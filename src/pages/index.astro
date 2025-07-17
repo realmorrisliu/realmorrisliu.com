@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+---
+
+<Layout>
+  <div class="max-w-2xl mx-auto px-4 py-12">
+    <div class="mb-12">
+      <h1 class="text-3xl font-serif mb-2">
+        Hi, I'm Morris. I write code, design systems, and play bass.
+      </h1>
+    </div>
+    <div class="mb-12">
+      <p class="text-lg font-normal text-gray-700">
+        Currently building Sealbox.
+      </p>
+    </div>
+    <nav class="space-y-4">
+      <a
+        href="/thoughts"
+        class="block text-gray-700 hover:text-gray-900 hover:underline font-medium"
+        >Thoughts</a
+      >
+      <a
+        href="/so-far"
+        class="block text-gray-700 hover:text-gray-900 hover:underline font-medium"
+        >So Far</a
+      >
+    </nav>
+  </div>
+</Layout>
