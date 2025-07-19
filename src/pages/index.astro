@@ -3,29 +3,32 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 ---
 
-<Layout>
-  <div class="max-w-2xl mx-auto px-4 py-12">
-    <div class="mb-12">
-      <h1 class="text-3xl font-serif mb-2">
-        Hi, I'm Morris. I write code, design systems, and play bass.
+<Layout title="Morris Liu">
+  <div class="max-w-2xl mx-auto px-6 py-16">
+    <div class="space-y-8 leading-relaxed">
+      <h1 class="text-4xl font-serif leading-tight" style="color: var(--color-text-primary);">
+        Hi, I'm Morris.
       </h1>
+      
+      <div class="space-y-6 text-lg" style="color: var(--color-text-secondary);">
+        <p>
+          I write about technology and ideas in my 
+          <a href="/thoughts" style="color: var(--color-text-link);">thoughts</a>, 
+          and you can learn about my work and projects 
+          <a href="/so-far" style="color: var(--color-text-link);">so far</a>.
+        </p>
+        
+        <p>
+          Currently, I'm building something called Sealbox.
+        </p>
+      </div>
     </div>
-    <div class="mb-12">
-      <p class="text-lg font-normal text-gray-700">
-        Currently building Sealbox.
+    
+    <!-- 简洁的署名 -->
+    <footer class="mt-24 pt-8">
+      <p class="text-base font-serif" style="color: var(--color-text-primary);">
+        Morris Liu
       </p>
-    </div>
-    <nav class="space-y-4">
-      <a
-        href="/thoughts"
-        class="block text-gray-700 hover:text-gray-900 hover:underline font-medium"
-        >Thoughts</a
-      >
-      <a
-        href="/so-far"
-        class="block text-gray-700 hover:text-gray-900 hover:underline font-medium"
-        >So Far</a
-      >
-    </nav>
+    </footer>
   </div>
 </Layout>

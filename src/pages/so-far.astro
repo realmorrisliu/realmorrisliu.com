@@ -3,39 +3,171 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 ---
 
-<Layout>
-  <div class="max-w-2xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-serif mb-12">So Far</h1>
+<Layout title="So Far - Morris Liu">
+  <div class="max-w-2xl mx-auto px-6 py-16">
+    <header class="mb-16">
+      <h1 class="text-4xl font-serif mb-6 leading-tight">So Far</h1>
+      <nav class="flex gap-4 flex-wrap">
+        <a href="#work" class="text-sm" style="color: var(--color-text-secondary);">Work</a>
+        <a href="#skills" class="text-sm" style="color: var(--color-text-secondary);">Skills</a>
+        <a href="#projects" class="text-sm" style="color: var(--color-text-secondary);">Projects</a>
+        <a href="#side" class="text-sm" style="color: var(--color-text-secondary);">Side</a>
+        <a href="#contact" class="text-sm" style="color: var(--color-text-secondary);">Contact</a>
+      </nav>
+    </header>
 
-    <section id="work" class="mb-12">
-      <h2 class="text-xl font-medium mb-2">Work</h2>
-      <p class="text-gray-700 font-normal">
-        Details about professional experience.
+    <section id="work" class="mb-16">
+      <h2 class="text-2xl font-serif mb-4 leading-tight">Work</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-lg font-serif mb-2" style="color: var(--color-text-primary);">Full-Stack Engineer</h3>
+          <p class="text-sm mb-2" style="color: var(--color-text-tertiary);">Yuanxiang Technology • May 2024 - Present</p>
+          <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+            Leading AI infrastructure architecture and building observability systems with Kubernetes, 
+            Prometheus, and Grafana. Optimized RAG technology stack, reducing memory consumption by 90% 
+            and improving data pipeline efficiency from hours to minutes.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-serif mb-2" style="color: var(--color-text-primary);">CTO</h3>
+          <p class="text-sm mb-2" style="color: var(--color-text-tertiary);">Gongzhiyi Technology • Sep 2021 - May 2024</p>
+          <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+            Built and led a 20-person engineering team from startup to scale. Architected two core products: 
+            a Git-based CAD version control system and a lightweight 3D visualization engine. 
+            Established 14-day release cycles and quality assurance processes.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-serif mb-2" style="color: var(--color-text-primary);">Frontend Engineer</h3>
+          <p class="text-sm mb-2" style="color: var(--color-text-tertiary);">Meituan • Jul 2018 - Jan 2019</p>
+          <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+            Developed data analytics modules and multi-store management systems. 
+            Built component libraries and solved complex browser compatibility issues.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="mb-16">
+      <h2 class="text-2xl font-serif mb-4 leading-tight">Skills</h2>
+      <div class="space-y-4">
+        <div>
+          <h3 class="text-base font-serif mb-2" style="color: var(--color-text-primary);">Languages</h3>
+          <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+            Rust, TypeScript, Go, Python. I believe in type safety and systems that don't surprise you.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-base font-serif mb-2" style="color: var(--color-text-primary);">Infrastructure</h3>
+          <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+            Kubernetes, Docker, Prometheus, Grafana. Building systems that scale and stay observable.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-base font-serif mb-2" style="color: var(--color-text-primary);">Data & Web</h3>
+          <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+            Postgres, Redis, React, Tauri. From databases to user interfaces, 
+            I enjoy crafting experiences that feel natural.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-base font-serif mb-2" style="color: var(--color-text-primary);">Leadership</h3>
+          <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+            Built and managed engineering teams up to 20 people. I believe the best 
+            technical solutions come from understanding both code and people.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="mb-16">
+      <h2 class="text-2xl font-serif mb-4 leading-tight">Projects</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-lg font-serif mb-2" style="color: var(--color-text-primary);">Sealbox</h3>
+          <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+            A simple secret storage service built with Rust. Self-hosted and developer-friendly, 
+            because managing secrets shouldn't be a secret science.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-serif mb-2" style="color: var(--color-text-primary);">openrouter-rs</h3>
+          <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+            Type-safe SDK for OpenRouter.ai in Rust. Making LLM API interactions 
+            predictable and pleasant to work with.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-serif mb-2" style="color: var(--color-text-primary);">Kira</h3>
+          <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+            An AI-powered second brain currently in development. 
+            Designed to catch thoughts before they fade—because the best ideas 
+            usually arrive at the worst times.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-serif mb-2" style="color: var(--color-text-primary);">CAD Systems</h3>
+          <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+            Built Git-based version control for CAD files and a lightweight 3D visualization engine. 
+            Solving the problem of "which version of this design are we looking at?"
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="side" class="mb-16">
+      <h2 class="text-2xl font-serif mb-4 leading-tight">Side</h2>
+      <div class="space-y-4">
+        <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+          I play bass guitar and listen to jazz, funk, and rock. Music helps me think 
+          differently about rhythm and structure—useful skills for both code and life.
+        </p>
+        
+        <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+          My bio says I'm from Mars, which isn't entirely untrue. I'm fascinated by 
+          how things are put together, whether it's a distributed system or a good bassline.
+        </p>
+        
+        <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+          I believe in building things that last, writing code that others can understand, 
+          and occasionally wondering if we're all just elaborate functions in some cosmic program.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="mb-16">
+      <h2 class="text-2xl font-serif mb-4 leading-tight">Contact</h2>
+      <div class="space-y-4">
+        <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+          You can find me on <a href="https://github.com/realmorrisliu" style="color: var(--color-text-link);">GitHub</a> 
+          where I share code and occasionally wonder if anyone reads commit messages.
+        </p>
+        
+        <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+          For more immediate thoughts and updates, I'm on 
+          <a href="https://twitter.com/realmorrisliu" style="color: var(--color-text-link);">Twitter</a>.
+        </p>
+        
+        <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+          For everything else, email works well: 
+          <a href="mailto:morrisliu1994@outlook.com" style="color: var(--color-text-link);">morrisliu1994@outlook.com</a>
+        </p>
+      </div>
+    </section>
+    
+    <!-- 信件结尾式返回链接 -->
+    <footer class="mt-16 pt-8">
+      <p class="text-base font-serif" style="color: var(--color-text-secondary);">
+        <a href="/" style="color: var(--color-text-link);">Morris Liu</a>
       </p>
-    </section>
-
-    <section id="skills" class="mb-12">
-      <h2 class="text-xl font-medium mb-2">Skills</h2>
-      <p class="text-gray-700 font-normal">
-        Technical and professional skills.
-      </p>
-    </section>
-
-    <section id="projects" class="mb-12">
-      <h2 class="text-xl font-medium mb-2">Projects</h2>
-      <p class="text-gray-700 font-normal">
-        Notable projects and contributions.
-      </p>
-    </section>
-
-    <section id="side" class="mb-12">
-      <h2 class="text-xl font-medium mb-2">Side</h2>
-      <p class="text-gray-700 font-normal">Personal interests and hobbies.</p>
-    </section>
-
-    <section id="contact" class="mb-12">
-      <h2 class="text-xl font-medium mb-2">Contact</h2>
-      <p class="text-gray-700 font-normal">Ways to get in touch.</p>
-    </section>
+    </footer>
   </div>
 </Layout>
