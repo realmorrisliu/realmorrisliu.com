@@ -144,41 +144,65 @@ import "../styles/global.css";
 
       <!-- Work Projects -->
       <div class="mb-12">
-        <h3 class="mb-6 font-serif text-lg text-[color:var(--color-text-primary)]">Work Projects</h3>
-        <div class="space-y-6">
-          <div>
-            <div class="mb-3">
-              <h4 class="mb-1 font-serif text-base text-[color:var(--color-text-primary)]">
-                X-Elephant AI Infrastructure
+        <h3 class="mb-8 font-serif text-xl text-[color:var(--color-text-primary)]">Work Projects</h3>
+        <div class="space-y-8">
+          <!-- X-Elephant -->
+          <div class="border-l border-[color:var(--color-border)] pl-6">
+            <div class="mb-4">
+              <h4 class="mb-2 font-serif text-lg text-[color:var(--color-text-primary)]">
+                X-Elephant: AI for Sales & Support
               </h4>
-              <p class="text-sm text-[color:var(--color-text-tertiary)]">UniXYZ • 2024</p>
+              <p class="text-sm font-medium text-[color:var(--color-text-tertiary)]">UniXYZ • 2024 - Present</p>
+            </div>
+            <div class="space-y-3 text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+              <p>
+                Led AI infrastructure design for sales and support automation platform.
+              </p>
+              <p>
+                <span class="font-medium text-[color:var(--color-text-primary)]">RAG Optimization:</span> Built Qdrant-based vector database cluster, developed custom Rust tools to reduce memory usage from 100GB+ to 10GB (90% reduction).
+              </p>
+              <p>
+                <span class="font-medium text-[color:var(--color-text-primary)]">Data Pipeline:</span> Automated Shopify data collection using Playwright and webhook-based real-time updates.
+              </p>
+            </div>
+          </div>
+
+          <!-- EverCraft -->
+          <div class="border-l border-[color:var(--color-border)] pl-6">
+            <div class="mb-4">
+              <h4 class="mb-2 font-serif text-lg text-[color:var(--color-text-primary)]">
+                EverCraft: Version Control System for CAD Files
+              </h4>
+              <p class="text-sm font-medium text-[color:var(--color-text-tertiary)]">EverXYZ • 2019-2023</p>
             </div>
             <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-              Led AI application infrastructure design and implementation. Containerized core services with Kubernetes auto-scaling, built observability stack with Loki+Prometheus+Grafana, optimized RAG components reducing memory usage by 90%, and developed distributed Shopify data collection system that improved knowledge base updates from hours to minutes.
+              Built SaaS platform bringing Git-inspired version control to CAD workflows. Features online model preview (powered by fractal3D), collaborative annotation, and visual diff comparison for engineering teams.
             </p>
           </div>
 
-          <div>
-            <div class="mb-3">
-              <h4 class="mb-1 font-serif text-base text-[color:var(--color-text-primary)]">
-                EverCraft Version Control Engine
+          <!-- EverCraft Lite -->
+          <div class="border-l border-[color:var(--color-border)] pl-6">
+            <div class="mb-4">
+              <h4 class="mb-2 font-serif text-lg text-[color:var(--color-text-primary)]">
+                EverCraft Lite: Local CAD Version Control
               </h4>
-              <p class="text-sm text-[color:var(--color-text-tertiary)]">EverXYZ • 2019-2021</p>
+              <p class="text-sm font-medium text-[color:var(--color-text-tertiary)]">EverXYZ • 2023-2024</p>
             </div>
             <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-              Designed and built a Git-inspired version control system optimized for large binary CAD files. Created online CAD viewing and diff comparison features that solved real pain points for mechanical engineers. Led architecture decisions and managed a 10+ person development team.
+              Desktop solution incubated from EverCraft. Built with Tauri and Rust, providing intuitive graphical interface for local version control of CAD files and documents.
             </p>
           </div>
 
-          <div>
-            <div class="mb-3">
-              <h4 class="mb-1 font-serif text-base text-[color:var(--color-text-primary)]">
-                fractal3D Visualization Engine
+          <!-- fractal3D -->
+          <div class="border-l border-[color:var(--color-border)] pl-6">
+            <div class="mb-4">
+              <h4 class="mb-2 font-serif text-lg text-[color:var(--color-text-primary)]">
+                fractal3D: 3D CAD Visualization Engine
               </h4>
-              <p class="text-sm text-[color:var(--color-text-tertiary)]">EverXYZ • 2020-2024</p>
+              <p class="text-sm font-medium text-[color:var(--color-text-tertiary)]">EverXYZ • 2020-2024</p>
             </div>
             <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-              Built a user-friendly online 3D CAD visualization engine with low-code capabilities for mainstream applications. Led a 5-person team through the complete product lifecycle from design to market operations, making professional 3D visualization accessible to beginners.
+              Built online 3D CAD visualization engine with low-code capabilities. Led 5-person team through complete product lifecycle, making professional 3D visualization accessible to mainstream users.
             </p>
           </div>
         </div>
