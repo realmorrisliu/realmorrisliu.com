@@ -74,23 +74,32 @@ const formatDate = (date: Date) => {
     <!-- 作者签名式导航 -->
     <footer class="mt-24 space-y-6 pt-8">
       <div class="space-y-4">
-        <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
+        <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
           Thank you for reading.
         </p>
 
-        <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
-          You can find more of my <a href="/thoughts" style="color: var(--color-text-link);"
-            >thoughts</a
+        <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+          I'd love to hear your thoughts on this. Feel free to reach out at 
+          <a href={`mailto:morrisliu1994@outlook.com?subject=Feedback on "${title}"`} class="text-[color:var(--color-text-link)]"
+            >morrisliu1994@outlook.com</a
           >
-          or return to my <a href="/" style="color: var(--color-text-link);">main page</a>.
+          if you want to discuss this further or have questions.
+        </p>
+
+        <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+          If you're curious about my background and other projects, you can learn more 
+          <a href="/so-far" class="text-[color:var(--color-text-link)]">about me</a>, 
+          explore my other <a href="/thoughts" class="text-[color:var(--color-text-link)]"
+            >thoughts</a
+          >, or return to my <a href="/" class="text-[color:var(--color-text-link)]">main page</a>.
         </p>
       </div>
 
       <div class="pt-4">
-        <p class="font-serif text-base" style="color: var(--color-text-primary);">
+        <p class="font-serif text-base text-[color:var(--color-text-primary)]">
           {author}
         </p>
-        <time class="text-sm" style="color: var(--color-text-tertiary);">
+        <time class="text-sm text-[color:var(--color-text-tertiary)]">
           {formatDate(pubDate)}
         </time>
       </div>
