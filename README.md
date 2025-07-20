@@ -1,52 +1,87 @@
-# Astro Starter Kit: Basics
+# realmorrisliu.com
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+My personal website built with Astro and designed around the philosophy of "less, but better." A minimalist, letter-like experience that feels more like reading beautifully written correspondence than browsing a traditional website.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+🌐 **Live Site**: [realmorrisliu.com](https://realmorrisliu.com)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## ✨ Design Philosophy
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- **"Less, but better"**: Remove all non-essential visual elements
+- **Letter-like Experience**: Feels like reading beautifully written correspondence
+- **Content-First**: UI should be nearly invisible, highlighting content
+- **Natural Navigation**: No traditional website navigation; embedded within content flow
+- **Static Elegance**: No animations, scroll effects, or dynamic elements
 
-## 🚀 Project Structure
+## 🏗️ Architecture
 
-Inside of your Astro project, you'll see the following folders and files:
+Built with modern web technologies for optimal performance and maintainability:
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+src/
+├── content/
+│   └── blog/                # Markdown blog posts with Content Collections
+├── components/
+│   ├── ProjectItem.astro    # Reusable project display component
+│   └── TimelineItem.astro   # Career timeline component
+├── layouts/
+│   ├── Layout.astro         # Base HTML layout
+│   └── BlogPost.astro       # Blog post layout with Typography
+├── pages/
+│   ├── index.astro          # Homepage with letter-style greeting
+│   ├── so-far.astro         # Professional experience and projects
+│   └── thoughts/
+│       ├── index.astro      # Blog listing page
+│       └── [...slug].astro  # Dynamic blog post routes
+└── styles/
+    └── global.css           # Design system + Typography config
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🎨 Tech Stack
+
+- **Framework**: [Astro](https://astro.build) for static site generation
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com) with custom design tokens
+- **Typography**: [Tailwind Typography](https://tailwindcss.com/docs/typography-plugin) for markdown content
+- **Fonts**: [Fontsource](https://fontsource.org) (Inter + EB Garamond)
+- **Content**: [Astro Content Collections](https://docs.astro.build/en/guides/content-collections/) for type-safe blog posts
+- **Code Quality**: [Prettier](https://prettier.io) with Astro and Tailwind plugins
 
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+All commands are run from the root of the project:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+| Command         | Action                                     |
+| --------------- | ------------------------------------------ |
+| `pnpm install`  | Install dependencies                       |
+| `pnpm dev`      | Start local dev server at `localhost:4321` |
+| `pnpm build`    | Build production site to `./dist/`         |
+| `pnpm preview`  | Preview build locally before deploying     |
+| `pnpm prettier` | Format all files with Prettier             |
 
-## 👀 Want to learn more?
+## 📝 Key Features
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Letter-style Navigation**: No traditional header bars; navigation naturally embedded in content
+- **Three-layer Content Architecture**: Homepage intro → Thoughts (blog) → So Far (about/resume)
+- **Component-based Timeline**: Reusable TimelineItem and ProjectItem components
+- **Enhanced Link Visibility**: Font-weight 500 links for better usability while maintaining elegance
+- **Responsive Typography**: Carefully tuned type scales and line heights for optimal readability
+
+## 📄 Content Structure
+
+- **Homepage**: Natural greeting with conversational navigation
+- **Thoughts**: Blog with featured posts and clean chronological listing
+- **So Far**: Professional timeline, projects, skills, and personal interests
+- **Individual Posts**: Focused reading experience with return navigation
+
+See `CLAUDE.md` for detailed development guidelines and design system documentation.
+
+## 🚀 Development
+
+This site prioritizes simplicity and maintainability:
+
+- **No complex build processes**: Standard Astro with minimal configuration
+- **Component-driven**: Reusable components for consistent design patterns
+- **Type-safe content**: Content Collections ensure blog post schema validation
+- **Design system**: CSS custom properties for consistent theming
+- **Performance-first**: Static generation for optimal loading speeds
+
+For detailed architectural decisions and content guidelines, refer to the comprehensive documentation in `CLAUDE.md`.

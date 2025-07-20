@@ -3,32 +3,40 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 ---
 
-<Layout title="Morris Liu">
-  <div class="max-w-2xl mx-auto px-6 py-16">
+<Layout 
+  title="Morris Liu - Software Engineer & Team Lead"
+  description="Morris Liu builds software and leads teams. Currently working on AI infrastructure while exploring ideas through side projects. Believes in tools that are reliable, fast, and help you sleep well at night."
+>
+  <div class="mx-auto max-w-2xl px-6 py-16">
     <div class="space-y-8 leading-relaxed">
-      <h1 class="text-4xl font-serif leading-tight" style="color: var(--color-text-primary);">
+      <h1 class="font-serif text-4xl leading-tight text-[color:var(--color-text-primary)]">
         Hi, I'm Morris.
       </h1>
-      
-      <div class="space-y-6 text-lg" style="color: var(--color-text-secondary);">
+
+      <div class="space-y-6 text-lg text-[color:var(--color-text-secondary)]">
         <p>
-          I write about technology and ideas in my 
-          <a href="/thoughts" style="color: var(--color-text-link);">thoughts</a>, 
-          and you can learn about my work and projects 
-          <a href="/so-far" style="color: var(--color-text-link);">so far</a>.
+          I build software and lead teams. Currently working on AI infrastructure while exploring 
+          ideas through side projects. I believe in tools that are reliable, fast, and help you 
+          sleep well at night.
         </p>
-        
+
         <p>
-          Currently, I'm building something called Sealbox.
+          I write about technology and design in my
+          <a href="/thoughts" class="text-[color:var(--color-text-link)]">thoughts</a>, and you can learn
+          about my work and projects
+          <a href="/so-far" class="text-[color:var(--color-text-link)]">so far</a>.
+        </p>
+
+        <p>
+          Outside of code, I practice bass and capture moments through photography—both teach me 
+          about rhythm, timing, and finding beauty in structure.
         </p>
       </div>
     </div>
-    
+
     <!-- 简洁的署名 -->
     <footer class="mt-24 pt-8">
-      <p class="text-base font-serif" style="color: var(--color-text-primary);">
-        Morris Liu
-      </p>
+      <p class="font-serif text-base text-[color:var(--color-text-primary)]">Morris Liu</p>
     </footer>
   </div>
 </Layout>
