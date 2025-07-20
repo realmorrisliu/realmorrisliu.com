@@ -1,24 +1,20 @@
-# Redirect common variations and old URLs
-/blog/* /thoughts/:splat 301
-/posts/* /thoughts/:splat 301
+# Exact path redirects (most performant - no wildcards)
 /about /so-far 301
 /resume /so-far 301
 /cv /so-far 301
 /contact /so-far#contact 301
-
-# Redirect social media handles to actual social profiles
 /github https://github.com/realmorrisliu 301
 /twitter https://twitter.com/realmorrisliu 301
 /x https://twitter.com/realmorrisliu 301
-
-# Redirect project URLs to GitHub
 /sealbox https://github.com/realmorrisliu/sealbox 301
 /openrouter-rs https://github.com/realmorrisliu/openrouter-rs 301
 /funcall https://github.com/realmorrisliu/funcall 301
-
-# Handle trailing slashes (Cloudflare Pages automatically does this, but being explicit)
 /thoughts /thoughts/ 301
 /so-far /so-far/ 301
+
+# Wildcard redirects (placed after exact matches for performance)
+/blog/* /thoughts/:splat 301
+/posts/* /thoughts/:splat 301
 
 # Fallback for any 404s to home page (optional, comment out if you want default 404)
 # /* / 404
