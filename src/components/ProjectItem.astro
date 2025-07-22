@@ -17,9 +17,7 @@ const { title, description, githubUrl } = Astro.props;
     {title}
     {githubUrl && <GitHubIcon href={githubUrl} />}
   </h3>
-  <p
-    class="font-sans text-base leading-relaxed text-[color:var(--color-text-secondary)]"
-  >
+  <p class="font-sans text-base leading-relaxed text-[color:var(--color-text-secondary)]">
     {description}
   </p>
 </div>

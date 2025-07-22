@@ -23,6 +23,7 @@ src/
 │   └── blog/                # Markdown blog posts with Content Collections
 ├── components/
 │   ├── Link.astro           # Unified link component with responsive styling
+│   ├── Button.astro         # Unified button component with variant styles
 │   ├── GitHubIcon.astro     # GitHub icon with accessibility and hover effects
 │   ├── RssIcon.astro        # RSS icon with text and responsive styling
 │   ├── FooterSignature.astro # Reusable footer signature with navigation
@@ -34,10 +35,14 @@ src/
 ├── pages/
 │   ├── index.astro          # Homepage with letter-style greeting
 │   ├── so-far.astro         # Professional timeline, projects, skills
+│   ├── og-generator.astro   # OG image generation editor with terminal aesthetic
+│   ├── og-preview.astro     # Full-size OG image preview and download
 │   ├── rss.xml.ts           # RSS feed generation
 │   └── thoughts/
 │       ├── index.astro      # Blog listing page with RSS icon
 │       └── [...slug].astro  # Dynamic blog post routes
+├── scripts/
+│   └── og-utils.ts          # Shared utilities for OG image generation
 └── styles/
     └── global.css           # Design system + Typography config
 ```
@@ -49,7 +54,7 @@ The design system is built around CSS custom properties and follows extreme mini
 **CSS Variables (`global.css`):**
 
 - Color palette: 5 carefully chosen grays (`--color-text-primary` to `--color-border`)
-- Typography: Inter (sans-serif) + EB Garamond (serif) with 4 line-height scales
+- Typography: Inter (sans-serif) + EB Garamond (serif) + Maple Mono (monospace) with 4 line-height scales
 - No animations, shadows, or decorative elements
 
 **Layout Patterns:**
@@ -63,6 +68,7 @@ The design system is built around CSS custom properties and follows extreme mini
 **Reusable Components:**
 
 - **Link.astro**: Unified link component with responsive hover behavior. Mobile devices show permanent underlines for better touch accessibility, desktop shows underlines only on hover. Automatically detects external links for proper `target="_blank"` handling.
+- **Button.astro**: Unified button component with TypeScript interfaces supporting primary/secondary variants and sm/md sizes. Maintains consistent hover states and responsive design without over-complex styling.
 - **GitHubIcon.astro**: Accessible GitHub icon component with responsive opacity effects. Desktop shows 60% opacity by default, 100% on hover; mobile shows 100% opacity always. Includes proper ARIA labels and SVG titles for screen readers.
 - **TimelineItem.astro**: Career timeline component with props for year, title, company, period, and description. Features continuous vertical line design with year labels floating to the left of the timeline.
 - **ProjectItem.astro**: Project display component leveraging Link and GitHubIcon components. Includes title, description, and optional GitHub repository access with consistent styling.
@@ -146,6 +152,14 @@ The website uses a "letter-like" navigation approach that avoids traditional web
    - Optimized visual hierarchy with consistent border styling (1px) and clear information structure
    - Letter-style signature return to home
 
+5. **OG Image Generator (`og-generator.astro` & `og-preview.astro`)**:
+   - Terminal aesthetic editor with `$ whoami` and `$ echo $PASSION` pattern
+   - Real-time inline preview with contenteditable spans for name and tagline customization
+   - Full-size (1200×630px) generation page with Canvas API-based image export
+   - Hidden "easter egg" feature, not shown in navigation but accessible via direct URL
+   - Preset tagline suggestions and reset functionality for user convenience
+   - PNG format export optimized for social media platforms
+
 ### Code Style Conventions
 
 - **Astro Components**: Use semantic HTML5 elements
@@ -173,7 +187,7 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 ### Font Loading Strategy
 
 - Fontsource for local font hosting (no external CDN)
-- Only import actually used font weights (Inter 400/500, EB Garamond 500)
+- Only import actually used font weights (Inter 400/500, EB Garamond 500, Maple Mono 400)
 - Fonts imported in `global.css` for better control
 - Fallback fonts specified in CSS variables
 - Font smoothing enabled for better rendering
@@ -293,6 +307,57 @@ The Work Projects section is optimized for technical interviews and showcases:
 - Problem-solving narratives with concrete solutions
 - Leadership and team management examples
 - Clear project evolution and business impact
+
+### OG Image Generation System
+
+The website includes a custom OG (Open Graph) image generation tool that creates social media preview images with a terminal aesthetic:
+
+**Core Features:**
+
+- **Terminal Design**: Uses `$ whoami` / `Morris Liu` / `$ echo $PASSION` / `[custom tagline]` pattern
+- **Real-time Editor**: Inline preview (600×315px) with contenteditable text spans
+- **Full-size Export**: 1200×630px PNG generation using native Canvas API
+- **Typography**: Maple Mono monospace font for authentic terminal look
+- **Easter Egg Integration**: Hidden feature accessible via `/og-generator` (not in main navigation)
+
+**Technical Implementation:**
+
+**`src/pages/og-generator.astro`:**
+- Editor page with inline preview at 50% scale (600×315px)
+- Contenteditable spans with `data-original` attributes for reset functionality
+- Preset tagline suggestions with click-to-apply functionality
+- Button component integration for consistent UI
+- URL parameter generation for seamless transition to full-size preview
+
+**`src/pages/og-preview.astro`:**
+- Full-size (1200×630px) preview and download page
+- Canvas API-based image generation reading actual DOM computed styles
+- Font loading synchronization with `document.fonts.ready`
+- PNG export with proper filename and download trigger
+- Fixed positioning with return navigation
+
+**`src/scripts/og-utils.ts`:**
+- Shared utilities for font loading (`waitForFonts()`)
+- Canvas generation (`generateOGImage()`) with pixel-perfect DOM to canvas conversion
+- Download handling (`downloadCanvas()`) with proper filename generation
+- Text extraction (`getElementText()`) with fallback support
+
+**Key Technical Decisions:**
+
+- **Canvas over html2canvas**: Native Canvas API avoids `oklch()` color function compatibility issues
+- **Style Reading**: Uses `getComputedStyle()` and `getBoundingClientRect()` for accurate positioning
+- **Font Synchronization**: `document.fonts.ready` ensures Maple Mono loads before image generation
+- **TypeScript Safety**: Full error handling with proper type guards and null checks
+- **Responsive Design**: Separate scaling for editor (50%) and full-size (100%) views
+
+**Usage Workflow:**
+
+1. Navigate to `/og-generator` (easter egg URL)
+2. Click on text in preview to edit name and tagline
+3. Select from preset tagline suggestions or create custom
+4. Click "Generate full size" to open 1200×630px version
+5. Click "Save as PNG" to download high-quality image
+6. Use downloaded image as social media preview
 
 ### Development Notes
 
@@ -471,6 +536,7 @@ The website is optimized for deployment on Cloudflare Pages with the following c
 - **@tailwindcss/vite** (^4.1.11): Vite integration for Tailwind
 - **@fontsource/inter** (^5.2.6): Inter font family local hosting
 - **@fontsource/eb-garamond** (^5.2.6): EB Garamond font family local hosting
+- **@fontsource/maple-mono** (^5.2.6): Maple Mono monospace font for terminal aesthetic
 
 ### Development Dependencies
 

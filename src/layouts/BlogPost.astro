@@ -44,7 +44,7 @@ const readingTime =
 const enhancedKeywords = [
   ...(tags || []),
   "Morris Liu",
-  "Software Engineer", 
+  "Software Engineer",
   "Tech Blog",
   "Programming",
 ].filter(Boolean);
@@ -74,7 +74,8 @@ const truncateTitle = (text: string, maxLength: number = 50) => {
         </li>
         <li class="shrink-0 before:mx-2 before:content-['/']">
           <Link href="/thoughts" class="hover:text-[color:var(--color-text-secondary)]"
-            >Thoughts</Link>
+            >Thoughts</Link
+          >
         </li>
         <li class="min-w-0 truncate before:mx-2 before:content-['/']">
           <span class="truncate" title={title}>{truncateTitle(title, 35)}</span>

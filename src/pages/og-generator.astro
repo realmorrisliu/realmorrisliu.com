@@ -1,0 +1,141 @@
+---
+import Layout from "../layouts/Layout.astro";
+import FooterSignature from "../components/FooterSignature.astro";
+import Link from "../components/Link.astro";
+import Button from "../components/Button.astro";
+import "../styles/global.css";
+---
+
+<Layout
+  title="OG Image Generator - Morris Liu"
+  description="A simple tool to generate social media preview images for your content."
+>
+  <div class="mx-auto max-w-2xl px-6 py-16">
+    <header class="mb-16">
+      <h1 class="mb-6 font-serif text-4xl leading-tight">OG Image Generator</h1>
+      <p class="mb-6 text-base leading-relaxed text-gray-700">
+        A simple tool to create social media preview images. Click on any text below to edit, then
+        right-click the preview to save your image.
+      </p>
+      <p class="text-sm text-gray-500">
+        Dimensions: 1200×630px (standard for Twitter, LinkedIn, Facebook)
+      </p>
+    </header>
+
+    <!-- Preview Container -->
+    <div class="mb-8">
+      <div id="ogContainer" class="relative h-[315px] w-[600px] border border-gray-300 bg-white">
+        <div class="absolute top-1/2 left-10 -translate-y-1/2 font-mono leading-relaxed">
+          <div class="mb-1 text-xs text-gray-500">$ whoami</div>
+          <div class="mb-8 text-sm text-black">
+            <span
+              contenteditable="true"
+              class="editable-text px-1 focus:bg-gray-50 focus:ring-1 focus:ring-gray-200 focus:outline-none"
+              data-original="Morris Liu">Morris Liu</span
+            >
+          </div>
+
+          <div class="mb-1 text-xs text-gray-500">$ echo $PASSION</div>
+          <div class="text-xs text-gray-700">
+            <span
+              contenteditable="true"
+              class="editable-text px-1 focus:bg-gray-50 focus:ring-1 focus:ring-gray-200 focus:outline-none"
+              data-original="Building tools that matter">Building tools that matter</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="mb-16 flex flex-wrap gap-4">
+      <Button variant="primary" id="generateBtn"> Generate full size → </Button>
+      <Button variant="secondary" id="resetBtn"> Reset to defaults </Button>
+    </div>
+
+    <!-- Usage Instructions -->
+    <section class="mb-16">
+      <h2 class="mb-4 font-serif text-2xl leading-tight">How to use</h2>
+      <ul class="grid gap-2 text-sm text-gray-700">
+        <li>First, click on any text in the preview to edit it</li>
+        <li>Then customize your name and tagline</li>
+        <li>Next, click "Generate full size" to open the 1200×630 version</li>
+        <li>Finally, right-click and save your image</li>
+      </ul>
+    </section>
+
+    <!-- Inspiration -->
+    <section class="mb-16">
+      <h3 class="mb-4 font-serif text-xl leading-tight">Some tagline ideas</h3>
+      <ul class="grid gap-2 text-sm text-gray-700">
+        <li class="tagline-suggestion cursor-pointer hover:underline">
+          Building tools that spark joy
+        </li>
+        <li class="tagline-suggestion cursor-pointer hover:underline">
+          Crafting software, one commit at a time
+        </li>
+        <li class="tagline-suggestion cursor-pointer hover:underline">Turning ideas into code</li>
+        <li class="tagline-suggestion cursor-pointer hover:underline">
+          Engineering elegant solutions
+        </li>
+        <li class="tagline-suggestion cursor-pointer hover:underline">
+          Code, coffee, and curiosity
+        </li>
+        <li class="tagline-suggestion cursor-pointer hover:underline">
+          Building the tools I wish I had
+        </li>
+      </ul>
+    </section>
+
+    <FooterSignature>
+      <nav>
+        <Link href="/" class="text-sm">← Back to main page</Link>
+      </nav>
+    </FooterSignature>
+  </div>
+
+  <script>
+    import { getElementText } from "../scripts/og-utils";
+
+    // 生成完整尺寸图片
+    document.getElementById("generateBtn")?.addEventListener("click", () => {
+      const name = encodeURIComponent(getElementText('[data-original="Morris Liu"]', "Morris Liu"));
+      const passion = encodeURIComponent(
+        getElementText('[data-original="Building tools that matter"]', "Building tools that matter")
+      );
+
+      window.location.href = `/og-preview?name=${name}&passion=${passion}`;
+    });
+
+    // 重置功能
+    document.getElementById("resetBtn")?.addEventListener("click", () => {
+      document.querySelectorAll(".editable-text").forEach(el => {
+        if (!(el instanceof HTMLElement)) return;
+        const original = el.getAttribute("data-original");
+        if (original) el.textContent = original;
+      });
+    });
+
+    // 标语建议点击功能
+    document.querySelectorAll(".tagline-suggestion").forEach(el => {
+      if (!(el instanceof HTMLElement)) return;
+      el.addEventListener("click", () => {
+        const passionEl = document.querySelector('[data-original="Building tools that matter"]');
+        if (passionEl instanceof HTMLElement) {
+          passionEl.textContent = el.textContent;
+        }
+      });
+    });
+
+    // 为可编辑文本添加键盘事件
+    document.querySelectorAll(".editable-text").forEach(el => {
+      if (!(el instanceof HTMLElement)) return;
+      el.addEventListener("keydown", e => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          el.blur();
+        }
+      });
+    });
+  </script>
+</Layout>
