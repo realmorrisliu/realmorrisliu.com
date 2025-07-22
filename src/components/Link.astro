@@ -11,13 +11,13 @@ const { href, class: className = "", external } = Astro.props;
 const isExternal = external || href.startsWith("http") || href.startsWith("mailto:");
 
 // 统一的链接样式：移动端有下划线，桌面端hover时有下划线
-const linkStyles =
+const LINK_STYLES =
   "font-medium text-[color:var(--color-text-link)] md:no-underline underline decoration-1 underline-offset-2 md:hover:underline transition-all duration-150";
 ---
 
 <a
   href={href}
-  class={`${linkStyles} ${className}`}
+  class={`${LINK_STYLES} ${className}`}
   {...isExternal && { target: "_blank", rel: "noopener noreferrer" }}
 >
   <slot />

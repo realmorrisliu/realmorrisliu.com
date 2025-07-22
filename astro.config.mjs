@@ -7,6 +7,14 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://realmorrisliu.com",
   integrations: [sitemap()],
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
+      config: {
+        limitInputPixels: false,
+      },
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
   },

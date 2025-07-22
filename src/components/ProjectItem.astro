@@ -19,6 +19,7 @@ const { title, description, githubUrl } = Astro.props;
   </h3>
   <p
     class="font-sans text-base leading-relaxed text-[color:var(--color-text-secondary)]"
-    set:html={description}
-  />
+  >
+    {description}
+  </p>
 </div>

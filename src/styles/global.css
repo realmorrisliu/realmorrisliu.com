@@ -1,8 +1,6 @@
-/* 导入 Fontsource 字体 */
-@import "@fontsource/inter/300.css";
+/* 导入 Fontsource 字体 - 只导入实际使用的字重 */
 @import "@fontsource/inter/400.css";
 @import "@fontsource/inter/500.css";
-@import "@fontsource/eb-garamond/400.css";
 @import "@fontsource/eb-garamond/500.css";
 
 @import "tailwindcss";

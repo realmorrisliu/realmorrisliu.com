@@ -28,7 +28,8 @@ const { year, title, company, period, description } = Astro.props;
     </div>
     <p
       class="font-sans text-base leading-relaxed text-[color:var(--color-text-secondary)]"
-      set:html={description}
-    />
+    >
+      {description}
+    </p>
   </div>
 </div>

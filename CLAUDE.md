@@ -173,6 +173,7 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 ### Font Loading Strategy
 
 - Fontsource for local font hosting (no external CDN)
+- Only import actually used font weights (Inter 400/500, EB Garamond 500)
 - Fonts imported in `global.css` for better control
 - Fallback fonts specified in CSS variables
 - Font smoothing enabled for better rendering
@@ -371,8 +372,9 @@ The website features professional-grade SEO optimization for maximum discoverabi
 
 - All pages pre-generated at build time (SSG)
 - Minimal JavaScript footprint
-- Optimized font loading with Fontsource local hosting
+- Optimized font loading with Fontsource local hosting (only necessary weights)
 - CSS custom properties for faster style application
+- Image optimization with Sharp service configured
 
 **Asset Optimization:**
 
@@ -380,6 +382,13 @@ The website features professional-grade SEO optimization for maximum discoverabi
 - Short-term caching for HTML content (1 hour)
 - Proper MIME type configuration
 - Font files optimized with woff2 format
+
+**Security Best Practices:**
+
+- Never use `set:html` without proper sanitization
+- All user-generated content should be escaped
+- TypeScript interfaces for component prop validation
+- Constant strings for frequently used styles to avoid runtime recreation
 
 ## Deployment & Hosting
 
