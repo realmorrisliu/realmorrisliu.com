@@ -89,20 +89,7 @@ p {
   color: var(--color-text-secondary);
 }
 
-/* 链接样式 */
-a {
-  color: var(--color-text-link);
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.15s ease;
-}
-
-a:hover {
-  color: var(--color-text-primary);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
+/* 链接样式现在统一在 Link.astro 组件中管理 */
 
 /* Typography 插件自定义覆盖 - 极简主义风格 */
 .prose h1,

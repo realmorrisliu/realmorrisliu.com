@@ -2,10 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import TimelineItem from "../components/TimelineItem.astro";
 import ProjectItem from "../components/ProjectItem.astro";
+import Link from "../components/Link.astro";
 import "../styles/global.css";
 ---
 
-<Layout 
+<Layout
   title="So Far - Morris Liu"
   description="Morris Liu's professional journey: 7 years from individual contributor to CTO. Experience building AI infrastructure, leading engineering teams, and creating open source tools like Sealbox and Kira."
 >
@@ -14,11 +15,14 @@ import "../styles/global.css";
       <h1 class="mb-6 font-serif text-4xl leading-tight">So Far</h1>
 
       <nav class="mb-8 flex flex-wrap gap-4">
-        <a href="#work" class="text-sm text-[color:var(--color-text-secondary)]">Work</a>
-        <a href="#projects" class="text-sm text-[color:var(--color-text-secondary)]">Projects</a>
-        <a href="#skills" class="text-sm text-[color:var(--color-text-secondary)]">Skills</a>
-        <a href="#side" class="text-sm text-[color:var(--color-text-secondary)]">Side</a>
-        <a href="#contact" class="text-sm text-[color:var(--color-text-secondary)]">Contact</a>
+        <Link href="#work" class="text-sm text-[color:var(--color-text-secondary)]">Work</Link>
+        <Link href="#projects" class="text-sm text-[color:var(--color-text-secondary)]"
+          >Projects</Link
+        >
+        <Link href="#skills" class="text-sm text-[color:var(--color-text-secondary)]">Skills</Link>
+        <Link href="#side" class="text-sm text-[color:var(--color-text-secondary)]">Side</Link>
+        <Link href="#contact" class="text-sm text-[color:var(--color-text-secondary)]">Contact</Link
+        >
       </nav>
 
       <!-- 总结性描述 -->
@@ -37,7 +41,9 @@ import "../styles/global.css";
       <!-- 技术背景和名词注释 -->
       <div class="mb-8 space-y-4">
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-          Seven years of growth from individual contributor to team leader. Each role taught me something different about technology, people, and the balance between moving fast and building things that last.
+          Seven years of growth from individual contributor to team leader. Each role taught me
+          something different about technology, people, and the balance between moving fast and
+          building things that last.
         </p>
 
         <div class="text-sm text-[color:var(--color-text-tertiary)]">
@@ -139,12 +145,16 @@ import "../styles/global.css";
       <h2 class="mb-4 font-serif text-2xl leading-tight">Projects</h2>
 
       <p class="mb-8 text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-        A mix of professional work and personal exploration. The work projects showcase technical leadership and architecture design, while open source projects reflect my curiosity and problem-solving approach.
+        A mix of professional work and personal exploration. The work projects showcase technical
+        leadership and architecture design, while open source projects reflect my curiosity and
+        problem-solving approach.
       </p>
 
       <!-- Work Projects -->
       <div class="mb-12">
-        <h3 class="mb-8 font-serif text-xl text-[color:var(--color-text-primary)]">Work Projects</h3>
+        <h3 class="mb-8 font-serif text-xl text-[color:var(--color-text-primary)]">
+          Work Projects
+        </h3>
         <div class="space-y-8">
           <!-- X-Elephant -->
           <div class="border-l border-[color:var(--color-border)] pl-6">
@@ -152,17 +162,24 @@ import "../styles/global.css";
               <h4 class="mb-2 font-serif text-lg text-[color:var(--color-text-primary)]">
                 X-Elephant: AI for Sales & Support
               </h4>
-              <p class="text-sm font-medium text-[color:var(--color-text-tertiary)]">UniXYZ • 2024 - Present</p>
+              <p class="text-sm font-medium text-[color:var(--color-text-tertiary)]">
+                UniXYZ • 2024 - Present
+              </p>
             </div>
-            <div class="space-y-3 text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+            <div
+              class="space-y-3 text-base leading-relaxed text-[color:var(--color-text-secondary)]"
+            >
+              <p>Led AI infrastructure design for sales and support automation platform.</p>
               <p>
-                Led AI infrastructure design for sales and support automation platform.
+                <span class="font-medium text-[color:var(--color-text-primary)]"
+                  >RAG Optimization:</span
+                > Built Qdrant-based vector database cluster, developed custom Rust tools to reduce memory
+                usage from 100GB+ to 10GB (90% reduction).
               </p>
               <p>
-                <span class="font-medium text-[color:var(--color-text-primary)]">RAG Optimization:</span> Built Qdrant-based vector database cluster, developed custom Rust tools to reduce memory usage from 100GB+ to 10GB (90% reduction).
-              </p>
-              <p>
-                <span class="font-medium text-[color:var(--color-text-primary)]">Data Pipeline:</span> Automated Shopify data collection using Playwright and webhook-based real-time updates.
+                <span class="font-medium text-[color:var(--color-text-primary)]"
+                  >Data Pipeline:</span
+                > Automated Shopify data collection using Playwright and webhook-based real-time updates.
               </p>
             </div>
           </div>
@@ -173,10 +190,14 @@ import "../styles/global.css";
               <h4 class="mb-2 font-serif text-lg text-[color:var(--color-text-primary)]">
                 EverCraft: Version Control System for CAD Files
               </h4>
-              <p class="text-sm font-medium text-[color:var(--color-text-tertiary)]">EverXYZ • 2019-2023</p>
+              <p class="text-sm font-medium text-[color:var(--color-text-tertiary)]">
+                EverXYZ • 2019-2023
+              </p>
             </div>
             <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-              Built SaaS platform bringing Git-inspired version control to CAD workflows. Features online model preview (powered by fractal3D), collaborative annotation, and visual diff comparison for engineering teams.
+              Built SaaS platform bringing Git-inspired version control to CAD workflows. Features
+              online model preview (powered by fractal3D), collaborative annotation, and visual diff
+              comparison for engineering teams.
             </p>
           </div>
 
@@ -186,10 +207,13 @@ import "../styles/global.css";
               <h4 class="mb-2 font-serif text-lg text-[color:var(--color-text-primary)]">
                 EverCraft Lite: Local CAD Version Control
               </h4>
-              <p class="text-sm font-medium text-[color:var(--color-text-tertiary)]">EverXYZ • 2023-2024</p>
+              <p class="text-sm font-medium text-[color:var(--color-text-tertiary)]">
+                EverXYZ • 2023-2024
+              </p>
             </div>
             <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-              Desktop solution incubated from EverCraft. Built with Tauri and Rust, providing intuitive graphical interface for local version control of CAD files and documents.
+              Desktop solution incubated from EverCraft. Built with Tauri and Rust, providing
+              intuitive graphical interface for local version control of CAD files and documents.
             </p>
           </div>
 
@@ -199,10 +223,14 @@ import "../styles/global.css";
               <h4 class="mb-2 font-serif text-lg text-[color:var(--color-text-primary)]">
                 fractal3D: 3D CAD Visualization Engine
               </h4>
-              <p class="text-sm font-medium text-[color:var(--color-text-tertiary)]">EverXYZ • 2020-2024</p>
+              <p class="text-sm font-medium text-[color:var(--color-text-tertiary)]">
+                EverXYZ • 2020-2024
+              </p>
             </div>
             <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-              Built online 3D CAD visualization engine with low-code capabilities. Led 5-person team through complete product lifecycle, making professional 3D visualization accessible to mainstream users.
+              Built online 3D CAD visualization engine with low-code capabilities. Led 5-person team
+              through complete product lifecycle, making professional 3D visualization accessible to
+              mainstream users.
             </p>
           </div>
         </div>
@@ -210,7 +238,9 @@ import "../styles/global.css";
 
       <!-- Personal Projects -->
       <div>
-        <h3 class="mb-6 font-serif text-lg text-[color:var(--color-text-primary)]">Personal Projects</h3>
+        <h3 class="mb-6 font-serif text-lg text-[color:var(--color-text-primary)]">
+          Personal Projects
+        </h3>
         <div class="space-y-6">
           <ProjectItem
             title="Sealbox"
@@ -219,9 +249,7 @@ import "../styles/global.css";
           />
           <p class="mt-2 ml-0 text-sm text-[color:var(--color-text-tertiary)]">
             → Read the story behind this project in
-            <a href="/thoughts/why-i-built-sealbox" class="text-[color:var(--color-text-link)]"
-              >Why I Built Sealbox</a
-            >
+            <Link href="/thoughts/why-i-built-sealbox">Why I Built Sealbox</Link>
           </p>
 
           <ProjectItem
@@ -242,9 +270,9 @@ import "../styles/global.css";
           />
           <p class="mt-2 ml-0 text-sm text-[color:var(--color-text-tertiary)]">
             → Read more about the vision and design philosophy in
-            <a
+            <Link
               href="/thoughts/building-kira-an-ai-native-second-brain"
-              class="text-[color:var(--color-text-link)]">Building Kira: An AI-Native Second Brain</a
+              >Building Kira: An AI-Native Second Brain</Link
             >
           </p>
         </div>
@@ -300,30 +328,30 @@ import "../styles/global.css";
       <h2 class="mb-4 font-serif text-2xl leading-tight">Side</h2>
       <div class="space-y-4">
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-          I spend time practicing bass, working through the grooves that shaped music—<a
+          I spend time practicing bass, working through the grooves that shaped music—<Link
             href="https://en.wikipedia.org/wiki/Queen_(band)"
-            class="text-[color:var(--color-text-link)]">Queen</a
-          >'s theatrical bass lines, <a
+            >Queen</Link
+          >'s theatrical bass lines, <Link
             href="https://en.wikipedia.org/wiki/Chic_(band)"
-            class="text-[color:var(--color-text-link)]">Chic</a
-          >'s infectious funk, <a
+            >Chic</Link
+          >'s infectious funk, <Link
             href="https://en.wikipedia.org/wiki/Earth,_Wind_%26_Fire"
-            class="text-[color:var(--color-text-link)]">EW&F</a
-          >'s sophisticated arrangements, and <a
+            >EW&F</Link
+          >'s sophisticated arrangements, and <Link
             href="https://en.wikipedia.org/wiki/AC/DC"
-            class="text-[color:var(--color-text-link)]">AC/DC</a
+            >AC/DC</Link
           >'s relentless drive. There's something about the bass that mirrors good engineering: it's
           the foundation that holds everything else together.
         </p>
 
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
           When I'm not playing music, I'm often capturing moments through photography. I'm drawn to
-          the philosophy of photographers like <a
+          the philosophy of photographers like <Link
             href="https://en.wikipedia.org/wiki/Henri_Cartier-Bresson"
-            class="text-[color:var(--color-text-link)]">Henri Cartier-Bresson</a
-          >, who taught us about the decisive moment, and <a
+            >Henri Cartier-Bresson</Link
+          >, who taught us about the decisive moment, and <Link
             href="https://hideakihamada.com/about/"
-            class="text-[color:var(--color-text-link)]">Hideaki Hamada</a
+            >Hideaki Hamada</Link
           >, whose quiet observations of daily life reveal extraordinary beauty in the ordinary.
         </p>
 
@@ -350,25 +378,21 @@ import "../styles/global.css";
       <h2 class="mb-4 font-serif text-2xl leading-tight">Contact</h2>
       <div class="space-y-4">
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-          You can find me on <a
+          You can find me on <Link
             href="https://github.com/realmorrisliu"
-            class="text-[color:var(--color-text-link)]">GitHub</a
+            >GitHub</Link
           >
           where I share code and occasionally wonder if anyone reads commit messages.
         </p>
 
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
           For more immediate thoughts and updates, I'm on
-          <a href="https://twitter.com/realmorrisliu" class="text-[color:var(--color-text-link)]"
-            >X (Twitter)</a
-          >.
+          <Link href="https://twitter.com/realmorrisliu">X (Twitter)</Link>.
         </p>
 
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
           For everything else, email works well:
-          <a href="mailto:morrisliu1994@outlook.com" class="text-[color:var(--color-text-link)]"
-            >morrisliu1994@outlook.com</a
-          >
+          <Link href="mailto:morrisliu1994@outlook.com">morrisliu1994@outlook.com</Link>
         </p>
       </div>
     </section>
@@ -376,7 +400,7 @@ import "../styles/global.css";
     <!-- 信件结尾式返回链接 -->
     <footer class="mt-16 pt-8">
       <p class="font-serif text-base text-[color:var(--color-text-secondary)]">
-        <a href="/" class="text-[color:var(--color-text-link)]">Morris Liu</a>
+        <Link href="/">Morris Liu</Link>
       </p>
     </footer>
   </div>

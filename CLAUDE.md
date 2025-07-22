@@ -22,6 +22,8 @@ src/
 ├── content/
 │   └── blog/                # Markdown blog posts with Content Collections
 ├── components/
+│   ├── Link.astro           # Unified link component with responsive styling
+│   ├── GitHubIcon.astro     # GitHub icon with accessibility and hover effects  
 │   ├── ProjectItem.astro    # Reusable project display with GitHub links
 │   └── TimelineItem.astro   # Career timeline with continuous line design
 ├── layouts/
@@ -57,15 +59,19 @@ The design system is built around CSS custom properties and follows extreme mini
 
 **Reusable Components:**
 
+- **Link.astro**: Unified link component with responsive hover behavior. Mobile devices show permanent underlines for better touch accessibility, desktop shows underlines only on hover. Automatically detects external links for proper `target="_blank"` handling.
+- **GitHubIcon.astro**: Accessible GitHub icon component with responsive opacity effects. Desktop shows 60% opacity by default, 100% on hover; mobile shows 100% opacity always. Includes proper ARIA labels and SVG titles for screen readers.
 - **TimelineItem.astro**: Career timeline component with props for year, title, company, period, and description. Features continuous vertical line design with year labels floating to the left of the timeline.
-- **ProjectItem.astro**: Project display component with optional GitHub links. Includes title, description, and GitHub icon for external repository access.
+- **ProjectItem.astro**: Project display component leveraging Link and GitHubIcon components. Includes title, description, and optional GitHub repository access with consistent styling.
 
 **Component Design Principles:**
 
 - All components use TypeScript interfaces for prop validation
+- Responsive design with mobile-first accessibility considerations
 - Consistent spacing and typography following the design system
-- GitHub links use SVG icons with tertiary color styling
-- Timeline components support absolute positioning for precise visual alignment
+- Smooth transitions (150ms duration) for hover effects without complex animations
+- Proper accessibility attributes for screen readers and keyboard navigation
+- Unified styling through component abstraction rather than global CSS
 
 ## Design Guidelines
 

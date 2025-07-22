@@ -1,5 +1,6 @@
 ---
 import Layout from "./Layout.astro";
+import Link from "../components/Link.astro";
 import "../styles/global.css";
 
 interface Props {
@@ -80,18 +81,18 @@ const formatDate = (date: Date) => {
 
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
           I'd love to hear your thoughts on this. Feel free to reach out at 
-          <a href={`mailto:morrisliu1994@outlook.com?subject=Feedback on "${title}"`} class="text-[color:var(--color-text-link)]"
-            >morrisliu1994@outlook.com</a
+          <Link href={`mailto:morrisliu1994@outlook.com?subject=Feedback on "${title}"`}
+            >morrisliu1994@outlook.com</Link
           >
           if you want to discuss this further or have questions.
         </p>
 
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
           If you're curious about my background and other projects, you can learn more 
-          <a href="/so-far" class="text-[color:var(--color-text-link)]">about me</a>, 
-          explore my other <a href="/thoughts" class="text-[color:var(--color-text-link)]"
-            >thoughts</a
-          >, or return to my <a href="/" class="text-[color:var(--color-text-link)]">main page</a>.
+          <Link href="/so-far">about me</Link>, 
+          explore my other <Link href="/thoughts"
+            >thoughts</Link
+          >, or return to my <Link href="/">main page</Link>.
         </p>
       </div>
 

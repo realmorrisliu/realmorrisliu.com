@@ -21,6 +21,8 @@ src/
 ├── content/
 │   └── blog/                # Markdown blog posts with Content Collections
 ├── components/
+│   ├── Link.astro           # Unified link component with responsive hover
+│   ├── GitHubIcon.astro     # Accessible GitHub icon with opacity effects
 │   ├── ProjectItem.astro    # Reusable project display component
 │   └── TimelineItem.astro   # Career timeline component
 ├── layouts/
@@ -62,6 +64,8 @@ All commands are run from the root of the project:
 - **Letter-style Navigation**: No traditional header bars; navigation naturally embedded in content
 - **Three-layer Content Architecture**: Homepage intro → Thoughts (blog) → So Far (about/resume)
 - **Component-based Timeline**: Reusable TimelineItem and ProjectItem components
+- **Unified Link System**: Responsive Link component with mobile underlines and desktop hover effects
+- **Accessible Interactions**: GitHubIcon with proper ARIA labels and responsive opacity transitions
 - **Enhanced Link Visibility**: Font-weight 500 links for better usability while maintaining elegance
 - **Responsive Typography**: Carefully tuned type scales and line heights for optimal readability
 
