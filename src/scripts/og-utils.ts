@@ -13,215 +13,213 @@ export async function waitForFonts(): Promise<void> {
 }
 
 /**
- * 终端启动动画控制器
+ * 终端启动动画相关函数
  */
-export class TerminalBootAnimation {
-  private readonly STORAGE_KEY = "og-generator-visited";
-  private terminalBoot: HTMLElement | null;
-  private asciiLogo: HTMLElement | null;
-  private bootSequence: HTMLElement | null;
-  private isSkipped = false;
+const STORAGE_KEY = "og-generator-visited";
 
-  constructor() {
-    this.terminalBoot = document.getElementById("terminal-boot");
-    this.asciiLogo = document.getElementById("ascii-logo");
-    this.bootSequence = document.getElementById("boot-sequence");
-  }
+type AnimationState = {
+  terminalBoot: HTMLElement | null;
+  asciiLogo: HTMLElement | null;
+  bootSequence: HTMLElement | null;
+  isSkipped: boolean;
+};
 
-  /**
-   * 初始化动画
-   */
-  public init(): void {
-    if (!this.terminalBoot || !this.asciiLogo || !this.bootSequence) return;
+const createAnimationState = (): AnimationState => ({
+  terminalBoot: document.getElementById("terminal-boot"),
+  asciiLogo: document.getElementById("ascii-logo"),
+  bootSequence: document.getElementById("boot-sequence"),
+  isSkipped: false,
+});
 
-    const hasVisited = localStorage.getItem(this.STORAGE_KEY);
-    if (hasVisited) return;
+const skipAnimation = (state: AnimationState): void => {
+  if (state.isSkipped || !state.terminalBoot) return;
 
-    this.setupEventListeners();
-    this.startAnimation();
-  }
+  state.isSkipped = true;
+  localStorage.setItem(STORAGE_KEY, "true");
+  state.terminalBoot.classList.add("fade-out");
 
-  private setupEventListeners(): void {
-    const handleKeydown = (e: KeyboardEvent) => {
-      this.skipAnimation();
-      document.removeEventListener("keydown", handleKeydown);
-    };
+  setTimeout(() => {
+    if (state.terminalBoot) {
+      state.terminalBoot.style.display = "none";
+    }
+  }, 500);
+};
 
-    const handleClick = () => {
-      this.skipAnimation();
-      this.terminalBoot?.removeEventListener("click", handleClick);
-    };
+const setupEventListeners = (state: AnimationState): void => {
+  const handleKeydown = () => {
+    skipAnimation(state);
+    document.removeEventListener("keydown", handleKeydown);
+  };
 
-    document.addEventListener("keydown", handleKeydown);
-    this.terminalBoot?.addEventListener("click", handleClick);
-  }
+  const handleClick = () => {
+    skipAnimation(state);
+    state.terminalBoot?.removeEventListener("click", handleClick);
+  };
 
-  private skipAnimation(): void {
-    if (this.isSkipped || !this.terminalBoot) return;
-    
-    this.isSkipped = true;
-    localStorage.setItem(this.STORAGE_KEY, "true");
-    this.terminalBoot.classList.add("fade-out");
-    
-    setTimeout(() => {
-      if (this.terminalBoot) {
-        this.terminalBoot.style.display = "none";
-      }
-    }, 500);
-  }
+  document.addEventListener("keydown", handleKeydown);
+  state.terminalBoot?.addEventListener("click", handleClick);
+};
 
-  private startAnimation(): void {
-    // Phase 1: 显示 ASCII logo
-    setTimeout(() => {
-      if (this.isSkipped || !this.asciiLogo) return;
-      this.asciiLogo.classList.add("show");
-    }, 500);
+const startCountdown = (state: AnimationState): void => {
+  const countdownElement = document.getElementById("countdown");
+  if (!countdownElement) return;
 
-    // Phase 2: 显示启动序列
-    setTimeout(() => {
-      if (this.isSkipped || !this.bootSequence) return;
-      this.bootSequence.classList.add("show");
-      this.typeSequence();
-    }, 1500);
-  }
+  let countdown = 4;
 
-  private typeSequence(): void {
-    const lines = [
-      { id: "line1", text: "Morris Liu Terminal v1.0" },
-      { id: "line2", text: "System initialized..." },
-      { id: "line3", text: "🎉 Congratulations! You found the easter egg!" },
-      { id: "line4", text: "Loading personal workspace..." },
-      { id: "line5", text: "Welcome to the OG Generator." },
-      { id: "continue-text", text: "Press any key to continue..." },
-    ];
-    
-    let currentLineIndex = 0;
+  const countdownInterval = setInterval(() => {
+    if (state.isSkipped) {
+      clearInterval(countdownInterval);
+      return;
+    }
 
-    const typeLine = (): void => {
-      if (this.isSkipped || currentLineIndex >= lines.length) {
-        this.startCountdown();
-        return;
-      }
+    countdown--;
+    if (countdown > 0) {
+      countdownElement.textContent = `(${countdown})`;
+    } else {
+      clearInterval(countdownInterval);
+      skipAnimation(state);
+    }
+  }, 1000);
+};
 
-      const currentLine = lines[currentLineIndex];
-      const lineElement = document.getElementById(currentLine.id);
-      if (!lineElement) {
-        currentLineIndex++;
-        setTimeout(typeLine, 100);
-        return;
-      }
+const typeSequence = (state: AnimationState): void => {
+  const lines = [
+    { id: "line1", text: "Morris Liu Terminal v1.0" },
+    { id: "line2", text: "System initialized..." },
+    { id: "line3", text: "🎉 Congratulations! You found the easter egg!" },
+    { id: "line4", text: "Welcome to the OG Generator." },
+    { id: "continue-text", text: "Press any key to continue..." },
+  ];
 
-      lineElement.textContent = "";
-      lineElement.classList.add("typing-line");
+  let currentLineIndex = 0;
 
-      let charIndex = 0;
-      const typeChar = (): void => {
-        if (this.isSkipped) return;
+  const typeLine = (): void => {
+    if (state.isSkipped || currentLineIndex >= lines.length) {
+      startCountdown(state);
+      return;
+    }
 
-        if (charIndex < currentLine.text.length) {
-          lineElement.textContent += currentLine.text[charIndex];
-          charIndex++;
-          setTimeout(typeChar, 50);
-        } else {
-          lineElement.classList.remove("typing-line");
-          lineElement.classList.add("typing-done");
-          currentLineIndex++;
-          setTimeout(typeLine, 500);
-        }
-      };
+    const currentLine = lines[currentLineIndex];
+    const lineElement = document.getElementById(currentLine.id);
+    if (!lineElement) {
+      currentLineIndex++;
+      setTimeout(typeLine, 100);
+      return;
+    }
 
-      typeChar();
-    };
+    lineElement.textContent = "";
+    lineElement.classList.add("typing-line");
 
-    typeLine();
-  }
+    let charIndex = 0;
+    const typeChar = (): void => {
+      if (state.isSkipped) return;
 
-  private startCountdown(): void {
-    const countdownElement = document.getElementById("countdown");
-    if (!countdownElement) return;
-
-    let countdown = 4;
-
-    const countdownInterval = setInterval(() => {
-      if (this.isSkipped) {
-        clearInterval(countdownInterval);
-        return;
-      }
-
-      countdown--;
-      if (countdown > 0) {
-        countdownElement.textContent = `(${countdown})`;
+      if (charIndex < currentLine.text.length) {
+        lineElement.textContent += currentLine.text[charIndex];
+        charIndex++;
+        setTimeout(typeChar, 50);
       } else {
-        clearInterval(countdownInterval);
-        this.skipAnimation();
+        lineElement.classList.remove("typing-line");
+        lineElement.classList.add("typing-done");
+        currentLineIndex++;
+        setTimeout(typeLine, 500);
       }
-    }, 1000);
-  }
-}
+    };
+
+    typeChar();
+  };
+
+  typeLine();
+};
+
+const startAnimation = (state: AnimationState): void => {
+  // Phase 1: 显示 ASCII logo
+  setTimeout(() => {
+    if (state.isSkipped || !state.asciiLogo) return;
+    state.asciiLogo.classList.add("show");
+  }, 500);
+
+  // Phase 2: 显示启动序列
+  setTimeout(() => {
+    if (state.isSkipped || !state.bootSequence) return;
+    state.bootSequence.classList.add("show");
+    typeSequence(state);
+  }, 1500);
+};
 
 /**
- * OG Generator 编辑器控制器
+ * 初始化终端启动动画
  */
-export class OGGeneratorEditor {
-  constructor() {
-    this.initializeControls();
-  }
+export const initTerminalBootAnimation = (): void => {
+  const state = createAnimationState();
 
-  private initializeControls(): void {
-    this.setupGenerateButton();
-    this.setupResetButton();
-    this.setupTaglineSuggestions();
-    this.setupEditableText();
-  }
+  if (!state.terminalBoot || !state.asciiLogo || !state.bootSequence) return;
 
-  private setupGenerateButton(): void {
-    const generateBtn = document.getElementById("generateBtn");
-    generateBtn?.addEventListener("click", () => {
-      const name = encodeURIComponent(
-        getElementText('[data-original="Morris Liu"]', "Morris Liu")
-      );
-      const passion = encodeURIComponent(
-        getElementText('[data-original="Building tools that matter"]', "Building tools that matter")
-      );
-      window.location.href = `/og-preview?name=${name}&passion=${passion}`;
-    });
-  }
+  const hasVisited = localStorage.getItem(STORAGE_KEY);
+  if (hasVisited) return;
 
-  private setupResetButton(): void {
-    const resetBtn = document.getElementById("resetBtn");
-    resetBtn?.addEventListener("click", () => {
-      document.querySelectorAll(".editable-text").forEach(el => {
-        if (!(el instanceof HTMLElement)) return;
-        const original = el.getAttribute("data-original");
-        if (original) el.textContent = original;
-      });
-    });
-  }
+  setupEventListeners(state);
+  startAnimation(state);
+};
 
-  private setupTaglineSuggestions(): void {
-    document.querySelectorAll(".tagline-suggestion").forEach(el => {
-      if (!(el instanceof HTMLElement)) return;
-      el.addEventListener("click", () => {
-        const passionEl = document.querySelector('[data-original="Building tools that matter"]');
-        if (passionEl instanceof HTMLElement && el.textContent) {
-          passionEl.textContent = el.textContent;
-        }
-      });
-    });
-  }
+/**
+ * OG Generator 编辑器相关函数
+ */
+const setupGenerateButton = (): void => {
+  const generateBtn = document.getElementById("generateBtn");
+  generateBtn?.addEventListener("click", () => {
+    const name = encodeURIComponent(getElementText('[data-original="Morris Liu"]', "Morris Liu"));
+    const passion = encodeURIComponent(
+      getElementText('[data-original="Building tools that matter"]', "Building tools that matter")
+    );
+    window.location.href = `/og-preview?name=${name}&passion=${passion}`;
+  });
+};
 
-  private setupEditableText(): void {
+const setupResetButton = (): void => {
+  const resetBtn = document.getElementById("resetBtn");
+  resetBtn?.addEventListener("click", () => {
     document.querySelectorAll(".editable-text").forEach(el => {
       if (!(el instanceof HTMLElement)) return;
-      el.addEventListener("keydown", e => {
-        if (e.key === "Enter") {
-          e.preventDefault();
-          el.blur();
-        }
-      });
+      const original = el.getAttribute("data-original");
+      if (original) el.textContent = original;
     });
-  }
-}
+  });
+};
+
+const setupTaglineSuggestions = (): void => {
+  document.querySelectorAll(".tagline-suggestion").forEach(el => {
+    if (!(el instanceof HTMLElement)) return;
+    el.addEventListener("click", () => {
+      const passionEl = document.querySelector('[data-original="Building tools that matter"]');
+      if (passionEl instanceof HTMLElement && el.textContent) {
+        passionEl.textContent = el.textContent;
+      }
+    });
+  });
+};
+
+const setupEditableText = (): void => {
+  document.querySelectorAll(".editable-text").forEach(el => {
+    if (!(el instanceof HTMLElement)) return;
+    el.addEventListener("keydown", e => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        el.blur();
+      }
+    });
+  });
+};
+
+/**
+ * 初始化 OG Generator 编辑器功能
+ */
+export const initOGGeneratorEditor = (): void => {
+  setupGenerateButton();
+  setupResetButton();
+  setupTaglineSuggestions();
+  setupEditableText();
+};
 
 /**
  * 1:1 复制 HTML 样式到 Canvas 生成 OG 图片

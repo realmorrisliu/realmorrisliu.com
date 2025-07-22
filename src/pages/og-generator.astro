@@ -201,15 +201,14 @@ import "../styles/global.css";
   </style>
 
   <script>
-    import { TerminalBootAnimation, OGGeneratorEditor } from "../scripts/og-utils";
+    import { initTerminalBootAnimation, initOGGeneratorEditor } from "../scripts/og-utils";
 
     document.addEventListener("DOMContentLoaded", () => {
       // 初始化终端启动动画
-      const bootAnimation = new TerminalBootAnimation();
-      bootAnimation.init();
+      initTerminalBootAnimation();
 
-      // 初始化编辑器控制器
-      new OGGeneratorEditor();
+      // 初始化编辑器功能
+      initOGGeneratorEditor();
     });
   </script>
 </Layout>

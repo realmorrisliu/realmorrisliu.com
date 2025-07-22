@@ -346,8 +346,8 @@ The website includes a custom OG (Open Graph) image generation tool that creates
 - Canvas generation (`generateOGImage()`) with pixel-perfect DOM to canvas conversion
 - Download handling (`downloadCanvas()`) with proper filename generation
 - Text extraction (`getElementText()`) with fallback support
-- `TerminalBootAnimation` class: Encapsulates terminal boot animation logic with proper TypeScript null checking
-- `OGGeneratorEditor` class: Manages editor controls (generate, reset, tagline suggestions, editable text)
+- `initTerminalBootAnimation()`: Functional approach to terminal boot animation with state management
+- `initOGGeneratorEditor()`: Functional approach to editor controls (generate, reset, tagline suggestions, editable text)
 
 **Key Technical Decisions:**
 
@@ -359,7 +359,7 @@ The website includes a custom OG (Open Graph) image generation tool that creates
 - **Animation Architecture**: Inline scripts with `is:inline` for immediate execution, preventing flash-of-unstyled-content
 - **First-Visit Detection**: localStorage-based approach avoids server-side storage while maintaining privacy
 - **Performance Optimization**: CSS pseudo-elements for cursor animation, preventing text flicker during typewriter effect
-- **Code Organization**: Class-based architecture in `og-utils.ts` separates concerns and improves maintainability
+- **Code Organization**: Functional programming approach in `og-utils.ts` with pure functions and state management for better maintainability
 
 **Usage Workflow:**
 
