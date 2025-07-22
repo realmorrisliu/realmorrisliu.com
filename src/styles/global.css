@@ -89,7 +89,28 @@ p {
   color: var(--color-text-secondary);
 }
 
-/* 链接样式现在统一在 Link.astro 组件中管理 */
+/* 统一的链接样式 - 与 Link.astro 组件保持一致 */
+.prose a {
+  font-weight: 500;
+  color: var(--color-text-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: all 150ms ease;
+}
+
+/* 桌面端：默认无下划线，hover时显示 */
+@media (min-width: 768px) {
+  .prose a {
+    text-decoration: none;
+  }
+  
+  .prose a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+}
 
 /* Typography 插件自定义覆盖 - 极简主义风格 */
 .prose h1,
