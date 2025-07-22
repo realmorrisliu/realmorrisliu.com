@@ -1,10 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Link from "../components/Link.astro";
+import FooterSignature from "../components/FooterSignature.astro";
 import "../styles/global.css";
 ---
 
-<Layout 
+<Layout
   title="Morris Liu - Software Engineer & Team Lead"
   description="Morris Liu builds software and leads teams. Currently working on AI infrastructure while exploring ideas through side projects. Believes in tools that are reliable, fast, and help you sleep well at night."
 >
@@ -16,28 +17,24 @@ import "../styles/global.css";
 
       <div class="space-y-6 text-lg text-[color:var(--color-text-secondary)]">
         <p>
-          I build software and lead teams. Currently working on AI infrastructure while exploring 
-          ideas through side projects. I believe in tools that are reliable, fast, and help you 
+          I build software and lead teams. Currently working on AI infrastructure while exploring
+          ideas through side projects. I believe in tools that are reliable, fast, and help you
           sleep well at night.
         </p>
 
         <p>
           I write about technology and design in my
-          <Link href="/thoughts">thoughts</Link>, and you can learn
-          about my work and projects
+          <Link href="/thoughts">thoughts</Link>, and you can learn about my work and projects
           <Link href="/so-far">so far</Link>.
         </p>
 
         <p>
-          Outside of code, I practice bass and capture moments through photography—both teach me 
+          Outside of code, I practice bass and capture moments through photography—both teach me
           about rhythm, timing, and finding beauty in structure.
         </p>
       </div>
     </div>
 
-    <!-- 简洁的署名 -->
-    <footer class="mt-24 pt-8">
-      <p class="font-serif text-base text-[color:var(--color-text-primary)]">Morris Liu</p>
-    </footer>
+    <FooterSignature />
   </div>
 </Layout>

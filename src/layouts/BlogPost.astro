@@ -1,6 +1,7 @@
 ---
 import Layout from "./Layout.astro";
 import Link from "../components/Link.astro";
+import FooterSignature from "../components/FooterSignature.astro";
 import "../styles/global.css";
 
 interface Props {
@@ -10,9 +11,18 @@ interface Props {
   updatedDate?: Date;
   author: string;
   tags?: string[];
+  readingTime?: number;
 }
 
-const { title, description, pubDate, updatedDate, author, tags } = Astro.props;
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  author,
+  tags,
+  readingTime: propReadingTime,
+} = Astro.props;
 
 const formatDate = (date: Date) => {
   return date.toLocaleDateString("en-US", {
@@ -21,89 +31,102 @@ const formatDate = (date: Date) => {
     day: "numeric",
   });
 };
+
+// Use reading time from frontmatter, or calculate as fallback
+const readingTime =
+  propReadingTime ||
+  (() => {
+    // Fallback calculation if not provided in frontmatter
+    return 5; // Default estimate
+  })();
+
+// Enhanced keywords for SEO
+const enhancedKeywords = [
+  ...(tags || []),
+  "Morris Liu",
+  "Software Engineer", 
+  "Tech Blog",
+  "Programming",
+].filter(Boolean);
+
+// Truncate title for breadcrumb display
+const truncateTitle = (text: string, maxLength: number = 50) => {
+  if (text.length <= maxLength) return text;
+  return text.substring(0, maxLength).replace(/\s+\S*$/, "") + "...";
+};
 ---
 
-<Layout 
+<Layout
   title={`${title} - Morris Liu`}
   description={description}
   type="article"
   publishedTime={pubDate.toISOString()}
   modifiedTime={updatedDate?.toISOString()}
-  tags={tags}
+  tags={enhancedKeywords}
+  readingTime={readingTime}
 >
   <article class="mx-auto max-w-2xl px-6 py-16">
+    <!-- Breadcrumb Navigation for SEO -->
+    <nav aria-label="Breadcrumb" class="mb-8">
+      <ol class="flex items-center text-sm text-[color:var(--color-text-tertiary)]">
+        <li class="shrink-0">
+          <Link href="/" class="hover:text-[color:var(--color-text-secondary)]">Home</Link>
+        </li>
+        <li class="shrink-0 before:mx-2 before:content-['/']">
+          <Link href="/thoughts" class="hover:text-[color:var(--color-text-secondary)]"
+            >Thoughts</Link>
+        </li>
+        <li class="min-w-0 truncate before:mx-2 before:content-['/']">
+          <span class="truncate" title={title}>{truncateTitle(title, 35)}</span>
+        </li>
+      </ol>
+      <script
+        type="application/ld+json"
+        is:inline
+        set:html={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://realmorrisliu.com/",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Thoughts",
+              item: "https://realmorrisliu.com/thoughts",
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: title,
+              item: `https://realmorrisliu.com${Astro.url.pathname}`,
+            },
+          ],
+        })}
+      />
+    </nav>
+
     <header class="mb-16">
-      <h1 class="mb-6 font-serif text-4xl leading-tight">{title}</h1>
+      <h1 class="mb-6 font-serif text-3xl leading-tight md:text-4xl">{title}</h1>
 
-      <div class="mb-4">
-        <time class="text-base" style="color: var(--color-text-tertiary);">
-          {formatDate(pubDate)}
-        </time>
-        {
-          updatedDate && (
-            <span class="ml-6 text-base" style="color: var(--color-text-tertiary);">
-              Updated: {formatDate(updatedDate)}
-            </span>
-          )
-        }
+      <div class="flex items-center gap-4 text-sm" style="color: var(--color-text-tertiary);">
+        <time>{formatDate(pubDate)}</time>
+        <span>{readingTime} min read</span>
       </div>
-
-      <p class="mb-6 text-lg leading-relaxed" style="color: var(--color-text-secondary);">
-        {description}
-      </p>
-
-      {
-        tags && tags.length > 0 && (
-          <div class="flex flex-wrap gap-3">
-            {tags.map(tag => (
-              <span
-                class="rounded-full border px-3 py-1 text-sm"
-                style="color: var(--color-text-secondary); border-color: var(--color-border);"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        )
-      }
     </header>
 
     <div class="prose prose-lg prose-gray max-w-none">
       <slot />
     </div>
 
-    <!-- 作者签名式导航 -->
-    <footer class="mt-24 space-y-6 pt-8">
-      <div class="space-y-4">
-        <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-          Thank you for reading.
-        </p>
-
-        <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-          I'd love to hear your thoughts on this. Feel free to reach out at 
-          <Link href={`mailto:morrisliu1994@outlook.com?subject=Feedback on "${title}"`}
-            >morrisliu1994@outlook.com</Link
-          >
-          if you want to discuss this further or have questions.
-        </p>
-
-        <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-          If you're curious about my background and other projects, you can learn more 
-          <Link href="/so-far">about me</Link>, 
-          explore my other <Link href="/thoughts"
-            >thoughts</Link
-          >, or return to my <Link href="/">main page</Link>.
-        </p>
-      </div>
-
-      <div class="pt-4">
-        <p class="font-serif text-base text-[color:var(--color-text-primary)]">
-          {author}
-        </p>
-        <time class="text-sm text-[color:var(--color-text-tertiary)]">
-          {formatDate(pubDate)}
-        </time>
-      </div>
-    </footer>
+    <FooterSignature author={author}>
+      <nav class="mt-2">
+        <Link href="/thoughts" class="text-sm">← Back to thoughts</Link>
+      </nav>
+    </FooterSignature>
   </article>
 </Layout>

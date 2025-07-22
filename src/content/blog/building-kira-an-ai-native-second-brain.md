@@ -1,9 +1,22 @@
 ---
-title: "Building Kira: An AI-Native Second Brain"
-description: "Why I'm building an AI chat app that thinks like a brain, not a chatbot—and how it evolved from a simple reading app idea."
+title: "Building Kira: An AI-Native Second Brain That Captures Context, Not Just Notes"
+description: "Traditional note-taking apps like Notion and Obsidian create too much cognitive overhead. I'm building Kira—an AI assistant that continuously captures context from your digital environment and amplifies your thinking through conversation. Learn how it evolved from a reading app idea into something completely different."
 pubDate: 2025-07-20
-tags: ["ai", "product", "design", "rust"]
+updatedDate: 2025-07-22
+tags:
+  [
+    "ai",
+    "product-design",
+    "knowledge-management",
+    "second-brain",
+    "context-aware-ai",
+    "personal-assistant",
+    "productivity",
+    "note-taking-alternative",
+  ]
 featured: true
+author: "Morris Liu"
+readingTime: 6
 ---
 
 I can't use Notion. Or Obsidian. Or any of those heavyweight knowledge management apps.
@@ -87,3 +100,7 @@ For now, I'm focused on solving the immediate problem: giving people like me a w
 If you're someone who wants to remember more, think clearer, and organize less, Kira might be exactly what you need too.
 
 The beta is coming soon. Because the best way to build a second brain is to use it every day.
+
+---
+
+_Want to see another example of building simpler tools for developers? Check out [Why I Built Sealbox](/thoughts/why-i-built-sealbox), where I apply similar thinking to secret management._

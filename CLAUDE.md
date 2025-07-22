@@ -6,10 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 | Command         | Action                                               |
 | --------------- | ---------------------------------------------------- |
-| `pnpm dev`      | Starts local dev server at `localhost:4321`          |
-| `pnpm build`    | Build production site to `./dist/`                   |
-| `pnpm preview`  | Preview build locally before deploying               |
-| `pnpm prettier` | Format all files with Prettier (2-space indentation) |
+| `pnpm dev`      | Start local dev server at `localhost:4321`          |
+| `pnpm build`    | Build production site to `./dist/`                  |
+| `pnpm preview`  | Preview build locally before deploying              |
+| `pnpm prettier` | Format all files with Prettier (2-space indentation)|
 
 ## Project Architecture
 
@@ -23,7 +23,9 @@ src/
 │   └── blog/                # Markdown blog posts with Content Collections
 ├── components/
 │   ├── Link.astro           # Unified link component with responsive styling
-│   ├── GitHubIcon.astro     # GitHub icon with accessibility and hover effects  
+│   ├── GitHubIcon.astro     # GitHub icon with accessibility and hover effects
+│   ├── RssIcon.astro        # RSS icon with text and responsive styling
+│   ├── FooterSignature.astro # Reusable footer signature with navigation
 │   ├── ProjectItem.astro    # Reusable project display with GitHub links
 │   └── TimelineItem.astro   # Career timeline with continuous line design
 ├── layouts/
@@ -32,8 +34,9 @@ src/
 ├── pages/
 │   ├── index.astro          # Homepage with letter-style greeting
 │   ├── so-far.astro         # Professional timeline, projects, skills
+│   ├── rss.xml.ts           # RSS feed generation
 │   └── thoughts/
-│       ├── index.astro      # Blog listing page
+│       ├── index.astro      # Blog listing page with RSS icon
 │       └── [...slug].astro  # Dynamic blog post routes
 └── styles/
     └── global.css           # Design system + Typography config
@@ -276,12 +279,14 @@ The "So Far" page follows this content philosophy:
 The Work Projects section is optimized for technical interviews and showcases:
 
 **Technical Depth Examples:**
+
 - **X-Elephant**: RAG system optimization (100GB+ → 10GB memory reduction), Qdrant cluster architecture, custom Rust tooling, automated Shopify data pipeline
 - **EverCraft**: SaaS version control system for CAD workflows, Git-inspired architecture, fractal3D integration
 - **EverCraft Lite**: Desktop application built with Tauri and Rust, incubated from enterprise solution
 - **fractal3D**: 3D visualization engine with team leadership experience
 
 **Interview-Ready Format:**
+
 - Quantifiable achievements and technical metrics
 - Specific technology stacks and architectural decisions
 - Problem-solving narratives with concrete solutions
@@ -329,29 +334,33 @@ The project uses Prettier for consistent code formatting with the following conf
 
 ## SEO & Performance Optimization
 
-### Search Engine Optimization
+### Search Engine Optimization (Comprehensive Implementation)
 
-The website includes comprehensive SEO optimization for better discoverability and search rankings:
+The website features professional-grade SEO optimization for maximum discoverability and search rankings:
 
 **Meta Tags & Social Media:**
+
 - Complete Open Graph and Twitter Card implementation
 - Dynamic meta descriptions for each page
 - Canonical URLs for proper indexing
 - Article-specific metadata for blog posts (publish dates, tags, author)
 
 **Structured Data (JSON-LD):**
+
 - Person schema for homepage and profile pages
 - BlogPosting schema for individual articles
 - Rich snippets with author, publication dates, and content descriptions
 - Schema.org markup for enhanced search results
 
 **Technical SEO:**
+
 - XML sitemap automatically generated via `@astrojs/sitemap`
 - SEO-optimized robots.txt with crawl guidelines
 - Proper HTML semantic structure with heading hierarchy
 - Clean URL structure (`/thoughts/post-name/`)
 
 **Keywords & Content:**
+
 - Strategic keyword placement for software engineering, Rust, TypeScript, AI infrastructure
 - Content-first approach with technical depth and personal insights
 - Regular content updates with publication dates
@@ -359,12 +368,14 @@ The website includes comprehensive SEO optimization for better discoverability a
 ### Performance & Caching
 
 **Static Optimization:**
+
 - All pages pre-generated at build time (SSG)
 - Minimal JavaScript footprint
 - Optimized font loading with Fontsource local hosting
 - CSS custom properties for faster style application
 
 **Asset Optimization:**
+
 - Long-term caching for static assets (1 year)
 - Short-term caching for HTML content (1 hour)
 - Proper MIME type configuration
@@ -377,6 +388,7 @@ The website includes comprehensive SEO optimization for better discoverability a
 The website is optimized for deployment on Cloudflare Pages with the following configuration:
 
 **Build Settings:**
+
 - Framework: Astro
 - Build command: `pnpm build`
 - Build output directory: `dist`
@@ -385,18 +397,21 @@ The website is optimized for deployment on Cloudflare Pages with the following c
 **Optimization Files:**
 
 **`public/_headers`:**
+
 - Security headers (XSS protection, content type sniffing prevention)
 - Long-term caching for static assets (CSS, JS, fonts, images)
 - Short-term caching for HTML and XML files
 - Proper MIME type configuration
 
 **`public/_redirects`:**
+
 - SEO-friendly URL redirects (`/blog/*` → `/thoughts/*`)
 - Social media shortlinks (`/github`, `/twitter`)
 - Project quick access (`/sealbox` → GitHub repository)
 - Legacy URL support for better user experience
 
 **Cloudflare Pages Benefits:**
+
 - Global CDN with 200+ data centers
 - Automatic HTTPS with free SSL certificates
 - Git integration for automatic deployments
@@ -406,12 +421,14 @@ The website is optimized for deployment on Cloudflare Pages with the following c
 ### Performance Features
 
 **Caching Strategy:**
+
 - Static assets: 1 year cache with immutable headers
 - HTML files: 1 hour cache for fresh content
 - Sitemap/robots: 24 hour cache for SEO tools
 - Font files: Long-term caching with cross-origin headers
 
 **Security Headers:**
+
 - X-Frame-Options: DENY (prevent clickjacking)
 - X-Content-Type-Options: nosniff (prevent MIME sniffing)
 - X-XSS-Protection: 1; mode=block (XSS protection)
@@ -421,12 +438,14 @@ The website is optimized for deployment on Cloudflare Pages with the following c
 ### Monitoring & Analytics
 
 **Built-in Monitoring:**
+
 - Cloudflare Pages analytics for traffic and performance
 - Core Web Vitals tracking through Cloudflare
 - Build and deployment status monitoring
 - Error tracking and alerting
 
 **SEO Monitoring:**
+
 - XML sitemap submission to Google Search Console
 - Structured data validation
 - Page speed insights monitoring
@@ -435,7 +454,9 @@ The website is optimized for deployment on Cloudflare Pages with the following c
 ## Project Dependencies
 
 ### Core Dependencies
+
 - **Astro** (^5.11.2): Static site generator and framework
+- **@astrojs/rss** (^4.0.12): RSS feed generation for blog
 - **@astrojs/sitemap** (^3.4.1): Automatic XML sitemap generation
 - **Tailwind CSS** (^4.1.11): Utility-first CSS framework
 - **@tailwindcss/vite** (^4.1.11): Vite integration for Tailwind
@@ -443,12 +464,14 @@ The website is optimized for deployment on Cloudflare Pages with the following c
 - **@fontsource/eb-garamond** (^5.2.6): EB Garamond font family local hosting
 
 ### Development Dependencies
+
 - **@tailwindcss/typography** (^0.5.16): Typography plugin for markdown content
 - **Prettier** (3.6.2): Code formatting with 2-space indentation
 - **prettier-plugin-astro** (0.14.1): Astro component formatting
 - **prettier-plugin-tailwindcss** (0.6.14): Tailwind class sorting
 
 ### Dependency Strategy
+
 - Minimal dependency footprint for better security and performance
 - Local font hosting to reduce external requests and improve loading speed
 - Development-only dependencies for code quality without runtime overhead

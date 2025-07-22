@@ -1,9 +1,22 @@
 ---
-title: "Why I Built Sealbox"
-description: "How a simple need for secret storage led to building a Rust-based alternative to enterprise secret management solutions."
+title: "Why I Built Sealbox: A Developer-First Secret Management Tool in Rust"
+description: "After struggling with HashiCorp Vault's complexity for a simple API key storage task, I built Sealbox—a lightweight, single-binary secret manager in Rust with end-to-end encryption, SQLite storage, and zero cloud dependencies. Here's the story and technical decisions behind it."
 pubDate: 2025-07-19
-tags: ["rust", "security", "development", "tools"]
+updatedDate: 2025-07-22
+tags:
+  [
+    "rust",
+    "security",
+    "devops",
+    "secret-management",
+    "open-source",
+    "encryption",
+    "sqlite",
+    "developer-tools",
+  ]
 featured: true
+author: "Morris Liu"
+readingTime: 4
 ---
 
 I needed to store API keys for a side project. Simple requirement, right?
@@ -69,3 +82,7 @@ Sealbox doesn't aim to replace Vault. It aims to be the 90% simpler alternative 
 Sometimes the most valuable thing you can build is something that gets out of the way.
 
 If you're tired of fighting enterprise tools for simple problems, [check out Sealbox](https://github.com/realmorrisliu/sealbox). It might be exactly what you didn't know you needed.
+
+---
+
+_If you enjoyed this story about building developer-first tools, you might also be interested in [Building Kira: An AI-Native Second Brain](/thoughts/building-kira-an-ai-native-second-brain), where I explore similar principles applied to knowledge management._

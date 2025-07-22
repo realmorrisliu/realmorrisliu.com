@@ -1,0 +1,38 @@
+---
+export interface Props {
+  author?: string;
+  showNavigation?: boolean;
+  navigationItems?: Array<{
+    href: string;
+    label: string;
+  }>;
+}
+
+const { author = "Morris Liu", showNavigation = false, navigationItems = [] } = Astro.props;
+---
+
+<footer class="mt-24 pt-8">
+  {
+    showNavigation && navigationItems.length > 0 && (
+      <nav class="mb-6">
+        <div class="flex gap-4 text-sm text-[color:var(--color-text-tertiary)]">
+          {navigationItems.map(item => (
+            <a
+              href={item.href}
+              class="font-medium text-[color:var(--color-text-link)] underline decoration-1 underline-offset-2 transition-all duration-150 hover:text-[color:var(--color-text-secondary)] md:no-underline md:hover:underline"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      </nav>
+    )
+  }
+
+  <div class="text-base text-[color:var(--color-text-primary)]">
+    {author}
+  </div>
+
+  <!-- Optional slot for custom navigation -->
+  <slot />
+</footer>

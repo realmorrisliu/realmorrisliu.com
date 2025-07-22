@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import TimelineItem from "../components/TimelineItem.astro";
 import ProjectItem from "../components/ProjectItem.astro";
 import Link from "../components/Link.astro";
+import FooterSignature from "../components/FooterSignature.astro";
 import "../styles/global.css";
 ---
 
@@ -270,8 +271,7 @@ import "../styles/global.css";
           />
           <p class="mt-2 ml-0 text-sm text-[color:var(--color-text-tertiary)]">
             → Read more about the vision and design philosophy in
-            <Link
-              href="/thoughts/building-kira-an-ai-native-second-brain"
+            <Link href="/thoughts/building-kira-an-ai-native-second-brain"
               >Building Kira: An AI-Native Second Brain</Link
             >
           </p>
@@ -329,16 +329,12 @@ import "../styles/global.css";
       <div class="space-y-4">
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
           I spend time practicing bass, working through the grooves that shaped music—<Link
-            href="https://en.wikipedia.org/wiki/Queen_(band)"
-            >Queen</Link
-          >'s theatrical bass lines, <Link
-            href="https://en.wikipedia.org/wiki/Chic_(band)"
+            href="https://en.wikipedia.org/wiki/Queen_(band)">Queen</Link
+          >'s theatrical bass lines, <Link href="https://en.wikipedia.org/wiki/Chic_(band)"
             >Chic</Link
-          >'s infectious funk, <Link
-            href="https://en.wikipedia.org/wiki/Earth,_Wind_%26_Fire"
+          >'s infectious funk, <Link href="https://en.wikipedia.org/wiki/Earth,_Wind_%26_Fire"
             >EW&F</Link
-          >'s sophisticated arrangements, and <Link
-            href="https://en.wikipedia.org/wiki/AC/DC"
+          >'s sophisticated arrangements, and <Link href="https://en.wikipedia.org/wiki/AC/DC"
             >AC/DC</Link
           >'s relentless drive. There's something about the bass that mirrors good engineering: it's
           the foundation that holds everything else together.
@@ -347,11 +343,9 @@ import "../styles/global.css";
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
           When I'm not playing music, I'm often capturing moments through photography. I'm drawn to
           the philosophy of photographers like <Link
-            href="https://en.wikipedia.org/wiki/Henri_Cartier-Bresson"
-            >Henri Cartier-Bresson</Link
+            href="https://en.wikipedia.org/wiki/Henri_Cartier-Bresson">Henri Cartier-Bresson</Link
           >, who taught us about the decisive moment, and <Link
-            href="https://hideakihamada.com/about/"
-            >Hideaki Hamada</Link
+            href="https://hideakihamada.com/about/">Hideaki Hamada</Link
           >, whose quiet observations of daily life reveal extraordinary beauty in the ordinary.
         </p>
 
@@ -378,10 +372,7 @@ import "../styles/global.css";
       <h2 class="mb-4 font-serif text-2xl leading-tight">Contact</h2>
       <div class="space-y-4">
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-          You can find me on <Link
-            href="https://github.com/realmorrisliu"
-            >GitHub</Link
-          >
+          You can find me on <Link href="https://github.com/realmorrisliu">GitHub</Link>
           where I share code and occasionally wonder if anyone reads commit messages.
         </p>
 
@@ -397,11 +388,10 @@ import "../styles/global.css";
       </div>
     </section>
 
-    <!-- 信件结尾式返回链接 -->
-    <footer class="mt-16 pt-8">
-      <p class="font-serif text-base text-[color:var(--color-text-secondary)]">
-        <Link href="/">Morris Liu</Link>
-      </p>
-    </footer>
+    <FooterSignature>
+      <nav class="mt-2">
+        <Link href="/" class="text-sm">← Back to main page</Link>
+      </nav>
+    </FooterSignature>
   </div>
 </Layout>

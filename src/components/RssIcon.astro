@@ -1,0 +1,45 @@
+---
+export interface Props {
+  class?: string;
+  showText?: boolean;
+}
+
+const { class: className = "", showText = false } = Astro.props;
+---
+
+<a
+  href="/rss.xml"
+  class={`inline-flex items-center gap-2 text-[color:var(--color-text-tertiary)] md:opacity-60 opacity-100 md:hover:opacity-100 transition-opacity duration-150 ${className}`}
+  aria-label="RSS Feed"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  {showText && <span class="text-xs">Stay updated</span>}
+  <svg
+    width="12"
+    height="12"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="fill-current inline"
+    style="vertical-align: baseline;"
+  >
+    <path
+      d="M4 11a9 9 0 0 1 9 9"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
+    />
+    <path
+      d="M4 4a16 16 0 0 1 16 16"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
+    />
+    <circle cx="5" cy="19" r="1" fill="currentColor"/>
+  </svg>
+</a>
