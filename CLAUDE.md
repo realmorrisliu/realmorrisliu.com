@@ -319,6 +319,7 @@ The website includes a custom OG (Open Graph) image generation tool that creates
 - **Full-size Export**: 1200×630px PNG generation using native Canvas API
 - **Typography**: Maple Mono monospace font for authentic terminal look
 - **Easter Egg Integration**: Hidden feature accessible via `/og-generator` (not in main navigation)
+- **Terminal Boot Animation**: First-time visitors see a cinematic terminal startup sequence with ASCII art logo, congratulations message, and typewriter effects
 
 **Technical Implementation:**
 
@@ -328,6 +329,10 @@ The website includes a custom OG (Open Graph) image generation tool that creates
 - Preset tagline suggestions with click-to-apply functionality
 - Button component integration for consistent UI
 - URL parameter generation for seamless transition to full-size preview
+- Terminal boot animation overlay with localStorage-based first-visit detection
+- ASCII art logo with non-breaking spaces for precise alignment
+- Typewriter effect with character-by-character rendering (50ms intervals)
+- 4-second countdown with skip functionality via keyboard/mouse input
 
 **`src/pages/og-preview.astro`:**
 - Full-size (1200×630px) preview and download page
@@ -349,15 +354,19 @@ The website includes a custom OG (Open Graph) image generation tool that creates
 - **Font Synchronization**: `document.fonts.ready` ensures Maple Mono loads before image generation
 - **TypeScript Safety**: Full error handling with proper type guards and null checks
 - **Responsive Design**: Separate scaling for editor (50%) and full-size (100%) views
+- **Animation Architecture**: Inline scripts with `is:inline` for immediate execution, preventing flash-of-unstyled-content
+- **First-Visit Detection**: localStorage-based approach avoids server-side storage while maintaining privacy
+- **Performance Optimization**: CSS pseudo-elements for cursor animation, preventing text flicker during typewriter effect
 
 **Usage Workflow:**
 
 1. Navigate to `/og-generator` (easter egg URL)
-2. Click on text in preview to edit name and tagline
-3. Select from preset tagline suggestions or create custom
-4. Click "Generate full size" to open 1200×630px version
-5. Click "Save as PNG" to download high-quality image
-6. Use downloaded image as social media preview
+2. **First-time visitors**: Experience cinematic terminal boot sequence with ASCII logo and congratulations message (press any key to skip)
+3. Click on text in preview to edit name and tagline
+4. Select from preset tagline suggestions or create custom
+5. Click "Generate full size" to open 1200×630px version
+6. Click "Save as PNG" to download high-quality image
+7. Use downloaded image as social media preview
 
 ### Development Notes
 

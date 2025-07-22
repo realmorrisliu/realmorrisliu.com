@@ -10,6 +10,53 @@ import "../styles/global.css";
   title="OG Image Generator - Morris Liu"
   description="A simple tool to generate social media preview images for your content."
 >
+  <!-- 立即执行脚本，避免黑屏闪烁 -->
+  <script is:inline>
+    (function() {
+      const STORAGE_KEY = "og-generator-visited";
+      const hasVisited = localStorage.getItem(STORAGE_KEY);
+      
+      if (!hasVisited) {
+        // 首次访问，显示动画
+        const style = document.createElement('style');
+        style.textContent = '#terminal-boot { display: block !important; }';
+        document.head.appendChild(style);
+      }
+    })();
+  </script>
+  <!-- 终端启动动画 -->
+  <div
+    id="terminal-boot"
+    class="fixed inset-0 z-50 overflow-hidden bg-black font-mono text-green-400"
+    style="display: none;"
+  >
+    <div class="h-full p-8">
+      <div id="ascii-logo" class="mb-8 mt-16 text-sm leading-tight opacity-0">
+        <div>&nbsp;███╗&nbsp;&nbsp;&nbsp;███╗██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div>&nbsp;████╗&nbsp;████║██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div>&nbsp;██╔████╔██║██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div>&nbsp;██║╚██╔╝██║██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div>&nbsp;██║&nbsp;╚═╝&nbsp;██║███████╗</div>
+        <div>&nbsp;╚═╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╚═╝╚══════╝</div>
+      </div>
+
+      <div id="boot-sequence" class="text-sm opacity-0">
+        <div id="line1" class="mb-2"></div>
+        <div id="line2" class="mb-2"></div>
+        <div id="line3" class="mb-2 text-yellow-400"></div>
+        <div id="line4" class="mb-2"></div>
+        <div id="line5" class="mb-4"></div>
+        <div id="line6" class="mb-4 text-gray-400">
+          <span id="continue-text"></span>
+          <span id="countdown" class="ml-2 inline-block w-8 text-left text-green-300"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute right-4 bottom-4 text-xs text-gray-500">
+      <kbd>ESC</kbd> to skip animation
+    </div>
+  </div>
   <div class="mx-auto max-w-2xl px-6 py-16">
     <header class="mb-16">
       <h1 class="mb-6 font-serif text-4xl leading-tight">OG Image Generator</h1>
@@ -94,8 +141,209 @@ import "../styles/global.css";
     </FooterSignature>
   </div>
 
+  <style>
+    /* 终端启动动画样式 */
+    @keyframes typewriter {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink {
+      from,
+      to {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .typing-line::after {
+      content: "";
+      border-right: 2px solid #22c55e;
+      animation: blink 1s infinite;
+    }
+
+    .typing-done::after {
+      display: none;
+    }
+
+    #terminal-boot.fade-out {
+      opacity: 0;
+      transition: opacity 0.5s ease-out;
+      pointer-events: none;
+    }
+
+    /* ASCII logo 渐入效果 */
+    #ascii-logo.show {
+      opacity: 1;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    #boot-sequence.show {
+      opacity: 1;
+    }
+  </style>
+
   <script>
     import { getElementText } from "../scripts/og-utils";
+
+    // 终端启动动画控制
+    document.addEventListener("DOMContentLoaded", () => {
+      const STORAGE_KEY = "og-generator-visited";
+      const terminalBoot = document.getElementById("terminal-boot");
+      const asciiLogo = document.getElementById("ascii-logo");
+      const bootSequence = document.getElementById("boot-sequence");
+
+      // 检查元素是否存在
+      if (!terminalBoot || !asciiLogo || !bootSequence) return;
+
+      // 检查是否首次访问
+      const hasVisited = localStorage.getItem(STORAGE_KEY);
+
+      if (hasVisited) {
+        // 非首次访问，确保动画隐藏（虽然应该已经被头部脚本处理了）
+        return;
+      }
+
+      // 首次访问，播放启动动画
+      let animationPhase = 0;
+      let isSkipped = false;
+
+      function skipAnimation() {
+        if (isSkipped) return;
+        isSkipped = true;
+        localStorage.setItem(STORAGE_KEY, "true");
+        terminalBoot.classList.add("fade-out");
+        setTimeout(() => {
+          terminalBoot.style.display = "none";
+        }, 500);
+      }
+
+      function startAnimation() {
+        // Phase 1: 显示 ASCII logo
+        setTimeout(() => {
+          if (isSkipped) return;
+          asciiLogo.classList.add("show");
+        }, 500);
+
+        // Phase 2: 显示启动序列
+        setTimeout(() => {
+          if (isSkipped) return;
+          bootSequence.classList.add("show");
+          typeSequence();
+        }, 1500);
+      }
+
+      function typeSequence() {
+        const lines = [
+          { id: "line1", text: "Morris Liu Terminal v1.0" },
+          { id: "line2", text: "System initialized..." },
+          { id: "line3", text: "🎉 Congratulations! You found the easter egg!" },
+          { id: "line4", text: "Loading personal workspace..." },
+          { id: "line5", text: "Welcome to the OG Generator." },
+          { id: "continue-text", text: "Press any key to continue..." },
+        ];
+        let currentLineIndex = 0;
+
+        function typeLine() {
+          if (isSkipped || currentLineIndex >= lines.length) {
+            // 动画完成，开始倒计时
+            startCountdown();
+            return;
+          }
+
+          const currentLine = lines[currentLineIndex];
+          const lineElement = document.getElementById(currentLine.id);
+          if (!lineElement) {
+            currentLineIndex++;
+            setTimeout(typeLine, 100);
+            return;
+          }
+
+          // 清空元素内容，开始打字
+          lineElement.textContent = "";
+          lineElement.classList.add("typing-line");
+
+          let charIndex = 0;
+          function typeChar() {
+            if (isSkipped) return;
+
+            if (charIndex < currentLine.text.length) {
+              lineElement.textContent += currentLine.text[charIndex];
+              charIndex++;
+              setTimeout(typeChar, 50); // 每个字符50ms间隔
+            } else {
+              // 当前行打字完成
+              lineElement.classList.remove("typing-line");
+              lineElement.classList.add("typing-done");
+              currentLineIndex++;
+              setTimeout(typeLine, 500); // 行与行之间500ms间隔
+            }
+          }
+
+          typeChar();
+        }
+
+        typeLine();
+      }
+
+      function startCountdown() {
+        const countdownElement = document.getElementById("countdown");
+        if (!countdownElement) return;
+
+        let countdown = 4; // 从4开始，立即显示3
+
+        // 立即开始倒计时，避免卡顿感
+        const countdownInterval = setInterval(() => {
+          if (isSkipped) {
+            clearInterval(countdownInterval);
+            return;
+          }
+
+          countdown--;
+          if (countdown > 0) {
+            countdownElement.textContent = `(${countdown})`;
+          } else {
+            clearInterval(countdownInterval);
+            skipAnimation();
+          }
+        }, 1000);
+      }
+
+      // 键盘事件监听 - 任意键跳过
+      function handleKeydown(e) {
+        skipAnimation();
+        document.removeEventListener("keydown", handleKeydown);
+      }
+
+      // 鼠标点击跳过
+      function handleClick() {
+        skipAnimation();
+        terminalBoot.removeEventListener("click", handleClick);
+      }
+
+      document.addEventListener("keydown", handleKeydown);
+      terminalBoot.addEventListener("click", handleClick);
+
+      // 开始动画
+      startAnimation();
+    });
 
     // 生成完整尺寸图片
     document.getElementById("generateBtn")?.addEventListener("click", () => {

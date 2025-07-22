@@ -45,6 +45,7 @@ src/
 - **Responsive components** – Mobile-first Link, GitHubIcon, Timeline, Project components
 - **SEO optimized** – Structured data, sitemap, social meta tags
 - **Performance first** – Static generation, local fonts, minimal JS
+- **Hidden easter egg** – Terminal OG image generator (`/og-generator`) with cinematic boot animation
 
 ## Content
 
