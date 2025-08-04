@@ -14,10 +14,10 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.4.1
         version: 3.4.1
-      '@fontsource/eb-garamond':
+      '@fontsource-variable/eb-garamond':
         specifier: ^5.2.6
         version: 5.2.6
-      '@fontsource/inter':
+      '@fontsource-variable/inter':
         specifier: ^5.2.6
         version: 5.2.6
       '@fontsource/maple-mono':
@@ -254,11 +254,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource/eb-garamond@5.2.6':
-    resolution: {integrity: sha512-tyfij001YUzGAdIVxWSmID5zlR6PUzMUDm4GjwDlfBEtlS+slyypAmtkM7x4oG1mS0n9pqFbQW+WlmNm1UVJQA==}
+  '@fontsource-variable/eb-garamond@5.2.6':
+    resolution: {integrity: sha512-7WNOTFudWYYSiTmaRlTQO0GwS8UQeCVzrluVsRQY5ueDlrUzCwlCQdbGJ4IxGchYqgqB4ehOqX3jjTxBpJyNeA==}
 
-  '@fontsource/inter@5.2.6':
-    resolution: {integrity: sha512-CZs9S1CrjD0jPwsNy9W6j0BhsmRSQrgwlTNkgQXTsAeDRM42LBRLo3eo9gCzfH4GvV7zpyf78Ozfl773826csw==}
+  '@fontsource-variable/inter@5.2.6':
+    resolution: {integrity: sha512-jks/bficUPQ9nn7GvXvHtlQIPudW7Wx8CrlZoY8bhxgeobNxlQan8DclUJuYF2loYRrGpfrhCIZZspXYysiVGg==}
 
   '@fontsource/maple-mono@5.2.5':
     resolution: {integrity: sha512-iJR/yQj+7DatkzxJNMu3+1gvq1YOHhCjlS6MBOys/Fw/BEDnhC65mp3RZoBXDbk+00flvRO9b9G/IvxBk82Ekw==}
@@ -2010,9 +2010,9 @@ snapshots:
   '@esbuild/win32-x64@0.25.6':
     optional: true
 
-  '@fontsource/eb-garamond@5.2.6': {}
+  '@fontsource-variable/eb-garamond@5.2.6': {}
 
-  '@fontsource/inter@5.2.6': {}
+  '@fontsource-variable/inter@5.2.6': {}
 
   '@fontsource/maple-mono@5.2.5': {}
 

@@ -1,7 +1,6 @@
-/* 导入 Fontsource 字体 - 只导入实际使用的字重 */
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/500.css";
-@import "@fontsource/eb-garamond/500.css";
+/* 导入 Fontsource 字体 - Variable 版本支持全字重范围 */
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/eb-garamond";
 @import "@fontsource/maple-mono/400.css";
 
 @import "tailwindcss";
@@ -9,8 +8,8 @@
 
 /* 在 Tailwind 中注册字体、颜色和自定义 Typography */
 @theme {
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-serif: "EB Garamond", Georgia, serif;
+  --font-sans: "Inter Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "EB Garamond Variable", Georgia, serif;
   --font-mono: "Maple Mono", "SF Mono", "Monaco", "Consolas", monospace;
 
   /* 颜色定义 - 对应 CSS variables */
@@ -52,8 +51,8 @@
   --color-background: #ffffff;
   --color-border: #e5e5e5;
 
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-serif: "EB Garamond", Georgia, serif;
+  --font-sans: "Inter Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "EB Garamond Variable", Georgia, serif;
 
   --line-height-tight: 1.25;
   --line-height-normal: 1.5;

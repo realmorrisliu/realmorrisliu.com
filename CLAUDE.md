@@ -187,7 +187,8 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 ### Font Loading Strategy
 
 - Fontsource for local font hosting (no external CDN)
-- Only import actually used font weights (Inter 400/500, EB Garamond 500, Maple Mono 400)
+- Variable fonts for Inter (100-900) and EB Garamond (400-800) provide full weight ranges
+- Fixed weight for Maple Mono 400 (monospace terminal aesthetic)
 - Fonts imported in `global.css` for better control
 - Fallback fonts specified in CSS variables
 - Font smoothing enabled for better rendering
@@ -546,8 +547,8 @@ The website is optimized for deployment on Cloudflare Pages with the following c
 - **@astrojs/sitemap** (^3.4.1): Automatic XML sitemap generation
 - **Tailwind CSS** (^4.1.11): Utility-first CSS framework
 - **@tailwindcss/vite** (^4.1.11): Vite integration for Tailwind
-- **@fontsource/inter** (^5.2.6): Inter font family local hosting
-- **@fontsource/eb-garamond** (^5.2.6): EB Garamond font family local hosting
+- **@fontsource-variable/inter** (^5.2.6): Inter Variable font family local hosting
+- **@fontsource-variable/eb-garamond** (^5.2.6): EB Garamond Variable font family local hosting
 - **@fontsource/maple-mono** (^5.2.6): Maple Mono monospace font for terminal aesthetic
 
 ### Development Dependencies
