@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
 import "../styles/global.css";
 
-// 这个页面专门用于生成完整尺寸的 OG 图片
+// This page is specifically for generating full-size OG images
 const name = Astro.url.searchParams.get("name") || "Morris Liu";
 const passion = Astro.url.searchParams.get("passion") || "Building tools that matter";
 ---
@@ -61,7 +61,7 @@ const passion = Astro.url.searchParams.get("passion") || "Building tools that ma
       }
     });
 
-    // 页面加载完成后预加载字体
+    // Preload fonts after page load completes
     window.addEventListener("load", waitForFonts);
   </script>
 </Layout>

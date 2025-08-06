@@ -1,19 +1,19 @@
-// OG Image 生成工具函数
+// OG Image generation utility functions
 
 /**
- * 等待字体加载完成
+ * Wait for fonts to finish loading
  */
 export async function waitForFonts(): Promise<void> {
   if ("fonts" in document) {
     await document.fonts.ready;
   } else {
-    // 降级方案：等待一段时间
+    // Fallback: wait for a period of time
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
 }
 
 /**
- * 终端启动动画相关函数
+ * Terminal boot animation related functions
  */
 const STORAGE_KEY = "og-generator-visited";
 
@@ -133,13 +133,13 @@ const typeSequence = (state: AnimationState): void => {
 };
 
 const startAnimation = (state: AnimationState): void => {
-  // Phase 1: 显示 ASCII logo
+  // Phase 1: Show ASCII logo
   setTimeout(() => {
     if (state.isSkipped || !state.asciiLogo) return;
     state.asciiLogo.classList.add("show");
   }, 500);
 
-  // Phase 2: 显示启动序列
+  // Phase 2: Show boot sequence
   setTimeout(() => {
     if (state.isSkipped || !state.bootSequence) return;
     state.bootSequence.classList.add("show");
@@ -148,7 +148,7 @@ const startAnimation = (state: AnimationState): void => {
 };
 
 /**
- * 初始化终端启动动画
+ * Initialize terminal boot animation
  */
 export const initTerminalBootAnimation = (): void => {
   const state = createAnimationState();
@@ -163,7 +163,7 @@ export const initTerminalBootAnimation = (): void => {
 };
 
 /**
- * OG Generator 编辑器相关函数
+ * OG Generator editor related functions
  */
 const setupGenerateButton = (): void => {
   const generateBtn = document.getElementById("generateBtn");
@@ -212,7 +212,7 @@ const setupEditableText = (): void => {
 };
 
 /**
- * 初始化 OG Generator 编辑器功能
+ * Initialize OG Generator editor functionality
  */
 export const initOGGeneratorEditor = (): void => {
   setupGenerateButton();
@@ -222,13 +222,13 @@ export const initOGGeneratorEditor = (): void => {
 };
 
 /**
- * 1:1 复制 HTML 样式到 Canvas 生成 OG 图片
+ * Generate OG image by copying HTML styles 1:1 to Canvas
  */
 export async function generateOGImage(): Promise<HTMLCanvasElement> {
   const container = document.getElementById("ogContainer");
   if (!container) throw new Error("Container not found");
 
-  const scale = 2; // 2x 像素密度
+  const scale = 2; // 2x pixel density
   const canvas = document.createElement("canvas");
   canvas.width = 1200 * scale;
   canvas.height = 630 * scale;
@@ -240,18 +240,18 @@ export async function generateOGImage(): Promise<HTMLCanvasElement> {
 
   ctx.scale(scale, scale);
 
-  // 启用文字抗锯齿
+  // Enable text anti-aliasing
   ctx.imageSmoothingEnabled = true;
   ctx.imageSmoothingQuality = "high";
 
-  // 背景
+  // Background
   ctx.fillStyle = "#ffffff";
   ctx.fillRect(0, 0, 1200, 630);
 
-  // 获取容器位置
+  // Get container position
   const containerRect = container.getBoundingClientRect();
 
-  // 获取终端内容容器内的直接文本元素
+  // Get direct text elements within terminal content container
   const terminalContent = container.querySelector(".absolute");
   const textElements = terminalContent ? terminalContent.children : [];
 
@@ -261,22 +261,22 @@ export async function generateOGImage(): Promise<HTMLCanvasElement> {
     const rect = element.getBoundingClientRect();
     const styles = getComputedStyle(element);
 
-    // 计算相对于容器的位置
+    // Calculate position relative to container
     const x = rect.left - containerRect.left;
     const y = rect.top - containerRect.top;
 
-    // 设置字体
+    // Set font
     const fontSize = parseInt(styles.fontSize);
     const fontFamily = styles.fontFamily;
     ctx.font = `${fontSize}px ${fontFamily}`;
 
-    // 设置颜色
+    // Set color
     ctx.fillStyle = styles.color;
 
-    // 设置文本基线
+    // Set text baseline
     ctx.textBaseline = "top";
 
-    // 绘制文本
+    // Draw text
     const text = element.textContent?.trim();
     if (text) {
       ctx.fillText(text, x, y);
@@ -287,7 +287,7 @@ export async function generateOGImage(): Promise<HTMLCanvasElement> {
 }
 
 /**
- * 下载 Canvas 为 PNG 图片
+ * Download Canvas as PNG image
  */
 export function downloadCanvas(canvas: HTMLCanvasElement, filename?: string): void {
   const link = document.createElement("a");
@@ -297,7 +297,7 @@ export function downloadCanvas(canvas: HTMLCanvasElement, filename?: string): vo
 }
 
 /**
- * 从 DOM 元素获取文本内容
+ * Get text content from DOM element
  */
 export function getElementText(selector: string, fallback: string): string {
   const element = document.querySelector(selector);

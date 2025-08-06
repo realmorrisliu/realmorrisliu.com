@@ -1,4 +1,4 @@
-/* 导入 Fontsource 字体 - Variable 版本支持全字重范围 */
+/* Import Fontsource fonts - Variable versions support full weight range */
 @import "@fontsource-variable/inter";
 @import "@fontsource-variable/eb-garamond";
 @import "@fontsource/maple-mono/400.css";
@@ -6,13 +6,13 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-/* 在 Tailwind 中注册字体、颜色和自定义 Typography */
+/* Register fonts, colors, and custom Typography in Tailwind */
 @theme {
   --font-sans: "Inter Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-serif: "EB Garamond Variable", Georgia, serif;
   --font-mono: "Maple Mono", "SF Mono", "Monaco", "Consolas", monospace;
 
-  /* 颜色定义 - 对应 CSS variables */
+  /* Color definitions - corresponding to CSS variables */
   --color-text-primary: #1a1a1a;
   --color-text-secondary: #4a4a4a;
   --color-text-tertiary: #6b6b6b;
@@ -20,7 +20,7 @@
   --color-background: #ffffff;
   --color-border: #e5e5e5;
 
-  /* 自定义 Typography 样式 - 极简主义设计 */
+  /* Custom Typography styles - minimalist design */
   --prose-body: var(--color-text-secondary);
   --prose-headings: var(--color-text-primary);
   --prose-lead: var(--color-text-secondary);
@@ -41,7 +41,7 @@
   --prose-td-borders: var(--color-border);
 }
 
-/* 极简主义设计基础 */
+/* Minimalist design foundation */
 :root {
   --color-text-primary: #1a1a1a;
   --color-text-secondary: #4a4a4a;
@@ -60,7 +60,7 @@
   --line-height-loose: 1.8;
 }
 
-/* 纸质感的全局样式 */
+/* Paper-like global styles */
 body {
   font-family: var(--font-sans);
   font-weight: 400;
@@ -71,7 +71,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 文本层级 */
+/* Text hierarchy */
 h1,
 h2,
 h3 {
@@ -88,7 +88,7 @@ p {
   color: var(--color-text-secondary);
 }
 
-/* 统一的链接样式 - 与 Link.astro 组件保持一致 */
+/* Unified link styles - consistent with Link.astro component */
 .prose a {
   font-weight: 500;
   color: var(--color-text-link);
@@ -98,7 +98,7 @@ p {
   transition: all 150ms ease;
 }
 
-/* 桌面端：默认无下划线，hover时显示 */
+/* Desktop: no underline by default, show on hover */
 @media (min-width: 768px) {
   .prose a {
     text-decoration: none;
@@ -111,7 +111,7 @@ p {
   }
 }
 
-/* Typography 插件自定义覆盖 - 极简主义风格 */
+/* Typography plugin custom overrides - minimalist style */
 .prose h1,
 .prose h2,
 .prose h3,
@@ -149,13 +149,13 @@ p {
   content: none;
 }
 
-/* 代码块语法高亮覆盖 */
+/* Code block syntax highlighting overrides */
 .prose .astro-code {
   background-color: #f8f9fa;
   border: 1px solid #e9ecef;
 }
 
-/* 移除代码块内联的背景 */
+/* Remove inline code block background */
 .prose :not(pre) > code {
   background-color: #f8f9fa;
   border: 1px solid #e9ecef;

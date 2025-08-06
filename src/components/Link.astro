@@ -7,10 +7,10 @@ export interface Props {
 
 const { href, class: className = "", external } = Astro.props;
 
-// 自动检测外部链接（仅用于target="_blank"）
+// Auto-detect external links (only for target="_blank")
 const isExternal = external || href.startsWith("http") || href.startsWith("mailto:");
 
-// 统一的链接样式：移动端有下划线，桌面端hover时有下划线
+// Unified link styles: underlined on mobile, underlined on desktop hover
 const LINK_STYLES =
   "font-medium text-[color:var(--color-text-link)] md:no-underline underline decoration-1 underline-offset-2 md:hover:underline transition-all duration-150";
 ---

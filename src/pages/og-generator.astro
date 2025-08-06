@@ -10,21 +10,21 @@ import "../styles/global.css";
   title="OG Image Generator - Morris Liu"
   description="A simple tool to generate social media preview images for your content."
 >
-  <!-- 立即执行脚本，避免黑屏闪烁 -->
+  <!-- Execute script immediately to avoid black screen flicker -->
   <script is:inline>
     (function() {
       const STORAGE_KEY = "og-generator-visited";
       const hasVisited = localStorage.getItem(STORAGE_KEY);
       
       if (!hasVisited) {
-        // 首次访问，显示动画
+        // First visit, show animation
         const style = document.createElement('style');
         style.textContent = '#terminal-boot { display: block !important; }';
         document.head.appendChild(style);
       }
     })();
   </script>
-  <!-- 终端启动动画 -->
+  <!-- Terminal boot animation -->
   <div
     id="terminal-boot"
     class="fixed inset-0 z-50 overflow-hidden bg-black font-mono text-green-400"
@@ -142,7 +142,7 @@ import "../styles/global.css";
   </div>
 
   <style>
-    /* 终端启动动画样式 */
+    /* Terminal boot animation styles */
     @keyframes typewriter {
       from {
         width: 0;
@@ -189,7 +189,7 @@ import "../styles/global.css";
       pointer-events: none;
     }
 
-    /* ASCII logo 渐入效果 */
+    /* ASCII logo fade-in effect */
     #ascii-logo.show {
       opacity: 1;
       animation: fadeInUp 1s ease-out;
@@ -204,10 +204,10 @@ import "../styles/global.css";
     import { initTerminalBootAnimation, initOGGeneratorEditor } from "../scripts/og-utils";
 
     document.addEventListener("DOMContentLoaded", () => {
-      // 初始化终端启动动画
+      // Initialize terminal boot animation
       initTerminalBootAnimation();
 
-      // 初始化编辑器功能
+      // Initialize editor functionality
       initOGGeneratorEditor();
     });
   </script>
