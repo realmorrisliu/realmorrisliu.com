@@ -350,7 +350,7 @@ In languages with nullable types everywhere, you still need to check for null at
 
 The `derive_builder` crate leverages this by generating builders that are both ergonomic and zero-cost. The builder methods often compile down to simple field assignments. You get the nice API without runtime overhead.
 
-And because everything is explicitly typed, your IDE can provide perfect autocomplete. IntelliSense knows exactly which methods are available on your builder, what parameters they expect, and what they return.
+And because everything is explicitly typed, your code editor can provide perfect autocomplete. rust-analyzer knows exactly which methods are available on your builder, what parameters they expect, and what they return.
 
 ## Building Forward
 

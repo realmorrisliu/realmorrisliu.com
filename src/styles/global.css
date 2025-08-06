@@ -153,6 +153,19 @@ p {
 .prose .astro-code {
   background-color: #f8f9fa;
   border: 1px solid #e9ecef;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.prose pre {
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.prose pre code {
+  white-space: pre;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 /* Remove inline code block background */
