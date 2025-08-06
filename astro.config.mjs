@@ -6,10 +6,11 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://realmorrisliu.com",
+  trailingSlash: "ignore",
   integrations: [sitemap()],
   image: {
     service: {
-      entrypoint: 'astro/assets/services/sharp',
+      entrypoint: "astro/assets/services/sharp",
       config: {
         limitInputPixels: false,
       },
