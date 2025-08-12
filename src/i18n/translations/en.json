@@ -18,7 +18,7 @@
       "description": "Seven years of growth from individual contributor to team leader. Each role taught me something different about technology, people, and the balance between moving fast and building things that last.",
       "positions": [
         {
-          "year": "Now",
+          "year": "2024",
           "title": "Full-Stack Engineer",
           "company": "UniXYZ",
           "period": "May 2024 - Present",
@@ -35,14 +35,14 @@
           "year": "2020",
           "title": "Tech Lead & Team Manager",
           "company": "EverXYZ",
-          "period": "Early 2020 - Sep 2021",
+          "period": "Jan 2020 - Sep 2021",
           "description": "Naturally evolved into leadership as the team grew from startup to scale-up. Discovered that good management amplifies everyone's capabilities, while bad management crushes even the best engineers. Built processes that enabled autonomy rather than control."
         },
         {
           "year": "2019",
           "title": "Full-Stack Engineer",
           "company": "EverXYZ",
-          "period": "Feb 2019 - Early 2020",
+          "period": "Feb 2019 - Dec 2019",
           "description": "Joined as employee #4 to build a CAD platform from zero. The classic startup experience: wearing every hat, moving fast, breaking things, and occasionally building something users actually wanted. Learned that early-stage product development is 90% listening to users and 10% clever code."
         },
         {
@@ -56,7 +56,7 @@
           "year": "2017",
           "title": "Intern",
           "company": "Meituan",
-          "period": "Jul - Sep 2017",
+          "period": "Jul 2017 - Sep 2017",
           "description": "Joined as an early team member when the Kemanman project was just forming. Implemented C-side membership card features, contributing to the foundation of what would become a key product."
         }
       ]
@@ -79,17 +79,32 @@
           {
             "title": "EverCraft: Version Control System for CAD Files",
             "company": "EverXYZ • 2019-2023",
-            "description": "Built SaaS platform bringing Git-inspired version control to CAD workflows. Features online model preview (powered by fractal3D), collaborative annotation, and visual diff comparison for engineering teams."
+            "description": "Built SaaS platform bringing Git-inspired version control to CAD workflows.",
+            "details": [
+              "Architecture Design: Designed distributed storage system handling 10TB+ CAD files with version tracking and branching capabilities.",
+              "3D Visualization: Integrated fractal3D engine for real-time model preview and collaborative annotation across 20+ CAD formats.",
+              "Team Management: Led cross-functional development through product-market fit, serving 200+ engineering teams."
+            ]
           },
           {
             "title": "EverCraft Lite: Local CAD Version Control",
             "company": "EverXYZ • 2023-2024",
-            "description": "Desktop solution incubated from EverCraft. Built with Tauri and Rust, providing intuitive graphical interface for local version control of CAD files and documents."
+            "description": "Desktop solution incubated from EverCraft using Tauri and Rust.",
+            "details": [
+              "Cross-Platform Development: Built native desktop app with Tauri, achieving 90% code reuse between Windows/macOS/Linux.",
+              "Performance Optimization: Implemented efficient file watching and diff algorithms, reducing memory usage by 70% compared to web version.",
+              "User Experience: Designed intuitive drag-drop interface serving 500+ individual engineers and small teams."
+            ]
           },
           {
             "title": "fractal3D: 3D CAD Visualization Engine",
             "company": "EverXYZ • 2020-2024",
-            "description": "Built online 3D CAD visualization engine with low-code capabilities. Led 5-person team through complete product lifecycle, making professional 3D visualization accessible to mainstream users."
+            "description": "Built online 3D CAD visualization engine with low-code capabilities.",
+            "details": [
+              "Team Leadership: Led 5-person engineering team through complete product lifecycle from concept to 10,000+ monthly active users.",
+              "Technical Innovation: Developed WebGL-based rendering engine supporting 20+ CAD formats with sub-second loading for 100MB+ models.",
+              "Product Strategy: Transformed complex 3D technology into accessible SaaS platform, achieving 40% month-over-month growth."
+            ]
           }
         ]
       },
@@ -99,8 +114,13 @@
           {
             "title": "Sealbox",
             "description": "A lightweight secret management service built with Rust. Single binary, SQLite storage, end-to-end encryption—designed for developers who want secure secret storage without enterprise complexity. Perfect for CI/CD, containers, and small teams.",
-            "readMore": "→ Read the story behind this project in",
-            "githubUrl": "https://github.com/realmorrisliu/sealbox"
+            "githubUrl": "https://github.com/realmorrisliu/sealbox",
+            "readMoreLink": {
+              "text": "→ Read the story behind this project in",
+              "href": "/thoughts/why-i-built-sealbox",
+              "linkText": "Why I Built Sealbox",
+              "suffix": ""
+            }
           },
           {
             "title": "openrouter-rs",
@@ -115,7 +135,12 @@
           {
             "title": "Kira",
             "description": "An AI assistant that captures context from everything you do—selected text, clipboard, files, conversations—then uses that rich context to help you develop and connect your ideas. Built for people who think better through conversation than traditional note-taking tools.",
-            "readMore": "→ Read more about the vision and design philosophy in"
+            "readMoreLink": {
+              "text": "→ Read more about the vision and design philosophy in",
+              "href": "/thoughts/building-kira-an-ai-native-second-brain",
+              "linkText": "Building Kira: An AI-Native Second Brain",
+              "suffix": ""
+            }
           }
         ]
       }
@@ -125,19 +150,23 @@
       "categories": [
         {
           "title": "Languages",
-          "description": "Rust, TypeScript, Go, Python. I believe in type safety and systems that don't surprise you."
+          "stack": "Rust, TypeScript, Go, Python.",
+          "philosophy": "I believe in type safety and systems that don't surprise you."
         },
         {
           "title": "Infrastructure",
-          "description": "Kubernetes, Docker, Prometheus, Grafana. I build systems that scale gracefully and stay observable."
+          "stack": "Kubernetes, Docker, Prometheus, Grafana.",
+          "philosophy": "I build systems that scale gracefully and stay observable."
         },
         {
           "title": "Data & Interfaces",
-          "description": "Postgres, Redis, React, Tauri. From databases to user interfaces, I focus on experiences that feel natural."
+          "stack": "Postgres, Redis, React, Tauri.",
+          "philosophy": "From databases to user interfaces, I focus on experiences that feel natural."
         },
         {
           "title": "Leadership",
-          "description": "Built and managed engineering teams up to 20 people. The best technical solutions come from understanding both code and people."
+          "stack": "Built and managed engineering teams up to 20 people.",
+          "philosophy": "The best technical solutions come from understanding both code and people."
         }
       ]
     },
@@ -153,9 +182,30 @@
     },
     "contact": {
       "title": "Contact",
-      "github": "You can find me on {github} where I share code and occasionally wonder if anyone reads commit messages.",
-      "twitter": "For more immediate thoughts and updates, I'm on {twitter}.",
-      "email": "For everything else, email works well: {email}"
+      "github": {
+        "text": "You can find me on ",
+        "link": {
+          "href": "https://github.com/realmorrisliu",
+          "text": "GitHub"
+        },
+        "suffix": " where I share code and occasionally wonder if anyone reads commit messages."
+      },
+      "twitter": {
+        "text": "For more immediate thoughts and updates, I'm on ",
+        "link": {
+          "href": "https://twitter.com/realmorrisliu",
+          "text": "X (Twitter)"
+        },
+        "suffix": "."
+      },
+      "email": {
+        "text": "For everything else, email works well: ",
+        "link": {
+          "href": "mailto:morrisliu1994@outlook.com",
+          "text": "morrisliu1994@outlook.com"
+        },
+        "suffix": ""
+      }
     },
     "footer": {
       "backToMain": "← Back to main page"

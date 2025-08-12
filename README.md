@@ -21,12 +21,12 @@ pnpm dev          # http://localhost:4321
 
 ## Commands
 
-| Command         | Action                                   |
-| --------------- | ---------------------------------------- |
-| `pnpm dev`      | Start dev server at `localhost:4321`    |
-| `pnpm build`    | Build to `./dist/`                       |
-| `pnpm preview`  | Preview build locally                    |
-| `pnpm prettier` | Format all files                         |
+| Command         | Action                               |
+| --------------- | ------------------------------------ |
+| `pnpm dev`      | Start dev server at `localhost:4321` |
+| `pnpm build`    | Build to `./dist/`                   |
+| `pnpm preview`  | Preview build locally                |
+| `pnpm prettier` | Format all files                     |
 
 ## Architecture
 
@@ -34,7 +34,7 @@ pnpm dev          # http://localhost:4321
 src/
 ├── content/blog/        # Markdown posts (Content Collections)
 ├── components/          # Reusable Astro components
-├── layouts/             # Base + BlogPost layouts  
+├── layouts/             # Base + BlogPost layouts
 ├── pages/              # Routes (index, so-far, thoughts/*)
 └── styles/global.css   # Design system + typography
 ```
@@ -50,7 +50,7 @@ src/
 ## Content
 
 - **Homepage** (`/`) – Natural greeting and navigation
-- **Thoughts** (`/thoughts`) – Technical blog with RSS feed  
+- **Thoughts** (`/thoughts`) – Technical blog with RSS feed
 - **So Far** (`/so-far`) – Professional timeline and projects
 
 ---

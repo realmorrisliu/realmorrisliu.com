@@ -6,10 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 | Command         | Action                                               |
 | --------------- | ---------------------------------------------------- |
-| `pnpm dev`      | Start local dev server at `localhost:4321`          |
-| `pnpm build`    | Build production site to `./dist/`                  |
-| `pnpm preview`  | Preview build locally before deploying              |
-| `pnpm prettier` | Format all files with Prettier (2-space indentation)|
+| `pnpm dev`      | Start local dev server at `localhost:4321`           |
+| `pnpm build`    | Build production site to `./dist/`                   |
+| `pnpm preview`  | Preview build locally before deploying               |
+| `pnpm prettier` | Format all files with Prettier (2-space indentation) |
 
 ## Project Architecture
 
@@ -79,7 +79,7 @@ The design system is built around CSS custom properties and follows extreme mini
 - **Link.astro**: Unified link component with responsive hover behavior. Mobile devices show permanent underlines for better touch accessibility, desktop shows underlines only on hover. Automatically detects external links for proper `target="_blank"` handling.
 - **Button.astro**: Unified button component with TypeScript interfaces supporting primary/secondary variants and sm/md sizes. Maintains consistent hover states and responsive design without over-complex styling.
 - **GitHubIcon.astro**: Accessible GitHub icon component with responsive opacity effects. Desktop shows 60% opacity by default, 100% on hover; mobile shows 100% opacity always. Includes proper ARIA labels and SVG titles for screen readers.
-- **TimelineItem.astro**: Career timeline component with props for year, title, company, period, and description. Features continuous vertical line design with year labels floating to the left of the timeline.
+- **TimelineItem.astro**: Career timeline component with props for year, title, company, period, and description. Features enhanced visual hierarchy with timeline dots, emphasized year labels, and improved spacing. Year labels float to the left, company names are prominently displayed, and job descriptions have clear visual separation.
 - **ProjectItem.astro**: Project display component leveraging Link and GitHubIcon components. Includes title, description, and optional GitHub repository access with consistent styling.
 - **FormattedText.astro**: Handles dynamic text with link replacements, used for i18n content that contains inline links. Splits text by placeholders and renders appropriate Link components.
 
@@ -337,6 +337,7 @@ The website includes a custom OG (Open Graph) image generation tool that creates
 **Technical Implementation:**
 
 **`src/pages/og-generator.astro`:**
+
 - Editor page with inline preview at 50% scale (600×315px)
 - Contenteditable spans with `data-original` attributes for reset functionality
 - Preset tagline suggestions with click-to-apply functionality
@@ -348,6 +349,7 @@ The website includes a custom OG (Open Graph) image generation tool that creates
 - 4-second countdown with skip functionality via keyboard/mouse input
 
 **`src/pages/og-preview.astro`:**
+
 - Full-size (1200×630px) preview and download page
 - Canvas API-based image generation reading actual DOM computed styles
 - Font loading synchronization with `document.fonts.ready`
@@ -355,6 +357,7 @@ The website includes a custom OG (Open Graph) image generation tool that creates
 - Fixed positioning with return navigation
 
 **`src/scripts/og-utils.ts`:**
+
 - Shared utilities for font loading (`waitForFonts()`)
 - Canvas generation (`generateOGImage()`) with pixel-perfect DOM to canvas conversion
 - Download handling (`downloadCanvas()`) with proper filename generation
@@ -557,27 +560,36 @@ The website is optimized for deployment on Cloudflare Pages with the following c
 The website implements server-side i18n using Astro's static site generation:
 
 **Translation Files:**
+
 - `src/i18n/translations/en.json` - English translations
-- `src/i18n/translations/zh.json` - Chinese translations  
+- `src/i18n/translations/zh.json` - Chinese translations
 - Structured JSON with nested keys for easy maintenance
 - Work project details use simple string arrays for better maintainability (e.g., `["RAG Optimization: Built...", "Data Pipeline: Automated..."]`)
+- Skills section uses `stack` and `philosophy` structure for better visual hierarchy
+- Personal project links use `readMoreLink` object with text, href, linkText, and optional suffix
+- Contact section uses structured objects for clean link rendering without FormattedText overhead
 
 **Utility Functions (`src/i18n/utils.ts`):**
+
 - `getTranslations(lang)` - Returns translations for specified language
 - `getLanguageFromURL(url)` - Extracts language from URL
 - `getLangSwitchUrl(url, lang)` - Generates language switch URLs
 - `getHtmlLangAttribute(lang)` - Returns proper HTML lang attribute
 
 **URL Structure:**
+
 - English (default): `/so-far`
 - Chinese: `/so-far/zh`
 - Other pages remain English-only for now
 
 **Implementation Details:**
+
 - Server-side rendering for better performance and SEO
 - No client-side JavaScript for language switching
 - Proper `lang` attribute on HTML element
-- FormattedText component for handling inline links in translated content
+- Language switching preserves current page anchor/hash for better UX
+- FormattedText component for complex inline links (Side section)
+- Direct link rendering for simple contact links (optimized approach)
 
 ### Adding New Languages
 
@@ -592,6 +604,9 @@ The website implements server-side i18n using Astro's static site generation:
 - Use placeholders (`{name}`) for dynamic content within translations
 - Maintain same JSON structure in all translation files
 - Test all language versions during development
+- Use structured objects for complex content (skills with stack/philosophy, readMoreLink objects)
+- Standardize time period formats: English uses "Month YYYY - Month YYYY", Chinese uses "YYYY年 X月 - YYYY年 X月"
+- Maintain consistent company naming across languages for professional consistency
 
 ## Project Dependencies
 

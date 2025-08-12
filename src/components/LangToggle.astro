@@ -3,19 +3,19 @@
 ---
 
 <div class="lang-toggle flex items-center gap-1 text-sm">
-  <button 
-    id="lang-en" 
-    class="lang-btn font-medium text-[color:var(--color-text-secondary)] hover:text-[color:var(--color-text-primary)] transition-colors duration-150"
+  <button
+    id="lang-en"
+    class="lang-btn font-medium text-[color:var(--color-text-secondary)] transition-colors duration-150 hover:text-[color:var(--color-text-primary)]"
     data-lang="en"
   >
     EN
   </button>
-  
+
   <span class="text-[color:var(--color-border)]">|</span>
-  
-  <button 
-    id="lang-zh" 
-    class="lang-btn font-medium text-[color:var(--color-text-secondary)] hover:text-[color:var(--color-text-primary)] transition-colors duration-150"
+
+  <button
+    id="lang-zh"
+    class="lang-btn font-medium text-[color:var(--color-text-secondary)] transition-colors duration-150 hover:text-[color:var(--color-text-primary)]"
     data-lang="zh"
   >
     中文
@@ -27,7 +27,7 @@
     color: var(--color-text-primary);
     font-weight: 500;
   }
-  
+
   .lang-btn:not(.active) {
     color: var(--color-text-tertiary);
   }
@@ -36,39 +36,39 @@
 <script>
   // 语言切换逻辑
   function initLangToggle() {
-    const langButtons = document.querySelectorAll('.lang-btn');
+    const langButtons = document.querySelectorAll(".lang-btn");
     const body = document.body;
-    
+
     // 从localStorage读取用户偏好，默认为英文
-    const savedLang = localStorage.getItem('preferred-lang') || 'en';
-    
+    const savedLang = localStorage.getItem("preferred-lang") || "en";
+
     // 设置初始语言
     setLanguage(savedLang);
-    
+
     // 绑定点击事件
     langButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener("click", () => {
         const lang = btn.dataset.lang;
         setLanguage(lang);
-        localStorage.setItem('preferred-lang', lang);
+        localStorage.setItem("preferred-lang", lang);
       });
     });
-    
+
     function setLanguage(lang) {
       // 更新body的data属性
       body.dataset.currentLang = lang;
-      
+
       // 更新按钮状态
       langButtons.forEach(btn => {
         if (btn.dataset.lang === lang) {
-          btn.classList.add('active');
+          btn.classList.add("active");
         } else {
-          btn.classList.remove('active');
+          btn.classList.remove("active");
         }
       });
     }
   }
-  
+
   // 页面加载完成后初始化
-  document.addEventListener('DOMContentLoaded', initLangToggle);
+  document.addEventListener("DOMContentLoaded", initLangToggle);
 </script>

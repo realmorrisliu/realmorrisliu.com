@@ -13,9 +13,10 @@ interface Props {
 const { currentLang } = Astro.props;
 const t = getTranslations(currentLang);
 
-// Generate language switch URLs
-const enUrl = "/so-far";
-const zhUrl = "/so-far/zh";
+// Generate language switch URLs with current hash preserved
+const currentHash = Astro.url.hash;
+const enUrl = `/so-far${currentHash}`;
+const zhUrl = `/so-far/zh${currentHash}`;
 ---
 
 <div class="mx-auto max-w-2xl px-6 py-16">
@@ -78,7 +79,7 @@ const zhUrl = "/so-far/zh";
       >
       </div>
 
-      <div class="space-y-8">
+      <div class="space-y-12">
         {
           t.soFar.work.positions.map(position => (
             <TimelineItem
@@ -124,10 +125,10 @@ const zhUrl = "/so-far/zh";
                 <div class="space-y-3 text-base leading-relaxed text-[color:var(--color-text-secondary)]">
                   <p>{project.description}</p>
                   {project.details.map((detail: string) => {
-                    const colonIndex = detail.indexOf(':');
-                    const label = colonIndex > 0 ? detail.substring(0, colonIndex + 1) : '';
+                    const colonIndex = detail.indexOf(":");
+                    const label = colonIndex > 0 ? detail.substring(0, colonIndex + 1) : "";
                     const text = colonIndex > 0 ? detail.substring(colonIndex + 1).trim() : detail;
-                    
+
                     return (
                       <p>
                         <span class="font-medium text-[color:var(--color-text-primary)]">
@@ -163,27 +164,11 @@ const zhUrl = "/so-far/zh";
                 description={project.description}
                 githubUrl={project.githubUrl}
               />
-              {project.readMore && (
+              {project.readMoreLink && (
                 <p class="mt-2 ml-0 text-sm text-[color:var(--color-text-tertiary)]">
-                  {project.title === "Sealbox" ? (
-                    <>
-                      {currentLang === "en" ? `${project.readMore} ` : "→ 在"}
-                      <Link href="/thoughts/why-i-built-sealbox">
-                        {currentLang === "en" ? "Why I Built Sealbox" : "《为什么我做Sealbox》"}
-                      </Link>
-                      {currentLang === "zh" && "中看这个项目背后的故事"}
-                    </>
-                  ) : project.title === "Kira" ? (
-                    <>
-                      {currentLang === "en" ? `${project.readMore} ` : "→ 在"}
-                      <Link href="/thoughts/building-kira-an-ai-native-second-brain">
-                        {currentLang === "en"
-                          ? "Building Kira: An AI-Native Second Brain"
-                          : "《构建 Kira：一个 AI 原生的第二大脑》"}
-                      </Link>
-                      {currentLang === "zh" && "中了解更多的愿景和设计理念"}
-                    </>
-                  ) : null}
+                  {project.readMoreLink.text}
+                  <Link href={project.readMoreLink.href}>{project.readMoreLink.linkText}</Link>
+{project.readMoreLink.suffix}
                 </p>
               )}
             </div>
@@ -201,12 +186,17 @@ const zhUrl = "/so-far/zh";
       {
         t.soFar.skills.categories.map(category => (
           <div>
-            <h3 class="mb-2 font-serif text-base text-[color:var(--color-text-primary)]">
+            <h3 class="mb-3 font-serif text-base text-[color:var(--color-text-primary)]">
               {category.title}
             </h3>
-            <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-              {category.description}
-            </p>
+            <div class="space-y-2">
+              <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+                {category.stack}
+              </p>
+              <p class="text-sm leading-relaxed text-[color:var(--color-text-tertiary)] italic">
+                {category.philosophy}
+              </p>
+            </div>
           </div>
         ))
       }
@@ -285,42 +275,27 @@ const zhUrl = "/so-far/zh";
     </h2>
     <div class="space-y-4">
       <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-        <FormattedText
-          text={t.soFar.contact.github}
-          replacements={[
-            {
-              placeholder: "{github}",
-              href: "https://github.com/realmorrisliu",
-              label: "GitHub",
-            },
-          ]}
-        />
+        {t.soFar.contact.github.text}
+        <Link href={t.soFar.contact.github.link.href}>
+          {t.soFar.contact.github.link.text}
+        </Link>
+        {t.soFar.contact.github.suffix}
       </p>
 
       <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-        <FormattedText
-          text={t.soFar.contact.twitter}
-          replacements={[
-            {
-              placeholder: "{twitter}",
-              href: "https://twitter.com/realmorrisliu",
-              label: "X (Twitter)",
-            },
-          ]}
-        />
+        {t.soFar.contact.twitter.text}
+        <Link href={t.soFar.contact.twitter.link.href}>
+          {t.soFar.contact.twitter.link.text}
+        </Link>
+        {t.soFar.contact.twitter.suffix}
       </p>
 
       <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-        <FormattedText
-          text={t.soFar.contact.email}
-          replacements={[
-            {
-              placeholder: "{email}",
-              href: "mailto:morrisliu1994@outlook.com",
-              label: "morrisliu1994@outlook.com",
-            },
-          ]}
-        />
+        {t.soFar.contact.email.text}
+        <Link href={t.soFar.contact.email.link.href}>
+          {t.soFar.contact.email.link.text}
+        </Link>
+        {t.soFar.contact.email.suffix}
       </p>
     </div>
   </section>

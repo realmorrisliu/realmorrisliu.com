@@ -12,14 +12,14 @@ import "../styles/global.css";
 >
   <!-- Execute script immediately to avoid black screen flicker -->
   <script is:inline>
-    (function() {
+    (function () {
       const STORAGE_KEY = "og-generator-visited";
       const hasVisited = localStorage.getItem(STORAGE_KEY);
-      
+
       if (!hasVisited) {
         // First visit, show animation
-        const style = document.createElement('style');
-        style.textContent = '#terminal-boot { display: block !important; }';
+        const style = document.createElement("style");
+        style.textContent = "#terminal-boot { display: block !important; }";
         document.head.appendChild(style);
       }
     })();
@@ -31,7 +31,7 @@ import "../styles/global.css";
     style="display: none;"
   >
     <div class="h-full p-8">
-      <div id="ascii-logo" class="mb-8 mt-16 text-sm leading-tight opacity-0">
+      <div id="ascii-logo" class="mt-16 mb-8 text-sm leading-tight opacity-0">
         <div>&nbsp;███╗&nbsp;&nbsp;&nbsp;███╗██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
         <div>&nbsp;████╗&nbsp;████║██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
         <div>&nbsp;██╔████╔██║██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>

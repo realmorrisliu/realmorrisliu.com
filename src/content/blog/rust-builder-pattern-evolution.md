@@ -333,6 +333,7 @@ The builder pattern also makes the API future-proof. When OpenRouter adds new pa
 Not everything needs a builder. The `Message::new(role, content)` constructor is fine as-is. Two required parameters, clear purpose, no complexity.
 
 But once you hit these conditions, builders start paying dividends:
+
 - More than 4-5 parameters total
 - More than 2-3 optional parameters
 - Parameters that commonly get used together in different combinations
@@ -364,4 +365,4 @@ The next time you're staring at a constructor with more than a handful of parame
 
 ---
 
-*Building something with complex APIs in Rust? Check out [openrouter-rs](https://github.com/realmorrisliu/openrouter-rs) to see these patterns in action, or read about [building Sealbox](/thoughts/why-i-built-sealbox) for more thoughts on API design philosophy.*
+_Building something with complex APIs in Rust? Check out [openrouter-rs](https://github.com/realmorrisliu/openrouter-rs) to see these patterns in action, or read about [building Sealbox](/thoughts/why-i-built-sealbox) for more thoughts on API design philosophy._

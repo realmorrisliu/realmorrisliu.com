@@ -18,46 +18,46 @@
       "description": "七年时间，从写代码的工程师变成带团队的负责人。每个阶段都有不同的收获——有技术上的，有管理上的，还有怎么在快速迭代和长期稳定性之间找平衡。",
       "positions": [
         {
-          "year": "Now",
+          "year": "2024",
           "title": "全栈工程师",
-          "company": "深圳垣象科技有限公司",
-          "period": "May 2024 - Present",
-          "description": "专注 AI 基础设施和扩展性挑战。和多元化的团队一起解决复杂的分布式系统问题，同时保持创业公司的敏捷性。"
+          "company": "UniXYZ",
+          "period": "2024年 5月 - 至今",
+          "description": "专注于 AI 基础设施和系统扩展性挑战。和多元化的团队一起解决复杂的分布式系统问题，保持创业公司的敏捷性。"
         },
         {
           "year": "2021",
           "title": "CTO",
-          "company": "深圳市工之易科技有限公司",
-          "period": "Sep 2021 - May 2024",
-          "description": "深圳市工之易科技有限公司加入奇绩创坛（原 YC 中国）孵化项目时被提升为 CTO。带领 20 人的工程团队经历快速扩张，建立了可持续的开发实践，在技术债务和功能交付之间找到平衡。学到了领导力最难的部分不是技术——而是人。"
+          "company": "EverXYZ",
+          "period": "2021年 9月 - 2024年 5月",
+          "description": "EverXYZ 加入奇绩创坛（原 YC 中国）孵化项目时被提升为 CTO。带领 20 人工程团队经历快速扩张，建立可持续开发实践，在技术债务和产品交付之间找到平衡。最大的收获是：领导力最难的部分不是技术——而是人。"
         },
         {
           "year": "2020",
           "title": "技术负责人",
-          "company": "深圳市工之易科技有限公司",
-          "period": "Early 2020 - Sep 2021",
-          "description": "随着团队从初创公司成长为扩张期公司，自然而然地演化成了领导者。发现好的管理能放大每个人的能力，而糟糕的管理甚至能毁掉最好的工程师。建立了能够赋予自主权而非控制的流程。"
+          "company": "EverXYZ",
+          "period": "2020年 1月 - 2021年 9月",
+          "description": "随着公司从初创期进入扩张期，自然地承担起了技术领导者的角色。最大的体会是：好的管理能放大每个人的能力，而糟糕的管理能毁掉最好的工程师。所以我们建立的是赋能而非控制的流程。"
         },
         {
           "year": "2019",
           "title": "全栈工程师",
-          "company": "深圳市工之易科技有限公司",
-          "period": "Feb 2019 - Early 2020",
-          "description": "作为第 4 号员工加入，从零开始构建 CAD 平台。经典的创业公司体验：什么都干、快速迭代、搞坏东西，偶尔做出用户真正想要的东西。学到了早期产品开发是 90% 的倾听用户和 10% 的巧妙代码。"
+          "company": "EverXYZ",
+          "period": "2019年 2月 - 2019年 12月",
+          "description": "作为第 4 号员工加入，从零开始构建 CAD 平台。这是经典的创业体验：什么帽子都得戴、快速迭代、偶尔搞坏一些东西，然后偶尔真的做出用户需要的产品。最大的收获：早期产品开发其实是 90% 的用户倾听和 10% 的技术技巧。"
         },
         {
           "year": "2018",
           "title": "前端工程师",
           "company": "美团",
-          "period": "Jul 2018 - Jan 2019",
-          "description": "为成熟产品开发数据分析模块和多店管理系统。构建组件库，解决复杂的浏览器兼容性问题——包括那个让所有人都头疼的 IE9 固定元素渲染 bug。"
+          "period": "2018年 7月 - 2019年 1月",
+          "description": "为成熟的产品开发数据分析模块和多店管理系统。搭建组件库，解决各种浏览器兼容性问题——包括那个让所有人都抓狂的 IE9 固定元素渲染 bug。"
         },
         {
           "year": "2017",
           "title": "实习生",
           "company": "美团",
-          "period": "Jul - Sep 2017",
-          "description": "在客满满项目刚刚成立时作为早期团队成员加入。实现了 C 端会员卡功能，为后来成为核心产品的基础做出了贡献。"
+          "period": "2017年 7月 - 2017年 9月",
+          "description": "在客满满项目刚成立时作为早期成员加入。负责实现 C 端会员卡功能，为后来的核心产品打下了基础。"
         }
       ]
     },
@@ -69,7 +69,7 @@
         "items": [
           {
             "title": "小象快答：AI 销售与客服自动化平台",
-            "company": "深圳垣象科技有限公司 • 2024 - 至今",
+            "company": "UniXYZ • 2024 - 至今",
             "description": "负责销售和客服自动化平台的 AI 基础设施设计。",
             "details": [
               "RAG 优化：搭建了基于 Qdrant 的向量数据库集群，开发了自定义 Rust 工具，将内存使用量从 100GB+ 降到了 10GB（减少 90%）。",
@@ -78,18 +78,33 @@
           },
           {
             "title": "追光几何：CAD 文件版本控制系统",
-            "company": "深圳市工之易科技有限公司 • 2019-2023",
-            "description": "构建了一个将 Git 灵感的版本控制带到 CAD 工作流的 SaaS 平台。包含在线模型预览（由 fractal3D 驱动）、协作注释和面向工程团队的可视化差异对比功能。"
+            "company": "EverXYZ • 2019-2023",
+            "description": "构建了一个将 Git 灵感的版本控制带到 CAD 工作流的 SaaS 平台。",
+            "details": [
+              "架构设计：设计了分布式存储系统，处理 10TB+ CAD 文件的版本追踪和分支功能。",
+              "3D 可视化：集成 fractal3D 引擎，实现实时模型预览和跨 20+ CAD 格式的协作注释。",
+              "团队管理：带领跨职能开发团队达成产品-市场匹配，服务 200+ 工程团队。"
+            ]
           },
           {
             "title": "追光几何 Lite：本地 CAD 版本控制",
-            "company": "深圳市工之易科技有限公司 • 2023-2024",
-            "description": "从 EverCraft 孵化出来的桌面解决方案。用 Tauri 和 Rust 构建，为 CAD 文件和文档的本地版本控制提供直观的图形界面。"
+            "company": "EverXYZ • 2023-2024",
+            "description": "从 EverCraft 孵化出来的桌面解决方案，使用 Tauri 和 Rust 构建。",
+            "details": [
+              "跨平台开发：使用 Tauri 构建原生桌面应用，Windows/macOS/Linux 间实现 90% 代码复用。",
+              "性能优化：实现高效的文件监听和差异算法，相比 Web 版本内存使用量减少 70%。",
+              "用户体验：设计直观的拖拽界面，服务 500+ 个人工程师和小团队。"
+            ]
           },
           {
             "title": "分形三维：3D CAD 可视化引擎",
-            "company": "深圳市工之易科技有限公司 • 2020-2024",
-            "description": "构建了具备低代码能力的 3D CAD 在线可视化引擎。带领 5 人团队走过了完整的产品生命周期，让专业的 3D 可视化能力变得普通用户也能使用。"
+            "company": "EverXYZ • 2020-2024",
+            "description": "构建了具备低代码能力的 3D CAD 在线可视化引擎。",
+            "details": [
+              "团队管理：带领 5 人工程团队走过完整产品生命周期，从概念到月活 10,000+ 用户。",
+              "技术创新：开发基于 WebGL 的渲染引擎，支持 20+ CAD 格式，100MB+ 模型不到一秒加载。",
+              "产品策略：将复杂 3D 技术转化为可访问的 SaaS 平台，实现月环比 40% 增长。"
+            ]
           }
         ]
       },
@@ -99,8 +114,13 @@
           {
             "title": "Sealbox",
             "description": "用 Rust 构建的轻量级密钥管理服务。单个二进制文件、SQLite 存储、端到端加密——为想要安全存储密钥但不想要企业级复杂性的开发者设计。非常适合 CI/CD、容器和小团队。",
-            "readMore": "→ 在{link}中看这个项目背后的故事",
-            "githubUrl": "https://github.com/realmorrisliu/sealbox"
+            "githubUrl": "https://github.com/realmorrisliu/sealbox",
+            "readMoreLink": {
+              "text": "→ 在",
+              "href": "/thoughts/why-i-built-sealbox",
+              "linkText": "《为什么我做Sealbox》",
+              "suffix": "中看这个项目背后的故事"
+            }
           },
           {
             "title": "openrouter-rs",
@@ -115,7 +135,12 @@
           {
             "title": "Kira",
             "description": "一个 AI 助手，能从你做的所有事情中获取上下文——选中的文字、剪贴板、文件、对话——然后利用这些丰富的上下文帮你发展和连接想法。为那些通过对话而不是传统笔记工具来更好思考的人而设计。",
-            "readMore": "→ 在{link}中了解更多的愿景和设计理念"
+            "readMoreLink": {
+              "text": "→ 在",
+              "href": "/thoughts/building-kira-an-ai-native-second-brain",
+              "linkText": "《构建 Kira：一个 AI 原生的第二大脑》",
+              "suffix": "中了解更多的愿景和设计理念"
+            }
           }
         ]
       }
@@ -125,27 +150,31 @@
       "categories": [
         {
           "title": "编程语言",
-          "description": "Rust、TypeScript、Go、Python。我喜欢那种类型安全、不会突然出妖蛾子的系统。"
+          "stack": "主要用 Rust、TypeScript、Go、Python。",
+          "philosophy": "信奉类型安全，写那种半夜不会突然挂掉叫醒人的系统。"
         },
         {
           "title": "基础设施",
-          "description": "Kubernetes、Docker、Prometheus、Grafana。我喜欢搭建那种可以优雅扩展、而且一直可以看到运行状态的系统。"
+          "stack": "K8s、Docker、Prometheus、Grafana 这些都在用。",
+          "philosophy": "搭系统的时候考虑怎么优雅地扩展，还得能随时知道系统在干什么。"
         },
         {
           "title": "数据与界面",
-          "description": "Postgres、Redis、React、Tauri。从数据库到用户界面，我都希望做出让人用起来舒服自然的东西。"
+          "stack": "从 Postgres、Redis 到 React、Tauri，覆盖了从数据存储到用户界面的整条链路。",
+          "philosophy": "追求那种让人用起来特别顺手的体验。"
         },
         {
           "title": "团队管理",
-          "description": "带过最多 20 人的技术团队。我发现最好的技术方案往往来自于既懂代码又懂人心。"
+          "stack": "带过最多 20 人的技术团队。",
+          "philosophy": "最难的不是写代码，而是让一帮聪明人朝着同一个方向使劲。"
         }
       ]
     },
     "side": {
       "title": "爱好",
-      "bass": "我会花时间练贝斯，研究那些塑造了音乐的经典律动——{queen}戏剧化的贝斯线条，{chic}感染力十足的放克，{ewf}精妙的编曲，还有{acdc}那股子猛劲。贝斯和好的工程设计很像：都是那个把所有东西撑起来的基础。",
-      "photography": "不弹琴的时候，我经常拿着相机到处拍。我很喜欢一些摄影师的理念，比如{cartierBresson}提出的\"决定性瞬间\"，还有{hideakiHamada}对日常生活的安静观察，能从平凡中发现非凡的美。",
-      "philosophy": "摄影和音乐都影响着我写代码的思路。就像好的作品或者恰到好处的瞬间，最棒的软件用起来会让人觉得\"就应该是这样\"。我喜欢做那种经得起时间考验的东西，写别人也能看懂的代码，还有找到那种让复杂系统变得简单的节奏感。",
+      "bass": "我会花时间练贝斯，研究那些塑造了音乐历史的经典律动——{queen}戏剧化的贝斯线条，{chic}感染力十足的放克，{ewf}精妙的编曲，还有{acdc}那股子猛劲。贝斯和好的工程设计很像：都是那个默默撑起整个架构的基础。",
+      "photography": "不弹琴的时候，我经常带着相机到处转。很喜欢一些摄影师的理念，比如{cartierBresson}提出的\"决定性瞬间\"，还有{hideakiHamada}对日常生活的安静观察，能从最平凡的场景里发现非凡的美。",
+      "philosophy": "摄影和音乐都影响着我写代码的思路。就像好的摄影作品或者恰到好处的音乐节拍，最棒的软件用起来会让人觉得\"就应该是这样\"。我喜欢做那种经得起时间考验的东西，写别人也能看懂的代码，找到那种让复杂系统变得简单的节奏感。",
       "gear": {
         "title": "目前的装备：",
         "items": ["Bass: YAMAHA TRBX604", "Camera: Leica M10-R"]
@@ -153,9 +182,30 @@
     },
     "contact": {
       "title": "联系方式",
-      "github": "你可以在{github}上找到我，我在那里分享代码，偶尔也会好奇有没有人真的会看 commit 消息。",
-      "twitter": "想看更即时的想法和动态，可以关注我的{twitter}。",
-      "email": "其他事情，邮件联系就行：{email}"
+      "github": {
+        "text": "你可以在",
+        "link": {
+          "href": "https://github.com/realmorrisliu",
+          "text": "GitHub"
+        },
+        "suffix": "上找到我，我在那里分享代码，偶尔也会好奇到底有没有人真的看 commit 消息。"
+      },
+      "twitter": {
+        "text": "想看更即时的想法和吐槽，可以关注我的",
+        "link": {
+          "href": "https://twitter.com/realmorrisliu",
+          "text": "X (Twitter)"
+        },
+        "suffix": "。"
+      },
+      "email": {
+        "text": "其他事情，邮件联系就行：",
+        "link": {
+          "href": "mailto:morrisliu1994@outlook.com",
+          "text": "morrisliu1994@outlook.com"
+        },
+        "suffix": ""
+      }
     },
     "footer": {
       "backToMain": "← 回到主页"
