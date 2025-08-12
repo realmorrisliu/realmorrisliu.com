@@ -1,21 +1,29 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import TimelineItem from "../components/TimelineItem.astro";
-import ProjectItem from "../components/ProjectItem.astro";
-import Link from "../components/Link.astro";
-import FooterSignature from "../components/FooterSignature.astro";
-import FormattedText from "../components/FormattedText.astro";
-import { getLanguageFromURL, getTranslations, getLangSwitchUrl, getHtmlLangAttribute } from "../i18n/utils";
-import "../styles/global.css";
+import Layout from "../../layouts/Layout.astro";
+import TimelineItem from "../../components/TimelineItem.astro";
+import ProjectItem from "../../components/ProjectItem.astro";
+import Link from "../../components/Link.astro";
+import FooterSignature from "../../components/FooterSignature.astro";
+import FormattedText from "../../components/FormattedText.astro";
+import { getLanguageFromURL, getTranslations, getLangSwitchUrl, getHtmlLangAttribute } from "../../i18n/utils";
+import "../../styles/global.css";
 
-// Default to English
-const currentLang = 'en';
+// Get language from path parameter
+const { lang } = Astro.params;
+const currentLang = lang === 'zh' ? 'zh' : 'en';
 const t = getTranslations(currentLang);
 const htmlLang = getHtmlLangAttribute(currentLang);
 
 // Generate language switch URLs
 const enUrl = '/so-far';
 const zhUrl = '/so-far/zh';
+
+// Define static paths for generation
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'zh' } },
+  ];
+}
 ---
 
 <Layout

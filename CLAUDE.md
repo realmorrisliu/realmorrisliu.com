@@ -28,13 +28,22 @@ src/
 │   ├── RssIcon.astro        # RSS icon with text and responsive styling
 │   ├── FooterSignature.astro # Reusable footer signature with navigation
 │   ├── ProjectItem.astro    # Reusable project display with GitHub links
-│   └── TimelineItem.astro   # Career timeline with continuous line design
+│   ├── TimelineItem.astro   # Career timeline with continuous line design
+│   ├── FormattedText.astro  # Dynamic text with link replacements for i18n
+│   └── LangToggle.astro     # Language toggle component (deprecated)
+├── i18n/
+│   ├── translations/
+│   │   ├── en.json          # English translations
+│   │   └── zh.json          # Chinese translations
+│   └── utils.ts             # i18n utility functions
 ├── layouts/
-│   ├── Layout.astro         # Base HTML layout
+│   ├── Layout.astro         # Base HTML layout with language support
 │   └── BlogPost.astro       # Blog post layout with Typography
 ├── pages/
 │   ├── index.astro          # Homepage with letter-style greeting
-│   ├── so-far.astro         # Professional timeline, projects, skills
+│   ├── so-far.astro         # Professional timeline (English)
+│   ├── so-far/
+│   │   └── [lang].astro     # Professional timeline (other languages)
 │   ├── og-generator.astro   # OG image generation editor with terminal aesthetic
 │   ├── og-preview.astro     # Full-size OG image preview and download
 │   ├── rss.xml.ts           # RSS feed generation
@@ -72,6 +81,7 @@ The design system is built around CSS custom properties and follows extreme mini
 - **GitHubIcon.astro**: Accessible GitHub icon component with responsive opacity effects. Desktop shows 60% opacity by default, 100% on hover; mobile shows 100% opacity always. Includes proper ARIA labels and SVG titles for screen readers.
 - **TimelineItem.astro**: Career timeline component with props for year, title, company, period, and description. Features continuous vertical line design with year labels floating to the left of the timeline.
 - **ProjectItem.astro**: Project display component leveraging Link and GitHubIcon components. Includes title, description, and optional GitHub repository access with consistent styling.
+- **FormattedText.astro**: Handles dynamic text with link replacements, used for i18n content that contains inline links. Splits text by placeholders and renders appropriate Link components.
 
 **Component Design Principles:**
 
@@ -143,14 +153,16 @@ The website uses a "letter-like" navigation approach that avoids traditional web
    - "Thank you for reading" + natural return links
    - Feels like correspondence conclusion
 
-4. **So Far (`so-far.astro`)**:
+4. **So Far (`so-far.astro` & `so-far/[lang].astro`)**:
+   - Multi-language support via URL paths: `/so-far` (English) and `/so-far/zh` (Chinese)
    - Internal anchor navigation for sections (Work, Projects, Skills, Side, Contact)
-   - Timeline-based Work section with company name translations and continuous visual line
+   - Timeline-based Work section with continuous visual line
    - Enhanced Work Projects section with detailed technical achievements and interview-ready content
    - Component-based architecture using TimelineItem and ProjectItem
    - Rich professional content written in conversational tone with quantifiable results
    - Optimized visual hierarchy with consistent border styling (1px) and clear information structure
    - Letter-style signature return to home
+   - Language toggle in top-right corner for easy switching
 
 5. **OG Image Generator (`og-generator.astro` & `og-preview.astro`)**:
    - Terminal aesthetic editor with `$ whoami` and `$ echo $PASSION` pattern
@@ -537,6 +549,48 @@ The website is optimized for deployment on Cloudflare Pages with the following c
 - Structured data validation
 - Page speed insights monitoring
 - Search ranking and keyword tracking
+
+## Internationalization (i18n)
+
+### Architecture
+
+The website implements server-side i18n using Astro's static site generation:
+
+**Translation Files:**
+- `src/i18n/translations/en.json` - English translations
+- `src/i18n/translations/zh.json` - Chinese translations
+- Structured JSON with nested keys for easy maintenance
+
+**Utility Functions (`src/i18n/utils.ts`):**
+- `getTranslations(lang)` - Returns translations for specified language
+- `getLanguageFromURL(url)` - Extracts language from URL
+- `getLangSwitchUrl(url, lang)` - Generates language switch URLs
+- `getHtmlLangAttribute(lang)` - Returns proper HTML lang attribute
+
+**URL Structure:**
+- English (default): `/so-far`
+- Chinese: `/so-far/zh`
+- Other pages remain English-only for now
+
+**Implementation Details:**
+- Server-side rendering for better performance and SEO
+- No client-side JavaScript for language switching
+- Proper `lang` attribute on HTML element
+- FormattedText component for handling inline links in translated content
+
+### Adding New Languages
+
+1. Create new translation file: `src/i18n/translations/[lang].json`
+2. Copy structure from `en.json` and translate content
+3. Update `getStaticPaths()` in `[lang].astro` to include new language
+4. Add language option to language toggle component
+
+### Best Practices
+
+- Keep translation keys consistent across all language files
+- Use placeholders (`{name}`) for dynamic content within translations
+- Maintain same JSON structure in all translation files
+- Test all language versions during development
 
 ## Project Dependencies
 

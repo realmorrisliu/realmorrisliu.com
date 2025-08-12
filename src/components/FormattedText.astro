@@ -1,0 +1,45 @@
+---
+import Link from "./Link.astro";
+
+export interface Props {
+  text: string;
+  replacements: Array<{
+    placeholder: string;
+    href: string;
+    label: string;
+  }>;
+}
+
+const { text, replacements } = Astro.props;
+
+// Split text by placeholders and create segments
+let segments: Array<{ type: 'text' | 'link'; content: string; href?: string }> = [{ type: 'text', content: text }];
+
+replacements.forEach(({ placeholder, href, label }) => {
+  const newSegments: typeof segments = [];
+  
+  segments.forEach(segment => {
+    if (segment.type === 'text') {
+      const parts = segment.content.split(placeholder);
+      parts.forEach((part, index) => {
+        if (part) {
+          newSegments.push({ type: 'text', content: part });
+        }
+        if (index < parts.length - 1) {
+          newSegments.push({ type: 'link', content: label, href });
+        }
+      });
+    } else {
+      newSegments.push(segment);
+    }
+  });
+  
+  segments = newSegments;
+});
+---
+
+{segments.map(segment => 
+  segment.type === 'text' 
+    ? segment.content 
+    : <Link href={segment.href}>{segment.content}</Link>
+)}
