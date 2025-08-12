@@ -117,9 +117,13 @@ const zhUrl = `/so-far/zh${currentHash}`;
                 <h4 class="mb-2 font-serif text-lg text-[color:var(--color-text-primary)]">
                   {project.title}
                 </h4>
-                <p class="text-sm font-medium text-[color:var(--color-text-tertiary)]">
-                  {project.company}
-                </p>
+                <div class="mb-1 flex items-center gap-2 text-sm">
+                  <span class="font-medium text-[color:var(--color-text-primary)]">
+                    {project.company}
+                  </span>
+                  <span class="text-[color:var(--color-border)]">|</span>
+                  <span class="text-[color:var(--color-text-tertiary)]">{project.period}</span>
+                </div>
               </div>
               {project.details ? (
                 <div class="space-y-3 text-base leading-relaxed text-[color:var(--color-text-secondary)]">
@@ -168,7 +172,7 @@ const zhUrl = `/so-far/zh${currentHash}`;
                 <p class="mt-2 ml-0 text-sm text-[color:var(--color-text-tertiary)]">
                   {project.readMoreLink.text}
                   <Link href={project.readMoreLink.href}>{project.readMoreLink.linkText}</Link>
-{project.readMoreLink.suffix}
+                  {project.readMoreLink.suffix}
                 </p>
               )}
             </div>

@@ -11,27 +11,27 @@ const { year, title, company, period, description } = Astro.props;
 ---
 
 <div class="relative pl-6">
-  <!-- Year floating on the left -->
-  <div class="absolute top-0 -left-16 w-12 text-right">
+  <!-- Year floating on the left (PC only) -->
+  <div class="absolute top-0 -left-16 hidden w-12 text-right md:block">
     <span class="text-sm font-medium text-[color:var(--color-text-primary)]">{year}</span>
-  </div>
-
-  <!-- Timeline dot -->
-  <div class="absolute top-1 -left-1 h-2 w-2 rounded-full bg-[color:var(--color-text-primary)]">
   </div>
 
   <!-- Main content area -->
   <div class="pb-2">
     <div class="mb-4">
+      <!-- Year label (mobile only) -->
+      <div class="mb-2 md:hidden">
+        <span class="text-sm font-medium text-[color:var(--color-text-primary)]">{year}</span>
+      </div>
+
       <h3 class="mb-2 font-serif text-xl leading-tight text-[color:var(--color-text-primary)]">
         {title}
       </h3>
-      <div class="mb-1">
-        <span class="text-base font-medium text-[color:var(--color-text-primary)]">{company}</span>
+      <div class="mb-1 flex items-center gap-2 text-sm">
+        <span class="font-medium text-[color:var(--color-text-primary)]">{company}</span>
+        <span class="text-[color:var(--color-border)]">|</span>
+        <span class="text-[color:var(--color-text-tertiary)]">{period}</span>
       </div>
-      <p class="text-sm text-[color:var(--color-text-tertiary)]">
-        {period}
-      </p>
     </div>
     <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
       {description}

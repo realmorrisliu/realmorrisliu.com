@@ -36,7 +36,7 @@
           "title": "Tech Lead & Team Manager",
           "company": "EverXYZ",
           "period": "Jan 2020 - Sep 2021",
-          "description": "Naturally evolved into leadership as the team grew from startup to scale-up. Discovered that good management amplifies everyone's capabilities, while bad management crushes even the best engineers. Built processes that enabled autonomy rather than control."
+          "description": "Naturally evolved into leadership as the team grew from startup to scale-up. Discovered that good management amplifies everyone's capabilities, while bad management crushes even the best engineers. Built a culture of context not control."
         },
         {
           "year": "2019",
@@ -69,7 +69,8 @@
         "items": [
           {
             "title": "X-Elephant: AI for Sales & Support",
-            "company": "UniXYZ • 2024 - Present",
+            "company": "UniXYZ",
+            "period": "2024 - Present",
             "description": "Led AI infrastructure design for sales and support automation platform.",
             "details": [
               "RAG Optimization: Built Qdrant-based vector database cluster, developed custom Rust tools to reduce memory usage from 100GB+ to 10GB (90% reduction).",
@@ -78,7 +79,8 @@
           },
           {
             "title": "EverCraft: Version Control System for CAD Files",
-            "company": "EverXYZ • 2019-2023",
+            "company": "EverXYZ",
+            "period": "2019-2023",
             "description": "Built SaaS platform bringing Git-inspired version control to CAD workflows.",
             "details": [
               "Architecture Design: Designed distributed storage system handling 10TB+ CAD files with version tracking and branching capabilities.",
@@ -88,7 +90,8 @@
           },
           {
             "title": "EverCraft Lite: Local CAD Version Control",
-            "company": "EverXYZ • 2023-2024",
+            "company": "EverXYZ",
+            "period": "2023-2024",
             "description": "Desktop solution incubated from EverCraft using Tauri and Rust.",
             "details": [
               "Cross-Platform Development: Built native desktop app with Tauri, achieving 90% code reuse between Windows/macOS/Linux.",
@@ -98,11 +101,12 @@
           },
           {
             "title": "fractal3D: 3D CAD Visualization Engine",
-            "company": "EverXYZ • 2020-2024",
+            "company": "EverXYZ",
+            "period": "2020-2024",
             "description": "Built online 3D CAD visualization engine with low-code capabilities.",
             "details": [
               "Team Leadership: Led 5-person engineering team through complete product lifecycle from concept to 10,000+ monthly active users.",
-              "Technical Innovation: Developed WebGL-based rendering engine supporting 20+ CAD formats with sub-second loading for 100MB+ models.",
+              "Technical Innovation: Developed WebGL-based rendering engine supporting 20+ CAD formats with loading within seconds for 100MB+ models.",
               "Product Strategy: Transformed complex 3D technology into accessible SaaS platform, achieving 40% month-over-month growth."
             ]
           }
@@ -188,7 +192,7 @@
           "href": "https://github.com/realmorrisliu",
           "text": "GitHub"
         },
-        "suffix": " where I share code and occasionally wonder if anyone reads commit messages."
+        "suffix": " where I share code and document technical experiments and ideas."
       },
       "twitter": {
         "text": "For more immediate thoughts and updates, I'm on ",
