@@ -4,6 +4,7 @@ import TimelineItem from "../components/TimelineItem.astro";
 import ProjectItem from "../components/ProjectItem.astro";
 import Link from "../components/Link.astro";
 import FooterSignature from "../components/FooterSignature.astro";
+import LangToggle from "../components/LangToggle.astro";
 import "../styles/global.css";
 ---
 
@@ -13,38 +14,71 @@ import "../styles/global.css";
 >
   <div class="mx-auto max-w-2xl px-6 py-16">
     <header class="mb-16">
-      <h1 class="mb-6 font-serif text-4xl leading-tight">So Far</h1>
+      <div class="mb-6 flex items-center justify-between">
+        <h1 class="font-serif text-4xl leading-tight">
+          <span class="lang-en">So Far</span>
+          <span class="lang-zh">关于我</span>
+        </h1>
+        <LangToggle />
+      </div>
 
       <nav class="mb-8 flex flex-wrap gap-4">
-        <Link href="#work" class="text-sm text-[color:var(--color-text-secondary)]">Work</Link>
-        <Link href="#projects" class="text-sm text-[color:var(--color-text-secondary)]"
-          >Projects</Link
-        >
-        <Link href="#skills" class="text-sm text-[color:var(--color-text-secondary)]">Skills</Link>
-        <Link href="#side" class="text-sm text-[color:var(--color-text-secondary)]">Side</Link>
-        <Link href="#contact" class="text-sm text-[color:var(--color-text-secondary)]">Contact</Link
-        >
+        <Link href="#work" class="text-sm text-[color:var(--color-text-secondary)]">
+          <span class="lang-en">Work</span>
+          <span class="lang-zh">工作经历</span>
+        </Link>
+        <Link href="#projects" class="text-sm text-[color:var(--color-text-secondary)]">
+          <span class="lang-en">Projects</span>
+          <span class="lang-zh">项目经验</span>
+        </Link>
+        <Link href="#skills" class="text-sm text-[color:var(--color-text-secondary)]">
+          <span class="lang-en">Skills</span>
+          <span class="lang-zh">技能</span>
+        </Link>
+        <Link href="#side" class="text-sm text-[color:var(--color-text-secondary)]">
+          <span class="lang-en">Side</span>
+          <span class="lang-zh">爱好</span>
+        </Link>
+        <Link href="#contact" class="text-sm text-[color:var(--color-text-secondary)]">
+          <span class="lang-en">Contact</span>
+          <span class="lang-zh">联系方式</span>
+        </Link>
       </nav>
 
       <!-- Summary description -->
       <div class="space-y-4">
         <p class="text-lg leading-relaxed text-[color:var(--color-text-secondary)]">
-          I build software and lead teams. Currently working on AI infrastructure while
-          side-building tools that solve real problems. This page captures the journey so far—the
-          work, the projects, and the lessons learned.
+          <span class="lang-en">
+            I build software and lead teams. Currently working on AI infrastructure while
+            side-building tools that solve real problems. This page captures the journey so far—the
+            work, the projects, and the lessons learned.
+          </span>
+          <span class="lang-zh">
+            我写代码，也带团队。最近在忙 AI 基础设施的事，空余时间会做一些解决实际问题的小工具。
+            这页面记录了我这些年的经历——踩过的坑，做过的项目，还有一路学到的东西。
+          </span>
         </p>
       </div>
     </header>
 
     <section id="work" class="mb-16">
-      <h2 class="mb-4 font-serif text-2xl leading-tight">Work</h2>
+      <h2 class="mb-4 font-serif text-2xl leading-tight">
+        <span class="lang-en">Work</span>
+        <span class="lang-zh">工作经历</span>
+      </h2>
 
       <!-- Technical background and terminology notes -->
       <div class="mb-8 space-y-4">
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-          Seven years of growth from individual contributor to team leader. Each role taught me
-          something different about technology, people, and the balance between moving fast and
-          building things that last.
+          <span class="lang-en">
+            Seven years of growth from individual contributor to team leader. Each role taught me
+            something different about technology, people, and the balance between moving fast and
+            building things that last.
+          </span>
+          <span class="lang-zh">
+            七年时间，从写代码的工程师变成带团队的负责人。每个阶段都有不同的收获——
+            有技术上的，有管理上的，还有怎么在快速迭代和长期稳定性之间找平衡。
+          </span>
         </p>
 
         <div class="text-sm text-[color:var(--color-text-tertiary)]">
@@ -97,6 +131,7 @@ import "../styles/global.css";
             company="UniXYZ"
             period="May 2024 - Present"
             description="Focused on AI infrastructure and scalability challenges. Working with a diverse team to solve complex distributed systems problems while maintaining startup agility."
+            descriptionZh="专注 AI 基础设施和扩展性挑战。和多元化的团队一起解决复杂的分布式系统问题，同时保持创业公司的敏捷性。"
           />
 
           <TimelineItem
@@ -104,7 +139,8 @@ import "../styles/global.css";
             title="CTO"
             company="EverXYZ"
             period="Sep 2021 - May 2024"
-            description="Promoted to CTO when joining MiraclePlus (formerly YC China). Led a 20-person engineering team through rapid scaling, established sustainable development practices, and balanced technical debt with feature delivery. Learned that the hardest part of leadership isn't the technology—it's the people."
+            description="Promoted to CTO as EverXYZ entered MiraclePlus (formerly YC China) accelerator program. Led a 20-person engineering team through rapid scaling, established sustainable development practices, and balanced technical debt with feature delivery. Learned that the hardest part of leadership isn't the technology—it's the people."
+            descriptionZh="EverXYZ 加入奇绩创坛（原 YC 中国）孵化项目时被提升为 CTO。带领 20 人的工程团队经历快速扩张，建立了可持续的开发实践，在技术债务和功能交付之间找到平衡。学到了领导力最难的部分不是技术——而是人。"
           />
 
           <TimelineItem
@@ -113,6 +149,7 @@ import "../styles/global.css";
             company="EverXYZ"
             period="Early 2020 - Sep 2021"
             description="Naturally evolved into leadership as the team grew from startup to scale-up. Discovered that good management amplifies everyone's capabilities, while bad management crushes even the best engineers. Built processes that enabled autonomy rather than control."
+            descriptionZh="随着团队从初创公司成长为扩张期公司，自然而然地演化成了领导者。发现好的管理能放大每个人的能力，而糟糕的管理甚至能毁掉最好的工程师。建立了能够赋予自主权而非控制的流程。"
           />
 
           <TimelineItem
@@ -121,6 +158,7 @@ import "../styles/global.css";
             company="EverXYZ"
             period="Feb 2019 - Early 2020"
             description="Joined as employee #4 to build a CAD platform from zero. The classic startup experience: wearing every hat, moving fast, breaking things, and occasionally building something users actually wanted. Learned that early-stage product development is 90% listening to users and 10% clever code."
+            descriptionZh="作为第 4 号员工加入，从零开始构建 CAD 平台。经典的创业公司体验：什么都干、快速迭代、搞坏东西，偶尔做出用户真正想要的东西。学到了早期产品开发是 90% 的倾听用户和 10% 的巧妙代码。"
           />
 
           <TimelineItem
@@ -129,6 +167,7 @@ import "../styles/global.css";
             company="Meituan"
             period="Jul 2018 - Jan 2019"
             description="Developed data analytics modules and multi-store management systems for the established product. Built component libraries and solved complex browser compatibility issues—including that one IE9 fixed element rendering bug that haunted everyone."
+            descriptionZh="为成熟产品开发数据分析模块和多店管理系统。构建组件库，解决复杂的浏览器兼容性问题——包括那个让所有人都头疼的 IE9 固定元素渲染 bug。"
           />
 
           <TimelineItem
@@ -137,24 +176,35 @@ import "../styles/global.css";
             company="Meituan"
             period="Jul - Aug 2017"
             description="Joined as an early team member when the Kemanman project was just forming. Implemented C-side membership card features, contributing to the foundation of what would become a key product."
+            descriptionZh="在客满满项目刚刚成立时作为早期团队成员加入。实现了 C 端会员卡功能，为后来成为核心产品的基础做出了贡献。"
           />
         </div>
       </div>
     </section>
 
     <section id="projects" class="mb-16">
-      <h2 class="mb-4 font-serif text-2xl leading-tight">Projects</h2>
+      <h2 class="mb-4 font-serif text-2xl leading-tight">
+        <span class="lang-en">Projects</span>
+        <span class="lang-zh">项目经验</span>
+      </h2>
 
       <p class="mb-8 text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-        A mix of professional work and personal exploration. The work projects showcase technical
-        leadership and architecture design, while open source projects reflect my curiosity and
-        problem-solving approach.
+        <span class="lang-en">
+          A mix of professional work and personal exploration. The work projects showcase technical
+          leadership and architecture design, while open source projects reflect my curiosity and
+          problem-solving approach.
+        </span>
+        <span class="lang-zh">
+          有工作中的项目，也有自己折腾的小工具。工作项目能看出我是怎么带技术团队、
+          怎么做架构设计的，开源项目则更多是我对技术的好奇心和解决问题的思路。
+        </span>
       </p>
 
       <!-- Work Projects -->
       <div class="mb-12">
         <h3 class="mb-8 font-serif text-xl text-[color:var(--color-text-primary)]">
-          Work Projects
+          <span class="lang-en">Work Projects</span>
+          <span class="lang-zh">工作项目</span>
         </h3>
         <div class="space-y-8">
           <!-- X-Elephant -->
@@ -170,17 +220,34 @@ import "../styles/global.css";
             <div
               class="space-y-3 text-base leading-relaxed text-[color:var(--color-text-secondary)]"
             >
-              <p>Led AI infrastructure design for sales and support automation platform.</p>
               <p>
-                <span class="font-medium text-[color:var(--color-text-primary)]"
-                  >RAG Optimization:</span
-                > Built Qdrant-based vector database cluster, developed custom Rust tools to reduce memory
-                usage from 100GB+ to 10GB (90% reduction).
+                <span class="lang-en">Led AI infrastructure design for sales and support automation platform.</span>
+                <span class="lang-zh">负责销售和客服自动化平台的 AI 基础设施设计。</span>
               </p>
               <p>
-                <span class="font-medium text-[color:var(--color-text-primary)]"
-                  >Data Pipeline:</span
-                > Automated Shopify data collection using Playwright and webhook-based real-time updates.
+                <span class="lang-en">
+                  <span class="font-medium text-[color:var(--color-text-primary)]"
+                    >RAG Optimization:</span
+                  > Built Qdrant-based vector database cluster, developed custom Rust tools to reduce memory
+                  usage from 100GB+ to 10GB (90% reduction).
+                </span>
+                <span class="lang-zh">
+                  <span class="font-medium text-[color:var(--color-text-primary)]"
+                    >RAG 优化：</span
+                  > 搭建了基于 Qdrant 的向量数据库集群，开发了自定义 Rust 工具，将内存使用量从 100GB+ 降到了 10GB（减少 90%）。
+                </span>
+              </p>
+              <p>
+                <span class="lang-en">
+                  <span class="font-medium text-[color:var(--color-text-primary)]"
+                    >Data Pipeline:</span
+                  > Automated Shopify data collection using Playwright and webhook-based real-time updates.
+                </span>
+                <span class="lang-zh">
+                  <span class="font-medium text-[color:var(--color-text-primary)]"
+                    >数据管道：</span
+                  > 使用 Playwright 自动化 Shopify 数据收集，基于 webhook 实现实时更新。
+                </span>
               </p>
             </div>
           </div>
@@ -196,9 +263,14 @@ import "../styles/global.css";
               </p>
             </div>
             <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-              Built SaaS platform bringing Git-inspired version control to CAD workflows. Features
-              online model preview (powered by fractal3D), collaborative annotation, and visual diff
-              comparison for engineering teams.
+              <span class="lang-en">
+                Built SaaS platform bringing Git-inspired version control to CAD workflows. Features
+                online model preview (powered by fractal3D), collaborative annotation, and visual diff
+                comparison for engineering teams.
+              </span>
+              <span class="lang-zh">
+                构建了一个将 Git 灵感的版本控制带到 CAD 工作流的 SaaS 平台。包含在线模型预览（由 fractal3D 驱动）、协作注释和面向工程团队的可视化差异对比功能。
+              </span>
             </p>
           </div>
 
@@ -213,8 +285,13 @@ import "../styles/global.css";
               </p>
             </div>
             <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-              Desktop solution incubated from EverCraft. Built with Tauri and Rust, providing
-              intuitive graphical interface for local version control of CAD files and documents.
+              <span class="lang-en">
+                Desktop solution incubated from EverCraft. Built with Tauri and Rust, providing
+                intuitive graphical interface for local version control of CAD files and documents.
+              </span>
+              <span class="lang-zh">
+                从 EverCraft 孵化出来的桌面解决方案。用 Tauri 和 Rust 构建，为 CAD 文件和文档的本地版本控制提供直观的图形界面。
+              </span>
             </p>
           </div>
 
@@ -229,9 +306,14 @@ import "../styles/global.css";
               </p>
             </div>
             <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-              Built online 3D CAD visualization engine with low-code capabilities. Led 5-person team
-              through complete product lifecycle, making professional 3D visualization accessible to
-              mainstream users.
+              <span class="lang-en">
+                Built online 3D CAD visualization engine with low-code capabilities. Led 5-person team
+                through complete product lifecycle, making professional 3D visualization accessible to
+                mainstream users.
+              </span>
+              <span class="lang-zh">
+                构建了具备低代码能力的 3D CAD 在线可视化引擎。带领 5 人团队走过了完整的产品生命周期，让专业的 3D 可视化能力变得普通用户也能使用。
+              </span>
             </p>
           </div>
         </div>
@@ -240,125 +322,202 @@ import "../styles/global.css";
       <!-- Personal Projects -->
       <div>
         <h3 class="mb-6 font-serif text-lg text-[color:var(--color-text-primary)]">
-          Personal Projects
+          <span class="lang-en">Personal Projects</span>
+          <span class="lang-zh">个人项目</span>
         </h3>
         <div class="space-y-6">
           <ProjectItem
             title="Sealbox"
             description="A lightweight secret management service built with Rust. Single binary, SQLite storage, end-to-end encryption—designed for developers who want secure secret storage without enterprise complexity. Perfect for CI/CD, containers, and small teams."
+            descriptionZh="用 Rust 构建的轻量级密钥管理服务。单个二进制文件、SQLite 存储、端到端加密——为想要安全存储密钥但不想要企业级复杂性的开发者设计。非常适合 CI/CD、容器和小团队。"
             githubUrl="https://github.com/realmorrisliu/sealbox"
           />
           <p class="mt-2 ml-0 text-sm text-[color:var(--color-text-tertiary)]">
-            → Read the story behind this project in
-            <Link href="/thoughts/why-i-built-sealbox">Why I Built Sealbox</Link>
+            <span class="lang-en">
+              → Read the story behind this project in
+              <Link href="/thoughts/why-i-built-sealbox">Why I Built Sealbox</Link>
+            </span>
+            <span class="lang-zh">
+              → 在<Link href="/thoughts/why-i-built-sealbox">《为什么我做Sealbox》</Link>中看这个项目背后的故事
+            </span>
           </p>
 
           <ProjectItem
             title="openrouter-rs"
             description="Type-safe Rust SDK for OpenRouter.ai with async support and builder patterns. Leverages Rust's type system to make LLM API interactions predictable and memory-safe, supporting everything from simple completions to streaming responses."
+            descriptionZh="为 OpenRouter.ai 打造的类型安全 Rust SDK，支持异步和建造者模式。利用 Rust 的类型系统让 LLM API 交互变得可预测和内存安全，支持从简单的完成到流式响应的所有功能。"
             githubUrl="https://github.com/realmorrisliu/openrouter-rs"
           />
 
           <ProjectItem
             title="funcall"
             description="A lightweight Rust library that transforms regular functions into dynamically callable JSON tools with a single `#[funcall]` macro. Minimal boilerplate, type-safe serialization, and runtime function invocation by name."
+            descriptionZh="一个轻量级的 Rust 库，只需要一个 `#[funcall]` 宏就能把普通函数转换成可动态调用的 JSON 工具。最少的样板代码、类型安全的序列化，以及按名称的运行时函数调用。"
             githubUrl="https://github.com/realmorrisliu/funcall"
           />
 
           <ProjectItem
             title="Kira"
             description="An AI assistant that captures context from everything you do—selected text, clipboard, files, conversations—then uses that rich context to help you develop and connect your ideas. Built for people who think better through conversation than traditional note-taking tools."
+            descriptionZh="一个 AI 助手，能从你做的所有事情中获取上下文——选中的文字、剪贴板、文件、对话——然后利用这些丰富的上下文帮你发展和连接想法。为那些通过对话而不是传统笔记工具来更好思考的人而设计。"
           />
           <p class="mt-2 ml-0 text-sm text-[color:var(--color-text-tertiary)]">
-            → Read more about the vision and design philosophy in
-            <Link href="/thoughts/building-kira-an-ai-native-second-brain"
-              >Building Kira: An AI-Native Second Brain</Link
-            >
+            <span class="lang-en">
+              → Read more about the vision and design philosophy in
+              <Link href="/thoughts/building-kira-an-ai-native-second-brain"
+                >Building Kira: An AI-Native Second Brain</Link
+              >
+            </span>
+            <span class="lang-zh">
+              → 在<Link href="/thoughts/building-kira-an-ai-native-second-brain"
+                >《构建 Kira：一个 AI 原生的第二大脑》</Link
+              >中了解更多的愿景和设计理念
+            </span>
           </p>
         </div>
       </div>
     </section>
 
     <section id="skills" class="mb-16">
-      <h2 class="mb-4 font-serif text-2xl leading-tight">Skills</h2>
+      <h2 class="mb-4 font-serif text-2xl leading-tight">
+        <span class="lang-en">Skills</span>
+        <span class="lang-zh">技能</span>
+      </h2>
       <div class="space-y-4">
         <div>
           <h3 class="mb-2 font-serif text-base text-[color:var(--color-text-primary)]">
-            Languages
+            <span class="lang-en">Languages</span>
+            <span class="lang-zh">编程语言</span>
           </h3>
           <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-            Rust, TypeScript, Go, Python. I believe in type safety and systems that don't surprise
-            you.
+            <span class="lang-en">
+              Rust, TypeScript, Go, Python. I believe in type safety and systems that don't surprise
+              you.
+            </span>
+            <span class="lang-zh">
+              Rust、TypeScript、Go、Python。我喜欢那种类型安全、不会突然出妖蛾子的系统。
+            </span>
           </p>
         </div>
 
         <div>
           <h3 class="mb-2 font-serif text-base text-[color:var(--color-text-primary)]">
-            Infrastructure
+            <span class="lang-en">Infrastructure</span>
+            <span class="lang-zh">基础设施</span>
           </h3>
           <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-            Kubernetes, Docker, Prometheus, Grafana. I build systems that scale gracefully and stay
-            observable.
+            <span class="lang-en">
+              Kubernetes, Docker, Prometheus, Grafana. I build systems that scale gracefully and stay
+              observable.
+            </span>
+            <span class="lang-zh">
+              Kubernetes、Docker、Prometheus、Grafana。我喜欢搭建那种可以优雅扩展、而且一直可以看到运行状态的系统。
+            </span>
           </p>
         </div>
 
         <div>
           <h3 class="mb-2 font-serif text-base text-[color:var(--color-text-primary)]">
-            Data & Interfaces
+            <span class="lang-en">Data & Interfaces</span>
+            <span class="lang-zh">数据与界面</span>
           </h3>
           <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-            Postgres, Redis, React, Tauri. From databases to user interfaces, I focus on experiences
-            that feel natural.
+            <span class="lang-en">
+              Postgres, Redis, React, Tauri. From databases to user interfaces, I focus on experiences
+              that feel natural.
+            </span>
+            <span class="lang-zh">
+              Postgres、Redis、React、Tauri。从数据库到用户界面，我都希望做出让人用起来舒服自然的东西。
+            </span>
           </p>
         </div>
 
         <div>
           <h3 class="mb-2 font-serif text-base text-[color:var(--color-text-primary)]">
-            Leadership
+            <span class="lang-en">Leadership</span>
+            <span class="lang-zh">团队管理</span>
           </h3>
           <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-            Built and managed engineering teams up to 20 people. The best technical solutions come
-            from understanding both code and people.
+            <span class="lang-en">
+              Built and managed engineering teams up to 20 people. The best technical solutions come
+              from understanding both code and people.
+            </span>
+            <span class="lang-zh">
+              带过最多 20 人的技术团队。我发现最好的技术方案往往来自于既懂代码又懂人心。
+            </span>
           </p>
         </div>
       </div>
     </section>
 
     <section id="side" class="mb-16">
-      <h2 class="mb-4 font-serif text-2xl leading-tight">Side</h2>
+      <h2 class="mb-4 font-serif text-2xl leading-tight">
+        <span class="lang-en">Side</span>
+        <span class="lang-zh">爱好</span>
+      </h2>
       <div class="space-y-4">
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-          I spend time practicing bass, working through the grooves that shaped music—<Link
-            href="https://en.wikipedia.org/wiki/Queen_(band)">Queen</Link
-          >'s theatrical bass lines, <Link href="https://en.wikipedia.org/wiki/Chic_(band)"
-            >Chic</Link
-          >'s infectious funk, <Link href="https://en.wikipedia.org/wiki/Earth,_Wind_%26_Fire"
-            >EW&F</Link
-          >'s sophisticated arrangements, and <Link href="https://en.wikipedia.org/wiki/AC/DC"
-            >AC/DC</Link
-          >'s relentless drive. There's something about the bass that mirrors good engineering: it's
-          the foundation that holds everything else together.
+          <span class="lang-en">
+            I spend time practicing bass, working through the grooves that shaped music—<Link
+              href="https://en.wikipedia.org/wiki/Queen_(band)">Queen</Link
+            >'s theatrical bass lines, <Link href="https://en.wikipedia.org/wiki/Chic_(band)"
+              >Chic</Link
+            >'s infectious funk, <Link href="https://en.wikipedia.org/wiki/Earth,_Wind_%26_Fire"
+              >EW&F</Link
+            >'s sophisticated arrangements, and <Link href="https://en.wikipedia.org/wiki/AC/DC"
+              >AC/DC</Link
+            >'s relentless drive. There's something about the bass that mirrors good engineering: it's
+            the foundation that holds everything else together.
+          </span>
+          <span class="lang-zh">
+            我会花时间练贝斯，研究那些塑造了音乐的经典律动——<Link
+              href="https://en.wikipedia.org/wiki/Queen_(band)">Queen</Link
+            >戏剧化的贝斯线条，<Link href="https://en.wikipedia.org/wiki/Chic_(band)"
+              >Chic</Link
+            >感染力十足的放克，<Link href="https://en.wikipedia.org/wiki/Earth,_Wind_%26_Fire"
+              >Earth, Wind & Fire</Link
+            >精妙的编曲，还有<Link href="https://en.wikipedia.org/wiki/AC/DC"
+              >AC/DC</Link
+            >那股子猛劲。贝斯和好的工程设计很像：都是那个把所有东西撑起来的基础。
+          </span>
         </p>
 
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-          When I'm not playing music, I'm often capturing moments through photography. I'm drawn to
-          the philosophy of photographers like <Link
-            href="https://en.wikipedia.org/wiki/Henri_Cartier-Bresson">Henri Cartier-Bresson</Link
-          >, who taught us about the decisive moment, and <Link
-            href="https://hideakihamada.com/about/">Hideaki Hamada</Link
-          >, whose quiet observations of daily life reveal extraordinary beauty in the ordinary.
+          <span class="lang-en">
+            When I'm not playing music, I'm often capturing moments through photography. I'm drawn to
+            the philosophy of photographers like <Link
+              href="https://en.wikipedia.org/wiki/Henri_Cartier-Bresson">Henri Cartier-Bresson</Link
+            >, who taught us about the decisive moment, and <Link
+              href="https://hideakihamada.com/about/">Hideaki Hamada</Link
+            >, whose quiet observations of daily life reveal extraordinary beauty in the ordinary.
+          </span>
+          <span class="lang-zh">
+            不弹琴的时候，我经常拿着相机到处拍。我很喜欢一些摄影师的理念，比如<Link
+              href="https://en.wikipedia.org/wiki/Henri_Cartier-Bresson">卡蒂埃-布列松</Link
+            >提出的"决定性瞬间"，还有<Link
+              href="https://hideakihamada.com/about/">滨田英明</Link
+            >对日常生活的安静观察，能从平凡中发现非凡的美。
+          </span>
         </p>
 
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-          Both photography and music have shaped how I think about code. Like a good composition or
-          a perfectly timed shot, the best software feels inevitable once you experience it. I
-          believe in building things that last, writing code that others can understand, and finding
-          the rhythm that makes complex systems feel simple.
+          <span class="lang-en">
+            Both photography and music have shaped how I think about code. Like a good composition or
+            a perfectly timed shot, the best software feels inevitable once you experience it. I
+            believe in building things that last, writing code that others can understand, and finding
+            the rhythm that makes complex systems feel simple.
+          </span>
+          <span class="lang-zh">
+            摄影和音乐都影响着我写代码的思路。就像好的作品或者恰到好处的瞬间，
+            最棒的软件用起来会让人觉得"就应该是这样"。我喜欢做那种经得起时间考验的东西，
+            写别人也能看懂的代码，还有找到那种让复杂系统变得简单的节奏感。
+          </span>
         </p>
 
         <div class="mt-6 border-t border-[color:var(--color-border)] pt-4">
           <p class="mb-2 font-serif text-sm text-[color:var(--color-text-tertiary)]">
-            Current gear:
+            <span class="lang-en">Current gear:</span>
+            <span class="lang-zh">目前的装备：</span>
           </p>
           <div class="space-y-1 text-sm text-[color:var(--color-text-tertiary)]">
             <p>Bass: YAMAHA TRBX604</p>
@@ -369,28 +528,52 @@ import "../styles/global.css";
     </section>
 
     <section id="contact" class="mb-16">
-      <h2 class="mb-4 font-serif text-2xl leading-tight">Contact</h2>
+      <h2 class="mb-4 font-serif text-2xl leading-tight">
+        <span class="lang-en">Contact</span>
+        <span class="lang-zh">联系方式</span>
+      </h2>
       <div class="space-y-4">
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-          You can find me on <Link href="https://github.com/realmorrisliu">GitHub</Link>
-          where I share code and occasionally wonder if anyone reads commit messages.
+          <span class="lang-en">
+            You can find me on <Link href="https://github.com/realmorrisliu">GitHub</Link>
+            where I share code and occasionally wonder if anyone reads commit messages.
+          </span>
+          <span class="lang-zh">
+            你可以在<Link href="https://github.com/realmorrisliu">GitHub</Link>
+            上找到我，我在那里分享代码，偶尔也会好奇有没有人真的会看 commit 消息。
+          </span>
         </p>
 
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-          For more immediate thoughts and updates, I'm on
-          <Link href="https://twitter.com/realmorrisliu">X (Twitter)</Link>.
+          <span class="lang-en">
+            For more immediate thoughts and updates, I'm on
+            <Link href="https://twitter.com/realmorrisliu">X (Twitter)</Link>.
+          </span>
+          <span class="lang-zh">
+            想看更即时的想法和动态，可以关注我的
+            <Link href="https://twitter.com/realmorrisliu">X (Twitter)</Link>。
+          </span>
         </p>
 
         <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-          For everything else, email works well:
-          <Link href="mailto:morrisliu1994@outlook.com">morrisliu1994@outlook.com</Link>
+          <span class="lang-en">
+            For everything else, email works well:
+            <Link href="mailto:morrisliu1994@outlook.com">morrisliu1994@outlook.com</Link>
+          </span>
+          <span class="lang-zh">
+            其他事情，邮件联系就行：
+            <Link href="mailto:morrisliu1994@outlook.com">morrisliu1994@outlook.com</Link>
+          </span>
         </p>
       </div>
     </section>
 
     <FooterSignature>
       <nav class="mt-2">
-        <Link href="/" class="text-sm">← Back to main page</Link>
+        <Link href="/" class="text-sm">
+          <span class="lang-en">← Back to main page</span>
+          <span class="lang-zh">← 回到主页</span>
+        </Link>
       </nav>
     </FooterSignature>
   </div>

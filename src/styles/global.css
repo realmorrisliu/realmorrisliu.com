@@ -181,3 +181,57 @@ p {
 .prose :not(pre) > code::after {
   content: none;
 }
+
+/* Language toggle system */
+/* Default: show English, hide Chinese (applies when no data-current-lang or when data-current-lang="en") */
+.lang-en {
+  display: block;
+}
+
+.lang-zh {
+  display: none;
+}
+
+/* Explicitly set English display when en is selected */
+[data-current-lang="en"] .lang-en {
+  display: block;
+}
+
+[data-current-lang="en"] .lang-zh {
+  display: none;
+}
+
+/* When Chinese is selected: show Chinese, hide English */
+[data-current-lang="zh"] .lang-en {
+  display: none;
+}
+
+[data-current-lang="zh"] .lang-zh {
+  display: block;
+}
+
+/* Ensure inline elements maintain proper flow */
+span.lang-en,
+span.lang-zh {
+  display: inline;
+}
+
+span.lang-zh {
+  display: none;
+}
+
+[data-current-lang="en"] span.lang-en {
+  display: inline;
+}
+
+[data-current-lang="en"] span.lang-zh {
+  display: none;
+}
+
+[data-current-lang="zh"] span.lang-en {
+  display: none;
+}
+
+[data-current-lang="zh"] span.lang-zh {
+  display: inline;
+}

@@ -5,9 +5,10 @@ export interface Props {
   company: string;
   period: string;
   description: string;
+  descriptionZh?: string;
 }
 
-const { year, title, company, period, description } = Astro.props;
+const { year, title, company, period, description, descriptionZh } = Astro.props;
 ---
 
 <div class="relative pl-6">
@@ -27,7 +28,8 @@ const { year, title, company, period, description } = Astro.props;
       </p>
     </div>
     <p class="font-sans text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-      {description}
+      <span class="lang-en">{description}</span>
+      {descriptionZh && <span class="lang-zh">{descriptionZh}</span>}
     </p>
   </div>
 </div>
