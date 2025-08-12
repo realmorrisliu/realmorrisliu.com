@@ -6,137 +6,140 @@
       "description": "Morris Liu's professional journey: 7 years from individual contributor to CTO. Experience building AI infrastructure, leading engineering teams, and creating open source tools like Sealbox and Kira."
     },
     "description": "I build software and lead teams. Currently working on AI infrastructure while side-building tools that solve real problems. This page captures the journey so far—the work, the projects, and the lessons learned.",
-    "nav": {
-      "work": "Work",
-      "projects": "Projects",
-      "skills": "Skills",
-      "side": "Side",
-      "contact": "Contact"
-    },
+    "nav": [
+      { "id": "work", "label": "Work", "href": "#work" },
+      { "id": "projects", "label": "Projects", "href": "#projects" },
+      { "id": "skills", "label": "Skills", "href": "#skills" },
+      { "id": "side", "label": "Side", "href": "#side" },
+      { "id": "contact", "label": "Contact", "href": "#contact" }
+    ],
     "work": {
       "title": "Work",
       "description": "Seven years of growth from individual contributor to team leader. Each role taught me something different about technology, people, and the balance between moving fast and building things that last.",
-      "positions": {
-        "fullStackEngineer2024": {
+      "positions": [
+        {
           "year": "Now",
           "title": "Full-Stack Engineer",
           "company": "UniXYZ",
           "period": "May 2024 - Present",
           "description": "Focused on AI infrastructure and scalability challenges. Working with a diverse team to solve complex distributed systems problems while maintaining startup agility."
         },
-        "cto": {
+        {
           "year": "2021",
           "title": "CTO",
           "company": "EverXYZ",
           "period": "Sep 2021 - May 2024",
           "description": "Promoted to CTO as EverXYZ entered MiraclePlus (formerly YC China) accelerator program. Led a 20-person engineering team through rapid scaling, established sustainable development practices, and balanced technical debt with feature delivery. Learned that the hardest part of leadership isn't the technology—it's the people."
         },
-        "techLead": {
+        {
           "year": "2020",
           "title": "Tech Lead & Team Manager",
           "company": "EverXYZ",
           "period": "Early 2020 - Sep 2021",
           "description": "Naturally evolved into leadership as the team grew from startup to scale-up. Discovered that good management amplifies everyone's capabilities, while bad management crushes even the best engineers. Built processes that enabled autonomy rather than control."
         },
-        "fullStackEngineer2019": {
+        {
           "year": "2019",
           "title": "Full-Stack Engineer",
           "company": "EverXYZ",
           "period": "Feb 2019 - Early 2020",
           "description": "Joined as employee #4 to build a CAD platform from zero. The classic startup experience: wearing every hat, moving fast, breaking things, and occasionally building something users actually wanted. Learned that early-stage product development is 90% listening to users and 10% clever code."
         },
-        "frontendEngineer": {
+        {
           "year": "2018",
           "title": "Frontend Engineer",
           "company": "Meituan",
           "period": "Jul 2018 - Jan 2019",
           "description": "Developed data analytics modules and multi-store management systems for the established product. Built component libraries and solved complex browser compatibility issues—including that one IE9 fixed element rendering bug that haunted everyone."
         },
-        "intern": {
+        {
           "year": "2017",
           "title": "Intern",
           "company": "Meituan",
-          "period": "Jul - Aug 2017",
+          "period": "Jul - Sep 2017",
           "description": "Joined as an early team member when the Kemanman project was just forming. Implemented C-side membership card features, contributing to the foundation of what would become a key product."
         }
-      }
+      ]
     },
     "projects": {
       "title": "Projects",
       "description": "A mix of professional work and personal exploration. The work projects showcase technical leadership and architecture design, while open source projects reflect my curiosity and problem-solving approach.",
       "workProjects": {
         "title": "Work Projects",
-        "xElephant": {
-          "title": "X-Elephant: AI for Sales & Support",
-          "company": "UniXYZ • 2024 - Present",
-          "description": "Led AI infrastructure design for sales and support automation platform.",
-          "details": {
-            "ragOptimization": {
-              "label": "RAG Optimization:",
-              "text": "Built Qdrant-based vector database cluster, developed custom Rust tools to reduce memory usage from 100GB+ to 10GB (90% reduction)."
-            },
-            "dataPipeline": {
-              "label": "Data Pipeline:",
-              "text": "Automated Shopify data collection using Playwright and webhook-based real-time updates."
-            }
+        "items": [
+          {
+            "title": "X-Elephant: AI for Sales & Support",
+            "company": "UniXYZ • 2024 - Present",
+            "description": "Led AI infrastructure design for sales and support automation platform.",
+            "details": [
+              "RAG Optimization: Built Qdrant-based vector database cluster, developed custom Rust tools to reduce memory usage from 100GB+ to 10GB (90% reduction).",
+              "Data Pipeline: Automated Shopify data collection using Playwright and webhook-based real-time updates."
+            ]
+          },
+          {
+            "title": "EverCraft: Version Control System for CAD Files",
+            "company": "EverXYZ • 2019-2023",
+            "description": "Built SaaS platform bringing Git-inspired version control to CAD workflows. Features online model preview (powered by fractal3D), collaborative annotation, and visual diff comparison for engineering teams."
+          },
+          {
+            "title": "EverCraft Lite: Local CAD Version Control",
+            "company": "EverXYZ • 2023-2024",
+            "description": "Desktop solution incubated from EverCraft. Built with Tauri and Rust, providing intuitive graphical interface for local version control of CAD files and documents."
+          },
+          {
+            "title": "fractal3D: 3D CAD Visualization Engine",
+            "company": "EverXYZ • 2020-2024",
+            "description": "Built online 3D CAD visualization engine with low-code capabilities. Led 5-person team through complete product lifecycle, making professional 3D visualization accessible to mainstream users."
           }
-        },
-        "everCraft": {
-          "title": "EverCraft: Version Control System for CAD Files",
-          "company": "EverXYZ • 2019-2023",
-          "description": "Built SaaS platform bringing Git-inspired version control to CAD workflows. Features online model preview (powered by fractal3D), collaborative annotation, and visual diff comparison for engineering teams."
-        },
-        "everCraftLite": {
-          "title": "EverCraft Lite: Local CAD Version Control",
-          "company": "EverXYZ • 2023-2024",
-          "description": "Desktop solution incubated from EverCraft. Built with Tauri and Rust, providing intuitive graphical interface for local version control of CAD files and documents."
-        },
-        "fractal3D": {
-          "title": "fractal3D: 3D CAD Visualization Engine",
-          "company": "EverXYZ • 2020-2024",
-          "description": "Built online 3D CAD visualization engine with low-code capabilities. Led 5-person team through complete product lifecycle, making professional 3D visualization accessible to mainstream users."
-        }
+        ]
       },
       "personalProjects": {
         "title": "Personal Projects",
-        "sealbox": {
-          "title": "Sealbox",
-          "description": "A lightweight secret management service built with Rust. Single binary, SQLite storage, end-to-end encryption—designed for developers who want secure secret storage without enterprise complexity. Perfect for CI/CD, containers, and small teams.",
-          "readMore": "→ Read the story behind this project in"
-        },
-        "openrouterRs": {
-          "title": "openrouter-rs",
-          "description": "Type-safe Rust SDK for OpenRouter.ai with async support and builder patterns. Leverages Rust's type system to make LLM API interactions predictable and memory-safe, supporting everything from simple completions to streaming responses."
-        },
-        "funcall": {
-          "title": "funcall",
-          "description": "A lightweight Rust library that transforms regular functions into dynamically callable JSON tools with a single `#[funcall]` macro. Minimal boilerplate, type-safe serialization, and runtime function invocation by name."
-        },
-        "kira": {
-          "title": "Kira",
-          "description": "An AI assistant that captures context from everything you do—selected text, clipboard, files, conversations—then uses that rich context to help you develop and connect your ideas. Built for people who think better through conversation than traditional note-taking tools.",
-          "readMore": "→ Read more about the vision and design philosophy in"
-        }
+        "items": [
+          {
+            "title": "Sealbox",
+            "description": "A lightweight secret management service built with Rust. Single binary, SQLite storage, end-to-end encryption—designed for developers who want secure secret storage without enterprise complexity. Perfect for CI/CD, containers, and small teams.",
+            "readMore": "→ Read the story behind this project in",
+            "githubUrl": "https://github.com/realmorrisliu/sealbox"
+          },
+          {
+            "title": "openrouter-rs",
+            "description": "Type-safe Rust SDK for OpenRouter.ai with async support and builder patterns. Leverages Rust's type system to make LLM API interactions predictable and memory-safe, supporting everything from simple completions to streaming responses.",
+            "githubUrl": "https://github.com/realmorrisliu/openrouter-rs"
+          },
+          {
+            "title": "funcall",
+            "description": "A lightweight Rust library that transforms regular functions into dynamically callable JSON tools with a single `#[funcall]` macro. Minimal boilerplate, type-safe serialization, and runtime function invocation by name.",
+            "githubUrl": "https://github.com/realmorrisliu/funcall"
+          },
+          {
+            "title": "Kira",
+            "description": "An AI assistant that captures context from everything you do—selected text, clipboard, files, conversations—then uses that rich context to help you develop and connect your ideas. Built for people who think better through conversation than traditional note-taking tools.",
+            "readMore": "→ Read more about the vision and design philosophy in"
+          }
+        ]
       }
     },
     "skills": {
       "title": "Skills",
-      "languages": {
-        "title": "Languages",
-        "description": "Rust, TypeScript, Go, Python. I believe in type safety and systems that don't surprise you."
-      },
-      "infrastructure": {
-        "title": "Infrastructure",
-        "description": "Kubernetes, Docker, Prometheus, Grafana. I build systems that scale gracefully and stay observable."
-      },
-      "dataAndInterfaces": {
-        "title": "Data & Interfaces",
-        "description": "Postgres, Redis, React, Tauri. From databases to user interfaces, I focus on experiences that feel natural."
-      },
-      "leadership": {
-        "title": "Leadership",
-        "description": "Built and managed engineering teams up to 20 people. The best technical solutions come from understanding both code and people."
-      }
+      "categories": [
+        {
+          "title": "Languages",
+          "description": "Rust, TypeScript, Go, Python. I believe in type safety and systems that don't surprise you."
+        },
+        {
+          "title": "Infrastructure",
+          "description": "Kubernetes, Docker, Prometheus, Grafana. I build systems that scale gracefully and stay observable."
+        },
+        {
+          "title": "Data & Interfaces",
+          "description": "Postgres, Redis, React, Tauri. From databases to user interfaces, I focus on experiences that feel natural."
+        },
+        {
+          "title": "Leadership",
+          "description": "Built and managed engineering teams up to 20 people. The best technical solutions come from understanding both code and people."
+        }
+      ]
     },
     "side": {
       "title": "Side",
@@ -145,8 +148,7 @@
       "philosophy": "Both photography and music have shaped how I think about code. Like a good composition or a perfectly timed shot, the best software feels inevitable once you experience it. I believe in building things that last, writing code that others can understand, and finding the rhythm that makes complex systems feel simple.",
       "gear": {
         "title": "Current gear:",
-        "bass": "Bass: YAMAHA TRBX604",
-        "camera": "Camera: Leica M10-R"
+        "items": ["Bass: YAMAHA TRBX604", "Camera: Leica M10-R"]
       }
     },
     "contact": {

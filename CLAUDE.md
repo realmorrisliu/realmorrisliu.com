@@ -558,8 +558,9 @@ The website implements server-side i18n using Astro's static site generation:
 
 **Translation Files:**
 - `src/i18n/translations/en.json` - English translations
-- `src/i18n/translations/zh.json` - Chinese translations
+- `src/i18n/translations/zh.json` - Chinese translations  
 - Structured JSON with nested keys for easy maintenance
+- Work project details use simple string arrays for better maintainability (e.g., `["RAG Optimization: Built...", "Data Pipeline: Automated..."]`)
 
 **Utility Functions (`src/i18n/utils.ts`):**
 - `getTranslations(lang)` - Returns translations for specified language

@@ -6,137 +6,140 @@
       "description": "Morris Liu 的职业历程：从工程师到 CTO 的七年成长。经历了 AI 基础设施建设、技术团队管理，以及开源工具 Sealbox 和 Kira 的创作。"
     },
     "description": "我写代码，也带团队。最近在忙 AI 基础设施的事，空余时间会做一些解决实际问题的小工具。这页面记录了我这些年的经历——踩过的坑，做过的项目，还有一路学到的东西。",
-    "nav": {
-      "work": "工作经历",
-      "projects": "项目经验",
-      "skills": "技能",
-      "side": "爱好",
-      "contact": "联系方式"
-    },
+    "nav": [
+      { "id": "work", "label": "工作经历", "href": "#work" },
+      { "id": "projects", "label": "项目经验", "href": "#projects" },
+      { "id": "skills", "label": "技能", "href": "#skills" },
+      { "id": "side", "label": "爱好", "href": "#side" },
+      { "id": "contact", "label": "联系方式", "href": "#contact" }
+    ],
     "work": {
       "title": "工作经历",
       "description": "七年时间，从写代码的工程师变成带团队的负责人。每个阶段都有不同的收获——有技术上的，有管理上的，还有怎么在快速迭代和长期稳定性之间找平衡。",
-      "positions": {
-        "fullStackEngineer2024": {
+      "positions": [
+        {
           "year": "Now",
-          "title": "Full-Stack Engineer",
+          "title": "全栈工程师",
           "company": "深圳垣象科技有限公司",
           "period": "May 2024 - Present",
           "description": "专注 AI 基础设施和扩展性挑战。和多元化的团队一起解决复杂的分布式系统问题，同时保持创业公司的敏捷性。"
         },
-        "cto": {
+        {
           "year": "2021",
           "title": "CTO",
           "company": "深圳市工之易科技有限公司",
           "period": "Sep 2021 - May 2024",
           "description": "深圳市工之易科技有限公司加入奇绩创坛（原 YC 中国）孵化项目时被提升为 CTO。带领 20 人的工程团队经历快速扩张，建立了可持续的开发实践，在技术债务和功能交付之间找到平衡。学到了领导力最难的部分不是技术——而是人。"
         },
-        "techLead": {
+        {
           "year": "2020",
-          "title": "Tech Lead & Team Manager",
+          "title": "技术负责人",
           "company": "深圳市工之易科技有限公司",
           "period": "Early 2020 - Sep 2021",
           "description": "随着团队从初创公司成长为扩张期公司，自然而然地演化成了领导者。发现好的管理能放大每个人的能力，而糟糕的管理甚至能毁掉最好的工程师。建立了能够赋予自主权而非控制的流程。"
         },
-        "fullStackEngineer2019": {
+        {
           "year": "2019",
-          "title": "Full-Stack Engineer",
+          "title": "全栈工程师",
           "company": "深圳市工之易科技有限公司",
           "period": "Feb 2019 - Early 2020",
           "description": "作为第 4 号员工加入，从零开始构建 CAD 平台。经典的创业公司体验：什么都干、快速迭代、搞坏东西，偶尔做出用户真正想要的东西。学到了早期产品开发是 90% 的倾听用户和 10% 的巧妙代码。"
         },
-        "frontendEngineer": {
+        {
           "year": "2018",
-          "title": "Frontend Engineer",
+          "title": "前端工程师",
           "company": "美团",
           "period": "Jul 2018 - Jan 2019",
           "description": "为成熟产品开发数据分析模块和多店管理系统。构建组件库，解决复杂的浏览器兼容性问题——包括那个让所有人都头疼的 IE9 固定元素渲染 bug。"
         },
-        "intern": {
+        {
           "year": "2017",
-          "title": "Intern",
+          "title": "实习生",
           "company": "美团",
-          "period": "Jul - Aug 2017",
+          "period": "Jul - Sep 2017",
           "description": "在客满满项目刚刚成立时作为早期团队成员加入。实现了 C 端会员卡功能，为后来成为核心产品的基础做出了贡献。"
         }
-      }
+      ]
     },
     "projects": {
       "title": "项目经验",
       "description": "有工作中的项目，也有自己折腾的小工具。工作项目能看出我是怎么带技术团队、怎么做架构设计的，开源项目则更多是我对技术的好奇心和解决问题的思路。",
       "workProjects": {
         "title": "工作项目",
-        "xElephant": {
-          "title": "小象快答：AI 销售与客服自动化平台",
-          "company": "深圳垣象科技有限公司 • 2024 - 至今",
-          "description": "负责销售和客服自动化平台的 AI 基础设施设计。",
-          "details": {
-            "ragOptimization": {
-              "label": "RAG 优化：",
-              "text": "搭建了基于 Qdrant 的向量数据库集群，开发了自定义 Rust 工具，将内存使用量从 100GB+ 降到了 10GB（减少 90%）。"
-            },
-            "dataPipeline": {
-              "label": "数据管道：",
-              "text": "使用 Playwright 自动化 Shopify 数据收集，基于 webhook 实现实时更新。"
-            }
+        "items": [
+          {
+            "title": "小象快答：AI 销售与客服自动化平台",
+            "company": "深圳垣象科技有限公司 • 2024 - 至今",
+            "description": "负责销售和客服自动化平台的 AI 基础设施设计。",
+            "details": [
+              "RAG 优化：搭建了基于 Qdrant 的向量数据库集群，开发了自定义 Rust 工具，将内存使用量从 100GB+ 降到了 10GB（减少 90%）。",
+              "数据管道：使用 Playwright 自动化 Shopify 数据收集，基于 webhook 实现实时更新。"
+            ]
+          },
+          {
+            "title": "追光几何：CAD 文件版本控制系统",
+            "company": "深圳市工之易科技有限公司 • 2019-2023",
+            "description": "构建了一个将 Git 灵感的版本控制带到 CAD 工作流的 SaaS 平台。包含在线模型预览（由 fractal3D 驱动）、协作注释和面向工程团队的可视化差异对比功能。"
+          },
+          {
+            "title": "追光几何 Lite：本地 CAD 版本控制",
+            "company": "深圳市工之易科技有限公司 • 2023-2024",
+            "description": "从 EverCraft 孵化出来的桌面解决方案。用 Tauri 和 Rust 构建，为 CAD 文件和文档的本地版本控制提供直观的图形界面。"
+          },
+          {
+            "title": "分形三维：3D CAD 可视化引擎",
+            "company": "深圳市工之易科技有限公司 • 2020-2024",
+            "description": "构建了具备低代码能力的 3D CAD 在线可视化引擎。带领 5 人团队走过了完整的产品生命周期，让专业的 3D 可视化能力变得普通用户也能使用。"
           }
-        },
-        "everCraft": {
-          "title": "追光几何：CAD 文件版本控制系统",
-          "company": "深圳市工之易科技有限公司 • 2019-2023",
-          "description": "构建了一个将 Git 灵感的版本控制带到 CAD 工作流的 SaaS 平台。包含在线模型预览（由 fractal3D 驱动）、协作注释和面向工程团队的可视化差异对比功能。"
-        },
-        "everCraftLite": {
-          "title": "追光几何 Lite：本地 CAD 版本控制",
-          "company": "深圳市工之易科技有限公司 • 2023-2024",
-          "description": "从 EverCraft 孵化出来的桌面解决方案。用 Tauri 和 Rust 构建，为 CAD 文件和文档的本地版本控制提供直观的图形界面。"
-        },
-        "fractal3D": {
-          "title": "分形三维：3D CAD 可视化引擎",
-          "company": "深圳市工之易科技有限公司 • 2020-2024",
-          "description": "构建了具备低代码能力的 3D CAD 在线可视化引擎。带领 5 人团队走过了完整的产品生命周期，让专业的 3D 可视化能力变得普通用户也能使用。"
-        }
+        ]
       },
       "personalProjects": {
         "title": "个人项目",
-        "sealbox": {
-          "title": "Sealbox",
-          "description": "用 Rust 构建的轻量级密钥管理服务。单个二进制文件、SQLite 存储、端到端加密——为想要安全存储密钥但不想要企业级复杂性的开发者设计。非常适合 CI/CD、容器和小团队。",
-          "readMore": "→ 在{link}中看这个项目背后的故事"
-        },
-        "openrouterRs": {
-          "title": "openrouter-rs",
-          "description": "为 OpenRouter.ai 打造的类型安全 Rust SDK，支持异步和建造者模式。利用 Rust 的类型系统让 LLM API 交互变得可预测和内存安全，支持从简单的完成到流式响应的所有功能。"
-        },
-        "funcall": {
-          "title": "funcall",
-          "description": "一个轻量级的 Rust 库，只需要一个 `#[funcall]` 宏就能把普通函数转换成可动态调用的 JSON 工具。最少的样板代码、类型安全的序列化，以及按名称的运行时函数调用。"
-        },
-        "kira": {
-          "title": "Kira",
-          "description": "一个 AI 助手，能从你做的所有事情中获取上下文——选中的文字、剪贴板、文件、对话——然后利用这些丰富的上下文帮你发展和连接想法。为那些通过对话而不是传统笔记工具来更好思考的人而设计。",
-          "readMore": "→ 在{link}中了解更多的愿景和设计理念"
-        }
+        "items": [
+          {
+            "title": "Sealbox",
+            "description": "用 Rust 构建的轻量级密钥管理服务。单个二进制文件、SQLite 存储、端到端加密——为想要安全存储密钥但不想要企业级复杂性的开发者设计。非常适合 CI/CD、容器和小团队。",
+            "readMore": "→ 在{link}中看这个项目背后的故事",
+            "githubUrl": "https://github.com/realmorrisliu/sealbox"
+          },
+          {
+            "title": "openrouter-rs",
+            "description": "为 OpenRouter.ai 打造的类型安全 Rust SDK，支持异步和建造者模式。利用 Rust 的类型系统让 LLM API 交互变得可预测和内存安全，支持从简单的完成到流式响应的所有功能。",
+            "githubUrl": "https://github.com/realmorrisliu/openrouter-rs"
+          },
+          {
+            "title": "funcall",
+            "description": "一个轻量级的 Rust 库，只需要一个 `#[funcall]` 宏就能把普通函数转换成可动态调用的 JSON 工具。最少的样板代码、类型安全的序列化，以及按名称的运行时函数调用。",
+            "githubUrl": "https://github.com/realmorrisliu/funcall"
+          },
+          {
+            "title": "Kira",
+            "description": "一个 AI 助手，能从你做的所有事情中获取上下文——选中的文字、剪贴板、文件、对话——然后利用这些丰富的上下文帮你发展和连接想法。为那些通过对话而不是传统笔记工具来更好思考的人而设计。",
+            "readMore": "→ 在{link}中了解更多的愿景和设计理念"
+          }
+        ]
       }
     },
     "skills": {
       "title": "技能",
-      "languages": {
-        "title": "编程语言",
-        "description": "Rust、TypeScript、Go、Python。我喜欢那种类型安全、不会突然出妖蛾子的系统。"
-      },
-      "infrastructure": {
-        "title": "基础设施",
-        "description": "Kubernetes、Docker、Prometheus、Grafana。我喜欢搭建那种可以优雅扩展、而且一直可以看到运行状态的系统。"
-      },
-      "dataAndInterfaces": {
-        "title": "数据与界面",
-        "description": "Postgres、Redis、React、Tauri。从数据库到用户界面，我都希望做出让人用起来舒服自然的东西。"
-      },
-      "leadership": {
-        "title": "团队管理",
-        "description": "带过最多 20 人的技术团队。我发现最好的技术方案往往来自于既懂代码又懂人心。"
-      }
+      "categories": [
+        {
+          "title": "编程语言",
+          "description": "Rust、TypeScript、Go、Python。我喜欢那种类型安全、不会突然出妖蛾子的系统。"
+        },
+        {
+          "title": "基础设施",
+          "description": "Kubernetes、Docker、Prometheus、Grafana。我喜欢搭建那种可以优雅扩展、而且一直可以看到运行状态的系统。"
+        },
+        {
+          "title": "数据与界面",
+          "description": "Postgres、Redis、React、Tauri。从数据库到用户界面，我都希望做出让人用起来舒服自然的东西。"
+        },
+        {
+          "title": "团队管理",
+          "description": "带过最多 20 人的技术团队。我发现最好的技术方案往往来自于既懂代码又懂人心。"
+        }
+      ]
     },
     "side": {
       "title": "爱好",
@@ -145,8 +148,7 @@
       "philosophy": "摄影和音乐都影响着我写代码的思路。就像好的作品或者恰到好处的瞬间，最棒的软件用起来会让人觉得\"就应该是这样\"。我喜欢做那种经得起时间考验的东西，写别人也能看懂的代码，还有找到那种让复杂系统变得简单的节奏感。",
       "gear": {
         "title": "目前的装备：",
-        "bass": "Bass: YAMAHA TRBX604",
-        "camera": "Camera: Leica M10-R"
+        "items": ["Bass: YAMAHA TRBX604", "Camera: Leica M10-R"]
       }
     },
     "contact": {
