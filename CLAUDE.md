@@ -30,6 +30,7 @@ src/
 │   ├── ProjectItem.astro    # Reusable project display with GitHub links
 │   ├── TimelineItem.astro   # Career timeline with continuous line design
 │   ├── FormattedText.astro  # Dynamic text with link replacements for i18n
+│   ├── ResumeLayout.astro   # PDF-optimized resume layout with high info density
 │   └── LangToggle.astro     # Language toggle component (deprecated)
 ├── i18n/
 │   ├── translations/
@@ -43,7 +44,10 @@ src/
 │   ├── index.astro          # Homepage with letter-style greeting
 │   ├── so-far.astro         # Professional timeline (English)
 │   ├── so-far/
-│   │   └── [lang].astro     # Professional timeline (other languages)
+│   │   ├── [lang].astro     # Professional timeline (other languages)
+│   │   ├── pdf.astro        # PDF resume (English)
+│   │   └── pdf/
+│   │       └── [lang].astro # PDF resume (other languages)
 │   ├── og-generator.astro   # OG image generation editor with terminal aesthetic
 │   ├── og-preview.astro     # Full-size OG image preview and download
 │   ├── rss.xml.ts           # RSS feed generation
@@ -82,6 +86,7 @@ The design system is built around CSS custom properties and follows extreme mini
 - **TimelineItem.astro**: Career timeline component with props for year, title, company, period, and description. Features enhanced visual hierarchy with timeline dots, emphasized year labels, and improved spacing. Year labels float to the left, company names are prominently displayed, and job descriptions have clear visual separation.
 - **ProjectItem.astro**: Project display component leveraging Link and GitHubIcon components. Includes title, description, and optional GitHub repository access with consistent styling.
 - **FormattedText.astro**: Handles dynamic text with link replacements, used for i18n content that contains inline links. Splits text by placeholders and renders appropriate Link components.
+- **ResumeLayout.astro**: PDF-optimized resume layout component with high information density. Uses condensed typography (8.5pt base font, 1.15 line-height), tight margins (0.3in), and single-column layout to fit all content on one A4 page. Features inline GitHub links for Personal Projects and optimized spacing for professional presentation.
 
 **Component Design Principles:**
 
@@ -163,8 +168,19 @@ The website uses a "letter-like" navigation approach that avoids traditional web
    - Optimized visual hierarchy with consistent border styling (1px) and clear information structure
    - Letter-style signature return to home
    - Language toggle in top-right corner for easy switching
+   - PDF download link integrated into content flow for traditional resume format
 
-5. **OG Image Generator (`og-generator.astro` & `og-preview.astro`)**:
+5. **PDF Resume (`so-far/pdf.astro` & `so-far/pdf/[lang].astro`)**:
+   - Dedicated PDF-optimized layout using ResumeLayout component
+   - Auto-triggered print dialog for seamless PDF generation
+   - High information density design fits all content on single A4 page
+   - Condensed typography: 8.5pt base font, 1.15 line-height for readability
+   - Tight margins (0.3in) and optimized spacing for professional presentation
+   - Inline GitHub links for Personal Projects to save vertical space
+   - Multi-language support matching main so-far pages
+   - Loading indicator hidden during print for clean output
+
+6. **OG Image Generator (`og-generator.astro` & `og-preview.astro`)**:
    - Terminal aesthetic editor with `$ whoami` and `$ echo $PASSION` pattern
    - Real-time inline preview with contenteditable spans for name and tagline customization
    - Full-size (1200×630px) generation page with Canvas API-based image export

@@ -1,0 +1,340 @@
+---
+import { getTranslations, type Language } from "../i18n/utils";
+
+export interface Props {
+  currentLang: Language;
+}
+
+const { currentLang } = Astro.props;
+const t = getTranslations(currentLang);
+---
+
+<div class="resume-container">
+  <!-- Header Section -->
+  <header class="resume-header">
+    <h1 class="resume-name">Morris Liu</h1>
+    <div class="resume-contact">
+      <span>morrisliu1994@outlook.com</span>
+      <span>•</span>
+      <span>github.com/realmorrisliu</span>
+      <span>•</span>
+      <span>twitter.com/realmorrisliu</span>
+    </div>
+    <p class="resume-summary">
+      {
+        currentLang === "en"
+          ? "Full-Stack Engineer & Technical Leader • 7 years experience building AI infrastructure, leading engineering teams, and creating scalable solutions"
+          : "全栈工程师 & 技术负责人 • 7年AI基础设施建设、工程团队管理和可扩展解决方案开发经验"
+      }
+    </p>
+  </header>
+
+  <!-- Skills Section - Compact horizontal layout -->
+  <section class="resume-section">
+    <h2 class="resume-section-title">{t.soFar.skills.title}</h2>
+    <div class="skills-grid">
+      {
+        t.soFar.skills.categories.map(category => (
+          <div class="skill-line">
+            <strong>{category.title}:</strong> {category.stack}
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Work Experience -->
+  <section class="resume-section">
+    <h2 class="resume-section-title">{t.soFar.work.title}</h2>
+    <div class="experience-list">
+      {
+        t.soFar.work.positions.map(position => (
+          <div class="experience-item">
+            <div class="experience-header">
+              <h3 class="job-title">{position.title}</h3>
+              <div class="company-period">
+                <span class="company">{position.company}</span>
+                <span class="period-separator">•</span>
+                <span class="period">{position.period}</span>
+              </div>
+            </div>
+            <p class="job-description">{position.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Work Projects -->
+  <section class="resume-section">
+    <h2 class="resume-section-title">{t.soFar.projects.workProjects.title}</h2>
+    <div class="projects-list">
+      {
+        t.soFar.projects.workProjects.items.map(project => (
+          <div class="project-item">
+            <div class="project-header">
+              <h3 class="project-title">{project.title}</h3>
+              <span class="project-period">{project.period}</span>
+            </div>
+            <p class="project-description">{project.description}</p>
+            {project.details && (
+              <ul class="project-details">
+                {project.details.map((detail: string) => (
+                  <li>{detail}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Personal Projects -->
+  <section class="resume-section">
+    <h2 class="resume-section-title">{t.soFar.projects.personalProjects.title}</h2>
+    <div class="projects-list">
+      {
+        t.soFar.projects.personalProjects.items.map(project => (
+          <div class="project-item">
+            <h3 class="project-title">{project.title}</h3>
+            <p class="project-description">
+              {project.description}
+              {project.githubUrl && (
+                <span class="inline-github"> • GitHub: {project.githubUrl.replace('https://github.com/', '')}</span>
+              )}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</div>
+
+<style>
+  .resume-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+    font-family: "Inter Variable", Arial, sans-serif;
+    font-size: 9pt;
+    line-height: 1.2;
+    color: #000;
+    background: #fff;
+  }
+
+  /* Header Section */
+  .resume-header {
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 6px;
+  }
+
+  .resume-name {
+    font-size: 18pt;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    font-family: "EB Garamond Variable", serif;
+  }
+
+  .resume-contact {
+    font-size: 9pt;
+    margin-bottom: 6px;
+    color: #333;
+  }
+
+  .resume-contact span {
+    margin: 0 3px;
+  }
+
+  .resume-summary {
+    font-size: 9pt;
+    font-weight: 400;
+    margin: 0;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.3;
+  }
+
+  /* Section styling */
+  .resume-section {
+    margin-bottom: 10px;
+  }
+
+  .resume-section-title {
+    font-size: 11pt;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: "EB Garamond Variable", serif;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;
+  }
+
+  /* Skills section - horizontal layout */
+  .skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .skill-line {
+    font-size: 9pt;
+    line-height: 1.2;
+  }
+
+  .skill-line strong {
+    font-weight: 600;
+    margin-right: 4px;
+  }
+
+  /* Experience items */
+  .experience-item {
+    margin-bottom: 7px;
+    page-break-inside: avoid;
+  }
+
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 3px;
+  }
+
+  .job-title {
+    font-size: 10pt;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .company-period {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 8pt;
+    color: #666;
+    white-space: nowrap;
+  }
+
+  .company {
+    font-weight: 500;
+    color: #333;
+  }
+
+  .period-separator {
+    color: #999;
+  }
+
+  .period {
+    color: #666;
+  }
+
+  .job-description {
+    font-size: 8pt;
+    margin: 0;
+    line-height: 1.2;
+    color: #333;
+  }
+
+  /* Project items */
+  .project-item {
+    margin-bottom: 6px;
+    page-break-inside: avoid;
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1px;
+  }
+
+  .project-title {
+    font-size: 9pt;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+  }
+
+  .project-period {
+    font-size: 8pt;
+    color: #666;
+    white-space: nowrap;
+  }
+
+  .inline-github {
+    font-size: 7pt;
+    color: #666;
+    font-weight: 400;
+  }
+
+  .project-description {
+    font-size: 8pt;
+    margin: 0 0 3px 0;
+    line-height: 1.2;
+    color: #333;
+  }
+
+  .project-details {
+    margin: 0;
+    padding-left: 10px;
+    font-size: 7pt;
+    line-height: 1.1;
+  }
+
+  .project-details li {
+    margin-bottom: 1px;
+    color: #333;
+  }
+
+  /* Print-specific styles */
+  @media print {
+    .resume-container {
+      padding: 8px;
+      font-size: 8.5pt;
+      line-height: 1.15;
+    }
+
+    .resume-name {
+      font-size: 16pt;
+    }
+
+    .resume-section-title {
+      font-size: 10pt;
+    }
+
+    .job-title {
+      font-size: 9pt;
+    }
+
+    .project-title {
+      font-size: 8pt;
+    }
+
+    .resume-summary {
+      line-height: 1.25;
+    }
+
+    .job-description {
+      font-size: 7.5pt;
+      line-height: 1.15;
+    }
+
+    .project-description {
+      font-size: 7.5pt;
+      line-height: 1.15;
+    }
+
+    .project-details {
+      font-size: 6.5pt;
+      line-height: 1.1;
+    }
+
+    @page {
+      margin: 0.3in;
+      size: A4;
+    }
+  }
+</style>
