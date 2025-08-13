@@ -10,6 +10,11 @@ const t = getTranslations(currentLang);
 const htmlLang = getHtmlLangAttribute(currentLang);
 ---
 
-<Layout title={t.soFar.meta.title} description={t.soFar.meta.description} lang={htmlLang}>
+<Layout
+  title={t.soFar.meta.title}
+  description={t.soFar.meta.description}
+  lang={htmlLang}
+  alternateLanguages={[{ lang: "zh", url: "https://realmorrisliu.com/so-far/zh" }]}
+>
   <SoFarPage currentLang={currentLang} />
 </Layout>

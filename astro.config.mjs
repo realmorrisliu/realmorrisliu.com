@@ -1,13 +1,50 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
-import sitemap from "@astrojs/sitemap";
+import sitemap, { ChangeFreqEnum } from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://realmorrisliu.com",
-  trailingSlash: "ignore",
-  integrations: [sitemap()],
+  trailingSlash: "never",
+  build: {
+    format: "file",
+  },
+  integrations: [
+    sitemap({
+      customPages: [
+        "https://realmorrisliu.com/",
+        "https://realmorrisliu.com/so-far",
+        "https://realmorrisliu.com/so-far/zh",
+        "https://realmorrisliu.com/thoughts",
+      ],
+      changefreq: "weekly",
+      priority: 0.7,
+      lastmod: new Date(),
+      serialize(item) {
+        // Set different priorities based on page type
+        if (item.url === "https://realmorrisliu.com/") {
+          item.priority = 1.0;
+          item.changefreq = ChangeFreqEnum.MONTHLY;
+        } else if (item.url === "https://realmorrisliu.com/thoughts") {
+          // Thoughts index page
+          item.priority = 0.9;
+          item.changefreq = ChangeFreqEnum.WEEKLY;
+        } else if (item.url.includes("/thoughts/")) {
+          // Individual blog posts
+          item.priority = 0.8;
+          item.changefreq = ChangeFreqEnum.NEVER;
+        } else if (item.url.includes("/so-far/")) {
+          item.priority = 0.8;
+          item.changefreq = ChangeFreqEnum.MONTHLY;
+        } else if (item.url.includes("/pdf/")) {
+          item.priority = 0.6;
+          item.changefreq = ChangeFreqEnum.MONTHLY;
+        }
+        return item;
+      },
+    }),
+  ],
   image: {
     service: {
       entrypoint: "astro/assets/services/sharp",

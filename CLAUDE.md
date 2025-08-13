@@ -212,6 +212,13 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 
 ## Technical Implementation
 
+### Build Configuration
+
+**URL Structure:**
+- `trailingSlash: "never"` - All URLs are clean without trailing slashes (e.g., `/thoughts`, `/so-far`)
+- `build: { format: "file" }` - Generates `.html` files for better compatibility
+- All internal links and redirects are consistent with this configuration
+
 ### Font Loading Strategy
 
 - Fontsource for local font hosting (no external CDN)

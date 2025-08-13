@@ -32,7 +32,14 @@ const loadingText =
 const backUrl = currentLang === "zh" ? "/so-far/zh" : "/so-far";
 ---
 
-<Layout title={pageTitle} description={pageDescription} lang={htmlLang}>
+<Layout 
+  title={pageTitle} 
+  description={pageDescription} 
+  lang={htmlLang}
+  alternateLanguages={[
+    { lang: "en", url: "https://realmorrisliu.com/so-far/pdf" }
+  ]}
+>
   <!-- PDF Ready indicator -->
   <div class="pdf-loading-indicator">
     <p>{loadingText}</p>

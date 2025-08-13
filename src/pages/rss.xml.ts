@@ -16,7 +16,7 @@ export async function GET(context: APIContext) {
       title: post.data.title,
       pubDate: post.data.pubDate,
       description: post.data.description,
-      link: `/thoughts/${post.id.replace(/\.md$/, "")}/`,
+      link: `/thoughts/${post.id.replace(/\.md$/, "")}`,
       author: post.data.author || "Morris Liu",
       categories: post.data.tags,
     })),

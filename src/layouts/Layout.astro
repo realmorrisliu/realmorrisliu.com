@@ -3,24 +3,28 @@ export interface Props {
   title: string;
   description?: string;
   image?: string;
+  imageAlt?: string;
   type?: string;
   publishedTime?: string;
   modifiedTime?: string;
   tags?: string[];
   readingTime?: number;
   lang?: string;
+  alternateLanguages?: { lang: string; url: string }[];
 }
 
 const {
   title,
-  description = "Morris Liu - Software Engineer & Team Lead building AI infrastructure and open source tools. Thoughts on technology, leadership, and design.",
+  description = "Morris Liu - Rust Developer & AI Infrastructure Engineer. Specializes in systems programming, AI tools, and open source projects. 7+ years building reliable, performant software.",
   image = "/og-image.png",
+  imageAlt = "Morris Liu - Rust Developer & AI Infrastructure Engineer",
   type = "website",
   publishedTime,
   modifiedTime,
   tags = [],
   lang = "en",
   readingTime,
+  alternateLanguages = [],
 } = Astro.props;
 
 const pathname = Astro.url.pathname;
@@ -30,21 +34,22 @@ const imageURL = new URL(image, Astro.site || "https://realmorrisliu.com");
 // Generate keywords
 const keywords = [
   "Morris Liu",
-  "Software Engineer",
-  "Full Stack Developer",
-  "CTO",
-  "Team Lead",
-  "Rust",
-  "TypeScript",
-  "AI Infrastructure",
+  "Rust Developer",
+  "Systems Programming",
+  "AI Infrastructure Engineer",
+  "Rust Programming",
+  "Secret Management",
+  "AI Tools",
   "Open Source",
-  "Leadership",
+  "Sealbox",
+  "Kira AI",
+  "TypeScript",
+  "CAD Technology",
+  "3D Visualization",
+  "Performance Engineering",
+  "Backend Systems",
   "EverXYZ",
   "UniXYZ",
-  "Sealbox",
-  "Kira",
-  "CAD",
-  "3D Visualization",
   ...tags,
 ].join(", ");
 ---
@@ -74,8 +79,9 @@ const keywords = [
     <meta property="og:image" content={imageURL} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={imageAlt} />
     <meta property="og:site_name" content="Morris Liu" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content={lang === "zh" ? "zh_CN" : "en_US"} />
 
     {publishedTime && <meta property="article:published_time" content={publishedTime} />}
     {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
@@ -88,14 +94,26 @@ const keywords = [
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={imageURL} />
+    <meta property="twitter:image:alt" content={imageAlt} />
     <meta property="twitter:creator" content="@realmorrisliu" />
 
     <!-- Additional SEO -->
     <meta name="theme-color" content="#ffffff" />
     <meta name="msapplication-TileColor" content="#ffffff" />
 
+    <!-- Hreflang for multilingual support -->
+    {alternateLanguages.map(({ lang: hrefLang, url }) => (
+      <link rel="alternate" hreflang={hrefLang} href={url} />
+    ))}
+    {alternateLanguages.length > 0 && (
+      <link rel="alternate" hreflang={lang} href={canonicalURL.toString()} />
+    )}
+
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="Morris Liu's Blog" href="/rss.xml" />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json" />
 
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap-index.xml" />
