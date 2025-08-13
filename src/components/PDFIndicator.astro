@@ -9,33 +9,24 @@ export interface Props {
 
 const { currentLang, backUrl } = Astro.props;
 const t = getTranslations(currentLang);
-
-const loadingText = t.soFar.pdf.printButtonHint;
-const backText = currentLang === "zh" ? "← 返回网页版" : "← Back to web version";
 ---
 
 <div class="pdf-indicator">
   <div class="pdf-content">
     <div class="pdf-header">
-      <svg
-        width="20" 
-        height="20" 
-        viewBox="0 0 24 24" 
-        fill="currentColor"
-        class="pdf-icon"
-      >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="pdf-icon">
         <title>PDF</title>
-        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+        <path
+          d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"
+        ></path>
       </svg>
       <div class="pdf-text">
         <span class="pdf-title">
-          {currentLang === "zh" 
-            ? "PDF 简历准备就绪 — 点击「另存为PDF」保存文件"
-            : "PDF Resume Ready — Click 'Save as PDF' in the print dialog"}
+          {t.soFar.pdf.title}
         </span>
       </div>
     </div>
-    
+
     <div class="pdf-actions">
       <Button id="print-button" variant="primary" size="sm">
         {t.soFar.pdf.printButton}
@@ -45,7 +36,7 @@ const backText = currentLang === "zh" ? "← 返回网页版" : "← Back to web
 
   <div class="pdf-footer">
     <p class="pdf-hint">{t.soFar.pdf.printButtonHint}</p>
-    <a href={backUrl} class="back-link">{backText}</a>
+    <a href={backUrl} class="back-link">{t.soFar.pdf.backText}</a>
   </div>
 </div>
 
@@ -155,32 +146,32 @@ const backText = currentLang === "zh" ? "← 返回网页版" : "← Back to web
       padding: 14px 16px;
       margin-bottom: 16px;
     }
-    
+
     .pdf-content {
       flex-direction: column;
       align-items: flex-start;
       gap: 12px;
       margin-bottom: 10px;
     }
-    
+
     .pdf-header {
       gap: 10px;
     }
-    
+
     .pdf-title {
       font-size: 0.8125rem;
     }
-    
+
     .pdf-footer {
       flex-direction: column;
       align-items: flex-start;
       gap: 8px;
     }
-    
+
     .pdf-hint {
       font-size: 0.6875rem;
     }
-    
+
     .back-link {
       font-size: 0.6875rem;
     }

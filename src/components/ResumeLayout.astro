@@ -21,11 +21,7 @@ const t = getTranslations(currentLang);
       <span>twitter.com/realmorrisliu</span>
     </div>
     <p class="resume-summary">
-      {
-        currentLang === "en"
-          ? "Full-Stack Engineer & Technical Leader • 7 years experience building AI infrastructure, leading engineering teams, and creating scalable solutions"
-          : "全栈工程师 & 技术负责人 • 7年AI基础设施建设、工程团队管理和可扩展解决方案开发经验"
-      }
+      {t.soFar.resumeSummary}
     </p>
   </header>
 
@@ -100,12 +96,13 @@ const t = getTranslations(currentLang);
             <h3 class="project-title">
               {project.title}
               {project.githubUrl && (
-                <span class="inline-github"> • GitHub: {project.githubUrl.replace('https://github.com/', '')}</span>
+                <span class="inline-github">
+                  {" "}
+                  • GitHub: {project.githubUrl.replace("https://github.com/", "")}
+                </span>
               )}
             </h3>
-            <p class="project-description">
-              {project.description}
-            </p>
+            <p class="project-description">{project.description}</p>
           </div>
         ))
       }
