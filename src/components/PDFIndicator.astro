@@ -1,0 +1,188 @@
+---
+import Button from "./Button.astro";
+import { getTranslations } from "../i18n/utils";
+
+export interface Props {
+  currentLang: "en" | "zh";
+  backUrl: string;
+}
+
+const { currentLang, backUrl } = Astro.props;
+const t = getTranslations(currentLang);
+
+const loadingText = t.soFar.pdf.printButtonHint;
+const backText = currentLang === "zh" ? "← 返回网页版" : "← Back to web version";
+---
+
+<div class="pdf-indicator">
+  <div class="pdf-content">
+    <div class="pdf-header">
+      <svg
+        width="20" 
+        height="20" 
+        viewBox="0 0 24 24" 
+        fill="currentColor"
+        class="pdf-icon"
+      >
+        <title>PDF</title>
+        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+      </svg>
+      <div class="pdf-text">
+        <span class="pdf-title">
+          {currentLang === "zh" 
+            ? "PDF 简历准备就绪 — 点击「另存为PDF」保存文件"
+            : "PDF Resume Ready — Click 'Save as PDF' in the print dialog"}
+        </span>
+      </div>
+    </div>
+    
+    <div class="pdf-actions">
+      <Button id="print-button" variant="primary" size="sm">
+        {t.soFar.pdf.printButton}
+      </Button>
+    </div>
+  </div>
+
+  <div class="pdf-footer">
+    <p class="pdf-hint">{t.soFar.pdf.printButtonHint}</p>
+    <a href={backUrl} class="back-link">{backText}</a>
+  </div>
+</div>
+
+<script>
+  // Auto-trigger print dialog after page loads
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      window.print();
+    }, 500);
+  });
+
+  // Manual print button handler
+  document.addEventListener("DOMContentLoaded", () => {
+    const printButton = document.getElementById("print-button");
+    if (printButton) {
+      printButton.addEventListener("click", () => {
+        window.print();
+      });
+    }
+  });
+</script>
+
+<style>
+  .pdf-indicator {
+    background: #f5f5f5;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    font-family: var(--font-sans);
+  }
+
+  .pdf-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+
+  .pdf-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+  }
+
+  .pdf-icon {
+    flex-shrink: 0;
+    color: var(--color-text-tertiary);
+  }
+
+  .pdf-text {
+    flex: 1;
+  }
+
+  .pdf-title {
+    font-size: 0.875rem;
+    line-height: var(--line-height-normal);
+    color: var(--color-text-secondary);
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .pdf-actions {
+    flex-shrink: 0;
+  }
+
+  .pdf-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 0.75rem;
+  }
+
+  .pdf-hint {
+    color: var(--color-text-tertiary);
+    font-style: italic;
+    margin: 0;
+    flex: 1;
+  }
+
+  .back-link {
+    color: var(--color-text-link);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    font-weight: 500;
+    transition: all 150ms ease;
+    white-space: nowrap;
+  }
+
+  .back-link:hover {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+  }
+
+  /* Hide entire indicator in print */
+  @media print {
+    .pdf-indicator {
+      display: none !important;
+    }
+  }
+
+  /* Mobile optimization */
+  @media (max-width: 640px) {
+    .pdf-indicator {
+      padding: 14px 16px;
+      margin-bottom: 16px;
+    }
+    
+    .pdf-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    
+    .pdf-header {
+      gap: 10px;
+    }
+    
+    .pdf-title {
+      font-size: 0.8125rem;
+    }
+    
+    .pdf-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    
+    .pdf-hint {
+      font-size: 0.6875rem;
+    }
+    
+    .back-link {
+      font-size: 0.6875rem;
+    }
+  }
+</style>

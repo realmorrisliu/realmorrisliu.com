@@ -31,6 +31,7 @@ src/
 │   ├── TimelineItem.astro   # Career timeline with continuous line design
 │   ├── FormattedText.astro  # Dynamic text with link replacements for i18n
 │   ├── ResumeLayout.astro   # PDF-optimized resume layout with high info density
+│   ├── PDFIndicator.astro   # PDF page indicator with print button and instructions
 │   └── LangToggle.astro     # Language toggle component (deprecated)
 ├── i18n/
 │   ├── translations/
@@ -86,7 +87,8 @@ The design system is built around CSS custom properties and follows extreme mini
 - **TimelineItem.astro**: Career timeline component with props for year, title, company, period, and description. Features enhanced visual hierarchy with timeline dots, emphasized year labels, and improved spacing. Year labels float to the left, company names are prominently displayed, and job descriptions have clear visual separation.
 - **ProjectItem.astro**: Project display component leveraging Link and GitHubIcon components. Includes title, description, and optional GitHub repository access with consistent styling.
 - **FormattedText.astro**: Handles dynamic text with link replacements, used for i18n content that contains inline links. Splits text by placeholders and renders appropriate Link components.
-- **ResumeLayout.astro**: PDF-optimized resume layout component with high information density. Uses condensed typography (8.5pt base font, 1.15 line-height), tight margins (0.3in), and single-column layout to fit all content on one A4 page. Features inline GitHub links for Personal Projects and optimized spacing for professional presentation.
+- **ResumeLayout.astro**: PDF-optimized resume layout component with high information density. Uses condensed typography (8.5pt base font, 1.15 line-height), tight margins (0.3in), and single-column layout to fit all content on one A4 page. Features inline GitHub links positioned after project titles for better visibility and optimized spacing for professional presentation.
+- **PDFIndicator.astro**: PDF page indicator component with print functionality fallback. Features minimalist gray banner design with PDF icon, status message, manual print button, and internationalization support. Automatically attempts print on page load with manual button as fallback for production environments where auto-print is blocked by browser security policies.
 
 **Component Design Principles:**
 
@@ -172,13 +174,13 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 
 5. **PDF Resume (`so-far/pdf.astro` & `so-far/pdf/[lang].astro`)**:
    - Dedicated PDF-optimized layout using ResumeLayout component
-   - Auto-triggered print dialog for seamless PDF generation
+   - PDFIndicator component with dual print strategy: automatic attempt + manual fallback button
    - High information density design fits all content on single A4 page
    - Condensed typography: 8.5pt base font, 1.15 line-height for readability
    - Tight margins (0.3in) and optimized spacing for professional presentation
-   - Inline GitHub links for Personal Projects to save vertical space
-   - Multi-language support matching main so-far pages
-   - Loading indicator hidden during print for clean output
+   - Inline GitHub links for Personal Projects positioned after titles for better visibility
+   - Multi-language support with internationalized print button text
+   - Minimalist gray banner indicator hidden during print for clean output
 
 6. **OG Image Generator (`og-generator.astro` & `og-preview.astro`)**:
    - Terminal aesthetic editor with `$ whoami` and `$ echo $PASSION` pattern
@@ -591,6 +593,7 @@ The website implements server-side i18n using Astro's static site generation:
 - Skills section uses `stack` and `philosophy` structure for better visual hierarchy
 - Personal project links use `readMoreLink` object with text, href, linkText, and optional suffix
 - Contact section uses structured objects for clean link rendering without FormattedText overhead
+- PDF section includes `printButton` and `printButtonHint` for internationalized print functionality
 
 **Utility Functions (`src/i18n/utils.ts`):**
 

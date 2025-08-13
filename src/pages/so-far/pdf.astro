@@ -1,12 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import ResumeLayout from "../../components/ResumeLayout.astro";
-import { getTranslations, getHtmlLangAttribute } from "../../i18n/utils";
+import PDFIndicator from "../../components/PDFIndicator.astro";
+import { getHtmlLangAttribute } from "../../i18n/utils";
 import "../../styles/global.css";
 
 // Default to English for PDF
 const currentLang = "en";
-const t = getTranslations(currentLang);
 const htmlLang = getHtmlLangAttribute(currentLang);
 ---
 
@@ -18,54 +18,8 @@ const htmlLang = getHtmlLangAttribute(currentLang);
     { lang: "zh", url: "https://realmorrisliu.com/so-far/pdf/zh" }
   ]}
 >
-  <!-- PDF Ready indicator -->
-  <div class="pdf-loading-indicator">
-    <p>Preparing PDF... Click "Save as PDF" in the print dialog.</p>
-    <a href="/so-far" class="back-link">← Back to web version</a>
-  </div>
+  <PDFIndicator currentLang={currentLang} backUrl="/so-far" />
 
   <ResumeLayout currentLang={currentLang} />
 </Layout>
 
-<script>
-  // Auto-trigger print dialog after page loads
-  window.addEventListener("load", () => {
-    // Small delay to ensure content is fully rendered
-    setTimeout(() => {
-      window.print();
-    }, 500);
-  });
-</script>
-
-<style>
-  .pdf-loading-indicator {
-    text-align: center;
-    padding: 20px;
-    background: #f5f5f5;
-    margin-bottom: 20px;
-    font-family: var(--font-sans);
-  }
-
-  .pdf-loading-indicator p {
-    margin: 0 0 10px 0;
-    font-size: 14px;
-    color: #666;
-  }
-
-  .back-link {
-    color: var(--color-text-link);
-    text-decoration: underline;
-    font-size: 13px;
-  }
-
-  .back-link:hover {
-    text-decoration: none;
-  }
-
-  /* Hide loading indicator in print */
-  @media print {
-    .pdf-loading-indicator {
-      display: none !important;
-    }
-  }
-</style>
