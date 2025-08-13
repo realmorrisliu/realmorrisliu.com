@@ -13,19 +13,18 @@ export function getTranslations(lang: Language = "en"): TranslationKey {
   return translations[lang] || translations.en;
 }
 
-export function getLanguageFromURL(url: URL): Language {
-  const lang = url.searchParams.get("lang");
-  return lang === "zh" ? "zh" : "en";
+export function getLanguageFromPath(pathname: string): Language {
+  const pathSegments = pathname.split("/").filter(Boolean);
+  const lastSegment = pathSegments[pathSegments.length - 1];
+  return lastSegment === "zh" ? "zh" : "en";
 }
 
-export function getLangSwitchUrl(currentUrl: URL, targetLang: Language): string {
-  const url = new URL(currentUrl);
+export function createLangSwitchUrl(targetLang: Language, hash: string = ""): string {
   if (targetLang === "en") {
-    url.searchParams.delete("lang");
+    return `/so-far${hash}`;
   } else {
-    url.searchParams.set("lang", targetLang);
+    return `/so-far/zh${hash}`;
   }
-  return url.pathname + url.search;
 }
 
 export function getHtmlLangAttribute(lang: Language): string {

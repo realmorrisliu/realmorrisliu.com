@@ -572,8 +572,8 @@ The website implements server-side i18n using Astro's static site generation:
 **Utility Functions (`src/i18n/utils.ts`):**
 
 - `getTranslations(lang)` - Returns translations for specified language
-- `getLanguageFromURL(url)` - Extracts language from URL
-- `getLangSwitchUrl(url, lang)` - Generates language switch URLs
+- `getLanguageFromPath(pathname)` - Extracts language from URL pathname
+- `createLangSwitchUrl(targetLang, hash)` - Generates language switch URLs with hash support
 - `getHtmlLangAttribute(lang)` - Returns proper HTML lang attribute
 
 **URL Structure:**

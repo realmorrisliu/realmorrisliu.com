@@ -4,7 +4,7 @@ import ProjectItem from "./ProjectItem.astro";
 import Link from "./Link.astro";
 import FooterSignature from "./FooterSignature.astro";
 import FormattedText from "./FormattedText.astro";
-import { getTranslations, type Language } from "../i18n/utils";
+import { getTranslations, createLangSwitchUrl, type Language } from "../i18n/utils";
 
 interface Props {
   currentLang: Language;
@@ -15,8 +15,8 @@ const t = getTranslations(currentLang);
 
 // Generate language switch URLs with current hash preserved
 const currentHash = Astro.url.hash;
-const enUrl = `/so-far${currentHash}`;
-const zhUrl = `/so-far/zh${currentHash}`;
+const enUrl = createLangSwitchUrl("en", currentHash);
+const zhUrl = createLangSwitchUrl("zh", currentHash);
 ---
 
 <div class="mx-auto max-w-2xl px-6 py-16">
@@ -126,7 +126,7 @@ const zhUrl = `/so-far/zh${currentHash}`;
                 </div>
               </div>
               {project.details ? (
-                <div class="space-y-3 text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+                <div class="space-y-3 text-sm leading-relaxed text-[color:var(--color-text-secondary)]">
                   <p>{project.description}</p>
                   {project.details.map((detail: string) => {
                     const colonIndex = detail.indexOf(":");
@@ -144,7 +144,7 @@ const zhUrl = `/so-far/zh${currentHash}`;
                   })}
                 </div>
               ) : (
-                <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+                <p class="text-sm leading-relaxed text-[color:var(--color-text-secondary)]">
                   {project.description}
                 </p>
               )}
