@@ -31,8 +31,7 @@ src/
 │   ├── TimelineItem.astro   # Career timeline with continuous line design
 │   ├── FormattedText.astro  # Dynamic text with link replacements for i18n
 │   ├── ResumeLayout.astro   # PDF-optimized resume layout with high info density
-│   ├── PDFIndicator.astro   # PDF page indicator with print button and instructions
-│   └── LangToggle.astro     # Language toggle component (deprecated)
+│   └── PDFIndicator.astro   # PDF page indicator with print button and instructions
 ├── i18n/
 │   ├── translations/
 │   │   ├── en.json          # English translations
@@ -97,7 +96,9 @@ The design system is built around CSS custom properties and follows extreme mini
 - Consistent spacing and typography following the design system
 - Smooth transitions (150ms duration) for hover effects without complex animations
 - Proper accessibility attributes for screen readers and keyboard navigation
-- Unified styling through component abstraction rather than global CSS
+- **Tailwind-First Architecture**: All components use Tailwind CSS classes exclusively, avoiding inline `<style>` tags
+- CSS custom properties preserved for design system colors (e.g., `text-[color:var(--color-text-tertiary)]`)
+- Complex animations and print-specific `@page` rules use minimal CSS when Tailwind limitations require it
 
 ## Design Guidelines
 
@@ -192,10 +193,12 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 
 ### Code Style Conventions
 
-- **Astro Components**: Use semantic HTML5 elements
-- **CSS**: Prefer CSS custom properties over Tailwind for colors/fonts
-- **Typography**: Mix Tailwind utilities with CSS variables for fine control
+- **Astro Components**: Use semantic HTML5 elements with Tailwind CSS classes exclusively
+- **CSS Architecture**: Tailwind-first approach - no inline `<style>` tags in components
+- **Design System Colors**: Use CSS custom properties via arbitrary values (e.g., `text-[color:var(--color-text-tertiary)]`)
+- **Typography**: Tailwind utilities with CSS variables for design system consistency
 - **Spacing**: Use Tailwind's spacing scale consistently (mb-4, mb-6, mb-16)
+- **Exceptions**: Complex animations and print `@page` rules may use minimal CSS when Tailwind cannot handle them
 
 ### Link Design
 
@@ -217,6 +220,7 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 ### Build Configuration
 
 **URL Structure:**
+
 - `trailingSlash: "never"` - All URLs are clean without trailing slashes (e.g., `/thoughts`, `/so-far`)
 - `build: { format: "file" }` - Generates `.html` files for better compatibility
 - All internal links and redirects are consistent with this configuration
@@ -446,10 +450,12 @@ The project uses Prettier for consistent code formatting with the following conf
 ### Code Style Conventions
 
 - **Astro Components**: Use semantic HTML5 elements with TypeScript interfaces for props
-- **CSS**: Prefer CSS custom properties over Tailwind for colors/fonts
-- **Typography**: Mix Tailwind utilities with CSS variables for fine control
+- **CSS Architecture**: Tailwind-first approach - avoid inline `<style>` tags in components
+- **Design System Colors**: Use CSS custom properties via arbitrary values (e.g., `text-[color:var(--color-text-tertiary)]`)
+- **Typography**: Tailwind utilities with CSS variables for design system consistency
 - **Spacing**: Use Tailwind's spacing scale consistently (mb-4, mb-6, mb-16)
 - **Components**: Always define TypeScript interfaces for component props
+- **Exceptions**: Complex animations and print `@page` rules may use minimal CSS when Tailwind limitations require it
 
 ## SEO & Performance Optimization
 

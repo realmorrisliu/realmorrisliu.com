@@ -102,12 +102,16 @@ const keywords = [
     <meta name="msapplication-TileColor" content="#ffffff" />
 
     <!-- Hreflang for multilingual support -->
-    {alternateLanguages.map(({ lang: hrefLang, url }) => (
-      <link rel="alternate" hreflang={hrefLang} href={url} />
-    ))}
-    {alternateLanguages.length > 0 && (
-      <link rel="alternate" hreflang={lang} href={canonicalURL.toString()} />
-    )}
+    {
+      alternateLanguages.map(({ lang: hrefLang, url }) => (
+        <link rel="alternate" hreflang={hrefLang} href={url} />
+      ))
+    }
+    {
+      alternateLanguages.length > 0 && (
+        <link rel="alternate" hreflang={lang} href={canonicalURL.toString()} />
+      )
+    }
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="Morris Liu's Blog" href="/rss.xml" />
@@ -191,16 +195,8 @@ const keywords = [
       })}
     />
   </head>
-  <body>
+  <body class="m-0 w-full min-h-full">
     <slot />
   </body>
 </html>
 
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    min-height: 100%;
-  }
-</style>

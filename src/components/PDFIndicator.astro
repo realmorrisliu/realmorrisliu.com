@@ -11,32 +11,32 @@ const { currentLang, backUrl } = Astro.props;
 const t = getTranslations(currentLang);
 ---
 
-<div class="pdf-indicator">
-  <div class="pdf-content">
-    <div class="pdf-header">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="pdf-icon">
+<div class="bg-gray-100 font-sans px-4 py-3.5 mb-4 sm:px-5 sm:py-4 sm:mb-5 print:hidden">
+  <div class="flex flex-col items-start gap-3 mb-2.5 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:mb-3">
+    <div class="flex items-center gap-2.5 flex-1 sm:gap-3">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0 text-[color:var(--color-text-tertiary)]">
         <title>PDF</title>
         <path
           d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"
         ></path>
       </svg>
-      <div class="pdf-text">
-        <span class="pdf-title">
+      <div class="flex-1">
+        <span class="text-[0.8125rem] text-[color:var(--color-text-secondary)] m-0 font-normal leading-[var(--line-height-normal)] sm:text-sm">
           {t.soFar.pdf.title}
         </span>
       </div>
     </div>
 
-    <div class="pdf-actions">
+    <div class="flex-shrink-0">
       <Button id="print-button" variant="primary" size="sm">
         {t.soFar.pdf.printButton}
       </Button>
     </div>
   </div>
 
-  <div class="pdf-footer">
-    <p class="pdf-hint">{t.soFar.pdf.printButtonHint}</p>
-    <a href={backUrl} class="back-link">{t.soFar.pdf.backText}</a>
+  <div class="flex flex-col items-start gap-2 text-xs sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+    <p class="text-[0.6875rem] text-[color:var(--color-text-tertiary)] italic m-0 flex-1 sm:text-xs">{t.soFar.pdf.printButtonHint}</p>
+    <a href={backUrl} class="text-[0.6875rem] text-[color:var(--color-text-link)] underline decoration-1 underline-offset-2 font-medium transition-all duration-150 ease whitespace-nowrap hover:text-[color:var(--color-text-secondary)] hover:no-underline sm:text-xs">{t.soFar.pdf.backText}</a>
   </div>
 </div>
 
@@ -59,121 +59,3 @@ const t = getTranslations(currentLang);
   });
 </script>
 
-<style>
-  .pdf-indicator {
-    background: #f5f5f5;
-    padding: 16px 20px;
-    margin-bottom: 20px;
-    font-family: var(--font-sans);
-  }
-
-  .pdf-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 12px;
-  }
-
-  .pdf-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex: 1;
-  }
-
-  .pdf-icon {
-    flex-shrink: 0;
-    color: var(--color-text-tertiary);
-  }
-
-  .pdf-text {
-    flex: 1;
-  }
-
-  .pdf-title {
-    font-size: 0.875rem;
-    line-height: var(--line-height-normal);
-    color: var(--color-text-secondary);
-    margin: 0;
-    font-weight: 400;
-  }
-
-  .pdf-actions {
-    flex-shrink: 0;
-  }
-
-  .pdf-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    font-size: 0.75rem;
-  }
-
-  .pdf-hint {
-    color: var(--color-text-tertiary);
-    font-style: italic;
-    margin: 0;
-    flex: 1;
-  }
-
-  .back-link {
-    color: var(--color-text-link);
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
-    font-weight: 500;
-    transition: all 150ms ease;
-    white-space: nowrap;
-  }
-
-  .back-link:hover {
-    color: var(--color-text-secondary);
-    text-decoration: none;
-  }
-
-  /* Hide entire indicator in print */
-  @media print {
-    .pdf-indicator {
-      display: none !important;
-    }
-  }
-
-  /* Mobile optimization */
-  @media (max-width: 640px) {
-    .pdf-indicator {
-      padding: 14px 16px;
-      margin-bottom: 16px;
-    }
-
-    .pdf-content {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
-
-    .pdf-header {
-      gap: 10px;
-    }
-
-    .pdf-title {
-      font-size: 0.8125rem;
-    }
-
-    .pdf-footer {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 8px;
-    }
-
-    .pdf-hint {
-      font-size: 0.6875rem;
-    }
-
-    .back-link {
-      font-size: 0.6875rem;
-    }
-  }
-</style>
