@@ -30,14 +30,14 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
           href={enUrl}
           class={`font-medium ${currentLang === "en" ? "text-[color:var(--color-text-primary)]" : "text-[color:var(--color-text-tertiary)]"}`}
         >
-          EN
+          {t.common.languages.en}
         </Link>
         <span class="text-[color:var(--color-border)]">|</span>
         <Link
           href={zhUrl}
           class={`font-medium ${currentLang === "zh" ? "text-[color:var(--color-text-primary)]" : "text-[color:var(--color-text-tertiary)]"}`}
         >
-          中文
+          {t.common.languages.zh}
         </Link>
       </div>
     </div>
@@ -83,11 +83,7 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
 
     <div class="relative">
       <!-- Continuous timeline line -->
-      <div
-        class="absolute top-0 bottom-0 left-0 w-px"
-        style="background-color: var(--color-border);"
-      >
-      </div>
+      <div class="absolute top-0 bottom-0 left-0 w-px bg-gray-300"></div>
 
       <div class="space-y-12">
         {
@@ -257,12 +253,12 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
             {
               placeholder: "{cartierBresson}",
               href: "https://en.wikipedia.org/wiki/Henri_Cartier-Bresson",
-              label: currentLang === "en" ? "Henri Cartier-Bresson" : "卡蒂埃-布列松",
+              label: t.soFar.side.photographers.cartierBresson,
             },
             {
               placeholder: "{hideakiHamada}",
               href: "https://hideakihamada.com/about/",
-              label: currentLang === "en" ? "Hideaki Hamada" : "滨田英明",
+              label: t.soFar.side.photographers.hideakiHamada,
             },
           ]}
         />

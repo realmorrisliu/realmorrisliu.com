@@ -16,27 +16,20 @@ export function getStaticPaths() {
   return [{ params: { lang: "zh" } }];
 }
 
-// Generate page title and description based on language
-const pageTitle = currentLang === "zh" ? "Morris Liu - 简历 (PDF)" : "Morris Liu - Resume (PDF)";
-
-const pageDescription =
-  currentLang === "zh"
-    ? "Morris Liu 的专业简历PDF版本。全栈工程师 & 技术负责人，7年经验。"
-    : "Morris Liu's professional resume in PDF format. Full-Stack Engineer & Technical Leader with 7 years experience.";
+// Generate page title and description from translations
+const pageTitle = t.soFar.pdf.pageTitle;
+const pageDescription = t.soFar.pdf.pageDescription;
 
 const backUrl = currentLang === "zh" ? "/so-far/zh" : "/so-far";
 ---
 
-<Layout 
-  title={pageTitle} 
-  description={pageDescription} 
+<Layout
+  title={pageTitle}
+  description={pageDescription}
   lang={htmlLang}
-  alternateLanguages={[
-    { lang: "en", url: "https://realmorrisliu.com/so-far/pdf" }
-  ]}
+  alternateLanguages={[{ lang: "en", url: "https://realmorrisliu.com/so-far/pdf" }]}
 >
   <PDFIndicator currentLang={currentLang} backUrl={backUrl} />
 
   <ResumeLayout currentLang={currentLang} />
 </Layout>
-

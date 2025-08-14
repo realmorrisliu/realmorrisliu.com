@@ -16,13 +16,11 @@ export function getStaticPaths() {
 }
 ---
 
-<Layout 
-  title={t.soFar.meta.title} 
-  description={t.soFar.meta.description} 
+<Layout
+  title={t.soFar.meta.title}
+  description={t.soFar.meta.description}
   lang={htmlLang}
-  alternateLanguages={[
-    { lang: "en", url: "https://realmorrisliu.com/so-far" }
-  ]}
+  alternateLanguages={[{ lang: "en", url: "https://realmorrisliu.com/so-far" }]}
 >
   <SoFarPage currentLang={currentLang} />
 </Layout>

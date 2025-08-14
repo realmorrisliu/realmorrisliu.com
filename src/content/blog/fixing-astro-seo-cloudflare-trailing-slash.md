@@ -18,7 +18,7 @@ author: "Morris Liu"
 readingTime: 5
 ---
 
-My Google Search Console lit up with warnings the week after I deployed my Astro site to Cloudflare Pages. 
+My Google Search Console lit up with warnings the week after I deployed my Astro site to Cloudflare Pages.
 
 "Redirect chains detected." "308 permanent redirects found." "Page indexing affected."
 
@@ -48,8 +48,8 @@ When I discovered this problem, the first thing I did was dive into [Astro's doc
 ```javascript
 // astro.config.mjs
 export default defineConfig({
-  trailingSlash: 'never' // This should fix it, right?
-})
+  trailingSlash: "never", // This should fix it, right?
+});
 ```
 
 Perfect! Set it to `'never'` and Cloudflare will stop adding trailing slashes.
@@ -76,13 +76,14 @@ Astro's [`build.format` configuration](https://docs.astro.build/en/reference/con
 // astro.config.mjs
 export default defineConfig({
   build: {
-    format: 'file' // Generate page.html instead of page/index.html
+    format: "file", // Generate page.html instead of page/index.html
   },
-  trailingSlash: 'never' // Now this makes sense together
-})
+  trailingSlash: "never", // Now this makes sense together
+});
 ```
 
 With `format: 'file'`, Astro generates:
+
 - `/about.html` instead of `/about/index.html`
 - `/blog/my-article.html` instead of `/blog/my-article/index.html`
 
@@ -95,13 +96,13 @@ The `trailingSlash: 'never'` setting becomes relevant again because it ensures y
 Here's what you need to change in your `astro.config.mjs`:
 
 ```javascript
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
   build: {
-    format: 'file' // This is the key change
+    format: "file", // This is the key change
   },
-  trailingSlash: 'never', // This ensures dev/prod consistency
+  trailingSlash: "never", // This ensures dev/prod consistency
   // ... your other config
 });
 ```
@@ -109,6 +110,7 @@ export default defineConfig({
 But that's not all. You'll also need to audit your site for:
 
 **Internal Links**: Make sure they don't include trailing slashes
+
 ```html
 <!-- Before -->
 <a href="/about/">About</a>
@@ -117,6 +119,7 @@ But that's not all. You'll also need to audit your site for:
 ```
 
 **Redirect Rules**: Update any `_redirects` file entries
+
 ```
 # Before
 /old-page/ /new-page/ 301
@@ -150,6 +153,7 @@ The `trailingSlash` configuration isn't useless—it's just solving a different 
 This issue highlights a broader challenge with static site deployment: the assumptions your build tool makes might not match your hosting platform's behavior.
 
 Before deploying any static site, it's worth understanding:
+
 - How your hosting platform handles file serving
 - Whether it performs automatic redirects
 - How those redirects might affect SEO

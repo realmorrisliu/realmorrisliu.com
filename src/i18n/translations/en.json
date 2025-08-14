@@ -1,4 +1,10 @@
 {
+  "common": {
+    "languages": {
+      "en": "EN",
+      "zh": "中文"
+    }
+  },
   "soFar": {
     "title": "So Far",
     "meta": {
@@ -180,6 +186,10 @@
       "bass": "I spend time practicing bass, working through the grooves that shaped music—{queen}'s theatrical bass lines, {chic}'s infectious funk, {ewf}'s sophisticated arrangements, and {acdc}'s relentless drive. There's something about the bass that mirrors good engineering: it's the foundation that holds everything else together.",
       "photography": "When I'm not playing music, I'm often capturing moments through photography. I'm drawn to the philosophy of photographers like {cartierBresson}, who taught us about the decisive moment, and {hideakiHamada}, whose quiet observations of daily life reveal extraordinary beauty in the ordinary.",
       "philosophy": "Both photography and music have shaped how I think about code. Like a good composition or a perfectly timed shot, the best software feels inevitable once you experience it. I believe in building things that last, writing code that others can understand, and finding the rhythm that makes complex systems feel simple.",
+      "photographers": {
+        "cartierBresson": "Henri Cartier-Bresson",
+        "hideakiHamada": "Hideaki Hamada"
+      },
       "gear": {
         "title": "Current gear:",
         "items": ["Bass: YAMAHA TRBX604", "Camera: Leica M10-R"]
@@ -219,7 +229,9 @@
       "printButton": "Print PDF",
       "printButtonHint": "If the print dialog didn't open automatically, use the button above",
       "title": "PDF Resume Ready — Click 'Save as PDF' in the print dialog",
-      "backText": "← Back to web version"
+      "backText": "← Back to web version",
+      "pageTitle": "Morris Liu - Resume (PDF)",
+      "pageDescription": "Morris Liu's professional resume in PDF format. Full-Stack Engineer & Technical Leader with 7 years experience."
     },
     "footer": {
       "backToMain": "← Back to main page"

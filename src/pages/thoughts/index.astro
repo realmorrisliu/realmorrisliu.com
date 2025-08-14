@@ -72,7 +72,7 @@ const structuredData = {
     <div class="space-y-16">
       {
         postsWithReadingTime.map(post => (
-          <article class="border-b pb-12" style="border-color: var(--color-border);">
+          <article class="border-b border-gray-300 pb-12">
             <div class="mb-4">
               <h2 class="mb-2 font-serif text-2xl leading-tight">
                 <Link
@@ -82,25 +82,17 @@ const structuredData = {
                   {post.data.title}
                 </Link>
               </h2>
-              <div
-                class="flex items-center gap-4 text-sm"
-                style="color: var(--color-text-tertiary);"
-              >
+              <div class="flex items-center gap-4 text-sm text-gray-500">
                 <time>{formatDate(post.data.pubDate)}</time>
                 <span>{post.readingTime} min read</span>
               </div>
             </div>
-            <p class="text-base leading-relaxed" style="color: var(--color-text-secondary);">
-              {post.data.description}
-            </p>
+            <p class="text-base leading-relaxed text-gray-600">{post.data.description}</p>
 
             {post.data.tags && post.data.tags.length > 0 && (
               <div class="mt-4 flex flex-wrap gap-2">
                 {post.data.tags.map(tag => (
-                  <span
-                    class="rounded-full border px-2 py-1 text-xs"
-                    style="color: var(--color-text-tertiary); border-color: var(--color-border);"
-                  >
+                  <span class="rounded-full border border-gray-300 px-2 py-1 text-xs text-gray-500">
                     {tag}
                   </span>
                 ))}
@@ -114,7 +106,7 @@ const structuredData = {
     {
       posts.length === 0 && (
         <div class="py-16 text-center">
-          <p class="text-lg" style="color: var(--color-text-secondary);">
+          <p class="text-lg text-gray-600">
             No thoughts yet. Create your first post in <code>src/content/blog/</code>
           </p>
         </div>

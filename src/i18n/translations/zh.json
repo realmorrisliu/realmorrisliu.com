@@ -1,4 +1,10 @@
 {
+  "common": {
+    "languages": {
+      "en": "EN",
+      "zh": "中文"
+    }
+  },
   "soFar": {
     "title": "关于我",
     "meta": {
@@ -180,6 +186,10 @@
       "bass": "我会花时间练贝斯，研究那些塑造了音乐历史的经典律动——{queen}戏剧化的贝斯线条，{chic}感染力十足的放克，{ewf}精妙的编曲，还有{acdc}那股子猛劲。贝斯和好的工程设计很像：都是那个默默撑起整个架构的基础。",
       "photography": "不弹琴的时候，我经常带着相机到处转。很喜欢一些摄影师的理念，比如{cartierBresson}提出的\"决定性瞬间\"，还有{hideakiHamada}对日常生活的安静观察，能从最平凡的场景里发现非凡的美。",
       "philosophy": "摄影和音乐都影响着我写代码的思路。就像好的摄影作品或者恰到好处的音乐节拍，最棒的软件用起来会让人觉得\"就应该是这样\"。我喜欢做那种经得起时间考验的东西，写别人也能看懂的代码，找到那种让复杂系统变得简单的节奏感。",
+      "photographers": {
+        "cartierBresson": "卡蒂埃-布列松",
+        "hideakiHamada": "滨田英明"
+      },
       "gear": {
         "title": "目前的装备：",
         "items": ["Bass: YAMAHA TRBX604", "Camera: Leica M10-R"]
@@ -219,7 +229,9 @@
       "printButton": "打印PDF",
       "printButtonHint": "如果打印对话框没有自动弹出，请使用上方按钮",
       "title": "PDF 简历准备就绪 — 点击「另存为PDF」保存文件",
-      "backText": "← 返回网页版"
+      "backText": "← 返回网页版",
+      "pageTitle": "Morris Liu - 简历 (PDF)",
+      "pageDescription": "Morris Liu 的专业简历PDF版本。全栈工程师 & 技术负责人，7年经验。"
     },
     "footer": {
       "backToMain": "← 回到主页"
