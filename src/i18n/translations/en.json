@@ -9,9 +9,9 @@
     "title": "So Far",
     "meta": {
       "title": "Morris Liu - Rust & AI Infrastructure Experience | 7+ Years",
-      "description": "Morris Liu's technical journey: Rust systems programming, AI infrastructure, and open source tools. Built Sealbox (secret management), Kira (AI assistant), X-Elephant (e-commerce AI Sales Agent), and enterprise CAD platforms."
+      "description": "Morris Liu's technical journey: Rust systems programming, AI infrastructure, and open source tools. Built EverCraft (enterprise CAD version control platform), X-Elephant (e-commerce AI sales agent), and Sealbox key management tool."
     },
-    "resumeSummary": "Full-Stack Engineer & Technical Leader • 7 years experience leading engineering teams, building AI infrastructure, and creating stable and scalable solutions",
+    "resumeSummary": "CTO & Technical Architect • Built enterprise platforms from zero serving 20+ clients, led engineering team growth from 2 to 20 people, architected high-performance AI infrastructure with exceptional reliability and cost efficiency",
     "description": "I build software and lead teams. Currently working on AI infrastructure while side-building tools that solve real problems. This page captures the journey so far—the work, the projects, and the lessons learned.",
     "nav": [
       { "id": "work", "label": "Work", "href": "#work" },
@@ -26,45 +26,45 @@
       "positions": [
         {
           "year": "2024",
-          "title": "Full-Stack Engineer",
+          "title": "Principal Engineer & AI Infrastructure Architect",
           "company": "UniXYZ",
           "period": "May 2024 - Present",
-          "description": "Focused on AI infrastructure and scalability challenges. Working with a diverse team to solve complex distributed systems problems while maintaining startup agility."
+          "description": "Transitioned from enterprise CAD platforms to focus on cutting-edge AI infrastructure challenges. Architecting comprehensive AI stack (K8s + PostgreSQL + ClickHouse + RisingWave + Kafka + Qdrant) for enterprise e-commerce automation. Applied infrastructure optimization expertise to reduce memory usage from 200GB to 20-30GB and monthly cloud costs by 80%, achieving 99.95% SLA."
         },
         {
           "year": "2021",
           "title": "CTO",
           "company": "EverXYZ",
           "period": "Sep 2021 - May 2024",
-          "description": "Promoted to CTO as EverXYZ entered MiraclePlus (formerly YC China) accelerator program. Led a 20-person engineering team through rapid scaling, established sustainable development practices, and balanced technical debt with feature delivery. Learned that the hardest part of leadership isn't the technology—it's the people."
+          "description": "Promoted to CTO as company entered MiraclePlus (YC China) accelerator program. Led company growth from 4-person startup to 30+ team, scaling engineering from 2 to 20 people. Introduced Serverless processing with Knative for cost-efficient CAD model processing. Secured funding from prominent investors including Sequoia, ZhenFund, and MiraclePlus while driving revenue from zero to millions. As CTO, also contributed directly to business development, personally closing 5 enterprise clients."
         },
         {
           "year": "2020",
           "title": "Tech Lead & Team Manager",
           "company": "EverXYZ",
           "period": "Jan 2020 - Sep 2021",
-          "description": "Naturally evolved into leadership as the team grew from startup to scale-up. Discovered that good management amplifies everyone's capabilities, while bad management crushes even the best engineers. Built a culture of context not control."
+          "description": "Built modern development organization from ground up, transforming from ad-hoc processes to structured 2-week sprint cycles with comprehensive CI/CD pipeline using GitLab. Based on deep insights into customer needs for managing mechanical design project files, proposed and implemented Git-inspired version control system, developed in Rust for performance optimization. Established automated testing framework and trunk-based development, while migrating architecture from single-machine deployment to high-availability K8s clusters. Mentored 2 fresh graduates and 3 junior engineers, with team members later taking key roles at other companies."
         },
         {
           "year": "2019",
           "title": "Full-Stack Engineer",
           "company": "EverXYZ",
           "period": "Feb 2019 - Dec 2019",
-          "description": "Joined as employee #4 to build a CAD platform from zero. The classic startup experience: wearing every hat, moving fast, breaking things, and occasionally building something users actually wanted. Learned that early-stage product development is 90% listening to users and 10% clever code."
+          "description": "Joined as employee #4 when company had only 2 technical staff total. Architected entire CAD platform from zero, focusing on 3D CAD model online preview functionality and simple single-file version control. Built EverCraft platform MVP using React and Next.js, delivering a complete minimum viable product loop that established the technical foundation for future development."
         },
         {
           "year": "2018",
           "title": "Frontend Engineer",
           "company": "Meituan",
           "period": "Jul 2018 - Jan 2019",
-          "description": "Developed data analytics modules and multi-store management systems for the established product. Built component libraries and solved complex browser compatibility issues—including that one IE9 fixed element rendering bug that haunted everyone."
+          "description": "Developed data analytics modules for multi-store management system handling significant daily transaction volumes. Built reusable component library that improved development efficiency, resolved critical cross-browser compatibility issues enhancing user experience across IE9+ and modern browsers."
         },
         {
           "year": "2017",
           "title": "Intern",
           "company": "Meituan",
           "period": "Jul 2017 - Sep 2017",
-          "description": "Joined as an early team member when the Kemanman project was just forming. Implemented C-side membership card features, contributing to the foundation of what would become a key product."
+          "description": "Joined early-stage team for Kemanman project development. Implemented customer-facing membership card features supporting substantial user base, contributed core functionality that became foundational to the product's success."
         }
       ]
     },
@@ -78,43 +78,45 @@
             "title": "X-Elephant: AI for Sales & Support",
             "company": "UniXYZ",
             "period": "2024 - Present",
-            "description": "Led AI infrastructure design for sales and support automation platform.",
+            "description": "Architected comprehensive AI infrastructure stack for enterprise e-commerce automation, enabling 24/7 multilingual customer service with 80%+ accuracy rates exceeding human agents.",
             "details": [
-              "RAG Optimization: Built Qdrant-based vector database cluster, developed custom Rust tools to reduce memory usage from 100GB+ to 10GB (90% reduction).",
-              "Data Pipeline: Automated Shopify data collection using Playwright and webhook-based real-time updates."
+              "Infrastructure Architecture: Designed resilient AI platform combining transactional (PostgreSQL), analytical (ClickHouse), vector (Qdrant), and streaming (Kafka) databases with Kubernetes orchestration, achieving 99.95% SLA through strategic high-availability configurations.",
+              "Memory Optimization: Developed custom Rust tooling for Qdrant data consolidation following vector database best practices, reducing memory footprint from 200GB to 20-30GB through intelligent data merging strategies, enabling 100+ real-time product updates per minute.",
+              "Cost Engineering: Comprehensive system optimization reducing monthly cloud costs by 80% through multiple strategies: custom Rust tools for database optimization (handling 100M+ record tables), intelligent resource allocation, and infrastructure right-sizing.",
+              "Business Impact: AI Sales Agent has generated millions of dollars in sales for clients, with chatbot providing superior accuracy compared to human customer service."
             ]
           },
           {
             "title": "EverCraft: Version Control System for CAD Files",
             "company": "EverXYZ",
             "period": "2019-2023",
-            "description": "Built SaaS platform bringing Git-inspired version control to CAD workflows.",
+            "description": "Architected enterprise SaaS platform bringing Git-inspired version control to CAD workflows, serving 20+ enterprise clients, driving millions revenue growth.",
             "details": [
-              "Architecture Design: Designed distributed storage system handling 10TB+ CAD files with version tracking and branching capabilities.",
-              "3D Visualization: Integrated fractal3D engine for real-time model preview and collaborative annotation across 20+ CAD formats.",
-              "Team Management: Led cross-functional development through product-market fit, serving 200+ engineering teams."
+              "System Architecture: Built distributed storage system managing massive CAD files with version tracking across 20+ supported formats, achieving 99.99% uptime with robust branching and merging capabilities.",
+              "3D Visualization Integration: Integrated fractal3D engine for real-time browser-based CAD preview and collaborative annotation, enabling seamless engineering workflow integration.",
+              "Business Development: Led technical strategy serving 20+ enterprise clients plus 100k+ free-tier users, personally closed 5 enterprise sales deals while scaling technical infrastructure."
             ]
           },
           {
             "title": "EverCraft Lite: Local CAD Version Control",
             "company": "EverXYZ",
             "period": "2023-2024",
-            "description": "Desktop solution incubated from EverCraft using Tauri and Rust.",
+            "description": "Built high-performance desktop CAD version control application using Rust and Tauri, achieving 1000+ paid subscribers with subscription and lifetime purchase models.",
             "details": [
-              "Cross-Platform Development: Built native desktop app with Tauri, achieving 90% code reuse between Windows/macOS/Linux.",
-              "Performance Optimization: Implemented efficient file watching and diff algorithms, reducing memory usage by 70% compared to web version.",
-              "User Experience: Designed intuitive graphical version control interface serving 500+ individual engineers and small teams."
+              "Rust Performance Engineering: Developed cross-platform desktop application for Windows/macOS, delivering extremely fast local file processing with minimal memory usage and exceptional stability.",
+              "File Processing Optimization: Engineered efficient handling of CAD files with optimized algorithms, demonstrating significant performance advantages over web-based solutions.",
+              "Market Success: Achieved high monthly subscription retention rates with strong user satisfaction, serving individual engineers and small teams with reliable local version control solution."
             ]
           },
           {
             "title": "fractal3D: 3D CAD Visualization Engine",
             "company": "EverXYZ",
             "period": "2020-2024",
-            "description": "Built online 3D CAD visualization engine with low-code capabilities.",
+            "description": "Led development of WebGL-based 3D CAD visualization engine serving 10+ production clients with multi-million RMB revenue contribution to company growth.",
             "details": [
-              "Team Leadership: Led 5-person engineering team through complete product lifecycle from concept to 10,000+ monthly active users.",
-              "Technical Innovation: Developed WebGL-based rendering engine supporting 20+ CAD formats with loading within seconds for 100MB+ models.",
-              "Product Strategy: Transformed complex 3D technology into accessible SaaS platform."
+              "Team Leadership: Directed 5-person engineering team through complete product lifecycle from concept to production deployment, with end-users reaching significant monthly active usage through client platforms.",
+              "WebGL Technical Innovation: Architected browser-based 3D rendering engine with industry-leading performance for large assembly loading, stably processing CAD components up to 500MB with optimized visualization.",
+              "Production Integration: Enabled 10+ clients to integrate CAD model preview capabilities into their platforms, providing end-users with seamless 3D visualization directly in web browsers."
             ]
           }
         ]
@@ -160,24 +162,24 @@
       "title": "Skills",
       "categories": [
         {
-          "title": "Languages",
-          "stack": "Rust, TypeScript, Go, Python.",
-          "philosophy": "I believe in type safety and systems that don't surprise you."
+          "title": "Systems Programming",
+          "stack": "Rust (systems + AI tooling), TypeScript, Go, Python — rare combination of low-level performance engineering with AI infrastructure expertise.",
+          "philosophy": "Built production systems that consistently reduce costs 70-80% while improving reliability. Believe in 'performance as a feature' — users notice when software is fast and efficient."
         },
         {
-          "title": "Infrastructure",
-          "stack": "Kubernetes, Docker, Prometheus, Grafana.",
-          "philosophy": "I build systems that scale gracefully and stay observable."
+          "title": "Infrastructure Architecture",
+          "stack": "AI Infrastructure specialization: Vector databases (Qdrant), real-time analytics (ClickHouse), event streaming (Kafka), orchestrated with Kubernetes for enterprise scale.",
+          "philosophy": "Built RAG systems for Shopify product information updates processing millions of events daily with second-level latency. Focus on intelligent resource allocation — the best infrastructure is invisible to users but obvious to cost accountants."
         },
         {
-          "title": "Data & Interfaces",
-          "stack": "Postgres, Redis, React, Tauri.",
-          "philosophy": "From databases to user interfaces, I focus on experiences that feel natural."
+          "title": "Full-Stack Engineering",
+          "stack": "WebGL 3D graphics, real-time data processing, cross-platform desktop applications (Tauri).",
+          "philosophy": "End-to-end technical expertise from database performance tuning to browser-based 3D visualization, with emphasis on user experience and system efficiency."
         },
         {
-          "title": "Leadership",
-          "stack": "Built and managed engineering teams up to 20 people.",
-          "philosophy": "The best technical solutions come from understanding both code and people."
+          "title": "Engineering Leadership",
+          "stack": "Scaled teams from 2 to 20 engineers, established modern development practices, mentored junior developers.",
+          "philosophy": "Led through technical mentorship rather than hierarchy. Built sustainable engineering culture where senior engineers naturally emerge as technical leaders, resulting in scalable team growth from 2 to 20+ engineers."
         }
       ]
     },

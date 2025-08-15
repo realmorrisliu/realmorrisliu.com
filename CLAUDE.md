@@ -31,7 +31,8 @@ src/
 │   ├── TimelineItem.astro   # Career timeline with continuous line design
 │   ├── FormattedText.astro  # Dynamic text with link replacements for i18n
 │   ├── ResumeLayout.astro   # PDF-optimized resume layout with high info density
-│   └── PDFIndicator.astro   # PDF page indicator with print button and instructions
+│   ├── PDFIndicator.astro   # PDF page indicator with print button and instructions
+│   └── CurrentStatus.astro  # Current activity status with visual differentiation
 ├── i18n/
 │   ├── translations/
 │   │   ├── en.json          # English translations
@@ -42,6 +43,7 @@ src/
 │   └── BlogPost.astro       # Blog post layout with Typography
 ├── pages/
 │   ├── index.astro          # Homepage with letter-style greeting
+│   ├── now.astro            # Current status page with markdown content
 │   ├── so-far.astro         # Professional timeline (English)
 │   ├── so-far/
 │   │   ├── [lang].astro     # Professional timeline (other languages)
@@ -56,6 +58,8 @@ src/
 │       └── [...slug].astro  # Dynamic blog post routes
 ├── scripts/
 │   └── og-utils.ts          # Shared utilities for OG image generation
+├── data/
+│   └── current.md           # Current status content in markdown format
 └── styles/
     └── global.css           # Design system + Typography config
 ```
@@ -88,6 +92,8 @@ The design system is built around CSS custom properties and follows extreme mini
 - **FormattedText.astro**: Handles dynamic text with link replacements, used for i18n content that contains inline links. Splits text by placeholders and renders appropriate Link components.
 - **ResumeLayout.astro**: PDF-optimized resume layout component with high information density. Uses condensed typography (8.5pt base font, 1.15 line-height), tight margins (0.3in), and single-column layout to fit all content on one A4 page. Features inline GitHub links positioned after project titles for better visibility and optimized spacing for professional presentation.
 - **PDFIndicator.astro**: PDF page indicator component with print functionality fallback. Features minimalist gray banner design with PDF icon, status message, manual print button, and internationalization support. Automatically attempts print on page load with manual button as fallback for production environments where auto-print is blocked by browser security policies.
+- **SoFarPage.astro**: Comprehensive page-level component that orchestrates the entire "So Far" page layout and functionality. Integrates multiple child components (TimelineItem, ProjectItem, FormattedText, FooterSignature) to create a cohesive professional profile page. Features built-in internationalization support with dynamic language switching, anchor-based navigation between sections (Work, Projects, Skills, Side, Contact), and intelligent language switch URL generation that preserves page anchors. Handles complex content rendering including timeline visualization, project showcases, and formatted text with inline link replacements.
+- **CurrentStatus.astro**: Displays current activity status on the homepage with enhanced visual differentiation. Features left border styling, typography hierarchy (font-medium for labels), and proper color contrast using design system tokens. Reads content from `src/data/current.json` with automatic date formatting. Designed to stand out from main content while maintaining minimalist aesthetics.
 
 **Component Design Principles:**
 
@@ -148,6 +154,7 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 
 1. **Homepage (`index.astro`)**:
    - Natural greeting: "Hi, I'm Morris."
+   - CurrentStatus component showing current activities (WebGL, Three.js, shader programming)
    - Conversational navigation embedded in prose
    - Letter-style signature at bottom
 
@@ -156,21 +163,27 @@ The website uses a "letter-like" navigation approach that avoids traditional web
    - Simple "Morris Liu" signature link back to home
    - No traditional breadcrumbs or back buttons
 
-3. **Blog Posts (`layouts/BlogPost.astro`)**:
+3. **Now (`now.astro`)**:
+   - Personal status page following Derek Sivers' now page philosophy
+   - Markdown content from `src/data/current.md` with frontmatter metadata
+   - Simple, conversational updates (learning, projects, life)
+   - FooterSignature with back-to-main navigation
+
+4. **Blog Posts (`layouts/BlogPost.astro`)**:
    - Author signature navigation at article end
    - "Thank you for reading" + natural return links
    - Feels like correspondence conclusion
 
-4. **So Far (`so-far.astro` & `so-far/[lang].astro`)**:
-   - Multi-language support via URL paths: `/so-far` (English) and `/so-far/zh` (Chinese)
-   - Internal anchor navigation for sections (Work, Projects, Skills, Side, Contact)
-   - Timeline-based Work section with continuous visual line
+5. **So Far (`so-far.astro` & `so-far/[lang].astro`)**:
+   - Built around **SoFarPage.astro** component that orchestrates the entire page structure and content rendering
+   - Multi-language support via URL paths: `/so-far` (English) and `/so-far/zh` (Chinese) with intelligent language switching
+   - Internal anchor navigation for sections (Work, Projects, Skills, Side, Contact) handled by SoFarPage component
+   - Timeline-based Work section with continuous visual line using TimelineItem components
    - Enhanced Work Projects section with detailed technical achievements and interview-ready content
-   - Component-based architecture using TimelineItem and ProjectItem
-   - Rich professional content written in conversational tone with quantifiable results
+   - Component-based architecture: SoFarPage integrates TimelineItem, ProjectItem, FormattedText, and FooterSignature components
+   - Rich professional content pulled from i18n translation files with dynamic content rendering
    - Optimized visual hierarchy with consistent border styling (1px) and clear information structure
-   - Letter-style signature return to home
-   - Language toggle in top-right corner for easy switching
+   - Language toggle in top-right corner with anchor-preserving URL generation
    - PDF download link integrated into content flow for traditional resume format
 
 5. **PDF Resume (`so-far/pdf.astro` & `so-far/pdf/[lang].astro`)**:
@@ -236,11 +249,12 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 
 ### CSS Architecture
 
-- Global styles in `src/styles/global.css`
-- Design tokens as CSS custom properties
-- Tailwind v4 with @theme syntax for custom design tokens
-- Tailwind Typography plugin for Markdown content
-- Custom overrides for minimalist aesthetic
+- Global styles in `src/styles/global.css` with `@import "tailwindcss";` and `@plugin "@tailwindcss/typography";`
+- Design tokens as CSS custom properties defined in global.css
+- Tailwind CSS v4 configured via Vite plugin in `astro.config.mjs` (no separate config file)
+- Font loading with Fontsource imports and optimized font-display: swap strategy
+- Tailwind Typography plugin for Markdown content with custom prose overrides
+- Minimal custom CSS for design system colors and typography hierarchy
 
 ### Blog System (Content Collections)
 
@@ -272,6 +286,8 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 
 - **"Why I Built Sealbox"**: Technical deep-dive into building a Rust-based secret management service, covering enterprise tool complexity and the "90% solution" philosophy
 - **"Building Kira: An AI-Native Second Brain"**: Product vision for an AI assistant focused on context capture and thought amplification, contrasting with traditional note-taking tools
+- **"Fixing Astro SEO on Cloudflare Pages"**: Practical guide addressing mysterious 308 redirects and trailing slash issues in Astro deployments on Cloudflare Pages, focusing on real-world SEO optimization solutions
+- **"Rust Builder Pattern Guide"**: Comprehensive tutorial comparing derive_builder crate with hand-written constructors, featuring real-world examples from openrouter-rs SDK development and API design best practices
 
 **Content Strategy:**
 
@@ -349,6 +365,36 @@ The Work Projects section is optimized for technical interviews and showcases:
 - Problem-solving narratives with concrete solutions
 - Leadership and team management examples
 - Clear project evolution and business impact
+
+### Current Status & Now Page System
+
+The website implements a dual current status system with both homepage integration and a dedicated now page:
+
+**Implementation:**
+
+- **Data Storage**: Content stored in `src/data/current.md` using markdown with frontmatter metadata
+- **Homepage Component**: `CurrentStatus.astro` displays summary with link to full now page
+- **Dedicated Page**: `/now` page renders full markdown content with Astro's prose styling
+- **Modern API**: Uses `import.meta.glob` for file loading (replacing deprecated `Astro.glob`)
+
+**Design Philosophy:**
+
+- Follows Derek Sivers' now page movement philosophy
+- Personal, conversational updates like telling a friend your current status
+- English-only content for authenticity and simplicity
+- Integrated with website's letter-like aesthetic and FooterSignature pattern
+
+**Content Structure:**
+
+- **Frontmatter**: `summary` (for homepage) and `lastUpdated` timestamp
+- **Markdown Body**: Full conversational content with support for links, bold text, etc.
+- **Automatic Processing**: Astro handles markdown rendering and link generation
+
+**Usage:**
+
+- Update `src/data/current.md` with new content and date
+- Homepage shows summary with "→ Learn more about what I'm up to now" link
+- Full now page accessible at `/now` with complete status and back navigation
 
 ### OG Image Generation System
 
@@ -640,18 +686,26 @@ The website implements server-side i18n using Astro's static site generation:
 - Standardize time period formats: English uses "Month YYYY - Month YYYY", Chinese uses "YYYY年 X月 - YYYY年 X月"
 - Maintain consistent company naming across languages for professional consistency
 
+### Translation Quality Guidelines
+
+- **Chinese Text Formatting**: Ensure proper spacing between Chinese text and English technical terms (AI, CAD, SaaS, etc.)
+- **Business Language**: Use professional terms like "签约" instead of colloquial "成交"
+- **Technical Expression**: Prefer natural expressions over direct translations
+- **Sensitive Information**: Use percentages instead of specific financial figures for security
+- **Consistency**: Maintain unified terminology across all sections
+
 ## Project Dependencies
 
 ### Core Dependencies
 
-- **Astro** (^5.11.2): Static site generator and framework
+- **Astro** (^5.12.8): Static site generator and framework
 - **@astrojs/rss** (^4.0.12): RSS feed generation for blog
-- **@astrojs/sitemap** (^3.4.1): Automatic XML sitemap generation
+- **@astrojs/sitemap** (^3.4.2): Automatic XML sitemap generation
 - **Tailwind CSS** (^4.1.11): Utility-first CSS framework
 - **@tailwindcss/vite** (^4.1.11): Vite integration for Tailwind
 - **@fontsource-variable/inter** (^5.2.6): Inter Variable font family local hosting
 - **@fontsource-variable/eb-garamond** (^5.2.6): EB Garamond Variable font family local hosting
-- **@fontsource/maple-mono** (^5.2.6): Maple Mono monospace font for terminal aesthetic
+- **@fontsource/maple-mono** (^5.2.5): Maple Mono monospace font for terminal aesthetic
 
 ### Development Dependencies
 

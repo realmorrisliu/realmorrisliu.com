@@ -1,0 +1,31 @@
+---
+// Load markdown file
+const currentFiles = import.meta.glob('../data/current.md', { eager: true });
+const currentData = Object.values(currentFiles)[0] as any;
+const { summary, lastUpdated } = currentData.frontmatter;
+
+// Format the date for display
+const formatDate = (dateString: string): string => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  });
+};
+---
+
+<section class="current-status mb-8 pl-4 border-l-2 border-[color:var(--color-border)] py-3">
+  <p class="text-base leading-relaxed mb-2">
+    <span class="font-medium text-[color:var(--color-text-primary)]">Currently:</span>
+    <span class="text-[color:var(--color-text-secondary)] ml-1">{summary}</span>
+  </p>
+  <p class="text-sm text-[color:var(--color-text-tertiary)] leading-normal mb-2">
+    Last updated {formatDate(lastUpdated)}
+  </p>
+  <p class="text-sm text-[color:var(--color-text-tertiary)] leading-normal">
+    <a href="/now" class="text-[color:var(--color-text-link)] font-medium hover:underline">
+      → Learn more about what I'm up to now
+    </a>
+  </p>
+</section>
