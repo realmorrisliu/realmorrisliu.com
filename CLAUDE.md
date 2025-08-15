@@ -90,8 +90,8 @@ The design system is built around CSS custom properties and follows extreme mini
 - **TimelineItem.astro**: Career timeline component with props for year, title, company, period, and description. Features enhanced visual hierarchy with timeline dots, emphasized year labels, and improved spacing. Year labels float to the left, company names are prominently displayed, and job descriptions have clear visual separation.
 - **ProjectItem.astro**: Project display component leveraging Link and GitHubIcon components. Includes title, description, and optional GitHub repository access with consistent styling.
 - **FormattedText.astro**: Handles dynamic text with link replacements, used for i18n content that contains inline links. Splits text by placeholders and renders appropriate Link components.
-- **ResumeLayout.astro**: PDF-optimized resume layout component with high information density. Uses condensed typography (8.5pt base font, 1.15 line-height), tight margins (0.3in), and single-column layout to fit all content on one A4 page. Features inline GitHub links positioned after project titles for better visibility and optimized spacing for professional presentation.
-- **PDFIndicator.astro**: PDF page indicator component with print functionality fallback. Features minimalist gray banner design with PDF icon, status message, manual print button, and internationalization support. Automatically attempts print on page load with manual button as fallback for production environments where auto-print is blocked by browser security policies.
+- **ResumeLayout.astro**: PDF-optimized resume layout component with language-adaptive spacing system. Built with pure CSS (no Tailwind) using semantic class names for precise control. Features dynamic spacing based on `currentLang` prop: English version uses ultra-compact spacing for maximum content density, Chinese version uses balanced spacing for readability. Uses condensed typography (8.5pt base font), tight margins (0.3in), and intelligent CSS media queries to ensure perfect single-page fit across languages.
+- **PDFIndicator.astro**: PDF page indicator component with print functionality and language switching. Features minimalist gray banner design with PDF icon, status message, language toggle button, and manual print button. Language toggle uses Button component with secondary variant for visual consistency. Automatically attempts print on page load with manual button as fallback for production environments where auto-print is blocked by browser security policies.
 - **SoFarPage.astro**: Comprehensive page-level component that orchestrates the entire "So Far" page layout and functionality. Integrates multiple child components (TimelineItem, ProjectItem, FormattedText, FooterSignature) to create a cohesive professional profile page. Features built-in internationalization support with dynamic language switching, anchor-based navigation between sections (Work, Projects, Skills, Side, Contact), and intelligent language switch URL generation that preserves page anchors. Handles complex content rendering including timeline visualization, project showcases, and formatted text with inline link replacements.
 - **CurrentStatus.astro**: Displays current activity status on the homepage with enhanced visual differentiation. Features left border styling, typography hierarchy (font-medium for labels), and proper color contrast using design system tokens. Reads content from `src/data/current.json` with automatic date formatting. Designed to stand out from main content while maintaining minimalist aesthetics.
 
@@ -186,17 +186,19 @@ The website uses a "letter-like" navigation approach that avoids traditional web
    - Language toggle in top-right corner with anchor-preserving URL generation
    - PDF download link integrated into content flow for traditional resume format
 
-5. **PDF Resume (`so-far/pdf.astro` & `so-far/pdf/[lang].astro`)**:
-   - Dedicated PDF-optimized layout using ResumeLayout component
+6. **PDF Resume (`so-far/pdf.astro` & `so-far/pdf/[lang].astro`)**:
+   - Dedicated PDF-optimized layout using ResumeLayout component with pure CSS (no Tailwind)
    - PDFIndicator component with dual print strategy: automatic attempt + manual fallback button
-   - High information density design fits all content on single A4 page
-   - Condensed typography: 8.5pt base font, 1.15 line-height for readability
-   - Tight margins (0.3in) and optimized spacing for professional presentation
+   - Language-adaptive spacing system that auto-adjusts for optimal single-page fit
+   - Language toggle button integrated in PDF banner for seamless switching
+   - English version: Ultra-compact spacing (4pt sections, 1.0 line-height) for content density
+   - Chinese version: Balanced spacing (10pt sections, 1.15 line-height) for comfortable reading
+   - High information density design with 0.3in margins and semantic CSS classes
+   - Condensed typography: 8.5pt base font optimized for print readability
    - Inline GitHub links for Personal Projects positioned after titles for better visibility
-   - Multi-language support with internationalized print button text
    - Minimalist gray banner indicator hidden during print for clean output
 
-6. **OG Image Generator (`og-generator.astro` & `og-preview.astro`)**:
+7. **OG Image Generator (`og-generator.astro` & `og-preview.astro`)**:
    - Terminal aesthetic editor with `$ whoami` and `$ echo $PASSION` pattern
    - Real-time inline preview with contenteditable spans for name and tagline customization
    - Full-size (1200×630px) generation page with Canvas API-based image export

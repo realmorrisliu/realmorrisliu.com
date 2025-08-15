@@ -11,32 +11,61 @@ const { currentLang, backUrl } = Astro.props;
 const t = getTranslations(currentLang);
 ---
 
-<div class="bg-gray-100 font-sans px-4 py-3.5 mb-4 sm:px-5 sm:py-4 sm:mb-5 print:hidden">
-  <div class="flex flex-col items-start gap-3 mb-2.5 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:mb-3">
-    <div class="flex items-center gap-2.5 flex-1 sm:gap-3">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0 text-[color:var(--color-text-tertiary)]">
+<div class="mb-4 bg-gray-100 px-4 py-3.5 font-sans sm:mb-5 sm:px-5 sm:py-4 print:hidden">
+  <div
+    class="mb-2.5 flex flex-col items-start gap-3 sm:mb-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+  >
+    <div class="flex flex-1 items-center gap-2.5 sm:gap-3">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="flex-shrink-0 text-[color:var(--color-text-tertiary)]"
+      >
         <title>PDF</title>
         <path
           d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"
         ></path>
       </svg>
       <div class="flex-1">
-        <span class="text-[0.8125rem] text-[color:var(--color-text-secondary)] m-0 font-normal leading-[var(--line-height-normal)] sm:text-sm">
+        <span
+          class="m-0 text-[0.8125rem] leading-[var(--line-height-normal)] font-normal text-[color:var(--color-text-secondary)] sm:text-sm"
+        >
           {t.soFar.pdf.title}
         </span>
       </div>
     </div>
 
-    <div class="flex-shrink-0">
+    <div class="flex flex-shrink-0 items-center gap-2">
+      <!-- Language Toggle -->
+      <Button 
+        href={currentLang === "en" ? "/so-far/pdf/zh" : "/so-far/pdf"}
+        variant="secondary" 
+        size="sm"
+      >
+        {currentLang === "en" ? "中文" : "English"}
+      </Button>
+      
       <Button id="print-button" variant="primary" size="sm">
         {t.soFar.pdf.printButton}
       </Button>
     </div>
   </div>
 
-  <div class="flex flex-col items-start gap-2 text-xs sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-    <p class="text-[0.6875rem] text-[color:var(--color-text-tertiary)] italic m-0 flex-1 sm:text-xs">{t.soFar.pdf.printButtonHint}</p>
-    <a href={backUrl} class="text-[0.6875rem] text-[color:var(--color-text-link)] underline decoration-1 underline-offset-2 font-medium transition-all duration-150 ease whitespace-nowrap hover:text-[color:var(--color-text-secondary)] hover:no-underline sm:text-xs">{t.soFar.pdf.backText}</a>
+  <div
+    class="flex flex-col items-start gap-2 text-xs sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+  >
+    <p
+      class="m-0 flex-1 text-[0.6875rem] text-[color:var(--color-text-tertiary)] italic sm:text-xs"
+    >
+      {t.soFar.pdf.printButtonHint}
+    </p>
+    <a
+      href={backUrl}
+      class="ease text-[0.6875rem] font-medium whitespace-nowrap text-[color:var(--color-text-link)] underline decoration-1 underline-offset-2 transition-all duration-150 hover:text-[color:var(--color-text-secondary)] hover:no-underline sm:text-xs"
+      >{t.soFar.pdf.backText}</a
+    >
   </div>
 </div>
 
@@ -58,4 +87,3 @@ const t = getTranslations(currentLang);
     }
   });
 </script>
-
