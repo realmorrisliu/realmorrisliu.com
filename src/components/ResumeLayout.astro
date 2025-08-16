@@ -116,7 +116,7 @@ const t = getTranslations(currentLang);
     margin: 0;
     max-width: 100%;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 12px 20px 20px 20px;
     font-family:
       "Inter Variable",
       -apple-system,
@@ -137,14 +137,14 @@ const t = getTranslations(currentLang);
   }
 
   .resume-title {
-    margin: 0 0 4px 0;
+    margin: 0 0 2px 0;
     font-family: "EB Garamond Variable", Georgia, serif;
     font-size: 18pt;
     font-weight: 600;
   }
 
   .contact-info {
-    margin-bottom: 6px;
+    margin-bottom: 3px;
     font-size: 9pt;
     color: #374151;
   }
@@ -312,7 +312,7 @@ const t = getTranslations(currentLang);
     }
 
     .resume-container {
-      padding: 4px;
+      padding: 2px 4px 4px 4px;
       font-size: 8.5pt;
       line-height: 1.1;
     }
@@ -377,34 +377,43 @@ const t = getTranslations(currentLang);
 
     /* Language-specific spacing adjustments for optimal PDF fit */
 
-    /* English version - more compact spacing to fit on one page */
+    /* English version - ultra-compact spacing to maximize content density */
     .lang-en .resume-section {
-      margin-bottom: 4pt !important;
+      margin-bottom: 3pt !important;
     }
 
     .lang-en .work-item,
     .lang-en .project-item {
-      margin-bottom: 3pt !important;
+      margin-bottom: 2pt !important;
     }
 
     .lang-en .work-header,
     .lang-en .project-header {
-      margin-bottom: 2pt !important;
+      margin-bottom: 1pt !important;
     }
 
     .lang-en .work-description,
     .lang-en .project-description {
-      line-height: 1 !important;
-      margin-bottom: 2pt !important;
+      line-height: 0.95 !important;
+      margin-bottom: 1pt !important;
     }
 
     .lang-en .resume-header {
-      margin-bottom: 4pt !important;
-      padding-bottom: 4pt !important;
+      margin-bottom: 3pt !important;
+      padding-bottom: 3pt !important;
     }
 
     .lang-en .section-title {
-      margin-bottom: 3pt !important;
+      margin-bottom: 2pt !important;
+    }
+
+    .lang-en .project-details {
+      line-height: 1 !important;
+      margin-top: 1pt !important;
+    }
+
+    .lang-en .skill-item {
+      margin-bottom: 0pt !important;
     }
 
     /* Chinese version - balanced spacing for good readability within one page */
