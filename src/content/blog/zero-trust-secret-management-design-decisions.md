@@ -1,0 +1,302 @@
+---
+title: "Building Zero-Trust Secret Management: The Design Decisions Behind the Architecture"
+description: "How we evolved from 'by user' to 'by client' architecture in Sealbox. A deep dive into the technical tradeoffs of zero-trust security models, Envelope Encryption implementation, and balancing team collaboration with security in secret management systems."
+pubDate: 2025-08-16
+tags: 
+  [
+    "rust",
+    "security", 
+    "architecture",
+    "zero-trust",
+    "secret-management",
+    "encryption",
+    "devops",
+    "system-design"
+  ]
+featured: true
+author: "Morris Liu"
+readingTime: 9
+---
+
+<div class="text-sm text-[color:var(--color-text-tertiary)] mb-6 font-normal not-prose">
+Read this in: <a href="/thoughts/zero-trust-secret-management-design-decisions" class="hover:underline">English</a> | <a href="/thoughts/zero-trust-secret-management-design-decisions-zh" class="hover:underline">中文</a>
+</div>
+
+## The Team Collaboration Dilemma
+
+"How do we share the production database password?"
+
+This seemingly simple question kept coming up as I worked on [Sealbox](/thoughts/why-i-built-sealbox). Teams needed CI servers to access secrets, developers needed API keys for local debugging, and DevOps engineers needed to distribute sensitive configs across environments.
+
+The obvious solution? Copy the private key to whoever needs it.
+
+But this violates a fundamental principle of cryptography: private keys should stay private. Once you start copying private keys around, you lose control over access. Who accessed what secret when? How do you revoke someone's access without affecting everyone else? What happens when an employee leaves or a device gets lost?
+
+These questions made me realize that Sealbox's "one key pair per user" architecture had fundamental limitations when it came to real-world team collaboration scenarios.
+
+## Limitations of the Current Architecture: The 'By User' Problem
+
+Sealbox's original design was elegantly simple: each user generates an RSA key pair, all secrets are encrypted with that user's public key. When the user wants to access a secret, they decrypt it with their private key.
+
+```
+User Alice ——— Master Key ——— Multiple Secrets
+    │              │               │
+    └─ Private Key └─ Public Key   └─ Encrypted Data
+```
+
+This model works perfectly for single-user scenarios. But when teams need to share secrets, the problems become apparent:
+
+**Problem 1: Sharing Difficulties**
+
+Say Alice creates a database password, and now Bob needs access too. In the "by user" model, this secret can only be decrypted by Alice's private key. To give Bob access, you'd have to either:
+
+1. Alice shares her private key with Bob (violates private key security principles)
+2. Alice decrypts and sends plaintext to Bob (bypasses the entire security system)
+3. Alice re-encrypts a copy with Bob's public key (requires knowing Bob's public key, creates multiple data copies)
+
+Every approach has serious flaws.
+
+**Problem 2: Coarse-Grained Permissions**
+
+Worse, once Bob gets Alice's private key, he can access all of Alice's secrets. There's no way to implement "Bob can access the database password but not the API keys" granular control.
+
+**Problem 3: Revocation Difficulties**
+
+When Bob leaves the company, how do you revoke his access? If he has a copy of Alice's private key, the only option is for Alice to generate a new key pair and re-encrypt all secrets. This affects everyone else with permissions.
+
+**Problem 4: Impossible Auditing**
+
+Who accessed what secret when? In a private key copying model, this becomes impossible to track. The server only sees "Alice's key" being used, but doesn't know who the actual user is.
+
+These problems point to a fundamental architectural flaw: **the "by user" model confuses identity with access entity**.
+
+In reality, what needs access to secrets isn't usually "users" but "clients"—developer laptops, CI servers, production application instances. These clients might belong to the same user or different users, but they should have independent security identities.
+
+## Core Insight: The 'By Client' Design Philosophy
+
+The solution's core insight is: **Master Keys should be by client, not by user**.
+
+This conceptual shift seems simple, but it represents a fundamental transition from "user identity-based trust models" to "zero-trust security models."
+
+```
+User Alice ——— Multiple Clients ——— Shared Secrets Pool
+    │              │                      │
+    └─ Manager     └─ Independent Keys    └─ Multi-encryption
+```
+
+**Zero-Trust Core Principles**
+
+In traditional security models, we trust "users." Once user identity is verified, we assume all operations by that user are trustworthy. But zero-trust models assume:
+
+- Every access request needs independent verification
+- No "inherently trusted" entities exist
+- Principle of least privilege: only grant minimum permissions needed to complete tasks
+
+In the context of secret management, this means every `sealbox-cli` instance—whether a developer's laptop, CI server, or production environment—should have its own independent security identity.
+
+**Independent Security Entities**
+
+The "by client" architecture treats each client instance as an independent security entity:
+
+- Alice's laptop: `client-alice-laptop`
+- CI server: `client-ci-server`
+- Production deployment: `client-prod-deploy`
+
+Each client has its own RSA key pair, completely independent. The benefits:
+
+1. **Fine-grained control**: Precisely control which client can access which secret
+2. **Independent revocation**: Disabling one client doesn't affect others
+3. **Clear auditing**: Know exactly which client accessed what and when
+4. **Fault isolation**: Private key compromise in one client doesn't affect others
+
+**Permission Immutability**
+
+Another key design in the new architecture: **secret access permissions are determined at creation time, with no support for dynamic addition later**.
+
+This seems like a limitation, but it's actually a security feature. Since the server never touches plaintext data, it can't re-encrypt existing secrets for new clients. This enforces:
+
+- Explicit authorization: Must clearly declare who can access what
+- No permission creep: Avoids the "grant permissions now, restrict later" anti-pattern
+- Clear responsibility: Secret creators must carefully consider who truly needs access
+
+This "inconvenience" actually promotes better security practices.
+
+## Technical Tradeoffs: The Thought Process Behind Key Design Decisions
+
+The philosophy sounds great, but how do you implement it? The key technical decision was: **one Secret corresponds to one DataKey, but this DataKey is encrypted by multiple client public keys**.
+
+### Multi-Client Envelope Encryption Implementation
+
+In Sealbox, we use the Envelope Encryption pattern: actual data is encrypted with AES symmetric encryption (fast), and the AES key (DataKey) is encrypted with RSA asymmetric encryption (secure).
+
+The core decision in the multi-client architecture was: **share the DataKey rather than multiple data encryption**.
+
+```
+Secret("database-password") 
+├── DataKey: random_256_bit_key
+├── encrypted_data: AES(DataKey, "mysqlpass123")  [only one copy stored]
+└── Multiple encrypted_data_key records:
+    ├── RSA(client_A_pubkey, DataKey) 
+    ├── RSA(client_B_pubkey, DataKey)
+    └── RSA(client_C_pubkey, DataKey)
+```
+
+**Why Share the DataKey?**
+
+This design has three considerations:
+
+1. **Data consistency**: All authorized clients see the same plaintext after decryption, avoiding sync issues
+2. **Storage efficiency**: `encrypted_data` is stored only once, not one copy per client
+3. **Cryptographic correctness**: Follows Envelope Encryption best practices
+
+Some might worry: is it secure for multiple clients to share the same DataKey?
+
+The answer is yes, it's secure. While the DataKey is the same, each client can only decrypt their own `encrypted_data_key` record using their private key. Clients without the private key can never obtain the DataKey, and therefore cannot decrypt the data.
+
+**Permission Revocation Implementation**
+
+When you need to revoke a client's access permissions, just delete the corresponding `encrypted_data_key` record:
+
+```sql
+DELETE FROM secret_client_keys 
+WHERE secret_key = 'database-password' 
+  AND client_id = 'client-bob-laptop';
+```
+
+The revoked client immediately loses access, but other clients remain unaffected. This is much more efficient than regenerating all keys.
+
+### Access Control Model Evolution
+
+From an implementation perspective, the new permission model requires redesigning the database architecture:
+
+```sql
+-- Client registry table
+CREATE TABLE clients (
+    id BLOB PRIMARY KEY,           -- UUID, unique client identifier
+    name TEXT NOT NULL,            -- Client name/alias  
+    public_key TEXT NOT NULL,      -- Client public key
+    status TEXT DEFAULT 'Active'   -- Active/Disabled/Retired
+);
+
+-- Secret-client key association table
+CREATE TABLE secret_client_keys (
+    secret_key TEXT NOT NULL,
+    client_id BLOB NOT NULL,
+    encrypted_data_key BLOB NOT NULL,  -- DataKey encrypted with this client's public key
+    PRIMARY KEY (secret_key, client_id)
+);
+```
+
+This design supports all the permission operations we need:
+
+- **Precise authorization**: Create records in `secret_client_keys` table for specific clients
+- **Permission queries**: `SELECT * FROM secret_client_keys WHERE client_id = ?`
+- **Permission revocation**: `DELETE FROM secret_client_keys WHERE ...`
+- **Audit trails**: All access has clear client identification
+
+**Difference from Traditional RBAC**
+
+This isn't traditional Role-Based Access Control (RBAC). In RBAC, users have roles, and roles have permissions. In our model:
+
+- Clients are independent security entities, not dependent on user roles
+- Permissions are directly bound to clients, not mediated through roles
+- Permissions are determined at secret creation time, no dynamic changes supported
+
+This design is better suited for DevOps environments, because "who needs access to what" is often based on technical architecture rather than organizational structure.
+
+### Balancing Security with Usability
+
+Every architectural decision involves tradeoffs between security and usability. Let me share a few key tradeoff points:
+
+**Tradeoff 1: Creation-Time Authorization vs Dynamic Permissions**
+
+- **Security advantage**: Permissions won't accidentally expand, every authorization is explicit
+- **Usability cost**: Can't temporarily grant someone access, need to recreate secrets
+- **Decision**: Prioritize security, because secret leakage risk far outweighs operational inconvenience
+
+**Tradeoff 2: Client Independence vs Management Complexity**
+
+- **Security advantage**: One client being compromised doesn't affect other clients
+- **Usability cost**: Need to manage more key pairs, client registration process is more complex
+- **Decision**: Management costs can be reduced through tooling and automation, security benefits justify this cost
+
+**Tradeoff 3: Server Zero-Knowledge vs Feature Limitations**
+
+- **Security advantage**: Server compromise can't reveal plaintext secrets
+- **Usability cost**: Can't implement certain convenience features (like secret search, content preview)
+- **Decision**: Zero-knowledge is a core requirement for secret management systems, feature limitations are acceptable
+
+These tradeoffs don't have standard answers. But in security systems, my principle is: **when security conflicts with convenience, prioritize security, then find ways to reduce the convenience cost**.
+
+## Real-World Impact: Lessons for Other System Designs
+
+This architectural redesign process gave me deeper insights into security system design. Several principles apply not just to secret management, but to system design in other domains:
+
+**Rethinking the Concept of "Identity"**
+
+Many systems have a "user identity" concept, but what actually needs access to resources is often not abstract "users," but concrete "access entities"—devices, application instances, service processes.
+
+- In container orchestration, it's Pods, not developers, that need database access
+- In microservice architectures, it's service instances, not teams, that need to call APIs
+- In CI/CD, it's build agents, not committers, that need access to build caches
+
+Binding access permissions directly to actual access entities, rather than routing through user identities, often achieves more precise security control.
+
+**"Determined at Creation" Permission Models**
+
+Permissions determined at resource creation time, with no support for subsequent dynamic modifications—this seemingly restrictive design is actually a safer choice in many scenarios:
+
+- **Immutable Infrastructure**: Infrastructure configuration is determined at deployment time, no runtime changes
+- **Container Images**: Dependencies and configuration are determined at build time, runtime is read-only
+- **Database Permissions**: Table permissions are designed at schema creation time, avoiding runtime permission creep
+
+This "inconvenience" forces us to carefully consider permission boundaries at design time, rather than "loose first, tighten later."
+
+**Zero-Trust Proliferation**
+
+Zero-trust isn't just a network security concept—it's a design philosophy: don't trust any default state, verify every operation.
+
+This principle can be applied to:
+- **API design**: Every request independently verified, no reliance on session state
+- **Database queries**: Every query checks permissions, no reliance on application-layer access control
+- **Configuration management**: Every config change requires auditing, no reliance on "admins won't make mistakes" assumptions
+
+**The True Cost of Technical Debt**
+
+My deepest insight: architectural design problems are harder to fix than functional bugs.
+
+Functional bugs affect specific scenarios; architectural problems affect the entire system's ability to evolve. When you discover you need to redesign core architecture, it often means previous technical debt has become a barrier to business development.
+
+In Sealbox's case, the "by user" architecture seemed to work fine until users started real team collaboration. At that point, the cost of fixing the problem far exceeded the cost of redesigning.
+
+**Forward-Compatible Design**
+
+Good architectural design should leave room for future requirements. In the context of secret management, this means:
+
+- Supporting new encryption algorithms (cryptography is evolving)
+- Supporting new client types (IoT devices, mobile apps, etc.)
+- Supporting new permission models (temporary access, conditional access, etc.)
+
+But "forward-compatible" doesn't mean "feature bloat." The key is finding stable abstraction layers to build new functionality on top of.
+
+## Conclusion
+
+The architectural evolution from "by user" to "by client" appears to solve team collaboration issues in secret sharing, but it actually reflects deeper shifts in design philosophy:
+
+**From identity-based trust to zero-trust models**. Every access entity has independent security identity, every operation requires independent verification.
+
+**From dynamic permissions to immutable permissions**. Permissions are determined at creation time, forcing us to carefully consider security boundaries at design time.
+
+**From convenience-first to security-first**. When security conflicts with convenience, prioritize security, then find ways to reduce convenience costs.
+
+These principles apply not just to secret management, but to other systems requiring security controls. Next time you face similar architectural decisions, consider asking yourself:
+
+- Do you really need access for "users" or "access entities"?
+- Can permissions be determined at creation time to avoid subsequent permission creep?
+- Can this design withstand zero-trust model scrutiny?
+
+Good security architecture design is often not the most convenient, but it lets you maintain confidence when facing real-world complexity.
+
+---
+
+_If you're interested in the design philosophy behind secret management systems, check out [Why I Built Sealbox](/thoughts/why-i-built-sealbox) for more background. Or explore [Rust Builder Pattern Guide](/thoughts/rust-builder-pattern-evolution) to see similar tradeoff considerations in API design._
