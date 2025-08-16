@@ -33,7 +33,7 @@ export default defineConfig({
         } else if (item.url.includes("/thoughts/")) {
           // Individual blog posts
           item.priority = 0.8;
-          item.changefreq = ChangeFreqEnum.NEVER;
+          item.changefreq = ChangeFreqEnum.MONTHLY;
         } else if (item.url.includes("/so-far/")) {
           item.priority = 0.8;
           item.changefreq = ChangeFreqEnum.MONTHLY;
