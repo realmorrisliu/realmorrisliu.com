@@ -386,11 +386,22 @@ The website implements a dual current status system with both homepage integrati
 - English-only content for authenticity and simplicity
 - Integrated with website's letter-like aesthetic and FooterSignature pattern
 
-**Content Structure:**
+**Content Structure & Approach:**
 
 - **Frontmatter**: `summary` (for homepage) and `lastUpdated` timestamp
-- **Markdown Body**: Full conversational content with support for links, bold text, etc.
-- **Automatic Processing**: Astro handles markdown rendering and link generation
+- **Markdown Body**: Structured with clear sections covering major life areas
+- **Sectioned Organization**: Life Changes, Work & Technical Focus, Project Challenges, Rediscovering Music & Games, Looking Ahead
+- **Personal Depth**: Includes specific details, current challenges, and philosophical reflections
+- **"Big Picture" Focus**: Answers what you'd tell a friend you hadn't seen in a year (Derek Sivers' definition)
+- **Balance**: Technical projects, personal interests, life transitions, and career aspirations
+
+**Content Guidelines:**
+
+- Write conversationally, as if sharing with a friend over coffee
+- Include specific details that make it personal (current music, games, design style, etc.)
+- Balance technical work with human interests and life changes
+- Address both current activities and forward-looking thoughts
+- Update regularly to reflect genuine current state
 
 **Usage:**
 

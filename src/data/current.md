@@ -1,10 +1,34 @@
 ---
-summary: "Learning WebGL and Three.js, thinking about how to improve Sealbox."
-lastUpdated: "2025-08-15"
+summary: "Getting ready to move into my new house in October, deep into Rust + AI work, rebuilding Sealbox architecture, learning shaders, and rediscovering my bass through Zutomayo's incredible basslines."
+lastUpdated: "2025-08-18"
 ---
 
-Learning WebGL and Three.js lately, going through some shader tutorials. Living in a rental but about to move to my new place once the renovation is done.
+## Life Changes
 
-Haven't touched the bass in two weeks, might pick it back up this weekend. Thinking about how to make **Sealbox** more user-friendly - probably needs some major changes but still figuring it out.
+Still living in my rental place, but I'm getting ready for a big transition - moving into my own house around October! My wife and I have been carefully designing a Bauhaus + Japandi + wood-focused style that's all about practical functionality. The renovation is taking longer than expected, but seeing this thoughtfully crafted space come together makes the wait worth it. There's something about the anticipation that's already changing how I think about the future - planning the workspace, imagining the daily routines, thinking about what this new chapter will look like.
 
-**Kira** is still in early experimental stage. Can't quite get the design as elegant as I want it to be - if any design folks are interested, check out [the blog post](/thoughts/building-kira-an-ai-native-second-brain) and let's chat.
+## Work & Technical Focus
+
+I'm working full-time focusing primarily on **Rust and AI infrastructure**. The combination has been fascinating - Rust's safety guarantees become even more critical when you're dealing with AI systems that need to be reliable and performant.
+
+Recently, I've been diving deep into **WebGL and Three.js** for work. We need to render beautiful jewelry and gemstone effects on the web, which has pushed me into the world of graphics programming. Learning shader development through [The Book of Shaders](https://thebookofshaders.com/) has been eye-opening - the parallel thinking required for GPU programming is so different from the sequential CPU mindset I'm used to. Moving from sequential, imperative thinking to parallel, declarative graphics programming requires rewiring how I approach problems.
+
+## Project Challenges
+
+**Sealbox** is my top priority right now, but I'm wrestling with a fundamental architecture decision. The core challenge is balancing security with usability - specifically whether to use a "by user" or "by client" model for secret management. The "by client" approach is more secure and enables better team collaboration, but it's significantly more complex for users to manage. I wrote about the [technical details and tradeoffs](/thoughts/zero-trust-secret-management-design-decisions), but finding the right user experience is still the missing piece.
+
+**Kira** is in early experimental mode. I want to create something with a really smooth, polished interface - that perfect balance of power and elegance. But I'm still figuring out the design. If anyone has thoughts on AI-native UX patterns, I'd love to chat about it.
+
+## Rediscovering Music & Games
+
+I'm back to practicing **bass** after a two-week break! Currently obsessed with **Zutomayo** - their basslines are incredibly well-crafted and fun to play. There's something about their approach to rhythm and melody that just clicks.
+
+Gaming-wise, I've been playing **Octopath Traveler** and absolutely love the HD 2D aesthetic. It's inspired me to want to learn **Unreal Engine** and try building a simple HD 2D RPG myself. There's something about that art style that perfectly bridges nostalgia and modern visual sophistication.
+
+## Looking Ahead
+
+I've been rethinking what "work" means lately. Whether it's something I actively want to do or something I have to do at a company, if my main income comes from it, then it's work. I'm seeking **work-life balance** not because work drains me or makes me happy, but because sometimes I don't want everything to be tied to profit and interests - there's something valuable about keeping parts of life pure.
+
+I'm actively working toward **remote work or becoming an independent developer**. The upcoming move feels like the perfect setup for that kind of life. If you know of any remote opportunities involving Rust, AI, or graphics programming, I'd love to hear about them.
+
+That's what I'm up to these days. Always interested in connecting with folks working on similar problems or just wanting to chat about any of this stuff.
