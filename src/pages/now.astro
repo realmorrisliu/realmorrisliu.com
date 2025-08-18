@@ -1,13 +1,17 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import FooterSignature from "../components/FooterSignature.astro";
 import "../styles/global.css";
 
-// Load markdown file
-const currentFiles = import.meta.glob("../data/current.md", { eager: true });
-const currentData = Object.values(currentFiles)[0] as any;
-const { lastUpdated } = currentData.frontmatter;
-const { Content } = currentData;
+// Get the latest now entry
+const nowEntries = await getCollection("now");
+const latestEntry = nowEntries.sort((a, b) => 
+  new Date(b.data.lastUpdated).getTime() - new Date(a.data.lastUpdated).getTime()
+)[0];
+
+const { Content } = await latestEntry.render();
+const { title, description, lastUpdated } = latestEntry.data;
 
 // Format the date for display
 const formatDate = (dateString: string): string => {
@@ -21,15 +25,15 @@ const formatDate = (dateString: string): string => {
 ---
 
 <Layout
-  title="Now - Morris Liu"
-  description="What Morris Liu is focused on right now: AI infrastructure work, WebGL explorations, bass playing, and current interests. Updated regularly."
+  title={`${title} - Morris Liu`}
+  description={description || "What Morris Liu is focused on right now: AI infrastructure work, WebGL explorations, bass playing, and current interests. Updated regularly."}
   imageAlt="Morris Liu's current activities and focus areas"
 >
   <div class="mx-auto max-w-2xl px-6 py-16">
     <div class="space-y-8 leading-relaxed">
       <div>
         <h1 class="mb-2 font-serif text-4xl leading-tight text-[color:var(--color-text-primary)]">
-          Now
+          {title}
         </h1>
         <p class="text-sm text-[color:var(--color-text-tertiary)]">
           Last updated {formatDate(lastUpdated)}

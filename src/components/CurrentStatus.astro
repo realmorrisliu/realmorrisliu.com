@@ -1,8 +1,13 @@
 ---
-// Load markdown file
-const currentFiles = import.meta.glob("../data/current.md", { eager: true });
-const currentData = Object.values(currentFiles)[0] as any;
-const { summary, lastUpdated } = currentData.frontmatter;
+import { getCollection } from "astro:content";
+
+// Get the latest now entry
+const nowEntries = await getCollection("now");
+const latestEntry = nowEntries.sort((a, b) => 
+  new Date(b.data.lastUpdated).getTime() - new Date(a.data.lastUpdated).getTime()
+)[0];
+
+const { summary, lastUpdated } = latestEntry.data;
 
 // Format the date for display
 const formatDate = (dateString: string): string => {

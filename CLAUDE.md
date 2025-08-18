@@ -20,7 +20,8 @@ This is a minimalist personal website built with Astro and Tailwind CSS, impleme
 ```
 src/
 ├── content/
-│   └── blog/                # Markdown blog posts with Content Collections
+│   ├── blog/                # Markdown blog posts with Content Collections
+│   └── now/                 # Monthly now page updates with Content Collections
 ├── components/
 │   ├── Link.astro           # Unified link component with responsive styling
 │   ├── Button.astro         # Unified button component with variant styles
@@ -58,8 +59,6 @@ src/
 │       └── [...slug].astro  # Dynamic blog post routes
 ├── scripts/
 │   └── og-utils.ts          # Shared utilities for OG image generation
-├── data/
-│   └── current.md           # Current status content in markdown format
 └── styles/
     └── global.css           # Design system + Typography config
 ```
@@ -258,13 +257,20 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 - Tailwind Typography plugin for Markdown content with custom prose overrides
 - Minimal custom CSS for design system colors and typography hierarchy
 
-### Blog System (Content Collections)
+### Content Collections
 
+**Blog System:**
 - **Content Storage**: Markdown files in `src/content/blog/`
 - **Collections Config**: `src/content/config.ts` with TypeScript schema validation
 - **Blog Layout**: `src/layouts/BlogPost.astro` with custom prose styling
 - **Dynamic Routing**: `src/pages/thoughts/[...slug].astro` for individual posts
 - **Index Page**: `src/pages/thoughts/index.astro` lists all published posts
+
+**Now Page System:**
+- **Content Storage**: Monthly updates in `src/content/now/` (e.g., `2025-08.md`)
+- **Schema**: Includes `summary`, `lastUpdated`, `title`, `description` fields
+- **Current Page**: `/now` automatically displays latest entry by `lastUpdated` date
+- **Historical Tracking**: All previous months preserved for future archive functionality
 
 ### Writing Blog Posts
 
@@ -374,10 +380,10 @@ The website implements a dual current status system with both homepage integrati
 
 **Implementation:**
 
-- **Data Storage**: Content stored in `src/data/current.md` using markdown with frontmatter metadata
-- **Homepage Component**: `CurrentStatus.astro` displays summary with link to full now page
-- **Dedicated Page**: `/now` page renders full markdown content with Astro's prose styling
-- **Modern API**: Uses `import.meta.glob` for file loading (replacing deprecated `Astro.glob`)
+- **Data Storage**: Content stored in `src/content/now/` using Content Collections with TypeScript schema validation
+- **Homepage Component**: `CurrentStatus.astro` displays summary from latest entry with link to full now page
+- **Dedicated Page**: `/now` page automatically renders latest entry by `lastUpdated` date
+- **Content Collections API**: Uses `getCollection('now')` for type-safe, performant data access
 
 **Design Philosophy:**
 
@@ -405,8 +411,10 @@ The website implements a dual current status system with both homepage integrati
 
 **Usage:**
 
-- Update `src/data/current.md` with new content and date
-- Homepage shows summary with "→ Learn more about what I'm up to now" link
+- Create new file in `src/content/now/` (e.g., `2025-09.md`) for monthly updates
+- Include required frontmatter: `summary`, `lastUpdated`, `title`, `description`
+- Latest entry automatically appears on `/now` page and homepage
+- Historical entries preserved for future archive functionality
 - Full now page accessible at `/now` with complete status and back navigation
 
 ### OG Image Generation System
