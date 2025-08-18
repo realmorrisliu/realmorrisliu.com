@@ -1,0 +1,39 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Link from "./Link.astro";
+
+export interface Props {
+  entry: CollectionEntry<"now">;
+  showBorder?: boolean;
+}
+
+const { entry, showBorder = true } = Astro.props;
+
+// Format date for archive entry title (e.g., "August 2025")
+const formatMonthYear = (date: Date): string => {
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+  });
+};
+
+// Generate entry ID for URL (remove .md extension)
+const getEntryId = (entry: CollectionEntry<"now">): string => {
+  return entry.id.replace(/\.md$/, "");
+};
+---
+
+<article class:list={["pb-8", { "border-b border-[color:var(--color-border)]": showBorder }]}>
+  <h2 class="mb-4 font-serif text-2xl leading-tight">
+    <Link
+      href={`/now/${getEntryId(entry)}`}
+      class="text-[color:var(--color-text-primary)] hover:text-[color:var(--color-text-link)]"
+    >
+      {formatMonthYear(entry.data.lastUpdated)}
+    </Link>
+  </h2>
+
+  <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+    {entry.data.summary}
+  </p>
+</article>

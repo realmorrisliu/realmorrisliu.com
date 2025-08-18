@@ -45,7 +45,10 @@ src/
 │   └── BlogPost.astro       # Blog post layout with Typography
 ├── pages/
 │   ├── index.astro          # Homepage with letter-style greeting
-│   ├── now.astro            # Current status page with markdown content
+│   ├── now.astro            # Current status page with Content Collections
+│   ├── now/
+│   │   ├── archive.astro    # Historical now page entries timeline
+│   │   └── [date].astro     # Dynamic route for specific monthly updates
 │   ├── so-far.astro         # Professional timeline (English)
 │   ├── so-far/
 │   │   ├── [lang].astro     # Professional timeline (other languages)
@@ -94,6 +97,7 @@ The design system is built around CSS custom properties and follows extreme mini
 - **PDFIndicator.astro**: PDF page indicator component with print functionality and language switching. Features minimalist gray banner design with PDF icon, status message, language toggle button, and manual print button. Language toggle uses Button component with secondary variant for visual consistency. Automatically attempts print on page load with manual button as fallback for production environments where auto-print is blocked by browser security policies.
 - **SoFarPage.astro**: Comprehensive page-level component that orchestrates the entire "So Far" page layout and functionality. Integrates multiple child components (TimelineItem, ProjectItem, FormattedText, FooterSignature) to create a cohesive professional profile page. Features built-in internationalization support with dynamic language switching, anchor-based navigation between sections (Work, Projects, Skills, Side, Contact), and intelligent language switch URL generation that preserves page anchors. Handles complex content rendering including timeline visualization, project showcases, and formatted text with inline link replacements.
 - **CurrentStatus.astro**: Displays current activity status on the homepage with enhanced visual differentiation. Features left border styling, typography hierarchy (font-medium for labels), and proper color contrast using design system tokens. Reads content from `src/data/current.json` with automatic date formatting. Designed to stand out from main content while maintaining minimalist aesthetics.
+- **UpdateCard.astro**: Reusable component for displaying now page entries in archive and listing contexts. Features minimalist design with only essential elements: clickable month/year title and summary content. Eliminates UI redundancy by removing duplicate time information and multiple click targets. Uses TypeScript interfaces with `showBorder` prop for flexible layout control.
 
 **Component Design Principles:**
 
@@ -163,11 +167,13 @@ The website uses a "letter-like" navigation approach that avoids traditional web
    - Simple "Morris Liu" signature link back to home
    - No traditional breadcrumbs or back buttons
 
-3. **Now (`now.astro`)**:
+3. **Now Pages (`now.astro`, `now/archive.astro`, `now/[date].astro`)**:
    - Personal status page following Derek Sivers' now page philosophy
-   - Markdown content from `src/data/current.md` with frontmatter metadata
-   - Simple, conversational updates (learning, projects, life)
-   - FooterSignature with back-to-main navigation
+   - Content stored in `src/content/now/` using Content Collections with monthly updates
+   - URL structure: `/now` (current), `/now/archive` (history), `/now/2025-08` (specific month)
+   - Archive page shows timeline of personal evolution and growth over time
+   - Dynamic routing for accessing historical updates by date
+   - FooterSignature with navigation between current, archive, and historical entries
 
 4. **Blog Posts (`layouts/BlogPost.astro`)**:
    - Author signature navigation at article end
@@ -417,8 +423,9 @@ The website implements a dual current status system with both homepage integrati
 - Create new file in `src/content/now/` (e.g., `2025-09.md`) for monthly updates
 - Include required frontmatter: `summary`, `lastUpdated`, `title`, `description`
 - Latest entry automatically appears on `/now` page and homepage
-- Historical entries preserved for future archive functionality
-- Full now page accessible at `/now` with complete status and back navigation
+- Historical entries accessible via `/now/archive` timeline and `/now/[date]` direct links
+- Archive page shows complete evolution of interests, projects, and focus areas
+- Full navigation system between current, archive, and specific historical entries
 
 ### OG Image Generation System
 

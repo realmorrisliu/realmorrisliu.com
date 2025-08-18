@@ -49,9 +49,15 @@ const formatDate = (date: Date | string): string => {
     </div>
 
     <FooterSignature>
-      <nav class="mt-2">
+      <nav class="mt-2 flex items-center justify-between">
         <a href="/" class="text-sm font-medium text-[color:var(--color-text-link)] hover:underline">
           ← Back to main page
+        </a>
+        <a
+          href="/now/archive"
+          class="text-sm font-medium text-[color:var(--color-text-link)] hover:underline"
+        >
+          View past updates →
         </a>
       </nav>
     </FooterSignature>

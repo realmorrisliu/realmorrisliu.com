@@ -1,0 +1,60 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Link from "../../components/Link.astro";
+import FooterSignature from "../../components/FooterSignature.astro";
+import UpdateCard from "../../components/UpdateCard.astro";
+import "../../styles/global.css";
+
+// Get all now entries sorted by date (newest first)
+const nowEntries = (await getCollection("now")).sort(
+  (a, b) => new Date(b.data.lastUpdated).getTime() - new Date(a.data.lastUpdated).getTime()
+);
+
+// Validate that we have entries
+if (!nowEntries || nowEntries.length === 0) {
+  console.warn("No now entries found in collection");
+}
+---
+
+<Layout
+  title="Past Updates - Morris Liu"
+  description="A timeline of Morris Liu's personal updates, projects, and focus areas over time. See how interests, work, and life have evolved."
+  imageAlt="Morris Liu's personal update archive and timeline"
+>
+  <div class="mx-auto max-w-2xl px-6 py-16">
+    <header class="mb-16">
+      <h1 class="mb-2 font-serif text-4xl leading-tight text-[color:var(--color-text-primary)]">
+        Past Updates
+      </h1>
+      <p class="text-base text-[color:var(--color-text-tertiary)]">
+        A timeline of my personal updates, showing how projects, interests, and focus areas have
+        evolved over time.
+      </p>
+    </header>
+
+    <div class="space-y-12">
+      {
+        nowEntries.map((entry, index) => (
+          <UpdateCard entry={entry} showBorder={index < nowEntries.length - 1} />
+        ))
+      }
+    </div>
+
+    {
+      nowEntries.length === 0 && (
+        <div class="py-16 text-center">
+          <p class="text-lg text-[color:var(--color-text-secondary)]">
+            No archive entries yet. The first update is in <code>src/content/now/</code>
+          </p>
+        </div>
+      )
+    }
+
+    <FooterSignature>
+      <nav class="mt-2">
+        <Link href="/now" class="text-sm">← Back to current now page</Link>
+      </nav>
+    </FooterSignature>
+  </div>
+</Layout>

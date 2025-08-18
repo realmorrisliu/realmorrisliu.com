@@ -1,0 +1,97 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import FooterSignature from "../../components/FooterSignature.astro";
+import "../../styles/global.css";
+
+export async function getStaticPaths() {
+  const nowEntries = await getCollection("now");
+
+  return nowEntries.map(entry => ({
+    params: { date: entry.id.replace(/\.md$/, "") },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+
+// Handle case where entry doesn't exist (this shouldn't happen with static paths, but good to be safe)
+if (!entry) {
+  return Astro.redirect("/404");
+}
+const { Content } = await entry.render();
+const { title, description, lastUpdated } = entry.data;
+
+// Format the date for display
+const formatDate = (date: Date): string => {
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+};
+
+// Format date for title (e.g., "August 2025")
+const formatMonthYear = (date: Date): string => {
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+  });
+};
+
+const monthYear = formatMonthYear(lastUpdated);
+---
+
+<Layout
+  title={`${title} - ${monthYear} - Morris Liu`}
+  description={description ||
+    `What Morris Liu was focused on in ${monthYear}. Personal updates, projects, and thoughts from that time.`}
+  imageAlt={`Morris Liu's activities and focus areas in ${monthYear}`}
+>
+  <div class="mx-auto max-w-2xl px-6 py-16">
+    <div class="space-y-8 leading-relaxed">
+      <div>
+        <h1 class="mb-2 font-serif text-4xl leading-tight text-[color:var(--color-text-primary)]">
+          {title} - {monthYear}
+        </h1>
+        <p class="text-sm text-[color:var(--color-text-tertiary)]">
+          Last updated {formatDate(lastUpdated)}
+        </p>
+      </div>
+
+      <div class="prose prose-lg prose-gray max-w-none">
+        <div class="space-y-6 text-lg text-[color:var(--color-text-secondary)]">
+          <Content />
+        </div>
+      </div>
+    </div>
+
+    <FooterSignature>
+      <nav class="mt-2 space-y-1">
+        <div>
+          <a
+            href="/now/archive"
+            class="text-sm font-medium text-[color:var(--color-text-link)] hover:underline"
+          >
+            ← Back to archive
+          </a>
+        </div>
+        <div>
+          <a
+            href="/now"
+            class="text-sm font-medium text-[color:var(--color-text-link)] hover:underline"
+          >
+            ← Current now page
+          </a>
+        </div>
+      </nav>
+    </FooterSignature>
+  </div>
+</Layout>
+
+<style>
+  .prose strong {
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+</style>
