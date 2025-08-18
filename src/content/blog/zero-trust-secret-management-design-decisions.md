@@ -2,16 +2,16 @@
 title: "Building Zero-Trust Secret Management: The Design Decisions Behind the Architecture"
 description: "How we evolved from 'by user' to 'by client' architecture in Sealbox. A deep dive into the technical tradeoffs of zero-trust security models, Envelope Encryption implementation, and balancing team collaboration with security in secret management systems."
 pubDate: 2025-08-16
-tags: 
+tags:
   [
     "rust",
-    "security", 
+    "security",
     "architecture",
     "zero-trust",
     "secret-management",
     "encryption",
     "devops",
-    "system-design"
+    "system-design",
   ]
 featured: true
 author: "Morris Liu"
@@ -132,11 +132,11 @@ In Sealbox, we use the Envelope Encryption pattern: actual data is encrypted wit
 The core decision in the multi-client architecture was: **share the DataKey rather than multiple data encryption**.
 
 ```
-Secret("database-password") 
+Secret("database-password")
 ├── DataKey: random_256_bit_key
 ├── encrypted_data: AES(DataKey, "mysqlpass123")  [only one copy stored]
 └── Multiple encrypted_data_key records:
-    ├── RSA(client_A_pubkey, DataKey) 
+    ├── RSA(client_A_pubkey, DataKey)
     ├── RSA(client_B_pubkey, DataKey)
     └── RSA(client_C_pubkey, DataKey)
 ```
@@ -158,8 +158,8 @@ The answer is yes, it's secure. While the DataKey is the same, each client can o
 When you need to revoke a client's access permissions, just delete the corresponding `encrypted_data_key` record:
 
 ```sql
-DELETE FROM secret_client_keys 
-WHERE secret_key = 'database-password' 
+DELETE FROM secret_client_keys
+WHERE secret_key = 'database-password'
   AND client_id = 'client-bob-laptop';
 ```
 
@@ -173,7 +173,7 @@ From an implementation perspective, the new permission model requires redesignin
 -- Client registry table
 CREATE TABLE clients (
     id BLOB PRIMARY KEY,           -- UUID, unique client identifier
-    name TEXT NOT NULL,            -- Client name/alias  
+    name TEXT NOT NULL,            -- Client name/alias
     public_key TEXT NOT NULL,      -- Client public key
     status TEXT DEFAULT 'Active'   -- Active/Disabled/Retired
 );
@@ -257,6 +257,7 @@ This "inconvenience" forces us to carefully consider permission boundaries at de
 Zero-trust isn't just a network security concept—it's a design philosophy: don't trust any default state, verify every operation.
 
 This principle can be applied to:
+
 - **API design**: Every request independently verified, no reliance on session state
 - **Database queries**: Every query checks permissions, no reliance on application-layer access control
 - **Configuration management**: Every config change requires auditing, no reliance on "admins won't make mistakes" assumptions

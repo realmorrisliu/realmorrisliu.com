@@ -42,6 +42,6 @@ replacements.forEach(({ placeholder, href, label }) => {
 
 {
   segments.map(segment =>
-    segment.type === "text" ? segment.content : <Link href={segment.href}>{segment.content}</Link>
+    segment.type === "text" ? segment.content : <Link href={segment.href!}>{segment.content}</Link>
   )
 }

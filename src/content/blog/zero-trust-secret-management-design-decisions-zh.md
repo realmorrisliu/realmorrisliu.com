@@ -11,7 +11,7 @@ tags:
     "secret-management",
     "encryption",
     "devops",
-    "system-design"
+    "system-design",
   ]
 featured: true
 author: "Morris Liu"
@@ -257,6 +257,7 @@ CREATE TABLE secret_client_keys (
 零信任不只是网络安全概念，它是一种设计哲学：不信任任何默认状态，每个操作都要验证。
 
 这个原则可以应用到：
+
 - **API 设计**：每个请求都独立验证，不依赖 session 状态
 - **数据库查询**：每个查询都检查权限，不依赖应用层的访问控制
 - **配置管理**：每个配置变更都要审计，不依赖「管理员不会犯错」的假设

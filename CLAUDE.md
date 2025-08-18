@@ -4,12 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Commands
 
-| Command         | Action                                               |
-| --------------- | ---------------------------------------------------- |
-| `pnpm dev`      | Start local dev server at `localhost:4321`           |
-| `pnpm build`    | Build production site to `./dist/`                   |
-| `pnpm preview`  | Preview build locally before deploying               |
-| `pnpm prettier` | Format all files with Prettier (2-space indentation) |
+| Command          | Action                                               |
+| ---------------- | ---------------------------------------------------- |
+| `pnpm dev`       | Start local dev server at `localhost:4321`           |
+| `pnpm build`     | Build production site to `./dist/`                   |
+| `pnpm preview`   | Preview build locally before deploying               |
+| `pnpm prettier`  | Format all files with Prettier (2-space indentation) |
+| `pnpm typecheck` | Run TypeScript type checking with Astro              |
 
 ## Project Architecture
 
@@ -260,6 +261,7 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 ### Content Collections
 
 **Blog System:**
+
 - **Content Storage**: Markdown files in `src/content/blog/`
 - **Collections Config**: `src/content/config.ts` with TypeScript schema validation
 - **Blog Layout**: `src/layouts/BlogPost.astro` with custom prose styling
@@ -267,6 +269,7 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 - **Index Page**: `src/pages/thoughts/index.astro` lists all published posts
 
 **Now Page System:**
+
 - **Content Storage**: Monthly updates in `src/content/now/` (e.g., `2025-08.md`)
 - **Schema**: Includes `summary`, `lastUpdated`, `title`, `description` fields
 - **Current Page**: `/now` automatically displays latest entry by `lastUpdated` date

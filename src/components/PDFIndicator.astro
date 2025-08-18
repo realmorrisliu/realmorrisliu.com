@@ -39,14 +39,14 @@ const t = getTranslations(currentLang);
 
     <div class="flex flex-shrink-0 items-center gap-2">
       <!-- Language Toggle -->
-      <Button 
+      <Button
         href={currentLang === "en" ? "/so-far/pdf/zh" : "/so-far/pdf"}
-        variant="secondary" 
+        variant="secondary"
         size="sm"
       >
         {currentLang === "en" ? "中文" : "English"}
       </Button>
-      
+
       <Button id="print-button" variant="primary" size="sm">
         {t.soFar.pdf.printButton}
       </Button>

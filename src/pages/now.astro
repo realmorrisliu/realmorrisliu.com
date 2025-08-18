@@ -6,17 +6,17 @@ import "../styles/global.css";
 
 // Get the latest now entry
 const nowEntries = await getCollection("now");
-const latestEntry = nowEntries.sort((a, b) => 
-  new Date(b.data.lastUpdated).getTime() - new Date(a.data.lastUpdated).getTime()
+const latestEntry = nowEntries.sort(
+  (a, b) => new Date(b.data.lastUpdated).getTime() - new Date(a.data.lastUpdated).getTime()
 )[0];
 
 const { Content } = await latestEntry.render();
 const { title, description, lastUpdated } = latestEntry.data;
 
 // Format the date for display
-const formatDate = (dateString: string): string => {
-  const date = new Date(dateString);
-  return date.toLocaleDateString("en-US", {
+const formatDate = (date: Date | string): string => {
+  const dateObj = date instanceof Date ? date : new Date(date);
+  return dateObj.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -26,7 +26,8 @@ const formatDate = (dateString: string): string => {
 
 <Layout
   title={`${title} - Morris Liu`}
-  description={description || "What Morris Liu is focused on right now: AI infrastructure work, WebGL explorations, bass playing, and current interests. Updated regularly."}
+  description={description ||
+    "What Morris Liu is focused on right now: AI infrastructure work, WebGL explorations, bass playing, and current interests. Updated regularly."}
   imageAlt="Morris Liu's current activities and focus areas"
 >
   <div class="mx-auto max-w-2xl px-6 py-16">

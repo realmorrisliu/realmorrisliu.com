@@ -3,16 +3,16 @@ import { getCollection } from "astro:content";
 
 // Get the latest now entry
 const nowEntries = await getCollection("now");
-const latestEntry = nowEntries.sort((a, b) => 
-  new Date(b.data.lastUpdated).getTime() - new Date(a.data.lastUpdated).getTime()
+const latestEntry = nowEntries.sort(
+  (a, b) => new Date(b.data.lastUpdated).getTime() - new Date(a.data.lastUpdated).getTime()
 )[0];
 
 const { summary, lastUpdated } = latestEntry.data;
 
 // Format the date for display
-const formatDate = (dateString: string): string => {
-  const date = new Date(dateString);
-  return date.toLocaleDateString("en-US", {
+const formatDate = (date: Date | string): string => {
+  const dateObj = date instanceof Date ? date : new Date(date);
+  return dateObj.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
