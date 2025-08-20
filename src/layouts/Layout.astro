@@ -27,7 +27,7 @@ const {
   alternateLanguages = [],
 } = Astro.props;
 
-const pathname = Astro.url.pathname;
+const pathname = Astro.url.pathname.replace(/\.html$/, "").replace(/\/$/, "");
 const canonicalURL = new URL(pathname, Astro.site || "https://realmorrisliu.com");
 const imageURL = new URL(image, Astro.site || "https://realmorrisliu.com");
 
