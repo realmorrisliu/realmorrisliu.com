@@ -4,6 +4,7 @@ import Link from "../components/Link.astro";
 import FooterSignature from "../components/FooterSignature.astro";
 import { formatDate } from "../utils/dateUtils";
 import "../styles/global.css";
+import "../styles/prose.css";
 
 interface Props {
   title: string;
@@ -32,6 +33,14 @@ const readingTime =
     // Fallback calculation if not provided in frontmatter
     return 5; // Default estimate
   })();
+
+// Detect if this is a Chinese article by checking URL path or title
+const isChinese = Astro.url.pathname.includes("-zh") || /[\u4e00-\u9fff]/.test(title);
+
+// Determine prose classes based on language
+const proseClasses = isChinese
+  ? "prose prose-lg prose-gray prose-chinese max-w-none"
+  : "prose prose-lg prose-gray max-w-none";
 
 // Enhanced keywords for SEO
 const enhancedKeywords = [
@@ -113,7 +122,7 @@ const truncateTitle = (text: string, maxLength: number = 50) => {
       </div>
     </header>
 
-    <div class="prose prose-lg prose-gray max-w-none">
+    <div class={proseClasses}>
       <slot />
     </div>
 

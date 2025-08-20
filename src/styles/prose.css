@@ -1,0 +1,291 @@
+/* Prose Typography Styles */
+/* This file contains all prose-related styling for markdown content */
+
+@import "tailwindcss";
+
+/* Prose-specific CSS variables */
+@theme {
+  /* Custom Typography styles - minimalist design */
+  --prose-body: var(--color-text-secondary);
+  --prose-headings: var(--color-text-primary);
+  --prose-lead: var(--color-text-secondary);
+  --prose-links: var(--color-text-link);
+  --prose-bold: var(--color-text-primary);
+  --prose-counters: var(--color-text-tertiary);
+  --prose-bullets: var(--color-text-tertiary);
+  --prose-hr: var(--color-border);
+  --prose-quotes: var(--color-text-secondary);
+  --prose-quote-borders: var(--color-border);
+  --prose-captions: var(--color-text-tertiary);
+  --prose-kbd: var(--color-text-primary);
+  --prose-kbd-shadows: var(--color-border);
+  --prose-code: #495057;
+  --prose-pre-code: #495057;
+  --prose-pre-bg: #f8f9fa;
+  --prose-th-borders: var(--color-border);
+  --prose-td-borders: var(--color-border);
+}
+
+/* Base Prose Styles */
+
+/* Unified link styles - consistent with Link.astro component */
+.prose a {
+  font-weight: 500;
+  color: var(--color-text-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: all 150ms ease;
+}
+
+/* Desktop: no underline by default, show on hover */
+@media (min-width: 768px) {
+  .prose a {
+    text-decoration: none;
+  }
+
+  .prose a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+}
+
+/* Typography plugin custom overrides - minimalist style */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+}
+
+.prose p {
+  font-family: var(--font-sans);
+}
+
+.prose strong,
+.prose b {
+  font-weight: 500;
+}
+
+.prose code {
+  font-weight: 400;
+}
+
+.prose pre {
+  border: 1px solid #e9ecef;
+}
+
+.prose blockquote {
+  font-weight: 400;
+  quotes: none;
+}
+
+.prose blockquote p:first-of-type::before,
+.prose blockquote p:last-of-type::after {
+  content: none;
+}
+
+/* Code block syntax highlighting overrides */
+.prose .astro-code {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.prose pre {
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.prose pre code {
+  white-space: pre;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+/* Remove inline code block background */
+.prose :not(pre) > code {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-weight: 400;
+}
+
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  content: none;
+}
+
+/* Chinese Typography Enhancements */
+/* 
+ * Comprehensive Chinese typography optimization system
+ * This section provides sophisticated Chinese text rendering optimizations
+ * that cannot be replicated with standard Tailwind classes due to:
+ * - Complex Chinese font stacks with regional variations
+ * - Language-specific line height and spacing requirements  
+ * - Mixed-language text handling (Chinese + English)
+ * - Chinese-specific punctuation and character spacing
+ */
+
+/* Chinese prose styling for better readability */
+.prose-chinese {
+  /* Enhanced line height for Chinese text readability */
+  line-height: var(--line-height-chinese-relaxed);
+}
+
+/* Ensure prose-chinese works with existing prose classes */
+.prose.prose-chinese,
+.prose-lg.prose-chinese,
+.prose-gray.prose-chinese {
+  line-height: var(--line-height-chinese-relaxed);
+}
+
+.prose.prose-chinese h1,
+.prose.prose-chinese h2,
+.prose.prose-chinese h3,
+.prose-lg.prose-chinese h1,
+.prose-lg.prose-chinese h2,
+.prose-lg.prose-chinese h3 {
+  font-family: var(--font-chinese-serif);
+  font-weight: 600;
+  line-height: var(--line-height-chinese-tight);
+  letter-spacing: -0.01em;
+}
+
+.prose.prose-chinese p,
+.prose.prose-chinese li,
+.prose-lg.prose-chinese p,
+.prose-lg.prose-chinese li {
+  font-family: var(--font-chinese-sans);
+  line-height: var(--line-height-chinese-relaxed);
+  margin-bottom: 1.75rem;
+}
+
+.prose-chinese h1,
+.prose-chinese h2,
+.prose-chinese h3,
+.prose-chinese h4,
+.prose-chinese h5,
+.prose-chinese h6 {
+  /* 
+   * Chinese optimized heading fonts with regional fallbacks
+   * Prioritizes Source Han Serif for authentic Chinese typography
+   * Falls back to system Chinese fonts across different platforms
+   */
+  font-family: var(--font-chinese-serif);
+  font-weight: 600; /* Slightly bolder for Chinese headings - better visual weight */
+  line-height: var(--line-height-chinese-tight);
+  letter-spacing: -0.01em; /* Slight tightening for better Chinese character readability */
+}
+
+.prose-chinese p,
+.prose-chinese li,
+.prose-chinese blockquote p {
+  /* Chinese optimized body fonts */
+  font-family: var(--font-chinese-sans);
+  line-height: var(--line-height-chinese-relaxed);
+  margin-bottom: 1.75rem; /* Increased paragraph spacing for Chinese */
+}
+
+.prose-chinese strong,
+.prose-chinese b {
+  font-weight: 600; /* Better weight for Chinese bold text */
+}
+
+.prose-chinese em,
+.prose-chinese i {
+  /* 
+   * Chinese typography doesn't traditionally use italic styles
+   * Instead we use color and weight variations for emphasis
+   * This maintains readability while providing visual distinction
+   */
+  font-style: normal; /* Chinese doesn't use italic, use color variation instead */
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+/* Chinese blockquote styling */
+.prose-chinese blockquote {
+  border-left: 3px solid var(--color-border);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  color: var(--color-text-secondary);
+  font-style: normal; /* Remove italic for Chinese quotes */
+}
+
+/* Chinese list spacing */
+.prose-chinese ul,
+.prose-chinese ol {
+  margin-bottom: 2rem;
+}
+
+.prose-chinese li {
+  margin-bottom: 0.75rem;
+}
+
+/* Chinese punctuation optimization */
+.prose-chinese {
+  /* 
+   * Advanced Chinese text spacing and punctuation handling
+   * - ideograph-alpha: proper spacing between Chinese characters and Latin text
+   * - ideograph-numeric: proper spacing between Chinese characters and numbers
+   * - proportional-width: ensures proper character width for mixed content
+   */
+  text-spacing: ideograph-alpha ideograph-numeric;
+  font-variant-east-asian: proportional-width;
+}
+
+/* Mixed language support - English within Chinese text */
+.prose-chinese code {
+  font-family: var(--font-mono);
+  font-size: 0.875em; /* Slightly smaller for better balance with Chinese text */
+}
+
+/* Improved spacing for Chinese headers */
+.prose-chinese h1 {
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+}
+
+.prose-chinese h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose-chinese h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Chinese footnotes styling enhancement */
+.prose-chinese .footnote-ref {
+  font-family: var(--font-chinese-sans);
+}
+
+.prose-chinese .footnote-content {
+  font-family: var(--font-chinese-sans);
+  line-height: var(--line-height-chinese-relaxed);
+}
+
+/* Mobile responsiveness for Chinese text */
+@media (max-width: 768px) {
+  .prose-chinese {
+    line-height: var(--line-height-chinese-loose);
+  }
+
+  .prose-chinese p {
+    margin-bottom: 1.5rem;
+  }
+
+  .prose-chinese h1,
+  .prose-chinese h2,
+  .prose-chinese h3 {
+    line-height: 1.3;
+  }
+}

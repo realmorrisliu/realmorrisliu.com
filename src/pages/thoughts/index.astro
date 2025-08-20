@@ -47,7 +47,7 @@ const structuredData = {
       description: post.data.description,
       datePublished: post.data.pubDate.toISOString(),
       dateModified: post.data.updatedDate?.toISOString() || post.data.pubDate.toISOString(),
-      url: `https://realmorrisliu.com/thoughts/${post.id.replace(/\.md$/, "")}`,
+      url: `https://realmorrisliu.com/thoughts/${post.id.replace(/\.(md|mdx)$/, "")}`,
       author: {
         "@type": "Person",
         name: post.data.author || "Morris Liu",
@@ -76,7 +76,7 @@ const structuredData = {
             <div class="mb-4">
               <h2 class="mb-2 font-serif text-2xl leading-tight">
                 <Link
-                  href={`/thoughts/${post.id.replace(/\.md$/, "")}`}
+                  href={`/thoughts/${post.id.replace(/\.(md|mdx)$/, "")}`}
                   class="text-[color:var(--color-text-primary)]"
                 >
                   {post.data.title}

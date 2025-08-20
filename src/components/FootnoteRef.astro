@@ -1,0 +1,13 @@
+---
+export interface Props {
+  id: number;
+}
+
+const { id } = Astro.props;
+---
+
+<span id={`ref${id}`}></span><a
+  href={`#note${id}`}
+  class="align-super text-xs text-blue-600 no-underline transition-colors duration-150 hover:text-blue-800 hover:underline"
+  >[{id}]</a
+>

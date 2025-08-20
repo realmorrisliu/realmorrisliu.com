@@ -1,22 +1,8 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import ResumeLayout from "../../components/ResumeLayout.astro";
-import PDFIndicator from "../../components/PDFIndicator.astro";
-import { getHtmlLangAttribute } from "../../i18n/utils";
-import "../../styles/global.css";
+import ResumeLayout from "../../layouts/ResumeLayout.astro";
 
 // Default to English for PDF
 const currentLang = "en";
-const htmlLang = getHtmlLangAttribute(currentLang);
 ---
 
-<Layout
-  title="Morris Liu - Resume (PDF)"
-  description="Morris Liu's professional resume in PDF format. Full-Stack Engineer & Technical Leader with 7 years experience."
-  lang={htmlLang}
-  alternateLanguages={[{ lang: "zh", url: "https://realmorrisliu.com/so-far/pdf/zh" }]}
->
-  <PDFIndicator currentLang={currentLang} backUrl="/so-far" />
-
-  <ResumeLayout currentLang={currentLang} />
-</Layout>
+<ResumeLayout currentLang={currentLang} />

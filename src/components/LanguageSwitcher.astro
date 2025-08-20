@@ -1,0 +1,25 @@
+---
+import Link from "./Link.astro";
+
+export interface LanguageOption {
+  name: string; // "中文版", "English", "原文"
+  url: string; // "/thoughts/...", "https://..."
+  description?: string; // "(原文)" 等可选描述
+  external?: boolean; // 是否外部链接，如果不指定会自动检测
+}
+
+export interface Props {
+  language: LanguageOption; // 单个语言选项
+}
+
+const { language } = Astro.props;
+---
+
+<Link
+  href={language.url}
+  class="text-sm text-[color:var(--color-text-tertiary)] hover:text-[color:var(--color-text-secondary)]"
+  external={language.external}
+>
+  {language.name}
+  {language.description && <span class="ml-1">{language.description}</span>}
+</Link>

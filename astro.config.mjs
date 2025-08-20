@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap, { ChangeFreqEnum } from "@astrojs/sitemap";
+import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,6 +12,7 @@ export default defineConfig({
     format: "file",
   },
   integrations: [
+    mdx(),
     sitemap({
       customPages: [
         "https://realmorrisliu.com/",

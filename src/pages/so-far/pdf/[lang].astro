@@ -1,35 +1,14 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
-import ResumeLayout from "../../../components/ResumeLayout.astro";
-import PDFIndicator from "../../../components/PDFIndicator.astro";
-import { getTranslations, getHtmlLangAttribute } from "../../../i18n/utils";
-import "../../../styles/global.css";
+import ResumeLayout from "../../../layouts/ResumeLayout.astro";
 
 // Get language from path parameter
 const { lang } = Astro.params;
 const currentLang = lang === "zh" ? "zh" : "en";
-const t = getTranslations(currentLang);
-const htmlLang = getHtmlLangAttribute(currentLang);
 
 // Define static paths for generation
 export function getStaticPaths() {
   return [{ params: { lang: "zh" } }];
 }
-
-// Generate page title and description from translations
-const pageTitle = t.soFar.pdf.pageTitle;
-const pageDescription = t.soFar.pdf.pageDescription;
-
-const backUrl = currentLang === "zh" ? "/so-far/zh" : "/so-far";
 ---
 
-<Layout
-  title={pageTitle}
-  description={pageDescription}
-  lang={htmlLang}
-  alternateLanguages={[{ lang: "en", url: "https://realmorrisliu.com/so-far/pdf" }]}
->
-  <PDFIndicator currentLang={currentLang} backUrl={backUrl} />
-
-  <ResumeLayout currentLang={currentLang} />
-</Layout>
+<ResumeLayout currentLang={currentLang} />

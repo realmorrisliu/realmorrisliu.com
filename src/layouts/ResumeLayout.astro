@@ -1,0 +1,622 @@
+---
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { getTranslations, getHtmlLangAttribute } from "../i18n/utils";
+import "../styles/global.css";
+
+export interface Props {
+  currentLang: "en" | "zh";
+}
+
+const { currentLang } = Astro.props;
+const t = getTranslations(currentLang);
+const htmlLang = getHtmlLangAttribute(currentLang);
+
+// Generate page title and description from translations
+const pageTitle = t.soFar.pdf.pageTitle;
+const pageDescription = t.soFar.pdf.pageDescription;
+
+const backUrl = currentLang === "zh" ? "/so-far/zh" : "/so-far";
+
+// Generate canonical URL
+const pathname = Astro.url.pathname.replace(/\.html$/, "").replace(/\/$/, "");
+const canonicalURL = new URL(pathname, Astro.site || "https://realmorrisliu.com");
+
+// Set up alternate languages
+const alternateLanguages =
+  currentLang === "en"
+    ? [{ lang: "zh", url: "https://realmorrisliu.com/so-far/pdf/zh" }]
+    : [{ lang: "en", url: "https://realmorrisliu.com/so-far/pdf" }];
+---
+
+<!doctype html>
+<html lang={htmlLang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{pageTitle}</title>
+    <meta name="title" content={pageTitle} />
+    <meta name="description" content={pageDescription} />
+    <meta
+      name="keywords"
+      content="Morris Liu, Resume, PDF, Full-Stack Engineer, Technical Leader"
+    />
+    <meta name="author" content="Morris Liu" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:image" content="https://realmorrisliu.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Morris Liu - Resume" />
+    <meta property="og:site_name" content="Morris Liu" />
+    <meta property="og:locale" content={currentLang === "zh" ? "zh_CN" : "en_US"} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={pageTitle} />
+    <meta property="twitter:description" content={pageDescription} />
+    <meta property="twitter:image" content="https://realmorrisliu.com/og-image.png" />
+    <meta property="twitter:image:alt" content="Morris Liu - Resume" />
+    <meta property="twitter:creator" content="@realmorrisliu" />
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+
+    <!-- Hreflang for multilingual support -->
+    {
+      alternateLanguages.map(({ lang: hrefLang, url }) => (
+        <link rel="alternate" hreflang={hrefLang} href={url} />
+      ))
+    }
+    <link rel="alternate" hreflang={currentLang} href={canonicalURL.toString()} />
+
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="Morris Liu's Blog" href="/rss.xml" />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap-index.xml" />
+  </head>
+
+  <body class="m-0 min-h-full w-full">
+    <!-- PDF Indicator -->
+    <div class="mb-4 bg-gray-100 px-4 py-3.5 font-sans sm:mb-5 sm:px-5 sm:py-4 print:hidden">
+      <div
+        class="mb-2.5 flex flex-col items-start gap-3 sm:mb-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+      >
+        <div class="flex flex-1 items-center gap-2.5 sm:gap-3">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="flex-shrink-0 text-[color:var(--color-text-tertiary)]"
+          >
+            <title>PDF</title>
+            <path
+              d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"
+            ></path>
+          </svg>
+          <div class="flex-1">
+            <span
+              class="m-0 text-[0.8125rem] leading-[var(--line-height-normal)] font-normal text-[color:var(--color-text-secondary)] sm:text-sm"
+            >
+              {t.soFar.pdf.title}
+            </span>
+          </div>
+        </div>
+
+        <div class="flex flex-shrink-0 items-center gap-2">
+          <!-- Language Toggle -->
+          <Button
+            href={currentLang === "en" ? "/so-far/pdf/zh" : "/so-far/pdf"}
+            variant="secondary"
+            size="sm"
+          >
+            {currentLang === "en" ? "中文" : "English"}
+          </Button>
+
+          <Button id="print-button" variant="primary" size="sm">
+            {t.soFar.pdf.printButton}
+          </Button>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col items-start gap-2 text-xs sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+      >
+        <p
+          class="m-0 flex-1 text-[0.6875rem] text-[color:var(--color-text-tertiary)] italic sm:text-xs"
+        >
+          {t.soFar.pdf.printButtonHint}
+        </p>
+        <Link href={backUrl} class="text-[0.6875rem] whitespace-nowrap sm:text-xs">
+          {t.soFar.pdf.backText}
+        </Link>
+      </div>
+    </div>
+
+    <!-- Resume Content -->
+    <div class={`resume-container lang-${currentLang}`}>
+      <!-- Header Section -->
+      <header class="resume-header">
+        <h1 class="resume-title">Morris Liu</h1>
+        <div class="contact-info">
+          <span class="contact-item">morrisliu1994@outlook.com</span>
+          <span class="contact-separator">•</span>
+          <span class="contact-item">github.com/realmorrisliu</span>
+          <span class="contact-separator">•</span>
+          <span class="contact-item">twitter.com/realmorrisliu</span>
+        </div>
+        <p class="resume-summary">
+          {t.soFar.resumeSummary}
+        </p>
+      </header>
+
+      <!-- Skills Section -->
+      <section class="resume-section">
+        <h2 class="section-title">{t.soFar.skills.title}</h2>
+        <div class="skills-grid">
+          {
+            t.soFar.skills.categories.map(category => (
+              <div class="skill-item">
+                <strong class="skill-label">{category.title}:</strong> {category.stack}
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <!-- Work Experience -->
+      <section class="resume-section">
+        <h2 class="section-title">{t.soFar.work.title}</h2>
+        <div class="work-list">
+          {
+            t.soFar.work.positions.map(position => (
+              <div class="work-item">
+                <div class="work-header">
+                  <h3 class="position-title">{position.title}</h3>
+                  <div class="work-meta">
+                    <span class="company-name">{position.company}</span>
+                    <span class="meta-separator">•</span>
+                    <span class="work-period">{position.period}</span>
+                  </div>
+                </div>
+                <p class="work-description">{position.description}</p>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <!-- Work Projects -->
+      <section class="resume-section">
+        <h2 class="section-title">{t.soFar.projects.workProjects.title}</h2>
+        <div class="projects-list">
+          {
+            t.soFar.projects.workProjects.items.map(project => (
+              <div class="project-item">
+                <div class="project-header">
+                  <h3 class="project-title">{project.title}</h3>
+                  <span class="project-period">{project.period}</span>
+                </div>
+                <p class="project-description">{project.description}</p>
+                {project.details && (
+                  <ul class="project-details">
+                    {project.details.map((detail: string) => (
+                      <li class="detail-item">{detail}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <!-- Personal Projects -->
+      <section class="resume-section">
+        <h2 class="section-title">{t.soFar.projects.personalProjects.title}</h2>
+        <div class="projects-list">
+          {
+            t.soFar.projects.personalProjects.items.map(project => (
+              <div class="project-item">
+                <h3 class="project-title">
+                  {project.title}
+                  {project.githubUrl && (
+                    <span class="github-link">
+                      {" "}
+                      • GitHub: {project.githubUrl.replace("https://github.com/", "")}
+                    </span>
+                  )}
+                </h3>
+                <p class="project-description">{project.description}</p>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      // Auto-trigger print dialog after page loads
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          window.print();
+        }, 500);
+      });
+
+      // Manual print button handler
+      document.addEventListener("DOMContentLoaded", () => {
+        const printButton = document.getElementById("print-button");
+        if (printButton) {
+          printButton.addEventListener("click", () => {
+            window.print();
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  /* Base styles */
+  .resume-container {
+    margin: 0;
+    max-width: 100%;
+    background-color: #ffffff;
+    padding: 12px 20px 20px 20px;
+    font-family:
+      "Inter Variable",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+    font-size: 9pt;
+    line-height: 1.2;
+    color: #000000;
+  }
+
+  /* Header */
+  .resume-header {
+    text-align: center;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 6px;
+  }
+
+  .resume-title {
+    margin: 0 0 2px 0;
+    font-family: "EB Garamond Variable", Georgia, serif;
+    font-size: 18pt;
+    font-weight: 600;
+  }
+
+  .contact-info {
+    margin-bottom: 3px;
+    font-size: 9pt;
+    color: #374151;
+  }
+
+  .contact-item {
+    margin: 0 3px;
+  }
+
+  .contact-separator {
+    margin: 0 3px;
+  }
+
+  .resume-summary {
+    margin: 0 auto;
+    max-width: 700px;
+    font-size: 9pt;
+    line-height: 1.3;
+    font-weight: 400;
+  }
+
+  /* Sections */
+  .resume-section {
+    margin-bottom: 6px;
+  }
+
+  .section-title {
+    margin: 0 0 5px 0;
+    border-bottom: 1px solid #9ca3af;
+    padding-bottom: 2px;
+    font-family: "EB Garamond Variable", Georgia, serif;
+    font-size: 11pt;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* Skills */
+  .skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .skill-item {
+    font-size: 9pt;
+    line-height: 1.2;
+  }
+
+  .skill-label {
+    margin-right: 4px;
+    font-weight: 600;
+  }
+
+  /* Work Experience */
+  .work-list {
+    /* no specific styles needed */
+  }
+
+  .work-item {
+    margin-bottom: 4px;
+    break-inside: avoid;
+  }
+
+  .work-header {
+    margin-bottom: 3px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .position-title {
+    margin: 0;
+    font-size: 10pt;
+    font-weight: 600;
+  }
+
+  .work-meta {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 8pt;
+    white-space: nowrap;
+    color: #4b5563;
+  }
+
+  .company-name {
+    font-weight: 500;
+    color: #374151;
+  }
+
+  .meta-separator {
+    color: #6b7280;
+  }
+
+  .work-period {
+    color: #4b5563;
+  }
+
+  .work-description {
+    margin: 0;
+    font-size: 8pt;
+    line-height: 1.2;
+    color: #374151;
+  }
+
+  /* Projects */
+  .projects-list {
+    /* no specific styles needed */
+  }
+
+  .project-item {
+    margin-bottom: 4px;
+  }
+
+  .project-header {
+    margin-bottom: 1px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .project-title {
+    margin: 0;
+    flex: 1;
+    font-size: 9pt;
+    font-weight: 600;
+  }
+
+  .project-period {
+    font-size: 8pt;
+    white-space: nowrap;
+    color: #4b5563;
+  }
+
+  .project-description {
+    margin: 0 0 2px 0;
+    font-size: 8pt;
+    line-height: 1.2;
+    color: #374151;
+  }
+
+  .project-details {
+    margin: 0;
+    padding-left: 10px;
+    font-size: 7pt;
+    line-height: 1.1;
+  }
+
+  .detail-item {
+    margin-bottom: 0;
+    color: #374151;
+  }
+
+  .github-link {
+    font-size: 7pt;
+    font-weight: 400;
+    color: #4b5563;
+  }
+
+  /* Print styles */
+  @media print {
+    @page {
+      margin: 0.3in;
+      size: A4;
+    }
+
+    .resume-container {
+      padding: 2px 4px 4px 4px;
+      font-size: 8.5pt;
+      line-height: 1.1;
+    }
+
+    .resume-title {
+      font-size: 16pt;
+    }
+
+    .resume-summary {
+      line-height: 1.2;
+    }
+
+    .section-title {
+      font-size: 10pt;
+    }
+
+    .position-title {
+      font-size: 9pt;
+    }
+
+    .work-description {
+      font-size: 7.5pt;
+      line-height: 1.05;
+    }
+
+    .project-title {
+      font-size: 8pt;
+    }
+
+    .project-description {
+      font-size: 7.5pt;
+      line-height: 1.05;
+    }
+
+    .project-details {
+      font-size: 6.5pt;
+      line-height: 1.1;
+    }
+
+    .resume-section {
+      margin-bottom: 6pt;
+    }
+
+    .work-header,
+    .project-header {
+      margin-bottom: 3pt;
+    }
+
+    .work-description,
+    .project-description {
+      margin-bottom: 3pt;
+    }
+
+    .work-item,
+    .project-item {
+      margin-bottom: 4pt;
+    }
+
+    .detail-item {
+      margin-bottom: 0;
+    }
+
+    /* Language-specific spacing adjustments for optimal PDF fit */
+
+    /* English version - ultra-compact spacing to maximize content density */
+    .lang-en .resume-section {
+      margin-bottom: 3pt !important;
+    }
+
+    .lang-en .work-item,
+    .lang-en .project-item {
+      margin-bottom: 2pt !important;
+    }
+
+    .lang-en .work-header,
+    .lang-en .project-header {
+      margin-bottom: 1pt !important;
+    }
+
+    .lang-en .work-description,
+    .lang-en .project-description {
+      line-height: 0.95 !important;
+      margin-bottom: 1pt !important;
+    }
+
+    .lang-en .resume-header {
+      margin-bottom: 3pt !important;
+      padding-bottom: 3pt !important;
+    }
+
+    .lang-en .section-title {
+      margin-bottom: 2pt !important;
+    }
+
+    .lang-en .project-details {
+      line-height: 1 !important;
+      margin-top: 1pt !important;
+    }
+
+    .lang-en .skill-item {
+      margin-bottom: 0pt !important;
+    }
+
+    /* Chinese version - balanced spacing for good readability within one page */
+    .lang-zh .resume-section {
+      margin-bottom: 10pt !important;
+    }
+
+    .lang-zh .work-item,
+    .lang-zh .project-item {
+      margin-bottom: 6pt !important;
+    }
+
+    .lang-zh .work-header,
+    .lang-zh .project-header {
+      margin-bottom: 3pt !important;
+    }
+
+    .lang-zh .work-description,
+    .lang-zh .project-description {
+      margin-bottom: 4pt !important;
+      line-height: 1.15 !important;
+    }
+
+    .lang-zh .resume-header {
+      margin-bottom: 8pt !important;
+      padding-bottom: 6pt !important;
+    }
+
+    .lang-zh .section-title {
+      margin-bottom: 5pt !important;
+    }
+
+    .lang-zh .skill-item {
+      margin-bottom: 1pt !important;
+    }
+
+    .lang-zh .project-details {
+      margin-top: 2pt !important;
+      margin-bottom: 3pt !important;
+    }
+  }
+</style>
