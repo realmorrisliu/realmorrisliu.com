@@ -1,5 +1,6 @@
 ---
 import Button from "./Button.astro";
+import Link from "./Link.astro";
 import { getTranslations } from "../i18n/utils";
 
 export interface Props {
@@ -61,11 +62,9 @@ const t = getTranslations(currentLang);
     >
       {t.soFar.pdf.printButtonHint}
     </p>
-    <a
-      href={backUrl}
-      class="ease text-[0.6875rem] font-medium whitespace-nowrap text-[color:var(--color-text-link)] underline decoration-1 underline-offset-2 transition-all duration-150 hover:text-[color:var(--color-text-secondary)] hover:no-underline sm:text-xs"
-      >{t.soFar.pdf.backText}</a
-    >
+    <Link href={backUrl} class="text-[0.6875rem] whitespace-nowrap sm:text-xs">
+      {t.soFar.pdf.backText}
+    </Link>
   </div>
 </div>
 

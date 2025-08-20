@@ -1,5 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+import Link from "./Link.astro";
+import { formatDate } from "../utils/dateUtils";
 
 // Get the latest now entry
 const nowEntries = await getCollection("now");
@@ -8,16 +10,6 @@ const latestEntry = nowEntries.sort(
 )[0];
 
 const { summary, lastUpdated } = latestEntry.data;
-
-// Format the date for display
-const formatDate = (date: Date | string): string => {
-  const dateObj = date instanceof Date ? date : new Date(date);
-  return dateObj.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-};
 ---
 
 <section class="current-status mb-8 border-l-2 border-[color:var(--color-border)] py-3 pl-4">
@@ -29,8 +21,6 @@ const formatDate = (date: Date | string): string => {
     Last updated {formatDate(lastUpdated)}
   </p>
   <p class="text-sm leading-normal text-[color:var(--color-text-tertiary)]">
-    <a href="/now" class="font-medium text-[color:var(--color-text-link)] hover:underline">
-      → Learn more about what I'm up to now
-    </a>
+    <Link href="/now" class="text-sm"> → Learn more about what I'm up to now </Link>
   </p>
 </section>

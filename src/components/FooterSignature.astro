@@ -1,4 +1,6 @@
 ---
+import Link from "./Link.astro";
+
 export interface Props {
   author?: string;
   showNavigation?: boolean;
@@ -17,12 +19,9 @@ const { author = "Morris Liu", showNavigation = false, navigationItems = [] } = 
       <nav class="mb-6">
         <div class="flex gap-4 text-sm text-[color:var(--color-text-tertiary)]">
           {navigationItems.map(item => (
-            <a
-              href={item.href}
-              class="font-medium text-[color:var(--color-text-link)] underline decoration-1 underline-offset-2 transition-all duration-150 hover:text-[color:var(--color-text-secondary)] md:no-underline md:hover:underline"
-            >
+            <Link href={item.href} class="text-sm">
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
       </nav>

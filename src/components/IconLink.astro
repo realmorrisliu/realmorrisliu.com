@@ -1,0 +1,25 @@
+---
+export interface Props {
+  href: string;
+  class?: string;
+  title?: string;
+  ariaLabel?: string;
+}
+
+const { href, class: className = "", title, ariaLabel } = Astro.props;
+
+// Unified icon link styles: responsive opacity with hover effects
+const ICON_STYLES =
+  "inline-flex text-[color:var(--color-text-tertiary)] md:opacity-60 opacity-100 md:hover:opacity-100 transition-opacity duration-150";
+---
+
+<a
+  href={href}
+  class={`${ICON_STYLES} ${className}`}
+  title={title}
+  aria-label={ariaLabel}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <slot />
+</a>

@@ -1,4 +1,6 @@
 ---
+import IconLink from "./IconLink.astro";
+
 export interface Props {
   class?: string;
   showText?: boolean;
@@ -7,12 +9,11 @@ export interface Props {
 const { class: className = "", showText = false } = Astro.props;
 ---
 
-<a
+<IconLink
   href="/rss.xml"
-  class={`inline-flex items-center gap-2 text-[color:var(--color-text-tertiary)] md:opacity-60 opacity-100 md:hover:opacity-100 transition-opacity duration-150 ${className}`}
-  aria-label="RSS Feed"
-  target="_blank"
-  rel="noopener noreferrer"
+  class={`items-center gap-2 ${className}`}
+  title="RSS Feed"
+  ariaLabel="RSS Feed"
 >
   {showText && <span class="text-xs">Stay updated</span>}
   <svg
@@ -39,4 +40,4 @@ const { class: className = "", showText = false } = Astro.props;
       fill="none"></path>
     <circle cx="5" cy="19" r="1" fill="currentColor"></circle>
   </svg>
-</a>
+</IconLink>

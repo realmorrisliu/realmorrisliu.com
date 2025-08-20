@@ -26,15 +26,18 @@ src/
 ├── components/
 │   ├── Link.astro           # Unified link component with responsive styling
 │   ├── Button.astro         # Unified button component with variant styles
-│   ├── GitHubIcon.astro     # GitHub icon with accessibility and hover effects
-│   ├── RssIcon.astro        # RSS icon with text and responsive styling
-│   ├── FooterSignature.astro # Reusable footer signature with navigation
+│   ├── IconLink.astro       # Universal icon link component with consistent hover effects
+│   ├── GitHubIcon.astro     # GitHub icon using IconLink base component
+│   ├── RssIcon.astro        # RSS icon using IconLink base component
+│   ├── FooterSignature.astro # Reusable footer signature with navigation (uses Link)
 │   ├── ProjectItem.astro    # Reusable project display with GitHub links
 │   ├── TimelineItem.astro   # Career timeline with continuous line design
 │   ├── FormattedText.astro  # Dynamic text with link replacements for i18n
 │   ├── ResumeLayout.astro   # PDF-optimized resume layout with high info density
-│   ├── PDFIndicator.astro   # PDF page indicator with print button and instructions
-│   └── CurrentStatus.astro  # Current activity status with visual differentiation
+│   ├── PDFIndicator.astro   # PDF page indicator with print button (uses Link)
+│   ├── UpdateCard.astro     # Reusable component for displaying now page entries
+│   ├── SoFarPage.astro      # Comprehensive page-level component for professional profile
+│   └── CurrentStatus.astro  # Current activity status with visual differentiation (uses Link)
 ├── i18n/
 │   ├── translations/
 │   │   ├── en.json          # English translations
@@ -63,6 +66,8 @@ src/
 │       └── [...slug].astro  # Dynamic blog post routes
 ├── scripts/
 │   └── og-utils.ts          # Shared utilities for OG image generation
+├── utils/
+│   └── dateUtils.ts         # Unified date formatting utilities
 └── styles/
     └── global.css           # Design system + Typography config
 ```
@@ -87,17 +92,20 @@ The design system is built around CSS custom properties and follows extreme mini
 
 **Reusable Components:**
 
-- **Link.astro**: Unified link component with responsive hover behavior. Mobile devices show permanent underlines for better touch accessibility, desktop shows underlines only on hover. Automatically detects external links for proper `target="_blank"` handling.
+- **Link.astro**: Unified link component with responsive hover behavior. Mobile devices show permanent underlines for better touch accessibility, desktop shows underlines only on hover. Automatically detects external links for proper `target="_blank"` handling. Used consistently across all components to eliminate style duplication.
 - **Button.astro**: Unified button component with TypeScript interfaces supporting primary/secondary variants and sm/md sizes. Maintains consistent hover states and responsive design without over-complex styling.
-- **GitHubIcon.astro**: Accessible GitHub icon component with responsive opacity effects. Desktop shows 60% opacity by default, 100% on hover; mobile shows 100% opacity always. Includes proper ARIA labels and SVG titles for screen readers.
+- **IconLink.astro**: Universal icon link component that abstracts common icon link patterns. Provides consistent responsive opacity effects (60% default, 100% on hover for desktop; 100% always for mobile), external link handling, and accessibility attributes. Base component for GitHubIcon and RssIcon.
+- **GitHubIcon.astro**: GitHub icon component built on IconLink base. Provides GitHub-specific SVG and accessibility labels while leveraging IconLink for consistent behavior.
+- **RssIcon.astro**: RSS feed icon component built on IconLink base. Supports optional text display and uses consistent styling patterns.
 - **TimelineItem.astro**: Career timeline component with props for year, title, company, period, and description. Features enhanced visual hierarchy with timeline dots, emphasized year labels, and improved spacing. Year labels float to the left, company names are prominently displayed, and job descriptions have clear visual separation.
 - **ProjectItem.astro**: Project display component leveraging Link and GitHubIcon components. Includes title, description, and optional GitHub repository access with consistent styling.
 - **FormattedText.astro**: Handles dynamic text with link replacements, used for i18n content that contains inline links. Splits text by placeholders and renders appropriate Link components.
 - **ResumeLayout.astro**: PDF-optimized resume layout component with language-adaptive spacing system. Built with pure CSS (no Tailwind) using semantic class names for precise control. Features dynamic spacing based on `currentLang` prop: English version uses ultra-compact spacing with compressed top margins and line-height (0.95) for maximum content density, Chinese version uses balanced spacing for readability. Uses condensed typography (8.5pt base font), tight margins (0.3in), and intelligent CSS media queries to ensure perfect single-page fit across languages. Top spacing optimizations include reduced container padding and header margins for improved space utilization.
-- **PDFIndicator.astro**: PDF page indicator component with print functionality and language switching. Features minimalist gray banner design with PDF icon, status message, language toggle button, and manual print button. Language toggle uses Button component with secondary variant for visual consistency. Automatically attempts print on page load with manual button as fallback for production environments where auto-print is blocked by browser security policies.
-- **SoFarPage.astro**: Comprehensive page-level component that orchestrates the entire "So Far" page layout and functionality. Integrates multiple child components (TimelineItem, ProjectItem, FormattedText, FooterSignature) to create a cohesive professional profile page. Features built-in internationalization support with dynamic language switching, anchor-based navigation between sections (Work, Projects, Skills, Side, Contact), and intelligent language switch URL generation that preserves page anchors. Handles complex content rendering including timeline visualization, project showcases, and formatted text with inline link replacements.
-- **CurrentStatus.astro**: Displays current activity status on the homepage with enhanced visual differentiation. Features left border styling, typography hierarchy (font-medium for labels), and proper color contrast using design system tokens. Reads content from `src/data/current.json` with automatic date formatting. Designed to stand out from main content while maintaining minimalist aesthetics.
-- **UpdateCard.astro**: Reusable component for displaying now page entries in archive and listing contexts. Features minimalist design with only essential elements: clickable month/year title and summary content. Eliminates UI redundancy by removing duplicate time information and multiple click targets. Uses TypeScript interfaces with `showBorder` prop for flexible layout control.
+- **PDFIndicator.astro**: PDF page indicator component with print functionality and language switching. Features minimalist gray banner design with PDF icon, status message, language toggle button, and manual print button. Language toggle uses Button component with secondary variant for visual consistency. Uses Link component for back navigation to maintain consistency. Automatically attempts print on page load with manual button as fallback for production environments where auto-print is blocked by browser security policies.
+- **SoFarPage.astro**: Comprehensive page-level component that orchestrates the entire "So Far" page layout and functionality. Integrates multiple child components (TimelineItem, ProjectItem, FormattedText, FooterSignature) to create a cohesive professional profile page. Features built-in internationalization support with dynamic language switching, anchor-based navigation between sections (Work, Projects, Skills, Side, Contact), and intelligent language switch URL generation that preserves page anchors. Handles complex content rendering including timeline visualization, project showcases, and formatted text with inline link replacements. Uses Link component for PDF download links.
+- **CurrentStatus.astro**: Displays current activity status on the homepage with enhanced visual differentiation. Features left border styling, typography hierarchy (font-medium for labels), and proper color contrast using design system tokens. Uses Content Collections API to fetch latest now page entry and Link component for navigation to full now page. Integrates dateUtils for consistent date formatting.
+- **UpdateCard.astro**: Reusable component for displaying now page entries in archive and listing contexts. Features minimalist design with only essential elements: clickable month/year title and summary content. Eliminates UI redundancy by removing duplicate time information and multiple click targets. Uses TypeScript interfaces with `showBorder` prop for flexible layout control and dateUtils for consistent date formatting.
+- **FooterSignature.astro**: Reusable footer signature component with optional navigation items. Uses Link component consistently for all navigation links instead of inline styles. Provides clean separation between author signature and navigation elements.
 
 **Component Design Principles:**
 
@@ -107,6 +115,9 @@ The design system is built around CSS custom properties and follows extreme mini
 - Smooth transitions (150ms duration) for hover effects without complex animations
 - Proper accessibility attributes for screen readers and keyboard navigation
 - **Tailwind-First Architecture**: All components use Tailwind CSS classes exclusively, avoiding inline `<style>` tags
+- **Component Composition**: Base components (Link, IconLink) are reused consistently to eliminate code duplication
+- **Unified Styling**: All links use Link component, all icon links use IconLink component to ensure consistent behavior
+- **Shared Utilities**: Common functionality like date formatting is abstracted into utility functions (`src/utils/dateUtils.ts`)
 - CSS custom properties preserved for design system colors (e.g., `text-[color:var(--color-text-tertiary)]`)
 - Complex animations and print-specific `@page` rules use minimal CSS when Tailwind limitations require it
 
@@ -219,6 +230,8 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 - **Design System Colors**: Use CSS custom properties via arbitrary values (e.g., `text-[color:var(--color-text-tertiary)]`)
 - **Typography**: Tailwind utilities with CSS variables for design system consistency
 - **Spacing**: Use Tailwind's spacing scale consistently (mb-4, mb-6, mb-16)
+- **Component Reuse**: Always use existing base components (Link for links, IconLink for icon links)
+- **Utility Functions**: Import shared utilities like `dateUtils` instead of duplicating formatting logic
 - **Exceptions**: Complex animations and print `@page` rules may use minimal CSS when Tailwind cannot handle them
 
 ### Link Design
@@ -532,6 +545,8 @@ The project uses Prettier for consistent code formatting with the following conf
 - **Typography**: Tailwind utilities with CSS variables for design system consistency
 - **Spacing**: Use Tailwind's spacing scale consistently (mb-4, mb-6, mb-16)
 - **Components**: Always define TypeScript interfaces for component props
+- **Component Reuse**: Always use existing base components (Link for links, IconLink for icon links)
+- **Utility Functions**: Import shared utilities like `dateUtils` instead of duplicating formatting logic
 - **Exceptions**: Complex animations and print `@page` rules may use minimal CSS when Tailwind limitations require it
 
 ## SEO & Performance Optimization

@@ -61,11 +61,10 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
         class="pdf-download-section text-base leading-relaxed text-[color:var(--color-text-secondary)]"
       >
         {t.soFar.pdf.text}
-        <a
-          href={currentLang === "zh" ? "/so-far/pdf/zh" : "/so-far/pdf"}
-          class="font-medium text-[color:var(--color-text-link)] hover:underline"
-          >{t.soFar.pdf.linkText}</a
-        >{t.soFar.pdf.suffix}
+        <Link href={currentLang === "zh" ? "/so-far/pdf/zh" : "/so-far/pdf"}>
+          {t.soFar.pdf.linkText}
+        </Link>
+        {t.soFar.pdf.suffix}
       </p>
     </div>
   </header>
