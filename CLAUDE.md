@@ -1,22 +1,47 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+**Version:** v2.0 | **Last Updated:** 2025-08-21  
+Personal website built with Astro + Tailwind CSS, implementing letter-like aesthetic for correspondence experience.
 
-## Commands
+## ⚡ Quick Reference
 
-| Command          | Action                                               |
-| ---------------- | ---------------------------------------------------- |
-| `pnpm dev`       | Start local dev server at `localhost:4321`           |
-| `pnpm build`     | Build production site to `./dist/`                   |
-| `pnpm preview`   | Preview build locally before deploying               |
-| `pnpm prettier`  | Format all files with Prettier (2-space indentation) |
-| `pnpm typecheck` | Run TypeScript type checking with Astro              |
+### Essential Commands
+
+| Command | Action | Critical Notes |
+|---------|--------|----------------|
+| `pnpm dev` | Dev server at `localhost:4321` | Hot reload enabled |
+| `pnpm build` | Build to `./dist/` | **ALWAYS run before deploy** |
+| `pnpm typecheck` | TypeScript validation | **MUST pass before commit** |
+| `pnpm prettier` | Format (2-space indent) | Auto-sorts Tailwind classes |
+
+### Key Paths
+```
+src/content/blog/     → Blog posts (.md)
+src/content/now/      → Now page updates
+src/components/       → Reusable components
+src/i18n/translations/ → Multi-language content
+src/layouts/          → Page layouts
+```
+
+### **🚨 CRITICAL RULES**
+
+**ALWAYS DO:**
+- Use existing components (Link, Button, IconLink)
+- Follow Tailwind-first architecture (no inline `<style>`)
+- Run `pnpm typecheck` before committing
+- Wrap footnote content in `<span>` with `{/* prettier-ignore */}`
+
+**NEVER DO:**
+- Create new files unless absolutely necessary 
+- Add H1 tags in blog posts (handled by layout)
+- Use `set:html` without sanitization
+- Commit without passing typecheck
 
 ## Project Architecture
 
-This is a minimalist personal website built with Astro and Tailwind CSS, implementing a letter-like aesthetic that feels like reading beautifully written correspondence rather than browsing a traditional website.
+**Core Concept:** Letter-like aesthetic for correspondence experience, not traditional website navigation.
 
-### Core Structure
+### Directory Structure
 
 ```
 src/
@@ -75,741 +100,184 @@ src/
     └── prose.css            # Prose typography + Chinese text optimization
 ```
 
-### Design System Architecture
+### Design System
 
-The design system is built around CSS custom properties and follows extreme minimalism principles:
+| Element | Values | Usage |
+|---------|--------|-------|
+| **Colors** | 5 grays: `--color-text-primary` to `--color-border` | Use CSS custom properties |
+| **Fonts** | Inter (sans) + EB Garamond (serif) + Maple Mono | Variable weights, local hosting |
+| **Width** | `max-w-2xl` (672px) | Fixed content width |
+| **Spacing** | `mb-16`, `py-16` (64px) | Consistent vertical rhythm |
+| **Style** | No animations, shadows, decorative elements | Extreme minimalism |
 
-**CSS Variables (`global.css`):**
+### Component Registry
 
-- Color palette: 5 carefully chosen grays (`--color-text-primary` to `--color-border`)
-- Typography: Inter (sans-serif) + EB Garamond (serif) + Maple Mono (monospace) with 4 line-height scales
-- No animations, shadows, or decorative elements
+| Component | Purpose | Key Props | Dependencies |
+|-----------|---------|-----------|--------------|
+| **Link.astro** | Unified links, responsive hover | `href`, `target`, `class` | Base component |
+| **Button.astro** | Buttons with variants | `variant`, `size`, `type` | - |
+| **IconLink.astro** | Icon links with consistent opacity | `href`, `title`, `icon` | Base for GitHub/RSS |
+| **GitHubIcon.astro** | GitHub links | `href`, `title` | IconLink |
+| **RssIcon.astro** | RSS feed links | `href`, `showText` | IconLink |
+| **TimelineItem.astro** | Career timeline | `year`, `title`, `company`, `period` | - |
+| **ProjectItem.astro** | Project display | `title`, `description`, `github` | Link, GitHubIcon |
+| **FormattedText.astro** | i18n text with links | `text`, `replacements` | Link |
+| **PDFIndicator.astro** | PDF page banner | `lang`, `switchUrl` | Link |
+| **SoFarPage.astro** | Professional profile page | `lang`, `translations` | All components |
+| **CurrentStatus.astro** | Homepage status | - | Content Collections |
+| **UpdateCard.astro** | Now page entries | `entry`, `showFull` | - |
+| **FooterSignature.astro** | Footer navigation | `links`, `signature` | Link |
+| **LanguageSwitcher.astro** | Language toggle | `languageOption` | Button |
+| **Footnote.astro** | Academic footnotes | `id`, `slot` | Link |
+| **FootnoteRef.astro** | Footnote references | `id` | Link |
 
-**Layout Patterns:**
+### **⚡ Component Rules**
 
-- Fixed content width: `max-w-2xl` (672px)
-- Consistent vertical rhythm: 16-unit spacing (`mb-16`, `py-16`)
-- Semantic HTML structure with `<header>`, `<section>`, `<nav>`
+- **TypeScript interfaces** for all props
+- **Tailwind-first** - no inline `<style>` tags
+- **Component composition** - reuse Link/IconLink base components
+- **150ms transitions** for hover effects only
+- **CSS custom properties** for design system colors: `text-[color:var(--color-text-tertiary)]`
 
-### Component Architecture
+### Footnote System
 
-**Reusable Components:**
+**🚨 Critical Requirements:**
+- Wrap content in `<span>` tags with `{/* prettier-ignore */}`
+- Use same numeric ID for both FootnoteRef and Footnote
+- Import both components at top of .mdx files
 
-- **Link.astro**: Unified link component with responsive hover behavior. Mobile devices show permanent underlines for better touch accessibility, desktop shows underlines only on hover. Automatically detects external links for proper `target="_blank"` handling. Used consistently across all components to eliminate style duplication.
-- **Button.astro**: Unified button component with TypeScript interfaces supporting primary/secondary variants and sm/md sizes. Maintains consistent hover states and responsive design without over-complex styling.
-- **IconLink.astro**: Universal icon link component that abstracts common icon link patterns. Provides consistent responsive opacity effects (60% default, 100% on hover for desktop; 100% always for mobile), external link handling, and accessibility attributes. Base component for GitHubIcon and RssIcon.
-- **GitHubIcon.astro**: GitHub icon component built on IconLink base. Provides GitHub-specific SVG and accessibility labels while leveraging IconLink for consistent behavior.
-- **RssIcon.astro**: RSS feed icon component built on IconLink base. Supports optional text display and uses consistent styling patterns.
-- **TimelineItem.astro**: Career timeline component with props for year, title, company, period, and description. Features enhanced visual hierarchy with timeline dots, emphasized year labels, and improved spacing. Year labels float to the left, company names are prominently displayed, and job descriptions have clear visual separation.
-- **ProjectItem.astro**: Project display component leveraging Link and GitHubIcon components. Includes title, description, and optional GitHub repository access with consistent styling.
-- **FormattedText.astro**: Handles dynamic text with link replacements for i18n content with inline links
-- **PDFIndicator.astro**: PDF page indicator with print functionality and language switching. Features minimalist banner design with PDF icon, language toggle, and print buttons
-- **SoFarPage.astro**: Comprehensive page-level component for professional profile with i18n support, anchor navigation, and child component integration
-- **CurrentStatus.astro**: Homepage activity status component using Content Collections API to fetch latest now page entry
-- **UpdateCard.astro**: Reusable component for now page entries with minimalist design and flexible layout control
-- **FooterSignature.astro**: Reusable footer signature with navigation items using Link component
-- **LanguageSwitcher.astro**: Language switching component for blog posts accepting single LanguageOption object
-- **Footnote.astro**: Academic-style footnotes with numbered references and return links. Displays footnote content at page bottom with gray tertiary text styling and return arrow links. Uses slot content for footnote text.
-- **FootnoteRef.astro**: Footnote reference links with superscript styling and anchor navigation. Renders as superscript numbered links `[1]` in content that jump to corresponding footnotes.
-
-**Component Design Principles:**
-
-- All components use TypeScript interfaces for prop validation
-- Responsive design with mobile-first accessibility considerations
-- Consistent spacing and typography following the design system
-- Smooth transitions (150ms duration) for hover effects without complex animations
-- Proper accessibility attributes for screen readers and keyboard navigation
-- **Tailwind-First Architecture**: All components use Tailwind CSS classes exclusively, avoiding inline `<style>` tags
-- **Component Composition**: Base components (Link, IconLink) are reused consistently to eliminate code duplication
-- **Unified Styling**: All links use Link component, all icon links use IconLink component to ensure consistent behavior
-- **Shared Utilities**: Common functionality like date formatting is abstracted into utility functions (`src/utils/dateUtils.ts`)
-- CSS custom properties preserved for design system colors (e.g., `text-[color:var(--color-text-tertiary)]`)
-- Complex animations and print-specific `@page` rules use minimal CSS when Tailwind limitations require it
-
-**Footnote System Usage:**
-
-The footnote components implement a complete academic-style reference system with bidirectional navigation:
-
-**Basic Usage:**
+**Usage:**
 ```astro
-// Import components in .mdx files
 import FootnoteRef from "../../components/FootnoteRef.astro";
 import Footnote from "../../components/Footnote.astro";
 
-// In content: reference footnote
-This statement needs citation.<FootnoteRef id={1} />
-
-// At page bottom: footnote content
-<Footnote id={1}>
-  {/* prettier-ignore */}
-  <span>Source: Paul Graham, "Do Things That Don't Scale" (2013)</span>
-</Footnote>
-```
-
-**Critical Requirements:**
-- **Span Wrapping**: All footnote content MUST be wrapped in `<span>` tags
-- **Prettier Ignore**: Use `{/* prettier-ignore */}` comment before each `<span>` to prevent formatting issues
-- **ID Consistency**: Same numeric ID must be used for both FootnoteRef and corresponding Footnote
-- **Import Order**: Import both components at top of .mdx files
-
-**Technical Implementation:**
-- Creates anchor links: `#ref${id}` (reference) ↔ `#note${id}` (footnote)
-- FootnoteRef renders as superscript `[${id}]` with Link component
-- Footnote displays with gray tertiary text and return arrow (`↩`) link
-- Bidirectional navigation allows jumping between reference and footnote
-
-**Example from Production:**
-```astro
-很多准创业者认为 startup 要么起飞，要么不起飞。<FootnoteRef id={1} />
+Text with citation.<FootnoteRef id={1} />
 
 <Footnote id={1}>
   {/* prettier-ignore */}
-  <span>这是关于创业公司发展的重要观点，来源于实际经验。</span>
+  <span>Source citation here</span>
 </Footnote>
 ```
 
-## Design Guidelines
+## Design System Reference
 
-### Core Philosophy
+### Philosophy
+**"Less, but better"** - Letter-like experience with natural navigation embedded in content flow.
 
-- **"Less, but better"**: Remove all non-essential visual elements
-- **Letter-Like Experience**: Feels like reading beautifully written correspondence
-- **Content-First**: UI should be nearly invisible, highlighting content
-- **Natural Navigation**: No traditional website navigation; embedded within content flow
-- **Static Elegance**: No animations, scroll effects, or dynamic elements
+### Typography
+| Element | Font | Size | Line Height | Color |
+|---------|------|------|-------------|-------|
+| Headlines | EB Garamond | 4xl | 1.25 | `#1a1a1a` |
+| Subheadings | EB Garamond | 2xl | tight | `#1a1a1a` |
+| Body | Inter | base | 1.65 | `#4a4a4a` |
+| Meta | Inter | sm | normal | `#6b6b6b` |
+| Links | Inter | base | normal | `#000000` (weight 500) |
 
-### Typography Hierarchy
+### Layout
+| Property | Value | Usage |
+|----------|-------|-------|
+| Page padding | `px-6 py-16` | 24px horizontal, 64px vertical |
+| Section spacing | `mb-16` | 64px between major sections |
+| Element spacing | `mb-4` to `mb-6` | 16px-24px between elements |
 
-- **Headlines**: EB Garamond serif, 4xl size, tight line-height (1.25)
-- **Subheadings**: EB Garamond serif, 2xl size, tight line-height
-- **Body Text**: Inter sans-serif, base size, relaxed line-height (1.65)
-- **Meta Text**: Inter sans-serif, sm size, tertiary color
+## Content & Routing
 
-### Color Strategy
-
-- **Primary Text**: `#1a1a1a` (near-black for headers)
-- **Secondary Text**: `#4a4a4a` (body text)
-- **Tertiary Text**: `#6b6b6b` (meta information)
-- **Links**: `#000000` with font-weight 500 for visibility, subtle hover underline
-- **Background**: Pure white `#ffffff`
-
-### Spacing System
-
-- **Page Padding**: `px-6 py-16` (24px horizontal, 64px vertical)
-- **Section Spacing**: `mb-16` (64px between major sections)
-- **Element Spacing**: `mb-4` to `mb-6` (16px-24px between related elements)
-
-## Content Structure & Conventions
-
-### Navigation Philosophy
-
-The website uses a "letter-like" navigation approach that avoids traditional website elements:
-
-**Letter-Style Navigation:**
-
-- No header navigation bars (breaks the paper aesthetic)
-- Navigation embedded naturally within content flow
-- Footer signatures that provide return links
-- Content feels like reading correspondence rather than browsing
-
-### Page Templates
-
-1. **Homepage (`index.astro`)**:
-   - Natural greeting: "Hi, I'm Morris."
-   - CurrentStatus component showing current activities (WebGL, Three.js, shader programming)
-   - Conversational navigation embedded in prose
-   - Letter-style signature at bottom
-
-2. **Thoughts (`thoughts/index.astro`)**:
-   - Clean article listing with dates and descriptions
-   - Simple "Morris Liu" signature link back to home
-   - No traditional breadcrumbs or back buttons
-
-3. **Now Pages (`now.astro`, `now/archive.astro`, `now/[date].astro`)**:
-   - Personal status page following Derek Sivers' now page philosophy
-   - Content stored in `src/content/now/` using Content Collections with monthly updates
-   - URL structure: `/now` (current), `/now/archive` (history), `/now/2025-08` (specific month)
-   - Archive page shows timeline of personal evolution and growth over time
-   - Dynamic routing for accessing historical updates by date
-   - FooterSignature with navigation between current, archive, and historical entries
-
-4. **Blog Posts (`layouts/BlogPost.astro`)**:
-   - Author signature navigation at article end
-   - "Thank you for reading" + natural return links
-   - Feels like correspondence conclusion
-
-5. **So Far (`so-far.astro` & `so-far/[lang].astro`)**:
-   - Built around **SoFarPage.astro** component that orchestrates the entire page structure and content rendering
-   - Multi-language support via URL paths: `/so-far` (English) and `/so-far/zh` (Chinese) with intelligent language switching
-   - Internal anchor navigation for sections (Work, Projects, Skills, Side, Contact) handled by SoFarPage component
-   - Timeline-based Work section with continuous visual line using TimelineItem components
-   - Enhanced Work Projects section with detailed technical achievements and interview-ready content
-   - Component-based architecture: SoFarPage integrates TimelineItem, ProjectItem, FormattedText, and FooterSignature components
-   - Rich professional content pulled from i18n translation files with dynamic content rendering
-   - Optimized visual hierarchy with consistent border styling (1px) and clear information structure
-   - Language toggle in top-right corner with anchor-preserving URL generation
-   - PDF download link integrated into content flow for traditional resume format
-
-6. **PDF Resume (`so-far/pdf.astro` & `so-far/pdf/[lang].astro`)**:
-   - Uses ResumeLayout with PDF-optimized styling and language-adaptive spacing
-   - PDFIndicator with auto-print and manual fallback buttons
-   - Language-specific spacing: English (ultra-compact), Chinese (balanced)
-   - Pure CSS with semantic classes for precise print control
-
-7. **OG Image Generator (`og-generator.astro` & `og-preview.astro`)**:
-   - Terminal aesthetic editor with `$ whoami` and `$ echo $PASSION` pattern
-   - Real-time inline preview with contenteditable spans for name and tagline customization
-   - Full-size (1200×630px) generation page with Canvas API-based image export
-   - Hidden "easter egg" feature, not shown in navigation but accessible via direct URL
-   - Preset tagline suggestions and reset functionality for user convenience
-   - PNG format export optimized for social media platforms
-
-### Code Style Conventions
-
-- **Astro Components**: Use semantic HTML5 elements with Tailwind CSS classes exclusively
-- **CSS Architecture**: Tailwind-first approach - no inline `<style>` tags in components
-- **Design System Colors**: Use CSS custom properties via arbitrary values (e.g., `text-[color:var(--color-text-tertiary)]`)
-- **Typography**: Tailwind utilities with CSS variables for design system consistency
-- **Spacing**: Use Tailwind's spacing scale consistently (mb-4, mb-6, mb-16)
-- **Component Reuse**: Always use existing base components (Link for links, IconLink for icon links)
-- **Utility Functions**: Import shared utilities like `dateUtils` instead of duplicating formatting logic
-- **Footnote Content**: All footnote content MUST use `<span>` wrapping with `{/* prettier-ignore */}` comments
-- **Exceptions**: Complex animations and print `@page` rules may use minimal CSS when Tailwind cannot handle them
-
-### Link Design
-
-**Enhanced Visibility:**
-
-- Font-weight: 500 (medium bold) for all links
-- Pure black color (#000000) for maximum contrast
-- Subtle hover effects with underlines
-- No backgrounds or decorative elements (maintains letter aesthetic)
-
-**Philosophy:**
-
-- Links should be immediately recognizable
-- Maintain elegance while ensuring usability
-- Avoid over-designed interactive elements
-
-## Technical Implementation
-
-### Build Configuration
-
-**URL Structure:**
-
-- `trailingSlash: "never"` - All URLs are clean without trailing slashes (e.g., `/thoughts`, `/so-far`)
-- `build: { format: "file" }` - Generates `.html` files for better compatibility
-- All internal links and redirects are consistent with this configuration
-
-### Font Loading Strategy
-
-- Fontsource for local font hosting (no external CDN)
-- Variable fonts for Inter (100-900) and EB Garamond (400-800) provide full weight ranges
-- Fixed weight for Maple Mono 400 (monospace terminal aesthetic)
-- Fonts imported in `global.css` for better control
-- Fallback fonts specified in CSS variables
-- Font smoothing enabled for better rendering
-
-### CSS Architecture
-
-The CSS system is organized into two main files for separation of concerns:
-
-**global.css**: Core design system and base styles
-- Design system tokens as CSS custom properties (`--color-text-primary`, etc.)
-- Tailwind CSS imports and base configuration
-- Font family definitions with Fontsource imports
-- Base HTML element styling and typography scale
-- Responsive design utilities and layout foundations
-
-**prose.css**: Typography and content-specific styling
-- Tailwind Typography plugin overrides for blog content
-- Custom CSS variables mapping design system colors to prose styles
-- **Chinese Text Optimization**: Comprehensive Chinese typography support including:
-  - Proper font stacks for Chinese characters with fallbacks
-  - Optimized line-height and spacing for Chinese text readability  
-  - Mixed-language content handling (Chinese + English technical terms)
-  - Improved punctuation and word-break behavior
-- **Minimalist Typography**: EB Garamond headings, Inter body text, weight 500 instead of bold 600
-- **Code Styling**: Light gray theme with consistent borders, Shiki syntax highlighting integration
-- **Academic Features**: Footnote styling, blockquote refinements, clean list styling
-
-**Technical Configuration:**
-- Tailwind CSS v4 configured via Vite plugin in `astro.config.mjs`
-- Font loading with Fontsource imports and optimized font-display strategy
-- Typography plugin with custom `@theme` block for color integration
-- Responsive scaling handled automatically by Typography plugin
-- No inline `<style>` tags in components, maintaining Tailwind-first architecture
+### Page Structure
+| Route | Purpose | Layout | Components |
+|-------|---------|--------|------------|
+| `/` | Homepage | Layout.astro | CurrentStatus, FooterSignature |
+| `/thoughts` | Blog listing | Layout.astro | RSS icon, article list |
+| `/thoughts/[slug]` | Blog posts | BlogPost.astro | LanguageSwitcher, Footnotes |
+| `/now` | Current status | Layout.astro | UpdateCard, FooterSignature |
+| `/now/archive` | Status history | Layout.astro | Timeline view |
+| `/so-far` | Professional profile (EN) | Layout.astro | SoFarPage |
+| `/so-far/zh` | Professional profile (ZH) | Layout.astro | SoFarPage |
+| `/so-far/pdf` | Resume PDF | ResumeLayout.astro | PDFIndicator |
 
 ### Content Collections
 
-**Blog System:**
-
-- **Content Storage**: Markdown files in `src/content/blog/`
-- **Collections Config**: `src/content/config.ts` with TypeScript schema validation
-- **Blog Layout**: `src/layouts/BlogPost.astro` with custom prose styling
-- **Dynamic Routing**: `src/pages/thoughts/[...slug].astro` for individual posts
-- **Index Page**: `src/pages/thoughts/index.astro` lists all published posts
-
-**Now Page System:**
-
-- **Content Storage**: Monthly updates in `src/content/now/` (e.g., `2025-08.md`)
-- **Schema**: Includes `summary`, `lastUpdated`, `title`, `description` fields
-- **Current Page**: `/now` automatically displays latest entry by `lastUpdated` date
-- **Historical Tracking**: All previous months preserved for future archive functionality
+| Collection | Location | Schema | Usage |
+|------------|----------|--------|-------|
+| Blog | `src/content/blog/` | `title`, `description`, `pubDate`, `tags`, `draft` | Auto-indexed when `draft: false` |
+| Now | `src/content/now/` | `summary`, `lastUpdated`, `title`, `description` | Latest entry on `/now` |
 
 ### Writing Blog Posts
-
-1. Create `.md` files in `src/content/blog/`
-2. Required frontmatter:
-   ```yaml
-   ---
-   title: "Post Title"
-   description: "Brief description"
-   pubDate: 2025-01-15
-   tags: ["tag1", "tag2"]
-   draft: false
-   ---
-   ```
-3. Posts automatically appear in `/thoughts` when `draft: false`
-4. Support for updated dates, tags, and featured posts
-
-### Current Blog Content
-
-**Featured Posts:**
-
-- **"Why I Built Sealbox"**: Technical deep-dive into building a Rust-based secret management service, covering enterprise tool complexity and the "90% solution" philosophy
-- **"Building Kira: An AI-Native Second Brain"**: Product vision for an AI assistant focused on context capture and thought amplification, contrasting with traditional note-taking tools
-- **"Fixing Astro SEO on Cloudflare Pages"**: Practical guide addressing mysterious 308 redirects and trailing slash issues in Astro deployments on Cloudflare Pages, focusing on real-world SEO optimization solutions
-- **"Rust Builder Pattern Guide"**: Comprehensive tutorial comparing derive_builder crate with hand-written constructors, featuring real-world examples from openrouter-rs SDK development and API design best practices
-- **"做那些无法规模化的事"** (Chinese): Translation of Paul Graham's classic "Do Things That Don't Scale" with extensive footnotes and cultural context for Chinese entrepreneurs. Features complete academic-style footnote system with 12 detailed annotations covering startup growth, user acquisition, and founder psychology.
-
-**Content Strategy:**
-
-- Technical posts focus on real projects and actual implementation challenges
-- Personal posts explore product philosophy and design decisions
-- **Multilingual Content**: English originals with selective Chinese translations of important entrepreneurship and technical content
-- **Academic Footnotes**: Chinese translations feature comprehensive footnote systems for cultural context and additional explanation
-- All posts avoid redundant H1 titles (handled by layout)
-- Conversational tone with technical depth
-- **Translation Quality**: Chinese content prioritizes natural expression over literal translation, with proper technical term handling
-
-### Prose Styling System
-
-The blog uses Tailwind Typography plugin with custom overrides:
-
-- Base classes: `prose prose-lg prose-gray max-w-none`
-- Custom CSS variables in `@theme` block for design system integration
-- **prose.css**: Typography overrides (EB Garamond headings, Inter body text, weight 500)
-- **Chinese Support**: Comprehensive Chinese typography optimization with proper font stacks and spacing
-- Code styling: Light gray theme with consistent borders, Shiki syntax highlighting
-- Minimalist design with responsive scaling handled by Typography plugin
-
-## Content Guidelines
-
-### Writing Style
-
-- **Conversational tone**: Write as if talking to a friend over coffee
-- **Technical without jargon**: Explain complex concepts simply
-- **Personal touch**: Include personality and humor where appropriate
-- **Honesty**: Authentic experiences and genuine perspectives
-- **Brevity**: Respect the reader's time
-
-### About Page Content Structure
-
-The "So Far" page follows this content philosophy:
-
-- **Work**: Professional experience with human context and real impact, timeline-based presentation
-- **Projects**: Split into Work Projects and Personal Projects with technical depth and quantifiable achievements
-- **Skills**: Technical abilities explained with personality and philosophy
-- **Side**: Personal interests that show the human behind the code
-- **Contact**: Approachable and genuine ways to connect
-
-### Work Projects Content Strategy
-
-The Work Projects section is optimized for technical interviews and showcases:
-
-**Technical Depth Examples:**
-
-- **X-Elephant**: RAG system optimization (100GB+ → 10GB memory reduction), Qdrant cluster architecture, custom Rust tooling, automated Shopify data pipeline
-- **EverCraft**: SaaS version control system for CAD workflows, Git-inspired architecture, fractal3D integration
-- **EverCraft Lite**: Desktop application built with Tauri and Rust, incubated from enterprise solution
-- **fractal3D**: 3D visualization engine with team leadership experience
-
-**Interview-Ready Format:**
-
-- Quantifiable achievements and technical metrics
-- Specific technology stacks and architectural decisions
-- Problem-solving narratives with concrete solutions
-- Leadership and team management examples
-- Clear project evolution and business impact
-
-### Current Status & Now Page System
-
-The website implements a dual current status system with both homepage integration and a dedicated now page:
-
-**Implementation:**
-
-- **Data Storage**: Content stored in `src/content/now/` using Content Collections with TypeScript schema validation
-- **Homepage Component**: `CurrentStatus.astro` displays summary from latest entry with link to full now page
-- **Dedicated Page**: `/now` page automatically renders latest entry by `lastUpdated` date
-- **Content Collections API**: Uses `getCollection('now')` for type-safe, performant data access
-
-**Design Philosophy:**
-
-- Follows Derek Sivers' now page movement philosophy
-- Personal, conversational updates like telling a friend your current status
-- English-only content for authenticity and simplicity
-- Integrated with website's letter-like aesthetic and FooterSignature pattern
-
-**Content Structure & Approach:**
-
-- **Frontmatter**: `summary` (for homepage) and `lastUpdated` timestamp
-- **Markdown Body**: Structured with clear sections covering major life areas
-- **Sectioned Organization**: Life Changes, Work & Technical Focus, Project Challenges, Rediscovering Music & Games, Looking Ahead
-- **Personal Depth**: Includes specific details, current challenges, and philosophical reflections
-- **"Big Picture" Focus**: Answers what you'd tell a friend you hadn't seen in a year (Derek Sivers' definition)
-- **Balance**: Technical projects, personal interests, life transitions, and career aspirations
-
-**Content Guidelines:**
-
-- Write conversationally, as if sharing with a friend over coffee
-- Include specific details that make it personal (current music, games, design style, etc.)
-- Balance technical work with human interests and life changes
-- Address both current activities and forward-looking thoughts
-- Update regularly to reflect genuine current state
-
-**Usage:**
-
-- Create new file in `src/content/now/` (e.g., `2025-09.md`) for monthly updates
-- Include required frontmatter: `summary`, `lastUpdated`, `title`, `description`
-- Latest entry automatically appears on `/now` page and homepage
-- Historical entries accessible via `/now/archive` timeline and `/now/[date]` direct links
-- Archive page shows complete evolution of interests, projects, and focus areas
-- Full navigation system between current, archive, and specific historical entries
-
-### OG Image Generation System
-
-The website includes a custom OG (Open Graph) image generation tool that creates social media preview images with a terminal aesthetic:
-
-**Core Features:**
-
-- **Terminal Design**: Uses `$ whoami` / `Morris Liu` / `$ echo $PASSION` / `[custom tagline]` pattern
-- **Real-time Editor**: Inline preview (600×315px) with contenteditable text spans
-- **Full-size Export**: 1200×630px PNG generation using native Canvas API
-- **Typography**: Maple Mono monospace font for authentic terminal look
-- **Easter Egg Integration**: Hidden feature accessible via `/og-generator` (not in main navigation)
-- **Terminal Boot Animation**: First-time visitors see a cinematic terminal startup sequence with ASCII art logo, congratulations message, and typewriter effects
-
-**Technical Implementation:**
-
-**`src/pages/og-generator.astro`:**
-
-- Editor page with inline preview at 50% scale (600×315px)
-- Contenteditable spans with `data-original` attributes for reset functionality
-- Preset tagline suggestions with click-to-apply functionality
-- Button component integration for consistent UI
-- URL parameter generation for seamless transition to full-size preview
-- Terminal boot animation overlay with localStorage-based first-visit detection
-- ASCII art logo with non-breaking spaces for precise alignment
-- Typewriter effect with character-by-character rendering (50ms intervals)
-- 4-second countdown with skip functionality via keyboard/mouse input
-
-**`src/pages/og-preview.astro`:**
-
-- Full-size (1200×630px) preview and download page
-- Canvas API-based image generation reading actual DOM computed styles
-- Font loading synchronization with `document.fonts.ready`
-- PNG export with proper filename and download trigger
-- Fixed positioning with return navigation
-
-**`src/scripts/og-utils.ts`:**
-
-- Shared utilities for font loading (`waitForFonts()`)
-- Canvas generation (`generateOGImage()`) with pixel-perfect DOM to canvas conversion
-- Download handling (`downloadCanvas()`) with proper filename generation
-- Text extraction (`getElementText()`) with fallback support
-- `initTerminalBootAnimation()`: Functional approach to terminal boot animation with state management
-- `initOGGeneratorEditor()`: Functional approach to editor controls (generate, reset, tagline suggestions, editable text)
-
-**Key Technical Decisions:**
-
-- **Canvas over html2canvas**: Native Canvas API avoids `oklch()` color function compatibility issues
-- **Style Reading**: Uses `getComputedStyle()` and `getBoundingClientRect()` for accurate positioning
-- **Font Synchronization**: `document.fonts.ready` ensures Maple Mono loads before image generation
-- **TypeScript Safety**: Full error handling with proper type guards and null checks
-- **Responsive Design**: Separate scaling for editor (50%) and full-size (100%) views
-- **Animation Architecture**: Inline scripts with `is:inline` for immediate execution, preventing flash-of-unstyled-content
-- **First-Visit Detection**: localStorage-based approach avoids server-side storage while maintaining privacy
-- **Performance Optimization**: CSS pseudo-elements for cursor animation, preventing text flicker during typewriter effect
-- **Code Organization**: Functional programming approach in `og-utils.ts` with pure functions and state management for better maintainability
-
-**Usage Workflow:**
-
-1. Navigate to `/og-generator` (easter egg URL)
-2. **First-time visitors**: Experience cinematic terminal boot sequence with ASCII logo and congratulations message (press any key to skip)
-3. Click on text in preview to edit name and tagline
-4. Select from preset tagline suggestions or create custom
-5. Click "Generate full size" to open 1200×630px version
-6. Click "Save as PNG" to download high-quality image
-7. Use downloaded image as social media preview
-
-### Development Notes
-
-- TypeScript configured with Astro's strict preset
-- Content Collections provide type safety for blog posts
-- VS Code extension recommendations include `astro-build.astro-vscode`
-- No build tools beyond Astro's defaults
-- Static site generation (SSG) for optimal performance
-
-## Code Quality & Formatting
-
-### Prettier Configuration
-
-The project uses Prettier for consistent code formatting with the following configuration:
-
-- **Indentation**: 2 spaces (no tabs)
-- **Line width**: 100 characters
-- **Quotes**: Double quotes
-- **Semicolons**: Always required
-- **Trailing commas**: ES5 compatible
-- **Plugins**: `prettier-plugin-astro` and `prettier-plugin-tailwindcss`
-
-**Key Files:**
-
-- `.prettierrc` - Main configuration
-- `.prettierignore` - Excludes build outputs, dependencies, and binary files
-
-**Usage:**
-
-- `pnpm prettier --write .` - Format all files
-- Supports Astro components and Tailwind class sorting
-
-### Code Style Conventions
-
-- **Astro Components**: Use semantic HTML5 elements with TypeScript interfaces for props
-- **CSS Architecture**: Tailwind-first approach - avoid inline `<style>` tags in components
-- **Design System Colors**: Use CSS custom properties via arbitrary values (e.g., `text-[color:var(--color-text-tertiary)]`)
-- **Typography**: Tailwind utilities with CSS variables for design system consistency
-- **Spacing**: Use Tailwind's spacing scale consistently (mb-4, mb-6, mb-16)
-- **Components**: Always define TypeScript interfaces for component props
-- **Component Reuse**: Always use existing base components (Link for links, IconLink for icon links)
-- **Utility Functions**: Import shared utilities like `dateUtils` instead of duplicating formatting logic
-- **Exceptions**: Complex animations and print `@page` rules may use minimal CSS when Tailwind limitations require it
-
-## SEO & Performance Optimization
-
-### Search Engine Optimization (Comprehensive Implementation)
-
-The website features professional-grade SEO optimization for maximum discoverability and search rankings:
-
-**Meta Tags & Social Media:**
-
-- Complete Open Graph and Twitter Card implementation
-- Dynamic meta descriptions for each page
-- Canonical URLs for proper indexing
-- Article-specific metadata for blog posts (publish dates, tags, author)
-
-**Structured Data (JSON-LD):**
-
-- Person schema for homepage and profile pages
-- BlogPosting schema for individual articles
-- Rich snippets with author, publication dates, and content descriptions
-- Schema.org markup for enhanced search results
-
-**Technical SEO:**
-
-- XML sitemap automatically generated via `@astrojs/sitemap`
-- SEO-optimized robots.txt with crawl guidelines
-- Proper HTML semantic structure with heading hierarchy
-- Clean URL structure (`/thoughts/post-name/`)
-
-**Keywords & Content:**
-
-- Strategic keyword placement for software engineering, Rust, TypeScript, AI infrastructure
-- Content-first approach with technical depth and personal insights
-- Regular content updates with publication dates
-
-### Performance & Caching
-
-**Static Optimization:**
-
-- All pages pre-generated at build time (SSG)
-- Minimal JavaScript footprint
-- Optimized font loading with Fontsource local hosting (only necessary weights)
-- CSS custom properties for faster style application
-- Image optimization with Sharp service configured
-
-**Asset Optimization:**
-
-- Long-term caching for static assets (1 year)
-- Short-term caching for HTML content (1 hour)
-- Proper MIME type configuration
-- Font files optimized with woff2 format
-
-**Security Best Practices:**
-
-- Never use `set:html` without proper sanitization
-- All user-generated content should be escaped
-- TypeScript interfaces for component prop validation
-- Constant strings for frequently used styles to avoid runtime recreation
-
-## Deployment & Hosting
-
-### Cloudflare Pages Configuration
-
-The website is optimized for deployment on Cloudflare Pages with the following configuration:
-
-**Build Settings:**
-
-- Framework: Astro
-- Build command: `pnpm build`
-- Build output directory: `dist`
-- Node.js version: 18 (specified in `.nvmrc`)
-
-**Optimization Files:**
-
-**`public/_headers`:**
-
-- Security headers (XSS protection, content type sniffing prevention)
-- Long-term caching for static assets (CSS, JS, fonts, images)
-- Short-term caching for HTML and XML files
-- Proper MIME type configuration
-
-**`public/_redirects`:**
-
-- SEO-friendly URL redirects (`/blog/*` → `/thoughts/*`)
-- Social media shortlinks (`/github`, `/twitter`)
-- Project quick access (`/sealbox` → GitHub repository)
-- Legacy URL support for better user experience
-
-**Cloudflare Pages Benefits:**
-
-- Global CDN with 200+ data centers
-- Automatic HTTPS with free SSL certificates
-- Git integration for automatic deployments
-- Preview deployments for every pull request
-- Custom domain support with DNS management
-
-### Performance Features
-
-**Caching Strategy:**
-
-- Static assets: 1 year cache with immutable headers
-- HTML files: 1 hour cache for fresh content
-- Sitemap/robots: 24 hour cache for SEO tools
-- Font files: Long-term caching with cross-origin headers
-
-**Security Headers:**
-
-- X-Frame-Options: DENY (prevent clickjacking)
-- X-Content-Type-Options: nosniff (prevent MIME sniffing)
-- X-XSS-Protection: 1; mode=block (XSS protection)
-- Referrer-Policy: strict-origin-when-cross-origin (privacy)
-- Permissions-Policy: camera=(), microphone=(), geolocation=() (API restrictions)
-
-### Monitoring & Analytics
-
-**Built-in Monitoring:**
-
-- Cloudflare Pages analytics for traffic and performance
-- Core Web Vitals tracking through Cloudflare
-- Build and deployment status monitoring
-- Error tracking and alerting
-
-**SEO Monitoring:**
-
-- XML sitemap submission to Google Search Console
-- Structured data validation
-- Page speed insights monitoring
-- Search ranking and keyword tracking
+```yaml
+---
+title: "Post Title"
+description: "Brief description" 
+pubDate: 2025-01-15
+tags: ["tag1", "tag2"]
+draft: false
+---
+```
+
+### Featured Posts
+- **"Why I Built Sealbox"** - Rust secret management service
+- **"Building Kira: An AI-Native Second Brain"** - AI assistant product vision  
+- **"Fixing Astro SEO on Cloudflare Pages"** - 308 redirects and trailing slash issues
+- **"Rust Builder Pattern Guide"** - derive_builder vs hand-written constructors
+- **"做那些无法规模化的事"** - Chinese translation with 12 academic footnotes
+
+## Technical Implementation
+
+### Configuration
+
+| Setting | Value | Purpose |
+|---------|-------|---------|
+| **URL Structure** | `trailingSlash: "never"` | Clean URLs without trailing slashes |
+| **Build Format** | `{ format: "file" }` | Generates `.html` files |
+| **Fonts** | Fontsource local hosting | Inter (variable) + EB Garamond (variable) + Maple Mono |
+| **CSS Files** | `global.css` + `prose.css` | Design system + Typography overrides |
+| **Tailwind** | v4 via Vite plugin | Custom `@theme` block, Typography plugin |
+| **Chinese Support** | Optimized font stacks | Mixed-language content handling |
+
+### Dependencies
+
+| Package | Version | Purpose |
+|---------|---------|---------|
+| **Astro** | ^5.12.8 | Static site generator |
+| **Tailwind CSS** | ^4.1.11 | Utility-first CSS |
+| **@astrojs/rss** | ^4.0.12 | RSS feed generation |
+| **@astrojs/sitemap** | ^3.4.2 | XML sitemap |
+| **@tailwindcss/typography** | ^0.5.16 | Markdown styling |
+| **Prettier** | 3.6.2 | Code formatting |
 
 ## Internationalization (i18n)
 
-### Architecture
+| Language | Route | Translation File |
+|----------|-------|-----------------|
+| English (default) | `/so-far` | `src/i18n/translations/en.json` |
+| Chinese | `/so-far/zh` | `src/i18n/translations/zh.json` |
 
-The website implements server-side i18n using Astro's static site generation:
+### i18n Utils (`src/i18n/utils.ts`)
+- `getTranslations(lang)` - Get translations for language
+- `getLanguageFromPath(pathname)` - Extract language from URL
+- `createLangSwitchUrl(targetLang, hash)` - Generate switch URLs with hash support
 
-**Translation Files:**
+## Deployment & SEO
 
-- `src/i18n/translations/en.json` - English translations
-- `src/i18n/translations/zh.json` - Chinese translations
-- Structured JSON with nested keys for easy maintenance
-- Work project details use simple string arrays for better maintainability (e.g., `["RAG Optimization: Built...", "Data Pipeline: Automated..."]`)
-- Skills section uses `stack` and `philosophy` structure for better visual hierarchy
-- Personal project links use `readMoreLink` object with text, href, linkText, and optional suffix
-- Contact section uses structured objects for clean link rendering without FormattedText overhead
-- PDF section includes `printButton` and `printButtonHint` for internationalized print functionality
+### Cloudflare Pages
+| Setting | Value |
+|---------|-------|
+| **Build command** | `pnpm build` |
+| **Output directory** | `dist` |
+| **Node.js version** | 18 |
+| **Caching** | 1 year (assets), 1 hour (HTML) |
+| **Redirects** | `/blog/*` → `/thoughts/*` |
 
-**Utility Functions (`src/i18n/utils.ts`):**
+### SEO Features
+- XML sitemap via `@astrojs/sitemap`
+- Open Graph + Twitter Cards
+- Structured data (Person + BlogPosting schemas)
+- Clean URLs with no trailing slashes
 
-- `getTranslations(lang)` - Returns translations for specified language
-- `getLanguageFromPath(pathname)` - Extracts language from URL pathname
-- `createLangSwitchUrl(targetLang, hash)` - Generates language switch URLs with hash support
-- `getHtmlLangAttribute(lang)` - Returns proper HTML lang attribute
+---
 
-**URL Structure:**
+**🎯 Key Takeaways for Claude:**
+1. **Always use existing components** (Link, Button, IconLink)
+2. **Run `pnpm typecheck` before committing**
+3. **Follow Tailwind-first architecture** 
+4. **Wrap footnote content in `<span>` with `{/* prettier-ignore */}`**
+5. **Never add H1 tags in blog posts** (handled by layout)
 
-- English (default): `/so-far`
-- Chinese: `/so-far/zh`
-- Other pages remain English-only for now
-
-**Implementation Details:**
-
-- Server-side rendering for better performance and SEO
-- No client-side JavaScript for language switching
-- Proper `lang` attribute on HTML element
-- Language switching preserves current page anchor/hash for better UX
-- FormattedText component for complex inline links (Side section)
-- Direct link rendering for simple contact links (optimized approach)
-
-### Adding New Languages
-
-1. Create new translation file: `src/i18n/translations/[lang].json`
-2. Copy structure from `en.json` and translate content
-3. Update `getStaticPaths()` in `[lang].astro` to include new language
-4. Add language option to language toggle component
-
-### Best Practices
-
-- Keep translation keys consistent across all language files
-- Use placeholders (`{name}`) for dynamic content within translations
-- Maintain same JSON structure in all translation files
-- Test all language versions during development
-- Use structured objects for complex content (skills with stack/philosophy, readMoreLink objects)
-- Standardize time period formats: English uses "Month YYYY - Month YYYY", Chinese uses "YYYY年 X月 - YYYY年 X月"
-- Maintain consistent company naming across languages for professional consistency
-
-### Translation Quality Guidelines
-
-- **Chinese Text Formatting**: Ensure proper spacing between Chinese text and English technical terms (AI, CAD, SaaS, etc.)
-- **Business Language**: Use professional terms like "签约" instead of colloquial "成交"
-- **Technical Expression**: Prefer natural expressions over direct translations
-- **Sensitive Information**: Use percentages instead of specific financial figures for security
-- **Consistency**: Maintain unified terminology across all sections
-
-## Project Dependencies
-
-### Core Dependencies
-
-- **Astro** (^5.12.8): Static site generator and framework
-- **@astrojs/rss** (^4.0.12): RSS feed generation for blog
-- **@astrojs/sitemap** (^3.4.2): Automatic XML sitemap generation
-- **Tailwind CSS** (^4.1.11): Utility-first CSS framework
-- **@tailwindcss/vite** (^4.1.11): Vite integration for Tailwind
-- **@fontsource-variable/inter** (^5.2.6): Inter Variable font family local hosting
-- **@fontsource-variable/eb-garamond** (^5.2.6): EB Garamond Variable font family local hosting
-- **@fontsource/maple-mono** (^5.2.5): Maple Mono monospace font for terminal aesthetic
-
-### Development Dependencies
-
-- **@tailwindcss/typography** (^0.5.16): Typography plugin for markdown content
-- **Prettier** (3.6.2): Code formatting with 2-space indentation
-- **prettier-plugin-astro** (0.14.1): Astro component formatting
-- **prettier-plugin-tailwindcss** (0.6.14): Tailwind class sorting
-
-### Dependency Strategy
-
-- Minimal dependency footprint for better security and performance
-- Local font hosting to reduce external requests and improve loading speed
-- Development-only dependencies for code quality without runtime overhead
-- Version pinning for reproducible builds across environments
