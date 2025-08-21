@@ -225,7 +225,7 @@
    * - ideograph-numeric: proper spacing between Chinese characters and numbers
    * - proportional-width: ensures proper character width for mixed content
    */
-  font-variant-east-asian: proportional-width;
+  font-variant-east-asian: normal;
 }
 
 /* Mixed language support - English within Chinese text */

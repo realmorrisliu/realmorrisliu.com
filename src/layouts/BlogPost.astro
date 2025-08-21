@@ -12,6 +12,7 @@ interface Props {
   pubDate: Date;
   updatedDate?: Date;
   author: string;
+  translator?: string;
   tags?: string[];
   readingTime?: number;
 }
@@ -22,6 +23,7 @@ const {
   pubDate,
   updatedDate,
   author,
+  translator,
   tags,
   readingTime: propReadingTime,
 } = Astro.props;
@@ -126,7 +128,7 @@ const truncateTitle = (text: string, maxLength: number = 50) => {
       <slot />
     </div>
 
-    <FooterSignature author={author}>
+    <FooterSignature author={author} translator={translator}>
       <nav class="mt-2">
         <Link href="/thoughts" class="text-sm">← Back to thoughts</Link>
       </nav>

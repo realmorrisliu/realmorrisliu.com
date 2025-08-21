@@ -3,6 +3,7 @@ import Link from "./Link.astro";
 
 export interface Props {
   author?: string;
+  translator?: string;
   showNavigation?: boolean;
   navigationItems?: Array<{
     href: string;
@@ -10,7 +11,12 @@ export interface Props {
   }>;
 }
 
-const { author = "Morris Liu", showNavigation = false, navigationItems = [] } = Astro.props;
+const {
+  author = "Morris Liu",
+  translator = "Morris Liu",
+  showNavigation = false,
+  navigationItems = [],
+} = Astro.props;
 ---
 
 <footer class="mt-24 pt-8">
@@ -28,9 +34,18 @@ const { author = "Morris Liu", showNavigation = false, navigationItems = [] } = 
     )
   }
 
-  <div class="text-base text-[color:var(--color-text-primary)]">
-    {author}
-  </div>
+  {
+    translator ? (
+      <div class="flex items-center">
+        <span class="mr-1 text-[color:var(--color-text-tertiary)]">translated by</span>
+        {translator}
+      </div>
+    ) : (
+      <div class="flex items-center justify-between text-base text-[color:var(--color-text-primary)]">
+        {author}
+      </div>
+    )
+  }
 
   <!-- Optional slot for custom navigation -->
   <slot />
