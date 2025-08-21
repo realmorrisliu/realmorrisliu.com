@@ -1,4 +1,6 @@
 ---
+import Link from "./Link.astro";
+
 export interface Props {
   id: number;
 }
@@ -6,12 +8,8 @@ export interface Props {
 const { id } = Astro.props;
 ---
 
-<p class="mb-3 text-sm leading-relaxed text-gray-600">
-  <span id={`note${id}`} class="font-medium">[{id}]</span>
+<p class="mb-3 text-sm leading-relaxed text-[color:var(--color-text-tertiary)]">
+  <span id={`note${id}`}>[{id}]</span>
   <slot />
-  <a
-    href={`#ref${id}`}
-    class="ml-1 text-xs text-blue-600 no-underline transition-colors duration-150 hover:text-blue-800 hover:underline"
-    >↩</a
-  >
+  <Link href={`#ref${id}`} class="ml-1 text-xs">↩</Link>
 </p>

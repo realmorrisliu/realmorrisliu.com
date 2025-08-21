@@ -33,11 +33,12 @@ src/
 │   ├── ProjectItem.astro    # Reusable project display with GitHub links
 │   ├── TimelineItem.astro   # Career timeline with continuous line design
 │   ├── FormattedText.astro  # Dynamic text with link replacements for i18n
-│   ├── ResumeLayout.astro   # PDF-optimized resume layout with high info density
 │   ├── PDFIndicator.astro   # PDF page indicator with print button (uses Link)
 │   ├── UpdateCard.astro     # Reusable component for displaying now page entries
 │   ├── SoFarPage.astro      # Comprehensive page-level component for professional profile
-│   └── CurrentStatus.astro  # Current activity status with visual differentiation (uses Link)
+│   ├── CurrentStatus.astro  # Current activity status with visual differentiation (uses Link)
+│   ├── Footnote.astro       # Academic-style footnotes with return links
+│   └── FootnoteRef.astro    # Footnote references with anchor links
 ├── i18n/
 │   ├── translations/
 │   │   ├── en.json          # English translations
@@ -45,7 +46,8 @@ src/
 │   └── utils.ts             # i18n utility functions
 ├── layouts/
 │   ├── Layout.astro         # Base HTML layout with language support
-│   └── BlogPost.astro       # Blog post layout with Typography
+│   ├── BlogPost.astro       # Blog post layout with Typography
+│   └── ResumeLayout.astro   # PDF-optimized resume layout with language support
 ├── pages/
 │   ├── index.astro          # Homepage with letter-style greeting
 │   ├── now.astro            # Current status page with Content Collections
@@ -69,7 +71,8 @@ src/
 ├── utils/
 │   └── dateUtils.ts         # Unified date formatting utilities
 └── styles/
-    └── global.css           # Design system + Typography config
+    ├── global.css           # Design system + Typography config
+    └── prose.css            # Prose typography + Chinese text optimization
 ```
 
 ### Design System Architecture
@@ -99,14 +102,15 @@ The design system is built around CSS custom properties and follows extreme mini
 - **RssIcon.astro**: RSS feed icon component built on IconLink base. Supports optional text display and uses consistent styling patterns.
 - **TimelineItem.astro**: Career timeline component with props for year, title, company, period, and description. Features enhanced visual hierarchy with timeline dots, emphasized year labels, and improved spacing. Year labels float to the left, company names are prominently displayed, and job descriptions have clear visual separation.
 - **ProjectItem.astro**: Project display component leveraging Link and GitHubIcon components. Includes title, description, and optional GitHub repository access with consistent styling.
-- **FormattedText.astro**: Handles dynamic text with link replacements, used for i18n content that contains inline links. Splits text by placeholders and renders appropriate Link components.
-- **ResumeLayout.astro**: PDF-optimized resume layout component with language-adaptive spacing system. Built with pure CSS (no Tailwind) using semantic class names for precise control. Features dynamic spacing based on `currentLang` prop: English version uses ultra-compact spacing with compressed top margins and line-height (0.95) for maximum content density, Chinese version uses balanced spacing for readability. Uses condensed typography (8.5pt base font), tight margins (0.3in), and intelligent CSS media queries to ensure perfect single-page fit across languages. Top spacing optimizations include reduced container padding and header margins for improved space utilization.
-- **PDFIndicator.astro**: PDF page indicator component with print functionality and language switching. Features minimalist gray banner design with PDF icon, status message, language toggle button, and manual print button. Language toggle uses Button component with secondary variant for visual consistency. Uses Link component for back navigation to maintain consistency. Automatically attempts print on page load with manual button as fallback for production environments where auto-print is blocked by browser security policies.
-- **SoFarPage.astro**: Comprehensive page-level component that orchestrates the entire "So Far" page layout and functionality. Integrates multiple child components (TimelineItem, ProjectItem, FormattedText, FooterSignature) to create a cohesive professional profile page. Features built-in internationalization support with dynamic language switching, anchor-based navigation between sections (Work, Projects, Skills, Side, Contact), and intelligent language switch URL generation that preserves page anchors. Handles complex content rendering including timeline visualization, project showcases, and formatted text with inline link replacements. Uses Link component for PDF download links.
-- **CurrentStatus.astro**: Displays current activity status on the homepage with enhanced visual differentiation. Features left border styling, typography hierarchy (font-medium for labels), and proper color contrast using design system tokens. Uses Content Collections API to fetch latest now page entry and Link component for navigation to full now page. Integrates dateUtils for consistent date formatting.
-- **UpdateCard.astro**: Reusable component for displaying now page entries in archive and listing contexts. Features minimalist design with only essential elements: clickable month/year title and summary content. Eliminates UI redundancy by removing duplicate time information and multiple click targets. Uses TypeScript interfaces with `showBorder` prop for flexible layout control and dateUtils for consistent date formatting.
-- **FooterSignature.astro**: Reusable footer signature component with optional navigation items. Uses Link component consistently for all navigation links instead of inline styles. Provides clean separation between author signature and navigation elements.
-- **LanguageSwitcher.astro**: Language switching component for blog posts and multilingual content. Accepts a single `LanguageOption` object with name, URL, optional description, and external link detection. Built on Link component for consistent styling and behavior. Features design system colors (`--color-text-tertiary` with hover effects) and automatic external link handling. Used in blog posts to provide alternative language versions or original source links.
+- **FormattedText.astro**: Handles dynamic text with link replacements for i18n content with inline links
+- **PDFIndicator.astro**: PDF page indicator with print functionality and language switching. Features minimalist banner design with PDF icon, language toggle, and print buttons
+- **SoFarPage.astro**: Comprehensive page-level component for professional profile with i18n support, anchor navigation, and child component integration
+- **CurrentStatus.astro**: Homepage activity status component using Content Collections API to fetch latest now page entry
+- **UpdateCard.astro**: Reusable component for now page entries with minimalist design and flexible layout control
+- **FooterSignature.astro**: Reusable footer signature with navigation items using Link component
+- **LanguageSwitcher.astro**: Language switching component for blog posts accepting single LanguageOption object
+- **Footnote.astro**: Academic-style footnotes with numbered references and return links. Displays footnote content at page bottom with gray tertiary text styling and return arrow links. Uses slot content for footnote text.
+- **FootnoteRef.astro**: Footnote reference links with superscript styling and anchor navigation. Renders as superscript numbered links `[1]` in content that jump to corresponding footnotes.
 
 **Component Design Principles:**
 
@@ -121,6 +125,48 @@ The design system is built around CSS custom properties and follows extreme mini
 - **Shared Utilities**: Common functionality like date formatting is abstracted into utility functions (`src/utils/dateUtils.ts`)
 - CSS custom properties preserved for design system colors (e.g., `text-[color:var(--color-text-tertiary)]`)
 - Complex animations and print-specific `@page` rules use minimal CSS when Tailwind limitations require it
+
+**Footnote System Usage:**
+
+The footnote components implement a complete academic-style reference system with bidirectional navigation:
+
+**Basic Usage:**
+```astro
+// Import components in .mdx files
+import FootnoteRef from "../../components/FootnoteRef.astro";
+import Footnote from "../../components/Footnote.astro";
+
+// In content: reference footnote
+This statement needs citation.<FootnoteRef id={1} />
+
+// At page bottom: footnote content
+<Footnote id={1}>
+  {/* prettier-ignore */}
+  <span>Source: Paul Graham, "Do Things That Don't Scale" (2013)</span>
+</Footnote>
+```
+
+**Critical Requirements:**
+- **Span Wrapping**: All footnote content MUST be wrapped in `<span>` tags
+- **Prettier Ignore**: Use `{/* prettier-ignore */}` comment before each `<span>` to prevent formatting issues
+- **ID Consistency**: Same numeric ID must be used for both FootnoteRef and corresponding Footnote
+- **Import Order**: Import both components at top of .mdx files
+
+**Technical Implementation:**
+- Creates anchor links: `#ref${id}` (reference) ↔ `#note${id}` (footnote)
+- FootnoteRef renders as superscript `[${id}]` with Link component
+- Footnote displays with gray tertiary text and return arrow (`↩`) link
+- Bidirectional navigation allows jumping between reference and footnote
+
+**Example from Production:**
+```astro
+很多准创业者认为 startup 要么起飞，要么不起飞。<FootnoteRef id={1} />
+
+<Footnote id={1}>
+  {/* prettier-ignore */}
+  <span>这是关于创业公司发展的重要观点，来源于实际经验。</span>
+</Footnote>
+```
 
 ## Design Guidelines
 
@@ -205,16 +251,10 @@ The website uses a "letter-like" navigation approach that avoids traditional web
    - PDF download link integrated into content flow for traditional resume format
 
 6. **PDF Resume (`so-far/pdf.astro` & `so-far/pdf/[lang].astro`)**:
-   - Dedicated PDF-optimized layout using ResumeLayout component with pure CSS (no Tailwind)
-   - PDFIndicator component with dual print strategy: automatic attempt + manual fallback button
-   - Language-adaptive spacing system that auto-adjusts for optimal single-page fit
-   - Language toggle button integrated in PDF banner for seamless switching
-   - English version: Ultra-compact spacing (4pt sections, 1.0 line-height) for content density
-   - Chinese version: Balanced spacing (10pt sections, 1.15 line-height) for comfortable reading
-   - High information density design with 0.3in margins and semantic CSS classes
-   - Condensed typography: 8.5pt base font optimized for print readability
-   - Inline GitHub links for Personal Projects positioned after titles for better visibility
-   - Minimalist gray banner indicator hidden during print for clean output
+   - Uses ResumeLayout with PDF-optimized styling and language-adaptive spacing
+   - PDFIndicator with auto-print and manual fallback buttons
+   - Language-specific spacing: English (ultra-compact), Chinese (balanced)
+   - Pure CSS with semantic classes for precise print control
 
 7. **OG Image Generator (`og-generator.astro` & `og-preview.astro`)**:
    - Terminal aesthetic editor with `$ whoami` and `$ echo $PASSION` pattern
@@ -233,6 +273,7 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 - **Spacing**: Use Tailwind's spacing scale consistently (mb-4, mb-6, mb-16)
 - **Component Reuse**: Always use existing base components (Link for links, IconLink for icon links)
 - **Utility Functions**: Import shared utilities like `dateUtils` instead of duplicating formatting logic
+- **Footnote Content**: All footnote content MUST use `<span>` wrapping with `{/* prettier-ignore */}` comments
 - **Exceptions**: Complex animations and print `@page` rules may use minimal CSS when Tailwind cannot handle them
 
 ### Link Design
@@ -271,12 +312,33 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 
 ### CSS Architecture
 
-- Global styles in `src/styles/global.css` with `@import "tailwindcss";` and `@plugin "@tailwindcss/typography";`
-- Design tokens as CSS custom properties defined in global.css
-- Tailwind CSS v4 configured via Vite plugin in `astro.config.mjs` (no separate config file)
-- Font loading with Fontsource imports and optimized font-display: swap strategy
-- Tailwind Typography plugin for Markdown content with custom prose overrides
-- Minimal custom CSS for design system colors and typography hierarchy
+The CSS system is organized into two main files for separation of concerns:
+
+**global.css**: Core design system and base styles
+- Design system tokens as CSS custom properties (`--color-text-primary`, etc.)
+- Tailwind CSS imports and base configuration
+- Font family definitions with Fontsource imports
+- Base HTML element styling and typography scale
+- Responsive design utilities and layout foundations
+
+**prose.css**: Typography and content-specific styling
+- Tailwind Typography plugin overrides for blog content
+- Custom CSS variables mapping design system colors to prose styles
+- **Chinese Text Optimization**: Comprehensive Chinese typography support including:
+  - Proper font stacks for Chinese characters with fallbacks
+  - Optimized line-height and spacing for Chinese text readability  
+  - Mixed-language content handling (Chinese + English technical terms)
+  - Improved punctuation and word-break behavior
+- **Minimalist Typography**: EB Garamond headings, Inter body text, weight 500 instead of bold 600
+- **Code Styling**: Light gray theme with consistent borders, Shiki syntax highlighting integration
+- **Academic Features**: Footnote styling, blockquote refinements, clean list styling
+
+**Technical Configuration:**
+- Tailwind CSS v4 configured via Vite plugin in `astro.config.mjs`
+- Font loading with Fontsource imports and optimized font-display strategy
+- Typography plugin with custom `@theme` block for color integration
+- Responsive scaling handled automatically by Typography plugin
+- No inline `<style>` tags in components, maintaining Tailwind-first architecture
 
 ### Content Collections
 
@@ -319,44 +381,28 @@ The website uses a "letter-like" navigation approach that avoids traditional web
 - **"Building Kira: An AI-Native Second Brain"**: Product vision for an AI assistant focused on context capture and thought amplification, contrasting with traditional note-taking tools
 - **"Fixing Astro SEO on Cloudflare Pages"**: Practical guide addressing mysterious 308 redirects and trailing slash issues in Astro deployments on Cloudflare Pages, focusing on real-world SEO optimization solutions
 - **"Rust Builder Pattern Guide"**: Comprehensive tutorial comparing derive_builder crate with hand-written constructors, featuring real-world examples from openrouter-rs SDK development and API design best practices
+- **"做那些无法规模化的事"** (Chinese): Translation of Paul Graham's classic "Do Things That Don't Scale" with extensive footnotes and cultural context for Chinese entrepreneurs. Features complete academic-style footnote system with 12 detailed annotations covering startup growth, user acquisition, and founder psychology.
 
 **Content Strategy:**
 
 - Technical posts focus on real projects and actual implementation challenges
 - Personal posts explore product philosophy and design decisions
+- **Multilingual Content**: English originals with selective Chinese translations of important entrepreneurship and technical content
+- **Academic Footnotes**: Chinese translations feature comprehensive footnote systems for cultural context and additional explanation
 - All posts avoid redundant H1 titles (handled by layout)
 - Conversational tone with technical depth
+- **Translation Quality**: Chinese content prioritizes natural expression over literal translation, with proper technical term handling
 
 ### Prose Styling System
 
-The blog uses Tailwind Typography plugin with custom overrides for minimalist design:
+The blog uses Tailwind Typography plugin with custom overrides:
 
-**Typography Plugin Configuration:**
-
-- Base: `prose prose-lg prose-gray max-w-none` classes
-- Custom CSS variables in `@theme` block for consistent theming
-- Typography color tokens map to our design system colors
-
-**Custom Overrides (in `global.css`):**
-
-- **Headings**: EB Garamond serif, weight 500 (not default 600-800)
-- **Body text**: Inter sans-serif for better readability
-- **Strong/Bold**: Weight 500 instead of 600 for subtlety
-- **Blockquotes**: Removed smart quotes for cleaner look
-- **Code blocks**: Light gray theme (#f8f9fa) with subtle borders
-
-**Code Styling:**
-
-- **Inline code**: Light background, subtle border, no backticks
-- **Code blocks**: Astro's Shiki with 'github-light' theme
-- **Consistent borders**: 1px solid #e9ecef across all code elements
-
-**Design Principles:**
-
-- Leverages Tailwind Typography for robust defaults
-- Minimal custom CSS for maintainability
-- Typography plugin handles responsive scaling
-- Custom overrides ensure minimalist aesthetic
+- Base classes: `prose prose-lg prose-gray max-w-none`
+- Custom CSS variables in `@theme` block for design system integration
+- **prose.css**: Typography overrides (EB Garamond headings, Inter body text, weight 500)
+- **Chinese Support**: Comprehensive Chinese typography optimization with proper font stacks and spacing
+- Code styling: Light gray theme with consistent borders, Shiki syntax highlighting
+- Minimalist design with responsive scaling handled by Typography plugin
 
 ## Content Guidelines
 

@@ -1,11 +1,12 @@
 ---
 export interface Props {
+  id?: string;
   href: string;
   class?: string;
   external?: boolean;
 }
 
-const { href, class: className = "", external } = Astro.props;
+const { id, href, class: className = "", external } = Astro.props;
 
 // Auto-detect external links (only for target="_blank")
 const isExternal = external || href.startsWith("http") || href.startsWith("mailto:");
@@ -16,9 +17,8 @@ const LINK_STYLES =
 ---
 
 <a
+  id={id}
   href={href}
   class={`${LINK_STYLES} ${className}`}
-  {...isExternal && { target: "_blank", rel: "noopener noreferrer" }}
+  {...isExternal && { target: "_blank", rel: "noopener noreferrer" }}><slot /></a
 >
-  <slot />
-</a>

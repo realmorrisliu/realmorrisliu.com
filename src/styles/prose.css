@@ -123,12 +123,12 @@
 }
 
 /* Chinese Typography Enhancements */
-/* 
+/*
  * Comprehensive Chinese typography optimization system
  * This section provides sophisticated Chinese text rendering optimizations
  * that cannot be replicated with standard Tailwind classes due to:
  * - Complex Chinese font stacks with regional variations
- * - Language-specific line height and spacing requirements  
+ * - Language-specific line height and spacing requirements
  * - Mixed-language text handling (Chinese + English)
  * - Chinese-specific punctuation and character spacing
  */
@@ -173,7 +173,7 @@
 .prose-chinese h4,
 .prose-chinese h5,
 .prose-chinese h6 {
-  /* 
+  /*
    * Chinese optimized heading fonts with regional fallbacks
    * Prioritizes Source Han Serif for authentic Chinese typography
    * Falls back to system Chinese fonts across different platforms
@@ -198,18 +198,6 @@
   font-weight: 600; /* Better weight for Chinese bold text */
 }
 
-.prose-chinese em,
-.prose-chinese i {
-  /* 
-   * Chinese typography doesn't traditionally use italic styles
-   * Instead we use color and weight variations for emphasis
-   * This maintains readability while providing visual distinction
-   */
-  font-style: normal; /* Chinese doesn't use italic, use color variation instead */
-  color: var(--color-text-primary);
-  font-weight: 500;
-}
-
 /* Chinese blockquote styling */
 .prose-chinese blockquote {
   border-left: 3px solid var(--color-border);
@@ -231,13 +219,12 @@
 
 /* Chinese punctuation optimization */
 .prose-chinese {
-  /* 
+  /*
    * Advanced Chinese text spacing and punctuation handling
    * - ideograph-alpha: proper spacing between Chinese characters and Latin text
    * - ideograph-numeric: proper spacing between Chinese characters and numbers
    * - proportional-width: ensures proper character width for mixed content
    */
-  text-spacing: ideograph-alpha ideograph-numeric;
   font-variant-east-asian: proportional-width;
 }
 
