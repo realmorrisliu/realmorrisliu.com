@@ -1,0 +1,24 @@
+---
+import { cn } from "../utils";
+
+export interface Props {
+  text: string;
+  note: string;
+}
+
+const { text, note } = Astro.props;
+---
+
+<span
+  class={cn(
+    // 基础样式
+    "inline-note-trigger inline cursor-help",
+    // 边框样式
+    "border-b border-dashed border-[color:var(--color-text-tertiary)]",
+    // 交互效果
+    "transition-colors duration-150 hover:border-[color:var(--color-text-secondary)]"
+  )}
+  data-tooltip-content={note}
+>
+  {text}
+</span>

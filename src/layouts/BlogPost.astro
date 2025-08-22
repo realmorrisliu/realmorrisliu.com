@@ -2,6 +2,7 @@
 import Layout from "./Layout.astro";
 import Link from "../components/Link.astro";
 import FooterSignature from "../components/FooterSignature.astro";
+import InlineNote from "../components/InlineNote.astro";
 import { formatDate } from "../utils/dateUtils";
 import "../styles/global.css";
 import "../styles/prose.css";
@@ -134,4 +135,7 @@ const truncateTitle = (text: string, maxLength: number = 50) => {
       </nav>
     </FooterSignature>
   </article>
+
+  <!-- InlineNote 容器，为所有 InlineNoteRef 提供 tooltip 容器 -->
+  <InlineNote />
 </Layout>

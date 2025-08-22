@@ -1,0 +1,182 @@
+---
+// 提供全局唯一的 tooltip 元素和管理逻辑，所有 InlineNoteRef 共享
+import { cn } from "../utils";
+---
+
+<div id="inline-note-container" class="pointer-events-none fixed inset-0 z-[9999]">
+  <div
+    id="inline-note-tooltip"
+    class={cn(
+      "invisible absolute",
+      "inline-block w-max max-w-[calc(100vw-2rem)]",
+      "border border-[color:var(--color-border)] bg-[color:var(--color-background)]",
+      "px-2 py-1",
+      "text-sm leading-[1.6] text-[color:var(--color-text-secondary)]",
+      "break-words whitespace-normal",
+      "opacity-0 transition-opacity duration-150"
+    )}
+    role="tooltip"
+    aria-hidden="true"
+  >
+    <span id="inline-note-content"></span>
+  </div>
+</div>
+
+<script>
+  // 全局状态
+  let tooltip: HTMLElement | null = null;
+  let tooltipContent: HTMLElement | null = null;
+  let activeTrigger: HTMLElement | null = null;
+  let hideTimeout: number | null = null;
+
+  // 获取全局 tooltip 元素（懒加载）
+  function getTooltip() {
+    if (!tooltip) {
+      tooltip = document.getElementById("inline-note-tooltip");
+      tooltipContent = document.getElementById("inline-note-content");
+      if (!tooltip || !tooltipContent) {
+        console.warn("InlineNote tooltip not found.");
+        return null;
+      }
+    }
+    return { tooltip, content: tooltipContent! };
+  }
+
+  // 计算 tooltip 位置
+  function calculatePosition(trigger: HTMLElement, tooltipEl: HTMLElement) {
+    const triggerRect = trigger.getBoundingClientRect();
+    const tooltipRect = tooltipEl.getBoundingClientRect();
+    const margin = 16;
+    const spacing = 4;
+
+    // 水平位置：居中对齐，边界约束
+    const x = Math.max(
+      margin,
+      Math.min(
+        triggerRect.left + triggerRect.width / 2 - tooltipRect.width / 2,
+        window.innerWidth - tooltipRect.width - margin
+      )
+    );
+
+    // 垂直位置：优先上方，空间不够则下方
+    const preferTop = triggerRect.top - tooltipRect.height - spacing;
+    const y =
+      preferTop >= margin
+        ? preferTop
+        : Math.min(triggerRect.bottom + spacing, window.innerHeight - tooltipRect.height - margin);
+
+    return { x, y };
+  }
+
+  // 显示 tooltip
+  function showTooltip(trigger: HTMLElement) {
+    const elements = getTooltip();
+    const content = trigger.dataset.tooltipContent;
+    if (!elements || !content) return;
+
+    hideTooltip(); // 隐藏之前的 tooltip
+    activeTrigger = trigger;
+    elements.content.textContent = content;
+
+    // 设置位置（先隐藏获取尺寸）
+    Object.assign(elements.tooltip.style, { visibility: "hidden" });
+    elements.tooltip.classList.remove("invisible");
+
+    const { x, y } = calculatePosition(trigger, elements.tooltip);
+    Object.assign(elements.tooltip.style, {
+      left: `${x}px`,
+      top: `${y}px`,
+      visibility: "visible",
+    });
+    elements.tooltip.setAttribute("aria-hidden", "false");
+
+    // 淡入动画
+    requestAnimationFrame(() => {
+      elements.tooltip.classList.replace("opacity-0", "opacity-100");
+    });
+  }
+
+  // 隐藏 tooltip
+  function hideTooltip() {
+    if (hideTimeout) clearTimeout(hideTimeout);
+
+    const elements = getTooltip();
+    if (!elements) return;
+
+    elements.tooltip.classList.replace("opacity-100", "opacity-0");
+    elements.tooltip.setAttribute("aria-hidden", "true");
+
+    hideTimeout = window.setTimeout(() => {
+      elements.tooltip.classList.add("invisible");
+    }, 150);
+
+    activeTrigger = null;
+  }
+
+  // 更新 tooltip 位置
+  function updateTooltipPosition() {
+    if (!activeTrigger) return;
+    const elements = getTooltip();
+    if (!elements) return;
+
+    const { x, y } = calculatePosition(activeTrigger, elements.tooltip);
+    Object.assign(elements.tooltip.style, { left: `${x}px`, top: `${y}px` });
+  }
+
+  // 防抖函数
+  function debounce(fn: Function, delay: number) {
+    let timer: number;
+    return (...args: any[]) => {
+      clearTimeout(timer);
+      timer = window.setTimeout(() => fn(...args), delay);
+    };
+  }
+
+  // 设置事件监听器
+  function setupEventListeners() {
+    const triggers = document.querySelectorAll<HTMLElement>(".inline-note-trigger");
+    const isMobile = "ontouchstart" in window;
+
+    // 事件处理函数
+    const handleTriggerEvent = (trigger: HTMLElement, action: "show" | "toggle") => {
+      if (action === "show") {
+        showTooltip(trigger);
+      } else if (activeTrigger === trigger) {
+        hideTooltip();
+      } else {
+        showTooltip(trigger);
+      }
+    };
+
+    // 绑定触发器事件
+    triggers.forEach(trigger => {
+      if (isMobile) {
+        trigger.addEventListener("click", e => {
+          e.preventDefault();
+          e.stopPropagation();
+          handleTriggerEvent(trigger, "toggle");
+        });
+      } else {
+        trigger.addEventListener("mouseenter", () => handleTriggerEvent(trigger, "show"));
+        trigger.addEventListener("mouseleave", hideTooltip);
+      }
+    });
+
+    // 移动端：点击其他地方隐藏
+    if (isMobile) {
+      document.addEventListener("click", hideTooltip);
+    }
+
+    // 响应式更新（防抖优化）
+    const debouncedUpdate = debounce(updateTooltipPosition, 100);
+    const throttledUpdate = debounce(updateTooltipPosition, 10);
+
+    window.addEventListener("resize", debouncedUpdate);
+    window.addEventListener("scroll", throttledUpdate);
+  }
+
+  // 主初始化函数
+  document.addEventListener("DOMContentLoaded", () => {
+    setupEventListeners();
+  });
+</script>
