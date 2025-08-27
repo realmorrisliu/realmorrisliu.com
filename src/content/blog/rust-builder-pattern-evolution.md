@@ -2,7 +2,7 @@
 title: "Rust Builder Pattern Guide: derive_builder vs Hand-Written Constructors"
 description: "Learn Rust builder pattern with derive_builder crate. Step-by-step tutorial from complex constructors to clean API design. Includes real code examples and best practices."
 pubDate: 2025-08-06
-tags: ["rust", "api-design", "builder-pattern", "sdk"]
+tags: ["rust", "api-design", "design-patterns", "software-engineering", "type-systems"]
 draft: false
 ---
 

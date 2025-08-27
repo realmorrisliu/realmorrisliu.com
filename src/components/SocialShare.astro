@@ -1,0 +1,28 @@
+---
+import XIcon from "@components/XIcon.astro";
+import HackerNewsIcon from "@components/HackerNewsIcon.astro";
+
+export interface Props {
+  title: string;
+  url: string;
+}
+
+const { title, url } = Astro.props;
+
+// Generate share URLs with proper encoding
+const encodedTitle = encodeURIComponent(title);
+const encodedUrl = encodeURIComponent(url);
+
+const twitterUrl = `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`;
+const hackerNewsUrl = `https://news.ycombinator.com/submitlink?u=${encodedUrl}&t=${encodedTitle}`;
+---
+
+<section class="border-border mt-16 border-t pt-8" aria-label="Article sharing options">
+  <div class="flex items-center gap-4">
+    <span class="text-text-tertiary text-sm" id="share-heading">Share this article</span>
+    <div class="flex items-center gap-3" role="group" aria-labelledby="share-heading">
+      <XIcon href={twitterUrl} />
+      <HackerNewsIcon href={hackerNewsUrl} />
+    </div>
+  </div>
+</section>

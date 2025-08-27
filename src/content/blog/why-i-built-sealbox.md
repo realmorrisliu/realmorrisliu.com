@@ -3,17 +3,7 @@ title: "Why I Built Sealbox: A Developer-First Secret Management Tool in Rust"
 description: "After struggling with HashiCorp Vault's complexity for a simple API key storage task, I built Sealbox—a lightweight, single-binary secret manager in Rust with end-to-end encryption, SQLite storage, and zero cloud dependencies. Here's the story and technical decisions behind it."
 pubDate: 2025-07-19
 updatedDate: 2025-07-22
-tags:
-  [
-    "rust",
-    "security",
-    "devops",
-    "secret-management",
-    "open-source",
-    "encryption",
-    "sqlite",
-    "developer-tools",
-  ]
+tags: ["rust", "security", "devops", "open-source", "developer-tools"]
 featured: true
 author: "Morris Liu"
 readingTime: 4

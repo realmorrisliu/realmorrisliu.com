@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-**Version:** v2.1 | **Last Updated:** 2025-08-22
+**Version:** v2.4 | **Last Updated:** 2025-08-27
 Personal website built with Astro + Tailwind CSS, implementing letter-like aesthetic for correspondence experience.
 
 ## ⚡ Quick Reference
@@ -24,17 +24,44 @@ src/i18n/translations/ → Multi-language content
 src/layouts/          → Page layouts
 ```
 
+### **🏷️ Tag Display System**
+
+**Intelligent Tag Formatting** - All tags use smart formatting for professional display:
+
+| Original Tag        | Display Format      | Usage                                  |
+| ------------------- | ------------------- | -------------------------------------- |
+| `devops`            | `DevOps`            | Correct technical terminology          |
+| `api-design`        | `API Design`        | Kebab-case to Title Case              |
+| `machine-learning`  | `Machine Learning`  | Multi-word technical terms            |
+| `zero-trust`        | `Zero Trust`        | Security concepts                     |
+| `user-acquisition`  | `User Acquisition`  | Business terminology                  |
+
+**Implementation:**
+- Core function: `formatTag()` in `src/utils/tagUtils.ts`
+- 120+ technical terms mapped correctly
+- Automatic kebab-case splitting and formatting  
+- Used in: Tag components, page titles, structured data
+- Import: `import { formatTag } from "@utils/tagUtils";`
+
+**Key Rules:**
+- **NEVER** manually format tag displays - always use `formatTag()`
+- Tag data stored in original kebab-case format for URL consistency
+- Formatting applied at display time only
+- All new technical terms should be added to the mapping tables
+
 ### **🚨 CRITICAL RULES**
 
 **ALWAYS DO:**
 
 - Use existing components (Link, Button, IconLink)
+- Use path aliases (`@components/`, `@layouts/`, etc.) for all imports
 - Follow Tailwind-first architecture (no inline `<style>`)
 - Run `pnpm typecheck` before committing
 - Wrap footnote content in `<span>` with `{/* prettier-ignore */}`
 
 **NEVER DO:**
 
+- Use relative paths (`../`, `./`) for imports - always use path aliases
 - Create new files unless absolutely necessary
 - Add H1 tags in blog posts (handled by layout)
 - Use `set:html` without sanitization
@@ -55,8 +82,11 @@ src/
 │   ├── Link.astro           # Unified link component with responsive styling
 │   ├── Button.astro         # Unified button component with variant styles
 │   ├── IconLink.astro       # Universal icon link component with consistent hover effects
-│   ├── GitHubIcon.astro     # GitHub icon using IconLink base component
-│   ├── RssIcon.astro        # RSS icon using IconLink base component
+│   ├── GitHubIcon.astro     # GitHub icon using Iconify (logos:github-icon)
+│   ├── RssIcon.astro        # RSS icon using Iconify (lucide:rss)
+│   ├── XIcon.astro          # X/Twitter icon using Iconify (logos:x)
+│   ├── HackerNewsIcon.astro # Hacker News icon using Iconify (logos:ycombinator)
+│   ├── SocialShare.astro    # Social sharing component for blog posts
 │   ├── FooterSignature.astro # Reusable footer signature with navigation (uses Link)
 │   ├── ProjectItem.astro    # Reusable project display with GitHub links
 │   ├── TimelineItem.astro   # Career timeline with continuous line design
@@ -99,7 +129,9 @@ src/
 ├── scripts/
 │   └── og-utils.ts          # Shared utilities for OG image generation
 ├── utils/
-│   └── dateUtils.ts         # Unified date formatting utilities
+│   ├── dateUtils.ts         # Unified date formatting utilities
+│   ├── tagUtils.ts          # Intelligent tag formatting system (120+ mappings)
+│   └── index.ts             # Common utility functions (cn + tag utilities)
 └── styles/
     ├── global.css           # Design system + Typography config
     └── prose.css            # Prose typography + Chinese text optimization
@@ -122,8 +154,11 @@ src/
 | **Link.astro**             | Unified links, responsive hover    | `href`, `target`, `class`            | Base component      |
 | **Button.astro**           | Buttons with variants              | `variant`, `size`, `type`            | -                   |
 | **IconLink.astro**         | Icon links with consistent opacity | `href`, `title`, `icon`              | Base for GitHub/RSS |
-| **GitHubIcon.astro**       | GitHub links                       | `href`, `title`                      | IconLink            |
-| **RssIcon.astro**          | RSS feed links                     | `href`, `showText`                   | IconLink            |
+| **GitHubIcon.astro**       | GitHub links (Iconify)             | `href`, `class`                      | IconLink, Icon      |
+| **RssIcon.astro**          | RSS feed links (Iconify)           | `class`, `showText`                  | IconLink, Icon      |
+| **XIcon.astro**            | X/Twitter share links (Iconify)    | `href`, `class`                      | IconLink, Icon      |
+| **HackerNewsIcon.astro**   | Hacker News share links (Iconify)  | `href`, `class`                      | IconLink, Icon      |
+| **SocialShare.astro**      | Blog post social sharing           | `title`, `url`                       | XIcon, HackerNews   |
 | **TimelineItem.astro**     | Career timeline                    | `year`, `title`, `company`, `period` | -                   |
 | **ProjectItem.astro**      | Project display                    | `title`, `description`, `github`     | Link, GitHubIcon    |
 | **FormattedText.astro**    | i18n text with links               | `text`, `replacements`               | Link                |
@@ -137,14 +172,50 @@ src/
 | **FootnoteRef.astro**      | Footnote references                | `id`                                 | Link                |
 | **InlineNote.astro**       | Global tooltip system              | -                                    | Global singleton    |
 | **InlineNoteRef.astro**    | Inline note triggers               | `text`, `note`                       | InlineNote          |
+| **Tag.astro**              | Smart tag display with formatting | `tag`, `interactive`, `href`, `size` | formatTag utility   |
 
 ### **⚡ Component Rules**
 
 - **TypeScript interfaces** for all props
+- **Path aliases required** - use `@components/` instead of relative paths
 - **Tailwind-first** - no inline `<style>` tags
 - **Component composition** - reuse Link/IconLink base components
 - **150ms transitions** for hover effects only
 - **CSS custom properties** for design system colors: `text-text-tertiary`
+
+### **🏗️ Code Organization Best Practices**
+
+**Import Ordering (Top to Bottom):**
+
+```typescript
+// 1. Astro/framework imports
+import { getCollection } from "astro:content";
+
+// 2. Layout imports
+import Layout from "@layouts/Layout.astro";
+import BlogPost from "@layouts/BlogPost.astro";
+
+// 3. Component imports (alphabetical)
+import Button from "@components/Button.astro";
+import FooterSignature from "@components/FooterSignature.astro";
+import Link from "@components/Link.astro";
+
+// 4. Utility imports
+import { getTranslations } from "@i18n/utils";
+import { formatDate } from "@utils/dateUtils";
+import { cn } from "@utils/index";
+
+// 5. Style imports (at end)
+import "@styles/global.css";
+import "@styles/prose.css";
+```
+
+**File Creation Guidelines:**
+
+- **Prefer editing** existing files over creating new ones
+- **Component naming**: PascalCase for components, camelCase for utilities
+- **File structure**: Match directory structure with logical groupings
+- **Single responsibility**: Each component/utility serves one clear purpose
 
 ### Footnote & Inline Note Systems
 
@@ -157,8 +228,8 @@ src/
 **Academic Footnotes Usage:**
 
 ```astro
-import FootnoteRef from "../../components/FootnoteRef.astro"; import Footnote from
-"../../components/Footnote.astro"; Text with citation.<FootnoteRef id={1} />
+import FootnoteRef from "@components/FootnoteRef.astro"; import Footnote from
+"@components/Footnote.astro"; Text with citation.<FootnoteRef id={1} />
 
 <Footnote id={1}>
   {/* prettier-ignore */}
@@ -169,8 +240,8 @@ import FootnoteRef from "../../components/FootnoteRef.astro"; import Footnote fr
 **Inline Notes Usage:**
 
 ```astro
-import InlineNote from "../../components/InlineNote.astro"; import InlineNoteRef from
-"../../components/InlineNoteRef.astro"; // Add global tooltip system (once per page)
+import InlineNote from "@components/InlineNote.astro"; import InlineNoteRef from
+"@components/InlineNoteRef.astro"; // Add global tooltip system (once per page)
 <InlineNote />
 
 // Use inline notes for immediate explanations
@@ -182,6 +253,80 @@ import InlineNote from "../../components/InlineNote.astro"; import InlineNoteRef
 - **Footnotes**: Academic citations, numbered references at page bottom
 - **Inline Notes**: Immediate explanations, hover/click tooltips for terminology
 - **Global System**: InlineNote provides shared tooltip, InlineNoteRef triggers it
+
+## Icon System (Iconify Integration)
+
+### **🎯 Iconify Setup**
+
+Uses `astro-icon` v1.x with local icon sets to avoid network dependencies and ensure reliability.
+
+**Required Dependencies:**
+
+```bash
+pnpm add -D astro-icon @iconify-json/logos @iconify-json/lucide
+```
+
+**Configuration in `astro.config.mjs`:**
+
+```javascript
+import icon from "astro-icon";
+
+export default defineConfig({
+  integrations: [icon()],
+});
+```
+
+### **📋 Icon Usage Patterns**
+
+**Basic Icon Component:**
+
+```astro
+import {Icon} from "astro-icon/components";
+
+<Icon name="logos:github-icon" size={16} />
+<Icon name="lucide:rss" size={12} />
+```
+
+**Icon Component Wrapper Pattern:**
+
+```astro
+import {Icon} from "astro-icon/components"; import IconLink from "@components/IconLink.astro";
+
+<IconLink href={url} title="Share on X">
+  <Icon name="logos:x" size={16} />
+</IconLink>
+```
+
+### **🚨 Icon System Rules**
+
+- **Install icon sets locally** - No remote API calls (v1.x requirement)
+- **Use semantic naming** - `logos:` for brands, `lucide:` for functional icons
+- **Consistent sizing** - 16px for social icons, 12px for RSS
+- **Wrap with IconLink** - Maintain design system consistency
+- **TypeScript imports** - Always import Icon from "astro-icon/components"
+
+### **📦 Available Icon Sets**
+
+| Icon Set             | Package                | Usage         | Examples                          |
+| -------------------- | ---------------------- | ------------- | --------------------------------- |
+| **Brand Logos**      | `@iconify-json/logos`  | `logos:name`  | `x`, `github-icon`, `ycombinator` |
+| **Functional Icons** | `@iconify-json/lucide` | `lucide:name` | `rss`, `mail`, `calendar`         |
+
+### **🔧 Social Sharing Implementation**
+
+**Components:**
+
+- **SocialShare.astro** - Main sharing container with X and Hacker News
+- **XIcon.astro** - X/Twitter sharing (`logos:x`)
+- **HackerNewsIcon.astro** - Hacker News sharing (`logos:ycombinator`)
+- **GitHubIcon.astro** - GitHub links (`logos:github-icon`)
+- **RssIcon.astro** - RSS feed (`lucide:rss`)
+
+**Integration:**
+
+- Automatically included in `BlogPost.astro` layout
+- Positioned between article content and footer
+- Uses proper URL encoding for share parameters
 
 ## Design System Reference
 
@@ -215,7 +360,8 @@ import InlineNote from "../../components/InlineNote.astro"; import InlineNoteRef
 | ------------------ | ------------------------- | ------------------ | ------------------------------ |
 | `/`                | Homepage                  | Layout.astro       | CurrentStatus, FooterSignature |
 | `/thoughts`        | Blog listing              | Layout.astro       | RSS icon, article list         |
-| `/thoughts/[slug]` | Blog posts                | BlogPost.astro     | LanguageSwitcher, Footnotes    |
+| `/thoughts/[slug]` | Blog posts                | BlogPost.astro     | SocialShare, LanguageSwitcher  |
+| `/thoughts/tags/[tag]` | Tag-filtered posts    | Layout.astro       | Tag display, breadcrumb nav    |
 | `/now`             | Current status            | Layout.astro       | UpdateCard, FooterSignature    |
 | `/now/archive`     | Status history            | Layout.astro       | Timeline view                  |
 | `/so-far`          | Professional profile (EN) | Layout.astro       | SoFarPage                      |
@@ -249,28 +395,85 @@ draft: false
 - **"Rust Builder Pattern Guide"** - derive_builder vs hand-written constructors
 - **"做那些无法规模化的事"** - Chinese translation with 12 academic footnotes
 
+## Path Aliases & Import System
+
+### **🎯 Path Aliases Configuration**
+
+All imports use path aliases defined in `tsconfig.json` for cleaner, maintainable code:
+
+| Alias           | Maps to            | Usage                                 |
+| --------------- | ------------------ | ------------------------------------- |
+| `@/*`           | `src/*`            | General-purpose root directory access |
+| `@components/*` | `src/components/*` | All component imports                 |
+| `@layouts/*`    | `src/layouts/*`    | Layout component imports              |
+| `@styles/*`     | `src/styles/*`     | CSS and style imports                 |
+| `@i18n/*`       | `src/i18n/*`       | Internationalization utilities        |
+| `@utils/*`      | `src/utils/*`      | Utility functions and helpers         |
+| `@content/*`    | `src/content/*`    | Content collection access             |
+
+### **⚡ Import Examples**
+
+**Components & Layouts:**
+
+```typescript
+import Layout from "@layouts/Layout.astro";
+import Link from "@components/Link.astro";
+import FooterSignature from "@components/FooterSignature.astro";
+import InlineNote from "@components/InlineNote.astro";
+import { Icon } from "astro-icon/components";
+```
+
+**Utilities & Styles:**
+
+```typescript
+import { getTranslations } from "@i18n/utils";
+import { formatDate } from "@utils/dateUtils";
+import { cn } from "@utils/index";
+import "@styles/global.css";
+import "@styles/prose.css";
+```
+
+**Scripts & Content:**
+
+```typescript
+import { generateOGImage } from "@/scripts/og-utils";
+import { getCollection } from "astro:content";
+```
+
+### **🚨 Path Alias Rules**
+
+- **ALWAYS** use path aliases instead of relative paths (`../`, `./`)
+- **TypeScript + VS Code** automatically recognize and autocomplete aliases
+- **Consistent imports** regardless of file location in directory tree
+- **Easier refactoring** - moving files doesn't break import paths
+
 ## Technical Implementation
 
 ### Configuration
 
-| Setting             | Value                      | Purpose                                                |
-| ------------------- | -------------------------- | ------------------------------------------------------ |
-| **URL Structure**   | `trailingSlash: "never"`   | Clean URLs without trailing slashes                    |
-| **Build Format**    | `{ format: "file" }`       | Generates `.html` files                                |
-| **Fonts**           | Fontsource local hosting   | Inter (variable) + EB Garamond (variable) + Maple Mono |
-| **CSS Files**       | `global.css` + `prose.css` | Design system + Typography overrides                   |
-| **Tailwind**        | v4 via Vite plugin         | Custom `@theme` block, Typography plugin               |
-| **Chinese Support** | Optimized font stacks      | Mixed-language content handling                        |
+| Setting             | Value                        | Purpose                                                |
+| ------------------- | ---------------------------- | ------------------------------------------------------ |
+| **TypeScript**      | `astro/tsconfigs/strict`     | Strict mode + path aliases configuration               |
+| **Path Aliases**    | 7 aliases in `tsconfig.json` | Clean imports with `@` prefixes                        |
+| **URL Structure**   | `trailingSlash: "never"`     | Clean URLs without trailing slashes                    |
+| **Build Format**    | `{ format: "file" }`         | Generates `.html` files                                |
+| **Fonts**           | Fontsource local hosting     | Inter (variable) + EB Garamond (variable) + Maple Mono |
+| **CSS Files**       | `global.css` + `prose.css`   | Design system + Typography overrides                   |
+| **Tailwind**        | v4 via Vite plugin           | Custom `@theme` block, Typography plugin               |
+| **Chinese Support** | Optimized font stacks        | Mixed-language content handling                        |
 
 ### Dependencies
 
 | Package                     | Version | Purpose               |
 | --------------------------- | ------- | --------------------- |
-| **Astro**                   | ^5.12.8 | Static site generator |
+| **Astro**                   | ^5.13.2 | Static site generator |
 | **Tailwind CSS**            | ^4.1.11 | Utility-first CSS     |
 | **@astrojs/rss**            | ^4.0.12 | RSS feed generation   |
-| **@astrojs/sitemap**        | ^3.4.2  | XML sitemap           |
+| **@astrojs/sitemap**        | ^3.5.0  | XML sitemap           |
 | **@tailwindcss/typography** | ^0.5.16 | Markdown styling      |
+| **astro-icon**              | ^1.1.5  | Iconify integration   |
+| **@iconify-json/logos**     | ^1.2.9  | Brand logo icons      |
+| **@iconify-json/lucide**    | ^1.2.64 | Functional icons      |
 | **Prettier**                | 3.6.2   | Code formatting       |
 
 ## Internationalization (i18n)
@@ -309,10 +512,13 @@ draft: false
 
 **🎯 Key Takeaways for Claude:**
 
-1. **Always use existing components** (Link, Button, IconLink)
-2. **Run `pnpm typecheck` before committing**
-3. **Follow Tailwind-first architecture**
-4. **Wrap footnote content in `<span>` with `{/* prettier-ignore */}`**
-5. **Never add H1 tags in blog posts** (handled by layout)
-6. **Use InlineNote + InlineNoteRef for terminology explanations**
-7. **InlineNote system: 180 lines, optimized for performance and UX**
+1. **Always use path aliases** (`@components/`, `@layouts/`, `@styles/`, etc.) - never relative paths
+2. **Always use existing components** (Link, Button, IconLink)
+3. **Run `pnpm typecheck` before committing**
+4. **Follow Tailwind-first architecture**
+5. **Wrap footnote content in `<span>` with `{/* prettier-ignore */}`**
+6. **Never add H1 tags in blog posts** (handled by layout)
+7. **Use InlineNote + InlineNoteRef for terminology explanations**
+8. **Path aliases make refactoring safer and imports cleaner**
+9. **Use Iconify for all icons** - install icon sets as dependencies with `@iconify-json/[name]`
+10. **Social sharing integrated** - SocialShare component automatically added to all blog posts

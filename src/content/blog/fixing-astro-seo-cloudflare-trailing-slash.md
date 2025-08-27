@@ -2,17 +2,7 @@
 title: "Fixing Astro SEO on Cloudflare Pages: Why trailingSlash Doesn't Work (and What Does)"
 description: "Deployed your Astro site on Cloudflare Pages only to discover mysterious 308 redirects killing your SEO? I spent hours chasing the wrong solution. Here's what actually fixes the trailing slash problem and why Astro's trailingSlash config won't help you."
 pubDate: 2025-08-13
-tags:
-  [
-    "astro",
-    "cloudflare-pages",
-    "seo",
-    "web-development",
-    "static-sites",
-    "redirects",
-    "deployment",
-    "hosting",
-  ]
+tags: ["astro", "seo", "web-development", "cloudflare", "devops"]
 featured: false
 author: "Morris Liu"
 readingTime: 5

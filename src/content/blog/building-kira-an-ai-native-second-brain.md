@@ -3,17 +3,7 @@ title: "Building Kira: An AI-Native Second Brain That Captures Context, Not Just
 description: "Traditional note-taking apps like Notion and Obsidian create too much cognitive overhead. I'm building Kira—an AI assistant that continuously captures context from your digital environment and amplifies your thinking through conversation. Learn how it evolved from a reading app idea into something completely different."
 pubDate: 2025-07-20
 updatedDate: 2025-07-22
-tags:
-  [
-    "ai",
-    "product-design",
-    "knowledge-management",
-    "second-brain",
-    "context-aware-ai",
-    "personal-assistant",
-    "productivity",
-    "note-taking-alternative",
-  ]
+tags: ["ai", "product-design", "knowledge-management", "rust", "productivity"]
 featured: true
 author: "Morris Liu"
 readingTime: 6

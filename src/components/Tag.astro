@@ -1,0 +1,37 @@
+---
+import { cn } from "@utils/index";
+import { formatTag } from "@utils/tagUtils";
+
+export interface Props {
+  tag: string;
+  interactive?: boolean;
+  href?: string;
+  size?: "sm" | "md";
+  class?: string;
+}
+
+const { tag, interactive = false, href, size = "sm", class: className = "" } = Astro.props;
+
+const displayTag = formatTag(tag);
+---
+
+<a
+  href={interactive && href ? href : undefined}
+  class={cn(
+    "inline-flex items-center rounded font-medium transition-all duration-150",
+    "bg-gray-50 text-text-tertiary",
+    size === "sm" ? "px-1 py-0.5 text-xs" : "px-2 py-0.5 text-sm",
+    interactive && href
+      ? "cursor-pointer hover:bg-gray-100 hover:text-text-secondary"
+      : "cursor-default",
+    className
+  )}
+  rel={interactive && href ? "tag" : undefined}
+  title={interactive && href ? `View all articles about ${displayTag}` : `Tag: ${displayTag}`}
+  aria-label={interactive && href ? `View articles tagged with ${displayTag}` : undefined}
+  tabindex={interactive && href ? 0 : -1}
+  role={interactive && href ? undefined : "presentation"}
+  aria-disabled={interactive && href ? undefined : "true"}
+>
+  {displayTag}
+</a>

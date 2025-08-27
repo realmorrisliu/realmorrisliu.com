@@ -1,0 +1,221 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Link from "@components/Link.astro";
+import TagComponent from "@components/Tag.astro";
+import FooterSignature from "@components/FooterSignature.astro";
+import { formatTag } from "@utils/tagUtils";
+import "@styles/global.css";
+
+export async function getStaticPaths() {
+  const posts = (await getCollection("blog")).filter(post => !post.data.draft);
+
+  // Collect all unique tags
+  const allTags = new Set<string>();
+  posts.forEach(post => {
+    post.data.tags?.forEach(tag => allTags.add(tag.toLowerCase()));
+  });
+
+  return Array.from(allTags).map(tag => ({
+    params: { tag },
+    props: { tag },
+  }));
+}
+
+const { tag } = Astro.props;
+
+// Filter posts by tag and apply smart sorting
+const filteredPosts = (await getCollection("blog"))
+  .filter(post => !post.data.draft)
+  .filter(post => post.data.tags?.some(t => t.toLowerCase() === tag))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+};
+
+// Add reading time and smart tag sorting
+const postsWithMeta = filteredPosts.map(post => {
+  const readingTime = post.data.readingTime || 5;
+
+  // Smart tag sorting: prioritize core technical tags
+  const coreTags = ["rust", "ai", "ml", "devops", "security", "infrastructure", "architecture"];
+  const sortedTags =
+    post.data.tags?.sort((a, b) => {
+      const aScore = coreTags.includes(a.toLowerCase()) ? 1 : 0;
+      const bScore = coreTags.includes(b.toLowerCase()) ? 1 : 0;
+      return bScore - aScore;
+    }) || [];
+
+  return {
+    ...post,
+    readingTime,
+    sortedTags,
+  };
+});
+
+// 使用智能格式化系统
+const displayTag = formatTag(tag);
+
+// Enhanced structured data for tag pages
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: `${displayTag} Posts - Morris Liu`,
+  description: `Technical posts about ${displayTag} from Morris Liu. Deep insights on ${displayTag} and related technologies.`,
+  url: `https://realmorrisliu.com/thoughts/tags/${tag}`,
+  keywords: [tag, "Morris Liu", "technical blog", "programming"],
+  mainEntity: {
+    "@type": "Blog",
+    name: `${displayTag} Posts`,
+    description: `Collection of technical posts about ${displayTag}`,
+    blogPost: postsWithMeta.map(post => ({
+      "@type": "BlogPosting",
+      headline: post.data.title,
+      description: post.data.description,
+      datePublished: post.data.pubDate.toISOString(),
+      dateModified: post.data.updatedDate?.toISOString() || post.data.pubDate.toISOString(),
+      url: `https://realmorrisliu.com/thoughts/${post.id.replace(/\.(md|mdx)$/, "")}`,
+      author: {
+        "@type": "Person",
+        name: post.data.author || "Morris Liu",
+      },
+      keywords: post.data.tags?.join(", "),
+    })),
+  },
+};
+---
+
+<Layout
+  title={`${displayTag} Posts - Morris Liu`}
+  description={`Technical posts about ${displayTag} from Morris Liu. Deep insights on ${displayTag} and related technologies.`}
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)} />
+
+  <div class="mx-auto max-w-2xl px-6 py-16">
+    <header class="mb-16">
+      {/* Breadcrumb navigation for context */}
+      <nav class="mb-6" aria-label="Breadcrumb">
+        <ol class="text-text-tertiary flex items-center gap-2 text-sm">
+          <li><Link href="/thoughts" class="hover:text-text-secondary">Thoughts</Link></li>
+          <li aria-hidden="true" class="select-none">/</li>
+          <li class="text-text-secondary font-medium" aria-current="page">Tags</li>
+        </ol>
+      </nav>
+
+      {/* Primary heading with clear hierarchy */}
+      <div class="mb-6">
+        <h1 class="mb-3 font-serif text-4xl leading-tight">
+          {displayTag}
+        </h1>
+      </div>
+
+      {/* Enhanced description with context */}
+      <div class="space-y-3">
+        <p class="text-text-secondary text-lg leading-relaxed">
+          {postsWithMeta.length} post{postsWithMeta.length !== 1 ? "s" : ""} exploring <TagComponent
+            tag={tag}
+            size="md"
+            class="ring-1 ring-gray-200"
+          /> and related topics.
+        </p>
+
+        {/* Optional: Add contextual information based on tag */}
+        {
+          tag === "rust" && (
+            <p class="text-text-tertiary leading-relaxed">
+              Systems programming insights, memory safety patterns, and performance optimization
+              techniques.
+            </p>
+          )
+        }
+        {
+          tag === "ai" && (
+            <p class="text-text-tertiary leading-relaxed">
+              Artificial intelligence infrastructure, machine learning systems, and AI-native
+              product development.
+            </p>
+          )
+        }
+        {
+          tag === "devops" && (
+            <p class="text-text-tertiary leading-relaxed">
+              Infrastructure automation, deployment strategies, and operational excellence
+              practices.
+            </p>
+          )
+        }
+        {
+          tag !== "rust" && tag !== "ai" && tag !== "devops" && (
+            <p class="text-text-tertiary leading-relaxed">
+              Technical insights and engineering experiences from building production systems.
+            </p>
+          )
+        }
+      </div>
+    </header>
+
+    <div class="space-y-16">
+      {
+        postsWithMeta.map(post => (
+          <article class="border-b border-gray-300 pb-12 last:border-0">
+            <div class="mb-4">
+              <h2 class="mb-2 font-serif text-2xl leading-tight">
+                <Link
+                  href={`/thoughts/${post.id.replace(/\.(md|mdx)$/, "")}`}
+                  class={`${/[\u4e00-\u9fff]/.test(post.data.title) ? "underline-offset-4" : ""}`}
+                >
+                  {post.data.title}
+                </Link>
+              </h2>
+
+              <div class="mb-3 flex items-center gap-4 text-sm text-gray-500">
+                <time>{formatDate(post.data.pubDate)}</time>
+                <span>{post.readingTime} min read</span>
+              </div>
+
+              {post.sortedTags && post.sortedTags.length > 0 && (
+                <div class="mb-3 flex flex-wrap gap-1.5">
+                  {post.sortedTags.map((tagName: string) => (
+                    <TagComponent
+                      tag={tagName}
+                      size="sm"
+                      interactive={tagName.toLowerCase() !== tag}
+                      href={
+                        tagName.toLowerCase() !== tag
+                          ? `/thoughts/tags/${tagName.toLowerCase()}`
+                          : undefined
+                      }
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <p class="text-base leading-relaxed text-gray-600">{post.data.description}</p>
+          </article>
+        ))
+      }
+    </div>
+
+    {
+      postsWithMeta.length === 0 && (
+        <div class="py-16 text-center">
+          <p class="text-lg text-gray-600">No posts found for tag "{displayTag}".</p>
+        </div>
+      )
+    }
+
+    <FooterSignature>
+      <div class="mt-2 flex items-center justify-between">
+        <nav class="flex items-center gap-4">
+          <Link href="/thoughts" class="text-sm">← Back to all thoughts</Link>
+        </nav>
+      </div>
+    </FooterSignature>
+  </div>
+</Layout>

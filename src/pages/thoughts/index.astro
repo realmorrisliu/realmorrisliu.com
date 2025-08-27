@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Link from "@components/Link.astro";
+import Tag from "@components/Tag.astro";
 import FooterSignature from "@components/FooterSignature.astro";
 import RssIcon from "@components/RssIcon.astro";
 import "@styles/global.css";
@@ -18,30 +19,57 @@ const formatDate = (date: Date) => {
   });
 };
 
-// Add reading time to posts (fallback to estimated time if not provided)
-const postsWithReadingTime = posts.map(post => {
-  const readingTime = post.data.readingTime || 5; // Default to 5 min if not specified
+// Add reading time and smart tag sorting
+const postsWithMeta = posts.map(post => {
+  const readingTime = post.data.readingTime || 5;
+
+  // Smart tag sorting: prioritize core technical tags
+  const coreTags = [
+    "rust",
+    "ai",
+    "ml",
+    "devops",
+    "security",
+    "infrastructure",
+    "architecture",
+    "kubernetes",
+    "api-design",
+    "system-design",
+  ];
+  const sortedTags =
+    post.data.tags?.sort((a, b) => {
+      const aScore = coreTags.includes(a.toLowerCase()) ? 1 : 0;
+      const bScore = coreTags.includes(b.toLowerCase()) ? 1 : 0;
+      return bScore - aScore;
+    }) || [];
 
   return {
     ...post,
     readingTime,
+    sortedTags,
   };
 });
 
-// Generate structured data for the collection page
+// Enhanced structured data
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   name: "Thoughts - Morris Liu",
   description:
-    "Technical thoughts and insights from Morris Liu on software engineering, leadership, AI infrastructure, and open source development.",
+    "Technical insights on Rust systems programming, AI infrastructure, and startup engineering from Morris Liu.",
   url: "https://realmorrisliu.com/thoughts",
+  keywords: [
+    "Rust programming",
+    "AI infrastructure",
+    "DevOps",
+    "Systems programming",
+    "Technical blog",
+  ],
   mainEntity: {
     "@type": "Blog",
     name: "Morris Liu's Technical Blog",
-    description:
-      "Deep dives into software engineering, open source projects, and technical leadership",
-    blogPost: postsWithReadingTime.map(post => ({
+    description: "Deep technical insights and engineering experiences",
+    blogPost: postsWithMeta.map(post => ({
       "@type": "BlogPosting",
       headline: post.data.title,
       description: post.data.description,
@@ -60,19 +88,24 @@ const structuredData = {
 
 <Layout
   title="Thoughts - Morris Liu"
-  description="Technical thoughts and insights from Morris Liu on software engineering, leadership, AI infrastructure, and open source development. Stories behind building tools like Sealbox and Kira."
+  description="Technical insights on Rust systems programming, AI infrastructure, and startup engineering from Morris Liu. Deep dives into building tools like Sealbox and Kira."
 >
   <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)} />
 
   <div class="mx-auto max-w-2xl px-6 py-16">
     <header class="mb-16">
-      <h1 class="mb-2 font-serif text-4xl leading-tight">Thoughts</h1>
+      <h1 class="mb-4 font-serif text-4xl leading-tight">Thoughts</h1>
+
+      <p class="text-text-secondary text-lg leading-relaxed">
+        I write about Rust, AI infrastructure, DevOps, and other engineering topics. Stories behind
+        building tools like Sealbox and Kira.
+      </p>
     </header>
 
     <div class="space-y-16">
       {
-        postsWithReadingTime.map(post => (
-          <article class="border-b border-gray-300 pb-12">
+        postsWithMeta.map(post => (
+          <article class="border-b border-gray-300 pb-12 last:border-0">
             <div class="mb-4">
               <h2 class="mb-2 font-serif text-2xl leading-tight">
                 <Link
@@ -82,22 +115,29 @@ const structuredData = {
                   {post.data.title}
                 </Link>
               </h2>
-              <div class="flex items-center gap-4 text-sm text-gray-500">
-                <time>{formatDate(post.data.pubDate)}</time>
-                <span>{post.readingTime} min read</span>
+
+              <div class="mt-3 flex items-center gap-4 text-sm">
+                <time class="text-text-secondary font-medium">{formatDate(post.data.pubDate)}</time>
+                <span class="text-text-tertiary">{post.readingTime} min read</span>
+              </div>
+
+              <div class="mt-4 space-y-3">
+                {post.sortedTags && post.sortedTags.length > 0 && (
+                  <div class="flex flex-wrap gap-2">
+                    {post.sortedTags.map((tag: string) => (
+                      <Tag
+                        tag={tag}
+                        size="sm"
+                        interactive={true}
+                        href={`/thoughts/tags/${tag.toLowerCase()}`}
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
-            <p class="text-base leading-relaxed text-gray-600">{post.data.description}</p>
 
-            {post.data.tags && post.data.tags.length > 0 && (
-              <div class="mt-4 flex flex-wrap gap-2">
-                {post.data.tags.map(tag => (
-                  <span class="rounded-full border border-gray-300 px-2 py-1 text-xs text-gray-500">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
+            <p class="text-base leading-relaxed text-gray-600">{post.data.description}</p>
           </article>
         ))
       }

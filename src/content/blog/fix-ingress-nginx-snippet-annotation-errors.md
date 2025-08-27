@@ -2,7 +2,7 @@
 title: "Fix ingress-nginx Snippet Annotation Errors After 1.9 Upgrade"
 description: "Encountering 'nginx.ingress.kubernetes.io/server-snippet annotation cannot be used' errors after upgrading ingress-nginx? Here's how to fix the breaking changes in version 1.9 with proper Helm configuration and security considerations."
 pubDate: 2025-08-20
-tags: ["kubernetes", "ingress-nginx", "helm", "devops", "troubleshooting"]
+tags: ["kubernetes", "devops", "infrastructure", "security", "troubleshooting"]
 draft: false
 ---
 
