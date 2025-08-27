@@ -34,16 +34,16 @@ const formatDate = (date: Date | string): string => {
   <div class="mx-auto max-w-2xl px-6 py-16">
     <div class="space-y-8 leading-relaxed">
       <div>
-        <h1 class="mb-2 font-serif text-4xl leading-tight text-[color:var(--color-text-primary)]">
+        <h1 class="text-text-primary mb-2 font-serif text-4xl leading-tight">
           {title}
         </h1>
-        <p class="text-sm text-[color:var(--color-text-tertiary)]">
+        <p class="text-text-tertiary text-sm">
           Last updated {formatDate(lastUpdated)}
         </p>
       </div>
 
       <div class="prose prose-lg prose-gray max-w-none">
-        <div class="space-y-6 text-lg text-[color:var(--color-text-secondary)]">
+        <div class="text-text-secondary space-y-6 text-lg">
           <Content />
         </div>
       </div>
@@ -51,13 +51,10 @@ const formatDate = (date: Date | string): string => {
 
     <FooterSignature>
       <nav class="mt-2 flex items-center justify-between">
-        <a href="/" class="text-sm font-medium text-[color:var(--color-text-link)] hover:underline">
+        <a href="/" class="text-text-link text-sm font-medium hover:underline">
           ← Back to main page
         </a>
-        <a
-          href="/now/archive"
-          class="text-sm font-medium text-[color:var(--color-text-link)] hover:underline"
-        >
+        <a href="/now/archive" class="text-text-link text-sm font-medium hover:underline">
           View past updates →
         </a>
       </nav>

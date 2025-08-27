@@ -14,13 +14,13 @@ const { summary, lastUpdated } = latestEntry.data;
 
 <section class="current-status mb-8 border-l-2 border-[color:var(--color-border)] py-3 pl-4">
   <p class="mb-2 text-base leading-relaxed">
-    <span class="font-medium text-[color:var(--color-text-primary)]">Currently:</span>
-    <span class="ml-1 text-[color:var(--color-text-secondary)]">{summary}</span>
+    <span class="text-text-primary font-medium">Currently:</span>
+    <span class="text-text-secondary ml-1">{summary}</span>
   </p>
-  <p class="mb-2 text-sm leading-normal text-[color:var(--color-text-tertiary)]">
+  <p class="text-text-tertiary mb-2 text-sm leading-normal">
     Last updated {formatDate(lastUpdated)}
   </p>
-  <p class="text-sm leading-normal text-[color:var(--color-text-tertiary)]">
+  <p class="text-text-tertiary text-sm leading-normal">
     <Link href="/now" class="text-sm"> → Learn more about what I'm up to now </Link>
   </p>
 </section>

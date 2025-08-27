@@ -38,19 +38,6 @@
   transition: all 150ms ease;
 }
 
-/* Desktop: no underline by default, show on hover */
-@media (min-width: 768px) {
-  .prose a {
-    text-decoration: none;
-  }
-
-  .prose a:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
-  }
-}
-
 /* Typography plugin custom overrides - minimalist style */
 .prose h1,
 .prose h2,

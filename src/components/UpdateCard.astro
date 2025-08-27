@@ -18,15 +18,12 @@ const getEntryId = (entry: CollectionEntry<"now">): string => {
 
 <article class:list={["pb-8", { "border-b border-[color:var(--color-border)]": showBorder }]}>
   <h2 class="mb-4 font-serif text-2xl leading-tight">
-    <Link
-      href={`/now/${getEntryId(entry)}`}
-      class="text-[color:var(--color-text-primary)] hover:text-[color:var(--color-text-link)]"
-    >
+    <Link href={`/now/${getEntryId(entry)}`} class="text-text-primary hover:text-text-link">
       {formatMonthYear(entry.data.lastUpdated)}
     </Link>
   </h2>
 
-  <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+  <p class="text-text-secondary text-base leading-relaxed">
     {entry.data.summary}
   </p>
 </article>

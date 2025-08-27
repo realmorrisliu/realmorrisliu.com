@@ -28,14 +28,14 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
       <div class="flex items-center gap-1 text-sm">
         <Link
           href={enUrl}
-          class={`font-medium ${currentLang === "en" ? "text-[color:var(--color-text-primary)]" : "text-[color:var(--color-text-tertiary)]"}`}
+          class={`font-medium ${currentLang === "en" ? "text-text-primary" : "text-text-tertiary"}`}
         >
           {t.common.languages.en}
         </Link>
         <span class="text-[color:var(--color-border)]">|</span>
         <Link
           href={zhUrl}
-          class={`font-medium ${currentLang === "zh" ? "text-[color:var(--color-text-primary)]" : "text-[color:var(--color-text-tertiary)]"}`}
+          class={`font-medium ${currentLang === "zh" ? "text-text-primary" : "text-text-tertiary"}`}
         >
           {t.common.languages.zh}
         </Link>
@@ -45,7 +45,7 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
     <nav class="mb-8 flex flex-wrap gap-4">
       {
         t.soFar.nav.map(navItem => (
-          <Link href={navItem.href} class="text-sm text-[color:var(--color-text-secondary)]">
+          <Link href={navItem.href} class="text-text-secondary text-sm">
             {navItem.label}
           </Link>
         ))
@@ -54,12 +54,10 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
 
     <!-- Summary description -->
     <div class="space-y-4">
-      <p class="text-lg leading-relaxed text-[color:var(--color-text-secondary)]">
+      <p class="text-text-secondary text-lg leading-relaxed">
         {t.soFar.description}
       </p>
-      <p
-        class="pdf-download-section text-base leading-relaxed text-[color:var(--color-text-secondary)]"
-      >
+      <p class="pdf-download-section text-text-secondary text-base leading-relaxed">
         {t.soFar.pdf.text}
         <Link href={currentLang === "zh" ? "/so-far/pdf/zh" : "/so-far/pdf"}>
           {t.soFar.pdf.linkText}
@@ -75,7 +73,7 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
     </h2>
 
     <div class="mb-8">
-      <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+      <p class="text-text-secondary text-base leading-relaxed">
         {t.soFar.work.description}
       </p>
     </div>
@@ -105,13 +103,13 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
       {t.soFar.projects.title}
     </h2>
 
-    <p class="mb-8 text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+    <p class="text-text-secondary mb-8 text-base leading-relaxed">
       {t.soFar.projects.description}
     </p>
 
     <!-- Work Projects -->
     <div class="mb-12">
-      <h3 class="mb-8 font-serif text-xl text-[color:var(--color-text-primary)]">
+      <h3 class="text-text-primary mb-8 font-serif text-xl">
         {t.soFar.projects.workProjects.title}
       </h3>
       <div class="space-y-8">
@@ -119,19 +117,15 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
           t.soFar.projects.workProjects.items.map(project => (
             <div class="border-l border-[color:var(--color-border)] pl-6">
               <div class="mb-4">
-                <h4 class="mb-2 font-serif text-lg text-[color:var(--color-text-primary)]">
-                  {project.title}
-                </h4>
+                <h4 class="text-text-primary mb-2 font-serif text-lg">{project.title}</h4>
                 <div class="mb-1 flex items-center gap-2 text-sm">
-                  <span class="font-medium text-[color:var(--color-text-primary)]">
-                    {project.company}
-                  </span>
+                  <span class="text-text-primary font-medium">{project.company}</span>
                   <span class="text-[color:var(--color-border)]">|</span>
-                  <span class="text-[color:var(--color-text-tertiary)]">{project.period}</span>
+                  <span class="text-text-tertiary">{project.period}</span>
                 </div>
               </div>
               {project.details ? (
-                <div class="space-y-3 text-sm leading-relaxed text-[color:var(--color-text-secondary)]">
+                <div class="text-text-secondary space-y-3 text-sm leading-relaxed">
                   <p>{project.description}</p>
                   {project.details.map((detail: string) => {
                     const colonIndex = detail.indexOf(":");
@@ -140,18 +134,14 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
 
                     return (
                       <p>
-                        <span class="font-medium text-[color:var(--color-text-primary)]">
-                          {label}
-                        </span>
+                        <span class="text-text-primary font-medium">{label}</span>
                         {text}
                       </p>
                     );
                   })}
                 </div>
               ) : (
-                <p class="text-sm leading-relaxed text-[color:var(--color-text-secondary)]">
-                  {project.description}
-                </p>
+                <p class="text-text-secondary text-sm leading-relaxed">{project.description}</p>
               )}
             </div>
           ))
@@ -161,7 +151,7 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
 
     <!-- Personal Projects -->
     <div>
-      <h3 class="mb-6 font-serif text-lg text-[color:var(--color-text-primary)]">
+      <h3 class="text-text-primary mb-6 font-serif text-lg">
         {t.soFar.projects.personalProjects.title}
       </h3>
       <div class="space-y-6">
@@ -174,7 +164,7 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
                 githubUrl={project.githubUrl}
               />
               {project.readMoreLink && (
-                <p class="mt-2 ml-0 text-sm text-[color:var(--color-text-tertiary)]">
+                <p class="text-text-tertiary mt-2 ml-0 text-sm">
                   {project.readMoreLink.text}
                   <Link href={project.readMoreLink.href}>{project.readMoreLink.linkText}</Link>
                   {project.readMoreLink.suffix}
@@ -195,16 +185,10 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
       {
         t.soFar.skills.categories.map(category => (
           <div>
-            <h3 class="mb-3 font-serif text-base text-[color:var(--color-text-primary)]">
-              {category.title}
-            </h3>
+            <h3 class="text-text-primary mb-3 font-serif text-base">{category.title}</h3>
             <div class="space-y-2">
-              <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
-                {category.stack}
-              </p>
-              <p class="text-sm leading-relaxed text-[color:var(--color-text-tertiary)] italic">
-                {category.philosophy}
-              </p>
+              <p class="text-text-secondary text-base leading-relaxed">{category.stack}</p>
+              <p class="text-text-tertiary text-sm leading-relaxed italic">{category.philosophy}</p>
             </div>
           </div>
         ))
@@ -217,7 +201,7 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
       {t.soFar.side.title}
     </h2>
     <div class="space-y-4">
-      <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+      <p class="text-text-secondary text-base leading-relaxed">
         <FormattedText
           text={t.soFar.side.bass}
           replacements={[
@@ -245,7 +229,7 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
         />
       </p>
 
-      <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+      <p class="text-text-secondary text-base leading-relaxed">
         <FormattedText
           text={t.soFar.side.photography}
           replacements={[
@@ -263,15 +247,15 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
         />
       </p>
 
-      <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+      <p class="text-text-secondary text-base leading-relaxed">
         {t.soFar.side.philosophy}
       </p>
 
       <div class="mt-6 border-t border-[color:var(--color-border)] pt-4">
-        <p class="mb-2 font-serif text-sm text-[color:var(--color-text-tertiary)]">
+        <p class="text-text-tertiary mb-2 font-serif text-sm">
           {t.soFar.side.gear.title}
         </p>
-        <div class="space-y-1 text-sm text-[color:var(--color-text-tertiary)]">
+        <div class="text-text-tertiary space-y-1 text-sm">
           {t.soFar.side.gear.items.map(item => <p>{item}</p>)}
         </div>
       </div>
@@ -283,7 +267,7 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
       {t.soFar.contact.title}
     </h2>
     <div class="space-y-4">
-      <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+      <p class="text-text-secondary text-base leading-relaxed">
         {t.soFar.contact.github.text}
         <Link href={t.soFar.contact.github.link.href}>
           {t.soFar.contact.github.link.text}
@@ -291,7 +275,7 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
         {t.soFar.contact.github.suffix}
       </p>
 
-      <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+      <p class="text-text-secondary text-base leading-relaxed">
         {t.soFar.contact.twitter.text}
         <Link href={t.soFar.contact.twitter.link.href}>
           {t.soFar.contact.twitter.link.text}
@@ -299,7 +283,7 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
         {t.soFar.contact.twitter.suffix}
       </p>
 
-      <p class="text-base leading-relaxed text-[color:var(--color-text-secondary)]">
+      <p class="text-text-secondary text-base leading-relaxed">
         {t.soFar.contact.email.text}
         <Link href={t.soFar.contact.email.link.href}>
           {t.soFar.contact.email.link.text}

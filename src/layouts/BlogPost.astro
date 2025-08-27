@@ -73,14 +73,12 @@ const truncateTitle = (text: string, maxLength: number = 50) => {
   <article class="mx-auto max-w-2xl px-6 py-16">
     <!-- Breadcrumb Navigation for SEO -->
     <nav aria-label="Breadcrumb" class="mb-8">
-      <ol class="flex items-center text-sm text-[color:var(--color-text-tertiary)]">
+      <ol class="text-text-tertiary flex items-center text-sm">
         <li class="shrink-0">
-          <Link href="/" class="hover:text-[color:var(--color-text-secondary)]">Home</Link>
+          <Link href="/" class="hover:text-text-secondary">Home</Link>
         </li>
         <li class="shrink-0 before:mx-2 before:content-['/']">
-          <Link href="/thoughts" class="hover:text-[color:var(--color-text-secondary)]"
-            >Thoughts</Link
-          >
+          <Link href="/thoughts" class="hover:text-text-secondary">Thoughts</Link>
         </li>
         <li class="min-w-0 truncate before:mx-2 before:content-['/']">
           <span class="truncate" title={title}>{truncateTitle(title, 35)}</span>

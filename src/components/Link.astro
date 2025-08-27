@@ -1,4 +1,6 @@
 ---
+import { cn } from "../utils/index";
+
 export interface Props {
   id?: string;
   href: string;
@@ -10,15 +12,14 @@ const { id, href, class: className = "", external } = Astro.props;
 
 // Auto-detect external links (only for target="_blank")
 const isExternal = external || href.startsWith("http") || href.startsWith("mailto:");
-
-// Unified link styles: underlined on mobile, underlined on desktop hover
-const LINK_STYLES =
-  "font-medium text-[color:var(--color-text-link)] md:no-underline underline decoration-1 underline-offset-2 md:hover:underline transition-all duration-150";
 ---
 
 <a
   id={id}
   href={href}
-  class={`${LINK_STYLES} ${className}`}
+  class={cn(
+    "font-medium text-text-link underline decoration-1 underline-offset-2 hover:text-text-primary transition-all duration-150",
+    className
+  )}
   {...isExternal && { target: "_blank", rel: "noopener noreferrer" }}><slot /></a
 >

@@ -23,7 +23,7 @@ const {
   {
     showNavigation && navigationItems.length > 0 && (
       <nav class="mb-6">
-        <div class="flex gap-4 text-sm text-[color:var(--color-text-tertiary)]">
+        <div class="text-text-tertiary flex gap-4 text-sm">
           {navigationItems.map(item => (
             <Link href={item.href} class="text-sm">
               {item.label}
@@ -37,13 +37,11 @@ const {
   {
     translator ? (
       <div class="flex items-center">
-        <span class="mr-1 text-[color:var(--color-text-tertiary)]">translated by</span>
+        <span class="text-text-tertiary mr-1">translated by</span>
         {translator}
       </div>
     ) : (
-      <div class="flex items-center justify-between text-base text-[color:var(--color-text-primary)]">
-        {author}
-      </div>
+      <div class="text-text-primary flex items-center justify-between text-base">{author}</div>
     )
   }
 

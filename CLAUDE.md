@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-**Version:** v2.1 | **Last Updated:** 2025-08-22  
+**Version:** v2.1 | **Last Updated:** 2025-08-22
 Personal website built with Astro + Tailwind CSS, implementing letter-like aesthetic for correspondence experience.
 
 ## ⚡ Quick Reference
@@ -144,7 +144,7 @@ src/
 - **Tailwind-first** - no inline `<style>` tags
 - **Component composition** - reuse Link/IconLink base components
 - **150ms transitions** for hover effects only
-- **CSS custom properties** for design system colors: `text-[color:var(--color-text-tertiary)]`
+- **CSS custom properties** for design system colors: `text-text-tertiary`
 
 ### Footnote & Inline Note Systems
 
