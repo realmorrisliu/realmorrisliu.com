@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import Link from "./Link.astro";
-import { formatDate } from "../utils/dateUtils";
+import Link from "@components/Link.astro";
+import { formatDate } from "@utils/dateUtils";
 
 // Get the latest now entry
 const nowEntries = await getCollection("now");

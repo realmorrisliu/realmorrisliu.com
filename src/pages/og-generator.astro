@@ -1,9 +1,9 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import FooterSignature from "../components/FooterSignature.astro";
-import Link from "../components/Link.astro";
-import Button from "../components/Button.astro";
-import "../styles/global.css";
+import Layout from "@layouts/Layout.astro";
+import FooterSignature from "@components/FooterSignature.astro";
+import Link from "@components/Link.astro";
+import Button from "@components/Button.astro";
+import "@styles/global.css";
 ---
 
 <Layout
@@ -200,7 +200,7 @@ import "../styles/global.css";
   </style>
 
   <script>
-    import { initTerminalBootAnimation, initOGGeneratorEditor } from "../scripts/og-utils";
+    import { initTerminalBootAnimation, initOGGeneratorEditor } from "@/scripts/og-utils";
 
     document.addEventListener("DOMContentLoaded", () => {
       // Initialize terminal boot animation

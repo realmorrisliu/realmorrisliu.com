@@ -1,9 +1,9 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
-import FooterSignature from "../../components/FooterSignature.astro";
-import "../../styles/global.css";
-import "../../styles/prose.css";
+import Layout from "@layouts/Layout.astro";
+import FooterSignature from "@components/FooterSignature.astro";
+import "@styles/global.css";
+import "@styles/prose.css";
 
 export async function getStaticPaths() {
   const nowEntries = await getCollection("now");

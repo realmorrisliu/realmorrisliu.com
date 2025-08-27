@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import Link from "./Link.astro";
-import { formatMonthYear } from "../utils/dateUtils";
+import Link from "@components/Link.astro";
+import { formatMonthYear } from "@utils/dateUtils";
 
 export interface Props {
   entry: CollectionEntry<"now">;
