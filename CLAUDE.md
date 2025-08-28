@@ -28,22 +28,24 @@ src/layouts/          → Page layouts
 
 **Intelligent Tag Formatting** - All tags use smart formatting for professional display:
 
-| Original Tag        | Display Format      | Usage                                  |
-| ------------------- | ------------------- | -------------------------------------- |
-| `devops`            | `DevOps`            | Correct technical terminology          |
-| `api-design`        | `API Design`        | Kebab-case to Title Case              |
-| `machine-learning`  | `Machine Learning`  | Multi-word technical terms            |
-| `zero-trust`        | `Zero Trust`        | Security concepts                     |
-| `user-acquisition`  | `User Acquisition`  | Business terminology                  |
+| Original Tag       | Display Format     | Usage                         |
+| ------------------ | ------------------ | ----------------------------- |
+| `devops`           | `DevOps`           | Correct technical terminology |
+| `api-design`       | `API Design`       | Kebab-case to Title Case      |
+| `machine-learning` | `Machine Learning` | Multi-word technical terms    |
+| `zero-trust`       | `Zero Trust`       | Security concepts             |
+| `user-acquisition` | `User Acquisition` | Business terminology          |
 
 **Implementation:**
+
 - Core function: `formatTag()` in `src/utils/tagUtils.ts`
 - 120+ technical terms mapped correctly
-- Automatic kebab-case splitting and formatting  
+- Automatic kebab-case splitting and formatting
 - Used in: Tag components, page titles, structured data
 - Import: `import { formatTag } from "@utils/tagUtils";`
 
 **Key Rules:**
+
 - **NEVER** manually format tag displays - always use `formatTag()`
 - Tag data stored in original kebab-case format for URL consistency
 - Formatting applied at display time only
@@ -149,30 +151,30 @@ src/
 
 ### Component Registry
 
-| Component                  | Purpose                            | Key Props                            | Dependencies        |
-| -------------------------- | ---------------------------------- | ------------------------------------ | ------------------- |
-| **Link.astro**             | Unified links, responsive hover    | `href`, `target`, `class`            | Base component      |
-| **Button.astro**           | Buttons with variants              | `variant`, `size`, `type`            | -                   |
-| **IconLink.astro**         | Icon links with consistent opacity | `href`, `title`, `icon`              | Base for GitHub/RSS |
-| **GitHubIcon.astro**       | GitHub links (Iconify)             | `href`, `class`                      | IconLink, Icon      |
-| **RssIcon.astro**          | RSS feed links (Iconify)           | `class`, `showText`                  | IconLink, Icon      |
-| **XIcon.astro**            | X/Twitter share links (Iconify)    | `href`, `class`                      | IconLink, Icon      |
-| **HackerNewsIcon.astro**   | Hacker News share links (Iconify)  | `href`, `class`                      | IconLink, Icon      |
-| **SocialShare.astro**      | Blog post social sharing with conversational CTA | `title`, `url`              | XIcon, HackerNews   |
-| **TimelineItem.astro**     | Career timeline                    | `year`, `title`, `company`, `period` | -                   |
-| **ProjectItem.astro**      | Project display                    | `title`, `description`, `github`     | Link, GitHubIcon    |
-| **FormattedText.astro**    | i18n text with links               | `text`, `replacements`               | Link                |
-| **PDFIndicator.astro**     | PDF page banner                    | `lang`, `switchUrl`                  | Link                |
-| **SoFarPage.astro**        | Professional profile page          | `lang`, `translations`               | All components      |
-| **CurrentStatus.astro**    | Homepage status                    | -                                    | Content Collections |
-| **UpdateCard.astro**       | Now page entries                   | `entry`, `showFull`                  | -                   |
-| **FooterSignature.astro**  | Footer navigation                  | `links`, `signature`                 | Link                |
-| **LanguageSwitcher.astro** | Language toggle                    | `languageOption`                     | Button              |
-| **Footnote.astro**         | Academic footnotes                 | `id`, `slot`                         | Link                |
-| **FootnoteRef.astro**      | Footnote references                | `id`                                 | Link                |
-| **InlineNote.astro**       | Global tooltip system              | -                                    | Global singleton    |
-| **InlineNoteRef.astro**    | Inline note triggers               | `text`, `note`                       | InlineNote          |
-| **Tag.astro**              | Smart tag display with formatting | `tag`, `interactive`, `href`, `size` | formatTag utility   |
+| Component                  | Purpose                                          | Key Props                            | Dependencies        |
+| -------------------------- | ------------------------------------------------ | ------------------------------------ | ------------------- |
+| **Link.astro**             | Unified links, responsive hover                  | `href`, `target`, `class`            | Base component      |
+| **Button.astro**           | Buttons with variants                            | `variant`, `size`, `type`            | -                   |
+| **IconLink.astro**         | Icon links with consistent opacity               | `href`, `title`, `icon`              | Base for GitHub/RSS |
+| **GitHubIcon.astro**       | GitHub links (Iconify)                           | `href`, `class`                      | IconLink, Icon      |
+| **RssIcon.astro**          | RSS feed links (Iconify)                         | `class`, `showText`                  | IconLink, Icon      |
+| **XIcon.astro**            | X/Twitter share links (Iconify)                  | `href`, `class`                      | IconLink, Icon      |
+| **HackerNewsIcon.astro**   | Hacker News share links (Iconify)                | `href`, `class`                      | IconLink, Icon      |
+| **SocialShare.astro**      | Blog post social sharing with conversational CTA | `title`, `url`                       | XIcon, HackerNews   |
+| **TimelineItem.astro**     | Career timeline                                  | `year`, `title`, `company`, `period` | -                   |
+| **ProjectItem.astro**      | Project display                                  | `title`, `description`, `github`     | Link, GitHubIcon    |
+| **FormattedText.astro**    | i18n text with links                             | `text`, `replacements`               | Link                |
+| **PDFIndicator.astro**     | PDF page banner                                  | `lang`, `switchUrl`                  | Link                |
+| **SoFarPage.astro**        | Professional profile page                        | `lang`, `translations`               | All components      |
+| **CurrentStatus.astro**    | Homepage status                                  | -                                    | Content Collections |
+| **UpdateCard.astro**       | Now page entries                                 | `entry`, `showFull`                  | -                   |
+| **FooterSignature.astro**  | Footer navigation                                | `links`, `signature`                 | Link                |
+| **LanguageSwitcher.astro** | Language toggle                                  | `languageOption`                     | Button              |
+| **Footnote.astro**         | Academic footnotes                               | `id`, `slot`                         | Link                |
+| **FootnoteRef.astro**      | Footnote references                              | `id`                                 | Link                |
+| **InlineNote.astro**       | Global tooltip system                            | -                                    | Global singleton    |
+| **InlineNoteRef.astro**    | Inline note triggers                             | `text`, `note`                       | InlineNote          |
+| **Tag.astro**              | Smart tag display with formatting                | `tag`, `interactive`, `href`, `size` | formatTag utility   |
 
 ### **⚡ Component Rules**
 
@@ -356,17 +358,17 @@ import {Icon} from "astro-icon/components"; import IconLink from "@components/Ic
 
 ### Page Structure
 
-| Route              | Purpose                   | Layout             | Components                     |
-| ------------------ | ------------------------- | ------------------ | ------------------------------ |
-| `/`                | Homepage                  | Layout.astro       | CurrentStatus, FooterSignature |
-| `/thoughts`        | Blog listing              | Layout.astro       | RSS icon, article list         |
-| `/thoughts/[slug]` | Blog posts                | BlogPost.astro     | SocialShare, LanguageSwitcher  |
-| `/thoughts/tags/[tag]` | Tag-filtered posts    | Layout.astro       | Tag display, breadcrumb nav    |
-| `/now`             | Current status            | Layout.astro       | UpdateCard, FooterSignature    |
-| `/now/archive`     | Status history            | Layout.astro       | Timeline view                  |
-| `/so-far`          | Professional profile (EN) | Layout.astro       | SoFarPage                      |
-| `/so-far/zh`       | Professional profile (ZH) | Layout.astro       | SoFarPage                      |
-| `/so-far/pdf`      | Resume PDF                | ResumeLayout.astro | PDFIndicator                   |
+| Route                  | Purpose                   | Layout             | Components                     |
+| ---------------------- | ------------------------- | ------------------ | ------------------------------ |
+| `/`                    | Homepage                  | Layout.astro       | CurrentStatus, FooterSignature |
+| `/thoughts`            | Blog listing              | Layout.astro       | RSS icon, article list         |
+| `/thoughts/[slug]`     | Blog posts                | BlogPost.astro     | SocialShare, LanguageSwitcher  |
+| `/thoughts/tags/[tag]` | Tag-filtered posts        | Layout.astro       | Tag display, breadcrumb nav    |
+| `/now`                 | Current status            | Layout.astro       | UpdateCard, FooterSignature    |
+| `/now/archive`         | Status history            | Layout.astro       | Timeline view                  |
+| `/so-far`              | Professional profile (EN) | Layout.astro       | SoFarPage                      |
+| `/so-far/zh`           | Professional profile (ZH) | Layout.astro       | SoFarPage                      |
+| `/so-far/pdf`          | Resume PDF                | ResumeLayout.astro | PDFIndicator                   |
 
 ### Content Collections
 

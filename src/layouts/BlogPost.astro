@@ -1,11 +1,9 @@
 ---
-import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Link from "@components/Link.astro";
 import FooterSignature from "@components/FooterSignature.astro";
 import InlineNote from "@components/InlineNote.astro";
 import SocialShare from "@components/SocialShare.astro";
-import Tag from "@components/Tag.astro";
 import { formatDate } from "@utils/dateUtils";
 import "@styles/global.css";
 import "@styles/prose.css";
@@ -69,20 +67,6 @@ const truncateTitle = (text: string, maxLength: number = 50) => {
   if (text.length <= maxLength) return text;
   return text.substring(0, maxLength).replace(/\s+\S*$/, "") + "...";
 };
-
-// Get related posts based on shared tags
-const allPosts = await getCollection("blog");
-const relatedPosts = allPosts
-  .filter(post => !post.data.draft && post.data.title !== title)
-  .map(post => ({
-    ...post,
-    sharedTags: post.data.tags?.filter(tag => tags?.includes(tag))?.length || 0,
-  }))
-  .filter(post => post.sharedTags > 0)
-  .sort(
-    (a, b) => b.sharedTags - a.sharedTags || b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-  )
-  .slice(0, 3);
 ---
 
 <Layout
@@ -153,45 +137,6 @@ const relatedPosts = allPosts
 
     {!draft && <SocialShare title={title} url={`https://realmorrisliu.com${Astro.url.pathname}`} />}
 
-    <!-- Related Articles -->
-    <!-- {
-      relatedPosts.length > 0 && (
-        <section class="border-border mt-16 border-t pt-8" aria-label="Related articles">
-          <h2 class="mb-6 font-serif text-xl">Related articles</h2>
-          <div class="space-y-4">
-            {relatedPosts.map(post => (
-              <article class="border-l-2 border-gray-200 pl-4">
-                <h3 class="mb-2 font-serif text-lg leading-tight">
-                  <Link
-                    href={`/thoughts/${post.id.replace(/\.(md|mdx)$/, "")}`}
-                    class="hover:underline"
-                  >
-                    {post.data.title}
-                  </Link>
-                </h3>
-                <p class="mb-2 text-sm text-gray-600">{post.data.description}</p>
-                <div class="flex items-center gap-4 text-xs text-gray-500">
-                  <time>{formatDate(post.data.pubDate)}</time>
-                  {post.data.tags && post.data.tags.length > 0 && (
-                    <div class="flex gap-1">
-                      {post.data.tags.slice(0, 2).map(tag => (
-                        <Tag
-                          tag={tag}
-                          size="sm"
-                          interactive={true}
-                          href={`/thoughts/tags/${tag.toLowerCase()}`}
-                        />
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-      )
-    } -->
-
     <FooterSignature author={author} translator={translator}>
       <nav class="mt-2">
         <Link href="/thoughts" class="text-sm">← Back to thoughts</Link>
@@ -199,6 +144,5 @@ const relatedPosts = allPosts
     </FooterSignature>
   </article>
 
-  <!-- InlineNote 容器，为所有 InlineNoteRef 提供 tooltip 容器 -->
   <InlineNote />
 </Layout>
