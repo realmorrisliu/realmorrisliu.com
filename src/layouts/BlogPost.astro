@@ -151,7 +151,7 @@ const relatedPosts = allPosts
       <slot />
     </div>
 
-    <!-- {!draft && <SocialShare title={title} url={`https://realmorrisliu.com${Astro.url.pathname}`} />} -->
+    {!draft && <SocialShare title={title} url={`https://realmorrisliu.com${Astro.url.pathname}`} />}
 
     <!-- Related Articles -->
     <!-- {

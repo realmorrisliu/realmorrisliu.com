@@ -86,7 +86,7 @@ src/
 │   ├── RssIcon.astro        # RSS icon using Iconify (lucide:rss)
 │   ├── XIcon.astro          # X/Twitter icon using Iconify (logos:x)
 │   ├── HackerNewsIcon.astro # Hacker News icon using Iconify (logos:ycombinator)
-│   ├── SocialShare.astro    # Social sharing component for blog posts
+│   ├── SocialShare.astro    # Social sharing component with conversational CTA for blog posts
 │   ├── FooterSignature.astro # Reusable footer signature with navigation (uses Link)
 │   ├── ProjectItem.astro    # Reusable project display with GitHub links
 │   ├── TimelineItem.astro   # Career timeline with continuous line design
@@ -158,7 +158,7 @@ src/
 | **RssIcon.astro**          | RSS feed links (Iconify)           | `class`, `showText`                  | IconLink, Icon      |
 | **XIcon.astro**            | X/Twitter share links (Iconify)    | `href`, `class`                      | IconLink, Icon      |
 | **HackerNewsIcon.astro**   | Hacker News share links (Iconify)  | `href`, `class`                      | IconLink, Icon      |
-| **SocialShare.astro**      | Blog post social sharing           | `title`, `url`                       | XIcon, HackerNews   |
+| **SocialShare.astro**      | Blog post social sharing with conversational CTA | `title`, `url`              | XIcon, HackerNews   |
 | **TimelineItem.astro**     | Career timeline                    | `year`, `title`, `company`, `period` | -                   |
 | **ProjectItem.astro**      | Project display                    | `title`, `description`, `github`     | Link, GitHubIcon    |
 | **FormattedText.astro**    | i18n text with links               | `text`, `replacements`               | Link                |
@@ -316,7 +316,7 @@ import {Icon} from "astro-icon/components"; import IconLink from "@components/Ic
 
 **Components:**
 
-- **SocialShare.astro** - Main sharing container with X and Hacker News
+- **SocialShare.astro** - Main sharing container with X and Hacker News, uses conversational CTA ("Found this worth reading or have thoughts to share?")
 - **XIcon.astro** - X/Twitter sharing (`logos:x`)
 - **HackerNewsIcon.astro** - Hacker News sharing (`logos:ycombinator`)
 - **GitHubIcon.astro** - GitHub links (`logos:github-icon`)
