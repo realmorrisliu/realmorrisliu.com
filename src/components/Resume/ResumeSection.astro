@@ -1,0 +1,26 @@
+---
+import { cn } from "@/utils";
+
+export interface Props {
+  title: string;
+  children?: any;
+  className?: string;
+}
+
+const { title, className = "", ...props } = Astro.props;
+---
+
+<section class={cn("en:mb-0 zh:mb-1.5 mb-1", className)} {...props}>
+  <h2
+    class={cn(
+      "font-sans font-semibold uppercase",
+      "border-b border-gray-400 pb-0",
+      "tracking-wider en:tracking-wide zh:tracking-normal",
+      "mb-1 en:mb-0 zh:mb-1.5",
+      "text-resume-section en:text-resume-heading zh:text-resume-section"
+    )}
+  >
+    {title}
+  </h2>
+  <slot />
+</section>

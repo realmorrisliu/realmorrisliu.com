@@ -1,0 +1,26 @@
+---
+import { cn } from "@/utils";
+
+export interface SkillCategory {
+  title: string;
+  stack: string;
+}
+
+export interface Props {
+  categories: SkillCategory[];
+  className?: string;
+}
+
+const { categories, className = "", ...props } = Astro.props;
+---
+
+<div class={className} {...props}>
+  {
+    categories.map(category => (
+      <div class={cn("text-resume-body", "en:leading-tight zh:leading-relaxed leading-normal")}>
+        <strong class="en:font-medium zh:font-semibold font-semibold">{category.title}:</strong>{" "}
+        {category.stack}
+      </div>
+    ))
+  }
+</div>

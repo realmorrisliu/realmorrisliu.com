@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-**Version:** v2.4 | **Last Updated:** 2025-08-27
+**Version:** v2.5 | **Last Updated:** 2025-08-31
 Personal website built with Astro + Tailwind CSS, implementing letter-like aesthetic for correspondence experience.
 
 ## ⚡ Quick Reference
@@ -100,7 +100,12 @@ src/
 │   ├── Footnote.astro       # Academic-style footnotes with return links
 │   ├── FootnoteRef.astro    # Footnote references with anchor links
 │   ├── InlineNote.astro     # Global tooltip system with smart positioning (180 lines)
-│   └── InlineNoteRef.astro  # Inline note triggers with tooltip content
+│   ├── InlineNoteRef.astro  # Inline note triggers with tooltip content
+│   └── Resume/              # Resume-specific components for PDF layout
+│       ├── ProjectsList.astro    # Resume project entries with period/GitHub display
+│       ├── ResumeSection.astro   # Resume section headers with language-aware spacing
+│       ├── SkillsGrid.astro      # Skills display with category/stack formatting
+│       └── WorkExperienceList.astro # Work positions with company/period metadata
 ├── i18n/
 │   ├── translations/
 │   │   ├── en.json          # English translations
@@ -148,8 +153,11 @@ src/
 | **Width**   | `max-w-2xl` (672px)                                 | Fixed content width             |
 | **Spacing** | `mb-16`, `py-16` (64px)                             | Consistent vertical rhythm      |
 | **Style**   | No animations, shadows, decorative elements         | Extreme minimalism              |
+| **Resume**  | PDF-optimized sizing: 14pt-8pt scale                | Custom properties for print    |
 
 ### Component Registry
+
+#### **Core Components**
 
 | Component                  | Purpose                                          | Key Props                            | Dependencies        |
 | -------------------------- | ------------------------------------------------ | ------------------------------------ | ------------------- |
@@ -176,6 +184,23 @@ src/
 | **InlineNoteRef.astro**    | Inline note triggers                             | `text`, `note`                       | InlineNote          |
 | **Tag.astro**              | Smart tag display with formatting                | `tag`, `interactive`, `href`, `size` | formatTag utility   |
 
+#### **Resume Components (`src/components/Resume/`)**
+
+| Component                    | Purpose                                           | Key Props                            | Language Support    |
+| ---------------------------- | ------------------------------------------------- | ------------------------------------ | ------------------- |
+| **ResumeSection.astro**      | Section headers with language-aware spacing      | `title`, `className`                 | `en:`/`zh:` variants |
+| **SkillsGrid.astro**         | Skills display with category/stack formatting    | `categories[]`, `className`          | `en:`/`zh:` variants |
+| **WorkExperienceList.astro** | Work positions with company/period metadata      | `positions[]`, `className`           | `en:`/`zh:` variants |
+| **ProjectsList.astro**       | Project entries with period/GitHub link display  | `projects[]`, `showGithubLinks`      | `en:`/`zh:` variants |
+
+**🎯 Resume Component Features:**
+
+- **Language-aware spacing** - Different `en:`/`zh:` spacing for optimal PDF layout density
+- **TypeScript interfaces** - Strict typing for all data structures (ProjectItem, SkillCategory, etc.)
+- **PDF optimization** - Font sizes using CSS custom properties (`--text-resume-*`)
+- **Consistent styling** - Uses `cn()` utility for conditional classes
+- **Smart line heights** - `en:leading-tight zh:leading-relaxed` for text density optimization
+
 ### **⚡ Component Rules**
 
 - **TypeScript interfaces** for all props
@@ -184,6 +209,29 @@ src/
 - **Component composition** - reuse Link/IconLink base components
 - **150ms transitions** for hover effects only
 - **CSS custom properties** for design system colors: `text-text-tertiary`
+
+### **📄 Resume Components Architecture**
+
+**Language-Aware Styling System:**
+
+- **Custom Tailwind variants**: `@variant en (:lang(en) &);` and `@variant zh (:lang(zh) &);` in `global.css`
+- **Conditional spacing**: Different margins/line heights for English vs Chinese content density
+- **PDF font sizing**: Uses CSS custom properties (`--text-resume-name: 14pt`, etc.)
+- **Smart imports**: Resume components import `cn` utility for conditional class handling
+
+**Component Responsibilities:**
+
+- **ResumeSection**: Standardized section headers with border-bottom styling
+- **SkillsGrid**: Category-based skills display with bold labels
+- **WorkExperienceList**: Position entries with company/period metadata alignment
+- **ProjectsList**: Project listings with optional GitHub links and period display
+
+**Key Implementation Details:**
+
+- **Break-inside-avoid**: Prevents awkward page breaks in PDF output
+- **Responsive typography**: Different line heights for optimal readability by language
+- **Consistent interfaces**: TypeScript interfaces ensure data structure consistency
+- **Modular design**: Each component handles one specific resume section type
 
 ### **🏗️ Code Organization Best Practices**
 
@@ -461,8 +509,8 @@ import { getCollection } from "astro:content";
 | **Build Format**    | `{ format: "file" }`         | Generates `.html` files                                |
 | **Fonts**           | Fontsource local hosting     | Inter (variable) + EB Garamond (variable) + Maple Mono |
 | **CSS Files**       | `global.css` + `prose.css`   | Design system + Typography overrides                   |
-| **Tailwind**        | v4 via Vite plugin           | Custom `@theme` block, Typography plugin               |
-| **Chinese Support** | Optimized font stacks        | Mixed-language content handling                        |
+| **Tailwind**        | v4 via Vite plugin           | Custom `@theme` block, Typography plugin + Language variants |
+| **Chinese Support** | Optimized font stacks        | Mixed-language content handling + `en:`/`zh:` variants      |
 
 ### Dependencies
 
@@ -524,3 +572,5 @@ import { getCollection } from "astro:content";
 8. **Path aliases make refactoring safer and imports cleaner**
 9. **Use Iconify for all icons** - install icon sets as dependencies with `@iconify-json/[name]`
 10. **Social sharing integrated** - SocialShare component automatically added to all blog posts
+11. **Resume components available** - Use dedicated Resume/ folder components for PDF layouts
+12. **Language variants enabled** - Use `en:`/`zh:` Tailwind variants for responsive typography

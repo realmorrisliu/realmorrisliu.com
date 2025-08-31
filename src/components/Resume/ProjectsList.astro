@@ -1,0 +1,64 @@
+---
+import { cn } from "@/utils";
+
+export interface ProjectItem {
+  title: string;
+  description: string;
+  period?: string;
+  details?: string[];
+  githubUrl?: string;
+}
+
+export interface Props {
+  projects: ProjectItem[];
+  className?: string;
+  showGithubLinks?: boolean;
+}
+
+const { projects, className = "", showGithubLinks = false, ...props } = Astro.props;
+---
+
+<div class={className} {...props}>
+  {
+    projects.map(project => (
+      <div class="en:mb-0 zh:mb-1 mb-1">
+        {project.period ? (
+          <div class="mb-px flex items-baseline justify-between">
+            <h3
+              class={cn(
+                "text-resume-heading m-0 flex-1",
+                "en:font-medium zh:font-semibold font-semibold"
+              )}
+            >
+              {project.title}
+            </h3>
+            <span class="text-resume-meta whitespace-nowrap text-gray-600">{project.period}</span>
+          </div>
+        ) : (
+          <h3
+            class={cn(
+              "text-resume-heading m-0 flex-1",
+              "en:font-medium zh:font-semibold font-semibold"
+            )}
+          >
+            {project.title}
+            {showGithubLinks && project.githubUrl && (
+              <span class="text-resume-meta font-normal text-gray-600">
+                {" "}
+                • GitHub: {project.githubUrl.replace("https://github.com/", "")}
+              </span>
+            )}
+          </h3>
+        )}
+        <p
+          class={cn(
+            "text-resume-body m-0 mb-0.5 text-gray-700",
+            "en:leading-tight zh:leading-relaxed leading-normal"
+          )}
+        >
+          {project.description}
+        </p>
+      </div>
+    ))
+  }
+</div>

@@ -1,0 +1,46 @@
+---
+import { cn } from "@/utils";
+
+export interface WorkPosition {
+  title: string;
+  company: string;
+  period: string;
+  description: string;
+}
+
+export interface Props {
+  positions: WorkPosition[];
+  className?: string;
+}
+
+const { positions, className = "", ...props } = Astro.props;
+---
+
+<div class={className} {...props}>
+  {
+    positions.map(position => (
+      <div class={cn("mb-1 break-inside-avoid", "en:mb-0 zh:mb-1 mb-1")}>
+        <div class={cn("flex items-baseline justify-between", "en:mb-0 zh:mb-1 mb-1")}>
+          <h3
+            class={cn("text-resume-heading m-0", "en:font-medium zh:font-semibold font-semibold")}
+          >
+            {position.title}
+          </h3>
+          <div class="text-resume-meta flex items-center gap-1 whitespace-nowrap text-gray-600">
+            <span class="font-medium text-gray-700">{position.company}</span>
+            <span class="text-gray-500">•</span>
+            <span class="text-gray-600">{position.period}</span>
+          </div>
+        </div>
+        <p
+          class={cn(
+            "text-resume-body m-0 text-gray-700",
+            "en:leading-tight zh:leading-relaxed leading-normal"
+          )}
+        >
+          {position.description}
+        </p>
+      </div>
+    ))
+  }
+</div>
