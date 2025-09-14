@@ -28,43 +28,49 @@
           "year": "2024",
           "title": "AI Infrastructure Architect",
           "company": "UniXYZ",
-          "period": "May 2024 - Present",
-          "description": "Transitioned from enterprise CAD platforms to focus on cutting-edge AI infrastructure challenges. Architecting comprehensive AI stack (K8s + PostgreSQL + ClickHouse + RisingWave + Kafka + Qdrant) for enterprise e-commerce automation. Applied infrastructure optimization expertise to reduce memory usage from 200GB to 20-30GB and monthly cloud costs by 80%, achieving 99.95% SLA."
+          "period": "May 2024 - Sep 2025",
+          "description": "Transitioned from enterprise CAD platforms to focus on cutting-edge AI infrastructure challenges. Architecting comprehensive AI stack (K8s + PostgreSQL + ClickHouse + RisingWave + Kafka + Qdrant) for enterprise e-commerce automation. Applied infrastructure optimization expertise to reduce memory usage from 200GB to 20-30GB and monthly cloud costs by 80%, achieving 99.95% SLA.",
+          "showInPdf": true
         },
         {
           "year": "2021",
           "title": "CTO",
           "company": "EverXYZ",
           "period": "Sep 2021 - May 2024",
-          "description": "Promoted to CTO as company entered MiraclePlus (YC China) accelerator program. Led company growth from 4-person startup to 30+ team, scaling engineering from 2 to 20 people. Introduced Serverless processing with Knative for cost-efficient CAD model processing. Secured funding from prominent investors including Sequoia, ZhenFund, and MiraclePlus while driving revenue from zero to millions. As CTO, also contributed directly to business development, personally closing 5 enterprise clients."
+          "description": "Promoted to CTO as company entered MiraclePlus (YC China) accelerator program. Led company growth from 4-person startup to 30+ team, scaling engineering from 2 to 20 people. Introduced Serverless processing with Knative for cost-efficient CAD model processing. Secured funding from prominent investors including Sequoia, ZhenFund, and MiraclePlus while driving revenue from zero to millions. As CTO, also contributed directly to business development, personally closing 5 enterprise clients.",
+          "showInPdf": true
         },
         {
           "year": "2020",
           "title": "Tech Lead & Team Manager",
           "company": "EverXYZ",
           "period": "Jan 2020 - Sep 2021",
-          "description": "Built modern development organization from ground up, transforming from ad-hoc processes to structured 2-week sprint cycles with comprehensive CI/CD pipeline using GitLab. Based on deep insights into customer needs for managing mechanical design project files, proposed and implemented Git-inspired version control system, developed in Rust for performance optimization. Established automated testing framework and trunk-based development, while migrating architecture from single-machine deployment to high-availability K8s clusters. Mentored 2 fresh graduates and 3 junior engineers, with team members later taking key roles at other companies."
+          "description": "Built modern development organization from ground up, transforming from ad-hoc processes to structured 2-week sprint cycles with comprehensive CI/CD pipeline using GitLab. Based on deep insights into customer needs for managing mechanical design project files, proposed and implemented Git-inspired version control system, developed in Rust for performance optimization. Established automated testing framework and trunk-based development, while migrating architecture from single-machine deployment to high-availability K8s clusters. Mentored 2 fresh graduates and 3 junior engineers, with team members later taking key roles at other companies.",
+          "showInPdf": true
         },
         {
           "year": "2019",
           "title": "Full-Stack Engineer",
           "company": "EverXYZ",
           "period": "Feb 2019 - Dec 2019",
-          "description": "Joined as employee #4 when company had only 2 technical staff total. Architected entire CAD platform from zero, focusing on 3D CAD model online preview functionality and simple single-file version control. Built EverCraft platform MVP using React and Next.js, delivering a complete minimum viable product loop that established the technical foundation for future development."
+          "description": "Joined as employee #4 when company had only 2 technical staff total. Architected entire CAD platform from zero, focusing on 3D CAD model online preview functionality and simple single-file version control. Built EverCraft platform MVP using React and Next.js, delivering a complete minimum viable product loop that established the technical foundation for future development.",
+          "showInPdf": true
         },
         {
           "year": "2018",
           "title": "Frontend Engineer",
           "company": "Meituan",
           "period": "Jul 2018 - Jan 2019",
-          "description": "Developed data analytics modules for multi-store management system handling significant daily transaction volumes. Built reusable component library that improved development efficiency, resolved critical cross-browser compatibility issues enhancing user experience across IE9+ and modern browsers."
+          "description": "Developed data analytics modules for multi-store management system handling significant daily transaction volumes. Built reusable component library that improved development efficiency, resolved critical cross-browser compatibility issues enhancing user experience across IE9+ and modern browsers.",
+          "showInPdf": true
         },
         {
           "year": "2017",
           "title": "Intern",
           "company": "Meituan",
           "period": "Jul 2017 - Sep 2017",
-          "description": "Joined early-stage team for Kemanman project development. Implemented customer-facing membership card features supporting substantial user base, contributed core functionality that became foundational to the product's success."
+          "description": "Joined early-stage team for Kemanman project development. Implemented customer-facing membership card features supporting substantial user base, contributed core functionality that became foundational to the product's success.",
+          "showInPdf": false
         }
       ]
     },
@@ -75,16 +81,30 @@
         "title": "Work Projects",
         "items": [
           {
+            "title": "Cross-Border E-commerce Supply Chain Tools",
+            "company": "UniXYZ",
+            "period": "2025",
+            "description": "Developed a suite of specialized efficiency tools targeting cross-border e-commerce supply chain optimization, focusing on customization workflows and visual preview capabilities.",
+            "details": [
+              "path-offset: Advanced acrylic cutting layout optimization tool that maximizes material utilization while minimizing waste through intelligent nesting algorithms.",
+              "sticker: 3D preview tool for custom sticker design and visualization, enabling real-time preview of designs on various surfaces and materials with accurate lighting and texture rendering.",
+              "crystal: Custom crystal product 3D preview tool leveraging drei's MeshRefractionMaterial and MeshTransmissionMaterial to achieve photorealistic light refraction and transmission effects, providing customers with accurate product visualization.",
+              "styled-paint: Stable and consistent stylization tool built on Google's nano-banana model, delivering fast and reliable style transfer for product customization with excellent consistency across different input types."
+            ],
+            "showInPdf": true
+          },
+          {
             "title": "X-Elephant: AI for Sales & Support",
             "company": "UniXYZ",
-            "period": "2024 - Present",
+            "period": "2024 - 2025",
             "description": "Architected comprehensive AI infrastructure stack for enterprise e-commerce automation, enabling 24/7 multilingual customer service with 80%+ accuracy rates exceeding human agents.",
             "details": [
               "Infrastructure Architecture: Designed resilient AI platform combining transactional (PostgreSQL), analytical (ClickHouse), vector (Qdrant), and streaming (Kafka) databases with Kubernetes orchestration, achieving 99.95% SLA through strategic high-availability configurations.",
               "Memory Optimization: Developed custom Rust tooling for Qdrant data consolidation following vector database best practices, reducing memory footprint from 200GB to 20-30GB through intelligent data merging strategies, enabling 100+ real-time product updates per minute.",
               "Cost Engineering: Comprehensive system optimization reducing monthly cloud costs by 80% through multiple strategies: custom Rust tools for database optimization (handling 100M+ record tables), intelligent resource allocation, and infrastructure right-sizing.",
               "Business Impact: AI Sales Agent has generated millions of dollars in sales for clients, with chatbot providing superior accuracy compared to human customer service."
-            ]
+            ],
+            "showInPdf": true
           },
           {
             "title": "EverCraft: Version Control System for CAD Files",
@@ -95,7 +115,8 @@
               "System Architecture: Built distributed storage system managing massive CAD files with version tracking across 20+ supported formats, achieving 99.99% uptime with robust branching and merging capabilities.",
               "3D Visualization Integration: Integrated fractal3D engine for real-time browser-based CAD preview and collaborative annotation, enabling seamless engineering workflow integration.",
               "Business Development: Led technical strategy serving 20+ enterprise clients plus 100k+ free-tier users, personally closed 5 enterprise sales deals while scaling technical infrastructure."
-            ]
+            ],
+            "showInPdf": true
           },
           {
             "title": "EverCraft Lite: Local CAD Version Control",
@@ -106,7 +127,8 @@
               "Rust Performance Engineering: Developed cross-platform desktop application for Windows/macOS, delivering extremely fast local file processing with minimal memory usage and exceptional stability.",
               "File Processing Optimization: Engineered efficient handling of CAD files with optimized algorithms, demonstrating significant performance advantages over web-based solutions.",
               "Market Success: Achieved high monthly subscription retention rates with strong user satisfaction, serving individual engineers and small teams with reliable local version control solution."
-            ]
+            ],
+            "showInPdf": true
           },
           {
             "title": "fractal3D: 3D CAD Visualization Engine",
@@ -117,7 +139,8 @@
               "Team Leadership: Directed 5-person engineering team through complete product lifecycle from concept to production deployment, with end-users reaching significant monthly active usage through client platforms.",
               "WebGL Technical Innovation: Architected browser-based 3D rendering engine with industry-leading performance for large assembly loading, stably processing CAD components up to 500MB with optimized visualization.",
               "Production Integration: Enabled 10+ clients to integrate CAD model preview capabilities into their platforms, providing end-users with seamless 3D visualization directly in web browsers."
-            ]
+            ],
+            "showInPdf": true
           }
         ]
       },
@@ -133,17 +156,20 @@
               "href": "/thoughts/why-i-built-sealbox",
               "linkText": "Why I Built Sealbox",
               "suffix": ""
-            }
+            },
+            "showInPdf": true
           },
           {
             "title": "openrouter-rs",
             "description": "Type-safe Rust SDK for OpenRouter.ai with async support and builder patterns. Leverages Rust's type system to make LLM API interactions predictable and memory-safe, supporting everything from simple completions to streaming responses.",
-            "githubUrl": "https://github.com/realmorrisliu/openrouter-rs"
+            "githubUrl": "https://github.com/realmorrisliu/openrouter-rs",
+            "showInPdf": true
           },
           {
             "title": "funcall",
             "description": "A lightweight Rust library that transforms regular functions into dynamically callable JSON tools with a single `#[funcall]` macro. Minimal boilerplate, type-safe serialization, and runtime function invocation by name.",
-            "githubUrl": "https://github.com/realmorrisliu/funcall"
+            "githubUrl": "https://github.com/realmorrisliu/funcall",
+            "showInPdf": true
           },
           {
             "title": "Kira",
@@ -153,7 +179,8 @@
               "href": "/thoughts/building-kira-an-ai-native-second-brain",
               "linkText": "Building Kira: An AI-Native Second Brain",
               "suffix": ""
-            }
+            },
+            "showInPdf": false
           }
         ]
       }

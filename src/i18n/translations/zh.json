@@ -28,43 +28,49 @@
           "year": "2024",
           "title": "AI 基础设施负责人",
           "company": "UniXYZ",
-          "period": "2024年 5月 - 至今",
-          "description": "从企业 CAD 平台转向 AI 基础设施领域，专注前沿技术挑战。主导完整 AI 技术栈架构（K8s + PostgreSQL + ClickHouse + RisingWave + Kafka + Qdrant）服务企业级电商自动化。应用基础设施优化专长，实现内存从 200GB 降至 20-30GB、月度成本降低 80% 并保持 99.95% SLA。"
+          "period": "2024年 5月 - 2025年 9月",
+          "description": "从企业 CAD 平台转向 AI 基础设施领域，专注前沿技术挑战。主导完整 AI 技术栈架构（K8s + PostgreSQL + ClickHouse + RisingWave + Kafka + Qdrant）服务企业级电商自动化。应用基础设施优化专长，实现内存从 200GB 降至 20-30GB、月度成本降低 80% 并保持 99.95% SLA。",
+          "showInPdf": true
         },
         {
           "year": "2021",
           "title": "CTO",
           "company": "EverXYZ",
           "period": "2021年 9月 - 2024年 5月",
-          "description": "公司入选奇绩创坛（原 YC 中国）加速器时晋升为 CTO。主导公司从 4 人初创发展至 30+ 人团队，工程团队从 2 人扩展至 20 人规模。引入基于 Knative 的 Serverless CAD 模型处理优化成本，获得红杉、真格、奇绩创坛等知名机构投资，推动营收从 0 增长至数百万级。作为 CTO 期间也直接参与业务拓展，亲自签约 5 个企业客户。"
+          "description": "公司入选奇绩创坛（原 YC 中国）加速器时晋升为 CTO。主导公司从 4 人初创发展至 30+ 人团队，工程团队从 2 人扩展至 20 人规模。引入基于 Knative 的 Serverless CAD 模型处理优化成本，获得红杉、真格、奇绩创坛等知名机构投资，推动营收从 0 增长至数百万级。作为 CTO 期间也直接参与业务拓展，亲自签约 5 个企业客户。",
+          "showInPdf": true
         },
         {
           "year": "2020",
           "title": "技术负责人",
           "company": "EverXYZ",
           "period": "2020年 1月 - 2021年 9月",
-          "description": "从零构建现代化开发组织，将小作坊式开发模式转型为基于 GitLab CI/CD 的规范化两周迭代流程。基于对客户管理机械设计项目文件需求的深度洞察，提出并实现了受 Git 启发的版本控制系统，使用 Rust 开发以保证性能。建立自动化测试框架和主干开发模式，同时推动技术架构从单机部署演进至 K8s 高可用集群。培养 2 名应届毕业生和 3 名初级工程师，多名团队成员后来在其他公司担任重要角色。"
+          "description": "从零构建现代化开发组织，将小作坊式开发模式转型为基于 GitLab CI/CD 的规范化两周迭代流程。基于对客户管理机械设计项目文件需求的深度洞察，提出并实现了受 Git 启发的版本控制系统，使用 Rust 开发以保证性能。建立自动化测试框架和主干开发模式，同时推动技术架构从单机部署演进至 K8s 高可用集群。培养 2 名应届毕业生和 3 名初级工程师，多名团队成员后来在其他公司担任重要角色。",
+          "showInPdf": true
         },
         {
           "year": "2019",
           "title": "全栈工程师",
           "company": "EverXYZ",
           "period": "2019年 2月 - 2019年 12月",
-          "description": "作为第 4 号员工加入时，公司仅有 2 名技术人员。主导整个 CAD 平台从零构建，专注实现 3D CAD 模型的在线预览功能和简单的单文件版本控制。基于 React 和 Next.js 构建了 EverCraft 平台的 MVP 版本，完成了完整的最小功能闭环，为后续产品发展奠定了技术基础。"
+          "description": "作为第 4 号员工加入时，公司仅有 2 名技术人员。主导整个 CAD 平台从零构建，专注实现 3D CAD 模型的在线预览功能和简单的单文件版本控制。基于 React 和 Next.js 构建了 EverCraft 平台的 MVP 版本，完成了完整的最小功能闭环，为后续产品发展奠定了技术基础。",
+          "showInPdf": true
         },
         {
           "year": "2018",
           "title": "前端工程师",
           "company": "美团",
           "period": "2018年 7月 - 2019年 1月",
-          "description": "负责数据分析模块开发，处理多店管理系统的大量日常交易数据。构建可复用组件库提升开发效率，解决IE9+及现代浏览器的关键兼容性问题，显著改善用户体验。"
+          "description": "负责数据分析模块开发，处理多店管理系统的大量日常交易数据。构建可复用组件库提升开发效率，解决IE9+及现代浏览器的关键兼容性问题，显著改善用户体验。",
+          "showInPdf": true
         },
         {
           "year": "2017",
           "title": "实习生",
           "company": "美团",
           "period": "2017年 7月 - 2017年 9月",
-          "description": "作为客满满项目早期团队成员参与核心功能开发。实现面向用户的会员卡功能模块，支撑大量用户使用，为产品后续发展奠定了技术基础。"
+          "description": "作为客满满项目早期团队成员参与核心功能开发。实现面向用户的会员卡功能模块，支撑大量用户使用，为产品后续发展奠定了技术基础。",
+          "showInPdf": false
         }
       ]
     },
@@ -75,16 +81,30 @@
         "title": "工作项目",
         "items": [
           {
+            "title": "跨境电商供应链效率工具",
+            "company": "UniXYZ",
+            "period": "2025年",
+            "description": "开发了一套针对跨境电商供应链优化的专业效率工具，专注于定制化工作流程和可视化预览能力。",
+            "details": [
+              "path-offset: 高级亚克力切割布局优化工具，通过智能排版算法最大化材料利用率，同时最小化浪费。",
+              "sticker: 定制贴纸设计的 3D 预览工具，实现设计在各种表面和材料上的实时预览，具有精确的光照和纹理渲染效果。",
+              "crystal: 定制水晶产品 3D 预览工具，利用 drei 的 MeshRefractionMaterial 和 MeshTransmissionMaterial 实现逼真的光线折射和透射效果，为客户提供精确的产品可视化。",
+              "styled-paint: 基于 Google nano-banana 模型构建的稳定一致的风格化工具，为产品定制提供快速可靠的风格转换，在不同输入类型上保持出色的一致性。"
+            ],
+            "showInPdf": true
+          },
+          {
             "title": "小象快答：AI 销售与客服自动化平台",
             "company": "UniXYZ",
-            "period": "2024年 - 至今",
+            "period": "2024年 - 2025年",
             "description": "主导企业级电商自动化平台的完整 AI 基础设施架构，实现 7x24 小时多语言智能客服，准确率超 80% 甚至高于人工客服。",
             "details": [
               "基础设施架构：设计弹性 AI 平台，事务型（PostgreSQL）、分析型（ClickHouse）、向量（Qdrant）和流式（Kafka）数据库，配合 Kubernetes 编排，通过策略性高可用部署实现 99.95% SLA。",
               "内存优化：针对 Qdrant 向量数据库的设计特性开发 Rust 工具，实现数据合并优化遵循 Qdrant 文档中的最佳实践，将内存占用从 200GB 降至 20-30GB，同时支持每分钟 100+ 商品的实时更新。",
               "成本工程：系统性成本优化将月度云服务成本降低 80%，包括多个维度：自研 Rust 工具优化数据库（处理 1 亿+记录表）、智能资源配置、基础设施规模优化。",
               "商业价值：AI 销售助手已帮助客户实现数百万美元的销售额，智能客服准确率显著超越传统人工服务。"
-            ]
+            ],
+            "showInPdf": true
           },
           {
             "title": "追光几何：CAD 文件版本控制系统",
@@ -95,7 +115,8 @@
               "系统架构：构建分布式存储系统管理海量 CAD 文件，支持 20+ 格式版本追踪，实现 99.99% 可用性和强大的分支合并功能。",
               "3D 可视化集成：集成 fractal3D 引擎实现基于浏览器的 CAD 实时预览和协作标注，使工程流程集成无缝衔接。",
               "商务发展：主导技术策略服务 20+ 企业客户和 10w+ 免费用户，作为 CTO 同时亲自签约 5 个企业客户。"
-            ]
+            ],
+            "showInPdf": true
           },
           {
             "title": "追光几何 Lite：本地 CAD 版本控制",
@@ -106,7 +127,8 @@
               "Rust 性能工程：开发跨平台桌面应用支持 Windows/macOS，提供极快的本地文件处理速度、极低的内存占用和异常稳定的运行表现。",
               "文件处理优化：设计高效的 CAD 文件处理算法，相比 Web 方案展现显著的性能优势。",
               "市场成功：面向个人工程师和小团队市场实现高月订阅留存率，用户满意度较高，提供可靠的本地版本控制解决方案。"
-            ]
+            ],
+            "showInPdf": true
           },
           {
             "title": "分形三维：3D CAD 可视化引擎",
@@ -117,7 +139,8 @@
               "团队领导：指导 5 人工程团队完成产品从概念到生产部署的完整生命周期，最终用户通过客户平台达到显著的月活使用量。",
               "WebGL 技术创新：架构基于浏览器的 3D 渲染引擎，在大型装配体加载方面达到行业领先性能，稳定处理 500MB 以内 CAD 组件并优化可视化效果。",
               "生产集成：使 10+ 客户能够将 CAD 模型预览功能集成到他们的平台中，为终端用户提供浏览器中的无缝 3D 可视化体验。"
-            ]
+            ],
+            "showInPdf": true
           }
         ]
       },
@@ -133,17 +156,20 @@
               "href": "/thoughts/why-i-built-sealbox",
               "linkText": "《为什么我做Sealbox》",
               "suffix": "中看这个项目背后的故事"
-            }
+            },
+            "showInPdf": true
           },
           {
             "title": "openrouter-rs",
             "description": "为 OpenRouter.ai 打造的类型安全 Rust SDK，支持异步和建造者模式。利用 Rust 的类型系统让 LLM API 交互变得可预测和内存安全，支持从简单的完成到流式响应的所有功能。",
-            "githubUrl": "https://github.com/realmorrisliu/openrouter-rs"
+            "githubUrl": "https://github.com/realmorrisliu/openrouter-rs",
+            "showInPdf": true
           },
           {
             "title": "funcall",
             "description": "一个轻量级的 Rust 库，只需要一个 `#[funcall]` 宏就能把普通函数转换成可动态调用的 JSON 工具。最少的样板代码、类型安全的序列化，以及按名称的运行时函数调用。",
-            "githubUrl": "https://github.com/realmorrisliu/funcall"
+            "githubUrl": "https://github.com/realmorrisliu/funcall",
+            "showInPdf": true
           },
           {
             "title": "Kira",
@@ -153,7 +179,8 @@
               "href": "/thoughts/building-kira-an-ai-native-second-brain",
               "linkText": "《构建 Kira：一个 AI 原生的第二大脑》",
               "suffix": "中了解更多的愿景和设计理念"
-            }
+            },
+            "showInPdf": false
           }
         ]
       }

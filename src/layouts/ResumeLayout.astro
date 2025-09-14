@@ -16,6 +16,15 @@ const { currentLang } = Astro.props;
 const t = getTranslations(currentLang);
 const htmlLang = getHtmlLangAttribute(currentLang);
 
+// Filter content for PDF display - only show items where showInPdf is not false
+const pdfPositions = t.soFar.work.positions.filter(position => position.showInPdf !== false);
+const pdfWorkProjects = t.soFar.projects.workProjects.items.filter(
+  project => project.showInPdf !== false
+);
+const pdfPersonalProjects = t.soFar.projects.personalProjects.items.filter(
+  project => project.showInPdf !== false
+);
+
 // Generate page title and description from translations
 const pageTitle = t.soFar.pdf.pageTitle;
 const pageDescription = t.soFar.pdf.pageDescription;
@@ -178,17 +187,17 @@ const alternateLanguages =
 
       <!-- Work Experience -->
       <ResumeSection title={t.soFar.work.title}>
-        <WorkExperienceList positions={t.soFar.work.positions} />
+        <WorkExperienceList positions={pdfPositions} />
       </ResumeSection>
 
       <!-- Work Projects -->
       <ResumeSection title={t.soFar.projects.workProjects.title}>
-        <ProjectsList projects={t.soFar.projects.workProjects.items} />
+        <ProjectsList projects={pdfWorkProjects} />
       </ResumeSection>
 
       <!-- Personal Projects -->
       <ResumeSection title={t.soFar.projects.personalProjects.title}>
-        <ProjectsList projects={t.soFar.projects.personalProjects.items} showGithubLinks={true} />
+        <ProjectsList projects={pdfPersonalProjects} showGithubLinks={true} />
       </ResumeSection>
     </div>
 

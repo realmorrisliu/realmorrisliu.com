@@ -6,6 +6,7 @@ export interface WorkPosition {
   company: string;
   period: string;
   description: string;
+  showInPdf?: boolean;
 }
 
 export interface Props {
@@ -35,7 +36,7 @@ const { positions, className = "", ...props } = Astro.props;
         <p
           class={cn(
             "text-resume-body m-0 text-gray-700",
-            "en:leading-tight zh:leading-relaxed leading-normal"
+            "en:leading-tight zh:leading-normal leading-normal"
           )}
         >
           {position.description}
