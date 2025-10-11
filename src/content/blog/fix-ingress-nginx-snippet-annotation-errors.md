@@ -4,6 +4,7 @@ description: "Encountering 'nginx.ingress.kubernetes.io/server-snippet annotatio
 pubDate: 2025-08-20
 tags: ["kubernetes", "devops", "infrastructure", "security", "troubleshooting"]
 draft: false
+readingTime: 3
 ---
 
 Deployed a fresh Kubernetes cluster today and hit a wall I'd never seen before. My ingress-nginx Helm deployment failed with errors I'd never encountered in previous setups.

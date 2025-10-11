@@ -4,6 +4,7 @@ description: "Learn Rust builder pattern with derive_builder crate. Step-by-step
 pubDate: 2025-08-06
 tags: ["rust", "api-design", "design-patterns", "software-engineering", "type-systems"]
 draft: false
+readingTime: 8
 ---
 
 Building openrouter-rs started simply enough. A few request structs, some HTTP calls, done. But AI APIs are... thorough. OpenRouter's chat completion endpoint supports reasoning tokens, tool calling, response formatting, streaming options, and about twenty other parameters.
