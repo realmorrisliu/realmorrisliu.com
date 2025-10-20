@@ -25,6 +25,14 @@
       "description": "七年时间，从写代码的工程师变成带团队的负责人。每个阶段都有不同的收获——有技术上的，有管理上的，还有怎么在快速迭代和长期稳定性之间找平衡。",
       "positions": [
         {
+          "year": "2025",
+          "title": "技术负责人",
+          "company": "万里客",
+          "period": "2025年 9月 - 至今",
+          "description": "加入早期阶段的 AI 创业公司，作为创始技术负责人从零构建 B2B Sales Agent 平台。主导完整技术栈决策（LangGraph + FastAPI 后端、React + Vercel AI SDK 前端），打造 7x24 小时多语言销售自动化系统。正在构建生产级基础设施（K8s + Flux CD 实现 GitOps 工作流）并开发核心 Agent 能力，同时建立工程文化和开发流程。",
+          "showInPdf": true
+        },
+        {
           "year": "2024",
           "title": "AI 基础设施负责人",
           "company": "UniXYZ",
@@ -81,6 +89,19 @@
         "title": "工作项目",
         "items": [
           {
+            "title": "万里客：B2B Sales Agent 平台",
+            "company": "万里客",
+            "period": "2025年 - 至今",
+            "description": "作为创始技术负责人从零架构和构建 B2B Sales Agent 平台，为企业客户提供 7x24 小时多语言自动化销售互动能力。",
+            "details": [
+              "技术架构：设计完整技术栈，使用 LangGraph 进行 Agent 编排、FastAPI 后端服务、React + Vercel AI SDK 前端，实现具有上下文感知能力的智能多轮销售对话。",
+              "基础设施工程：构建生产级 Kubernetes 基础设施，使用 Flux CD 实现 GitOps 工作流进行自动化部署，为 AI 服务建立可扩展基础并配备完善的监控和可观测性。",
+              "Agent 开发：开发核心 Agent 能力，包括智能线索筛选、个性化触达、跨语言跨渠道的自动化跟进，注重自然对话流程和高转化率。",
+              "团队与流程：为早期团队建立工程文化和开发流程，搭建 CI/CD 流水线、代码审查标准和技术文档规范，为可持续增长奠定基础。"
+            ],
+            "showInPdf": true
+          },
+          {
             "title": "跨境电商供应链效率工具",
             "company": "UniXYZ",
             "period": "2025年",
@@ -91,7 +112,7 @@
               "crystal: 定制水晶产品 3D 预览工具，利用 drei 的 MeshRefractionMaterial 和 MeshTransmissionMaterial 实现逼真的光线折射和透射效果，为客户提供精确的产品可视化。",
               "styled-paint: 基于 Google nano-banana 模型构建的稳定一致的风格化工具，为产品定制提供快速可靠的风格转换，在不同输入类型上保持出色的一致性。"
             ],
-            "showInPdf": true
+            "showInPdf": false
           },
           {
             "title": "小象快答：AI 销售与客服自动化平台",

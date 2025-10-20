@@ -25,6 +25,14 @@
       "description": "Seven years of growth from individual contributor to team leader. Each role taught me something different about technology, people, and the balance between moving fast and building things that last.",
       "positions": [
         {
+          "year": "2025",
+          "title": "Head of Engineering",
+          "company": "Workus AI",
+          "period": "Sep 2025 - Present",
+          "description": "Joined seed-stage AI startup as founding engineering leader to architect and build B2B Sales Agent platform from scratch. Leading full technical stack decisions (LangGraph + FastAPI backend, React + Vercel AI SDK frontend) for 24/7 multilingual sales automation system. Building production-grade infrastructure (K8s + Flux CD for GitOps workflow) and developing core Agent capabilities while establishing engineering culture and development workflows.",
+          "showInPdf": true
+        },
+        {
           "year": "2024",
           "title": "AI Infrastructure Architect",
           "company": "UniXYZ",
@@ -81,6 +89,19 @@
         "title": "Work Projects",
         "items": [
           {
+            "title": "Workus AI: B2B Sales Agent Platform",
+            "company": "Workus AI",
+            "period": "2025 - Present",
+            "description": "Architecting and building B2B Sales Agent platform from ground up as founding engineering leader, enabling 24/7 multilingual automated sales engagement for enterprise clients.",
+            "details": [
+              "Technical Architecture: Designed complete technical stack with LangGraph for Agent orchestration, FastAPI backend services, and React + Vercel AI SDK frontend, enabling intelligent multi-turn sales conversations with context awareness.",
+              "Infrastructure Engineering: Building production-grade Kubernetes infrastructure with Flux CD implementing GitOps workflow for automated deployments, establishing scalable foundation for AI services with proper monitoring and observability.",
+              "Agent Development: Developing core Agent capabilities for intelligent lead qualification, personalized outreach, and automated follow-ups across multiple languages and channels, focusing on natural conversation flow and high conversion rates.",
+              "Team & Process: Establishing engineering culture and development workflows for early-stage team, setting up CI/CD pipelines, code review standards, and technical documentation practices for sustainable growth."
+            ],
+            "showInPdf": false
+          },
+          {
             "title": "Cross-Border E-commerce Supply Chain Tools",
             "company": "UniXYZ",
             "period": "2025",
@@ -91,7 +112,7 @@
               "crystal: Custom crystal product 3D preview tool leveraging drei's MeshRefractionMaterial and MeshTransmissionMaterial to achieve photorealistic light refraction and transmission effects, providing customers with accurate product visualization.",
               "styled-paint: Stable and consistent stylization tool built on Google's nano-banana model, delivering fast and reliable style transfer for product customization with excellent consistency across different input types."
             ],
-            "showInPdf": true
+            "showInPdf": false
           },
           {
             "title": "X-Elephant: AI for Sales & Support",
