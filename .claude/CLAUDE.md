@@ -153,7 +153,7 @@ src/
 | **Width**   | `max-w-2xl` (672px)                                 | Fixed content width             |
 | **Spacing** | `mb-16`, `py-16` (64px)                             | Consistent vertical rhythm      |
 | **Style**   | No animations, shadows, decorative elements         | Extreme minimalism              |
-| **Resume**  | PDF-optimized sizing: 14pt-8pt scale                | Custom properties for print    |
+| **Resume**  | PDF-optimized sizing: 14pt-8pt scale                | Custom properties for print     |
 
 ### Component Registry
 
@@ -186,12 +186,12 @@ src/
 
 #### **Resume Components (`src/components/Resume/`)**
 
-| Component                    | Purpose                                           | Key Props                            | Language Support    |
-| ---------------------------- | ------------------------------------------------- | ------------------------------------ | ------------------- |
-| **ResumeSection.astro**      | Section headers with language-aware spacing      | `title`, `className`                 | `en:`/`zh:` variants |
-| **SkillsGrid.astro**         | Skills display with category/stack formatting    | `categories[]`, `className`          | `en:`/`zh:` variants |
-| **WorkExperienceList.astro** | Work positions with company/period metadata      | `positions[]`, `className`           | `en:`/`zh:` variants |
-| **ProjectsList.astro**       | Project entries with period/GitHub link display  | `projects[]`, `showGithubLinks`      | `en:`/`zh:` variants |
+| Component                    | Purpose                                         | Key Props                       | Language Support     |
+| ---------------------------- | ----------------------------------------------- | ------------------------------- | -------------------- |
+| **ResumeSection.astro**      | Section headers with language-aware spacing     | `title`, `className`            | `en:`/`zh:` variants |
+| **SkillsGrid.astro**         | Skills display with category/stack formatting   | `categories[]`, `className`     | `en:`/`zh:` variants |
+| **WorkExperienceList.astro** | Work positions with company/period metadata     | `positions[]`, `className`      | `en:`/`zh:` variants |
+| **ProjectsList.astro**       | Project entries with period/GitHub link display | `projects[]`, `showGithubLinks` | `en:`/`zh:` variants |
 
 **🎯 Resume Component Features:**
 
@@ -501,16 +501,16 @@ import { getCollection } from "astro:content";
 
 ### Configuration
 
-| Setting             | Value                        | Purpose                                                |
-| ------------------- | ---------------------------- | ------------------------------------------------------ |
-| **TypeScript**      | `astro/tsconfigs/strict`     | Strict mode + path aliases configuration               |
-| **Path Aliases**    | 7 aliases in `tsconfig.json` | Clean imports with `@` prefixes                        |
-| **URL Structure**   | `trailingSlash: "never"`     | Clean URLs without trailing slashes                    |
-| **Build Format**    | `{ format: "file" }`         | Generates `.html` files                                |
-| **Fonts**           | Fontsource local hosting     | Inter (variable) + EB Garamond (variable) + Maple Mono |
-| **CSS Files**       | `global.css` + `prose.css`   | Design system + Typography overrides                   |
+| Setting             | Value                        | Purpose                                                      |
+| ------------------- | ---------------------------- | ------------------------------------------------------------ |
+| **TypeScript**      | `astro/tsconfigs/strict`     | Strict mode + path aliases configuration                     |
+| **Path Aliases**    | 7 aliases in `tsconfig.json` | Clean imports with `@` prefixes                              |
+| **URL Structure**   | `trailingSlash: "never"`     | Clean URLs without trailing slashes                          |
+| **Build Format**    | `{ format: "file" }`         | Generates `.html` files                                      |
+| **Fonts**           | Fontsource local hosting     | Inter (variable) + EB Garamond (variable) + Maple Mono       |
+| **CSS Files**       | `global.css` + `prose.css`   | Design system + Typography overrides                         |
 | **Tailwind**        | v4 via Vite plugin           | Custom `@theme` block, Typography plugin + Language variants |
-| **Chinese Support** | Optimized font stacks        | Mixed-language content handling + `en:`/`zh:` variants      |
+| **Chinese Support** | Optimized font stacks        | Mixed-language content handling + `en:`/`zh:` variants       |
 
 ### Dependencies
 

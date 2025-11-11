@@ -62,7 +62,7 @@ The analysis prompts I developed were exhaustive:
 ```
 Analyze this image for watercolor painting transformation. Focus on:
 - Light source direction, quality, and color temperature
-- How light creates mood and atmosphere in the scene  
+- How light creates mood and atmosphere in the scene
 - Areas of bright illumination vs gentle shadows
 - Individual person descriptions: facial features, hair, clothing, poses
 - Spatial relationships and interaction between people
@@ -93,40 +93,40 @@ The solution hit me while debugging a failed generation: what if I used nano ban
 The third approach introduced an intermediate step:
 
 1. **Line Art Extraction**: Use nano banana to create a minimal line drawing from the original photo
-2. **Description Generation**: Analyze the photo for color, lighting, and atmospheric details  
+2. **Description Generation**: Analyze the photo for color, lighting, and atmospheric details
 3. **Style Generation**: Combine the line art with the description and style instructions
 
 The line art prompt required careful calibration:
 
 ```
-Transform this photograph into gentle watercolor-ready line art 
+Transform this photograph into gentle watercolor-ready line art
 that supports fluid color application and natural watercolor effects.
 
-Create soft, minimal line work designed specifically to support 
-watercolor painting techniques, emphasizing areas that need 
-definition while leaving space for watercolor's natural flow 
+Create soft, minimal line work designed specifically to support
+watercolor painting techniques, emphasizing areas that need
+definition while leaving space for watercolor's natural flow
 and transparency.
 
 Use varied line thickness to suggest form and depth naturally:
 - Heavier lines (2-3 pixels) for foreground elements
-- Lighter lines (1-2 pixels) for background elements  
+- Lighter lines (1-2 pixels) for background elements
 - Broken or interrupted lines that allow color to flow
 
-Focus entirely on creating supportive line work that enhances 
-watercolor's natural strengths of luminosity, color harmony, 
+Focus entirely on creating supportive line work that enhances
+watercolor's natural strengths of luminosity, color harmony,
 and organic beauty.
 ```
 
 The final generation step combined all three elements:
 
 ```
-Using the provided line art as the structural foundation, 
-transform this drawing into a luminous watercolor painting 
+Using the provided line art as the structural foundation,
+transform this drawing into a luminous watercolor painting
 that captures the essence and details from: {description}
 
-The line art defines your structural framework - the placement 
-of elements, their proportions, and the overall composition. 
-Your task is to breathe life into these pencil strokes through 
+The line art defines your structural framework - the placement
+of elements, their proportions, and the overall composition.
+Your task is to breathe life into these pencil strokes through
 the fluid, unpredictable beauty of watercolor...
 ```
 
@@ -144,7 +144,7 @@ Building this three-stage pipeline required careful coordination between differe
 def transform_image_with_lineart(image_path: str, style: str) -> str:
     """
     Three-stage image style transfer using line art as structural bridge.
-    
+
     The 'backend' object is an abstraction layer that allows switching between
     different platforms for accessing nano banana (gemini-2.5-flash-image-preview).
     For example, switching between Google AI Studio and OpenRouter endpoints
@@ -153,15 +153,15 @@ def transform_image_with_lineart(image_path: str, style: str) -> str:
     # Stage 1: Extract structural line art
     lineart_prompt = load_lineart_prompt(style)
     lineart_path = backend.transform_image(image_path, lineart_prompt)
-    
+
     # Stage 2: Generate detailed description
-    analysis_prompt = load_analysis_prompt(style)  
+    analysis_prompt = load_analysis_prompt(style)
     description = backend.analyze_image(image_path, analysis_prompt)
-    
+
     # Stage 3: Generate styled result
     generation_prompt = build_generation_prompt(description, style)
     styled_path = backend.transform_image(lineart_path, generation_prompt)
-    
+
     return styled_path
 ```
 
@@ -174,8 +174,9 @@ The line art acts as a structural skeleton that nano banana can't ignore or dist
 But crucially, the lines are minimal and organic—just enough structure to guide the generation without constraining watercolor's natural fluidity.
 
 When nano banana generates the final watercolor, it has three pieces of information:
+
 - **Spatial structure** from the line art
-- **Visual details** from the description  
+- **Visual details** from the description
 - **Style instructions** from the prompt
 
 This trinity enables it to create images that are both spatially accurate and artistically compelling.
@@ -197,11 +198,11 @@ This led to a crucial insight: different target styles need different types of s
 For the Simpsons style, I developed a modified approach. Instead of extracting realistic line art, I prompted nano banana to create stylized line art that referenced cartoon proportions from the beginning:
 
 ```
-Transform this photograph into Simpsons-style line art. Don't simply 
-trace the realistic proportions—instead, interpret the people as if 
-they were Simpsons characters. Reference the characteristic head sizes, 
-body proportions, and simplified features from the show. Blend the 
-actual people's distinctive characteristics with typical Simpsons 
+Transform this photograph into Simpsons-style line art. Don't simply
+trace the realistic proportions—instead, interpret the people as if
+they were Simpsons characters. Reference the characteristic head sizes,
+body proportions, and simplified features from the show. Blend the
+actual people's distinctive characteristics with typical Simpsons
 character structures.
 ```
 
@@ -221,4 +222,4 @@ Sometimes the most effective path to your goal isn't the direct one.
 
 ---
 
-*Want to see another example of AI solving real-world problems? Check out [Building Kira: An AI-Native Second Brain](/thoughts/building-kira-an-ai-native-second-brain), where I explore how AI can amplify human thinking through contextual understanding—a different approach to the same core challenge of making AI truly useful.*
+_Want to see another example of AI solving real-world problems? Check out [Building Kira: An AI-Native Second Brain](/thoughts/building-kira-an-ai-native-second-brain), where I explore how AI can amplify human thinking through contextual understanding—a different approach to the same core challenge of making AI truly useful._

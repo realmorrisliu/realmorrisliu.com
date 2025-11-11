@@ -188,6 +188,7 @@ From a results perspective, `kubectl apply` and Flux CD achieve the same thing�
 **It's about mental models.**
 
 With imperative deployment:
+
 ```bash
 # "Execute these actions"
 kubectl set image deployment/app app=v2.0
@@ -199,12 +200,13 @@ kubectl get pods
 You're thinking in operations: "do this, then check that, then verify the other thing." You're responsible for sequencing, error handling, verification.
 
 With declarative deployment:
+
 ```yaml
 # "This is what should exist"
 spec:
   containers:
-  - name: app
-    image: app:v2.0
+    - name: app
+      image: app:v2.0
 ```
 
 You're thinking in states: "this is what I want." The system figures out how to get there and continuously ensures it stays there. You've offloaded the cognitive burden of the "how" to Flux.
@@ -253,6 +255,7 @@ This is what IaC should be. Not just "we have YAML files in Git," but "our infra
 Not every project needs GitOps. But if you're running Kubernetes, I'd argue you should seriously consider Flux CD, especially for small teams.
 
 **You should use Flux CD if:**
+
 - You're already using Kubernetes (Flux is Kubernetes-native)
 - You want simpler CI pipelines (remove deployment logic from CI)
 - You care about security (minimize credential distribution)
@@ -260,12 +263,14 @@ Not every project needs GitOps. But if you're running Kubernetes, I'd argue you 
 - You want Git to be the actual source of truth, not just a storage location
 
 **When to migrate:**
+
 - **New projects**: Start with Flux CD from day one
 - **Existing projects**: Gradual migration works fine—you can run Flux alongside manual deployments
 
 The main challenge is the learning curve—understanding GitRepository, Kustomization, HelmRelease resources, and how reconciliation works. But it's not a steep curve, and the existing CI pipelines remain compatible (you're mostly removing deployment steps, not rewriting everything).
 
 **Common misconceptions:**
+
 - "GitOps is complex" - Actually, it simplifies CI by removing deployment logic
 - "I need to rewrite all my pipelines" - No, you mostly remove steps
 - "It only works for big teams" - Small teams benefit even more from reduced complexity
