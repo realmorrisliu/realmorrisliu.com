@@ -1,9 +1,8 @@
 ---
 title: "GKE Gateway API: Fix 'No Healthy Upstream' Error"
 description: "Production down with 'no healthy upstream' but staging works? Your GKE Gateway API health check is misconfigured. Step-by-step fix inside."
-pubDate: 2025-01-10
+pubDate: 2025-11-11
 tags: ["gke", "gateway-api", "kubernetes", "healthcheck"]
-draft: false
 ---
 
 ## Quick Diagnostic Checklist
