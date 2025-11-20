@@ -12,5 +12,15 @@
 	},
 	"observability": {
     "enabled": true
-  }
+  },
+  "routes": [
+    {
+      "pattern": "realmorrisliu.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.realmorrisliu.com",
+      "custom_domain": true
+    }
+  ]
 }
