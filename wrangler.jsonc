@@ -10,6 +10,9 @@
 		"binding": "ASSETS",
 		"directory": "./dist"
 	},
+  "vars": {
+    "PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_live_Y2xlcmsucmVhbG1vcnJpc2xpdS5jb20k"
+  },
 	"observability": {
     "enabled": true
   },

@@ -5,8 +5,8 @@ import sitemap, { ChangeFreqEnum } from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import icon from "astro-icon";
 import react from "@astrojs/react";
-
 import cloudflare from "@astrojs/cloudflare";
+import clerk from "@clerk/astro";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,6 +16,7 @@ export default defineConfig({
   output: "server",
 
   integrations: [
+    clerk(),
     mdx(),
     icon({
       include: {
@@ -70,6 +71,9 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    ssr: {
+      external: ["async_hooks"],
+    },
   },
 
   markdown: {

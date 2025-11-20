@@ -1,0 +1,32 @@
+---
+import { SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/astro/components";
+import { cn } from "@/utils";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class={cn("flex items-center justify-end", className)}>
+  <SignedOut>
+    <SignInButton
+      mode="modal"
+      class="text-text-secondary hover:text-text-primary cursor-pointer text-sm font-medium transition-colors duration-200"
+    >
+      Sign In
+    </SignInButton>
+  </SignedOut>
+  <SignedIn>
+    <UserButton
+      appearance={{
+        elements: {
+          avatarBox:
+            "w-8 h-8 ring-2 ring-transparent hover:ring-text-secondary/20 transition-all duration-200",
+          userButtonTrigger: "focus:shadow-none focus:outline-none",
+        },
+      }}
+    />
+  </SignedIn>
+</div>

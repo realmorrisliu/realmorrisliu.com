@@ -1,4 +1,6 @@
 ---
+import { SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/astro/components";
+import AuthStatus from "@/components/AuthStatus.astro";
 import { cn } from "@/utils";
 import PostHog from "../components/PostHog.astro";
 
@@ -230,6 +232,9 @@ const keywords = [
       "font-sans font-normal leading-relaxed text-text-primary bg-background antialiased"
     )}
   >
+    <div class="mx-auto flex max-w-2xl justify-end px-6 pt-8">
+      <AuthStatus />
+    </div>
     <slot />
   </body>
 </html>
