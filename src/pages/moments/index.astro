@@ -6,16 +6,16 @@ import Link from "@components/Link.astro";
 import { getCollection } from "astro:content";
 import "@styles/global.css";
 
-const photos = await getCollection("captured");
+const photos = await getCollection("moments");
 
-const title = "Captured | Morris Liu";
+const title = "Moments | Morris Liu";
 const description = "A collection of moments frozen in time. Photography by Morris Liu.";
 ---
 
 <Layout title={title} description={description}>
   <div class="mx-auto max-w-6xl px-6 py-24 md:py-32">
     <header class="animate-fade-in mb-24 flex flex-col items-center space-y-8 text-center md:mb-32">
-      <h1 class="text-text-primary font-serif text-5xl tracking-tight md:text-7xl">Captured</h1>
+      <h1 class="text-text-primary font-serif text-5xl tracking-tight md:text-7xl">Moments</h1>
       <p class="text-text-secondary max-w-xl text-lg leading-relaxed font-light md:text-xl">
         Fragments of time, light, and shadow. <br class="hidden md:block" />
         A visual journal of the world as I see it.

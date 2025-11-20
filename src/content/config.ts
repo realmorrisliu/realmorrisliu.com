@@ -25,7 +25,7 @@ const now = defineCollection({
   }),
 });
 
-const captured = defineCollection({
+const moments = defineCollection({
   type: "content",
   schema: ({ image }) =>
     z.object({
@@ -41,4 +41,4 @@ const captured = defineCollection({
     }),
 });
 
-export const collections = { blog, now, captured };
+export const collections = { blog, now, moments };
