@@ -1,6 +1,4 @@
 ---
-import { SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/astro/components";
-import AuthStatus from "@/components/AuthStatus.astro";
 import { cn } from "@/utils";
 import PostHog from "../components/PostHog.astro";
 
@@ -233,6 +231,5 @@ const keywords = [
     )}
   >
     <slot />
-    <AuthStatus />
   </body>
 </html>

@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { SignedIn, SignedOut } from "@clerk/astro/components";
+import AuthStatus from "@/components/AuthStatus.astro";
 ---
 
 <Layout title="Kira - AI Agent">
@@ -27,4 +28,5 @@ import { SignedIn, SignedOut } from "@clerk/astro/components";
       </div>
     </SignedOut>
   </main>
+  <AuthStatus />
 </Layout>
