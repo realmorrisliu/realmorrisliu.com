@@ -25,4 +25,20 @@ const now = defineCollection({
   }),
 });
 
-export const collections = { blog, now };
+const captured = defineCollection({
+  type: "content",
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      image: image(),
+      date: z.coerce.date(),
+      location: z.string().optional(),
+      camera: z.string().optional(),
+      lens: z.string().optional(),
+      iso: z.string().optional(),
+      aperture: z.string().optional(),
+      shutterSpeed: z.string().optional(),
+    }),
+});
+
+export const collections = { blog, now, captured };

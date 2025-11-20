@@ -1,0 +1,55 @@
+---
+import Layout from "@layouts/Layout.astro";
+import PhotoGrid from "@components/PhotoGrid.astro";
+import FooterSignature from "@components/FooterSignature.astro";
+import Link from "@components/Link.astro";
+import { getCollection } from "astro:content";
+import "@styles/global.css";
+
+const photos = await getCollection("captured");
+
+const title = "Captured | Morris Liu";
+const description = "A collection of moments frozen in time. Photography by Morris Liu.";
+---
+
+<Layout title={title} description={description}>
+  <div class="mx-auto max-w-6xl px-6 py-24 md:py-32">
+    <header class="animate-fade-in mb-24 flex flex-col items-center space-y-8 text-center md:mb-32">
+      <h1 class="text-text-primary font-serif text-5xl tracking-tight md:text-7xl">Captured</h1>
+      <p class="text-text-secondary max-w-xl text-lg leading-relaxed font-light md:text-xl">
+        Fragments of time, light, and shadow. <br class="hidden md:block" />
+        A visual journal of the world as I see it.
+      </p>
+      <div class="pt-4">
+        <Link
+          href="/"
+          class="text-text-secondary hover:text-text-primary hover:border-text-primary border-b border-transparent pb-1 text-sm tracking-widest uppercase no-underline transition-colors"
+          >← Back Home</Link
+        >
+      </div>
+    </header>
+
+    <PhotoGrid photos={photos} />
+
+    <div class="mt-32 flex justify-center">
+      <FooterSignature />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
