@@ -14,6 +14,10 @@ const createAnonymousAuth = () =>
   }) as any;
 
 export const onRequest = defineMiddleware((context, next) => {
+  const { pathname } = new URL(context.request.url);
+  if (pathname === "/_image") {
+    return next();
+  }
   return clerkMiddleware((auth, clerkContext) => {
     const { userId, redirectToSignIn } = auth();
 
