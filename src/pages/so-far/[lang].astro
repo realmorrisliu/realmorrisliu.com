@@ -11,6 +11,7 @@ const t = getTranslations(currentLang);
 const htmlLang = getHtmlLangAttribute(currentLang);
 
 // Define static paths for generation
+export const prerender = true;
 export function getStaticPaths() {
   return [{ params: { lang: "zh" } }];
 }

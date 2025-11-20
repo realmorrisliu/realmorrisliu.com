@@ -6,16 +6,23 @@ import mdx from "@astrojs/mdx";
 import icon from "astro-icon";
 import react from "@astrojs/react";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://realmorrisliu.com",
   trailingSlash: "never",
-  build: {
-    format: "file",
-  },
+
+  output: "server",
+
   integrations: [
     mdx(),
-    icon(),
+    icon({
+      include: {
+        logos: ["github-icon", "x", "ycombinator"],
+        lucide: ["rss"],
+      },
+    }),
     react(),
     sitemap({
       customPages: [
@@ -51,6 +58,7 @@ export default defineConfig({
       },
     }),
   ],
+
   image: {
     service: {
       entrypoint: "astro/assets/services/sharp",
@@ -59,9 +67,11 @@ export default defineConfig({
       },
     },
   },
+
   vite: {
     plugins: [tailwindcss()],
   },
+
   markdown: {
     shikiConfig: {
       // 使用 github-light 作为默认主题
@@ -75,4 +85,8 @@ export default defineConfig({
       wrap: true,
     },
   },
+
+  adapter: cloudflare({
+    imageService: "compile",
+  }),
 });
