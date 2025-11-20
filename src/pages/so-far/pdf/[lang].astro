@@ -9,8 +9,6 @@ const currentLang = lang === "zh" ? "zh" : "en";
 export function getStaticPaths() {
   return [{ params: { lang: "zh" } }];
 }
-
-export const prerender = true;
 ---
 
 <ResumeLayout currentLang={currentLang} />

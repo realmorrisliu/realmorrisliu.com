@@ -5,16 +5,10 @@ import sitemap, { ChangeFreqEnum } from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import icon from "astro-icon";
 import react from "@astrojs/react";
-import keystatic from "@keystatic/astro";
-import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://realmorrisliu.com",
-  output: "server",
-  adapter: node({
-    mode: "standalone",
-  }),
   trailingSlash: "never",
   build: {
     format: "file",
@@ -23,7 +17,6 @@ export default defineConfig({
     mdx(),
     icon(),
     react(),
-    keystatic(),
     sitemap({
       customPages: [
         "https://realmorrisliu.com/",
