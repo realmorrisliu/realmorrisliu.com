@@ -1,11 +1,30 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/astro/server";
+import { defineMiddleware } from "astro/middleware";
 
 const isProtectedRoute = createRouteMatcher(["/kira(.*)"]);
 
-export const onRequest = clerkMiddleware((auth, context) => {
-  const { userId, redirectToSignIn } = auth();
+const createAnonymousAuth = () =>
+  ({
+    userId: null,
+    sessionId: null,
+    getToken: async () => null,
+    has: () => false,
+    debug: () => {},
+    redirectToSignIn: async () => {},
+  }) as any;
 
-  if (!userId && isProtectedRoute(context.request)) {
-    return redirectToSignIn();
-  }
+export const onRequest = defineMiddleware((context, next) => {
+  return clerkMiddleware((auth, clerkContext) => {
+    const { userId, redirectToSignIn } = auth();
+
+    if (!userId && isProtectedRoute(clerkContext.request)) {
+      return redirectToSignIn();
+    }
+  })(context, () => {
+    if (typeof context.locals.auth !== "function") {
+      context.locals.auth = createAnonymousAuth;
+    }
+
+    return next();
+  });
 });
