@@ -1,0 +1,30 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { SignedIn, SignedOut } from "@clerk/astro/components";
+---
+
+<Layout title="Kira - AI Agent">
+  <main class="mx-auto max-w-2xl px-6 py-16">
+    <SignedIn>
+      <div class="space-y-6">
+        <h1 class="text-text-primary text-4xl font-bold">Kira</h1>
+        <p class="text-text-secondary text-lg">
+          Welcome! This is a protected route. Only authenticated users can see this.
+        </p>
+        <div class="border-border bg-surface rounded-lg border p-6">
+          <p class="text-text-secondary">
+            🎉 Protected route is working! You're seeing this because you're signed in.
+          </p>
+        </div>
+      </div>
+    </SignedIn>
+    <SignedOut>
+      <div class="space-y-6">
+        <h1 class="text-text-primary text-4xl font-bold">Access Denied</h1>
+        <p class="text-text-secondary text-lg">
+          You should have been redirected to sign in. If you see this, something went wrong.
+        </p>
+      </div>
+    </SignedOut>
+  </main>
+</Layout>
