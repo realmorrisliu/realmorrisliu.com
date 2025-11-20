@@ -14,6 +14,8 @@ const htmlLang = getHtmlLangAttribute(currentLang);
 export function getStaticPaths() {
   return [{ params: { lang: "zh" } }];
 }
+
+export const prerender = true;
 ---
 
 <Layout

@@ -12,6 +12,8 @@ export async function getStaticPaths() {
     }));
 }
 
+export const prerender = true;
+
 type Props = {
   post: CollectionEntry<"blog">;
 };
