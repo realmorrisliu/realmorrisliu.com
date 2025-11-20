@@ -4,6 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap, { ChangeFreqEnum } from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import icon from "astro-icon";
+import react from "@astrojs/react";
+import keystatic from "@keystatic/astro";
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,6 +17,8 @@ export default defineConfig({
   integrations: [
     mdx(),
     icon(),
+    react(),
+    keystatic(),
     sitemap({
       customPages: [
         "https://realmorrisliu.com/",
