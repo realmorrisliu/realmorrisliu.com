@@ -1,32 +1,27 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { SignedIn, SignedOut } from "@clerk/astro/components";
-import AuthStatus from "@/components/AuthStatus.astro";
+import { SignedIn, SignedOut, SignInButton } from "@clerk/astro/components";
+import { KiraApp } from "@/components/kira/KiraApp";
 ---
 
 <Layout title="Kira - AI Agent">
-  <main class="mx-auto max-w-2xl px-6 py-16">
+  <main class="h-screen w-full bg-gray-50">
     <SignedIn>
-      <div class="space-y-6">
-        <h1 class="text-text-primary text-4xl font-bold">Kira</h1>
-        <p class="text-text-secondary text-lg">
-          Welcome! This is a protected route. Only authenticated users can see this.
-        </p>
-        <div class="border-border bg-surface rounded-lg border p-6">
-          <p class="text-text-secondary">
-            🎉 Protected route is working! You're seeing this because you're signed in.
-          </p>
-        </div>
-      </div>
+      <KiraApp client:only="react" />
     </SignedIn>
     <SignedOut>
-      <div class="space-y-6">
-        <h1 class="text-text-primary text-4xl font-bold">Access Denied</h1>
-        <p class="text-text-secondary text-lg">
-          You should have been redirected to sign in. If you see this, something went wrong.
-        </p>
+      <div class="flex h-full flex-col items-center justify-center gap-6 bg-gray-900 text-white">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold">Kira</h1>
+          <p class="mt-2 text-gray-400">Your AI-native second brain.</p>
+        </div>
+        <SignInButton
+          mode="modal"
+          class="rounded-full bg-white px-6 py-2 text-sm font-medium text-black transition-transform hover:scale-105 active:scale-95"
+        >
+          Sign In
+        </SignInButton>
       </div>
     </SignedOut>
   </main>
-  <AuthStatus />
 </Layout>

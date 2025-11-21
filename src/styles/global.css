@@ -16,6 +16,7 @@ html {
 /* Custom language variants */
 @variant en (:lang(en) &);
 @variant zh (:lang(zh) &);
+@variant dark (&:where(.dark, .dark *));
 
 /* Register fonts, colors, and custom Typography in Tailwind */
 @theme {
