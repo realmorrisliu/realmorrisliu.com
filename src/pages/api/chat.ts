@@ -1,6 +1,7 @@
 import type { APIRoute } from "astro";
 import { createOpenAI } from "@ai-sdk/openai";
 import { createGoogleGenerativeAI } from "@ai-sdk/google";
+import { createOpenRouter } from "@openrouter/ai-sdk-provider";
 import { streamText, tool, convertToModelMessages } from "ai";
 import { z } from "zod";
 
@@ -22,9 +23,8 @@ export const POST: APIRoute = async ({ request }) => {
       const google = createGoogleGenerativeAI({ apiKey });
       model = google("gemini-1.5-flash");
     } else if (provider === "openrouter") {
-      const openrouter = createOpenAI({
+      const openrouter = createOpenRouter({
         apiKey,
-        baseURL: "https://openrouter.ai/api/v1",
       });
       model = openrouter("openai/gpt-4o-mini");
     } else {
