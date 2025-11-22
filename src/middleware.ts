@@ -11,7 +11,13 @@ const createAnonymousAuth = () =>
     has: () => false,
     debug: () => {},
     redirectToSignIn: async () => {},
-  }) as any;
+  }) as ReturnType<
+    typeof import("@clerk/astro/server").clerkMiddleware extends (
+      handler: (auth: infer A) => unknown
+    ) => unknown
+      ? () => A
+      : never
+  >;
 
 export const onRequest = defineMiddleware((context, next) => {
   const { pathname } = new URL(context.request.url);

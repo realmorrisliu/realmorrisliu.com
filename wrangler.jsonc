@@ -1,29 +1,26 @@
 {
-	"main": "dist/_worker.js/index.js",
-	"name": "realmorrisliu-com",
+  "main": "dist/_worker.js/index.js",
+  "name": "realmorrisliu-com",
   "compatibility_date": "2025-11-20",
-  "compatibility_flags": [
-    "nodejs_compat",
-    "global_fetch_strictly_public"
-  ],
-	"assets": {
-		"binding": "ASSETS",
-		"directory": "./dist"
-	},
-  "vars": {
-    "PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_live_Y2xlcmsucmVhbG1vcnJpc2xpdS5jb20k"
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist",
   },
-	"observability": {
-    "enabled": true
+  "vars": {
+    "PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_live_Y2xlcmsucmVhbG1vcnJpc2xpdS5jb20k",
+  },
+  "observability": {
+    "enabled": true,
   },
   "routes": [
     {
       "pattern": "realmorrisliu.com",
-      "custom_domain": true
+      "custom_domain": true,
     },
     {
       "pattern": "www.realmorrisliu.com",
-      "custom_domain": true
-    }
-  ]
+      "custom_domain": true,
+    },
+  ],
 }
