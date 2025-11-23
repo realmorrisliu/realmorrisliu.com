@@ -144,7 +144,7 @@ export const AgentChat: React.FC<AgentChatProps> = ({
   return (
     <div className={`relative flex h-full w-full flex-col overflow-hidden ${className}`}>
       {/* Header */}
-      <div className="flex shrink-0 items-center justify-end px-8 py-6">
+      <div className="flex shrink-0 items-center justify-end px-4 py-6">
         <button 
             onClick={onOpenSettings}
             className="flex h-10 w-10 items-center justify-center rounded-full text-black/40 transition-colors hover:bg-black/5 hover:text-black/80 dark:text-white/40 dark:hover:bg-white/10 dark:hover:text-white/80"
@@ -178,14 +178,14 @@ export const AgentChat: React.FC<AgentChatProps> = ({
                   className="group flex items-center gap-1.5 rounded-lg bg-purple-500/5 px-3 py-1.5 text-xs font-medium text-purple-700/70 transition-all hover:bg-purple-500/10 dark:bg-purple-400/5 dark:text-purple-300/70 dark:hover:bg-purple-400/10"
                 >
                   <span>Review Tasks</span>
-                  <ArrowRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" />
+                  <ArrowRight className="h-3 w-3 opacity-100 transition-opacity" />
                 </button>
                 <button
                   onClick={() => setInput("Start focus mode")}
                   className="group flex items-center gap-1.5 rounded-lg bg-black/5 px-3 py-1.5 text-xs font-medium text-black/60 transition-all hover:bg-black/10 dark:bg-white/5 dark:text-white/60 dark:hover:bg-white/10"
                 >
                   <span>Start Focus Mode</span>
-                  <ArrowRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" />
+                  <ArrowRight className="h-3 w-3 opacity-100 transition-opacity" />
                 </button>
               </div>
             </div>
