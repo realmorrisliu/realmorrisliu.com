@@ -1,21 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useChat, type UIMessage } from "@ai-sdk/react";
+import { useCopilotAction } from "@copilotkit/react-core";
+import { useCopilotChatHeadless_c } from "@copilotkit/react-core";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Sparkles, Loader2, Mic, Settings } from "lucide-react";
+import { ArrowRight, Loader2, Mic, Settings } from "lucide-react";
 import { useSchedule } from "@/context/ScheduleContext";
 import type { EventType } from "@/types/kira";
-
-interface V5ToolCall {
-  toolName: string;
-  toolCallId: string;
-  args: unknown;
-}
-
-interface RenderTool {
-  toolName: string;
-  toolCallId: string;
-  result?: unknown;
-}
 
 interface AgentChatProps {
   onOpenSettings: () => void;
@@ -41,35 +30,87 @@ export const AgentChat: React.FC<AgentChatProps> = ({
   const { tasks } = state;
   const todoCount = tasks.filter(t => t.status === "todo").length;
 
-  // Load Config (Lazy Initialization)
-  const [config, setConfig] = useState(() => {
-    if (typeof window === "undefined") return { provider: "openai", apiKey: "" };
-    const provider = localStorage.getItem("kira_provider") || "openai";
-    const apiKey =
-      provider === "google"
-        ? localStorage.getItem("kira_google_key")
-        : provider === "openrouter"
-          ? localStorage.getItem("kira_openrouter_key")
-          : localStorage.getItem("kira_openai_key");
-    return { provider, apiKey: apiKey || "" };
+  // Input state
+  const [input, setInput] = useState("");
+
+  // Register frontend actions (tools) with CopilotKit
+  // These will be available to the LangGraph agent
+  useCopilotAction({
+    name: "addTask",
+    description: "Add a new task to the user's inbox",
+    parameters: [
+      {
+        name: "title",
+        type: "string",
+        description: "The task title or description",
+        required: true,
+      },
+      {
+        name: "tag",
+        type: "string",
+        description: "Task category (work, personal, urgent, wellness, study, social)",
+        required: false,
+      },
+    ],
+    handler: async ({ title, tag }) => {
+      addTask({
+        title,
+        tag: (tag as EventType) || "work",
+      });
+      return `Task "${title}" added successfully`;
+    },
   });
 
-  // Listen for settings updates
-  useEffect(() => {
-    const loadConfig = () => {
-      const provider = localStorage.getItem("kira_provider") || "openai";
-      const apiKey =
-        provider === "google"
-          ? localStorage.getItem("kira_google_key")
-          : provider === "openrouter"
-            ? localStorage.getItem("kira_openrouter_key")
-            : localStorage.getItem("kira_openai_key");
-      setConfig({ provider, apiKey: apiKey || "" });
-    };
+  useCopilotAction({
+    name: "addEvent",
+    description: "Add a calendar event to the user's schedule",
+    parameters: [
+      {
+        name: "title",
+        type: "string",
+        description: "The event title",
+        required: true,
+      },
+      {
+        name: "start",
+        type: "string",
+        description: "Event start time in ISO format (e.g., 2025-01-15T10:00:00)",
+        required: true,
+      },
+      {
+        name: "end",
+        type: "string",
+        description: "Event end time in ISO format (e.g., 2025-01-15T11:00:00)",
+        required: true,
+      },
+      {
+        name: "type",
+        type: "string",
+        description: "Event type (work, personal, urgent, wellness, study, social)",
+        required: false,
+      },
+      {
+        name: "description",
+        type: "string",
+        description: "Optional event description",
+        required: false,
+      },
+    ],
+    handler: async ({ title, start, end, type, description }) => {
+      const newEvent = {
+        title,
+        start: new Date(start),
+        end: new Date(end),
+        type: (type as EventType) || "work",
+        description,
+      };
+      addEvent(newEvent);
+      return `Event "${title}" scheduled for ${new Date(start).toLocaleTimeString()}`;
+    },
+  });
 
-    window.addEventListener("kira-settings-updated", loadConfig);
-    return () => window.removeEventListener("kira-settings-updated", loadConfig);
-  }, []);
+  // CopilotKit chat hook - for headless UI
+  const { messages, sendMessage, isLoading } = useCopilotChatHeadless_c();
 
   // Focus Input on Trigger
   useEffect(() => {
@@ -77,62 +118,6 @@ export const AgentChat: React.FC<AgentChatProps> = ({
       inputRef.current.focus();
     }
   }, [focusTrigger]);
-
-  // Manual input state management for AI SDK v5
-  const [input, setInput] = useState("");
-
-  // Vercel AI SDK Hook
-  const { messages, sendMessage, status, addToolOutput } = useChat({
-    // @ts-ignore - api and headers are valid in v5 but types might be mismatched
-    api: "/api/chat",
-    headers: {
-      "X-Provider": config.provider,
-      "X-Api-Key": config.apiKey,
-    },
-    async onToolCall({ toolCall }) {
-      console.log("Tool Call:", toolCall);
-
-      // Cast to interface to access args which exists at runtime but is missing in strict type definition
-      const call = toolCall as unknown as V5ToolCall;
-
-      if (call.toolName === "addTask") {
-        const taskArgs = call.args as { title: string; tag?: string };
-        addTask({ title: taskArgs.title, tag: (taskArgs.tag as EventType) || "work" });
-        // Use addToolOutput for v5 (addToolResult is deprecated)
-        addToolOutput({
-          tool: toolCall.toolName,
-          toolCallId: toolCall.toolCallId,
-          output: `Task "${taskArgs.title}" added successfully`,
-        });
-      } else if (call.toolName === "addEvent") {
-        const eventArgs = call.args as {
-          title: string;
-          start: string;
-          end: string;
-          description?: string;
-        };
-        addEvent({
-          title: eventArgs.title,
-          start: new Date(eventArgs.start),
-          end: new Date(eventArgs.end),
-          description: eventArgs.description,
-          type: "work",
-        });
-        // Use addToolOutput for v5 (addToolResult is deprecated)
-        addToolOutput({
-          tool: toolCall.toolName,
-          toolCallId: toolCall.toolCallId,
-          output: `Event "${eventArgs.title}" scheduled for ${new Date(eventArgs.start).toLocaleTimeString()}`,
-        });
-      }
-    },
-    onError: (error: Error) => {
-      console.error("Chat Error:", error);
-      if (error.message.includes("401")) {
-        onOpenSettings();
-      }
-    },
-  });
 
   // Auto-scroll
   useEffect(() => {
@@ -145,11 +130,11 @@ export const AgentChat: React.FC<AgentChatProps> = ({
     <div className={`relative flex h-full w-full flex-col overflow-hidden ${className}`}>
       {/* Header */}
       <div className="flex shrink-0 items-center justify-end px-4 py-6">
-        <button 
-            onClick={onOpenSettings}
-            className="flex h-10 w-10 items-center justify-center rounded-full text-black/40 transition-colors hover:bg-black/5 hover:text-black/80 dark:text-white/40 dark:hover:bg-white/10 dark:hover:text-white/80"
+        <button
+          onClick={onOpenSettings}
+          className="flex h-10 w-10 items-center justify-center rounded-full text-black/40 transition-colors hover:bg-black/5 hover:text-black/80 dark:text-white/40 dark:hover:bg-white/10 dark:hover:text-white/80"
         >
-            <Settings className="h-5 w-5" />
+          <Settings className="h-5 w-5" />
         </button>
       </div>
 
@@ -193,7 +178,7 @@ export const AgentChat: React.FC<AgentChatProps> = ({
         )}
 
         {/* Messages */}
-        {messages.map((m: UIMessage) => (
+        {messages.map(m => (
           <motion.div
             key={m.id}
             initial={{ opacity: 0, y: 10 }}
@@ -202,48 +187,17 @@ export const AgentChat: React.FC<AgentChatProps> = ({
           >
             {m.role === "user" ? (
               <div className="max-w-[85%] rounded-2xl rounded-tr-sm bg-blue-500/30 px-5 py-3 text-[15px] leading-relaxed text-black/90 backdrop-blur-md dark:bg-blue-400/20 dark:text-white/90">
-                {m.parts.map((part, i) => (
-                  <React.Fragment key={i}>{part.type === "text" && part.text}</React.Fragment>
-                ))}
+                {m.content}
               </div>
             ) : (
               <div className="max-w-[90%] text-[15px] leading-relaxed text-black/70 dark:text-white/70">
-                {m.parts.map((part, i) => {
-                  if (part.type === "text") {
-                    return <span key={i}>{part.text}</span>;
-                  }
-                  if (part.type === "tool-invocation" && "toolInvocation" in part) {
-                    const tool = part.toolInvocation as unknown as RenderTool;
-                    return (
-                      <div
-                        key={tool.toolCallId}
-                        className="mt-2 rounded bg-black/5 p-2 font-mono text-xs opacity-70 dark:bg-white/5"
-                      >
-                        <div className="flex items-center gap-2 font-bold">
-                          <Sparkles className="h-3 w-3" />
-                          {tool.toolName}
-                        </div>
-                        {"result" in tool ? (
-                          <div className="mt-1 text-green-600 dark:text-green-400">
-                            Done: {JSON.stringify(tool.result)}
-                          </div>
-                        ) : (
-                          <div className="mt-1 flex items-center gap-1 text-amber-600 dark:text-amber-400">
-                            <Loader2 className="h-3 w-3 animate-spin" />
-                            Running...
-                          </div>
-                        )}
-                      </div>
-                    );
-                  }
-                  return null;
-                })}
+                {m.content}
               </div>
             )}
           </motion.div>
         ))}
 
-        {(status === "submitted" || status === "streaming") && (
+        {isLoading && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -261,19 +215,14 @@ export const AgentChat: React.FC<AgentChatProps> = ({
       {/* Input Area */}
       <div className="relative z-10 p-4 lg:p-6">
         <form
-          onSubmit={e => {
+          onSubmit={async e => {
             e.preventDefault();
-            if (input.trim()) {
-              if (!config.apiKey) {
-                onOpenSettings();
-                return;
-              }
-              // Use parts array for v5
-              // @ts-ignore - sendMessage accepts options in v5
-              sendMessage(
-                { parts: [{ type: "text", text: input }] },
-                { headers: { "X-Provider": config.provider, "X-Api-Key": config.apiKey } }
-              );
+            if (input.trim() && !isLoading) {
+              await sendMessage({
+                id: Date.now().toString(),
+                role: "user",
+                content: input,
+              });
               setInput("");
             }
           }}
@@ -294,7 +243,7 @@ export const AgentChat: React.FC<AgentChatProps> = ({
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 type="submit"
-                disabled={status === "submitted" || status === "streaming"}
+                disabled={isLoading}
                 className="mr-1 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-500/30 text-black/80 backdrop-blur-md transition-transform hover:scale-105 active:scale-95 disabled:opacity-50 dark:bg-blue-400/20 dark:text-white/80"
               >
                 <ArrowRight className="h-4 w-4" />
@@ -320,4 +269,3 @@ export const AgentChat: React.FC<AgentChatProps> = ({
     </div>
   );
 };
-

@@ -37,5 +37,16 @@ yarn.lock
 *.ttf
 *.eot
 
+# Python backend (agent/)
+agent/
+
+# Development tools
+.wrangler/
+photos-inbox/
+.vscode/
+
+# IDE configs
+.idea/
+
 # Markdown files (optional - remove if you want to format them)
 # *.md

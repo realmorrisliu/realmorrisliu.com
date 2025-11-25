@@ -1,27 +1,39 @@
 # CLAUDE.md
 
-**Version:** v2.5 | **Last Updated:** 2025-08-31
-Personal website built with Astro + Tailwind CSS, implementing letter-like aesthetic for correspondence experience.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+**Version:** v3.0 | **Last Updated:** 2025-11-25
+Personal website + Kira AI calendar assistant. Built with Astro + Tailwind CSS (frontend) and LangGraph + FastAPI (backend agent).
 
 ## ⚡ Quick Reference
 
 ### Essential Commands
 
-| Command          | Action                         | Critical Notes               |
-| ---------------- | ------------------------------ | ---------------------------- |
-| `pnpm dev`       | Dev server at `localhost:4321` | Hot reload enabled           |
-| `pnpm build`     | Build to `./dist/`             | **ALWAYS run before deploy** |
-| `pnpm typecheck` | TypeScript validation          | **MUST pass before commit**  |
-| `pnpm prettier`  | Format (2-space indent)        | Auto-sorts Tailwind classes  |
+| Command                             | Action                                 | Critical Notes                       |
+| ----------------------------------- | -------------------------------------- | ------------------------------------ |
+| `make dev`                          | Start both frontend + backend          | **Recommended for Kira development** |
+| `pnpm dev`                          | Frontend dev server (`localhost:4321`) | Hot reload enabled                   |
+| `cd agent && uv run python main.py` | Backend server (`localhost:8000`)      | FastAPI + LangGraph agent            |
+| `make install`                      | Install all dependencies               | Frontend (pnpm) + backend (uv)       |
+| `pnpm build`                        | Build frontend to `./dist/`            | **ALWAYS run before deploy**         |
+| `pnpm typecheck`                    | TypeScript validation                  | **MUST pass before commit**          |
+| `pnpm prettier`                     | Format (2-space indent)                | Auto-sorts Tailwind classes          |
+| `make check`                        | Run all quality checks                 | typecheck + format + lint            |
 
 ### Key Paths
 
 ```
-src/content/blog/     → Blog posts (.md)
-src/content/now/      → Now page updates
-src/components/       → Reusable components
-src/i18n/translations/ → Multi-language content
-src/layouts/          → Page layouts
+src/content/blog/       → Blog posts (.md)
+src/content/now/        → Now page updates
+src/components/         → Reusable Astro components
+src/components/kira/    → Kira app React components
+src/context/            → React Context (ScheduleContext)
+src/i18n/translations/  → Multi-language content
+src/layouts/            → Page layouts
+agent/                  → Python backend (LangGraph + FastAPI)
+  ├── agent.py          → LangGraph workflow definition
+  ├── main.py           → FastAPI server + CopilotKit integration
+  └── turso_checkpointer.py → Persistent state (SQLite/Turso)
 ```
 
 ### **🏷️ Tag Display System**
@@ -70,6 +82,13 @@ src/layouts/          → Page layouts
 - Commit without passing typecheck
 
 ## Project Architecture
+
+This repository contains two major components:
+
+1. **Personal Website** - Astro-based static site with blog, portfolio, and resume
+2. **Kira Calendar Agent** - AI-powered calendar assistant (LangGraph + CopilotKit)
+
+### Personal Website
 
 **Core Concept:** Letter-like aesthetic for correspondence experience, not traditional website navigation.
 
@@ -560,7 +579,330 @@ import { getCollection } from "astro:content";
 
 ---
 
+## Kira Calendar Agent Architecture
+
+### Overview
+
+Kira is an AI-powered calendar and task management assistant that demonstrates integration between:
+
+- **LangGraph**: State machine workflow engine for multi-turn conversations
+- **CopilotKit**: Seamless frontend-backend integration with tool calling
+- **OpenRouter**: Unified API for multiple LLM models (GPT-4, Claude, Gemini)
+- **Turso Embedded Replica**: Local SQLite + optional cloud sync for conversation persistence
+
+### System Architecture
+
+```
+┌────────────────────────────────────────────────────────────┐
+│  Frontend (Astro + React)                                  │
+│  src/components/kira/KiraApp.tsx                           │
+│  - CopilotKit provider with thread_id                      │
+│  - useCopilotAction registers frontend tools               │
+│  - ScheduleContext manages calendar/task state             │
+└─────────────────────┬──────────────────────────────────────┘
+                      │
+                      │ POST /api/copilotkit (GraphQL stream)
+                      │
+┌─────────────────────▼──────────────────────────────────────┐
+│  FastAPI Backend (agent/main.py)                           │
+│  - CopilotKit Runtime integration                          │
+│  - CORS middleware                                         │
+│  - Lifespan handler (startup/shutdown)                     │
+└─────────────────────┬──────────────────────────────────────┘
+                      │
+                      │ Calls graph.stream()
+                      │
+┌─────────────────────▼──────────────────────────────────────┐
+│  LangGraph Agent (agent/agent.py)                          │
+│                                                             │
+│  KiraAgentState (inherits CopilotKitState):               │
+│    - messages: conversation history                        │
+│    - copilotkit: frontend actions (addEvent, addTask, etc.)│
+│                                                             │
+│  chat_node workflow:                                        │
+│    1. Extract frontend actions from state                  │
+│    2. Initialize LLM via OpenRouter                        │
+│    3. Bind tools (frontend actions) to model               │
+│    4. Call LLM with system prompt + conversation           │
+│    5. Stream response back to frontend                     │
+└─────────────────────┬──────────────────────────────────────┘
+                      │
+        ┌─────────────┼─────────────┐
+        │             │             │
+        ▼             ▼             ▼
+   ┌────────┐   ┌──────────┐   ┌─────────┐
+   │OpenRouter│   │Checkpointer│   │Frontend │
+   │Multi-model│   │SQLite/Turso│   │Actions  │
+   └────────┘   └──────────┘   └─────────┘
+```
+
+### Key Components
+
+#### 1. Frontend Integration (React + CopilotKit)
+
+**Location**: `src/components/kira/KiraApp.tsx`
+
+- **CopilotKit Provider**: Wraps app with `<CopilotKit>` component
+- **Thread Management**: Generates unique `thread_id` stored in localStorage for conversation persistence
+- **Frontend Actions**: Registered via `useCopilotAction` (addEvent, updateEvent, deleteEvent, addTask, etc.)
+- **State Management**: `ScheduleContext` provides calendar events and task state to all components
+
+**Critical Pattern**:
+
+```typescript
+// Thread ID generation for conversation persistence
+function getThreadId(): string {
+  let threadId = localStorage.getItem("kira_thread_id");
+  if (!threadId) {
+    threadId = `thread_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+    localStorage.setItem("kira_thread_id", threadId);
+  }
+  return threadId;
+}
+```
+
+#### 2. Backend Workflow (LangGraph)
+
+**Location**: `agent/agent.py`
+
+**State Definition**:
+
+```python
+class KiraAgentState(CopilotKitState):
+    """Inherits from CopilotKitState to access frontend actions"""
+    messages: Annotated[List[BaseMessage], add_messages]
+```
+
+**chat_node Execution Flow**:
+
+1. Extract `frontend_actions` from `state.get("copilotkit", {}).get("actions", [])`
+2. Initialize ChatOpenAI with OpenRouter endpoint
+3. Bind frontend tools: `model.bind_tools(frontend_actions)`
+4. Call LLM with system prompt + conversation history
+5. Return response with tool calls (executed on frontend)
+
+**Key Insight**: Tools are **executed on frontend**, not backend. LangGraph agent only generates tool calls; CopilotKit runtime handles execution.
+
+#### 3. Persistent State (Turso Checkpointer)
+
+**Location**: `agent/turso_checkpointer.py`
+
+**Architecture**:
+
+- **Local-first**: Always uses local SQLite file (`agent/data/checkpoints.db`)
+- **Optional Cloud Sync**: If Turso credentials provided, syncs in background via libsql
+- **Zero Code Intrusion**: LangGraph uses standard AsyncSqliteSaver, libsql handles sync transparently
+
+**Configuration**:
+
+```bash
+# Development (local only)
+ENVIRONMENT=dev
+
+# Production (with cloud sync)
+ENVIRONMENT=prod
+TURSO_DATABASE_URL=libsql://your-db.turso.io
+TURSO_AUTH_TOKEN=your-token
+TURSO_SYNC_INTERVAL=60  # seconds
+```
+
+**Critical Methods**:
+
+- `get_checkpointer()`: Returns AsyncSqliteSaver for LangGraph
+- `sync_now()`: Manual sync trigger for critical moments
+- `close()`: Cleanup with final sync (called on shutdown)
+
+#### 4. Server Lifecycle (FastAPI)
+
+**Location**: `agent/main.py`
+
+**Lifespan Handler**:
+
+```python
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup: Initialize checkpointer and compile graph
+    checkpointer, turso_checkpointer = await get_checkpointer()
+    graph = workflow.compile(checkpointer=checkpointer)
+
+    yield
+
+    # Shutdown: Close checkpointer (triggers final sync)
+    await turso_checkpointer.close()
+```
+
+**Endpoints**:
+
+- `POST /copilotkit`: CopilotKit GraphQL endpoint (streaming)
+- `GET /`: Root health check
+- `GET /health`: Health check for monitoring
+- `GET /docs`: Auto-generated FastAPI docs
+
+### Environment Variables
+
+#### Frontend (.env)
+
+```bash
+PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+PUBLIC_COPILOTKIT_LICENSE_KEY=...
+```
+
+#### Backend (agent/.env)
+
+```bash
+# Required
+OPENROUTER_API_KEY=sk-or-v1-...
+
+# Optional
+OPENROUTER_MODEL=google/gemini-2.0-flash-exp  # Default model
+ENVIRONMENT=dev  # 'dev' (local) or 'prod' (Turso sync)
+TURSO_DATABASE_URL=libsql://...  # Required if ENVIRONMENT=prod
+TURSO_AUTH_TOKEN=...  # Required if ENVIRONMENT=prod
+TURSO_SYNC_INTERVAL=60  # Sync interval in seconds
+ALLOWED_ORIGINS=http://localhost:4321  # CORS origins
+PORT=8000  # Server port
+```
+
+### Development Workflow
+
+#### Starting Development
+
+```bash
+# Start both frontend and backend
+make dev
+
+# Or separately:
+pnpm dev  # Frontend: http://localhost:4321
+cd agent && uv run python main.py  # Backend: http://localhost:8000
+```
+
+#### Testing Agent
+
+1. Visit `http://localhost:4321` (Kira app loads)
+2. Chat with agent: "Add a meeting tomorrow at 2pm"
+3. Agent calls `addEvent` tool → frontend executes → UI updates
+4. Conversation persists via thread_id in localStorage
+
+#### Debugging Checkpointer
+
+```bash
+# View local conversation history
+sqlite3 agent/data/checkpoints.db
+> SELECT * FROM checkpoints;
+
+# Check Turso sync (if enabled)
+turso db shell your-db-name
+> SELECT COUNT(*) FROM checkpoints;
+```
+
+### Critical Integration Points
+
+#### 1. Frontend → Backend: Action Registration
+
+Frontend actions are serialized and sent to backend via CopilotKit's GraphQL protocol. Backend sees them as tool schemas in LangGraph state.
+
+#### 2. Backend → Frontend: Tool Execution
+
+LangGraph generates tool calls (AIMessage with tool_calls). CopilotKit runtime intercepts and executes corresponding `useCopilotAction` callbacks on frontend.
+
+#### 3. State Persistence: Thread ID
+
+Both frontend and backend use same `thread_id` from localStorage. LangGraph checkpointer keys state by thread_id, enabling conversation history across sessions.
+
+### Common Patterns
+
+#### Adding New Frontend Actions
+
+```typescript
+// In React component
+useCopilotAction({
+  name: "myNewAction",
+  parameters: [{ name: "param1", type: "string", description: "..." }],
+  handler: async ({ param1 }) => {
+    // Execute action on frontend
+    return { success: true };
+  },
+});
+```
+
+Agent automatically sees this as a callable tool.
+
+#### Modifying System Prompt
+
+Edit `agent/agent.py` → `chat_node` → `system_message` content. This controls agent behavior and personality.
+
+#### Changing LLM Model
+
+Set `OPENROUTER_MODEL` in `agent/.env`. See https://openrouter.ai/models for available models.
+
+### Architecture Benefits
+
+1. **Frontend Tool Execution**: No backend permission issues, direct UI updates
+2. **Model Flexibility**: Switch LLMs via environment variable (OpenRouter abstraction)
+3. **Conversation Persistence**: Thread-based state enables multi-session context
+4. **Local-First Database**: Low latency, offline support, optional cloud sync
+5. **Zero Frontend Changes**: Agent upgrades don't require frontend redeployment
+
+### Build Configuration for SSR
+
+**🚨 Critical for Production Builds**
+
+When using CopilotKit in Astro SSR API routes, you must configure Vite to externalize Node.js-only dependencies. This prevents build errors caused by AWS SDK and LangChain modules that cannot run in browser environments.
+
+**Problem**: `@copilotkit/runtime` depends on `@langchain/aws`, which transitively depends on `@aws-sdk/*` and `@smithy/*` packages. These packages use Node.js file system modules (`fs`, `crypto`, etc.) that Vite cannot bundle for the browser.
+
+**Solution**: Add comprehensive `vite.ssr.external` configuration in `astro.config.mjs`:
+
+```javascript
+vite: {
+  plugins: [tailwindcss()],
+  ssr: {
+    external: [
+      "async_hooks",
+
+      // AWS SDK and dependencies (used by @copilotkit/runtime -> @langchain/aws)
+      "@aws-sdk/*",
+      "@smithy/*",
+
+      // LangChain ecosystem
+      "@langchain/aws",
+      "@langchain/community",
+      "@langchain/core",
+      "langchain",
+
+      // CopilotKit runtime dependencies
+      "@copilotkit/runtime",
+      "@copilotkit/shared",
+
+      // Node.js-only dependencies
+      "pino",
+      "pino-pretty",
+      "pino-abstract-transport",
+      "type-graphql",
+      "graphql-yoga",
+      "express",
+    ],
+  },
+},
+```
+
+**Why This Works**:
+
+- SSR API routes run only on the server, not in the browser
+- Externalizing these packages tells Vite to keep them as Node.js modules
+- At runtime, Cloudflare Workers (or other SSR platforms) load them as server-side dependencies
+
+**When to Update**:
+
+- After upgrading CopilotKit, LangChain, or related dependencies
+- If you see `"X is not exported by __vite-browser-external"` errors during build
+- When adding new Node.js-only integrations to API routes
+
+---
+
 **🎯 Key Takeaways for Claude:**
+
+### Website Development
 
 1. **Always use path aliases** (`@components/`, `@layouts/`, `@styles/`, etc.) - never relative paths
 2. **Always use existing components** (Link, Button, IconLink)
@@ -574,3 +916,17 @@ import { getCollection } from "astro:content";
 10. **Social sharing integrated** - SocialShare component automatically added to all blog posts
 11. **Resume components available** - Use dedicated Resume/ folder components for PDF layouts
 12. **Language variants enabled** - Use `en:`/`zh:` Tailwind variants for responsive typography
+
+### Kira Agent Development
+
+1. **Use `make dev` for full-stack development** - starts both frontend and backend
+2. **Thread ID is critical** - stored in localStorage, enables conversation persistence
+3. **Tools execute on frontend** - LangGraph generates calls, CopilotKit executes via useCopilotAction
+4. **Checkpointer is local-first** - SQLite file with optional Turso cloud sync
+5. **Environment variables matter** - Different behavior for dev vs prod (ENVIRONMENT=dev/prod)
+6. **System prompt in agent.py** - Edit to change agent behavior and personality
+7. **OpenRouter abstraction** - Switch models via OPENROUTER_MODEL env var
+8. **Lifespan handler for cleanup** - Always close checkpointer on shutdown for final sync
+9. **CORS configuration** - Update ALLOWED_ORIGINS when deploying to new domains
+10. **Health check endpoint** - Use `/health` for monitoring in production
+11. **Build configuration required** - Must configure `vite.ssr.external` for production builds (see "Build Configuration for SSR")

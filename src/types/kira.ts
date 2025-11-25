@@ -1,4 +1,4 @@
-export type EventType = 'work' | 'personal' | 'urgent' | 'wellness' | 'study' | 'social';
+export type EventType = "work" | "personal" | "urgent" | "wellness" | "study" | "social";
 
 export interface CalendarEvent {
   id: string;
@@ -13,7 +13,7 @@ export interface Task {
   id: string;
   title: string;
   tag: EventType;
-  status: 'todo' | 'done';
+  status: "todo" | "done";
   createdAt: Date;
 }
 

@@ -72,7 +72,31 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     ssr: {
-      external: ["async_hooks"],
+      external: [
+        "async_hooks",
+
+        // AWS SDK and dependencies (used by @copilotkit/runtime -> @langchain/aws)
+        "@aws-sdk/*",
+        "@smithy/*",
+
+        // LangChain ecosystem
+        "@langchain/aws",
+        "@langchain/community",
+        "@langchain/core",
+        "langchain",
+
+        // CopilotKit runtime dependencies
+        "@copilotkit/runtime",
+        "@copilotkit/shared",
+
+        // Node.js-only dependencies
+        "pino",
+        "pino-pretty",
+        "pino-abstract-transport",
+        "type-graphql",
+        "graphql-yoga",
+        "express",
+      ],
     },
   },
 

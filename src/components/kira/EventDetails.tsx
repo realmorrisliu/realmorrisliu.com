@@ -18,7 +18,6 @@ const EVENT_TYPES: { type: EventType; color: string; label: string }[] = [
   { type: "wellness", color: "bg-rose-500", label: "Wellness" },
   { type: "study", color: "bg-teal-500", label: "Study" },
   { type: "social", color: "bg-pink-500", label: "Social" },
-  { type: "other", color: "bg-blue-500", label: "Other" },
 ];
 
 export const EventDetails: React.FC<EventDetailsProps> = ({

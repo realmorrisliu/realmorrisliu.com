@@ -1,0 +1,31 @@
+[project]
+name = "agent"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Morris Liu", email = "morrisliu1994@outlook.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "ag-ui-langgraph>=0.0.8",
+    "copilotkit>=0.1.72",
+    "fastapi>=0.115.14",
+    "langchain-core>=1.1.0",
+    "langchain-google-genai>=3.1.0",
+    "langchain-openai>=1.0.3",
+    "langgraph>=1.0.3",
+    "langgraph-checkpoint-sqlite>=2.0.5",
+    "aiosqlite>=0.20.0",
+    "libsql>=0.1.0",
+    "python-dotenv>=1.2.1",
+    "uvicorn>=0.38.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.11,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.6",
+]

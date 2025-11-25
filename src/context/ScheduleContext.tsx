@@ -1,5 +1,11 @@
 import React, { createContext, useContext, useReducer, useEffect } from "react";
-import type { ScheduleState, CalendarEvent, Task, DayPoolItem, UserPreferences } from "@/types/kira";
+import type {
+  ScheduleState,
+  CalendarEvent,
+  Task,
+  DayPoolItem,
+  UserPreferences,
+} from "@/types/kira";
 
 // Initial State
 const initialState: ScheduleState = {
@@ -147,7 +153,12 @@ export const ScheduleProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       ];
       dispatch({
         type: "LOAD_STATE",
-        payload: { events: mockEvents, tasks: mockTasks, dayPool: [], preferences: initialState.preferences },
+        payload: {
+          events: mockEvents,
+          tasks: mockTasks,
+          dayPool: [],
+          preferences: initialState.preferences,
+        },
       });
     }
   }, []);

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Clock, Inbox, CheckCircle2, Plus, X } from "lucide-react";
@@ -289,7 +288,8 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({ jumpToTodayTrigger =
                     const startMin = event.start.getMinutes();
                     const durationMin = (event.end.getTime() - event.start.getTime()) / 60000;
 
-                    const top = (startHour - (preferences?.workingHours?.start ?? 6)) * 60 + startMin;
+                    const top =
+                      (startHour - (preferences?.workingHours?.start ?? 6)) * 60 + startMin;
                     const height = durationMin;
 
                     return (

@@ -28,3 +28,11 @@ photos-inbox/
 
 # Cloudflare Wrangler
 .wrangler/
+
+# Agent (Python Backend)
+agent/data/               # Local SQLite database files
+agent/.venv/              # Python virtual environment
+agent/__pycache__/        # Python cache
+agent/**/__pycache__/     # Nested Python cache
+agent/*.pyc               # Compiled Python files
+agent/.pytest_cache/      # Pytest cache
