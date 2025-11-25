@@ -6,7 +6,6 @@ import mdx from "@astrojs/mdx";
 import icon from "astro-icon";
 import react from "@astrojs/react";
 import cloudflare from "@astrojs/cloudflare";
-import clerk from "@clerk/astro";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,7 +15,6 @@ export default defineConfig({
   output: "server",
 
   integrations: [
-    clerk(),
     mdx(),
     icon({
       include: {
@@ -72,31 +70,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     ssr: {
-      external: [
-        "async_hooks",
-
-        // AWS SDK and dependencies (used by @copilotkit/runtime -> @langchain/aws)
-        "@aws-sdk/*",
-        "@smithy/*",
-
-        // LangChain ecosystem
-        "@langchain/aws",
-        "@langchain/community",
-        "@langchain/core",
-        "langchain",
-
-        // CopilotKit runtime dependencies
-        "@copilotkit/runtime",
-        "@copilotkit/shared",
-
-        // Node.js-only dependencies
-        "pino",
-        "pino-pretty",
-        "pino-abstract-transport",
-        "type-graphql",
-        "graphql-yoga",
-        "express",
-      ],
+      external: ["async_hooks"],
     },
   },
 
