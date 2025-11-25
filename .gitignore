@@ -30,9 +30,9 @@ photos-inbox/
 .wrangler/
 
 # Agent (Python Backend)
-agent/data/               # Local SQLite database files
-agent/.venv/              # Python virtual environment
-agent/__pycache__/        # Python cache
-agent/**/__pycache__/     # Nested Python cache
-agent/*.pyc               # Compiled Python files
-agent/.pytest_cache/      # Pytest cache
+agent/data/
+agent/.venv/
+agent/__pycache__/
+agent/**/__pycache__/
+agent/*.pyc
+agent/.pytest_cache/
