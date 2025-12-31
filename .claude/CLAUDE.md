@@ -9,15 +9,15 @@ Personal website built with Astro + Tailwind CSS. Minimalist blog, portfolio, an
 
 ### Essential Commands
 
-| Command              | Action                        | Critical Notes                   |
-| -------------------- | ----------------------------- | -------------------------------- |
-| `pnpm dev`           | Frontend dev server           | `localhost:4321`, hot reload     |
-| `pnpm build`         | Build frontend to `./dist/`   | **ALWAYS run before deploy**     |
-| `pnpm typecheck`     | TypeScript validation         | **MUST pass before commit**      |
-| `pnpm prettier`      | Format (2-space indent)       | Auto-sorts Tailwind classes      |
-| `pnpm check`         | Run all quality checks        | lint + format:check + typecheck  |
-| `pnpm new:photo`     | Add photo to Moments          | EXIF extraction + content gen    |
-| `pnpm deploy`        | Build + deploy to Cloudflare  | Runs `astro build && wrangler`   |
+| Command          | Action                       | Critical Notes                  |
+| ---------------- | ---------------------------- | ------------------------------- |
+| `pnpm dev`       | Frontend dev server          | `localhost:4321`, hot reload    |
+| `pnpm build`     | Build frontend to `./dist/`  | **ALWAYS run before deploy**    |
+| `pnpm typecheck` | TypeScript validation        | **MUST pass before commit**     |
+| `pnpm prettier`  | Format (2-space indent)      | Auto-sorts Tailwind classes     |
+| `pnpm check`     | Run all quality checks       | lint + format:check + typecheck |
+| `pnpm new:photo` | Add photo to Moments         | EXIF extraction + content gen   |
+| `pnpm deploy`    | Build + deploy to Cloudflare | Runs `astro build && wrangler`  |
 
 ### Key Paths
 
@@ -48,6 +48,7 @@ src/
 ### 🚨 CRITICAL RULES
 
 **ALWAYS DO:**
+
 - Use path aliases (`@components/`, `@layouts/`, `@utils/`, etc.) for all imports
 - Use existing components (Link, Button, IconLink, Tag)
 - Follow Tailwind-first architecture (no inline `<style>` except animations)
@@ -56,6 +57,7 @@ src/
 - Use `formatTag()` for all tag displays
 
 **NEVER DO:**
+
 - Use relative paths (`../`, `./`) for imports - always use path aliases
 - Create new files unless absolutely necessary
 - Add H1 tags in blog posts (handled by layout)
@@ -70,11 +72,11 @@ src/
 
 ### Content Collections
 
-| Collection | Location            | Schema                                             | Usage                            |
-| ---------- | ------------------- | -------------------------------------------------- | -------------------------------- |
-| **blog**   | `src/content/blog/` | `title`, `description`, `pubDate`, `tags`, `draft` | Auto-indexed when `draft: false` |
-| **now**    | `src/content/now/`  | `summary`, `lastUpdated`, `title`, `description`   | Latest entry on `/now`           |
-| **moments**| `src/content/moments/` | `title`, `image`, `date`, `location`, `camera`, EXIF | Photo journal with metadata   |
+| Collection  | Location               | Schema                                               | Usage                            |
+| ----------- | ---------------------- | ---------------------------------------------------- | -------------------------------- |
+| **blog**    | `src/content/blog/`    | `title`, `description`, `pubDate`, `tags`, `draft`   | Auto-indexed when `draft: false` |
+| **now**     | `src/content/now/`     | `summary`, `lastUpdated`, `title`, `description`     | Latest entry on `/now`           |
+| **moments** | `src/content/moments/` | `title`, `image`, `date`, `location`, `camera`, EXIF | Photo journal with metadata      |
 
 ### Writing Blog Posts
 
@@ -105,6 +107,7 @@ pnpm new:photo
 ```
 
 **EXIF Data Extracted:**
+
 - Camera model (e.g., "iPhone 15 Pro")
 - Lens (if available)
 - ISO, Aperture, Shutter Speed
@@ -112,6 +115,7 @@ pnpm new:photo
 - Location (if manually added)
 
 **Photo Grid Display:**
+
 - Masonry layout with responsive columns (1-3 columns)
 - Click to expand full-size with metadata overlay
 - EXIF info displayed in overlay footer
@@ -165,20 +169,20 @@ Use Tailwind classes: `text-text-primary`, `text-text-secondary`, etc.
 
 ### Component Registry
 
-| Component                  | Purpose                                          | Key Props                            | Dependencies        |
-| -------------------------- | ------------------------------------------------ | ------------------------------------ | ------------------- |
-| **Link.astro**             | Unified links, responsive hover                  | `href`, `target`, `class`            | Base component      |
-| **Button.astro**           | Buttons with variants                            | `variant`, `size`, `type`            | -                   |
-| **IconLink.astro**         | Icon links with consistent opacity               | `href`, `title`, `icon`              | Base for GitHub/RSS |
-| **Tag.astro**              | Smart tag display with formatting                | `tag`, `interactive`, `href`, `size` | formatTag utility   |
-| **PhotoGrid.astro**        | Masonry photo gallery with lightbox              | `photos`                             | Content Collections |
-| **PostHog.astro**          | Analytics tracking component                     | -                                    | PostHog SDK         |
-| **SocialShare.astro**      | Blog post social sharing (X + Hacker News)       | `title`, `url`                       | XIcon, HackerNews   |
-| **FooterSignature.astro**  | Footer navigation with links                     | `links`, `signature`                 | Link                |
-| **InlineNote.astro**       | Global tooltip system for terminology            | -                                    | Global singleton    |
-| **InlineNoteRef.astro**    | Inline note triggers with hover tooltips         | `text`, `note`                       | InlineNote          |
-| **Footnote.astro**         | Academic footnotes with return links             | `id`, `slot`                         | Link                |
-| **FootnoteRef.astro**      | Footnote references with anchor links            | `id`                                 | Link                |
+| Component                 | Purpose                                    | Key Props                            | Dependencies        |
+| ------------------------- | ------------------------------------------ | ------------------------------------ | ------------------- |
+| **Link.astro**            | Unified links, responsive hover            | `href`, `target`, `class`            | Base component      |
+| **Button.astro**          | Buttons with variants                      | `variant`, `size`, `type`            | -                   |
+| **IconLink.astro**        | Icon links with consistent opacity         | `href`, `title`, `icon`              | Base for GitHub/RSS |
+| **Tag.astro**             | Smart tag display with formatting          | `tag`, `interactive`, `href`, `size` | formatTag utility   |
+| **PhotoGrid.astro**       | Masonry photo gallery with lightbox        | `photos`                             | Content Collections |
+| **PostHog.astro**         | Analytics tracking component               | -                                    | PostHog SDK         |
+| **SocialShare.astro**     | Blog post social sharing (X + Hacker News) | `title`, `url`                       | XIcon, HackerNews   |
+| **FooterSignature.astro** | Footer navigation with links               | `links`, `signature`                 | Link                |
+| **InlineNote.astro**      | Global tooltip system for terminology      | -                                    | Global singleton    |
+| **InlineNoteRef.astro**   | Inline note triggers with hover tooltips   | `text`, `note`                       | InlineNote          |
+| **Footnote.astro**        | Academic footnotes with return links       | `id`, `slot`                         | Link                |
+| **FootnoteRef.astro**     | Footnote references with anchor links      | `id`                                 | Link                |
 
 ### Resume Components (`src/components/Resume/`)
 
@@ -190,6 +194,7 @@ Use Tailwind classes: `text-text-primary`, `text-text-secondary`, etc.
 | **ProjectsList.astro**       | Project entries with period/GitHub link display | `en:`/`zh:` variants |
 
 **Language-Aware Styling:**
+
 - Custom Tailwind variants: `@variant en (:lang(en) &);` and `@variant zh (:lang(zh) &);`
 - Different spacing/line heights for English vs Chinese
 - PDF-optimized font sizing via CSS custom properties (`--text-resume-*`)
@@ -242,8 +247,7 @@ Uses `astro-icon` v1.x with **local icon sets** to avoid network dependencies.
 ### Usage
 
 ```astro
-import { Icon } from "astro-icon/components";
-import IconLink from "@components/IconLink.astro";
+import {Icon} from "astro-icon/components"; import IconLink from "@components/IconLink.astro";
 
 <Icon name="logos:github-icon" size={16} />
 <Icon name="lucide:rss" size={12} />
@@ -269,10 +273,8 @@ import IconLink from "@components/IconLink.astro";
 **Use for citations and references at page bottom:**
 
 ```astro
-import FootnoteRef from "@components/FootnoteRef.astro";
-import Footnote from "@components/Footnote.astro";
-
-Text with citation.<FootnoteRef id={1} />
+import FootnoteRef from "@components/FootnoteRef.astro"; import Footnote from
+"@components/Footnote.astro"; Text with citation.<FootnoteRef id={1} />
 
 <Footnote id={1}>
   {/* prettier-ignore */}
@@ -281,6 +283,7 @@ Text with citation.<FootnoteRef id={1} />
 ```
 
 **Requirements:**
+
 - Wrap content in `<span>` with `{/* prettier-ignore */}`
 - Use same numeric ID for both FootnoteRef and Footnote
 - Import both components at top of .mdx files
@@ -290,10 +293,8 @@ Text with citation.<FootnoteRef id={1} />
 **Use for immediate explanations via hover tooltips:**
 
 ```astro
-import InlineNote from "@components/InlineNote.astro";
-import InlineNoteRef from "@components/InlineNoteRef.astro";
-
-// Add global tooltip system (once per page)
+import InlineNote from "@components/InlineNote.astro"; import InlineNoteRef from
+"@components/InlineNoteRef.astro"; // Add global tooltip system (once per page)
 <InlineNote />
 
 // Use inline notes for terminology
@@ -301,6 +302,7 @@ import InlineNoteRef from "@components/InlineNoteRef.astro";
 ```
 
 **Key Differences:**
+
 - **Footnotes**: Academic citations, numbered references at page bottom
 - **Inline Notes**: Immediate explanations, hover/click tooltips
 - **Global System**: InlineNote provides shared tooltip, InlineNoteRef triggers it
@@ -360,12 +362,14 @@ import "@styles/global.css";
 **Usage**: Automatically included in `Layout.astro` via `<PostHog />` in `<head>`
 
 **Configuration**:
+
 - PostHog SDK loaded from CDN
 - Project API key configured in component
 - Page view tracking enabled
 - Custom event tracking available
 
 **Privacy**:
+
 - Respects Do Not Track (DNT) headers
 - No personally identifiable information collected
 - Cookie-based session tracking
@@ -397,31 +401,31 @@ const switchUrl = createLangSwitchUrl("zh", "#section");
 
 ### Astro Config (`astro.config.mjs`)
 
-| Setting             | Value                        | Purpose                                                      |
-| ------------------- | ---------------------------- | ------------------------------------------------------------ |
-| **Output Mode**     | `server`                     | SSR mode for Cloudflare Pages                                |
-| **Adapter**         | `@astrojs/cloudflare`        | Cloudflare Workers integration                               |
-| **TypeScript**      | `astro/tsconfigs/strict`     | Strict mode + path aliases configuration                     |
-| **URL Structure**   | `trailingSlash: "never"`     | Clean URLs without trailing slashes                          |
-| **Fonts**           | Fontsource local hosting     | Inter (variable) + EB Garamond (variable) + Maple Mono       |
-| **Tailwind**        | v4 via Vite plugin           | Custom `@theme` block, Typography plugin + Language variants |
-| **Image Service**   | Sharp (compile)              | Optimized image processing                                   |
-| **Markdown Theme**  | github-light                 | Syntax highlighting with word wrap                           |
+| Setting            | Value                    | Purpose                                                      |
+| ------------------ | ------------------------ | ------------------------------------------------------------ |
+| **Output Mode**    | `server`                 | SSR mode for Cloudflare Pages                                |
+| **Adapter**        | `@astrojs/cloudflare`    | Cloudflare Workers integration                               |
+| **TypeScript**     | `astro/tsconfigs/strict` | Strict mode + path aliases configuration                     |
+| **URL Structure**  | `trailingSlash: "never"` | Clean URLs without trailing slashes                          |
+| **Fonts**          | Fontsource local hosting | Inter (variable) + EB Garamond (variable) + Maple Mono       |
+| **Tailwind**       | v4 via Vite plugin       | Custom `@theme` block, Typography plugin + Language variants |
+| **Image Service**  | Sharp (compile)          | Optimized image processing                                   |
+| **Markdown Theme** | github-light             | Syntax highlighting with word wrap                           |
 
 ### Dependencies
 
-| Package                     | Version | Purpose               |
-| --------------------------- | ------- | --------------------- |
-| **Astro**                   | ^5.16.0 | Static site generator |
-| **Tailwind CSS**            | ^4.1.11 | Utility-first CSS     |
-| **@astrojs/react**          | ^4.4.2  | React integration     |
-| **@astrojs/cloudflare**     | ^12.6.11| Cloudflare adapter    |
-| **@astrojs/rss**            | ^4.0.14 | RSS feed generation   |
-| **@astrojs/sitemap**        | ^3.6.0  | XML sitemap           |
-| **@tailwindcss/typography** | ^0.5.16 | Markdown styling      |
-| **astro-icon**              | ^1.1.5  | Iconify integration   |
-| **exifr**                   | ^7.1.3  | EXIF data extraction  |
-| **Prettier**                | 3.6.2   | Code formatting       |
+| Package                     | Version  | Purpose               |
+| --------------------------- | -------- | --------------------- |
+| **Astro**                   | ^5.16.0  | Static site generator |
+| **Tailwind CSS**            | ^4.1.11  | Utility-first CSS     |
+| **@astrojs/react**          | ^4.4.2   | React integration     |
+| **@astrojs/cloudflare**     | ^12.6.11 | Cloudflare adapter    |
+| **@astrojs/rss**            | ^4.0.14  | RSS feed generation   |
+| **@astrojs/sitemap**        | ^3.6.0   | XML sitemap           |
+| **@tailwindcss/typography** | ^0.5.16  | Markdown styling      |
+| **astro-icon**              | ^1.1.5   | Iconify integration   |
+| **exifr**                   | ^7.1.3   | EXIF data extraction  |
+| **Prettier**                | 3.6.2    | Code formatting       |
 
 ---
 
@@ -429,13 +433,13 @@ const switchUrl = createLangSwitchUrl("zh", "#section");
 
 ### Cloudflare Pages
 
-| Setting              | Value                          |
-| -------------------- | ------------------------------ |
-| **Build command**    | `pnpm build`                   |
-| **Output directory** | `dist`                         |
-| **Node.js version**  | 18                             |
-| **Framework**        | Astro                          |
-| **Deploy command**   | `pnpm deploy`                  |
+| Setting              | Value         |
+| -------------------- | ------------- |
+| **Build command**    | `pnpm build`  |
+| **Output directory** | `dist`        |
+| **Node.js version**  | 18            |
+| **Framework**        | Astro         |
+| **Deploy command**   | `pnpm deploy` |
 
 ### SEO Features
 
