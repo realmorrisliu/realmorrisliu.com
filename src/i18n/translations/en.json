@@ -29,7 +29,7 @@
           "title": "Head of Engineering",
           "company": "Workus AI",
           "period": "Sep 2025 - Present",
-          "description": "Joined seed-stage AI startup as founding engineering leader to architect and build B2B Sales Agent platform from scratch. Leading full technical stack decisions (LangGraph + FastAPI backend, React + Vercel AI SDK frontend) for 24/7 multilingual sales automation system. Building production-grade infrastructure (K8s + Flux CD for GitOps workflow) and developing core Agent capabilities while establishing engineering culture and development workflows.",
+          "description": "Joined seed-stage AI startup as founding engineering leader. Initially built B2B Sales Agent with LangGraph stack. Currently architecting Marco—a Rust-based Agent Runtime inspired by Codex/Pi architectures. Implementing domain-agnostic Runtime layer with Domain Pack abstraction for business-agnostic core (Session, Tool Loop, Event streaming) while supporting pluggable business logic via trait-based Domain Packs. Building multi-Agent management with AgentManager/AgentInstance patterns and production-grade K8s infrastructure.",
           "showInPdf": true
         },
         {
@@ -94,10 +94,11 @@
             "period": "2025 - Present",
             "description": "Architecting and building B2B Sales Agent platform from ground up as founding engineering leader, enabling 24/7 multilingual automated sales engagement for enterprise clients.",
             "details": [
-              "Technical Architecture: Designed complete technical stack with LangGraph for Agent orchestration, FastAPI backend services, and React + Vercel AI SDK frontend, enabling intelligent multi-turn sales conversations with context awareness.",
-              "Infrastructure Engineering: Building production-grade Kubernetes infrastructure with Flux CD implementing GitOps workflow for automated deployments, establishing scalable foundation for AI services with proper monitoring and observability.",
-              "Agent Development: Developing core Agent capabilities for intelligent lead qualification, personalized outreach, and automated follow-ups across multiple languages and channels, focusing on natural conversation flow and high conversion rates.",
-              "Team & Process: Establishing engineering culture and development workflows for early-stage team, setting up CI/CD pipelines, code review standards, and technical documentation practices for sustainable growth."
+              "Agent Runtime Architecture: Designing domain-agnostic Agent Runtime inspired by Codex/Pi—abstracting core execution layer (Session Loop, Tool Loop with loop guard, Event streaming, Context Manager) from business logic. Runtime communicates with business domains via DomainPack trait with three hooks (initialization, Op handling, Event post-processing), enabling the same infrastructure to power completely different agent behaviors.",
+              "Multi-Agent Management: Built AgentManager/AgentInstance patterns supporting multiple concurrent agent instances with isolated state and memory. Each instance wraps the generic Runtime while binding to specific Domain Packs (Sourcing, Sales, Ops), demonstrating horizontal scalability of the architecture.",
+              "Provider Abstraction Layer: Implemented unified LLM client interface supporting Gemini, OpenAI-compatible, and Anthropic-compatible providers through marco-llm crate. Business logic remains provider-agnostic while leveraging provider-specific capabilities (structured outputs, function calling, streaming).",
+              "Tool & Skill System: Designed pluggable Tool trait with JSON Schema validation and Skill loading system supporting hot-reloadable business capabilities. Built-in tools include web search, memory management, and entity extraction—runtime-agnostic and reusable across domains.",
+              "Rust Infrastructure: Production-grade async architecture using Rust 2024 + Tokio with structured logging, JSONL session persistence, and K8s deployment with GitOps workflow."
             ],
             "showInPdf": false
           },

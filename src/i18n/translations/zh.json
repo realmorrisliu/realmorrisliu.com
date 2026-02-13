@@ -29,7 +29,7 @@
           "title": "技术负责人",
           "company": "万里客",
           "period": "2025年 9月 - 至今",
-          "description": "加入早期阶段的 AI 创业公司，作为创始技术负责人从零构建 B2B Sales Agent 平台。主导完整技术栈决策（LangGraph + FastAPI 后端、React + Vercel AI SDK 前端），打造 7x24 小时多语言销售自动化系统。正在构建生产级基础设施（K8s + Flux CD 实现 GitOps 工作流）并开发核心 Agent 能力，同时建立工程文化和开发流程。",
+          "description": "加入早期阶段的 AI 创业公司，担任创始技术负责人。初期构建基于 LangGraph 的 Sales Agent。目前主导架构 Marco——一个受 Codex/Pi 启发的 Rust Agent Runtime。实现业务无关的 Runtime 核心层（Session、Tool Loop、Event 流）与 Domain Pack 抽象架构，通过 trait-based Domain Pack 支持可插拔的业务逻辑。构建多 Agent 管理系统（AgentManager/AgentInstance 模式）及生产级 K8s 基础设施。",
           "showInPdf": true
         },
         {
@@ -94,10 +94,11 @@
             "period": "2025年 - 至今",
             "description": "作为创始技术负责人从零架构和构建 B2B Sales Agent 平台，为企业客户提供 7x24 小时多语言自动化销售互动能力。",
             "details": [
-              "技术架构：设计完整技术栈，使用 LangGraph 进行 Agent 编排、FastAPI 后端服务、React + Vercel AI SDK 前端，实现具有上下文感知能力的智能多轮销售对话。",
-              "基础设施工程：构建生产级 Kubernetes 基础设施，使用 Flux CD 实现 GitOps 工作流进行自动化部署，为 AI 服务建立可扩展基础并配备完善的监控和可观测性。",
-              "Agent 开发：开发核心 Agent 能力，包括智能线索筛选、个性化触达、跨语言跨渠道的自动化跟进，注重自然对话流程和高转化率。",
-              "团队与流程：为早期团队建立工程文化和开发流程，搭建 CI/CD 流水线、代码审查标准和技术文档规范，为可持续增长奠定基础。"
+              "Agent Runtime 架构：设计受 Codex/Pi 启发的业务无关 Agent Runtime——将核心执行层（Session Loop、带循环保护的 Tool Loop、Event 流、Context Manager）与业务逻辑解耦。Runtime 通过 DomainPack trait 的三个 hook（初始化、Op 处理、Event 后处理）与业务域通信，使同一基础设施可驱动完全不同的 Agent 行为。",
+              "多 Agent 管理：构建 AgentManager/AgentInstance 模式，支持多并发 Agent 实例，具备隔离的状态和内存。每个实例封装通用 Runtime 并绑定特定 Domain Pack（Sourcing、Sales、Ops），展现架构的水平扩展能力。",
+              "Provider 抽象层：通过 marco-llm crate 实现统一 LLM 客户端接口，支持 Gemini、OpenAI-compatible、Anthropic-compatible 多提供商。业务逻辑保持 Provider 无关，同时可利用提供商特定能力（结构化输出、函数调用、流式响应）。",
+              "Tool & Skill 系统：设计可插拔的 Tool trait，支持 JSON Schema 验证，以及支持热重载业务能力的 Skill 加载系统。内置工具包括 Web 搜索、Memory 管理、实体提取等——Runtime 无关，可跨域复用。",
+              "Rust 基础设施：生产级异步架构，采用 Rust 2024 + Tokio，具备结构化日志、JSONL 会话持久化，以及 GitOps 工作流的 K8s 部署。"
             ],
             "showInPdf": true
           },
