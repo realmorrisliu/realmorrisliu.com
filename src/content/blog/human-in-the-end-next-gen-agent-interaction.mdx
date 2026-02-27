@@ -1,0 +1,180 @@
+---
+title: "Human in the End: Rethinking How We Interact with AI Agents"
+description: "The industry consensus is Human-in-the-Loop. But when agents run for hours autonomously, approving every step becomes the bottleneck. Human-in-the-End isn't about removing humans—it's about upgrading their role from operator to owner."
+pubDate: 2026-02-27
+tags: ["ai", "agents", "architecture", "alan"]
+featured: true
+author: "Morris Liu"
+readingTime: 10
+---
+
+import LanguageSwitcher from "../../components/LanguageSwitcher.astro";
+
+<LanguageSwitcher
+  language={{
+    name: "阅读中文版",
+    url: "/thoughts/human-in-the-end-next-gen-agent-interaction-zh",
+  }}
+/>
+
+I've been building an agent runtime called [Alan](https://github.com/realmorrisliu/Alan). It's written in Rust, and the core idea is to model AI agents as Turing machines—a stateless program executes on a stateful tape, producing observable side effects.
+
+But the deeper I got into the runtime design, the more I kept hitting the same question: where does the human fit in?
+
+The industry answer is "Human-in-the-Loop." Put a human at every critical decision point. Make them approve tool calls, review outputs, confirm actions. It's safe. It's responsible. And yet—a recent [Anthropic study](https://www.anthropic.com/research/measuring-agent-autonomy) tells a different story: among Claude Code users, about 20% of new user sessions run with full auto-approve; by the time someone has used it 750+ times, that number crosses 40%. The longest agent sessions nearly doubled—from under 25 minutes to over 45—between October 2025 and January 2026.
+
+People are voting with their feet. They trust agents more, and they don't want to babysit every step.
+
+This post is about why I think we need a different model—one I'm calling **Human-in-the-End**—and what it actually means for agent architecture.
+
+## The Loop That Doesn't Scale
+
+Human-in-the-Loop (HITL) is the consensus pattern for AI safety. The idea is straightforward: AI proposes, human disposes. Before the agent executes anything risky, it pauses and waits for approval.
+
+In practice, this shows up in three flavors:
+
+- **Approval nodes** — the agent halts at predefined checkpoints (LangGraph-style workflows)
+- **Review queues** — tasks land in an inbox for batch human review
+- **Tool permissions** — the agent requests elevated access for dangerous operations (Claude Code does this)
+
+This works. For short, interactive sessions where a human is actively watching, it works well. The human catches hallucinations, prevents destructive actions, and provides course corrections in real time.
+
+But here's the thing: agents are getting more capable. They can plan multi-step tasks, reflect on their own outputs, retry failed approaches, and maintain context across long execution chains. The trajectory is clear—agents are moving from "answer my question" to "complete my project."
+
+And that's where HITL falls apart.
+
+When an agent runs for hours—researching, coding, testing, iterating—the approval model creates three compounding problems:
+
+**Approval fatigue.** You click "approve" so many times that you stop reading what you're approving. The safety mechanism becomes theater. David Farrell nailed this in [*The Unsupervised Agent Problem*](https://blog.dnmfarrell.com/post/the-unsupervised-agent-problem/): "your attention has drifted… you rubber-stamp an action you should have scrutinized." And Anthropic's data backs it up—over 40% of experienced Claude Code users just turn on full auto-approve.
+
+**Bandwidth ceiling.** Every approval is a synchronous blocking call on a human brain. The agent's throughput is capped by your attention span. OpenAI's [Harness team](https://openai.com/index/harness-engineering/) reported that they regularly see single Codex runs lasting over 6 hours—often while the engineers are asleep. You can't step-by-step approve something that runs overnight.
+
+**Role mismatch.** You're forced to evaluate low-level details (should this file be written? should this command run?) when your actual value is in high-level judgment (is this the right approach? does this outcome meet the goal?). The Harness team figured this out: they progressively replaced human review with agent-to-agent review, keeping humans for moments that require real judgment. The result? Three engineers used Codex to ship roughly [1,500 PRs and nearly a million lines of code](https://openai.com/index/harness-engineering/) in five months. Not a single line written by hand.
+
+The irony: the more capable the agent, the less sense it makes to supervise every step. You wouldn't hire a senior engineer and then stand behind them approving every keystroke.
+
+## What "Human in the End" Actually Means
+
+The phrase "Human-in-the-End" is deliberately provocative. It's meant to contrast with HITL—from "approve every step" to "just check the result." Taken literally, though, it's misleading.
+
+Humans don't vanish until the end. In practice, they show up at three stages:
+
+- **Before**: defining goals, setting constraints, establishing policies, drawing red lines around irreversible actions
+- **During**: policies remain active, anomalies trigger callbacks
+- **End**: reviewing final output, accepting accountability
+
+What humans *don't* participate in is **execution**—the routine, reversible, within-policy operations that make up 95% of an agent's work.
+
+So the real shift isn't about *where* humans appear. It's about *what role* they play:
+
+| | HITL | HITE |
+|---|---|---|
+| Human role | Operator | Owner |
+| Focus | Execution details | Goals and outcomes |
+| Intervention | Step-by-step approval | Exception-driven oversight |
+| Agent model | Supervised tool | Delegated autonomous executor |
+
+The core formula: **Human Defines → Agent Executes → Human Owns.**
+
+This isn't just theory. OpenAI's Harness team arrived at essentially the same model independently—their stated principle is ["Humans steer, agents execute."](https://openai.com/index/harness-engineering/) Humans set goals and constraints, agents handle the full pipeline from coding to testing to deployment, and only escalate when judgment is genuinely needed.
+
+1. **Human Defines.** Set the goal, budget, risk policy, and hard boundaries. Define the rules, not babysit the process.
+2. **Agent Executes.** The agent handles all operational work within the sandbox—planning, executing, reflecting, retrying. Normal flow runs silently.
+3. **Human Owns.** The human is accountable for the outcome. The system only escalates when it hits a policy boundary—budget exceeded, high-risk action triggered, anomaly detected. This is **exception-driven human oversight**.
+
+## Why Humans Never Fully Disappear
+
+I want to be clear about this, because HITE is easy to misread as "fully autonomous AI, no humans needed." That's not my argument.
+
+Humans stay irreplaceable for structural reasons, not technical ones:
+
+**Accountability.** If an agent signs a bad contract or pushes broken code to production, a human bears the consequences. There must always be someone accountable—just not someone approving every step.
+
+**Strategic judgment.** AI can optimize, but it can't define purpose. "Should we enter this market?" isn't an optimization problem. It's a judgment call involving risk appetite, culture, and brand—things no probability distribution captures.
+
+**Unquantifiable value.** Long-term relationships, trust networks, industry gut feel. These shape decisions in ways models can't replicate.
+
+HITE frees humans from execution oversight so they can focus on what genuinely requires human judgment: setting goals and owning outcomes.
+
+## From Philosophy to Architecture
+
+Ideas are cheap. The hard part is encoding them into a runtime.
+
+I've been working through this in [Alan](https://github.com/realmorrisliu/Alan), which models agents as Turing machines: a stateless program (AgentConfig) executes on a stateful tape (Tape), producing durable side effects recorded in a rollout log. Three abstractions:
+
+```
+AgentConfig  →  "how to think"   (stateless: LLM + tools + policies)
+Workspace    →  "who I am"       (persistent: persona + memory + skills)
+Session      →  "what I'm doing" (bounded: tape + turns + rollout)
+```
+
+Alan already has the foundation—stateless agent / stateful workspace / bounded session separation, plus rollback, replay, approval, and sandbox primitives. But turning HITE from a philosophy into runtime behavior requires four more things.
+
+### Commit Boundaries and Policy-as-Code
+
+If HITE means anything concrete, it means this: most agent actions should flow freely, and human intervention should converge on **commit boundaries**—irreversible checkpoints where real-world consequences kick in.
+
+Traditional approval flows bind intervention to specific tool calls. Too rigid. In an autonomous system, reading a file, running a local computation, trying an approach that might fail—all of these should be free. Human attention should be saved for the moments that actually matter: signing a contract, transferring funds, pushing to production.
+
+These boundaries need to be defined as declarative **Policy-as-Code**:
+
+- **Dynamic risk assessment.** Triggers based on context, not individual actions—has the agent exceeded its scope? Is spending approaching the budget ceiling? Is the code change unusually large?
+- **Exceptions as first-class citizens.** The real test of an autonomous agent isn't how fast it runs when things go right. It's how gracefully it degrades when they don't. Normal operations run silently; only policy violations or anomalies escalate to the human owner.
+
+In Turing machine terms: a commit boundary is a special symbol on the tape. When the read/write head hits it, the transition function yields to the human instead of deciding on its own. The human writes their decision, the machine resumes. This maps naturally to Alan's existing Yield/Resume protocol.
+
+### Task/Job: Beyond the Context Window
+
+Sessions are bounded by the LLM's context window. Fine for a single conversation, but real agent tasks—"refactor this module," "investigate and fix this production issue," "research competitors and write a report"—span hours or days.
+
+This needs a new layer above sessions:
+
+- **Task/Job** — the top-level business entity, carrying the full lifecycle goal, SLA, resource constraints, and owner identity
+- **Run** — a single execution attempt, supporting multi-day rotation, automatic retry, and exponential backoff scheduling
+- **Session** — demoted to a single computation window, one finite stretch of tape
+
+The hard problem is continuity. When a new session picks up a task, it needs enough context to continue without re-deriving everything. This means structured handoff artifacts—not just "here's the conversation history" but "here's the current state, what's been tried, what's left."
+
+This layering maps to the HITE formula: Task carries Human Defines (goals and constraints), Run/Session carries Agent Executes (autonomous operation), and the Task's final state delivers to Human Owns (outcome accountability).
+
+### Checkpointed Reasoning as Trust Infrastructure
+
+Alan already records every thought, action, and observation in a durable rollout log—what I call Checkpointed Reasoning. But for HITE to work—for humans to genuinely feel comfortable *not* watching every step—the rollout needs to evolve from a display log into a verifiable evidence chain:
+
+- **Idempotency.** Every tool call carries an idempotency key. The engine intercepts side-effecting requests to guarantee safe replay.
+- **Provenance.** Final outputs carry tamper-proof lineage—which policy authorized each step, which source data informed each decision. This eliminates "I need to watch everything" anxiety.
+
+Humans let go not because they blindly trust the agent, but because they can trace the complete decision chain at any time. Checkpointed Reasoning upgrades from "technical feature" to "trust infrastructure."
+
+### Skills over Plugins: The Unix Philosophy
+
+Under HITE, agents need to autonomously orchestrate many tools over long periods. The architecture of tool orchestration directly determines how controllable and maintainable the system is.
+
+The current industry trend leans toward MCP (Model Context Protocol). But MCP's design runs counter to the Unix philosophy—"do one thing well" and "communicate through text streams." It introduces heavyweight client/server architecture, handshake protocols, and state management. To let an agent use a simple tool, you have to wrap it as an RPC server.
+
+OpenAI learned this the hard way. When building the Codex [App Server](https://openai.com/index/unlocking-the-codex-harness/), they initially tried shipping Codex as an MCP server, but quickly found it "difficult to maintain MCP semantics" and pivoted to their own JSON-RPC protocol. When you need rich agent interactions—thread lifecycles, streaming progress, approval interrupts—MCP's abstraction level isn't enough.
+
+Alan takes a different path: **Skills over Plugins.**
+
+- **Micro CLI tools.** Developers write command-line tools in whatever language they prefer. Read from stdin, write to stdout. No servers, no protocol overhead.
+- **Skills as pipelines.** Markdown-based Skills chain these isolated CLI tools together using natural language—like Unix pipes, but orchestrated by the agent reading a process document.
+
+In this architecture, MCP and OpenAPI are just atomic executors among many. Skills are the orchestration layer—the logic controllers.
+
+This solves real problems: context isolation (the model only loads the current skill, not every tool schema), composition determinism (skills define explicit data flow), auth decoupling (each tool manages its own authentication), and developer sovereignty (write a CLI + a SKILL.md, no servers required).
+
+## The Punchline
+
+The shift from HITL to HITE is a structural upgrade in the human role:
+
+> **Human-in-the-Loop:** Human approves execution steps.
+>
+> **Human-in-the-End:** Human defines goals and owns outcomes. Agent executes independently. Intervention occurs only at commit boundaries—when risk exceeds policy, irreversible actions are triggered, or anomalies are detected.
+
+Delegate outcomes, not steps.
+
+This is the design philosophy behind Alan, and the first in a series exploring next-generation agent architecture. Next up: the AI Turing Machine metaphor and why it leads to cleaner runtime design than you'd expect.
+
+---
+
+_This is Part 1 of a series on next-generation agent design. Next: [The AI Turing Machine — Alan's Architecture Philosophy](#) (coming soon). If you're interested in the runtime itself, check out [Alan on GitHub](https://github.com/realmorrisliu/Alan)._
