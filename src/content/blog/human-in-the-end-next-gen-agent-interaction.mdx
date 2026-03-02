@@ -2,6 +2,7 @@
 title: "Human in the End: Rethinking How We Interact with AI Agents"
 description: "The industry consensus is Human-in-the-Loop. But when agents run for hours autonomously, approving every step becomes the bottleneck. Human-in-the-End isn't about removing humans—it's about upgrading their role from operator to owner."
 pubDate: 2026-02-27
+updatedDate: 2026-03-02
 tags: ["ai", "agents", "architecture", "alan"]
 featured: true
 author: "Morris Liu"
@@ -163,18 +164,8 @@ In this architecture, MCP and OpenAPI are just atomic executors among many. Skil
 
 This solves real problems: context isolation (the model only loads the current skill, not every tool schema), composition determinism (skills define explicit data flow), auth decoupling (each tool manages its own authentication), and developer sovereignty (write a CLI + a SKILL.md, no servers required).
 
-## The Punchline
+## Update (March 2, 2026)
 
-The shift from HITL to HITE is a structural upgrade in the human role:
+Today I came across Eric Holmes's post on Hacker News: [MCP is dead. Long live the CLI](https://ejholmes.github.io/2026/02/28/mcp-is-dead-long-live-the-cli.html). One line captures the core tradeoff well: "The best tools are the ones that work for both humans and machines."
 
-> **Human-in-the-Loop:** Human approves execution steps.
->
-> **Human-in-the-End:** Human defines goals and owns outcomes. Agent executes independently. Intervention occurs only at commit boundaries—when risk exceeds policy, irreversible actions are triggered, or anomalies are detected.
-
-Delegate outcomes, not steps.
-
-This is the design philosophy behind Alan, and the first in a series exploring next-generation agent architecture. Next up: the AI Turing Machine metaphor and why it leads to cleaner runtime design than you'd expect.
-
----
-
-_This is Part 1 of a series on next-generation agent design. Next: [The AI Turing Machine — Alan's Architecture Philosophy](#) (coming soon). If you're interested in the runtime itself, check out [Alan on GitHub](https://github.com/realmorrisliu/Alan)._
+This aligns with the "Skills over Plugins" argument above. In Alan, Skills remain the orchestration layer over small CLI executors. MCP and OpenAPI still have value as adapters when needed, but CLI-first is the default path because it gives better composability, easier debugging, and cleaner permission boundaries.

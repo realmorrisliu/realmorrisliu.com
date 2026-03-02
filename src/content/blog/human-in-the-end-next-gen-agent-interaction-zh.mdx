@@ -2,6 +2,7 @@
 title: "Human in the End：重新思考我们与 AI Agent 的交互方式"
 description: "行业共识是 Human-in-the-Loop。但当 Agent 连续自主运行数小时，逐步审批反而成了瓶颈。Human-in-the-End 不是移除人类，而是将人类的角色从操作者升级为拥有者。"
 pubDate: 2026-02-27
+updatedDate: 2026-03-02
 tags: ["ai", "agents", "architecture", "alan"]
 featured: true
 author: "Morris Liu"
@@ -163,18 +164,8 @@ Alan 选择了一条不同的路径：**Skills over Plugins。**
 
 这解决了真实的工程痛点：上下文隔离（模型只加载当前 Skill，而非所有工具 Schema）、组合确定性（Skill 定义了显式的数据流转路径）、鉴权解耦（每个工具自己管理认证状态）、开发者主权（写一个 CLI + 一个 SKILL.md，不需要常驻 Server）。
 
-## 结语
+## 更新（2026 年 3 月 2 日）
 
-从 HITL 到 HITE，本质上是人类角色的一次结构性升级：
+今天我在 Hacker News 上看到 Eric Holmes 的文章：[MCP is dead. Long live the CLI](https://ejholmes.github.io/2026/02/28/mcp-is-dead-long-live-the-cli.html)。其中一句话和上面的判断高度一致："The best tools are the ones that work for both humans and machines."
 
-> **Human-in-the-Loop：** 人类审批执行步骤。
->
-> **Human-in-the-End：** 人类定义目标并为结果负责。Agent 独立执行。介入仅发生在提交边界——当风险超出策略、不可逆操作被触发、或异常被检测到时。
-
-委托结果，而非步骤。
-
-这是 Alan 背后的设计哲学，也是这个系列的第一篇。下一篇：AI Turing Machine 隐喻，以及为什么它能带来比你预期更干净的运行时设计。
-
----
-
-_这是「下一代 Agent 设计」系列的第一篇。下一篇：[The AI Turing Machine — Alan 的架构哲学](#)（即将发布）。如果你对运行时本身感兴趣，可以看看 [Alan 的 GitHub 仓库](https://github.com/realmorrisliu/Alan)。_
+这也印证了上面「Skills over Plugins」的观点。在 Alan 里，Skills 仍然是编排层，底层执行默认优先走小型 CLI 工具。MCP 和 OpenAPI 依然有价值，但更适合作为按需接入的适配器，而不是唯一入口。这样在组合性、可调试性和权限边界上都更清晰。
