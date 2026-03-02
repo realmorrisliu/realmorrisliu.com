@@ -4,64 +4,118 @@
 
 - Canonical URL or repo slug (`src/content/blog/*.mdx`)
 - Campaign mode: `launch` | `refresh` | `follow-up`
-- Target audience priority: builders | founders | infra engineers | general AI users
-- Desired tone: neutral | assertive | provocative
+- Core claim: one sentence
+- Counterpoint: one sentence
+- Desired action: discussion | subscribers | reposts | product signups
+
+## Default Channel Mix
+
+- Global: `X + Hacker News`
+- Chinese: `Xiaohongshu + Juejin`
+- Optional long-form layer: `WeChat OA` (weekly or biweekly synthesis)
 
 ## X Playbook
 
 ## Objective
-- Trigger technical discussion, not pure link clicks.
+- Trigger high-signal technical debate and pull traffic to the canonical post.
 
-## Recommended sequence
-1. Post primary take without link.
-2. Reply to your own post with article link.
-3. Add one follow-up reply that narrows the debate question.
+## Sequence
+1. Publish a no-link primary post with thesis and challenge question.
+2. Reply to self with link and one key excerpt.
+3. Add one follow-up reply after 1-3 hours with a concrete scenario.
 
-## Copy constraints
-- 3 short paragraphs max in primary post.
-- 1-2 hashtags max.
-- End with one clear question.
+## Constraints
+- Max 3 short paragraphs.
+- Max 2 hashtags (for example `#AIAgents #BuildInPublic`).
+- End with one pointed question, not a slogan.
 
 ## Hacker News Playbook
 
 ## Objective
-- Earn thoughtful replies from practitioners.
+- Attract practitioner critique and edge-case feedback.
 
-## Submission guidance
-- Use a neutral title that mirrors article title.
-- Post one concise "Author here" comment with the thesis and one explicit question.
-- Avoid defensive replies; answer with concrete examples.
+## Sequence
+1. Submit with clean, neutral title (close to article title).
+2. Post one "Author here" comment: thesis + what feedback you want.
+3. Reply with examples, benchmarks, or architecture details.
 
-## Reply constraints
-- One point per comment.
-- Prefer direct examples over abstract claims.
-- No vote solicitation or off-platform coordination.
+## Constraints
+- One claim per comment.
+- No vote requests, no off-platform brigading.
+- If disagreement escalates, ask for counterexample data.
 
 ## Xiaohongshu Playbook
 
 ## Objective
-- Turn long-form technical idea into digestible cards with a practical takeaway.
+- Translate deep technical argument into practical decision framework.
 
-## Recommended structure
-1. Cover: contrarian hook.
-2. Card 1: problem statement.
-3. Card 2: failed default pattern.
-4. Card 3: your model/framework.
-5. Card 4: concrete case.
-6. Card 5: actionable checklist.
-7. Final card: one discussion question.
+## Card Structure (7 cards)
+1. Cover: strong contrarian hook.
+2. Problem: why default pattern breaks.
+3. Misconception: common but wrong strategy.
+4. Framework: your model (for example Human-in-the-End).
+5. Case: one real workflow and boundary.
+6. Checklist: 3-5 actionable rules.
+7. Question: invite opposing view with one scenario.
 
-## Caption constraints
-- Start with one sentence hook.
-- Include one short "why now".
-- End with one question that invites disagreement.
+## Caption Formula
+- Hook sentence.
+- "Why now" in one line.
+- Link to long-form article in profile/bio guidance.
+- End with one debate question.
+
+## Juejin Playbook
+
+## Objective
+- Reach technical readers who prefer structured reasoning and implementation detail.
+
+## Post Structure
+1. Background: context and why this matters now.
+2. Problem: where current practice fails.
+3. Approach: your framework and decision boundary.
+4. Tradeoffs: what gets better, what gets harder.
+5. Implementation notes: process, tooling, guardrails.
+6. Actionable takeaway: what readers can apply this week.
+
+## Title Pattern
+- Primary: `一个反直觉结论 + 适用边界`  
+  Example: `Human-in-the-End 不是口号：长时代理系统的提交边界怎么定`
+- Alternate: `问题场景 + 方法选择`  
+  Example: `当 Agent 连续运行数小时，为什么我放弃 Human-in-the-Loop`
+
+## WeChat OA Playbook
+
+## Objective
+- Build durable narrative continuity across your projects (blog, Alan, openrouter-rs).
+
+## Cadence
+- Weekly or biweekly digest.
+- One issue = one main thesis + two supporting field notes.
+
+## Article Structure
+1. Opening: this period's core question.
+2. Main essay: updated thesis with examples.
+3. Build-in-public log: progress on Alan/openrouter-rs.
+4. Cross-link block: X/HN/Xiaohongshu/Juejin discussion highlights.
+5. Next question: what you will test before next issue.
+
+## Cross-Channel Repurpose Map
+
+- Blog -> X: thesis + challenge question.
+- Blog -> HN: neutral title + author comment.
+- Blog -> Xiaohongshu: visual cards + practical checklist.
+- Blog -> Juejin: full technical breakdown.
+- Weekly OA -> recap links + evolving stance.
+
+## Reply Playbook (All Channels)
+
+- Clarify: restate claim with one concrete example.
+- Rebut: acknowledge valid concern, then show boundary conditions.
+- Bridge: convert conflict into testable question.
 
 ## Tone Guardrails
 
 - Keep claims falsifiable and specific.
-- Avoid absolutist language unless backed by concrete reasoning.
-- Prefer "default choice vs edge adapter" framing for protocol debates.
-- If discussion gets polarized, pivot to boundary conditions:
-  - where this model works,
-  - where it does not,
-  - what assumptions must hold.
+- Avoid absolute language unless evidence is explicit.
+- Prefer "default choice vs edge adapter" framing.
+- State assumptions, failure modes, and where the model does not apply.
