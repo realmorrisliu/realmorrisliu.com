@@ -10,9 +10,9 @@
 
 ## Default Channel Mix
 
-- Global: `X + Hacker News`
+- Global: `X + LinkedIn`
 - Chinese: `Xiaohongshu + Juejin`
-- Optional long-form layer: `WeChat OA` (weekly or biweekly synthesis)
+- Optional channels: `Hacker News` + `WeChat OA` (weekly or biweekly synthesis)
 
 ## X Playbook
 
@@ -28,6 +28,21 @@
 - Max 3 short paragraphs.
 - Max 2 hashtags (for example `#AIAgents #BuildInPublic`).
 - End with one pointed question, not a slogan.
+
+## LinkedIn Playbook
+
+## Objective
+- Reach practitioner-heavy audiences and generate durable professional discussion.
+
+## Sequence
+1. Publish a text-first post with one clear thesis and one concrete scenario.
+2. Add first comment with canonical link and one-line reading context.
+3. Add one follow-up comment after 2-6 hours with an implementation takeaway.
+
+## Constraints
+- 1-2 short paragraphs plus 3-5 concise bullets.
+- Max 3 hashtags.
+- No generic motivation hooks; use falsifiable claims and specific boundaries.
 
 ## Hacker News Playbook
 
@@ -96,15 +111,16 @@
 1. Opening: this period's core question.
 2. Main essay: updated thesis with examples.
 3. Build-in-public log: progress on Alan/openrouter-rs.
-4. Cross-link block: X/HN/Xiaohongshu/Juejin discussion highlights.
+4. Cross-link block: X/LinkedIn/Xiaohongshu/Juejin discussion highlights (plus HN when used).
 5. Next question: what you will test before next issue.
 
 ## Cross-Channel Repurpose Map
 
 - Blog -> X: thesis + challenge question.
-- Blog -> HN: neutral title + author comment.
+- Blog -> LinkedIn: thesis + practitioner scenario + first-comment link.
 - Blog -> Xiaohongshu: visual cards + practical checklist.
 - Blog -> Juejin: full technical breakdown.
+- Blog -> HN (optional): neutral title + author comment.
 - Weekly OA -> recap links + evolving stance.
 
 ## Reply Playbook (All Channels)

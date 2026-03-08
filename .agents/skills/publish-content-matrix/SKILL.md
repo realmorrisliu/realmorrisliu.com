@@ -1,6 +1,6 @@
 ---
 name: publish-content-matrix
-description: Create and operate a cross-channel publishing matrix from this repository's content source. Use when the user wants to publish, republish, or maintain discussion momentum for blog or build-in-public updates (especially Alan and openrouter-rs) on X, Hacker News, Xiaohongshu, Juejin, and WeChat Official Account, including draft generation, channel-specific framing, follow-up replies, and post-publication iteration.
+description: Create and operate a cross-channel publishing matrix from this repository's content source. Use when the user wants to publish, republish, or maintain discussion momentum for blog or build-in-public updates (especially Alan and openrouter-rs) on X, LinkedIn, Xiaohongshu, Juejin, Hacker News, and WeChat Official Account, including draft generation, channel-specific framing, follow-up replies, and post-publication iteration.
 ---
 
 # Publish Content Matrix
@@ -25,8 +25,8 @@ Read [references/channel-playbooks.md](references/channel-playbooks.md) for form
 - `follow-up`: discussion continuation based on existing replies/comments.
 
 3. Select channels.
-- Default channels: X + Hacker News + Xiaohongshu + Juejin.
-- Optional channel: WeChat Official Account (`wechat-oa`) for weekly or biweekly roundup.
+- Default channels: X + LinkedIn + Xiaohongshu + Juejin.
+- Optional channels: Hacker News (`hn`) and WeChat Official Account (`wechat-oa`).
 - If the user only wants some channels, output only those channels.
 
 4. Generate a publish pack.
@@ -36,7 +36,7 @@ Read [references/channel-playbooks.md](references/channel-playbooks.md) for form
 
 5. Run risk and quality checks.
 - Avoid fabricated claims, fake metrics, or fake citations.
-- Avoid direct vote-begging on Hacker News.
+- If Hacker News is selected, avoid direct vote-begging.
 - Keep sharp opinions technical and evidence-backed.
 - If the user says "today/yesterday/tomorrow", use exact dates.
 
@@ -58,18 +58,23 @@ Always return sections in this order:
 2. `Primary Angle`
 3. `Channel Plan`
 4. `X Pack`
-5. `Hacker News Pack`
+5. `LinkedIn Pack`
 6. `Xiaohongshu Pack`
 7. `Juejin Pack`
-8. `WeChat OA Pack` (only when selected)
-9. `Reply Playbook`
-10. `Next Iteration`
+8. `Hacker News Pack` (only when selected)
+9. `WeChat OA Pack` (only when selected)
+10. `Reply Playbook`
+11. `Next Iteration`
 
 ## Channel Rules
 
 - X:
   - Give one primary post, two alternates, and one first-reply link text.
   - Use at most 2 hashtags in the primary post.
+- LinkedIn:
+  - Give one primary post, one alternate hook, and one first-comment link text.
+  - Prefer 3-5 concise bullets for scannability.
+  - End with one practitioner question, not engagement bait.
 - Hacker News:
   - Provide title options only if user asks; otherwise recommend one clean title.
   - Always provide one concise "Author here" comment.
