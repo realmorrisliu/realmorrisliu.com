@@ -46,7 +46,7 @@ And that's where HITL falls apart.
 
 When an agent runs for hours—researching, coding, testing, iterating—the approval model creates three compounding problems:
 
-**Approval fatigue.** You click "approve" so many times that you stop reading what you're approving. The safety mechanism becomes theater. David Farrell nailed this in [*The Unsupervised Agent Problem*](https://blog.dnmfarrell.com/post/the-unsupervised-agent-problem/): "your attention has drifted… you rubber-stamp an action you should have scrutinized." And Anthropic's data backs it up—over 40% of experienced Claude Code users just turn on full auto-approve.
+**Approval fatigue.** You click "approve" so many times that you stop reading what you're approving. The safety mechanism becomes theater. David Farrell nailed this in [_The Unsupervised Agent Problem_](https://blog.dnmfarrell.com/post/the-unsupervised-agent-problem/): "your attention has drifted… you rubber-stamp an action you should have scrutinized." And Anthropic's data backs it up—over 40% of experienced Claude Code users just turn on full auto-approve.
 
 **Bandwidth ceiling.** Every approval is a synchronous blocking call on a human brain. The agent's throughput is capped by your attention span. OpenAI's [Harness team](https://openai.com/index/harness-engineering/) reported that they regularly see single Codex runs lasting over 6 hours—often while the engineers are asleep. You can't step-by-step approve something that runs overnight.
 
@@ -64,16 +64,16 @@ Humans don't vanish until the end. In practice, they show up at three stages:
 - **During**: policies remain active, anomalies trigger callbacks
 - **End**: reviewing final output, accepting accountability
 
-What humans *don't* participate in is **execution**—the routine, reversible, within-policy operations that make up 95% of an agent's work.
+What humans _don't_ participate in is **execution**—the routine, reversible, within-policy operations that make up 95% of an agent's work.
 
-So the real shift isn't about *where* humans appear. It's about *what role* they play:
+So the real shift isn't about _where_ humans appear. It's about _what role_ they play:
 
-| | HITL | HITE |
-|---|---|---|
-| Human role | Operator | Owner |
-| Focus | Execution details | Goals and outcomes |
-| Intervention | Step-by-step approval | Exception-driven oversight |
-| Agent model | Supervised tool | Delegated autonomous executor |
+|              | HITL                  | HITE                          |
+| ------------ | --------------------- | ----------------------------- |
+| Human role   | Operator              | Owner                         |
+| Focus        | Execution details     | Goals and outcomes            |
+| Intervention | Step-by-step approval | Exception-driven oversight    |
+| Agent model  | Supervised tool       | Delegated autonomous executor |
 
 The core formula: **Human Defines → Agent Executes → Human Owns.**
 
@@ -140,7 +140,7 @@ This layering maps to the HITE formula: Task carries Human Defines (goals and co
 
 ### Checkpointed Reasoning as Trust Infrastructure
 
-Alan already records every thought, action, and observation in a durable rollout log—what I call Checkpointed Reasoning. But for HITE to work—for humans to genuinely feel comfortable *not* watching every step—the rollout needs to evolve from a display log into a verifiable evidence chain:
+Alan already records every thought, action, and observation in a durable rollout log—what I call Checkpointed Reasoning. But for HITE to work—for humans to genuinely feel comfortable _not_ watching every step—the rollout needs to evolve from a display log into a verifiable evidence chain:
 
 - **Idempotency.** Every tool call carries an idempotency key. The engine intercepts side-effecting requests to guarantee safe replay.
 - **Provenance.** Final outputs carry tamper-proof lineage—which policy authorized each step, which source data informed each decision. This eliminates "I need to watch everything" anxiety.

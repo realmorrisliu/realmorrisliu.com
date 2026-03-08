@@ -17,14 +17,17 @@
 ## X Playbook
 
 ## Objective
+
 - Trigger high-signal technical debate and pull traffic to the canonical post.
 
 ## Sequence
+
 1. Publish a no-link primary post with thesis and challenge question.
 2. Reply to self with link and one key excerpt.
 3. Add one follow-up reply after 1-3 hours with a concrete scenario.
 
 ## Constraints
+
 - Max 3 short paragraphs.
 - Max 2 hashtags (for example `#AIAgents #BuildInPublic`).
 - End with one pointed question, not a slogan.
@@ -32,14 +35,17 @@
 ## LinkedIn Playbook
 
 ## Objective
+
 - Reach practitioner-heavy audiences and generate durable professional discussion.
 
 ## Sequence
+
 1. Publish a text-first post with one clear thesis and one concrete scenario.
 2. Add first comment with canonical link and one-line reading context.
 3. Add one follow-up comment after 2-6 hours with an implementation takeaway.
 
 ## Constraints
+
 - 1-2 short paragraphs plus 3-5 concise bullets.
 - Max 3 hashtags.
 - No generic motivation hooks; use falsifiable claims and specific boundaries.
@@ -47,14 +53,17 @@
 ## Hacker News Playbook
 
 ## Objective
+
 - Attract practitioner critique and edge-case feedback.
 
 ## Sequence
+
 1. Submit with clean, neutral title (close to article title).
 2. Post one "Author here" comment: thesis + what feedback you want.
 3. Reply with examples, benchmarks, or architecture details.
 
 ## Constraints
+
 - One claim per comment.
 - No vote requests, no off-platform brigading.
 - If disagreement escalates, ask for counterexample data.
@@ -62,9 +71,11 @@
 ## Xiaohongshu Playbook
 
 ## Objective
+
 - Translate deep technical argument into practical decision framework.
 
 ## Card Structure (7 cards)
+
 1. Cover: strong contrarian hook.
 2. Problem: why default pattern breaks.
 3. Misconception: common but wrong strategy.
@@ -74,6 +85,7 @@
 7. Question: invite opposing view with one scenario.
 
 ## Caption Formula
+
 - Hook sentence.
 - "Why now" in one line.
 - Link to long-form article in profile/bio guidance.
@@ -82,9 +94,11 @@
 ## Juejin Playbook
 
 ## Objective
+
 - Reach technical readers who prefer structured reasoning and implementation detail.
 
 ## Post Structure
+
 1. Background: context and why this matters now.
 2. Problem: where current practice fails.
 3. Approach: your framework and decision boundary.
@@ -93,6 +107,7 @@
 6. Actionable takeaway: what readers can apply this week.
 
 ## Title Pattern
+
 - Primary: `一个反直觉结论 + 适用边界`  
   Example: `Human-in-the-End 不是口号：长时代理系统的提交边界怎么定`
 - Alternate: `问题场景 + 方法选择`  
@@ -101,13 +116,16 @@
 ## WeChat OA Playbook
 
 ## Objective
+
 - Build durable narrative continuity across your projects (blog, Alan, openrouter-rs).
 
 ## Cadence
+
 - Weekly or biweekly digest.
 - One issue = one main thesis + two supporting field notes.
 
 ## Article Structure
+
 1. Opening: this period's core question.
 2. Main essay: updated thesis with examples.
 3. Build-in-public log: progress on Alan/openrouter-rs.

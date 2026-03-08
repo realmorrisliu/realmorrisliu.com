@@ -8,11 +8,11 @@
   "soFar": {
     "title": "So Far",
     "meta": {
-      "title": "Morris Liu - Rust & AI Infrastructure Experience | 7+ Years",
-      "description": "Morris Liu's technical journey: Rust systems programming, AI infrastructure, and open source tools. Built EverCraft (enterprise CAD version control platform), X-Elephant (e-commerce AI sales agent), and Sealbox key management tool."
+      "title": "Morris Liu - Rust Systems Builder & Agent Runtime Architect | 7+ Years",
+      "description": "Morris Liu's technical journey: Rust systems programming, agent runtimes, and open source tooling. Building Marco (production agent runtime), Alan (open-source agent runtime), openrouter-rs (Rust SDK with 100% API coverage), and EverCraft (enterprise CAD version control)."
     },
-    "resumeSummary": "CTO & Technical Architect • Built enterprise platforms from zero serving 20+ clients, led engineering team growth from 2 to 20 people, architected high-performance AI infrastructure with exceptional reliability and cost efficiency",
-    "description": "I build software and lead teams. Currently working on AI infrastructure while side-building tools that solve real problems. This page captures the journey so far—the work, the projects, and the lessons learned.",
+    "resumeSummary": "CTO & Technical Architect • Built enterprise platforms from zero serving 20+ clients, led engineering team growth from 2 to 20 people, architected production agent runtimes and high-performance AI infrastructure",
+    "description": "I build systems in Rust and lead teams. Currently focused on agent runtimes and AI infrastructure, while maintaining open-source LLM tooling. This page captures the journey so far—the work, the projects, and the lessons learned.",
     "nav": [
       { "id": "work", "label": "Work", "href": "#work" },
       { "id": "projects", "label": "Projects", "href": "#projects" },
@@ -170,22 +170,27 @@
         "title": "Personal Projects",
         "items": [
           {
-            "title": "Sealbox",
-            "description": "A lightweight secret management service built with Rust. Single binary, SQLite storage, end-to-end encryption—designed for developers who want secure secret storage without enterprise complexity. Perfect for CI/CD, containers, and small teams.",
-            "githubUrl": "https://github.com/realmorrisliu/sealbox",
+            "title": "Alan",
+            "description": "An open-source agent runtime built in Rust, designed to be the foundation for all my future agents. Explores the 'Human-in-the-End' paradigm—where agents are modeled as Turing machines with humans defining goals and owning outcomes rather than operating the agent step-by-step.",
+            "githubUrl": "https://github.com/realmorrisliu/Alan",
             "readMoreLink": {
-              "text": "→ Read the story behind this project in",
-              "href": "/thoughts/why-i-built-sealbox",
-              "linkText": "Why I Built Sealbox",
+              "text": "→ Read about the philosophy behind this project in",
+              "href": "/thoughts/human-in-the-end-next-gen-agent-interaction",
+              "linkText": "Human in the End",
               "suffix": ""
             },
             "showInPdf": true
           },
           {
             "title": "openrouter-rs",
-            "description": "Type-safe Rust SDK for OpenRouter.ai with async support and builder patterns. Leverages Rust's type system to make LLM API interactions predictable and memory-safe, supporting everything from simple completions to streaming responses.",
+            "description": "Type-safe Rust SDK for OpenRouter.ai with 100% official API coverage (36/36 endpoints). Features domain-oriented client API, unified stream events, typed tool calling, and reasoning token support. Includes openrouter-cli for command-line model discovery, key management, and usage tracking.",
             "githubUrl": "https://github.com/realmorrisliu/openrouter-rs",
             "showInPdf": true
+          },
+          {
+            "title": "Founders Fight Club",
+            "description": "A satirical 2D pixel fighting game built with Godot 4, featuring Silicon Valley founders as playable characters. 16-character roster with unique signature moves, full combat system (combos, guard counters, throw techs), training mode, and an AI-powered art generation pipeline. Dual language support (EN/ZH).",
+            "showInPdf": false
           },
           {
             "title": "funcall",
@@ -194,10 +199,22 @@
             "showInPdf": true
           },
           {
-            "title": "Kira",
-            "description": "An AI assistant that captures context from everything you do—selected text, clipboard, files, conversations—then uses that rich context to help you develop and connect your ideas. Built for people who think better through conversation than traditional note-taking tools.",
+            "title": "Sealbox",
+            "description": "A lightweight secret management service built with Rust. Single binary, SQLite storage, end-to-end encryption. Currently paused—rethinking the problem space as agent authentication evolves beyond traditional API keys and vaults.",
+            "githubUrl": "https://github.com/realmorrisliu/sealbox",
             "readMoreLink": {
-              "text": "→ Read more about the vision and design philosophy in",
+              "text": "→ Read the story behind this project in",
+              "href": "/thoughts/why-i-built-sealbox",
+              "linkText": "Why I Built Sealbox",
+              "suffix": ""
+            },
+            "showInPdf": false
+          },
+          {
+            "title": "Kira",
+            "description": "An AI-native knowledge management system concept—capturing context from selected text, clipboard, files, and conversations. Project discontinued: in an agent-first world, this becomes a native capability of agent runtimes rather than a standalone product.",
+            "readMoreLink": {
+              "text": "→ Read more about the original vision in",
               "href": "/thoughts/building-kira-an-ai-native-second-brain",
               "linkText": "Building Kira: An AI-Native Second Brain",
               "suffix": ""

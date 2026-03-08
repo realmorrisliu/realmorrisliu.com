@@ -15,38 +15,45 @@ Read [references/channel-playbooks.md](references/channel-playbooks.md) for form
 ## Workflow
 
 1. Identify source content.
+
 - Ask for the target URL or slug if missing.
 - Load the corresponding file from `src/content/blog/`.
 - Capture title, thesis, strongest contrarian point, and any recent update markers (`updatedDate`).
 
 2. Select campaign mode.
+
 - `launch`: first publication push.
 - `refresh`: updated article, new angle, or new supporting reference.
 - `follow-up`: discussion continuation based on existing replies/comments.
 
 3. Select channels.
+
 - Default channels: X + LinkedIn + Xiaohongshu + Juejin.
 - Optional channels: Hacker News (`hn`) and WeChat Official Account (`wechat-oa`).
 - If the user only wants some channels, output only those channels.
 
 4. Generate a publish pack.
+
 - Build outputs for selected channels.
 - Keep message consistent, but adapt per channel.
 - Include concrete posting sequence, not only copy text.
 
 5. Run risk and quality checks.
+
 - Avoid fabricated claims, fake metrics, or fake citations.
 - If Hacker News is selected, avoid direct vote-begging.
 - Keep sharp opinions technical and evidence-backed.
 - If the user says "today/yesterday/tomorrow", use exact dates.
 
 6. Prepare follow-up replies.
+
 - Draft 3-5 likely replies for each channel:
   - one clarifying reply,
   - one rebuttal reply,
   - one bridge reply that lowers conflict and keeps discussion moving.
 
 7. Iterate post-publication.
+
 - When the user returns with comments/screenshots, draft contextual responses.
 - Suggest the next piece of build-in-public content for Alan or openrouter-rs that compounds current discussion.
 

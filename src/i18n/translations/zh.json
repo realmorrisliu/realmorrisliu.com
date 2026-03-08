@@ -8,11 +8,11 @@
   "soFar": {
     "title": "关于我",
     "meta": {
-      "title": "Morris Liu - Rust 开发者 & AI 基础设施工程师 | 7+ 年经验",
-      "description": "Morris Liu 技术历程：Rust 系统编程、AI 基础设施、开源工具开发。构建了 EverCraft（企业级 CAD 版本控制平台）、X-Elephant（电商 AI Sales Agent）和 Sealbox 密钥管理工具。"
+      "title": "Morris Liu - Rust 系统构建者 & Agent Runtime 架构师 | 7+ 年经验",
+      "description": "Morris Liu 技术历程：Rust 系统编程、Agent Runtime 架构、开源工具开发。构建了 Marco（生产级 Agent Runtime）、Alan（开源 Agent Runtime）、openrouter-rs（100% API 覆盖的 Rust SDK）和 EverCraft（企业级 CAD 版本控制平台）。"
     },
-    "resumeSummary": "CTO 及架构师 • 从零构建企业平台服务 20+ 客户，带领工程团队从 2 人扩展至 20 人，架构高性能 AI 基础设施实现卓越的可靠性和成本效率",
-    "description": "我写代码，也带团队。最近在忙 AI 基础设施的事，空余时间会做一些解决实际问题的小工具。这页面记录了我这些年的经历——踩过的坑，做过的项目，还有一路学到的东西。",
+    "resumeSummary": "CTO 及架构师 • 从零构建企业平台服务 20+ 客户，带领工程团队从 2 人扩展至 20 人，架构生产级 Agent Runtime 和高性能 AI 基础设施",
+    "description": "我用 Rust 写系统，也带团队。最近主要在搞 Agent Runtime 和 AI 基础设施，同时维护一些开源的 LLM 工具。这页面记录了我这些年的经历——踩过的坑，做过的项目，还有一路学到的东西。",
     "nav": [
       { "id": "work", "label": "工作经历", "href": "#work" },
       { "id": "projects", "label": "项目经验", "href": "#projects" },
@@ -170,22 +170,27 @@
         "title": "个人项目",
         "items": [
           {
-            "title": "Sealbox",
-            "description": "用 Rust 构建的轻量级密钥管理服务。单个二进制文件、SQLite 存储、端到端加密——为想要安全存储密钥但不想要企业级复杂性的开发者设计。非常适合 CI/CD、容器和小团队。",
-            "githubUrl": "https://github.com/realmorrisliu/sealbox",
+            "title": "Alan",
+            "description": "用 Rust 构建的开源 Agent Runtime，目标是成为我未来所有 Agent 的底座。探索 \"Human-in-the-End\" 范式——将 Agent 建模为图灵机，人类负责定义目标和承担结果，而不是一步步操作 Agent。",
+            "githubUrl": "https://github.com/realmorrisliu/Alan",
             "readMoreLink": {
               "text": "→ 在",
-              "href": "/thoughts/why-i-built-sealbox",
-              "linkText": "《为什么我做Sealbox》",
-              "suffix": "中看这个项目背后的故事"
+              "href": "/thoughts/human-in-the-end-next-gen-agent-interaction",
+              "linkText": "《Human in the End》",
+              "suffix": "中了解这个项目背后的理念"
             },
             "showInPdf": true
           },
           {
             "title": "openrouter-rs",
-            "description": "为 OpenRouter.ai 打造的类型安全 Rust SDK，支持异步和建造者模式。利用 Rust 的类型系统让 LLM API 交互变得可预测和内存安全，支持从简单的文字补全到流式响应的所有功能。",
+            "description": "为 OpenRouter.ai 打造的类型安全 Rust SDK，100% 覆盖官方 API（36/36 端点）。提供领域导向的客户端 API、统一流事件、类型安全的工具调用和推理令牌支持。附带 openrouter-cli 命令行工具，支持模型发现、密钥管理和用量查询。",
             "githubUrl": "https://github.com/realmorrisliu/openrouter-rs",
             "showInPdf": true
+          },
+          {
+            "title": "Founders Fight Club",
+            "description": "用 Godot 4 开发的讽刺风格 2D 像素格斗游戏，硅谷创始人作为可操控角色。16 个启动角色各有独特签名技能，完整的战斗系统（连击、格挡反击、投掷技防），训练模式，以及 AI 驱动的美术生成管线。支持中英双语。",
+            "showInPdf": false
           },
           {
             "title": "funcall",
@@ -194,13 +199,25 @@
             "showInPdf": true
           },
           {
+            "title": "Sealbox",
+            "description": "用 Rust 构建的轻量级密钥管理服务。单个二进制文件、SQLite 存储、端到端加密。目前暂停开发——随着 Agent 认证机制的演进，正在重新思考这个问题空间，传统的 API 密钥和密钥保险库可能不再是最优解。",
+            "githubUrl": "https://github.com/realmorrisliu/sealbox",
+            "readMoreLink": {
+              "text": "→ 在",
+              "href": "/thoughts/why-i-built-sealbox",
+              "linkText": "《为什么我做Sealbox》",
+              "suffix": "中看这个项目背后的故事"
+            },
+            "showInPdf": false
+          },
+          {
             "title": "Kira",
-            "description": "一个 AI 助手，能从你做的所有事情中获取上下文——选中的文字、剪贴板、文件、对话——然后利用这些丰富的上下文帮你发展和连接想法。为那些通过对话而不是传统笔记工具来更好思考的人而设计。",
+            "description": "AI 原生知识管理系统概念——从选中的文字、剪贴板、文件和对话中捕获上下文。项目已终止：在 Agent-first 的世界里，这些能力应该是 Agent Runtime 的原生功能，而不是一个独立产品。",
             "readMoreLink": {
               "text": "→ 在",
               "href": "/thoughts/building-kira-an-ai-native-second-brain",
               "linkText": "《构建 Kira：一个 AI 原生的第二大脑》",
-              "suffix": "中了解更多的愿景和设计理念"
+              "suffix": "中了解最初的愿景"
             },
             "showInPdf": false
           }
