@@ -8,11 +8,11 @@
   "soFar": {
     "title": "我这辈子活到现在",
     "meta": {
-      "title": "Morris Liu - Rust 系统构建者 & Agent Runtime 架构师 | 7+ 年经验",
-      "description": "Morris Liu 技术历程：Rust 系统编程、Agent Runtime 架构、开源工具开发。构建了 Marco（生产级 Agent Runtime）、Alan（开源 Agent Runtime）、openrouter-rs（100% API 覆盖的 Rust SDK）和 EverCraft（企业级 CAD 版本控制平台）。"
+      "title": "Morris Liu - Rust 系统构建者 & Agent Runtime 架构师 | 8+ 年经验",
+      "description": "Morris Liu 技术历程：Rust 系统编程、AI 基础设施、开源工具开发。目前在梦数科技基于 Univer 构建 Spreadsheet for Agents，同时持续构建 Alan 和 openrouter-rs。"
     },
-    "resumeSummary": "CTO 及架构师 • 从零构建企业平台服务 20+ 客户，带领工程团队从 2 人扩展至 20 人，架构生产级 Agent Runtime 和高性能 AI 基础设施",
-    "description": "我用 Rust 写系统，也带团队。最近主要在搞 Agent Runtime 和 AI 基础设施，同时维护一些开源的 LLM 工具。这页面记录了我这些年的经历——踩过的坑，做过的项目，还有一路学到的东西。",
+    "resumeSummary": "工程负责人及系统构建者 • 从零构建企业平台服务 20+ 客户，带领工程团队从 2 人扩展至 20 人，如今继续在生产力软件、Agent 基础设施和开源 Rust 工具上做事",
+    "description": "我用 Rust 写系统，也带团队。现在一边在 DreamNum 基于 Univer 做 Spreadsheet for Agents，一边继续把 Alan 往真正可用的个人助理方向推进，同时维护 openrouter-rs 这样的开源工具。这页面记录了我这些年的经历——踩过的坑，做过的项目，还有一路学到的东西。",
     "nav": [
       { "id": "work", "label": "工作经历", "href": "#work" },
       { "id": "projects", "label": "项目经验", "href": "#projects" },
@@ -22,14 +22,22 @@
     ],
     "work": {
       "title": "工作经历",
-      "description": "七年时间，从写代码的工程师变成带团队的负责人。每个阶段都有不同的收获——有技术上的，有管理上的，还有怎么在快速迭代和长期稳定性之间找平衡。",
+      "description": "八年多时间，从写代码的工程师变成带团队的负责人。每个阶段都有不同的收获——有技术上的，有管理上的，还有怎么在快速迭代和长期稳定性之间找平衡。",
       "positions": [
+        {
+          "year": "2026",
+          "title": "软件工程师",
+          "company": "梦数科技（DreamNum）",
+          "period": "2026年 4月 - 至今",
+          "description": "加入梦数科技之后，我的重点不是直接迭代表格编辑器本身，而是把 Univer 行业领先的电子表格编辑能力带给 Agent：做 Spreadsheet for Agents。离开上一份工作并休整了大约一个月之后，我重新回到产品一线，在新的问题域里继续打磨工程能力、产品理解和长期技术判断。",
+          "showInPdf": true
+        },
         {
           "year": "2025",
           "title": "技术负责人",
           "company": "万里客",
-          "period": "2025年 9月 - 至今",
-          "description": "加入早期阶段的 AI 创业公司，担任创始技术负责人。初期构建基于 LangGraph 的 Sales Agent。目前主导架构 Marco——一个受 Codex/Pi 启发的 Rust Agent Runtime。实现业务无关的 Runtime 核心层（Session、Tool Loop、Event 流）与 Domain Pack 抽象架构，通过 trait-based Domain Pack 支持可插拔的业务逻辑。构建多 Agent 管理系统（AgentManager/AgentInstance 模式）及生产级 K8s 基础设施。",
+          "period": "2025年 9月 - 2026年 3月",
+          "description": "加入早期阶段的 AI 创业公司，担任创始技术负责人。先是构建基于 LangGraph 的 Sales Agent，后来把核心重新抽象成 Marco——一个受 Codex/Pi 启发的 Rust Agent Runtime。实现业务无关的 Runtime 核心层（Session、Tool Loop、Event 流）与 Domain Pack 抽象架构，通过 trait-based Domain Pack 支持可插拔的业务逻辑。也搭建了多 Agent 管理系统（AgentManager/AgentInstance 模式）及生产级 K8s 基础设施。",
           "showInPdf": true
         },
         {
@@ -91,7 +99,7 @@
           {
             "title": "万里客：B2B Sales Agent 平台",
             "company": "万里客",
-            "period": "2025年 - 至今",
+            "period": "2025年 - 2026年",
             "description": "作为创始技术负责人从零架构和构建 B2B Sales Agent 平台，为企业客户提供 7x24 小时多语言自动化销售互动能力。",
             "details": [
               "Agent Runtime 架构：设计受 Codex/Pi 启发的业务无关 Agent Runtime——将核心执行层（Session Loop、带循环保护的 Tool Loop、Event 流、Context Manager）与业务逻辑解耦。Runtime 通过 DomainPack trait 的三个 hook（初始化、Op 处理、Event 后处理）与业务域通信，使同一基础设施可驱动完全不同的 Agent 行为。",
@@ -171,7 +179,7 @@
         "items": [
           {
             "title": "Alan",
-            "description": "用 Rust 构建的开源 Agent Runtime，目标是成为我未来所有 Agent 的底座。探索 \"Human-in-the-End\" 范式——将 Agent 建模为图灵机，人类负责定义目标和承担结果，而不是一步步操作 Agent。",
+            "description": "用 Rust 构建的开源 Agent Runtime，目标是成为我未来所有 Agent 的底座。现在已经可以作为一个正常的个人助理使用，我也在继续把它往更强的代码能力推进，目标包括 SWE-bench 和 Terminal-Bench。",
             "githubUrl": "https://github.com/realmorrisliu/Alan",
             "readMoreLink": {
               "text": "→ 在",
@@ -183,7 +191,7 @@
           },
           {
             "title": "openrouter-rs",
-            "description": "为 OpenRouter.ai 打造的类型安全 Rust SDK，100% 覆盖官方 API（36/36 端点）。提供领域导向的客户端 API、统一流事件、类型安全的工具调用和推理令牌支持。附带 openrouter-cli 命令行工具，支持模型发现、密钥管理和用量查询。",
+            "description": "为 OpenRouter.ai 打造的类型安全 Rust SDK。0.8.x 版本开始可以自动检查与官方 API 的差异，提供领域导向的客户端 API、统一流事件、类型安全的工具调用，以及用于账户与用量管理的 openrouter-cli。",
             "githubUrl": "https://github.com/realmorrisliu/openrouter-rs",
             "showInPdf": true
           },
@@ -299,7 +307,7 @@
       "title": "PDF 简历准备就绪 — 选择「另存为PDF」保存文件",
       "backText": "← 返回网页版",
       "pageTitle": "Morris Liu - 简历 (PDF)",
-      "pageDescription": "Morris Liu 的专业简历PDF版本。全栈工程师 & 技术负责人，7年经验。"
+      "pageDescription": "Morris Liu 的专业简历PDF版本。全栈工程师 & 技术负责人，8+ 年经验。"
     },
     "footer": {
       "backToMain": "← 回到主页"

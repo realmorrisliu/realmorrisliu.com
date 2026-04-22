@@ -8,11 +8,11 @@
   "soFar": {
     "title": "So Far",
     "meta": {
-      "title": "Morris Liu - Rust Systems Builder & Agent Runtime Architect | 7+ Years",
-      "description": "Morris Liu's technical journey: Rust systems programming, agent runtimes, and open source tooling. Building Marco (production agent runtime), Alan (open-source agent runtime), openrouter-rs (Rust SDK with 100% API coverage), and EverCraft (enterprise CAD version control)."
+      "title": "Morris Liu - Rust Systems Builder & Agent Runtime Architect | 8+ Years",
+      "description": "Morris Liu's technical journey: Rust systems programming, AI infrastructure, and open source tooling. Currently at DreamNum building spreadsheets for agents with Univer, while continuing Alan and openrouter-rs."
     },
-    "resumeSummary": "CTO & Technical Architect • Built enterprise platforms from zero serving 20+ clients, led engineering team growth from 2 to 20 people, architected production agent runtimes and high-performance AI infrastructure",
-    "description": "I build systems in Rust and lead teams. Currently focused on agent runtimes and AI infrastructure, while maintaining open-source LLM tooling. This page captures the journey so far—the work, the projects, and the lessons learned.",
+    "resumeSummary": "Engineering Leader & Systems Builder • Built enterprise platforms from zero serving 20+ clients, scaled engineering teams from 2 to 20 people, and now build productivity software, agent infrastructure, and open-source Rust tooling",
+    "description": "I build systems in Rust and lead teams. Right now that means building spreadsheets for agents with Univer at DreamNum, pushing Alan toward a real personal assistant, and maintaining open-source LLM tooling. This page captures the journey so far—the work, the projects, and the lessons learned.",
     "nav": [
       { "id": "work", "label": "Work", "href": "#work" },
       { "id": "projects", "label": "Projects", "href": "#projects" },
@@ -22,14 +22,22 @@
     ],
     "work": {
       "title": "Work",
-      "description": "Seven years of growth from individual contributor to team leader. Each role taught me something different about technology, people, and the balance between moving fast and building things that last.",
+      "description": "More than eight years of growth from individual contributor to team leader. Each role taught me something different about technology, people, and the balance between moving fast and building things that last.",
       "positions": [
+        {
+          "year": "2026",
+          "title": "Software Engineer",
+          "company": "DreamNum",
+          "period": "Apr 2026 - Present",
+          "description": "Joined DreamNum after a roughly month-long break between roles. My focus is bringing Univer's industry-leading spreadsheet editing capabilities to agents: building spreadsheets for agents rather than iterating on the spreadsheet editor itself.",
+          "showInPdf": true
+        },
         {
           "year": "2025",
           "title": "Head of Engineering",
           "company": "Workus AI",
-          "period": "Sep 2025 - Present",
-          "description": "Joined seed-stage AI startup as founding engineering leader. Initially built B2B Sales Agent with LangGraph stack. Currently architecting Marco—a Rust-based Agent Runtime inspired by Codex/Pi architectures. Implementing domain-agnostic Runtime layer with Domain Pack abstraction for business-agnostic core (Session, Tool Loop, Event streaming) while supporting pluggable business logic via trait-based Domain Packs. Building multi-Agent management with AgentManager/AgentInstance patterns and production-grade K8s infrastructure.",
+          "period": "Sep 2025 - Mar 2026",
+          "description": "Joined seed-stage AI startup as founding engineering leader. Initially built B2B Sales Agent with LangGraph stack, then re-architected the core into Marco—a Rust-based Agent Runtime inspired by Codex/Pi architectures. Designed domain-agnostic runtime layers (Session, Tool Loop, Event streaming) with Domain Pack abstraction, built multi-Agent management patterns, and shipped production-grade K8s infrastructure.",
           "showInPdf": true
         },
         {
@@ -91,8 +99,8 @@
           {
             "title": "Workus AI: B2B Sales Agent Platform",
             "company": "Workus AI",
-            "period": "2025 - Present",
-            "description": "Architecting and building B2B Sales Agent platform from ground up as founding engineering leader, enabling 24/7 multilingual automated sales engagement for enterprise clients.",
+            "period": "2025 - 2026",
+            "description": "Architected and built B2B Sales Agent platform from ground up as founding engineering leader, enabling 24/7 multilingual automated sales engagement for enterprise clients.",
             "details": [
               "Agent Runtime Architecture: Designing domain-agnostic Agent Runtime inspired by Codex/Pi—abstracting core execution layer (Session Loop, Tool Loop with loop guard, Event streaming, Context Manager) from business logic. Runtime communicates with business domains via DomainPack trait with three hooks (initialization, Op handling, Event post-processing), enabling the same infrastructure to power completely different agent behaviors.",
               "Multi-Agent Management: Built AgentManager/AgentInstance patterns supporting multiple concurrent agent instances with isolated state and memory. Each instance wraps the generic Runtime while binding to specific Domain Packs (Sourcing, Sales, Ops), demonstrating horizontal scalability of the architecture.",
@@ -100,7 +108,7 @@
               "Tool & Skill System: Designed pluggable Tool trait with JSON Schema validation and Skill loading system supporting hot-reloadable business capabilities. Built-in tools include web search, memory management, and entity extraction—runtime-agnostic and reusable across domains.",
               "Rust Infrastructure: Production-grade async architecture using Rust 2024 + Tokio with structured logging, JSONL session persistence, and K8s deployment with GitOps workflow."
             ],
-            "showInPdf": false
+            "showInPdf": true
           },
           {
             "title": "Cross-Border E-commerce Supply Chain Tools",
@@ -171,7 +179,7 @@
         "items": [
           {
             "title": "Alan",
-            "description": "An open-source agent runtime built in Rust, designed to be the foundation for all my future agents. Explores the 'Human-in-the-End' paradigm—where agents are modeled as Turing machines with humans defining goals and owning outcomes rather than operating the agent step-by-step.",
+            "description": "An open-source agent runtime built in Rust, designed to be the foundation for all my future agents. It is now usable as a real personal assistant, and I'm pushing it toward benchmark-grade coding ability with targets like SWE-bench and Terminal-Bench.",
             "githubUrl": "https://github.com/realmorrisliu/Alan",
             "readMoreLink": {
               "text": "→ Read about the philosophy behind this project in",
@@ -183,7 +191,7 @@
           },
           {
             "title": "openrouter-rs",
-            "description": "Type-safe Rust SDK for OpenRouter.ai with 100% official API coverage (36/36 endpoints). Features domain-oriented client API, unified stream events, typed tool calling, and reasoning token support. Includes openrouter-cli for command-line model discovery, key management, and usage tracking.",
+            "description": "Type-safe Rust SDK for OpenRouter.ai. The 0.8.x line automatically checks drift against the official API, and includes domain-oriented clients, unified stream events, typed tool calling, and openrouter-cli for account and usage management.",
             "githubUrl": "https://github.com/realmorrisliu/openrouter-rs",
             "showInPdf": true
           },
@@ -299,7 +307,7 @@
       "title": "PDF Resume Ready — Choose 'Save as PDF' in the print dialog",
       "backText": "← Back to web version",
       "pageTitle": "Morris Liu - Resume (PDF)",
-      "pageDescription": "Morris Liu's professional resume in PDF format. Full-Stack Engineer & Technical Leader with 7 years experience."
+      "pageDescription": "Morris Liu's professional resume in PDF format. Full-Stack Engineer & Technical Leader with 8+ years experience."
     },
     "footer": {
       "backToMain": "← Back to main page"
