@@ -15,6 +15,7 @@
     "description": "I build systems in Rust and lead teams. Right now that means building spreadsheets for agents with Univer at DreamNum, pushing Alan toward a real personal assistant, and maintaining open-source LLM tooling. This page captures the journey so far—the work, the projects, and the lessons learned.",
     "nav": [
       { "id": "work", "label": "Work", "href": "#work" },
+      { "id": "education", "label": "Education", "href": "#education" },
       { "id": "projects", "label": "Projects", "href": "#projects" },
       { "id": "skills", "label": "Skills", "href": "#skills" },
       { "id": "side", "label": "Side", "href": "#side" },
@@ -87,6 +88,18 @@
           "period": "Jul 2017 - Sep 2017",
           "description": "Joined early-stage team for Kemanman project development. Implemented customer-facing membership card features supporting substantial user base, contributed core functionality that became foundational to the product's success.",
           "showInPdf": false
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "description": "My formal training in computer science started at Huazhong University of Science and Technology, where I earned my bachelor's degree and built the academic foundation for the engineering work that followed.",
+      "items": [
+        {
+          "school": "Huazhong University of Science and Technology",
+          "degree": "Bachelor's Degree in Computer Science",
+          "period": "2014 - 2018",
+          "description": "Studied Computer Science and completed my undergraduate education there."
         }
       ]
     },

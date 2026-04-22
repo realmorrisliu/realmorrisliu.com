@@ -190,6 +190,26 @@ const alternateLanguages =
         <WorkExperienceList positions={pdfPositions} />
       </ResumeSection>
 
+      <!-- Education -->
+      <ResumeSection title={t.soFar.education.title}>
+        {
+          t.soFar.education.items.map(item => (
+            <div class="en:mb-0 zh:mb-1 mb-1 break-inside-avoid">
+              <div class="mb-px flex items-baseline justify-between">
+                <h3 class="text-resume-heading en:font-medium zh:font-semibold m-0 font-semibold">
+                  {item.degree}
+                </h3>
+                <span class="text-resume-meta whitespace-nowrap text-gray-600">{item.period}</span>
+              </div>
+              <p class="text-resume-meta m-0 text-gray-700">{item.school}</p>
+              <p class="text-resume-body en:leading-tight zh:leading-normal m-0 leading-normal text-gray-700">
+                {item.description}
+              </p>
+            </div>
+          ))
+        }
+      </ResumeSection>
+
       <!-- Work Projects -->
       <ResumeSection title={t.soFar.projects.workProjects.title}>
         <ProjectsList projects={pdfWorkProjects} />

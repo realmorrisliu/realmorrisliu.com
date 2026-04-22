@@ -98,6 +98,34 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
     </div>
   </section>
 
+  <section id="education" class="mb-16">
+    <h2 class="mb-4 font-serif text-2xl leading-tight">
+      {t.soFar.education.title}
+    </h2>
+
+    <p class="text-text-secondary mb-8 text-base leading-relaxed">
+      {t.soFar.education.description}
+    </p>
+
+    <div class="space-y-8">
+      {
+        t.soFar.education.items.map(item => (
+          <div class="border-l border-[color:var(--color-border)] pl-6">
+            <div class="mb-4">
+              <h3 class="text-text-primary mb-2 font-serif text-lg">{item.degree}</h3>
+              <div class="mb-1 flex items-center gap-2 text-sm">
+                <span class="text-text-primary font-medium">{item.school}</span>
+                <span class="text-[color:var(--color-border)]">|</span>
+                <span class="text-text-tertiary">{item.period}</span>
+              </div>
+            </div>
+            <p class="text-text-secondary text-sm leading-relaxed">{item.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
   <section id="projects" class="mb-16">
     <h2 class="mb-4 font-serif text-2xl leading-tight">
       {t.soFar.projects.title}

@@ -15,6 +15,7 @@
     "description": "我用 Rust 写系统，也带团队。现在一边在 DreamNum 基于 Univer 做 Spreadsheet for Agents，一边继续把 Alan 往真正可用的个人助理方向推进，同时维护 openrouter-rs 这样的开源工具。这页面记录了我这些年的经历——踩过的坑，做过的项目，还有一路学到的东西。",
     "nav": [
       { "id": "work", "label": "工作经历", "href": "#work" },
+      { "id": "education", "label": "教育经历", "href": "#education" },
       { "id": "projects", "label": "项目经验", "href": "#projects" },
       { "id": "skills", "label": "技能", "href": "#skills" },
       { "id": "side", "label": "爱好", "href": "#side" },
@@ -87,6 +88,18 @@
           "period": "2017年 7月 - 2017年 9月",
           "description": "作为客满满项目早期团队成员参与核心功能开发。实现面向用户的会员卡功能模块，支撑大量用户使用，为产品后续发展奠定了技术基础。",
           "showInPdf": false
+        }
+      ]
+    },
+    "education": {
+      "title": "教育经历",
+      "description": "我的计算机科学训练始于华中科技大学。在那里完成了本科阶段的学习，也打下了后来做工程、做系统和做产品的基础。",
+      "items": [
+        {
+          "school": "华中科技大学",
+          "degree": "计算机科学与技术 学士",
+          "period": "2014 年 - 2018 年",
+          "description": "2014 年至 2018 年在华中科技大学就读计算机科学与技术专业，并获得学士学位。"
         }
       ]
     },
