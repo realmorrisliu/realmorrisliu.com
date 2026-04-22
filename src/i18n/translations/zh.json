@@ -121,7 +121,7 @@
               "Tool & Skill 系统：设计可插拔的 Tool trait，支持 JSON Schema 验证，以及支持热重载业务能力的 Skill 加载系统。内置工具包括 Web 搜索、Memory 管理、实体提取等——Runtime 无关，可跨域复用。",
               "Rust 基础设施：生产级异步架构，采用 Rust 2024 + Tokio，具备结构化日志、JSONL 会话持久化，以及 GitOps 工作流的 K8s 部署。"
             ],
-            "showInPdf": true
+            "showInPdf": false
           },
           {
             "title": "跨境电商供应链效率工具",
@@ -147,7 +147,7 @@
               "成本工程：系统性成本优化将月度云服务成本降低 80%，包括多个维度：自研 Rust 工具优化数据库（处理 1 亿+记录表）、智能资源配置、基础设施规模优化。",
               "商业价值：AI 销售助手已帮助客户实现数百万美元的销售额，智能客服准确率显著超越传统人工服务。"
             ],
-            "showInPdf": true
+            "showInPdf": false
           },
           {
             "title": "追光几何：CAD 文件版本控制系统",
@@ -159,7 +159,7 @@
               "3D 可视化集成：集成 fractal3D 引擎实现基于浏览器的 CAD 实时预览和协作标注，使工程流程集成无缝衔接。",
               "商务发展：主导技术策略服务 20+ 企业客户和 10w+ 免费用户，作为 CTO 同时亲自签约 5 个企业客户。"
             ],
-            "showInPdf": true
+            "showInPdf": false
           },
           {
             "title": "追光几何 Lite：本地 CAD 版本控制",
