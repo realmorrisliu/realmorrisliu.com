@@ -121,7 +121,7 @@
               "Tool & Skill 系统：设计可插拔的 Tool trait，支持 JSON Schema 验证，以及支持热重载业务能力的 Skill 加载系统。内置工具包括 Web 搜索、Memory 管理、实体提取等——Runtime 无关，可跨域复用。",
               "Rust 基础设施：生产级异步架构，采用 Rust 2024 + Tokio，具备结构化日志、JSONL 会话持久化，以及 GitOps 工作流的 K8s 部署。"
             ],
-            "showInPdf": false
+            "showInPdf": true
           },
           {
             "title": "跨境电商供应链效率工具",
@@ -134,7 +134,7 @@
               "crystal: 定制水晶产品 3D 预览工具，利用 drei 的 MeshRefractionMaterial 和 MeshTransmissionMaterial 实现逼真的光线折射和透射效果，为客户提供精确的产品可视化。",
               "styled-paint: 基于 Google nano-banana 模型构建的稳定一致的风格化工具，为产品定制提供快速可靠的风格转换，在不同输入类型上保持出色的一致性。"
             ],
-            "showInPdf": false
+            "showInPdf": true
           },
           {
             "title": "小象快答：AI 销售与客服自动化平台",
@@ -147,7 +147,7 @@
               "成本工程：系统性成本优化将月度云服务成本降低 80%，包括多个维度：自研 Rust 工具优化数据库（处理 1 亿+记录表）、智能资源配置、基础设施规模优化。",
               "商业价值：AI 销售助手已帮助客户实现数百万美元的销售额，智能客服准确率显著超越传统人工服务。"
             ],
-            "showInPdf": false
+            "showInPdf": true
           },
           {
             "title": "追光几何：CAD 文件版本控制系统",
@@ -159,7 +159,7 @@
               "3D 可视化集成：集成 fractal3D 引擎实现基于浏览器的 CAD 实时预览和协作标注，使工程流程集成无缝衔接。",
               "商务发展：主导技术策略服务 20+ 企业客户和 10w+ 免费用户，作为 CTO 同时亲自签约 5 个企业客户。"
             ],
-            "showInPdf": false
+            "showInPdf": true
           },
           {
             "title": "追光几何 Lite：本地 CAD 版本控制",
@@ -171,7 +171,7 @@
               "文件处理优化：设计高效的 CAD 文件处理算法，相比 Web 方案展现显著的性能优势。",
               "市场成功：面向个人工程师和小团队市场实现高月订阅留存率，用户满意度较高，提供可靠的本地版本控制解决方案。"
             ],
-            "showInPdf": true
+            "showInPdf": false
           },
           {
             "title": "分形三维：3D CAD 可视化引擎",
@@ -183,7 +183,7 @@
               "WebGL 技术创新：架构基于浏览器的 3D 渲染引擎，在大型装配体加载方面达到行业领先性能，稳定处理 500MB 以内 CAD 组件并优化可视化效果。",
               "生产集成：使 10+ 客户能够将 CAD 模型预览功能集成到他们的平台中，为终端用户提供浏览器中的无缝 3D 可视化体验。"
             ],
-            "showInPdf": true
+            "showInPdf": false
           }
         ]
       },
@@ -217,7 +217,7 @@
             "title": "funcall",
             "description": "一个轻量级的 Rust 库，只需要一个 `#[funcall]` 宏就能把普通函数转换成可动态调用的 JSON 工具。最少的样板代码、类型安全的序列化，以及按名称的运行时函数调用。",
             "githubUrl": "https://github.com/realmorrisliu/funcall",
-            "showInPdf": true
+            "showInPdf": false
           },
           {
             "title": "Sealbox",

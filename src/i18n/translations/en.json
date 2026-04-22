@@ -121,7 +121,7 @@
               "Tool & Skill System: Designed pluggable Tool trait with JSON Schema validation and Skill loading system supporting hot-reloadable business capabilities. Built-in tools include web search, memory management, and entity extraction—runtime-agnostic and reusable across domains.",
               "Rust Infrastructure: Production-grade async architecture using Rust 2024 + Tokio with structured logging, JSONL session persistence, and K8s deployment with GitOps workflow."
             ],
-            "showInPdf": false
+            "showInPdf": true
           },
           {
             "title": "Cross-Border E-commerce Supply Chain Tools",
@@ -134,7 +134,7 @@
               "crystal: Custom crystal product 3D preview tool leveraging drei's MeshRefractionMaterial and MeshTransmissionMaterial to achieve photorealistic light refraction and transmission effects, providing customers with accurate product visualization.",
               "styled-paint: Stable and consistent stylization tool built on Google's nano-banana model, delivering fast and reliable style transfer for product customization with excellent consistency across different input types."
             ],
-            "showInPdf": false
+            "showInPdf": true
           },
           {
             "title": "X-Elephant: AI for Sales & Support",
@@ -147,7 +147,7 @@
               "Cost Engineering: Comprehensive system optimization reducing monthly cloud costs by 80% through multiple strategies: custom Rust tools for database optimization (handling 100M+ record tables), intelligent resource allocation, and infrastructure right-sizing.",
               "Business Impact: AI Sales Agent has generated millions of dollars in sales for clients, with chatbot providing superior accuracy compared to human customer service."
             ],
-            "showInPdf": false
+            "showInPdf": true
           },
           {
             "title": "EverCraft: Version Control System for CAD Files",
@@ -159,7 +159,7 @@
               "3D Visualization Integration: Integrated fractal3D engine for real-time browser-based CAD preview and collaborative annotation, enabling seamless engineering workflow integration.",
               "Business Development: Led technical strategy serving 20+ enterprise clients plus 100k+ free-tier users, personally closed 5 enterprise sales deals while scaling technical infrastructure."
             ],
-            "showInPdf": false
+            "showInPdf": true
           },
           {
             "title": "EverCraft Lite: Local CAD Version Control",
@@ -171,7 +171,7 @@
               "File Processing Optimization: Engineered efficient handling of CAD files with optimized algorithms, demonstrating significant performance advantages over web-based solutions.",
               "Market Success: Achieved high monthly subscription retention rates with strong user satisfaction, serving individual engineers and small teams with reliable local version control solution."
             ],
-            "showInPdf": true
+            "showInPdf": false
           },
           {
             "title": "fractal3D: 3D CAD Visualization Engine",
@@ -183,7 +183,7 @@
               "WebGL Technical Innovation: Architected browser-based 3D rendering engine with industry-leading performance for large assembly loading, stably processing CAD components up to 500MB with optimized visualization.",
               "Production Integration: Enabled 10+ clients to integrate CAD model preview capabilities into their platforms, providing end-users with seamless 3D visualization directly in web browsers."
             ],
-            "showInPdf": true
+            "showInPdf": false
           }
         ]
       },
@@ -217,7 +217,7 @@
             "title": "funcall",
             "description": "A lightweight Rust library that transforms regular functions into dynamically callable JSON tools with a single `#[funcall]` macro. Minimal boilerplate, type-safe serialization, and runtime function invocation by name.",
             "githubUrl": "https://github.com/realmorrisliu/funcall",
-            "showInPdf": true
+            "showInPdf": false
           },
           {
             "title": "Sealbox",
