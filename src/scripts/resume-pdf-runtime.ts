@@ -149,8 +149,13 @@ if (app) {
     retryButton?.classList.add("hidden");
   };
 
+  const withCacheBust = (url: string) => {
+    const separator = url.includes("?") ? "&" : "?";
+    return `${url}${separator}resumeTypst=${Date.now()}`;
+  };
+
   const fetchText = async (url: string) => {
-    const response = await fetch(url);
+    const response = await fetch(withCacheBust(url), { cache: "no-store" });
     if (!response.ok) {
       throw new Error(`Failed to fetch ${url}: ${response.status}`);
     }

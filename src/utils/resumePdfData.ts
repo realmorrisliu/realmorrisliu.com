@@ -12,6 +12,27 @@ function projectGithubLabel(project: PersonalProject): string | undefined {
   return project.githubUrl?.replace("https://github.com/", "");
 }
 
+function contactLinks() {
+  return [
+    {
+      label: "morrisliu1994@outlook.com",
+      url: "mailto:morrisliu1994@outlook.com",
+    },
+    {
+      label: "github.com/realmorrisliu",
+      url: "https://github.com/realmorrisliu",
+    },
+    {
+      label: "x.com/realmorrisliu",
+      url: "https://x.com/realmorrisliu",
+    },
+    {
+      label: "realmorrisliu.com",
+      url: "https://realmorrisliu.com",
+    },
+  ];
+}
+
 export function getResumePdfData(lang: Language) {
   const t = getTranslations(lang);
 
@@ -27,7 +48,7 @@ export function getResumePdfData(lang: Language) {
     title: t.soFar.pdf.pageTitle,
     description: t.soFar.pdf.pageDescription,
     summary: t.soFar.resumeSummary,
-    contact: ["morrisliu1994@outlook.com", "github.com/realmorrisliu", "x.com/realmorrisliu"],
+    contact: contactLinks(),
     sections: {
       skills: t.soFar.skills.title,
       work: t.soFar.work.title,
@@ -63,6 +84,7 @@ export function getResumePdfData(lang: Language) {
       period: "",
       description: project.description,
       github: projectGithubLabel(project) ?? "",
+      githubUrl: project.githubUrl ?? "",
     })),
     counts: {
       workPositions: workPositions.length,
