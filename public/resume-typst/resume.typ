@@ -3,20 +3,20 @@
 #let faint = rgb("#737373")
 #let rule-color = rgb("#2a2a2a")
 
-#let body-leading-for(lang) = if lang == "zh" { 0.44em } else { 0.4em }
-#let skill-leading-for(lang) = if lang == "zh" { 0.68em } else { 0.42em }
-#let skill-after-for(lang) = if lang == "zh" { 5pt } else { 1.1pt }
-#let item-leading-for(lang) = if lang == "zh" { 0.48em } else { 0.38em }
-#let section-before-for(lang) = if lang == "zh" { 5.6pt } else { 3.3pt }
-#let section-after-for(lang) = if lang == "zh" { 3.2pt } else { 1.3pt }
-#let item-before-for(lang) = if lang == "zh" { 2.4pt } else { 0.9pt }
-#let item-title-gap-for(lang) = if lang == "zh" { 4.8pt } else { 1.3pt }
-#let item-after-for(lang) = if lang == "zh" { 7.2pt } else { 1.6pt }
+#let body-leading-for(lang) = if lang == "zh" { 0.44em } else { 0.5em }
+#let skill-leading-for(lang) = if lang == "zh" { 0.68em } else { 0.64em }
+#let skill-after-for(lang) = if lang == "zh" { 5pt } else { 4.2pt }
+#let item-leading-for(lang) = if lang == "zh" { 0.48em } else { 0.48em }
+#let section-before-for(lang) = if lang == "zh" { 5.6pt } else { 4.8pt }
+#let section-after-for(lang) = if lang == "zh" { 3.2pt } else { 2.6pt }
+#let item-before-for(lang) = if lang == "zh" { 2.4pt } else { 1.6pt }
+#let item-title-gap-for(lang) = if lang == "zh" { 4.8pt } else { 3.4pt }
+#let item-after-for(lang) = if lang == "zh" { 7.2pt } else { 4.6pt }
 
 #let heading(title, lang) = [
   #v(section-before-for(lang))
   #text(
-    size: if lang == "zh" { 9.45pt } else { 8.8pt },
+    size: if lang == "zh" { 9.45pt } else { 9.35pt },
     weight: "semibold",
     tracking: if lang == "zh" { 0pt } else { 0.6pt },
   )[#title]
@@ -39,6 +39,26 @@
   #set par(leading: leading, spacing: 0em, justify: true)
   #text(fill: dim)[#body]
 ]
+
+#let maybe-link(label, url) = if url == "" {
+  [#label]
+} else {
+  link(url)[#label]
+}
+
+#let inline-links(items) = {
+  for (index, item) in items.enumerate() {
+    if index > 0 {
+      [ | ]
+    }
+
+    if type(item) == str {
+      item
+    } else {
+      maybe-link(item.label, item.url)
+    }
+  }
+}
 
 #let skill-item(category, lang) = [
   #set par(leading: skill-leading-for(lang), spacing: 0em, justify: true)
@@ -82,7 +102,7 @@
   ]
   #if show-github and project.github != "" [
     #linebreak()
-    #text(size: 7.4pt, fill: faint)[GitHub: #project.github]
+    #text(size: 7.4pt, fill: faint)[GitHub: #maybe-link(project.github, project.at("githubUrl", default: ""))]
   ]
   #v(item-title-gap-for(lang))
   #paragraph(project.description, item-leading-for(lang))
@@ -91,7 +111,7 @@
 
 #let render-resume(data, lang, font) = [
   #let is-zh = lang == "zh"
-  #let body-size = if is-zh { 8.85pt } else { 8.12pt }
+  #let body-size = if is-zh { 8.85pt } else { 8.42pt }
   #let body-leading = body-leading-for(lang)
 
   #set document(title: data.title, author: "Morris Liu")
@@ -105,7 +125,7 @@
   #align(center)[
     #text(size: 17.5pt, weight: "semibold")[#data.name]
     #v(2pt)
-    #text(size: 7.7pt, fill: faint)[#data.contact.join(" | ")]
+    #text(size: 7.7pt, fill: faint)[#inline-links(data.contact)]
     #v(2.5pt)
     #paragraph(data.summary, body-leading)
   ]
