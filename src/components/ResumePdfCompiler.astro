@@ -10,9 +10,17 @@ const mainPath = currentLang === "zh" ? "resume.zh.typ" : "resume.en.typ";
 const dataUrl = currentLang === "zh" ? "/so-far/pdf-data/zh.json" : "/so-far/pdf-data/en.json";
 const dataPath = currentLang === "zh" ? "resume.zh.json" : "resume.en.json";
 const fileName = currentLang === "zh" ? "morris-liu-resume-zh.pdf" : "morris-liu-resume.pdf";
+const artifactBaseUrl = import.meta.env.PUBLIC_RESUME_TYPST_ARTIFACT_BASE_URL?.replace(/\/$/, "");
 const wasmBaseUrl = (
-  import.meta.env.PUBLIC_RESUME_TYPST_WASM_BASE_URL ?? "/resume-typst-wasm"
+  import.meta.env.PUBLIC_RESUME_TYPST_WASM_BASE_URL ??
+  (artifactBaseUrl ? `${artifactBaseUrl}/wasm` : "/resume-typst-wasm")
 ).replace(/\/$/, "");
+const fontUrls = [
+  import.meta.env.PUBLIC_RESUME_TYPST_FONT_URL ??
+    (artifactBaseUrl
+      ? `${artifactBaseUrl}/fonts/NotoSansCJKsc-Regular.otf`
+      : "/resume-typst/fonts/NotoSansCJKsc-Regular.otf"),
+];
 
 const statusCopy =
   currentLang === "zh"
@@ -41,7 +49,7 @@ const statusCopy =
   data-data-path={dataPath}
   data-data-url={dataUrl}
   data-file-name={fileName}
-  data-font-urls='["/resume-typst/fonts/NotoSansCJKsc-Regular.otf"]'
+  data-font-urls={JSON.stringify(fontUrls)}
   data-wasm-base-url={wasmBaseUrl}
   data-status-loading={statusCopy.loading}
   data-status-compiling={statusCopy.compiling}

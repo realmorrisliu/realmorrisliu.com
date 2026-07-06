@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/build-site.mjs",
     "preview": "astro preview",
     "prettier": "prettier --write .",
     "format": "prettier --write .",
@@ -15,6 +15,9 @@
     "check": "pnpm lint && pnpm format:check && pnpm typecheck",
     "check:fix": "pnpm lint:fix && pnpm format && pnpm typecheck",
     "build:typst-wasm": "wasm-pack build crates/resume-typst-wasm --target web --release --out-dir ../../public/resume-typst-wasm --no-typescript",
+    "upload:typst-artifacts:r2": "node scripts/upload-resume-typst-artifacts-to-r2.mjs",
+    "build:with-r2-artifacts": "node scripts/upload-resume-typst-artifacts-to-r2.mjs --build-site",
+    "deploy:with-r2-artifacts": "node scripts/upload-resume-typst-artifacts-to-r2.mjs --deploy-site",
     "astro": "astro",
     "new:photo": "tsx scripts/add-photo.ts",
     "deploy": "astro build && wrangler deploy",
