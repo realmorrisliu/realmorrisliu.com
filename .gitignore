@@ -3,9 +3,11 @@ dist/
 
 # generated types
 .astro/
+.playwright-cli/
 
 # dependencies
 node_modules/
+crates/**/target/
 
 # logs
 npm-debug.log*

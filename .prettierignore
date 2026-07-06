@@ -5,6 +5,9 @@ node_modules/
 # Build outputs
 dist/
 .astro/
+.playwright-cli/
+crates/**/target/
+public/resume-typst-wasm/
 
 # Logs
 *.log
@@ -32,15 +35,19 @@ yarn.lock
 *.svg
 *.ico
 *.pdf
+*.wasm
 *.woff
 *.woff2
 *.ttf
+*.otf
 *.eot
 
 # Python backend (agent/)
 agent/
 
 # Development tools
+.claude/
+.codex/
 .wrangler/
 photos-inbox/
 .vscode/
