@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-06T15:32:29Z",
+  "title": "Design System: realmorrisliu.com",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Reading Ink",
+        "canonical": "#1a1a1a",
+        "tonalRamp": [
+          "#000000",
+          "#1a1a1a",
+          "#333333",
+          "#4a4a4a",
+          "#6b6b6b",
+          "#a3a3a3",
+          "#d4d4d4",
+          "#f5f5f5"
+        ]
+      },
+      "link-ink": {
+        "role": "primary",
+        "displayName": "Letter Ink",
+        "canonical": "#000000",
+        "tonalRamp": [
+          "#000000",
+          "#171717",
+          "#262626",
+          "#404040",
+          "#737373",
+          "#a3a3a3",
+          "#d4d4d4",
+          "#fafafa"
+        ]
+      },
+      "body-muted": {
+        "role": "neutral",
+        "displayName": "Body Muted",
+        "canonical": "#4a4a4a",
+        "tonalRamp": [
+          "#171717",
+          "#262626",
+          "#404040",
+          "#4a4a4a",
+          "#737373",
+          "#a3a3a3",
+          "#d4d4d4",
+          "#f5f5f5"
+        ]
+      },
+      "quiet-muted": {
+        "role": "neutral",
+        "displayName": "Quiet Muted",
+        "canonical": "#6b6b6b",
+        "tonalRamp": [
+          "#262626",
+          "#404040",
+          "#525252",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#b3b3b3",
+          "#d9d9d9",
+          "#f5f5f5"
+        ]
+      },
+      "background": {
+        "role": "neutral",
+        "displayName": "White Page",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#171717",
+          "#262626",
+          "#404040",
+          "#737373",
+          "#a3a3a3",
+          "#d4d4d4",
+          "#f5f5f5",
+          "#ffffff"
+        ]
+      },
+      "border-hairline": {
+        "role": "neutral",
+        "displayName": "Hairline Rule",
+        "canonical": "#e5e5e5",
+        "tonalRamp": [
+          "#262626",
+          "#404040",
+          "#737373",
+          "#a3a3a3",
+          "#c7c7c7",
+          "#d4d4d4",
+          "#e5e5e5",
+          "#f5f5f5"
+        ]
+      },
+      "code-surface": {
+        "role": "neutral",
+        "displayName": "Code Surface",
+        "canonical": "#f8f9fa",
+        "tonalRamp": [
+          "#212529",
+          "#343a40",
+          "#495057",
+          "#6c757d",
+          "#adb5bd",
+          "#dee2e6",
+          "#f1f3f5",
+          "#f8f9fa"
+        ]
+      },
+      "code-border": {
+        "role": "neutral",
+        "displayName": "Code Border",
+        "canonical": "#e9ecef",
+        "tonalRamp": [
+          "#212529",
+          "#343a40",
+          "#495057",
+          "#6c757d",
+          "#adb5bd",
+          "#ced4da",
+          "#e9ecef",
+          "#f8f9fa"
+        ]
+      },
+      "tag-surface": {
+        "role": "neutral",
+        "displayName": "Tag Wash",
+        "canonical": "#f9fafb",
+        "tonalRamp": [
+          "#111827",
+          "#374151",
+          "#4b5563",
+          "#6b7280",
+          "#9ca3af",
+          "#d1d5db",
+          "#f3f4f6",
+          "#f9fafb"
+        ]
+      },
+      "tag-hover": {
+        "role": "neutral",
+        "displayName": "Tag Hover",
+        "canonical": "#f3f4f6",
+        "tonalRamp": [
+          "#111827",
+          "#374151",
+          "#4b5563",
+          "#6b7280",
+          "#9ca3af",
+          "#d1d5db",
+          "#e5e7eb",
+          "#f3f4f6"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Rule",
+        "canonical": "#d1d5db",
+        "tonalRamp": [
+          "#111827",
+          "#374151",
+          "#4b5563",
+          "#6b7280",
+          "#9ca3af",
+          "#d1d5db",
+          "#e5e7eb",
+          "#f9fafb"
+        ]
+      },
+      "photo-night": {
+        "role": "neutral",
+        "displayName": "Photo Night",
+        "canonical": "#09090b",
+        "tonalRamp": [
+          "#09090b",
+          "#18181b",
+          "#27272a",
+          "#3f3f46",
+          "#71717a",
+          "#a1a1aa",
+          "#d4d4d8",
+          "#fafafa"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Rare high-emphasis titles, especially photography."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Default page titles and main route headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Article titles, resume sections, and list headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Long-form reading and technical descriptions."
+      },
+      "body-large": {
+        "displayName": "Body Large",
+        "purpose": "Homepage, now-page, and lead introductory prose."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Links, buttons, dates, and concise metadata."
+      },
+      "mono-label": {
+        "displayName": "Mono Label",
+        "purpose": "Camera metadata, generated OG tooling, and terminal-like readouts."
+      }
+    },
+    "shadows": [
+      {
+        "name": "photo-rest",
+        "value": "0 1px 2px rgb(0 0 0 / 0.05)",
+        "purpose": "The resting image tile shadow in the moments masonry grid."
+      },
+      {
+        "name": "photo-hover",
+        "value": "0 20px 25px -5px rgb(0 0 0 / 0.10), 0 8px 10px -6px rgb(0 0 0 / 0.10)",
+        "purpose": "The hover elevation for photography tiles."
+      },
+      {
+        "name": "lightbox-image",
+        "value": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
+        "purpose": "The immersive photo viewer image shadow."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-quick",
+        "value": "150ms ease",
+        "purpose": "Default links, buttons, chips, and inline-note opacity."
+      },
+      {
+        "name": "photo-overlay",
+        "value": "500ms ease-out",
+        "purpose": "Photography overlay and lightbox fade timing."
+      },
+      {
+        "name": "photo-scale",
+        "value": "700ms ease-out",
+        "purpose": "Subtle image zoom on moments tiles."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Compact black control for the resume PDF and utility surfaces.",
+      "html": "<button class=\"ds-btn-primary\">Print resume</button>",
+      "css": ".ds-btn-primary { background: #000; color: #fff; border: 0; border-radius: 0; padding: 8px 16px; font-family: var(--font-sans, Inter, sans-serif); font-size: 12px; font-weight: 500; line-height: 1.5; cursor: pointer; text-decoration: none; transition: opacity 150ms ease; } .ds-btn-primary:hover { opacity: 0.8; } .ds-btn-primary:active { opacity: 1; } .ds-btn-primary:focus-visible { outline: 2px solid #1a1a1a; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "White bordered control for lower-emphasis resume actions.",
+      "html": "<button class=\"ds-btn-secondary\">English</button>",
+      "css": ".ds-btn-secondary { background: #fff; color: #374151; border: 1px solid #d1d5db; border-radius: 0; padding: 8px 12px; font-family: var(--font-sans, Inter, sans-serif); font-size: 12px; font-weight: 500; line-height: 1.5; cursor: pointer; text-decoration: none; transition: background-color 150ms ease, border-color 150ms ease; } .ds-btn-secondary:hover { background: #f9fafb; border-color: #9ca3af; } .ds-btn-secondary:active { background: #f3f4f6; } .ds-btn-secondary:focus-visible { outline: 2px solid #1a1a1a; outline-offset: 2px; }"
+    },
+    {
+      "name": "Inline Link",
+      "kind": "nav",
+      "refersTo": "link-inline",
+      "description": "The default prose navigation pattern.",
+      "html": "<a class=\"ds-inline-link\" href=\"#\">thoughts</a>",
+      "css": ".ds-inline-link { color: var(--color-text-link, #000); font-family: var(--font-sans, Inter, sans-serif); font-weight: 500; text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; transition: color 150ms ease; } .ds-inline-link:hover { color: var(--color-text-primary, #1a1a1a); } .ds-inline-link:focus-visible { outline: 2px solid var(--color-text-primary, #1a1a1a); outline-offset: 2px; }"
+    },
+    {
+      "name": "Tag Chip",
+      "kind": "chip",
+      "refersTo": "tag-chip",
+      "description": "Quiet metadata chip for blog tags.",
+      "html": "<a class=\"ds-tag-chip\" href=\"#\" rel=\"tag\">rust</a>",
+      "css": ".ds-tag-chip { display: inline-flex; align-items: center; background: #f9fafb; color: var(--color-text-tertiary, #6b6b6b); border-radius: 4px; padding: 2px 4px; font-family: var(--font-sans, Inter, sans-serif); font-size: 12px; font-weight: 500; line-height: 1.5; text-decoration: none; transition: background-color 150ms ease, color 150ms ease; } .ds-tag-chip:hover { background: #f3f4f6; color: var(--color-text-secondary, #4a4a4a); } .ds-tag-chip:focus-visible { outline: 2px solid var(--color-text-primary, #1a1a1a); outline-offset: 2px; }"
+    },
+    {
+      "name": "Article List Item",
+      "kind": "card",
+      "refersTo": "article-list-item",
+      "description": "Flat article preview separated by a single bottom rule.",
+      "html": "<article class=\"ds-article-item\"><h2><a href=\"#\">Building Kira, an AI-native second brain</a></h2><div class=\"ds-article-meta\"><time>June 12, 2026</time><span>5 min read</span></div><p>Technical notes with enough context to decide whether to keep reading.</p></article>",
+      "css": ".ds-article-item { padding-bottom: 48px; border-bottom: 1px solid #d1d5db; font-family: var(--font-sans, Inter, sans-serif); color: var(--color-text-secondary, #4a4a4a); } .ds-article-item h2 { margin: 0 0 8px; font-family: var(--font-serif, Georgia, serif); font-size: 24px; font-weight: 400; line-height: 1.25; color: var(--color-text-primary, #1a1a1a); } .ds-article-item a { color: var(--color-text-link, #000); font-weight: 500; text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; } .ds-article-meta { display: flex; align-items: center; gap: 16px; margin-top: 12px; font-size: 14px; color: var(--color-text-tertiary, #6b6b6b); } .ds-article-item p { margin: 16px 0 0; font-size: 16px; line-height: 1.65; color: #4b5563; }"
+    },
+    {
+      "name": "Timeline Item",
+      "kind": "custom",
+      "refersTo": "timeline-item",
+      "description": "Resume entry with a calm serif title and compact metadata.",
+      "html": "<div class=\"ds-timeline-item\"><span class=\"ds-timeline-year\">2026</span><h3>Agent runtime architect</h3><div class=\"ds-timeline-meta\"><strong>DreamNum</strong><span>|</span><span>Now</span></div><p>Building spreadsheet editing capabilities for agents.</p></div>",
+      "css": ".ds-timeline-item { position: relative; padding-left: 24px; font-family: var(--font-sans, Inter, sans-serif); } .ds-timeline-year { display: block; margin-bottom: 8px; color: var(--color-text-primary, #1a1a1a); font-size: 14px; font-weight: 500; } .ds-timeline-item h3 { margin: 0 0 8px; color: var(--color-text-primary, #1a1a1a); font-family: var(--font-serif, Georgia, serif); font-size: 20px; font-weight: 400; line-height: 1.25; } .ds-timeline-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font-size: 14px; color: var(--color-text-tertiary, #6b6b6b); } .ds-timeline-meta strong { color: var(--color-text-primary, #1a1a1a); font-weight: 500; } .ds-timeline-item p { margin: 0; color: var(--color-text-secondary, #4a4a4a); font-size: 16px; line-height: 1.65; }"
+    },
+    {
+      "name": "Inline Note Tooltip",
+      "kind": "tooltip",
+      "refersTo": "tooltip-inline-note",
+      "description": "Small annotation tooltip for inline notes.",
+      "html": "<span class=\"ds-note-trigger\">runtime boundary</span><span class=\"ds-note-tooltip\" role=\"tooltip\">A short contextual note.</span>",
+      "css": ".ds-note-trigger { border-bottom: 1px dashed var(--color-text-tertiary, #6b6b6b); color: var(--color-text-secondary, #4a4a4a); cursor: help; transition: border-color 150ms ease; } .ds-note-trigger:hover { border-color: var(--color-text-secondary, #4a4a4a); } .ds-note-tooltip { display: inline-block; max-width: min(320px, calc(100vw - 32px)); margin-left: 8px; border: 1px solid var(--color-border, #e5e5e5); background: var(--color-background, #fff); color: var(--color-text-secondary, #4a4a4a); padding: 4px 8px; font-family: var(--font-sans, Inter, sans-serif); font-size: 14px; line-height: 1.6; }"
+    },
+    {
+      "name": "Moments Photo Tile",
+      "kind": "card",
+      "refersTo": "moments-photo-tile",
+      "description": "Image-led tile with slow zoom and metadata overlay.",
+      "html": "<figure class=\"ds-photo-tile\"><img src=\"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80\" alt=\"Quiet landscape at dusk\" /><figcaption><strong>Quiet frame</strong><span>Shanghai</span></figcaption></figure>",
+      "css": ".ds-photo-tile { position: relative; overflow: hidden; margin: 0; background: #f3f4f6; box-shadow: 0 1px 2px rgb(0 0 0 / 0.05); cursor: zoom-in; transition: box-shadow 500ms ease; } .ds-photo-tile:hover { box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.10), 0 8px 10px -6px rgb(0 0 0 / 0.10); } .ds-photo-tile img { display: block; width: 100%; height: auto; transition: transform 700ms ease-out; } .ds-photo-tile:hover img { transform: scale(1.02); } .ds-photo-tile::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgb(0 0 0 / 0.60), transparent 60%); opacity: 0; transition: opacity 500ms ease; } .ds-photo-tile:hover::after { opacity: 1; } .ds-photo-tile figcaption { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding: 24px; color: #fff; opacity: 0; transform: translateY(16px); transition: opacity 500ms ease, transform 500ms ease; } .ds-photo-tile:hover figcaption { opacity: 1; transform: translateY(0); } .ds-photo-tile strong { display: block; font-family: var(--font-serif, Georgia, serif); font-size: 20px; font-weight: 400; letter-spacing: 0.02em; } .ds-photo-tile span { display: block; margin-top: 4px; color: rgb(255 255 255 / 0.80); font-family: var(--font-mono, monospace); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }"
+    },
+    {
+      "name": "Footer Signature",
+      "kind": "nav",
+      "refersTo": "footer-signature",
+      "description": "Quiet sign-off and back-navigation area at the end of pages.",
+      "html": "<footer class=\"ds-footer-signature\"><div>Morris Liu</div><nav><a href=\"#\">Back to thoughts</a></nav></footer>",
+      "css": ".ds-footer-signature { margin-top: 96px; padding-top: 32px; color: var(--color-text-primary, #1a1a1a); font-family: var(--font-sans, Inter, sans-serif); font-size: 16px; line-height: 1.5; } .ds-footer-signature nav { margin-top: 8px; } .ds-footer-signature a { color: var(--color-text-link, #000); font-size: 14px; font-weight: 500; text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; transition: color 150ms ease; } .ds-footer-signature a:hover { color: var(--color-text-primary, #1a1a1a); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Systems Letter",
+    "overview": "The visual system should feel like a carefully written technical letter: quiet enough for long reading, exact enough for credibility, and personal enough that the author remains visible. The default page is a narrow column, not a marketing shell. Typography and spacing do most of the work; links, dates, rules, and tags provide orientation without creating chrome.\n\nThe site is intentionally monochrome and restrained, but the restraint must not become unfinished. Hierarchy comes from serif headings, measured spacing, clear text contrast, and real artifacts: posts, current status, resume entries, projects, and photography. The `moments` surface is the main exception: photography may use deeper backgrounds, overlays, shadows, and slower motion because the image is the artifact.\n\nThe system rejects SaaS landing-page cliches, repeated feature-card grids, gradient text, all-purpose AI/productivity aesthetics, conversion-heavy calls to action, maximalist portfolio effects, decorative glassmorphism, generic editorial affectation, and template-generated section grammar.",
+    "keyCharacteristics": [
+      "Narrow reading column with generous vertical rhythm.",
+      "Serif headings paired with sans body text and sparse mono metadata.",
+      "Black and neutral gray palette with no decorative accent color.",
+      "Flat content surfaces; borders and rules carry structure.",
+      "Photography is allowed a distinct, immersive treatment."
+    ],
+    "rules": [
+      {
+        "name": "The True White Rule",
+        "body": "The body background stays white. Do not tint it into cream, sand, ivory, or warm paper to manufacture personality.",
+        "section": "colors"
+      },
+      {
+        "name": "The No Accent Rule",
+        "body": "Do not add a brand accent color casually. If a future section needs color, it must be tied to a real artifact such as photography, code output, or a specific project object.",
+        "section": "colors"
+      },
+      {
+        "name": "The Letter First Rule",
+        "body": "Serif headings are calm and direct. Do not use italic display flourishes, drop caps, or magazine-like theatrics unless the content is explicitly a designed editorial piece.",
+        "section": "typography"
+      },
+      {
+        "name": "The Mono Is Evidence Rule",
+        "body": "Monospace is for code, camera metadata, PDF tooling, and terminal-like interfaces. Never use mono as a generic shortcut for \"technical.\"",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Manuscript Rule",
+        "body": "Content pages do not use decorative cards or ambient shadows. If a surface is not an image, preview, tooltip, or modal-like object, it should be flat.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the page column narrow (`max-w-2xl`) for writing and resume surfaces.",
+      "Do use serif headings and sans body text to preserve the letter-like rhythm.",
+      "Do use real artifacts: posts, projects, resume entries, current work, and moments.",
+      "Do use one-pixel rules and generous spacing for structure.",
+      "Do preserve strong contrast for primary, secondary, and tertiary text.",
+      "Do let photography use shadows, overlays, and slower motion when the image is the focus."
+    ],
+    "donts": [
+      "Don't turn the site into a SaaS landing page with hero metrics, repeated feature-card grids, gradient text, all-purpose AI/productivity aesthetics, or conversion-heavy calls to action.",
+      "Don't make it a maximalist portfolio that competes with the writing.",
+      "Don't use generic editorial affectation for its own sake: italic display drama, drop caps, repeated tiny uppercase section labels, or broadsheet grid gestures.",
+      "Don't add decorative glassmorphism.",
+      "Don't use colored side-stripe borders or `border-left` greater than 1px as a new callout pattern.",
+      "Don't create template-generated card grids when spacing, headings, and rules can carry the structure."
+    ]
+  }
+}
