@@ -1,5 +1,4 @@
 ---
-import Button from "@components/Button.astro";
 import Link from "@components/Link.astro";
 import ResumePdfCompiler from "@components/ResumePdfCompiler.astro";
 import { getHtmlLangAttribute, getTranslations, type Language } from "@i18n/utils";
@@ -24,6 +23,18 @@ const alternateLanguages =
   currentLang === "en"
     ? [{ lang: "zh", url: "https://realmorrisliu.com/so-far/pdf/zh" }]
     : [{ lang: "en", url: "https://realmorrisliu.com/so-far/pdf" }];
+
+const backLabel = t.soFar.pdf.backText;
+const downloadLabel = t.soFar.pdf.printButton;
+const languageSwitchLabel = currentLang === "zh" ? "切换简历语言" : "Switch resume language";
+const renderNote =
+  currentLang === "zh"
+    ? "此页面在浏览器中使用 Typst 渲染简历，并可直接导出为 PDF。"
+    : "This page renders the resume in your browser with Typst and exports it directly as a PDF.";
+const enLanguageClass =
+  currentLang === "en" ? "pdf-language-option is-active" : "pdf-language-option";
+const zhLanguageClass =
+  currentLang === "zh" ? "pdf-language-option is-active" : "pdf-language-option";
 ---
 
 <!doctype html>
@@ -78,63 +89,54 @@ const alternateLanguages =
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap-index.xml" />
   </head>
 
-  <body class="m-0 min-h-full w-full">
-    <div class="mb-4 bg-gray-100 px-4 py-3.5 font-sans sm:mb-5 sm:px-5 sm:py-4 print:hidden">
-      <div
-        class="mb-2.5 flex flex-col items-start gap-3 sm:mb-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
-      >
-        <div class="flex flex-1 items-center gap-2.5 sm:gap-3">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            class="text-text-tertiary flex-shrink-0"
-          >
-            <title>PDF</title>
-            <path
-              d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"
-            ></path>
-          </svg>
-          <div class="flex-1">
-            <span
-              class="text-text-secondary m-0 text-[0.8125rem] leading-[var(--line-height-normal)] font-normal sm:text-sm"
+  <body class="text-text-primary m-0 min-h-full w-full bg-[#f3f3f3] font-sans print:bg-white">
+    <main
+      class="min-h-screen overflow-auto px-4 py-5 sm:px-6 lg:h-screen lg:px-8 lg:py-8 print:block print:h-auto print:overflow-visible print:bg-white print:p-0"
+      aria-label={pageTitle}
+    >
+      <div class="pdf-page-shell mx-auto">
+        <nav
+          class="pdf-top-tools print:hidden"
+          aria-label={currentLang === "zh" ? "PDF 操作" : "PDF actions"}
+        >
+          <Link href={backUrl} class="text-sm whitespace-nowrap">{backLabel}</Link>
+
+          <div class="pdf-top-actions">
+            <button
+              id="print-button"
+              class="pdf-letter-action"
+              type="button"
+              title={t.soFar.pdf.printButton}
+              aria-label={t.soFar.pdf.printButton}
             >
-              {t.soFar.pdf.title}
-            </span>
+              {downloadLabel}
+            </button>
+
+            <div class="pdf-language-switch" aria-label={languageSwitchLabel}>
+              <a
+                href="/so-far/pdf"
+                class={enLanguageClass}
+                aria-current={currentLang === "en" ? "page" : undefined}
+              >
+                EN
+              </a>
+              <span class="pdf-language-separator" aria-hidden="true">/</span>
+              <a
+                href="/so-far/pdf/zh"
+                class={zhLanguageClass}
+                aria-current={currentLang === "zh" ? "page" : undefined}
+              >
+                中
+              </a>
+            </div>
           </div>
-        </div>
+        </nav>
 
-        <div class="flex flex-shrink-0 items-center gap-2">
-          <Button
-            href={currentLang === "en" ? "/so-far/pdf/zh" : "/so-far/pdf"}
-            variant="secondary"
-            size="sm"
-          >
-            {currentLang === "en" ? "中文" : "English"}
-          </Button>
+        <ResumePdfCompiler currentLang={currentLang} />
 
-          <Button id="print-button" variant="primary" size="sm">
-            {t.soFar.pdf.printButton}
-          </Button>
-        </div>
+        <p class="pdf-render-note print:hidden">{renderNote}</p>
       </div>
-
-      <div
-        class="flex flex-col items-start gap-2 text-xs sm:flex-row sm:items-center sm:justify-between sm:gap-4"
-      >
-        <p class="text-text-tertiary m-0 flex-1 text-xs italic">
-          {t.soFar.pdf.printButtonHint}
-        </p>
-        <Link href={backUrl} class="text-xs whitespace-nowrap">
-          {t.soFar.pdf.backText}
-        </Link>
-      </div>
-    </div>
-
-    <ResumePdfCompiler currentLang={currentLang} />
-
-    <div class="mt-4 print:hidden"></div>
+    </main>
   </body>
 </html>
 
@@ -143,6 +145,124 @@ const alternateLanguages =
     @page {
       margin: 0mm;
       size: A4;
+    }
+
+    #resume-pdf-app {
+      box-shadow: none !important;
+    }
+  }
+
+  .pdf-letter-action {
+    display: inline-flex;
+    align-items: center;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: var(--color-text-secondary);
+    font: inherit;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: left;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+      color 150ms ease,
+      opacity 150ms ease;
+  }
+
+  .pdf-letter-action:hover {
+    color: var(--color-text-primary);
+  }
+
+  .pdf-letter-action:disabled {
+    cursor: wait;
+    opacity: 0.45;
+  }
+
+  .pdf-letter-action:focus-visible {
+    outline: 2px solid var(--color-text-primary);
+    outline-offset: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+
+  .pdf-page-shell {
+    width: 210mm;
+    min-width: 210mm;
+  }
+
+  .pdf-top-tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .pdf-top-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .pdf-language-switch {
+    display: inline-flex;
+    align-items: baseline;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .pdf-language-option {
+    color: var(--color-text-tertiary);
+    text-decoration: none;
+    opacity: 0.5;
+    transition:
+      color 150ms ease,
+      opacity 150ms ease;
+  }
+
+  .pdf-language-option:hover {
+    color: var(--color-text-secondary);
+    opacity: 0.85;
+  }
+
+  .pdf-language-option.is-active {
+    color: var(--color-text-primary);
+    opacity: 1;
+  }
+
+  .pdf-language-separator {
+    margin: 0 0.1875rem;
+    color: var(--color-text-tertiary);
+    opacity: 0.45;
+  }
+
+  .pdf-render-note {
+    margin: 0.875rem 0 0;
+    color: var(--color-text-tertiary);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    .pdf-top-tools {
+      margin-bottom: 0.625rem;
     }
   }
 </style>
