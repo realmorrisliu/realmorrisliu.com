@@ -1,11 +1,10 @@
 ---
 import ResumeLayout from "@layouts/ResumeLayout.astro";
+import { type Language } from "@i18n/utils";
 
-// Get language from path parameter
 const { lang } = Astro.params;
-const currentLang = lang === "zh" ? "zh" : "en";
+const currentLang: Language = lang === "zh" ? "zh" : "en";
 
-// Define static paths for generation
 export const prerender = true;
 export function getStaticPaths() {
   return [{ params: { lang: "zh" } }];

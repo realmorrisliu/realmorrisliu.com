@@ -1,41 +1,25 @@
 ---
 import Button from "@components/Button.astro";
 import Link from "@components/Link.astro";
-import ResumeSection from "@components/Resume/ResumeSection.astro";
-import SkillsGrid from "@components/Resume/SkillsGrid.astro";
-import WorkExperienceList from "@components/Resume/WorkExperienceList.astro";
-import ProjectsList from "@components/Resume/ProjectsList.astro";
-import { getTranslations, getHtmlLangAttribute } from "@i18n/utils";
+import ResumePdfCompiler from "@components/ResumePdfCompiler.astro";
+import { getHtmlLangAttribute, getTranslations, type Language } from "@i18n/utils";
 import "@styles/global.css";
 
 export interface Props {
-  currentLang: "en" | "zh";
+  currentLang: Language;
 }
 
 const { currentLang } = Astro.props;
 const t = getTranslations(currentLang);
 const htmlLang = getHtmlLangAttribute(currentLang);
 
-// Filter content for PDF display - only show items where showInPdf is not false
-const pdfPositions = t.soFar.work.positions.filter(position => position.showInPdf !== false);
-const pdfWorkProjects = t.soFar.projects.workProjects.items.filter(
-  project => project.showInPdf !== false
-);
-const pdfPersonalProjects = t.soFar.projects.personalProjects.items.filter(
-  project => project.showInPdf !== false
-);
-
-// Generate page title and description from translations
 const pageTitle = t.soFar.pdf.pageTitle;
 const pageDescription = t.soFar.pdf.pageDescription;
-
 const backUrl = currentLang === "zh" ? "/so-far/zh" : "/so-far";
 
-// Generate canonical URL
 const pathname = Astro.url.pathname.replace(/\.html$/, "").replace(/\/$/, "");
 const canonicalURL = new URL(pathname, Astro.site || "https://realmorrisliu.com");
 
-// Set up alternate languages
 const alternateLanguages =
   currentLang === "en"
     ? [{ lang: "zh", url: "https://realmorrisliu.com/so-far/pdf/zh" }]
@@ -50,7 +34,6 @@ const alternateLanguages =
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Primary Meta Tags -->
     <title>{pageTitle}</title>
     <meta name="title" content={pageTitle} />
     <meta name="description" content={pageDescription} />
@@ -62,7 +45,6 @@ const alternateLanguages =
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonicalURL} />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={pageTitle} />
@@ -74,7 +56,6 @@ const alternateLanguages =
     <meta property="og:site_name" content="Morris Liu" />
     <meta property="og:locale" content={currentLang === "zh" ? "zh_CN" : "en_US"} />
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={pageTitle} />
@@ -83,30 +64,21 @@ const alternateLanguages =
     <meta property="twitter:image:alt" content="Morris Liu - Resume" />
     <meta property="twitter:creator" content="@realmorrisliu" />
 
-    <!-- Additional SEO -->
     <meta name="theme-color" content="#ffffff" />
     <meta name="msapplication-TileColor" content="#ffffff" />
 
-    <!-- Hreflang for multilingual support -->
     {
       alternateLanguages.map(({ lang: hrefLang, url }) => (
         <link rel="alternate" hreflang={hrefLang} href={url} />
       ))
     }
     <link rel="alternate" hreflang={currentLang} href={canonicalURL.toString()} />
-
-    <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="Morris Liu's Blog" href="/rss.xml" />
-
-    <!-- Web App Manifest -->
     <link rel="manifest" href="/manifest.json" />
-
-    <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap-index.xml" />
   </head>
 
   <body class="m-0 min-h-full w-full">
-    <!-- PDF Indicator -->
     <div class="mb-4 bg-gray-100 px-4 py-3.5 font-sans sm:mb-5 sm:px-5 sm:py-4 print:hidden">
       <div
         class="mb-2.5 flex flex-col items-start gap-3 sm:mb-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
@@ -134,7 +106,6 @@ const alternateLanguages =
         </div>
 
         <div class="flex flex-shrink-0 items-center gap-2">
-          <!-- Language Toggle -->
           <Button
             href={currentLang === "en" ? "/so-far/pdf/zh" : "/so-far/pdf"}
             variant="secondary"
@@ -161,92 +132,13 @@ const alternateLanguages =
       </div>
     </div>
 
-    <!-- Resume Content -->
-    <div
-      class="text-resume-body mx-auto h-[297mm] w-[210mm] border border-black bg-white px-5 py-3 font-sans leading-tight text-black"
-    >
-      <!-- Header Section -->
-      <header class="mb-1.5 border-b border-black pb-1.5 text-center">
-        <h1 class="text-resume-name m-0 mb-0.5 font-serif font-semibold">Morris Liu</h1>
-        <div class="text-resume-body mb-0.5 text-gray-700">
-          <span class="mx-0.5">morrisliu1994@outlook.com</span>
-          <span class="mx-0.5">•</span>
-          <span class="mx-0.5">github.com/realmorrisliu</span>
-          <span class="mx-0.5">•</span>
-          <span class="mx-0.5">x.com/realmorrisliu</span>
-        </div>
-        <p class="text-resume-body leading-snug font-normal">
-          {t.soFar.resumeSummary}
-        </p>
-      </header>
-
-      <!-- Skills Section -->
-      <ResumeSection title={t.soFar.skills.title}>
-        <SkillsGrid categories={t.soFar.skills.categories} />
-      </ResumeSection>
-
-      <!-- Work Experience -->
-      <ResumeSection title={t.soFar.work.title}>
-        <WorkExperienceList positions={pdfPositions} />
-      </ResumeSection>
-
-      <!-- Education -->
-      <ResumeSection title={t.soFar.education.title}>
-        {
-          t.soFar.education.items.map(item => (
-            <div class="en:mb-0 zh:mb-1 mb-1 break-inside-avoid">
-              <div class="mb-px flex items-baseline justify-between">
-                <h3 class="text-resume-heading en:font-medium zh:font-semibold m-0 font-semibold">
-                  {item.degree}
-                </h3>
-                <span class="text-resume-meta whitespace-nowrap text-gray-600">{item.period}</span>
-              </div>
-              <p class="text-resume-meta m-0 text-gray-700">{item.school}</p>
-              <p class="text-resume-body en:leading-tight zh:leading-normal m-0 leading-normal text-gray-700">
-                {item.description}
-              </p>
-            </div>
-          ))
-        }
-      </ResumeSection>
-
-      <!-- Work Projects -->
-      <ResumeSection title={t.soFar.projects.workProjects.title}>
-        <ProjectsList projects={pdfWorkProjects} />
-      </ResumeSection>
-
-      <!-- Personal Projects -->
-      <ResumeSection title={t.soFar.projects.personalProjects.title}>
-        <ProjectsList projects={pdfPersonalProjects} showGithubLinks={true} />
-      </ResumeSection>
-    </div>
+    <ResumePdfCompiler currentLang={currentLang} />
 
     <div class="mt-4 print:hidden"></div>
-
-    <!-- Scripts -->
-    <script>
-      // Auto-trigger print dialog after page loads
-      window.addEventListener("load", () => {
-        setTimeout(() => {
-          window.print();
-        }, 500);
-      });
-
-      // Manual print button handler
-      document.addEventListener("DOMContentLoaded", () => {
-        const printButton = document.getElementById("print-button");
-        if (printButton) {
-          printButton.addEventListener("click", () => {
-            window.print();
-          });
-        }
-      });
-    </script>
   </body>
 </html>
 
 <style>
-  /* Print styles */
   @media print {
     @page {
       margin: 0mm;

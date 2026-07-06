@@ -1,0 +1,27 @@
+[package]
+name = "resume-typst-wasm"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "z"
+panic = "abort"
+strip = true
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
+
+[dependencies]
+console_error_panic_hook = "0.1"
+js-sys = "0.3"
+typst = "0.15.0"
+typst-layout = "0.15.0"
+typst-pdf = "0.15.0"
+typst-svg = "0.15.0"
+wasm-bindgen = "0.2"

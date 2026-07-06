@@ -14,6 +14,7 @@
     "typecheck": "astro check",
     "check": "pnpm lint && pnpm format:check && pnpm typecheck",
     "check:fix": "pnpm lint:fix && pnpm format && pnpm typecheck",
+    "build:typst-wasm": "wasm-pack build crates/resume-typst-wasm --target web --release --out-dir ../../public/resume-typst-wasm --no-typescript",
     "astro": "astro",
     "new:photo": "tsx scripts/add-photo.ts",
     "deploy": "astro build && wrangler deploy",
