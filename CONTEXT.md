@@ -29,3 +29,24 @@ _Avoid_: PDF asset, Worker code
 The public, versioned URL prefix from which the Resume PDF route loads Resume Typst Runtime
 Artifacts in production.
 _Avoid_: R2 bucket name, local static path
+
+**Collected Edition**:
+An optional, book-like reading surface for selected site content rendered with Typst. It
+complements the default HTML site instead of replacing or mirroring every route.
+_Avoid_: Typst mirror, replacement site, PDF-only site
+
+**Collected Content**:
+The content set eligible for the Collected Edition, initially Thoughts entries, Now pages, and
+Moments entries.
+_Avoid_: Whole site, all pages, resume-only content
+
+**Collected Projection**:
+The build-time JSON publication model generated from Collected Content for Typst templates
+to consume. It normalizes prose, metadata, notes, code blocks, and photo entries without
+becoming a second content source.
+_Avoid_: Typst content source, copied Markdown, runtime conversion
+
+**Photography Collection**:
+The Collected Edition treatment of Moments entries as a curated photo-book section rather
+than as ordinary article prose.
+_Avoid_: Image appendix, gallery dump
