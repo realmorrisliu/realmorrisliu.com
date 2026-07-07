@@ -30,8 +30,8 @@ const downloadLabel = t.soFar.pdf.printButton;
 const languageSwitchLabel = currentLang === "zh" ? "切换简历语言" : "Switch resume language";
 const renderNote =
   currentLang === "zh"
-    ? "此页面在浏览器中使用 Typst 渲染简历，并可直接导出为 PDF。"
-    : "This page renders the resume in your browser with Typst and exports it directly as a PDF.";
+    ? "预览已预先生成；下载时会在浏览器中使用 Typst 导出 PDF。"
+    : "The preview is pre-rendered; downloads are exported in your browser with Typst.";
 const enLanguageClass =
   currentLang === "en" ? "pdf-language-option is-active" : "pdf-language-option";
 const zhLanguageClass =
