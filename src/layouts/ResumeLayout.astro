@@ -2,6 +2,7 @@
 import Link from "@components/Link.astro";
 import ResumePdfCompiler from "@components/ResumePdfCompiler.astro";
 import { getHtmlLangAttribute, getTranslations, type Language } from "@i18n/utils";
+import { getResumeTypstAssetUrls } from "@utils/resumeTypstAssets";
 import "@styles/global.css";
 
 export interface Props {
@@ -35,6 +36,7 @@ const enLanguageClass =
   currentLang === "en" ? "pdf-language-option is-active" : "pdf-language-option";
 const zhLanguageClass =
   currentLang === "zh" ? "pdf-language-option is-active" : "pdf-language-option";
+const { previewUrl } = getResumeTypstAssetUrls(currentLang);
 ---
 
 <!doctype html>
@@ -77,6 +79,7 @@ const zhLanguageClass =
 
     <meta name="theme-color" content="#ffffff" />
     <meta name="msapplication-TileColor" content="#ffffff" />
+    <link rel="preload" href={previewUrl} as="image" type="image/svg+xml" />
 
     {
       alternateLanguages.map(({ lang: hrefLang, url }) => (

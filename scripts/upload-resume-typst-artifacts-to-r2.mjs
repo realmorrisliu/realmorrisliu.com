@@ -57,6 +57,32 @@ const artifactBaseUrl = `${publicBaseUrl}/${prefix}`;
 const cacheControl =
   optionalEnv("RESUME_TYPST_CACHE_CONTROL") ?? "public, max-age=31536000, immutable";
 
+const run = (command, commandArgs, options = {}) => {
+  const { respectDryRun = true, ...spawnOptions } = options;
+
+  if (dryRun && respectDryRun) {
+    console.log(`[dry-run] ${command} ${commandArgs.join(" ")}`);
+    return;
+  }
+
+  const result = spawnSync(command, commandArgs, {
+    cwd: repoRoot,
+    env: process.env,
+    stdio: "inherit",
+    ...spawnOptions,
+  });
+
+  if (result.error) {
+    throw result.error;
+  }
+
+  if (result.status !== 0) {
+    throw new Error(`${command} ${commandArgs.join(" ")} failed with exit code ${result.status}`);
+  }
+};
+
+run(process.execPath, ["scripts/generate-resume-typst-assets.mjs"], { respectDryRun: false });
+
 const artifacts = [
   {
     file: "public/resume-typst-wasm/browser.js",
@@ -78,29 +104,12 @@ const artifacts = [
     key: `${prefix}/fonts/NotoSansCJKsc-Regular.otf`,
     contentType: "font/otf",
   },
+  {
+    file: "public/resume-typst/fonts/NotoSansCJKsc-ResumeSubset.ttf",
+    key: `${prefix}/fonts/NotoSansCJKsc-ResumeSubset.ttf`,
+    contentType: "font/ttf",
+  },
 ];
-
-const run = (command, commandArgs, options = {}) => {
-  if (dryRun) {
-    console.log(`[dry-run] ${command} ${commandArgs.join(" ")}`);
-    return;
-  }
-
-  const result = spawnSync(command, commandArgs, {
-    cwd: repoRoot,
-    env: process.env,
-    stdio: "inherit",
-    ...options,
-  });
-
-  if (result.error) {
-    throw result.error;
-  }
-
-  if (result.status !== 0) {
-    throw new Error(`${command} ${commandArgs.join(" ")} failed with exit code ${result.status}`);
-  }
-};
 
 for (const artifact of artifacts) {
   const filePath = path.join(repoRoot, artifact.file);

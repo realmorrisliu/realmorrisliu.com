@@ -32,6 +32,11 @@ type ResumeWasmWindow = Window &
     resumeTypstWasm?: ResumeWasmModule;
   };
 
+type ResumeIdleWindow = Window &
+  typeof globalThis & {
+    requestIdleCallback?: (callback: () => void, options?: { timeout?: number }) => number;
+  };
+
 type ResumePdfApp = HTMLElement & {
   dataset: DOMStringMap & {
     mainPath: string;
@@ -109,7 +114,6 @@ const app = document.getElementById("resume-pdf-app") as ResumePdfApp | null;
 
 if (app) {
   const statusEl = document.getElementById("resume-pdf-status");
-  const previewEl = document.getElementById("resume-pdf-preview");
   const errorEl = document.getElementById("resume-pdf-error");
   const downloadButton = (document.getElementById("resume-pdf-download") ??
     document.getElementById("print-button")) as HTMLButtonElement | null;
@@ -149,13 +153,8 @@ if (app) {
     retryButton?.classList.add("hidden");
   };
 
-  const withCacheBust = (url: string) => {
-    const separator = url.includes("?") ? "&" : "?";
-    return `${url}${separator}resumeTypst=${Date.now()}`;
-  };
-
   const fetchText = async (url: string) => {
-    const response = await fetch(withCacheBust(url), { cache: "no-store" });
+    const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Failed to fetch ${url}: ${response.status}`);
     }
@@ -171,64 +170,47 @@ if (app) {
   };
 
   const loadCompileAssets = async () => {
-    if (assetsPromise) {
-      return assetsPromise;
+    if (!assetsPromise) {
+      assetsPromise = (async () => {
+        const fontUrls = JSON.parse(app.dataset.fontUrls) as string[];
+        wasmBaseUrl = app.dataset.wasmBaseUrl || wasmBaseUrl;
+        const wasmBinaryUrl = assetUrl("resume_typst_wasm_bg.wasm");
+        const wasmResponsePromise = fetch(wasmBinaryUrl);
+        const wasmModulePromise = (async () => {
+          const wasmModule = await loadWasmModule(app.dataset.wasmBaseUrl);
+          const wasmResponse = await wasmResponsePromise;
+          if (!wasmResponse.ok) {
+            throw new Error(`Failed to fetch ${wasmBinaryUrl}: ${wasmResponse.status}`);
+          }
+          await wasmModule.default({ module_or_path: wasmResponse });
+          return wasmModule;
+        })();
+
+        const [wasmModule, sharedSource, entrySource, resumeData, ...fonts] = await Promise.all([
+          wasmModulePromise,
+          fetchText("/resume-typst/resume.typ"),
+          fetchText(`/resume-typst/${app.dataset.mainPath}`),
+          fetchText(app.dataset.dataUrl),
+          ...fontUrls.map(fetchBytes),
+        ]);
+
+        return {
+          wasmModule,
+          files: {
+            "resume.typ": sharedSource,
+            [app.dataset.mainPath]: entrySource,
+            [app.dataset.dataPath]: resumeData,
+          },
+          fonts,
+        };
+      })();
     }
 
-    assetsPromise = (async () => {
-      const wasmModule = await loadWasmModule(app.dataset.wasmBaseUrl);
-      await wasmModule.default({ module_or_path: assetUrl("resume_typst_wasm_bg.wasm") });
-
-      const fontUrls = JSON.parse(app.dataset.fontUrls) as string[];
-      const [sharedSource, entrySource, resumeData, ...fonts] = await Promise.all([
-        fetchText("/resume-typst/resume.typ"),
-        fetchText(`/resume-typst/${app.dataset.mainPath}`),
-        fetchText(app.dataset.dataUrl),
-        ...fontUrls.map(fetchBytes),
-      ]);
-
-      return {
-        wasmModule,
-        files: {
-          "resume.typ": sharedSource,
-          [app.dataset.mainPath]: entrySource,
-          [app.dataset.dataPath]: resumeData,
-        },
-        fonts,
-      };
-    })();
-
-    return assetsPromise;
-  };
-
-  const renderPreview = (pages: string[]) => {
-    if (!previewEl) {
-      return;
-    }
-
-    previewEl.replaceChildren();
-
-    previewEl.classList.remove(
-      "items-center",
-      "justify-center",
-      "text-center",
-      "text-sm",
-      "text-gray-500"
-    );
-
-    for (const [index, svg] of pages.entries()) {
-      const page = document.createElement("article");
-      page.className =
-        index === 0 ? "h-full w-full" : "mt-4 h-full w-full border border-black bg-white";
-      page.setAttribute("aria-label", `Resume preview page ${index + 1}`);
-      page.innerHTML = svg;
-
-      const svgEl = page.querySelector("svg");
-      if (svgEl) {
-        svgEl.classList.add("block", "h-full", "w-full");
-      }
-
-      previewEl.append(page);
+    try {
+      return await assetsPromise;
+    } catch (error) {
+      assetsPromise = undefined;
+      throw error;
     }
   };
 
@@ -273,34 +255,55 @@ if (app) {
       const message = error instanceof Error ? error.message : String(error);
       setStatus("failed", app.dataset.statusFailed);
       setError(message);
-    }
-  };
-
-  const compilePreview = async () => {
-    clearError();
-    if (downloadButton) {
-      downloadButton.disabled = true;
-      downloadButton.onclick = null;
-    }
-
-    try {
-      setStatus("loading", app.dataset.statusLoading);
-      const { wasmModule, files, fonts } = await loadCompileAssets();
-
-      setStatus("compiling", app.dataset.statusCompiling);
-
-      const result = wasmModule.compile_resume_preview(app.dataset.mainPath, files, fonts);
-
-      renderPreview(result.pages);
-      setStatus("ready", app.dataset.statusReady);
       setDownloadReady();
-    } catch (error) {
-      const message = error instanceof Error ? error.message : String(error);
-      setStatus("failed", app.dataset.statusFailed);
-      setError(message);
     }
   };
 
-  retryButton?.addEventListener("click", compilePreview);
-  void compilePreview();
+  const shouldWarmCompileAssets = () => {
+    const connection = (
+      navigator as typeof navigator & {
+        connection?: {
+          effectiveType?: string;
+          saveData?: boolean;
+        };
+      }
+    ).connection;
+    const effectiveType = connection?.effectiveType?.toLowerCase();
+
+    return !connection?.saveData && effectiveType !== "2g" && effectiveType !== "slow-2g";
+  };
+
+  const warmCompileAssets = () => {
+    void loadCompileAssets().catch(() => {
+      assetsPromise = undefined;
+    });
+  };
+
+  const scheduleCompileAssetWarmup = () => {
+    if (!shouldWarmCompileAssets()) {
+      return;
+    }
+
+    const idleWindow = window as ResumeIdleWindow;
+    const scheduleIdleWarmup = () => {
+      if (idleWindow.requestIdleCallback) {
+        idleWindow.requestIdleCallback(warmCompileAssets, { timeout: 2000 });
+        return;
+      }
+
+      window.setTimeout(warmCompileAssets, 1200);
+    };
+
+    if (document.readyState === "complete") {
+      scheduleIdleWarmup();
+      return;
+    }
+
+    window.addEventListener("load", scheduleIdleWarmup, { once: true });
+  };
+
+  retryButton?.addEventListener("click", compilePdf);
+  setStatus("ready", app.dataset.statusReady);
+  setDownloadReady();
+  scheduleCompileAssetWarmup();
 }

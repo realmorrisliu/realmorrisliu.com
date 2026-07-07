@@ -1,5 +1,6 @@
 ---
 import { type Language } from "@i18n/utils";
+import { getResumeTypstAssetUrls } from "@utils/resumeTypstAssets";
 
 interface Props {
   currentLang: Language;
@@ -10,17 +11,7 @@ const mainPath = currentLang === "zh" ? "resume.zh.typ" : "resume.en.typ";
 const dataUrl = currentLang === "zh" ? "/so-far/pdf-data/zh.json" : "/so-far/pdf-data/en.json";
 const dataPath = currentLang === "zh" ? "resume.zh.json" : "resume.en.json";
 const fileName = currentLang === "zh" ? "morris-liu-resume-zh.pdf" : "morris-liu-resume.pdf";
-const artifactBaseUrl = import.meta.env.PUBLIC_RESUME_TYPST_ARTIFACT_BASE_URL?.replace(/\/$/, "");
-const wasmBaseUrl = (
-  import.meta.env.PUBLIC_RESUME_TYPST_WASM_BASE_URL ??
-  (artifactBaseUrl ? `${artifactBaseUrl}/wasm` : "/resume-typst-wasm")
-).replace(/\/$/, "");
-const fontUrls = [
-  import.meta.env.PUBLIC_RESUME_TYPST_FONT_URL ??
-    (artifactBaseUrl
-      ? `${artifactBaseUrl}/fonts/NotoSansCJKsc-Regular.otf`
-      : "/resume-typst/fonts/NotoSansCJKsc-Regular.otf"),
-];
+const { fontUrls, previewUrl, wasmBaseUrl } = getResumeTypstAssetUrls(currentLang);
 
 const statusCopy =
   currentLang === "zh"
@@ -43,7 +34,7 @@ const statusCopy =
 <div
   id="resume-pdf-app"
   class="text-resume-body mx-auto h-[297mm] w-[210mm] border border-black bg-white px-5 py-3 font-sans leading-tight text-black"
-  data-state="loading"
+  data-state="ready"
   data-lang={currentLang}
   data-main-path={mainPath}
   data-data-path={dataPath}
@@ -57,12 +48,13 @@ const statusCopy =
   data-status-pdf={statusCopy.pdf}
   data-status-failed={statusCopy.failed}
 >
-  <span id="resume-pdf-status" class="sr-only">{statusCopy.loading}</span>
-  <div
-    id="resume-pdf-preview"
-    class="flex h-full w-full items-center justify-center text-center text-sm text-gray-500"
-  >
-    {statusCopy.loading}
+  <span id="resume-pdf-status" class="sr-only">{statusCopy.ready}</span>
+  <div id="resume-pdf-preview" class="h-full w-full">
+    <img
+      src={previewUrl}
+      class="block h-full w-full"
+      alt={currentLang === "zh" ? "简历 PDF 预览" : "Resume PDF preview"}
+    />
   </div>
   <pre
     id="resume-pdf-error"

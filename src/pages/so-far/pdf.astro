@@ -2,6 +2,8 @@
 import ResumeLayout from "@layouts/ResumeLayout.astro";
 
 const currentLang = "en";
+
+export const prerender = true;
 ---
 
 <ResumeLayout currentLang={currentLang} />
