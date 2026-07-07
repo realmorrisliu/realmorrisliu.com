@@ -24,19 +24,26 @@ const args = hasR2Config
   ? ["scripts/upload-resume-typst-artifacts-to-r2.mjs", "--build-site"]
   : ["exec", "astro", "build"];
 
+const run = (runCommand, runArgs, env = buildEnv) => {
+  const runResult = spawnSync(runCommand, runArgs, {
+    env,
+    stdio: "inherit",
+  });
+
+  if (runResult.error) {
+    throw runResult.error;
+  }
+
+  if (runResult.status !== 0) {
+    process.exit(runResult.status ?? 1);
+  }
+};
+
 if (hasR2Config) {
   console.log("Building with R2-hosted Resume Typst artifacts.");
 } else {
   console.log("Building with local Resume Typst artifact fallback.");
+  run(process.execPath, ["scripts/generate-resume-typst-assets.mjs"]);
 }
 
-const result = spawnSync(command, args, {
-  env: buildEnv,
-  stdio: "inherit",
-});
-
-if (result.error) {
-  throw result.error;
-}
-
-process.exit(result.status ?? 1);
+run(command, args);

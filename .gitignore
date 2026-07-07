@@ -8,6 +8,7 @@ dist/
 # dependencies
 node_modules/
 crates/**/target/
+.pnpm-store/
 
 # logs
 npm-debug.log*
