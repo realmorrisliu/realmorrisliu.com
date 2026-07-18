@@ -8,11 +8,11 @@
   "soFar": {
     "title": "我这辈子活到现在",
     "meta": {
-      "title": "Morris Liu - Rust 系统构建者 & Agent Runtime 架构师 | 8+ 年经验",
-      "description": "Morris Liu 技术历程：Rust 系统编程、AI 基础设施、开源工具开发。目前在梦数科技基于 Univer 构建 Spreadsheet for Agents，同时持续构建 Alan 和 openrouter-rs。"
+      "title": "Morris Liu - 系统构建者 & 工程负责人",
+      "description": "Morris Liu 的技术历程：CAD 与计算机图形学、Rust 系统、AI 基础设施、Agent Runtime 和工程管理。正在回归 EverXYZ，同时继续构建 Alan 和开源 Rust 工具。"
     },
-    "resumeSummary": "工程负责人及系统构建者 • 从零构建企业平台服务 20+ 客户，带领工程团队从 2 人扩展至 20 人，如今继续在生产力软件、Agent 基础设施和开源 Rust 工具上做事",
-    "description": "我用 Rust 写系统，也带团队。现在一边在 DreamNum 基于 Univer 做 Spreadsheet for Agents，一边继续把 Alan 往真正可用的个人助理方向推进，同时维护 openrouter-rs 这样的开源工具。这页面记录了我这些年的经历——踩过的坑，做过的项目，还有一路学到的东西。",
+    "resumeSummary": "工程负责人及系统构建者 • 从零构建企业级 CAD 与 AI 平台，带领工程团队从 2 人扩展至 20 人，如今回归 CAD 与计算机图形学，同时把 Alan 做成受 Plan 9 启发的个人计算环境",
+    "description": "我用 Rust 写系统，也带团队。现在正回归 EverXYZ，围绕 CAD 与计算机图形学重新搭建技术团队，同时继续把 Alan 作为可编程个人计算的长期探索。这页面记录了我这些年的经历——踩过的坑，做过的项目，还有一路学到的东西。",
     "nav": [
       { "id": "work", "label": "工作经历", "href": "#work" },
       { "id": "education", "label": "教育经历", "href": "#education" },
@@ -23,14 +23,22 @@
     ],
     "work": {
       "title": "工作经历",
-      "description": "八年多时间，从写代码的工程师变成带团队的负责人。每个阶段都有不同的收获——有技术上的，有管理上的，还有怎么在快速迭代和长期稳定性之间找平衡。",
+      "description": "从 2017 年至今，我从一名工程师成长为工程负责人，经历过消费产品、企业 CAD、AI 基础设施和 Agent 系统。贯穿其中的主线，是先把技术底座搭起来，再围绕它塑造团队与产品。",
       "positions": [
+        {
+          "year": "2026",
+          "title": "CTO",
+          "company": "EverXYZ",
+          "period": "2026年 - 至今",
+          "description": "回归 EverXYZ，重新搭建一支规模克制、技术密度高的团队，继续做 CAD 与计算机图形学。产品大方向不变，但具体策略和技术架构会从第一性原理重新设计。",
+          "showInPdf": true
+        },
         {
           "year": "2026",
           "title": "软件工程师",
           "company": "梦数科技（DreamNum）",
-          "period": "2026年 4月 - 至今",
-          "description": "加入梦数科技之后，我的重点不是直接迭代表格编辑器本身，而是把 Univer 行业领先的电子表格编辑能力带给 Agent：做 Spreadsheet for Agents。离开上一份工作并休整了大约一个月之后，我重新回到产品一线，在新的问题域里继续打磨工程能力、产品理解和长期技术判断。",
+          "period": "2026年 4月 - 2026年 7月",
+          "description": "围绕 Univer 构建面向 Agent 的电子表格工具，包括用于理解和修改工作簿的 DSL。公司从专注 Spreadsheet 转向全格式 Office Suite 后选择离开，因为我不认同这条产品路线。",
           "showInPdf": true
         },
         {
@@ -79,7 +87,7 @@
           "company": "美团",
           "period": "2018年 7月 - 2019年 1月",
           "description": "负责数据分析模块开发，处理多店管理系统的大量日常交易数据。构建可复用组件库提升开发效率，解决IE9+及现代浏览器的关键兼容性问题，显著改善用户体验。",
-          "showInPdf": true
+          "showInPdf": false
         },
         {
           "year": "2017",
@@ -192,7 +200,7 @@
         "items": [
           {
             "title": "Alan",
-            "description": "用 Rust 构建的开源 Agent Runtime，目标是成为我未来所有 Agent 的底座。现在已经可以作为一个正常的个人助理使用，我也在继续把它往更强的代码能力推进，目标包括 SWE-bench 和 Terminal-Bench。",
+            "description": "用 Rust 构建的开源可编程个人计算环境。它受 Plan 9 启发，把 Agent 视为普通 Process，将工具、记忆和认知通过挂载的文件与流暴露出来。Alan 是我对 Agent 时代个人计算方式的长期探索。",
             "githubUrl": "https://github.com/realmorrisliu/Alan",
             "readMoreLink": {
               "text": "→ 在",
@@ -274,14 +282,14 @@
       "title": "爱好",
       "bass": "我会花时间练贝斯，研究那些塑造了音乐历史的经典律动——{queen}戏剧化的贝斯线条，{chic}感染力十足的放克，{ewf}精妙的编曲，还有{acdc}那股子猛劲。贝斯和好的工程设计很像：都是那个默默撑起整个架构的基础。",
       "photography": "不弹琴的时候，我经常带着相机到处转。很喜欢一些摄影师的理念，比如{cartierBresson}提出的\"决定性瞬间\"，还有{hideakiHamada}对日常生活的安静观察，能从最平凡的场景里发现非凡的美。",
-      "philosophy": "摄影和音乐都影响着我写代码的思路。就像好的摄影作品或者恰到好处的音乐节拍，最棒的软件用起来会让人觉得\"就应该是这样\"。我喜欢做那种经得起时间考验的东西，写别人也能看懂的代码，找到那种让复杂系统变得简单的节奏感。",
+      "philosophy": "摄影、音乐和骑行都能让质量变得具体：时机、节奏，以及那些让东西用起来恰到好处的机械细节。我也希望软件如此——耐用、易懂，并且简单得让人觉得它本来就应该这样。",
       "photographers": {
         "cartierBresson": "卡蒂埃-布列松",
         "hideakiHamada": "滨田英明"
       },
       "gear": {
         "title": "目前的装备：",
-        "items": ["Bass: YAMAHA TRBX604", "Camera: Leica M10-R"]
+        "items": ["Bass: YAMAHA TRBX604", "Camera: Leica M10-R", "Bike: Aceoffix D10"]
       }
     },
     "contact": {
@@ -320,7 +328,7 @@
       "title": "Typst 简历预览",
       "backText": "← 返回网页版",
       "pageTitle": "Morris Liu - 简历 (PDF)",
-      "pageDescription": "Morris Liu 的专业简历PDF版本。全栈工程师 & 技术负责人，8+ 年经验。"
+      "pageDescription": "Morris Liu 的专业简历 PDF 版本，涵盖 CAD、图形学、Rust、AI 基础设施和工程管理。"
     },
     "footer": {
       "backToMain": "← 回到主页"
