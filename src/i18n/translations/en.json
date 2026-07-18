@@ -8,11 +8,11 @@
   "soFar": {
     "title": "So Far",
     "meta": {
-      "title": "Morris Liu - Rust Systems Builder & Agent Runtime Architect | 8+ Years",
-      "description": "Morris Liu's technical journey: Rust systems programming, AI infrastructure, and open source tooling. Currently at DreamNum building spreadsheets for agents with Univer, while continuing Alan and openrouter-rs."
+      "title": "Morris Liu - Systems Builder & Engineering Leader",
+      "description": "Morris Liu's technical journey across CAD and computer graphics, Rust systems, AI infrastructure, agent runtimes, and engineering leadership. Returning to EverXYZ while continuing Alan and open-source Rust tooling."
     },
-    "resumeSummary": "Engineering Leader & Systems Builder • Built enterprise platforms from zero serving 20+ clients, scaled engineering teams from 2 to 20 people, and now build productivity software, agent infrastructure, and open-source Rust tooling",
-    "description": "I build systems in Rust and lead teams. Right now that means building spreadsheets for agents with Univer at DreamNum, pushing Alan toward a real personal assistant, and maintaining open-source LLM tooling. This page captures the journey so far—the work, the projects, and the lessons learned.",
+    "resumeSummary": "Engineering Leader & Systems Builder • Built enterprise CAD and AI platforms from zero, scaled engineering teams from 2 to 20, and now returning to CAD and computer graphics while developing Alan as a Plan 9-inspired personal computing environment",
+    "description": "I build systems in Rust and lead teams. Right now I am returning to EverXYZ to rebuild the technical team around CAD and computer graphics, while continuing Alan as a long-term exploration of programmable personal computing. This page captures the journey so far—the work, the projects, and the lessons learned.",
     "nav": [
       { "id": "work", "label": "Work", "href": "#work" },
       { "id": "education", "label": "Education", "href": "#education" },
@@ -23,14 +23,22 @@
     ],
     "work": {
       "title": "Work",
-      "description": "More than eight years of growth from individual contributor to team leader. Each role taught me something different about technology, people, and the balance between moving fast and building things that last.",
+      "description": "Since 2017, I have moved from individual contributor to engineering leader across consumer products, enterprise CAD, AI infrastructure, and agent systems. The common thread is building the technical foundation, then shaping the team and product around it.",
       "positions": [
+        {
+          "year": "2026",
+          "title": "CTO",
+          "company": "EverXYZ",
+          "period": "2026 - Present",
+          "description": "Returning to rebuild a small, technically strong team around CAD and computer graphics. The product direction remains, but its strategy and architecture are being reconsidered from first principles.",
+          "showInPdf": true
+        },
         {
           "year": "2026",
           "title": "Software Engineer",
           "company": "DreamNum",
-          "period": "Apr 2026 - Present",
-          "description": "Joined DreamNum after a roughly month-long break between roles. My focus is bringing Univer's industry-leading spreadsheet editing capabilities to agents: building spreadsheets for agents rather than iterating on the spreadsheet editor itself.",
+          "period": "Apr 2026 - Jul 2026",
+          "description": "Built agent-oriented spreadsheet tooling around Univer, including a DSL for understanding and modifying workbooks. Left when the company shifted from spreadsheets toward a full Office suite—a product direction I did not believe in.",
           "showInPdf": true
         },
         {
@@ -79,7 +87,7 @@
           "company": "Meituan",
           "period": "Jul 2018 - Jan 2019",
           "description": "Developed data analytics modules for multi-store management system handling significant daily transaction volumes. Built reusable component library that improved development efficiency, resolved critical cross-browser compatibility issues enhancing user experience across IE9+ and modern browsers.",
-          "showInPdf": true
+          "showInPdf": false
         },
         {
           "year": "2017",
@@ -192,7 +200,7 @@
         "items": [
           {
             "title": "Alan",
-            "description": "An open-source agent runtime built in Rust, designed to be the foundation for all my future agents. It is now usable as a real personal assistant, and I'm pushing it toward benchmark-grade coding ability with targets like SWE-bench and Terminal-Bench.",
+            "description": "An open-source programmable personal computing environment built in Rust. Its Plan 9-inspired substrate models agents as ordinary processes whose tools, memory, and cognition are exposed through mounted files and streams. Alan is my long-term exploration of personal computing with agents.",
             "githubUrl": "https://github.com/realmorrisliu/Alan",
             "readMoreLink": {
               "text": "→ Read about the philosophy behind this project in",
@@ -274,14 +282,14 @@
       "title": "Side",
       "bass": "I spend time practicing bass, working through the grooves that shaped music—{queen}'s theatrical bass lines, {chic}'s infectious funk, {ewf}'s sophisticated arrangements, and {acdc}'s relentless drive. There's something about the bass that mirrors good engineering: it's the foundation that holds everything else together.",
       "photography": "When I'm not playing music, I'm often capturing moments through photography. I'm drawn to the philosophy of photographers like {cartierBresson}, who taught us about the decisive moment, and {hideakiHamada}, whose quiet observations of daily life reveal extraordinary beauty in the ordinary.",
-      "philosophy": "Both photography and music have shaped how I think about code. Like a good composition or a perfectly timed shot, the best software feels inevitable once you experience it. I believe in building things that last, writing code that others can understand, and finding the rhythm that makes complex systems feel simple.",
+      "philosophy": "Photography, music, and cycling all make quality tangible: timing, rhythm, and the small mechanical choices that make something feel right. I try to build software the same way—durable, understandable, and simple enough to feel inevitable.",
       "photographers": {
         "cartierBresson": "Henri Cartier-Bresson",
         "hideakiHamada": "Hideaki Hamada"
       },
       "gear": {
         "title": "Current gear:",
-        "items": ["Bass: YAMAHA TRBX604", "Camera: Leica M10-R"]
+        "items": ["Bass: YAMAHA TRBX604", "Camera: Leica M10-R", "Bike: Aceoffix D10"]
       }
     },
     "contact": {
@@ -320,7 +328,7 @@
       "title": "Typst Resume Preview",
       "backText": "← Back to web version",
       "pageTitle": "Morris Liu - Resume (PDF)",
-      "pageDescription": "Morris Liu's professional resume in PDF format. Full-Stack Engineer & Technical Leader with 8+ years experience."
+      "pageDescription": "Morris Liu's professional resume in PDF format. Systems builder and engineering leader across CAD, graphics, Rust, and AI infrastructure."
     },
     "footer": {
       "backToMain": "← Back to main page"
