@@ -21,35 +21,11 @@ jobs:
           node-version: '20'
           cache: 'pnpm'
 
-      - name: Install Rust (wasm32 target)
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          targets: wasm32-unknown-unknown
-
-      - name: Cache Cargo build
-        uses: Swatinem/rust-cache@v2
-        with:
-          workspaces: crates/resume-typst-wasm
-
-      # apt binaryen (116) is too old for the wasm's bulk-memory ops; use the
-      # same version 132 we run locally.
-      - name: Install binaryen (wasm-opt)
-        run: |
-          curl -sL https://github.com/WebAssembly/binaryen/releases/download/version_132/binaryen-version_132-x86_64-linux.tar.gz | tar xz
-          echo "$GITHUB_WORKSPACE/binaryen-version_132/bin" >> "$GITHUB_PATH"
-
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build Typst wasm
-        run: pnpm build:typst-wasm
-
-      # WORKERS_CI=1 makes build-site.mjs default the R2 bucket/base URL and
-      # upload the wasm/font artifacts before building the site.
-      - name: Build site (upload artifacts to R2)
+      - name: Build
         run: pnpm run build
-        env:
-          WORKERS_CI: "1"
 
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
