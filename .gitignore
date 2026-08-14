@@ -1,6 +1,12 @@
 # build output
 dist/
 
+# generated resume-typst artifacts (build via pnpm build:typst-wasm + pnpm build; full font is downloaded by scripts/generate-resume-typst-assets.mjs)
+public/resume-typst-wasm/
+public/resume-typst-preview/
+public/resume-typst/fonts/NotoSansCJKsc-Regular.otf
+public/resume-typst/fonts/NotoSansCJKsc-ResumeSubset.ttf
+
 # generated types
 .astro/
 .playwright-cli/

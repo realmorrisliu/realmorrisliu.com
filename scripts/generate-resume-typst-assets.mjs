@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { existsSync } from "node:fs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -130,6 +131,36 @@ const formatBytes = bytes => {
   return `${(bytes / 1024 / 1024).toFixed(1)} MiB`;
 };
 
+const FULL_FONT_URL =
+  "https://raw.githubusercontent.com/googlefonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf";
+
+const ensureFullFont = async () => {
+  if (existsSync(fullFontPath)) {
+    return;
+  }
+
+  console.log(
+    `Downloading ${path.relative(repoRoot, fullFontPath)} from Google Fonts (not committed to git)...`
+  );
+  const response = await fetch(FULL_FONT_URL);
+  if (!response.ok) {
+    throw new Error(`Failed to download ${FULL_FONT_URL}: ${response.status}`);
+  }
+  await mkdir(fontDir, { recursive: true });
+  await writeFile(fullFontPath, Buffer.from(await response.arrayBuffer()));
+};
+
+const ensureWasmBuilt = () => {
+  for (const file of ["resume_typst_wasm.js", "resume_typst_wasm_bg.wasm"]) {
+    const filePath = path.join(repoRoot, "public/resume-typst-wasm", file);
+    if (!existsSync(filePath)) {
+      throw new Error(
+        `Missing ${path.relative(repoRoot, filePath)} — run "pnpm build:typst-wasm" first`
+      );
+    }
+  }
+};
+
 const loadCompiler = async () => {
   const wasmModuleUrl = pathToFileURL(
     path.join(repoRoot, "public/resume-typst-wasm/resume_typst_wasm.js")
@@ -201,6 +232,9 @@ const generatePreview = async ({
 };
 
 const main = async () => {
+  ensureWasmBuilt();
+  await ensureFullFont();
+
   const translations = {
     en: await readJson("src/i18n/translations/en.json"),
     zh: await readJson("src/i18n/translations/zh.json"),
