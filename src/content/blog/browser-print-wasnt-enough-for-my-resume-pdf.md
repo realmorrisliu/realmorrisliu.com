@@ -114,7 +114,7 @@ Astro owns the website. Typst owns the PDF document.
 
 I exposed the Typst renderer through a small WASM bridge so the browser can generate the final PDF without sending resume data to a server.
 
-If you want to inspect the implementation, it is in my [site repository](https://github.com/realmorrisliu/realmorrisliu.com). The useful entry points are the [Typst template](https://github.com/realmorrisliu/realmorrisliu.com/blob/73a83cf74813fc020f52240a04adf30ec7fd5c14/public/resume-typst/resume.typ), the [WASM bridge](https://github.com/realmorrisliu/realmorrisliu.com/blob/73a83cf74813fc020f52240a04adf30ec7fd5c14/crates/resume-typst-wasm/src/lib.rs), the [build-time asset generator](https://github.com/realmorrisliu/realmorrisliu.com/blob/73a83cf74813fc020f52240a04adf30ec7fd5c14/scripts/generate-resume-typst-assets.mjs), and the [browser runtime](https://github.com/realmorrisliu/realmorrisliu.com/blob/73a83cf74813fc020f52240a04adf30ec7fd5c14/src/scripts/resume-pdf-runtime.ts).
+If you want to inspect the implementation, it is in my [site repository](https://github.com/realmorrisliu/realmorrisliu.com). The useful entry points are the [Typst template](https://github.com/realmorrisliu/realmorrisliu.com/blob/main/public/resume-typst/resume.typ), the [WASM bridge](https://github.com/realmorrisliu/realmorrisliu.com/blob/main/crates/resume-typst-wasm/src/lib.rs), the [build-time asset generator](https://github.com/realmorrisliu/realmorrisliu.com/blob/main/scripts/generate-resume-typst-assets.mjs), and the [browser runtime](https://github.com/realmorrisliu/realmorrisliu.com/blob/main/src/scripts/resume-pdf-runtime.ts).
 
 The code is less interesting than the boundary it creates.
 
