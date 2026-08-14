@@ -14,6 +14,8 @@ opt-level = "z"
 panic = "abort"
 strip = true
 
+# wasm-pack's bundled wasm-opt (binaryen 117) fails on bulk-memory ops; we run
+# the newer wasm-opt (>= 119) manually in package.json's build:typst-wasm instead
 [package.metadata.wasm-pack.profile.release]
 wasm-opt = false
 

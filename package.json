@@ -14,7 +14,7 @@
     "typecheck": "astro check",
     "check": "pnpm lint && pnpm format:check && pnpm typecheck",
     "check:fix": "pnpm lint:fix && pnpm format && pnpm typecheck",
-    "build:typst-wasm": "wasm-pack build crates/resume-typst-wasm --target web --release --out-dir ../../public/resume-typst-wasm --no-typescript",
+    "build:typst-wasm": "wasm-pack build crates/resume-typst-wasm --target web --release --out-dir ../../public/resume-typst-wasm --no-typescript && wasm-opt --enable-bulk-memory --enable-nontrapping-float-to-int --enable-sign-ext --enable-mutable-globals --enable-reference-types --enable-multivalue -Oz public/resume-typst-wasm/resume_typst_wasm_bg.wasm -o public/resume-typst-wasm/resume_typst_wasm_bg.opt.wasm && mv public/resume-typst-wasm/resume_typst_wasm_bg.opt.wasm public/resume-typst-wasm/resume_typst_wasm_bg.wasm",
     "build:resume-typst-assets": "node scripts/generate-resume-typst-assets.mjs",
     "upload:typst-artifacts:r2": "node scripts/upload-resume-typst-artifacts-to-r2.mjs",
     "build:with-r2-artifacts": "node scripts/upload-resume-typst-artifacts-to-r2.mjs --build-site",
