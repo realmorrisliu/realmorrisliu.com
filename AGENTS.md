@@ -25,6 +25,13 @@ Use `pnpm` for all tasks:
 - `pnpm check`: full quality gate (`lint + format:check + typecheck`).
 - `pnpm check:fix`: fix formatting/lint issues, then re-run checks.
 - `pnpm new:photo`: add a new photo content entry via script.
+- `pnpm build:typst-wasm`: rebuild the Typst wasm (needs Rust + wasm-pack + binaryen).
+- `pnpm upload:typst-wasm`: publish that wasm to R2 so other builds can fetch it.
+
+`pnpm build` needs nothing but Node. It downloads the prebuilt Typst wasm and
+the full CJK font, then regenerates the subset font and the resume preview
+SVGs. Only touching `crates/resume-typst-wasm/` needs a Rust toolchain: rebuild,
+bump `WASM_VERSION` in `scripts/resume-typst-wasm-source.mjs`, then upload.
 
 ## Coding Style & Naming Conventions
 
@@ -53,4 +60,10 @@ PRs should include:
 
 ## Security & Configuration Tips
 
-Keep secrets in local `.env` only; never commit credentials. `pnpm deploy` and `pnpm preview:worker` require valid Cloudflare/Wrangler auth in your environment.
+Keep secrets in local `.env` only; never commit credentials.
+
+Pushing to `main` deploys automatically via Cloudflare Workers Builds, which
+runs `pnpm build` then `npx wrangler deploy`. Prefer that over deploying by
+hand: a manual deploy is exactly how the site silently went a month without
+updates. `pnpm deploy` and `pnpm preview:worker` still exist as an escape hatch
+and need valid Cloudflare/Wrangler auth in your environment.

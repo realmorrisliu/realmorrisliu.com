@@ -1,5 +1,6 @@
 allowBuilds:
   "@cloudflare/workerd-darwin-arm64": true
+  "@cloudflare/workerd-linux-64": true
   "@tailwindcss/oxide": true
   esbuild: true
   sharp: true

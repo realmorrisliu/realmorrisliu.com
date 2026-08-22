@@ -17,7 +17,7 @@ pnpm dev          # http://localhost:4321
 - **Tailwind CSS** v4 with Typography plugin
 - **TypeScript** with strict Content Collections
 - **Fontsource** (Inter + EB Garamond)
-- **Cloudflare Pages** deployment
+- **Cloudflare Workers** deployment, auto-built on push to `main`
 
 ## Commands
 
