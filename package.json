@@ -19,8 +19,8 @@
     "upload:typst-wasm": "node scripts/upload-resume-typst-wasm.mjs",
     "astro": "astro",
     "new:photo": "tsx scripts/add-photo.ts",
-    "deploy": "astro build && wrangler deploy",
-    "preview:worker": "astro build && wrangler dev"
+    "deploy": "pnpm build && wrangler deploy",
+    "preview:worker": "pnpm build && wrangler dev"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",
