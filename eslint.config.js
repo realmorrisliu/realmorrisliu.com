@@ -71,6 +71,7 @@ export default [
         KeyboardEvent: "readonly",
         MouseEvent: "readonly",
         Event: "readonly",
+        CustomEvent: "readonly",
         HTMLInputElement: "readonly",
         HTMLTextAreaElement: "readonly",
         HTMLButtonElement: "readonly",

@@ -1,10 +1,18 @@
 #!/usr/bin/env node
 import { existsSync } from "node:fs";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const { default: subsetFont } = await import("subset-font");
+
+import {
+  WASM_BRIDGE_FILE,
+  WASM_BRIDGE_SOURCE,
+  WASM_DIR,
+  WASM_FILES,
+  wasmSourceBaseUrl,
+} from "./resume-typst-wasm-source.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, "..");
@@ -150,24 +158,41 @@ const ensureFullFont = async () => {
   await writeFile(fullFontPath, Buffer.from(await response.arrayBuffer()));
 };
 
-const ensureWasmBuilt = () => {
-  for (const file of ["resume_typst_wasm.js", "resume_typst_wasm_bg.wasm"]) {
-    const filePath = path.join(repoRoot, "public/resume-typst-wasm", file);
-    if (!existsSync(filePath)) {
+const ensureWasm = async () => {
+  await mkdir(path.join(repoRoot, WASM_DIR), { recursive: true });
+  await copyFile(
+    path.join(repoRoot, WASM_BRIDGE_SOURCE),
+    path.join(repoRoot, WASM_DIR, WASM_BRIDGE_FILE)
+  );
+
+  const missing = WASM_FILES.filter(file => !existsSync(path.join(repoRoot, WASM_DIR, file)));
+
+  if (missing.length === 0) {
+    return;
+  }
+
+  const baseUrl = wasmSourceBaseUrl();
+
+  for (const file of missing) {
+    const url = `${baseUrl}/${file}`;
+    console.log(`Downloading ${WASM_DIR}/${file} from ${baseUrl} (not committed to git)...`);
+    const response = await fetch(url);
+    if (!response.ok) {
       throw new Error(
-        `Missing ${path.relative(repoRoot, filePath)} — run "pnpm build:typst-wasm" first`
+        `Failed to download ${url}: ${response.status}. ` +
+          `Build it locally with "pnpm build:typst-wasm", then "pnpm upload:typst-wasm".`
       );
     }
+    const bytes = Buffer.from(await response.arrayBuffer());
+    await writeFile(path.join(repoRoot, WASM_DIR, file), bytes);
+    console.log(`Downloaded ${WASM_DIR}/${file} (${formatBytes(bytes.byteLength)})`);
   }
 };
 
 const loadCompiler = async () => {
-  const wasmModuleUrl = pathToFileURL(
-    path.join(repoRoot, "public/resume-typst-wasm/resume_typst_wasm.js")
-  ).href;
-  const wasmBinary = await readFile(
-    path.join(repoRoot, "public/resume-typst-wasm/resume_typst_wasm_bg.wasm")
-  );
+  const [moduleFile, binaryFile] = WASM_FILES;
+  const wasmModuleUrl = pathToFileURL(path.join(repoRoot, WASM_DIR, moduleFile)).href;
+  const wasmBinary = await readFile(path.join(repoRoot, WASM_DIR, binaryFile));
   const wasmModule = await import(wasmModuleUrl);
 
   await wasmModule.default({ module_or_path: wasmBinary });
@@ -232,8 +257,7 @@ const generatePreview = async ({
 };
 
 const main = async () => {
-  ensureWasmBuilt();
-  await ensureFullFont();
+  await Promise.all([ensureWasm(), ensureFullFont()]);
 
   const translations = {
     en: await readJson("src/i18n/translations/en.json"),
