@@ -20,7 +20,7 @@
     "upload:typst-wasm": "node scripts/upload-resume-typst-wasm.mjs",
     "astro": "astro",
     "new:photo": "tsx scripts/add-photo.ts",
-    "deploy": "pnpm build && wrangler deploy",
+    "deploy:manual": "pnpm build && wrangler deploy",
     "preview:worker": "pnpm build && wrangler dev"
   },
   "dependencies": {

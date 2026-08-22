@@ -65,5 +65,8 @@ Keep secrets in local `.env` only; never commit credentials.
 Pushing to `main` deploys automatically via Cloudflare Workers Builds, which
 runs `pnpm build` then `npx wrangler deploy`. Prefer that over deploying by
 hand: a manual deploy is exactly how the site silently went a month without
-updates. `pnpm deploy` and `pnpm preview:worker` still exist as an escape hatch
-and need valid Cloudflare/Wrangler auth in your environment.
+updates. `pnpm deploy:manual` and `pnpm preview:worker` still exist as an
+escape hatch and need valid Cloudflare/Wrangler auth in your environment. The
+manual one is named `deploy:manual` because `pnpm deploy` is a pnpm builtin in
+any repo with a `pnpm-workspace.yaml`, and silently refuses to run a script of
+that name.
