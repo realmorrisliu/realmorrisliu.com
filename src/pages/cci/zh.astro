@@ -1,0 +1,20 @@
+---
+import CciPage from "@components/CciPage.astro";
+import { cciCopy } from "@/cci/copy";
+import { getHtmlLangAttribute } from "@i18n/utils";
+import Layout from "@layouts/Layout.astro";
+
+export const prerender = true;
+
+const currentLang = "zh";
+const t = cciCopy[currentLang];
+---
+
+<Layout
+  title={t.meta.title}
+  description={t.meta.description}
+  lang={getHtmlLangAttribute(currentLang)}
+  alternateLanguages={[{ lang: "en", url: "https://realmorrisliu.com/cci" }]}
+>
+  <CciPage currentLang={currentLang} />
+</Layout>
