@@ -1,0 +1,788 @@
+---
+// THESIS: A public research ledger for conditional century-scale city comparisons.
+// OWN-WORLD: The site's monochrome Systems Letter, expanded into a wide evidence table.
+// STORY: premise → release controls → pilot audit → city evidence → method → governance → history.
+// FIRST VIEWPORT: title, explicit caveat, scenario structure, and immutable release identity.
+// FORM: one flat manuscript; serif hierarchy, open tables, one-pixel rules, no cards or accent color.
+import sourceManifestData from "@/cci/data/source-manifest-v1.json";
+import { cciCopy } from "@/cci/copy";
+import { DIMENSIONS, type ResultMode, type TargetYear } from "@/cci/model";
+import { cciReleases, latestCciRelease } from "@/cci/releases";
+import type { Language } from "@i18n/utils";
+import "@styles/cci.css";
+
+interface Props {
+  currentLang: Language;
+}
+
+interface ManifestSource {
+  sourceId: string;
+  dimensions: string[];
+  status: "applied" | "catalogued" | "context_only";
+  sourceClass: string;
+  producer: string;
+  title: string;
+  url: string;
+  sourceVersion: string;
+  knownCoverageGaps: string[];
+}
+
+const { currentLang } = Astro.props;
+const t = cciCopy[currentLang];
+const release = latestCciRelease;
+const sourceManifest = sourceManifestData as { sources: ManifestSource[] };
+const selectedYear: TargetYear = 2050;
+const selectedMode = "robust" as const;
+const selectedCity = release.cities[0];
+const languageUrl = currentLang === "zh" ? "/cci" : "/cci/zh";
+const dateLocale = currentLang === "zh" ? "zh-CN" : "en-GB";
+const releaseDate = new Intl.DateTimeFormat(dateLocale, {
+  day: "numeric",
+  month: "short",
+  year: "numeric",
+  timeZone: "UTC",
+}).format(new Date(`${release.asOf}T00:00:00Z`));
+const formatReleaseDate = (asOf: string) =>
+  new Intl.DateTimeFormat(dateLocale, {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${asOf}T00:00:00Z`));
+const releaseStatus = (status: (typeof release)["status"]) => t.release[status];
+const releaseUrl = `/cci/releases/${release.releaseId}.json`;
+const governanceUrl =
+  "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-data-bias-governance.md";
+const methodologyUrl =
+  "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-weight-analysis.md";
+const correctionParams = new URLSearchParams({
+  title: `[CCI correction] ${release.releaseId}: `,
+  body:
+    currentLang === "zh"
+      ? `## 城市与边界\n\n## 指标与发布版本\n${release.releaseId}\n\n## 具体异议\n\n## 可核查来源\n\n## 建议处理\n`
+      : `## City and boundary\n\n## Indicator and release\n${release.releaseId}\n\n## Claim\n\n## Verifiable source\n\n## Suggested handling\n`,
+});
+const correctionUrl = `https://github.com/realmorrisliu/realmorrisliu.com/issues/new?${correctionParams}`;
+
+const cityName = (city: (typeof release.cities)[number]) =>
+  currentLang === "zh" ? city.nameZh : city.name;
+const countryName = (city: (typeof release.cities)[number]) =>
+  currentLang === "zh" ? city.countryZh : city.country;
+const formatScore = (value: number | null) => (value === null ? "—" : value.toFixed(1));
+const selectedDistribution = (city: (typeof release.cities)[number]) =>
+  city.results[selectedYear].point;
+const selectedScore = (city: (typeof release.cities)[number]) => {
+  const distribution = selectedDistribution(city);
+  return distribution[selectedMode];
+};
+const selectedRange = (city: (typeof release.cities)[number]) => {
+  const distribution = selectedDistribution(city);
+  return distribution.robust === null || distribution.upside === null
+    ? "—"
+    : `${formatScore(distribution.robust)}–${formatScore(distribution.upside)}`;
+};
+const reasonLabel = (reason: string) =>
+  t.reasons[reason as keyof typeof t.reasons] ?? reason.replaceAll("_", " ");
+const sourceRole = (status: ManifestSource["status"]) =>
+  status === "applied"
+    ? t.governance.applied
+    : status === "catalogued"
+      ? t.governance.catalogued
+      : t.governance.context_only;
+const boundaryLabel =
+  selectedCity.boundary.verificationStatus === "verified"
+    ? t.city.boundaryVerified
+    : t.city.boundaryPending;
+const scenarioGroups: ReadonlyArray<[string, readonly string[]]> = [
+  [t.method.climate, t.method.climateStates],
+  [t.method.geopolitics, t.method.geopoliticsStates],
+  [t.method.medicine, t.method.medicineStates],
+];
+const uiData = JSON.stringify({
+  currentLang,
+  selectedYear,
+  selectedMode,
+  dimensions: t.dimensions,
+  controls: t.controls,
+  runtime: t.runtime,
+  tail: t.tail,
+  reasons: t.reasons,
+  labels: {
+    compare: t.compare.compare,
+    compareEmpty: t.compare.empty,
+    inAudit: t.compare.inAudit,
+    notRanked: t.compare.notRanked,
+    boundaryPending: t.city.boundaryPending,
+    boundaryVerified: t.city.boundaryVerified,
+    unavailable: t.myCci.unavailable,
+    unassessed: t.tail.unassessed,
+    pass: t.tail.pass,
+    watch: t.tail.watch,
+    fail: t.tail.fail,
+    metric: t.runtime.metric,
+    officialResult: t.runtime.officialResult,
+    range: t.runtime.range,
+    confidence: t.runtime.confidence,
+    tail: t.runtime.tail,
+  },
+}).replaceAll("<", "\\u003c");
+---
+
+<main
+  id="cci-app"
+  class="cci-page"
+  data-release-url={releaseUrl}
+  data-selected-city={selectedCity.slug}
+>
+  <p id="cci-runtime-status" class="sr-only" aria-live="polite">{t.runtime.loading}</p>
+  <header class="cci-site-header">
+    <a class="cci-brand" href="/">Morris Liu</a>
+    <nav class="cci-site-nav" aria-label={currentLang === "zh" ? "页面导航" : "Page navigation"}>
+      <a class="is-active" href="#index">{t.nav.index}</a>
+      <a href="#method">{t.nav.method}</a>
+      <a href="#releases">{t.nav.releases}</a>
+      <a href={languageUrl} data-language-switch>{t.nav.language}</a>
+    </nav>
+  </header>
+
+  <div class="cci-shell">
+    <section id="index" class="cci-hero" aria-labelledby="cci-title">
+      <div class="cci-hero-copy">
+        <h1 id="cci-title">{t.hero.title}</h1>
+        <p class="cci-hero-intro">{t.hero.intro}</p>
+        <p class="cci-caveat">{t.hero.caveat}</p>
+      </div>
+
+      <figure class="cci-horizon-chart">
+        <figcaption>
+          <span>{t.hero.chartTitle}</span>
+          <small>{t.hero.chartNote}</small>
+        </figcaption>
+        <svg viewBox="0 0 600 300" role="img" aria-labelledby="horizon-title horizon-desc">
+          <title id="horizon-title">{t.hero.chartTitle}</title>
+          <desc id="horizon-desc">{t.hero.chartNote}</desc>
+          <g class="cci-chart-grid" aria-hidden="true">
+            <line x1="54" y1="252" x2="525" y2="252"></line>
+            <line x1="54" y1="145" x2="525" y2="145" class="cci-chart-origin"></line>
+            {[54, 152, 274, 401, 525].map(x => <line x1={x} y1="145" x2={x} y2="252" />)}
+          </g>
+          <g class="cci-chart-scenarios" aria-hidden="true">
+            <path d="M54 145 C145 130 215 89 274 80 S420 45 525 38"></path>
+            <path d="M54 145 C145 140 211 113 274 101 S415 72 525 61"></path>
+            <path d="M54 145 C132 133 210 124 274 113 S420 93 525 83"></path>
+            <path d="M54 145 C138 150 211 129 274 134 S416 120 525 116"></path>
+            <path d="M54 145 C135 153 213 144 274 148 S420 151 525 142"></path>
+            <path d="M54 145 C136 157 210 163 274 170 S417 184 525 188"></path>
+            <path d="M54 145 C140 165 211 179 274 191 S418 210 525 214"></path>
+            <path d="M54 145 C142 171 215 196 274 206 S419 228 525 235"></path>
+          </g>
+          <path class="cci-chart-line is-upside" d="M54 145 C153 131 206 92 274 85 S416 47 525 40"
+          ></path>
+          <path
+            class="cci-chart-line is-median"
+            d="M54 145 C150 143 211 130 274 136 S416 126 525 120"></path>
+          <path
+            class="cci-chart-line is-robust"
+            d="M54 145 C145 164 207 182 274 194 S416 218 525 222"></path>
+          <g class="cci-chart-labels" aria-hidden="true">
+            <circle cx="54" cy="145" r="4"></circle>
+            <circle class="is-upside" cx="525" cy="40" r="5"></circle>
+            <circle cx="525" cy="120" r="5"></circle>
+            <circle class="is-robust" cx="525" cy="222" r="5"></circle>
+            <text class="is-upside" x="540" y="46">{t.hero.upside}</text>
+            <text x="540" y="126">{t.hero.median}</text>
+            <text class="is-robust" x="540" y="228">{t.hero.robust}</text>
+            {
+              [2026, 2035, 2050, 2075, 2100].map((year, index) => (
+                <text x={[54, 152, 274, 401, 525][index]} y="278" text-anchor="middle">
+                  {year}
+                </text>
+              ))
+            }
+          </g>
+        </svg>
+      </figure>
+    </section>
+
+    <div class="cci-release-rail" aria-label={t.release.researchPreview}>
+      <span>
+        {t.release.release}
+        <strong>{release.releaseId}</strong> · {t.release.asOf}
+        <time datetime={release.asOf}>{releaseDate}</time>
+      </span>
+      <span>
+        {t.release.model}
+        {release.modelVersion} · {t.release.data}
+        {release.dataVersion} · GHS-FUA {release.boundary.version}
+      </span>
+    </div>
+
+    <section
+      class="cci-control-deck"
+      aria-label={currentLang === "zh" ? "指数控制" : "Index controls"}
+    >
+      <fieldset>
+        <legend>{t.controls.targetYear}</legend>
+        <div class="cci-segmented" data-year-controls>
+          {
+            release.targetYears.map(year => (
+              <button type="button" data-year={year} aria-pressed={year === selectedYear}>
+                {year}
+              </button>
+            ))
+          }
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>{t.controls.resultMode}</legend>
+        <div class="cci-segmented" data-mode-controls>
+          {
+            (["robust", "median", "upside", "lifetime"] as ResultMode[]).map(mode => (
+              <button type="button" data-mode={mode} aria-pressed={mode === selectedMode}>
+                {t.controls[mode]}
+              </button>
+            ))
+          }
+        </div>
+      </fieldset>
+    </section>
+
+    <section class="cci-section cci-compare-section" aria-labelledby="compare-title">
+      <div class="cci-section-heading">
+        <h2 id="compare-title">{t.compare.title}</h2>
+        <p>{t.compare.intro}</p>
+      </div>
+
+      <p class="cci-preview-notice">{t.compare.notice}</p>
+
+      <div class="cci-table-tools">
+        <span
+          ><strong data-current-year>{selectedYear}</strong> · <span data-current-mode
+            >{t.controls[selectedMode]}</span
+          ></span
+        >
+        <div>
+          <button type="button" class="cci-action" data-compare-button>
+            {t.compare.compare}
+            <span data-compare-count>0</span> / 3
+          </button>
+          <a href="#ranking-eligibility">{t.compare.why}</a>
+        </div>
+      </div>
+
+      <div class="cci-table-scroll" tabindex="0">
+        <table class="cci-city-table">
+          <thead>
+            <tr>
+              <th class="cci-check-cell"><span class="sr-only">{t.compare.selectCity}</span></th>
+              <th scope="col"
+                ><button type="button" data-sort="city">{t.compare.columns.city}</button></th
+              >
+              <th scope="col"
+                ><button type="button" data-sort="result">{t.compare.columns.result}</button></th
+              >
+              <th scope="col">{t.compare.columns.range}</th>
+              <th scope="col"
+                ><button type="button" data-sort="confidence">{t.compare.columns.confidence}</button
+                ></th
+              >
+              <th scope="col"
+                ><button type="button" data-sort="tail">{t.compare.columns.tail}</button></th
+              >
+              <th scope="col">{t.compare.columns.evidence}</th>
+            </tr>
+          </thead>
+          <tbody data-city-rows>
+            {
+              release.cities.map((city, index) => (
+                <tr data-city-slug={city.slug} aria-selected={index === 0 ? "true" : "false"}>
+                  <td class="cci-check-cell">
+                    <input
+                      id={`compare-${city.slug}-${currentLang}`}
+                      type="checkbox"
+                      value={city.slug}
+                      data-compare-city
+                      aria-label={`${t.compare.selectCity}: ${cityName(city)}`}
+                    />
+                  </td>
+                  <th scope="row">
+                    <button
+                      type="button"
+                      class="cci-city-link"
+                      data-open-city={city.slug}
+                      aria-label={`${t.compare.openCity}: ${cityName(city)}`}
+                    >
+                      <span>{cityName(city)}</span>
+                      <small>{countryName(city)}</small>
+                    </button>
+                  </th>
+                  <td data-cell-result>{formatScore(selectedScore(city))}</td>
+                  <td data-cell-range>{selectedRange(city)}</td>
+                  <td data-cell-confidence>{city.confidence.overall}</td>
+                  <td data-cell-tail>{city.tailStatus ?? "—"}</td>
+                  <td data-cell-evidence>{city.rankingEligible ? "—" : t.compare.inAudit}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cci-table-legend" id="ranking-eligibility">
+        <p><strong>{t.compare.notRanked}</strong> — {t.compare.notRankedDefinition}</p>
+        <p><strong>D</strong> — {t.compare.confidenceDefinition}</p>
+        <p><strong>—</strong> — {t.compare.noClaimDefinition}</p>
+      </div>
+
+      <section class="cci-comparison" data-comparison hidden aria-live="polite">
+        <div class="cci-comparison-heading">
+          <h3>{t.compare.selected}</h3>
+          <button type="button" data-clear-comparison>{t.compare.clear}</button>
+        </div>
+        <p data-comparison-empty>{t.compare.empty}</p>
+        <div class="cci-table-scroll" data-comparison-table hidden>
+          <table>
+            <thead><tr data-comparison-head></tr></thead>
+            <tbody data-comparison-body></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section
+      class="cci-section cci-city-detail"
+      data-city-detail
+      aria-labelledby="city-detail-title"
+    >
+      <div class="cci-city-detail-heading">
+        <h2 id="city-detail-title" data-city-name>{cityName(selectedCity)} FUA</h2>
+        <p>
+          <span data-boundary-status>{boundaryLabel}</span> · <span data-ranking-status
+            >{t.city.notRanked}</span
+          >
+        </p>
+      </div>
+
+      <div class="cci-city-layout">
+        <div class="cci-city-ledger">
+          <div class="cci-tabs" role="tablist" aria-label={cityName(selectedCity)}>
+            <button
+              type="button"
+              role="tab"
+              id="cci-tab-overview"
+              aria-controls="cci-panel-overview"
+              aria-selected="false"
+              tabindex="-1"
+              data-tab="overview">{t.city.overview}</button
+            >
+            <button
+              type="button"
+              role="tab"
+              id="cci-tab-evidence"
+              aria-controls="cci-panel-evidence"
+              aria-selected="true"
+              data-tab="evidence">{t.city.evidence}</button
+            >
+            <button
+              type="button"
+              role="tab"
+              id="cci-tab-sources"
+              aria-controls="cci-panel-sources"
+              aria-selected="false"
+              tabindex="-1"
+              data-tab="sources">{t.city.sources}</button
+            >
+          </div>
+
+          <div
+            id="cci-panel-overview"
+            role="tabpanel"
+            aria-labelledby="cci-tab-overview"
+            data-panel="overview"
+            hidden
+          >
+            <dl class="cci-overview-grid">
+              <div>
+                <dt>{t.compare.columns.evidence}</dt><dd>
+                  <span data-city-coverage>{selectedCity.observedCoverage}</span>%
+                </dd>
+              </div>
+              <div>
+                <dt>{t.compare.columns.confidence}</dt><dd data-overall-confidence>
+                  {selectedCity.confidence.overall}
+                </dd>
+              </div>
+              <div>
+                <dt>{t.compare.columns.tail}</dt><dd data-overall-tail>
+                  {selectedCity.tailStatus ?? "—"}
+                </dd>
+              </div>
+              <div>
+                <dt>{t.compare.notRanked}</dt><dd>
+                  {selectedCity.rankingEligible ? "—" : t.compare.notRanked}
+                </dd>
+              </div>
+            </dl>
+            <details class="cci-reasons" open>
+              <summary>{t.city.eligibilityReasons}</summary>
+              <ul data-eligibility-reasons>
+                {selectedCity.notRankedReasons.map(reason => <li>{reasonLabel(reason)}</li>)}
+              </ul>
+            </details>
+          </div>
+
+          <div
+            id="cci-panel-evidence"
+            role="tabpanel"
+            aria-labelledby="cci-tab-evidence"
+            data-panel="evidence"
+          >
+            <div class="cci-ledger-title-row">
+              <h3>{t.city.eightDimensions}</h3>
+              <span>{t.city.result}</span>
+              <span>{t.city.confidence}</span>
+              <span>{t.city.evidenceStatus}</span>
+            </div>
+            <div class="cci-dimension-ledger">
+              {
+                DIMENSIONS.map(dimension => {
+                  const result =
+                    selectedCity.results[selectedYear].dimensions[dimension.id].point[selectedMode];
+                  return (
+                    <details class="cci-dimension-row" data-dimension={dimension.id}>
+                      <summary>
+                        <span class="cci-dimension-code">{dimension.id}</span>
+                        <span class="cci-dimension-name">{t.dimensions[dimension.id].name}</span>
+                        <span data-dimension-result>{formatScore(result)}</span>
+                        <span data-dimension-confidence>{selectedCity.confidence.overall}</span>
+                        <span data-dimension-evidence>
+                          {selectedCity.evidenceCoverage[dimension.id].observedSubpillars}/
+                          {selectedCity.evidenceCoverage[dimension.id].totalSubpillars}
+                        </span>
+                      </summary>
+                      <div class="cci-subpillar-list">
+                        <strong>{t.city.subpillars}</strong>
+                        <ul>
+                          {dimension.subpillars.map(subpillar => (
+                            <li>{t.subpillars[subpillar]}</li>
+                          ))}
+                        </ul>
+                        <p>{t.city.noEvidence}</p>
+                      </div>
+                    </details>
+                  );
+                })
+              }
+            </div>
+
+            <div class="cci-tail-ledger">
+              <div class="cci-tail-heading">
+                <h3>{t.tail.title} · {release.stressTestYear}</h3>
+                <span>{t.tail.status}</span>
+                <span>{t.tail.note}</span>
+              </div>
+              {
+                Object.entries(selectedCity.tailTests).map(([test, status]) => (
+                  <div class="cci-tail-row" data-tail-test={test}>
+                    <span>{t.tail[test as keyof typeof t.tail]}</span>
+                    <span data-tail-status>{status ?? "—"}</span>
+                    <span data-tail-note>{status ?? t.tail.unassessed}</span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+
+          <div
+            id="cci-panel-sources"
+            role="tabpanel"
+            aria-labelledby="cci-tab-sources"
+            data-panel="sources"
+            hidden
+          >
+            <h3>{t.city.boundaryRecord}</h3>
+            <dl class="cci-source-record">
+              <div>
+                <dt>{t.city.eFuaIds}</dt><dd data-boundary-fua-ids>
+                  {selectedCity.boundary.eFuaIds.join(", ")}
+                </dd>
+              </div>
+              <div>
+                <dt>{t.city.urbanCentreIds}</dt><dd data-boundary-uc-ids>
+                  {selectedCity.boundary.urbanCentreIds.join(", ")}
+                </dd>
+              </div>
+              <div>
+                <dt>{t.city.sourceNames}</dt><dd data-boundary-source-names>
+                  {selectedCity.boundary.sourceNames.join(", ")}
+                </dd>
+              </div>
+              <div>
+                <dt>{t.city.localLanguages}</dt><dd data-evidence-languages>
+                  {selectedCity.localEvidenceLanguages.join(", ")}
+                </dd>
+              </div>
+            </dl>
+            <p class="cci-boundary-note" data-boundary-note>
+              {currentLang === "zh" ? selectedCity.boundary.noteZh : selectedCity.boundary.note}
+            </p>
+            <a href={release.boundary.sourceUrl} target="_blank" rel="noopener noreferrer">
+              {release.boundary.product}
+            </a>
+          </div>
+        </div>
+
+        <aside class="cci-my-cci" aria-labelledby="my-cci-title">
+          <h3 id="my-cci-title">{t.myCci.title}</h3>
+          <p>{t.myCci.intro}</p>
+          <div class="cci-weight-controls">
+            {
+              DIMENSIONS.map(dimension => (
+                <div class="cci-weight-row" data-weight-row={dimension.id}>
+                  <label for={`weight-${dimension.id}-${currentLang}`}>
+                    <strong>{dimension.id}</strong>
+                    <span>{t.dimensions[dimension.id].name}</span>
+                  </label>
+                  <input
+                    id={`weight-${dimension.id}-${currentLang}`}
+                    type="range"
+                    min="0"
+                    max="40"
+                    step="5"
+                    value={dimension.weight}
+                    data-weight={dimension.id}
+                    aria-label={`${t.dimensions[dimension.id].name} ${t.myCci.weightLabel}`}
+                  />
+                  <output
+                    for={`weight-${dimension.id}-${currentLang}`}
+                    data-weight-output={dimension.id}
+                  >
+                    {dimension.weight}%
+                  </output>
+                </div>
+              ))
+            }
+          </div>
+          <div class="cci-weight-total">
+            <span>{t.myCci.total}</span>
+            <output data-weight-total>100%</output>
+          </div>
+          <button type="button" class="cci-reset" data-reset-weights>{t.myCci.reset}</button>
+          <div class="cci-personal-result">
+            <h4>{t.myCci.personalResult} <output data-personal-result>—</output></h4>
+            <p data-personal-unavailable>{t.myCci.unavailable}</p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="cci-evidence-legend">
+        {
+          (["city_observation", "national_prior", "scenario_assumption"] as const).map(
+            (level, index) => (
+              <div>
+                <span class={`cci-evidence-mark mark-${index + 1}`} aria-hidden="true" />
+                <p>
+                  <>
+                    <strong>{t.evidenceLevels[level].title}</strong>
+                    <br />
+                  </>
+                  {t.evidenceLevels[level].note}
+                </p>
+              </div>
+            )
+          )
+        }
+        <p>{t.evidenceLevels.missing}</p>
+      </div>
+    </section>
+
+    <section id="method" class="cci-section cci-method" aria-labelledby="method-title">
+      <div class="cci-section-heading">
+        <h2 id="method-title">{t.method.title}</h2>
+        <p>{t.method.intro}</p>
+      </div>
+
+      <ol class="cci-method-flow">
+        {
+          t.method.steps.map(step => (
+            <li>
+              <span>{step.number}</span>
+              <div>
+                <>
+                  <h3>{step.title}</h3>
+                  <p>{step.note}</p>
+                </>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+
+      <div class="cci-method-split">
+        <div>
+          <h3>{t.method.scenariosTitle}</h3>
+          <div class="cci-scenario-grid">
+            {
+              scenarioGroups.map(([title, states]) => (
+                <div>
+                  <>
+                    <h4>{title}</h4>
+                    <ul>
+                      {states.map(state => (
+                        <li>{state}</li>
+                      ))}
+                    </ul>
+                  </>
+                </div>
+              ))
+            }
+          </div>
+          <p>{t.method.unweighted}</p>
+        </div>
+        <div>
+          <h3>{t.method.confidenceTitle}</h3>
+          <div class="cci-confidence-grid">
+            {
+              t.method.confidenceMeasures.map(measure => (
+                <div>
+                  <>
+                    <span>{measure}</span>
+                    <strong>A · B · C · D</strong>
+                  </>
+                </div>
+              ))
+            }
+          </div>
+          <p>{t.method.weakest}</p>
+          <p>{t.method.lifetime}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cci-section cci-governance" aria-labelledby="governance-title">
+      <div class="cci-section-heading">
+        <h2 id="governance-title">{t.governance.title}</h2>
+        <p>{t.governance.intro}</p>
+      </div>
+      <ol class="cci-principles">
+        {
+          t.governance.principles.map((principle, index) => (
+            <li>
+              <>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <p>{principle}</p>
+              </>
+            </li>
+          ))
+        }
+      </ol>
+
+      <details id="source-manifest" class="cci-manifest">
+        <summary
+          ><strong>{t.governance.manifest}</strong><span>{t.governance.manifestSummary}</span
+          ></summary
+        >
+        <div class="cci-table-scroll" tabindex="0">
+          <table>
+            <thead
+              ><tr
+                ><th>{t.governance.source}</th><th>{t.governance.role}</th><th
+                  >{t.governance.mechanism}</th
+                ><th>{t.governance.limits}</th></tr
+              ></thead
+            >
+            <tbody>
+              {
+                sourceManifest.sources.map(source => (
+                  <tr>
+                    <th scope="row">
+                      <>
+                        <a href={source.url} target="_blank" rel="noopener noreferrer">
+                          {source.title}
+                        </a>
+                        <small>
+                          {source.producer} · {source.sourceVersion}
+                        </small>
+                      </>
+                    </th>
+                    <td>{sourceRole(source.status)}</td>
+                    <td>
+                      <code>{source.sourceClass}</code>
+                    </td>
+                    <td>{source.knownCoverageGaps.join("; ")}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+        <a class="cci-policy-link" href={governanceUrl} target="_blank" rel="noopener noreferrer"
+          >{t.governance.fullPolicy}</a
+        >
+      </details>
+    </section>
+
+    <section id="releases" class="cci-section cci-releases" aria-labelledby="releases-title">
+      <h2 id="releases-title">{t.releases.title}</h2>
+      <div class="cci-table-scroll" tabindex="0">
+        <table>
+          <thead
+            ><tr
+              ><th>{t.releases.release}</th><th>{t.releases.asOf}</th><th>{t.releases.model}</th><th
+                >{t.releases.data}</th
+              ><th>{t.releases.boundary}</th><th>{t.releases.status}</th></tr
+            ></thead
+          >
+          <tbody>
+            {
+              cciReleases.map(item => (
+                <tr>
+                  <th scope="row">
+                    <a href={`/cci/releases/${item.releaseId}.json`}>{item.releaseId}</a>
+                  </th>
+                  <td>{formatReleaseDate(item.asOf)}</td>
+                  <td>{item.modelVersion}</td>
+                  <td>{item.dataVersion}</td>
+                  <td>GHS-FUA {item.boundary.version}</td>
+                  <td>{releaseStatus(item.status)}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="cci-release-facts">
+        {t.release.immutable} · {t.release.checksums} · {t.release.reviewed}
+      </p>
+      <dl class="cci-checksums">
+        <div><dt>input_sha256</dt><dd><code>{release.checksums.inputSha256}</code></dd></div>
+        <div>
+          <dt>output_payload_sha256</dt><dd>
+            <code>{release.checksums.outputPayloadSha256}</code>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="cci-section cci-correction" aria-labelledby="correction-title">
+      <div>
+        <h2 id="correction-title">{t.correction.title}</h2>
+        <p>{t.correction.intro}</p>
+        <a href={correctionUrl} target="_blank" rel="noopener noreferrer">{t.correction.link}</a>
+      </div>
+      <nav aria-label={currentLang === "zh" ? "CCI 资源" : "CCI resources"}>
+        <a href={methodologyUrl} target="_blank" rel="noopener noreferrer">{t.footer.methodology}</a
+        >
+        <a href={governanceUrl} target="_blank" rel="noopener noreferrer">{t.footer.governance}</a>
+        <a href="#source-manifest">{t.footer.manifest}</a>
+        <a href="/">{t.footer.back}</a>
+      </nav>
+    </section>
+  </div>
+
+  <script id="cci-ui-data" type="application/json" is:inline set:html={uiData} />
+</main>
+
+<script>
+  import "@/scripts/cci-runtime";
+</script>

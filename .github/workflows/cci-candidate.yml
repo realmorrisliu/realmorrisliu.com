@@ -1,0 +1,47 @@
+name: CCI release candidate
+
+on:
+  schedule:
+    - cron: "17 3 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  candidate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      # ponytail: scored source adapters wait for a frozen indicator registry; this job
+      # validates the latest human-prepared evidence candidate until then.
+      - run: pnpm cci:build
+      - run: pnpm cci:check
+      - name: Open a candidate PR when the release changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- src/cci/data/releases; then
+            echo "No release change; no candidate PR needed."
+            exit 0
+          fi
+
+          branch="automation/cci-candidate-${GITHUB_RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add src/cci/data/releases
+          git commit -m "chore(cci): update release candidate"
+          git push --set-upstream origin "$branch"
+          gh pr create \
+            --title "chore(cci): update release candidate" \
+            --body "Automated monthly CCI candidate. The immutable release changes only after human review and merge." \
+            --base main \
+            --head "$branch"

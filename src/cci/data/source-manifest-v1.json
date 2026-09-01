@@ -1,0 +1,226 @@
+{
+  "manifestVersion": "cci-sources-v1.0.0",
+  "asOf": "2026-08-23",
+  "scoringUse": "Only entries marked applied may affect the published output. Catalogued entries are research candidates, not score inputs.",
+  "sources": [
+    {
+      "sourceId": "ghsl-fua-r2019a",
+      "dimensions": ["geography"],
+      "status": "applied",
+      "sourceClass": "modelled_estimate",
+      "producer": "European Commission Joint Research Centre with OECD",
+      "producerType": "international_organization",
+      "title": "GHS-FUA R2019A",
+      "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+      "sourceVersion": "GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0",
+      "licenseOrAccess": "European Commission reuse notice; source acknowledgement required",
+      "independenceGroup": "ghsl-oecd-fua-2019",
+      "knownCoverageGaps": [
+        "Modelled commuting areas use 2015 inputs rather than current travel-to-work observations",
+        "Some cross-border and polycentric urban systems require explicit alias and union review"
+      ],
+      "sourceLanguage": "en"
+    },
+    {
+      "sourceId": "ghsl-wup-r2025a",
+      "dimensions": ["PCS", "RES"],
+      "status": "catalogued",
+      "sourceClass": "modelled_estimate",
+      "producer": "European Commission Joint Research Centre",
+      "producerType": "international_organization",
+      "title": "GHSL World Urbanisation Prospect 2025",
+      "url": "https://human-settlement.emergency.copernicus.eu/GHSWUPDownload.php",
+      "sourceVersion": "R2025A",
+      "licenseOrAccess": "Open download; verify product-specific reuse notice",
+      "independenceGroup": "ghsl-wup-2025",
+      "knownCoverageGaps": ["Projection model uncertainty increases toward 2100"],
+      "sourceLanguage": "en"
+    },
+    {
+      "sourceId": "era5",
+      "dimensions": ["PCS"],
+      "status": "catalogued",
+      "sourceClass": "modelled_estimate",
+      "producer": "ECMWF Copernicus Climate Change Service",
+      "producerType": "international_organization",
+      "title": "ERA5 hourly data on single levels",
+      "url": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels",
+      "sourceVersion": "rolling reanalysis",
+      "licenseOrAccess": "Copernicus data access terms",
+      "independenceGroup": "ecmwf-era5",
+      "knownCoverageGaps": [
+        "Reanalysis is model-assisted and resolution may hide intra-FUA heat exposure"
+      ],
+      "sourceLanguage": "en"
+    },
+    {
+      "sourceId": "nex-gddp-cmip6",
+      "dimensions": ["PCS", "RES"],
+      "status": "catalogued",
+      "sourceClass": "modelled_estimate",
+      "producer": "NASA Center for Climate Simulation",
+      "producerType": "national_agency",
+      "title": "NEX-GDDP-CMIP6",
+      "url": "https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6",
+      "sourceVersion": "CMIP6 downscaled archive",
+      "licenseOrAccess": "Public scientific data; upstream model terms vary",
+      "independenceGroup": "cmip6-nex-gddp",
+      "knownCoverageGaps": ["Downscaling does not remove structural model uncertainty"],
+      "sourceLanguage": "en"
+    },
+    {
+      "sourceId": "ipcc-ar6-sea-level",
+      "dimensions": ["PCS"],
+      "status": "catalogued",
+      "sourceClass": "modelled_estimate",
+      "producer": "Intergovernmental Panel on Climate Change",
+      "producerType": "international_organization",
+      "title": "IPCC AR6 Sea Level Projection Tool",
+      "url": "https://sealevel.nasa.gov/ipcc-ar6-sea-level-projection-tool/",
+      "sourceVersion": "AR6",
+      "licenseOrAccess": "Public projection tool; preserve upstream attribution",
+      "independenceGroup": "ipcc-ar6-sea-level",
+      "knownCoverageGaps": [
+        "Local subsidence, protection standards, and compound flooding require separate evidence"
+      ],
+      "sourceLanguage": "en"
+    },
+    {
+      "sourceId": "ucdp",
+      "dimensions": ["GSS"],
+      "status": "catalogued",
+      "sourceClass": "event_coding",
+      "producer": "Uppsala Conflict Data Program",
+      "producerType": "academic_or_civil_society",
+      "title": "UCDP datasets and methodology",
+      "url": "https://www.uu.se/en/department/peace-and-conflict-research/research/ucdp/ucdp-methodology",
+      "sourceVersion": "rolling annual release",
+      "licenseOrAccess": "UCDP terms vary by dataset",
+      "independenceGroup": "ucdp-event-coding",
+      "knownCoverageGaps": [
+        "Public reporting is non-random; zero recorded events does not prove zero violence"
+      ],
+      "sourceLanguage": "en"
+    },
+    {
+      "sourceId": "wgi",
+      "dimensions": ["ISR"],
+      "status": "context_only",
+      "sourceClass": "expert_assessment",
+      "producer": "World Bank",
+      "producerType": "international_organization",
+      "title": "Worldwide Governance Indicators",
+      "url": "https://www.worldbank.org/en/publication/worldwide-governance-indicators/documentation",
+      "sourceVersion": "rolling annual release",
+      "licenseOrAccess": "Open data with attribution",
+      "independenceGroup": "wgi-source-network",
+      "knownCoverageGaps": [
+        "Country-level perception aggregate is not city truth",
+        "Underlying sources differ by country and include V-Dem and WJP"
+      ],
+      "sourceLanguage": "en"
+    },
+    {
+      "sourceId": "wri-aqueduct",
+      "dimensions": ["RES"],
+      "status": "catalogued",
+      "sourceClass": "modelled_estimate",
+      "producer": "World Resources Institute",
+      "producerType": "academic_or_civil_society",
+      "title": "Aqueduct Water Risk Atlas",
+      "url": "https://www.wri.org/aqueduct",
+      "sourceVersion": "verify at ingestion",
+      "licenseOrAccess": "Verify dataset-specific license before redistribution",
+      "independenceGroup": "wri-aqueduct",
+      "knownCoverageGaps": [
+        "Basin stress does not measure local utility redundancy or affordability"
+      ],
+      "sourceLanguage": "en"
+    },
+    {
+      "sourceId": "who-gho",
+      "dimensions": ["MED"],
+      "status": "catalogued",
+      "sourceClass": "official_statistic",
+      "producer": "World Health Organization",
+      "producerType": "international_organization",
+      "title": "Global Health Observatory",
+      "url": "https://www.who.int/data/gho",
+      "sourceVersion": "indicator-specific",
+      "licenseOrAccess": "WHO data terms; verify indicator license",
+      "independenceGroup": "who-gho-upstream-network",
+      "knownCoverageGaps": [
+        "Many measures are national and depend on heterogeneous reporting systems"
+      ],
+      "sourceLanguage": "en"
+    },
+    {
+      "sourceId": "who-ictrp",
+      "dimensions": ["LON"],
+      "status": "catalogued",
+      "sourceClass": "self_report_registry",
+      "producer": "World Health Organization",
+      "producerType": "international_organization",
+      "title": "International Clinical Trials Registry Platform",
+      "url": "https://www.who.int/tools/clinical-trials-registry-platform/network/data-providers",
+      "sourceVersion": "multi-registry rolling index",
+      "licenseOrAccess": "Portal and contributing-registry access terms vary",
+      "independenceGroup": "who-ictrp-registry-network",
+      "knownCoverageGaps": [
+        "Registration duties, timeliness, language, duplicates, and sponsor reporting differ"
+      ],
+      "sourceLanguage": "en"
+    },
+    {
+      "sourceId": "openalex",
+      "dimensions": ["TEC"],
+      "status": "catalogued",
+      "sourceClass": "scholarly_index",
+      "producer": "OurResearch",
+      "producerType": "academic_or_civil_society",
+      "title": "OpenAlex",
+      "url": "https://help.openalex.org/data/how-its-built/",
+      "sourceVersion": "rolling snapshot",
+      "licenseOrAccess": "CC0 data; API fair-use limits",
+      "independenceGroup": "openalex-upstream-index-network",
+      "knownCoverageGaps": [
+        "DOI, repository, language, affiliation, and citation-link coverage are uneven"
+      ],
+      "sourceLanguage": "en"
+    },
+    {
+      "sourceId": "measurement-lab",
+      "dimensions": ["TEC", "OPT"],
+      "status": "catalogued",
+      "sourceClass": "direct_measurement",
+      "producer": "Measurement Lab",
+      "producerType": "academic_or_civil_society",
+      "title": "M-Lab open internet measurement data",
+      "url": "https://www.measurementlab.net/data/",
+      "sourceVersion": "rolling measurement archive",
+      "licenseOrAccess": "Open measurement data; verify dataset terms",
+      "independenceGroup": "mlab-measurement-network",
+      "knownCoverageGaps": [
+        "Test participation, client mix, and network paths are not population-random"
+      ],
+      "sourceLanguage": "en"
+    },
+    {
+      "sourceId": "ourairports",
+      "dimensions": ["OPT"],
+      "status": "context_only",
+      "sourceClass": "administrative_record",
+      "producer": "OurAirports community",
+      "producerType": "community",
+      "title": "OurAirports open airport data",
+      "url": "https://ourairports.com/data/",
+      "sourceVersion": "rolling community dataset",
+      "licenseOrAccess": "Public-domain dedication stated by provider",
+      "independenceGroup": "ourairports-community",
+      "knownCoverageGaps": [
+        "Airport presence alone does not measure route frequency, reliability, or legal exit access"
+      ],
+      "sourceLanguage": "en"
+    }
+  ]
+}

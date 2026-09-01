@@ -29,6 +29,8 @@ export default defineConfig({
         "https://realmorrisliu.com/so-far",
         "https://realmorrisliu.com/so-far/zh",
         "https://realmorrisliu.com/thoughts",
+        "https://realmorrisliu.com/cci",
+        "https://realmorrisliu.com/cci/zh",
       ],
       changefreq: "weekly",
       priority: 0.7,
@@ -44,6 +46,9 @@ export default defineConfig({
           item.changefreq = ChangeFreqEnum.WEEKLY;
         } else if (item.url.includes("/thoughts/")) {
           // Individual blog posts
+          item.priority = 0.8;
+          item.changefreq = ChangeFreqEnum.MONTHLY;
+        } else if (item.url.includes("/cci")) {
           item.priority = 0.8;
           item.changefreq = ChangeFreqEnum.MONTHLY;
         } else if (item.url.includes("/so-far/")) {
