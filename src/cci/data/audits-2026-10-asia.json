@@ -1,0 +1,762 @@
+[
+  {
+    "slug": "tokyo",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "JMA Tokyo station 47662 reports 2025 mean temperature 17.3°C, maximum 38.5°C and precipitation 1,152.5 mm. These station observations do not measure FUA population exposure, wet-bulb heat or future hazard tails.",
+          "zh": "气象厅东京 47662 站 2025 年均温 17.3°C、最高温 38.5°C、降水 1,152.5 毫米。站点观测不等于 FUA 人口暴露、湿球热风险或未来尾部风险。"
+        },
+        "sources": [
+          {
+            "title": "気象庁 — 東京 年ごとの値",
+            "url": "https://www.data.jma.go.jp/stats/etrn/view/annually_s.php?prec_no=44&block_no=47662&year=2025&month=&day=&view=",
+            "period": "2025 calendar year",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Tokyo amended its civil protection plan in 2025, including missile-attack response. A preparedness plan establishes responsibilities, not the probability of conflict or demonstrated shelter effectiveness.",
+          "zh": "东京在 2025 年修订国民保护计划，包含导弹袭击应对。预案能证明职责安排，不能证明冲突概率或避难设施实际有效性。"
+        },
+        "sources": [
+          {
+            "title": "東京都国民保護計画（令和7年変更）",
+            "url": "https://www.bousai.metro.tokyo.lg.jp/taisaku/torikumi/1000061/1000365.html",
+            "period": "2025 amendment",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The July 2025 metropolitan opinion survey reports 53% saying their livelihood became harder, six percentage points higher. This measures perceived living conditions; the audited release alone does not establish institutional reliability or survey comparability.",
+          "zh": "2025 年 7 月都民调查显示 53% 认为生活更困难，比此前高 6 个百分点。这是生活感受；已查阅的发布稿不足以证明制度可靠性或跨城调查可比性。"
+        },
+        "sources": [
+          {
+            "title": "令和7年度「都民生活に関する世論調査」結果",
+            "url": "https://www.metro.tokyo.lg.jp/information/press/2026/01/2026013001",
+            "period": "Survey July 2025; published 2026-01-30",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Tokyo Waterworks reports FY2024 distribution of 1,528 million m³ and leakage of 53 million m³ (published rate 3.5%). Its 23-ward and 26 Tama municipality service area differs from the FUA; water leakage alone does not establish resource resilience.",
+          "zh": "东京都水道局报告 2024 财年配水 15.28 亿立方米、漏水 0.53 亿立方米，公布漏水率 3.5%。服务区为 23 区及多摩 26 市町，与 FUA 不同；漏水率不能单独代表资源韧性。"
+        },
+        "sources": [
+          {
+            "title": "Tokyo Waterworks — Prevention of Leakage in Tokyo 2025",
+            "url": "https://www.english.metro.tokyo.lg.jp/documents/d/english/knowledge_and_tech_r07rousui",
+            "period": "FY2024: 2024-04 to 2025-03",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "insufficient_evidence",
+        "summary": {
+          "en": "The 2024 Medical Facilities Survey/Hospital Report provides municipality bed tables, but its linked report returned HTTP 403 in this audit. No unverified bed count is admitted, and inventory would still require staffed capacity, outcomes and access denominators.",
+          "zh": "已找到 2024 年医疗设施调查及医院报告的分市区町村床位表，但报告下载返回 HTTP 403。本次不采纳未经核实的床位数；设施存量仍需补充实际人员配置、结局和可及性分母。"
+        },
+        "sources": [
+          {
+            "title": "東京都 — 令和6年 医療施設動態調査・病院報告",
+            "url": "https://www.hokeniryo.metro.tokyo.lg.jp/kiban/chosa_tokei/iryosisetsu/reiwa06nen",
+            "period": "2024 observations; page updated 2026-04-16",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "insufficient_evidence",
+        "summary": {
+          "en": "Japan’s jRCT registry is a relevant local-language source. The identified Tokyo-affiliated exosome trial detail could not be fetched (403); no verified phase, results, approval or resident access is established. A registry listing cannot qualify longevity treatment access.",
+          "zh": "jRCT 是相关日语注册源。检索到的东京相关外泌体试验详情无法访问（403），未核实阶段、结果、批准状态或居民可及性；注册记录不能证明长寿治疗可及。"
+        },
+        "sources": [
+          {
+            "title": "Japan Registry of Clinical Trials",
+            "url": "https://jrct.mhlw.go.jp/",
+            "period": "Registry inspected 2026-10-09; no trial outcome admitted",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "context_only",
+        "summary": {
+          "en": "WIPO’s 2025 Tokyo–Yokohama cluster profile reports 3,707 PCT applications per million inhabitants over its latest five-year window. This is a cluster-level innovation input, with geography and window requiring alignment before any Tokyo FUA use.",
+          "zh": "WIPO 2025 东京—横滨集群资料报告最近五年窗口每百万人 3,707 件 PCT 申请。这是集群创新投入；其边界和时间窗口不能直接等同东京 FUA。"
+        },
+        "sources": [
+          {
+            "title": "WIPO GII 2025 — Tokyo–Yokohama cluster profile",
+            "url": "https://www.wipo.int/documents/d/global-innovation-index/docs-en-2025-jp-tokyo-yokohama-2.pdf",
+            "period": "2025 edition; latest five-year window in profile",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Narita reports 42,255,291 passenger movements in calendar 2025. This airport throughput is not unique travellers, legal mobility or an independently usable evacuation route; Haneda and network redundancy remain separate evidence needs.",
+          "zh": "成田机场 2025 年旅客吞吐量为 42,255,291 人次。这不是独立旅客数、法律迁移能力或独立撤离路线；羽田及交通网络冗余仍需另行证据。"
+        },
+        "sources": [
+          {
+            "title": "Narita International Airport — calendar-year operating statistics",
+            "url": "https://www.narita-airport.jp/files/c843886ae837019a5d8d546c9559b91710af7bc8fed0a97b356a5234a52e4cc8",
+            "period": "Calendar 2025",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "Municipal, station, water-service, airport and Tokyo–Yokohama cluster observations are not spatially crosswalked to frozen eFUA 5129. Product-name matching does not validate these source areas.",
+      "zh": "行政区、站点、水务服务区、机场和东京—横滨集群观测尚未与冻结 eFUA 5129 做空间适配；产品名称匹配不等于来源辖区适配。",
+      "sources": [
+        {
+          "title": "European Commission JRC — GHS-FUA R2019A",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 geography; R2019A product",
+          "accessedAt": "2026-10-09"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "singapore",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "MSS reports Changi mean temperature 28.1°C in 2025, 0.3°C above its long-term average. A single weather station does not provide population-weighted humid-heat exposure or future flood risk.",
+          "zh": "气象署报告樟宜 2025 年均温 28.1°C，比长期均值高 0.3°C。单站不代表人口加权湿热暴露或未来洪水风险。"
+        },
+        "sources": [
+          {
+            "title": "Meteorological Service Singapore — The Year in Numbers 2025",
+            "url": "https://www.weather.gov.sg/wp-content/uploads/2026/01/The-Year-in-Numbers-2025.pdf",
+            "period": "2025 observations; January 2026 publication",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "MHA’s 8 April 2026 parliamentary answer assesses increased spillover risk from the Middle East conflict. This is an authority threat assessment, not an independently estimated city attack probability or an incident count.",
+          "zh": "内政部 2026 年 4 月 8 日国会答复评估中东冲突外溢风险上升。这是主管部门威胁判断，不是独立估计的城市袭击概率或事件次数。"
+        },
+        "sources": [
+          {
+            "title": "MHA — Threat risk level due to the conflict in the Middle East",
+            "url": "https://www.mha.gov.sg/media-room/newsroom/threat-risk-level-due-to-the-conflict-in-the-middle-east-and-how-singaporeans-can-safeguard-against-the-threats/",
+            "period": "Parliamentary answer 2026-04-08",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "IPS’s 2024 race/religion survey reports 88% never or rarely being made fun of because of race/religion. This is self-reported social experience; subgroup coverage, nonresponse and question wording prevent treating it as a complete institutional score.",
+          "zh": "IPS 2024 年种族与宗教调查中，88% 表示从未或很少因种族或宗教被嘲弄。这是自述社会经验；群体覆盖、无回应和问题措辞限制其作为完整制度评分的用途。"
+        },
+        "sources": [
+          {
+            "title": "IPS Working Paper 64 — Prejudices, Attitudes and Critical Perspectives on Race in Singapore",
+            "url": "https://lkyspp.nus.edu.sg/docs/default-source/ips/ips-working-papers-no-64_prejudices-attitudes-and-critical-perspectives-on-race-in-singapore.pdf?sfvrsn=4c64060a_1",
+            "period": "2024 survey; July 2025 paper; figure 3.7.1",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "SFA reports that Singapore imported over 90% of food from more than 180 countries/regions in 2025. These are bounds, not exact percentages/counts; source diversity alone does not quantify concentration, stock cover or disruption resilience.",
+          "zh": "食物局报告 2025 年逾 90% 食物依赖进口，来源超过 180 个国家或地区。这是范围值，不应改成精确数字；来源数不能证明集中度、库存天数或抗中断能力。"
+        },
+        "sources": [
+          {
+            "title": "SFA — Singapore Food Statistics 2025",
+            "url": "https://www.sfa.gov.sg/docs/default-source/publication/sg-food-statistics/sgfs-2025-publication_060526-fa.pdf",
+            "period": "2025 observations; 2026 publication",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "MOH lists 12,767 acute hospital beds for 2025: 10,784 public, 334 not-for-profit and 1,649 private. Bed inventory does not establish staffing, clinical outcomes, affordability or equal resident access.",
+          "zh": "卫生部列示 2025 年急性医院床位 12,767 张，其中公立 10,784、非营利 334、私立 1,649。床位存量不等于人员配置、临床结局、可负担性或居民平等可及。"
+        },
+        "sources": [
+          {
+            "title": "MOH — Beds in inpatient facilities and places in non-residential long-term care facilities",
+            "url": "https://www.moh.gov.sg/others/resources-and-statistics/beds-in-inpatient-facilities-and-places-in-non-residential-long-term-care-facilities/",
+            "period": "2025 observations; updated 2026-08-19",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "HSA’s register covers ongoing trials in its applications database and relies on sponsor updates at least every six months. It does not establish a deduplicated longevity cohort, positive outcomes, approval or public access.",
+          "zh": "卫生科学局注册表覆盖申请数据库中的在研试验，依赖申办方至少每六个月更新。它不能证明已去重的长寿试验队列、有效结果、批准或公众可及。"
+        },
+        "sources": [
+          {
+            "title": "HSA — Clinical Trials Register",
+            "url": "https://www.hsa.gov.sg/other-regulations/clinical-trials/clinical-trials-register/",
+            "period": "Page updated 2026-03-13; ongoing-trial scope",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The inspected 2025 IMDA report estimates the 2024 digital economy at S$128.1 billion (18.6% of GDP). The newer 2026 report was found but blocked by browser verification, so its values are excluded. National digital output does not measure resident technology access.",
+          "zh": "已查阅的 IMDA 2025 报告估计 2024 年数字经济为 1,281 亿新元，占 GDP 18.6%。已找到 2026 年报告但访问受浏览器验证阻挡，未采纳其数值；数字产出不等于居民技术可及。"
+        },
+        "sources": [
+          {
+            "title": "IMDA — Singapore Digital Economy Report 2025",
+            "url": "https://www.imda.gov.sg/-/media/imda/files/about/resources/corporate-publications/annual-report/imda-sgde-report-fy2024-2025.pdf",
+            "period": "2024 observations; 2025 report",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "context_only",
+        "summary": {
+          "en": "ICA defines separate permanent-residence eligibility categories and assessment factors; permanent residents require a valid re-entry permit to return as residents. Eligibility is conditional and individual, not universal mobility or a city-level freedom-of-exit estimate.",
+          "zh": "移民与关卡局规定不同永久居民申请类别和审核因素；永久居民以该身份再入境须持有效再入境许可。资格取决于个人条件，不能转成普遍迁移权或城市退出自由估计。"
+        },
+        "sources": [
+          {
+            "title": "ICA — Permanent Residence",
+            "url": "https://www.ica.gov.sg/reside/pr",
+            "period": "Rules inspected 2026-10-09",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "City-state statistics are a plausible local source, but the national territory, Changi station and agency service universes have not been intersected with frozen eFUA 154. Equivalence remains unverified.",
+      "zh": "城市国家统计具有较好的本地适配潜力，但国家疆域、樟宜站点和部门服务对象尚未与冻结 eFUA 154 相交核验，不能认定等价。",
+      "sources": [
+        {
+          "title": "European Commission JRC — GHS-FUA R2019A",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 geography; R2019A product",
+          "accessedAt": "2026-10-09"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "shenzhen",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The municipal 2025 climate bulletin reports mean temperature 23.5°C and 60 hot days (炎热日). Its stated coverage includes Shenshan; the hot-day threshold was not verified, so it is not recoded as days above 35°C.",
+          "zh": "深圳 2025 年气候公报报告年均温 23.5°C、炎热日 60 天，统计范围包含深汕。未核验炎热日阈值，不能改写为超过 35°C 的天数。"
+        },
+        "sources": [
+          {
+            "title": "深圳市气象局 — 2025年深圳市气候公报",
+            "url": "https://weather.sz.gov.cn/qixiangfuwu/qihoufuwu/qihouguanceyupinggu/nianduqihougongbao/content/post_12633879.html",
+            "period": "2025; published 2026-02-05",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The municipal emergency-shelter regulation and published shelter lists establish a preparedness framework. They do not measure conflict exposure, shelter occupancy/readiness or military attack risk; no city conflict probability is inferred.",
+          "zh": "应急避难场所管理办法及公布的场所清单证明存在备灾制度，不证明冲突暴露、避难容量与就绪程度或军事袭击风险；不据此推断城市冲突概率。"
+        },
+        "sources": [
+          {
+            "title": "深圳市应急避难场所管理办法政策解读",
+            "url": "https://www.sz.gov.cn/zfgb/zcjd/content/post_11958850.html",
+            "period": "Published 2025-01-13",
+            "accessedAt": "2026-10-09"
+          },
+          {
+            "title": "深圳市应急管理局 — 应急避难场所",
+            "url": "https://yjgl.sz.gov.cn/yjgl/yjgl/yjbncs/",
+            "period": "Outdoor list 2026-08-18; indoor list 2026-07-23",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The 2025 municipal disclosure report records 13,569 information requests, 756 administrative reconsiderations and 295 lawsuits. These self-reported administrative volumes do not establish disclosure quality, fair outcomes or public trust.",
+          "zh": "深圳 2025 年政府信息公开报告记载 13,569 件申请、756 件行政复议及 295 件行政诉讼。行政自报数量不能证明公开质量、公平结果或公众信任。"
+        },
+        "sources": [
+          {
+            "title": "深圳市人民政府 — 政府信息公开年度报告",
+            "url": "https://www.sz.gov.cn/cn/xxgk/ndxxgkbg/content/post_12675915.html",
+            "period": "2025 report; published 2026-03-10",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The 2025 bulletin reports public water-supply capacity of 9.02 million m³/day and annual supply of 1.948 billion m³. Capacity and throughput do not establish outage frequency or drought reserves.",
+          "zh": "2025 年公报报告公共供水能力每日 902 万立方米、全年供水 19.48 亿立方米。能力和供水量不等于停水频率或抗旱储备。"
+        },
+        "sources": [
+          {
+            "title": "深圳市2025年国民经济和社会发展统计公报",
+            "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tjsj/tjgb/content/post_12805133.html",
+            "period": "2025 preliminary statistics; published 2026-05-25",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The 2025 bulletin lists 86,035 hospital beds, separately from 92,327 beds across health institutions. These preliminary inventories do not establish clinical quality or equitable access.",
+          "zh": "2025 年公报列示医院床位 86,035 张，与全部卫生机构床位 92,327 张口径不同。初步存量不能证明临床质量或公平可及。"
+        },
+        "sources": [
+          {
+            "title": "深圳市2025年国民经济和社会发展统计公报",
+            "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tjsj/tjgb/content/post_12805133.html",
+            "period": "2025 preliminary statistics; published 2026-05-25",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "A November 2025 municipal scheme planned selection of two international clinical-trial demonstration institutions by year-end. This is a target, not two completed institutions, verified longevity trials, treatment efficacy or resident access.",
+          "zh": "2025 年 11 月市级方案计划年底前遴选两家国际化临床试验示范机构。这是目标，不代表已建成两家，也不证明长寿试验、疗效或居民可及。"
+        },
+        "sources": [
+          {
+            "title": "深圳市国际化临床试验示范机构建设方案",
+            "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/post_12473369.html",
+            "period": "Published 2025-11-04; year-end 2025 target",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The 2025 bulletin reports 19,660 PCT international patent applications. This administrative innovation input does not measure realized deployment, resident access or independent inventions after patent-family deduplication.",
+          "zh": "2025 年公报报告 PCT 国际专利申请 19,660 件。这是创新行政投入记录，不能证明实际应用、居民可及或专利族去重后的独立发明数量。"
+        },
+        "sources": [
+          {
+            "title": "深圳市2025年国民经济和社会发展统计公报",
+            "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tjsj/tjgb/content/post_12805133.html",
+            "period": "2025 preliminary statistics; published 2026-05-25",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The transport bureau reports 2025 airport passenger throughput of 66.4852 million. Throughput is not unique persons, visa eligibility, route redundancy or evacuation capacity.",
+          "zh": "交通运输局报告 2025 年机场旅客吞吐量 6,648.52 万人次。吞吐量不是独立人数、签证资格、线路冗余或撤离能力。"
+        },
+        "sources": [
+          {
+            "title": "深圳市交通运输局 — 2025年交通运输主要指标",
+            "url": "https://jtys.sz.gov.cn/zwgk/sjfb/yssj/hyl_179723/content/post_12673405.html",
+            "period": "2025; published 2026-03-09",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "Local Shenzhen observations are not automatically observations of eFUA 9725, whose source name is Guangzhou and whose urban-centre list spans the Pearl River Delta. Shenzhen/Guangzhou alias and Shenshan coverage require a source-area-to-FUA crosswalk.",
+      "zh": "深圳本地观测不能自动视为 eFUA 9725 的观测：该记录来源名称为 Guangzhou，城市中心跨珠三角。深圳／广州别名与深汕覆盖仍需来源辖区到 FUA 的空间适配。",
+      "sources": [
+        {
+          "title": "European Commission JRC — GHS-FUA R2019A",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 geography; R2019A product",
+          "accessedAt": "2026-10-09"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "seoul",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Seoul’s official indicator portal displays a 2025 annual mean temperature of 14.1°C. The overview does not identify a population-weighted station network or humid-heat distribution, limiting its use to a reported local observation.",
+          "zh": "首尔官方统计门户显示 2025 年均温 14.1°C。概览未提供人口加权站网或湿热分布，故仅作为本地原始观测。"
+        },
+        "sources": [
+          {
+            "title": "서울 열린데이터광장 — 서울 100대 통계",
+            "url": "https://data.seoul.go.kr/dataVisual/seoul/seoul100List.do",
+            "period": "2025 indicators displayed; inspected 2026-10-09",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The city safety map exposes civil-defence shelter and emergency-water layers. Availability of a map is not verified shelter capacity, operational readiness or probability of conflict.",
+          "zh": "市安全地图提供民防避难所与应急供水图层。地图存在不能证明实际避难容量、运转就绪或冲突概率。"
+        },
+        "sources": [
+          {
+            "title": "서울안전누리 — 재난안전시설 지도",
+            "url": "https://safecity.seoul.go.kr/distFclt/cfMapDs/cfMapDs.page?menuId=MENU_SSNS_000176",
+            "period": "Map inspected 2026-10-09; facility observation dates not established",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The 2025 Seoul Survey fieldwork covered 20,000 households, a 5,000-person citizen sample and 2,500 registered foreigners. The result archive is available, but weighted institutional outcomes were not extracted; a sampling plan cannot substitute for responses.",
+          "zh": "2025 年首尔调查包括 20,000 户家庭、5,000 名市民样本和 2,500 名登记外国人。结果归档已发布，但本次未提取加权制度评价；抽样安排不能替代调查结果。"
+        },
+        "sources": [
+          {
+            "title": "2025 서울서베이 실시 안내",
+            "url": "https://data.seoul.go.kr/together/notice/boardView.do?seq=b4c2f6cfb41cfbb844c76953388f1c3a",
+            "period": "Fieldwork 2025-08-16 to 2025-09-29",
+            "accessedAt": "2026-10-09"
+          },
+          {
+            "title": "서울서베이 자료",
+            "url": "https://data.seoul.go.kr/dataList/OA-15564/F/1/datasetView.do",
+            "period": "2025 data archive posted 2026-04-09",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Arisu’s 2025 tap-water report describes compliant samples at libraries in all 25 districts. This selected-site quality result does not establish household-wide coverage or continuity. Conflicting parameter totals on the page are excluded.",
+          "zh": "Arisu 2025 年自来水报告描述在全部 25 个区的图书馆采样合格。这是选定点位水质结果，不等于全体家庭覆盖或供水连续性；页面存在不一致的检测项目总数，本次不采纳该数。"
+        },
+        "sources": [
+          {
+            "title": "서울아리수본부 — 수돗물 품질보고서",
+            "url": "https://arisu.seoul.go.kr/home/sub?menukey=8302",
+            "period": "2025 water-quality report",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The official city overview lists 19,567 medical institutions for 2025. This heterogeneous facility count does not identify staffed acute beds, specialties, outcomes or resident access.",
+          "zh": "官方城市概览列示 2025 年医疗机构 19,567 家。异质机构总数不能证明实际急性床位、专科能力、结局或居民可及。"
+        },
+        "sources": [
+          {
+            "title": "서울 열린데이터광장 — 서울 100대 통계",
+            "url": "https://data.seoul.go.kr/dataVisual/seoul/seoul100List.do",
+            "period": "2025 indicators displayed; inspected 2026-10-09",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "KDCA’s CRIS provides Korean-language clinical-study registration and search. Its national all-disease totals cannot be treated as Seoul longevity trials; no deduplicated city cohort, positive outcomes or treatment access is established by the inspected portal.",
+          "zh": "疾控厅 CRIS 提供韩语临床研究注册和检索。全国全病种总量不能当作首尔长寿试验；已查门户不证明城市去重队列、有效结果或治疗可及。"
+        },
+        "sources": [
+          {
+            "title": "질병관리청 — 임상연구정보서비스 CRIS",
+            "url": "https://cris.nih.go.kr/cris/index/index.do",
+            "period": "Registry snapshot 2026-10-09",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The city reports 35,318 operating public Wi-Fi units on 9 April 2026 and 40,479 TB of traffic in 2025. These infrastructure/traffic measures do not prove universal coverage or uptime; its 2,020-unit replacement programme is a plan.",
+          "zh": "市政府 2026 年 4 月 9 日报告运行中公共 Wi-Fi 35,318 台，2025 年流量 40,479 TB。设备与流量不证明普遍覆盖或在线率；更换 2,020 台的项目属于计划。"
+        },
+        "sources": [
+          {
+            "title": "서울시, 공공와이파이 확충에서 품질 중심으로",
+            "url": "https://www.seoul.go.kr/news/news_report.do?nttNo=455932&srchCtgry=474",
+            "period": "2026-04-09 inventory; 2025 traffic",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The city portal reports 2,744,128 thousand subway passenger movements in 2025. Trips are not unique people or independent exit routes; local transit volume does not establish legal portability or international mobility.",
+          "zh": "市统计门户报告 2025 年地铁客运 2,744,128 千人次。乘次不是独立人数或独立退出通道，本地客运量不能证明法律可携性或国际迁移能力。"
+        },
+        "sources": [
+          {
+            "title": "서울 열린데이터광장 — 서울 100대 통계",
+            "url": "https://data.seoul.go.kr/dataVisual/seoul/seoul100List.do",
+            "period": "2025 indicators displayed; inspected 2026-10-09",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "Seoul municipal statistics and Arisu service evidence have not been crosswalked to eFUA 94, which includes five urban-centre IDs. A Seoul name match does not show that city-only numerators cover the complete functional area.",
+      "zh": "首尔行政统计和 Arisu 服务证据尚未与包含五个城市中心 ID 的 eFUA 94 适配；名称一致不能证明市域分子覆盖完整功能区。",
+      "sources": [
+        {
+          "title": "European Commission JRC — GHS-FUA R2019A",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 geography; R2019A product",
+          "accessedAt": "2026-10-09"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "jakarta",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "BNPB reports 50 neighbourhood units inundated in South/East Jakarta on 6 July 2025, with water depths of 40–270 cm. This event snapshot is not an annual probability or a complete FUA loss estimate; BNPB relays local BPBD reporting.",
+          "zh": "BNPB 报告 2025 年 7 月 6 日南／东雅加达 50 个邻里单元受淹，水深 40–270 厘米。事件快照不是年发生概率或完整 FUA 损失估计；BNPB 转述本地 BPBD，不能算独立双源。"
+        },
+        "sources": [
+          {
+            "title": "BNPB — Terpantau 50 Titik Genangan di Jakarta, Ratusan Jiwa Mengungsi",
+            "url": "https://bnpb.go.id/berita/terpantau-50-titik-genangan-di-jakarta-ratusan-jiwa-mengungsi",
+            "period": "Event 2025-07-06",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "BNPT’s 2025 statement says the dissolution of Jemaah Islamiyah does not end the terrorism threat. This is national threat context, not a Jakarta incident series or city probability; missing local events are not coded as zero risk.",
+          "zh": "BNPT 2025 年声明指出伊斯兰祈祷团解散并不等于恐怖威胁结束。这是全国威胁背景，不是雅加达事件序列或城市概率；缺少本地事件数据不编码为零风险。"
+        },
+        "sources": [
+          {
+            "title": "BNPT — Ancaman Terorisme Belum Usai Meski JI Telah Bubar",
+            "url": "https://www.bnpt.go.id/ancaman-terorisme-belum-usai-meski-ji-telah-bubar-bnpt-fokus-lakukan-balanced-approach",
+            "period": "2025 statement",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Jakarta’s Information Commission reports the BPS 2025 provincial Democracy Index at 82.94. This is an official composite on an administrative geography; it cannot substitute for a raw CCI institutional-reliability observation or the Jakarta FUA.",
+          "zh": "雅加达信息委员会转述 BPS 的 2025 年省级民主指数为 82.94。这是行政辖区官方综合指数，不能直接替代 CCI 制度可靠性原始观测或雅加达 FUA。"
+        },
+        "sources": [
+          {
+            "title": "BPS — Indeks Demokrasi Indonesia Menurut Provinsi (Metode Baru)",
+            "url": "https://www.bps.go.id/id/statistics-table/2/MjE1OSMy/-metode-baru-indeks-demokrasi-indonesia-menurut-provinsi.html",
+            "period": "2025; table updated 2026-04-24",
+            "accessedAt": "2026-10-09"
+          },
+          {
+            "title": "Komisi Informasi DKI Jakarta — IDI DKI Capai 82,94",
+            "url": "https://kip.jakarta.go.id/idi-dki-capai-8294-ki-dki-dorong-transparansi-kip-jadi-mesin-penggerak-demokrasi/",
+            "period": "2025 index; first-party meeting report 2026-08-04",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The provincial government reported 78% PAM Jaya water-service coverage on 7 December 2025, with 80% a year-end target. The verified observation is 78%, not the target; the release does not establish a household denominator or continuous safe supply.",
+          "zh": "省政府 2025 年 12 月 7 日报告 PAM Jaya 供水服务覆盖达到 78%，年底目标为 80%。经核实的当时观测是 78%，不是目标；发布稿未建立家庭分母或持续安全供水能力。"
+        },
+        "sources": [
+          {
+            "title": "Pemprov DKI — PAM Jaya JEKATE Running Series and water-service coverage",
+            "url": "https://www.jakarta.go.id/index.php/siaran-pers/6235-SP-HMS-12-2025",
+            "period": "Published 2025-12-07; point-in-time coverage",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "insufficient_evidence",
+        "summary": {
+          "en": "The Jakarta health-service portal identifies ambulance and health-capacity information channels, but the inspected pages do not establish a comparable current city series for staffed beds, outcomes, access or surge capacity. Service availability is not measured performance.",
+          "zh": "雅加达卫生部门门户提供救护车与医疗容量信息渠道，但已查页面未建立可比的当前城市人员床位、医疗结局、可及性或应急扩容序列；服务渠道存在不等于性能达标。"
+        },
+        "sources": [
+          {
+            "title": "Dinas Kesehatan Provinsi DKI Jakarta",
+            "url": "https://dinkes.jakarta.go.id/",
+            "period": "Portal inspected 2026-10-09; no numeric medical observation admitted",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Indonesia’s health ministry operates INA-CRR and a clinical-research centre launched in Jakarta in October 2024. A national all-disease registry and local coordinating centre do not establish Jakarta longevity trial results, approval or resident access.",
+          "zh": "印尼卫生部运行 INA-CRR，并于 2024 年 10 月在雅加达启动临床研究中心。全国全病种注册表与本地协调中心不能证明雅加达长寿试验结果、批准或居民可及。"
+        },
+        "sources": [
+          {
+            "title": "Kementerian Kesehatan — INA-CRR studies",
+            "url": "https://ina-crr.kemkes.go.id/en/studi",
+            "period": "Registry inspected 2026-10-09",
+            "accessedAt": "2026-10-09"
+          },
+          {
+            "title": "INA-CRC — Clinical Research Center launch",
+            "url": "https://ina-crc.kemkes.go.id/id/artikel/1",
+            "period": "Centre launched 2024-10-16",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "insufficient_evidence",
+        "summary": {
+          "en": "BPS’s 2025 welfare publication includes information-technology indicators, but the linked report download failed and no current table value was verified. Publication metadata alone does not support a technology-access estimate.",
+          "zh": "BPS 2025 年福利指标报告包含信息技术指标，但报告下载失败，未核实当前表格数值。出版物元数据不能支撑技术可及性估计。"
+        },
+        "sources": [
+          {
+            "title": "BPS DKI Jakarta — Indikator Kesejahteraan Rakyat 2025",
+            "url": "https://jakarta.bps.go.id/id/publication/2025/12/30/75b5f2691e03874bca316472/indikator-kesejahteraan-rakyat-provinsi-dki-jakarta-2025.html",
+            "period": "Published 2025-12-30; observation years not extracted",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "MRT Jakarta reports 4,173,621 passenger trips in November 2025 (139,121 daily average). These operating-system trips do not establish unique users, wider metropolitan coverage, network independence or legal exit options.",
+          "zh": "雅加达 MRT 报告 2025 年 11 月客运 4,173,621 人次，日均 139,121。运营系统乘次不能证明独立用户数、整个都会区覆盖、网络独立性或法律退出选择。"
+        },
+        "sources": [
+          {
+            "title": "MRT Jakarta — November 2025 ridership",
+            "url": "https://www.jakartamrt.co.id/id/info-terkini/lima-stasiun-dengan-jumlah-pelanggan-tertinggi-sepanjang-november-2025",
+            "period": "November 2025",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "DKI provincial, PAM Jaya and MRT observations have not been spatially reconciled with eFUA 4897. Original 1 km geometry checks established that the five Jakarta-named records are non-overlapping segments. The release explicitly keeps only 4897 (5,292 km²); this does not validate local-data geography.",
+      "zh": "DKI 省、PAM Jaya 与 MRT 观测尚未与 eFUA 4897 空间适配。原始 1 km 几何核查确认五条 Jakarta 同名记录为互不重叠的分段；本版明确只保留 4897（5,292 km²），这并不认证地方数据的地理适配。",
+      "sources": [
+        {
+          "title": "European Commission JRC — GHS-FUA R2019A",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 geography; R2019A product",
+          "accessedAt": "2026-10-09"
+        },
+        {
+          "title": "Original GHS-FUA R2019A GeoPackage archive; verified SHA-256 and cell geometry",
+          "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_FUA_UCDB2015_GLOBE_R2019A/V1-0/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.zip",
+          "period": "2015 geography; R2019A; geometry audited 2026-10-09",
+          "accessedAt": "2026-10-09"
+        }
+      ]
+    }
+  }
+]

@@ -41,7 +41,7 @@ export const cciCopy = {
       published: "Published",
       immutable: "Immutable release",
       checksums: "Source and output checksums",
-      reviewed: "Human-reviewed candidate PRs",
+      reviewed: "Versioned evidence reviews",
       download: "Open release JSON",
     },
     controls: {
@@ -56,8 +56,7 @@ export const cciCopy = {
       title: "Compare the pilot cities",
       intro:
         "A deliberately diverse validation panel, bound to one globally consistent functional urban area product.",
-      notice:
-        "Research preview · No city clears v1 ranking eligibility yet. Missing evidence remains missing.",
+      notice: "No city clears v1 ranking eligibility yet. Missing evidence remains missing.",
       compare: "Compare",
       clear: "Clear comparison",
       selected: "Selected cities",
@@ -72,6 +71,7 @@ export const cciCopy = {
         evidence: "Evidence",
       },
       inAudit: "In audit",
+      reviewed: "Reviewed · see evidence",
       notRanked: "Not Ranked",
       notRankedDefinition: "eligibility gate not met",
       confidenceDefinition: "one or more confidence dimensions are unsupported",
@@ -80,7 +80,7 @@ export const cciCopy = {
       openCity: "Open city evidence",
     },
     city: {
-      boundaryPending: "Boundary mapping needs review",
+      boundaryPending: "Boundary scope not verified",
       boundaryVerified: "Boundary mapping verified",
       notRanked: "Not Ranked",
       overview: "Overview",
@@ -99,6 +99,11 @@ export const cciCopy = {
       urbanCentreIds: "Urban-centre IDs",
       sourceNames: "Source names",
       localLanguages: "Required local evidence languages",
+      audit: "Evidence review",
+      usable_observation: "Local observation found; scoring fit not established",
+      context_only: "Context only; excluded from city scoring",
+      insufficient_evidence: "Insufficient evidence for this dimension",
+      observationBoundary: "Observation geography review",
     },
     dimensions: {
       PCS: { name: "Physical & climate safety", weight: 15 },
@@ -158,6 +163,7 @@ export const cciCopy = {
       status: "Status",
       note: "Note",
       unassessed: "Unassessed",
+      insufficient: "Reviewed evidence does not establish a 2125 outcome",
       pass: "Pass",
       watch: "Watch",
       fail: "Fail",
@@ -260,7 +266,7 @@ export const cciCopy = {
       back: "Back to Morris Liu",
     },
     reasons: {
-      boundary_needs_review: "FUA mapping still needs review",
+      boundary_needs_review: "FUA scope is not verified",
       indicator_registry_incomplete: "indicator registry is not frozen",
       subpillar_evidence_incomplete: "one or more subpillars have no calculable evidence",
       indicator_provenance_incomplete: "one or more scored inputs lack complete provenance",
@@ -272,7 +278,7 @@ export const cciCopy = {
       confidence_grade_d: "one or more confidence measures are grade D",
       future_transforms_incomplete: "future transformations are not complete",
       baseline_contains_scenario_assumption: "the baseline contains a scenario assumption",
-      tail_tests_incomplete: "one or more 2125 tail tests are unassessed",
+      tail_tests_incomplete: "one or more 2125 tail outcomes lack supporting evidence",
     },
   },
   zh: {
@@ -314,7 +320,7 @@ export const cciCopy = {
       published: "已发布",
       immutable: "不可变发布",
       checksums: "来源与输出校验和",
-      reviewed: "经人工审核的候选 PR",
+      reviewed: "版本化证据审查记录",
       download: "打开发布 JSON",
     },
     controls: {
@@ -328,7 +334,7 @@ export const cciCopy = {
     compare: {
       title: "比较首批城市",
       intro: "这是刻意保持多样性的验证面板，全部绑定到同一个全球一致的功能性都市区产品。",
-      notice: "研究预览 · 目前没有城市通过 v1 排名资格。缺失证据继续保持缺失。",
+      notice: "目前没有城市通过 v1 排名资格。缺失证据继续保持缺失。",
       compare: "比较",
       clear: "清空比较",
       selected: "已选城市",
@@ -343,6 +349,7 @@ export const cciCopy = {
         evidence: "证据",
       },
       inAudit: "审核中",
+      reviewed: "已核查 · 查看证据",
       notRanked: "未排名",
       notRankedDefinition: "尚未满足资格门槛",
       confidenceDefinition: "至少一项置信度维度缺少支撑",
@@ -351,7 +358,7 @@ export const cciCopy = {
       openCity: "打开城市证据",
     },
     city: {
-      boundaryPending: "边界映射仍需审核",
+      boundaryPending: "边界范围未获验证",
       boundaryVerified: "边界映射已验证",
       notRanked: "未排名",
       overview: "概览",
@@ -370,6 +377,11 @@ export const cciCopy = {
       urbanCentreIds: "城市中心 ID",
       sourceNames: "源数据名称",
       localLanguages: "本地证据要求语言",
+      audit: "证据核查结论",
+      usable_observation: "找到本地观测；尚未满足评分适配",
+      context_only: "仅作背景；不计入城市评分",
+      insufficient_evidence: "本维度证据不足",
+      observationBoundary: "观测地理范围审核",
     },
     dimensions: {
       PCS: { name: "自然与气候安全", weight: 15 },
@@ -428,6 +440,7 @@ export const cciCopy = {
       status: "状态",
       note: "说明",
       unassessed: "未评估",
+      insufficient: "已审证据不足以判定 2125 年结果",
       pass: "通过",
       watch: "关注",
       fail: "未通过",
@@ -508,7 +521,7 @@ export const cciCopy = {
       back: "返回 Morris Liu",
     },
     reasons: {
-      boundary_needs_review: "FUA 映射仍需审核",
+      boundary_needs_review: "FUA 范围未获验证",
       indicator_registry_incomplete: "指标注册表尚未冻结",
       subpillar_evidence_incomplete: "至少一个子支柱没有可计算证据",
       indicator_provenance_incomplete: "至少一个评分输入缺少完整溯源",
@@ -520,7 +533,7 @@ export const cciCopy = {
       confidence_grade_d: "至少一个置信度维度为 D",
       future_transforms_incomplete: "未来转换规则尚不完整",
       baseline_contains_scenario_assumption: "基线包含情景假设",
-      tail_tests_incomplete: "至少一项 2125 尾部测试尚未评估",
+      tail_tests_incomplete: "至少一项 2125 尾部结果缺少判定依据",
     },
   },
 } as const;

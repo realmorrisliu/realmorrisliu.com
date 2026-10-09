@@ -1,0 +1,604 @@
+[
+  {
+    "slug": "basel",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Basel statistics reports 62 days with Rhine water temperature above 20°C in 2024. This is a river-station observation, not population heat exposure or an eFUA climate score; the 2025 figure is explicitly partial-year.",
+          "zh": "巴塞尔统计局记录 2024 年莱茵河水温超过 20°C 共 62 天。这是河流测站观察，不是居民热暴露或 eFUA 气候分数；页面的 2025 数字明确为未满年度。"
+        },
+        "sources": [
+          {
+            "title": "Von Wogen und Wellen: Abfluss und Wassertemperatur im Rhein",
+            "url": "https://statistik.bs.ch/artikel/rhein-im-fluss",
+            "period": "2024 full year; 2025 partial year",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Local German-language search found no comparable Basel cross-border conflict-exposure series. Swiss BABS supplies an armed-conflict scenario, not a Basel event rate; national scenarios cannot certify absence of war risk.",
+          "zh": "本地德文检索未找到可比的巴塞尔跨境冲突暴露序列。瑞士 BABS 提供武装冲突情景，不是巴塞尔事件率；国家情景不能证明无战争风险。"
+        },
+        "sources": [
+          {
+            "title": "BABS KNS2025 Gefährdungsdossiers — Bewaffneter Konflikt",
+            "url": "https://www.babs.admin.ch/dam/en/sd-web/bie7zUvtan7V/KNS2025-Sammlung-der-Gefaehrdungsdossiers-final-de.pdf",
+            "period": "2025 scenario catalogue; not observed event frequency",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The 2023 Basel-Stadt resident survey publishes response counts for public-safety satisfaction: 549 very satisfied and 972 rather satisfied. Denominator eligibility and nonresponse must be retained; canton residents are not the cross-border eFUA.",
+          "zh": "2023 年 Basel-Stadt 居民调查公开公共安全满意度回答数：非常满意 549、比较满意 972。须保留答题资格与无回应；州居民样本不等于跨境 eFUA。"
+        },
+        "sources": [
+          {
+            "title": "Bevölkerungsbefragung 2023",
+            "url": "https://www.statistik.bs.ch/artikel/bevoelkerungsbefragung-2023",
+            "period": "2023",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "IWB reports 17.7 million m³ of drinking-water sales in 2025. Volume is an operator observation, not reserve margin, affordability or outage resilience, and its service area differs from the eFUA.",
+          "zh": "IWB 报告 2025 年饮用水销量 1,770 万立方米。销量是运营者观察，不等于余量、可负担性或停供韧性，供水区域也不等于 eFUA。"
+        },
+        "sources": [
+          {
+            "title": "Erfolgreiches Geschäftsjahr 2025 für IWB",
+            "url": "https://www.iwb.ch/ueber-uns/newsroom/medienmitteilungen/artikel~_erfolgreiches-geschaeftsjahr-2025-fuer-iwb~",
+            "period": "2025; published 2026-04-29",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "context_only",
+        "summary": {
+          "en": "USB's 2025 report documents the Claraspital acquisition and discusses cross-canton access under insurance rules. This establishes provider change, not uniform resident access or eFUA service quality; provider consolidation changes comparability.",
+          "zh": "USB 的 2025 年报记载收购 Claraspital，并讨论医保规则下的跨州准入。它证明服务机构变化，不证明居民均等准入或整个 eFUA 医疗质量；机构合并影响跨年可比性。"
+        },
+        "sources": [
+          {
+            "title": "Universitätsspital Basel Jahresbericht 2025",
+            "url": "https://www.unispital-basel.ch/ueber-uns/publikationen-veranstaltungen-news/jahresbericht",
+            "period": "2025 report; 2026 integration discussion",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "insufficient_evidence",
+        "summary": {
+          "en": "The inspected Basel longevity study concerns C. elegans dietary RNA mechanisms. Human translation and resident access were not established; this cannot qualify as a local clinical longevity outcome.",
+          "zh": "核查的巴塞尔长寿研究是线虫饮食 RNA 机制研究。尚未建立人体转化和居民准入证据，不能作为本地临床长寿结果。"
+        },
+        "sources": [
+          {
+            "title": "Longevity-Forschung: Gesünder im Alter durch Stress",
+            "url": "https://www.biozentrum.unibas.ch/de/news/detail/longevity-research-dietary-stress-supports-healthy-aging",
+            "period": "2025-09 publication; preclinical study",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "context_only",
+        "summary": {
+          "en": "BaselTech was established in October 2025 and officially launched in March 2026. A programme launch is verified, but realised nonmedical adoption, productivity and coverage are not measured by this announcement.",
+          "zh": "BaselTech 于 2025 年 10 月成立、2026 年 3 月正式启动。可核实的是项目启动；公告不测量非医疗技术实际采用、生产率或覆盖率。"
+        },
+        "sources": [
+          {
+            "title": "Innovationsförderprogramme",
+            "url": "https://www.bs.ch/ls/node/42842",
+            "period": "2025 activities; 2026-03 launch",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "EuroAirport reports 9.6 million passengers in 2025. This is a trinational airport-flow observation; it does not measure individual exit rights, affordability or emergency route availability.",
+          "zh": "EuroAirport 报告 2025 年旅客吞吐量 960 万。这是三国地区机场流量观察，不测量个人退出权利、可负担性或紧急航路可用性。"
+        },
+        "sources": [
+          {
+            "title": "Rapport Annuel 2025",
+            "url": "https://www.euroairport.com/publications/rapports-annuels/rapport-annuel-2025",
+            "period": "2025; published 2026-05-06",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "Review completed: original Swiss eFUA 935 and German eFUA 2227 have zero overlapping 1 km cells and union area 820 km². The frozen union is documented; it is not the full trinational metro. The remaining unresolved issue is the mapping of Basel-Stadt, IWB and EuroAirport observations to that union.",
+      "zh": "审核已完成：原始瑞士 eFUA 935 与德国 eFUA 2227 的 1 km 单元互不重叠，并集 820 km²。冻结并集规则已明确，但不是完整三国都会区。仍未解决的是 Basel-Stadt、IWB 和 EuroAirport 观测与该范围的对应关系。",
+      "sources": [
+        {
+          "title": "GHS-FUA R2019A methodology",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 geography; R2019A",
+          "accessedAt": "2026-10-09"
+        },
+        {
+          "title": "Original GHS-FUA R2019A GeoPackage archive; verified SHA-256 and cell geometry",
+          "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_FUA_UCDB2015_GLOBE_R2019A/V1-0/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.zip",
+          "period": "2015 geography; R2019A; geometry audited 2026-10-09",
+          "accessedAt": "2026-10-09"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "zurich",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The city operates temperature/humidity monitoring and distinguishes future tropical-night projections from observations. The inspected page provides no fixed annual exposure series for the eFUA; projected frequency is not scored as current fact.",
+          "zh": "城市运行温湿度监测，并区分未来热带夜预测与观察。所核查页面未提供整个 eFUA 固定年度暴露序列；预测频率不计作当前事实。"
+        },
+        "sources": [
+          {
+            "title": "Stadtklima Zürich",
+            "url": "https://www.stadt-zuerich.ch/de/gesundheit/gesundheitsschutz/stadtklima.html",
+            "period": "current monitoring description; future scenarios separately identified",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The canton risk review confirms ten cross-administration risks for 2025, while BABS provides a national armed-conflict scenario. Neither supplies an observed Zurich metropolitan war probability.",
+          "zh": "州风险报告确认 2025 年十项跨部门风险，BABS 提供国家武装冲突情景；两者均不提供苏黎世都市圈已观测战争概率。"
+        },
+        "sources": [
+          {
+            "title": "Integrales Risikomanagement 2025",
+            "url": "https://www.zh.ch/de/steuern-finanzen/kantonsfinanzen/geschaeftsbericht-rechnung/geschaeftsbericht-2025/integrales-risikomanagement.html",
+            "period": "2025",
+            "accessedAt": "2026-10-09"
+          },
+          {
+            "title": "BABS KNS2025 Gefährdungsdossiers — Bewaffneter Konflikt",
+            "url": "https://www.babs.admin.ch/dam/en/sd-web/bie7zUvtan7V/KNS2025-Sammlung-der-Gefaehrdungsdossiers-final-de.pdf",
+            "period": "2025 scenario catalogue; not observed event frequency",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "In the 2025 city resident survey, 68% feel well represented by the city executive and council. This is a municipal perception measure with subgroup differences, not objective governance performance for eFUA 1479.",
+          "zh": "2025 年城市居民调查中，68% 认为市政府及议会能良好代表自己。这是含群体差异的市级感知指标，不是 eFUA 1479 的客观治理表现。"
+        },
+        "sources": [
+          {
+            "title": "Hauptergebnisse Bevölkerungsbefragung 2025",
+            "url": "https://www.stadt-zuerich.ch/artikel/de/bevoelkerungsbefragung/ergebnisse-bvb-2025.html",
+            "period": "2025 survey",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The municipal drinking-water dataset provides individual measurements from 2023 and a 2025 CSV; metadata was updated 2026-06-09. Catalogue inspection verifies availability, not complete compliance, network resilience or water/food/energy sufficiency.",
+          "zh": "市饮用水数据集提供自 2023 年起的单项测量及 2025 CSV；元数据于 2026-06-09 更新。目录核查证明可获取，不代表已完成合规、管网韧性或水粮能源充足性验证。"
+        },
+        "sources": [
+          {
+            "title": "Open Data Zürich — Trinkwasserqualität",
+            "url": "https://data.stadt-zuerich.ch/dataset/dib_wvz_trinkwasserqualitaet",
+            "period": "2023–2025 data; metadata 2026-06-09",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "USZ reports 20,767 inpatient patients in January–June 2025, 1.5% above the previous period. One tertiary provider's throughput cannot establish unmet need, waiting times or equitable access throughout the eFUA.",
+          "zh": "USZ 报告 2025 年 1—6 月住院患者 20,767 人，同比增长 1.5%。单一三级医疗机构业务量不能证明整个 eFUA 未满足需求、等待时间或公平准入。"
+        },
+        "sources": [
+          {
+            "title": "USZ mit positivem Geschäftsverlauf im ersten Halbjahr 2025",
+            "url": "https://www.usz.ch/usz-mit-positivem-geschaeftsverlauf-im-ersten-halbjahr-2025/",
+            "period": "2025-01 to 2025-06",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "UZH's DO-HEALTH analysis covers 777 people aged over 70 over three years, reporting changes in epigenetic clocks. Biomarker changes are clinical research observations, not demonstrated lifespan extension; enrolment years and metropolitan access are not established here.",
+          "zh": "UZH 的 DO-HEALTH 分析涵盖 777 名 70 岁以上人士的三年观察，报告表观遗传时钟变化。这是临床研究生物标志物观察，不是已证实延寿；此处未建立入组年份和都市圈居民准入。"
+        },
+        "sources": [
+          {
+            "title": "Omega-3 kann den Alterungsprozess verlangsamen",
+            "url": "https://www.news.uzh.ch/de/articles/media/2025/omega-3-alterungsprozess.html",
+            "period": "three-year trial; analysis published 2025-02-04",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "ETH recognised 46 ventures in 2025: 24 spin-offs and 22 start-ups, including some retrospective recognition. The changed definitions break simple year-on-year comparison; nonmedical, local operation and resident diffusion must be separated.",
+          "zh": "ETH 在 2025 年认定 46 家企业：24 家 spin-offs、22 家 start-ups，含部分追认。定义变化使简单同比无效；还须区分非医疗、本地经营与居民技术扩散。"
+        },
+        "sources": [
+          {
+            "title": "Mehr Neugründungen, neue Regeln, neues Förderprogramm",
+            "url": "https://ethz.ch/de/news-und-veranstaltungen/eth-news/news/2026/02/mm-mehr-neugruendungen-neue-regeln-neues-foerderprogramm.html",
+            "period": "2025 recognitions; published 2026-02-25",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Zurich Airport reports 163 destinations in 71 countries in 2025. This is realised airport connectivity, not every resident's legal right or financial capacity to relocate; airport catchment extends beyond Zurich.",
+          "zh": "苏黎世机场报告 2025 年连接 71 国、163 个目的地。这是实际机场连接，不代表每位居民迁移的法律权利或财力；机场服务范围超出苏黎世。"
+        },
+        "sources": [
+          {
+            "title": "Aviation Development — Flughafen Zürich",
+            "url": "https://www.flughafen-zuerich.ch/de/business/airlines-und-handling/aviation-development/markt",
+            "period": "2025",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "Candidate ID 1479 has a repository name/country match. Source-method review confirms an estimated 2015 eFUA, but this audit did not establish polygon-to-municipality, canton, hospital or airport service-area crosswalks. Name matching does not certify indicator geography.",
+      "zh": "候选 ID 1479 已有仓库名称/国家匹配。来源方法确认这是估计的 2015 eFUA；本次未建立多边形与市、州、医院或机场服务范围的空间映射。名称匹配不能认证指标地理范围。",
+      "sources": [
+        {
+          "title": "GHS-FUA R2019A methodology",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 geography; R2019A",
+          "accessedAt": "2026-10-09"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "london",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The July 2024 local climate review identifies heat, flooding and drought and distinguishes defence planning dates from observed hazards. It does not provide a single audited eFUA exposure measure; 2040/2050 works deadlines are plans, not current protection outcomes.",
+          "zh": "2024 年 7 月本地气候审查识别高温、洪水和干旱，并区分防御规划日期与已发生危害。它不提供统一核准的 eFUA 暴露指标；2040/2050 工程期限是计划，不是当前防护结果。"
+        },
+        "sources": [
+          {
+            "title": "The London Climate Resilience Review — July 2024",
+            "url": "https://www.london.gov.uk/sites/default/files/2024-07/The_London_Climate_Resillience_Review_July_2024_FA.pdf",
+            "period": "2024 assessment; historical events and future plans distinguished",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "insufficient_evidence",
+        "summary": {
+          "en": "London Risk Register searches located the official v14 document, but full retrieval returned 403. UCDP's available annual/monthly data were inspected at catalogue level only; no London spatial conflict join or comparable military-exposure measure was established.",
+          "zh": "检索找到官方 London Risk Register v14，但全文访问返回 403。UCDP 年度/月度数据仅核查到目录；未建立伦敦冲突空间连接或可比军事暴露指标。"
+        },
+        "sources": [
+          {
+            "title": "UCDP Dataset Download Center",
+            "url": "https://ucdp.uu.se/downloads/",
+            "period": "annual 26.1 through 2025; candidate 26.0.8 through 2026-08",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The GLA's PAS summary reports 74% trusting the MPS in April 2025 and 68% feeling safe after dark in Q3 2025/26, versus 58% among women. These are survey perceptions, not recorded conflict or universal safety; MOPAC is their common upstream.",
+          "zh": "GLA 的 PAS 摘要报告 2025 年 4 月 74% 信任伦敦警察；2025/26 第三季度 68% 夜间独行感到安全，女性为 58%。这是调查感知，不是冲突记录或人人安全；共同上游为 MOPAC。"
+        },
+        "sources": [
+          {
+            "title": "State of London 2026 — Crime",
+            "url": "https://apps.london.gov.uk/state-of-london/report/crime",
+            "period": "2025-04 and 2025-10 to 2025-12",
+            "accessedAt": "2026-10-09"
+          },
+          {
+            "title": "MOPAC Surveys",
+            "url": "https://data.london.gov.uk/dataset/mopac-surveys-236kk",
+            "period": "PAS: 19,200 residents per year; catalogue through 2026 Q2",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Thames Water reports a three-year rolling leakage average of 584 Ml/day at half-year 2025/26. This is a regional operator metric, not Greater London alone; water quality, outages and affordability require separate indicators and food/energy remain uncovered.",
+          "zh": "Thames Water 在 2025/26 半年报报告三年滚动平均漏损 584 百万升/日。这是区域运营者指标，不仅覆盖大伦敦；水质、停供与可负担性需独立指标，粮食和能源仍无对应观察。"
+        },
+        "sources": [
+          {
+            "title": "Thames Water Half Year Results 2025/26",
+            "url": "https://www.thameswater.co.uk/news/2025/dec/thames-water-half-year-results-202526",
+            "period": "half-year 2025/26; leakage is three-year rolling average",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "context_only",
+        "summary": {
+          "en": "GLA's health chapter separates care-system indicators and borough inequalities from overall life expectancy, linking NHS vaccination and OHID outcomes. Direct NHS RTT retrieval was unavailable; no complete eFUA care access, quality and affordability measure was established.",
+          "zh": "GLA 健康章节区分医疗系统指标、行政区不平等与总体寿命，并链接 NHS 疫苗及 OHID 结果。NHS RTT 原文访问未成功；未建立整个 eFUA 医疗可及、质量和可负担性完整指标。"
+        },
+        "sources": [
+          {
+            "title": "State of London 2026 — Health",
+            "url": "https://apps.london.gov.uk/state-of-london/report/health",
+            "period": "mixed observation periods: 2022–2024, 2024/25 and provisional 2023–2025",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "UCL announced preparations for a first-in-human immune-rejuvenation Phase 1 trial on 2026-06-18. The announcement describes safety/biological-activity aims, not proven clinical benefit; trial initiation, results and routine resident access were not established.",
+          "zh": "UCL 于 2026-06-18 公告筹备首次人体免疫年轻化一期试验。目标是安全性/生物活性，不是已证明临床获益；此处未确认试验已启动、结果或居民常规准入。"
+        },
+        "sources": [
+          {
+            "title": "New trial aims to extend immune system lifespan",
+            "url": "https://www.ucl.ac.uk/news/2026/jun/new-trial-aims-extend-immune-system-lifespan",
+            "period": "2026-06-18 announcement; future trial",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "context_only",
+        "summary": {
+          "en": "BDUK publishes a January 2025 London premises-level package distinguishing existing gigabit connections from commercial and public delivery plans. The catalogue was inspected, not aggregated; planned infrastructure and actual innovation diffusion cannot be conflated.",
+          "zh": "BDUK 发布 2025 年 1 月伦敦场所级数据，区分已有千兆连接、商业及公共交付计划。已核查目录但未聚合；规划基础设施不能混同实际创新扩散。"
+        },
+        "sources": [
+          {
+            "title": "January 2025 OMR and premises in BDUK plans",
+            "url": "https://www.gov.uk/government/publications/january-2025-omr-and-premises-in-bduk-plans-england-and-wales",
+            "period": "2025-01; published 2025-07-01",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Heathrow's 2025 results report over 84.5 million passengers. This verifies one airport's throughput, not all London airports or personal exit rights; expansion forecasts and expected 2026 traffic are excluded.",
+          "zh": "希思罗 2025 业绩公告报告超过 8,450 万旅客。它核实单一机场流量，不代表全部伦敦机场或个人退出权利；不采用扩建预测和 2026 预期流量。"
+        },
+        "sources": [
+          {
+            "title": "Heathrow results for year ended 31 Dec 2025",
+            "url": "https://mediacentre.heathrow.com/pressrelease/detail/24843",
+            "period": "2025; published 2026-02-25",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "Repository ID 5288 is name-matched to London; this review finds mismatched footprints across GLA boroughs, MPS/PAS, regional water supply and individual airports. No population-weighted or polygon crosswalk to the frozen 2015 eFUA was established.",
+      "zh": "仓库 ID 5288 已按名称匹配伦敦；本次发现 GLA 行政区、MPS/PAS、区域供水及单机场范围不同。未建立到冻结 2015 eFUA 的人口加权或多边形映射。",
+      "sources": [
+        {
+          "title": "GHS-FUA R2019A methodology",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 geography; R2019A",
+          "accessedAt": "2026-10-09"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "amsterdam",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The municipality identifies extreme heat, drought, heavy-rain flooding and flood risk and publishes 2025 adaptation progress. Policy and progress documentation do not quantify present eFUA hazard exposure or guarantee future protection.",
+          "zh": "市政府识别极端高温、干旱、强降雨内涝与洪灾风险并公开 2025 适应进展。政策与进度文档不量化当前 eFUA 暴露，也不保证未来防护。"
+        },
+        "sources": [
+          {
+            "title": "Beleid Voorbereiden op klimaatverandering",
+            "url": "https://www.amsterdam.nl/bestuur-organisatie/beleid/voorbereiden-klimaatverandering/",
+            "period": "2025 progress documentation; ongoing policy",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The Amsterdam-Amstelland regional risk profile covers 2025–2028 and was considered by council on 2025-04-02. This is regional preparedness context, not observed metropolitan warfare frequency or a calibrated long-term war probability.",
+          "zh": "Amsterdam-Amstelland 区域风险档案覆盖 2025—2028，市议会于 2025-04-02 审议。它是区域备灾背景，不是都市圈战争发生率或校准的长期战争概率。"
+        },
+        "sources": [
+          {
+            "title": "Regionaal Risicoprofiel 2025–2028",
+            "url": "https://openresearch.amsterdam/nl/page/120969/regionaal-risicoprofiel-2025-2028",
+            "period": "2025–2028 planning horizon; council 2025-04-02",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "O&S reports the self-reported victimisation index in Oost rising from 98 in 2024 to 107 in 2025. This is a district survey index, not raw crimes or a city governance score; reported victimisation and police registrations must remain distinct.",
+          "zh": "O&S 报告 Oost 区自报受害指数从 2024 年 98 升至 2025 年 107。这是区级调查指数，不是犯罪件数或城市治理分数；自报受害与警方登记须区分。"
+        },
+        "sources": [
+          {
+            "title": "Openbare orde en veiligheid in cijfers 2026",
+            "url": "https://onderzoek.amsterdam.nl/artikel/openbare-orde-en-veiligheid-in-cijfers-2026",
+            "period": "2024–2025 observations; 2026 publication",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Leiduin's 2025 regulatory table reports four chlorate measurements above the then 1 µg/L standard and notes notification to the inspectorate; it explicitly notes a 250 µg/L standard from 2026. One production site and changing standards cannot establish whole-network compliance or resilience.",
+          "zh": "Leiduin 2025 法定化验表报告四次氯酸盐测量超过当时 1 µg/L 标准并通知监管机构；表内明确 2026 起标准为 250 µg/L。单一生产点与标准变化不能证明整个管网合规或韧性。"
+        },
+        "sources": [
+          {
+            "title": "Waternet Drinkwater Productielocatie Leiduin — Jaar 2025",
+            "url": "https://www.waternet.nl/siteassets/ons-water/drinkwater/waterkwaliteit-rapporten/2025/drinkwater-leiduin-wettelijk-2025-jaar.pdf",
+            "period": "2025 samples; standards distinguished from 2026",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "context_only",
+        "summary": {
+          "en": "GGD's 2024 adult/older-resident monitor reports municipal health and subgroup differences, published June 2025. Population health surveillance is not itself a complete health-care delivery/access measure; eFUA coverage and unmet-care fields were not established.",
+          "zh": "GGD 的 2024 成年/老年居民监测于 2025 年 6 月公布，按群体呈现市级健康差异。人群健康监测本身不等于完整医疗交付/准入指标；未建立 eFUA 覆盖与未满足医疗需求字段。"
+        },
+        "sources": [
+          {
+            "title": "Gezondheidsmonitor Volwassenen en Ouderen 2024",
+            "url": "https://openresearch.amsterdam/nl/page/125996/gezondheidsmonitor-volwassenen-en-ouderen-2024",
+            "period": "2024 survey; published 2025-06",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Amsterdam UMC's 2026-10-01 publication record reports NCT05506488: 31 participants in a Phase 2 randomised MASH senolytic trial; the primary fibrosis endpoint was 47% versus 7%, with adverse events 82% versus 43%. This disease-specific small trial is not general lifespan extension or routine resident access.",
+          "zh": "Amsterdam UMC 的 2026-10-01 论文记录报告 NCT05506488：31 人 MASH 衰老细胞清除二期随机试验；主要纤维化终点为 47% 对 7%，不良事件 82% 对 43%。小样本特定疾病试验不是普遍延寿或居民常规准入。"
+        },
+        "sources": [
+          {
+            "title": "Senolytics dasatinib and quercetin in MASH — randomized controlled trial",
+            "url": "https://pure.amsterdamumc.nl/en/publications/senolytics-dasatinib-and-quercetin-in-metabolic-dysfunction-assoc-2/",
+            "period": "published 2026-10-01; three 7-week treatment cycles; enrolment dates not established",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The December 2025 municipal digital monitor examines Amsterdam/Weesp residents' devices, skills and barriers. This supplies a local diffusion source, but no extracted comparable nonmedical innovation/productivity measure; cybercrime observations belong in ISR, not a second TEC penalty.",
+          "zh": "2025 年 12 月市级数字监测研究 Amsterdam/Weesp 居民设备、技能和障碍。它提供本地扩散来源，但未提取可比非医疗创新/生产率指标；网络犯罪观察归 ISR，不再作为 TEC 重复扣分。"
+        },
+        "sources": [
+          {
+            "title": "Monitor Amsterdammers Digitaal 2025",
+            "url": "https://onderzoek.amsterdam.nl/publicatie/monitor-amsterdammers-digitaal-2025",
+            "period": "published 2025-12; survey fieldwork dates not established",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Schiphol reports 68.8 million passengers and 300 worldwide destinations in 2025, including 124 intercontinental. Airport metrics do not establish nationality-specific relocation rights, asset portability or emergency departure options.",
+          "zh": "Schiphol 报告 2025 年旅客 6,880 万、全球目的地 300 个（洲际 124 个）。机场指标不证明按国籍区分的迁居权、资产可携带性或紧急撤离选择。"
+        },
+        "sources": [
+          {
+            "title": "Schiphol in 2025: stillere vliegtuigen, meer tevreden reizigers en solide financiële resultaten",
+            "url": "https://nieuws.schiphol.nl/schiphol-in-2025-stillere-vliegtuigen-meer-tevreden-reizigers-en-solide-financiele-resultaten/",
+            "period": "2025 results; 2026 publication",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "Repository ID 1427 is name-matched. Municipality including Weesp, Amsterdam-Amstelland safety region, Leiduin production supply and Schiphol catchment are different geographies; their observations were not spatially reconciled to the frozen 2015 eFUA.",
+      "zh": "仓库 ID 1427 已名称匹配。含 Weesp 的市域、Amsterdam-Amstelland 安全区、Leiduin 供水范围与 Schiphol 服务区域并非同一地理单位；本次未将观察空间统一到冻结的 2015 eFUA。",
+      "sources": [
+        {
+          "title": "GHS-FUA R2019A methodology",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 geography; R2019A",
+          "accessedAt": "2026-10-09"
+        }
+      ]
+    }
+  }
+]

@@ -26,8 +26,10 @@ function sha256(value: JsonValue): string {
 
 const dataDirectory = fileURLToPath(new URL("../src/cci/data", import.meta.url));
 const candidateFilename = readdirSync(dataDirectory)
-  .filter(filename => /^candidate-\d{4}-\d{2}\.ts$/.test(filename))
-  .sort()
+  .filter(filename => /^candidate-\d{4}-\d{2}(?:-\d+)?\.ts$/.test(filename))
+  .sort((left, right) =>
+    left.slice(0, -3).localeCompare(right.slice(0, -3), "en", { numeric: true })
+  )
   .at(-1);
 if (!candidateFilename) throw new Error("No CCI candidate input found");
 

@@ -201,6 +201,30 @@ export interface CityCandidate {
   unresolvedEligibilityConflict: boolean;
   indicators: IndicatorInput[];
   tailTests: Record<TailTestId, TailStatus | null>;
+  audit?: CityEvidenceAudit;
+}
+
+export interface AuditSource {
+  title: string;
+  url: string;
+  period: string;
+  accessedAt: string;
+}
+
+export interface CityEvidenceAudit {
+  asOf: string;
+  dimensions: Array<{
+    id: DimensionId;
+    outcome: "usable_observation" | "context_only" | "insufficient_evidence";
+    summary: { en: string; zh: string };
+    sources: AuditSource[];
+  }>;
+  boundaryReview: {
+    outcome: "verified" | "unresolved";
+    en: string;
+    zh: string;
+    sources: AuditSource[];
+  };
 }
 
 export interface CandidateReleaseInput {
@@ -224,6 +248,18 @@ export interface CandidateReleaseInput {
   targetYears: TargetYear[];
   stressTestYear: 2125;
   cities: CityCandidate[];
+  research?: {
+    reportUrl?: string;
+    summary: { en: string; zh: string };
+    findings: Array<{
+      dimensions: DimensionId[];
+      title: string;
+      url: string;
+      period: string;
+      en: string;
+      zh: string;
+    }>;
+  };
 }
 
 export interface DistributionSummary {
@@ -234,6 +270,7 @@ export interface DistributionSummary {
 
 export interface CityReleaseResult {
   slug: string;
+  audit?: CityEvidenceAudit;
   name: string;
   nameZh: string;
   country: string;
@@ -279,6 +316,7 @@ export interface CciRelease {
   officialWeights: Record<DimensionId, number>;
   scenarioCount: number;
   cities: CityReleaseResult[];
+  research?: CandidateReleaseInput["research"];
 }
 
 export interface PublishedCciRelease extends CciRelease {
@@ -621,6 +659,56 @@ function validateInput(input: CandidateReleaseInput): void {
   const scenarioIds = new Set(SCENARIOS.map(scenario => scenario.id));
   const asOfYear = Number(input.asOf.slice(0, 4));
   for (const city of input.cities) {
+    if (city.audit) {
+      const audit = city.audit;
+      if (!isIsoDate(audit.asOf) || audit.asOf > input.asOf) {
+        throw new Error(`${city.slug}: invalid evidence audit date`);
+      }
+      if (
+        audit.dimensions
+          .map(item => item.id)
+          .sort()
+          .join(",") !==
+        DIMENSIONS.map(item => item.id)
+          .sort()
+          .join(",")
+      ) {
+        throw new Error(`${city.slug}: evidence audit must cover each dimension exactly once`);
+      }
+      for (const item of audit.dimensions) {
+        if (
+          !["usable_observation", "context_only", "insufficient_evidence"].includes(item.outcome) ||
+          !item.summary.en.trim() ||
+          !item.summary.zh.trim() ||
+          (item.outcome !== "insufficient_evidence" && item.sources.length === 0)
+        ) {
+          throw new Error(`${city.slug}.${item.id}: incomplete evidence audit`);
+        }
+      }
+      if (
+        !["verified", "unresolved"].includes(audit.boundaryReview.outcome) ||
+        !audit.boundaryReview.en.trim() ||
+        !audit.boundaryReview.zh.trim() ||
+        audit.boundaryReview.sources.length === 0
+      ) {
+        throw new Error(`${city.slug}: incomplete boundary review`);
+      }
+      const sources = [
+        ...audit.dimensions.flatMap(item => item.sources),
+        ...audit.boundaryReview.sources,
+      ];
+      for (const source of sources) {
+        if (
+          !source.title.trim() ||
+          !source.period.trim() ||
+          !isIsoDate(source.accessedAt) ||
+          source.accessedAt > audit.asOf ||
+          !["https:", "http:"].includes(new URL(source.url).protocol)
+        ) {
+          throw new Error(`${city.slug}: invalid audit source`);
+        }
+      }
+    }
     if (city.boundary.verificationStatus === "verified" && city.boundary.eFuaIds.length === 0) {
       throw new Error(`${city.slug}: verified boundary needs at least one eFUA ID`);
     }
@@ -784,6 +872,7 @@ function computeCity(city: CityCandidate, input: CandidateReleaseInput): CityRel
 
   return {
     slug: city.slug,
+    ...(city.audit ? { audit: city.audit } : {}),
     name: city.name,
     nameZh: city.nameZh,
     country: city.country,
@@ -824,5 +913,6 @@ export function buildRelease(input: CandidateReleaseInput): CciRelease {
     ) as Record<DimensionId, number>,
     scenarioCount: SCENARIOS.length,
     cities: input.cities.map(city => computeCity(city, input)),
+    ...(input.research ? { research: input.research } : {}),
   };
 }
