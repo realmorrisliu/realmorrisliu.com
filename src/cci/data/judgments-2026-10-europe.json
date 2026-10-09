@@ -1,0 +1,446 @@
+[
+  {
+    "slug": "basel",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 70,
+        "uncertainty": 16,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Estimate 70: Rhine heat and low-water observations justify a material physical-risk discount, while this inland setting is not treated like a coastal flood hotspot. The -1/decade assumption represents gradual heat and river stress; station data cannot resolve all cross-border exposure.",
+          "zh": "研究估计 70：莱茵河升温及低水位观察支持保留明显物理风险折减；内陆位置不按沿海洪灾热点处理。每十年 -1 是高温及河流压力渐增的主观假设；测站不能覆盖全部跨境暴露。"
+        },
+        "sourceUrls": ["https://statistik.bs.ch/artikel/rhein-im-fluss"]
+      },
+      {
+        "id": "GSS",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Estimate 80 assumes relatively low direct-war exposure under the Swiss national baseline, not zero risk. BABS explicitly retains armed conflict and nationwide supply-chain spillovers; rising UCDP interstate conflict motivates a cautious -1/decade assumption, without assigning a war probability.",
+          "zh": "研究估计 80 采用瑞士国家背景下直接战争暴露相对较低的判断，并非零风险。BABS 明确保留武装冲突及全国供应链外溢；UCDP 国家间冲突增加支持谨慎的每十年 -1 假设，不生成战争概率。"
+        },
+        "sourceUrls": [
+          "https://www.babs.admin.ch/dam/en/sd-web/bie7zUvtan7V/KNS2025-Sammlung-der-Gefaehrdungsdossiers-final-de.pdf",
+          "https://www.uu.se/en/press/press-releases/2026/2026-06-09-ucdp-record-number-of-conflicts-between-states"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 80,
+        "uncertainty": 14,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Estimate 80 reflects the resident survey's predominantly positive public-safety assessments and functioning feedback mechanisms. The canton sample is older and excludes much of the cross-border area; flat long-term direction assumes continuity, not automatic institutional improvement.",
+          "zh": "研究估计 80 反映居民调查中总体积极的公共安全评价及可运行的反馈机制。州级样本较旧且未覆盖大部分跨境地区；长期方向为 0，假设延续而不假定制度自动改善。"
+        },
+        "sourceUrls": [
+          "https://www.statistik.bs.ch/artikel/bevoelkerungsbefragung-2023",
+          "https://www.worldbank.org/en/publication/worldwide-governance-indicators"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 75,
+        "uncertainty": 17,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Estimate 75 reflects operating water and energy networks and IWB investment capacity, with a discount for unmeasured food resilience and service-area mismatch. Flat direction assumes heat-network transition broadly offsets rising supply pressure; sales volume is not reserve capacity.",
+          "zh": "研究估计 75 基于运行中的水能源网络及 IWB 投资能力，同时为未测粮食韧性与服务区差异保留折减。方向 0 假设供热转型大体抵消新增供应压力；销量不作为储备容量。"
+        },
+        "sourceUrls": [
+          "https://www.iwb.ch/ueber-uns/newsroom/medienmitteilungen/artikel~_erfolgreiches-geschaeftsjahr-2025-fuer-iwb~"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 80,
+        "uncertainty": 16,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Estimate 80 reflects USB's advanced-provider capacity and integration of Claraspital, but insurer and cross-canton access remain important constraints. Flat direction assumes consolidation can maintain service capability; it does not assume merger plans have already improved outcomes.",
+          "zh": "研究估计 80 反映 USB 高水平医疗机构能力及 Claraspital 整合，但医保与跨州准入仍是重要约束。方向 0 假设整合有助维持能力，不把合并计划当作已改善医疗结果。"
+        },
+        "sourceUrls": [
+          "https://www.unispital-basel.ch/ueber-uns/publikationen-veranstaltungen-news/jahresbericht"
+        ]
+      },
+      {
+        "id": "LON",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Estimate 60 balances life-science and ageing-research capacity against unestablished resident access to validated longevity treatments. The inspected result is preclinical, so research strength cannot support a high combined translation-and-access score. +1/decade assumes cautious maturation, not efficacy or broad coverage.",
+          "zh": "研究估计 60 平衡生命科学与衰老研究能力，以及尚未建立的居民获验证长寿疗法准入。已核查成果属临床前，研究实力不能单独支撑转化与可及合并维度的高分。每十年 +1 假设谨慎成熟，不代表疗效或普惠覆盖。"
+        },
+        "sourceUrls": [
+          "https://www.biozentrum.unibas.ch/de/news/detail/longevity-research-dietary-stress-supports-healthy-aging",
+          "https://www.bs.ch/ls/node/42842"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 70,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Estimate 70 recognises a developing nonmedical digital ecosystem through BaselTech but does not treat programme launch as realised productivity. +1/decade assumes gradual diffusion; the absence of a representative adoption series warrants a wide judgment range.",
+          "zh": "研究估计 70 认可 BaselTech 所体现的非医疗数字生态建设，不把项目启动当作生产率实现。每十年 +1 假设逐步扩散；缺少代表性采用序列，因此判断范围较宽。"
+        },
+        "sourceUrls": [
+          "https://www.bs.ch/ls/node/42842",
+          "https://www.oecd.org/en/about/news/announcements/2026/01/ai-use-by-individuals-surges-across-the-oecd-as-adoption-by-firms-continues-to-expand.html"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 80,
+        "uncertainty": 17,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Estimate 80 reflects established trinational airport connectivity and cross-border optionality. Passenger traffic does not establish affordable departure or residency rights for every nationality; flat direction assumes network continuity while preserving these personal-access limits.",
+          "zh": "研究估计 80 反映既有三国地区机场连接及跨境选择。客流不证明各国籍居民均能负担出行或取得居留权；方向 0 假设网络延续，同时保留个人准入限制。"
+        },
+        "sourceUrls": [
+          "https://www.euroairport.com/publications/rapports-annuels/rapport-annuel-2025"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "zurich",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 75,
+        "uncertainty": 16,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Estimate 75 reflects an inland location with documented urban-heat pressure and local monitoring; monitoring itself does not reduce physical hazard. -1/decade assumes increasing heat exposure, with uncertainty for unaggregated metropolitan flood and slope risks.",
+          "zh": "研究估计 75 反映内陆位置及已记录的城市热压力和本地监测；监测本身不降低物理危害。每十年 -1 假设热暴露增加，未聚合的都市圈洪水与坡地风险进入不确定范围。"
+        },
+        "sourceUrls": [
+          "https://www.stadt-zuerich.ch/de/gesundheit/gesundheitsschutz/stadtklima.html"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Estimate 80 uses the same Swiss direct-war baseline as Basel rather than manufacturing a city-level difference. National armed-conflict scenarios and worsening global interstate trends motivate -1/decade; no local event count establishes a precise risk.",
+          "zh": "研究估计 80 与巴塞尔采用相同瑞士直接战争背景，不制造无依据的城际差异。国家武装冲突情景及全球国家间冲突趋势支持每十年 -1；没有本地事件数量能确定精确风险。"
+        },
+        "sourceUrls": [
+          "https://www.zh.ch/de/steuern-finanzen/kantonsfinanzen/geschaeftsbericht-rechnung/geschaeftsbericht-2025/integrales-risikomanagement.html",
+          "https://www.babs.admin.ch/dam/en/sd-web/bie7zUvtan7V/KNS2025-Sammlung-der-Gefaehrdungsdossiers-final-de.pdf",
+          "https://www.uu.se/en/press/press-releases/2026/2026-06-09-ucdp-record-number-of-conflicts-between-states"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 85,
+        "uncertainty": 13,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Estimate 85 reflects strong municipal feedback and 68% reporting good political representation, tempered by the remaining dissatisfied residents and nationality differences. Flat direction assumes institutional continuity; the 68% observation is not mechanically converted into 85.",
+          "zh": "研究估计 85 反映较强市级反馈机制与 68% 的良好政治代表感，同时考虑其余不满意居民和国籍差异。方向 0 假设制度延续；没有把 68% 机械转换成 85 分。"
+        },
+        "sourceUrls": [
+          "https://www.stadt-zuerich.ch/artikel/de/bevoelkerungsbefragung/ergebnisse-bvb-2025.html",
+          "https://www.worldbank.org/en/publication/worldwide-governance-indicators"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Estimate 80 is a strong-system prior supported by a public municipal water-measurement programme, not a claim that every sample or service passes. Food, energy redundancy and the wider eFUA are less directly evidenced; flat direction balances adaptation with growing demand.",
+          "zh": "研究估计 80 是有市级公开水质监测支持的较强系统先验，不声称每个样本或服务均合格。粮食、能源冗余及更大 eFUA 的直接证据较弱；方向 0 平衡适应投入与需求增长。"
+        },
+        "sourceUrls": ["https://data.stadt-zuerich.ch/dataset/dib_wvz_trinkwasserqualitaet"]
+      },
+      {
+        "id": "MED",
+        "baseline": 80,
+        "uncertainty": 16,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Estimate 80 reflects USZ's substantial tertiary-care throughput and treatment capacity; throughput alone cannot establish affordability, safety or unmet need. Flat direction assumes capacity broadly keeps pace with demand, with provider-to-metropolitan uncertainty retained.",
+          "zh": "研究估计 80 反映 USZ 较大的三级医疗业务量和治疗能力；业务量本身不能证明可负担、安全或未满足需求。方向 0 假设容量大体跟上需求，保留单院到都市圈的外推不确定性。"
+        },
+        "sourceUrls": [
+          "https://www.usz.ch/usz-mit-positivem-geschaeftsverlauf-im-ersten-halbjahr-2025/"
+        ]
+      },
+      {
+        "id": "LON",
+        "baseline": 60,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Estimate 60 recognises DO-HEALTH human research while retaining a substantial access constraint. Changes in epigenetic clocks are not validated lifespan gains, and a strong research platform does not establish broadly accessible longevity treatment. +1/decade assumes slow translation and access development, not guaranteed benefit.",
+          "zh": "研究估计 60 认可 DO-HEALTH 人体研究，同时保留明显准入约束。表观遗传时钟变化不等于已验证延寿，强研究平台也不证明长寿治疗广泛可及。每十年 +1 假设转化与可及缓慢发展，不保证获益。"
+        },
+        "sourceUrls": [
+          "https://www.news.uzh.ch/de/articles/media/2025/omega-3-alterungsprozess.html"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 85,
+        "uncertainty": 15,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Estimate 85 reflects active ETH-linked technology formation, with 24 spin-offs and 22 start-ups recognised in 2025. Definition changes, medical overlap and resident diffusion limit the inference; +1/decade assumes continued nonmedical transfer rather than extrapolating venture counts.",
+          "zh": "研究估计 85 反映活跃的 ETH 技术创业，2025 年认定 24 家 spin-offs 和 22 家 start-ups。定义变化、医疗重叠及居民扩散限制推断；每十年 +1 假设非医疗转移持续，不外推企业数量。"
+        },
+        "sourceUrls": [
+          "https://ethz.ch/de/news-und-veranstaltungen/eth-news/news/2026/02/mm-mehr-neugruendungen-neue-regeln-neues-foerderprogramm.html",
+          "https://www.oecd.org/en/about/news/announcements/2026/01/ai-use-by-individuals-surges-across-the-oecd-as-adoption-by-firms-continues-to-expand.html"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 85,
+        "uncertainty": 16,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Estimate 85 reflects a hub serving 163 destinations in 71 countries and its ground links. The broad airport catchment is not the city population and individual legal/financial exit options vary; flat direction assumes maintained connectivity rather than perpetual route growth.",
+          "zh": "研究估计 85 反映连接 71 国 163 目的地及地面接驳的枢纽。机场广域服务人口不等于城市居民且法律/财务退出选择各异；方向 0 假设维持连接，不假定航线永远增长。"
+        },
+        "sourceUrls": [
+          "https://www.flughafen-zuerich.ch/de/business/airlines-und-handling/aviation-development/markt"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "london",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 60,
+        "uncertainty": 17,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Estimate 60 reflects combined heat, flood and drought pressures identified in the local review. Existing flood protection matters, but future upgrade deadlines are not completed defences; -2/decade assumes physical pressure rises faster than baseline protection without further adaptation.",
+          "zh": "研究估计 60 反映本地审查识别的高温、洪水和干旱复合压力。既有防洪有意义，但未来升级期限不是已建成防御；每十年 -2 假设若无更多适应，物理压力增长快于基线保护。"
+        },
+        "sourceUrls": [
+          "https://www.london.gov.uk/sites/default/files/2024-07/The_London_Climate_Resillience_Review_July_2024_FA.pdf"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 70,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Estimate 70 is a cautious national/geopolitical prior for a major internationally connected capital, not a measured London conflict rate. The inaccessible local risk register widens uncertainty; UCDP's interstate trend motivates -1/decade rather than a quantified escalation probability.",
+          "zh": "研究估计 70 是对高度国际连接首都的谨慎国家/地缘先验，不是伦敦实测冲突率。本地风险档案访问受限扩大不确定范围；UCDP 国家间趋势支持每十年 -1，而非量化升级概率。"
+        },
+        "sourceUrls": [
+          "https://ucdp.uu.se/downloads/",
+          "https://www.uu.se/en/press/press-releases/2026/2026-06-09-ucdp-record-number-of-conflicts-between-states"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 70,
+        "uncertainty": 15,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Estimate 70 balances 74% reported police trust with pronounced subgroup and borough safety differences. Survey commissioning changes and self-report bias limit precision; flat direction assumes neither automatic recovery nor continued institutional decline.",
+          "zh": "研究估计 70 平衡 74% 的警察信任与明显群体、行政区安全差异。调查机制变化与自报偏差限制精度；方向 0 不假定自动恢复或制度持续衰退。"
+        },
+        "sourceUrls": [
+          "https://apps.london.gov.uk/state-of-london/report/crime",
+          "https://data.london.gov.uk/dataset/mopac-surveys-236kk",
+          "https://www.worldbank.org/en/publication/worldwide-governance-indicators"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 55,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Estimate 55 reflects material water-service and investment constraints, including Thames Water's large leakage burden and adverse performance indicators. The operator extends beyond London and food/energy are incompletely observed; flat direction assumes remediation offsets pressure without banking announced improvements.",
+          "zh": "研究估计 55 反映明显供水与投资约束，包括 Thames Water 较大漏损及不佳绩效信号。运营范围超出伦敦，粮食能源观察不完整；方向 0 假设整改抵消压力，不提前兑现公告改善。"
+        },
+        "sourceUrls": [
+          "https://www.thameswater.co.uk/news/2025/dec/thames-water-half-year-results-202526"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 70,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Estimate 70 recognises a substantial care system but discounts documented borough inequalities and incomplete access evidence. Overall longevity is not a substitute for care delivery; flat direction assumes capability is maintained under demand pressure, not that waiting-time constraints disappear.",
+          "zh": "研究估计 70 认可较大医疗系统，同时为已记载行政区不平等与准入证据不足折减。总体寿命不替代医疗交付；方向 0 假设需求压力下维持能力，不假定等待约束消失。"
+        },
+        "sourceUrls": ["https://apps.london.gov.uk/state-of-london/report/health"]
+      },
+      {
+        "id": "LON",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Estimate 60 recognises UCL’s translational setting and planned immune-rejuvenation Phase 1 programme, but balances them against unestablished routine resident access. Trial announcements and ILAP support are neither proven benefit nor broad coverage; current evidence does not justify a premium over the other European research centres. +1/decade assumes gradual maturation.",
+          "zh": "研究估计 60 认可 UCL 转化环境及计划中的免疫年轻化一期项目，同时考虑居民常规准入尚未建立。试验公告与 ILAP 支持不等于已证实获益或普惠覆盖；现有证据不足以支持高于其他欧洲研究中心的溢价。每十年 +1 假设逐步成熟。"
+        },
+        "sourceUrls": [
+          "https://www.ucl.ac.uk/news/2026/jun/new-trial-aims-extend-immune-system-lifespan"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Estimate 80 reflects an advanced urban digital setting and premises-level infrastructure planning, while incomplete local uptake evidence prevents a near-ceiling judgment. +1/decade assumes continued diffusion of nonmedical AI and connectivity, not guaranteed productivity from announced rollout.",
+          "zh": "研究估计 80 反映较成熟城市数字环境与场所级基础设施规划；本地采用证据不完整，因此不接近上限。每十年 +1 假设非医疗 AI 与连接继续扩散，不把部署公告当作保证生产率。"
+        },
+        "sourceUrls": [
+          "https://www.gov.uk/government/publications/january-2025-omr-and-premises-in-bduk-plans-england-and-wales",
+          "https://www.oecd.org/en/about/news/announcements/2026/01/ai-use-by-individuals-surges-across-the-oecd-as-adoption-by-firms-continues-to-expand.html"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 85,
+        "uncertainty": 17,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Estimate 85 reflects Heathrow's demonstrated hub scale and international connections, not passenger volume as a direct score formula. Personal immigration status, cost and disruption remain constraints; flat direction excludes planned expansion from the baseline.",
+          "zh": "研究估计 85 反映希思罗已实现的枢纽规模与国际连接，不以客流作为直接评分公式。个人移民身份、费用及中断仍构成约束；方向 0 不把规划扩建计入基线。"
+        },
+        "sourceUrls": ["https://mediacentre.heathrow.com/pressrelease/detail/24843"]
+      }
+    ]
+  },
+  {
+    "slug": "amsterdam",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 55,
+        "uncertainty": 18,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Estimate 55 reflects the municipality's combined flood, heavy-rain, heat and drought concerns, with a larger water-exposure discount than the inland Swiss cases. Adaptation policy is not completed protection; -2/decade is an assumed rising physical burden, not a flood-probability estimate.",
+          "zh": "研究估计 55 反映市政府识别的洪水、暴雨、高温和干旱复合风险，水暴露折减大于瑞士内陆案例。适应政策不等于已完成保护；每十年 -2 是物理负担增加假设，不是洪灾概率估计。"
+        },
+        "sourceUrls": [
+          "https://www.amsterdam.nl/bestuur-organisatie/beleid/voorbereiden-klimaatverandering/"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 75,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Estimate 75 uses a comparatively stable European national baseline with nonzero geopolitical spillovers. The regional risk profile is preparedness context, not war-frequency evidence; -1/decade reflects global interstate deterioration without claiming a calibrated metropolitan probability.",
+          "zh": "研究估计 75 采用相对稳定的欧洲国家背景并保留地缘外溢。区域风险档案是备灾背景，不是战争频率证据；每十年 -1 反映全球国家间恶化，不声称校准的都市圈概率。"
+        },
+        "sourceUrls": [
+          "https://openresearch.amsterdam/nl/page/120969/regionaal-risicoprofiel-2025-2028",
+          "https://www.uu.se/en/press/press-releases/2026/2026-06-09-ucdp-record-number-of-conflicts-between-states"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 75,
+        "uncertainty": 15,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Estimate 75 balances institutional monitoring and public reporting against rising victimisation in the 2025 local survey. A district index cannot represent every resident, and cybercrime is counted here only; flat direction assumes adaptive capacity broadly offsets pressures.",
+          "zh": "研究估计 75 平衡制度监测与公开报告能力，以及 2025 本地调查受害率上升。区级指数不能代表所有居民，网络犯罪只在此考虑；方向 0 假设适应能力大体抵消压力。"
+        },
+        "sourceUrls": [
+          "https://onderzoek.amsterdam.nl/artikel/openbare-orde-en-veiligheid-in-cijfers-2026",
+          "https://www.worldbank.org/en/publication/worldwide-governance-indicators"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 70,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Estimate 70 reflects an operating monitored water system but retains a material constraint for source-specific quality issues and incomplete energy/food redundancy evidence. The 2025 chlorate exceedances and 2026 standard change are not a simple trend; flat direction assumes ongoing control without guaranteed improvement.",
+          "zh": "研究估计 70 反映运行且受监测的供水系统，同时保留水源特定质量问题及能源粮食冗余证据不足的明显约束。2025 氯酸盐超标与 2026 标准变化不构成简单趋势；方向 0 假设持续控制而非保证改善。"
+        },
+        "sourceUrls": [
+          "https://www.waternet.nl/siteassets/ons-water/drinkwater/waterkwaliteit-rapporten/2025/drinkwater-leiduin-wettelijk-2025-jaar.pdf"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Estimate 75 reflects organised public-health surveillance and a substantial clinical research/provider environment. Population health monitoring does not establish universal timely or affordable care; flat direction assumes system continuity and keeps eFUA access uncertainty explicit.",
+          "zh": "研究估计 75 反映有组织的公共卫生监测及较强临床研究/医疗环境。人群健康监测不证明人人及时、可负担就医；方向 0 假设系统延续，并明确 eFUA 准入不确定性。"
+        },
+        "sourceUrls": [
+          "https://openresearch.amsterdam/nl/page/125996/gezondheidsmonitor-volwassenen-en-ouderen-2024",
+          "https://pure.amsterdamumc.nl/en/publications/senolytics-dasatinib-and-quercetin-in-metabolic-dysfunction-assoc-2/"
+        ]
+      },
+      {
+        "id": "LON",
+        "baseline": 60,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Estimate 60 recognises the 31-person disease-specific senolytic Phase 2 trial but gives equal importance to resident accessibility. The fibrosis signal and higher adverse-event frequency do not establish general longevity benefit or routine affordable access. +1/decade assumes cautious translation and access development rather than extrapolation of trial efficacy.",
+          "zh": "研究估计 60 认可 31 人特定疾病衰老细胞清除二期试验，同时同等重视居民可及。纤维化信号和更高不良事件频率不证明普遍长寿获益或常规可负担准入。每十年 +1 假设谨慎转化与准入发展，不外推试验疗效。"
+        },
+        "sourceUrls": [
+          "https://pure.amsterdamumc.nl/en/publications/senolytics-dasatinib-and-quercetin-in-metabolic-dysfunction-assoc-2/"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Estimate 75 reflects a digitally engaged population and a dedicated municipal skills/barriers monitor, while representative productivity benefits remain unproven. +1/decade assumes gradual nonmedical adoption; digital exclusion constrains the baseline and cybercrime is not penalised twice.",
+          "zh": "研究估计 75 反映居民数字参与及市级技能/障碍监测，但代表性生产率收益未证明。每十年 +1 假设非医疗采用逐步增加；数字排斥约束基线，网络犯罪不重复扣分。"
+        },
+        "sourceUrls": [
+          "https://onderzoek.amsterdam.nl/publicatie/monitor-amsterdammers-digitaal-2025",
+          "https://www.oecd.org/en/about/news/announcements/2026/01/ai-use-by-individuals-surges-across-the-oecd-as-adoption-by-firms-continues-to-expand.html"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 85,
+        "uncertainty": 17,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Estimate 85 reflects Schiphol's realised network of 300 destinations, including 124 intercontinental. Network reach is not residency or asset-transfer permission for each person; flat direction assumes continuity and retains nationality, cost and disruption limits.",
+          "zh": "研究估计 85 反映 Schiphol 已实现的 300 个目的地网络，其中洲际 124 个。网络可达不等于每个人的居留或资产转移许可；方向 0 假设延续并保留国籍、成本及中断限制。"
+        },
+        "sourceUrls": [
+          "https://nieuws.schiphol.nl/schiphol-in-2025-stillere-vliegtuigen-meer-tevreden-reizigers-en-solide-financiele-resultaten/"
+        ]
+      }
+    ]
+  }
+]

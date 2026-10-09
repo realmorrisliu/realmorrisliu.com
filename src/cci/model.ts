@@ -1,3 +1,9 @@
+import {
+  computeJudgmentResults,
+  validateJudgments,
+  type DimensionJudgment,
+  type ResearchModel,
+} from "./judgment";
 export const TARGET_YEARS = [2026, 2035, 2050, 2075, 2100] as const;
 
 export type TargetYear = (typeof TARGET_YEARS)[number];
@@ -179,6 +185,7 @@ export interface IndicatorInput {
 }
 
 export interface CityCandidate {
+  judgments?: DimensionJudgment[];
   slug: string;
   name: string;
   nameZh: string;
@@ -228,6 +235,7 @@ export interface CityEvidenceAudit {
 }
 
 export interface CandidateReleaseInput {
+  researchModel?: ResearchModel;
   releaseId: string;
   status: "research_preview" | "candidate" | "published";
   asOf: string;
@@ -269,6 +277,7 @@ export interface DistributionSummary {
 }
 
 export interface CityReleaseResult {
+  judgments?: DimensionJudgment[];
   slug: string;
   audit?: CityEvidenceAudit;
   name: string;
@@ -301,6 +310,7 @@ export interface CityReleaseResult {
 }
 
 export interface CciRelease {
+  researchModel?: ResearchModel;
   schemaVersion: "cci-release-v1";
   releaseId: string;
   status: CandidateReleaseInput["status"];
@@ -895,6 +905,7 @@ function computeCity(city: CityCandidate, input: CandidateReleaseInput): CityRel
 
 export function buildRelease(input: CandidateReleaseInput): CciRelease {
   validateInput(input);
+  validateJudgments(input);
   return {
     schemaVersion: "cci-release-v1",
     releaseId: input.releaseId,
@@ -911,8 +922,20 @@ export function buildRelease(input: CandidateReleaseInput): CciRelease {
     officialWeights: Object.fromEntries(
       DIMENSIONS.map(dimension => [dimension.id, dimension.weight])
     ) as Record<DimensionId, number>,
-    scenarioCount: SCENARIOS.length,
-    cities: input.cities.map(city => computeCity(city, input)),
+    scenarioCount: input.researchModel ? 0 : SCENARIOS.length,
+    cities: input.cities.map(city => {
+      const result = computeCity(city, input);
+      return input.researchModel
+        ? {
+            ...result,
+            judgments: city.judgments,
+            results: computeJudgmentResults(city, input),
+            rankingEligible: true,
+            notRankedReasons: [],
+          }
+        : result;
+    }),
+    ...(input.researchModel ? { researchModel: input.researchModel } : {}),
     ...(input.research ? { research: input.research } : {}),
   };
 }

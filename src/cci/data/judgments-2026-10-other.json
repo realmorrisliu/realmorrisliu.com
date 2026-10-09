@@ -1,0 +1,728 @@
+[
+  {
+    "slug": "boston",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 65,
+        "uncertainty": 15,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Research estimate 65/100 (judgment half-width ±15); subjective long-run direction -2/decade. Coastal exposure and the city heat scenario constrain otherwise substantial adaptation capacity; the negative direction assumes warming outpaces some protection.",
+          "zh": "研究估计 65/100（判断半宽 ±15）；主观长期方向每十年 -2 分。海岸暴露及市级高温情景限制较强的适应能力；负向假设升温仍会超过部分防护进展。"
+        },
+        "sourceUrls": [
+          "https://www.boston.gov/departments/climate-resilience/heat-resilience-solutions-boston"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research estimate 75/100 (judgment half-width ±18); subjective long-run direction -1/decade. A working police reporting system supports a relatively strong security judgment, but is not proof of low strategic exposure; slight deterioration allows for unmeasured geopolitical risk.",
+          "zh": "研究估计 75/100（判断半宽 ±18）；主观长期方向每十年 -1 分。正常运行的警方报告体系支持较强安全判断，但不能证明战略暴露低；小幅负向为未量化地缘风险预留空间。"
+        },
+        "sourceUrls": [
+          "https://police.boston.gov/2025/12/22/crime-statistics-january-1-2025-december-21-2025-vs-2024/"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 80,
+        "uncertainty": 15,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 80/100 (judgment half-width ±15); subjective long-run direction +1/decade. A dedicated resilience office and coastal planning suggest strong administrative capacity; modest improvement assumes implementation, with cohesion and recovery still uncertain.",
+          "zh": "研究估计 80/100（判断半宽 ±15）；主观长期方向每十年 +1 分。专设韧性办公室及海岸规划体现较强行政能力；小幅改善以落实为前提，社会凝聚与恢复成效仍不确定。"
+        },
+        "sourceUrls": ["https://www.boston.gov/departments/climate-resilience"]
+      },
+      {
+        "id": "RES",
+        "baseline": 75,
+        "uncertainty": 15,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research estimate 75/100 (judgment half-width ±15); subjective long-run direction -1/decade. Regional water infrastructure is strong, while the targeted lead exceedance shows important last-mile weakness; climate and ageing assets justify a mildly adverse direction.",
+          "zh": "研究估计 75/100（判断半宽 ±15）；主观长期方向每十年 -1 分。区域水务基础设施较强，但定向抽检铅超行动值暴露末端短板；气候及设施老化支持轻微负向假设。"
+        },
+        "sourceUrls": [
+          "https://www.mwra.com/your-water-system/drinking-water-quality/annual-water-quality-test-results-main/2025full"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 85,
+        "uncertainty": 15,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 85/100 (judgment half-width ±15); subjective long-run direction +1/decade. Specialist institutions and organized health assessment support high capacity, tempered by the local access-to-care priority; gradual improvement assumes better access rather than universal coverage today.",
+          "zh": "研究估计 85/100（判断半宽 ±15）；主观长期方向每十年 +1 分。专科机构和系统健康评估支持较高医疗能力，但当地仍将就医可及性列为重点；缓慢改善假设可及性提高，不声称目前全面覆盖。"
+        },
+        "sourceUrls": [
+          "https://www.boston.gov/government/cabinets/boston-public-health-commission/racial-justice-and-health-equity/bostonchna"
+        ]
+      },
+      {
+        "id": "LON",
+        "baseline": 70,
+        "uncertainty": 18,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "Research estimate 70/100 (judgment half-width ±18); subjective long-run direction +2/decade. Alzheimer treatment pathways and concentrated clinical research support substantial translational readiness. Broad resident access to validated regenerative or longevity interventions is not established, so readiness falls below strong-and-redundant capacity; growth assumes cautious evidence-based adoption.",
+          "zh": "研究估计 70/100（判断半宽 ±18）；主观长期方向每十年 +2 分。阿尔茨海默病治疗路径与集中临床研究支持较强转化准备度，但尚未证明普通居民广泛可及经验证的再生或长寿干预，因此不足以评为强大且有冗余；增长假设谨慎的循证采用。"
+        },
+        "sourceUrls": [
+          "https://www.massgeneral.org/neurology/treatments-and-services/memory-disorders-division"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 85,
+        "uncertainty": 15,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 85/100 (judgment half-width ±15); subjective long-run direction +1/decade. The documented life-sciences and research ecosystem supports a strong knowledge-capacity judgment; undated industry totals widen uncertainty and justify only modest growth.",
+          "zh": "研究估计 85/100（判断半宽 ±15）；主观长期方向每十年 +1 分。已记录的生命科学及科研生态支持较强知识能力判断；行业总量日期不明扩大不确定性，因此仅假设温和增长。"
+        },
+        "sourceUrls": [
+          "https://content.boston.gov/government/cabinets/economic-opportunity-and-inclusion/healthcare-and-life-sciences"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research estimate 80/100 (judgment half-width ±18); subjective long-run direction +0/decade. Multiple transit service types and formal reliability evaluation support substantial transport options; stable direction avoids assuming improvements in unmeasured residence or asset-transfer rights.",
+          "zh": "研究估计 80/100（判断半宽 ±18）；主观长期方向每十年 +0 分。多种公共交通服务及正式可靠性评估支持较丰富出行选择；法律居留和资产转移未测量，因此采用稳定方向。"
+        },
+        "sourceUrls": [
+          "https://www.opmidatablog.com/latest-posts/the-mbtas-2024-service-delivery-policy-changing-how-success-is-measured"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "san-francisco",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 50,
+        "uncertainty": 18,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Research estimate 50/100 (judgment half-width ±18); subjective long-run direction -2/decade. Seismic and climate hazards impose material constraints despite municipal adaptation planning; negative direction assumes rising climate burdens, with Bay Area geography unresolved.",
+          "zh": "研究估计 50/100（判断半宽 ±18）；主观长期方向每十年 -2 分。地震与气候灾害带来明显约束，市级适应规划只能部分抵消；负向假设气候负担上升，湾区范围仍未对齐。"
+        },
+        "sourceUrls": ["https://onesanfrancisco.org/hazards-and-climate-resilience-plan"]
+      },
+      {
+        "id": "GSS",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research estimate 75/100 (judgment half-width ±18); subjective long-run direction -1/decade. Police reporting provides a local accountability signal but no complete conflict assessment; relatively strong security is a regional-background judgment with a cautious adverse drift.",
+          "zh": "研究估计 75/100（判断半宽 ±18）；主观长期方向每十年 -1 分。警方报告提供本地问责信号，但并非完整冲突评估；较强安全是结合地区背景的研究判断，并采取谨慎负向变化。"
+        },
+        "sourceUrls": [
+          "https://media.api.sf.gov/documents/PoliceCommission5725-_Commission_Crime_Trends_Notes_05.07.25_1X6g5Kl.pdf"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 75,
+        "uncertainty": 15,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research estimate 75/100 (judgment half-width ±15); subjective long-run direction +0/decade. Civilian oversight and published complaint processing indicate institutional capacity; complaints are not prevalence rates, and unchanged direction reflects unresolved regional coordination.",
+          "zh": "研究估计 75/100（判断半宽 ±15）；主观长期方向每十年 +0 分。民间监督及公开投诉处理体现制度能力；投诉数不等于侵害率，跨区域协调未明，因此采用稳定方向。"
+        },
+        "sourceUrls": ["https://media.api.sf.gov/documents/Annual_Statistical_Report_2025.html"]
+      },
+      {
+        "id": "RES",
+        "baseline": 70,
+        "uncertainty": 15,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research estimate 70/100 (judgment half-width ±15); subjective long-run direction -1/decade. SFPUC testing and regulatory compliance support strong service capacity, with climate and service-area gaps limiting resilience; mild decline assumes pressure on water and ageing networks.",
+          "zh": "研究估计 70/100（判断半宽 ±15）；主观长期方向每十年 -1 分。SFPUC 检测和监管合规支持较强服务能力，气候及供区缺口限制韧性；小幅下降假设供水与老化网络压力持续。"
+        },
+        "sourceUrls": [
+          "https://www.sfpuc.gov/about-us/news/sfpuc-releases-annual-water-quality-report-reflecting-century-investment-safe"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 85,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 85/100 (judgment half-width ±18); subjective long-run direction +1/decade. Major local clinical institutions and systematic needs assessment support specialist strength, but access gaps constrain the judgment; improvement assumes access catches up gradually.",
+          "zh": "研究估计 85/100（判断半宽 ±18）；主观长期方向每十年 +1 分。当地重要临床机构及系统需求评估支持专科优势，但可及性缺口限制判断；改善假设就医机会逐步追上能力。"
+        },
+        "sourceUrls": ["https://sfhip.org/chna/sf-chna/"]
+      },
+      {
+        "id": "LON",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "Research estimate 75/100 (judgment half-width ±18); subjective long-run direction +2/decade. Stanford trial infrastructure and regional research support substantial translational readiness, but neither broad affordable access nor validated general longevity interventions are established. The level remains below strong-and-redundant capacity; growth assumes evidence matures and access improves.",
+          "zh": "研究估计 75/100（判断半宽 ±18）；主观长期方向每十年 +2 分。斯坦福试验基础设施及区域研究支持较强转化准备度，但尚未证明广泛可负担接入或经验证的普遍长寿干预，故仍低于强大且有冗余水平；增长假设证据成熟且可及性改善。"
+        },
+        "sourceUrls": ["https://clinicaltrials.stanford.edu/app/ct.sm.html/"]
+      },
+      {
+        "id": "TEC",
+        "baseline": 90,
+        "uncertainty": 15,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 90/100 (judgment half-width ±15); subjective long-run direction +1/decade. The observed SF–San Mateo information employment base supports high industry concentration; boundary mismatch and the difference between information and all technology limit certainty and growth.",
+          "zh": "研究估计 90/100（判断半宽 ±15）；主观长期方向每十年 +1 分。SF—圣马特奥观测到的信息行业就业基础支持高度产业集聚；边界不匹配且信息行业不等于全部科技，限制确定性和增长幅度。"
+        },
+        "sourceUrls": ["https://media.api.sf.gov/documents/WISF_Meeting_Packet_12102025_final.pdf"]
+      },
+      {
+        "id": "OPT",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research estimate 80/100 (judgment half-width ±18); subjective long-run direction +0/decade. BART and partner-agency coordination support diverse regional transport options; geography, disruption alternatives and legal mobility are incomplete, so the assumed direction is flat.",
+          "zh": "研究估计 80/100（判断半宽 ±18）；主观长期方向每十年 +0 分。BART 及合作机构协调支持多样区域交通选择；地理范围、中断替代与法律迁移能力不完整，因此假设方向持平。"
+        },
+        "sourceUrls": ["https://www.bart.gov/news/articles/2025/news20251222"]
+      }
+    ]
+  },
+  {
+    "slug": "toronto",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 70,
+        "uncertainty": 15,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Research estimate 70/100 (judgment half-width ±15); subjective long-run direction -2/decade. Climate assessment indicates warmer and wetter conditions, but organized adaptation supports above-middle resilience; decline assumes increasing heat and flood pressure.",
+          "zh": "研究估计 70/100（判断半宽 ±15）；主观长期方向每十年 -2 分。气候评估显示更热更湿，有组织适应支持中上韧性；下降假设高温与洪水压力持续增加。"
+        },
+        "sourceUrls": [
+          "https://www.toronto.ca/services-payments/water-environment/environmentally-friendly-city-initiatives/becoming-a-climate-ready-toronto/"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research estimate 80/100 (judgment half-width ±18); subjective long-run direction -1/decade. Police reporting and Canadian national background support a strong security judgment; incompatible crime series and unmeasured strategic risks preclude greater precision or a zero-risk claim.",
+          "zh": "研究估计 80/100（判断半宽 ±18）；主观长期方向每十年 -1 分。警方报告及加拿大国家背景支持较强安全判断；犯罪序列不兼容且战略风险未测量，不能进一步精确化或宣称零风险。"
+        },
+        "sourceUrls": [
+          "https://www.tps.ca/media/filer_public/da/56/da567ea3-47fe-43dc-b268-ef8201a9d297/b8f15a2f-7544-40cb-b2b9-32eba49deb3c.pdf"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 80,
+        "uncertainty": 15,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research estimate 80/100 (judgment half-width ±15); subjective long-run direction +0/decade. Published financial reporting and climate assessment suggest strong institutional capacity; without extracted recovery or cohesion outcomes, the long-term direction remains neutral.",
+          "zh": "研究估计 80/100（判断半宽 ±15）；主观长期方向每十年 +0 分。公开财务报告及气候评估体现较强制度能力；未提取恢复或凝聚力结果，长期方向采用中性假设。"
+        },
+        "sourceUrls": [
+          "https://www.toronto.ca/city-government/budget-finances/city-finance/annual-financial-report/"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 80,
+        "uncertainty": 15,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research estimate 80/100 (judgment half-width ±15); subjective long-run direction -1/decade. Systematic water testing and compliance reporting support strong essential-service capacity; the estimate discounts unmeasured food and energy redundancy and assumes modest climate pressure.",
+          "zh": "研究估计 80/100（判断半宽 ±15）；主观长期方向每十年 -1 分。系统水质检测与合规报告支持较强基本服务能力；估计考虑未测量的食品能源冗余缺口，并假设轻微气候压力。"
+        },
+        "sourceUrls": [
+          "https://www.toronto.ca/services-payments/water-environment/tap-water-in-toronto/tap-water-quality-system-reports/"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 75/100 (judgment half-width ±18); subjective long-run direction +1/decade. Population-health monitoring and local clinical institutions support substantial care capacity; documented inequality and unextracted access measures constrain the level, with gradual improvement assumed.",
+          "zh": "研究估计 75/100（判断半宽 ±18）；主观长期方向每十年 +1 分。人口健康监测及当地临床机构支持较强医疗能力；已记录不平等及未提取的可及性指标限制分数，假设逐步改善。"
+        },
+        "sourceUrls": [
+          "https://www.toronto.ca/community-people/health-wellness-care/health-inspections-monitoring/population-health-status-indicators/"
+        ]
+      },
+      {
+        "id": "LON",
+        "baseline": 60,
+        "uncertainty": 18,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "Research estimate 60/100 (judgment half-width ±18); subjective long-run direction +2/decade. Baycrest provides an established brain-health research pathway, supporting readiness with material gaps. Trial translation does not establish broadly accessible validated regenerative or longevity interventions; growth assumes both evidence and resident access improve.",
+          "zh": "研究估计 60/100（判断半宽 ±18）；主观长期方向每十年 +2 分。Baycrest 提供已有脑健康科研路径，支持具备能力但仍有明显短板的准备度。试验转化不等于居民广泛可及经验证再生或长寿干预；增长假设证据和居民可及性同时改善。"
+        },
+        "sourceUrls": [
+          "https://www.baycrest.org/all-entities/baycrest-academy-for-research-and-education/research-units/anne-allan-bank-centre-for-clinical-research-trials/"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 80,
+        "uncertainty": 15,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 80/100 (judgment half-width ±15); subjective long-run direction +1/decade. The employment survey and research institutions support a strong knowledge economy; municipal boundaries and incomplete digital-diffusion measures justify restrained positive direction.",
+          "zh": "研究估计 80/100（判断半宽 ±15）；主观长期方向每十年 +1 分。就业调查与科研机构支持较强知识经济；市级边界及不完整的数字普及测量使正向幅度保持克制。"
+        },
+        "sourceUrls": [
+          "https://www.toronto.ca/city-government/data-research-maps/research-reports/planning-development/toronto-employment-survey/"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 75,
+        "uncertainty": 15,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 75/100 (judgment half-width ±15); subjective long-run direction +1/decade. Observed TTC service volumes and punctuality show functioning transport with room to improve; a modest positive direction concerns service delivery, not unverified legal mobility rights.",
+          "zh": "研究估计 75/100（判断半宽 ±15）；主观长期方向每十年 +1 分。TTC 服务量和准点率观测体现正常运行且仍可改善的交通；小幅正向针对服务交付，不代表未核实的法律迁移权利。"
+        },
+        "sourceUrls": [
+          "https://coupler.ttc.ca/news/message-from-the-executives/2026/Jun/CEO-Report-June-Commentary"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "melbourne",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 60,
+        "uncertainty": 15,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Research estimate 60/100 (judgment half-width ±15); subjective long-run direction -2/decade. Heat, coastal and river flooding create meaningful exposure despite active planning; the negative direction assumes climate intensification partly exceeds adaptation.",
+          "zh": "研究估计 60/100（判断半宽 ±15）；主观长期方向每十年 -2 分。高温、海岸及河流洪水构成明显暴露，主动规划只能部分抵消；负向假设气候增强部分超过适应进展。"
+        },
+        "sourceUrls": [
+          "https://participate.melbourne.vic.gov.au/amendment-c384/water-and-flooding-melbourne"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research estimate 80/100 (judgment half-width ±18); subjective long-run direction +0/decade. Official offence reporting and Australian national background support relatively strong security; council-level data cannot settle strategic exposure, so a stable direction retains a wide judgment range.",
+          "zh": "研究估计 80/100（判断半宽 ±18）；主观长期方向每十年 +0 分。官方犯罪报告及澳大利亚国家背景支持相对较强安全；地方政府数据不能解决战略暴露，因此采用稳定方向与较宽判断区间。"
+        },
+        "sourceUrls": [
+          "https://discover.data.vic.gov.au/dataset/data-tables-recorded-offences/historical"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 80,
+        "uncertainty": 15,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 80/100 (judgment half-width ±15); subjective long-run direction +1/decade. Community preparedness and established municipal programmes support strong adaptive institutions; slight improvement assumes plans become practical recovery capacity.",
+          "zh": "研究估计 80/100（判断半宽 ±15）；主观长期方向每十年 +1 分。社区应急准备及既有市政项目支持较强适应制度；小幅改善假设计划转化为实际恢复能力。"
+        },
+        "sourceUrls": ["https://participate.melbourne.vic.gov.au/community-resilience"]
+      },
+      {
+        "id": "RES",
+        "baseline": 65,
+        "uncertainty": 15,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Research estimate 65/100 (judgment half-width ±15); subjective long-run direction -2/decade. Large storage and managed water systems provide capacity, but the observed storage decline and rainfall deficit reveal constraints; adverse direction assumes persistent climate-demand pressure.",
+          "zh": "研究估计 65/100（判断半宽 ±15）；主观长期方向每十年 -2 分。大型水库和管理体系提供能力，但观测到的库容下降与降雨不足显示约束；负向假设气候和需求压力持续。"
+        },
+        "sourceUrls": [
+          "https://www.melbournewater.com.au/media/eyJtZWRpYSI6IjI5ODY2In0%3D/downloads"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 80,
+        "uncertainty": 15,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 80/100 (judgment half-width ±15); subjective long-run direction +1/decade. Statutory hospital reporting and major clinical institutions support strong care capacity; single-provider evidence leaves metropolitan access uncertain, with gradual improvement assumed.",
+          "zh": "研究估计 80/100（判断半宽 ±15）；主观长期方向每十年 +1 分。法定医院报告及重要临床机构支持较强医疗能力；单一机构证据使都市圈可及性不确定，假设缓慢改善。"
+        },
+        "sourceUrls": ["https://www.thermh.org.au/about/reports-policies/annual-reports"]
+      },
+      {
+        "id": "LON",
+        "baseline": 60,
+        "uncertainty": 18,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "Research estimate 60/100 (judgment half-width ±18); subjective long-run direction +2/decade. Monash and ASPREE support ageing-research and clinical-trial readiness, but research strength is not proof of broadly accessible validated regenerative or longevity interventions. The constrained level reflects the translation-access gap; growth assumes evidence-based delivery improves.",
+          "zh": "研究估计 60/100（判断半宽 ±18）；主观长期方向每十年 +2 分。莫纳什及 ASPREE 支持老龄科研和临床试验准备度，但科研优势不能证明居民广泛可及经验证的再生或长寿干预。受限水平体现转化与可及性缺口；增长假设循证交付改善。"
+        },
+        "sourceUrls": [
+          "https://research.monash.edu/en/projects/aspree-completion-project/publications/"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 80/100 (judgment half-width ±18); subjective long-run direction +1/decade. The municipal knowledge-economy strategy and research base support a strong capability estimate; strategy is not measured diffusion, so growth stays modest and uncertainty broad.",
+          "zh": "研究估计 80/100（判断半宽 ±18）；主观长期方向每十年 +1 分。市级知识经济策略及科研基础支持较强能力估计；策略不是已测量普及，因此增长保持温和且不确定性较宽。"
+        },
+        "sourceUrls": [
+          "https://participate.melbourne.vic.gov.au/economic-development-strategy-2025-29/draft"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 70,
+        "uncertainty": 15,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 70/100 (judgment half-width ±15); subjective long-run direction +1/decade. Observed train punctuality and reliability support workable transport options, with incomplete all-mode redundancy; positive direction assumes operational gains, not increased migration rights.",
+          "zh": "研究估计 70/100（判断半宽 ±15）；主观长期方向每十年 +1 分。火车准点率及可靠性观测支持有效出行选择，但多方式冗余不完整；正向假设运营改善，不代表迁移权利增加。"
+        },
+        "sourceUrls": [
+          "https://www.ptv.vic.gov.au/footer/data-and-reporting/network-performance/monthly-performance/"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "dubai",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 35,
+        "uncertainty": 18,
+        "trendPerDecade": -3,
+        "rationale": {
+          "en": "Research estimate 35/100 (judgment half-width ±18); subjective long-run direction -3/decade. Heat-humidity exposure and major planned drainage works indicate substantial physical constraints; stronger negative direction assumes worsening climate, while announced protection is not counted as delivered.",
+          "zh": "研究估计 35/100（判断半宽 ±18）；主观长期方向每十年 -3 分。高温湿度暴露及大规模拟建排水工程表明明显物理约束；较强负向假设气候恶化，不将宣布的防护视为已交付。"
+        },
+        "sourceUrls": ["https://www.dm.gov.ae/بلدية-دبي-تُرسي-عقود-4-مشاريع-ضمن-مراحل/?lang=ar"]
+      },
+      {
+        "id": "GSS",
+        "baseline": 45,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research estimate 45/100 (judgment half-width ±20); subjective long-run direction -1/decade. Gulf strategic exposure is treated as a material regional-background constraint; the inaccessible police table means no crime rate is inferred. Slight deterioration is an uncertainty-aware assumption, not an event forecast. The cited event dataset is a research reference; no local event extraction supports this number.",
+          "zh": "研究估计 45/100（判断半宽 ±20）；主观长期方向每十年 -1 分。将海湾战略暴露作为重要地区背景约束；警方统计表无法访问，不推导犯罪率。小幅恶化是考虑不确定性的假设，非事件预测。 所引事件数据集仅为研究参考，没有当地事件提取直接支持此数值。"
+        },
+        "sourceUrls": ["https://ucdp.uu.se/downloads/"]
+      },
+      {
+        "id": "ISR",
+        "baseline": 65,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 65/100 (judgment half-width ±18); subjective long-run direction +1/decade. Statistical standards and coordinated infrastructure programmes support meaningful administrative capacity; independent outcomes and inclusion remain weakly evidenced, so improvement is modest.",
+          "zh": "研究估计 65/100（判断半宽 ±18）；主观长期方向每十年 +1 分。统计标准及协调基础设施项目支持较强行政能力；独立结果和包容性证据较弱，因此仅假设小幅改善。"
+        },
+        "sourceUrls": [
+          "https://www.dsc.gov.ae/Public%20Documents/About%20DSC/Charter%20of%20Quality%20of%20Statistical%20Data%20-%20EN.pdf"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 45,
+        "uncertainty": 18,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research estimate 45/100 (judgment half-width ±18); subjective long-run direction -1/decade. DEWA demonstrates large operational capacity, but desalinated-water dependence links water to energy continuity; slight decline assumes demand and compound disruption risks offset investment.",
+          "zh": "研究估计 45/100（判断半宽 ±18）；主观长期方向每十年 -1 分。DEWA 展示大型运营能力，但海淡依赖将用水与能源连续性相连；小幅下降假设需求和复合中断风险抵消部分投资。"
+        },
+        "sourceUrls": [
+          "https://www.dewa.gov.ae/en/about-us/media-publications/latest-news/2026/2/dubai-electricity-and-water-authority-pjsc"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 70,
+        "uncertainty": 18,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "Research estimate 70/100 (judgment half-width ±18); subjective long-run direction +2/decade. Household surveys and public/private capacity planning support substantial clinical provision; migrant and financial access gaps limit confidence, while investment is assumed to improve delivery.",
+          "zh": "研究估计 70/100（判断半宽 ±18）；主观长期方向每十年 +2 分。家庭调查及公私医疗容量规划支持较强医疗供给；移民和经济可及性缺口限制信心，假设投资提升服务交付。"
+        },
+        "sourceUrls": ["https://dha.gov.ae/opendata"]
+      },
+      {
+        "id": "LON",
+        "baseline": 45,
+        "uncertainty": 20,
+        "trendPerDecade": 3,
+        "rationale": {
+          "en": "Research estimate 45/100 (judgment half-width ±20); subjective long-run direction +3/decade. The new Longevity Authority and trial framework provide regulatory preparation, not mature clinical translation or broad affordable access to validated regenerative or longevity interventions. Faster assumed growth starts from this constrained base and depends on implementation and evidence.",
+          "zh": "研究估计 45/100（判断半宽 ±20）；主观长期方向每十年 +3 分。新长寿管理局及试验框架提供监管准备，并非成熟临床转化或居民广泛可负担的经验证再生、长寿干预。较快增长假设从这一受限基础起步，依赖实际落实和证据积累。"
+        },
+        "sourceUrls": [
+          "https://www.dha.gov.ae/uploads/042023/Clinical%20Trials%20Policy2023415239.pdf",
+          "https://dlp.dubai.gov.ae/Legislation%20Reference/2026/Law%20No.%20%2817%29%20of%202026%20Establishing%20the%20Dubai%20Longevity%20Authority.html"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "Research estimate 75/100 (judgment half-width ±18); subjective long-run direction +2/decade. Documented government AI use cases support substantial deployment capacity; selected self-reported cases are not independent economy-wide diffusion, so high ambition receives only a qualified positive direction.",
+          "zh": "研究估计 75/100（判断半宽 ±18）；主观长期方向每十年 +2 分。已记录政府 AI 案例支持较强部署能力；精选自报案例不是独立全经济普及测量，因此对较高投入仅给予有限正向假设。"
+        },
+        "sourceUrls": [
+          "https://www.digitaldubai.ae/knowledge-hub/publications/dubai-state-of-ai-report-2025"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research estimate 60/100 (judgment half-width ±20); subjective long-run direction +0/decade. Organized transport services support practical options, but residency, asset portability and regional disruption are not verified; the mid-range estimate and flat direction explicitly reflect those constraints.",
+          "zh": "研究估计 60/100（判断半宽 ±20）；主观长期方向每十年 +0 分。有组织交通服务支持实际选择，但居留、资产可携性及区域中断尚未核实；中等估计与持平方向明确考虑这些约束。"
+        },
+        "sourceUrls": ["https://rta.ae/wps/portal/rta/ae/home/open-data"]
+      }
+    ]
+  },
+  {
+    "slug": "sao-paulo",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 45,
+        "uncertainty": 18,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Research estimate 45/100 (judgment half-width ±18); subjective long-run direction -2/decade. Municipal climate planning acknowledges significant heat and flood constraints; negative direction assumes exposure grows faster than uneven implementation.",
+          "zh": "研究估计 45/100（判断半宽 ±18）；主观长期方向每十年 -2 分。市级气候规划承认明显高温与洪水约束；负向假设暴露增长快于不均衡实施。"
+        },
+        "sourceUrls": ["https://prefeitura.sp.gov.br/web/planclimasp"]
+      },
+      {
+        "id": "GSS",
+        "baseline": 45,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research estimate 45/100 (judgment half-width ±20); subjective long-run direction +0/decade. Police reporting systems provide a basis for review, while organized violence and underreporting remain unresolved; the constrained level is a regional-background judgment, with no invented crime trend.",
+          "zh": "研究估计 45/100（判断半宽 ±20）；主观长期方向每十年 +0 分。警方报告体系提供审核基础，但有组织暴力及漏报仍未解决；受约束水平属于结合地区背景的判断，不编造犯罪趋势。"
+        },
+        "sourceUrls": ["https://www.ssp.sp.gov.br/transparenciassp/Apresentacao.aspx"]
+      },
+      {
+        "id": "ISR",
+        "baseline": 55,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 55/100 (judgment half-width ±18); subjective long-run direction +1/decade. Municipal integrity reporting and climate programmes show functioning institutions, but implementation and regional coordination constrain capacity; gradual improvement is assumed rather than measured.",
+          "zh": "研究估计 55/100（判断半宽 ±18）；主观长期方向每十年 +1 分。市级廉政报告及气候项目说明制度正常运转，但实施与区域协调限制能力；逐步改善属于假设而非观测。"
+        },
+        "sourceUrls": [
+          "https://smartsampa.prefeitura.sp.gov.br/web/controladoria_geral/w/cgm-sp-apresenta-relat%C3%B3rio-anual-de-atividades-2025-e-destaca-avan%C3%A7os-em-governan%C3%A7a-integridade-e-transpar%C3%AAncia"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 50,
+        "uncertainty": 18,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research estimate 50/100 (judgment half-width ±18); subjective long-run direction -1/decade. Systematic utility sampling supports basic capacity, but household continuity, drought and service-area disparities are unresolved; mild decline assumes climate-demand pressure persists.",
+          "zh": "研究估计 50/100（判断半宽 ±18）；主观长期方向每十年 -1 分。系统公用事业抽样支持基本能力，但家庭连续供水、干旱及服务区差异未解决；轻微下降假设气候需求压力持续。"
+        },
+        "sourceUrls": [
+          "https://www.sabesp.com.br/o-que-fazemos/fornecimento-agua/qualidade-agua/analises-anuais-qualidade-agua-distribuida"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 60,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 60/100 (judgment half-width ±18); subjective long-run direction +1/decade. Municipal accountability and academic clinical capacity support meaningful healthcare, with access inequality and incomplete metropolitan coverage limiting the estimate; slow improvement is assumed.",
+          "zh": "研究估计 60/100（判断半宽 ±18）；主观长期方向每十年 +1 分。市级问责及学术临床能力支持较强医疗基础，但就医不平等与都市圈覆盖不完整限制估计；假设缓慢改善。"
+        },
+        "sourceUrls": ["https://prefeitura.sp.gov.br/saude/prestacao_de_contas/"]
+      },
+      {
+        "id": "LON",
+        "baseline": 45,
+        "uncertainty": 20,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "Research estimate 45/100 (judgment half-width ±20); subjective long-run direction +2/decade. USP’s cognitive trial demonstrates local research activity, but mature translation, validated regenerative or longevity interventions and broad affordable resident access are unproven. The constrained readiness estimate preserves those gaps; growth assumes gradual translation and inclusion.",
+          "zh": "研究估计 45/100（判断半宽 ±20）；主观长期方向每十年 +2 分。USP 认知试验说明存在本地研究活动，但成熟转化、经验证的再生或长寿干预以及居民广泛可负担接入尚未证明。受限准备度估计保留这些缺口；增长假设转化和普惠覆盖逐步改善。"
+        },
+        "sourceUrls": ["https://repositorio.usp.br/item/003296178"]
+      },
+      {
+        "id": "TEC",
+        "baseline": 70,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 70/100 (judgment half-width ±18); subjective long-run direction +1/decade. FAPESP’s research ecosystem and indicator infrastructure support substantial knowledge capacity; state-level evidence overstates city precision, warranting a restrained upward assumption.",
+          "zh": "研究估计 70/100（判断半宽 ±18）；主观长期方向每十年 +1 分。FAPESP 科研生态和指标基础支持较强知识能力；州级证据不能精确代表城市，因此仅采用克制的上行假设。"
+        },
+        "sourceUrls": ["https://indicadorescti.fapesp.br/sobre/"]
+      },
+      {
+        "id": "OPT",
+        "baseline": 55,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 55/100 (judgment half-width ±18); subjective long-run direction +1/decade. Metro operations provide practical mobility, but excluded concession lines prevent a complete network assessment; modest improvement assumes coordination gains while legal and asset options remain uncertain.",
+          "zh": "研究估计 55/100（判断半宽 ±18）；主观长期方向每十年 +1 分。地铁运营提供实际流动性，但特许线路缺失阻碍全网评估；小幅改善假设协调提高，法律及资产选择仍不确定。"
+        },
+        "sourceUrls": [
+          "https://www.metro.sp.gov.br/pt_BR/metro/sustentabilidade/relatorio-integrado/"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cape-town",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 40,
+        "uncertainty": 18,
+        "trendPerDecade": -3,
+        "rationale": {
+          "en": "Research estimate 40/100 (judgment half-width ±18); subjective long-run direction -3/decade. Identified rainfall decline and hotter extremes create substantial physical exposure; strong negative direction assumes drought and heat pressures outpace uneven adaptation.",
+          "zh": "研究估计 40/100（判断半宽 ±18）；主观长期方向每十年 -3 分。已识别降雨下降及极端高温构成较大物理暴露；较强负向假设旱热压力超过不均衡适应。"
+        },
+        "sourceUrls": [
+          "https://www.capetown.gov.za/family-and-home/greener-living/why-go-green/lets-act-against-climate-change/climate-change/"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 30,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research estimate 30/100 (judgment half-width ±20); subjective long-run direction +0/decade. Station-level reporting and the unresolved organized-violence burden justify a structurally constrained security judgment; no metro crime rate or improvement trend is inferred from enforcement-driven counts.",
+          "zh": "研究估计 30/100（判断半宽 ±20）；主观长期方向每十年 +0 分。警署级报告及未解决的有组织暴力负担支持结构性受限的安全判断；不从受执法影响的数量推导都市圈犯罪率或改善趋势。"
+        },
+        "sourceUrls": [
+          "https://www.saps.gov.za/services/downloads/2024/2024-2025_Q4_crime_stats.pdf"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 55,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 55/100 (judgment half-width ±18); subjective long-run direction +1/decade. Annual and oversight reporting support functioning municipal accountability, but social and recovery disparities constrain systemwide capacity; modest progress assumes implementation continues.",
+          "zh": "研究估计 55/100（判断半宽 ±18）；主观长期方向每十年 +1 分。年度及监督报告支持正常市政问责，但社会与恢复差异限制全系统能力；小幅进步假设实施持续。"
+        },
+        "sourceUrls": [
+          "https://www.capetown.gov.za/work-and-business/city-publications/publications-and-reports/annual-reports/"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 40,
+        "uncertainty": 18,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Research estimate 40/100 (judgment half-width ±18); subjective long-run direction -2/decade. Water-quality reporting supports operational capacity, while drought reserve adequacy and unequal reliable access remain material gaps; decline assumes climate and demand pressure persist.",
+          "zh": "研究估计 40/100（判断半宽 ±18）；主观长期方向每十年 -2 分。水质报告支持运营能力，但抗旱储备充分性及稳定用水不平等仍是明显缺口；下降假设气候需求压力持续。"
+        },
+        "sourceUrls": [
+          "https://www.capetown.gov.za/family-and-home/residential-utility-services/residential-water-and-sanitation-services/water-quality"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 55,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 55/100 (judgment half-width ±18); subjective long-run direction +1/decade. Provincial health reporting and local specialist institutions show meaningful clinical capability; city allocation and access inequality limit resident-level protection, with gradual improvement assumed.",
+          "zh": "研究估计 55/100（判断半宽 ±18）；主观长期方向每十年 +1 分。省级卫生报告及当地专科机构体现一定临床能力；城市分配和就医不平等限制居民保障，假设逐步改善。"
+        },
+        "sourceUrls": [
+          "https://www.westerncape.gov.za/health-wellness/files/wcg-blob-files?file=2025-10%2Fwcdhw-annual-report-2024-2025.pdf&type=file"
+        ]
+      },
+      {
+        "id": "LON",
+        "baseline": 35,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 35/100 (judgment half-width ±20); subjective long-run direction +1/decade. UCT geriatric services provide a research-care foundation, but mature trial translation and broad affordable access to validated regenerative or longevity interventions are not established. Substantial access and implementation constraints keep readiness low; only modest gains are assumed.",
+          "zh": "研究估计 35/100（判断半宽 ±20）；主观长期方向每十年 +1 分。UCT 老年医学服务提供科研医疗基础，但成熟试验转化和居民广泛可负担的经验证再生、长寿干预尚未证明。明显可及性与实施约束使准备度偏低；仅假设小幅提升。"
+        },
+        "sourceUrls": ["https://health.uct.ac.za/department-medicine/division/geriatric-medicine"]
+      },
+      {
+        "id": "TEC",
+        "baseline": 55,
+        "uncertainty": 18,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "Research estimate 55/100 (judgment half-width ±18); subjective long-run direction +2/decade. Municipal fibre infrastructure and UCT support a functioning knowledge base; undated inventories do not prove household inclusion, so growth assumes diffusion from a constrained base.",
+          "zh": "研究估计 55/100（判断半宽 ±18）；主观长期方向每十年 +2 分。市级光纤基础设施及 UCT 支持正常知识基础；无日期清单不能证明家庭包容性，增长假设从受限基础逐步普及。"
+        },
+        "sourceUrls": [
+          "https://www.capetown.gov.za/work%20and%20business/Get-online/Commercial-telecommunication-services/Commercial-telecommunications-services"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 45,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research estimate 45/100 (judgment half-width ±20); subjective long-run direction +1/decade. Municipal bus services supply real options but incomplete multimodal redundancy and financial access constrain mobility; mild improvement assumes service expansion, not new legal rights.",
+          "zh": "研究估计 45/100（判断半宽 ±20）；主观长期方向每十年 +1 分。市营公交提供实际选择，但多方式冗余及经济可及性不完整限制流动性；小幅改善假设服务扩展，非新增法律权利。"
+        },
+        "sourceUrls": [
+          "https://www.myciti.org.za/en/contact/media-releases/annual-fare-adjustment-july-2025/"
+        ]
+      }
+    ]
+  }
+]
