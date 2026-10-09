@@ -161,7 +161,19 @@ const uiData = JSON.stringify({
 >
   <p id="cci-runtime-status" class="sr-only" aria-live="polite">{t.runtime.loading}</p>
   <header class="cci-site-header">
-    <a class="cci-brand" href="/">Morris Liu</a>
+    <a
+      class="cci-brand"
+      href="#index"
+      aria-label={currentLang === "zh" ? "CCI · 世纪城市指数" : "CCI · Century City Index"}
+    >
+      <svg viewBox="0 0 100 36" width="100" height="36" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="currentColor" stroke-width="3">
+          <path d="M29 8a14 14 0 1 0 0 20M63 8a14 14 0 1 0 0 20"></path>
+          <path d="M77 4h16M85 4v28M77 32h16"></path>
+        </g>
+        <path fill="currentColor" d="M0 35h100v1H0zM96 3h4v4h-4z"></path>
+      </svg>
+    </a>
     <nav class="cci-site-nav" aria-label={currentLang === "zh" ? "页面导航" : "Page navigation"}>
       <a class="is-active" href="#index">{t.nav.index}</a>
       <a href="#method">{t.nav.method}</a>
@@ -177,14 +189,15 @@ const uiData = JSON.stringify({
           {
             currentLang === "zh" ? (
               <>
-                <>
-                  <span class="cci-title-phrase">世纪城市</span>
-                  <wbr />
-                  <span class="cci-title-phrase">指数</span>
-                </>
+                <span class="cci-title-phrase">世纪城市</span>
+                <wbr />
+                <span class="cci-title-phrase">指数</span>
               </>
             ) : (
-              t.hero.title
+              <>
+                <span class="cci-title-phrase">Century City</span>{" "}
+                <span class="cci-title-phrase">Index</span>
+              </>
             )
           }
         </h1>
