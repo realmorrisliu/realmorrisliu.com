@@ -18,6 +18,21 @@
   font-family: var(--font-sans);
   font-size: var(--cci-type-body);
   line-height: 1.65;
+  font-kerning: normal;
+  font-optical-sizing: auto;
+}
+
+.cci-page :where(h1, h2, h3, h4) {
+  text-wrap: balance;
+}
+
+.cci-page :where(p, li) {
+  text-wrap: pretty;
+}
+
+.cci-title-phrase {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .cci-page :where(a) {
@@ -253,9 +268,9 @@
   border-top: 1px solid var(--cci-faint);
   border-bottom: 1px solid var(--cci-faint);
   padding: 1.4rem 0;
-  font-family: var(--font-mono);
-  font-size: var(--cci-type-mono);
-  letter-spacing: 0.035em;
+  font-size: var(--cci-type-label);
+  font-variant-numeric: lining-nums tabular-nums;
+  gap: 0.75rem 2rem;
 }
 
 .cci-release-rail span:last-child {
@@ -264,6 +279,7 @@
 
 .cci-release-rail strong {
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .cci-control-deck {
@@ -333,8 +349,8 @@
 
 .cci-research article h3 {
   margin-bottom: 0.75rem;
-  font-family: var(--font-mono);
-  font-size: var(--cci-type-mono);
+  font-size: var(--cci-type-label);
+  font-weight: 600;
 }
 
 .cci-research article a {
@@ -400,6 +416,7 @@
   border-collapse: collapse;
   font-size: var(--cci-type-label);
   text-align: left;
+  font-variant-numeric: lining-nums tabular-nums;
 }
 
 .cci-page thead {
@@ -621,7 +638,7 @@
 }
 
 .cci-ledger-title-row,
-.cci-dimension-row summary {
+.cci-dimension-row > summary {
   display: grid;
   grid-template-columns: 3rem minmax(13rem, 1fr) 5.5rem 6.5rem 6.5rem;
   align-items: center;
@@ -654,14 +671,14 @@
   border-bottom: 1px solid var(--cci-rule-light);
 }
 
-.cci-dimension-row summary {
+.cci-dimension-row > summary {
   min-height: 54px;
   cursor: pointer;
   font-size: var(--cci-type-label);
   list-style-position: outside;
 }
 
-.cci-dimension-row summary::marker {
+.cci-dimension-row > summary::marker {
   color: var(--cci-faint);
   font-size: var(--cci-type-mono);
 }
@@ -693,6 +710,32 @@
 
 .cci-subpillar-list p {
   margin: 0.5rem 0 0;
+}
+
+.cci-subpillar-list [data-dimension-audit] {
+  max-width: 65ch;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--cci-rule-light);
+  padding-top: 1.25rem;
+  font-size: var(--cci-type-body);
+}
+
+.cci-subpillar-list [data-dimension-audit] h4 {
+  margin: 0 0 0.75rem;
+  color: var(--cci-ink);
+  font-size: var(--cci-type-body);
+  font-weight: 600;
+}
+
+.cci-subpillar-list [data-audit-sources] {
+  display: block;
+  margin-top: 1rem;
+  font-size: var(--cci-type-label);
+  overflow-wrap: anywhere;
+}
+
+.cci-subpillar-list [data-audit-sources] li + li {
+  margin-top: 0.75rem;
 }
 
 .cci-tail-ledger {
@@ -1165,12 +1208,40 @@
 }
 
 :lang(zh) .cci-page {
+  --cci-type-display: clamp(3rem, 1.25rem + 3.25vw, 4.5rem);
   font-family: var(--font-chinese-sans);
   line-height: var(--line-height-chinese-relaxed);
+  line-break: strict;
+  text-autospace: normal;
+  text-spacing-trim: trim-start;
 }
 
 :lang(zh) .cci-page :where(h1, h2, h3, h4, .cci-brand) {
   font-family: var(--font-chinese-serif);
+  letter-spacing: 0;
+}
+
+:lang(zh) .cci-hero h1 {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: none;
+  font-size: var(--cci-type-display);
+  line-height: 1.25;
+}
+
+:lang(zh) .cci-hero-intro {
+  max-width: 24em;
+}
+
+:lang(zh) .cci-page :where(.cci-section-heading > p, .cci-research article) {
+  max-width: 38em;
+}
+
+:lang(zh) .cci-subpillar-list [data-dimension-audit] {
+  max-width: 34em;
+}
+
+:lang(zh) .cci-page :where(.cci-control-deck legend, .cci-source-record dt, .cci-overview-grid dt) {
   letter-spacing: 0;
 }
 
@@ -1189,7 +1260,7 @@
   }
 
   .cci-city-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .cci-my-cci {
@@ -1328,18 +1399,19 @@
   }
 
   .cci-ledger-title-row,
-  .cci-dimension-row summary {
+  .cci-dimension-row > summary {
     grid-template-columns: 2rem minmax(0, 1fr) 3.5rem 3.5rem 3.6rem;
     column-gap: 0.3rem;
   }
 
   .cci-ledger-title-row span,
-  .cci-dimension-row summary {
+  .cci-dimension-row > summary {
     font-size: var(--cci-type-mono);
   }
 
   .cci-subpillar-list {
-    margin-left: 3rem;
+    margin-left: 0;
+    padding-left: 1rem;
   }
 
   .cci-subpillar-list ul,
@@ -1350,6 +1422,10 @@
   .cci-confidence-grid,
   .cci-principles {
     grid-template-columns: 1fr;
+  }
+
+  .cci-weight-row {
+    grid-template-columns: minmax(0, 1fr) minmax(3rem, 0.65fr) 2.5rem;
   }
 
   .cci-tail-heading,
@@ -1434,4 +1510,25 @@
     opacity: 1;
     transform: scaleX(1);
   }
+}
+
+.cci-subpillar-list [data-judgment] {
+  margin: 1rem 0 1.5rem;
+  font-size: var(--cci-type-body);
+  max-width: 65ch;
+}
+
+.cci-subpillar-list [data-judgment-values] {
+  margin-top: 1rem;
+  font-size: var(--cci-type-label);
+  font-variant-numeric: tabular-nums;
+}
+
+.cci-subpillar-list [data-judgment-sources] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  padding: 0;
+  list-style: none;
+  font-size: var(--cci-type-label);
 }

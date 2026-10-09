@@ -1,3 +1,4 @@
+import { judgmentSupport, eventAdjustment } from "@/cci/judgment";
 import {
   DIMENSIONS,
   type DimensionId,
@@ -98,6 +99,16 @@ function initialize(
       : `${formatScore(distribution.robust)}–${formatScore(distribution.upside)}`;
   };
   const name = (city: City) => (ui.currentLang === "zh" ? city.nameZh : city.name);
+  const support = (city: City) =>
+    city.judgments ? judgmentSupport(city.judgments, ui.currentLang) : city.confidence.overall;
+  const researchModel = release.researchModel;
+  const eventEffect = (city: City) =>
+    researchModel
+      ? DIMENSIONS.reduce(
+          (sum, d) => sum + (eventAdjustment(city.slug, d.id, researchModel) * d.weight) / 100,
+          0
+        ).toFixed(1)
+      : tailLabel(city.tailStatus);
   const tailLabel = (value: City["tailStatus"]) => (value ? ui.labels[value] : "—");
 
   const syncUrl = () => {
@@ -148,9 +159,15 @@ function initialize(
     if (sortKey === "city") return name(left).localeCompare(name(right), ui.currentLang);
     if (sortKey === "result") return compareNullable(score(left), score(right));
     if (sortKey === "confidence") {
+      if (left.judgments && right.judgments)
+        return (
+          right.judgments.reduce((sum, d) => sum + d.uncertainty, 0) -
+          left.judgments.reduce((sum, d) => sum + d.uncertainty, 0)
+        );
       const grades = { A: 4, B: 3, C: 2, D: 1 };
       return grades[left.confidence.overall] - grades[right.confidence.overall];
     }
+    if (release.researchModel) return Number(eventEffect(left)) - Number(eventEffect(right));
     const tails = { pass: 3, watch: 2, fail: 1 };
     return (
       (left.tailStatus ? tails[left.tailStatus] : 0) -
@@ -172,13 +189,15 @@ function initialize(
       row.setAttribute("aria-selected", String(city.slug === selectedSlug));
       mustQuery(row, "[data-cell-result]").textContent = formatScore(score(city));
       mustQuery(row, "[data-cell-range]").textContent = range(city);
-      mustQuery(row, "[data-cell-confidence]").textContent = city.confidence.overall;
-      mustQuery(row, "[data-cell-tail]").textContent = tailLabel(city.tailStatus);
-      mustQuery(row, "[data-cell-evidence]").textContent = city.rankingEligible
-        ? `${city.observedCoverage.toFixed(1)}%`
-        : city.audit
-          ? ui.labels.reviewed
-          : ui.labels.inAudit;
+      mustQuery(row, "[data-cell-confidence]").textContent = support(city);
+      mustQuery(row, "[data-cell-tail]").textContent = eventEffect(city);
+      mustQuery(row, "[data-cell-evidence]").textContent = city.judgments
+        ? `${city.judgments.length}/8`
+        : city.rankingEligible
+          ? `${city.observedCoverage.toFixed(1)}%`
+          : city.audit
+            ? ui.labels.reviewed
+            : ui.labels.inAudit;
       const checkbox = mustQuery<HTMLInputElement>(row, "[data-compare-city]");
       checkbox.checked = compared.includes(city.slug);
       checkbox.disabled = compared.length >= 3 && !checkbox.checked;
@@ -209,9 +228,11 @@ function initialize(
     mustQuery(app, "[data-ranking-status]").textContent = city.rankingEligible
       ? formatScore(score(city))
       : ui.labels.notRanked;
-    mustQuery(app, "[data-city-coverage]").textContent = String(city.observedCoverage);
-    mustQuery(app, "[data-overall-confidence]").textContent = city.confidence.overall;
-    mustQuery(app, "[data-overall-tail]").textContent = tailLabel(city.tailStatus);
+    mustQuery(app, "[data-city-coverage]").textContent = city.judgments
+      ? "8/8"
+      : `${city.observedCoverage}%`;
+    mustQuery(app, "[data-overall-confidence]").textContent = support(city);
+    mustQuery(app, "[data-overall-tail]").textContent = eventEffect(city);
     mustQuery(app, "[data-boundary-fua-ids]").textContent = city.boundary.eFuaIds.join(", ");
     mustQuery(app, "[data-boundary-uc-ids]").textContent = city.boundary.urbanCentreIds.join(", ");
     mustQuery(app, "[data-boundary-source-names]").textContent =
@@ -246,10 +267,33 @@ function initialize(
       mustQuery(row, "[data-dimension-result]").textContent = formatScore(
         dimensionScore(city, dimension)
       );
-      mustQuery(row, "[data-dimension-confidence]").textContent = city.confidence.overall;
+      const judgment = city.judgments?.find(item => item.id === dimension);
+      mustQuery(row, "[data-dimension-confidence]").textContent = judgment
+        ? judgmentSupport([judgment], ui.currentLang)
+        : support(city);
+      mustQuery(row, "[data-judgment]").hidden = !judgment;
+      mustQuery(row, "[data-judgment-rationale]").textContent =
+        judgment?.rationale[ui.currentLang] ?? "";
+      mustQuery(row, "[data-judgment-values]").textContent = judgment
+        ? `${ui.labels.judgmentValues}: ${judgment.baseline} / ${researchModel ? eventAdjustment(city.slug, dimension, researchModel) : 0} / ±${judgment.uncertainty} / ${judgment.trendPerDecade}`
+        : "";
+      mustQuery(row, "[data-judgment-sources]").replaceChildren(
+        ...(judgment?.sourceUrls.map((url, index) => {
+          const item = element("li", "");
+          item.append(
+            element("a", `${ui.labels.judgmentSource} ${index + 1}`, {
+              href: url,
+              target: "_blank",
+              rel: "noopener noreferrer",
+            })
+          );
+          return item;
+        }) ?? [])
+      );
       const coverage = city.evidenceCoverage[dimension];
-      mustQuery(row, "[data-dimension-evidence]").textContent =
-        `${coverage.observedSubpillars}/${coverage.totalSubpillars}`;
+      mustQuery(row, "[data-dimension-evidence]").textContent = judgment
+        ? String(judgment.sourceUrls.length)
+        : `${coverage.observedSubpillars}/${coverage.totalSubpillars}`;
       const audit = city.audit?.dimensions.find(item => item.id === dimension);
       mustQuery(row, "[data-dimension-audit]").hidden = !audit;
       mustQuery(row, "[data-audit-outcome]").textContent = audit ? ui.labels[audit.outcome] : "";
@@ -307,16 +351,8 @@ function initialize(
       cities.map(city => formatScore(score(city)))
     );
     appendComparisonRow(body, ui.labels.range, cities.map(range));
-    appendComparisonRow(
-      body,
-      ui.labels.confidence,
-      cities.map(city => city.confidence.overall)
-    );
-    appendComparisonRow(
-      body,
-      ui.labels.tail,
-      cities.map(city => tailLabel(city.tailStatus))
-    );
+    appendComparisonRow(body, ui.labels.confidence, cities.map(support));
+    appendComparisonRow(body, ui.labels.tail, cities.map(eventEffect));
     DIMENSIONS.forEach(dimension => {
       appendComparisonRow(
         body,

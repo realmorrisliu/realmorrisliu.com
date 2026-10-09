@@ -1,3 +1,4 @@
+import judgmentCandidate from "./data/candidate-2026-10-2";
 import assert from "node:assert/strict";
 import test from "node:test";
 import octoberCandidate from "./data/candidate-2026-10";
@@ -266,4 +267,84 @@ test("evidence published after the release as-of date is rejected", () => {
   city.indicators[0].provenance = { ...fixtureProvenance, retrievedAt: "2026-08-24" };
 
   assert.throws(() => buildRelease(candidate(city)), /exceeds the release as-of date/);
+});
+
+test("research judgments publish bounded estimates without changing statistical audit facts", () => {
+  const release = buildRelease(judgmentCandidate);
+  assert.equal(release.scenarioCount, 0);
+  assert.equal(release.cities.length, 16);
+  for (const city of release.cities) {
+    assert.equal(city.rankingEligible, true);
+    assert.equal(city.observedCoverage, 0);
+    assert.equal(city.judgments?.length, 8);
+    for (const year of TARGET_YEARS) {
+      for (const result of [city.results[year], ...Object.values(city.results[year].dimensions)]) {
+        for (const d of [result.point, result.lifetime]) {
+          assert.ok(d.robust !== null && d.median !== null && d.upside !== null);
+          assert.ok(
+            d.robust >= 0 && d.robust <= d.median && d.median <= d.upside && d.upside <= 100
+          );
+        }
+      }
+    }
+    assert.deepEqual(city.results[2026].point, city.results[2026].lifetime);
+  }
+});
+
+test("event effects apply exactly once, stay dimension-local, and preserve the input", () => {
+  const input = globalThis.structuredClone(judgmentCandidate);
+  const before = JSON.stringify(input);
+  const result = buildRelease(input);
+  const base = globalThis.structuredClone(input);
+  base.researchModel.events = [];
+  const baseline = buildRelease(base);
+  const boston = result.cities.find(c => c.slug === "boston");
+  const bostonBase = baseline.cities.find(c => c.slug === "boston");
+  assert.ok(boston && bostonBase);
+  assert.equal(
+    Number(boston.results[2026].dimensions.LON.point.median) -
+      Number(bostonBase.results[2026].dimensions.LON.point.median),
+    1
+  );
+  assert.deepEqual(boston.results[2026].dimensions.MED, bostonBase.results[2026].dimensions.MED);
+  assert.equal(
+    Math.round(
+      (Number(boston.results[2026].point.median) - Number(bostonBase.results[2026].point.median)) *
+        10
+    ),
+    1
+  );
+  assert.deepEqual(buildRelease(input), result);
+  assert.equal(JSON.stringify(input), before);
+});
+
+test("research judgment validation rejects missing dimensions, unsafe sources and duplicate or future events", () => {
+  const missing = globalThis.structuredClone(judgmentCandidate);
+  missing.cities[0].judgments.pop();
+  assert.throws(() => buildRelease(missing), /eight judgments/);
+  const unsafe = globalThis.structuredClone(judgmentCandidate);
+  unsafe.cities[0].judgments[0].sourceUrls = ["javascript:alert(1)"];
+  assert.throws(() => buildRelease(unsafe), /invalid research judgment/);
+  const duplicate = globalThis.structuredClone(judgmentCandidate);
+  duplicate.researchModel.events.push(duplicate.researchModel.events[0]);
+  assert.throws(() => buildRelease(duplicate), /duplicate research event/);
+  const future = globalThis.structuredClone(judgmentCandidate);
+  future.researchModel.events[0].date = "2026-10-10";
+  assert.throws(() => buildRelease(future), /research event/);
+});
+
+test("neutral research references have transparent time and uncertainty behavior", () => {
+  const input = globalThis.structuredClone(judgmentCandidate);
+  input.researchModel.events = [];
+  input.cities.forEach(city =>
+    city.judgments.forEach(d => {
+      d.baseline = 50;
+      d.uncertainty = 10;
+      d.trendPerDecade = 1;
+    })
+  );
+  const city = buildRelease(input).cities[0];
+  assert.deepEqual(city.results[2026].point, { robust: 40, median: 50, upside: 60 });
+  assert.deepEqual(city.results[2035].point, { robust: 39.1, median: 50.9, upside: 62.7 });
+  assert.equal(city.results[2035].lifetime.median, 50.5);
 });

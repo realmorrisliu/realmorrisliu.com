@@ -1,0 +1,573 @@
+[
+  {
+    "slug": "tokyo",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 50,
+        "uncertainty": 15,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Substantial seismic exposure in Tokyo’s disaster scenarios and observed summer heat place physical safety near the midpoint despite developed adaptation. The subjective -2/decade assumes warming gradually outweighs additional protection; it is not a hazard forecast. Station and administrative evidence do not resolve FUA exposure.",
+          "zh": "东京官方灾害情景揭示显著地震暴露，实测夏季高温叠加，使物理安全估在中位附近，适应能力只能部分抵消。主观每十年 -2 假设升温压力逐步超过新增防护，并非灾害预测；站点与行政证据仍不等于 FUA 暴露。"
+        },
+        "sourceUrls": [
+          "https://www.data.jma.go.jp/stats/etrn/view/annually_s.php?prec_no=44&block_no=47662&year=2025&month=&day=&view=",
+          "https://www.bousai.metro.tokyo.lg.jp/content/e_book_2025/2025-12_GDP_GuideBook_en/pageindices/index59.html"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 65,
+        "uncertainty": 18,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Civil-protection capacity supports a reasonably strong baseline, but regional nuclear/missile exposure prevents the 80-point redundancy anchor. The subjective -1/decade assumes persistent regional friction; neither preparedness plans nor Japanese national reporting quantify Tokyo attack probability.",
+          "zh": "民防组织能力支持较强基线，但区域核与导弹暴露使其达不到 80 分的强冗余锚点。主观每十年 -1 假设区域摩擦持续；预案及日本国家报告均不量化东京遭袭概率。"
+        },
+        "sourceUrls": [
+          "https://www.bousai.metro.tokyo.lg.jp/taisaku/torikumi/1000061/1000365.html",
+          "https://www.mofa.go.jp/region/asia-paci/n_korea/nuclear/index.html"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 80,
+        "uncertainty": 14,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Established civil-protection coordination and detailed public-service reporting support the strong-capacity anchor. The livelihood survey signals pressure rather than institutional failure. A subjective flat trend assumes adaptive administration offsets social pressure; governance and cohesion are inferred across incomplete local evidence.",
+          "zh": "成熟民防协调及细致公共服务披露支持强能力锚点；生活困难调查体现压力而非制度失灵。主观持平假设行政适应抵消社会压力；治理与凝聚力判断综合了仍不完整的本地证据。"
+        },
+        "sourceUrls": [
+          "https://www.metro.tokyo.lg.jp/information/press/2026/01/2026013001",
+          "https://www.bousai.metro.tokyo.lg.jp/taisaku/torikumi/1000061/1000365.html",
+          "https://www.english.metro.tokyo.lg.jp/documents/d/english/knowledge_and_tech_r07rousui"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 75,
+        "uncertainty": 15,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Low reported water leakage supports high operating capability, while earthquake disruption and unverified food/energy redundancy keep the estimate below 80. A subjective flat trend balances network renewal against ageing assets and external supply exposure; the water service area is not the FUA.",
+          "zh": "较低漏水率支持较高运营能力，但地震中断及尚未核实的粮能冗余使估计低于 80。主观持平假设管网更新抵消资产老化与外部供应暴露；水务服务区并非 FUA。"
+        },
+        "sourceUrls": [
+          "https://www.english.metro.tokyo.lg.jp/documents/d/english/knowledge_and_tech_r07rousui",
+          "https://www.bousai.metro.tokyo.lg.jp/content/e_book_2025/2025-12_GDP_GuideBook_en/pageindices/index59.html"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 80,
+        "uncertainty": 14,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Japan’s broad core-service coverage and comparatively strong treatment outcomes provide a high national prior, alongside Tokyo’s documented facility system. The subjective -1/decade assumes care-demand pressure modestly exceeds capacity adaptation. This is not a measured Tokyo result, and the local bed table remained inaccessible.",
+          "zh": "日本广泛基础服务覆盖和较强治疗结局提供高国家先验，东京也有完整设施统计体系。主观每十年 -1 假设照护需求压力略超过扩容适应；并非东京实测结果，本地床位表仍未取得。"
+        },
+        "sourceUrls": [
+          "https://www.hokeniryo.metro.tokyo.lg.jp/kiban/chosa_tokei/iryosisetsu/reiwa06nen",
+          "https://www.oecd.org/en/publications/health-at-a-glance-2025_15a55280-en/japan_319bfc39-en.html"
+        ]
+      },
+      {
+        "id": "LON",
+        "baseline": 55,
+        "uncertainty": 20,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "A mature medical system, innovation cluster and domestic trial registry imply moderate translation readiness, but verified longevity-specific maturity and resident access remain weakly evidenced. The subjective +2/decade assumes gradual translation and adoption, without counting unverified exosome results or claiming lifespan extension.",
+          "zh": "成熟医疗体系、创新集群与本国试验注册机制支持中等转化准备度，但长寿专项成熟度及居民准入证据薄弱。主观每十年 +2 假设渐进转化与采用，不计未经核实的外泌体结果，也不声称延寿效果。"
+        },
+        "sourceUrls": [
+          "https://jrct.mhlw.go.jp/",
+          "https://www.wipo.int/documents/d/global-innovation-index/docs-en-2025-jp-tokyo-yokohama-2.pdf",
+          "https://www.oecd.org/en/publications/health-at-a-glance-2025_15a55280-en/japan_319bfc39-en.html"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 85,
+        "uncertainty": 12,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "The Tokyo–Yokohama patent cluster supports a high estimate of knowledge and industrial depth. Incomplete city diffusion evidence prevents a near-ideal score. Subjective +1/decade assumes incremental adoption in an already mature system; the wider cluster is an explicit geographic proxy.",
+          "zh": "东京—横滨专利集群支持知识与产业厚度的高估计，但城市技术扩散证据不全，不能接近理想上限。主观每十年 +1 假设成熟体系继续渐进采用；较大集群是明确的地理代理。"
+        },
+        "sourceUrls": [
+          "https://www.wipo.int/documents/d/global-innovation-index/docs-en-2025-jp-tokyo-yokohama-2.pdf"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Large international-airport throughput supports substantial connectivity, but independent route continuity, legal residency and asset portability are not established for every resident. The subjective flat trend assumes connectivity persists without assuming broader migration rights. Airport-system evidence is a proxy, not a personal exit guarantee.",
+          "zh": "国际机场吞吐量支持较强连接能力，但独立通道连续性、合法居留及资产可携性并未对所有居民成立。主观持平假设连接持续，不假设迁移权自动扩大；机场系统证据只是代理，并非个人退出保证。"
+        },
+        "sourceUrls": [
+          "https://www.narita-airport.jp/files/c843886ae837019a5d8d546c9559b91710af7bc8fed0a97b356a5234a52e4cc8"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "singapore",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 55,
+        "uncertainty": 15,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Persistent tropical heat creates a material physical constraint despite strong urban operating capacity. The subjective -2/decade assumes increasing heat burden partly outpaces adaptation. Changi’s temperature is a local clue, not a population exposure model; unquantified flood and other hazards widen the interval.",
+          "zh": "持续热带高温构成重要物理约束，城市运营能力只能部分抵消。主观每十年 -2 假设热负担增长部分超过适应；樟宜温度是本地线索而非人口暴露模型，未量化洪水等风险扩大区间。"
+        },
+        "sourceUrls": [
+          "https://www.weather.gov.sg/wp-content/uploads/2026/01/The-Year-in-Numbers-2025.pdf",
+          "https://www.sfa.gov.sg/docs/default-source/publication/sg-food-statistics/sgfs-2025-publication_060526-fa.pdf"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "An established threat-assessment and response apparatus supports a strong security prior, while official spillover concerns justify remaining below the high-redundancy anchor. Subjective -1/decade assumes continuing external friction; it is not a conversion of the authority’s threat label into attack probability.",
+          "zh": "稳定威胁评估与应对体系支持较强安全先验，但官方外溢风险警示使其低于强冗余锚点。主观每十年 -1 假设外部摩擦延续；不是把官方威胁标签换算为袭击概率。"
+        },
+        "sourceUrls": [
+          "https://www.mha.gov.sg/media-room/newsroom/threat-risk-level-due-to-the-conflict-in-the-middle-east-and-how-singaporeans-can-safeguard-against-the-threats/"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 80,
+        "uncertainty": 14,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Resident social-experience evidence and institutional response capacity support a strong governance/cohesion estimate, while the survey cannot establish equal experience across groups. A subjective flat trend assumes continued administrative adaptation with persistent inclusion challenges; the score is an interpretation, not a survey percentage.",
+          "zh": "居民社会经验和机构应对能力支持较强治理与凝聚力估计，但调查不能证明各群体体验一致。主观持平假设行政适应持续而包容性挑战仍在；分数是解释性判断，不是调查比例。"
+        },
+        "sourceUrls": [
+          "https://lkyspp.nus.edu.sg/docs/default-source/ips/ips-working-papers-no-64_prejudices-attitudes-and-critical-perspectives-on-race-in-singapore.pdf?sfvrsn=4c64060a_1",
+          "https://www.mha.gov.sg/media-room/newsroom/threat-risk-level-due-to-the-conflict-in-the-middle-east-and-how-singaporeans-can-safeguard-against-the-threats/"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 65,
+        "uncertainty": 15,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Diverse food sourcing supports shock management, but very high import reliance prevents treating supplier count as physical self-sufficiency or spare capacity. Subjective +1/decade assumes diversification and management improve gradually while external dependence remains; energy and water redundancy are not fully audited.",
+          "zh": "多元食物来源支持冲击管理，但高度进口依赖意味着供应地数量不等于自给或备用能力。主观每十年 +1 假设多元化及管理渐进改善，同时外部依赖持续；能源和供水冗余尚未完整核验。"
+        },
+        "sourceUrls": [
+          "https://www.sfa.gov.sg/docs/default-source/publication/sg-food-statistics/sgfs-2025-publication_060526-fa.pdf"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 80,
+        "uncertainty": 14,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "The observed public, nonprofit and private hospital capacity supports a strong system estimate. It does not prove equal affordability, outcomes or staffed surge capacity, so the ideal anchor is inappropriate. Subjective +1/decade assumes incremental expansion and coordination outweigh rising demand slightly.",
+          "zh": "公立、非营利与私立医院容量支持较强体系估计，但不证明支付公平、结局或实际应急人员配置，不能视为理想上限。主观每十年 +1 假设渐进扩容与协调略超过需求增长。"
+        },
+        "sourceUrls": [
+          "https://www.moh.gov.sg/others/resources-and-statistics/beds-in-inpatient-facilities-and-places-in-non-residential-long-term-care-facilities/"
+        ]
+      },
+      {
+        "id": "LON",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "A functioning trial regulator, medical capacity and digital economy support relatively strong translation readiness, but sponsor-maintained trial registration is not evidence of longevity efficacy or routine access. Subjective +2/decade assumes gradual regulatory and delivery learning; no latest experimental-news bonus is included.",
+          "zh": "试验监管、医疗容量与数字经济支持相对较强转化准备度，但申办方维护的注册不证明长寿疗效或常规准入。主观每十年 +2 假设监管和交付能力渐进学习；未计最新实验新闻红利。"
+        },
+        "sourceUrls": [
+          "https://www.hsa.gov.sg/other-regulations/clinical-trials/clinical-trials-register/",
+          "https://www.moh.gov.sg/others/resources-and-statistics/beds-in-inpatient-facilities-and-places-in-non-residential-long-term-care-facilities/",
+          "https://www.imda.gov.sg/-/media/imda/files/about/resources/corporate-publications/annual-report/imda-sgde-report-fy2024-2025.pdf"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 85,
+        "uncertainty": 13,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "The scale of the documented digital economy supports a high capability estimate, while output share alone does not establish universal diffusion. Subjective +1/decade assumes continued adoption with diminishing gains in a mature system. The verified older observation is retained rather than substituting inaccessible 2026 figures.",
+          "zh": "已核实数字经济规模支持高能力估计，但产出占比不能证明普遍扩散。主观每十年 +1 假设成熟体系持续采用但边际收益递减；保留已核实旧观测，不替换成未读到的 2026 数字。"
+        },
+        "sourceUrls": [
+          "https://www.imda.gov.sg/-/media/imda/files/about/resources/corporate-publications/annual-report/imda-sgde-report-fy2024-2025.pdf"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "A developed administrative framework for residency and re-entry supports predictable options for eligible residents, but status-dependent rights prevent a universal high score. Subjective flat trend assumes current conditionality persists. Transport and asset portability remain broad contextual assumptions, not fully audited rights.",
+          "zh": "成熟居留与再入境制度为符合资格者提供可预期选项，但身份差异阻止普遍高分。主观持平假设现有条件性持续；交通和资产可携性仍属宽泛背景假设，并非已完整审定的权利。"
+        },
+        "sourceUrls": [
+          "https://www.ica.gov.sg/reside/pr",
+          "https://www.imda.gov.sg/-/media/imda/files/about/resources/corporate-publications/annual-report/imda-sgde-report-fy2024-2025.pdf"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "shenzhen",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 50,
+        "uncertainty": 17,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "A hot climate and a high reported hot-day count support a material physical constraint despite substantial urban capacity. Subjective -2/decade assumes heat pressure grows faster than part of the adaptation response; flood and severe-weather exposure are not quantified, and the bulletin includes Shenshan.",
+          "zh": "炎热气候和较多炎热日支持显著物理约束判断，城市能力只能部分抵消。主观每十年 -2 假设热压力超过部分适应增量；洪水及强天气暴露尚未量化，公报也包含深汕。"
+        },
+        "sourceUrls": [
+          "https://weather.sz.gov.cn/qixiangfuwu/qihoufuwu/qihouguanceyupinggu/nianduqihougongbao/content/post_12633879.html",
+          "https://www.sz.gov.cn/zfgb/zcjd/content/post_11958850.html",
+          "https://yjgl.sz.gov.cn/yjgl/yjgl/yjbncs/"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Emergency institutions support a capable response prior, but shelter records cannot establish conflict safety or strategic redundancy. The 60 estimate assumes a functioning city under material external strategic exposure, rather than treating missing events as safety. Subjective -1/decade represents a persistent-friction scenario, not a war forecast.",
+          "zh": "应急机构支持较强应对先验，但避难记录不能证明冲突安全或战略冗余。60 分假设城市正常运转同时有重要外部战略暴露，不把缺少事件当成安全；主观每十年 -1 表达摩擦持续情景而非战争预测。"
+        },
+        "sourceUrls": [
+          "https://www.sz.gov.cn/zfgb/zcjd/content/post_11958850.html",
+          "https://yjgl.sz.gov.cn/yjgl/yjgl/yjbncs/"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 65,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "The disclosure system and formal review channels support substantial administrative capacity, but request and appeal volumes do not establish fair outcomes, public trust or adaptation across all groups. Subjective +1/decade assumes process and service improvements; the uncertainty includes reporting incentives and limited independent outcomes.",
+          "zh": "信息公开体系及正式复议渠道支持较强行政能力，但申请和申诉数量不能证明公平结果、信任或各群体适应。主观每十年 +1 假设流程与服务改善；区间包含自报激励及独立结果不足。"
+        },
+        "sourceUrls": [
+          "https://www.sz.gov.cn/cn/xxgk/ndxxgkbg/content/post_12675915.html",
+          "https://www.sz.gov.cn/zfgb/zcjd/content/post_11958850.html",
+          "https://yjgl.sz.gov.cn/yjgl/yjgl/yjbncs/"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 65,
+        "uncertainty": 17,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Large observed public-water capacity supports substantial service delivery, but capacity is not continuity and food/energy reserves remain incompletely known. Subjective +1/decade assumes infrastructure improvement partly offsets demand growth. Administrative Shenzhen is a proxy for a much wider functional-area record.",
+          "zh": "较大公共供水能力支持较强服务交付，但容量不等于连续性，粮能储备仍不完整。主观每十年 +1 假设基础设施改善部分抵消需求增长；深圳行政区是更大功能区记录的代理。"
+        },
+        "sourceUrls": ["https://www.sz.gov.cn/cn/xxgk/zfxxgj/tjsj/tjgb/content/post_12805133.html"]
+      },
+      {
+        "id": "MED",
+        "baseline": 70,
+        "uncertainty": 17,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "The observed hospital-bed base supports capacity above the 60 anchor, but inventory alone cannot justify the 80 quality/access anchor. Subjective +2/decade assumes expanding specialist and delivery capabilities, with equitable access and staffed continuity still uncertain; this is not an extrapolated bed-growth forecast.",
+          "zh": "医院床位基础支持高于 60 的容量判断，但存量不足以支撑 80 的质量与可及性锚点。主观每十年 +2 假设专科和交付能力扩展，公平可及与实际人员连续性仍不确定；并非床位增速预测。"
+        },
+        "sourceUrls": ["https://www.sz.gov.cn/cn/xxgk/zfxxgj/tjsj/tjgb/content/post_12805133.html"]
+      },
+      {
+        "id": "LON",
+        "baseline": 50,
+        "uncertainty": 20,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "Medical capacity and a formal trial-development programme suggest intermediate translation readiness, but programme targets do not prove completed trial infrastructure or longevity access. Subjective +2/decade assumes partial execution and learning. No efficacy, completed demonstration-centre count or routine treatment availability is inferred.",
+          "zh": "医疗容量与正式临床试验建设计划提示中等转化准备度，但计划目标不证明试验基础设施已完成或长寿可及。主观每十年 +2 假设部分落地及学习，不推断疗效、已建成示范机构数或常规治疗可得。"
+        },
+        "sourceUrls": [
+          "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/post_12473369.html",
+          "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tjsj/tjgb/content/post_12805133.html"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 85,
+        "uncertainty": 15,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "The large PCT application base supports substantial invention and industry depth; patents are not equivalent to independent inventions or universal diffusion. Subjective +2/decade assumes continuing commercialization and adoption. The administrative-to-FUA mismatch widens uncertainty rather than generating an invented spatial adjustment.",
+          "zh": "较大 PCT 申请基础支持发明和产业厚度，但专利不等于独立发明或普遍扩散。主观每十年 +2 假设商业化与采用持续；行政区到 FUA 不匹配扩大不确定性，不虚构空间修正。"
+        },
+        "sourceUrls": ["https://www.sz.gov.cn/cn/xxgk/zfxxgj/tjsj/tjgb/content/post_12805133.html"]
+      },
+      {
+        "id": "OPT",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Large airport throughput supports useful connections, while legally usable residency, asset portability and genuinely independent routes remain person- and jurisdiction-dependent. Subjective +1/decade assumes transport and digital continuity improve, not automatic liberalization of legal rights. The score is a broad capability prior.",
+          "zh": "较大机场吞吐支持实用连接，但可执行居留、资产可携性和真正独立通道取决于个人身份及司法辖区。主观每十年 +1 假设交通和数字连续性改善，不假设法律权利自动放宽；分数属于宽泛能力先验。"
+        },
+        "sourceUrls": [
+          "https://jtys.sz.gov.cn/zwgk/sjfb/yssj/hyl_179723/content/post_12673405.html",
+          "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tjsj/tjgb/content/post_12805133.html"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "seoul",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 60,
+        "uncertainty": 16,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Local climate observations and a developed emergency-facility system support capable adaptation with remaining heat and multi-hazard constraints. Subjective -2/decade assumes warming gradually erodes that margin. The mean temperature is not a hazard distribution, so this is a comparative structural judgment with a wide interval.",
+          "zh": "本地气候观测与成熟应急设施体系支持较强适应，但仍受高温及多灾种约束。主观每十年 -2 假设升温渐进侵蚀余量；均温不等于风险分布，因此这是带宽区间的结构性比较判断。"
+        },
+        "sourceUrls": [
+          "https://data.seoul.go.kr/dataVisual/seoul/seoul100List.do",
+          "https://safecity.seoul.go.kr/distFclt/cfMapDs/cfMapDs.page?menuId=MENU_SSNS_000176"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 45,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Civil-defence infrastructure moderates risk, but proximity to the Korean peninsula’s nuclear/missile confrontation creates a stronger structural exposure than the other four cities. Subjective -1/decade assumes persistent confrontation, not certain conflict. National diplomatic reporting provides context rather than a Seoul attack probability.",
+          "zh": "民防设施有缓释作用，但朝鲜半岛核与导弹对峙的地理邻近性使首尔结构暴露高于其余四城。主观每十年 -1 假设对峙持续，并非必然冲突；国家外交资料仅为背景，不是首尔遭袭概率。"
+        },
+        "sourceUrls": [
+          "https://safecity.seoul.go.kr/distFclt/cfMapDs/cfMapDs.page?menuId=MENU_SSNS_000176",
+          "https://www.mofa.go.jp/region/asia-paci/n_korea/nuclear/index.html"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 75,
+        "uncertainty": 16,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Broad resident/foreigner survey infrastructure and operational service reporting support strong feedback and delivery capacity, without proving survey satisfaction or equal treatment. Subjective flat trend assumes adaptive institutions balance social pressures. This judgment uses institutional mechanisms, not fabricated unextracted survey outcomes.",
+          "zh": "覆盖居民与外国人的调查基础设施及运营服务披露支持较强反馈与交付能力，但不证明满意度或平等待遇。主观持平假设制度适应抵消社会压力；依据的是制度机制，并未编造未提取的调查结果。"
+        },
+        "sourceUrls": [
+          "https://data.seoul.go.kr/together/notice/boardView.do?seq=b4c2f6cfb41cfbb844c76953388f1c3a",
+          "https://data.seoul.go.kr/dataList/OA-15564/F/1/datasetView.do",
+          "https://arisu.seoul.go.kr/home/sub?menukey=8302",
+          "https://www.seoul.go.kr/news/news_report.do?nttNo=455932&srchCtgry=474"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 75,
+        "uncertainty": 17,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Reported local water-quality compliance supports a strong public-service prior, while selected-site sampling cannot establish universal continuity or food/energy redundancy. Subjective flat trend balances maintenance and adaptation against demand and external supply exposure; the service geography remains a proxy.",
+          "zh": "本地水质合格记录支持较强公共服务先验，但选点采样不能证明普遍连续性或粮能冗余。主观持平平衡维护适应、需求及外部供应暴露；服务地理仍是代理。"
+        },
+        "sourceUrls": ["https://arisu.seoul.go.kr/home/sub?menukey=8302"]
+      },
+      {
+        "id": "MED",
+        "baseline": 80,
+        "uncertainty": 14,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "National core-service coverage and a large local facility base support a strong capacity estimate; Korea’s comparatively limited financial coverage constrains the access interpretation. Subjective flat trend assumes medical advances offset demand and affordability pressures. Country-level outcomes are priors, not Seoul observations.",
+          "zh": "国家基础服务覆盖及较大本地机构基础支持较强容量；韩国相对有限的费用覆盖限制可及性判断。主观持平假设医疗进步抵消需求与负担压力；国家结局只是先验，并非首尔观测。"
+        },
+        "sourceUrls": [
+          "https://data.seoul.go.kr/dataVisual/seoul/seoul100List.do",
+          "https://www.oecd.org/en/publications/health-at-a-glance-2025_15a55280-en/korea_40b1d2b4-en.html"
+        ]
+      },
+      {
+        "id": "LON",
+        "baseline": 55,
+        "uncertainty": 20,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "The medical base and Korean-language trial infrastructure support moderate translation readiness, but no deduplicated local longevity cohort or routine access was verified. Subjective +2/decade assumes gradual research-to-care development, not demonstrated lifespan extension or an automatic benefit from registry size.",
+          "zh": "医疗基础和韩语试验基础设施支持中等转化准备度，但未核实本地去重长寿队列或常规准入。主观每十年 +2 假设研究到临床渐进发展，不代表已证明延寿，也不按注册数量自动加分。"
+        },
+        "sourceUrls": [
+          "https://cris.nih.go.kr/cris/index/index.do",
+          "https://data.seoul.go.kr/dataVisual/seoul/seoul100List.do",
+          "https://www.oecd.org/en/publications/health-at-a-glance-2025_15a55280-en/korea_40b1d2b4-en.html"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 85,
+        "uncertainty": 14,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Extensive operating public Wi-Fi and substantial traffic support a high diffusion/infrastructure prior, with knowledge and industry depth less directly audited. Subjective +1/decade assumes incremental quality gains in a mature network. Planned equipment replacements are not counted as completed output.",
+          "zh": "广泛运行的公共 Wi-Fi 与较大流量支持高扩散及基础设施先验，但知识与产业厚度直接审计较少。主观每十年 +1 假设成熟网络质量渐进改善；计划更换设备未按完成产出计入。"
+        },
+        "sourceUrls": ["https://www.seoul.go.kr/news/news_report.do?nttNo=455932&srchCtgry=474"]
+      },
+      {
+        "id": "OPT",
+        "baseline": 70,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Heavy subway use and digital infrastructure support strong local network continuity, but do not by themselves prove independent international exits, legal mobility or asset portability. Subjective flat trend assumes a capable network with persistent geographic and status constraints; personal exit rights remain heterogeneous.",
+          "zh": "较大地铁运量及数字设施支持较强本地网络连续性，但不能单独证明独立国际退出、法律迁移或资产可携。主观持平假设网络能力持续而地理及身份约束仍在；个人退出权仍有差异。"
+        },
+        "sourceUrls": [
+          "https://data.seoul.go.kr/dataVisual/seoul/seoul100List.do",
+          "https://www.seoul.go.kr/news/news_report.do?nttNo=455932&srchCtgry=474"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "jakarta",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 35,
+        "uncertainty": 18,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Observed deep neighbourhood flooding indicates substantial physical vulnerability, placing the structural estimate below the 40 constraint anchor. Subjective -2/decade assumes climate and urban exposure pressures partly outpace adaptation. A single event does not estimate annual probability, and wider FUA conditions remain uncertain.",
+          "zh": "邻里深水受淹记录显示明显物理脆弱性，结构估计低于 40 的约束锚点。主观每十年 -2 假设气候与城市暴露压力部分超过适应；单次事件不估计年概率，更大 FUA 状况仍不确定。"
+        },
+        "sourceUrls": [
+          "https://bnpb.go.id/berita/terpantau-50-titik-genangan-di-jakarta-ratusan-jiwa-mengungsi"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 65,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "An operating national counterterrorism apparatus supports a capable baseline, while the acknowledged continuing threat rules out an exceptionally safe assumption. Subjective flat trend assumes containment without elimination. This uses national security context; no local incident count or attack probability was established.",
+          "zh": "运行中的国家反恐体系支持较强基线，但已确认的持续威胁排除极高安全假设。主观持平假设威胁受控而非消除；依据国家安全背景，并未建立本地事件数或袭击概率。"
+        },
+        "sourceUrls": [
+          "https://www.bnpt.go.id/ancaman-terorisme-belum-usai-meski-ji-telah-bubar-bnpt-fokus-lakukan-balanced-approach"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 55,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "The published provincial institutional assessment and functioning public-service channels support an intermediate capability judgment, while the composite index is not directly reused as the score. Subjective +1/decade assumes gradual administrative learning; city/FUA mismatch, outcome gaps and uneven implementation keep uncertainty high.",
+          "zh": "省级制度评估和运行中的公共服务渠道支持中等能力判断，但未直接照搬综合指数作为分数。主观每十年 +1 假设行政渐进学习；市域与 FUA 不匹配、结果缺口及执行不均使不确定性较高。"
+        },
+        "sourceUrls": [
+          "https://www.bps.go.id/id/statistics-table/2/MjE1OSMy/-metode-baru-indeks-demokrasi-indonesia-menurut-provinsi.html",
+          "https://kip.jakarta.go.id/idi-dki-capai-8294-ki-dki-dorong-transparansi-kip-jadi-mesin-penggerak-demokrasi/",
+          "https://dinkes.jakarta.go.id/",
+          "https://www.jakarta.go.id/index.php/siaran-pers/6235-SP-HMS-12-2025"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 45,
+        "uncertainty": 17,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "The dated water-service coverage below universal provision indicates meaningful basic-service constraints despite an expanding system. Subjective +2/decade assumes gradual connection and operating improvements, not automatic completion of coverage targets. Safe continuous supply, energy and food redundancy remain less established.",
+          "zh": "有日期且未达普及的供水覆盖说明基础服务仍受明显约束，同时系统在扩展。主观每十年 +2 假设连接与运营渐进改善，不把覆盖目标视为必然实现；安全连续供水及粮能冗余仍较不明确。"
+        },
+        "sourceUrls": ["https://www.jakarta.go.id/index.php/siaran-pers/6235-SP-HMS-12-2025"]
+      },
+      {
+        "id": "MED",
+        "baseline": 55,
+        "uncertainty": 20,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "WHO’s national evidence indicates improving service coverage but important financial and noncommunicable-disease gaps; local health-service infrastructure supports an intermediate city prior. Subjective +2/decade assumes gradual access and workforce improvement. National conditions are not a measured Jakarta result, and local capacity data remain incomplete.",
+          "zh": "WHO 国家证据显示服务覆盖改善，但支付及慢病服务仍有重要缺口；本地卫生服务基础设施支持中等城市先验。主观每十年 +2 假设可及性与人员逐步改善；国家状况不是雅加达实测，本地容量数据仍不全。"
+        },
+        "sourceUrls": [
+          "https://dinkes.jakarta.go.id/",
+          "https://www.who.int/indonesia/news/detail/12-12-2025-indonesia-moves-forward-on-universal-health-coverage-while-addressing-remaining-gaps"
+        ]
+      },
+      {
+        "id": "LON",
+        "baseline": 35,
+        "uncertainty": 20,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "A national clinical-research centre in Jakarta and a registry provide a starting platform, while specialist longevity translation and equitable routine access remain unverified. Subjective +2/decade assumes institutional learning from this early base; the score does not penalize an absence of proven lifespan extension unique to Jakarta.",
+          "zh": "雅加达国家临床研究中心及注册表提供起步平台，但长寿专项转化与公平常规准入未核实。主观每十年 +2 假设从较早期基础积累制度能力；不是因为雅加达缺少已证实延寿疗法而单独扣分。"
+        },
+        "sourceUrls": [
+          "https://ina-crr.kemkes.go.id/en/studi",
+          "https://ina-crc.kemkes.go.id/id/artikel/1",
+          "https://dinkes.jakarta.go.id/",
+          "https://www.who.int/indonesia/news/detail/12-12-2025-indonesia-moves-forward-on-universal-health-coverage-while-addressing-remaining-gaps"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "Operating transport and public-service systems suggest meaningful deployment capacity, but current technology-access figures were not verified. The 60 baseline is a broad urban-capability prior rather than a fabricated survey estimate. Subjective +2/decade assumes catch-up diffusion with substantial implementation uncertainty.",
+          "zh": "运行中的交通及公共服务系统提示实质应用能力，但当前技术可及数值未核实。60 分是宽泛城市能力先验，不是编造的调查估计；主观每十年 +2 假设追赶式扩散，同时保留较大执行不确定性。"
+        },
+        "sourceUrls": [
+          "https://jakarta.bps.go.id/id/publication/2025/12/30/75b5f2691e03874bca316472/indikator-kesejahteraan-rakyat-provinsi-dki-jakarta-2025.html",
+          "https://www.jakartamrt.co.id/id/info-terkini/lima-stasiun-dengan-jumlah-pelanggan-tertinggi-sepanjang-november-2025",
+          "https://dinkes.jakarta.go.id/"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 55,
+        "uncertainty": 20,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "Observed MRT use supports functioning local transport options, while metropolitan reach, independent exit routes and resident-specific legal/asset portability remain unevenly evidenced. Subjective +2/decade assumes gradual network development, without treating passenger growth as a guarantee of migration rights or crisis evacuation.",
+          "zh": "MRT 使用记录支持可运行的本地交通选项，但都会区覆盖、独立退出路线及个人法律与资产可携证据不均。主观每十年 +2 假设网络渐进发展，不把客运增长当作迁移权或危机撤离保证。"
+        },
+        "sourceUrls": [
+          "https://www.jakartamrt.co.id/id/info-terkini/lima-stasiun-dengan-jumlah-pelanggan-tertinggi-sepanjang-november-2025"
+        ]
+      }
+    ]
+  }
+]

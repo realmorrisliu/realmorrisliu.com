@@ -5,6 +5,8 @@
 // FIRST VIEWPORT: title, explicit caveat, scenario structure, and immutable release identity.
 // FORM: one flat manuscript; serif hierarchy, open tables, one-pixel rules, no cards or accent color.
 import sourceManifestData from "@/cci/data/source-manifest-v1.json";
+import { judgmentCopy } from "@/cci/judgment-copy";
+import { judgmentSupport, eventAdjustment } from "@/cci/judgment";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS, type ResultMode, type TargetYear } from "@/cci/model";
 import { cciReleases, latestCciRelease } from "@/cci/releases";
@@ -28,11 +30,12 @@ interface ManifestSource {
 }
 
 const { currentLang } = Astro.props;
-const t = cciCopy[currentLang];
 const release = latestCciRelease;
+const isJudgment = Boolean(release.researchModel);
+const t = isJudgment ? judgmentCopy(currentLang) : cciCopy[currentLang];
 const sourceManifest = sourceManifestData as { sources: ManifestSource[] };
-const selectedYear: TargetYear = 2050;
-const selectedMode = "robust" as const;
+const selectedYear: TargetYear = isJudgment ? 2026 : 2050;
+const selectedMode = isJudgment ? ("median" as const) : ("robust" as const);
 const selectedCity = release.cities[0];
 const languageUrl = currentLang === "zh" ? "/cci" : "/cci/zh";
 const dateLocale = currentLang === "zh" ? "zh-CN" : "en-GB";
@@ -52,8 +55,10 @@ const formatReleaseDate = (asOf: string) =>
 const releaseStatus = (status: (typeof release)["status"]) => t.release[status];
 const releaseUrl = `/cci/releases/${release.releaseId}.json`;
 const governanceUrl =
+  release.researchModel?.methodologyUrl ??
   "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-data-bias-governance.md";
 const methodologyUrl =
+  release.researchModel?.methodologyUrl ??
   "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-weight-analysis.md";
 const correctionParams = new URLSearchParams({
   title: `[CCI correction] ${release.releaseId}: `,
@@ -64,6 +69,16 @@ const correctionParams = new URLSearchParams({
 });
 const correctionUrl = `https://github.com/realmorrisliu/realmorrisliu.com/issues/new?${correctionParams}`;
 
+const support = (city: (typeof release.cities)[number]) =>
+  city.judgments ? judgmentSupport(city.judgments, currentLang) : city.confidence.overall;
+const eventEffect = (city: (typeof release.cities)[number]) =>
+  release.researchModel
+    ? DIMENSIONS.reduce(
+        (sum, d) =>
+          sum + (eventAdjustment(city.slug, d.id, release.researchModel!) * d.weight) / 100,
+        0
+      ).toFixed(1)
+    : (city.tailStatus ?? "—");
 const cityName = (city: (typeof release.cities)[number]) =>
   currentLang === "zh" ? city.nameZh : city.name;
 const countryName = (city: (typeof release.cities)[number]) =>
@@ -108,6 +123,11 @@ const uiData = JSON.stringify({
   tail: t.tail,
   reasons: t.reasons,
   labels: {
+    judgmentValues:
+      currentLang === "zh"
+        ? "结构参考 / 事件调节 / 基线半宽 / 每十年趋势"
+        : "Reference / event effect / baseline half-width / trend per decade",
+    judgmentSource: currentLang === "zh" ? "判断依据" : "Judgment source",
     compare: t.compare.compare,
     compareEmpty: t.compare.empty,
     inAudit: t.compare.inAudit,
@@ -153,7 +173,21 @@ const uiData = JSON.stringify({
   <div class="cci-shell">
     <section id="index" class="cci-hero" aria-labelledby="cci-title">
       <div class="cci-hero-copy">
-        <h1 id="cci-title">{t.hero.title}</h1>
+        <h1 id="cci-title">
+          {
+            currentLang === "zh" ? (
+              <>
+                <>
+                  <span class="cci-title-phrase">世纪城市</span>
+                  <wbr />
+                  <span class="cci-title-phrase">指数</span>
+                </>
+              </>
+            ) : (
+              t.hero.title
+            )
+          }
+        </h1>
         <p class="cci-hero-intro">{t.hero.intro}</p>
         <p class="cci-caveat">{t.hero.caveat}</p>
       </div>
@@ -366,14 +400,16 @@ const uiData = JSON.stringify({
                   </th>
                   <td data-cell-result>{formatScore(selectedScore(city))}</td>
                   <td data-cell-range>{selectedRange(city)}</td>
-                  <td data-cell-confidence>{city.confidence.overall}</td>
-                  <td data-cell-tail>{city.tailStatus ?? "—"}</td>
+                  <td data-cell-confidence>{support(city)}</td>
+                  <td data-cell-tail>{eventEffect(city)}</td>
                   <td data-cell-evidence>
-                    {city.rankingEligible
-                      ? `${city.observedCoverage}%`
-                      : city.audit
-                        ? t.compare.reviewed
-                        : t.compare.inAudit}
+                    {city.judgments
+                      ? `${city.judgments.length}/8`
+                      : city.rankingEligible
+                        ? `${city.observedCoverage}%`
+                        : city.audit
+                          ? t.compare.reviewed
+                          : t.compare.inAudit}
                   </td>
                 </tr>
               ))
@@ -383,9 +419,41 @@ const uiData = JSON.stringify({
       </div>
 
       <div class="cci-table-legend" id="ranking-eligibility">
-        <p><strong>{t.compare.notRanked}</strong> — {t.compare.notRankedDefinition}</p>
-        <p><strong>D</strong> — {t.compare.confidenceDefinition}</p>
-        <p><strong>—</strong> — {t.compare.noClaimDefinition}</p>
+        {
+          isJudgment ? (
+            <>
+              <p>
+                {currentLang === "zh"
+                  ? "分数：结构性能力与风险的综合判断"
+                  : "Score: capacity and risk assessment"}
+              </p>
+              <p>
+                {currentLang === "zh"
+                  ? "区间：假设改变时的可能范围"
+                  : "Range: sensitivity to assumptions"}
+              </p>
+              <p>
+                {currentLang === "zh"
+                  ? "事件调节：本期事件对中心总分的贡献"
+                  : "Event effect: active events’ contribution to the total center"}
+              </p>
+            </>
+          ) : (
+            <>
+              <>
+                <p>
+                  <strong>{t.compare.notRanked}</strong> — {t.compare.notRankedDefinition}
+                </p>
+                <p>
+                  <strong>D</strong> — {t.compare.confidenceDefinition}
+                </p>
+                <p>
+                  <strong>—</strong> — {t.compare.noClaimDefinition}
+                </p>
+              </>
+            </>
+          )
+        }
       </div>
 
       <section class="cci-comparison" data-comparison hidden aria-live="polite">
@@ -412,7 +480,11 @@ const uiData = JSON.stringify({
         <h2 id="city-detail-title" data-city-name>{cityName(selectedCity)} FUA</h2>
         <p>
           <span data-boundary-status>{boundaryLabel}</span> · <span data-ranking-status
-            >{t.city.notRanked}</span
+            >{
+              selectedCity.rankingEligible
+                ? formatScore(selectedScore(selectedCity))
+                : t.city.notRanked
+            }</span
           >
         </p>
       </div>
@@ -458,26 +530,28 @@ const uiData = JSON.stringify({
             <dl class="cci-overview-grid">
               <div>
                 <dt>{t.compare.columns.evidence}</dt><dd>
-                  <span data-city-coverage>{selectedCity.observedCoverage}</span>%
+                  <span data-city-coverage
+                    >{selectedCity.judgments ? "8/8" : `${selectedCity.observedCoverage}%`}</span
+                  >
                 </dd>
               </div>
               <div>
                 <dt>{t.compare.columns.confidence}</dt><dd data-overall-confidence>
-                  {selectedCity.confidence.overall}
+                  {support(selectedCity)}
                 </dd>
               </div>
               <div>
                 <dt>{t.compare.columns.tail}</dt><dd data-overall-tail>
-                  {selectedCity.tailStatus ?? "—"}
+                  {eventEffect(selectedCity)}
                 </dd>
               </div>
-              <div>
+              <div hidden={isJudgment}>
                 <dt>{t.compare.notRanked}</dt><dd>
                   {selectedCity.rankingEligible ? "—" : t.compare.notRanked}
                 </dd>
               </div>
             </dl>
-            <details class="cci-reasons" open>
+            <details class="cci-reasons" open hidden={isJudgment}>
               <summary>{t.city.eligibilityReasons}</summary>
               <ul data-eligibility-reasons>
                 {selectedCity.notRankedReasons.map(reason => <li>{reasonLabel(reason)}</li>)}
@@ -500,6 +574,7 @@ const uiData = JSON.stringify({
             <div class="cci-dimension-ledger">
               {
                 DIMENSIONS.map(dimension => {
+                  const judgment = selectedCity.judgments?.find(item => item.id === dimension.id);
                   const audit = selectedCity.audit?.dimensions.find(
                     item => item.id === dimension.id
                   );
@@ -511,10 +586,15 @@ const uiData = JSON.stringify({
                         <span class="cci-dimension-code">{dimension.id}</span>
                         <span class="cci-dimension-name">{t.dimensions[dimension.id].name}</span>
                         <span data-dimension-result>{formatScore(result)}</span>
-                        <span data-dimension-confidence>{selectedCity.confidence.overall}</span>
+                        <span data-dimension-confidence>
+                          {judgment
+                            ? judgmentSupport([judgment], currentLang)
+                            : support(selectedCity)}
+                        </span>
                         <span data-dimension-evidence>
-                          {selectedCity.evidenceCoverage[dimension.id].observedSubpillars}/
-                          {selectedCity.evidenceCoverage[dimension.id].totalSubpillars}
+                          {judgment
+                            ? judgment.sourceUrls.length
+                            : `${selectedCity.evidenceCoverage[dimension.id].observedSubpillars}/${selectedCity.evidenceCoverage[dimension.id].totalSubpillars}`}
                         </span>
                       </summary>
                       <div class="cci-subpillar-list">
@@ -525,8 +605,25 @@ const uiData = JSON.stringify({
                           ))}
                         </ul>
                         <p>{t.city.noEvidence}</p>
-                        <div data-dimension-audit hidden={!audit}>
-                          <h4>{t.city.audit}</h4>
+                        <div data-judgment hidden={!judgment}>
+                          <p data-judgment-rationale>{judgment?.rationale[currentLang]}</p>
+                          <p data-judgment-values>
+                            {judgment &&
+                              `${currentLang === "zh" ? "结构参考 / 事件调节 / 基线半宽 / 每十年趋势" : "Reference / event effect / baseline half-width / trend per decade"}: ${judgment.baseline} / ${release.researchModel ? eventAdjustment(selectedCity.slug, dimension.id, release.researchModel) : 0} / ±${judgment.uncertainty} / ${judgment.trendPerDecade}`}
+                          </p>
+                          <ul data-judgment-sources>
+                            {judgment?.sourceUrls.map((url, index) => (
+                              <li>
+                                <a href={url} target="_blank" rel="noopener noreferrer">
+                                  {currentLang === "zh" ? "判断依据" : "Judgment source"}{" "}
+                                  {index + 1}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <details data-dimension-audit hidden={!audit}>
+                          <summary>{t.city.audit}</summary>
                           <p data-audit-outcome>{audit ? t.city[audit.outcome] : ""}</p>
                           <p data-audit-summary>{audit?.summary[currentLang]}</p>
                           <ul data-audit-sources>
@@ -539,7 +636,7 @@ const uiData = JSON.stringify({
                               </li>
                             ))}
                           </ul>
-                        </div>
+                        </details>
                       </div>
                     </details>
                   );
@@ -547,7 +644,7 @@ const uiData = JSON.stringify({
               }
             </div>
 
-            <div class="cci-tail-ledger">
+            <div class="cci-tail-ledger" hidden={isJudgment}>
               <div class="cci-tail-heading">
                 <h3>{t.tail.title} · {release.stressTestYear}</h3>
                 <span>{t.tail.status}</span>
@@ -666,7 +763,7 @@ const uiData = JSON.stringify({
         </aside>
       </div>
 
-      <div class="cci-evidence-legend">
+      <div class="cci-evidence-legend" hidden={isJudgment}>
         {
           (["city_observation", "national_prior", "scenario_assumption"] as const).map(
             (level, index) => (
@@ -686,6 +783,46 @@ const uiData = JSON.stringify({
         <p>{t.evidenceLevels.missing}</p>
       </div>
     </section>
+
+    {
+      release.researchModel && (
+        <section class="cci-section cci-research" aria-labelledby="event-title">
+          <div class="cci-section-heading">
+            <>
+              <h2 id="event-title">
+                {currentLang === "zh" ? "推动本期判断的事件" : "Events behind this assessment"}
+              </h2>
+              <p>
+                {currentLang === "zh"
+                  ? "下列分值是我们对事件的判断贡献，不是来源公布的测量值，也不是相对上一审查版的涨跌。"
+                  : "These adjustments are our interpretation of each event, not measured source values or changes from the previous audit-only release."}
+              </p>
+            </>
+          </div>
+          {release.researchModel.events.map(event => (
+            <article>
+              <h3>
+                {event.date} · {event.title[currentLang]}
+              </h3>
+              <ul>
+                {event.impacts.map(impact => (
+                  <li>
+                    {cityName(release.cities.find(city => city.slug === impact.city)!)} ·{" "}
+                    {impact.dimension} {impact.delta > 0 ? "+" : ""}
+                    {impact.delta} — {impact.reason[currentLang]}
+                  </li>
+                ))}
+              </ul>
+              {event.sourceUrls.map(url => (
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                  {currentLang === "zh" ? "查看原始来源" : "Read primary source"}
+                </a>
+              ))}
+            </article>
+          ))}
+        </section>
+      )
+    }
 
     <section id="method" class="cci-section cci-method" aria-labelledby="method-title">
       <div class="cci-section-heading">
@@ -712,7 +849,7 @@ const uiData = JSON.stringify({
       <div class="cci-method-split">
         <div>
           <h3>{t.method.scenariosTitle}</h3>
-          <div class="cci-scenario-grid">
+          <div class="cci-scenario-grid" hidden={isJudgment}>
             {
               scenarioGroups.map(([title, states]) => (
                 <div>
@@ -728,11 +865,21 @@ const uiData = JSON.stringify({
               ))
             }
           </div>
-          <p>{t.method.unweighted}</p>
+          {
+            isJudgment ? (
+              <p>
+                {currentLang === "zh"
+                  ? "20：严重脆弱 · 40：约束明显 · 60：能力较强但有短板 · 80：强大且有冗余 · 100：理想上限。初始参考值按 5 分档位评估；模型 2 不再把判断区间标为概率分位数。"
+                  : "20: severe fragility · 40: material constraints · 60: capable with gaps · 80: strong and redundant · 100: ideal ceiling. Reference values use five-point steps. Model 2 does not label judgment ranges as probability quantiles."}
+              </p>
+            ) : (
+              <p>{t.method.unweighted}</p>
+            )
+          }
         </div>
         <div>
           <h3>{t.method.confidenceTitle}</h3>
-          <div class="cci-confidence-grid">
+          <div class="cci-confidence-grid" hidden={isJudgment}>
             {
               t.method.confidenceMeasures.map(measure => (
                 <div>
