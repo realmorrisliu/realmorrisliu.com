@@ -240,12 +240,18 @@
 .cci-chart-line.is-upside,
 .cci-chart-labels .is-upside {
   color: var(--cci-ink);
-  stroke: var(--cci-ink);
 }
 
 .cci-chart-line.is-robust,
 .cci-chart-labels .is-robust {
   color: var(--cci-faint);
+}
+
+.cci-chart-line.is-upside {
+  stroke: var(--cci-ink);
+}
+
+.cci-chart-line.is-robust {
   stroke: var(--cci-faint);
   stroke-dasharray: 7 4;
 }
@@ -257,6 +263,7 @@
 
 .cci-chart-labels text {
   fill: currentColor;
+  stroke: none;
   font-family: var(--font-sans);
   font-size: var(--cci-type-label);
 }
@@ -347,6 +354,52 @@
 
 .cci-section-heading {
   margin-bottom: 2rem;
+}
+
+.cci-event time {
+  color: var(--cci-faint);
+  font-size: var(--cci-type-label);
+  font-variant-numeric: tabular-nums;
+}
+
+.cci-research .cci-event h3 {
+  margin: 0.5rem 0 1.25rem;
+  font-size: var(--cci-type-title);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.cci-event-impacts {
+  display: grid;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cci-event-impact-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-size: var(--cci-type-label);
+  font-weight: 500;
+}
+
+.cci-event-impact-heading strong {
+  white-space: nowrap;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.cci-event-impacts p {
+  margin: 0.6rem 0 0;
+  color: var(--cci-muted);
+}
+
+.cci-event > a {
+  font-size: var(--cci-type-label);
 }
 
 .cci-research article {
@@ -947,20 +1000,10 @@
 }
 
 .cci-method-flow li {
-  position: relative;
   display: flex;
   min-height: 96px;
   gap: 0.85rem;
   padding: 0 2.25rem 0 0.5rem;
-}
-
-.cci-method-flow li:not(:last-child)::after {
-  position: absolute;
-  top: 1.15rem;
-  right: 0.65rem;
-  width: 1.2rem;
-  border-top: 1px solid var(--cci-faint);
-  content: "";
 }
 
 .cci-method-flow > li > span {
@@ -1068,6 +1111,7 @@
 .cci-principles {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--cci-rule);
   margin: 0 0 2.5rem;
   padding: 0;
   list-style: none;
@@ -1075,14 +1119,9 @@
 
 .cci-principles li {
   min-height: 150px;
-  border-top: 1px solid var(--cci-rule);
   border-right: 1px solid var(--cci-rule);
   border-bottom: 1px solid var(--cci-rule);
-  padding: 1rem 1.5rem 1rem 0;
-}
-
-.cci-principles li + li {
-  padding-left: 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 .cci-principles li:last-child {
@@ -1298,10 +1337,6 @@
     gap: 1.5rem 0;
   }
 
-  .cci-method-flow li:nth-child(3)::after {
-    display: none;
-  }
-
   .cci-method-split {
     grid-template-columns: 1fr;
   }
@@ -1464,15 +1499,9 @@
     padding: 0.8rem 0;
   }
 
-  .cci-method-flow li::after {
-    display: none;
-  }
-
-  .cci-principles li,
-  .cci-principles li + li {
+  .cci-principles li {
     min-height: 0;
     border-right: 0;
-    padding: 1rem 0;
   }
 
   .cci-manifest summary {
