@@ -1,4 +1,4 @@
-import { judgmentSupport, eventAdjustment } from "@/cci/judgment";
+import { judgmentHalfWidth, eventAdjustment } from "@/cci/judgment";
 import {
   DIMENSIONS,
   type DimensionId,
@@ -100,7 +100,7 @@ function initialize(
   };
   const name = (city: City) => (ui.currentLang === "zh" ? city.nameZh : city.name);
   const support = (city: City) =>
-    city.judgments ? judgmentSupport(city.judgments, ui.currentLang) : city.confidence.overall;
+    city.judgments ? judgmentHalfWidth(city.judgments) : city.confidence.overall;
   const researchModel = release.researchModel;
   const eventEffect = (city: City) =>
     researchModel
@@ -161,8 +161,8 @@ function initialize(
     if (sortKey === "confidence") {
       if (left.judgments && right.judgments)
         return (
-          right.judgments.reduce((sum, d) => sum + d.uncertainty, 0) -
-          left.judgments.reduce((sum, d) => sum + d.uncertainty, 0)
+          left.judgments.reduce((sum, d) => sum + d.uncertainty, 0) -
+          right.judgments.reduce((sum, d) => sum + d.uncertainty, 0)
         );
       const grades = { A: 4, B: 3, C: 2, D: 1 };
       return grades[left.confidence.overall] - grades[right.confidence.overall];
@@ -269,7 +269,7 @@ function initialize(
       );
       const judgment = city.judgments?.find(item => item.id === dimension);
       mustQuery(row, "[data-dimension-confidence]").textContent = judgment
-        ? judgmentSupport([judgment], ui.currentLang)
+        ? judgmentHalfWidth([judgment])
         : support(city);
       mustQuery(row, "[data-judgment]").hidden = !judgment;
       mustQuery(row, "[data-judgment-rationale]").textContent =

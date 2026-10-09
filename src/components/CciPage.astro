@@ -6,7 +6,7 @@
 // FORM: one flat manuscript; serif hierarchy, open tables, one-pixel rules, no cards or accent color.
 import sourceManifestData from "@/cci/data/source-manifest-v1.json";
 import { judgmentCopy } from "@/cci/judgment-copy";
-import { judgmentSupport, eventAdjustment } from "@/cci/judgment";
+import { judgmentHalfWidth, eventAdjustment } from "@/cci/judgment";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS, type ResultMode, type TargetYear } from "@/cci/model";
 import { cciReleases, latestCciRelease } from "@/cci/releases";
@@ -70,7 +70,7 @@ const correctionParams = new URLSearchParams({
 const correctionUrl = `https://github.com/realmorrisliu/realmorrisliu.com/issues/new?${correctionParams}`;
 
 const support = (city: (typeof release.cities)[number]) =>
-  city.judgments ? judgmentSupport(city.judgments, currentLang) : city.confidence.overall;
+  city.judgments ? judgmentHalfWidth(city.judgments) : city.confidence.overall;
 const eventEffect = (city: (typeof release.cities)[number]) =>
   release.researchModel
     ? DIMENSIONS.reduce(
@@ -587,9 +587,7 @@ const uiData = JSON.stringify({
                         <span class="cci-dimension-name">{t.dimensions[dimension.id].name}</span>
                         <span data-dimension-result>{formatScore(result)}</span>
                         <span data-dimension-confidence>
-                          {judgment
-                            ? judgmentSupport([judgment], currentLang)
-                            : support(selectedCity)}
+                          {judgment ? judgmentHalfWidth([judgment]) : support(selectedCity)}
                         </span>
                         <span data-dimension-evidence>
                           {judgment
@@ -757,8 +755,13 @@ const uiData = JSON.stringify({
           </div>
           <button type="button" class="cci-reset" data-reset-weights>{t.myCci.reset}</button>
           <div class="cci-personal-result">
-            <h4>{t.myCci.personalResult} <output data-personal-result>—</output></h4>
-            <p data-personal-unavailable>{t.myCci.unavailable}</p>
+            <h4>
+              {t.myCci.personalResult}
+              <output data-personal-result>{formatScore(selectedScore(selectedCity))}</output>
+            </h4>
+            <p data-personal-unavailable hidden={selectedCity.rankingEligible}>
+              {t.myCci.unavailable}
+            </p>
           </div>
         </aside>
       </div>
