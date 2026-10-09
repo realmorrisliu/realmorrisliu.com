@@ -152,6 +152,16 @@ const uiData = JSON.stringify({
     tail: t.runtime.tail,
   },
 }).replaceAll("<", "\\u003c");
+const researchEvents = (release.researchModel?.events ?? []).map(event => {
+  const groups = new Map<string, { impact: (typeof event.impacts)[number]; cities: string[] }>();
+  for (const impact of event.impacts) {
+    const key = JSON.stringify([impact.dimension, impact.delta, impact.reason[currentLang]]);
+    const group = groups.get(key) ?? { impact, cities: [] };
+    group.cities.push(cityName(release.cities.find(city => city.slug === impact.city)!));
+    groups.set(key, group);
+  }
+  return { ...event, groups: [...groups.values()] };
+});
 ---
 
 <main
@@ -810,17 +820,22 @@ const uiData = JSON.stringify({
               </p>
             </>
           </div>
-          {release.researchModel.events.map(event => (
-            <article>
-              <h3>
-                {event.date} · {event.title[currentLang]}
-              </h3>
-              <ul>
-                {event.impacts.map(impact => (
+          {researchEvents.map(event => (
+            <article class="cci-event">
+              <time datetime={event.date}>{event.date}</time>
+              <h3>{event.title[currentLang]}</h3>
+              <ul class="cci-event-impacts">
+                {event.groups.map(({ impact, cities }) => (
                   <li>
-                    {cityName(release.cities.find(city => city.slug === impact.city)!)} ·{" "}
-                    {impact.dimension} {impact.delta > 0 ? "+" : ""}
-                    {impact.delta} — {impact.reason[currentLang]}
+                    <div class="cci-event-impact-heading">
+                      <span>{cities.join(currentLang === "zh" ? "、" : ", ")}</span>
+                      <strong>
+                        {cities.length > 1 ? (currentLang === "zh" ? "每城 · " : "Each · ") : ""}
+                        {impact.dimension} {impact.delta > 0 ? "+" : impact.delta < 0 ? "−" : ""}
+                        {Math.abs(impact.delta)}
+                      </strong>
+                    </div>
+                    <p>{impact.reason[currentLang]}</p>
                   </li>
                 ))}
               </ul>
