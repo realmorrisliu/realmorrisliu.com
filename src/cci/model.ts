@@ -224,6 +224,17 @@ export interface CandidateReleaseInput {
   targetYears: TargetYear[];
   stressTestYear: 2125;
   cities: CityCandidate[];
+  research?: {
+    summary: { en: string; zh: string };
+    findings: Array<{
+      dimensions: DimensionId[];
+      title: string;
+      url: string;
+      period: string;
+      en: string;
+      zh: string;
+    }>;
+  };
 }
 
 export interface DistributionSummary {
@@ -279,6 +290,7 @@ export interface CciRelease {
   officialWeights: Record<DimensionId, number>;
   scenarioCount: number;
   cities: CityReleaseResult[];
+  research?: CandidateReleaseInput["research"];
 }
 
 export interface PublishedCciRelease extends CciRelease {
@@ -824,5 +836,6 @@ export function buildRelease(input: CandidateReleaseInput): CciRelease {
     ) as Record<DimensionId, number>,
     scenarioCount: SCENARIOS.length,
     cities: input.cities.map(city => computeCity(city, input)),
+    ...(input.research ? { research: input.research } : {}),
   };
 }

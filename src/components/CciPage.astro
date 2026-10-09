@@ -204,10 +204,10 @@ const uiData = JSON.stringify({
       </figure>
     </section>
 
-    <div class="cci-release-rail" aria-label={t.release.researchPreview}>
+    <div class="cci-release-rail" aria-label={releaseStatus(release.status)}>
       <span>
         {t.release.release}
-        <strong>{release.releaseId}</strong> · {t.release.asOf}
+        <strong>{release.releaseId}</strong> · {releaseStatus(release.status)} · {t.release.asOf}
         <time datetime={release.asOf}>{releaseDate}</time>
       </span>
       <span>
@@ -216,6 +216,35 @@ const uiData = JSON.stringify({
         {release.dataVersion} · GHS-FUA {release.boundary.version}
       </span>
     </div>
+
+    {
+      release.research && (
+        <section class="cci-section cci-research" aria-labelledby="research-title">
+          <div class="cci-section-heading">
+            <h2 id="research-title">{currentLang === "zh" ? "本期证据更新" : "Evidence update"}</h2>
+            <p>{release.research.summary[currentLang]}</p>
+          </div>
+          <details class="cci-reasons">
+            <summary>
+              {currentLang === "zh" ? "查看发现与一手来源" : "Read findings and primary sources"}
+            </summary>
+            {release.research.findings.map(finding => (
+              <article>
+                <h3>
+                  {finding.dimensions.join(" / ")} · {finding.period}
+                </h3>
+                <p>{finding[currentLang]}</p>
+                <p>
+                  <a href={finding.url} target="_blank" rel="noopener noreferrer">
+                    {finding.title}
+                  </a>
+                </p>
+              </article>
+            ))}
+          </details>
+        </section>
+      )
+    }
 
     <section
       class="cci-control-deck"

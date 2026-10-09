@@ -1,0 +1,90 @@
+import previous from "./candidate-2026-08";
+import type { CandidateReleaseInput } from "../model";
+
+export default {
+  ...previous,
+  releaseId: "CCI-2026.10",
+  status: "candidate",
+  asOf: "2026-10-09",
+  dataVersion: "2026.10.0",
+  research: {
+    summary: {
+      en: "October evidence review. These findings inform further research; they are not city score inputs. All 16 cities remain unranked pending local evidence, boundary checks and supported future scenarios.",
+      zh: "10 月证据审查。以下发现用于推进研究，尚未进入城市评分。16 座城市仍待补齐本地证据、边界核查与未来情景依据，暂不排名。",
+    },
+    findings: [
+      {
+        dimensions: ["ISR"],
+        title: "World Bank · Worldwide Governance Indicators",
+        url: "https://www.worldbank.org/en/publication/worldwide-governance-indicators",
+        period: "1996–2025 / 2026 update",
+        en: "WGI now lists a 2026 update through 2025 with revised historical estimates. Its national perception aggregates are context, not direct city governance observations; old and revised methods must not be spliced into a trend.",
+        zh: "WGI 当前列出覆盖至 2025 年的 2026 更新，并修订历史估计。国家层面的感知汇总属于背景，不是城市治理实测；不能拼接新旧方法构造趋势。",
+      },
+      {
+        dimensions: ["LON"],
+        title: "Life Biosciences · ER-100 Phase 1 interim announcement",
+        url: "https://www.lifebiosciences.com/life-biosciences-announces-first-in-human-data-from-ongoing-phase-1-trial-evaluating-er-100-in-optic-neuropathies/",
+        period: "2026-10-08 / 56-day follow-up",
+        en: "The sponsor reports interim observations from three participants in an open-label phase 1 optic-neuropathy trial. This is preliminary sponsor-reported evidence, not proof of longer human lifespan, long-term safety or routine resident access.",
+        zh: "申办方公布视神经疾病开放标签一期试验三名参与者的中期观察。这是申办方报告的初步证据，不能证明人体延寿、长期安全或居民常规可及。",
+      },
+      {
+        dimensions: ["TEC"],
+        title: "OECD · AI adoption by firms",
+        url: "https://www.oecd.org/en/about/news/announcements/2026/01/ai-use-by-individuals-surges-across-the-oecd-as-adoption-by-firms-continues-to-expand.html",
+        period: "2025",
+        en: "In OECD countries with available data, 20.2% of firms reported AI use in 2025, up from 14.2% in 2024. Adoption differs by firm size; these figures neither measure city productivity nor justify century-scale growth assumptions.",
+        zh: "有数据的 OECD 国家中，2025 年 20.2% 的企业报告使用 AI，2024 年为 14.2%。企业规模间差异明显；这些数据不测量城市生产率，也不支持百年增长假设。",
+      },
+      {
+        dimensions: ["OPT"],
+        title: "European Commission · EES and ETIAS",
+        url: "https://home-affairs.ec.europa.eu/news/main-differences-between-ees-and-etias-what-travellers-need-know-2026-04-28_en",
+        period: "2026-04-28",
+        en: "The Commission confirms EES operation from April 10. Its April ETIAS launch plan is not proof of today's launch status. Short-stay border registration and travel permission do not establish long-term residence, work or capital-transfer rights.",
+        zh: "欧委会确认 EES 自 4 月 10 日运行。4 月给出的 ETIAS 启动计划不能证明今日已启动；短期入境登记与旅行许可也不等于长期居留、工作或资金转移权利。",
+      },
+      {
+        dimensions: ["PCS", "RES"],
+        title: "Copernicus Climate Change Service",
+        url: "https://climate.copernicus.eu/august-was-joint-warmest-month-ever-recorded-globally-temperatures-once-again-exceeding-15degc",
+        period: "2026-08",
+        en: "August's global mean temperature reached 16.96°C in ERA5, tied with July 2023. Western Europe's record summer heat coincided with exceptionally low river flows. City-level exposure and service continuity still need separate evidence.",
+        zh: "ERA5 的 8 月全球均温达 16.96°C，与 2023 年 7 月并列。西欧创纪录的夏季高温伴随异常低河流流量；城市暴露和关键服务连续性仍需分别取证。",
+      },
+      {
+        dimensions: ["PCS", "ISR"],
+        title: "WMO · Global Heat Forum",
+        url: "https://wmo.int/secretariat/celeste-saulo/eleven-warmest-years-one-persistent-gap",
+        period: "2026-10-06",
+        en: "WMO's October briefing links heat observations to warning and response capacity. Its ENSO outlook remains a forecast; neither a global briefing nor a warning-system announcement establishes a city's long-term safety.",
+        zh: "WMO 10 月简报强调高温观测与预警响应能力的联系。ENSO 展望仍是预测；全球简报或预警系统公告均不能证明一座城市的长期安全。",
+      },
+      {
+        dimensions: ["GSS"],
+        title: "UCDP · Dataset Download Center",
+        url: "https://ucdp.uu.se/downloads/",
+        period: "2025 / 2026-08",
+        en: "Annual GED 26.1 covers 2025; the latest monthly candidate listed at review is 26.0.8 for August 2026. Final annual records and provisional monthly events must retain their distinct versions. No recorded event is not proof of no violence.",
+        zh: "年度 GED 26.1 覆盖 2025 年；本次核查官网列出的最新月度候选为 2026 年 8 月的 26.0.8。年度记录与月度暂定事件必须保留版本区别；未记录事件不证明不存在暴力。",
+      },
+      {
+        dimensions: ["RES"],
+        title: "IEA · Global Energy Review 2026",
+        url: "https://www.iea.org/reports/global-energy-review-2026/electricity-supply",
+        period: "2025",
+        en: "Low-emissions sources provided 43% of global electricity in 2025, while coal still provided 34%. Generation mix cannot stand in for local outage duration, reserve capacity or recovery capability.",
+        zh: "2025 年低排放电源占全球发电量 43%，煤电仍占 34%。电源结构不能替代本地停电时长、备用容量或恢复能力。",
+      },
+      {
+        dimensions: ["MED"],
+        title: "WHO · World Health Statistics 2026",
+        url: "https://www.who.int/news/item/13-05-2026-global-health-gains-face-threat-of-reversal",
+        period: "2022–2025",
+        en: "WHO reports uneven health progress and substantial reporting delays: only 18% of countries reported mortality data within one year by end-2025. Access, affordability and observation dates matter alongside clinical capacity.",
+        zh: "WHO 报告指出健康进展不均与显著的数据滞后：截至 2025 年底，仅 18% 的国家能在一年内报送死亡数据。可及性、支付负担与观测日期必须和临床能力一并核查。",
+      },
+    ],
+  },
+} satisfies CandidateReleaseInput;

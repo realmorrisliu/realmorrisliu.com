@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import octoberCandidate from "./data/candidate-2026-10";
+import augustCandidate from "./data/candidate-2026-08";
 import {
   DIMENSIONS,
   SCENARIO_AXES,
@@ -129,6 +131,14 @@ const candidate = (city = completeCity()): CandidateReleaseInput => ({
   targetYears: [...TARGET_YEARS],
   stressTestYear: 2125,
   cities: [city],
+});
+
+test("context research survives release generation without becoming scored evidence", () => {
+  const release = buildRelease(octoberCandidate);
+  assert.deepEqual(release.research, octoberCandidate.research);
+  assert.deepEqual(release.cities, buildRelease(augustCandidate).cities);
+  assert.ok(release.cities.every(city => !city.rankingEligible && city.observedCoverage === 0));
+  assert.equal(buildRelease(augustCandidate).research, undefined);
 });
 
 test("normalization supports higher- and lower-is-better anchors", () => {

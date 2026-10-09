@@ -56,8 +56,7 @@ export const cciCopy = {
       title: "Compare the pilot cities",
       intro:
         "A deliberately diverse validation panel, bound to one globally consistent functional urban area product.",
-      notice:
-        "Research preview · No city clears v1 ranking eligibility yet. Missing evidence remains missing.",
+      notice: "No city clears v1 ranking eligibility yet. Missing evidence remains missing.",
       compare: "Compare",
       clear: "Clear comparison",
       selected: "Selected cities",
@@ -328,7 +327,7 @@ export const cciCopy = {
     compare: {
       title: "比较首批城市",
       intro: "这是刻意保持多样性的验证面板，全部绑定到同一个全球一致的功能性都市区产品。",
-      notice: "研究预览 · 目前没有城市通过 v1 排名资格。缺失证据继续保持缺失。",
+      notice: "目前没有城市通过 v1 排名资格。缺失证据继续保持缺失。",
       compare: "比较",
       clear: "清空比较",
       selected: "已选城市",
