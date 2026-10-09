@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import octoberCandidate from "./data/candidate-2026-10";
 import augustCandidate from "./data/candidate-2026-08";
+import reviewedCandidate from "./data/candidate-2026-10-1";
+import boundaryAudit from "./data/boundary-audit-2026-10.json";
 import {
   DIMENSIONS,
   SCENARIO_AXES,
@@ -139,6 +141,40 @@ test("context research survives release generation without becoming scored evide
   assert.deepEqual(release.cities, buildRelease(augustCandidate).cities);
   assert.ok(release.cities.every(city => !city.rankingEligible && city.observedCoverage === 0));
   assert.equal(buildRelease(augustCandidate).research, undefined);
+});
+
+test("published evidence reviews cover all cities without granting ranking eligibility", () => {
+  const release = buildRelease(reviewedCandidate);
+  assert.equal(release.status, "published");
+  assert.equal(release.cities.length, 16);
+  assert.equal(
+    release.cities.reduce((count, city) => count + (city.audit?.dimensions.length ?? 0), 0),
+    128
+  );
+  for (const city of release.cities) {
+    assert.equal(city.rankingEligible, false);
+    assert.equal(city.observedCoverage, 0);
+    assert.equal(city.results[2100].point.median, null);
+    assert.ok(!city.notRankedReasons.includes("local_evidence_packs_incomplete"));
+    assert.ok(city.notRankedReasons.includes("subpillar_evidence_incomplete"));
+  }
+  assert.equal(boundaryAudit.sourceSha256, reviewedCandidate.boundary.sourceSha256);
+  assert.deepEqual(
+    boundaryAudit.cities.map(city => city.slug).sort(),
+    release.cities.map(city => city.slug).sort()
+  );
+});
+
+test("evidence review rejects duplicate dimensions, future sources and unsafe links", () => {
+  const duplicate = globalThis.structuredClone(reviewedCandidate);
+  duplicate.cities[0].audit.dimensions[1].id = duplicate.cities[0].audit.dimensions[0].id;
+  assert.throws(() => buildRelease(duplicate), /exactly once/);
+  const future = globalThis.structuredClone(reviewedCandidate);
+  future.cities[0].audit.dimensions[0].sources[0].accessedAt = "2026-10-10";
+  assert.throws(() => buildRelease(future), /invalid audit source/);
+  const unsafe = globalThis.structuredClone(reviewedCandidate);
+  unsafe.cities[0].audit.dimensions[0].sources[0].url = "javascript:alert(1)";
+  assert.throws(() => buildRelease(unsafe), /invalid audit source/);
 });
 
 test("normalization supports higher- and lower-is-better anchors", () => {

@@ -111,11 +111,16 @@ const uiData = JSON.stringify({
     compare: t.compare.compare,
     compareEmpty: t.compare.empty,
     inAudit: t.compare.inAudit,
+    reviewed: t.compare.reviewed,
+    usable_observation: t.city.usable_observation,
+    context_only: t.city.context_only,
+    insufficient_evidence: t.city.insufficient_evidence,
     notRanked: t.compare.notRanked,
     boundaryPending: t.city.boundaryPending,
     boundaryVerified: t.city.boundaryVerified,
     unavailable: t.myCci.unavailable,
     unassessed: t.tail.unassessed,
+    insufficient: t.tail.insufficient,
     pass: t.tail.pass,
     watch: t.tail.watch,
     fail: t.tail.fail,
@@ -223,6 +228,20 @@ const uiData = JSON.stringify({
           <div class="cci-section-heading">
             <h2 id="research-title">{currentLang === "zh" ? "本期证据更新" : "Evidence update"}</h2>
             <p>{release.research.summary[currentLang]}</p>
+            {release.research.reportUrl && (
+              <p>
+                <a
+                  class="cci-policy-link"
+                  href={release.research.reportUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {currentLang === "zh"
+                    ? "完整发布说明与审核记录"
+                    : "Full release notes and audit records"}
+                </a>
+              </p>
+            )}
           </div>
           <details class="cci-reasons">
             <summary>
@@ -349,7 +368,13 @@ const uiData = JSON.stringify({
                   <td data-cell-range>{selectedRange(city)}</td>
                   <td data-cell-confidence>{city.confidence.overall}</td>
                   <td data-cell-tail>{city.tailStatus ?? "—"}</td>
-                  <td data-cell-evidence>{city.rankingEligible ? "—" : t.compare.inAudit}</td>
+                  <td data-cell-evidence>
+                    {city.rankingEligible
+                      ? `${city.observedCoverage}%`
+                      : city.audit
+                        ? t.compare.reviewed
+                        : t.compare.inAudit}
+                  </td>
                 </tr>
               ))
             }
@@ -475,6 +500,9 @@ const uiData = JSON.stringify({
             <div class="cci-dimension-ledger">
               {
                 DIMENSIONS.map(dimension => {
+                  const audit = selectedCity.audit?.dimensions.find(
+                    item => item.id === dimension.id
+                  );
                   const result =
                     selectedCity.results[selectedYear].dimensions[dimension.id].point[selectedMode];
                   return (
@@ -497,6 +525,21 @@ const uiData = JSON.stringify({
                           ))}
                         </ul>
                         <p>{t.city.noEvidence}</p>
+                        <div data-dimension-audit hidden={!audit}>
+                          <h4>{t.city.audit}</h4>
+                          <p data-audit-outcome>{audit ? t.city[audit.outcome] : ""}</p>
+                          <p data-audit-summary>{audit?.summary[currentLang]}</p>
+                          <ul data-audit-sources>
+                            {audit?.sources.map(source => (
+                              <li>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer">
+                                  {source.title}
+                                </a>
+                                {` · ${source.period}`}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
                     </details>
                   );
@@ -515,7 +558,9 @@ const uiData = JSON.stringify({
                   <div class="cci-tail-row" data-tail-test={test}>
                     <span>{t.tail[test as keyof typeof t.tail]}</span>
                     <span data-tail-status>{status ?? "—"}</span>
-                    <span data-tail-note>{status ?? t.tail.unassessed}</span>
+                    <span data-tail-note>
+                      {status ?? (selectedCity.audit ? t.tail.insufficient : t.tail.unassessed)}
+                    </span>
                   </div>
                 ))
               }
@@ -530,6 +575,23 @@ const uiData = JSON.stringify({
             hidden
           >
             <h3>{t.city.boundaryRecord}</h3>
+            <div data-observation-boundary hidden={!selectedCity.audit}>
+              <h4>{t.city.observationBoundary}</h4>
+              <p data-observation-boundary-note>
+                {selectedCity.audit?.boundaryReview[currentLang]}
+              </p>
+              <ul data-observation-boundary-sources>
+                {
+                  selectedCity.audit?.boundaryReview.sources.map(source => (
+                    <li>
+                      <a href={source.url} target="_blank" rel="noopener noreferrer">
+                        {source.title}
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
             <dl class="cci-source-record">
               <div>
                 <dt>{t.city.eFuaIds}</dt><dd data-boundary-fua-ids>

@@ -1,0 +1,1030 @@
+[
+  {
+    "slug": "boston",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The plan projects up to 46 days above 90°F annually in the 2070s versus a historical 10. This is a municipal scenario, not a current eFUA heat observation; humidity, flooding and geophysical inputs are incomplete.",
+          "zh": "计划预计 2070 年代每年超过 90°F 的天数可达 46 天，历史基准为 10 天。这是市级情景预测，非当前 eFUA 高温观测；湿度、洪水和地质灾害输入仍不完整。"
+        },
+        "sources": [
+          {
+            "title": "Heat Resilience Solutions for Boston",
+            "url": "https://www.boston.gov/departments/climate-resilience/heat-resilience-solutions-boston",
+            "period": "2022 plan; historical baseline and 2070s projection",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Police publish Part 1 crime and shooting reports for this window. The landing page establishes availability, not extracted counts. Recorded city crime does not measure regional conflict or strategic exposure.",
+          "zh": "警方公开该时段的一级犯罪与枪击报告。已核查发布入口，未提取数量；市内报案犯罪不能代表地区冲突或战略风险。"
+        },
+        "sources": [
+          {
+            "title": "Crime Statistics: January 1, 2025 – December 21, 2025 vs. 2024",
+            "url": "https://police.boston.gov/2025/12/22/crime-statistics-january-1-2025-december-21-2025-vs-2024/",
+            "period": "2025-01-01 to 2025-12-21",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The city documents a dedicated climate resilience office created in August 2024 and completed coastal plans for its 47-mile coastline. Institutional arrangements and plans do not establish delivery, social cohesion or recovery outcomes.",
+          "zh": "市府记录 2024 年 8 月设立气候韧性办公室，并为 47 英里海岸线完成规划；机构与计划不能证明实施成效、社会凝聚力或恢复能力。"
+        },
+        "sources": [
+          {
+            "title": "Climate Resilience",
+            "url": "https://www.boston.gov/departments/climate-resilience",
+            "period": "2024 institutional change; current programme page",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Boston sampled 33 higher-risk homes: lead 90th percentile 22.5 ppb, above the stated 15 ppb action level; 4 samples exceeded it. Targeted premise plumbing results must not be generalized to all homes or contradicted by upstream compliance claims. Food and energy resilience remain unmeasured.",
+          "zh": "波士顿在 33 户较高风险住宅抽检：铅第 90 百分位为 22.5 ppb，高于报告列示的 15 ppb 行动值，4 份样本超标。针对住宅管道的结果不能外推所有住户，也不能被上游供水达标声明抵消；食品和能源韧性未测量。"
+        },
+        "sources": [
+          {
+            "title": "2025 Annual Water Quality Test Results - Full Service",
+            "url": "https://www.mwra.com/your-water-system/drinking-water-quality/annual-water-quality-test-results-main/2025full",
+            "period": "September–October 2025; published June 2026",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The 2025 assessment and improvement plan explicitly retain access to care, housing, food and economic opportunity as priorities. This supports an access-gap review, not a complete normalized metro healthcare score; facility and population denominators were not extracted.",
+          "zh": "2025 年评估与改善计划仍将就医、住房、食品和经济机会列为重点，可支持可及性缺口审核；尚未提取设施和人口分母，不能形成完整都市圈医疗评分。"
+        },
+        "sources": [
+          {
+            "title": "Boston Community Health Collaborative",
+            "url": "https://www.boston.gov/government/cabinets/boston-public-health-commission/racial-justice-and-health-equity/bostonchna",
+            "period": "2025 CHNA; 2025–2028 improvement plan",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Mass General documents Alzheimer treatment pathways and research recruitment. A provider programme is not a deduplicated geroscience trial inventory, a lifespan benefit, or evidence that all residents can afford treatment.",
+          "zh": "麻省总医院记录阿尔茨海默病治疗路径及研究招募；单一机构项目不等于去重后的老龄科研试验清单、延寿获益或全体居民可负担治疗的证据。"
+        },
+        "sources": [
+          {
+            "title": "Memory Disorders Division",
+            "url": "https://www.massgeneral.org/neurology/treatments-and-services/memory-disorders-division",
+            "period": "2024 approval reference; current programme page",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The city publishes a life-sciences industry snapshot. Its undated employment and institution totals were not adopted as 2026 observations; a reproducible industry classification, geographic scope and digital diffusion data are absent.",
+          "zh": "市府提供生命科学行业概况，但就业与机构总量无明确观测日期，未作为 2026 年观测采用；仍缺可复现的行业分类、地理范围及数字技术普及数据。"
+        },
+        "sources": [
+          {
+            "title": "Healthcare and Life Sciences",
+            "url": "https://content.boston.gov/government/cabinets/economic-opportunity-and-inclusion/healthcare-and-life-sciences",
+            "period": "Undated industry snapshot",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The MBTA performance office explains changed reliability measures and a Fall 2023 comparison. This is direct methodology evidence; the MBTA policy page itself was robots-blocked. No comparable current network redundancy or legal mobility measure was extracted.",
+          "zh": "MBTA 绩效办公室说明可靠性指标调整及 2023 年秋季对照，这是生产方方法证据；MBTA 政策页面本身被 robots 阻止读取。未提取可比的当前网络冗余或法律迁移能力指标。"
+        },
+        "sources": [
+          {
+            "title": "The MBTA’s 2024 Service Delivery Policy: Changing how Success is Measured",
+            "url": "https://www.opmidatablog.com/latest-posts/the-mbtas-2024-service-delivery-policy-changing-how-success-is-measured",
+            "period": "2025-01-24; policy adopted 2024-12-19",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "The existing candidate records a direct name/country match. This review did not spatially reconcile municipal, operator or provincial observations with the 2015 GHS-FUA polygon; local observations are not yet qualified as eFUA scoring inputs.",
+      "zh": "既有候选数据记录名称与国家直接匹配。本次未将市界、运营商或省级观测与 2015 年 GHS-FUA 多边形进行空间对齐；当地观测尚未具备作为 eFUA 评分输入的资格。",
+      "sources": [
+        {
+          "title": "GHS-FUA R2019A — Functional Urban Areas",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 epoch; R2019A product",
+          "accessedAt": "2026-10-09"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "toronto",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Toronto identifies a warmer, wetter and less predictable climate and publishes a 2025 risk assessment. City scenarios and qualitative hazards require population-weighted eFUA extraction before use; no tail threshold is certified.",
+          "zh": "多伦多发布 2025 年风险评估，指出气候更热、更湿且更难预测。市级情景与定性危害需按 eFUA 人口加权提取后才能入模，尚不能认证尾部风险门槛。"
+        },
+        "sources": [
+          {
+            "title": "Becoming a Climate-Ready Toronto",
+            "url": "https://www.toronto.ca/services-payments/water-environment/environmentally-friendly-city-initiatives/becoming-a-climate-ready-toronto/",
+            "period": "2024 climate report; 2025 risk assessment",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The report explicitly warns that annual Major Crime Indicator counts and the Public Safety Data Portal are not comparable because extraction methods differ. No series was spliced or converted to a conflict score; wider strategic exposure remains unmeasured.",
+          "zh": "报告明确警告年度主要犯罪统计与公开安全数据门户因提取方式不同而不可比较。未拼接时间序列或换算冲突分数；更广泛的战略风险仍未测量。"
+        },
+        "sources": [
+          {
+            "title": "2024 Toronto Police Service Chief’s Annual Report",
+            "url": "https://www.tps.ca/media/filer_public/da/56/da567ea3-47fe-43dc-b268-ef8201a9d297/b8f15a2f-7544-40cb-b2b9-32eba49deb3c.pdf",
+            "period": "2024",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The city publishes 2025 financial statements and annual reporting. Availability supports fiscal accountability review but does not itself establish adaptive capacity, cohesion or disaster recovery performance; no financial ratio was extracted.",
+          "zh": "市府公开 2025 年财务报表与年度报告，可支持财政问责审核；公开报告本身不能证明适应能力、凝聚力或灾后恢复绩效，未提取财务比率。"
+        },
+        "sources": [
+          {
+            "title": "Annual Financial Report",
+            "url": "https://www.toronto.ca/city-government/budget-finances/city-finance/annual-financial-report/",
+            "period": "2025 annual report listing",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The producer lists 2025 testing, adverse-result, system-compliance and lead-mitigation reports. This establishes a local water evidence trail, not a full eFUA extraction or food/energy supply assessment.",
+          "zh": "生产方列出 2025 年检测、异常结果、系统合规及减铅报告，形成当地用水证据路径；尚未完成 eFUA 提取或食品、能源供应评估。"
+        },
+        "sources": [
+          {
+            "title": "Tap Water Quality & System Reports",
+            "url": "https://www.toronto.ca/services-payments/water-environment/tap-water-in-toronto/tap-water-quality-system-reports/",
+            "period": "2025 reporting",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Toronto Public Health provides geographic and sociodemographic dashboards and warns of inequities. Underlying healthcare-access values, sample uncertainty and alignment to the larger eFUA were not extracted; the 2023 profile is not relabelled 2026.",
+          "zh": "多伦多公共卫生部门提供地域与社会人口分组仪表板，并明确健康不平等。未提取就医可及性原值、抽样不确定性或与更大 eFUA 的对应关系；不将 2023 年概况改称 2026 年数据。"
+        },
+        "sources": [
+          {
+            "title": "Population Health Status Indicators",
+            "url": "https://www.toronto.ca/community-people/health-wellness-care/health-inspections-monitoring/population-health-status-indicators/",
+            "period": "Page modified 2026-05-07; underlying periods vary",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Baycrest describes brain-health trials with ethics review and eligibility assessment. This confirms a local research pathway but provides neither deduplicated trial-phase counts nor population access or proven general longevity benefit.",
+          "zh": "Baycrest 描述经伦理审查和资格筛选的脑健康试验，证明存在本地研究路径；未提供按阶段去重的试验数量、人口可及性或已证实的普遍延寿效益。"
+        },
+        "sources": [
+          {
+            "title": "Anne & Allan Bank Centre for Clinical Research Trials",
+            "url": "https://www.baycrest.org/all-entities/baycrest-academy-for-research-and-education/research-units/anne-allan-bank-centre-for-clinical-research-trials/",
+            "period": "Undated current programme page",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The city employment survey provides sector and location counts. Municipality, downtown and employment-area tables must not be treated as eFUA technology employment; research output and household digital diffusion remain separate missing constructs.",
+          "zh": "市级就业调查提供行业与地点统计；市界、市中心及就业区表格不能作为 eFUA 科技就业数据，科研产出与家庭数字普及仍是独立缺口。"
+        },
+        "sources": [
+          {
+            "title": "Toronto Employment Survey",
+            "url": "https://www.toronto.ca/city-government/data-research-maps/research-reports/planning-development/toronto-employment-survey/",
+            "period": "2025",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "TTC reports roughly 193 million bus riders over 143.5 million kilometres in 2025 and 77% bus on-time performance in April 2026. Operator metrics are useful context but not all-mode metro redundancy, legal mobility or asset portability.",
+          "zh": "TTC 报告 2025 年公交约 1.93 亿人次、1.435 亿公里，2026 年 4 月公交准点率 77%。运营商指标可作背景，不能代表全都市圈多方式冗余、法律迁移能力或资产可携性。"
+        },
+        "sources": [
+          {
+            "title": "CEO’s Report June: Commentary",
+            "url": "https://coupler.ttc.ca/news/message-from-the-executives/2026/Jun/CEO-Report-June-Commentary",
+            "period": "2025 ridership; April 2026 performance; published 2026-06-30",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "The existing candidate records a direct name/country match. This review did not spatially reconcile municipal, operator or provincial observations with the 2015 GHS-FUA polygon; local observations are not yet qualified as eFUA scoring inputs.",
+      "zh": "既有候选数据记录名称与国家直接匹配。本次未将市界、运营商或省级观测与 2015 年 GHS-FUA 多边形进行空间对齐；当地观测尚未具备作为 eFUA 评分输入的资格。",
+      "sources": [
+        {
+          "title": "GHS-FUA R2019A — Functional Urban Areas",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 epoch; R2019A product",
+          "accessedAt": "2026-10-09"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "san-francisco",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The city publishes a hazards and climate resilience plan covering buildings, infrastructure and communities. San Francisco city exposure cannot stand for the unresolved San Jose-named Bay Area eFUA; no polygon-weighted hazard observation was extracted.",
+          "zh": "市府发布覆盖建筑、基础设施和社区的灾害与气候韧性计划。旧金山市暴露不能代表尚未核清的 San Jose 命名湾区 eFUA；未提取按多边形加权的灾害观测。"
+        },
+        "sources": [
+          {
+            "title": "Hazards and Climate Resilience Plan",
+            "url": "https://onesanfrancisco.org/hazards-and-climate-resilience-plan",
+            "period": "2025 plan",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Police identify the series as preliminary crime warehouse data with a fixed weekly window. It covers San Francisco reporting, not the Bay Area or organized-conflict exposure; no absence-of-conflict conclusion follows.",
+          "zh": "警方标明这是固定周窗口的初步犯罪数据库统计，覆盖旧金山报案而非整个湾区或有组织冲突暴露；不能据此推断不存在冲突。"
+        },
+        "sources": [
+          {
+            "title": "San Francisco Police Department Crime Trends - May 7 2025",
+            "url": "https://media.api.sf.gov/documents/PoliceCommission5725-_Commission_Crime_Trends_Notes_05.07.25_1X6g5Kl.pdf",
+            "period": "YTD through 2025-05-04",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The civilian oversight report records 899 complaints and 938 cases closed in 2025. These are administrative flows, not a rights-violation prevalence estimate; reporting access and case timing prevent a simple good/bad score.",
+          "zh": "民间监督机构年报记录 2025 年 899 宗投诉、938 宗结案。这是行政流量而非权利侵害发生率，报案可及性与跨期结案使其不能直接换算好坏分数。"
+        },
+        "sources": [
+          {
+            "title": "San Francisco Department of Police Accountability — 2025 Annual Report",
+            "url": "https://media.api.sf.gov/documents/Annual_Statistical_Report_2025.html",
+            "period": "2025",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "SFPUC reports over 95,000 tests and compliance with federal/state water standards in 2025. Nondetection is method-dependent, not proof of zero contaminant; the SFPUC service area does not cover every Bay Area resident or energy/food system.",
+          "zh": "SFPUC 报告 2025 年超过 95,000 次检测并符合州及联邦供水标准。未检出取决于检测方法，不能证明污染物为零；其供区不覆盖全部湾区居民或能源、食品系统。"
+        },
+        "sources": [
+          {
+            "title": "SFPUC Releases Annual Water Quality Report, Reflecting a Century of Investment in Safe Drinking Water",
+            "url": "https://www.sfpuc.gov/about-us/news/sfpuc-releases-annual-water-quality-report-reflecting-century-investment-safe",
+            "period": "2025 tests; published 2026-06-08",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The data-producing health partnership publishes a 2025 CHNA. The page also describes 2022 access, behavioral-health and economic priorities; older priorities are not relabelled as new findings. A complete metro access/quality extraction is unavailable here.",
+          "zh": "健康评估生产方公开 2025 年 CHNA；同页也描述 2022 年就医、行为健康与经济重点，不将旧结论当作新发现。本次未取得完整都市圈医疗可及性与质量提取结果。"
+        },
+        "sources": [
+          {
+            "title": "SF CHNA Reports",
+            "url": "https://sfhip.org/chna/sf-chna/",
+            "period": "2025 CHNA listing; 2022 priorities explicitly distinguished",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Stanford supplies condition, NCT ID, recruitment and age filters. A provider directory is a discovery route, not a reconciled Bay Area geroscience registry; trial maturity, outcomes and affordability were not established.",
+          "zh": "斯坦福提供疾病、NCT 编号、招募状态和年龄筛选。机构目录只是发现入口，不是已对齐的湾区老龄科研注册表；尚未确认试验成熟度、结局与可负担性。"
+        },
+        "sources": [
+          {
+            "title": "Clinical Trials Search — Stanford Medicine",
+            "url": "https://clinicaltrials.stanford.edu/app/ct.sm.html/",
+            "period": "Live directory accessed 2026-10-09",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The official packet reports 107,100 information-sector jobs for San Francisco–San Mateo in August 2025. The industry is not equivalent to all technology and the metro division excludes much of the Bay Area; no eFUA score is calculated.",
+          "zh": "官方材料列示 2025 年 8 月旧金山—圣马特奥信息行业就业 107,100 人。该行业不等于全部科技行业，统计分区也未覆盖湾区大部；未计算 eFUA 分数。"
+        },
+        "sources": [
+          {
+            "title": "ECONOMIC INDICATORS – CHANGE IN EMPLOYMENT",
+            "url": "https://media.api.sf.gov/documents/WISF_Meeting_Packet_12102025_final.pdf",
+            "period": "August 2025 preliminary; released September 2025",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "context_only",
+        "summary": {
+          "en": "BART reports fare-gate installation at all 50 stations and service coordination with partner agencies. Operator self-report describes implementation but not complete disruption redundancy, legal mobility or asset portability; the Bay Area boundary is unresolved.",
+          "zh": "BART 报告全部 50 站安装新闸机并与其他机构协调服务。运营商自报说明实施情况，不等于完整中断冗余、法律迁移能力或资产可携性评估；湾区边界仍未解决。"
+        },
+        "sources": [
+          {
+            "title": "Top accomplishments of 2025 usher in the New BART",
+            "url": "https://www.bart.gov/news/articles/2025/news20251222",
+            "period": "2025 retrospective",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "The candidate uses eFUA 1255, source name San Jose, urban-centre IDs 10 and 13. No geometry overlay verifies that the public San Francisco Bay Area alias matches this footprint; municipal and operator statistics cannot certify it.",
+      "zh": "候选数据使用 eFUA 1255、来源名称 San Jose、城市中心 ID 10 和 13。尚无几何叠置验证公众所称旧金山湾区与该范围一致；市级及运营商统计不能认证此别名。",
+      "sources": [
+        {
+          "title": "GHS-FUA R2019A — Functional Urban Areas",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 epoch; R2019A product",
+          "accessedAt": "2026-10-09"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "melbourne",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The municipality distinguishes coastal, rainfall and river flooding and publishes local flood guides. These planning materials identify mechanisms but do not provide a comparable greater-Melbourne population exposure or geophysical tail test.",
+          "zh": "市府区分海岸、降雨与河流洪水并提供当地防洪指南；规划材料识别风险机制，但未提供可比的大墨尔本人口暴露或地质尾部风险测试。"
+        },
+        "sources": [
+          {
+            "title": "Water and flooding in Melbourne",
+            "url": "https://participate.melbourne.vic.gov.au/amendment-c384/water-and-flooding-melbourne",
+            "period": "Current planning consultation page",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Victoria’s official catalog exposes recorded-offence tables. Police administrative offences require council-to-eFUA mapping, denominator checks and underreporting review; no metro organized-violence or strategic-exposure score was extracted.",
+          "zh": "维州官方目录提供报案犯罪统计表。警方行政记录需核对地方政府辖区到 eFUA 的映射、分母及漏报；未提取都市圈有组织暴力或战略暴露评分。"
+        },
+        "sources": [
+          {
+            "title": "Crime Statistics Agency Data tables - Recorded offences",
+            "url": "https://discover.data.vic.gov.au/dataset/data-tables-recorded-offences/historical",
+            "period": "Year ending December 2025 listed",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Prepare Melbourne documents community engagement and preparedness for heat, utility loss and other emergencies. Participation and plans are context, not independently measured metropolitan recovery or governance outcomes.",
+          "zh": "Prepare Melbourne 记录社区参与及高温、公用设施中断等应急准备。参与与计划仅作背景，不等于独立测量的都市圈恢复能力或治理结果。"
+        },
+        "sources": [
+          {
+            "title": "Community Resilience Assessment",
+            "url": "https://participate.melbourne.vic.gov.au/community-resilience",
+            "period": "Prepare Melbourne four-year project; period not explicit on page",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Storage fell from 86.5% at the start of 2024/25 to 71.5% on 30 June 2025; catchment rainfall was 839 mm, 19.9% below the 30-year average. Utility observations are not household reliability or a food/energy assessment; no normalized score is assigned.",
+          "zh": "2024/25 年度库容从年初 86.5% 降至 2025 年 6 月 30 日的 71.5%；集水区降雨 839 毫米，较 30 年均值低 19.9%。公用事业观测不等于家庭供水可靠性或食品、能源评估；未分配归一化分数。"
+        },
+        "sources": [
+          {
+            "title": "Melbourne Water Annual Report 2024-25",
+            "url": "https://www.melbournewater.com.au/media/eyJtZWRpYSI6IjI5ODY2In0%3D/downloads",
+            "period": "2024-07-01 to 2025-06-30",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The hospital publishes statutory operational, care-volume and financial reports. One tertiary hospital cannot represent access or routine care across the metropolis; no population denominator or systemwide continuity estimate was extracted.",
+          "zh": "医院公开法定运营、服务量及财务报告。单一三级医院不能代表全都市圈就医与常规医疗；未提取人口分母或全系统连续性估计。"
+        },
+        "sources": [
+          {
+            "title": "Annual reports — Royal Melbourne Hospital",
+            "url": "https://www.thermh.org.au/about/reports-policies/annual-reports",
+            "period": "2024–2025 annual report listing",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Monash’s research repository lists extended ASPREE follow-up on cardiovascular events and bleeding in older adults. Research output is not evidence of a generally approved longevity therapy or equitable resident access; registry reconciliation is incomplete.",
+          "zh": "莫纳什科研库列出 ASPREE 关于老年人心血管事件与出血的延长随访成果。科研产出不能证明普遍获批的延寿疗法或公平居民可及性；试验注册记录尚未对齐。"
+        },
+        "sources": [
+          {
+            "title": "ASPREE Completion Project — Outputs",
+            "url": "https://research.monash.edu/en/projects/aspree-completion-project/publications/",
+            "period": "2025–2026 research listings",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The city describes a knowledge economy and proposed economic actions. A draft strategy is not a current observation of knowledge output, innovation diffusion or metro industry density; no promotional claim becomes a score.",
+          "zh": "市府描述知识经济和拟议经济行动。策略草案不是当前科研产出、创新普及或都市圈产业密度观测；不把宣传性主张转换成评分。"
+        },
+        "sources": [
+          {
+            "title": "Draft Economic Development Strategy 2025–2029",
+            "url": "https://participate.melbourne.vic.gov.au/economic-development-strategy-2025-29/draft",
+            "period": "2025–2029 draft strategy",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Official table reports metropolitan train punctuality of 94.5% and reliability of 99.1% for June 2025. Definitions are contractual and mode-specific; this old month is not 2026 performance or full transport redundancy, and legal/asset mobility remain unmeasured.",
+          "zh": "官方表列示 2025 年 6 月都市火车准点率 94.5%、可靠性 99.1%。定义依合同和交通方式而异；旧月份不代表 2026 年绩效或完整交通冗余，法律与资产迁移能力仍未测量。"
+        },
+        "sources": [
+          {
+            "title": "Monthly performance — Public Transport Victoria",
+            "url": "https://www.ptv.vic.gov.au/footer/data-and-reporting/network-performance/monthly-performance/",
+            "period": "June 2025",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "The existing candidate records a direct name/country match. This review did not spatially reconcile municipal, operator or provincial observations with the 2015 GHS-FUA polygon; local observations are not yet qualified as eFUA scoring inputs.",
+      "zh": "既有候选数据记录名称与国家直接匹配。本次未将市界、运营商或省级观测与 2015 年 GHS-FUA 多边形进行空间对齐；当地观测尚未具备作为 eFUA 评分输入的资格。",
+      "sources": [
+        {
+          "title": "GHS-FUA R2019A — Functional Urban Areas",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 epoch; R2019A product",
+          "accessedAt": "2026-10-09"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "dubai",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Dubai Municipality announced four drainage projects costing AED 1.439 billion, expected by 2027. Planned capacity is not delivered protection; population-weighted heat/humidity and flood exposure were not extracted. Arabic source was machine-assisted read, not independently translated.",
+          "zh": "迪拜市政宣布四项排水项目，总值 14.39 亿迪拉姆，预计 2027 年完成。规划容量不等于已实现防护；未提取按人口加权的高温湿度与洪水暴露。阿拉伯语内容经机器辅助阅读，未独立翻译复核。"
+        },
+        "sources": [
+          {
+            "title": "بلدية دبي تُرسي عقود 4 مشاريع ضمن مراحل مشروع تصريف",
+            "url": "https://www.dm.gov.ae/بلدية-دبي-تُرسي-عقود-4-مشاريع-ضمن-مراحل/?lang=ar",
+            "period": "2025-04-18 announcement; planned completion 2027",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "insufficient_evidence",
+        "summary": {
+          "en": "English official-domain crime searches and direct access did not yield inspectable current table data; the police endpoint timed out. No numerical crime claim, zero-conflict assumption or geopolitical tail verdict is made.",
+          "zh": "以英语检索警方官方域名并直接访问，未取得可检查的当前统计表，警方端点访问超时。不作犯罪数值断言、零冲突假设或地缘政治尾部风险判断。"
+        },
+        "sources": [
+          {
+            "title": "Dubai Police — Major Crime Statistics (attempted access)",
+            "url": "https://www.dubaipolice.gov.ae/wps/portal/home/opendata/majorcrimestatistics/",
+            "period": "Unavailable on attempted access 2026-10-09",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Dubai Statistics Center publishes a statistical quality charter. A formal data-governance commitment is not verification of reporting independence, social cohesion or emergency recovery outcomes; independent comparable outcome evidence was not established.",
+          "zh": "迪拜统计中心公开统计质量章程。正式数据治理承诺不能验证报送独立性、社会凝聚力或应急恢复结果；尚未取得独立可比的结果证据。"
+        },
+        "sources": [
+          {
+            "title": "Charter of Quality of Statistical Data",
+            "url": "https://www.dsc.gov.ae/Public%20Documents/About%20DSC/Charter%20of%20Quality%20of%20Statistical%20Data%20-%20EN.pdf",
+            "period": "Undated charter accessed 2026-10-09",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "DEWA reports 62.21 TWh power generation and desalinated-water demand of 161.505 billion imperial gallons in 2025. These show system scale and desalination dependence, not resilience during fuel, power or shipping disruption; operator incentives and service boundaries matter.",
+          "zh": "DEWA 报告 2025 年发电 62.21 TWh、海水淡化水需求 161.505 十亿英制加仑。这体现系统规模及海淡依赖，不能证明燃料、电力或航运中断时的韧性；需保留运营商激励和服务边界限制。"
+        },
+        "sources": [
+          {
+            "title": "DEWA 2025 Annual Operating Performance Summary",
+            "url": "https://www.dewa.gov.ae/en/about-us/media-publications/latest-news/2026/2/dubai-electricity-and-water-authority-pjsc",
+            "period": "2025; published February 2026",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "context_only",
+        "summary": {
+          "en": "DHA lists a household health survey and public/private clinical-capacity studies. Listing availability is not a completed sample and access audit; migrant eligibility, financial access and FUA population alignment were not resolved.",
+          "zh": "DHA 列出家庭健康调查及公私部门临床容量研究。发现资料不等于完成样本与可及性审核；移民资格、经济可及性和 FUA 人口对应仍未解决。"
+        },
+        "sources": [
+          {
+            "title": "البيانات المفتوحة — Dubai Health Authority",
+            "url": "https://dha.gov.ae/opendata",
+            "period": "2024 household health survey; 2022–2033 capacity study",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Dubai Law 17/2026, issued 6 June 2026, establishes a Longevity Authority with trial and treatment oversight, alongside the DHA clinical-trials framework. Legal institutions do not prove therapeutic efficacy, mature trial outcomes or affordable resident access; no city trial count is certified.",
+          "zh": "迪拜于 2026 年 6 月 6 日颁布第 17 号法律，设立负责试验与治疗监督的长寿管理局，与 DHA 临床试验框架并行。法律机构不证明疗效、成熟试验结局或居民可负担性；未认证城市试验数量。"
+        },
+        "sources": [
+          {
+            "title": "Clinical Trials Policy",
+            "url": "https://www.dha.gov.ae/uploads/042023/Clinical%20Trials%20Policy2023415239.pdf",
+            "period": "Version 1.1; effective 2023-06-12",
+            "accessedAt": "2026-10-09"
+          },
+          {
+            "title": "Law No. (17) of 2026 Establishing the Dubai Longevity Authority",
+            "url": "https://dlp.dubai.gov.ae/Legislation%20Reference/2026/Law%20No.%20%2817%29%20of%202026%20Establishing%20the%20Dubai%20Longevity%20Authority.html",
+            "period": "Issued 2026-06-06; commencement tied to Gazette publication",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Digital Dubai describes government AI use cases and its ecosystem. Selected cases and strategic ambition are producer self-report, not independent household diffusion or knowledge-output measures; no AI reputation bonus is assigned.",
+          "zh": "Digital Dubai 介绍政府 AI 案例与生态。精选案例及战略目标属于生产方自报，不是独立家庭普及或科研产出测量；不增加 AI 声誉分。"
+        },
+        "sources": [
+          {
+            "title": "Dubai State of AI Report 2025",
+            "url": "https://www.digitaldubai.ae/knowledge-hub/publications/dubai-state-of-ai-report-2025",
+            "period": "2025-04-21",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "context_only",
+        "summary": {
+          "en": "RTA publishes a 2025 annual report and transport data access. No comparable all-mode disruption redundancy measure was extracted, and local ridership cannot establish immigration rights or asset portability.",
+          "zh": "RTA 公开 2025 年年报及交通数据入口。未提取可比的多方式中断冗余指标，本地乘客量也不能证明移民权利或资产可携性。"
+        },
+        "sources": [
+          {
+            "title": "Roads & Transport Authority — Open Data",
+            "url": "https://rta.ae/wps/portal/rta/ae/home/open-data",
+            "period": "2025 annual report published 2026",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "The existing candidate records a direct name/country match. This review did not spatially reconcile municipal, operator or provincial observations with the 2015 GHS-FUA polygon; local observations are not yet qualified as eFUA scoring inputs.",
+      "zh": "既有候选数据记录名称与国家直接匹配。本次未将市界、运营商或省级观测与 2015 年 GHS-FUA 多边形进行空间对齐；当地观测尚未具备作为 eFUA 评分输入的资格。",
+      "sources": [
+        {
+          "title": "GHS-FUA R2019A — Functional Urban Areas",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 epoch; R2019A product",
+          "accessedAt": "2026-10-09"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "sao-paulo",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The municipal portal provides climate plans and monitoring reports. Plan existence does not establish completed flood/heat adaptation or population-weighted eFUA risk; no scenario score was inferred from political targets.",
+          "zh": "市府门户提供气候计划及监测报告。计划存在不证明已完成防洪降温适应，也不代表按人口加权的 eFUA 风险；未从政策目标推导情景分数。"
+        },
+        "sources": [
+          {
+            "title": "PLANCLIMA SP",
+            "url": "https://prefeitura.sp.gov.br/web/planclimasp",
+            "period": "Current plan and monitoring portal; underlying periods vary",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "SSP describes municipal and police-unit crime publication and separate lethal-violence records. The monthly endpoint yielded no readable table during access; no count was adopted and organized violence, underreporting and strategic exposure remain unquantified.",
+          "zh": "SSP 描述按市与警务单位公开犯罪数据及独立致命暴力记录。月度端点本次未返回可读表格；未采用数量，有组织暴力、漏报与战略暴露仍未量化。"
+        },
+        "sources": [
+          {
+            "title": "Segurança Pública — Transparência",
+            "url": "https://www.ssp.sp.gov.br/transparenciassp/Apresentacao.aspx",
+            "period": "Reporting system description; underlying periods vary",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The municipal comptroller announces its 2025 activity report covering governance and integrity. A self-reported activity inventory does not independently validate governance outcomes, cohesion or disaster recovery; municipal scope differs from the eFUA.",
+          "zh": "市审计监察机构发布覆盖治理与廉政的 2025 年活动报告。自报活动清单不能独立验证治理结果、凝聚力或灾后恢复，市级范围也不同于 eFUA。"
+        },
+        "sources": [
+          {
+            "title": "CGM-SP apresenta Relatório Anual de Atividades 2025",
+            "url": "https://smartsampa.prefeitura.sp.gov.br/web/controladoria_geral/w/cgm-sp-apresenta-relat%C3%B3rio-anual-de-atividades-2025-e-destaca-avan%C3%A7os-em-governan%C3%A7a-integridade-e-transpar%C3%AAncia",
+            "period": "2025 reporting; released 2026",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Sabesp describes systematic source-to-meter sampling and accredited laboratories. The portfolio serves many municipalities, and portal claims do not establish São Paulo eFUA household continuity; no unverified corporate total is treated as a city value.",
+          "zh": "Sabesp 描述从水源到水表的系统抽样与认证实验室。其业务覆盖多个城市，门户声明不能证明圣保罗 eFUA 家庭连续供水；不把未核实的公司总量作为城市值。"
+        },
+        "sources": [
+          {
+            "title": "Relatórios Anuais de Qualidade da Água",
+            "url": "https://www.sabesp.com.br/o-que-fazemos/fornecimento-agua/qualidade-agua/analises-anuais-qualidade-agua-distribuida",
+            "period": "Current report portal; no specific municipal series extracted",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Municipal health authorities provide annual management and four-month accountability reports. This is a local administrative evidence route; hospital capacity, resident access, denominator and uncertainty were not extracted or reconciled across the eFUA.",
+          "zh": "市卫生部门提供年度管理及每四个月问责报告，这是本地行政证据路径；未提取医院容量、居民可及性、分母和不确定性，亦未跨 eFUA 对齐。"
+        },
+        "sources": [
+          {
+            "title": "Prestação de Contas — Secretaria Municipal da Saúde",
+            "url": "https://prefeitura.sp.gov.br/saude/prestacao_de_contas/",
+            "period": "Portal dated 2025-06-12; annual and four-month reports",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "USP’s repository identifies a randomized cognitive-stimulation trial and names Supera Instituto de Educação as funder. It is not proof of general lifespan extension; sponsor interest, trial registration, outcomes and resident access require separate checks.",
+          "zh": "USP 科研库记录一项随机认知刺激试验，并列明资助方 Supera Instituto de Educação。它不证明普遍延寿，资助利益、注册记录、结局及居民可及性需分别核查。"
+        },
+        "sources": [
+          {
+            "title": "Supera cognitive stimulation study with cognitively-unimpaired older adults",
+            "url": "https://repositorio.usp.br/item/003296178",
+            "period": "2025 publication",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "context_only",
+        "summary": {
+          "en": "FAPESP explains public administrative/microdata inputs and proprietary publication databases. Indicators primarily concern São Paulo state or Brazil, not the municipal/eFUA boundary; upstream source overlap and publication-language coverage prohibit naive index stacking.",
+          "zh": "FAPESP 说明采用公共行政、微观数据及商业论文数据库。指标主要涉及圣保罗州或巴西，非市界或 eFUA；上游重叠与论文语言覆盖限制使其不能简单叠加为多个独立指标。"
+        },
+        "sources": [
+          {
+            "title": "Sobre os Indicadores de Ciência, Tecnologia e Inovação",
+            "url": "https://indicadorescti.fapesp.br/sobre/",
+            "period": "Current methodology; source periods vary",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Metrô explicitly excludes private-concession metro lines and supplier/third-party operations from reporting. Operator results therefore cannot represent the whole metropolitan transport network or redundancy; legal and asset mobility remain unmeasured.",
+          "zh": "Metrô 明确排除私营特许地铁线及供应商、第三方运营资料。因此运营商结果不能代表全都市圈交通网络或冗余；法律与资产迁移能力仍未测量。"
+        },
+        "sources": [
+          {
+            "title": "Relatório Integrado — Metrô",
+            "url": "https://www.metro.sp.gov.br/pt_BR/metro/sustentabilidade/relatorio-integrado/",
+            "period": "2025 report in associated transparency portal",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "The existing candidate records a direct name/country match. This review did not spatially reconcile municipal, operator or provincial observations with the 2015 GHS-FUA polygon; local observations are not yet qualified as eFUA scoring inputs.",
+      "zh": "既有候选数据记录名称与国家直接匹配。本次未将市界、运营商或省级观测与 2015 年 GHS-FUA 多边形进行空间对齐；当地观测尚未具备作为 eFUA 评分输入的资格。",
+      "sources": [
+        {
+          "title": "GHS-FUA R2019A — Functional Urban Areas",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 epoch; R2019A product",
+          "accessedAt": "2026-10-09"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "cape-town",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The city identifies rainfall decline, hotter extremes and wind changes and links a hazard/vulnerability assessment. The portal is not a gridded population-weighted exposure extraction; neither a drought-free future nor tail-risk clearance is supported.",
+          "zh": "市府指出降雨下降、极端高温和风力变化，并提供灾害脆弱性评估入口。门户不等于网格人口加权暴露提取，不能支持未来无旱灾或尾部风险已排除的结论。"
+        },
+        "sources": [
+          {
+            "title": "Climate change — City of Cape Town",
+            "url": "https://www.capetown.gov.za/family-and-home/greener-living/why-go-green/lets-act-against-climate-change/climate-change/",
+            "period": "Current hazard assessment portal; underlying periods vary",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "SAPS publishes station-level offence tables including Cape Town districts. Station counts and enforcement-driven drug offences cannot be equated to metro organized-violence risk; compatible denominators and independent victimization evidence are missing.",
+          "zh": "SAPS 提供包含开普敦辖区的警署级犯罪表。警署数量及受执法力度影响的毒品案件不能直接等同都市圈有组织暴力风险；仍缺兼容分母及独立受害调查证据。"
+        },
+        "sources": [
+          {
+            "title": "Police Recorded Crime Statistics: Fourth Quarter 2024/2025",
+            "url": "https://www.saps.gov.za/services/downloads/2024/2024-2025_Q4_crime_stats.pdf",
+            "period": "January–March 2025",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The city publishes both an integrated annual report and oversight materials under municipal reporting rules. Publication supports an audit trail, not automatic proof of recovery capacity or equitable governance; no metropolitan outcome score is certified.",
+          "zh": "市府按法定规则公开综合年报及监督材料，提供审核路径；公开不自动证明恢复能力或公平治理，未认证都市圈结果评分。"
+        },
+        "sources": [
+          {
+            "title": "Annual reports — City of Cape Town",
+            "url": "https://www.capetown.gov.za/work-and-business/city-publications/publications-and-reports/annual-reports/",
+            "period": "2024/25 annual and oversight reports",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The city provides annual water tests in English, Afrikaans and isiXhosa plus quarterly updates. Sampling compliance is not equal to reliable access for all households or drought reserve adequacy; food and energy remain separate gaps.",
+          "zh": "市府以英语、南非荷兰语和科萨语提供年度水质报告及季度更新。抽样合规不等于所有家庭稳定用水或抗旱储备充足；食品和能源仍是独立缺口。"
+        },
+        "sources": [
+          {
+            "title": "Water quality — City of Cape Town",
+            "url": "https://www.capetown.gov.za/family-and-home/residential-utility-services/residential-water-and-sanitation-services/water-quality",
+            "period": "July 2024–June 2025 annual report; quarterly reports through June 2026",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Western Cape publishes audited health-performance tables with numerator and denominator fields. Provincial and programme-level figures are not Cape Town-wide patient outcomes; geographic allocation, private-sector inclusion and access equity were not resolved.",
+          "zh": "西开普省公开含分子、分母字段的经审核卫生绩效表。省级与项目级数字不是全开普敦患者结局；地理分配、私营部门覆盖及就医公平仍未解决。"
+        },
+        "sources": [
+          {
+            "title": "Department of Health and Wellness Annual Report 2024/25",
+            "url": "https://www.westerncape.gov.za/health-wellness/files/wcg-blob-files?file=2025-10%2Fwcdhw-annual-report-2024-2025.pdf&type=file",
+            "period": "2024/25",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "UCT describes geriatric research and clinical services at Cape Peninsula facilities. Academic capability does not establish mature longevity trials or approved lifespan-extending treatments; city trial-registry reconciliation and affordable access are missing.",
+          "zh": "UCT 描述在开普半岛设施开展的老年医学研究和临床服务。学术能力不证明成熟延寿试验或获批延寿治疗；尚缺城市试验注册对齐与可负担就医证据。"
+        },
+        "sources": [
+          {
+            "title": "Geriatric Medicine — University of Cape Town",
+            "url": "https://health.uct.ac.za/department-medicine/division/geriatric-medicine",
+            "period": "Undated programme page accessed 2026-10-09",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The city reports 935 km of fibre, 34 switching facilities and 556 connected city buildings. Inventory observation date is unclear and public-building connectivity is not household coverage or affordability; no universal digital-access score is inferred.",
+          "zh": "市府列出 935 公里光纤、34 个交换设施及 556 栋联网市政建筑。清单观测日期不明确，公共建筑联网不等于家庭覆盖或可负担性；不据此推断全民数字接入分数。"
+        },
+        "sources": [
+          {
+            "title": "Commercial telecommunications broadband services",
+            "url": "https://www.capetown.gov.za/work%20and%20business/Get-online/Commercial-telecommunication-services/Commercial-telecommunications-services",
+            "period": "Undated network inventory; tariff dated 2026-07-01",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The municipal bus operator publishes fare adjustments. This supplies an affordability-policy observation route, not a complete rail/bus disruption or evacuation redundancy measure; immigration rights and asset portability remain unmeasured.",
+          "zh": "市营公交运营方公开票价调整，可作为可负担政策观测入口；非完整铁路、公交中断或疏散冗余指标，移民权利与资产可携性仍未测量。"
+        },
+        "sources": [
+          {
+            "title": "Annual MyCiTi fare adjustments – 1 July 2025",
+            "url": "https://www.myciti.org.za/en/contact/media-releases/annual-fare-adjustment-july-2025/",
+            "period": "2025-07-01",
+            "accessedAt": "2026-10-09"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "The existing candidate records a direct name/country match. This review did not spatially reconcile municipal, operator or provincial observations with the 2015 GHS-FUA polygon; local observations are not yet qualified as eFUA scoring inputs.",
+      "zh": "既有候选数据记录名称与国家直接匹配。本次未将市界、运营商或省级观测与 2015 年 GHS-FUA 多边形进行空间对齐；当地观测尚未具备作为 eFUA 评分输入的资格。",
+      "sources": [
+        {
+          "title": "GHS-FUA R2019A — Functional Urban Areas",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 epoch; R2019A product",
+          "accessedAt": "2026-10-09"
+        }
+      ]
+    }
+  }
+]

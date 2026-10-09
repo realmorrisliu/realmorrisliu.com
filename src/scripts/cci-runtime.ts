@@ -176,7 +176,9 @@ function initialize(
       mustQuery(row, "[data-cell-tail]").textContent = tailLabel(city.tailStatus);
       mustQuery(row, "[data-cell-evidence]").textContent = city.rankingEligible
         ? `${city.observedCoverage.toFixed(1)}%`
-        : ui.labels.inAudit;
+        : city.audit
+          ? ui.labels.reviewed
+          : ui.labels.inAudit;
       const checkbox = mustQuery<HTMLInputElement>(row, "[data-compare-city]");
       checkbox.checked = compared.includes(city.slug);
       checkbox.disabled = compared.length >= 3 && !checkbox.checked;
@@ -199,6 +201,7 @@ function initialize(
     const city = cityBySlug.get(selectedSlug);
     if (!city) throw new Error(`Unknown CCI city: ${selectedSlug}`);
     mustQuery(app, "[data-city-name]").textContent = `${name(city)} FUA`;
+    mustQuery(app, ".cci-tabs").setAttribute("aria-label", name(city));
     mustQuery(app, "[data-boundary-status]").textContent =
       city.boundary.verificationStatus === "verified"
         ? ui.labels.boundaryVerified
@@ -217,6 +220,22 @@ function initialize(
       city.localEvidenceLanguages.join(", ");
     mustQuery(app, "[data-boundary-note]").textContent =
       ui.currentLang === "zh" ? city.boundary.noteZh : city.boundary.note;
+    mustQuery(app, "[data-observation-boundary]").hidden = !city.audit;
+    mustQuery(app, "[data-observation-boundary-note]").textContent =
+      city.audit?.boundaryReview[ui.currentLang] ?? "";
+    mustQuery(app, "[data-observation-boundary-sources]").replaceChildren(
+      ...(city.audit?.boundaryReview.sources.map(source => {
+        const item = element("li", "");
+        item.append(
+          element("a", source.title, {
+            href: source.url,
+            target: "_blank",
+            rel: "noopener noreferrer",
+          })
+        );
+        return item;
+      }) ?? [])
+    );
 
     const reasonList = mustQuery(app, "[data-eligibility-reasons]");
     reasonList.replaceChildren(
@@ -231,6 +250,24 @@ function initialize(
       const coverage = city.evidenceCoverage[dimension];
       mustQuery(row, "[data-dimension-evidence]").textContent =
         `${coverage.observedSubpillars}/${coverage.totalSubpillars}`;
+      const audit = city.audit?.dimensions.find(item => item.id === dimension);
+      mustQuery(row, "[data-dimension-audit]").hidden = !audit;
+      mustQuery(row, "[data-audit-outcome]").textContent = audit ? ui.labels[audit.outcome] : "";
+      mustQuery(row, "[data-audit-summary]").textContent = audit?.summary[ui.currentLang] ?? "";
+      mustQuery(row, "[data-audit-sources]").replaceChildren(
+        ...(audit?.sources.map(source => {
+          const item = element("li", "");
+          item.append(
+            element("a", source.title, {
+              href: source.url,
+              target: "_blank",
+              rel: "noopener noreferrer",
+            })
+          );
+          item.append(document.createTextNode(` · ${source.period}`));
+          return item;
+        }) ?? [])
+      );
     });
     app.querySelectorAll<HTMLElement>("[data-tail-test]").forEach(row => {
       const test = row.dataset.tailTest;
@@ -238,7 +275,9 @@ function initialize(
       mustQuery(row, "[data-tail-status]").textContent = value ? ui.labels[value] : "—";
       mustQuery(row, "[data-tail-note]").textContent = value
         ? ui.labels[value]
-        : ui.labels.unassessed;
+        : city.audit
+          ? ui.labels.insufficient
+          : ui.labels.unassessed;
     });
   };
 
@@ -457,7 +496,11 @@ function weightsMatch(left: Record<DimensionId, number>, right: Record<Dimension
   return DIMENSIONS.every(dimension => left[dimension.id] === right[dimension.id]);
 }
 
-function element(tag: "li" | "th" | "td", text: string, attributes: Record<string, string> = {}) {
+function element(
+  tag: "li" | "th" | "td" | "a",
+  text: string,
+  attributes: Record<string, string> = {}
+) {
   const node = document.createElement(tag);
   node.textContent = text;
   Object.entries(attributes).forEach(([name, value]) => node.setAttribute(name, value));
