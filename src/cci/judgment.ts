@@ -112,19 +112,9 @@ export function validateJudgments(input: CandidateReleaseInput) {
   }
 }
 
-export function judgmentSupport(judgments: DimensionJudgment[], lang: "en" | "zh") {
+export function judgmentHalfWidth(judgments: DimensionJudgment[]) {
   const width = judgments.reduce((sum, d) => sum + d.uncertainty, 0) / judgments.length;
-  return width <= 10
-    ? lang === "zh"
-      ? "较强"
-      : "Stronger"
-    : width <= 15
-      ? lang === "zh"
-        ? "中等"
-        : "Moderate"
-      : lang === "zh"
-        ? "探索性"
-        : "Exploratory";
+  return `±${width.toFixed(1)}`;
 }
 
 export function eventAdjustment(city: string, dimension: DimensionId, model: ResearchModel) {

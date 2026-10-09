@@ -8,9 +8,15 @@ export function judgmentCopy(lang: "en" | "zh") {
     runtime: {
       ...t.runtime,
       officialResult: zh ? "研究估计" : "Research estimate",
-      confidence: zh ? "判断把握" : "Support",
+      confidence: zh ? "基线半宽" : "Baseline ±",
       tail: zh ? "事件调节" : "Event effect",
       range: zh ? "研究区间" : "Judgment range",
+    },
+    myCci: {
+      ...t.myCci,
+      intro: zh
+        ? "按你的关注点调整八维权重，比较个人结果与本期研究估计。"
+        : "Adjust the eight weights to compare your priorities with the published assessment.",
     },
     controls: {
       ...t.controls,
@@ -30,14 +36,14 @@ export function judgmentCopy(lang: "en" | "zh") {
       why: zh ? "如何理解分数？" : "How to read scores",
       columns: {
         ...t.compare.columns,
-        confidence: zh ? "判断把握" : "Support",
+        confidence: zh ? "基线半宽" : "Baseline ±",
         tail: zh ? "事件调节" : "Event effect",
         evidence: zh ? "依据" : "Basis",
       },
     },
     city: {
       ...t.city,
-      confidence: zh ? "判断把握" : "Support",
+      confidence: zh ? "基线半宽" : "Baseline ±",
       evidenceStatus: zh ? "依据" : "Basis",
       noEvidence: zh
         ? "本维度采用公开资料支持的研究估计；来源支持判断理由，不直接给出此分数。"
@@ -88,8 +94,8 @@ export function judgmentCopy(lang: "en" | "zh") {
       scenariosTitle: zh ? "共同的评分锚点" : "Common scoring anchors",
       confidenceTitle: zh ? "把握程度不决定城市好坏" : "Support is separate from performance",
       weakest: zh
-        ? "判断把握来自基线估计的平均半宽：≤10 分为较强，≤15 分为中等，其余为探索性。单项证据薄弱只扩大该维度区间，不取消整体分数；这是研究者的自评，不是经验校准的准确率。"
-        : "Support follows the mean baseline half-width: ≤10 stronger, ≤15 moderate, otherwise exploratory. A weak dimension widens its range without vetoing the city. This is self-assessed support, not calibrated accuracy.",
+        ? "基线半宽直接展示每项判断允许上下浮动的分数；主表展示八维半宽的平均值。未来区间随时间扩大。单项薄弱不会取消整体分数，也不把研究判断转换成笼统的置信等级。"
+        : "Baseline ± shows the allowed variation around each judgment; the main table reports the mean of eight half-widths. Future ranges widen with time. Weak evidence does not veto a score or turn into a blanket confidence grade.",
       lifetime: zh
         ? "未来中心 = 参考值 + 事件调节 + 每十年方向假设 × 时间；每十年额外扩大 2 分半宽，上限 40 分。Lifetime 是中心轨迹的时间加权平均。所有范围都截断在 0–100 内。"
         : "Future center = reference + event effects + directional change per decade. Half-width grows by 2 points per decade, capped at 40. Lifetime is the time-weighted central trajectory. All estimates are clipped to 0–100.",
