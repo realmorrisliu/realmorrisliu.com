@@ -145,3 +145,11 @@ pnpm exec <research-python> -B scripts/cci_openalex_institutions.py --cache <sna
 [远端行组核验](data/cci-openalex-remote-affiliation-probe.json)补上网络范围读取这一环：针对同一文件的首个行组，实际读取 ID、年份、作者数及五个作者单位叶列，共 8 次成功范围响应、9,765,569 字节列数据。每个响应均核验来源 ETag、字节范围与长度，并保存各范围 SHA-256；通过稀疏临时文件重建后，46,950 条记录的全部所选字段与此前独立保存的完整作者投影精确一致。另保存 6,206,313 字节的压缩投影，并验证落盘回读一致。
 
 复算：`pnpm exec <research-python> -B scripts/cci_openalex_remote_affiliation_probe.py --footers <footer-cache> --reference <verified-four-column-projection.parquet> --output <nested-projection.parquet>`。脚本内的逐值对照和落盘回读是该实读核验的自检；任何不一致都会拒绝生成成功审计。上述字节数不含传输协议开销或失败请求，不能推广为全库成本；本轮验证的是后续单位列获取链路，不是全库单位已取得，也不授予城市归属或评分资格。
+
+### 筛选记录与作者单位连接
+
+[连接实证](data/cci-openalex-authorship-join-probe.json)将分区 1918 的首个行组与已完成的筛选列连接，得到全部 937 条目标年份记录。连接按原始分区、行组、行内位置定位，要求位置列表恰好覆盖该行组全部 2025 年作品，再逐条比较 ID、年份、作者数；缺失位置、错位或身份不符都拒绝连接。保存后的 Parquet 回读也已对照。
+
+输出保留筛选列中的作品类型、语料与撤稿标识，附加完整的所选作者单位字段及 `authorship_count_status`。实取 937 条均为 `count_matches`，仅指声明人数与列表长度一致。代码保留 `missing_list`、`unknown_declared_count`、`invalid_declared_count`、`count_list_mismatch` 和 `no_authors` 等待审状态，不丢弃这些作品，不因记录不完整而重新分配贡献。
+
+复算：`pnpm exec <research-python> -B scripts/cci_openalex_attach_authorships.py --filters <filter-projection-cache> --authorships <verified-nested-projection.parquet> --output <joined-projection.parquet>`。目前命令核验冻结的单个探测行组，核心连接函数可用于后续完整提取；尚未形成全库连接结果或城市归属。相关测试覆盖不完整记录保留、缺失位置和 ID 变更拒绝，全研究测试 64 项通过。

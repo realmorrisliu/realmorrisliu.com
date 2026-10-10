@@ -1,0 +1,15 @@
+{
+  "status": "single_row_group_work_authorship_join_not_city_output",
+  "fileIndex": 1918,
+  "rowGroup": 0,
+  "targetYear": 2025,
+  "records": 937,
+  "authorshipCountStatuses": {
+    "count_matches": 937
+  },
+  "filterProjectionSha256": "5a1be61579dca05a0db2d8290d8cf0182da1e9a21afa7413d7806350a87730c2",
+  "authorshipProjectionSha256": "6452059ef414bd74b582541a7e5e59cd4a939895a19658ba56316c79364bfbb9",
+  "joinedProjectionSha256": "046e88908fddeafc81b397b6757d1cd465f46f84f9800deac5d59c58a826dedc",
+  "scriptSha256": "c5cebf54c47f1d4342e893d9e7c8ea468ac9451572c306c8de4b28d76723b384",
+  "limitations": "Exact frozen source-position and identity join for one group. Count matching does not prove publisher byline completeness. Incomplete or zero-author records remain flagged, never renormalized. No institution location decision, fractional credit or CCI score."
+}
