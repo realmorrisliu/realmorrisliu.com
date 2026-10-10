@@ -1,0 +1,152 @@
+{
+  "reviewedOn": "2026-10-10",
+  "protocol": "cci-lon-scope-v0",
+  "scope": "Purposeful boundary examples; not representative sampling or full registry adjudication",
+  "reviewer": "single_assistant_review_not_independent_consensus",
+  "records": [
+    {
+      "nctId": "NCT00427193",
+      "sourcePage": "lon-aging-page-3.json",
+      "sourcePageSha256": "6000d404e9f45c5f394352ab25a04472f1713a3d71bc99f57457a2fa04bb24b0",
+      "recordPointer": "/studies/854",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT00427193",
+      "reviewedFields": [
+        "protocolSection.designModule.studyType",
+        "protocolSection.descriptionModule",
+        "protocolSection.armsInterventionsModule",
+        "protocolSection.outcomesModule"
+      ],
+      "scopeDecision": "include_intervention",
+      "reasonZh": "明确检验热量限制与衰老相关适应；保留为干预证据链，不能将代谢指标解释为已证实延寿。",
+      "linkedTrials": [],
+      "efficacyAssessment": "not_established_by_scope_review",
+      "cityAssessment": "not_assigned"
+    },
+    {
+      "nctId": "NCT01775111",
+      "sourcePage": "lon-aging-page-1.json",
+      "sourcePageSha256": "6aace81a45380d8e3bd43b570e4117e53458e7bceab170af56042f99c36bedd6",
+      "recordPointer": "/studies/1",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT01775111",
+      "reviewedFields": [
+        "protocolSection.designModule.studyType",
+        "protocolSection.descriptionModule",
+        "protocolSection.armsInterventionsModule",
+        "protocolSection.outcomesModule"
+      ],
+      "scopeDecision": "needs_scope_review",
+      "reasonZh": "力量训练和蛋白补充涉及功能、免疫与肌肉信号；当前摘要不足以判断其在一般老年康复与长寿专项转化间的归属。",
+      "linkedTrials": [],
+      "efficacyAssessment": "not_established_by_scope_review",
+      "cityAssessment": "not_assigned"
+    },
+    {
+      "nctId": "NCT02065245",
+      "sourcePage": "lon-aging-page-1.json",
+      "sourcePageSha256": "6aace81a45380d8e3bd43b570e4117e53458e7bceab170af56042f99c36bedd6",
+      "recordPointer": "/studies/229",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT02065245",
+      "reviewedFields": [
+        "protocolSection.designModule.studyType",
+        "protocolSection.descriptionModule",
+        "protocolSection.armsInterventionsModule",
+        "protocolSection.outcomesModule"
+      ],
+      "scopeDecision": "include_intervention",
+      "reasonZh": "以老年衰弱为对象的再生干预；主要终点为输注后安全事件，不能当成衰弱逆转或延寿成功。",
+      "linkedTrials": [],
+      "efficacyAssessment": "not_established_by_scope_review",
+      "cityAssessment": "not_assigned"
+    },
+    {
+      "nctId": "NCT04064528",
+      "sourcePage": "lon-aging-page-1.json",
+      "sourcePageSha256": "6aace81a45380d8e3bd43b570e4117e53458e7bceab170af56042f99c36bedd6",
+      "recordPointer": "/studies/0",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT04064528",
+      "reviewedFields": [
+        "protocolSection.designModule.studyType",
+        "protocolSection.descriptionModule",
+        "protocolSection.armsInterventionsModule",
+        "protocolSection.outcomesModule"
+      ],
+      "scopeDecision": "needs_scope_review",
+      "reasonZh": "比较年轻与老年人补充氨基酸后的肌腱周围浓度；需进一步确认与延缓年龄相关功能衰退的转化关系，不能仅因年龄组比较便纳入或排除。",
+      "linkedTrials": [],
+      "efficacyAssessment": "not_established_by_scope_review",
+      "cityAssessment": "not_assigned"
+    },
+    {
+      "nctId": "NCT04488601",
+      "sourcePage": "lon-aging-page-1.json",
+      "sourcePageSha256": "6aace81a45380d8e3bd43b570e4117e53458e7bceab170af56042f99c36bedd6",
+      "recordPointer": "/studies/252",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT04488601",
+      "reviewedFields": [
+        "protocolSection.designModule.studyType",
+        "protocolSection.descriptionModule",
+        "protocolSection.armsInterventionsModule",
+        "protocolSection.outcomesModule"
+      ],
+      "scopeDecision": "include_intervention",
+      "reasonZh": "以雷帕霉素用于正常衰老为研究目的；已有结果论文，但主要结局及亚组结果的局限须独立保留。",
+      "linkedTrials": [],
+      "efficacyAssessment": "not_established_by_scope_review",
+      "cityAssessment": "not_assigned"
+    },
+    {
+      "nctId": "NCT05651620",
+      "sourcePage": "lon-aging-page-3.json",
+      "sourcePageSha256": "6000d404e9f45c5f394352ab25a04472f1713a3d71bc99f57457a2fa04bb24b0",
+      "recordPointer": "/studies/747",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT05651620",
+      "reviewedFields": [
+        "protocolSection.designModule.studyType",
+        "protocolSection.descriptionModule",
+        "protocolSection.armsInterventionsModule",
+        "protocolSection.outcomesModule"
+      ],
+      "scopeDecision": "include_linked_followup",
+      "reasonZh": "原 CALERIE 随机队列的观察性随访；Healthspan 字段实际使用代谢综合征 z 分数，不是健康寿命年数。",
+      "linkedTrials": ["NCT00427193"],
+      "efficacyAssessment": "not_established_by_scope_review",
+      "cityAssessment": "not_assigned"
+    },
+    {
+      "nctId": "NCT05813379",
+      "sourcePage": "lon-aging-page-3.json",
+      "sourcePageSha256": "6000d404e9f45c5f394352ab25a04472f1713a3d71bc99f57457a2fa04bb24b0",
+      "recordPointer": "/studies/994",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT05813379",
+      "reviewedFields": [
+        "protocolSection.designModule.studyType",
+        "protocolSection.descriptionModule",
+        "protocolSection.armsInterventionsModule",
+        "protocolSection.outcomesModule"
+      ],
+      "scopeDecision": "outside_current_scope",
+      "reasonZh": "当前记录描述面部皮肤、皱纹及胶原的局部外观目标；未建立系统性衰老或年龄相关功能衰退的干预证据链。此判断不涉及产品安全或功效。",
+      "linkedTrials": [],
+      "efficacyAssessment": "not_established_by_scope_review",
+      "cityAssessment": "not_assigned"
+    },
+    {
+      "nctId": "NCT06145087",
+      "sourcePage": "lon-aging-page-1.json",
+      "sourcePageSha256": "6aace81a45380d8e3bd43b570e4117e53458e7bceab170af56042f99c36bedd6",
+      "recordPointer": "/studies/3",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT06145087",
+      "reviewedFields": [
+        "protocolSection.designModule.studyType",
+        "protocolSection.descriptionModule",
+        "protocolSection.armsInterventionsModule",
+        "protocolSection.outcomesModule"
+      ],
+      "scopeDecision": "include_intervention",
+      "reasonZh": "方案明确以衰老机制为干预目标；主要终点是血流介导舒张，纳入相关性不等于补充剂有效或已获批。",
+      "linkedTrials": [],
+      "efficacyAssessment": "not_established_by_scope_review",
+      "cityAssessment": "not_assigned"
+    }
+  ]
+}
