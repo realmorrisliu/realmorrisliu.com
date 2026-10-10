@@ -1,0 +1,28 @@
+{
+  "scope": "2025 projected population on 2019 healthcare model; no CCI scores or current clinical claims.",
+  "candidateCount": 9031,
+  "statusCounts": {
+    "partial_travel_evidence": 9029,
+    "no_observed_motorized_population": 1,
+    "zero_selected_population": 1
+  },
+  "candidatesWithMissingMotorizedPopulation": 1186,
+  "candidatesWithOver1PercentMissingMotorizedPopulation": 917,
+  "candidatesWithPopulatedWalkingFasterCells": 133,
+  "populationMethod": "Native population cell centres inside densified eFUA; population is not resampled.",
+  "travelMethod": "Nearest source travel cell at each population centre, via GDAL WarpedVRT; NoData retained.",
+  "missingBounds": "Bounds cover missing travel only among known selected population; not statistical confidence intervals.",
+  "scriptSha256": "92c304b47e360cd77acf6001654a1cc8ec424ca5fc0ab94cd67c02c202ddfe84",
+  "helperSha256": "713981315966affdd5fbd7133b883bd8e79fa83965bdfaa7498dfb6db5d5b497",
+  "csvSha256": "f079428abaaada9a35856b186f0b9525ada7ae3fd2770c32d65d6154a10d8505",
+  "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+  "populationSha256": "babb97f6fc93ee50d5b0490d6f30363023ea3e2f0e71e46e8ddebcfc0342ddc3",
+  "rasterSha256": {
+    "motorized": "e2aa94723c58212e093f7a9b1d8197b077a252137baf99c80e2d7f08026d360f",
+    "walking": "261c1463dff6e750554ea9bc54791f8c767f2ffe080b9cc1c0f321df7c141d69"
+  },
+  "rasterioVersion": "1.5.2",
+  "gdalVersion": "3.12.2",
+  "pyprojVersion": "3.7.2",
+  "shapelyVersion": "2.1.2"
+}

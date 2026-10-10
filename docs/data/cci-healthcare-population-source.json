@@ -1,0 +1,22 @@
+{
+  "retrievedDate": "2026-10-10",
+  "dataset": "GHS-WUP-POP R2025A",
+  "epoch": 2025,
+  "measurement": "Projected residential population per cell, not a census",
+  "source": "https://data.jrc.ec.europa.eu/dataset/adba95af-db56-4569-acd3-9513201eba30",
+  "download": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_WUP_POP_GLOBE_R2025A/GHS_WUP_POP_E2025_GLOBE_R2025A_4326_30ss/V1-0/GHS_WUP_POP_E2025_GLOBE_R2025A_4326_30ss_V1_0.zip",
+  "licence": "CC BY 4.0",
+  "licenceSource": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_WUP_POP_GLOBE_R2025A/copyright.txt",
+  "zipSha256": "9874b02b500078fe61eda0fa34ec9d06aa3892c3656b223407a702154e742885",
+  "zipBytes": 820383377,
+  "file": "GHS_WUP_POP_E2025_GLOBE_R2025A_4326_30ss_V1_0.tif",
+  "sha256": "babb97f6fc93ee50d5b0490d6f30363023ea3e2f0e71e46e8ddebcfc0342ddc3",
+  "bytes": 673695183,
+  "crs": "EPSG:4326",
+  "transform": [0.0083333, 0.0, -180.0079, 0.0, -0.0083333, 89.09958, 0.0, 0.0, 1.0],
+  "width": 43202,
+  "height": 21384,
+  "nodata": -200.0,
+  "dtype": "float64",
+  "embeddedUnits": [null]
+}
