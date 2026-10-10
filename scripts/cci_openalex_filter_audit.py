@@ -22,6 +22,7 @@ def audit(partitions, cache):
     if len(set(indices)) != len(indices):
         raise ValueError('Duplicate partition index')
     with tempfile.TemporaryDirectory() as folder, closing(sqlite3.connect(str(Path(folder) / 'ids.sqlite'))) as db:
+        db.execute('PRAGMA cache_size=-131072')
         db.execute('CREATE TABLE works (id TEXT PRIMARY KEY, file INTEGER, row_group INTEGER, row_offset INTEGER, UNIQUE(file,row_group,row_offset))')
         for partition in partitions:
             index = partition['fileIndex']
