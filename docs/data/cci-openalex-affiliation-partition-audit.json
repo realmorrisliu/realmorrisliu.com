@@ -5,12 +5,16 @@
   "sourceAuditSha256": "c451cd3e7d531f5f1b0dcaac3b34eec1b0a1d3262afb20ecbb574b0eef4959fa",
   "projectionSha256": "d4bbe13314c5ab0a942387254e78c615655a878e80de7de597f284a085a5e025",
   "institutionDirectorySha256": "b59735ba074e3e1b8e05f1d08bd672ef1d1ec219303cd9a788c93fc2a5e798ed",
-  "scriptSha256": "599c5b0c1ee0718efa3bceba6485418d5e10ebf2538216ee5a9dc114de090e81",
+  "scriptSha256": "86227857c9da25442e26e9d658a2b077336ca3cb45a04285fba5054c6464e350",
   "counts": {
     "works": 13882,
     "authorships": 94299,
     "multiple_directory_fuas": 8372,
     "direct_parent_child_overlap": 4494,
+    "authorships_with_single_consistent_directory_fua": 56417,
+    "works_with_any_single_consistent_directory_fua": 10370,
+    "works_with_all_authorships_single_consistent_directory_fua": 5817,
+    "works_with_no_authorships": 7,
     "no_matched_institution": 21994,
     "no_affiliation_records": 19165,
     "unmatched_raw_affiliation": 4532,
@@ -258,5 +262,5 @@
       }
     ]
   },
-  "limitations": "Flags overlap and count authorships, except works/authorships totals. Largest source partition is not representative; do not extrapolate rates. Matching declared author counts does not establish complete or geographically correct affiliations. Directory FUA points are not verified research locations; no contribution allocation, global counts or CCI score."
+  "limitations": "Ambiguity flags count authorships and overlap; works_with_* counters count works. Largest source partition is not representative; do not extrapolate rates. Matching declared author counts does not establish complete or geographically correct affiliations. Directory FUA points are not verified research locations; no contribution allocation, global counts or CCI score. Single-consistent-directory-FUA counts require every ambiguity flag to be false per authorship. Any-author coverage is not complete-work coverage. Empty bylines never qualify as all-author coverage. Directory points still do not verify actual research sites; these counts are not fractional city output."
 }

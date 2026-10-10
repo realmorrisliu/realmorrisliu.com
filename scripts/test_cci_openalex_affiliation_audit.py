@@ -27,6 +27,19 @@ class AffiliationAuditTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Incomplete'):
             inspect([{'id': 'W1', 'publication_year': 2025, 'authors_count': 2, 'authorships': [author]}], {})
 
+    def test_partial_and_empty_byline_do_not_become_complete_attribution(self):
+        directory = {'I1': {'efua_ids': '1', 'mapping_status': 'directory_point_match'}}
+        author = {'affiliations': [{'institution_ids': ['I1']}],
+                  'institutions': [{'id': 'I1', 'lineage': ['I1']}]}
+        rows = [{'id': 'W1', 'publication_year': 2025, 'authors_count': 2, 'authorships': [author, {}]},
+                {'id': 'W2', 'publication_year': 2025, 'authors_count': 0, 'authorships': []},
+                {'id': 'W3', 'publication_year': 2025, 'authors_count': 1, 'authorships': [author]}]
+        counts = inspect(rows, directory)['counts']
+        self.assertEqual(counts['authorships_with_single_consistent_directory_fua'], 2)
+        self.assertEqual(counts['works_with_any_single_consistent_directory_fua'], 2)
+        self.assertEqual(counts['works_with_all_authorships_single_consistent_directory_fua'], 1)
+        self.assertEqual(counts['works_with_no_authorships'], 1)
+
 
 if __name__ == '__main__':
     unittest.main()

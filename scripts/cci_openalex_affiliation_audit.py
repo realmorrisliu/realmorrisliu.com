@@ -22,6 +22,7 @@ def inspect(records, directory):
         if not isinstance(authors, list) or len(authors) != work['authors_count']:
             raise ValueError('Incomplete author list')
         counts['authorships'] += len(authors)
+        consistent_authors = 0
         for position, author in enumerate(authors):
             affiliations = author.get('affiliations') or []
             institutions = author.get('institutions') or []
@@ -40,11 +41,18 @@ def inspect(records, directory):
                 'multiple_directory_fuas': len(locations) > 1,
                 'direct_parent_child_overlap': bool(parents),
             }
+            if len(locations) == 1 and not any(flags.values()):
+                consistent_authors += 1
             for flag, present in flags.items():
                 if present:
                     counts[flag] += 1
                     if len(examples.setdefault(flag, [])) < 3:
                         examples[flag].append({'workId': work['id'], 'authorshipPosition': position, 'directInstitutionIds': sorted(direct), 'directoryFuaIds': sorted(locations), 'parentChildPairs': sorted(parents)})
+        counts['authorships_with_single_consistent_directory_fua'] += consistent_authors
+        counts['works_with_any_single_consistent_directory_fua'] += bool(consistent_authors)
+        # An empty author list cannot establish complete geographic attribution.
+        counts['works_with_all_authorships_single_consistent_directory_fua'] += bool(authors) and consistent_authors == len(authors)
+        counts['works_with_no_authorships'] += not authors
     return {'counts': dict(counts), 'examples': examples}
 
 
@@ -66,7 +74,7 @@ def main():
         raise ValueError('Previously verified row-group projection required')
     result = inspect(pq.read_table(args.projection).to_pylist(), directory)
     output = {'status': 'single_row_group_affiliation_diagnostics_not_city_output', 'selection': '2025 works in first row group of largest frozen works file; not representative', 'projectionSha256': digest(args.projection), 'institutionDirectorySha256': digest(directory_path), 'scriptSha256': digest(Path(__file__)), **result,
-              'limitations': 'Flag counts overlap and count authorships, except works/authorships totals. Directory FUA matches are diagnostic points, not verified research locations. Parent-child overlap does not authorize dropping either institution. Unknown affiliations must not be redistributed to known cities. No full-snapshot rates, fractional output or score calculated.'}
+              'limitations': 'Ambiguity flags count authorships and overlap; works_with_* counters count works. Single-consistent-directory-FUA counts require all flags false for each qualifying author and do not establish actual research sites. Empty bylines never qualify as all-author coverage. Directory FUA matches are diagnostic points, not verified research locations. Parent-child overlap does not authorize dropping either institution. Unknown affiliations must not be redistributed to known cities. No full-snapshot rates, fractional output or score calculated.'}
     (folder / 'cci-openalex-affiliation-rowgroup-audit.json').write_text(json.dumps(output, indent=2) + '\n')
     print(result['counts'])
 
