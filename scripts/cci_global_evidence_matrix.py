@@ -21,16 +21,25 @@ def indexed(rows, expected):
     return result
 
 
-def matrix(candidates, history, spatial, violence, healthcare, governance):
+def matrix(candidates, history, spatial, violence, healthcare, governance, seismic):
     expected = {r["efua_id"] for r in candidates}
     if len(expected) != len(candidates):
         raise ValueError("Duplicate universe IDs")
-    history, spatial, violence, healthcare, governance = [
-        indexed(rows, expected) for rows in (history, spatial, violence, healthcare, governance)]
+    history, spatial, violence, healthcare, governance, seismic = [
+        indexed(rows, expected) for rows in (history, spatial, violence, healthcare, governance, seismic)]
     rows = []
     for candidate in candidates:
         key = candidate["efua_id"]
-        h, s, v, m, g = (table[key] for table in (history, spatial, violence, healthcare, governance))
+        h, s, v, m, g, q = (table[key] for table in (history, spatial, violence, healthcare, governance, seismic))
+        pcs = {
+            "partial_seismic_hazard_model": "partial_seismic_hazard_model",
+            "no_observed_hazard_population": "seismic_model_missing",
+            "zero_selected_population": "population_denominator_zero",
+            "population_unavailable": "population_unavailable",
+            "geometry_review": "geometry_review",
+            "outside_population_raster": "outside_population_raster",
+            "partially_outside_population_raster": "partial_spatial_coverage",
+        }[q["status"]]
         events = sum(int(v[f"recorded_events_{year}"]) for year in range(2021, 2026))
         if events < 0:
             raise ValueError("Negative recorded event count")
@@ -49,7 +58,7 @@ def matrix(candidates, history, spatial, violence, healthcare, governance):
         rows.append({
             "efua_id": key, "source_name": candidate["source_name"], "country_iso": candidate["country_iso"],
             "historical_research_slug": h["research_slug"], "historical_research_scope": h["research_scope"],
-            "PCS": "not_assembled", "GSS": "partial_event_history" if events else "no_assigned_events_not_zero_risk",
+            "PCS": pcs, "GSS": "partial_event_history" if events else "no_assigned_events_not_zero_risk",
             "ISR": "country_context_only" if context_count else "country_context_missing",
             "RES": "not_assembled", "MED": med, "LON": "not_assembled",
             "TEC": "not_assembled", "OPT": "not_assembled",
@@ -85,7 +94,8 @@ def main():
     violence = read("cci-ucdp-2021-2025-efua.csv", "cci-ucdp-2021-2025.json", "files", True)
     healthcare = read("cci-healthcare-efua-population.csv", "cci-healthcare-efua-population.json", "csvSha256")
     governance = read("cci-wgi-efua-context.csv", "cci-wgi-context.json", "outputs", True)
-    rows = matrix(candidates, history, spatial, violence, healthcare, governance)
+    seismic = read("cci-seismic-efua-population.csv", "cci-seismic-efua-population.json", "csvSha256")
+    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic)
     output = folder / "cci-global-evidence-matrix.csv"
     with output.open("w", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
@@ -97,7 +107,8 @@ def main():
         "scoreStatusCounts": dict(Counter(r["cci_score_status"] for r in rows)),
         "notAssembledMeaning": "Existing sources may contain relevant fields, but no qualified whole-candidate measurement has been assembled here.",
         "historicalMeaning": "Historical city research references are not global-protocol scores; union members do not inherit duplicated scores.",
-        "subpillarSupport": {"GSS": ["organized_violence: partial historical events only"],
+        "subpillarSupport": {"PCS": ["geophysical: reference-rock seismic hazard only, not building losses"],
+                             "GSS": ["organized_violence: partial historical events only"],
                              "ISR": ["governance: country context only"],
                              "MED": ["access: historical spatial model only"]},
         "sourceJoinKey": "efua_id; source tables and their provenance remain authoritative for values and limitations",

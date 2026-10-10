@@ -3,7 +3,9 @@
   "candidateCount": 9031,
   "dimensionStatusCounts": {
     "PCS": {
-      "not_assembled": 9031
+      "partial_seismic_hazard_model": 9023,
+      "seismic_model_missing": 7,
+      "population_denominator_zero": 1
     },
     "GSS": {
       "partial_event_history": 993,
@@ -37,6 +39,7 @@
   "notAssembledMeaning": "Existing sources may contain relevant fields, but no qualified whole-candidate measurement has been assembled here.",
   "historicalMeaning": "Historical city research references are not global-protocol scores; union members do not inherit duplicated scores.",
   "subpillarSupport": {
+    "PCS": ["geophysical: reference-rock seismic hazard only, not building losses"],
     "GSS": ["organized_violence: partial historical events only"],
     "ISR": ["governance: country context only"],
     "MED": ["access: historical spatial model only"]
@@ -72,8 +75,13 @@
       "sha256": "bca45d3d7cc3f504058321bb534724f06053cdf7ed482adf0e1c4e0ad91d7792",
       "provenance": "cci-wgi-context.json",
       "provenanceSha256": "e261ae4cf23e70a79e7f989fffc27b9b15bcffd8f7b2a1bc01f44554a0167f25"
+    },
+    "cci-seismic-efua-population.csv": {
+      "sha256": "da4fad78fa431a6629fe913ee9561d8c3a73967ff31693d3afba6ae19af6f29d",
+      "provenance": "cci-seismic-efua-population.json",
+      "provenanceSha256": "fd20df70072c245d4329f133257096bef8759cc50d920c36691dedda13f3c6fa"
     }
   },
-  "scriptSha256": "9794dd5e1be98dd1db24259c11571fc7544a9989c5020540d8ded2ac8783ca89",
-  "csvSha256": "4a017dce49951b4709a262946dfb9b2054066a30e7f674f7262be7366185d234"
+  "scriptSha256": "ba59ffacbfb8538819be7ba20230c62024ab751fdea9cf2eea30077673d3bb29",
+  "csvSha256": "dacc2570f60c58fb25ebcacca9710bc0172fb82aa1856af34381330533d605fd"
 }

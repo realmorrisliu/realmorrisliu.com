@@ -17,12 +17,17 @@ class EvidenceMatrixTest(unittest.TestCase):
         violence = [{**base, **{f"recorded_events_{y}": "0" for y in range(2021, 2026)}}]
         health = [{**base, "status": "no_observed_motorized_population"}]
         governance = [{**base, "available_dimensions": "6", "lookup_economy_code": "AAA"}]
-        row = matrix(candidates, history, spatial, violence, health, governance)[0]
+        seismic = [{**base, "status": "no_observed_hazard_population"}]
+        row = matrix(candidates, history, spatial, violence, health, governance, seismic)[0]
         self.assertEqual(row["GSS"], "no_assigned_events_not_zero_risk")
         self.assertEqual(row["ISR"], "country_context_only")
         self.assertEqual(row["MED"], "travel_model_missing")
-        self.assertEqual(row["PCS"], "not_assembled")
+        self.assertEqual(row["PCS"], "seismic_model_missing")
         self.assertEqual(row["historical_research_scope"], "union_member_only")
+        self.assertEqual(row["cci_score_status"], "not_computed_under_global_protocol")
+        seismic[0]["status"] = "partial_seismic_hazard_model"
+        row = matrix(candidates, history, spatial, violence, health, governance, seismic)[0]
+        self.assertEqual(row["PCS"], "partial_seismic_hazard_model")
         self.assertEqual(row["cci_score_status"], "not_computed_under_global_protocol")
 
 
