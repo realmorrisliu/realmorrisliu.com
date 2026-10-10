@@ -1,0 +1,20 @@
+{
+  "scope": "Union of two frozen searches, not complete global LON research",
+  "queryCounts": {
+    "aging_condition": 4041,
+    "lonafarnib_intervention": 39
+  },
+  "uniqueStudyCount": 4080,
+  "overlapCount": 0,
+  "newStudyCount": 39,
+  "knownOmissionsRecovered": ["NCT00425607", "NCT00916747"],
+  "sourceManifestSha256": {
+    "cci-lon-registry-source.json": "73a913d2701b8ea22cd859e30a0227444cbe0ae1a36be5087aa0ebca3378ee0b",
+    "cci-lon-lonafarnib-source.json": "9d28eb89ecbe1f05892a09736493821166a2ee58b68ffcf56b75755d5ab722df"
+  },
+  "outputSha256": {
+    "cci-lon-lonafarnib-studies.csv": "40eb010051f01ae0af94d1c84d34257aeae7dc34c605962fb77094bd8f8912e0",
+    "cci-lon-lonafarnib-locations.csv": "8ea488b7a11cac1911ad55be014dc508c8fa5a4e2464571d039114f63e22387e",
+    "cci-lon-discovery-union.csv": "0ac757b07f27ebeec6c8de42f8ee34f92efed09e534ca06255777a8383ceaeca"
+  }
+}

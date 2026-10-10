@@ -1,0 +1,18 @@
+{
+  "retrievedOn": "2026-10-10",
+  "discoveryReason": "Follow the intervention named in FDA lonafarnib approval summary PMID 36507973; not a city filter",
+  "query": {
+    "query.intr": "lonafarnib",
+    "format": "json",
+    "pageSize": "1000",
+    "countTotal": "true"
+  },
+  "pages": [
+    {
+      "file": "lon-lonafarnib-page-1.json",
+      "url": "https://clinicaltrials.gov/api/v2/studies?query.intr=lonafarnib&format=json&pageSize=1000&countTotal=true",
+      "sha256": "8989b3c5e07055126cdbb4b44ad0b2ff85bdf6c2f42f5640df66858dc8e20aab",
+      "bytes": 591507
+    }
+  ]
+}

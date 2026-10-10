@@ -46,15 +46,10 @@ def inventory(pages):
     return sorted(studies, key=lambda r: r['nct_id']), sorted(locations, key=lambda r: (r['nct_id'], r['location_index']))
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--source-dir', type=Path, required=True)
-    args = parser.parse_args()
-    folder = ROOT / 'docs/data'
-    source = json.loads((folder / 'cci-lon-registry-source.json').read_text())
+def load_pages(source, source_dir):
     pages = []
     for record in source['pages']:
-        raw = (args.source_dir / record['file']).read_bytes()
+        raw = (source_dir / record['file']).read_bytes()
         if len(raw) != record['bytes'] or hashlib.sha256(raw).hexdigest() != record['sha256']:
             raise ValueError('Source hash mismatch')
         query = parse_qs(urlparse(record['url']).query)
@@ -64,6 +59,16 @@ def main():
         if query != expected or urlparse(record['url']).netloc != 'clinicaltrials.gov':
             raise ValueError('Pagination query mismatch')
         pages.append(json.loads(raw))
+    return pages
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--source-dir', type=Path, required=True)
+    args = parser.parse_args()
+    folder = ROOT / 'docs/data'
+    source = json.loads((folder / 'cci-lon-registry-source.json').read_text())
+    pages = load_pages(source, args.source_dir)
     studies, locations = inventory(pages)
     hashes = {}
     for name, rows in [('cci-lon-registry-studies.csv', studies), ('cci-lon-registry-locations.csv', locations)]:
