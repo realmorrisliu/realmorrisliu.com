@@ -1,0 +1,63 @@
+{
+  "retrievedOn": "2026-10-10",
+  "periodStartInclusive": "2026-07-01",
+  "periodEndExclusive": "2026-10-01",
+  "status": "source_snapshot_not_cci_scores",
+  "documentationUrl": "https://github.com/teamookla/ookla-open-data",
+  "documentationSha256": "551ee9d499b3c7e40a6779d60ffb68bcf27942056b819f18a8ee0e55e442465f",
+  "license": "CC BY-NC-SA 4.0",
+  "attribution": "Speedtest by Ookla Global Fixed and Mobile Network Performance Maps, accessed 10 October 2026, Q3 2026. Analysis by CCI project; no endorsement implied.",
+  "limitations": [
+    "Self-selected GPS-located tests from Android/iOS, not all residents or connections.",
+    "Fixed identifies non-cellular connections from mobile devices.",
+    "2026-04-16 documentation notes regional availability changes; missing tiles cannot imply absent connectivity.",
+    "Source can be reaggregated; use frozen hashes rather than URL alone.",
+    "No network reliability, affordability, inclusion or complete TEC dimension inferred."
+  ],
+  "files": [
+    {
+      "mode": "fixed",
+      "url": "https://ookla-open-data.s3.amazonaws.com/parquet/performance/type=fixed/year=2026/quarter=3/2026-07-01_performance_fixed_tiles.parquet",
+      "sha256": "989168fd06431217e500f2de9a55d766de72120022609bc1bea916817303c622",
+      "bytes": 365146218,
+      "rows": 6640362,
+      "columns": {
+        "quadkey": "large_string",
+        "tile": "large_string",
+        "tile_x": "double",
+        "tile_y": "double",
+        "avg_d_kbps": "int64",
+        "avg_u_kbps": "int64",
+        "avg_lat_ms": "int64",
+        "avg_lat_down_ms": "double",
+        "avg_lat_up_ms": "double",
+        "tests": "int64",
+        "devices": "int64"
+      },
+      "lastModified": "2026-10-09T16:25:06.000Z",
+      "listingSha256": "bb3ce73ac6ee94f222eaaba11cee0096b9c0f4aacca5f2970a66edb79235e145"
+    },
+    {
+      "mode": "mobile",
+      "url": "https://ookla-open-data.s3.amazonaws.com/parquet/performance/type=mobile/year=2026/quarter=3/2026-07-01_performance_mobile_tiles.parquet",
+      "sha256": "a91d8cba1035f86d859016bb3734fe6ae16998397d8b36896653ee5f53f617f8",
+      "bytes": 189644612,
+      "rows": 3477926,
+      "columns": {
+        "quadkey": "large_string",
+        "tile": "large_string",
+        "tile_x": "double",
+        "tile_y": "double",
+        "avg_d_kbps": "int64",
+        "avg_u_kbps": "int64",
+        "avg_lat_ms": "int64",
+        "avg_lat_down_ms": "double",
+        "avg_lat_up_ms": "double",
+        "tests": "int64",
+        "devices": "int64"
+      },
+      "lastModified": "2026-10-09T16:19:02.000Z",
+      "listingSha256": "4ef6408aee69ff26533dcebb9c12f318613f22822d431f9f7b93afffb49bfc18"
+    }
+  ]
+}
