@@ -1,0 +1,33 @@
+{
+  "status": "partial_sample_measurements_not_city_scores",
+  "candidateCount": 9031,
+  "sourceManifestSha256": "4dcf8f6956d11970207b12171a79ca330ddbfb8e65ca15faaace8ed790cd21ba",
+  "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+  "scriptSha256": "17f41f647cfe89a953ecaa3f7915b2c647308dfc55920d47e82b02c6730c3ad3",
+  "assignmentScriptSha256": "23db899081b67195749200355a0d2495bb254f85e50635fa182ceb87bfd530b9",
+  "csvSha256": "9e1475a09cf1209674a80861335b139833d2a35bbaa4805ea05af4d289cb50d7",
+  "audits": {
+    "fixed": {
+      "rows": 6640362,
+      "outside": 3719021,
+      "ambiguous": 0,
+      "assigned": 2921341,
+      "interior": 2833376,
+      "roundedAssignmentChanges": 623
+    },
+    "mobile": {
+      "rows": 3477926,
+      "outside": 1812679,
+      "ambiguous": 0,
+      "assigned": 1665247,
+      "interior": 1617440,
+      "roundedAssignmentChanges": 348
+    }
+  },
+  "method": "WKT polygon centroids transformed to Mollweide, unique FUA intersections only. Test-weighted means of positive finite core tile metrics with positive integral tests/devices and devices <= tests. Zero/negative/null/nonfinite values quarantined per metric. Interior scenario excludes projected tiles not wholly covered by assigned FUA.",
+  "limitations": "Self-selected quarterly tests, not resident means. Interior scenario is boundary sensitivity, not a confidence interval or certified geometric bound: projected tile edges are straight chords. Sparse loaded-latency fields excluded because total tests is not their measured-test denominator. Tile rounded averages limit precision. No affordability, uptime, inclusion, full TEC score or ranking inferred.",
+  "versions": {
+    "shapely": "2.1.2",
+    "pyproj": "3.7.2"
+  }
+}

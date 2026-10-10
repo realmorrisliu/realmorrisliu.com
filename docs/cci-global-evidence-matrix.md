@@ -37,3 +37,5 @@ pnpm exec /private/tmp/cci-global/geo-venv/bin/python -B -m unittest discover -s
 本轮没有改变八维权重、历史发布、城市评分或线上页面。完整目标仍未达到发布条件。
 
 2026-10-10 追加：已完成 [Ookla 2026 Q3 全候选样本落点审计](cci-global-indicator-contract.md#ookla-原始季度数据与全候选落点审计2026-10-10)，8,255 个候选至少有一种连接类型的样本中心点。该审计尚非边界校验后的性能测量，TEC 状态继续保持未组装，不增加完整评分城市数。
+
+后续样本测量已生成 [18,062 行网络条件均值与边界敏感性表](data/cci-ookla-efua-sampled-measurements.csv)。该表尚未接入本矩阵；待接入时必须保留样本限制与边界状态，不能将其升级为完整 TEC 得分。
