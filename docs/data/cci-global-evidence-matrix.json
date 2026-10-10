@@ -1,0 +1,79 @@
+{
+  "status": "partial_evidence_inventory_not_ranking",
+  "candidateCount": 9031,
+  "dimensionStatusCounts": {
+    "PCS": {
+      "not_assembled": 9031
+    },
+    "GSS": {
+      "partial_event_history": 993,
+      "no_assigned_events_not_zero_risk": 8038
+    },
+    "ISR": {
+      "country_context_only": 9025,
+      "country_context_missing": 6
+    },
+    "RES": {
+      "not_assembled": 9031
+    },
+    "MED": {
+      "partial_access_model": 9029,
+      "travel_model_missing": 1,
+      "population_denominator_zero": 1
+    },
+    "LON": {
+      "not_assembled": 9031
+    },
+    "TEC": {
+      "not_assembled": 9031
+    },
+    "OPT": {
+      "not_assembled": 9031
+    }
+  },
+  "scoreStatusCounts": {
+    "not_computed_under_global_protocol": 9031
+  },
+  "notAssembledMeaning": "Existing sources may contain relevant fields, but no qualified whole-candidate measurement has been assembled here.",
+  "historicalMeaning": "Historical city research references are not global-protocol scores; union members do not inherit duplicated scores.",
+  "subpillarSupport": {
+    "GSS": ["organized_violence: partial historical events only"],
+    "ISR": ["governance: country context only"],
+    "MED": ["access: historical spatial model only"]
+  },
+  "sourceJoinKey": "efua_id; source tables and their provenance remain authoritative for values and limitations",
+  "inputs": {
+    "cci-global-candidates-r2019a.csv": {
+      "sha256": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
+      "provenance": "cci-global-candidates-r2019a.provenance.json",
+      "provenanceSha256": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d"
+    },
+    "cci-global-coverage-2026-10.csv": {
+      "sha256": "a705fcd814ca23dec92f53c1cbcc1fa329892027d7f1fe9c4bf543a5a915b6e7",
+      "provenance": "cci-global-coverage-2026-10.json",
+      "provenanceSha256": "47e1271455443b55c9510a85df7c40838e4c1bee092de0e6a5d7cb3e4417d5d9"
+    },
+    "cci-ucdb-efua-fua-coverage.csv": {
+      "sha256": "49247f54025a1f09137ee777664600c73c2c2f05584d7c823a779554e88e97e3",
+      "provenance": "cci-ucdb-efua-crosswalk.json",
+      "provenanceSha256": "e5aeb965114a9cb8a972946af360b14116fb30effb8578a2b7359a5184ec1cdb"
+    },
+    "cci-ucdp-2021-2025-efua.csv": {
+      "sha256": "89a6049ae41179b3e1ffe5c2e3d47a8e74fd2add5f32d75c8689802f724a46df",
+      "provenance": "cci-ucdp-2021-2025.json",
+      "provenanceSha256": "925f3415335aa635ae06272ed298bccbc87f466d6ff4eb302f16f6b4e0cc300e"
+    },
+    "cci-healthcare-efua-population.csv": {
+      "sha256": "f079428abaaada9a35856b186f0b9525ada7ae3fd2770c32d65d6154a10d8505",
+      "provenance": "cci-healthcare-efua-population.json",
+      "provenanceSha256": "81067513a3d7ef1a20b2f34910395daf676348909ec9e50ce04fca5a6121497e"
+    },
+    "cci-wgi-efua-context.csv": {
+      "sha256": "bca45d3d7cc3f504058321bb534724f06053cdf7ed482adf0e1c4e0ad91d7792",
+      "provenance": "cci-wgi-context.json",
+      "provenanceSha256": "e261ae4cf23e70a79e7f989fffc27b9b15bcffd8f7b2a1bc01f44554a0167f25"
+    }
+  },
+  "scriptSha256": "9794dd5e1be98dd1db24259c11571fc7544a9989c5020540d8ded2ac8783ca89",
+  "csvSha256": "4a017dce49951b4709a262946dfb9b2054066a30e7f674f7262be7366185d234"
+}
