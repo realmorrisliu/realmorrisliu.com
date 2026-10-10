@@ -50,6 +50,37 @@ assert.equal(
 );
 assert.equal(total(a.scores, sensitivity).center, 55);
 assert.equal(total(b.scores, sensitivity).center, 57);
+const realCase = JSON.parse(
+  readFileSync(new URL("../docs/data/cci-local-2026-singapore-case.json", import.meta.url), "utf8")
+);
+assert.equal(realCase.status, "real_conditional_calibration_case_not_ranking");
+assert.equal(realCase.dimensions.length, DIMENSIONS.length);
+assert.equal(new Set(realCase.dimensions.map((d: { id: string }) => d.id)).size, DIMENSIONS.length);
+for (const dimension of DIMENSIONS) {
+  const review = realCase.dimensions.find((d: { id: string }) => d.id === dimension.id);
+  assert(review && review.rationale && review.assumption);
+  assert([20, 40, 60, 80].includes(review.score));
+  assert(review.conditionalAlternatives.length > 0);
+  assert(review.conditionalAlternatives.every((score: number) => [20, 40, 60, 80].includes(score)));
+  assert.deepEqual(Object.keys(review.subpillars).sort(), [...dimension.subpillars].sort());
+  assert(
+    Object.values(review.subpillars).every(state =>
+      ["partial", "context", "unresolved"].includes(state as string)
+    )
+  );
+}
+const realScores = Object.fromEntries(
+  realCase.dimensions.map((d: { id: DimensionId; score: number }) => [d.id, d.score])
+) as Record<DimensionId, number>;
+assert.equal(total(realScores).center, realCase.expectedConditionalTotal);
+assert.equal(total({ ...realScores, MED: 40 }).center, 55);
+assert.equal(total({ ...realScores, LON: 60 }).center, 60);
+assert.equal(total({ ...realScores, TEC: 80 }).center, 60);
+assert.equal(total({ ...realScores, LON: 60, TEC: 80 }).center, 62);
+const unresolvedLon: Partial<Record<DimensionId, number>> = { ...realScores };
+delete unresolvedLon.LON;
+assert.deepEqual(total(unresolvedLon), { center: null, lower: 54, upper: 64 });
+assert.equal(total(realScores, { ...weights, MED: 10, LON: 15 }).center, 57);
 console.log({
   status: input.status,
   totals: input.cases.map((c: { id: string; scores: Record<DimensionId, number> }) => ({
@@ -58,4 +89,5 @@ console.log({
   })),
   missingMED: total(missing),
   sensitivity: { A: 55, B: 57 },
+  realCase: { id: realCase.candidateId, conditionalTotal: realCase.expectedConditionalTotal },
 });

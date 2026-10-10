@@ -1,0 +1,118 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 154,
+  "name": "Singapore",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "evidenceReview": "cci-local-2026-singapore-case.md",
+  "expectedConditionalTotal": 58,
+  "limitations": "All 31 subpillars are reviewed, not all are measured. Scores require the stated assumptions; unknown evidence remains unknown. This is neither a global ranking nor an exclusion bound. Rejecting a necessary assumption requires reassessment, not automatic retention of its score.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Heat-protection enforcement and drainage improvements support functioning protection; vulnerable outdoor groups, flood hotspots and other hazards prevent an unconditional strong-capability claim.",
+      "assumption": "Observed protective capacity continues in 2026; unresolved hazards do not already cause a stronger widespread constraint on ordinary residents.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "unresolved"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": 60,
+      "rationale": "Specific security responses coexist with the authority's spillover and targeting concerns; unmatched conflict records do not establish safety.",
+      "assumption": "The assessed threats have not broadly disrupted ordinary activity and essential channels; unreviewed strategic exposure does not reverse this assessment.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Inspections, remediation and delivered community response support execution; survey scope and emergency staffing limits do not establish full population reach and crisis redundancy.",
+      "assumption": "Observed institutions and services continue to function for ordinary residents; unmeasured recovery and group differences do not imply broad delivery failure.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "context",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "Operational water alternatives, low normal electricity interruption and varied food origins coexist with imported food, fuel and electricity-dependent desalination.",
+      "assumption": "Normal availability continues and price pressure does not broadly make essential consumption unaffordable for median-income residents; unmeasured stocks and common disruptions require further review.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "water": "context",
+        "food": "context",
+        "energy": "partial",
+        "supply_chain": "context"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "Citizen insurance, delivered assistance, subsidised specialist appointments and a specific resident treatment outcome support real pathways; waiting tails and pressure continuity remain uncertain.",
+      "assumption": "Subsidised care and assessed assistance remain usable by ordinary residents; the reviewed specialist service is evidence of capability, not a proxy for all routine-care outcomes.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 40,
+      "rationale": "Reviewed human pathways include short feasibility and individual exploratory studies, leaving a specific gap to reliable ordinary-resident clinical benefit and routine access.",
+      "assumption": "The reviewed pathways reflect current major maturity and unreviewed pathways have not changed the result. This representative-pathway assumption is weak; rejecting it leaves the whole dimension unresolved.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Actual patents and commercialisation, cross-sector digital activity and network samples support capacity; measured adoption depth and firm-size differences remain relevant constraints.",
+      "assumption": "Capabilities persist from the 2024 observations to 2026 and the measured diffusion differences remain informative. An unverified newer report is not itself negative evidence.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Delivered aviation and a verified temporary exit option coexist with particular CPF withdrawal conditions and a documented voice failover incident with subsequent remediation.",
+      "assumption": "Ordinary residents have usable travel funds, account access and alternative communication. Their distribution, long-term overseas residence rights and independent transport redundancy remain unverified.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ]
+}
