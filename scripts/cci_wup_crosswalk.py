@@ -13,7 +13,7 @@ import shapefile
 import shapely
 from shapely.geometry import shape
 
-from cci_global_crosswalk import ROOT, FUA_TABLE, digest, load, overlaps, write_csv
+from cci_global_crosswalk import ROOT, FUA_TABLE, UC_TABLE, digest, load, overlaps, write_csv
 
 SOURCE = 'https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_WUP_MTUC_GLOBE_R2025A/V1-1/GHS_WUP_MTUC_GLOBE_R2025A_V1_1_vector.zip'
 SHA256 = '7f927a52a1f4a833c7c65eb6fd0e1bee86f53e329a8453cb6e04c7459c49acfa'
@@ -24,6 +24,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--archive', type=Path, required=True)
     parser.add_argument('--fua', type=Path, required=True)
+    parser.add_argument('--ucdb', type=Path, required=True)
     args = parser.parse_args()
     if digest(args.archive) != SHA256:
         raise ValueError('Frozen WUP archive checksum mismatch')
@@ -32,6 +33,13 @@ def main():
     fuas, repairs = load(args.fua, FUA_TABLE, 'eFUA_ID', 'eFUA_name', old['geoPackageSha256'])
     if len(fuas) != old['rowCount']:
         raise ValueError('Incomplete FUA universe')
+    ucdb_source = json.loads((folder / 'cci-ucdb-r2024a-v1-2.inventory.json').read_text())
+    ucdb, ucdb_repairs = load(args.ucdb, UC_TABLE, 'ID_UC_G0', 'GC_UCN_MAI_2025', ucdb_source['geoPackageSha256'])
+    if len(ucdb) != 11422:
+        raise ValueError('Incomplete UCDB universe')
+    ucdb_polygons = [r[2] for r in ucdb]
+    ucdb_tree = shapely.STRtree(ucdb_polygons)
+    ucdb_edges, ucdb_counts = [], Counter()
     polygons = [r[2] for r in fuas]
     tree = shapely.STRtree(polygons)
     edges, centres, centre_repairs = [], [], []
@@ -70,19 +78,30 @@ def main():
                     efua = fuas[index][0]
                     fua_counts[efua] += 1
                     edges.append({'wup_2025_id': identifier, 'efua_id': efua, 'overlap_km2': round(part.area / 1e6, 6), 'centre_area_share': round(part.area / polygon.area, 9)})
-                centres.append({'wup_2025_id': identifier, 'intersecting_efuas': len(matches), 'covered_area_share': round(covered, 9), 'status': 'no_overlap' if not matches else 'single_overlap' if len(matches) == 1 else 'multiple_overlaps'})
+                ucdb_matches = list(overlaps(polygon, ucdb_tree, ucdb_polygons))
+                ucdb_covered = shapely.union_all([part for _, part in ucdb_matches]).area / polygon.area
+                if not 0 <= ucdb_covered <= 1 + 1e-9:
+                    raise ValueError('Invalid UCDB coverage')
+                for index, part in ucdb_matches:
+                    ucdb_id = ucdb[index][0]
+                    ucdb_counts[ucdb_id] += 1
+                    ucdb_edges.append({'wup_2025_id': identifier, 'ucdb_id': ucdb_id, 'overlap_km2': round(part.area / 1e6, 6), 'wup_area_share': round(part.area / polygon.area, 9), 'ucdb_area_share': round(part.area / ucdb_polygons[index].area, 9)})
+                centres.append({'wup_2025_id': identifier, 'intersecting_ucdb_centres': len(ucdb_matches), 'ucdb_covered_area_share': round(ucdb_covered, 9), 'intersecting_efuas': len(matches), 'covered_area_share': round(covered, 9), 'status': 'no_overlap' if not matches else 'single_overlap' if len(matches) == 1 else 'multiple_overlaps'})
             # Source manual Table 20 specifies 12,140 centres in 2025; include no other epoch.
             if len(seen) != len(reader) or len(centres) != years[2025] or years[2025] != 12140:
                 raise ValueError('Source record or 2025 population-of-centres count mismatch')
     fua_rows = [{'efua_id': identifier, 'intersecting_centres': fua_counts[identifier]} for identifier, _, _ in fuas]
     if sum(row['intersecting_efuas'] for row in centres) != len(edges) or sum(fua_counts.values()) != len(edges):
         raise ValueError('Intersection accounting mismatch')
-    outputs = {'cci-wup-2025-efua-overlaps.csv': edges, 'cci-wup-2025-centre-coverage.csv': centres, 'cci-wup-2025-fua-coverage.csv': fua_rows}
+    ucdb_rows = [{'ucdb_id': identifier, 'intersecting_wup_centres': ucdb_counts[identifier]} for identifier, _, _ in ucdb]
+    if sum(r['intersecting_ucdb_centres'] for r in centres) != len(ucdb_edges) or sum(ucdb_counts.values()) != len(ucdb_edges):
+        raise ValueError('UCDB intersection accounting mismatch')
+    outputs = {'cci-wup-2025-ucdb-overlaps.csv': ucdb_edges, 'cci-wup-2025-ucdb-coverage.csv': ucdb_rows, 'cci-wup-2025-efua-overlaps.csv': edges, 'cci-wup-2025-centre-coverage.csv': centres, 'cci-wup-2025-fua-coverage.csv': fua_rows}
     for name, rows in outputs.items():
         write_csv(folder / name, rows)
-    summary = {'status': 'wup_2025_polygon_overlap_not_candidate_migration_or_scores', 'sourceUrl': SOURCE, 'archiveSha256': SHA256, 'archiveBytes': args.archive.stat().st_size, 'archiveFiles': files, 'scriptSha256': digest(Path(__file__)), 'sharedCrosswalkScriptSha256': digest(ROOT / 'scripts/cci_global_crosswalk.py'), 'efuaSourceSha256': old['geoPackageSha256'], 'sourceRecordsByYear': dict(sorted(years.items())), 'sourceRecords': len(seen), 'targetYear': 2025, 'urbanCentres': len(centres), 'efuas': len(fuas), 'intersectionCount': len(edges), 'centreOverlapCounts': dict(Counter(r['status'] for r in centres)), 'efuasWithoutCentreOverlap': sum(r['intersecting_centres'] == 0 for r in fua_rows), 'efuaGeometryRepairs': repairs, 'centreGeometryRepairs': centre_repairs, 'outputs': {name: digest(folder / name) for name in outputs}, 'versions': {'pyshp': shapefile.__version__, 'shapely': shapely.__version__, 'geos': shapely.geos_version_string}, 'method': 'All 2025 polygons, positive-area intersection in common Mollweide CRS, no name or country filters, union for coverage. Invalid geometry repaired only if area, extent and polygon type are preserved; every repair recorded. Same policy as frozen FUA crosswalk.', 'limitations': 'WUP urban centres are not commuting areas. IDs are local to this source, not UCDB IDs. Unmatched and multi-overlap centres remain unresolved. Area overlap does not establish population coverage or permit transferring scores. No replacement of frozen candidates or historical releases.'}
+    summary = {'status': 'wup_2025_polygon_overlap_not_candidate_migration_or_scores', 'sourceUrl': SOURCE, 'archiveSha256': SHA256, 'archiveBytes': args.archive.stat().st_size, 'archiveFiles': files, 'scriptSha256': digest(Path(__file__)), 'sharedCrosswalkScriptSha256': digest(ROOT / 'scripts/cci_global_crosswalk.py'), 'efuaSourceSha256': old['geoPackageSha256'], 'ucdbSourceSha256': ucdb_source['geoPackageSha256'], 'ucdbGeometryRepairs': ucdb_repairs, 'ucdbIntersectionCount': len(ucdb_edges), 'ucdbCentres': len(ucdb), 'wupCentresWithoutUcdbOverlap': sum(r['intersecting_ucdb_centres'] == 0 for r in centres), 'wupCentresWithMultipleUcdbOverlaps': sum(r['intersecting_ucdb_centres'] > 1 for r in centres), 'ucdbCentresWithoutWupOverlap': sum(r['intersecting_wup_centres'] == 0 for r in ucdb_rows), 'wupCentresOutsideFuaAndUcdb': sum(r['intersecting_efuas'] == 0 and r['intersecting_ucdb_centres'] == 0 for r in centres), 'sourceRecordsByYear': dict(sorted(years.items())), 'sourceRecords': len(seen), 'targetYear': 2025, 'urbanCentres': len(centres), 'efuas': len(fuas), 'intersectionCount': len(edges), 'centreOverlapCounts': dict(Counter(r['status'] for r in centres)), 'efuasWithoutCentreOverlap': sum(r['intersecting_centres'] == 0 for r in fua_rows), 'efuaGeometryRepairs': repairs, 'centreGeometryRepairs': centre_repairs, 'outputs': {name: digest(folder / name) for name in outputs}, 'versions': {'pyshp': shapefile.__version__, 'shapely': shapely.__version__, 'geos': shapely.geos_version_string}, 'method': 'All 2025 polygons, positive-area intersection in common Mollweide CRS, no name or country filters, union for coverage. Invalid geometry repaired only if area, extent and polygon type are preserved; every repair recorded. Same policy as frozen FUA crosswalk.', 'limitations': 'WUP urban centres are not commuting areas. IDs are local to this source, not UCDB IDs. Unmatched and multi-overlap centres remain unresolved. Area overlap does not establish population coverage or permit transferring scores. No replacement of frozen candidates or historical releases.'}
     (folder / 'cci-wup-2025-crosswalk.json').write_text(json.dumps(summary, indent=2) + '\n')
-    print({k: summary[k] for k in ('sourceRecords', 'urbanCentres', 'efuas', 'intersectionCount', 'centreOverlapCounts', 'efuasWithoutCentreOverlap')})
+    print({k: summary[k] for k in ('sourceRecords', 'urbanCentres', 'efuas', 'intersectionCount', 'centreOverlapCounts', 'efuasWithoutCentreOverlap', 'ucdbIntersectionCount', 'wupCentresWithoutUcdbOverlap', 'wupCentresWithMultipleUcdbOverlaps', 'ucdbCentresWithoutWupOverlap', 'wupCentresOutsideFuaAndUcdb')})
 
 
 if __name__ == '__main__':

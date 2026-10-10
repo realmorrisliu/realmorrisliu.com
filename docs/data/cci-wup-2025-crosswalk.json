@@ -45,9 +45,172 @@
       "sha256": "d97b91909fb80bd29ded1e4f76ef40b5d53d3c51c752532d96a913d76aa1ed14"
     }
   },
-  "scriptSha256": "873acff75002002caac3f4100506a0e4a87842b89e2befa11cef6554a16ebb64",
+  "scriptSha256": "bb458a602f2b7d46ae82b7f196ca451e0f46a2c80ff875d077c5b0987be20373",
   "sharedCrosswalkScriptSha256": "713981315966affdd5fbd7133b883bd8e79fa83965bdfaa7498dfb6db5d5b497",
   "efuaSourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+  "ucdbSourceSha256": "56e60b7cbfc776b23493d5684aa5d0d7d6940fc3dd9a3881fa52599f20fd80fc",
+  "ucdbGeometryRepairs": [
+    {
+      "sourceId": 99,
+      "reason": "Ring Self-intersection[1615000 6824000]",
+      "originalAreaM2": 121000000.0,
+      "repairedAreaM2": 121000000.0,
+      "derivedWkbSha256": "f1020336345abbb93788a81afa77a3324ed8929f0addbf851d8d44847d86621d"
+    },
+    {
+      "sourceId": 231,
+      "reason": "Ring Self-intersection[-800000 4640000]",
+      "originalAreaM2": 426000000.0,
+      "repairedAreaM2": 426000000.0,
+      "derivedWkbSha256": "a397896007438ecf8a451604910afe1e1a03332c7628bdf3197c756b062d9122"
+    },
+    {
+      "sourceId": 258,
+      "reason": "Ring Self-intersection[1187000 3983000]",
+      "originalAreaM2": 465000000.0,
+      "repairedAreaM2": 465000000.0,
+      "derivedWkbSha256": "c43498bd3ea9de9ea56974abb2887b266b2f306b8f83099b36da2c0dddbd02d0"
+    },
+    {
+      "sourceId": 1027,
+      "reason": "Ring Self-intersection[11684000 4100000]",
+      "originalAreaM2": 388000000.0,
+      "repairedAreaM2": 388000000.0,
+      "derivedWkbSha256": "e88d2d859546a9bcb71b390a4cb881a368ad730b4da277c63bba318c6d4457de"
+    },
+    {
+      "sourceId": 1041,
+      "reason": "Ring Self-intersection[-7732000 2831000]",
+      "originalAreaM2": 31000000.0,
+      "repairedAreaM2": 31000000.0,
+      "derivedWkbSha256": "908b1a29352645704c22474e442c3e7787819ac4702aa68d0a82d23053c00849"
+    },
+    {
+      "sourceId": 1142,
+      "reason": "Ring Self-intersection[11446000 3054000]",
+      "originalAreaM2": 972000000.0,
+      "repairedAreaM2": 972000000.0,
+      "derivedWkbSha256": "723bcaffa7c2a88bbf5c07a7e52ec151989386bb7bd22c71c509769bc145e61a"
+    },
+    {
+      "sourceId": 1147,
+      "reason": "Ring Self-intersection[15256000 -4433000]",
+      "originalAreaM2": 638000000.0,
+      "repairedAreaM2": 638000000.0,
+      "derivedWkbSha256": "b1ebe651fd065f40d512c8f989fdb6fe1cee849d6315eddebd71d331fcba2318"
+    },
+    {
+      "sourceId": 2036,
+      "reason": "Ring Self-intersection[803000 5241000]",
+      "originalAreaM2": 27000000.0,
+      "repairedAreaM2": 27000000.0,
+      "derivedWkbSha256": "38ae8861321de3528df2abcf45335cd24b2ae9e35b8e3cd4021cee9206e7bcc9"
+    },
+    {
+      "sourceId": 2253,
+      "reason": "Ring Self-intersection[-6947000 1448000]",
+      "originalAreaM2": 100000000.0,
+      "repairedAreaM2": 100000000.0,
+      "derivedWkbSha256": "f707bcdd6651e899eb281b3ddbc24b8d53daec6812d21431a33e287da8894baf"
+    },
+    {
+      "sourceId": 2264,
+      "reason": "Ring Self-intersection[-215000 6221000]",
+      "originalAreaM2": 388000000.0,
+      "repairedAreaM2": 388000000.0,
+      "derivedWkbSha256": "c5ff74b3ff6db85b1ba5ab8cd6eae356759f5e56540070fa5fff0b3ff1b37541"
+    },
+    {
+      "sourceId": 2324,
+      "reason": "Ring Self-intersection[13486000 -4109000]",
+      "originalAreaM2": 1378000000.0,
+      "repairedAreaM2": 1378000000.0,
+      "derivedWkbSha256": "47b95c4fd337bf2fbdd4dd7dc74e4f0e9bdc92b22a210e4dcb795829a99792e0"
+    },
+    {
+      "sourceId": 2637,
+      "reason": "Ring Self-intersection[2444000 4915000]",
+      "originalAreaM2": 1269000000.0,
+      "repairedAreaM2": 1269000000.0,
+      "derivedWkbSha256": "318fcbabc5adef9025d3f4ed699a6f65f8ebfb96a489d6189e22dba5aa22c778"
+    },
+    {
+      "sourceId": 3920,
+      "reason": "Ring Self-intersection[11427000 4234000]",
+      "originalAreaM2": 355000000.0,
+      "repairedAreaM2": 355000000.0,
+      "derivedWkbSha256": "f82b65bfe3a8fe99e02110b6981c13b7720a84ad58485f81133e52e47409aa22"
+    },
+    {
+      "sourceId": 4754,
+      "reason": "Ring Self-intersection[3063000 5309000]",
+      "originalAreaM2": 77000000.0,
+      "repairedAreaM2": 77000000.0,
+      "derivedWkbSha256": "76e660e15e6001e1c49fdec55935a25d1d6cd25e7a7d95ef3689c3db79ff5b7e"
+    },
+    {
+      "sourceId": 6998,
+      "reason": "Ring Self-intersection[11043000 -813000]",
+      "originalAreaM2": 169000000.0,
+      "repairedAreaM2": 169000000.0,
+      "derivedWkbSha256": "1a496cfd20c8a50bd54e769b9ff4d5a67e031a9ee2028883da84d483d82294df"
+    },
+    {
+      "sourceId": 7529,
+      "reason": "Ring Self-intersection[8794000 2682000]",
+      "originalAreaM2": 430000000.0,
+      "repairedAreaM2": 430000000.0,
+      "derivedWkbSha256": "113089af89c87c25f55b1bb303f3a4b044ed960db099b21e880100e40f584be0"
+    },
+    {
+      "sourceId": 8099,
+      "reason": "Ring Self-intersection[-6238000 4859000]",
+      "originalAreaM2": 3031000000.0,
+      "repairedAreaM2": 3031000000.0,
+      "derivedWkbSha256": "5e2d231c235e8c7905cc641853bf90698ab89672baf9c28dcdcb84c5cb74438d"
+    },
+    {
+      "sourceId": 8100,
+      "reason": "Ring Self-intersection[-3879000 -2497000]",
+      "originalAreaM2": 203000000.0,
+      "repairedAreaM2": 203000000.0,
+      "derivedWkbSha256": "1ff61fef6a874b767556f2b60110fbaeddfe1f7372d0e2f03cf47ada661046fb"
+    },
+    {
+      "sourceId": 10796,
+      "reason": "Ring Self-intersection[8105000 2176000]",
+      "originalAreaM2": 211000000.0,
+      "repairedAreaM2": 211000000.0,
+      "derivedWkbSha256": "4b2f6a17454a9776b04563c7e116a8a50a19aed5b6525ec68e7d2508b7de0696"
+    },
+    {
+      "sourceId": 11185,
+      "reason": "Ring Self-intersection[10915000 2728000]",
+      "originalAreaM2": 220000000.0,
+      "repairedAreaM2": 220000000.0,
+      "derivedWkbSha256": "7a36aec3ede8e1ee56bc19c033e291067034eb7db068b039cf883a37a0c90aa7"
+    },
+    {
+      "sourceId": 11199,
+      "reason": "Ring Self-intersection[10994000 3794000]",
+      "originalAreaM2": 1802000000.0,
+      "repairedAreaM2": 1802000000.0,
+      "derivedWkbSha256": "3e1c639c1762e4c7afef6c32bea871894c71d010c480aa7903b8b03b72dd04c4"
+    },
+    {
+      "sourceId": 11623,
+      "reason": "Ring Self-intersection[11189000 3012000]",
+      "originalAreaM2": 799000000.0,
+      "repairedAreaM2": 799000000.0,
+      "derivedWkbSha256": "56e49a2f7b369714a8288097833a621dcd49d5c61505ff3236b1560be6d50d0c"
+    }
+  ],
+  "ucdbIntersectionCount": 11400,
+  "ucdbCentres": 11422,
+  "wupCentresWithoutUcdbOverlap": 889,
+  "wupCentresWithMultipleUcdbOverlaps": 132,
+  "ucdbCentresWithoutWupOverlap": 300,
+  "wupCentresOutsideFuaAndUcdb": 559,
   "sourceRecordsByYear": {
     "1975": 5851,
     "1980": 6309,
@@ -1142,8 +1305,10 @@
     }
   ],
   "outputs": {
+    "cci-wup-2025-ucdb-overlaps.csv": "edc4dd52fe28b5a7bb4630d094f7508d346cb2e555495b15e323e614c1327e81",
+    "cci-wup-2025-ucdb-coverage.csv": "671ee91f75296c2e25db227c5975862b5ddeba038ecb350e1fe4447684d24d7f",
     "cci-wup-2025-efua-overlaps.csv": "edea641a3179ba211ecca28d6aff5e9e6df451d34cf531e3c674daade8715937",
-    "cci-wup-2025-centre-coverage.csv": "c1b56d7b8c9170138a5b26086c2bd2545e553473937da9b234c3fbebeeac0443",
+    "cci-wup-2025-centre-coverage.csv": "b737c8336838119fd03f0a1a4b695354ded5f943dceb2d83fd6b3db78b50f8a0",
     "cci-wup-2025-fua-coverage.csv": "e3c2715551e27e2a28c069e2df3d97348b1dad236a0327a566c5437cc8df85be"
   },
   "versions": {
