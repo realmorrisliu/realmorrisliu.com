@@ -1,6 +1,11 @@
 {
   "status": "partial_evidence_inventory_not_ranking",
   "candidateCount": 9031,
+  "boundaryCoverageCounts": {
+    "withoutUcdbCentreOverlap": 1156,
+    "withoutWup2025CentreOverlap": 997
+  },
+  "boundaryMeaning": "Centre intersections describe geometric coverage only. UCDB and WUP are separate sources; their IDs and counts cannot be merged directly. Zero intersections do not exclude a candidate or imply a score.",
   "dimensionStatusCounts": {
     "PCS": {
       "partial_seismic_hazard_model": 9023,
@@ -96,8 +101,13 @@
       "sha256": "9e1475a09cf1209674a80861335b139833d2a35bbaa4805ea05af4d289cb50d7",
       "provenance": "cci-ookla-efua-sampled-measurements.json",
       "provenanceSha256": "38567c2a5f1fc1390312175e7fbd1d42e5ae7da19fdecb87792f75633a2d43ec"
+    },
+    "cci-wup-2025-fua-coverage.csv": {
+      "sha256": "e3c2715551e27e2a28c069e2df3d97348b1dad236a0327a566c5437cc8df85be",
+      "provenance": "cci-wup-2025-crosswalk.json",
+      "provenanceSha256": "14fffd62e6c3053cd1cf8a00f49e2cd86c5c76f8f0e00dfe4e884f27027be565"
     }
   },
-  "scriptSha256": "268f24f88f827d2348c40261f4f5394ffa2230fa4fe12a24bb5bd17cf4b8ce5f",
-  "csvSha256": "f9aab10a7c611f4492fc392170f0e4d5ad60b4fc821be889d66f766cb22e0d01"
+  "scriptSha256": "74102cf849c9f1b72d7bde60bd9fdc03f369e9b82b6c1105d4ed80851bb6ee9b",
+  "csvSha256": "51231f8ffbad82849caaceb5ecfdc5193c8618c944a946a450941a8856163df9"
 }

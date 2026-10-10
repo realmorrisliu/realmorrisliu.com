@@ -51,12 +51,12 @@ def network_coverage(rows, expected):
     return result
 
 
-def matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network):
+def matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup):
     expected = {r["efua_id"] for r in candidates}
     if len(expected) != len(candidates):
         raise ValueError("Duplicate universe IDs")
-    history, spatial, violence, healthcare, governance, seismic, water = [
-        indexed(rows, expected) for rows in (history, spatial, violence, healthcare, governance, seismic, water)]
+    history, spatial, violence, healthcare, governance, seismic, water, wup = [
+        indexed(rows, expected) for rows in (history, spatial, violence, healthcare, governance, seismic, water, wup)]
     network = network_coverage(network, expected)
     rows = []
     for candidate in candidates:
@@ -71,6 +71,9 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
             "outside_population_raster": "outside_population_raster",
             "partially_outside_population_raster": "partial_spatial_coverage",
         }[q["status"]]
+        wup_count = int(wup[key]["intersecting_centres"])
+        if wup_count < 0:
+            raise ValueError("Negative WUP centre count")
         water_count = int(water[key]["available_indicators"])
         if not 0 <= water_count <= 2:
             raise ValueError("Invalid water context count")
@@ -99,6 +102,7 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
             "TEC": "partial_network_samples" if network[key]["network_sample_connection_types"] else "network_samples_missing", "OPT": "not_assembled",
             **network[key],
             "ucdb_intersecting_centres": s["intersecting_centres"],
+            "wup_2025_intersecting_centres": wup_count,
             "ucdb_centre_area_share": s["centre_area_share"],
             "ucdp_assigned_events_2021_2025": events,
             "wgi_country_dimensions_available": context_count,
@@ -133,7 +137,8 @@ def main():
     seismic = read("cci-seismic-efua-population.csv", "cci-seismic-efua-population.json", "csvSha256")
     water = read("cci-water-efua-context.csv", "cci-water-context.json", "outputs", True)
     network = read("cci-ookla-efua-sampled-measurements.csv", "cci-ookla-efua-sampled-measurements.json", "csvSha256")
-    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network)
+    wup = read("cci-wup-2025-fua-coverage.csv", "cci-wup-2025-crosswalk.json", "outputs", True)
+    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup)
     output = folder / "cci-global-evidence-matrix.csv"
     with output.open("w", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
@@ -141,6 +146,9 @@ def main():
         writer.writerows(rows)
     summary = {
         "status": "partial_evidence_inventory_not_ranking", "candidateCount": len(rows),
+        "boundaryCoverageCounts": {"withoutUcdbCentreOverlap": sum(int(r["ucdb_intersecting_centres"]) == 0 for r in rows),
+                                   "withoutWup2025CentreOverlap": sum(r["wup_2025_intersecting_centres"] == 0 for r in rows)},
+        "boundaryMeaning": "Centre intersections describe geometric coverage only. UCDB and WUP are separate sources; their IDs and counts cannot be merged directly. Zero intersections do not exclude a candidate or imply a score.",
         "dimensionStatusCounts": {d: dict(Counter(r[d] for r in rows)) for d in DIMENSIONS},
         "scoreStatusCounts": dict(Counter(r["cci_score_status"] for r in rows)),
         "notAssembledMeaning": "Existing sources may contain relevant fields, but no qualified whole-candidate measurement has been assembled here.",

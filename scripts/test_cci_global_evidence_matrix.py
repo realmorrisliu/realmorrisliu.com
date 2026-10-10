@@ -19,12 +19,16 @@ class EvidenceMatrixTest(unittest.TestCase):
         governance = [{**base, "available_dimensions": "6", "lookup_economy_code": "AAA"}]
         seismic = [{**base, "status": "no_observed_hazard_population"}]
         water = [{**base, "available_indicators": "1"}]
+        wup = [{**base, "intersecting_centres": "0"}]
         network = [{**base, 'connection_type':mode, 'centroid_tiles':'0', 'interior_tiles':'0', 'boundary_tiles':'0',
                     **{f'centroid_{metric}_{field}':value for metric in ('avg_d_kbps','avg_u_kbps','avg_lat_ms')
                        for field,value in [('valid_tests','0'),('test_weighted_mean','')]}}
                    for mode in ('fixed','mobile')]
-        row = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network)[0]
+        row = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup)[0]
         self.assertEqual(row["TEC"], "network_samples_missing")
+        self.assertEqual(row["wup_2025_intersecting_centres"], 0)
+        with self.assertRaisesRegex(ValueError, "full candidate universe"):
+            matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, [])
         self.assertEqual(row["GSS"], "no_assigned_events_not_zero_risk")
         self.assertEqual(row["ISR"], "country_context_only")
         self.assertEqual(row["MED"], "travel_model_missing")
@@ -35,15 +39,21 @@ class EvidenceMatrixTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             network_coverage(network[:1], {'1'})
         network[0].update(centroid_tiles='1', boundary_tiles='1', centroid_avg_d_kbps_valid_tests='2', centroid_avg_d_kbps_test_weighted_mean='100')
+        wup[0]["intersecting_centres"] = "3"
         seismic[0]["status"] = "partial_seismic_hazard_model"
         water[0]["available_indicators"] = "0"
-        row = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network)[0]
+        row = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup)[0]
         self.assertEqual(row["TEC"], "partial_network_samples")
+        self.assertEqual(row["wup_2025_intersecting_centres"], 3)
         self.assertEqual(row["network_sample_connection_types"], 1)
         self.assertEqual(row["network_boundary_tiles"], 1)
         self.assertEqual(row["PCS"], "partial_seismic_hazard_model")
         self.assertEqual(row["RES"], "water_context_missing")
         self.assertEqual(row["cci_score_status"], "not_computed_under_global_protocol")
+
+        wup[0]['intersecting_centres'] = '-1'
+        with self.assertRaisesRegex(ValueError, 'Negative WUP centre count'):
+            matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup)
 
         network[0]['centroid_avg_d_kbps_valid_tests'] = '0'
         with self.assertRaises(ValueError):
