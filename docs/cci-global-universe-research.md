@@ -6,6 +6,49 @@
 
 ## 三种全球框架并不等价
 
+### 后续边界复核：未匹配不等于新生城市
+
+2026-10-10 再查 [GHS-FUA 产品页](https://human-settlement.emergency.copernicus.eu/ghs_fua.php)、[GHSL 发布根目录](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/)和[FUA 版本目录](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_FUA_UCDB2015_GLOBE_R2019A/)，这些入口仍列 R2019A / V1-0，没有找到可直接替换的新版全球 FUA。产品页的“新版”提示指向 UCDB，不是新版通勤区。较新的 [GHS-WUP-DEGURBA R2025A](https://human-settlement.emergency.copernicus.eu/ghs_wup_degurba_r2025a.php)提供 2025 年聚落实体边界，仍不是 FUA。此结论限于核验的官方入口，不等于证明任何渠道都不存在更新研究。
+
+把已经完成的空间交集结果与冻结 UCDB 一般属性表按 ID 连接后，1,861 个 `no_overlap` 城市中心分布在 **124 个来源国家／地区名称**下。其中 **1,231 个**的 `GC_UCB_YOB_2025` 为 2015 或更早，**630 个**为 2020 或 2025。手册第 31–32 页解释该字段为 GHS-SMOD 多时期分类中达到城市中心条件的年份；1975 表示该年或更早，不能当作建城年份。
+
+因此，未匹配不能统一解释为 2015 年后的城市增长，也不能反过来据此宣称旧版计算错误。人口输入、分类方法与多边形变化均可能影响差异，原因仍需逐项证据。首都标识为 1 的未匹配记录有 Apia（ID 1）、Nuku'alofa（2）、Papeete（4）、Oranjestad（23）、Port Vila（191）；这是来源字段的标识，不对主权或行政地位另作推断，更不产生 CCI 加分。
+
+边界迁移目前没有可直接自动执行的等价替代：不能只把 1,861 个 UC 追加到 eFUA 后混排，因为统计单元不同；也不能为每个 UC 随意画缓冲区冒充通勤区。现有 9,031 个候选继续保留，未匹配记录仍是未解决的范围缺口。若后续采用统一 UC 口径，必须对全部对象切换并重算，不能只替换容易匹配的城市。
+
+以下在仓库根目录复算上述分类，使用已冻结 GPKG 及已验哈希的交集结果；没有重新运行几何算法，也没有用名称匹配：
+
+```python
+import csv
+import hashlib
+import json
+import sqlite3
+from collections import Counter
+from pathlib import Path
+
+folder = Path("docs/data")
+coverage = folder / "cci-ucdb-efua-centre-coverage.csv"
+manifest = json.loads((folder / "cci-ucdb-efua-crosswalk.json").read_text())
+assert hashlib.sha256(coverage.read_bytes()).hexdigest() == manifest["files"][coverage.name]
+with coverage.open() as stream:
+    audit = list(csv.DictReader(stream))
+assert len(audit) == len({row["ucdb_id"] for row in audit}) == 11422
+unmatched = {int(row["ucdb_id"]) for row in audit if row["status"] == "no_overlap"}
+gpkg = Path("/private/tmp/cci-global/GHS_UCDB_GLOBE_R2024A.gpkg")
+with gpkg.open("rb") as stream:
+    assert hashlib.file_digest(stream, "sha256").hexdigest() == manifest["ucdbSourceSha256"]
+with sqlite3.connect(gpkg.resolve().as_uri() + "?mode=ro", uri=True) as db:
+    rows = db.execute("SELECT ID_UC_G0, GC_CNT_GAD_2025, GC_UCB_YOB_2025, GC_UCM_CAP FROM GHSL_UCDB_THEME_GENERAL_CHARACTERISTICS_GLOBE_R2024A").fetchall()
+assert len(rows) == len({row[0] for row in rows}) == 11422
+rows = [row for row in rows if row[0] in unmatched]
+assert len(rows) == len(unmatched) == 1861
+assert all(row[2] in range(1975, 2031, 5) for row in rows)
+assert sum(row[2] <= 2015 for row in rows) == 1231
+assert len({row[1] for row in rows}) == 124
+assert {row[0] for row in rows if row[3] == 1} == {1, 2, 4, 23, 191}
+print(Counter(row[2] for row in rows))
+```
+
 | 框架     | 本次能确认的版本与数量                                                                                                     | 单位、门槛及时间                                                                                         | 与当前 CCI 的关系                                                |
 | -------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | GHS-FUA  | R2019A，v1.0；本地冻结文件实查 **9,031** 条、9,031 唯一 `eFUA_ID`                                                          | 2015 年城市中心及估算通勤范围，1 km 网格；World Mollweide / EPSG:54009                                   | 完全匹配当前发布采用的文件版本，最小改动                         |
