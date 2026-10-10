@@ -5,6 +5,7 @@
 // FIRST VIEWPORT: title, explicit caveat, scenario structure, and immutable release identity.
 // FORM: one flat manuscript; serif hierarchy, open tables, one-pixel rules, no cards or accent color.
 import CciLogo from "@/assets/cci-logo.svg";
+import CciGlobalResearch from "@components/CciGlobalResearch.astro";
 import sourceManifestData from "@/cci/data/source-manifest-v1.json";
 import { judgmentCopy } from "@/cci/judgment-copy";
 import { judgmentHalfWidth, eventAdjustment } from "@/cci/judgment";
@@ -368,6 +369,10 @@ const researchEvents = (release.researchModel?.events ?? []).map(event => {
               rel="noopener noreferrer"
             >
               {currentLang === "zh" ? "为什么选择这些城市？" : "Why these cities?"}
+            </a>
+            {" · "}
+            <a class="cci-policy-link" href="#global-research">
+              {currentLang === "zh" ? "全球 Top 32 研究进展" : "Global Top 32 research progress"}
             </a>
           </p>
         )
@@ -867,6 +872,8 @@ const researchEvents = (release.researchModel?.events ?? []).map(event => {
         </section>
       )
     }
+
+    <CciGlobalResearch currentLang={currentLang} />
 
     <section id="method" class="cci-section cci-method" aria-labelledby="method-title">
       <div class="cci-section-heading">

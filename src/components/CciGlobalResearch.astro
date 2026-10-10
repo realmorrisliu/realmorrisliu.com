@@ -1,0 +1,132 @@
+---
+import coverage from "../../docs/data/cci-global-evidence-matrix.json";
+import boundaries from "../../docs/data/cci-ucdb-efua-crosswalk.json";
+import { cciCopy } from "@/cci/copy";
+
+interface Props {
+  currentLang: "en" | "zh";
+}
+
+const { currentLang } = Astro.props;
+const zh = currentLang === "zh";
+const n = (value: number) => value.toLocaleString(zh ? "zh-CN" : "en-GB");
+const counts = coverage.dimensionStatusCounts;
+const rows = [
+  [
+    "PCS",
+    zh
+      ? `${n(counts.PCS.partial_seismic_hazard_model)} 个候选有部分地震危险模型；尚缺其他自然风险与防护证据。`
+      : `${n(counts.PCS.partial_seismic_hazard_model)} candidates have partial seismic hazard evidence; other hazards and protection remain unresolved.`,
+  ],
+  [
+    "GSS",
+    zh
+      ? `${n(counts.GSS.partial_event_history)} 个候选关联到历史冲突事件；没有匹配事件不等于安全。`
+      : `${n(counts.GSS.partial_event_history)} candidates have assigned historical conflict events; no matched event does not establish safety.`,
+  ],
+  [
+    "ISR",
+    zh
+      ? `${n(counts.ISR.country_context_only)} 个候选有国家治理背景；尚不能据此区分城市。`
+      : `${n(counts.ISR.country_context_only)} candidates have national governance context; this does not distinguish cities.`,
+  ],
+  [
+    "RES",
+    zh
+      ? `${n(counts.RES.country_urban_water_context_only)} 个候选有国家城市人口饮用水背景；尚不是本地供给可靠性。`
+      : `${n(counts.RES.country_urban_water_context_only)} candidates have national urban drinking-water context; this is not local supply reliability.`,
+  ],
+  [
+    "MED",
+    zh
+      ? `${n(counts.MED.partial_access_model)} 个候选有部分医疗通达模型；尚不能代表质量、资格、费用或连续性。`
+      : `${n(counts.MED.partial_access_model)} candidates have partial healthcare access models; these do not establish quality, eligibility, cost or continuity.`,
+  ],
+  [
+    "LON",
+    zh
+      ? "尚未形成同口径的临床转化、监管与居民可及证据。"
+      : "Comparable evidence of clinical translation, regulation and resident access is not yet assembled.",
+  ],
+  [
+    "TEC",
+    zh
+      ? "已有部分网络资料，尚未形成全候选同口径的科技能力评估。"
+      : "Some network data is available; comparable technological assessments across all candidates are not yet assembled.",
+  ],
+  [
+    "OPT",
+    zh
+      ? "迁移、资产与连接能力仍需身份条件和实际可用通道证据。"
+      : "Mobility, assets and connectivity still require a resident profile and evidence of usable alternatives.",
+  ],
+] as const;
+---
+
+<section id="global-research" class="cci-section" aria-labelledby="global-research-title">
+  <div class="cci-section-heading">
+    <h2 id="global-research-title">
+      {zh ? "全球 Top 32 研究进展" : "Global Top 32 research progress"}
+    </h2>
+    <p>
+      <time datetime="2026-10-10">2026-10-10</time> · {
+        zh
+          ? "独立研究进度，不属于上方所选历史发布。全球 Top 32 尚未确定。"
+          : "Separate research status, not part of the historical release selected above. A global Top 32 has not been established."
+      }
+    </p>
+    <p>
+      {
+        zh
+          ? `已登记 ${n(coverage.candidateCount)} 个功能城市区；${n(coverage.scoreStatusCounts.not_computed_under_global_protocol)} 个仍未完成全球统一规则下的完整评分。以下数量表示局部证据关联，不是合格城市数或完成率。`
+          : `${n(coverage.candidateCount)} functional urban areas are registered; ${n(coverage.scoreStatusCounts.not_computed_under_global_protocol)} still lack complete assessments under a common global protocol. Counts below describe partial evidence links, not qualified cities or completion rates.`
+      }
+    </p>
+    <p>
+      {
+        zh
+          ? `新版城市中心中仍有 ${n(boundaries.centreOverlapCounts.no_overlap)} 个与旧功能区无交集，边界差异尚未解决。未收录、未匹配或资料缺失均不代表表现较差。`
+          : `${n(boundaries.centreOverlapCounts.no_overlap)} newer urban centres do not overlap the older functional areas; boundary differences remain unresolved. Omission, unmatched boundaries and missing data are not negative assessments.`
+      }
+    </p>
+    <p>
+      {
+        zh
+          ? "后续分别评价当地普通居民与跨国迁居者，沿用八维权重，各自审查入围名单，不合成单一榜单。跨国视角的基准人物参数仍待明确；当前发布未应用这两种视角。"
+          : "Future assessments will distinguish ordinary local residents from international movers, retaining the eight weights and reviewing each shortlist separately. The mover profile remains unspecified; neither perspective has been applied to the current release."
+      }
+    </p>
+  </div>
+  <details class="cci-reasons">
+    <summary
+      >{
+        zh ? "查看八维证据与剩余缺口" : "Evidence and remaining gaps across eight dimensions"
+      }</summary
+    >
+    <dl>
+      {
+        rows.map(([dimension, description]) => (
+          <div>
+            <dt>
+              <strong>
+                {dimension} · {cciCopy[currentLang].dimensions[dimension].name}
+              </strong>
+            </dt>
+            <dd>{description}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </details>
+</section>
+
+<style>
+  dl {
+    display: grid;
+    gap: 1.25rem;
+  }
+  dd {
+    margin: 0.4rem 0 0;
+    color: var(--cci-muted);
+  }
+</style>
