@@ -297,6 +297,22 @@
     "No full works download or global city publication calculation performed.",
     "Row-group count/list agreement does not establish source byline completeness, affiliation correctness or full-snapshot completeness.",
     "Projection is cached locally; footer SHA covers footer only, not the entire remote file.",
-    "Live API and September snapshot are different versions; probes are not same-work same-version comparison."
+    "Live API and September snapshot are different versions. Singleton probes compare the same IDs with earlier list or snapshot responses, not publisher-verified byline completeness."
+  ],
+  "singletonProbes": [
+    {
+      "workId": "https://openalex.org/W2887590359",
+      "url": "https://api.openalex.org/works/W2887590359?select=id,title,publication_year,authorships,is_authors_truncated",
+      "responseSha256": "933f481cc753c2150941fa6c09cf5844bee72b6406b50576e17bac5c63b70445",
+      "returnedAuthorships": 2920,
+      "isAuthorsTruncatedFieldPresent": false
+    },
+    {
+      "workId": "https://openalex.org/W4394029306",
+      "url": "https://api.openalex.org/works/W4394029306?select=id,title,publication_year,authorships,is_authors_truncated",
+      "responseSha256": "665d5ebdf7bc7ccbdccd1d416e060bb1ad38b10ce57a6bdcd81b4b5c8aa92c53",
+      "returnedAuthorships": 201,
+      "isAuthorsTruncatedFieldPresent": false
+    }
   ]
 }
