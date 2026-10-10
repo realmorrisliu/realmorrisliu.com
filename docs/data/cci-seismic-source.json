@@ -1,0 +1,27 @@
+{
+  "status": "archive_downloaded_publisher_checksum_verified",
+  "recordUrl": "https://zenodo.org/records/8409647",
+  "apiUrl": "https://zenodo.org/api/records/8409647",
+  "retrievedAt": "2026-10-10",
+  "version": "v2023.1.0",
+  "license": "cc-by-nc-sa-4.0",
+  "recordSha256": "c13530d3359139a4f8f31f0069c4a7c49d73091b2b53d3d2483994765a76f561",
+  "file": {
+    "id": "ca792816-b051-4a56-a942-ceef4df6f4af",
+    "key": "GEM-GSHM_PGA-475y-rock_v2023.zip",
+    "size": 34645808,
+    "checksum": "md5:aa62c4c9d940637afac8cfe934b64742",
+    "links": {
+      "self": "https://zenodo.org/api/records/8409647/files/GEM-GSHM_PGA-475y-rock_v2023.zip/content"
+    }
+  },
+  "scope": "PGA on reference rock, 10% exceedance probability in 50 years; no MMI conversion or loss estimates.",
+  "archiveSha256": "b06fbc4d303ac735d9fcf464cff3b26c0ad16cec485ee0c465127278afd8b41f",
+  "memberSha256": {
+    "LICENSE.txt": "9e502ba75fd0fd30cea5497b438a4bc12f07f02bc932a7a6041fd6a18b8f46a0",
+    "README.txt": "2ec001cc187db183fcf43a0b98c8cf396f916c4f9b4e2b1bec3e92763387c461",
+    "v2023_1_pga_475_rock_3min.tif": "c6928e0edea4d2a03e6a0d6b4aa9699159834f015c20ffb2d8ee8492ff67a5af"
+  },
+  "unitFromReadme": "PGA as fraction of gravitational acceleration (g)",
+  "rasterNoDataHandling": "Require finite nonnegative values as well as GDAL validity mask; NaN is not marked masked by this file."
+}

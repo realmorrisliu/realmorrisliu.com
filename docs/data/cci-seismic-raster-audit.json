@@ -1,0 +1,32 @@
+{
+  "width": 7200,
+  "height": 3000,
+  "crs": "EPSG:4326",
+  "bounds": [-180.0, -60.00000000000101, 180.0, 89.99],
+  "transform": [0.05, 0.0, -180.0, 0.0, -0.049996666666667, 89.99, 0.0, 0.0, 1.0],
+  "dtype": "float64",
+  "nodata": 1.7976931348623157e308,
+  "units": [null],
+  "tags": {
+    "AREA_OR_POINT": "Area"
+  },
+  "bandTags": {},
+  "counts": {
+    "pixels": 21600000,
+    "masked": 0,
+    "nonfinite_unmasked": 15589229,
+    "negative_unmasked": 0,
+    "zero_unmasked": 1405719,
+    "valid_nonnegative": 6010771
+  },
+  "minimum": 0.0,
+  "maximum": 1.8930059999999962,
+  "archiveSha256": "b06fbc4d303ac735d9fcf464cff3b26c0ad16cec485ee0c465127278afd8b41f",
+  "rasterMember": "v2023_1_pga_475_rock_3min.tif",
+  "sourceManifestSha256": "658f231d14247357cf27c07917b12f767c8bbb47a7fc1779459028475aee2f66",
+  "scriptSha256": "5c46c9a191a58059fa49bffca5ba0919d3992fbfc6e93c997154f8294c6b991c",
+  "helperSha256": "2959aa9fee48368e219463da473dc84ad4a019076fbabe5a7585684803b912bd",
+  "rasterioVersion": "1.5.2",
+  "gdalVersion": "3.12.2",
+  "scope": "Native PGA raster integrity only; no population, MMI, damage or CCI score inference."
+}
