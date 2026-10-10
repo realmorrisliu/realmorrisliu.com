@@ -139,3 +139,9 @@ pnpm exec <research-python> -B scripts/cci_openalex_institutions.py --cache <sna
 实现上必须区分 Arrow 数据集字段路径与 Parquet 物理叶列路径。实测 `pq.read_table(..., columns=<带 list.element 的物理路径>)` 报字段不匹配；`pq.ParquetFile(...).read(columns=...)` 可按冻结页脚路径重建所需嵌套结构。后续远端范围读取应使用后者，并另行对账远端数据；本次是本地缓存的投影等价性验证，不是全库单位列已经读取。
 
 复算：`pnpm exec <research-python> -B scripts/cci_openalex_nested_projection_audit.py <verified-four-column-projection.parquet>`。测试包含超百人作者列表、缺失 author 对象、空列表与 null，以及作者数不符拒绝；全研究测试 62 项通过。
+
+### 远端必要单位列的实读对照
+
+[远端行组核验](data/cci-openalex-remote-affiliation-probe.json)补上网络范围读取这一环：针对同一文件的首个行组，实际读取 ID、年份、作者数及五个作者单位叶列，共 8 次成功范围响应、9,765,569 字节列数据。每个响应均核验来源 ETag、字节范围与长度，并保存各范围 SHA-256；通过稀疏临时文件重建后，46,950 条记录的全部所选字段与此前独立保存的完整作者投影精确一致。另保存 6,206,313 字节的压缩投影，并验证落盘回读一致。
+
+复算：`pnpm exec <research-python> -B scripts/cci_openalex_remote_affiliation_probe.py --footers <footer-cache> --reference <verified-four-column-projection.parquet> --output <nested-projection.parquet>`。脚本内的逐值对照和落盘回读是该实读核验的自检；任何不一致都会拒绝生成成功审计。上述字节数不含传输协议开销或失败请求，不能推广为全库成本；本轮验证的是后续单位列获取链路，不是全库单位已取得，也不授予城市归属或评分资格。
