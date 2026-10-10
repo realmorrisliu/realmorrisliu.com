@@ -51,8 +51,8 @@ const rows = [
   [
     "TEC",
     zh
-      ? "已有部分网络资料，尚未形成全候选同口径的科技能力评估。"
-      : "Some network data is available; comparable technological assessments across all candidates are not yet assembled.",
+      ? `${n(counts.TEC.partial_network_samples)} 个候选有 2026 年第三季度网络测速样本，${n(counts.TEC.network_samples_missing)} 个缺少样本；样本存在选择与边界差异，尚不代表居民覆盖、科研、产业或技术普及。`
+      : `${n(counts.TEC.partial_network_samples)} candidates have Q3 2026 network test samples; ${n(counts.TEC.network_samples_missing)} lack samples. Selection and boundary effects remain; these do not establish resident coverage, research, industry or technology adoption.`,
   ],
   [
     "OPT",

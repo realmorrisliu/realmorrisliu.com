@@ -135,7 +135,7 @@ pnpm exec /private/tmp/cci-global/geo-venv/bin/python -B scripts/cci_seismic_ras
 
 同表另算排除跨边界瓦片后的 interior 情景。它用于观察边界选择对样本均值的影响，**不是统计置信区间或严格上下界**；投影后瓦片边缘用直线段连接，未证明与精确曲线完全一致。中心归属也不表示每次测试都发生在功能区内。`avg_lat_down_ms`、`avg_lat_up_ms` 未参与计算：其部分测试缺测，不能直接以瓦片总测试次数充当分母。
 
-复算命令与落点审计相同，脚本改为 `scripts/cci_ookla_measurements.py`。输出为 [样本测量表](data/cci-ookla-efua-sampled-measurements.csv)和[方法、来源与输出哈希](data/cci-ookla-efua-sampled-measurements.json)。该表尚未接入统一矩阵或页面，不构成完整 TEC 判断；自选样本、地域发布限制、资费、未联网居民和断网时长等问题仍在。
+复算命令与落点审计相同，脚本改为 `scripts/cci_ookla_measurements.py`。输出为 [样本测量表](data/cci-ookla-efua-sampled-measurements.csv)和[方法、来源与输出哈希](data/cci-ookla-efua-sampled-measurements.json)。该表的可用状态和边界瓦片数已接入统一矩阵，双语研究进展引用其局部覆盖数量；不构成完整 TEC 判断；自选样本、地域发布限制、资费、未联网居民和断网时长等问题仍在。
 
 **下一件能完整交付的工作是“全球候选 × 已核验局部代理”的测量底表，而非 CCI 总榜。** 对主任务已经冻结的候选总体，逐字段保存原始值、原始 UC/来源地区、epoch、单位、上游来源与处理状态；保持 `measured / missing / not_applicable / ambiguous` 可区分。任何空间映射失败、来源窗口不明或上面冲突字段均不进入派生指标。此底表允许比较某一明确测量，不能自行改名为完整八维覆盖。
 

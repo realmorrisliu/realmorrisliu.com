@@ -3,6 +3,7 @@
 import csv
 import hashlib
 import json
+import math
 from collections import Counter
 from pathlib import Path
 
@@ -21,12 +22,42 @@ def indexed(rows, expected):
     return result
 
 
-def matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water):
+def network_coverage(rows, expected):
+    if any(row['connection_type'] not in ('fixed', 'mobile') for row in rows):
+        raise ValueError('Unknown network connection type')
+    modes = {mode: indexed([row for row in rows if row['connection_type'] == mode], expected)
+             for mode in ('fixed', 'mobile')}
+    result = {}
+    for key in expected:
+        available = 0
+        boundary = 0
+        for mode in modes.values():
+            row = mode[key]
+            centroid, interior, edges = [int(row[field]) for field in ('centroid_tiles', 'interior_tiles', 'boundary_tiles')]
+            if min(centroid, interior, edges) < 0 or centroid != interior + edges:
+                raise ValueError('Invalid network tile accounting')
+            boundary += edges
+            has_measurement = False
+            for metric in ('avg_d_kbps', 'avg_u_kbps', 'avg_lat_ms'):
+                tests = int(row[f'centroid_{metric}_valid_tests'])
+                value = row[f'centroid_{metric}_test_weighted_mean']
+                if tests < 0 or bool(value) != (tests > 0):
+                    raise ValueError('Network missingness and denominator disagree')
+                if value and (not math.isfinite(float(value)) or float(value) <= 0):
+                    raise ValueError('Invalid network sample mean')
+                has_measurement |= bool(value)
+            available += has_measurement
+        result[key] = {'network_sample_connection_types':available, 'network_boundary_tiles':boundary}
+    return result
+
+
+def matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network):
     expected = {r["efua_id"] for r in candidates}
     if len(expected) != len(candidates):
         raise ValueError("Duplicate universe IDs")
     history, spatial, violence, healthcare, governance, seismic, water = [
         indexed(rows, expected) for rows in (history, spatial, violence, healthcare, governance, seismic, water)]
+    network = network_coverage(network, expected)
     rows = []
     for candidate in candidates:
         key = candidate["efua_id"]
@@ -65,7 +96,8 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
             "ISR": "country_context_only" if context_count else "country_context_missing",
             "RES": "country_urban_water_context_only" if water_count else "water_context_missing",
             "MED": med, "LON": "not_assembled",
-            "TEC": "not_assembled", "OPT": "not_assembled",
+            "TEC": "partial_network_samples" if network[key]["network_sample_connection_types"] else "network_samples_missing", "OPT": "not_assembled",
+            **network[key],
             "ucdb_intersecting_centres": s["intersecting_centres"],
             "ucdb_centre_area_share": s["centre_area_share"],
             "ucdp_assigned_events_2021_2025": events,
@@ -100,7 +132,8 @@ def main():
     governance = read("cci-wgi-efua-context.csv", "cci-wgi-context.json", "outputs", True)
     seismic = read("cci-seismic-efua-population.csv", "cci-seismic-efua-population.json", "csvSha256")
     water = read("cci-water-efua-context.csv", "cci-water-context.json", "outputs", True)
-    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water)
+    network = read("cci-ookla-efua-sampled-measurements.csv", "cci-ookla-efua-sampled-measurements.json", "csvSha256")
+    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network)
     output = folder / "cci-global-evidence-matrix.csv"
     with output.open("w", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
@@ -116,7 +149,8 @@ def main():
                              "RES": ["water: country urban service context only, not city reliability"],
                              "GSS": ["organized_violence: partial historical events only"],
                              "ISR": ["governance: country context only"],
-                             "MED": ["access: historical spatial model only"]},
+                             "MED": ["access: historical spatial model only"],
+                             "TEC": ["digital_infrastructure: self-selected 2026 Q3 network tests only; boundary sensitivity retained, not population access or complete technology capability"]},
         "sourceJoinKey": "efua_id; source tables and their provenance remain authoritative for values and limitations",
         "inputs": inputs, "scriptSha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "csvSha256": hashlib.sha256(output.read_bytes()).hexdigest(),

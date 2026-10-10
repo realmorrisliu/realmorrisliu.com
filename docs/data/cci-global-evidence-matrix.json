@@ -28,7 +28,8 @@
       "not_assembled": 9031
     },
     "TEC": {
-      "not_assembled": 9031
+      "partial_network_samples": 8255,
+      "network_samples_missing": 776
     },
     "OPT": {
       "not_assembled": 9031
@@ -44,7 +45,10 @@
     "RES": ["water: country urban service context only, not city reliability"],
     "GSS": ["organized_violence: partial historical events only"],
     "ISR": ["governance: country context only"],
-    "MED": ["access: historical spatial model only"]
+    "MED": ["access: historical spatial model only"],
+    "TEC": [
+      "digital_infrastructure: self-selected 2026 Q3 network tests only; boundary sensitivity retained, not population access or complete technology capability"
+    ]
   },
   "sourceJoinKey": "efua_id; source tables and their provenance remain authoritative for values and limitations",
   "inputs": {
@@ -87,8 +91,13 @@
       "sha256": "7667458ead1cedd9b4cc3fdac8558b04a5f7a8ffe1d90f9e43beddf9f45923c3",
       "provenance": "cci-water-context.json",
       "provenanceSha256": "b16f39cb526a3582032d7cfa84763b7ca4036944390f28629a05761a786103e5"
+    },
+    "cci-ookla-efua-sampled-measurements.csv": {
+      "sha256": "9e1475a09cf1209674a80861335b139833d2a35bbaa4805ea05af4d289cb50d7",
+      "provenance": "cci-ookla-efua-sampled-measurements.json",
+      "provenanceSha256": "38567c2a5f1fc1390312175e7fbd1d42e5ae7da19fdecb87792f75633a2d43ec"
     }
   },
-  "scriptSha256": "c2e963a3d970ffc06d76d27d00e3075a96aae52b2d0461b348d668263687a1fb",
-  "csvSha256": "46ba3c6962de5a2897feeffa790d871a3fedeafdff5cdf3066acd6f88ff0154b"
+  "scriptSha256": "268f24f88f827d2348c40261f4f5394ffa2230fa4fe12a24bb5bd17cf4b8ce5f",
+  "csvSha256": "f9aab10a7c611f4492fc392170f0e4d5ad60b4fc821be889d66f766cb22e0d01"
 }
