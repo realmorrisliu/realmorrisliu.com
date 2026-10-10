@@ -1,4 +1,5 @@
 import judgmentCandidate from "./data/candidate-2026-10-2";
+import expandedCandidate from "./data/candidate-2026-10-3";
 import assert from "node:assert/strict";
 import test from "node:test";
 import octoberCandidate from "./data/candidate-2026-10";
@@ -288,6 +289,68 @@ test("research judgments publish bounded estimates without changing statistical 
       }
     }
     assert.deepEqual(city.results[2026].point, city.results[2026].lifetime);
+  }
+});
+
+test("32-city expansion adds traceable assessments without rescoring the original sample", () => {
+  const before = JSON.stringify(judgmentCandidate);
+  const previous = buildRelease(judgmentCandidate);
+  const expanded = buildRelease(expandedCandidate);
+  assert.equal(expanded.cities.length, 32);
+  assert.equal(new Set(expanded.cities.map(city => city.slug)).size, 32);
+  assert.deepEqual(expanded.officialWeights, previous.officialWeights);
+  assert.deepEqual(expanded.cities.slice(0, 16), previous.cities);
+  assert.equal(JSON.stringify(judgmentCandidate), before);
+  assert.ok(expanded.research?.sampleSelectionUrl);
+  assert.equal(
+    expanded.cities.reduce((count, city) => count + (city.judgments?.length ?? 0), 0),
+    256
+  );
+
+  const existingBoundaries = new Set(previous.cities.flatMap(city => city.boundary.eFuaIds));
+  for (const city of expanded.cities.slice(16)) {
+    assert.ok(city.rankingEligible);
+    assert.equal(city.observedCoverage, 0);
+    assert.ok(city.audit);
+    assert.equal(city.audit.boundaryReview.outcome, "unresolved");
+    assert.equal(city.audit.dimensions.length, 8);
+    for (const id of city.boundary.eFuaIds) {
+      assert.ok(!existingBoundaries.has(id), `${city.slug}: reused functional area`);
+      existingBoundaries.add(id);
+    }
+    assert.ok(city.judgments);
+    for (const judgment of city.judgments) {
+      const audit = city.audit.dimensions.find(d => d.id === judgment.id);
+      assert.ok(audit);
+      assert.ok(judgment.sourceUrls.every(url => audit.sources.some(source => source.url === url)));
+    }
+    for (const year of TARGET_YEARS) {
+      const { robust, median, upside } = city.results[year].point;
+      assert.ok(robust !== null && median !== null && upside !== null);
+      assert.ok(robust >= 0 && robust <= median && median <= upside && upside <= 100);
+    }
+  }
+});
+
+test("expansion applies the existing heat event once to Paris without spreading it to every new city", () => {
+  const input = globalThis.structuredClone(expandedCandidate);
+  const expanded = buildRelease(input);
+  input.researchModel.events = [];
+  const withoutEvents = buildRelease(input);
+  for (const city of expanded.cities.slice(16)) {
+    const baseline = withoutEvents.cities.find(item => item.slug === city.slug);
+    assert.ok(baseline);
+    const expected = city.slug === "paris" ? -2 : 0;
+    const adjustedScore = city.results[2026].dimensions.PCS.point.median;
+    const baselineScore = baseline.results[2026].dimensions.PCS.point.median;
+    assert.ok(adjustedScore !== null && baselineScore !== null);
+    assert.equal(adjustedScore - baselineScore, expected);
+    for (const dimension of DIMENSIONS.filter(d => d.id !== "PCS")) {
+      assert.deepEqual(
+        city.results[2026].dimensions[dimension.id],
+        baseline.results[2026].dimensions[dimension.id]
+      );
+    }
   }
 });
 

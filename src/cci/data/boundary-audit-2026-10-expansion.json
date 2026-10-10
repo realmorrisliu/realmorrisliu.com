@@ -1,0 +1,173 @@
+{
+  "asOf": "2026-10-09",
+  "status": "attributes_verified",
+  "sourceUrl": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_FUA_UCDB2015_GLOBE_R2019A/V1-0/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.zip",
+  "sourceSha256": "d54de59b82b8c4d64a710f90ccd554975a3be92233f14115ac154094c3549979",
+  "geoPackageSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+  "scope": "The 16 additions accepted on 2026-10-10. Archive SHA-256 and extracted GeoPackage identity checked; each exact ID, source name and country matched, with no ID reused from the existing sample. No polygon-overlap or administrative-to-FUA crosswalk validation performed. These are 2015 modelled functional areas, not 2026 administrative populations.",
+  "cities": [
+    {
+      "slug": "shanghai",
+      "attributeCheck": "matched",
+      "eFuaId": 10097,
+      "sourceName": "Shanghai",
+      "countryIso": "CHN",
+      "urbanCentreIds": [12400, 12406, 12443, 12455, 12465, 12471, 12500],
+      "areaKm2": 5878.0,
+      "population2015": 26920218.16448322
+    },
+    {
+      "slug": "hangzhou",
+      "attributeCheck": "matched",
+      "eFuaId": 10078,
+      "sourceName": "Hangzhou",
+      "countryIso": "CHN",
+      "urbanCentreIds": [12381, 12386, 12407, 12412],
+      "areaKm2": 4634.0,
+      "population2015": 9581083.877038121
+    },
+    {
+      "slug": "beijing",
+      "attributeCheck": "matched",
+      "eFuaId": 7704,
+      "sourceName": "Beijing",
+      "countryIso": "CHN",
+      "urbanCentreIds": [10675, 10685, 10687, 10697, 10738, 10786],
+      "areaKm2": 5536.0,
+      "population2015": 21279474.475599967
+    },
+    {
+      "slug": "hong-kong",
+      "attributeCheck": "matched",
+      "eFuaId": 73,
+      "sourceName": "Hong Kong",
+      "countryIso": "HKG",
+      "urbanCentreIds": [12274],
+      "areaKm2": 684.0,
+      "population2015": 5845663.066958129
+    },
+    {
+      "slug": "taipei",
+      "attributeCheck": "matched",
+      "eFuaId": 1141,
+      "sourceName": "New Taipei [Taipei]",
+      "countryIso": "TWN",
+      "urbanCentreIds": [12696, 12701],
+      "areaKm2": 2463.0,
+      "population2015": 9530828.725439332
+    },
+    {
+      "slug": "mumbai",
+      "attributeCheck": "matched",
+      "eFuaId": 7163,
+      "sourceName": "Mumbai",
+      "countryIso": "IND",
+      "urbanCentreIds": [6845],
+      "areaKm2": 2367.0,
+      "population2015": 22277275.06993202
+    },
+    {
+      "slug": "bengaluru",
+      "attributeCheck": "matched",
+      "eFuaId": 9099,
+      "sourceName": "Bengaluru",
+      "countryIso": "IND",
+      "urbanCentreIds": [8050, 8122, 8153],
+      "areaKm2": 2054.0,
+      "population2015": 11934852.474908724
+    },
+    {
+      "slug": "paris",
+      "attributeCheck": "matched",
+      "eFuaId": 2702,
+      "sourceName": "Paris",
+      "countryIso": "FRA",
+      "urbanCentreIds": [2046, 2071],
+      "areaKm2": 6778.0,
+      "population2015": 11236407.127822112
+    },
+    {
+      "slug": "berlin",
+      "attributeCheck": "matched",
+      "eFuaId": 4946,
+      "sourceName": "Berlin",
+      "countryIso": "DEU",
+      "urbanCentreIds": [2849, 2851],
+      "areaKm2": 3572.0,
+      "population2015": 4290482.744469203
+    },
+    {
+      "slug": "stockholm",
+      "attributeCheck": "matched",
+      "eFuaId": 1445,
+      "sourceName": "Stockholm",
+      "countryIso": "SWE",
+      "urbanCentreIds": [2973, 2988],
+      "areaKm2": 2536.0,
+      "population2015": 2011040.466645619
+    },
+    {
+      "slug": "new-york",
+      "attributeCheck": "matched",
+      "eFuaId": 7244,
+      "sourceName": "New York",
+      "countryIso": "USA",
+      "urbanCentreIds": [942, 949, 945, 947, 953, 970],
+      "areaKm2": 17489.0,
+      "population2015": 19523052.757618506
+    },
+    {
+      "slug": "mexico-city",
+      "attributeCheck": "matched",
+      "eFuaId": 5006,
+      "sourceName": "Mexico City",
+      "countryIso": "MEX",
+      "urbanCentreIds": [154, 159, 158, 161, 164, 167, 168, 170],
+      "areaKm2": 4831.0,
+      "population2015": 21410705.863286152
+    },
+    {
+      "slug": "santiago",
+      "attributeCheck": "matched",
+      "eFuaId": 2072,
+      "sourceName": "Santiago",
+      "countryIso": "CHL",
+      "urbanCentreIds": [930, 931, 932],
+      "areaKm2": 2923.0,
+      "population2015": 7087659.554542821
+    },
+    {
+      "slug": "nairobi",
+      "attributeCheck": "matched",
+      "eFuaId": 2171,
+      "sourceName": "Nairobi",
+      "countryIso": "KEN",
+      "urbanCentreIds": [4806, 4808, 4819, 4821, 4837, 4855],
+      "areaKm2": 859.0,
+      "population2015": 4712493.997491837
+    },
+    {
+      "slug": "cairo",
+      "attributeCheck": "matched",
+      "eFuaId": 3981,
+      "sourceName": "Cairo",
+      "countryIso": "EGY",
+      "urbanCentreIds": [
+        3878, 3901, 3904, 3902, 3917, 3921, 3943, 3947, 3960, 3964, 3972, 3974, 3975, 3981, 3983,
+        3989, 3996
+      ],
+      "areaKm2": 4348.0,
+      "population2015": 23490198.364338383
+    },
+    {
+      "slug": "sydney",
+      "attributeCheck": "matched",
+      "eFuaId": 1830,
+      "sourceName": "Sydney",
+      "countryIso": "AUS",
+      "urbanCentreIds": [13042, 13043],
+      "areaKm2": 3881.0,
+      "population2015": 4404986.391695047
+    }
+  ]
+}

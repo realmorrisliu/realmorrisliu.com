@@ -99,10 +99,11 @@ _Avoid_: Point forecast, life expectancy
 The provenance role of a CCI input: city observation, national prior, or scenario assumption.
 _Avoid_: Confidence score, source quality
 
-**Pilot City Panel**:
-The deliberately diverse initial set of sixteen Functional Urban Areas used to validate CCI
-before broader coverage.
-_Avoid_: Global top sixteen, representative world sample
+**Research City Sample**:
+The deliberately diverse set of thirty-two urban regions, retaining the original sixteen
+pilot areas and adding sixteen documented comparison cases. Selection covers different
+regions and urban conditions; it is not a probability sample or a global qualification ranking.
+_Avoid_: Global top thirty-two, statistically representative world sample
 
 **CCI Dimension**:
 One of the eight fixed categories that together define the Official CCI value model.

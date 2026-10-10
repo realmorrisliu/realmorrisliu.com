@@ -355,6 +355,24 @@ const researchEvents = (release.researchModel?.events ?? []).map(event => {
 
       <p class="cci-preview-notice">{t.compare.notice}</p>
 
+      {
+        release.research?.sampleSelectionUrl && (
+          <p class="cci-preview-notice">
+            {currentLang === "zh"
+              ? `覆盖 ${release.cities.length} 个城市／地区，${release.cities.filter(city => city.judgments?.length === DIMENSIONS.length).length} 个已完成八维研究。全球多样性研究样本，非全球前 ${release.cities.length} 名；未收录不代表表现较差。`
+              : `${release.cities.length} urban regions covered; ${release.cities.filter(city => city.judgments?.length === DIMENSIONS.length).length} assessed across eight dimensions. A diverse global research sample, not the world's top ${release.cities.length}; omission is not a negative assessment.`}{" "}
+            <a
+              class="cci-policy-link"
+              href={release.research.sampleSelectionUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {currentLang === "zh" ? "为什么选择这些城市？" : "Why these cities?"}
+            </a>
+          </p>
+        )
+      }
+
       <div class="cci-table-tools">
         <span
           ><strong data-current-year>{selectedYear}</strong> · <span data-current-mode

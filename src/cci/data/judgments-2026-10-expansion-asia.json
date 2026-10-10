@@ -1,0 +1,508 @@
+[
+  {
+    "slug": "shanghai",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 50,
+        "uncertainty": 18,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Heat pressure supports a midpoint safety judgment; -2 assumes warming outpaces adaptation. Flood and compound-tail exposure remain unquantified.",
+          "zh": "热压力支持中位安全判断；-2假设升温超过适应，洪涝及复合尾部暴露仍未量化。"
+        },
+        "sourceUrls": ["https://www.cma.gov.cn/zfxxgk/gknr/qxbg/202503/W020250302606211127018.pdf"]
+      },
+      {
+        "id": "GSS",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "A 60 midpoint-capacity anchor balances functioning regional commerce against disruption uncertainty; -1 assumes persistent friction, not a forecast of conflict.",
+          "zh": "以60分能力锚点平衡区域商业运作与中断不确定性；-1假设摩擦持续，并非冲突预测。"
+        },
+        "sourceUrls": [
+          "https://www.mnd.gov.tw/en/Publication/85049",
+          "https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html",
+          "https://english.www.gov.cn/archive/whitepaper/202208/10/content_WS62f34f46c6d02e533532f0ac.html"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 65,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Service capacity supports 65, calibrated to Shenzhen; a flat trend assumes delivery persists, with social trust and equal access unresolved.",
+          "zh": "服务能力支持与深圳校准的65分；持平假设交付能力延续，社会信任与平等可及尚未解决。"
+        },
+        "sourceUrls": ["https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html"]
+      },
+      {
+        "id": "RES",
+        "baseline": 65,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Developed utility provision supports 65; a flat trend assumes maintenance offsets demand, without treating installed capacity as redundancy.",
+          "zh": "成熟公用服务支持65分；持平假设维护抵消需求，不把装机或设施能力当成冗余。"
+        },
+        "sourceUrls": ["https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html"]
+      },
+      {
+        "id": "MED",
+        "baseline": 75,
+        "uncertainty": 16,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Broad clinical infrastructure supports 75, above Shenzhen but below a demonstrated 80 redundancy anchor; +1 assumes gradual service improvements.",
+          "zh": "广泛临床设施支持75分，高于深圳但低于已证明冗余的80分锚点；+1假设服务逐步改善。"
+        },
+        "sourceUrls": ["https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html"]
+      },
+      {
+        "id": "LON",
+        "baseline": 50,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "A 50 translational-readiness judgment avoids equating laboratories with proven healthspan gains; +1 assumes slow translation and requires clinical verification.",
+          "zh": "50分转化准备度避免把实验室等同于已证健康寿命收益；+1假设缓慢转化，仍需临床验证。"
+        },
+        "sourceUrls": ["https://wulg-lab.sibcb.ac.cn/LabIntroduction/"]
+      },
+      {
+        "id": "TEC",
+        "baseline": 85,
+        "uncertainty": 16,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Strong research concentration supports the same 85 anchor as Shenzhen and Tokyo; +1 assumes continuity, with the cluster/FUA mismatch widening uncertainty.",
+          "zh": "科研集聚支持与深圳、东京相同的85分锚点；+1假设能力延续，集群/FUA不匹配扩大不确定性。"
+        },
+        "sourceUrls": [
+          "https://www.wipo.int/documents/d/global-innovation-index/docs-en-2025-cn-shanghai-suzhou-6.pdf"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "International business links support 75; a flat trend assumes links persist while regulatory and household optionality remain incompletely measured.",
+          "zh": "国际商业联系支持75分；持平假设联系延续，监管与家庭选择空间仍未完整衡量。"
+        },
+        "sourceUrls": ["https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html"]
+      }
+    ]
+  },
+  {
+    "slug": "hangzhou",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 55,
+        "uncertainty": 18,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "A 55 judgment reflects heat pressure without importing coastal Shanghai’s full exposure; -2 assumes additional warming, with flood tails unresolved.",
+          "zh": "55分体现热压力，不直接复制沿海上海的全部暴露；-2假设继续升温，洪涝尾部风险未解决。"
+        },
+        "sourceUrls": ["https://www.cma.gov.cn/zfxxgk/gknr/qxbg/202503/W020250302606211127018.pdf"]
+      },
+      {
+        "id": "GSS",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Use the same provisional 60 anchor as Shenzhen without inventing a local conflict probability; -1 assumes persistent regional disruption risk.",
+          "zh": "暂用与深圳相同的60分锚点，不编造本地冲突概率；-1假设区域中断风险持续。"
+        },
+        "sourceUrls": [
+          "https://www.mnd.gov.tw/en/Publication/85049",
+          "https://english.www.gov.cn/archive/whitepaper/202208/10/content_WS62f34f46c6d02e533532f0ac.html"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 65,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Infrastructure coordination supports a tentative 65; a flat trend avoids claiming governance improvement from a management document alone.",
+          "zh": "基础设施协调支持暂定65分；持平避免仅据管理文件宣称治理改善。"
+        },
+        "sourceUrls": [
+          "https://www.hangzhou.gov.cn/module/download/downfile.jsp?classid=0&filename=2bdd803be2154e5e8da6bf7ead6c48af.pdf"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 65,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Source diversification supports 65 with a wide envelope; zero trend assumes maintenance and demand balance, not verified redundant supply.",
+          "zh": "水源多元化支持宽区间的65分；零趋势假设维护与需求平衡，并非已验证冗余供水。"
+        },
+        "sourceUrls": [
+          "https://www.hangzhou.gov.cn/module/download/downfile.jsp?classid=0&filename=2bdd803be2154e5e8da6bf7ead6c48af.pdf"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 70,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "A substantial care hub supports 70, aligned to Shenzhen; +1 assumes incremental service gains, with metropolitan access and affordability unverified.",
+          "zh": "大型医疗节点支持与深圳对齐的70分；+1假设渐进服务改善，都会区可及与负担能力未验证。"
+        },
+        "sourceUrls": ["https://www.gongshu.gov.cn/art/2025/3/31/art_1229226453_4342557.html"]
+      },
+      {
+        "id": "LON",
+        "baseline": 50,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "A 50 readiness anchor recognizes local research while leaving clinical translation and broad access open; +1 is a cautious translation assumption.",
+          "zh": "50分准备度承认本地研究，临床转化及广泛可及仍待证；+1是谨慎的转化假设。"
+        },
+        "sourceUrls": ["https://www.phs.zju.edu.cn/kxyj/list.htm"]
+      },
+      {
+        "id": "TEC",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "An 80 capacity anchor recognizes an established technology economy below the broader 85 Shenzhen/Tokyo anchor; +1 assumes continued upgrading.",
+          "zh": "80分能力锚点承认成熟科技经济，低于覆盖更广的深圳/东京85分；+1假设持续升级。"
+        },
+        "sourceUrls": ["https://zfgb.hangzhou.gov.cn/136/105220253/t125220253054/520085.shtml"]
+      },
+      {
+        "id": "OPT",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "A tentative 60 balances commercial reach with incomplete mobility evidence; a flat trend avoids extrapolating a single year of flows.",
+          "zh": "暂定60分平衡商业联系与不完整迁移证据；持平避免外推单年流量。"
+        },
+        "sourceUrls": ["https://zfgb.hangzhou.gov.cn/136/105220253/t125220253054/520085.shtml"]
+      }
+    ]
+  },
+  {
+    "slug": "beijing",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 55,
+        "uncertainty": 18,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Flood exposure supports a 55 judgment despite recovery capacity; -2 assumes climate pressure grows, with seismic and compound tails unresolved.",
+          "zh": "洪灾暴露使判断为55分，恢复能力有所抵消；-2假设气候压力增长，地震和复合尾部尚未解决。"
+        },
+        "sourceUrls": ["https://swj.beijing.gov.cn/zwgk/ghjhzj/202405/t20240521_3690638.html"]
+      },
+      {
+        "id": "GSS",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Use a provisional 60 rather than inventing a capital-city attack penalty; -1 assumes continued regional friction and the maximum envelope retains uncertainty.",
+          "zh": "暂取60分，不编造首都遭袭扣分；-1假设区域摩擦延续，以最大半宽保留不确定性。"
+        },
+        "sourceUrls": [
+          "https://www.mnd.gov.tw/en/Publication/85049",
+          "https://english.www.gov.cn/archive/whitepaper/202208/10/content_WS62f34f46c6d02e533532f0ac.html"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 70,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Observed administrative coordination supports 70; zero trend assumes stable implementation while social trust and accountability remain unmeasured.",
+          "zh": "已记录行政协调支持70分；零趋势假设稳定执行，社会信任与问责尚未衡量。"
+        },
+        "sourceUrls": ["https://swj.beijing.gov.cn/zwgk/ghjhzj/202405/t20240521_3690638.html"]
+      },
+      {
+        "id": "RES",
+        "baseline": 60,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Improved management offsets dependence on managed transfers, supporting 60 below Tokyo’s 75; zero trend assumes gains balance demand and hydrologic variability.",
+          "zh": "管理改善抵消对调配水源的依赖，支持低于东京75分的60分；零趋势假设改善抵消需求与水文波动。"
+        },
+        "sourceUrls": [
+          "https://www.beijing.gov.cn/renwen/bjgk/bjgk/zyhj/202503/t20250327_4046537.html",
+          "https://swj.beijing.gov.cn/zwgk/ghjhzj/202405/t20240521_3690638.html"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 80,
+        "uncertainty": 16,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Depth of clinical provision supports 80, aligned with Tokyo and Seoul; +1 assumes service improvement while access differences retain substantial uncertainty.",
+          "zh": "临床供给深度支持与东京、首尔对齐的80分；+1假设服务改善，可及差异仍保留显著不确定性。"
+        },
+        "sourceUrls": ["https://wjw.beijing.gov.cn/wjwh/szzl/202601/t20260127_4469663.html"]
+      },
+      {
+        "id": "LON",
+        "baseline": 55,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "A 55 research-translation anchor matches Tokyo/Seoul without treating mechanistic research as human lifespan extension; +1 assumes slow translation.",
+          "zh": "55分科研转化锚点对齐东京/首尔，不把机制研究当成人类延寿；+1假设缓慢转化。"
+        },
+        "sourceUrls": ["https://ioz.cas.cn/gb2018/xwdt/kyjz/202503/t20250303_7545481.html"]
+      },
+      {
+        "id": "TEC",
+        "baseline": 85,
+        "uncertainty": 16,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Use the strong 85 anchor shared with Shenzhen/Tokyo, not a mechanical conversion of rank; +1 assumes research continuity.",
+          "zh": "采用与深圳/东京共有的85分强能力锚点，不机械转换排名；+1假设科研延续。"
+        },
+        "sourceUrls": [
+          "https://www.wipo.int/en/web/global-innovation-index/2025/innovation-clusters"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 70,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "International transport supports 70; a flat trend assumes route access continues, with legal, financial and household optionality not fully assessed.",
+          "zh": "国际交通支持70分；持平假设航线可及延续，法律、金融及家庭选择空间未完整评估。"
+        },
+        "sourceUrls": ["https://www.beijing.gov.cn/ywdt/gqrd/202501/t20250103_3980373.html"]
+      }
+    ]
+  },
+  {
+    "slug": "hong-kong",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 50,
+        "uncertainty": 16,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "A 50 baseline aligns with Shenzhen’s heat/coastal constraints; -2 assumes warming pressures exceed incremental adaptation.",
+          "zh": "50分与深圳热及沿海约束校准；-2假设升温压力超过渐进适应。"
+        },
+        "sourceUrls": ["https://www.weather.gov.hk/en/wxinfo/pastwx/2025/ywx2025.htm"]
+      },
+      {
+        "id": "GSS",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Use the shared regional 60 anchor, not a claim of identical city exposure; -1 assumes persistent disruption risk with wide uncertainty.",
+          "zh": "采用区域共同60分锚点，并非声称城市暴露相同；-1假设中断风险持续且不确定性较大。"
+        },
+        "sourceUrls": [
+          "https://www.mnd.gov.tw/en/Publication/85049",
+          "https://english.www.gov.cn/archive/whitepaper/202208/10/content_WS62f34f46c6d02e533532f0ac.html"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 70,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Specialized supervisory capacity supports 70; zero trend avoids inferring wider governance improvement or social cohesion from banking resilience.",
+          "zh": "专业监管能力支持70分；零趋势避免由银行韧性推断更广治理改善或社会凝聚力。"
+        },
+        "sourceUrls": [
+          "https://www.hkma.gov.hk/media/eng/publication-and-research/sustainability-report/2024/2024.pdf"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 65,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "A 65 anchor balances dependable arrangements with concentration risk, as for Singapore; flat trend assumes adaptation offsets demand.",
+          "zh": "65分平衡成熟安排与集中风险，与新加坡校准；持平假设适应抵消需求。"
+        },
+        "sourceUrls": [
+          "https://www.wsd.gov.hk/en/publications-and-statistics/pr-publications/the-facts/index.html"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 75,
+        "uncertainty": 16,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "A 75 judgment recognizes mature care below an unqualified redundancy anchor; +1 assumes gradual staffing and service gains.",
+          "zh": "75分承认成熟医疗，尚不足无条件强冗余锚点；+1假设人员与服务渐进改善。"
+        },
+        "sourceUrls": ["https://www.info.gov.hk/gia/general/202507/23/P2025072300832p.htm"]
+      },
+      {
+        "id": "LON",
+        "baseline": 55,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "A 55 readiness judgment recognizes human healthy-aging research, not rejuvenation efficacy; +1 assumes modest translation into accessible prevention.",
+          "zh": "55分准备度认可人群健康老龄研究，并非返老还童疗效；+1假设逐步转化为可及预防服务。"
+        },
+        "sourceUrls": ["https://hub.hku.hk/handle/10722/355326"]
+      },
+      {
+        "id": "TEC",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Use 75 rather than Shenzhen’s 85 because a distinct local technology breadth assessment is incomplete; +1 assumes ecosystem development, with broad uncertainty.",
+          "zh": "采用75而非深圳85分，因为本地科技广度独立评估尚不完整；+1假设生态发展并保留宽区间。"
+        },
+        "sourceUrls": [
+          "https://www.wipo.int/en/web/global-innovation-index/2025/innovation-clusters",
+          "https://hub.hku.hk/handle/10722/355326"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 80,
+        "uncertainty": 16,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "An 80 connectivity anchor recognizes global routes; a flat trend assumes network continuity without projecting post-pandemic growth indefinitely.",
+          "zh": "80分连接锚点认可全球航线；持平假设网络延续，不无限外推疫后增长。"
+        },
+        "sourceUrls": ["https://www.hongkongairport.com/en/media-centre/press-release/2025/pr_1797"]
+      }
+    ]
+  },
+  {
+    "slug": "taipei",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 45,
+        "uncertainty": 18,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "A 45 safety judgment recognizes a serious seismic planning burden; -2 is a climate-stress assumption, with local heat and compound exposure still thinly evidenced.",
+          "zh": "45分安全判断体现重要地震备灾负担；-2是气候压力假设，本地热与复合暴露证据仍薄弱。"
+        },
+        "sourceUrls": [
+          "https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&s=D97B13B6080B8213&sms=72544237BBE4C5F6",
+          "https://english.water.gov.taipei/News_Content.aspx?n=82A83F699502B12F&s=AEDDE483A90365B6"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 40,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "A 40 constraint anchor reflects direct cross-strait exposure, below Seoul’s 45; -1 assumes persistent pressure, not inevitable war.",
+          "zh": "40分约束锚点反映直接台海暴露，低于首尔45分；-1假设压力持续，并非战争必然。"
+        },
+        "sourceUrls": [
+          "https://www.mnd.gov.tw/en/Publication/85049",
+          "https://english.www.gov.cn/archive/whitepaper/202208/10/content_WS62f34f46c6d02e533532f0ac.html"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "A 75 coordination anchor aligns with Seoul; flat trend assumes cooperation persists, while citywide trust and institutional outcomes remain incomplete.",
+          "zh": "75分协调锚点与首尔对齐；持平假设协作延续，全市信任及制度结果仍不完整。"
+        },
+        "sourceUrls": ["https://eoc.gov.taipei/News/Detail/495"]
+      },
+      {
+        "id": "RES",
+        "baseline": 70,
+        "uncertainty": 16,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "A 70 judgment recognizes demonstrated adaptation below Tokyo’s 75; zero trend assumes network renewal offsets demand, without asserting energy or food redundancy.",
+          "zh": "70分认可已记录适应，低于东京75分；零趋势假设更新抵消需求，不宣称粮能冗余。"
+        },
+        "sourceUrls": [
+          "https://english.water.gov.taipei/News_Content.aspx?n=82A83F699502B12F&s=AEDDE483A90365B6"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 75,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "A provisional 75 clinical-capacity judgment carries maximum uncertainty; +1 assumes gradual service improvement and requires outcome/access confirmation.",
+          "zh": "暂定75分临床能力附最大不确定性；+1假设服务渐进改善，仍需结果与可及验证。"
+        },
+        "sourceUrls": ["https://data.taipei/dataset/detail?id=e4c8461a-6438-40fb-8374-87128f1d9a71"]
+      },
+      {
+        "id": "LON",
+        "baseline": 50,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "A tentative 50 preparedness anchor recognizes prevention infrastructure; +1 assumes incremental translation, with local geroscience efficacy and access unverified.",
+          "zh": "暂定50分准备度认可预防基础；+1假设渐进转化，本地衰老干预疗效及可及未验证。"
+        },
+        "sourceUrls": ["https://data.taipei/dataset/detail?id=e4c8461a-6438-40fb-8374-87128f1d9a71"]
+      },
+      {
+        "id": "TEC",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "A provisional 80 technology anchor acknowledges regional integration without assigning the whole cluster; +1 assumes continued research/industry links.",
+          "zh": "暂定80分科技锚点承认区域联结但不归入整个集群；+1假设科研产业联系延续。"
+        },
+        "sourceUrls": [
+          "https://www.wipo.int/web-publications/global-innovation-index-2025/en/cluster-ranking.html"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 70,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "A 70 anchor recognizes international reach while keeping airport/FUA and legal mobility gaps explicit; flat trend assumes network continuity.",
+          "zh": "70分认可国际联系，同时明确机场/FUA与法律迁移证据缺口；持平假设网络延续。"
+        },
+        "sourceUrls": ["https://web.taoyuan-airport.com/news/CD7D5A82-B421-F011-BC0F-0050569094FE"]
+      }
+    ]
+  }
+]

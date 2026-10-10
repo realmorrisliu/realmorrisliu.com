@@ -1,0 +1,516 @@
+[
+  {
+    "slug": "paris",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 60,
+        "uncertainty": 18,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Research judgment 60: The climate plan addresses heat and adaptation; investment capacity offsets only part of structural exposure. Municipal policy is not metro-wide protection. The 2026 summer event is excluded here. Half-width 18 and trend -2/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 60：气候计划应对高温并推进适应；投资能力只能部分抵消结构性暴露。市级政策不等于整个都会区已受保护，此处不计 2026 年夏季事件。 半宽 18 与每十年 -2 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.paris.fr/pages/plus-vite-plus-local-plus-juste-le-nouveau-plan-climat-de-paris-25469"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 70,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research judgment 70: French alliance membership supports deterrence but leaves escalation exposure; this is national context, not measured Paris conflict risk. Half-width 20 and trend -1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 70：法国联盟成员身份支持威慑，同时保留冲突升级暴露；这是国家背景，不是巴黎冲突风险实测。 半宽 20 与每十年 -1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.nato.int/content/dam/nato/webready/documents/publications-and-reports/annual-reports/sgar25-en.pdf"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 75: Participatory budgeting provides a local feedback mechanism. Its existence supports institutional capacity, without establishing citywide delivery quality or inclusion. Half-width 18 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 75：参与式预算提供本地反馈机制，支持制度能力判断，但不能证明全市服务质量或参与平等。 半宽 18 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": ["https://mairie17.paris.fr/pages/qu-est-ce-que-le-budget-participatif-12057"]
+      },
+      {
+        "id": "RES",
+        "baseline": 70,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 70: The municipal operator describes an integrated drinking-water service. The inspected corporate presentation establishes operation only; food, energy redundancy and metropolitan service coverage remain unmeasured. Half-width 20 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 70：市属运营方说明完整饮用水服务；已阅读的企业介绍页面只支持运营存在，粮食、能源冗余及都会区覆盖仍未测。 半宽 20 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.eaudeparis.fr/actualit%C3%A9s/la-nouvelle-presentation-dentreprise-deau-de-paris-est-la"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 80: AP-HP documents coordinated hospital and community geriatric services. This supports provider depth, not equal resident access or comparative outcomes across the frozen area. Half-width 18 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 80：AP-HP 记录医院与社区老年医疗协同服务，支持医疗供给深度判断，不证明冻结区域居民均等准入或比较医疗结果。 半宽 18 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": ["https://www.aphp.fr/geriatrie-a-aphp"]
+      },
+      {
+        "id": "LON",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research judgment 60: Gérond’if links research and ageing care, supporting translation readiness. Geriatrics and experimentation do not demonstrate lifespan extension or routine access to such interventions. Half-width 20 and trend +1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 60：Gérond’if 连接研究与老年照护，支持转化准备度；老年医学和试验不证明延寿效果或居民常规获得此类干预。 半宽 20 与每十年 +1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": ["https://www.aphp.fr/geriatrie-a-aphp"]
+      },
+      {
+        "id": "TEC",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research judgment 80: The Paris Inria centre provides a concrete digital-research institution and AI partnerships. Research infrastructure supports potential, without proving metropolitan productivity or adoption. Half-width 18 and trend +1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 80：巴黎 Inria 中心提供明确数字研究机构与人工智能合作基础；研究设施支持潜力，不证明都会区生产率或技术采用。 半宽 18 与每十年 +1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.inria.fr/sites/default/files/2024-10/CP%20Inauguration%20de%20Paris%20_%20VF_1.pdf"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 85,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 85: ADP documents the Paris airport network and international activity. This supports strong transport optionality, not affordable mobility or immigration eligibility for every resident. Half-width 18 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 85：ADP 记录巴黎机场网络与国际活动，支持较强交通选择；不证明每位居民可负担出行或具备移民资格。 半宽 18 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.parisaeroport.fr/docs/default-source/groupe-fichiers/finance/information-r%C3%A9glement%C3%A9e-amf/documents-de-r%C3%A9f%C3%A9rence/2026/adp-deu-2025-vf.pdf?sfvrsn=ad17a5bd_2"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "berlin",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 65,
+        "uncertainty": 18,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Research judgment 65: The heat plan identifies urban heat adaptation needs and protective measures. Inland adaptation capacity supports a moderate baseline; planned measures do not eliminate exposure. Half-width 18 and trend -2/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 65：高温行动计划识别城市适应需求与保护措施。内陆适应能力支持中等偏强基线，但规划措施并未消除暴露。 半宽 18 与每十年 -2 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.berlin.de/hitzeschutz/_assets/hitzeaktionsplan/landes-hitzeaktionsplan-berlin_v10-vom-25112025.pdf"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 70,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research judgment 70: German NATO membership supplies deterrence and alliance obligations. A cautious regional-security assumption is used; no Berlin-specific conflict probability is available. Half-width 20 and trend -1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 70：德国北约身份同时提供威慑与联盟义务；采用谨慎区域安全假设，未获得柏林专属冲突概率。 半宽 20 与每十年 -1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.nato.int/content/dam/nato/webready/documents/publications-and-reports/annual-reports/sgar25-en.pdf"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 75: Judicial review of repeat elections shows both administrative failure and a correction mechanism. This supports functioning institutions with execution limits, not flawless administration. Half-width 18 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 75：重选的司法审查同时显示行政失败与纠错机制，支持有执行短板的有效制度判断，而非无缺陷治理。 半宽 18 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.bundesverfassungsgericht.de/SharedDocs/Pressemitteilungen/DE/2023/bvg23-049.html"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 65,
+        "uncertainty": 18,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research judgment 65: The water masterplan explicitly addresses growth, climate pressure and structural change in Lusatia. Planning capacity supports supply resilience, but future security is not already delivered. Half-width 18 and trend -1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 65：水资源总规划明确应对人口增长、气候压力与卢萨蒂亚结构转型。规划能力支持供给韧性，但未来保障尚未实现。 半宽 18 与每十年 -1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.berlin.de/sen/uvk/umwelt/wasser-und-geologie/masterplan-wasser/"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 80: Charité combines clinical geriatrics and research with a local partner. It supports specialist capacity, but one provider cannot establish waiting times or access across the metro area. Half-width 18 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 80：Charité 结合临床老年医学、研究与本地合作机构，支持专科能力；单一机构不能证明都会区等待时间或准入。 半宽 18 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": ["https://geriatrie.charite.de/en/"]
+      },
+      {
+        "id": "LON",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research judgment 60: Ageing, nutrition and muscle research alongside clinical care support readiness. Institutional activity does not establish proven life extension or population-wide availability. Half-width 20 and trend +1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 60：衰老、营养与肌肉研究结合临床照护支持准备度；机构活动不证明延寿有效或全体居民可及。 半宽 20 与每十年 +1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": ["https://geriatrie.charite.de/en/"]
+      },
+      {
+        "id": "TEC",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research judgment 75: The 2035 joint innovation strategy supports coordinated regional technology development. Adoption is a policy commitment, not a realised productivity gain. Half-width 18 and trend +1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 75：2035 联合创新战略支持区域技术协同发展；战略通过是政策承诺，不是已实现的生产率收益。 半宽 18 与每十年 +1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.berlin.de/sen/web/presse/pressemitteilungen/2026/pressemitteilung.1693458.php"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 75: BER lists international direct connections, supporting meaningful mobility options. The route directory does not establish hub redundancy, affordability or migration rights. Half-width 18 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 75：BER 列出国际直达航线，支持实际出行选择；目录不证明枢纽冗余、可负担性或迁移权利。 半宽 18 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": ["https://ber.berlin-airport.de/en/flying/airlines-ziele.html"]
+      }
+    ]
+  },
+  {
+    "slug": "stockholm",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 65,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research judgment 65: The Slussen project identifies substantial Mälaren flood risk and planned discharge and saltwater protection. Engineering capacity supports resilience, but an unfinished project cannot certify safety; uncertainty remains wide. Half-width 20 and trend -1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 65：Slussen 项目识别梅拉伦湖重大洪水风险，并规划泄流与防海水入侵能力。工程能力支持韧性，但未完成项目不能证明安全，保留宽区间。 半宽 20 与每十年 -1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://vaxer.stockholm/omraden/stadsutvecklingsomraden/slussen/fordjupa-dig-i-projektet/klimatanpassning/"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 70,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research judgment 70: Swedish NATO membership changes the security framework toward collective deterrence and shared exposure. Neither membership nor geographic distance certifies local safety. Half-width 20 and trend -1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 70：瑞典北约身份将安全框架转向集体威慑与共同暴露；成员身份或地理距离都不证明本地绝对安全。 半宽 20 与每十年 -1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.nato.int/content/dam/nato/webready/documents/publications-and-reports/annual-reports/sgar25-en.pdf"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 80: Resident suggestions, district councils and participatory budgeting provide accountable channels. Process documentation supports capacity, not universal satisfaction or metro-wide performance. Half-width 18 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 80：居民建议、区议会与参与式预算提供问责渠道。程序资料支持治理能力，不证明普遍满意或都会区整体表现。 半宽 18 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://start.stockholm/en/about-the-city-of-stockholm/politics/how-you-can-have-an-influence/"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research judgment 75: Mälaren supply and operator water testing support an established monitored system. Dependence on a shared water source and unmeasured energy and food buffers limit the inference. Half-width 18 and trend -1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 75：梅拉伦湖供水及运营方水质检测支持成熟监测系统。共同水源依赖与未测能源、粮食缓冲限制结论。 半宽 18 与每十年 -1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.stockholmvattenochavfall.se/kunskap/dricksvatten/vattenkvalitet/"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 80: Karolinska has a regional mandate for specialised and highly specialised care. This supports advanced capacity without proving equal access or waiting-time performance. Half-width 18 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 80：Karolinska 承担区域专科与高度专科医疗职责，支持先进医疗能力，但不证明均等准入或等候表现。 半宽 18 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": ["https://www.karolinska.se/om-oss/vart-uppdrag/"]
+      },
+      {
+        "id": "LON",
+        "baseline": 65,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research judgment 65: ARC integrates ageing research and population studies. This offers translation preparation, but observational cohorts are not proof of effective lifespan-extending treatment. Half-width 20 and trend +1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 65：ARC 整合衰老研究与人群研究，提供转化准备；观察队列不构成有效延寿治疗证据。 半宽 20 与每十年 +1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://ki.se/en/nvs/research/centres-networks-and-core-facilities-at-nvs/aging-research-center-arc"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research judgment 80: KTH provides a technology-commercialisation institution in Stockholm. Ecosystem support justifies a strong capability estimate; population adoption and broad productivity are unmeasured. Half-width 18 and trend +1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 80：KTH 在斯德哥尔摩提供技术商业化机构支持，支撑较强能力判断；居民采用与广泛生产率仍未测。 半宽 18 与每十年 +1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": ["https://www.kth.se/en/om/innovation/om"]
+      },
+      {
+        "id": "OPT",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 75: Arlanda lists a diversified international route network. Transport options support connectivity, but the listing does not quantify resident affordability or onward relocation options. Half-width 18 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 75：阿兰达列出多样国际航线网络，支持交通连接；目录不量化居民可负担性或后续迁居选择。 半宽 18 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": ["https://www.swedavia.com/arlanda/destinations2/"]
+      }
+    ]
+  },
+  {
+    "slug": "new-york",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 55,
+        "uncertainty": 18,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Research judgment 55: The hazard plan identifies coastal flooding, severe storms and heat while enabling mitigation. Multiple physical hazards justify a lower structural baseline despite response capacity. Half-width 18 and trend -2/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 55：灾害计划识别沿海洪水、强风暴与高温并支持减灾。即使具有应对能力，多重物理风险仍支持较低结构基线。 半宽 18 与每十年 -2 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.nyc.gov/site/em/about/press-releases/20240703_pr_nycem_mitigation-plan.page"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 75,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research judgment 75: US alliance context supports deterrence while preserving international escalation risk. The baseline is aligned with Boston; national membership does not measure city exposure. Half-width 20 and trend -1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 75：美国联盟背景支持威慑，同时保留国际升级风险。基线与波士顿一致；国家成员身份不是城市暴露测量。 半宽 20 与每十年 -1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.nato.int/content/dam/nato/webready/documents/publications-and-reports/annual-reports/sgar25-en.pdf"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 75: Charter-mandated agency performance reports create a recurring accountability mechanism. Publishing reports supports institutional capacity, without proving equitable service execution. Half-width 18 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 75：城市宪章要求的部门绩效报告形成定期问责机制。公开报告支持制度能力，不证明服务执行公平。 半宽 18 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": ["https://www.nyc.gov/site/operations/reports/reports.page"]
+      },
+      {
+        "id": "RES",
+        "baseline": 75,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 75: The operator documents Catskill, Delaware and Croton surface-water systems. Multiple named supplies support resilience, but utility coverage and food-energy reserves do not equal the frozen metro area. Half-width 18 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 75：运营方记录 Catskill、Delaware 与 Croton 地表水系统。多处水源支持韧性，但公用事业覆盖及粮食能源储备不能等同冻结都会区。 半宽 18 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.nyc.gov/assets/dep/downloads/pdf/water/drinking-water/drinking-water-supply-quality-report/2025-drinking-water-supply-quality-report.pdf"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 80,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 80: NYC Care offers an access pathway for uninsured residents, including across immigration statuses. A safety net supports capability but does not remove affordability barriers or establish metro-wide outcomes. Half-width 20 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 80：NYC Care 为无医保居民提供包括不同移民身份的医疗渠道。安全网支持能力，但不消除可负担性障碍或证明都会区医疗结果。 半宽 20 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": ["https://access.nyc.gov/programs/nyc-care/"]
+      },
+      {
+        "id": "LON",
+        "baseline": 65,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research judgment 65: Einstein documents geroscience research and intervention-evaluation infrastructure. This supports translation readiness, not established lifespan extension; Boston’s ER-100 event is not transferred here. Half-width 20 and trend +1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 65：Einstein 记录衰老科学与干预评估设施，支持转化准备，而非已证实延寿；不移植波士顿 ER-100 事件加分。 半宽 20 与每十年 +1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": ["https://einsteinmed.edu/centers/geroscience"]
+      },
+      {
+        "id": "TEC",
+        "baseline": 80,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research judgment 80: WIPO identifies New York as a leading innovation cluster using patents, publications and venture capital, alongside the municipal AI plan. Cluster geography and the new 2025 methodology limit comparability; neither establishes resident adoption. Half-width 20 and trend +1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 80：WIPO 根据专利、论文与风险投资识别纽约领先创新集群，辅以市级人工智能计划。集群边界与 2025 年新方法限制可比性，两者都不证明居民实际采用。 半宽 20 与每十年 +1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.nyc.gov/assets/oti/downloads/pdf/reports/artificial-intelligence-action-plan.pdf",
+          "https://www.wipo.int/web-publications/global-innovation-index-2025/en/cluster-ranking.html"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 85,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 85: The Port Authority airport report establishes a multi-airport international network. Infrastructure supports high optionality, while affordability, visa eligibility and service-area mismatch remain constraints. Half-width 18 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 85：港务局机场报告支持多机场国际网络，基础设施提供较多选择，但可负担性、签证资格与服务区差异仍是限制。 半宽 18 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.panynj.gov/content/dam/airports/statistics/statistics-general-info/annual-atr/ATR_2025.pdf"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "sydney",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 60,
+        "uncertainty": 18,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Research judgment 60: The resilience strategy addresses heat, drought, storms, floods and sea-level rise. Adaptation capacity supports the same structural band as Melbourne; municipal plans do not cover all metro exposure. Half-width 18 and trend -2/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 60：韧性战略应对高温、干旱、风暴、洪水及海平面上升。适应能力支持与墨尔本相同结构档位；市级计划不能覆盖都会区全部暴露。 半宽 18 与每十年 -2 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.cityofsydney.nsw.gov.au/strategies-action-plans/resilience-strategy"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 80,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research judgment 80: The 2024 defence strategy describes a challenging strategic environment and US cooperation. Like Melbourne, relative direct-war remoteness is a judgment, not immunity from regional escalation. Half-width 20 and trend -1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 80：2024 国防战略说明严峻战略环境与美国合作。与墨尔本一样，直接战争距离较远只是判断，不表示免受区域升级影响。 半宽 20 与每十年 -1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.minister.defence.gov.au/media-releases/2024-04-17/2024-national-defence-strategy"
+        ]
+      },
+      {
+        "id": "ISR",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 80: Published progress, financial statements and statutory returns support a functioning accountability process. The City of Sydney council is only one part of the metropolitan institutional landscape. Half-width 18 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 80：公开进度、财务报表与法定报告支持有效问责程序。悉尼市议会只代表都会区制度体系的一部分。 半宽 18 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": ["https://www.cityofsydney.nsw.gov.au/research-reports/annual-report"]
+      },
+      {
+        "id": "RES",
+        "baseline": 65,
+        "uncertainty": 18,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Research judgment 65: The Greater Sydney strategy responds to growth, prolonged drought and extreme weather. Strategic provision supports capacity, but planned resilience is not an observed reserve margin. Half-width 18 and trend -1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 65：大悉尼战略回应增长、长期干旱与极端天气。战略供给支持能力，但规划韧性不是实测储备余量。 半宽 18 与每十年 -1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.water.nsw.gov.au/our-work/plans-and-strategies/greater-sydney-water-strategy/about-greater-sydney-water-strategy"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 80,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 80: NSW Health reporting supports an established public-healthcare system. State reporting informs a Melbourne-aligned capability estimate but cannot establish Sydney-specific waiting times or equal access. Half-width 20 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 80：新州卫生报告支持成熟公共医疗体系，作为与墨尔本同档能力判断背景，但不能证明悉尼专属等待时间或均等准入。 半宽 20 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": ["https://www.health.nsw.gov.au/annualreport/Pages/default.aspx"]
+      },
+      {
+        "id": "LON",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research judgment 60: The ageing-biology programme studies nutrition and age-related disease, including mice. It supports scientific readiness only; preclinical results do not establish human longevity benefits. Half-width 20 and trend +1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 60：衰老生物学项目研究营养与年龄相关疾病，包含小鼠研究。只支持科研准备；临床前结果不证明人体延寿收益。 半宽 20 与每十年 +1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": [
+          "https://www.sydney.edu.au/charles-perkins-centre/our-research/nutrition/ageing-biology.html"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Research judgment 80: Tech Central provides an identifiable technology district and commercial ecosystem. This supports capacity comparable to Melbourne, without treating promotion or planned growth as measured productivity. Half-width 18 and trend +1/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 80：Tech Central 提供明确技术园区与商业生态，支持与墨尔本相当能力；不把宣传或规划增长当成实测生产率。 半宽 18 与每十年 +1 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": ["https://www.nsw.gov.au/business-and-economy/innovation/tech-central"]
+      },
+      {
+        "id": "OPT",
+        "baseline": 75,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Research judgment 75: The airport publishes annual activity reviews, supporting an established international gateway. The broad connectivity judgment remains uncertain without a comparable resident access or route-frequency series. Half-width 20 and trend +0/decade are subjective assumptions, not measured forecasts.",
+          "zh": "研究判断 75：机场发布年度活动报告，支持成熟国际门户判断；缺少可比居民准入或航班频率序列，综合连接判断仍不确定。 半宽 20 与每十年 +0 均为主观假设，并非实测预测。"
+        },
+        "sourceUrls": ["https://www.sydneyairport.com.au/corporate/about/reports-and-publications"]
+      }
+    ]
+  }
+]

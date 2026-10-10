@@ -1,0 +1,644 @@
+[
+  {
+    "slug": "mumbai",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 35,
+        "uncertainty": 18,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "MCAP identifies coastal flooding, extreme heat and landslides; adaptation planning does not remove exposure.",
+          "zh": "MCAP 指出沿海洪水、极端高温与滑坡；适应规划尚不能消除暴露。"
+        },
+        "sourceUrls": ["https://wri-india.org/initiatives/mumbai-climate-action-plan-mcap"]
+      },
+      {
+        "id": "GSS",
+        "baseline": 55,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "National terrorism and regional-conflict context constrains security; it is not a Mumbai incident rate.",
+          "zh": "国家层面的恐袭和区域冲突背景限制安全判断，不代表孟买事件率。"
+        },
+        "sourceUrls": ["https://www.gov.uk/foreign-travel-advice/india/safety-and-security"]
+      },
+      {
+        "id": "ISR",
+        "baseline": 55,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "A municipal climate roadmap and implementation partners show coordination capacity; delivery and metropolitan coverage remain unverified.",
+          "zh": "市政气候路线图和实施伙伴显示协调能力，执行效果与都会区覆盖仍未核实。"
+        },
+        "sourceUrls": ["https://wri-india.org/initiatives/mumbai-climate-action-plan-mcap"]
+      },
+      {
+        "id": "RES",
+        "baseline": 45,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "MCAP prioritises water management and energy systems, indicating infrastructure adaptation needs; household continuity is not established.",
+          "zh": "MCAP 将水管理和能源系统列为重点，说明基础设施需要适应改造；尚未确认居民供应连续性。"
+        },
+        "sourceUrls": ["https://wri-india.org/initiatives/mumbai-climate-action-plan-mcap"]
+      },
+      {
+        "id": "MED",
+        "baseline": 55,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Tata Memorial supplies specialist capacity; WHO identifies national financing gaps that prevent equating elite care with resident access.",
+          "zh": "塔塔纪念中心提供专科能力；WHO 指出的全国筹资缺口使顶尖医疗不能等同于居民普遍可及。"
+        },
+        "sourceUrls": [
+          "https://tmc.gov.in/assets/PDF/annual_report/TMCAR2019E.pdf",
+          "https://www.who.int/india/health-topics/health-financing"
+        ]
+      },
+      {
+        "id": "LON",
+        "baseline": 40,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Oncology translation at ACTREC supports research readiness, but disease trials do not establish population longevity or affordable access.",
+          "zh": "ACTREC 肿瘤转化研究支持科研准备度，但疾病试验不能证明人群延寿或可负担可及。"
+        },
+        "sourceUrls": [
+          "https://tmc.gov.in/assets/PDF/annual_report/TMCAR2019E.pdf",
+          "https://www.who.int/india/health-topics/health-financing"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 70,
+        "uncertainty": 18,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "WIPO identifies a substantial Mumbai innovation cluster; the venture-capital-sensitive measure does not establish digital access across the FUA.",
+          "zh": "WIPO 识别出较强的孟买创新集群；受创投资本影响的指标不能证明整个 FUA 的数字可及性。"
+        },
+        "sourceUrls": [
+          "https://www.wipo.int/web-publications/global-innovation-index-2025/en/cluster-ranking.html"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "The operator reports Navi Mumbai commercial operations starting in December 2025, adding transport options; legal and asset portability remain unmeasured.",
+          "zh": "运营方报告新孟买机场于 2025 年 12 月开始商业运营，增加交通选择；法律迁移与资产可携性尚未量化。"
+        },
+        "sourceUrls": [
+          "https://www.adanienterprises.com/digital-reports/enterprises/2026/airports.html"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "bengaluru",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 50,
+        "uncertainty": 18,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "World Bank documents flood and drought damage in Bengaluru and its surroundings; lake restoration is a response, not immunity.",
+          "zh": "世界银行记录班加罗尔及周边洪旱损害；湖泊修复属于应对措施，不代表免受风险。"
+        },
+        "sourceUrls": [
+          "https://www.worldbank.org/en/news/press-release/2025/06/24/new-world-bank-program-to-improve-water-security-for-over-4-million-people-in-india-s-tech-hub-bengaluru"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 55,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "India-wide terrorism and conflict concerns support a constrained security prior; no city-specific frequency is inferred.",
+          "zh": "印度全国恐袭与冲突背景支持受约束的安全判断，不推断本地事件频率。"
+        },
+        "sourceUrls": ["https://www.gov.uk/foreign-travel-advice/india/safety-and-security"]
+      },
+      {
+        "id": "ISR",
+        "baseline": 55,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "The water program funds utility reform and disaster-warning capacity, showing implementation machinery with substantial unfinished work.",
+          "zh": "水务项目支持公用事业改革和灾害预警，显示已有执行机制，但仍有大量待完成工作。"
+        },
+        "sourceUrls": [
+          "https://www.worldbank.org/en/news/press-release/2025/06/24/new-world-bank-program-to-improve-water-security-for-over-4-million-people-in-india-s-tech-hub-bengaluru"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 40,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Aging pipes, sewage gaps and stressed water resources motivate the approved program; planned improvements are not completed reliability.",
+          "zh": "老化管网、污水缺口和水资源压力促成获批项目；规划改善尚不等于已实现可靠供应。"
+        },
+        "sourceUrls": [
+          "https://www.worldbank.org/en/news/press-release/2025/06/24/new-world-bank-program-to-improve-water-security-for-over-4-million-people-in-india-s-tech-hub-bengaluru"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 55,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "WHO describes expanding Indian coverage but persistent financial-protection gaps; this national prior cannot resolve Bengaluru neighbourhood access.",
+          "zh": "WHO 记录印度覆盖扩大但财务保障仍有缺口；全国背景无法区分班加罗尔各社区的就医可及性。"
+        },
+        "sourceUrls": ["https://www.who.int/india/health-topics/health-financing"]
+      },
+      {
+        "id": "LON",
+        "baseline": 45,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "IISc brain-aging cohorts and translational collaborations provide a specific aging research base; they do not prove life extension.",
+          "zh": "IISc 脑衰老队列和转化合作提供专门的衰老研究基础，但不能证明延寿。"
+        },
+        "sourceUrls": ["https://cbr-iisc.ac.in/"]
+      },
+      {
+        "id": "TEC",
+        "baseline": 80,
+        "uncertainty": 18,
+        "trendPerDecade": 2,
+        "rationale": {
+          "en": "WIPO identifies Bengaluru as India’s leading innovation cluster; strong research and investment concentration do not guarantee universal diffusion.",
+          "zh": "WIPO 识别班加罗尔为印度领先创新集群；科研和投资集中不保证技术普遍扩散。"
+        },
+        "sourceUrls": [
+          "https://www.wipo.int/web-publications/global-innovation-index-2025/en/cluster-ranking.html"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 55,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Air India and BIAL document existing aviation activity and a hub agreement; planned expansion does not establish network redundancy or resident mobility rights.",
+          "zh": "印度航空与 BIAL 记录既有航空活动和枢纽协议；规划扩展不能证明网络冗余或居民迁移权利。"
+        },
+        "sourceUrls": [
+          "https://www.airindia.com/content/air-india/in/en/newsroom/press-release/air-india-and-bial-enter-agreement-intended--to-develop-bengalur.html"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "mexico-city",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 40,
+        "uncertainty": 18,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "The city strategy identifies seismic vulnerability in essential infrastructure; earthquake preparedness does not remove physical exposure.",
+          "zh": "城市战略指出关键设施的地震脆弱性；防灾准备不能消除物理暴露。"
+        },
+        "sourceUrls": [
+          "https://www.resiliencia.cdmx.gob.mx/storage/app/media/Estrategia%20de%20Resiliencia%20CDMX%20--%20Gaceta%20Oficial%20CDMX.pdf"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 45,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Official advice identifies violent crime and security constraints, with strong regional variation; national warnings are not city crime statistics.",
+          "zh": "官方提示暴力犯罪和安全约束且区域差异显著；全国提示不是本市犯罪统计。"
+        },
+        "sourceUrls": ["https://www.gov.uk/foreign-travel-advice/mexico/safety-and-security"]
+      },
+      {
+        "id": "ISR",
+        "baseline": 55,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "The resilience strategy assigns agencies and cross-sector actions, but its older deadlines do not demonstrate current implementation success.",
+          "zh": "韧性战略明确机构和跨部门行动，但旧的期限不能证明目前执行成功。"
+        },
+        "sourceUrls": [
+          "https://www.resiliencia.cdmx.gob.mx/storage/app/media/Estrategia%20de%20Resiliencia%20CDMX%20--%20Gaceta%20Oficial%20CDMX.pdf"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 40,
+        "uncertainty": 18,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "The official strategy documents unequal continuous water access and vulnerable hydraulic infrastructure, supporting a constrained resource assessment.",
+          "zh": "官方战略记录持续供水不均和水务设施脆弱性，支持受约束的资源判断。"
+        },
+        "sourceUrls": [
+          "https://www.resiliencia.cdmx.gob.mx/storage/app/media/Estrategia%20de%20Resiliencia%20CDMX%20--%20Gaceta%20Oficial%20CDMX.pdf"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 55,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "OECD national evidence shows incomplete core-service coverage and constrained staffing; metropolitan specialist concentration cannot establish equitable access.",
+          "zh": "OECD 全国证据显示基本服务覆盖不完整且人员不足；都会区专科集中不能证明公平可及。"
+        },
+        "sourceUrls": [
+          "https://www.oecd.org/en/publications/health-at-a-glance-2025_15a55280-en/mexico_f3342ed6-en.html"
+        ]
+      },
+      {
+        "id": "LON",
+        "baseline": 40,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "INGER has an aging research and information infrastructure; fragmented health data and coverage limit translation into resident benefit.",
+          "zh": "INGER 具备衰老研究和信息基础设施；健康数据碎片化及覆盖限制向居民收益转化。"
+        },
+        "sourceUrls": [
+          "https://saludyenvejecimiento.inger.gob.mx/index.html",
+          "https://www.oecd.org/en/publications/health-at-a-glance-2025_15a55280-en/mexico_f3342ed6-en.html"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 65,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "WIPO identifies Mexico City as an innovation cluster; its narrower research and investment signal supports capability, not universal digital resilience.",
+          "zh": "WIPO 识别墨西哥城创新集群；科研和投资这一较窄信号支持能力判断，不代表普遍数字韧性。"
+        },
+        "sourceUrls": [
+          "https://www.wipo.int/web-publications/global-innovation-index-2025/en/cluster-ranking.html"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "AICM’s program confirms an international gateway while explicitly addressing saturation; additional airport arrangements do not establish seamless redundancy.",
+          "zh": "AICM 规划确认国际门户功能，同时明确处理饱和问题；多机场安排不等于无缝冗余。"
+        },
+        "sourceUrls": ["https://www.aicm.com.mx/wp-content/uploads/2023/08/PISACM-2023-2024.pdf"]
+      }
+    ]
+  },
+  {
+    "slug": "santiago",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 45,
+        "uncertainty": 18,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "Earthquake exposure and central Chile’s prolonged drought constrain physical resilience despite water adaptation investments.",
+          "zh": "地震暴露与智利中部长期干旱限制物理韧性，水务适应投资仍不能消除风险。"
+        },
+        "sourceUrls": [
+          "https://www.gov.uk/foreign-travel-advice/chile/safety-and-security",
+          "https://m.aguasandinas.cl/web/aguasandinas/noticias/-/asset_publisher/mv8Gi69FCubE/content/aguas-andinas-inaugura-primera-obra-de-biociudad-para-potenciar-el-suministro-de-la-regi%25C3%25B3n-metropolitana"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 65,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Santiago faces violent theft and disruptive protests; documented risks support caution without treating it as an active conflict zone.",
+          "zh": "圣地亚哥面临暴力盗抢和抗议扰动；证据支持谨慎判断，但不将其视为活跃冲突区。"
+        },
+        "sourceUrls": ["https://www.gov.uk/foreign-travel-advice/chile/safety-and-security"]
+      },
+      {
+        "id": "ISR",
+        "baseline": 65,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "OECD identifies strong national institutions and fiscal frameworks alongside productivity and fiscal pressures; municipal implementation is not measured.",
+          "zh": "OECD 认为国家制度与财政框架较强，同时存在生产率和财政压力；本地执行未量化。"
+        },
+        "sourceUrls": [
+          "https://www.oecd.org/en/about/news/press-releases/2025/01/maintaining-fiscal-sustainability-boosting-productivity-and-accelerating-green-transition-key-to-driving-chile-s-sustainable-growth.html"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 50,
+        "uncertainty": 18,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Aguas Andinas reports new storage and groundwater works responding to drought; supplier reporting does not prove FUA-wide continuity.",
+          "zh": "Aguas Andinas 报告新增储水和地下水工程应对干旱；供水商披露不能证明整个 FUA 供应连续。"
+        },
+        "sourceUrls": [
+          "https://m.aguasandinas.cl/web/aguasandinas/noticias/-/asset_publisher/mv8Gi69FCubE/content/aguas-andinas-inaugura-primera-obra-de-biociudad-para-potenciar-el-suministro-de-la-regi%25C3%25B3n-metropolitana"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 65,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "OECD reports broad Chilean core-service coverage but limited financial protection and staffing; the national evidence is not metropolitan access measurement.",
+          "zh": "OECD 报告智利基本服务覆盖广，但财务保障与医护资源有限；全国证据并非都会区可及性实测。"
+        },
+        "sourceUrls": [
+          "https://www.oecd.org/en/publications/health-at-a-glance-2025_15a55280-en/chile_9e89ef98-en.html"
+        ]
+      },
+      {
+        "id": "LON",
+        "baseline": 45,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "GERO combines aging cohorts and preclinical mechanisms with translation goals; goals do not establish effective resident longevity treatment.",
+          "zh": "GERO 结合衰老队列、临床前机制与转化目标；这些目标不能证明居民已有有效延寿治疗。"
+        },
+        "sourceUrls": [
+          "https://medicina.uchile.cl/investigacion/institutos-y-centros/centro-de-gerociencia-salud-mental-y-metabolismo"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 60,
+        "uncertainty": 18,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "OECD describes digitalisation opportunities alongside skills and adoption gaps; this national backdrop supports moderate capacity rather than frontier redundancy.",
+          "zh": "OECD 描述数字化机会以及技能和采用缺口；全国背景支持中等能力，尚非前沿冗余水平。"
+        },
+        "sourceUrls": [
+          "https://www.oecd.org/en/publications/oecd-economic-surveys-chile-2025_efad96ce-en/full-report/accelerating-productivity-through-digitalisation-and-innovation_d5d37b5d.html"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "MOP documents international aviation links concentrated in regional destinations; physical connectivity alone does not establish legal mobility or asset portability.",
+          "zh": "交通部门记录以区域目的地为主的国际航空联系；物理连接不能单独证明法律迁移或资产可携能力。"
+        },
+        "sourceUrls": [
+          "https://www.mop.gob.cl/mop-y-aeropuerto-de-santiago-reportan-mas-de-cinco-millones-de-pasajeros-este-verano/"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "nairobi",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 50,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "UN-Habitat documents damaging Nairobi floods; settlement vulnerability constrains resilience, without establishing a complete FUA loss model.",
+          "zh": "UN-Habitat 记录内罗毕洪灾；住区脆弱性限制韧性，但尚未构成完整 FUA 损失模型。"
+        },
+        "sourceUrls": [
+          "https://unhabitat.org/sites/default/files/2024/04/un-habitat_statement_on_the_nairobi_floods_26.04.2024.pdf"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 40,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "FCDO identifies Nairobi attack history, violent crime and protest disruption; foreign-visitor advice is a selective security lens.",
+          "zh": "FCDO 记录内罗毕袭击历史、暴力犯罪与抗议扰动；面向外国访客的提示只是选择性安全视角。"
+        },
+        "sourceUrls": ["https://www.gov.uk/foreign-travel-advice/kenya/safety-and-security"]
+      },
+      {
+        "id": "ISR",
+        "baseline": 50,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Public-works and sanitation partnerships demonstrate coordination, while informal-settlement service needs constrain implementation capacity.",
+          "zh": "公共工程与卫生项目合作显示协调能力，非正规住区服务需求则约束执行能力。"
+        },
+        "sourceUrls": [
+          "https://blogs.worldbank.org/en/nasikiliza/kenyan-youth-strengthen-urban-resilience-through-innovative-public-works-pilot-afe-0224",
+          "https://www.worldbank.org/en/news/feature/2020/02/19/providing-sustainable-sanitation-and-water-services-to-low-income-communities-in-nairobi"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 40,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "World Bank’s Nairobi project account documents water and sanitation access gaps and targeted improvements; historical progress does not prove universal continuity.",
+          "zh": "世界银行内罗毕项目记录供水与卫生可及缺口及针对性改善；历史进展不能证明普遍连续供应。"
+        },
+        "sourceUrls": [
+          "https://www.worldbank.org/en/news/feature/2020/02/19/providing-sustainable-sanitation-and-water-services-to-low-income-communities-in-nairobi"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 50,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "WHO reports Kenyan financing reform and capacity-building needs; KEMRI shows clinical capability without demonstrating affordable citywide access.",
+          "zh": "WHO 记录肯尼亚筹资改革与能力建设需求；KEMRI 显示临床能力，但不能证明全市可负担可及。"
+        },
+        "sourceUrls": [
+          "https://www.afro.who.int/sites/default/files/2026-04/WHO%20Kenya%20Annual%20Report%202025.pdf",
+          "https://www.kemri.go.ke/ccr-2/"
+        ]
+      },
+      {
+        "id": "LON",
+        "baseline": 35,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "KEMRI’s disease-focused trials provide translation infrastructure, but resident access constraints and a disease-specific remit limit longevity readiness.",
+          "zh": "KEMRI 疾病试验提供转化基础，但居民可及约束和疾病导向的职能限制长寿准备度。"
+        },
+        "sourceUrls": [
+          "https://www.kemri.go.ke/ccr-2/",
+          "https://www.afro.who.int/sites/default/files/2026-04/WHO%20Kenya%20Annual%20Report%202025.pdf"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 55,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "WIPO’s African-cluster analysis identifies Nairobi’s research concentration; it supports an emerging ecosystem without measuring broad digital diffusion.",
+          "zh": "WIPO 非洲集群分析识别内罗毕科研集中度，支持新兴生态判断，但未量化广泛数字扩散。"
+        },
+        "sourceUrls": [
+          "https://www.wipo.int/en/web/global-innovation-index/w/blogs/2024/gii-2024-african-innovation-clusters"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 50,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Kenya Airways offers a Nairobi international network, but airport access disruption and road-security constraints limit practical redundancy.",
+          "zh": "肯尼亚航空提供内罗毕国际网络，但机场接驳扰动与道路安全约束限制实际冗余。"
+        },
+        "sourceUrls": [
+          "https://www.kenya-airways.com/en/book-manage/search-book/where-we-fly/",
+          "https://www.gov.uk/foreign-travel-advice/kenya/safety-and-security"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cairo",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "baseline": 40,
+        "uncertainty": 20,
+        "trendPerDecade": -2,
+        "rationale": {
+          "en": "Egypt’s CCDR identifies heat and urban environmental exposure; coastal inundation findings are not transferred directly to inland Cairo.",
+          "zh": "埃及 CCDR 指出高温和城市环境暴露；不将沿海淹没结论直接套用内陆开罗。"
+        },
+        "sourceUrls": [
+          "https://www.worldbank.org/en/brief/2022/11/08/egypt-ccdr-lays-out-priority-climate-actions-and-investment-opportunities"
+        ]
+      },
+      {
+        "id": "GSS",
+        "baseline": 45,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Official advice documents terrorism concerns and security measures; Cairo is not equated with Egypt’s higher-risk border regions.",
+          "zh": "官方提示记录恐袭风险及安保措施；不将开罗等同于埃及风险更高的边境地区。"
+        },
+        "sourceUrls": ["https://www.gov.uk/foreign-travel-advice/egypt/safety-and-security"]
+      },
+      {
+        "id": "ISR",
+        "baseline": 50,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "CCDR reform priorities show governance mechanisms but resource-efficiency gaps; restrictive political conditions add uncertainty about adaptive feedback.",
+          "zh": "CCDR 改革重点显示治理机制及资源效率缺口；政治环境限制增加适应性反馈的不确定性。"
+        },
+        "sourceUrls": [
+          "https://www.worldbank.org/en/brief/2022/11/08/egypt-ccdr-lays-out-priority-climate-actions-and-investment-opportunities",
+          "https://www.gov.uk/foreign-travel-advice/egypt/safety-and-security"
+        ]
+      },
+      {
+        "id": "RES",
+        "baseline": 35,
+        "uncertainty": 20,
+        "trendPerDecade": -1,
+        "rationale": {
+          "en": "The CCDR identifies concentrated Nile dependence and increasing scarcity, a substantive national constraint on Cairo’s resource redundancy.",
+          "zh": "CCDR 指出对尼罗河高度依赖和短缺加剧，构成开罗资源冗余的实质性国家约束。"
+        },
+        "sourceUrls": [
+          "https://www.worldbank.org/en/brief/2022/11/08/egypt-ccdr-lays-out-priority-climate-actions-and-investment-opportunities"
+        ]
+      },
+      {
+        "id": "MED",
+        "baseline": 55,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "WHO describes a staged universal-coverage transition, while Ain Shams provides specialist capacity; neither establishes equal metropolitan coverage.",
+          "zh": "WHO 描述分阶段全民保障改革，艾因夏姆斯提供专科能力；两者均不能证明都会区平等覆盖。"
+        },
+        "sourceUrls": [
+          "https://extranet.who.int/cpcd/global-repository/egypt-laying-foundations-making-universal-health-coverage-reality",
+          "https://www.asu.edu.eg/ce/81/page"
+        ]
+      },
+      {
+        "id": "LON",
+        "baseline": 35,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "Ain Shams documents geriatric care and training; staged coverage and a clinical-service focus support cautious readiness, not proven longevity therapy.",
+          "zh": "艾因夏姆斯记录老年医疗和培训；分阶段保障与临床服务重点支持谨慎准备度判断，不是已验证延寿治疗。"
+        },
+        "sourceUrls": [
+          "https://www.asu.edu.eg/ce/81/page",
+          "https://extranet.who.int/cpcd/global-repository/egypt-laying-foundations-making-universal-health-coverage-reality"
+        ]
+      },
+      {
+        "id": "TEC",
+        "baseline": 60,
+        "uncertainty": 20,
+        "trendPerDecade": 1,
+        "rationale": {
+          "en": "WIPO identifies a Cairo innovation cluster, supporting knowledge concentration; cluster output is not evidence of universal infrastructure or technology access.",
+          "zh": "WIPO 识别开罗创新集群，支持知识集中判断；集群产出不是普遍基础设施或技术可及证据。"
+        },
+        "sourceUrls": [
+          "https://www.wipo.int/web-publications/global-innovation-index-2025/en/cluster-ranking.html"
+        ]
+      },
+      {
+        "id": "OPT",
+        "baseline": 50,
+        "uncertainty": 20,
+        "trendPerDecade": 0,
+        "rationale": {
+          "en": "Cairo Airport provides an international gateway; regional security and unmeasured legal and asset mobility prevent equating flights with broad optionality.",
+          "zh": "开罗机场提供国际门户；区域安全和未量化的法律、资产流动性使航班不能等同广泛选择空间。"
+        },
+        "sourceUrls": [
+          "https://www.cairo-airport.com/en-us/Airport/Airport-Information",
+          "https://www.gov.uk/foreign-travel-advice/egypt/safety-and-security"
+        ]
+      }
+    ]
+  }
+]

@@ -258,6 +258,7 @@ export interface CandidateReleaseInput {
   cities: CityCandidate[];
   research?: {
     reportUrl?: string;
+    sampleSelectionUrl?: string;
     summary: { en: string; zh: string };
     findings: Array<{
       dimensions: DimensionId[];

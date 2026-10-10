@@ -1,0 +1,786 @@
+[
+  {
+    "slug": "shanghai",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "CMA reports exceptional 2024 summer warmth in Shanghai; station climate does not establish FUA exposure.",
+          "zh": "气象局记录上海2024年夏季显著偏暖；站点气候不能确定FUA暴露。"
+        },
+        "sources": [
+          {
+            "title": "中国气象局 — 2024中国气候公报",
+            "url": "https://www.cma.gov.cn/zfxxgk/gknr/qxbg/202503/W020250302606211127018.pdf",
+            "period": "2024 climate; published 2025",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Taiwan’s defense report describes military pressure; the PRC white paper prefers peaceful reunification but retains force as an option. Both are interested official positions, not city conflict probabilities.",
+          "zh": "台湾防务报告描述军事压力；大陆白皮书主张和平统一但保留武力选项。两者均为利益相关方官方立场，不是城市冲突概率。"
+        },
+        "sources": [
+          {
+            "title": "Taiwan Ministry of National Defense — 2025 report briefing",
+            "url": "https://www.mnd.gov.tw/en/Publication/85049",
+            "period": "Published 2025-10-09; regional security context",
+            "accessedAt": "2026-10-10"
+          },
+          {
+            "title": "上海市统计局 — 2024年统计公报",
+            "url": "https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html",
+            "period": "2024; published 2025-03-24",
+            "accessedAt": "2026-10-10"
+          },
+          {
+            "title": "PRC State Council — Taiwan white-paper release",
+            "url": "https://english.www.gov.cn/archive/whitepaper/202208/10/content_WS62f34f46c6d02e533532f0ac.html",
+            "period": "2022-08-10 policy position, not a current conflict forecast",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The municipal bulletin records online public services and housing renovation. Administrative delivery is not a full measure of institutional resilience.",
+          "zh": "市公报记录政务网办与住房改造，行政服务交付并非完整制度韧性度量。"
+        },
+        "sources": [
+          {
+            "title": "上海市统计局 — 2024年统计公报",
+            "url": "https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html",
+            "period": "2024; published 2025-03-24",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The bulletin records municipal water supply capacity and network renewal, not outage resilience or food and energy reserves.",
+          "zh": "公报记录市政供水能力与管网更新，未衡量停供韧性或粮能储备。"
+        },
+        "sources": [
+          {
+            "title": "上海市统计局 — 2024年统计公报",
+            "url": "https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html",
+            "period": "2024; published 2025-03-24",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Municipal health reporting covers clinical services and community care; comparable access and waiting-time data are missing.",
+          "zh": "市级卫生记录覆盖诊疗与社区医疗，仍缺可比的可及性和等候数据。"
+        },
+        "sources": [
+          {
+            "title": "上海市统计局 — 2024年统计公报",
+            "url": "https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html",
+            "period": "2024; published 2025-03-24",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "SIBCB’s laboratory lists mRNA and aging research. This is research presence, not a longevity therapy or resident access outcome.",
+          "zh": "生化细胞所实验室列出mRNA与衰老研究；这证明科研存在，并非延寿疗法或居民可及结果。"
+        },
+        "sources": [
+          {
+            "title": "SIBCB — Ligang Wu laboratory research directions",
+            "url": "https://wulg-lab.sibcb.ac.cn/LabIntroduction/",
+            "period": "Undated institutional research description; accessed 2026-10-10",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "context_only",
+        "summary": {
+          "en": "WIPO identifies the Shanghai–Suzhou innovation cluster; its combined activity cannot be assigned to Shanghai alone.",
+          "zh": "WIPO识别上海—苏州创新集群，合计活动不能全部归给上海。"
+        },
+        "sources": [
+          {
+            "title": "WIPO — Shanghai–Suzhou cluster 2025",
+            "url": "https://www.wipo.int/documents/d/global-innovation-index/docs-en-2025-cn-shanghai-suzhou-6.pdf",
+            "period": "2025; multi-city cluster",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Municipal reporting records multinational headquarters and international visitors; this does not measure individual mobility rights.",
+          "zh": "市公报记录跨国总部与入境访客，但不衡量个人迁移权利。"
+        },
+        "sources": [
+          {
+            "title": "上海市统计局 — 2024年统计公报",
+            "url": "https://tjj.sh.gov.cn/tjgb/20250324/a7fe18c6d5c24d66bfca89c5bb4cdcfb.html",
+            "period": "2024; published 2025-03-24",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "The frozen boundary record is identified in the sample register; administrative, utility, facility and cluster evidence has not been spatially reconciled to that FUA.",
+      "zh": "样本登记已识别冻结边界记录；行政区、公用事业、设施与集群证据尚未与该FUA进行空间适配。",
+      "sources": [
+        {
+          "title": "European Commission JRC — GHS-FUA R2019A",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 geography; R2019A product",
+          "accessedAt": "2026-10-10"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "hangzhou",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "CMA identifies Hangzhou among cities with exceptional summer warmth in 2024; FUA hazard overlays are absent.",
+          "zh": "气象局将杭州列入2024年夏季显著偏暖城市，缺少FUA灾害叠图。"
+        },
+        "sources": [
+          {
+            "title": "中国气象局 — 2024中国气候公报",
+            "url": "https://www.cma.gov.cn/zfxxgk/gknr/qxbg/202503/W020250302606211127018.pdf",
+            "period": "2024 climate; published 2025",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Taiwan’s defense report describes military pressure; the PRC white paper prefers peaceful reunification but retains force as an option. Both are interested official positions, not city conflict probabilities.",
+          "zh": "台湾防务报告描述军事压力；大陆白皮书主张和平统一但保留武力选项。两者均为利益相关方官方立场，不是城市冲突概率。"
+        },
+        "sources": [
+          {
+            "title": "Taiwan Ministry of National Defense — 2025 report briefing",
+            "url": "https://www.mnd.gov.tw/en/Publication/85049",
+            "period": "Published 2025-10-09; regional security context",
+            "accessedAt": "2026-10-10"
+          },
+          {
+            "title": "PRC State Council — Taiwan white-paper release",
+            "url": "https://english.www.gov.cn/archive/whitepaper/202208/10/content_WS62f34f46c6d02e533532f0ac.html",
+            "period": "2022-08-10 policy position, not a current conflict forecast",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The government designates management and protection responsibilities for the second water source; implementation effectiveness is untested here.",
+          "zh": "政府划定第二水源管理保护职责；本次未验证执行效果。"
+        },
+        "sources": [
+          {
+            "title": "杭州市政府公报2024年第7期 — 第二水源管理保护范围",
+            "url": "https://www.hangzhou.gov.cn/module/download/downfile.jsp?classid=0&filename=2bdd803be2154e5e8da6bf7ead6c48af.pdf",
+            "period": "2024 management designation; no operational outcomes",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The second-source protection document identifies the Qiandao Lake transfer scheme but provides no audited supply-reliability series.",
+          "zh": "第二水源保护文件识别千岛湖配水工程，未提供已审查供水可靠性序列。"
+        },
+        "sources": [
+          {
+            "title": "杭州市政府公报2024年第7期 — 第二水源管理保护范围",
+            "url": "https://www.hangzhou.gov.cn/module/download/downfile.jsp?classid=0&filename=2bdd803be2154e5e8da6bf7ead6c48af.pdf",
+            "period": "2024 management designation; no operational outcomes",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Gongshu reports 21,806 actual beds in 2024, including provincial and municipal institutions. A district cannot represent the whole FUA.",
+          "zh": "拱墅区报告2024年实有床位21806张，含省市机构；单区不能代表整个FUA。"
+        },
+        "sources": [
+          {
+            "title": "拱墅区政府 — 2024年统计公报",
+            "url": "https://www.gongshu.gov.cn/art/2025/3/31/art_1229226453_4342557.html",
+            "period": "2024; published 2025-03-31; district only",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "ZJU public-health research entries cover frailty, dementia and epigenetic aging; they are research findings, not resident longevity outcomes.",
+          "zh": "浙大公卫研究涉及衰弱、痴呆及表观遗传衰老；科研发现不等于居民延寿结果。"
+        },
+        "sources": [
+          {
+            "title": "浙江大学公共卫生学院 — 科研成果",
+            "url": "https://www.phs.zju.edu.cn/kxyj/list.htm",
+            "period": "Entries dated 2026-03-11 and 2026-04-24; no later entries used",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The city’s December 2024 statistical release records high-technology industry activity and investment; this is not a comprehensive innovation index.",
+          "zh": "市2024年12月统计记录高技术产业活动与投资，并非完整创新指数。"
+        },
+        "sources": [
+          {
+            "title": "杭州市统计局 — 2024年12月份主要统计资料",
+            "url": "https://zfgb.hangzhou.gov.cn/136/105220253/t125220253054/520085.shtml",
+            "period": "2024 cumulative; published 2025-03-03",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The city reports foreign investment and trade flows; they indicate commercial links, not travel access or household exit options.",
+          "zh": "市级统计报告外资与贸易流量，体现商业联系，不等于旅行可及或家庭退出选择。"
+        },
+        "sources": [
+          {
+            "title": "杭州市统计局 — 2024年12月份主要统计资料",
+            "url": "https://zfgb.hangzhou.gov.cn/136/105220253/t125220253054/520085.shtml",
+            "period": "2024 cumulative; published 2025-03-03",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "The frozen boundary record is identified in the sample register; administrative, utility, facility and cluster evidence has not been spatially reconciled to that FUA.",
+      "zh": "样本登记已识别冻结边界记录；行政区、公用事业、设施与集群证据尚未与该FUA进行空间适配。",
+      "sources": [
+        {
+          "title": "European Commission JRC — GHS-FUA R2019A",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 geography; R2019A product",
+          "accessedAt": "2026-10-10"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "beijing",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The water authority reviews exceptional 2023 flood damage and recovery; it does not quantify future population-weighted hazard.",
+          "zh": "水务部门回顾2023年特大洪灾与恢复，未量化未来人口加权灾害。"
+        },
+        "sources": [
+          {
+            "title": "北京市水务局 — 2024年水务工作报告",
+            "url": "https://swj.beijing.gov.cn/zwgk/ghjhzj/202405/t20240521_3690638.html",
+            "period": "Published 2024-05-21; 2023 review and 2024 plans",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Taiwan’s defense report describes military pressure; the PRC white paper prefers peaceful reunification but retains force as an option. Both are interested official positions, not city conflict probabilities.",
+          "zh": "台湾防务报告描述军事压力；大陆白皮书主张和平统一但保留武力选项。两者均为利益相关方官方立场，不是城市冲突概率。"
+        },
+        "sources": [
+          {
+            "title": "Taiwan Ministry of National Defense — 2025 report briefing",
+            "url": "https://www.mnd.gov.tw/en/Publication/85049",
+            "period": "Published 2025-10-09; regional security context",
+            "accessedAt": "2026-10-10"
+          },
+          {
+            "title": "PRC State Council — Taiwan white-paper release",
+            "url": "https://english.www.gov.cn/archive/whitepaper/202208/10/content_WS62f34f46c6d02e533532f0ac.html",
+            "period": "2022-08-10 policy position, not a current conflict forecast",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The water authority documents cross-agency recovery and service programs; this supports coordination capacity but not all governance dimensions.",
+          "zh": "水务部门记录跨部门恢复与服务项目，支持协调能力但不涵盖全部治理维度。"
+        },
+        "sources": [
+          {
+            "title": "北京市水务局 — 2024年水务工作报告",
+            "url": "https://swj.beijing.gov.cn/zwgk/ghjhzj/202405/t20240521_3690638.html",
+            "period": "Published 2024-05-21; 2023 review and 2024 plans",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The city reports groundwater recovery and water-resource totals for 2024; the water report also documents inter-basin transfer infrastructure.",
+          "zh": "市政府报告2024年地下水回升及水资源总量，水务报告同时记录跨流域调水设施。"
+        },
+        "sources": [
+          {
+            "title": "北京市政府 — 2024资源和环境统计",
+            "url": "https://www.beijing.gov.cn/renwen/bjgk/bjgk/zyhj/202503/t20250327_4046537.html",
+            "period": "2024; published 2025-03-27",
+            "accessedAt": "2026-10-10"
+          },
+          {
+            "title": "北京市水务局 — 2024年水务工作报告",
+            "url": "https://swj.beijing.gov.cn/zwgk/ghjhzj/202405/t20240521_3690638.html",
+            "period": "Published 2024-05-21; 2023 review and 2024 plans",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The health authority records 150 tertiary medical institutions in 2024; this counts facilities rather than equal resident access.",
+          "zh": "卫健委记录2024年150家三级医疗机构，衡量设施数量而非居民平等可及。"
+        },
+        "sources": [
+          {
+            "title": "北京市卫健委 — 2024年卫生健康工作概况",
+            "url": "https://wjw.beijing.gov.cn/wjwh/szzl/202601/t20260127_4469663.html",
+            "period": "2024; published 2026-01-27",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The Beijing-based zoology institute reports a human reproductive-aging atlas, a mechanistic study rather than an intervention outcome.",
+          "zh": "北京动物所报告人类生殖衰老图谱，属于机制研究而非干预结果。"
+        },
+        "sources": [
+          {
+            "title": "中国科学院动物研究所 — 人类睾丸衰老研究",
+            "url": "https://ioz.cas.cn/gb2018/xwdt/kyjz/202503/t20250303_7545481.html",
+            "period": "Published 2025-03-03; mechanistic research",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "context_only",
+        "summary": {
+          "en": "WIPO places the Beijing innovation cluster among its leading clusters; its geocoded cluster is not the frozen CCI boundary.",
+          "zh": "WIPO将北京创新集群列入前列，其地理编码集群并非CCI冻结边界。"
+        },
+        "sources": [
+          {
+            "title": "WIPO — 2025 innovation cluster ranking",
+            "url": "https://www.wipo.int/en/web/global-innovation-index/2025/innovation-clusters",
+            "period": "2025 clusters; not municipal/FUA boundaries",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Daxing’s operator-area report documents international routes in 2024. One airport does not measure metropolitan mobility freedoms.",
+          "zh": "大兴区报告记录机场2024年国际航线；单一机场不衡量都会区迁移自由。"
+        },
+        "sources": [
+          {
+            "title": "大兴区政府 — 大兴机场2024年运营",
+            "url": "https://www.beijing.gov.cn/ywdt/gqrd/202501/t20250103_3980373.html",
+            "period": "2024; published 2025-01-03",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "The frozen boundary record is identified in the sample register; administrative, utility, facility and cluster evidence has not been spatially reconciled to that FUA.",
+      "zh": "样本登记已识别冻结边界记录；行政区、公用事业、设施与集群证据尚未与该FUA进行空间适配。",
+      "sources": [
+        {
+          "title": "European Commission JRC — GHS-FUA R2019A",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 geography; R2019A product",
+          "accessedAt": "2026-10-10"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "hong-kong",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "HKO records 53 very hot days and 54 hot nights in 2025, alongside record rainstorm warnings; station records are not FUA exposure.",
+          "zh": "天文台记录2025年53个酷热日、54个热夜及破纪录暴雨警告；站点记录不是FUA暴露。"
+        },
+        "sources": [
+          {
+            "title": "Hong Kong Observatory — The Year’s Weather 2025",
+            "url": "https://www.weather.gov.hk/en/wxinfo/pastwx/2025/ywx2025.htm",
+            "period": "2025; published 2026-01-08",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Taiwan’s defense report describes military pressure; the PRC white paper prefers peaceful reunification but retains force as an option. Both are interested official positions, not city conflict probabilities.",
+          "zh": "台湾防务报告描述军事压力；大陆白皮书主张和平统一但保留武力选项。两者均为利益相关方官方立场，不是城市冲突概率。"
+        },
+        "sources": [
+          {
+            "title": "Taiwan Ministry of National Defense — 2025 report briefing",
+            "url": "https://www.mnd.gov.tw/en/Publication/85049",
+            "period": "Published 2025-10-09; regional security context",
+            "accessedAt": "2026-10-10"
+          },
+          {
+            "title": "PRC State Council — Taiwan white-paper release",
+            "url": "https://english.www.gov.cn/archive/whitepaper/202208/10/content_WS62f34f46c6d02e533532f0ac.html",
+            "period": "2022-08-10 policy position, not a current conflict forecast",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "context_only",
+        "summary": {
+          "en": "HKMA reports banking climate stress tests. Financial supervision is only one part of institutional resilience.",
+          "zh": "金管局报告银行气候压力测试，金融监管只是制度韧性的一部分。"
+        },
+        "sources": [
+          {
+            "title": "HKMA — Sustainability Report 2024",
+            "url": "https://www.hkma.gov.hk/media/eng/publication-and-research/sustainability-report/2024/2024.pdf",
+            "period": "2024 stress tests; published 2025",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "WSD states that roughly 70–80% of supply comes from Dongjiang; external sourcing coexists with established supply arrangements.",
+          "zh": "水务署指出约70–80%供水来自东江，外部水源依赖与成熟供水安排并存。"
+        },
+        "sources": [
+          {
+            "title": "Water Supplies Department — Water Supplies facts",
+            "url": "https://www.wsd.gov.hk/en/publications-and-statistics/pr-publications/the-facts/index.html",
+            "period": "2024/25 water statistics; accessed 2026-10-10",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Government reporting documents HA doctor staffing and measures addressing consultation efficiency and waiting pressure.",
+          "zh": "政府资料记录医管局医生配置及改善诊疗效率、等候压力的措施。"
+        },
+        "sources": [
+          {
+            "title": "Hong Kong Government — LCQ14 doctors and consultation efficiency",
+            "url": "https://www.info.gov.hk/gia/general/202507/23/P2025072300832p.htm",
+            "period": "Published 2025-07-23; includes 2023/24 staffing",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "HEAL-HOA studies structured volunteering and loneliness among older adults; it does not test lifespan extension.",
+          "zh": "HEAL-HOA研究老年人结构化志愿活动与孤独感，并未检验寿命延长。"
+        },
+        "sources": [
+          {
+            "title": "HKU — HEAL-HOA randomized trial repository record",
+            "url": "https://hub.hku.hk/handle/10722/355326",
+            "period": "Published January 2025; loneliness intervention",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "context_only",
+        "summary": {
+          "en": "WIPO’s leading Shenzhen–Hong Kong–Guangzhou cluster combines three cities; Hong Kong cannot inherit the whole cluster’s output.",
+          "zh": "WIPO领先的深圳—香港—广州集群合并三城，香港不能继承整个集群产出。"
+        },
+        "sources": [
+          {
+            "title": "WIPO — 2025 innovation cluster ranking",
+            "url": "https://www.wipo.int/en/web/global-innovation-index/2025/innovation-clusters",
+            "period": "2025 clusters; not municipal/FUA boundaries",
+            "accessedAt": "2026-10-10"
+          },
+          {
+            "title": "HKU — HEAL-HOA randomized trial repository record",
+            "url": "https://hub.hku.hk/handle/10722/355326",
+            "period": "Published January 2025; loneliness intervention",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "AAHK records an extensive international network in FY2024/25; traffic is airport activity, not every resident’s mobility.",
+          "zh": "机管局记录2024/25财年的广泛国际网络；客流是机场活动，不是每位居民的迁移能力。"
+        },
+        "sources": [
+          {
+            "title": "Airport Authority Hong Kong — 2024/25 annual results",
+            "url": "https://www.hongkongairport.com/en/media-centre/press-release/2025/pr_1797",
+            "period": "FY ended 2025-03-31; published 2025-07-16",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "The frozen boundary record is identified in the sample register; administrative, utility, facility and cluster evidence has not been spatially reconciled to that FUA.",
+      "zh": "样本登记已识别冻结边界记录；行政区、公用事业、设施与集群证据尚未与该FUA进行空间适配。",
+      "sources": [
+        {
+          "title": "European Commission JRC — GHS-FUA R2019A",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 geography; R2019A product",
+          "accessedAt": "2026-10-10"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "taipei",
+    "dimensions": [
+      {
+        "id": "PCS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Taipei’s official drill uses a Shanchiao-fault compound-earthquake scenario. A drill scenario is not earthquake probability or realized loss.",
+          "zh": "台北官方演习采用山脚断层复合地震情景；演习情景不是地震概率或实际损失。"
+        },
+        "sources": [
+          {
+            "title": "臺北市政府 — 無預警災害防救演習",
+            "url": "https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&s=D97B13B6080B8213&sms=72544237BBE4C5F6",
+            "period": "2024 disaster exercise; hypothetical earthquake scenario",
+            "accessedAt": "2026-10-10"
+          },
+          {
+            "title": "Taipei Water Department — supply resilience",
+            "url": "https://english.water.gov.taipei/News_Content.aspx?n=82A83F699502B12F&s=AEDDE483A90365B6",
+            "period": "2023–2024 operations and end-2024 leakage",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "GSS",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Taiwan’s defense report describes military pressure; the PRC white paper prefers peaceful reunification but retains force as an option. Both are interested official positions, not city conflict probabilities.",
+          "zh": "台湾防务报告描述军事压力；大陆白皮书主张和平统一但保留武力选项。两者均为利益相关方官方立场，不是城市冲突概率。"
+        },
+        "sources": [
+          {
+            "title": "Taiwan Ministry of National Defense — 2025 report briefing",
+            "url": "https://www.mnd.gov.tw/en/Publication/85049",
+            "period": "Published 2025-10-09; regional security context",
+            "accessedAt": "2026-10-10"
+          },
+          {
+            "title": "PRC State Council — Taiwan white-paper release",
+            "url": "https://english.www.gov.cn/archive/whitepaper/202208/10/content_WS62f34f46c6d02e533532f0ac.html",
+            "period": "2022-08-10 policy position, not a current conflict forecast",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "ISR",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Datong district’s 2026 exercise involved agencies and community groups; participation does not prove metropolitan crisis performance.",
+          "zh": "大同区2026年演习涉及部门与社区团体，参与并不证明都会区危机绩效。"
+        },
+        "sources": [
+          {
+            "title": "臺北市防災資訊 — 大同區新式演習",
+            "url": "https://eoc.gov.taipei/News/Detail/495",
+            "period": "Published 2026-05-15; district exercise",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "RES",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "The water department records 10.31% leakage at end-2024 and a raw-water tunnel used during typhoons; its service boundary differs from the FUA.",
+          "zh": "水务部门记录2024年底漏水率10.31%，原水隧道在台风期间使用；服务边界不同于FUA。"
+        },
+        "sources": [
+          {
+            "title": "Taipei Water Department — supply resilience",
+            "url": "https://english.water.gov.taipei/News_Content.aspx?n=82A83F699502B12F&s=AEDDE483A90365B6",
+            "period": "2023–2024 operations and end-2024 leakage",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "MED",
+        "outcome": "context_only",
+        "summary": {
+          "en": "The 2024 health-yearbook metadata covers medical systems, prevention and long-term care; underlying comparable outcome tables were not retrieved.",
+          "zh": "2024卫生年鉴元数据涵盖医疗体系、预防与长照；未取得底层可比结果表。"
+        },
+        "sources": [
+          {
+            "title": "臺北市資料大平臺 — 衛生醫療年鑑2024",
+            "url": "https://data.taipei/dataset/detail?id=e4c8461a-6438-40fb-8374-87128f1d9a71",
+            "period": "2024 activities; metadata inspected, tables not retrieved",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "LON",
+        "outcome": "context_only",
+        "summary": {
+          "en": "Taipei’s yearbook scope includes health management and long-term care, not evidence for new longevity interventions.",
+          "zh": "台北年鉴范围包含健康管理与长照，并非新延寿干预证据。"
+        },
+        "sources": [
+          {
+            "title": "臺北市資料大平臺 — 衛生醫療年鑑2024",
+            "url": "https://data.taipei/dataset/detail?id=e4c8461a-6438-40fb-8374-87128f1d9a71",
+            "period": "2024 activities; metadata inspected, tables not retrieved",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "TEC",
+        "outcome": "context_only",
+        "summary": {
+          "en": "WIPO identifies Taipei–Hsinchu and its patent applicants; Hsinchu activity cannot be attributed entirely to Taipei.",
+          "zh": "WIPO识别台北—新竹及专利申请者，新竹活动不能全部归给台北。"
+        },
+        "sources": [
+          {
+            "title": "WIPO — 2025 cluster methodology and Taipei–Hsinchu",
+            "url": "https://www.wipo.int/web-publications/global-innovation-index-2025/en/cluster-ranking.html",
+            "period": "2025 multi-city cluster, not Taipei FUA",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      },
+      {
+        "id": "OPT",
+        "outcome": "usable_observation",
+        "summary": {
+          "en": "Taoyuan Airport reports 44.92 million passengers in 2024. This is a regional gateway outside Taipei municipality, not resident-level optionality.",
+          "zh": "桃园机场报告2024年4492万人次；这是台北行政区外的区域门户，不是居民层面选择空间。"
+        },
+        "sources": [
+          {
+            "title": "桃園國際機場 — 2024年營運成果",
+            "url": "https://web.taoyuan-airport.com/news/CD7D5A82-B421-F011-BC0F-0050569094FE",
+            "period": "2024; published 2025-04-25; airport catchment",
+            "accessedAt": "2026-10-10"
+          }
+        ]
+      }
+    ],
+    "boundaryReview": {
+      "outcome": "unresolved",
+      "en": "The frozen boundary record is identified in the sample register; administrative, utility, facility and cluster evidence has not been spatially reconciled to that FUA.",
+      "zh": "样本登记已识别冻结边界记录；行政区、公用事业、设施与集群证据尚未与该FUA进行空间适配。",
+      "sources": [
+        {
+          "title": "European Commission JRC — GHS-FUA R2019A",
+          "url": "https://human-settlement.emergency.copernicus.eu/ghs_fua.php",
+          "period": "2015 geography; R2019A product",
+          "accessedAt": "2026-10-10"
+        }
+      ]
+    }
+  }
+]

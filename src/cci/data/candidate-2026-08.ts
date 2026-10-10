@@ -17,7 +17,7 @@ const emptyEvidencePacks = () =>
     boolean
   >;
 
-const makeCity = (seed: CitySeed): CityCandidate => ({
+export const makeCity = (seed: CitySeed): CityCandidate => ({
   ...seed,
   evidencePacks: emptyEvidencePacks(),
   confidence: {
