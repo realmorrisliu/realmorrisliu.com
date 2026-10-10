@@ -155,3 +155,5 @@ pnpm exec /private/tmp/cci-global/geo-venv/bin/python -B scripts/cci_seismic_ras
 - 外部资料的原始链接、覆盖尺度与许可核验边界见[全球数据覆盖研究](cci-global-data-coverage-research.md)。例如 [CISI 原始论文](https://doi.org/10.1038/s41597-022-01218-4)、[SHDI 原始论文](https://www.nature.com/articles/sdata201938)、[Ookla 官方字段与许可](https://github.com/teamookla/ookla-open-data)是手册上游；本轮未新增声称其原始数据已完整下载或独立复算。
 
 本次未复做主任务全字段数值审查、未给评分锚点、未填入任何缺失分数，也未改历史/当前发布。资料语义清晰并不证明实际数据完整；资料非空也不证明语义成立。
+
+知识产出后续：已完成 [OpenAlex 全机构快照与计数口径审计](cci-openalex-institutions.md)。136,136 条目录记录完成位置映射，但未取得全量作品级去重和跨城分摊；机构目录覆盖不等于知识产出测量，原子支柱状态继续保持未测量。

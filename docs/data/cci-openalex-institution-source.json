@@ -1,0 +1,588 @@
+{
+  "retrievedOn": "2026-10-10",
+  "snapshotDate": "2026-09-23",
+  "manifestUrl": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/manifest.json",
+  "manifestSha256": "dc97c20a352d09d71fb15d45d6674a435c863a9781b7f0777baf3949d8a5e4f0",
+  "expectedRecords": 136136,
+  "files": [
+    {
+      "localFile": "part-000.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-02-06/part_0000.gz",
+      "bytes": 820583,
+      "expectedRecords": 5425,
+      "sha256": "1d6b47a554bb678b4be8fef0646fe35bfa1ece6d3aa179b301c23e82cda67ef9"
+    },
+    {
+      "localFile": "part-001.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-02-09/part_0000.gz",
+      "bytes": 593,
+      "expectedRecords": 1,
+      "sha256": "036cd59299cf88c8092ef5fece89e4aeff7cea595c9370d5681cdec66b1ab1e9"
+    },
+    {
+      "localFile": "part-002.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-02-22/part_0000.gz",
+      "bytes": 606,
+      "expectedRecords": 1,
+      "sha256": "12783c8e5d1e12d31d4fa3c8e7c40aa6903bb41091ff43e6b54d5ee6a9643b2a"
+    },
+    {
+      "localFile": "part-003.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-02-26/part_0000.gz",
+      "bytes": 8407,
+      "expectedRecords": 45,
+      "sha256": "63de97295e62cbe1e03d65239308f6850b87d0e29634c74d43e9c80c45b1b0f0"
+    },
+    {
+      "localFile": "part-004.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-03-08/part_0000.gz",
+      "bytes": 2277,
+      "expectedRecords": 13,
+      "sha256": "4d7fc4a12ab2121b640ef843055f29bfd8034e7ba38cd49775bffbd729cc786b"
+    },
+    {
+      "localFile": "part-005.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-03-14/part_0000.gz",
+      "bytes": 5479,
+      "expectedRecords": 30,
+      "sha256": "bcb12ac7704f41b3f2744901141a35122312bf39825f5d37f0ecf78eb91f0812"
+    },
+    {
+      "localFile": "part-006.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-03-18/part_0000.gz",
+      "bytes": 583,
+      "expectedRecords": 1,
+      "sha256": "925720abc192e7876e7dd852231946f4dca048796a0598f86c9905c25a148237"
+    },
+    {
+      "localFile": "part-007.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-03-19/part_0000.gz",
+      "bytes": 622,
+      "expectedRecords": 1,
+      "sha256": "8fb669ed52ec34291d4891b8bcb824e437fdf8c4e9aa7b032128a922ffadde0c"
+    },
+    {
+      "localFile": "part-008.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-03-28/part_0000.gz",
+      "bytes": 601,
+      "expectedRecords": 1,
+      "sha256": "548de9caa18c1e2085d347d143c6ebf53dd1ef914f218514146129120efbe4cf"
+    },
+    {
+      "localFile": "part-009.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-04-02/part_0000.gz",
+      "bytes": 28413,
+      "expectedRecords": 246,
+      "sha256": "78bace798afd8c1f95b7db3aafe13813f5f671f2a2b3d00343a17f152bea54fb"
+    },
+    {
+      "localFile": "part-010.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-04-14/part_0000.gz",
+      "bytes": 607,
+      "expectedRecords": 1,
+      "sha256": "27caa7eb1c2bb79285f492fef28175d0326dc525343fae60e95c68ed515af4e5"
+    },
+    {
+      "localFile": "part-011.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-04-16/part_0000.gz",
+      "bytes": 33343,
+      "expectedRecords": 306,
+      "sha256": "16dff1ba9b72f2917b329256e5c88c01c6e279a4cae44f2bb07bfe1a1b924139"
+    },
+    {
+      "localFile": "part-012.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-05-05/part_0000.gz",
+      "bytes": 590,
+      "expectedRecords": 1,
+      "sha256": "11c7595b194d7a24770909cde48996a707f9b55820ec8f28586abed0c3a527f9"
+    },
+    {
+      "localFile": "part-013.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-05-14/part_0000.gz",
+      "bytes": 24720,
+      "expectedRecords": 184,
+      "sha256": "8bbc664a90466f02fb8e289681e465fc06b2521056f58d39b56eb6fc4db0cf23"
+    },
+    {
+      "localFile": "part-014.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-05-23/part_0000.gz",
+      "bytes": 603,
+      "expectedRecords": 1,
+      "sha256": "6365518a721af213042e1cf4096c8d55516a94bec90c418bec7ef07c26324a26"
+    },
+    {
+      "localFile": "part-015.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-06-04/part_0000.gz",
+      "bytes": 20986,
+      "expectedRecords": 134,
+      "sha256": "b89176d9408c0bef4dcb0c1e8412e741f90d4a9b56716c73b5e937a57554d12a"
+    },
+    {
+      "localFile": "part-016.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-06-17/part_0000.gz",
+      "bytes": 608,
+      "expectedRecords": 1,
+      "sha256": "39974623dc8f9b0ff0ee44fc3aab9940e18f2e7b1ccdb48fe06c4aa3ac85c4f5"
+    },
+    {
+      "localFile": "part-017.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-06-25/part_0000.gz",
+      "bytes": 88022,
+      "expectedRecords": 629,
+      "sha256": "993e4068a52b9fd25c8d226533684c8f182227e1dc780f126f36483be4fd924e"
+    },
+    {
+      "localFile": "part-018.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-10/part_0000.gz",
+      "bytes": 3061,
+      "expectedRecords": 14,
+      "sha256": "bf67d69aa6195c26ddfa24077430d171a8207db0feefdb7e83d15f61725ddf32"
+    },
+    {
+      "localFile": "part-019.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-16/part_0000.gz",
+      "bytes": 1786188,
+      "expectedRecords": 3401,
+      "sha256": "0f9452a5763b6a4f84689836bded36309f1aaee67d280403d0a42c8d374eb670"
+    },
+    {
+      "localFile": "part-020.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-17/part_0000.gz",
+      "bytes": 31808,
+      "expectedRecords": 38,
+      "sha256": "ba6a343a38312c72392866a133252bda787bbcec68d4afb2e44d2a19edfa22e4"
+    },
+    {
+      "localFile": "part-021.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-18/part_0000.gz",
+      "bytes": 18591,
+      "expectedRecords": 23,
+      "sha256": "ef32d2640ea151d22aef52816b1155b7ebc78314d5cc9fdd79ebd81f40dabe6a"
+    },
+    {
+      "localFile": "part-022.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-19/part_0000.gz",
+      "bytes": 19761,
+      "expectedRecords": 22,
+      "sha256": "bfdf65766229886680e79830bad74a2815587a81be126336decd7f0e51a75eb3"
+    },
+    {
+      "localFile": "part-023.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-20/part_0000.gz",
+      "bytes": 6955,
+      "expectedRecords": 7,
+      "sha256": "b7c10db428658c845ac8d1020cb9e7dce3dd96dff1de9060d5526a01a59f102d"
+    },
+    {
+      "localFile": "part-024.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-21/part_0000.gz",
+      "bytes": 9663,
+      "expectedRecords": 12,
+      "sha256": "c9baefa4c83e2701705d2b1afdea57fc3108afb966257e2a5cb2d4ae2958cd12"
+    },
+    {
+      "localFile": "part-025.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-22/part_0000.gz",
+      "bytes": 210464,
+      "expectedRecords": 1230,
+      "sha256": "084ec42c67beeb0b31a7894e4b533f73b767e05ec3acc419c850d3ec3d75833f"
+    },
+    {
+      "localFile": "part-026.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-23/part_0000.gz",
+      "bytes": 40315,
+      "expectedRecords": 61,
+      "sha256": "db1e5e79fa7ce5135d483af01cb27c0984709690bef0abf92e0e1a6f1c75c45a"
+    },
+    {
+      "localFile": "part-027.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-24/part_0000.gz",
+      "bytes": 16463,
+      "expectedRecords": 19,
+      "sha256": "6bcf358191ac2d5aa6289725c4d0190928d0f6b7bd6696179144e841fb85d37d"
+    },
+    {
+      "localFile": "part-028.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-25/part_0000.gz",
+      "bytes": 11375,
+      "expectedRecords": 15,
+      "sha256": "bfe6b792017c8624ee9e41e0350d307aac1890fe229a83489c244c5cc1def79e"
+    },
+    {
+      "localFile": "part-029.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-26/part_0000.gz",
+      "bytes": 12511,
+      "expectedRecords": 16,
+      "sha256": "3be87627b8a7bec68f29afb450af8ecd008d7ac4bdb808f8c569ad3c210f6188"
+    },
+    {
+      "localFile": "part-030.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-27/part_0000.gz",
+      "bytes": 3691,
+      "expectedRecords": 3,
+      "sha256": "2374019526509cf813fbb7beb17a5bdde14baf808ed72a6e41620e64486738e3"
+    },
+    {
+      "localFile": "part-031.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-28/part_0000.gz",
+      "bytes": 3989,
+      "expectedRecords": 5,
+      "sha256": "b6bde305429097b152ad3c84c627cfd11470092e23ff8d20396f303d9290dd46"
+    },
+    {
+      "localFile": "part-032.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-29/part_0000.gz",
+      "bytes": 26032,
+      "expectedRecords": 25,
+      "sha256": "7705a675e801eb20263e279a2486fff30754d1f0cd9bc8d1db4ed93035df27e8"
+    },
+    {
+      "localFile": "part-033.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-30/part_0000.gz",
+      "bytes": 76989,
+      "expectedRecords": 130,
+      "sha256": "465c390ec7897f58c3ba2fc5e3d4d2935fb704a19193ceed931e6edf0f2f1dc9"
+    },
+    {
+      "localFile": "part-034.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-07-31/part_0000.gz",
+      "bytes": 42483,
+      "expectedRecords": 65,
+      "sha256": "0c9be7dfd7c4f557c1d2f340817e1a4e4ca1211d8b671dbcb1fb3b17a9e31081"
+    },
+    {
+      "localFile": "part-035.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-01/part_0000.gz",
+      "bytes": 35290,
+      "expectedRecords": 50,
+      "sha256": "a34a74867cf315f3b86c563b3568f74ede0649d8ea533d13bf2dcf5830490257"
+    },
+    {
+      "localFile": "part-036.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-02/part_0000.gz",
+      "bytes": 71126,
+      "expectedRecords": 82,
+      "sha256": "32ad8588d182cbecf31a468e8987b96b26cc1d9218b49f91114d8e67cb2a0023"
+    },
+    {
+      "localFile": "part-037.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-03/part_0000.gz",
+      "bytes": 13919,
+      "expectedRecords": 17,
+      "sha256": "8089c5e506e519855979cd3b1346b3f0cc120f475ed066099d71a70a779fc45a"
+    },
+    {
+      "localFile": "part-038.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-04/part_0000.gz",
+      "bytes": 6519,
+      "expectedRecords": 7,
+      "sha256": "3adce3740193687556681842c9f3f26be8fb8501073d1a2d983cc7a5b0ec1ae7"
+    },
+    {
+      "localFile": "part-039.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-05/part_0000.gz",
+      "bytes": 102727,
+      "expectedRecords": 433,
+      "sha256": "22153d3d2a175b248b1721dbdb5bcc3316ab11e7eb8b979830412bc243289b0d"
+    },
+    {
+      "localFile": "part-040.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-06/part_0000.gz",
+      "bytes": 25408,
+      "expectedRecords": 35,
+      "sha256": "e4d7aa0851cce971f97470de5e08d8726456259a4ceb60611c6b1ea69055ce17"
+    },
+    {
+      "localFile": "part-041.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-07/part_0000.gz",
+      "bytes": 21076,
+      "expectedRecords": 27,
+      "sha256": "08f319b473364c483b19aab172d41b7eca8e3f51bae73d2b9679061d054559bc"
+    },
+    {
+      "localFile": "part-042.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-08/part_0000.gz",
+      "bytes": 38524,
+      "expectedRecords": 41,
+      "sha256": "224cd349424424502b375547e202aeec02a894182b785fa90bef86264a70e659"
+    },
+    {
+      "localFile": "part-043.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-09/part_0000.gz",
+      "bytes": 18772,
+      "expectedRecords": 26,
+      "sha256": "78319ec4f5bcc341c40d13842da6d65c19c7ba52ccd0ed5548153fe4324209dd"
+    },
+    {
+      "localFile": "part-044.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-10/part_0000.gz",
+      "bytes": 11307,
+      "expectedRecords": 11,
+      "sha256": "89318789f4e4b2492dfcbe0522577243558d26aacc78e41afdfb07e80134775f"
+    },
+    {
+      "localFile": "part-045.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-11/part_0000.gz",
+      "bytes": 9619,
+      "expectedRecords": 11,
+      "sha256": "825585ac58d47c429eb979b157de853513a74e92af1c56c2d033df592bb314a7"
+    },
+    {
+      "localFile": "part-046.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-12/part_0000.gz",
+      "bytes": 36688,
+      "expectedRecords": 41,
+      "sha256": "ecc5b41de75c65c0fef5b16f03914b0865f0b9629eb804480de485c804b6a5d8"
+    },
+    {
+      "localFile": "part-047.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-13/part_0000.gz",
+      "bytes": 84285,
+      "expectedRecords": 95,
+      "sha256": "a819340162d3a14d2dac6044cbbd00ef7d1b160b2e9ca36cf6adfb998a891043"
+    },
+    {
+      "localFile": "part-048.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-14/part_0000.gz",
+      "bytes": 37142,
+      "expectedRecords": 69,
+      "sha256": "abc090635f2ee62f519683c7fb404a1642e49dd9aabee0cacbddbc94c33477f6"
+    },
+    {
+      "localFile": "part-049.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-15/part_0000.gz",
+      "bytes": 28770,
+      "expectedRecords": 33,
+      "sha256": "316fb5e501c29a44fcca6bc9032302ef25f2fcb9bade0347a5d7da75b7647d5e"
+    },
+    {
+      "localFile": "part-050.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-16/part_0000.gz",
+      "bytes": 53432,
+      "expectedRecords": 47,
+      "sha256": "22fc54926191c9f66c847aa68b35cf2032b8aae9dc0cbe7ca5b89b61f125c0ba"
+    },
+    {
+      "localFile": "part-051.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-17/part_0000.gz",
+      "bytes": 10924,
+      "expectedRecords": 9,
+      "sha256": "1ace0192609f698fbe2787144afeb87c9ab29022be6e011e4c7dcb13b20f5332"
+    },
+    {
+      "localFile": "part-052.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-18/part_0000.gz",
+      "bytes": 140152,
+      "expectedRecords": 155,
+      "sha256": "253c54ecef17b1988ae638fa26447d84343b30502aef516b0c9ac77fa4ae4c8c"
+    },
+    {
+      "localFile": "part-053.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-19/part_0000.gz",
+      "bytes": 166425,
+      "expectedRecords": 179,
+      "sha256": "6eb41aa727e1d553811e449c7587d1e7e20219ad7e0554249b3b0a65da344ee7"
+    },
+    {
+      "localFile": "part-054.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-20/part_0000.gz",
+      "bytes": 82796,
+      "expectedRecords": 113,
+      "sha256": "794cf980d43bd8dd9f2d6a641a27ccbf16b43901772d28d9a48bdfc06757aa2e"
+    },
+    {
+      "localFile": "part-055.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-22/part_0000.gz",
+      "bytes": 181954,
+      "expectedRecords": 213,
+      "sha256": "70782a9a9358204a9ccac6a549532ffbbb89a25e7021ce4d6ebcaed32416526b"
+    },
+    {
+      "localFile": "part-056.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-23/part_0000.gz",
+      "bytes": 55139,
+      "expectedRecords": 61,
+      "sha256": "b2152e17ab5fd34008d5a073b7a52ea0a0fe1b1b6f3ba626703343621cdb5925"
+    },
+    {
+      "localFile": "part-057.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-24/part_0000.gz",
+      "bytes": 64841,
+      "expectedRecords": 72,
+      "sha256": "f5b0624899dd5072b2fc422084e6d2ef8665fa112773544206c94d571299a3b8"
+    },
+    {
+      "localFile": "part-058.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-25/part_0000.gz",
+      "bytes": 33288,
+      "expectedRecords": 43,
+      "sha256": "2eabf8bb76cf6a60c295a8c76030a90eee42f1745237cf31b42cc16329663499"
+    },
+    {
+      "localFile": "part-059.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-26/part_0000.gz",
+      "bytes": 119348,
+      "expectedRecords": 128,
+      "sha256": "8acfa8e0573bc255283b9d1bead22b34818b5e300f4d11ded12f99f95db08371"
+    },
+    {
+      "localFile": "part-060.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-28/part_0000.gz",
+      "bytes": 251745,
+      "expectedRecords": 563,
+      "sha256": "39f0f7aee07bb0d25bf82ae55a140aed313dc141e92a120f489529521ff08901"
+    },
+    {
+      "localFile": "part-061.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-08-31/part_0000.gz",
+      "bytes": 308382,
+      "expectedRecords": 369,
+      "sha256": "50be6e50ba12fa766d118ef4198692d03d76f3ea73b89a37f03aa6744e8d1ce3"
+    },
+    {
+      "localFile": "part-062.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-01/part_0000.gz",
+      "bytes": 67351,
+      "expectedRecords": 89,
+      "sha256": "bade31f1a587b9c664ef96da470802db4847c59c69521681942afd67aed23cdc"
+    },
+    {
+      "localFile": "part-063.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-04/part_0000.gz",
+      "bytes": 279851,
+      "expectedRecords": 256,
+      "sha256": "15457ee0759339c36c621b9078cdc018876cee8a38c993aa6c67ac6b13a02fa6"
+    },
+    {
+      "localFile": "part-064.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-07/part_0000.gz",
+      "bytes": 389866,
+      "expectedRecords": 395,
+      "sha256": "d50f69ddbc602769092695ae932038ab1b270da664b26c6b4ba2a886b0a32173"
+    },
+    {
+      "localFile": "part-065.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-08/part_0000.gz",
+      "bytes": 159304,
+      "expectedRecords": 168,
+      "sha256": "050543ac58c4a81b6fedd4bc31ba97810f45b9589d2d77b32799d6f1d73f3d94"
+    },
+    {
+      "localFile": "part-066.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-09/part_0000.gz",
+      "bytes": 207890,
+      "expectedRecords": 199,
+      "sha256": "98ea6e53a6d3c9e89d6614b751b295ed94f047032c5be172f6370b61553cd673"
+    },
+    {
+      "localFile": "part-067.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-10/part_0000.gz",
+      "bytes": 312808,
+      "expectedRecords": 268,
+      "sha256": "a43ae1b759d9630bb3695620b236c860d09f2a83d358cbee47d3f236434e2382"
+    },
+    {
+      "localFile": "part-068.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-11/part_0000.gz",
+      "bytes": 232272,
+      "expectedRecords": 219,
+      "sha256": "648cca8c415448a47cb460a4960d634334157ddfa70ff6c141342b635310ac9d"
+    },
+    {
+      "localFile": "part-069.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-13/part_0000.gz",
+      "bytes": 1261052,
+      "expectedRecords": 997,
+      "sha256": "feae8c2af0a80b8536578b84a1342f3adde91b83f36d3e45e6237b8d3af20bc6"
+    },
+    {
+      "localFile": "part-070.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-14/part_0000.gz",
+      "bytes": 127048,
+      "expectedRecords": 96,
+      "sha256": "592136114089c6d0af42c8310b49f7c16d964684bbb274806df901befdb5dc45"
+    },
+    {
+      "localFile": "part-071.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-15/part_0000.gz",
+      "bytes": 48320,
+      "expectedRecords": 39,
+      "sha256": "6fd36663c4d2fd458262c677e2cbcffd0f4823ebbbf67a136fe2650d2da4bc72"
+    },
+    {
+      "localFile": "part-072.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-16/part_0000.gz",
+      "bytes": 346399,
+      "expectedRecords": 255,
+      "sha256": "7ee711ea00924223c1f45f30e83012bbc964917f51670ac311d48410ae74ce6e"
+    },
+    {
+      "localFile": "part-073.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-17/part_0000.gz",
+      "bytes": 750306,
+      "expectedRecords": 546,
+      "sha256": "120f163942cba755451912ff53b9728ab48a10d0534757ae666d43d06e4ae033"
+    },
+    {
+      "localFile": "part-074.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-18/part_0000.gz",
+      "bytes": 550971,
+      "expectedRecords": 395,
+      "sha256": "30900d21818fb6fe041c4047f949262a7ca0a59961b689188912b9742146a3e9"
+    },
+    {
+      "localFile": "part-075.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-19/part_0000.gz",
+      "bytes": 595064,
+      "expectedRecords": 421,
+      "sha256": "217f29ceb8815b7bc9cfaf8727d16ef34efb07c09c7f4da2870ecbef512e38be"
+    },
+    {
+      "localFile": "part-076.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-20/part_0000.gz",
+      "bytes": 963136,
+      "expectedRecords": 1006,
+      "sha256": "bdf2485914b7282457f0085fb61cb066fec30a37e5102de35eec74598fed41d7"
+    },
+    {
+      "localFile": "part-077.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-21/part_0000.gz",
+      "bytes": 7488,
+      "expectedRecords": 10,
+      "sha256": "203160b8dd3ecbd5c66393a4ba15652745ec07f0503e5d7d5a07e71caf7bbcb1"
+    },
+    {
+      "localFile": "part-078.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-22/part_0000.gz",
+      "bytes": 14055684,
+      "expectedRecords": 12301,
+      "sha256": "83a7908684a432b91cee7dce533cf17c694adce8362a7988407581145687e735"
+    },
+    {
+      "localFile": "part-079.jsonl.gz",
+      "url": "https://openalex.s3.amazonaws.com/data/jsonl/institutions/updated_date=2026-09-23/part_0000.gz",
+      "bytes": 176715737,
+      "expectedRecords": 103439,
+      "sha256": "88841d9e86a9686e1114246ab9760ea8bd4d568117a8a48d907ffaac2db538ff"
+    }
+  ],
+  "status": "institution_directory_not_knowledge_output",
+  "license": "CC0",
+  "documentationUrl": "https://help.openalex.org/access/snapshot/",
+  "recordCount": 136136,
+  "mappingStatusCounts": {
+    "directory_point_match": 120309,
+    "outside_frozen_fuas": 15826,
+    "coordinates_missing": 1
+  },
+  "candidateCount": 9031,
+  "candidatesWithDirectoryPoints": 3880,
+  "fuaSourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+  "scriptSha256": "fe5e480870c6315ed118d532942de6209510aabf37f1c79cb4ecf4855e83f606",
+  "outputs": {
+    "cci-openalex-institution-fua.csv": "b59735ba074e3e1b8e05f1d08bd672ef1d1ec219303cd9a788c93fc2a5e798ed",
+    "cci-openalex-efua-directory-coverage.csv": "a7a6352b2f46a3f1c5aeeed922164c70333f87462d1e18866739141d9b83b2ef"
+  },
+  "method": "All snapshot partitions, SHA-256 and row counts verified. Source geo point projected to frozen FUA CRS; point intersection only, no names, ranking or country filter. Multiple matches retained, not assigned arbitrarily.",
+  "limitations": "Directory geo can identify city rather than campus. Headquarters or parent location does not locate affiliated works. No works_count aggregation, current output, unique-work count, fractional attribution or knowledge-output score. Snapshot precedes September 28 affiliation-matcher change; live API and snapshot are separate versions."
+}

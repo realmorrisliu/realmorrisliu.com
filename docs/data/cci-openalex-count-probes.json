@@ -1,0 +1,455 @@
+{
+  "retrievedOn": "2026-10-10",
+  "status": "diagnostic_cases_not_representative_sample",
+  "selection": "Initial unfiltered institution API probe; follow-up on anomalous first returned institution. Not a city inclusion rule.",
+  "probes": [
+    {
+      "url": "https://api.openalex.org/institutions?per_page=2&select=id,ror,display_name,geo,works_count,counts_by_year,lineage",
+      "sha256": "e730d9c5372ea5ab2a5f7c0eca2404fd8c81e615f136eeebc142101861f077b5",
+      "response": {
+        "meta": {
+          "count": 143455,
+          "db_response_time_ms": 8,
+          "page": 1,
+          "per_page": 2,
+          "groups_count": null,
+          "x_query": {
+            "oql": "get institutions",
+            "oqo": {
+              "get_rows": "institutions"
+            },
+            "url": "/institutions?per_page=2"
+          },
+          "cost_usd": 0.0001
+        },
+        "results": [
+          {
+            "id": "https://openalex.org/I4210108322",
+            "ror": "https://ror.org/01t3wyv61",
+            "display_name": "National Institute for Fusion Science",
+            "geo": {
+              "city": "Toki",
+              "geonames_city_id": "1850207",
+              "region": null,
+              "country_code": "JP",
+              "country": "Japan",
+              "latitude": 35.349998474121094,
+              "longitude": 137.18333435058594
+            },
+            "works_count": 42653972,
+            "counts_by_year": [
+              {
+                "year": 2026,
+                "works_count": 13703362,
+                "oa_works_count": 13703329,
+                "cited_by_count": 93
+              },
+              {
+                "year": 2025,
+                "works_count": 18940306,
+                "oa_works_count": 18940240,
+                "cited_by_count": 444
+              },
+              {
+                "year": 2024,
+                "works_count": 10000450,
+                "oa_works_count": 10000393,
+                "cited_by_count": 1179
+              },
+              {
+                "year": 2023,
+                "works_count": 272,
+                "oa_works_count": 233,
+                "cited_by_count": 1235
+              },
+              {
+                "year": 2022,
+                "works_count": 285,
+                "oa_works_count": 225,
+                "cited_by_count": 2227
+              },
+              {
+                "year": 2021,
+                "works_count": 314,
+                "oa_works_count": 266,
+                "cited_by_count": 2951
+              },
+              {
+                "year": 2020,
+                "works_count": 322,
+                "oa_works_count": 244,
+                "cited_by_count": 804757
+              },
+              {
+                "year": 2019,
+                "works_count": 343,
+                "oa_works_count": 267,
+                "cited_by_count": 4764
+              },
+              {
+                "year": 2018,
+                "works_count": 351,
+                "oa_works_count": 238,
+                "cited_by_count": 5180
+              },
+              {
+                "year": 2017,
+                "works_count": 335,
+                "oa_works_count": 215,
+                "cited_by_count": 4856
+              },
+              {
+                "year": 2016,
+                "works_count": 329,
+                "oa_works_count": 234,
+                "cited_by_count": 4738
+              },
+              {
+                "year": 2015,
+                "works_count": 323,
+                "oa_works_count": 184,
+                "cited_by_count": 4928
+              },
+              {
+                "year": 2014,
+                "works_count": 385,
+                "oa_works_count": 189,
+                "cited_by_count": 5690
+              },
+              {
+                "year": 2013,
+                "works_count": 365,
+                "oa_works_count": 197,
+                "cited_by_count": 5192
+              },
+              {
+                "year": 2012,
+                "works_count": 335,
+                "oa_works_count": 195,
+                "cited_by_count": 3624
+              },
+              {
+                "year": 2011,
+                "works_count": 381,
+                "oa_works_count": 162,
+                "cited_by_count": 4219
+              },
+              {
+                "year": 2010,
+                "works_count": 514,
+                "oa_works_count": 219,
+                "cited_by_count": 6518
+              }
+            ],
+            "lineage": [
+              "https://openalex.org/I1319490839",
+              "https://openalex.org/I199525922",
+              "https://openalex.org/I4210108322"
+            ]
+          },
+          {
+            "id": "https://openalex.org/I1294671590",
+            "ror": "https://ror.org/02feahw73",
+            "display_name": "Centre National de la Recherche Scientifique",
+            "geo": {
+              "city": "Paris",
+              "geonames_city_id": "2988507",
+              "region": "Île-de-France",
+              "country_code": "FR",
+              "country": "France",
+              "latitude": 48.85341,
+              "longitude": 2.3488
+            },
+            "works_count": 1739576,
+            "counts_by_year": [
+              {
+                "year": 10000,
+                "works_count": 16,
+                "oa_works_count": 16,
+                "cited_by_count": 43
+              },
+              {
+                "year": 2028,
+                "works_count": 1,
+                "oa_works_count": 1,
+                "cited_by_count": 0
+              },
+              {
+                "year": 2027,
+                "works_count": 3,
+                "oa_works_count": 3,
+                "cited_by_count": 5
+              },
+              {
+                "year": 2026,
+                "works_count": 91045,
+                "oa_works_count": 79024,
+                "cited_by_count": 26022
+              },
+              {
+                "year": 2025,
+                "works_count": 97906,
+                "oa_works_count": 80519,
+                "cited_by_count": 203733
+              },
+              {
+                "year": 2024,
+                "works_count": 91087,
+                "oa_works_count": 77083,
+                "cited_by_count": 480619
+              },
+              {
+                "year": 2023,
+                "works_count": 88934,
+                "oa_works_count": 75287,
+                "cited_by_count": 739836
+              },
+              {
+                "year": 2022,
+                "works_count": 80095,
+                "oa_works_count": 62886,
+                "cited_by_count": 1046076
+              },
+              {
+                "year": 2021,
+                "works_count": 80976,
+                "oa_works_count": 62824,
+                "cited_by_count": 1444132
+              },
+              {
+                "year": 2020,
+                "works_count": 73783,
+                "oa_works_count": 56125,
+                "cited_by_count": 1944427
+              },
+              {
+                "year": 2019,
+                "works_count": 66760,
+                "oa_works_count": 46801,
+                "cited_by_count": 1859401
+              },
+              {
+                "year": 2018,
+                "works_count": 75445,
+                "oa_works_count": 51249,
+                "cited_by_count": 2006872
+              },
+              {
+                "year": 2017,
+                "works_count": 62453,
+                "oa_works_count": 37097,
+                "cited_by_count": 2036205
+              },
+              {
+                "year": 2016,
+                "works_count": 61675,
+                "oa_works_count": 34544,
+                "cited_by_count": 2150944
+              },
+              {
+                "year": 2015,
+                "works_count": 58732,
+                "oa_works_count": 30881,
+                "cited_by_count": 2080886
+              },
+              {
+                "year": 2014,
+                "works_count": 55531,
+                "oa_works_count": 27678,
+                "cited_by_count": 2136823
+              },
+              {
+                "year": 2013,
+                "works_count": 52409,
+                "oa_works_count": 25865,
+                "cited_by_count": 2160494
+              },
+              {
+                "year": 2012,
+                "works_count": 50972,
+                "oa_works_count": 23564,
+                "cited_by_count": 2110272
+              },
+              {
+                "year": 2011,
+                "works_count": 47297,
+                "oa_works_count": 21307,
+                "cited_by_count": 2110291
+              },
+              {
+                "year": 2010,
+                "works_count": 45058,
+                "oa_works_count": 20170,
+                "cited_by_count": 2063123
+              }
+            ],
+            "lineage": ["https://openalex.org/I1294671590"]
+          }
+        ],
+        "group_by": []
+      }
+    },
+    {
+      "url": "https://api.openalex.org/works?filter=institutions.id:I4210108322,publication_year:2025&group_by=type&per_page=100",
+      "sha256": "84f2e4a9796f66e2cc143691f2d39cf4ef9beed2712c86ec81c680856f3d3f04",
+      "response": {
+        "meta": {
+          "count": 388273,
+          "db_response_time_ms": 16,
+          "page": 1,
+          "per_page": 100,
+          "groups_count": 8,
+          "x_query": {
+            "oql": "get works where exact institution is (I4210108322) and published in 2025;\nthen, group those works by type",
+            "oqo": {
+              "get_rows": "works",
+              "filter_rows": [
+                {
+                  "column_id": "authorships.institutions.id",
+                  "value": "I4210108322"
+                },
+                {
+                  "column_id": "publication_year",
+                  "value": 2025
+                }
+              ],
+              "group_by": [
+                {
+                  "column_id": "type"
+                }
+              ]
+            },
+            "url": "/works?filter=authorships.institutions.id:I4210108322,publication_year:2025&group_by=type&per_page=100"
+          },
+          "cost_usd": 0.0001
+        },
+        "group_by": [
+          {
+            "key": "https://openalex.org/types/dataset",
+            "key_display_name": "dataset",
+            "count": 376341
+          },
+          {
+            "key": "https://openalex.org/types/other",
+            "key_display_name": "other",
+            "count": 11632
+          },
+          {
+            "key": "https://openalex.org/types/article",
+            "key_display_name": "article",
+            "count": 256
+          },
+          {
+            "key": "https://openalex.org/types/preprint",
+            "key_display_name": "preprint",
+            "count": 24
+          },
+          {
+            "key": "https://openalex.org/types/conference-paper",
+            "key_display_name": "conference-paper",
+            "count": 13
+          },
+          {
+            "key": "https://openalex.org/types/erratum",
+            "key_display_name": "erratum",
+            "count": 5
+          },
+          {
+            "key": "https://openalex.org/types/book-chapter",
+            "key_display_name": "book-chapter",
+            "count": 1
+          },
+          {
+            "key": "https://openalex.org/types/review",
+            "key_display_name": "review",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://api.openalex.org/works?filter=institutions.id:I4210108322,publication_year:2025&corpus=all&group_by=type&per_page=100",
+      "sha256": "3cd21bb0a6cbc72003eb837cc0c7ccb3a6cb433f42ef924fead619be664a292c",
+      "response": {
+        "meta": {
+          "count": 18940301,
+          "db_response_time_ms": 16,
+          "page": 1,
+          "per_page": 100,
+          "groups_count": 9,
+          "x_query": {
+            "oql": "get works (all corpora) where exact institution is (I4210108322)\n  and published in 2025;\nthen, group those works by type",
+            "oqo": {
+              "get_rows": "works",
+              "corpus": "all",
+              "filter_rows": [
+                {
+                  "column_id": "authorships.institutions.id",
+                  "value": "I4210108322"
+                },
+                {
+                  "column_id": "publication_year",
+                  "value": 2025
+                }
+              ],
+              "group_by": [
+                {
+                  "column_id": "type"
+                }
+              ]
+            },
+            "url": "/works?filter=authorships.institutions.id:I4210108322,publication_year:2025&corpus=all&group_by=type&per_page=100"
+          },
+          "cost_usd": 0.0001
+        },
+        "group_by": [
+          {
+            "key": "https://openalex.org/types/dataset",
+            "key_display_name": "dataset",
+            "count": 18099827
+          },
+          {
+            "key": "https://openalex.org/types/other",
+            "key_display_name": "other",
+            "count": 840169
+          },
+          {
+            "key": "https://openalex.org/types/article",
+            "key_display_name": "article",
+            "count": 260
+          },
+          {
+            "key": "https://openalex.org/types/preprint",
+            "key_display_name": "preprint",
+            "count": 24
+          },
+          {
+            "key": "https://openalex.org/types/conference-paper",
+            "key_display_name": "conference-paper",
+            "count": 13
+          },
+          {
+            "key": "https://openalex.org/types/erratum",
+            "key_display_name": "erratum",
+            "count": 5
+          },
+          {
+            "key": "https://openalex.org/types/book-chapter",
+            "key_display_name": "book-chapter",
+            "count": 1
+          },
+          {
+            "key": "https://openalex.org/types/review",
+            "key_display_name": "review",
+            "count": 1
+          },
+          {
+            "key": "https://openalex.org/types/software",
+            "key_display_name": "software",
+            "count": 1
+          }
+        ]
+      }
+    }
+  ]
+}
