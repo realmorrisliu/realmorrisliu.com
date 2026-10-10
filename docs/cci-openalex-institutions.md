@@ -123,3 +123,11 @@ pnpm exec <research-python> -B scripts/cci_openalex_institutions.py --cache <sna
 各项可重叠，不能相加；没有 affiliation 记录也不直接证明出版者原始作品没有单位信息。此样本的逐条文本匹配 ID 并集与平铺机构 ID 集合未发现不一致，但这不是全库保证。样本选择为最大文件的首个行组，不用于估计全球缺失率。输出保留问题作品 ID、作者位置、机构 ID 和父子关系例子，便于回查。
 
 后续城市归属必须保留未知部分；多城市和父子机构重叠进入歧义审查，不能把未知份额重新分给已知城市，也不能仅凭父子关系删除可能真实存在的双重单位。当前只识别这些情况，没有生成合作分摊值。复算：`pnpm exec <research-python> -B scripts/cci_openalex_affiliation_audit.py <verified-four-column-projection.parquet>`。相关测试验证未知不重分配、父子／跨城歧义、目录缺失与匹配差异的区分，以及不完整作者列表拒绝；59 项研究测试通过。
+
+### 完整目录中的跨城市谱系
+
+[谱系地点表](data/cci-openalex-hierarchy-locations.csv)和[校验汇总](data/cci-openalex-hierarchy-locations.json)进一步覆盖全部 136,136 条冻结机构记录：将每条记录关联到其非自身的 `lineage` ID，对祖先及后代的目录 FUA 点去重。有后代记录的祖先 ID 共 6,410 个，均在同版目录中；其中 3,008 个谱系涉及多个目录 FUA，1,319 个谱系至少有一个已入目录成员没有唯一 FUA 点匹配。后两项可重叠。
+
+例如，CNRS 的 1,513 条后代记录与自身共涉及 103 个目录 FUA。这证明按机构汇总计数再落到单一总部坐标会混合不同地点；它不证明每个地点在目标年份都有科研产出，也不是 CNRS 的真实研究场所清单。谱系关系还可能包含上级祖先与合并后的继承机构，不应仅解释为直接下属或当前校区。
+
+该表用于作品归属的歧义检查，不据此排除机构，也不把一个谱系的产出平分到全部目录地点。只出现一个 FUA、没有后代记录或目录点缺失，都不能证明是单一校区。复算：`pnpm exec <research-python> -B scripts/cci_openalex_hierarchy.py`。测试覆盖重复谱系／同城点去重、未定位成员保留，以及缺失祖先不继承后代地点；61 项研究测试通过。

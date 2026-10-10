@@ -1,0 +1,13 @@
+{
+  "status": "complete_directory_hierarchy_diagnostic_not_work_attribution",
+  "directoryRecords": 136136,
+  "ancestorIds": 6410,
+  "ancestorsMissingFromDirectory": 0,
+  "hierarchiesWithMultipleDirectoryFuas": 3008,
+  "hierarchiesWithUnlocatedKnownMembers": 1319,
+  "directorySha256": "b59735ba074e3e1b8e05f1d08bd672ef1d1ec219303cd9a788c93fc2a5e798ed",
+  "csvSha256": "c292f122fc0e3045080a59e5e2216977ffd6eef4bc7245e24bfe72c60dd9e99e",
+  "scriptSha256": "6ba10149875d5e5f3d8ee8a97bd0c4b988811d59d0e645f4c92403b506d94333",
+  "method": "Each non-self lineage ID receives distinct descendant directory records. Count unique directory FUA points among ancestor plus descendants; no paper counts used.",
+  "limitations": "Hierarchy includes ancestral and successor relationships from the frozen source, not only direct parent-child links. Multiple points demonstrate possible location ambiguity, not where any work occurred. A single point or no listed descendants does not prove a single-campus institution. Missing directory or FUA matches remain unknown. No institutions excluded and no city output assigned."
+}
