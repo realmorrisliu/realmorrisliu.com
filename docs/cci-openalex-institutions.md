@@ -162,6 +162,8 @@ pnpm exec <research-python> -B scripts/cci_openalex_institutions.py --cache <sna
 
 全量入口为 `pnpm exec <research-python> -B scripts/cci_openalex_work_authorships.py --filters <filter-projection-cache> --footers <footer-cache> --output <authorship-cache>`，要求筛选集合先产生完整且唯一的审计结果，否则拒绝启动。当前全量筛选尚未完成，未启动全库单位提取；本次通过函数直接实跑一个已完成筛选的分区。新增测试覆盖整分区保留不完整列表、缓存复用与损坏拒绝、空分区零请求；66 项研究测试及 `pnpm check` 通过。共用读取函数重构后，单行组远端独立对照也已重跑通过。
 
+后续已将同一分区函数用于当时全部 839 个已完成筛选的分区，启动两个线程的提前提取批次；队列按完成的来源分区产生，不按城市、国家或作品表现选择。批次队列与结果使用独立缓存记录，不生成全量 `manifest.json`。这使筛选和单位提取可以衔接运行，但不绕过最终验收：完整筛选集合的唯一性审计、全部分区单位提取和总记录对账仍须完成，正式全量入口届时复用通过版本与哈希检查的分区缓存。
+
 ### 计量方法参照与当前数据用途
 
 2026-10-10 核查 [CWTS Leiden Open Edition 2025 指标方法](https://open.leidenranking.com/information/indicators)：其最新发表窗口是 2020–2023，引用截至 2024 年底；科研影响比较区分完整计数与分数计数，并提供按领域和发表年份归一化的指标。其“核心论文”另有语言与来源条件，**不等同于 OpenAlex `corpus=core` 或 `is_xpac=false`**。不能混用两个 core 定义，或将本批 2025 年作品数量称为已校正的科研影响。
