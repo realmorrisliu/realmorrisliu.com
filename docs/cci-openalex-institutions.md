@@ -91,3 +91,11 @@ pnpm exec <research-python> -B scripts/cci_openalex_institutions.py --cache <sna
 以上是元数据中的压缩列块之和，不是已经下载的作品量、实际网络传输量或完整下载预算；页脚读取共 287,962,042 字节，也不能替代全文件哈希。下一步采用两阶段读取：先取得筛选列并核验实际年份、类型、语料及撤稿状态，再读取所需行组的单位列。按行组读取仍可能包含大量不符合条件的作品，不能将筛选后记录比例直接当成网络节省比例。
 
 复算命令：`pnpm exec <research-python> -B scripts/cci_openalex_works_metadata.py --manifest <frozen-works-manifest.json> --cache <footer-cache>`。新增测试验证年份统计缺失时保留行组、仅跳过不相交年份区间，以及缓存年份与校验和不符时拒绝读取。此阶段完成的是获取路径核验，尚未形成全球作品底表或城市知识产出值。
+
+### 作品级筛选列实读
+
+`cci_openalex_work_filters.py` 根据冻结页脚按范围读取六个筛选列，以稀疏临时文件交给现有 Parquet 解码器；无关列不读取。每次请求校验 ETag、范围和长度，逐行组对账行数，每个分区对账读取字节数。输出保留所有 2025 年类型、语料及撤稿状态，包括未知标识，并保留原分区、行组与行内位置，供后续单位数据关联。分区内无效或重复作品 ID 会拒绝输出；跨分区去重仍需单独完成。
+
+[实读核验](data/cci-openalex-filter-probe.json)沿用此前最大的快照文件：400,000 条记录完整投影后得到 13,882 条 2025 年记录，读取筛选列块 4,609,552 字节。其中第一个行组的 937 条目标年份记录，与此前独立保存的四列投影按 ID、年份、作者数逐条一致。该文件不是代表性抽样，不能据此估计全球年份分布、类型分布或城市产出。
+
+全量读取命令：`pnpm exec <research-python> -B scripts/cci_openalex_work_filters.py --footers <footer-cache> --output <filter-projection-cache>`。成功分区各有 Parquet 及 SHA-256 清单；失败项显式报告，重跑复用已校验缓存。只有全分区成功且总行数对账通过，才产生全量 `manifest.json`。本次已启动全量任务，尚未取得全量完成结果。新增三项测试覆盖与完整读取的逐值对照、位置／未知标识保留、截断与重复拒绝、无关年份零请求；55 项研究测试通过。
