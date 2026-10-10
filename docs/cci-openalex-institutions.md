@@ -198,4 +198,12 @@ pnpm exec <research-python> -B scripts/cci_openalex_institutions.py --cache <sna
 
 集合保留全部类型与语料：其中 24,175,918 条类型为 dataset，1,999,051 条为 article；不能将全部记录称为论文。记录顺序和缓存完成时间不是代表性抽样，也不能据此推算全球类型占比。此结果不能与另一时间点、默认 core 的在线 API 总量直接对账。作者人数是合法数值也不证明作者列表或单位完整。
 
-复核时，按审计中的 `partitions` 索引选取冻结元数据行，使用原筛选提取脚本生成或验证缓存；将每个缓存清单的 `sourceHash`、`parquetSha256`、`year2025Rows` 与审计条目逐一比较，再向 `cci_openalex_filter_audit.audit(partitions, cache)` 传入这些完整缓存清单。若缓存或来源不符，不能复用本次结论。完整 2,040 个分区的唯一性审计仍未完成；未读入的分区仍可能引入重复或计数问题，因此此文件不会作为全库作者提取入口要求的完整审计文件。
+复核时，按审计中的 `partitions` 索引选取冻结元数据行，使用原筛选提取脚本生成或验证缓存；将每个缓存清单的 `sourceHash`、`parquetSha256`、`year2025Rows` 与审计条目逐一比较，再向 `cci_openalex_filter_audit.audit(partitions, cache)` 传入这些完整缓存清单。若缓存或来源不符，不能复用本次结论。当时完整 2,040 个分区的唯一性审计尚未完成，因此此部分快照不会作为全库作者提取入口要求的完整审计文件；最新完整结果见下节。
+
+### 全量年份筛选与唯一性审计完成
+
+2026-10-10，全部 2,040 个分区筛选成功，覆盖冻结元数据中 459,294,412 条可能包含目标年份的来源行，读取 4,894,017,968 字节筛选列数据。完整清单生成后，`cci_openalex_filter_audit.py` 实读每份筛选 Parquet，核验哈希、年份、原始位置和逐分区类型／语料／撤稿计数，并以跨分区 SQLite 唯一约束检查作品 ID 和来源位置。[完整审计](data/cci-openalex-filter-inventory.json)结果为 45,069,447 条 2025 年记录及同数唯一 OpenAlex ID；未知和非法声明作者人数均为零。清单、冻结元数据与审计脚本哈希已再次核对。
+
+其中 25,158,414 条为 dataset、8,447,754 条为 article；其他类型和各语料、撤稿状态完整保留在分类计数中，不将全部记录称为论文，也不将 `type=retraction` 与 `is_retracted` 混同。ID 唯一性不证明同一成果的不同版本已去重，合法声明人数不证明作者或单位列表完整，2025 年记录也不是 2026 年城市能力的直接测量。
+
+复算命令为 `pnpm exec <research-python> -B scripts/cci_openalex_filter_audit.py --cache <filter-projection-cache>`，输入完整 `manifest.json` 与其全部 Parquet；完成后核对输出哈希引用及总数。两批互不重叠的作者单位提前提取仍在运行，须等待它们终止再启动全量入口，以免同一缓存出现并发写入。筛选审计完成解除了该入口的一项前置条件，尚未完成全库作者单位验收、城市归属、贡献分摊或 CCI 评分。
