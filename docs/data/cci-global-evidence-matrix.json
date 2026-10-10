@@ -44,6 +44,19 @@
   "scoreStatusCounts": {
     "not_computed_under_global_protocol": 9031
   },
+  "local2026Screening": {
+    "targetYear": 2026,
+    "evidenceCutoff": "2026-10-10",
+    "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+    "conditionalCaseCount": 2,
+    "unassessedCount": 9029,
+    "retainedCount": 9031,
+    "supportedExclusionCount": 0,
+    "statusCounts": {
+      "retained_no_supported_exclusion": 9031
+    },
+    "meaning": "Whole-scope exclusion screening of assembled evidence, not full city evaluation. Partial sources and conditional calibration scores establish no whole-dimension exclusion bound or qualified 32nd-place threshold. All candidates remain possible competitors; no exclusions or ranking eligibility granted."
+  },
   "notAssembledMeaning": "Existing sources may contain relevant fields, but no qualified whole-candidate measurement has been assembled here.",
   "historicalMeaning": "Historical city research references are not global-protocol scores; union members do not inherit duplicated scores.",
   "subpillarSupport": {
@@ -115,8 +128,18 @@
       "sha256": "498fa0e4371aab23e0564c66295e4b8c1b08a5b25aebf7ee616f44fa1468ebb8",
       "provenance": "cci-ourairports-fua-audit.json",
       "provenanceSha256": "181521e4b201c6ebda62183e0beba0b713cd3dfbd5fc2d3ce07496c209f943c4"
+    },
+    "cci-local-2026-singapore-case.json": {
+      "sha256": "c8fef56c88c6fdcc0e52151be35229b4c35c91589c7fe987da0eea371014ba34",
+      "provenance": "cci-local-2026-singapore-case.md",
+      "provenanceSha256": "dbb71501d51f2770db4a39cc23f9c4ff6b468510d6a07c93a87c229a9539de0a"
+    },
+    "cci-local-2026-london-case.json": {
+      "sha256": "c1b88740cbafea92cc9b2a99881f3360f4199544b77d4fc184ed34a9ae434f66",
+      "provenance": "cci-local-2026-london-case.md",
+      "provenanceSha256": "8ddf06116b3684fc5fad197e3d7a89f074474669f44d701a7f653db52f3611ff"
     }
   },
-  "scriptSha256": "eb3a917e341923e53d3c25afd857bf31977376f9d3f8d84669897672670ece7c",
-  "csvSha256": "55fa2f79d58b7c3d5a8a9ee41aa209f6ae601fa8fa924d346979f23d87117d3f"
+  "scriptSha256": "db9602881546bdd414add7ed6a67d381ba93c336625cc8ea456be83cfbc4f461",
+  "csvSha256": "a99472b45dd86ea9ad5d55fee41f987590a5e5ec7579382559c43000cd94d92d"
 }

@@ -1,8 +1,22 @@
 import unittest
-from cci_global_evidence_matrix import indexed, matrix, network_coverage
+import json
+from pathlib import Path
+from cci_global_evidence_matrix import indexed, local_cases, matrix, network_coverage
 
 
 class EvidenceMatrixTest(unittest.TestCase):
+    def test_conditional_cases_do_not_grant_exclusion_or_ranking(self):
+        case = json.loads((Path(__file__).resolve().parents[1] / 'docs/data/cci-local-2026-london-case.json').read_text())
+        self.assertEqual(local_cases([case], {'5288'})['5288']['expectedConditionalTotal'], 58)
+        with self.assertRaisesRegex(ValueError, 'Unknown or duplicate'):
+            local_cases([case], {'1'})
+        with self.assertRaisesRegex(ValueError, 'Unknown or duplicate'):
+            local_cases([case, case], {'5288'})
+        with self.assertRaisesRegex(ValueError, 'protocol mismatch'):
+            local_cases([{**case, 'status': 'ranking_eligible'}], {'5288'})
+        with self.assertRaisesRegex(ValueError, 'protocol mismatch'):
+            local_cases([{**case, 'evidenceCutoff': '2026-10-11'}], {'5288'})
+
     def test_missing_or_duplicated_candidate_is_rejected(self):
         with self.assertRaises(ValueError):
             indexed([{"efua_id": "1"}], {"1", "2"})
@@ -38,6 +52,15 @@ class EvidenceMatrixTest(unittest.TestCase):
         self.assertEqual(row["RES"], "country_urban_water_context_only")
         self.assertEqual(row["historical_research_scope"], "union_member_only")
         self.assertEqual(row["cci_score_status"], "not_computed_under_global_protocol")
+        self.assertEqual(row['local2026_case_status'], 'unassessed')
+        self.assertEqual(row['local2026_screening_status'], 'retained_no_supported_exclusion')
+        case = json.loads((Path(__file__).resolve().parents[1] / 'docs/data/cci-local-2026-london-case.json').read_text())
+        case['candidateId'] = 1
+        reviewed = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, [case])[0]
+        self.assertEqual(reviewed['local2026_case_status'], 'conditional_calibration_not_ranking')
+        self.assertEqual(reviewed['local2026_retention_reason'], 'conditional_scores_not_exclusion_bounds')
+        self.assertEqual(reviewed['local2026_screening_status'], 'retained_no_supported_exclusion')
+        self.assertEqual(reviewed['cci_score_status'], 'not_computed_under_global_protocol')
         with self.assertRaises(ValueError):
             network_coverage(network[:1], {'1'})
         network[0].update(centroid_tiles='1', boundary_tiles='1', centroid_avg_d_kbps_valid_tests='2', centroid_avg_d_kbps_test_weighted_mean='100')

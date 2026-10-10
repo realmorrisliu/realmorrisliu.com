@@ -22,6 +22,25 @@ def indexed(rows, expected):
     return result
 
 
+def local_cases(cases, expected):
+    result = {}
+    for case in cases:
+        key = str(case['candidateId'])
+        if key not in expected or key in result:
+            raise ValueError('Unknown or duplicate local case candidate')
+        if (case['status'] != 'real_conditional_calibration_case_not_ranking'
+                or case['targetYear'] != 2026 or case['evidenceCutoff'] != '2026-10-10'
+                or case['residentPerspective'] != 'local_citizen_ordinary_resident_median_income_usual_coverage'
+                or case['boundaryVersion'] != 'GHS-FUA R2019A'):
+            raise ValueError('Local case protocol mismatch')
+        if Counter(d['id'] for d in case['dimensions']) != Counter(DIMENSIONS):
+            raise ValueError('Local case needs exactly eight dimensions')
+        if not all(d['score'] in (20, 40, 60, 80) and d['rationale'] and d['assumption'] for d in case['dimensions']):
+            raise ValueError('Local case needs anchored conditional judgments')
+        result[key] = case
+    return result
+
+
 def network_coverage(rows, expected):
     if any(row['connection_type'] not in ('fixed', 'mobile') for row in rows):
         raise ValueError('Unknown network connection type')
@@ -51,13 +70,14 @@ def network_coverage(rows, expected):
     return result
 
 
-def matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports):
+def matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports, cases=()):
     expected = {r["efua_id"] for r in candidates}
     if len(expected) != len(candidates):
         raise ValueError("Duplicate universe IDs")
     history, spatial, violence, healthcare, governance, seismic, water, wup, airports = [
         indexed(rows, expected) for rows in (history, spatial, violence, healthcare, governance, seismic, water, wup, airports)]
     network = network_coverage(network, expected)
+    cases = local_cases(cases, expected)
     rows = []
     for candidate in candidates:
         key = candidate["efua_id"]
@@ -118,6 +138,10 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
             "wgi_country_dimensions_available": context_count,
             "wgi_lookup_economy_code": g["lookup_economy_code"],
             "cci_score_status": "not_computed_under_global_protocol",
+            "local2026_case_status": 'conditional_calibration_not_ranking' if key in cases else 'unassessed',
+            "local2026_case_review": cases[key]['evidenceReview'] if key in cases else '',
+            "local2026_screening_status": 'retained_no_supported_exclusion',
+            "local2026_retention_reason": 'conditional_scores_not_exclusion_bounds' if key in cases else 'partial_sources_do_not_bound_whole_dimensions',
         })
     return rows
 
@@ -149,7 +173,18 @@ def main():
     network = read("cci-ookla-efua-sampled-measurements.csv", "cci-ookla-efua-sampled-measurements.json", "csvSha256")
     wup = read("cci-wup-2025-fua-coverage.csv", "cci-wup-2025-crosswalk.json", "outputs", True)
     airports = read("cci-ourairports-efua-coverage.csv", "cci-ourairports-fua-audit.json", "outputs", True)
-    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports)
+    cases = []
+    for city in ('singapore', 'london'):
+        path = folder / f'cci-local-2026-{city}-case.json'
+        case = json.loads(path.read_text())
+        review = ROOT / 'docs' / case['evidenceReview']
+        if review.parent != ROOT / 'docs' or not review.is_file():
+            raise ValueError('Local case review must be an existing document')
+        inputs[path.name] = {'sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
+                             'provenance': review.name,
+                             'provenanceSha256': hashlib.sha256(review.read_bytes()).hexdigest()}
+        cases.append(case)
+    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports, cases)
     output = folder / "cci-global-evidence-matrix.csv"
     with output.open("w", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
@@ -162,6 +197,15 @@ def main():
         "boundaryMeaning": "Centre intersections describe geometric coverage only. UCDB and WUP are separate sources; their IDs and counts cannot be merged directly. Zero intersections do not exclude a candidate or imply a score.",
         "dimensionStatusCounts": {d: dict(Counter(r[d] for r in rows)) for d in DIMENSIONS},
         "scoreStatusCounts": dict(Counter(r["cci_score_status"] for r in rows)),
+        "local2026Screening": {
+            "targetYear": 2026, "evidenceCutoff": "2026-10-10",
+            "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+            "conditionalCaseCount": len(cases),
+            "unassessedCount": sum(r['local2026_case_status'] == 'unassessed' for r in rows),
+            "retainedCount": len(rows), "supportedExclusionCount": 0,
+            "statusCounts": dict(Counter(r['local2026_screening_status'] for r in rows)),
+            "meaning": "Whole-scope exclusion screening of assembled evidence, not full city evaluation. Partial sources and conditional calibration scores establish no whole-dimension exclusion bound or qualified 32nd-place threshold. All candidates remain possible competitors; no exclusions or ranking eligibility granted.",
+        },
         "notAssembledMeaning": "Existing sources may contain relevant fields, but no qualified whole-candidate measurement has been assembled here.",
         "historicalMeaning": "Historical city research references are not global-protocol scores; union members do not inherit duplicated scores.",
         "subpillarSupport": {"PCS": ["geophysical: reference-rock seismic hazard only, not building losses"],

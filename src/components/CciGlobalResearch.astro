@@ -5,7 +5,10 @@ import wup from "../../docs/data/cci-wup-2025-crosswalk.json";
 import institutions from "../../docs/data/cci-openalex-institution-source.json";
 import works from "../../docs/data/cci-openalex-filter-inventory.json";
 import airports from "../../docs/data/cci-ourairports-fua-audit.json";
+import singapore from "../../docs/data/cci-local-2026-singapore-case.json";
+import london from "../../docs/data/cci-local-2026-london-case.json";
 import { cciCopy } from "@/cci/copy";
+import { DIMENSIONS } from "@/cci/model";
 
 interface Props {
   currentLang: "en" | "zh";
@@ -15,6 +18,11 @@ const { currentLang } = Astro.props;
 const zh = currentLang === "zh";
 const n = (value: number) => value.toLocaleString(zh ? "zh-CN" : "en-GB");
 const counts = coverage.dimensionStatusCounts;
+const cases = [singapore, london];
+const screening = coverage.local2026Screening;
+if (cases.length !== screening.conditionalCaseCount) {
+  throw new Error("Local calibration case count disagrees with the global matrix");
+}
 const rows = [
   [
     "PCS",
@@ -98,6 +106,94 @@ const rows = [
         zh
           ? "后续分别评价当地普通居民与跨国迁居者，沿用八维权重，各自审查入围名单，不合成单一榜单。跨国视角的基准人物参数仍待明确；当前发布未应用这两种视角。"
           : "Future assessments will distinguish ordinary local residents from international movers, retaining the eight weights and reviewing each shortlist separately. The mover profile remains unspecified; neither perspective has been applied to the current release."
+      }
+    </p>
+  </div>
+  <div id="local-calibration">
+    <h3>{zh ? "当地居民评分校准" : "Local-resident scoring calibration"}</h3>
+    <p>
+      {
+        zh
+          ? "口径为 2026 年、本国公民、通常长期居住、当地中位收入和通常医保；证据截止 2026-10-10。两份案例逐项审阅了八维及全部 31 个子支柱，部分判断依赖明确假设，尚不表示每项均有充分测量。"
+          : "These cases assess local citizens who usually reside in the city, at median local income and with usual healthcare coverage, in 2026. The evidence cutoff is 10 October 2026. Each reviews all eight dimensions and 31 subpillars; some judgments depend on explicit assumptions, and not every item is fully measured."
+      }
+    </p>
+    <div
+      class="cci-table-scroll"
+      tabindex="0"
+      aria-label={zh ? "条件性评分案例" : "Conditional scoring cases"}
+    >
+      <table>
+        <caption
+          >{
+            zh
+              ? "条件性成绩单 · 用于校准，不是排名"
+              : "Conditional scorecards · calibration, not a ranking"
+          }</caption
+        >
+        <thead>
+          <tr>
+            <th scope="col">{zh ? "维度／原权重" : "Dimension / original weight"}</th>
+            <th scope="col">{zh ? "新加坡" : "Singapore"}</th>
+            <th scope="col">{zh ? "伦敦" : "London"}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            DIMENSIONS.map(dimension => (
+              <tr>
+                <th scope="row">
+                  {dimension.id} · {cciCopy[currentLang].dimensions[dimension.id].name} ·{" "}
+                  {dimension.weight}%
+                </th>
+                {cases.map(city => (
+                  <td>{city.dimensions.find(d => d.id === dimension.id)?.score ?? "—"}</td>
+                ))}
+              </tr>
+            ))
+          }
+          <tr>
+            <th scope="row">{zh ? "条件性总分" : "Conditional total"}</th>
+            {cases.map(city => <td>{city.expectedConditionalTotal}</td>)}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      {
+        zh
+          ? "两城同为 58，不证明能力相等或稳定并列。医疗等待不能仅因超出行政目标就自动取 40；科研强不能代替居民扩散；长期迁居权不能覆盖交通、资金及通信的全部退出条件。长寿路径的代表性假设最需挑战：若不接受该假设，LON 应保持未定，总分中心也应为空。"
+          : "Both conditional totals are 58; this does not establish equal capability or a stable tie. Missing an administrative waiting target does not automatically imply MED 40; strong research does not establish resident diffusion, and residence rights do not cover every transport, financial or communication condition. Longevity pathway representativeness is the weakest assumption: rejecting it leaves LON unresolved and removes the total's central estimate."
+      }
+    </p>
+    <p>
+      {
+        zh
+          ? "在伦敦 MED 40、OPT 80 的条件情景下，原权重总分为 57；仅将 MED 的 5 个权重点移至 OPT，就变为 59，与新加坡该权重下的 58 比较，次序翻转。这是敏感性演算，不是已经取得的新证据，正式权重不变。"
+          : "In the conditional London scenario MED 40 / OPT 80, the original-weight total is 57. Moving five weight points from MED to OPT yields 59, reversing the order against Singapore's 58 under those weights. This is a sensitivity exercise, not newly established evidence; official weights remain unchanged."
+      }
+    </p>
+    <p>
+      {
+        zh
+          ? "查看支持、反证与假设："
+          : "Review supporting evidence, counterevidence and assumptions: "
+      }
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/ea5288b8441fe07c2a2e6485a6ed35a5e8903f24/docs/cci-local-2026-singapore-case.md"
+        >{zh ? "新加坡案例" : "Singapore case"}</a
+      >
+      {" · "}
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/ea5288b8441fe07c2a2e6485a6ed35a5e8903f24/docs/cci-local-2026-london-case.md"
+        >{zh ? "伦敦案例" : "London case"}</a
+      >
+    </p>
+    <p>
+      {
+        zh
+          ? `已对现有全量矩阵检视提前排除是否有依据：${n(screening.retainedCount)} 个候选全部保留，有依据的排除为 ${n(screening.supportedExclusionCount)}。其中 ${n(screening.conditionalCaseCount)} 个有条件性校准案例，${n(screening.unassessedCount)} 个尚无此类八维评价。筛查只检查现有证据能否排除候选，不等于完成全量评分；局部底表和条件性分数均不能作为可靠排除界限。下一步补证须覆盖仍可能改变入围结论的竞争者。`
+          : `An exclusion screen of the assembled matrix retains all ${n(screening.retainedCount)} candidates, with ${n(screening.supportedExclusionCount)} supported exclusions. ${n(screening.conditionalCaseCount)} have conditional calibration cases; ${n(screening.unassessedCount)} lack such eight-dimension reviews. This checks whether current evidence supports exclusion, not whether every city has been fully scored. Partial sources and conditional scores establish no reliable exclusion bounds. Further assessment must cover competitors that could change the shortlist.`
       }
     </p>
   </div>
