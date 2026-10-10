@@ -16,6 +16,7 @@ export default [
     ignores: [
       "**/dist/**",
       "**/.astro/**",
+      "**/.wrangler/**",
       "**/crates/**/target/**",
       "**/node_modules/**",
       "**/public/resume-typst-wasm/**",

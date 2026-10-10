@@ -1,0 +1,52 @@
+{
+  "candidateCount": 9031,
+  "researchCityCount": 32,
+  "referencedEfuaCount": 33,
+  "singleEfuaResearchCount": 31,
+  "unionMemberCount": 2,
+  "unresearchedEfuaCount": 8998,
+  "recordedIndicatorCount": 0,
+  "researchAuditCounts": {
+    "PCS": {
+      "usable_observation": 9,
+      "context_only": 23
+    },
+    "GSS": {
+      "context_only": 30,
+      "insufficient_evidence": 2
+    },
+    "ISR": {
+      "usable_observation": 8,
+      "context_only": 24
+    },
+    "RES": {
+      "usable_observation": 16,
+      "context_only": 16
+    },
+    "MED": {
+      "context_only": 22,
+      "usable_observation": 8,
+      "insufficient_evidence": 2
+    },
+    "LON": {
+      "insufficient_evidence": 7,
+      "usable_observation": 2,
+      "context_only": 23
+    },
+    "TEC": {
+      "context_only": 26,
+      "usable_observation": 5,
+      "insufficient_evidence": 1
+    },
+    "OPT": {
+      "usable_observation": 15,
+      "context_only": 17
+    }
+  },
+  "status": "evidence_inventory_not_global_ranking",
+  "researchReleaseId": "CCI-2026.10.3",
+  "researchReleaseFileSha256": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
+  "candidateCsvSha256": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
+  "coverageCsvSha256": "a705fcd814ca23dec92f53c1cbcc1fa329892027d7f1fe9c4bf543a5a915b6e7",
+  "interpretation": "Audit outcomes refer to the linked historical research city, not verified whole-FUA coverage. Union-member rows reference the same research once; counts are not duplicated. Recorded inputs are not automatically qualified measurements. Blank input counts mean not inventoried for this scope, not zero performance. No global eligibility or rank is inferred."
+}

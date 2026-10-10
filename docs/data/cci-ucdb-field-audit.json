@@ -1,0 +1,99 @@
+{
+  "status": "raw_values_not_semantic_coverage",
+  "sourceGeoPackageSha256": "56e60b7cbfc776b23493d5684aa5d0d7d6940fc3dd9a3881fa52599f20fd80fc",
+  "scriptSha256": "14b42b6eef367bf3554ce3df4e7fc7d28546efb3447405f01c2d6541232d46e2",
+  "profileCsvSha256": "c1678608725a48c057841993f7b1d3bffaa17a018e63a8e899c5605c8b8ed78d",
+  "tableCount": 16,
+  "tableFieldCount": 2910,
+  "uniqueFieldNames": 2811,
+  "duplicateTables": [
+    {
+      "table": "GHSL_UCDB_THEME_NATURAL_SYSTEMS_GLOBE_R2024A",
+      "duplicates": [
+        {
+          "id": 67,
+          "rowCount": 2,
+          "differentFields": {
+            "NS_TPA_PER_2025": [18.52957757, 0.043504036]
+          }
+        },
+        {
+          "id": 441,
+          "rowCount": 2,
+          "differentFields": {
+            "NS_TPA_PER_2025": [99.17602347, 0.021621701]
+          }
+        },
+        {
+          "id": 596,
+          "rowCount": 2,
+          "differentFields": {
+            "NS_TPA_PER_2025": [0.947715665, 0.905070254]
+          }
+        },
+        {
+          "id": 1521,
+          "rowCount": 2,
+          "differentFields": {
+            "NS_TPA_PER_2025": [0.423969425, 0.546282798]
+          }
+        },
+        {
+          "id": 2289,
+          "rowCount": 2,
+          "differentFields": {
+            "NS_TPA_PER_2025": [3.23960061, 0.179619376]
+          }
+        },
+        {
+          "id": 3063,
+          "rowCount": 2,
+          "differentFields": {
+            "NS_TPA_PER_2025": [0.122019635, 11.31269654]
+          }
+        },
+        {
+          "id": 3345,
+          "rowCount": 2,
+          "differentFields": {
+            "NS_TPA_PER_2025": [0.054906248, 8.661049908]
+          }
+        },
+        {
+          "id": 4299,
+          "rowCount": 2,
+          "differentFields": {
+            "NS_TPA_PER_2025": [0.206568478, 21.86626283]
+          }
+        },
+        {
+          "id": 4943,
+          "rowCount": 2,
+          "differentFields": {
+            "NS_TPA_PER_2025": [0.041406481, 0.002575917]
+          }
+        },
+        {
+          "id": 5257,
+          "rowCount": 2,
+          "differentFields": {
+            "NS_TPA_PER_2025": [0.088464678, 0.175959936]
+          }
+        },
+        {
+          "id": 6621,
+          "rowCount": 2,
+          "differentFields": {
+            "NS_TPA_PER_2025": [1.428052736, 0.104751338]
+          }
+        }
+      ]
+    }
+  ],
+  "healthCrossFieldMissingness": {
+    "countMissingButProximityPresent": 199,
+    "countPresentButProximityMissing": 2,
+    "interpretation": "Different fields and labelled years; no causal inference or imputation. Null hospital counts must not be converted to zero facilities."
+  },
+  "limitations": "Profiles count source rows, including duplicates. Unique IDs with values do not certify coverage: blanks, placeholders, model estimates and conflicting records need field-specific interpretation. Zero is retained, never converted to missing or good performance. Negative values are counted, not automatically rejected. No indicators transferred to eFUAs or scored."
+}

@@ -1,0 +1,17 @@
+{
+  "status": "candidate_universe_not_ranking",
+  "extractedAt": "2026-10-10",
+  "sourceUrl": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_FUA_UCDB2015_GLOBE_R2019A/V1-0/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.zip",
+  "sourceSha256": "d54de59b82b8c4d64a710f90ccd554975a3be92233f14115ac154094c3549979",
+  "geoPackageSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+  "query": "SELECT eFUA_ID, eFUA_name, Cntry_ISO, UC_IDs, FUA_area, FUA_p_2015 FROM GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0 ORDER BY eFUA_ID",
+  "rowCount": 9031,
+  "countryCodeCount": 188,
+  "csvSha256": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
+  "inclusionRule": "Every row in the frozen GHS-FUA R2019A V1.0 product; no additional population, GDP, geography, prior-sample or user-nomination filter.",
+  "limitations": [
+    "2015 modelled functional areas, not all settlements or 2026 observed commuting areas.",
+    "Population and area are candidate metadata, not CCI scores or ranking inputs.",
+    "No CCI scores, qualification, city crosswalk or polygon-overlap validation implied."
+  ]
+}
