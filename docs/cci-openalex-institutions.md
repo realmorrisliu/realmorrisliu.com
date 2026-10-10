@@ -131,3 +131,11 @@ pnpm exec <research-python> -B scripts/cci_openalex_institutions.py --cache <sna
 例如，CNRS 的 1,513 条后代记录与自身共涉及 103 个目录 FUA。这证明按机构汇总计数再落到单一总部坐标会混合不同地点；它不证明每个地点在目标年份都有科研产出，也不是 CNRS 的真实研究场所清单。谱系关系还可能包含上级祖先与合并后的继承机构，不应仅解释为直接下属或当前校区。
 
 该表用于作品归属的歧义检查，不据此排除机构，也不把一个谱系的产出平分到全部目录地点。只出现一个 FUA、没有后代记录或目录点缺失，都不能证明是单一校区。复算：`pnpm exec <research-python> -B scripts/cci_openalex_hierarchy.py`。测试覆盖重复谱系／同城点去重、未定位成员保留，以及缺失祖先不继承后代地点；61 项研究测试通过。
+
+### 必要作者单位列的投影等价性
+
+为验证后续只读必要列不会损坏作者列表，在已缓存的完整行组上执行[嵌套列对照](data/cci-openalex-nested-projection-audit.json)：46,950 条作品、226,155 条作者记录的所选字段与完整记录逐值一致，包含全部 37 条超过百位作者的作品。比较保留作者顺序、空列表、空值、每条原始单位与机构 ID 的对应关系；作者列表长度也逐条与声明人数一致。它不证明出版者原始名单无遗漏或机构解析正确。
+
+实现上必须区分 Arrow 数据集字段路径与 Parquet 物理叶列路径。实测 `pq.read_table(..., columns=<带 list.element 的物理路径>)` 报字段不匹配；`pq.ParquetFile(...).read(columns=...)` 可按冻结页脚路径重建所需嵌套结构。后续远端范围读取应使用后者，并另行对账远端数据；本次是本地缓存的投影等价性验证，不是全库单位列已经读取。
+
+复算：`pnpm exec <research-python> -B scripts/cci_openalex_nested_projection_audit.py <verified-four-column-projection.parquet>`。测试包含超百人作者列表、缺失 author 对象、空列表与 null，以及作者数不符拒绝；全研究测试 62 项通过。

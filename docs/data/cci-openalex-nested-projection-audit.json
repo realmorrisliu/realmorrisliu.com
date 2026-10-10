@@ -1,0 +1,19 @@
+{
+  "status": "cached_single_row_group_nested_projection_equivalence",
+  "projectionSha256": "52c67617e859dc9071294b8b60a64517c9db5c4e2f40ef86740b2454699cef7c",
+  "scriptSha256": "b2c2d414bcb238ec16b16624e163c0d4f5d1be493b1229c4db8ba5a3f402ec2e",
+  "recordsCompared": 46950,
+  "authorshipsCompared": 226155,
+  "worksAbove100Authors": 37,
+  "selectedPhysicalColumns": [
+    "id",
+    "publication_year",
+    "authors_count",
+    "authorships.list.element.affiliations.list.element.institution_ids.list.element",
+    "authorships.list.element.affiliations.list.element.raw_affiliation_string",
+    "authorships.list.element.author.id",
+    "authorships.list.element.institutions.list.element.id",
+    "authorships.list.element.institutions.list.element.lineage.list.element"
+  ],
+  "limitations": "Exact selected-field equality in one cached row group, including order and null values. Not a remote range-read validation or full-snapshot author/affiliation completeness result. No city attribution."
+}
