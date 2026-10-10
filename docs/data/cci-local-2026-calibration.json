@@ -1,0 +1,53 @@
+{
+  "status": "synthetic_full_capability_calibration_not_city_scores",
+  "asOf": "2026-10-10",
+  "perspective": "ordinary_local_citizen",
+  "cases": [
+    {
+      "id": "A",
+      "description": "Nearby high-quality hospitals, verified necessary-treatment affordability barrier without sufficient relief; strong technology production and diffusion; other capabilities have documented strengths and residual limits.",
+      "scores": {
+        "PCS": 60,
+        "GSS": 60,
+        "ISR": 60,
+        "RES": 60,
+        "MED": 40,
+        "LON": 40,
+        "TEC": 80,
+        "OPT": 60
+      },
+      "expectedTotal": 57
+    },
+    {
+      "id": "B",
+      "description": "Strong research but verified major unmitigated technology adoption gap; routine and necessary specialist care available with residual limits; longevity translation and access have verified breaks; other capabilities match A.",
+      "scores": {
+        "PCS": 60,
+        "GSS": 60,
+        "ISR": 60,
+        "RES": 60,
+        "MED": 60,
+        "LON": 40,
+        "TEC": 40,
+        "OPT": 60
+      },
+      "expectedTotal": 56
+    },
+    {
+      "id": "C",
+      "description": "Relevant physical, security, institutional, resource, care, technology and exit capabilities have verified resident access and independent reserves; credible human longevity translation exists but maturity or broad availability remains limited.",
+      "scores": {
+        "PCS": 80,
+        "GSS": 80,
+        "ISR": 80,
+        "RES": 80,
+        "MED": 80,
+        "LON": 60,
+        "TEC": 80,
+        "OPT": 80
+      },
+      "expectedTotal": 78
+    }
+  ],
+  "limitations": "Capabilities are stipulated synthetic facts, not observations of named cities. Scores are holistic judgments under the accompanying document, not equal averages of subpillars. Neither cases nor their sensitivity settings establish actual candidate bounds or ranking eligibility. Real Singapore and London assessments remain unfinished."
+}
