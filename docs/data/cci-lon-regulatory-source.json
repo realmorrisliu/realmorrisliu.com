@@ -1,0 +1,53 @@
+{
+  "retrievedOn": "2026-10-10",
+  "scope": "Two EU products and two known omitted trial IDs; not global regulatory inventory",
+  "files": [
+    {
+      "file": "rapamune-ema-product-information.pdf",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/rapamune-epar-product-information_en.pdf",
+      "bytes": 587033,
+      "sha256": "822914cb553b9bcf81064d714c9274d63e73d083445521dca5c314d6106f24d7"
+    },
+    {
+      "file": "rapamune-ema-epar.html",
+      "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/rapamune",
+      "bytes": 244968,
+      "sha256": "6add3127d751755c47c1e96ef00e4ae5edb1ab8fd327cc67a183bfa2f12e9928"
+    },
+    {
+      "file": "zokinvy-ema-epar.html",
+      "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/zokinvy",
+      "bytes": 185860,
+      "sha256": "23e4aef842deed991bac8d196bde52281a5730f943053f0b05692e42ec3ab462"
+    },
+    {
+      "file": "NCT00425607.json",
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT00425607",
+      "bytes": 22029,
+      "sha256": "a37ad3d7cb007ab7fd70662d85deb44728c268dee59b38622253cffb3bdef08f"
+    },
+    {
+      "file": "NCT00916747.json",
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT00916747",
+      "bytes": 12188,
+      "sha256": "ad1dd86b1b23b61ebb39f64277b4b15a40e7dc8f9edbdddd5cef9decea14e293"
+    }
+  ],
+  "agingSearchCsvSha256": "c58c4ec6005cf0fa258509ddc94922242d177b3d5b454ef56e102155ebc280c8",
+  "knownQueryOmissions": [
+    {
+      "nctId": "NCT00425607",
+      "presentInFrozenAgingSearch": false,
+      "conditions": ["Progeria", "Hutchinson-Gilford Syndrome"],
+      "lastUpdatePosted": "2019-06-25",
+      "discoverySource": "https://pubmed.ncbi.nlm.nih.gov/36507973/"
+    },
+    {
+      "nctId": "NCT00916747",
+      "presentInFrozenAgingSearch": false,
+      "conditions": ["Progeria"],
+      "lastUpdatePosted": "2023-02-27",
+      "discoverySource": "https://pubmed.ncbi.nlm.nih.gov/36507973/"
+    }
+  ]
+}
