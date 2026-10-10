@@ -1,0 +1,35 @@
+{
+  "url": "https://www.england.nhs.uk/wp-content/uploads/2026/07/2402-commissioning-policy-lonafarnib-hgps.pdf",
+  "retrievedOn": "2026-10-10",
+  "publicationDate": "2026-07-16",
+  "reference": "2402",
+  "bytes": 227513,
+  "sha256": "6058ab23198d712877f7a303a4e1e328471ce3729276422055c433ebc5e5ed51",
+  "status": "policy_text_verified_not_local_delivery",
+  "sourceGeography": "England",
+  "cityAssignment": null,
+  "localDeliveryVerified": false,
+  "pages": 8,
+  "verifiedClaims": [
+    {
+      "pages": [1, 2, 3],
+      "claim": "Policy population narrower than product licence described in this document; age, genetic HGPS and exclusion criteria retained."
+    },
+    {
+      "pages": [3, 4, 5],
+      "claim": "Prescribing planning, responsible team and monitoring required; flowchart specifies review at 3-6 months.",
+      "flowchartVisuallyChecked": true
+    },
+    {
+      "pages": [6],
+      "claim": "NHS England specialised-service funding and provider registration/compliance requirements."
+    }
+  ],
+  "unknowns": [
+    "local provider delivery",
+    "waiting time",
+    "stock availability",
+    "individual costs",
+    "general NHS eligibility of baseline resident"
+  ]
+}
