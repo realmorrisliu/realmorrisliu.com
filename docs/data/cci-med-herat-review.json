@@ -1,0 +1,94 @@
+{
+  "reviewedOn": "2026-10-10",
+  "efuaId": "1",
+  "sourceName": "Herat",
+  "selectionRule": "First candidate in immutable numeric source-ID order, not ranking priority",
+  "perspective": "local_residents",
+  "status": "partial_dimension_dossier_not_scored",
+  "baseline": null,
+  "rasterSourceSha256": "f079428abaaada9a35856b186f0b9525ada7ae3fd2770c32d65d6154a10d8505",
+  "rasterObservation": {
+    "efua_id": "1",
+    "source_name": "Herat",
+    "status": "partial_travel_evidence",
+    "selected_population_cells": "208",
+    "unknown_population_cells": "0",
+    "known_projected_population": "1272664.4544973392",
+    "motorized_observed_population": "1272664.4544973392",
+    "motorized_missing_population": "0.0",
+    "motorized_within_60_minutes_population": "1272664.4544973392",
+    "motorized_mean_minutes_among_observed": "2.305874099950428",
+    "motorized_within_60_share_lower": "1.0",
+    "motorized_within_60_share_upper": "1.0",
+    "walking_observed_population": "1272664.4544973392",
+    "walking_missing_population": "0.0",
+    "walking_within_60_minutes_population": "1081758.223975478",
+    "walking_mean_minutes_among_observed": "34.726537532030804",
+    "walking_within_60_share_lower": "0.8499948436155051",
+    "walking_within_60_share_upper": "0.8499948436155051",
+    "walking_faster_over_1_minute_population": "0.0"
+  },
+  "sources": [
+    {
+      "id": "msf-pressure",
+      "url": "https://prezly.msf.org.uk/msf-pressure-grows-on-hospitals-in-afghanistan-as-paediatric-patient-numbers-rise",
+      "publishedOn": "2025-07-02",
+      "scale": "Herat regional hospital paediatric services; other hospitals in article excluded from local claims",
+      "independenceGroup": "MSF"
+    },
+    {
+      "id": "msf-access",
+      "url": "https://www.msf.org/new-restrictions-limit-access-care-women-herat",
+      "publishedOn": "2025-11-10",
+      "scale": "Herat provincial restriction and hospital observations; not FUA-wide survey",
+      "independenceGroup": "MSF"
+    },
+    {
+      "id": "msf-staff",
+      "url": "https://prezly.msf.org.uk/afghanistan-msf-denounces-the-detention-of-its-staff-amid-growing-restrictions-on-women",
+      "publishedOn": "2026-06-11",
+      "scale": "Herat staff incident and national context",
+      "independenceGroup": "MSF"
+    },
+    {
+      "id": "who-supply",
+      "url": "https://www.emro.who.int/images/stories/afghanistan/emergency-situation-report-51April-2025.pdf",
+      "observationPeriod": "2025-04",
+      "scale": "Hirat regional hospital kit delivery; national totals not assigned locally",
+      "independenceGroup": "WHO"
+    }
+  ],
+  "subpillars": {
+    "access": {
+      "supports": ["modelled geographic proximity", "provider reports free paediatric care"],
+      "constraints": [
+        "reported transport affordability barriers",
+        "reported female access restrictions"
+      ],
+      "unknown": ["FUA-wide eligibility and out-of-pocket burden at local median resources"]
+    },
+    "routine_quality": {
+      "supports": ["documented paediatric service delivery"],
+      "constraints": ["reported triage and emergency load"],
+      "unknown": ["risk-adjusted outcomes", "quality across all providers and services"]
+    },
+    "specialist_capacity": {
+      "supports": ["documented paediatric emergency services"],
+      "constraints": [],
+      "unknown": [
+        "range and availability of adult complex specialties",
+        "referral destinations and actual admission"
+      ]
+    },
+    "system_continuity": {
+      "supports": ["external medical supply support"],
+      "constraints": ["reported staff access disruption", "reported facility workload"],
+      "unknown": [
+        "staffing redundancy",
+        "utilities and inventory backup",
+        "recovery performance across the FUA"
+      ]
+    }
+  },
+  "judgment": "Material access constraints are supported; a complete comparable MED score is not yet justified. Do not infer total exclusion from Top 32."
+}
