@@ -1,9 +1,17 @@
 import unittest
 
-from cci_ucdb_field_audit import conflicts, profile
+from cci_ucdb_field_audit import conflicts, connectivity_zero_devices, profile
 
 
 class FieldAuditTest(unittest.TestCase):
+    def test_zero_devices_does_not_create_performance_evidence(self):
+        rows = [(1, 0, 0, 0, 0), (2, None, None, None, None),
+                (3, 20, 10, 0, 5), (4, 20, 10, 5, 0), (5, 20, 10, 5, None)]
+        self.assertEqual(connectivity_zero_devices(rows), {
+            "allFourZeroIds": [1],
+            "positiveSpeedWithoutPositiveDevicesIds": [4, 5],
+        })
+
     def test_zero_missing_text_and_nonfinite_remain_distinct(self):
         result = profile([None, "", "unknown", 0, -2, 7, float("inf")])
         self.assertEqual(result["null_count"], 1)

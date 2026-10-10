@@ -45,6 +45,17 @@ def conflicts(columns, rows):
     return result
 
 
+def connectivity_zero_devices(rows):
+    """Keep source zeros, but identify measurements unsupported by device counts."""
+    return {
+        "allFourZeroIds": [identifier for identifier, *values in rows if all(v == 0 for v in values)],
+        "positiveSpeedWithoutPositiveDevicesIds": [
+            identifier for identifier, download, upload, latency, devices in rows
+            if download is not None and download > 0 and (devices is None or devices <= 0)
+        ],
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--ucdb", required=True, type=Path)
@@ -81,6 +92,15 @@ def main():
             "SUM(HL_FCL_HOS_2024 IS NOT NULL AND HL_SHP_HOS_2025 IS NULL) "
             "FROM GHSL_UCDB_THEME_HEALTH_GLOBE_R2024A"
         ).fetchone()
+        connectivity = {}
+        for year in range(2020, 2024):
+            for mode in ("F", "M"):
+                columns = [f'SC_CON_{metric}{mode}_{year}' for metric in ("DS", "US", "AL", "ND")]
+                quoted = ",".join('"' + column + '"' for column in columns)
+                rows = db.execute(
+                    f'SELECT ID_UC_G0,{quoted} FROM GHSL_UCDB_THEME_SOCIOECONOMIC_GLOBE_R2024A ORDER BY ID_UC_G0'
+                ).fetchall()
+                connectivity[f"{mode}_{year}"] = connectivity_zero_devices(rows)
     csv_path = folder / "cci-ucdb-field-profile.csv"
     with csv_path.open("w", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(profiles[0]), lineterminator="\n")
@@ -95,6 +115,10 @@ def main():
         "tableFieldCount": len(profiles),
         "uniqueFieldNames": len({row["field"] for row in profiles}),
         "duplicateTables": duplicate_tables,
+        "connectivityZeroDeviceAudit": {
+            "bySourceSuffixAndYear": connectivity,
+            "interpretation": "All-four-zero records have zero download, upload, latency and devices. Preserve raw zeros but exclude from performance interpretation pending source clarification; zero latency is not evidence of excellent service. F/M are source suffixes, not resolution of the duplicated download field name in the manual.",
+        },
         "healthCrossFieldMissingness": {
             "countMissingButProximityPresent": health_mismatch[0],
             "countPresentButProximityMissing": health_mismatch[1],
