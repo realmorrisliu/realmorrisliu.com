@@ -1,0 +1,62 @@
+{
+  "retrievedDate": "2026-10-10",
+  "observationYear": 2019,
+  "publicationYear": 2020,
+  "unit": "minutes (from official WCS abstract; not embedded in GeoTIFF)",
+  "project": "https://malariaatlas.org/project-resources/accessibility-to-healthcare/",
+  "paper": "https://doi.org/10.1038/s41591-020-1059-1",
+  "metadataUrl": "https://data.malariaatlas.org/geoserver/Accessibility/ows?service=WCS&version=2.0.1&request=GetCapabilities",
+  "metadata": [
+    {
+      "coverageId": "Accessibility__202001_Global_Motorized_Travel_Time_to_Healthcare",
+      "title": "Travel Time to Nearest Healthcare Facility with Access to Motorized Transport",
+      "keywords": [
+        "202001_Global_Motorized_Travel_Time_to_Healthcare",
+        "WCS",
+        "GeoTIFF",
+        "spatialResolution:1Km",
+        "temporalExtent:2019",
+        "spatialExtent:Global"
+      ]
+    },
+    {
+      "coverageId": "Accessibility__202001_Global_Walking_Only_Travel_Time_To_Healthcare",
+      "title": "Walking-only Travel Time to Nearest Healthcare Facility without Access to Motorized Transport",
+      "keywords": [
+        "202001_Global_Walking_Only_Travel_Time_To_Healthcare",
+        "WCS",
+        "GeoTIFF",
+        "spatialExtent:Global",
+        "spatialResolution:1Km",
+        "temporalExtent:2019"
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "mode": "motorized",
+      "url": "https://data.malariaatlas.org/geoserver/ows?ResourceId=Explorer%3A2020_motorized_travel_time_to_healthcare&request=DirectDownload&service=CSW&version=2.0.1",
+      "file": "map-2020-motorized.zip",
+      "bytes": 1043054648,
+      "sha256": "e4bce82b37961d139fcf6ca778b3b1665f11ea34f884f7e2ddc6a9e1b7353bef"
+    },
+    {
+      "mode": "walking_only",
+      "url": "https://data.malariaatlas.org/geoserver/ows?ResourceId=Explorer%3A2020_walking_only_travel_time_to_healthcare&request=DirectDownload&service=CSW&version=2.0.1",
+      "file": "map-2020-walking_only.zip",
+      "bytes": 450457818,
+      "sha256": "77a5e0cd32c1918307d57ad31632a5fbc8837de7b55f74aaee946aa5ee9c98ef"
+    }
+  ],
+  "licenceSources": {
+    "providerMapPolicy": "https://malariaatlas.org/open-access-policy/",
+    "providerMapPolicyLabel": "CC BY 3.0",
+    "earthEngineWalkingDataset": "https://developers.google.com/earth-engine/datasets/catalog/projects_malariaatlasproject_assets_accessibility_accessibility_to_healthcare_2019_walking_only",
+    "earthEngineDatasetLabel": "CC BY 4.0"
+  },
+  "limits": [
+    "Modelled optimal travel time; not observed journeys or clinical capability.",
+    "Licence labels differ between provider map policy and Earth Engine catalogue; preserve source-specific notices.",
+    "No new 2026 facility observation implied."
+  ]
+}

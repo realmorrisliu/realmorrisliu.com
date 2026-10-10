@@ -1,0 +1,85 @@
+{
+  "rasters": {
+    "motorized": {
+      "file": "2020_motorized_travel_time_to_healthcare.geotiff",
+      "sha256": "e2aa94723c58212e093f7a9b1d8197b077a252137baf99c80e2d7f08026d360f",
+      "width": 43200,
+      "height": 17400,
+      "crs": "EPSG:4326",
+      "bounds": [-180.0, -60.0, 180.0, 85.0],
+      "transform": [
+        0.008333333333333333, 0.0, -180.0, 0.0, -0.008333333333333333, 85.0, 0.0, 0.0, 1.0
+      ],
+      "dtype": "float32",
+      "nodata": -9999.0,
+      "units": [null],
+      "tags": {
+        "AREA_OR_POINT": "Area"
+      },
+      "bandTags": {
+        "STATISTICS_MAXIMUM": "41504.0859375",
+        "STATISTICS_MEAN": "828.55239701463",
+        "STATISTICS_MINIMUM": "0",
+        "STATISTICS_STDDEV": "1888.1728949067",
+        "STATISTICS_VALID_PERCENT": "29.44"
+      },
+      "counts": {
+        "pixels": 751680000,
+        "masked": 530365561,
+        "nonfinite_unmasked": 0,
+        "negative_unmasked": 0,
+        "zero_unmasked": 373306,
+        "valid_nonnegative": 221314439
+      },
+      "minimum_nonnegative": 0.0,
+      "maximum_nonnegative": 41504.0859375
+    },
+    "walking": {
+      "file": "2020_walking_only_travel_time_to_healthcare.geotiff",
+      "sha256": "261c1463dff6e750554ea9bc54791f8c767f2ffe080b9cc1c0f321df7c141d69",
+      "width": 43200,
+      "height": 17400,
+      "crs": "EPSG:4326",
+      "bounds": [-180.0, -60.0, 180.0, 85.0],
+      "transform": [
+        0.008333333333333333, 0.0, -180.0, 0.0, -0.008333333333333333, 85.0, 0.0, 0.0, 1.0
+      ],
+      "dtype": "float32",
+      "nodata": -9999.0,
+      "units": [null],
+      "tags": {
+        "AREA_OR_POINT": "Area"
+      },
+      "bandTags": {
+        "STATISTICS_MAXIMUM": "138893",
+        "STATISTICS_MEAN": "2555.0621927916",
+        "STATISTICS_MINIMUM": "0",
+        "STATISTICS_STDDEV": "5331.6631507191",
+        "STATISTICS_VALID_PERCENT": "29.44"
+      },
+      "counts": {
+        "pixels": 751680000,
+        "masked": 530365561,
+        "nonfinite_unmasked": 0,
+        "negative_unmasked": 0,
+        "zero_unmasked": 373306,
+        "valid_nonnegative": 221314439
+      },
+      "minimum_nonnegative": 0.0,
+      "maximum_nonnegative": 138893.0
+    }
+  },
+  "comparison": {
+    "both_valid": 221314439,
+    "only_motorized_valid": 0,
+    "only_walking_valid": 0,
+    "walking_less_than_motorized": 2132842,
+    "walking_faster_by_over_1_minute": 181576,
+    "walking_faster_by_over_60_minutes": 3789
+  },
+  "scriptSha256": "2959aa9fee48368e219463da473dc84ad4a019076fbabe5a7585684803b912bd",
+  "rasterioVersion": "1.5.2",
+  "gdalVersion": "3.12.2",
+  "numpyVersion": "2.5.3",
+  "scope": "Raster integrity only; pixel counts are not resident coverage or CCI scores."
+}
