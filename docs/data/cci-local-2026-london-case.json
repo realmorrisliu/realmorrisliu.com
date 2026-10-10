@@ -1,0 +1,118 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 5288,
+  "name": "London",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "evidenceReview": "cci-local-2026-london-case.md",
+  "expectedConditionalTotal": 58,
+  "limitations": "All 31 subpillars are reviewed, not all are measured. Scores require the stated assumptions; unknown evidence remains unknown. This is neither a global ranking nor an exclusion bound. Rejecting a necessary assumption requires reassessment, not automatic retention of its score.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Operational tidal defences and low reference seismic hazard support protection; heat-associated mortality, surface-water risk and historical facility failures remain material constraints.",
+      "assumption": "Major protection usually functions in 2026; unresolved groups and hazards do not already create a stronger widespread unmitigated constraint.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": 60,
+      "rationale": "Intelligence and response capabilities coexist with a specific local attack and raised national threat; unmatched older conflict records cannot override new evidence.",
+      "assumption": "Ordinary activity and essential channels are not broadly blocked; targeted-community impacts and unreviewed strategic scenarios require further review.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Public accountability, delivered service changes and actual fire response support execution; group differences and unmeasured recovery tails limit stronger claims.",
+      "assumption": "Observed execution persists and unreviewed services do not have broad delivery failures; community experience differences are not assumed away.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "context",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "Operational water supply, domestic and traded food and observed electricity restoration support usual provision; bills, water performance and common dependencies remain constraints.",
+      "assumption": "Essentials remain usually available and affordable for median-income residents; operator and national evidence do not measure the whole FUA.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "context",
+        "energy": "partial",
+        "supply_chain": "context"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "Residence-based provision, delivered treatment, actual ambulance response and one hospital inspection support care pathways; elective and cancer waits remain important limitations.",
+      "assumption": "Necessary treatment is usually usable through public pathways; waiting has not broadly become an unmitigated blockage. Hospital inspection is not a city-wide adjusted outcome.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 40,
+      "rationale": "Reviewed pathways include planned Phase 1, short biomarker trials, a frailty RCT without primary functional improvement and disease-specific commissioning; reliable benefit and usual access remain disconnected for the general ageing pathways reviewed.",
+      "assumption": "Reviewed pathways reflect current major maturity and unreviewed pathways have not changed the result. This weak representative-pathway assumption must be challenged; rejecting it leaves the whole dimension unresolved.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "context",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Concrete research-derived commercialisation, industry context, network samples and delivered digital support establish capacity; broad deep adoption and whole-resident reach are unverified.",
+      "assumption": "Observed research, industry and diffusion capacities persist; the reviewed nodes indicate real capability but do not represent complete city measurement.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "context",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Delivered aviation and a specific British-citizen residence/work route to Ireland coexist with particular pension-transfer conditions, a documented airport electricity failure and unresolved communication redundancy.",
+      "assumption": "Ordinary residents have usable travel funds, accounts and alternative communication; household eligibility, relocation costs and independent substitutes remain unverified.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "unresolved"
+      }
+    }
+  ]
+}
