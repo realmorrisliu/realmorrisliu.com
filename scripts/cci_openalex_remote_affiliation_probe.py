@@ -15,27 +15,11 @@ from cci_global_crosswalk import ROOT, digest
 from cci_openalex_works_metadata import AFFILIATIONS
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--footers', type=Path, required=True)
-    parser.add_argument('--reference', type=Path, required=True)
-    parser.add_argument('--output', type=Path, required=True)
-    args = parser.parse_args()
-    folder = ROOT / 'docs/data'
-    source = json.loads((folder / 'cci-openalex-works-access-audit.json').read_text())['parquetProbe']
-    previous = json.loads((folder / 'cci-openalex-authorship-rowgroup-audit.json').read_text())
-    metadata = folder / 'cci-openalex-works-metadata.csv'
-    if digest(metadata) != json.loads((folder / 'cci-openalex-works-metadata.json').read_text())['csvSha256']:
-        raise ValueError('Metadata checksum mismatch')
-    if digest(args.reference) != previous['projectionSha256']:
-        raise ValueError('Independent reference checksum mismatch')
-    row = next(r for r in csv.DictReader(metadata.open()) if r['url'] == source['url'])
-    footer = (args.footers / f"{int(row['file_index']):04}.footer").read_bytes()
-    if hashlib.sha256(footer).hexdigest() != row['footer_sha256']:
-        raise ValueError('Footer checksum mismatch')
+def read_group(row, footer, group_index):
+    if not row['url'].startswith('https://openalex.s3.amazonaws.com/data/parquet/works/') or hashlib.sha256(footer).hexdigest() != row['footer_sha256']:
+        raise ValueError('Frozen source or footer mismatch')
     size = int(row['source_bytes'])
     meta = pq.read_metadata(pa.BufferReader(b'PAR1' + footer))
-    group_index = source['rowGroupRead']
     group = meta.row_group(group_index)
     selected = {'id', 'publication_year', 'authors_count'} | AFFILIATIONS
     columns = {group.column(i).path_in_schema: group.column(i) for i in range(group.num_columns)}
@@ -64,8 +48,34 @@ def main():
             ranges.append({'column': name, 'start': start, 'end': end, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()})
         sparse.flush()
         actual = pq.ParquetFile(sparse).read_row_group(group_index, columns=sorted(selected)).replace_schema_metadata(None)
+    if actual.num_rows != group.num_rows:
+        raise ValueError('Decoded row count mismatch')
+    return actual, ranges
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--footers', type=Path, required=True)
+    parser.add_argument('--reference', type=Path, required=True)
+    parser.add_argument('--output', type=Path, required=True)
+    args = parser.parse_args()
+    folder = ROOT / 'docs/data'
+    source = json.loads((folder / 'cci-openalex-works-access-audit.json').read_text())['parquetProbe']
+    previous = json.loads((folder / 'cci-openalex-authorship-rowgroup-audit.json').read_text())
+    metadata = folder / 'cci-openalex-works-metadata.csv'
+    if digest(metadata) != json.loads((folder / 'cci-openalex-works-metadata.json').read_text())['csvSha256']:
+        raise ValueError('Metadata checksum mismatch')
+    if digest(args.reference) != previous['projectionSha256']:
+        raise ValueError('Independent reference checksum mismatch')
+    row = next(r for r in csv.DictReader(metadata.open()) if r['url'] == source['url'])
+    footer = (args.footers / f"{int(row['file_index']):04}.footer").read_bytes()
+    if hashlib.sha256(footer).hexdigest() != row['footer_sha256']:
+        raise ValueError('Footer checksum mismatch')
+    group_index = source['rowGroupRead']
+    actual, ranges = read_group(row, footer, group_index)
+    selected = {'id', 'publication_year', 'authors_count'} | AFFILIATIONS
     expected = pq.ParquetFile(args.reference).read(columns=sorted(selected)).replace_schema_metadata(None)
-    if actual.num_rows != group.num_rows or not actual.equals(expected):
+    if not actual.equals(expected):
         raise ValueError('Remote projection differs from independent cached projection')
     args.output.parent.mkdir(parents=True, exist_ok=True)
     pq.write_table(actual, args.output, compression='zstd')

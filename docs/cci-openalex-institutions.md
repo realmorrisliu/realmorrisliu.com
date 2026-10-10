@@ -153,3 +153,11 @@ pnpm exec <research-python> -B scripts/cci_openalex_institutions.py --cache <sna
 输出保留筛选列中的作品类型、语料与撤稿标识，附加完整的所选作者单位字段及 `authorship_count_status`。实取 937 条均为 `count_matches`，仅指声明人数与列表长度一致。代码保留 `missing_list`、`unknown_declared_count`、`invalid_declared_count`、`count_list_mismatch` 和 `no_authors` 等待审状态，不丢弃这些作品，不因记录不完整而重新分配贡献。
 
 复算：`pnpm exec <research-python> -B scripts/cci_openalex_attach_authorships.py --filters <filter-projection-cache> --authorships <verified-nested-projection.parquet> --output <joined-projection.parquet>`。目前命令核验冻结的单个探测行组，核心连接函数可用于后续完整提取；尚未形成全库连接结果或城市归属。相关测试覆盖不完整记录保留、缺失位置和 ID 变更拒绝，全研究测试 64 项通过。
+
+### 整分区作者单位提取
+
+`cci_openalex_work_authorships.py` 复用范围读取和精确连接函数，只读取筛选记录实际命中的行组，并按分区保存结果、范围哈希和脚本版本。缓存复用要求筛选投影、冻结来源及三个执行脚本哈希一致；落盘结果回读核验。没有目标年份作品的分区保存零记录清单，不发起单位列请求；它不代表任何城市零产出。
+
+[首个整分区实证](data/cci-openalex-authorship-partition-probe.json)覆盖分区 1918 的全部 11 个命中行组：13,882 条目标年份作品全部连接，13,875 条为 `count_matches`、7 条为 `no_authors`，共读取 89,481,029 字节列数据。首个行组的 937 条结果与此前独立保存的连接投影一致。全部类型、语料和撤稿标识均保留；这仍不是具有代表性的抽样或全球作品底表。
+
+全量入口为 `pnpm exec <research-python> -B scripts/cci_openalex_work_authorships.py --filters <filter-projection-cache> --footers <footer-cache> --output <authorship-cache>`，要求筛选集合先产生完整且唯一的审计结果，否则拒绝启动。当前全量筛选尚未完成，未启动全库单位提取；本次通过函数直接实跑一个已完成筛选的分区。新增测试覆盖整分区保留不完整列表、缓存复用与损坏拒绝、空分区零请求；66 项研究测试及 `pnpm check` 通过。共用读取函数重构后，单行组远端独立对照也已重跑通过。

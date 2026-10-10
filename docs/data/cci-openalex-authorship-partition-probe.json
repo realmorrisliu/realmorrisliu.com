@@ -1,0 +1,697 @@
+{
+  "status": "single_partition_all_target_year_authorships_not_global",
+  "selection": "largest frozen source partition; not representative",
+  "partition": {
+    "fileIndex": 1918,
+    "sourceHash": "40a91d816ec9e7d22b316ebaaee6144427a75d13e2bf813a4cf6b171f74feafd",
+    "filterSha256": "5a1be61579dca05a0db2d8290d8cf0182da1e9a21afa7413d7806350a87730c2",
+    "scriptHashes": {
+      "cci_openalex_work_authorships.py": "a1eb105495c6c59b7772d7eae8dca829dfca7ad233483d4d0c8e8daf417a8de7",
+      "cci_openalex_attach_authorships.py": "c5cebf54c47f1d4342e893d9e7c8ea468ac9451572c306c8de4b28d76723b384",
+      "cci_openalex_remote_affiliation_probe.py": "6fccdae8122f768b6ff9090b46800f29012135b98b977a4a225941531df28f84"
+    },
+    "records": 13882,
+    "groupsRead": 11,
+    "authorshipCountStatuses": {
+      "count_matches": 13875,
+      "no_authors": 7
+    },
+    "columnBytes": 89481029,
+    "parquetSha256": "d4bbe13314c5ab0a942387254e78c615655a878e80de7de597f284a085a5e025",
+    "rangeLedger": [
+      {
+        "rowGroup": 0,
+        "ranges": [
+          {
+            "column": "authors_count",
+            "start": 33899468,
+            "end": 33941240,
+            "bytes": 41773,
+            "sha256": "fe3b8ce959c7d48f008b954eb1790666eb2927525e4858fb4c3d45075ccb7dc3"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.institution_ids.list.element",
+            "start": 16246152,
+            "end": 16944385,
+            "bytes": 698234,
+            "sha256": "3b2da8fd91b85cec10c3da20e75870704ec32c13cb8ba5557aee84ef12a3236b"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.raw_affiliation_string",
+            "start": 16944386,
+            "end": 21997427,
+            "bytes": 5053042,
+            "sha256": "0e4b4f4ca362c90fa0e5e289f570f54298a5658a1ec1113dda2bfb75a375e790"
+          },
+          {
+            "column": "authorships.list.element.author.id",
+            "start": 12471852,
+            "end": 14614093,
+            "bytes": 2142242,
+            "sha256": "34b7206ecc079145eecd12f1611389743bc3c05a97394eebe967707905c6251d"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.id",
+            "start": 31737775,
+            "end": 32338011,
+            "bytes": 600237,
+            "sha256": "c8ffbea5f1f80db17a7264c66506c0ad51880b23270238c996c812db58d44e7f"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.lineage.list.element",
+            "start": 32338012,
+            "end": 33094691,
+            "bytes": 756680,
+            "sha256": "b66d362dd72b7b2922ed45650318abbb4e820a3506b8790d7b3553ac81924b38"
+          },
+          {
+            "column": "id",
+            "start": 4,
+            "end": 425493,
+            "bytes": 425490,
+            "sha256": "479af5a7f75e3d1f7f488a0e0f1232da152e5bc250bb583599136dbde10e77b0"
+          },
+          {
+            "column": "publication_year",
+            "start": 8989769,
+            "end": 9037639,
+            "bytes": 47871,
+            "sha256": "305b104e39b3836c2524c265efa830e2b697435a315cbfa3756072928e34e3a3"
+          }
+        ]
+      },
+      {
+        "rowGroup": 1,
+        "ranges": [
+          {
+            "column": "authors_count",
+            "start": 145374704,
+            "end": 145406801,
+            "bytes": 32098,
+            "sha256": "add85d3b969e633811c9b751a2b1842e3a518dd93d39252c078fc31f2046534c"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.institution_ids.list.element",
+            "start": 129386845,
+            "end": 130048125,
+            "bytes": 661281,
+            "sha256": "d18526704074953857385fa6e3435116f7300297ccd312ffd04dadad17215a1c"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.raw_affiliation_string",
+            "start": 130048126,
+            "end": 134593357,
+            "bytes": 4545232,
+            "sha256": "3ec2cb25a2f8bb2f3e8f75bf32d995df2507fb5bf4a5e7773fdf69b6d1730217"
+          },
+          {
+            "column": "authorships.list.element.author.id",
+            "start": 126168969,
+            "end": 127927062,
+            "bytes": 1758094,
+            "sha256": "a0f1ca8048d31ed83e3bd581df9e56c861640ad0f34ff221218a4bdb93bfaf33"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.id",
+            "start": 143299339,
+            "end": 143875458,
+            "bytes": 576120,
+            "sha256": "f0b1ae97bd1250748eea7e0aa5b34f1dee012ac05dedb739abbc23b493377270"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.lineage.list.element",
+            "start": 143875459,
+            "end": 144616360,
+            "bytes": 740902,
+            "sha256": "331f6d4b9fd1bb072749c25d567f13c6602fbf78f7551626036a2517491b8828"
+          },
+          {
+            "column": "id",
+            "start": 116101598,
+            "end": 116433935,
+            "bytes": 332338,
+            "sha256": "c17784a830b599bf066427e8e453886b0e6a9cccd9e5cb89f8604bce47ca8fe6"
+          },
+          {
+            "column": "publication_year",
+            "start": 123318030,
+            "end": 123353548,
+            "bytes": 35519,
+            "sha256": "46e1d5de90ef9f81358d74a2c481223f3754458206e9ab6113ae9d144c8e398e"
+          }
+        ]
+      },
+      {
+        "rowGroup": 2,
+        "ranges": [
+          {
+            "column": "authors_count",
+            "start": 244128433,
+            "end": 244162397,
+            "bytes": 33965,
+            "sha256": "fa8a49f0a34bab5989a00edcecc8da5457f55f81511546ef1bf2ee286c375e2a"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.institution_ids.list.element",
+            "start": 228196221,
+            "end": 228842765,
+            "bytes": 646545,
+            "sha256": "b42ebbba73556214e6b07154950db5420e0527509dc5a7660a405155a7611b22"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.raw_affiliation_string",
+            "start": 228842766,
+            "end": 233446844,
+            "bytes": 4604079,
+            "sha256": "ede8948a05abb996ff699d5a19d5a7966752befd5b9f0f77028a9d3a6a828dc0"
+          },
+          {
+            "column": "authorships.list.element.author.id",
+            "start": 225101184,
+            "end": 226824527,
+            "bytes": 1723344,
+            "sha256": "39af85f877e761a2d095c52c006c72418538440ff0ee2ca67365e045544bbe00"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.id",
+            "start": 242131053,
+            "end": 242686704,
+            "bytes": 555652,
+            "sha256": "cc23c3b4b28f0b7ee6d04b17ecac7b485317aebec9d57c119bef7e59240824c5"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.lineage.list.element",
+            "start": 242686705,
+            "end": 243385436,
+            "bytes": 698732,
+            "sha256": "26e632d70595a086254833ff36872177649466187fd606e43acbfe8de15ab7d2"
+          },
+          {
+            "column": "id",
+            "start": 214623619,
+            "end": 214972895,
+            "bytes": 349277,
+            "sha256": "7989fb6b2af3962d16b71000c9a033a7a67b7ba606fbca53edbc2b02aff1beab"
+          },
+          {
+            "column": "publication_year",
+            "start": 222228064,
+            "end": 222266950,
+            "bytes": 38887,
+            "sha256": "6fefccbbcccd06becd12bfb3d8f6606381fecdecea8d1ec98838bd8523241e68"
+          }
+        ]
+      },
+      {
+        "rowGroup": 3,
+        "ranges": [
+          {
+            "column": "authors_count",
+            "start": 344850796,
+            "end": 344886377,
+            "bytes": 35582,
+            "sha256": "e72aed7662e37c4a36ed024bd2c561c245466367a4adcc9f5c1485fe960c0d93"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.institution_ids.list.element",
+            "start": 329570450,
+            "end": 330209356,
+            "bytes": 638907,
+            "sha256": "ff3a8fa474ec29e5a850e515717fe7d79ddfd5e25615b4104ac50b04f0b67c1d"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.raw_affiliation_string",
+            "start": 330209357,
+            "end": 334522411,
+            "bytes": 4313055,
+            "sha256": "bc467d71998aaacd37440b20473a8f6842de50c46acab6f56be0d278dbc1d0a4"
+          },
+          {
+            "column": "authorships.list.element.author.id",
+            "start": 326436369,
+            "end": 328187831,
+            "bytes": 1751463,
+            "sha256": "9b0646ba9977d4371611f12821a9c0dcd8fa5f923c4df905ee9ba5e63d0f51eb"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.id",
+            "start": 342875137,
+            "end": 343426519,
+            "bytes": 551383,
+            "sha256": "6af60a2ea143e87e898529db404f633b6652c7972968c51ea366abb6023f6235"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.lineage.list.element",
+            "start": 343426520,
+            "end": 344116396,
+            "bytes": 689877,
+            "sha256": "9606ea6addc00cdc142fcbc9c66ac7cd3bc10b42846abf3136c2b22955ae1130"
+          },
+          {
+            "column": "id",
+            "start": 315812194,
+            "end": 316175145,
+            "bytes": 362952,
+            "sha256": "8cba892271ac9c401691b687d4086205c03bc8e4dc45abe01a1172d38e916c55"
+          },
+          {
+            "column": "publication_year",
+            "start": 323574041,
+            "end": 323614118,
+            "bytes": 40078,
+            "sha256": "2070622b75bebe1ed055920552a6f631d0be248730dc47be6ca2c496cfe7bf5c"
+          }
+        ]
+      },
+      {
+        "rowGroup": 4,
+        "ranges": [
+          {
+            "column": "authors_count",
+            "start": 446088176,
+            "end": 446121958,
+            "bytes": 33783,
+            "sha256": "76847932b9ff5fa2e2aafa83987eabb1597cb379b154e67bc5a2f4fcffd349aa"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.institution_ids.list.element",
+            "start": 430105872,
+            "end": 430751531,
+            "bytes": 645660,
+            "sha256": "09c31393ce1d02023674e989f4722361725315d7646f22f73a9c3d3db9d9effa"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.raw_affiliation_string",
+            "start": 430751532,
+            "end": 435177687,
+            "bytes": 4426156,
+            "sha256": "402bcfa962e0e73788b061209278fda499fddccc209b4a588adaa9d662e56df0"
+          },
+          {
+            "column": "authorships.list.element.author.id",
+            "start": 426744227,
+            "end": 428576764,
+            "bytes": 1832538,
+            "sha256": "238a47f0adcad36eba2d4fa836efb925db3d0efe9e4324f3d71e9cf27baeadaa"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.id",
+            "start": 443997142,
+            "end": 444572862,
+            "bytes": 575721,
+            "sha256": "676e083cf99f726c00677552a219e0342a6bc2f84d9183e80f7c7e1467e0e669"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.lineage.list.element",
+            "start": 444572863,
+            "end": 445313364,
+            "bytes": 740502,
+            "sha256": "bdbc162e218beb8ce9892c647bce5e9db2efddf8cc004b146d13dfc1ea4aeb0b"
+          },
+          {
+            "column": "id",
+            "start": 416318603,
+            "end": 416667678,
+            "bytes": 349076,
+            "sha256": "ab7dd0cd53732cb3e3b92dd125d33c6a376445a1e9a52e97cc748ca1740adaa3"
+          },
+          {
+            "column": "publication_year",
+            "start": 423698207,
+            "end": 423735165,
+            "bytes": 36959,
+            "sha256": "3ca4a9ab84396290c46fbd33586b4a1ac033bfc06b1072e443f87e09354976a3"
+          }
+        ]
+      },
+      {
+        "rowGroup": 5,
+        "ranges": [
+          {
+            "column": "authors_count",
+            "start": 545981525,
+            "end": 546016883,
+            "bytes": 35359,
+            "sha256": "29251c538c4221fc29c28ae9a93401b465d186bade2e6951f56536cc477873bd"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.institution_ids.list.element",
+            "start": 530408123,
+            "end": 531030521,
+            "bytes": 622399,
+            "sha256": "c8275123052e581a5700cf134b25643f37f86b5a0d6bcc517b1b66d5ec4be663"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.raw_affiliation_string",
+            "start": 531030522,
+            "end": 535398393,
+            "bytes": 4367872,
+            "sha256": "295105a0a2d6cfc6aba48225d6b3285699ec0e313f6181671c3923b1f2d4037a"
+          },
+          {
+            "column": "authorships.list.element.author.id",
+            "start": 527156743,
+            "end": 528947868,
+            "bytes": 1791126,
+            "sha256": "18f91ed4968e6d4c44d5e35f26554e837c2f19f6ead56814a4bcde19f1dc89d8"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.id",
+            "start": 544031134,
+            "end": 544578504,
+            "bytes": 547371,
+            "sha256": "e241876146d0354d13e0630ffaff85f19feeb4adbef3fc75235a58a4cfbfe91d"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.lineage.list.element",
+            "start": 544578505,
+            "end": 545253053,
+            "bytes": 674549,
+            "sha256": "ad853dea5b18c7afa4c5e345a9b158804f31bd9e26fbb9f5381a2dc52aed8b66"
+          },
+          {
+            "column": "id",
+            "start": 516431334,
+            "end": 516794906,
+            "bytes": 363573,
+            "sha256": "0e8287b5eaee95afd843f4dd9d77f43297abb87b95191bce4a9068af51a4f2f6"
+          },
+          {
+            "column": "publication_year",
+            "start": 524146872,
+            "end": 524186751,
+            "bytes": 39880,
+            "sha256": "db7095a0d5c24344b180a39e9130990efc30d8012e3224a21c267a54ab15f008"
+          }
+        ]
+      },
+      {
+        "rowGroup": 6,
+        "ranges": [
+          {
+            "column": "authors_count",
+            "start": 647524692,
+            "end": 647559594,
+            "bytes": 34903,
+            "sha256": "a2f0793413634c427ae4a60ee3e6f8faf0458eac89d9aa494c86a4ad459562c1"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.institution_ids.list.element",
+            "start": 631157259,
+            "end": 631819651,
+            "bytes": 662393,
+            "sha256": "d0ad07e924dae875912e13542a56fc853c94a83edba8582387173cc7929e9166"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.raw_affiliation_string",
+            "start": 631819652,
+            "end": 636529536,
+            "bytes": 4709885,
+            "sha256": "d1939ea915430dbf299c70804312edcb85141ab80dd75529d5925dfc37586a25"
+          },
+          {
+            "column": "authorships.list.element.author.id",
+            "start": 627903788,
+            "end": 629715162,
+            "bytes": 1811375,
+            "sha256": "6b4f333d8fda13b16bb4a860de015387fb5dabea41e2ddbdfb7995206e9fecf9"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.id",
+            "start": 645443883,
+            "end": 646020067,
+            "bytes": 576185,
+            "sha256": "f7e5bdb567008092e86ac8c4193707dc4648aa0ab7de35829dd8b47f935aca52"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.lineage.list.element",
+            "start": 646020068,
+            "end": 646754363,
+            "bytes": 734296,
+            "sha256": "bdd8193fb1f303d3f1046c2b06cc1cea2a7025b673f0ecb24ea3f8a223725f2a"
+          },
+          {
+            "column": "id",
+            "start": 617061988,
+            "end": 617415511,
+            "bytes": 353524,
+            "sha256": "18967a1b4707d297e284dcf01bd58dba0a08a1570a4214d593f8efb944109bc1"
+          },
+          {
+            "column": "publication_year",
+            "start": 624844852,
+            "end": 624883798,
+            "bytes": 38947,
+            "sha256": "d44e29dfe915a56cd2ed53942986a77191a8310b0fc38b1f576213a96c9a2f95"
+          }
+        ]
+      },
+      {
+        "rowGroup": 7,
+        "ranges": [
+          {
+            "column": "authors_count",
+            "start": 748347404,
+            "end": 748380792,
+            "bytes": 33389,
+            "sha256": "9b028be30e541825bdf0ab5f0dc985dab56f07939a4e9d47617b62236db5a731"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.institution_ids.list.element",
+            "start": 732480305,
+            "end": 733127660,
+            "bytes": 647356,
+            "sha256": "967540a18689f6b2b9a7a9165042f9fca5acc905f6b1f793de02b86b792fa859"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.raw_affiliation_string",
+            "start": 733127661,
+            "end": 737613776,
+            "bytes": 4486116,
+            "sha256": "84e966e2046c8e944c7f4558f3b7ce074328dc75703eae8d89fb14cc6f371b44"
+          },
+          {
+            "column": "authorships.list.element.author.id",
+            "start": 729335503,
+            "end": 731059637,
+            "bytes": 1724135,
+            "sha256": "ff649e71c48557aa08b82665fcb3e6a05c1211a70f520bc921f4113ae0d23774"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.id",
+            "start": 746294033,
+            "end": 746857513,
+            "bytes": 563481,
+            "sha256": "ac3a5b8d141150c329c47a391e76213bf058692e88516ff8ecbe83a5e5588ca9"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.lineage.list.element",
+            "start": 746857514,
+            "end": 747587503,
+            "bytes": 729990,
+            "sha256": "982d3a2ceb8560f5dc1709ecd732e90403425d5826e59a784b29b716da0d25ea"
+          },
+          {
+            "column": "id",
+            "start": 718933958,
+            "end": 719279675,
+            "bytes": 345718,
+            "sha256": "adf4128b050ce44692b83f6df484563f019be974ad33b471eb2823e1230c6109"
+          },
+          {
+            "column": "publication_year",
+            "start": 726377934,
+            "end": 726415421,
+            "bytes": 37488,
+            "sha256": "6ed97941cb7c82e2278c3111f91a0fd3dc76adb83e31a572ef793d8d97ae9ef9"
+          }
+        ]
+      },
+      {
+        "rowGroup": 8,
+        "ranges": [
+          {
+            "column": "authors_count",
+            "start": 848029357,
+            "end": 848063102,
+            "bytes": 33746,
+            "sha256": "9acb974a7826988f3020493d09c56b4be7c0bf6a01ee3b91860462cdab6e4ced"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.institution_ids.list.element",
+            "start": 832362588,
+            "end": 832989578,
+            "bytes": 626991,
+            "sha256": "d3d16384a42ce8251b542f212086019ecd3fee1791ee7b62426d443eb70b3fbe"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.raw_affiliation_string",
+            "start": 832989579,
+            "end": 837376436,
+            "bytes": 4386858,
+            "sha256": "073e621d2faa45e472fd9462df1667fc53c71228f3b649ed78e88d67ad2807b1"
+          },
+          {
+            "column": "authorships.list.element.author.id",
+            "start": 829096623,
+            "end": 830870596,
+            "bytes": 1773974,
+            "sha256": "c048faec0f58abd857aa89249ea3d99d734ae51dcd0f7aa66e158f10c179ab6d"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.id",
+            "start": 846040544,
+            "end": 846603145,
+            "bytes": 562602,
+            "sha256": "db92d046eef5a7c18d6988aba6bfd8cf31c0705bee3d19f68ff1927b666c8bd1"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.lineage.list.element",
+            "start": 846603146,
+            "end": 847283065,
+            "bytes": 679920,
+            "sha256": "e3091582feb103bcce6e9066bfdb4c12784ec340d0c254d4295b02eae058e42a"
+          },
+          {
+            "column": "id",
+            "start": 818677809,
+            "end": 819024786,
+            "bytes": 346978,
+            "sha256": "187f8dd74fc6b2cec9ff5524db0a4067af48118366a6b68a3a5168bf1960891c"
+          },
+          {
+            "column": "publication_year",
+            "start": 826141223,
+            "end": 826179462,
+            "bytes": 38240,
+            "sha256": "e347567ded913e1692c3e5044cc0faae8f3589136e6797627be4538597450495"
+          }
+        ]
+      },
+      {
+        "rowGroup": 9,
+        "ranges": [
+          {
+            "column": "authors_count",
+            "start": 948981684,
+            "end": 949014739,
+            "bytes": 33056,
+            "sha256": "94bfac3e186da9c7a3ecfecbbe43352da43baaca4e9408edf4b769ac42b9dae2"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.institution_ids.list.element",
+            "start": 932777672,
+            "end": 933432741,
+            "bytes": 655070,
+            "sha256": "0563c3cac61e7f8e6145118afb4f6df3abb9777f0f2e588b212faec53fb7692d"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.raw_affiliation_string",
+            "start": 933432742,
+            "end": 938036042,
+            "bytes": 4603301,
+            "sha256": "25aef16ca7e3cd978bcbe3cbb7d674bcc211a168d73e2a0305077b9e783eeb91"
+          },
+          {
+            "column": "authorships.list.element.author.id",
+            "start": 929434336,
+            "end": 931228765,
+            "bytes": 1794430,
+            "sha256": "b3dd2541c1f9306dd7367aa467c5ca79d53cc122570cd1a05fcb4dc18ffa90ba"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.id",
+            "start": 946959180,
+            "end": 947524227,
+            "bytes": 565048,
+            "sha256": "e7ab5fdf0744f1d21c956cb8ff4bfd561cb57332bf114a4c36569dc73634447d"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.lineage.list.element",
+            "start": 947524228,
+            "end": 948231922,
+            "bytes": 707695,
+            "sha256": "0388852df1cc81a95deabb4c8a9650e8cd352e1c53effe32da8f62ae445c552e"
+          },
+          {
+            "column": "id",
+            "start": 919049728,
+            "end": 919388549,
+            "bytes": 338822,
+            "sha256": "6a73a61bb8d15af2985a2072ffa305ab5ad2a9a5a1e5ee8b8c5b5a096453b8a5"
+          },
+          {
+            "column": "publication_year",
+            "start": 926399432,
+            "end": 926436505,
+            "bytes": 37074,
+            "sha256": "312aef7718a00def414cabe3f93c84fac00fdfe823a92b696ef70b00e1d252da"
+          }
+        ]
+      },
+      {
+        "rowGroup": 10,
+        "ranges": [
+          {
+            "column": "authors_count",
+            "start": 1027583259,
+            "end": 1027590818,
+            "bytes": 7560,
+            "sha256": "3ed5f77ec84a0051de0a164bbf70c0134989ede9fa555b2ef06387a471182836"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.institution_ids.list.element",
+            "start": 1023457318,
+            "end": 1023641763,
+            "bytes": 184446,
+            "sha256": "f4a7c6e9633d8405330ed6c6c575dee38cb34a5da4c9d6a90a7d741570e97ce6"
+          },
+          {
+            "column": "authorships.list.element.affiliations.list.element.raw_affiliation_string",
+            "start": 1023641764,
+            "end": 1024763335,
+            "bytes": 1121572,
+            "sha256": "e32a7edbec16d6367d7e947dc4e55cc67c6fb717f05f9efea3db7cb53866fa97"
+          },
+          {
+            "column": "authorships.list.element.author.id",
+            "start": 1022626155,
+            "end": 1023084339,
+            "bytes": 458185,
+            "sha256": "d95db614d4415326d45f0781afccc9e3da173b30be8e9d57d8ad31f31cef1531"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.id",
+            "start": 1026999410,
+            "end": 1027163949,
+            "bytes": 164540,
+            "sha256": "2976f0a7456cadcc9285f93a62c3f7d800626c09f642ea07981fbbffba6e0cbe"
+          },
+          {
+            "column": "authorships.list.element.institutions.list.element.lineage.list.element",
+            "start": 1027163950,
+            "end": 1027372714,
+            "bytes": 208765,
+            "sha256": "2885baf7e5cfe3c075fe014e19e98247b35069fead90bf1e2d0caf6ca900d431"
+          },
+          {
+            "column": "id",
+            "start": 1019929956,
+            "end": 1020019344,
+            "bytes": 89389,
+            "sha256": "360067e5d3984342374af19697aee48a1cff28d0952f42a3ea3e66e7ca021a70"
+          },
+          {
+            "column": "publication_year",
+            "start": 1021862958,
+            "end": 1021873088,
+            "bytes": 10131,
+            "sha256": "6bf8c23e7567883ba08e3633dd7e096cf9657f710d16c712e70542cfcd167073"
+          }
+        ]
+      }
+    ]
+  },
+  "independentJoinedGroup0Records": 937,
+  "limitations": "All 2025 works within one partition retained across all types and corpora. No-author records remain unresolved; count matching is not publisher byline verification. No city output calculated."
+}
