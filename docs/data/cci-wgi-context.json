@@ -1,0 +1,48 @@
+{
+  "source": "https://www.worldbank.org/content/dam/sites/govindicators/doc/wgidataset_with_sourcedata-2026.xlsx",
+  "citation": "Worldwide Governance Indicators, 2026 Update, World Bank; accessed 2026-10-10; extracted 2025 aggregates only.",
+  "releaseYear": 2026,
+  "observationYear": 2025,
+  "workbookSha256": "67c38d2e9253fb1a72ee302c3b7c47b2ba7b177a04673163796ca1666f506ecb",
+  "candidateCsvSha256": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
+  "candidateCount": 9031,
+  "countryAggregateCountByDimension": {
+    "va": 208,
+    "pv": 215,
+    "ge": 213,
+    "rq": 213,
+    "rl": 215,
+    "cc": 215
+  },
+  "candidateAvailableDimensionCounts": {
+    "6": 9019,
+    "0": 6,
+    "5": 5,
+    "4": 1
+  },
+  "countryCodeAlias": {
+    "XKO": {
+      "target": "XKX",
+      "evidence": "Frozen FUA Cntry_name=Kosovo; WGI Economy (name)=Kosovo."
+    }
+  },
+  "missingCountryCodesByDimension": {
+    "va": ["CUW", "ESH", "GLP", "MTQ", "MYT", "REU", "XNC"],
+    "pv": ["CUW", "ESH", "GLP", "MYT", "XNC"],
+    "ge": ["CUW", "ESH", "GLP", "MYT", "NCL", "XNC"],
+    "rq": ["CUW", "ESH", "GLP", "MYT", "NCL", "XNC"],
+    "rl": ["CUW", "ESH", "GLP", "MYT", "XNC"],
+    "cc": ["CUW", "ESH", "GLP", "MYT", "XNC"]
+  },
+  "scope": "Country context only. No aggregate is repeated as a city measurement; no CCI scores.",
+  "excludedColumns": "All source-level means (columns 17 onward); workbook remains outside repository.",
+  "licence": "World Bank CC BY 4.0 with applicable additional terms; third-party rescaled inputs excluded.",
+  "licencePolicy": "https://datacatalog.worldbank.org/public-licenses",
+  "usageAdvisory": "https://www.worldbank.org/en/publication/worldwide-governance-indicators/usage-advisory",
+  "scriptSha256": "34bae71cb19a67ab9f971d77abbfe1bf0aa09134d2d6de0e83b70db6bbd617b4",
+  "openpyxlVersion": "3.1.5",
+  "outputs": {
+    "cci-wgi-2025-country-aggregates.csv": "fb1a2c4bad9c0f4b78b4edfb832e52243901af98fb55167cd7dca377ae62f3e7",
+    "cci-wgi-efua-context.csv": "bca45d3d7cc3f504058321bb534724f06053cdf7ed482adf0e1c4e0ad91d7792"
+  }
+}
