@@ -99,3 +99,7 @@ pnpm exec <research-python> -B scripts/cci_openalex_institutions.py --cache <sna
 [实读核验](data/cci-openalex-filter-probe.json)沿用此前最大的快照文件：400,000 条记录完整投影后得到 13,882 条 2025 年记录，读取筛选列块 4,609,552 字节。其中第一个行组的 937 条目标年份记录，与此前独立保存的四列投影按 ID、年份、作者数逐条一致。该文件不是代表性抽样，不能据此估计全球年份分布、类型分布或城市产出。
 
 全量读取命令：`pnpm exec <research-python> -B scripts/cci_openalex_work_filters.py --footers <footer-cache> --output <filter-projection-cache>`。成功分区各有 Parquet 及 SHA-256 清单；失败项显式报告，重跑复用已校验缓存。只有全分区成功且总行数对账通过，才产生全量 `manifest.json`。本次已启动全量任务，尚未取得全量完成结果。新增三项测试覆盖与完整读取的逐值对照、位置／未知标识保留、截断与重复拒绝、无关年份零请求；55 项研究测试通过。
+
+全量提取完成后，运行 `pnpm exec <research-python> -B scripts/cci_openalex_filter_audit.py --cache <filter-projection-cache>`。该审计要求完整分区集合及冻结元数据对账，以临时 SQLite 唯一约束检查跨分区作品 ID 和源位置，逐分区复核 Parquet 哈希、目标年份、记录数与类型／语料／撤稿状态计数。作者数未知或无效分别报告，不替换为零；出现重复不会自行择一或累加。作品 ID 唯一仍不等于预印本与正式版已去重。
+
+新增审计测试覆盖跨分区重复、内容变更、计数不符和未知值保留，全研究测试达到 57 项。审计逻辑已在一批完成缓存上实跑，但全量提取仍在进行，尚未生成全局唯一性审计结果；部分缓存通过不能推广成全库通过。
