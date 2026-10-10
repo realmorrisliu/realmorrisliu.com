@@ -1,0 +1,36 @@
+{
+  "status": "complete_footer_audit_not_works_download",
+  "targetYear": 2025,
+  "files": 2040,
+  "totals": {
+    "source_bytes": 707141690793,
+    "rows": 476196327,
+    "row_groups": 7768,
+    "eligible_groups": 7414,
+    "potential_rows": 459294412,
+    "unknown_year_statistics_groups": 0,
+    "filter_column_bytes": 4894017968,
+    "affiliation_column_bytes": 33969553129,
+    "full_authorship_column_bytes": 99711202158,
+    "footer_bytes": 287962042
+  },
+  "manifestSha256": "a72ff4b43c9d13d0911386e1a5dd1b9d71b3c1080ac44ccfc016e11d6390a059",
+  "scriptSha256": "e4c44094ae0e4de87c2a641626c9368457e36fd306520202468ff358806f01f5",
+  "csvSha256": "1a20ef8fb69d061bb03fb1ec5f037cdc69f55c0fe9288be28141365ac771ce83",
+  "filterColumnPaths": [
+    "authors_count",
+    "id",
+    "is_retracted",
+    "is_xpac",
+    "publication_year",
+    "type"
+  ],
+  "affiliationColumnPaths": [
+    "authorships.list.element.affiliations.list.element.institution_ids.list.element",
+    "authorships.list.element.affiliations.list.element.raw_affiliation_string",
+    "authorships.list.element.author.id",
+    "authorships.list.element.institutions.list.element.id",
+    "authorships.list.element.institutions.list.element.lineage.list.element"
+  ],
+  "limitations": "Potential rows are row-group candidates, not actual 2025 works. Byte sums are selected compressed column chunks, not measured transfer or a total download bound. Footer hashes and ETags do not assert full-file SHA verification. Type, corpus, retraction and author completeness require record-level reads. No city output calculated."
+}
