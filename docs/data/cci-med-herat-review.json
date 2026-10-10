@@ -56,6 +56,33 @@
       "observationPeriod": "2025-04",
       "scale": "Hirat regional hospital kit delivery; national totals not assigned locally",
       "independenceGroup": "WHO"
+    },
+    {
+      "id": "who-herams",
+      "url": "https://cdn.who.int/media/docs/default-source/documents/emergencies/herams/herams_afg_status_update_summary_report_2024-11.pdf?download=true&sfvrsn=8c5c5b29_3",
+      "observationPeriod": "through 2024-11-30",
+      "scale": "Hirat province; not the frozen Herat FUA",
+      "independenceGroup": "WHO collaborative provider reporting",
+      "sha256": "91da6a3516eed0dc63f48957a96c94e013c18ebac656422da4b3a6223b3407c4",
+      "bytes": 6509127,
+      "pagesPrinted": [2, 3, 4, 7],
+      "publicationCaveat": "Cover says November 2024; running headers say December 2024. Cutoff comes from disclaimer. Preliminary operational analysis, ongoing validation.",
+      "provinceFacilityStatus": {
+        "atLeastPartiallyOperational": 229,
+        "notOperational": 2,
+        "plannedOrClosed": 24,
+        "notReporting": 35
+      },
+      "interpretation": "Operational includes partial operation. Province counts are not FUA counts or population access. Service denominators exclude non-operational/non-reporting units; barrier denominators exclude available units and permit multiple barriers."
+    },
+    {
+      "id": "moph-capacity",
+      "url": "https://moph.gov.af/index.php/en/minister-public-health-visits-herat-regional-hospital-boost-service-quality-and-capacity",
+      "publishedOn": "2025-05-27",
+      "scale": "Herat Regional Hospital with western regional catchment",
+      "independenceGroup": "Afghanistan Ministry of Public Health",
+      "reportedActiveBedsApproximate": 650,
+      "interpretation": "Ministry-reported capacity, not independently verified census, current 2026 capacity, specialty inventory or outcome quality."
     }
   ],
   "subpillars": {
@@ -73,7 +100,10 @@
       "unknown": ["risk-adjusted outcomes", "quality across all providers and services"]
     },
     "specialist_capacity": {
-      "supports": ["documented paediatric emergency services"],
+      "supports": [
+        "documented paediatric emergency services",
+        "Ministry reports approximately 650 active beds at regional hospital in May 2025; does not enumerate complex specialties"
+      ],
       "constraints": [],
       "unknown": [
         "range and availability of adult complex specialties",
@@ -86,7 +116,8 @@
       "unknown": [
         "staffing redundancy",
         "utilities and inventory backup",
-        "recovery performance across the FUA"
+        "recovery performance across the FUA",
+        "Facility-level locations and service records needed to map provincial HeRAMS observations to the frozen FUA and update to 2026"
       ]
     }
   },
