@@ -1,0 +1,70 @@
+{
+  "scope": "Two methodological examples, not a global intervention inventory or city coverage measure",
+  "retrievedOn": "2026-10-10",
+  "records": [
+    {
+      "nctId": "NCT00427193",
+      "sourceUrl": "https://clinicaltrials.gov/api/v2/studies/NCT00427193",
+      "retrievedOn": "2026-10-10",
+      "sourceSha256": "0d2b27c89b19929b4afda1de19170812ad9ca7e71e984c783c3b1637f7aafc6d",
+      "sourceBytes": 44063,
+      "lastUpdatePosted": "2022-03-16",
+      "overallStatus": "COMPLETED",
+      "completion": {
+        "date": "2012-11",
+        "type": "ACTUAL"
+      },
+      "enrollment": {
+        "count": 238,
+        "type": "ACTUAL"
+      },
+      "phases": ["NA"],
+      "hasResultsSection": true,
+      "listedLocations": [
+        {
+          "facility": "Pennington Biomedical Research Center",
+          "city": "Baton Rouge",
+          "country": "United States"
+        },
+        {
+          "facility": "Jean Mayer Human Nutrition Research Center on Aging at Tufts University",
+          "city": "Boston",
+          "country": "United States"
+        },
+        {
+          "facility": "Washington University School of Medicine",
+          "city": "St Louis",
+          "country": "United States"
+        }
+      ],
+      "fuaAssignmentStatus": "not_assigned_site_role_and_location_require_review"
+    },
+    {
+      "nctId": "NCT04488601",
+      "sourceUrl": "https://clinicaltrials.gov/api/v2/studies/NCT04488601",
+      "retrievedOn": "2026-10-10",
+      "sourceSha256": "658689aed138780d701ead5850e1ad8bee9f3d2e96a1117362ea63e52d9b91cf",
+      "sourceBytes": 13015,
+      "lastUpdatePosted": "2024-01-24",
+      "overallStatus": "COMPLETED",
+      "completion": {
+        "date": "2023-12-30",
+        "type": "ACTUAL"
+      },
+      "enrollment": {
+        "count": 129,
+        "type": "ACTUAL"
+      },
+      "phases": ["PHASE2"],
+      "hasResultsSection": false,
+      "listedLocations": [
+        {
+          "facility": "AgelessRx",
+          "city": "Chicago",
+          "country": "United States"
+        }
+      ],
+      "fuaAssignmentStatus": "not_assigned_site_role_and_location_require_review"
+    }
+  ]
+}
