@@ -1,0 +1,41 @@
+{
+  "retrievedOn": "2026-10-10",
+  "url": "https://dhismfl.moph.gov.af/",
+  "exportFile": "MFL_Raw_20261010_0655.xlsx",
+  "sha256": "bb13c46047b1d4ccaa549d882c93e29e4a72b0c05fa8bbf9d2829d720bef3e81",
+  "bytes": 129249,
+  "filters": {
+    "province": "Hirat",
+    "district": "All districts",
+    "ownership": "Public & private",
+    "facilityType": "All types",
+    "status": "All statuses"
+  },
+  "sheetRows": {
+    "Facilities": 187,
+    "History": 2139,
+    "Workforce": 65
+  },
+  "totals": {
+    "Total Facilities": 752,
+    "Public Facilities": 489,
+    "Private Facilities": 263,
+    "Total Health Workers": 1816
+  },
+  "facilityStatusTotals": {
+    "Active": 559,
+    "Closed": 193
+  },
+  "districtHiratFacilities": 312,
+  "status": "aggregate_registry_inventory_not_city_service_measurement",
+  "limitations": [
+    "No facility identifiers, names or coordinates in exported tables",
+    "History rows are repeated snapshots, not additional facilities",
+    "Administrative Hirat district is not frozen Herat FUA",
+    "No verified common observation cutoff or register completeness",
+    "Reported workforce is not verified current staffing, full-time equivalents or clinical outcome evidence"
+  ],
+  "historyBackupDateSerialRange": ["44514", "46287"],
+  "historyBackupDateRange": ["2021-11-14", "2026-09-22"],
+  "dateInterpretation": "Excel default 1900 date system; workbook has no date1904 flag. Backup dates are not observation cutoff dates."
+}

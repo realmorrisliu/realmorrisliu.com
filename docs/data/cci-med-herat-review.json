@@ -83,6 +83,17 @@
       "independenceGroup": "Afghanistan Ministry of Public Health",
       "reportedActiveBedsApproximate": 650,
       "interpretation": "Ministry-reported capacity, not independently verified census, current 2026 capacity, specialty inventory or outcome quality."
+    },
+    {
+      "id": "moph-mfl",
+      "url": "https://dhismfl.moph.gov.af/",
+      "retrievedOn": "2026-10-10",
+      "scale": "Hirat province and administrative districts; not frozen FUA",
+      "independenceGroup": "Afghanistan Ministry of Public Health",
+      "sha256": "bb13c46047b1d4ccaa549d882c93e29e4a72b0c05fa8bbf9d2829d720bef3e81",
+      "bytes": 129249,
+      "audit": "cci-med-herat-mfl-audit.json",
+      "interpretation": "All-status aggregate export includes 559 Active and 193 Closed records; 752 is not operating-facility count. No facility IDs, coordinates, clinical service availability or outcomes."
     }
   ],
   "subpillars": {
@@ -107,7 +118,8 @@
       "constraints": [],
       "unknown": [
         "range and availability of adult complex specialties",
-        "referral destinations and actual admission"
+        "referral destinations and actual admission",
+        "MFL export aggregates facility types and districts; it cannot establish specialty admission or FUA facility assignment"
       ]
     },
     "system_continuity": {
