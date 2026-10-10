@@ -207,3 +207,19 @@ pnpm exec <research-python> -B scripts/cci_openalex_institutions.py --cache <sna
 其中 25,158,414 条为 dataset、8,447,754 条为 article；其他类型和各语料、撤稿状态完整保留在分类计数中，不将全部记录称为论文，也不将 `type=retraction` 与 `is_retracted` 混同。ID 唯一性不证明同一成果的不同版本已去重，合法声明人数不证明作者或单位列表完整，2025 年记录也不是 2026 年城市能力的直接测量。
 
 复算命令为 `pnpm exec <research-python> -B scripts/cci_openalex_filter_audit.py --cache <filter-projection-cache>`，输入完整 `manifest.json` 与其全部 Parquet；完成后核对输出哈希引用及总数。两批互不重叠的作者单位提前提取仍在运行，须等待它们终止再启动全量入口，以免同一缓存出现并发写入。筛选审计完成解除了该入口的一项前置条件，尚未完成全库作者单位验收、城市归属、贡献分摊或 CCI 评分。
+
+### 全量作者单位诊断入口
+
+新增 `cci_openalex_global_affiliation_audit.py` 复用已有歧义判读函数，逐批读取完整作者投影。入口要求正式全量 manifest、完整且唯一的筛选审计、冻结元数据和机构目录哈希匹配；逐分区检查缓存来源、提取脚本版本及文件哈希，再逐值对照筛选列和原始位置。总记录数与类型／语料／撤稿计数必须与全量筛选审计一致，任一不符即停止，不写成功结果。
+
+作者计数与列表不一致、列表缺失或声明人数未知的记录保留在总分母中，单列 `works_with_unassessed_incomplete_authorships`；仅对声明名单完整的记录执行现有地理歧义诊断。因此 `records` 是所有记录数，`works` 和 `authorships` 是已执行该诊断的作品及作者记录数，不能拿后两者冒充全库分母。零作者作品不具备完整归属资格，未知部分不重分配到已知城市。这个诊断也不证明出版者名单完整、真实研究地点、成果版本去重或城市分数。
+
+已用分区 1918 的 13,882 条真实记录验证逐批实现，94,299 条作者记录及全部既有诊断计数与原分区审计一致；这仍是单分区核验。测试覆盖批大小改变后结果一致、缺失和空名单保留、空分区、零未知计数明确输出、重复／遗漏分区拒绝、损坏／错位数据拒绝，以及伪造状态和类型总数拒绝。全量作者提取仍在运行，尚未运行全库地理诊断或生成其成功结果。
+
+待正式全量提取通过后复算：
+
+```sh
+pnpm exec <research-python> -B scripts/cci_openalex_global_affiliation_audit.py \
+  --cache <authorship-cache> --filters <filter-projection-cache> \
+  --output <global-affiliation-audit.json>
+```
