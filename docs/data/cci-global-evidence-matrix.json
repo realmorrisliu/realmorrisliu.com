@@ -16,7 +16,8 @@
       "country_context_missing": 6
     },
     "RES": {
-      "not_assembled": 9031
+      "country_urban_water_context_only": 8595,
+      "water_context_missing": 436
     },
     "MED": {
       "partial_access_model": 9029,
@@ -40,6 +41,7 @@
   "historicalMeaning": "Historical city research references are not global-protocol scores; union members do not inherit duplicated scores.",
   "subpillarSupport": {
     "PCS": ["geophysical: reference-rock seismic hazard only, not building losses"],
+    "RES": ["water: country urban service context only, not city reliability"],
     "GSS": ["organized_violence: partial historical events only"],
     "ISR": ["governance: country context only"],
     "MED": ["access: historical spatial model only"]
@@ -80,8 +82,13 @@
       "sha256": "da4fad78fa431a6629fe913ee9561d8c3a73967ff31693d3afba6ae19af6f29d",
       "provenance": "cci-seismic-efua-population.json",
       "provenanceSha256": "fd20df70072c245d4329f133257096bef8759cc50d920c36691dedda13f3c6fa"
+    },
+    "cci-water-efua-context.csv": {
+      "sha256": "7667458ead1cedd9b4cc3fdac8558b04a5f7a8ffe1d90f9e43beddf9f45923c3",
+      "provenance": "cci-water-context.json",
+      "provenanceSha256": "b16f39cb526a3582032d7cfa84763b7ca4036944390f28629a05761a786103e5"
     }
   },
-  "scriptSha256": "ba59ffacbfb8538819be7ba20230c62024ab751fdea9cf2eea30077673d3bb29",
-  "csvSha256": "dacc2570f60c58fb25ebcacca9710bc0172fb82aa1856af34381330533d605fd"
+  "scriptSha256": "c2e963a3d970ffc06d76d27d00e3075a96aae52b2d0461b348d668263687a1fb",
+  "csvSha256": "46ba3c6962de5a2897feeffa790d871a3fedeafdff5cdf3066acd6f88ff0154b"
 }

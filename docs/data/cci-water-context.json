@@ -1,0 +1,23 @@
+{
+  "scope": "Country urban population estimates, not city observations or water resilience scores.",
+  "observationYear": 2024,
+  "candidateCount": 9031,
+  "countryRecords": 434,
+  "availableCountriesByIndicator": {
+    "SH.H2O.BASW.UR.ZS": 178,
+    "SH.H2O.SMDW.UR.ZS": 102
+  },
+  "candidateIndicatorCounts": {
+    "2": 7039,
+    "1": 1556,
+    "0": 436
+  },
+  "sourceManifestSha256": "40f87d5fc100308697f56f3f41f8774497d38eb3933beb0a3434b9bae900f807",
+  "scriptSha256": "e1ae9870a94171269147c3c0dbd7f1db624d8220599ef06e492236c519c064b5",
+  "candidateCsvSha256": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
+  "outputs": {
+    "cci-water-2024-country-urban.csv": "2c5f5dd11632dd30e42bf90eaff6a5ae4d30eb0bd9a1d87ab29bb8fac716422d",
+    "cci-water-efua-context.csv": "7667458ead1cedd9b4cc3fdac8558b04a5f7a8ffe1d90f9e43beddf9f45923c3"
+  },
+  "limitations": "National urban definition may differ from eFUA. No inherited parent-jurisdiction values; XKO to XKX uses previously verified Kosovo alias. At-least-basic includes safely managed and must not be added to it. Missing safely managed is not zero and is not replaced by basic. No city score or 2026 nowcast."
+}

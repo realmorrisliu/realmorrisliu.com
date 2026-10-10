@@ -18,16 +18,20 @@ class EvidenceMatrixTest(unittest.TestCase):
         health = [{**base, "status": "no_observed_motorized_population"}]
         governance = [{**base, "available_dimensions": "6", "lookup_economy_code": "AAA"}]
         seismic = [{**base, "status": "no_observed_hazard_population"}]
-        row = matrix(candidates, history, spatial, violence, health, governance, seismic)[0]
+        water = [{**base, "available_indicators": "1"}]
+        row = matrix(candidates, history, spatial, violence, health, governance, seismic, water)[0]
         self.assertEqual(row["GSS"], "no_assigned_events_not_zero_risk")
         self.assertEqual(row["ISR"], "country_context_only")
         self.assertEqual(row["MED"], "travel_model_missing")
         self.assertEqual(row["PCS"], "seismic_model_missing")
+        self.assertEqual(row["RES"], "country_urban_water_context_only")
         self.assertEqual(row["historical_research_scope"], "union_member_only")
         self.assertEqual(row["cci_score_status"], "not_computed_under_global_protocol")
         seismic[0]["status"] = "partial_seismic_hazard_model"
-        row = matrix(candidates, history, spatial, violence, health, governance, seismic)[0]
+        water[0]["available_indicators"] = "0"
+        row = matrix(candidates, history, spatial, violence, health, governance, seismic, water)[0]
         self.assertEqual(row["PCS"], "partial_seismic_hazard_model")
+        self.assertEqual(row["RES"], "water_context_missing")
         self.assertEqual(row["cci_score_status"], "not_computed_under_global_protocol")
 
 

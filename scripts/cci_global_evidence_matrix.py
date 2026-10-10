@@ -21,12 +21,12 @@ def indexed(rows, expected):
     return result
 
 
-def matrix(candidates, history, spatial, violence, healthcare, governance, seismic):
+def matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water):
     expected = {r["efua_id"] for r in candidates}
     if len(expected) != len(candidates):
         raise ValueError("Duplicate universe IDs")
-    history, spatial, violence, healthcare, governance, seismic = [
-        indexed(rows, expected) for rows in (history, spatial, violence, healthcare, governance, seismic)]
+    history, spatial, violence, healthcare, governance, seismic, water = [
+        indexed(rows, expected) for rows in (history, spatial, violence, healthcare, governance, seismic, water)]
     rows = []
     for candidate in candidates:
         key = candidate["efua_id"]
@@ -40,6 +40,9 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
             "outside_population_raster": "outside_population_raster",
             "partially_outside_population_raster": "partial_spatial_coverage",
         }[q["status"]]
+        water_count = int(water[key]["available_indicators"])
+        if not 0 <= water_count <= 2:
+            raise ValueError("Invalid water context count")
         events = sum(int(v[f"recorded_events_{year}"]) for year in range(2021, 2026))
         if events < 0:
             raise ValueError("Negative recorded event count")
@@ -60,7 +63,8 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
             "historical_research_slug": h["research_slug"], "historical_research_scope": h["research_scope"],
             "PCS": pcs, "GSS": "partial_event_history" if events else "no_assigned_events_not_zero_risk",
             "ISR": "country_context_only" if context_count else "country_context_missing",
-            "RES": "not_assembled", "MED": med, "LON": "not_assembled",
+            "RES": "country_urban_water_context_only" if water_count else "water_context_missing",
+            "MED": med, "LON": "not_assembled",
             "TEC": "not_assembled", "OPT": "not_assembled",
             "ucdb_intersecting_centres": s["intersecting_centres"],
             "ucdb_centre_area_share": s["centre_area_share"],
@@ -95,7 +99,8 @@ def main():
     healthcare = read("cci-healthcare-efua-population.csv", "cci-healthcare-efua-population.json", "csvSha256")
     governance = read("cci-wgi-efua-context.csv", "cci-wgi-context.json", "outputs", True)
     seismic = read("cci-seismic-efua-population.csv", "cci-seismic-efua-population.json", "csvSha256")
-    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic)
+    water = read("cci-water-efua-context.csv", "cci-water-context.json", "outputs", True)
+    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water)
     output = folder / "cci-global-evidence-matrix.csv"
     with output.open("w", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
@@ -108,6 +113,7 @@ def main():
         "notAssembledMeaning": "Existing sources may contain relevant fields, but no qualified whole-candidate measurement has been assembled here.",
         "historicalMeaning": "Historical city research references are not global-protocol scores; union members do not inherit duplicated scores.",
         "subpillarSupport": {"PCS": ["geophysical: reference-rock seismic hazard only, not building losses"],
+                             "RES": ["water: country urban service context only, not city reliability"],
                              "GSS": ["organized_violence: partial historical events only"],
                              "ISR": ["governance: country context only"],
                              "MED": ["access: historical spatial model only"]},
