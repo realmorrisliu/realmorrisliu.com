@@ -161,3 +161,11 @@ pnpm exec <research-python> -B scripts/cci_openalex_institutions.py --cache <sna
 [首个整分区实证](data/cci-openalex-authorship-partition-probe.json)覆盖分区 1918 的全部 11 个命中行组：13,882 条目标年份作品全部连接，13,875 条为 `count_matches`、7 条为 `no_authors`，共读取 89,481,029 字节列数据。首个行组的 937 条结果与此前独立保存的连接投影一致。全部类型、语料和撤稿标识均保留；这仍不是具有代表性的抽样或全球作品底表。
 
 全量入口为 `pnpm exec <research-python> -B scripts/cci_openalex_work_authorships.py --filters <filter-projection-cache> --footers <footer-cache> --output <authorship-cache>`，要求筛选集合先产生完整且唯一的审计结果，否则拒绝启动。当前全量筛选尚未完成，未启动全库单位提取；本次通过函数直接实跑一个已完成筛选的分区。新增测试覆盖整分区保留不完整列表、缓存复用与损坏拒绝、空分区零请求；66 项研究测试及 `pnpm check` 通过。共用读取函数重构后，单行组远端独立对照也已重跑通过。
+
+### 计量方法参照与当前数据用途
+
+2026-10-10 核查 [CWTS Leiden Open Edition 2025 指标方法](https://open.leidenranking.com/information/indicators)：其最新发表窗口是 2020–2023，引用截至 2024 年底；科研影响比较区分完整计数与分数计数，并提供按领域和发表年份归一化的指标。其“核心论文”另有语言与来源条件，**不等同于 OpenAlex `corpus=core` 或 `is_xpac=false`**。不能混用两个 core 定义，或将本批 2025 年作品数量称为已校正的科研影响。
+
+[CWTS 的使用原则](https://open.leidenranking.com/information/responsibleuse)还区分产出规模与相对表现，并强调指标只覆盖科研表现的一部分。对 CCI 的具体处理是：当前提取只建立可审计的作品／作者单位底表；合作计数、类型窗口、领域差异、引用成熟度及规模分母仍是后续指标设计与敏感性检验事项。城市人口不是研究人员数量，不能把简单人均作品数称为科研生产率。
+
+这些方法参照不改变已冻结的候选范围，也不授权直接移用大学榜单结果、大学合并规则或其样本筛选作为城市排名。CCI 的地点歧义与未知贡献仍须单独保留；即使采用分数计数，也不能把未定位作者的贡献重新分给已知城市。当前尚未确定可发布的知识产出评分锚点。
