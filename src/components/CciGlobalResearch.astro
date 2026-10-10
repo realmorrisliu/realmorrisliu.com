@@ -1,6 +1,7 @@
 ---
 import coverage from "../../docs/data/cci-global-evidence-matrix.json";
 import boundaries from "../../docs/data/cci-ucdb-efua-crosswalk.json";
+import wup from "../../docs/data/cci-wup-2025-crosswalk.json";
 import institutions from "../../docs/data/cci-openalex-institution-source.json";
 import { cciCopy } from "@/cci/copy";
 
@@ -86,8 +87,8 @@ const rows = [
     <p>
       {
         zh
-          ? `新版城市中心中仍有 ${n(boundaries.centreOverlapCounts.no_overlap)} 个与旧功能区无交集，边界差异尚未解决。未收录、未匹配或资料缺失均不代表表现较差。`
-          : `${n(boundaries.centreOverlapCounts.no_overlap)} newer urban centres do not overlap the older functional areas; boundary differences remain unresolved. Omission, unmatched boundaries and missing data are not negative assessments.`
+          ? `UCDB R2024A 有 ${n(boundaries.centreOverlapCounts.no_overlap)} 个中心与旧功能区无交集；WUP 2025 的 ${n(wup.urbanCentres)} 个中心中有 ${n(wup.centreOverlapCounts.no_overlap)} 个无交集，其中 ${n(wup.wupCentresOutsideFuaAndUcdb)} 个也与 UCDB 无交集。两套来源的数量不能直接相加，边界迁移仍未解决。未收录、未匹配或资料缺失均不代表表现较差。`
+          : `${n(boundaries.centreOverlapCounts.no_overlap)} UCDB R2024A centres do not overlap the older functional areas. Of ${n(wup.urbanCentres)} WUP 2025 centres, ${n(wup.centreOverlapCounts.no_overlap)} have no such overlap, including ${n(wup.wupCentresOutsideFuaAndUcdb)} that also do not overlap UCDB. Counts from the two sources cannot be added together; boundary migration remains unresolved. Omission, unmatched boundaries and missing data are not negative assessments.`
       }
     </p>
     <p>
