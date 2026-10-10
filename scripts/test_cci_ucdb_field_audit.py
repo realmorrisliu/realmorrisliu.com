@@ -1,9 +1,22 @@
 import unittest
 
-from cci_ucdb_field_audit import conflicts, connectivity_zero_devices, profile
+from cci_ucdb_field_audit import conflicts, connectivity_zero_devices, profile, seismic_partition
 
 
 class FieldAuditTest(unittest.TestCase):
+    def test_seismic_zero_share_requires_population_partition(self):
+        rows = [(1, 100, 0, *([0] * 9)),
+                (2, 100, 0, 100, *([0] * 8)),
+                (3, 100, 50, 50, 0, 0, 0, 50, 0, 0, 0, 0),
+                (4, 100, 80, 50, 0, 0, 0, 50, 0, 0, 0, 0)]
+        self.assertEqual(seismic_partition(rows), {
+            "unclassifiedPopulationIds": [1], "partitionMismatchIds": [1],
+            "shareMismatchIds": [4],
+        })
+        for invalid in (None, float("nan"), -1):
+            with self.assertRaises(ValueError):
+                seismic_partition([(1, 100, 0, invalid, *([0] * 8))])
+
     def test_zero_devices_does_not_create_performance_evidence(self):
         rows = [(1, 0, 0, 0, 0), (2, None, None, None, None),
                 (3, 20, 10, 0, 5), (4, 20, 10, 5, 0), (5, 20, 10, 5, None)]

@@ -56,6 +56,26 @@ def connectivity_zero_devices(rows):
     }
 
 
+def seismic_partition(rows):
+    """Check population accounting before interpreting a reported zero exposure."""
+    result = {"unclassifiedPopulationIds": [], "partitionMismatchIds": [],
+              "shareMismatchIds": []}
+    for identifier, population, share, *classes in rows:
+        if (len(classes) != 9 or any(not isinstance(v, (float, int)) or
+                not math.isfinite(v) or v < 0 for v in (population, share, *classes))
+                or population <= 0 or share > 100):
+            raise ValueError("Invalid seismic population partition")
+        classified = sum(classes)
+        if classified == 0:
+            result["unclassifiedPopulationIds"].append(identifier)
+        # Accounting tolerance, not a model uncertainty bound.
+        if abs(classified - population) > max(0.01, population * 0.00001):
+            result["partitionMismatchIds"].append(identifier)
+        if abs(100 * sum(classes[4:]) / population - share) > 0.01:
+            result["shareMismatchIds"].append(identifier)
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--ucdb", required=True, type=Path)
@@ -101,6 +121,11 @@ def main():
                     f'SELECT ID_UC_G0,{quoted} FROM GHSL_UCDB_THEME_SOCIOECONOMIC_GLOBE_R2024A ORDER BY ID_UC_G0'
                 ).fetchall()
                 connectivity[f"{mode}_{year}"] = connectivity_zero_devices(rows)
+        classes = ",".join(f'EX_E{i:02}_POP_2025' for i in (1, 2, 4, 5, 6, 7, 8, 9, 10))
+        seismic = seismic_partition(db.execute(
+            f'SELECT ID_UC_G0, GC_POP_TOT_2025, EX_SHA_POP_2025,{classes} '
+            'FROM GHSL_UCDB_THEME_EXPOSURE_GLOBE_R2024A ORDER BY ID_UC_G0'
+        ).fetchall())
     csv_path = folder / "cci-ucdb-field-profile.csv"
     with csv_path.open("w", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(profiles[0]), lineterminator="\n")
@@ -115,6 +140,12 @@ def main():
         "tableFieldCount": len(profiles),
         "uniqueFieldNames": len({row["field"] for row in profiles}),
         "duplicateTables": duplicate_tables,
+        "seismicPopulationPartition2025": {
+            **seismic,
+            "populationTolerance": "max(0.01 person, total population * 0.00001)",
+            "shareTolerancePercentagePoints": 0.01,
+            "interpretation": "Compare all nine MMI class population counts to source urban-centre population, and MMI >= 6 share to its class numerator. Arithmetic agreement does not establish hazard coverage. Positive population with zero in every class is unresolved, not zero hazard. No imputation or eFUA score transfer.",
+        },
         "connectivityZeroDeviceAudit": {
             "bySourceSuffixAndYear": connectivity,
             "interpretation": "All-four-zero records have zero download, upload, latency and devices. Preserve raw zeros but exclude from performance interpretation pending source clarification; zero latency is not evidence of excellent service. F/M are source suffixes, not resolution of the duplicated download field name in the manual.",

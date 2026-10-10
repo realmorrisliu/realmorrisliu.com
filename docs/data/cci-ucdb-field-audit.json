@@ -1,7 +1,7 @@
 {
   "status": "raw_values_not_semantic_coverage",
   "sourceGeoPackageSha256": "56e60b7cbfc776b23493d5684aa5d0d7d6940fc3dd9a3881fa52599f20fd80fc",
-  "scriptSha256": "dd539929f18d85c174d6b69282cece057b6a849d9cc1f12acb6f1f3ef5531445",
+  "scriptSha256": "d1bda0d85ce20cac75cd6a5ce92f3edcf0b0757737b01ed5d326c754b8c78fce",
   "profileCsvSha256": "c1678608725a48c057841993f7b1d3bffaa17a018e63a8e899c5605c8b8ed78d",
   "tableCount": 16,
   "tableFieldCount": 2910,
@@ -90,6 +90,20 @@
       ]
     }
   ],
+  "seismicPopulationPartition2025": {
+    "unclassifiedPopulationIds": [38, 157, 159, 165, 219, 327, 481, 623],
+    "partitionMismatchIds": [
+      6, 38, 39, 129, 143, 151, 156, 157, 159, 165, 219, 273, 294, 327, 355, 475, 481, 530, 554,
+      567, 623, 673, 784, 912, 1063, 1179, 1588, 1857, 1892, 1943, 2107, 2117, 2573, 2637, 2796,
+      2921, 2996, 3042, 3173, 3381, 3436, 3887, 3901, 4090, 4129, 4399, 4447, 4490, 4495, 4522,
+      4529, 4746, 4790, 5071, 5161, 5487, 5491, 5547, 5615, 6500, 6787, 6904, 7706, 8238, 9230,
+      9251, 9489, 10163, 10479, 10933, 11473, 11656, 11685
+    ],
+    "shareMismatchIds": [],
+    "populationTolerance": "max(0.01 person, total population * 0.00001)",
+    "shareTolerancePercentagePoints": 0.01,
+    "interpretation": "Compare all nine MMI class population counts to source urban-centre population, and MMI >= 6 share to its class numerator. Arithmetic agreement does not establish hazard coverage. Positive population with zero in every class is unresolved, not zero hazard. No imputation or eFUA score transfer."
+  },
   "connectivityZeroDeviceAudit": {
     "bySourceSuffixAndYear": {
       "F_2020": {
