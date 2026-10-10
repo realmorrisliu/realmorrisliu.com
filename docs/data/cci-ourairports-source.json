@@ -1,0 +1,15 @@
+{
+  "status": "frozen_airport_directory_not_transport_access",
+  "retrievedAt": "2026-10-10",
+  "sourceCommit": "056cc323e5704413e08ee75586341378013ac6c8",
+  "sourceCommitDate": "2026-10-10T01:53:17Z",
+  "sourceUrl": "https://raw.githubusercontent.com/davidmegginson/ourairports-data/056cc323e5704413e08ee75586341378013ac6c8/airports.csv",
+  "documentationUrl": "https://ourairports.com/help/data-dictionary.html",
+  "licenseUrl": "https://ourairports.com/data/",
+  "license": "Public Domain; source makes no accuracy or fitness guarantee",
+  "bytes": 12743789,
+  "gitBlobSha1": "1c9edca8327af5087282be97a2ee6d82026a965b",
+  "sha256": "79dd7db7228a12199839aa6acbc2dc1f1e50a4604f14d7f60dceb6983de91906",
+  "expectedRecords": 86231,
+  "limitations": "Collection and commit dates are not independent observation dates for each airport. Directory scheduled_service is not completed flights, capacity, routes, fares, eligibility or resident access. Municipality is served location, not physical location. Documentation says closed_airport but frozen data uses closed; retain both and disclose mismatch."
+}

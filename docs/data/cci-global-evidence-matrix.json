@@ -37,7 +37,8 @@
       "network_samples_missing": 776
     },
     "OPT": {
-      "not_assembled": 9031
+      "no_in_area_airport_point_not_no_access": 5937,
+      "airport_directory_points_only": 3094
     }
   },
   "scoreStatusCounts": {
@@ -53,6 +54,9 @@
     "MED": ["access: historical spatial model only"],
     "TEC": [
       "digital_infrastructure: self-selected 2026 Q3 network tests only; boundary sensitivity retained, not population access or complete technology capability"
+    ],
+    "OPT": [
+      "transport_redundancy: directory airport points and scheduled nonclosed flags only; no resident access, routes, independent alternatives or common failures measured"
     ]
   },
   "sourceJoinKey": "efua_id; source tables and their provenance remain authoritative for values and limitations",
@@ -106,8 +110,13 @@
       "sha256": "e3c2715551e27e2a28c069e2df3d97348b1dad236a0327a566c5437cc8df85be",
       "provenance": "cci-wup-2025-crosswalk.json",
       "provenanceSha256": "14fffd62e6c3053cd1cf8a00f49e2cd86c5c76f8f0e00dfe4e884f27027be565"
+    },
+    "cci-ourairports-efua-coverage.csv": {
+      "sha256": "498fa0e4371aab23e0564c66295e4b8c1b08a5b25aebf7ee616f44fa1468ebb8",
+      "provenance": "cci-ourairports-fua-audit.json",
+      "provenanceSha256": "181521e4b201c6ebda62183e0beba0b713cd3dfbd5fc2d3ce07496c209f943c4"
     }
   },
-  "scriptSha256": "74102cf849c9f1b72d7bde60bd9fdc03f369e9b82b6c1105d4ed80851bb6ee9b",
-  "csvSha256": "51231f8ffbad82849caaceb5ecfdc5193c8618c944a946a450941a8856163df9"
+  "scriptSha256": "eb3a917e341923e53d3c25afd857bf31977376f9d3f8d84669897672670ece7c",
+  "csvSha256": "55fa2f79d58b7c3d5a8a9ee41aa209f6ae601fa8fa924d346979f23d87117d3f"
 }

@@ -4,6 +4,7 @@ import boundaries from "../../docs/data/cci-ucdb-efua-crosswalk.json";
 import wup from "../../docs/data/cci-wup-2025-crosswalk.json";
 import institutions from "../../docs/data/cci-openalex-institution-source.json";
 import works from "../../docs/data/cci-openalex-filter-inventory.json";
+import airports from "../../docs/data/cci-ourairports-fua-audit.json";
 import { cciCopy } from "@/cci/copy";
 
 interface Props {
@@ -60,8 +61,8 @@ const rows = [
   [
     "OPT",
     zh
-      ? "迁移、资产与连接能力仍需身份条件和实际可用通道证据。"
-      : "Mobility, assets and connectivity still require a resident profile and evidence of usable alternatives.",
+      ? `${n(counts.OPT.airport_directory_points_only)} 个候选内有机场目录坐标点，其中 ${n(airports.candidatesWithScheduledNonclosedPoints)} 个有标记为提供定期航班且非关闭状态的机场。目录标记尚未证明实际运营或居民可用；功能区外的机场也可能服务当地居民，没有区内点位不等于无法出行。交通冗余、迁移权利、资产与网络连续性仍需补证。`
+      : `${n(counts.OPT.airport_directory_points_only)} candidates contain airport directory points; ${n(airports.candidatesWithScheduledNonclosedPoints)} contain airports marked as having scheduled service and not closed. Directory flags do not establish actual operations or resident access; airports outside an area may serve its residents, so no in-area point does not mean no transport. Redundancy, legal mobility, assets and network continuity remain unresolved.`,
   ],
 ] as const;
 ---

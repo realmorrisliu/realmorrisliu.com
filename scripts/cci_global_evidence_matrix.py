@@ -51,12 +51,12 @@ def network_coverage(rows, expected):
     return result
 
 
-def matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup):
+def matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports):
     expected = {r["efua_id"] for r in candidates}
     if len(expected) != len(candidates):
         raise ValueError("Duplicate universe IDs")
-    history, spatial, violence, healthcare, governance, seismic, water, wup = [
-        indexed(rows, expected) for rows in (history, spatial, violence, healthcare, governance, seismic, water, wup)]
+    history, spatial, violence, healthcare, governance, seismic, water, wup, airports = [
+        indexed(rows, expected) for rows in (history, spatial, violence, healthcare, governance, seismic, water, wup, airports)]
     network = network_coverage(network, expected)
     rows = []
     for candidate in candidates:
@@ -92,6 +92,13 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
         context_count = int(g["available_dimensions"])
         if not 0 <= context_count <= 6:
             raise ValueError("Invalid country context count")
+        airport_count = int(airports[key]['directory_point_airports'])
+        scheduled_count = int(airports[key]['scheduled_nonclosed_directory_points'])
+        if not 0 <= scheduled_count <= airport_count:
+            raise ValueError('Invalid airport directory accounting')
+        airport_status = 'directory_points_only' if airport_count else 'no_in_area_point_not_no_transport'
+        if airports[key]['status'] != airport_status:
+            raise ValueError('Airport directory status mismatch')
         rows.append({
             "efua_id": key, "source_name": candidate["source_name"], "country_iso": candidate["country_iso"],
             "historical_research_slug": h["research_slug"], "historical_research_scope": h["research_scope"],
@@ -99,7 +106,10 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
             "ISR": "country_context_only" if context_count else "country_context_missing",
             "RES": "country_urban_water_context_only" if water_count else "water_context_missing",
             "MED": med, "LON": "not_assembled",
-            "TEC": "partial_network_samples" if network[key]["network_sample_connection_types"] else "network_samples_missing", "OPT": "not_assembled",
+            "TEC": "partial_network_samples" if network[key]["network_sample_connection_types"] else "network_samples_missing",
+            "OPT": "airport_directory_points_only" if airport_count else "no_in_area_airport_point_not_no_access",
+            "airport_directory_points": airport_count,
+            "scheduled_nonclosed_airport_directory_points": scheduled_count,
             **network[key],
             "ucdb_intersecting_centres": s["intersecting_centres"],
             "wup_2025_intersecting_centres": wup_count,
@@ -138,7 +148,8 @@ def main():
     water = read("cci-water-efua-context.csv", "cci-water-context.json", "outputs", True)
     network = read("cci-ookla-efua-sampled-measurements.csv", "cci-ookla-efua-sampled-measurements.json", "csvSha256")
     wup = read("cci-wup-2025-fua-coverage.csv", "cci-wup-2025-crosswalk.json", "outputs", True)
-    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup)
+    airports = read("cci-ourairports-efua-coverage.csv", "cci-ourairports-fua-audit.json", "outputs", True)
+    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports)
     output = folder / "cci-global-evidence-matrix.csv"
     with output.open("w", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
@@ -158,7 +169,8 @@ def main():
                              "GSS": ["organized_violence: partial historical events only"],
                              "ISR": ["governance: country context only"],
                              "MED": ["access: historical spatial model only"],
-                             "TEC": ["digital_infrastructure: self-selected 2026 Q3 network tests only; boundary sensitivity retained, not population access or complete technology capability"]},
+                             "TEC": ["digital_infrastructure: self-selected 2026 Q3 network tests only; boundary sensitivity retained, not population access or complete technology capability"],
+                             "OPT": ["transport_redundancy: directory airport points and scheduled nonclosed flags only; no resident access, routes, independent alternatives or common failures measured"]},
         "sourceJoinKey": "efua_id; source tables and their provenance remain authoritative for values and limitations",
         "inputs": inputs, "scriptSha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "csvSha256": hashlib.sha256(output.read_bytes()).hexdigest(),
