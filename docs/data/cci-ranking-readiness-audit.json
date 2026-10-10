@@ -1,0 +1,19 @@
+{
+  "checkedOn": "2026-10-10",
+  "scope": "Assessment readiness, not city score bounds or a ranking",
+  "candidateCount": 9031,
+  "completeGlobalScores": 0,
+  "dimensionsUnassembledForEveryCandidate": ["LON", "TEC", "OPT"],
+  "theirCombinedWeightPercent": 30,
+  "conditionalUnresolvedContributionRange": [0, 30],
+  "conditionalMeaning": "Only if the other five dimension scores were known and these three had no narrower justified bounds; the other five are not yet fully scored either.",
+  "candidateExclusionCertificates": 0,
+  "guaranteedTop32Certificates": 0,
+  "certificateMeaning": "None constructed or established by the current evidence protocol; not a claim that every city can physically attain every possible score.",
+  "inputs": {
+    "matrixManifestSha256": "d13adcc2266e488f47be7fc9063ba4613442fb3f09d784a61c31baf973b93694",
+    "matrixCsvSha256": "46ba3c6962de5a2897feeffa790d871a3fedeafdff5cdf3066acd6f88ff0154b",
+    "modelSha256": "e6b471d2257390b4b04200572848692a62051ba842ff5948e38beaac8e949acc",
+    "judgmentEngineSha256": "2cb91fda97320033b798ad3b0d5ddca9a0009484e7e641d58d7038f7bbc81ac4"
+  }
+}
