@@ -1,0 +1,236 @@
+{
+  "status": "single_row_group_affiliation_diagnostics_not_city_output",
+  "selection": "2025 works in first row group of largest frozen works file; not representative",
+  "projectionSha256": "52c67617e859dc9071294b8b60a64517c9db5c4e2f40ef86740b2454699cef7c",
+  "institutionDirectorySha256": "b59735ba074e3e1b8e05f1d08bd672ef1d1ec219303cd9a788c93fc2a5e798ed",
+  "scriptSha256": "599c5b0c1ee0718efa3bceba6485418d5e10ebf2538216ee5a9dc114de090e81",
+  "counts": {
+    "works": 937,
+    "authorships": 6496,
+    "multiple_directory_fuas": 538,
+    "direct_parent_child_overlap": 306,
+    "no_matched_institution": 1781,
+    "no_affiliation_records": 1577,
+    "unmatched_raw_affiliation": 315,
+    "institution_without_unique_directory_fua": 268,
+    "institution_missing_from_directory": 18
+  },
+  "examples": {
+    "multiple_directory_fuas": [
+      {
+        "workId": "https://openalex.org/W4414553510",
+        "authorshipPosition": 1,
+        "directInstitutionIds": [
+          "https://openalex.org/I38234673",
+          "https://openalex.org/I4210090124"
+        ],
+        "directoryFuaIds": ["4167", "5006"],
+        "parentChildPairs": [["https://openalex.org/I38234673", "https://openalex.org/I4210090124"]]
+      },
+      {
+        "workId": "https://openalex.org/W4414281844",
+        "authorshipPosition": 0,
+        "directInstitutionIds": [
+          "https://openalex.org/I203951103",
+          "https://openalex.org/I4210086288"
+        ],
+        "directoryFuaIds": ["1980", "5129"],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4414910601",
+        "authorshipPosition": 5,
+        "directInstitutionIds": [
+          "https://openalex.org/I41639379",
+          "https://openalex.org/I57206974"
+        ],
+        "directoryFuaIds": ["7068", "7244"],
+        "parentChildPairs": []
+      }
+    ],
+    "direct_parent_child_overlap": [
+      {
+        "workId": "https://openalex.org/W4414553510",
+        "authorshipPosition": 1,
+        "directInstitutionIds": [
+          "https://openalex.org/I38234673",
+          "https://openalex.org/I4210090124"
+        ],
+        "directoryFuaIds": ["4167", "5006"],
+        "parentChildPairs": [["https://openalex.org/I38234673", "https://openalex.org/I4210090124"]]
+      },
+      {
+        "workId": "https://openalex.org/W4413627865",
+        "authorshipPosition": 5,
+        "directInstitutionIds": [
+          "https://openalex.org/I100532134",
+          "https://openalex.org/I1294671590",
+          "https://openalex.org/I178906410",
+          "https://openalex.org/I4210089315",
+          "https://openalex.org/I4210100596",
+          "https://openalex.org/I4210135640"
+        ],
+        "directoryFuaIds": ["2702", "3718"],
+        "parentChildPairs": [
+          ["https://openalex.org/I4210089315", "https://openalex.org/I4210100596"],
+          ["https://openalex.org/I4210135640", "https://openalex.org/I100532134"],
+          ["https://openalex.org/I4210135640", "https://openalex.org/I1294671590"],
+          ["https://openalex.org/I4210135640", "https://openalex.org/I4210100596"]
+        ]
+      },
+      {
+        "workId": "https://openalex.org/W4413627865",
+        "authorshipPosition": 6,
+        "directInstitutionIds": [
+          "https://openalex.org/I100532134",
+          "https://openalex.org/I178906410",
+          "https://openalex.org/I4210089315",
+          "https://openalex.org/I4210100596"
+        ],
+        "directoryFuaIds": ["3718"],
+        "parentChildPairs": [
+          ["https://openalex.org/I4210089315", "https://openalex.org/I4210100596"]
+        ]
+      }
+    ],
+    "no_matched_institution": [
+      {
+        "workId": "https://openalex.org/W4414748146",
+        "authorshipPosition": 0,
+        "directInstitutionIds": [],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4414748146",
+        "authorshipPosition": 1,
+        "directInstitutionIds": [],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4414748146",
+        "authorshipPosition": 2,
+        "directInstitutionIds": [],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      }
+    ],
+    "no_affiliation_records": [
+      {
+        "workId": "https://openalex.org/W4414748146",
+        "authorshipPosition": 0,
+        "directInstitutionIds": [],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4414748146",
+        "authorshipPosition": 1,
+        "directInstitutionIds": [],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4414748146",
+        "authorshipPosition": 2,
+        "directInstitutionIds": [],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      }
+    ],
+    "unmatched_raw_affiliation": [
+      {
+        "workId": "https://openalex.org/W4414910601",
+        "authorshipPosition": 0,
+        "directInstitutionIds": ["https://openalex.org/I57206974"],
+        "directoryFuaIds": ["7244"],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4414910601",
+        "authorshipPosition": 1,
+        "directInstitutionIds": ["https://openalex.org/I57206974"],
+        "directoryFuaIds": ["7244"],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4414910601",
+        "authorshipPosition": 2,
+        "directInstitutionIds": ["https://openalex.org/I57206974"],
+        "directoryFuaIds": ["7244"],
+        "parentChildPairs": []
+      }
+    ],
+    "institution_without_unique_directory_fua": [
+      {
+        "workId": "https://openalex.org/W4414988393",
+        "authorshipPosition": 2,
+        "directInstitutionIds": ["https://openalex.org/I131155284"],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4413627865",
+        "authorshipPosition": 5,
+        "directInstitutionIds": [
+          "https://openalex.org/I100532134",
+          "https://openalex.org/I1294671590",
+          "https://openalex.org/I178906410",
+          "https://openalex.org/I4210089315",
+          "https://openalex.org/I4210100596",
+          "https://openalex.org/I4210135640"
+        ],
+        "directoryFuaIds": ["2702", "3718"],
+        "parentChildPairs": [
+          ["https://openalex.org/I4210089315", "https://openalex.org/I4210100596"],
+          ["https://openalex.org/I4210135640", "https://openalex.org/I100532134"],
+          ["https://openalex.org/I4210135640", "https://openalex.org/I1294671590"],
+          ["https://openalex.org/I4210135640", "https://openalex.org/I4210100596"]
+        ]
+      },
+      {
+        "workId": "https://openalex.org/W4413627865",
+        "authorshipPosition": 6,
+        "directInstitutionIds": [
+          "https://openalex.org/I100532134",
+          "https://openalex.org/I178906410",
+          "https://openalex.org/I4210089315",
+          "https://openalex.org/I4210100596"
+        ],
+        "directoryFuaIds": ["3718"],
+        "parentChildPairs": [
+          ["https://openalex.org/I4210089315", "https://openalex.org/I4210100596"]
+        ]
+      }
+    ],
+    "institution_missing_from_directory": [
+      {
+        "workId": "https://openalex.org/W4414039123",
+        "authorshipPosition": 0,
+        "directInstitutionIds": [
+          "https://openalex.org/I166825849",
+          "https://openalex.org/I4210126318",
+          "https://openalex.org/I4210133110"
+        ],
+        "directoryFuaIds": ["397"],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W7125578207",
+        "authorshipPosition": 1,
+        "directInstitutionIds": ["https://openalex.org/I4210126337"],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W7125578207",
+        "authorshipPosition": 2,
+        "directInstitutionIds": ["https://openalex.org/I4210126337"],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      }
+    ]
+  },
+  "limitations": "Flag counts overlap and count authorships, except works/authorships totals. Directory FUA matches are diagnostic points, not verified research locations. Parent-child overlap does not authorize dropping either institution. Unknown affiliations must not be redistributed to known cities. No full-snapshot rates, fractional output or score calculated."
+}

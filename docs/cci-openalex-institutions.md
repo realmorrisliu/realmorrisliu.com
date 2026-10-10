@@ -103,3 +103,23 @@ pnpm exec <research-python> -B scripts/cci_openalex_institutions.py --cache <sna
 全量提取完成后，运行 `pnpm exec <research-python> -B scripts/cci_openalex_filter_audit.py --cache <filter-projection-cache>`。该审计要求完整分区集合及冻结元数据对账，以临时 SQLite 唯一约束检查跨分区作品 ID 和源位置，逐分区复核 Parquet 哈希、目标年份、记录数与类型／语料／撤稿状态计数。作者数未知或无效分别报告，不替换为零；出现重复不会自行择一或累加。作品 ID 唯一仍不等于预印本与正式版已去重。
 
 新增审计测试覆盖跨分区重复、内容变更、计数不符和未知值保留，全研究测试达到 57 项。审计逻辑已在一批完成缓存上实跑，但全量提取仍在进行，尚未生成全局唯一性审计结果；部分缓存通过不能推广成全库通过。
+
+### 作者单位的实际歧义
+
+[作者单位定义](https://help.openalex.org/data/authorships/)区分逐条原始单位文本的匹配结果 `affiliations` 和去重后的机构列表 `institutions`；[机构定义](https://help.openalex.org/data/institutions/)说明 `lineage` 包含本机构及祖先，且部分缺少独立 ROR 的子单位只能匹配到上级机构。因此，谱系不能被当成额外研究地点，机构目录坐标也不能自动定位每篇作品的实际研究场所。
+
+[实取行组诊断](data/cci-openalex-affiliation-rowgroup-audit.json)使用已核验的同一投影及冻结机构目录，检查其中全部 937 条 2025 年作品、6,496 条作者记录：
+
+| 作者记录上的情况                        |  条数 |
+| --------------------------------------- | ----: |
+| 无任何匹配机构                          | 1,781 |
+| 没有逐条 affiliation 记录               | 1,577 |
+| 至少一条非空原始单位文本未匹配机构      |   315 |
+| 匹配机构的目录点涉及多个 FUA            |   538 |
+| 直接机构列表同时包含父子机构            |   306 |
+| 至少一个机构不在冻结目录中              |    18 |
+| 至少一个已入目录机构没有唯一 FUA 点匹配 |   268 |
+
+各项可重叠，不能相加；没有 affiliation 记录也不直接证明出版者原始作品没有单位信息。此样本的逐条文本匹配 ID 并集与平铺机构 ID 集合未发现不一致，但这不是全库保证。样本选择为最大文件的首个行组，不用于估计全球缺失率。输出保留问题作品 ID、作者位置、机构 ID 和父子关系例子，便于回查。
+
+后续城市归属必须保留未知部分；多城市和父子机构重叠进入歧义审查，不能把未知份额重新分给已知城市，也不能仅凭父子关系删除可能真实存在的双重单位。当前只识别这些情况，没有生成合作分摊值。复算：`pnpm exec <research-python> -B scripts/cci_openalex_affiliation_audit.py <verified-four-column-projection.parquet>`。相关测试验证未知不重分配、父子／跨城歧义、目录缺失与匹配差异的区分，以及不完整作者列表拒绝；59 项研究测试通过。
