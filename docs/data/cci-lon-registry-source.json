@@ -1,0 +1,41 @@
+{
+  "retrievedOn": "2026-10-10",
+  "query": {
+    "query.cond": "Aging",
+    "format": "json",
+    "pageSize": "1000",
+    "countTotal": "true"
+  },
+  "pages": [
+    {
+      "file": "lon-aging-page-1.json",
+      "url": "https://clinicaltrials.gov/api/v2/studies?query.cond=Aging&format=json&pageSize=1000&countTotal=true",
+      "sha256": "6aace81a45380d8e3bd43b570e4117e53458e7bceab170af56042f99c36bedd6",
+      "bytes": 16042737
+    },
+    {
+      "file": "lon-aging-page-2.json",
+      "url": "https://clinicaltrials.gov/api/v2/studies?query.cond=Aging&format=json&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lpzDMiio-numpOQJJxmbfWl2f0W",
+      "sha256": "42b86d9343cebf59704c25156976b5a1980656fc06c9411572439be54398d4de",
+      "bytes": 14833314
+    },
+    {
+      "file": "lon-aging-page-3.json",
+      "url": "https://clinicaltrials.gov/api/v2/studies?query.cond=Aging&format=json&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lpzDMiio-numpOQJJxtZfGm2fUTkA",
+      "sha256": "6000d404e9f45c5f394352ab25a04472f1713a3d71bc99f57457a2fa04bb24b0",
+      "bytes": 15059466
+    },
+    {
+      "file": "lon-aging-page-4.json",
+      "url": "https://clinicaltrials.gov/api/v2/studies?query.cond=Aging&format=json&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lpzDMiio-numpOQJJxsZfWi3_YfkA",
+      "sha256": "ffdb39d69d188a8644cb50a5e1ab6d7785125a1849b87b6c549e2e00010c5785",
+      "bytes": 14466187
+    },
+    {
+      "file": "lon-aging-page-5.json",
+      "url": "https://clinicaltrials.gov/api/v2/studies?query.cond=Aging&format=json&pageSize=1000&countTotal=true&pageToken=ZVNj7o2Elu8o3lpzDMiio-numpOQJJxrZPGk3fQakA",
+      "sha256": "2a0e39594037d55778b679d4342c2fa1497b8c2d8762b4d686b2bb6c5e70b081",
+      "bytes": 498382
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "scope": "Complete frozen query result, not complete global LON evidence",
+  "studyCount": 4041,
+  "listedLocationCount": 5736,
+  "studyTypes": {
+    "INTERVENTIONAL": 3157,
+    "OBSERVATIONAL": 884
+  },
+  "studiesWithRegistryResults": 399,
+  "studiesWithoutListedLocations": 305,
+  "distinctListedCountries": 80,
+  "latestRecordUpdate": "2026-10-09",
+  "sourceManifestSha256": "73a913d2701b8ea22cd859e30a0227444cbe0ae1a36be5087aa0ebca3378ee0b",
+  "outputSha256": {
+    "cci-lon-registry-studies.csv": "c58c4ec6005cf0fa258509ddc94922242d177b3d5b454ef56e102155ebc280c8",
+    "cci-lon-registry-locations.csv": "ae6dd463859e94b8babfec5fd6a4a653a7e1c8892eed33f14f8c70cca62c436e"
+  }
+}
