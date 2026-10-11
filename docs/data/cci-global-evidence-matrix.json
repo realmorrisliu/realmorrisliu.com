@@ -113,10 +113,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 7,
+    "conditionalCaseCount": 8,
     "completeConditionalCaseCount": 5,
-    "partialCaseCount": 2,
-    "unassessedCount": 9024,
+    "partialCaseCount": 3,
+    "unassessedCount": 9023,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -244,8 +244,13 @@
       "sha256": "ed1a44f4d111ee8c81c79b777a497ed266b004fe678066bc1337ce224130ee14",
       "provenance": "cci-local-2026-washington-case.md",
       "provenanceSha256": "3419b58741fe753ae5f09c3de5e3c5a882b377adb3fde94fb0a11ce63fb135b9"
+    },
+    "cci-local-2026-new-york-case.json": {
+      "sha256": "128fd4b85f7e145abbfef5cc2c2b1a6f2c82daaa9226b4b0217cf1f6105e15b1",
+      "provenance": "cci-local-2026-new-york-case.md",
+      "provenanceSha256": "ff633acc2084470a85c8d8780bafbaa6c6007b670221a22ed37868932902489a"
     }
   },
-  "scriptSha256": "9475660d0fc622a0d609e16817356ddff3456c5b3b933cbf075f4dcfe7442ec4",
-  "csvSha256": "f0123bbce338e3cb7c1bb0ec6847f7e864e9d857ed41f2f5421241bb55937acc"
+  "scriptSha256": "581543952fd52e53be401bf2c77e340a70cff2208c0f20e944dd246d45587ae9",
+  "csvSha256": "167ab2cc3f9cdf34b73463fce864644dda97d226dac6189ea2dfdb9c1623f3d1"
 }

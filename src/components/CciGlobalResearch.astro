@@ -15,6 +15,7 @@ import zurich from "../../docs/data/cci-local-2026-zurich-case.json";
 import gaza from "../../docs/data/cci-local-2026-gaza-case.json";
 import tokyo from "../../docs/data/cci-local-2026-tokyo-case.json";
 import washington from "../../docs/data/cci-local-2026-washington-case.json";
+import newYork from "../../docs/data/cci-local-2026-new-york-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -28,7 +29,7 @@ const zh = currentLang === "zh";
 const n = (value: number) => value.toLocaleString(zh ? "zh-CN" : "en-GB");
 const counts = coverage.dimensionStatusCounts;
 const legal = coverage.legalMobility.statusCounts;
-const cases = [singapore, london, helsinki, zurich, gaza, tokyo, washington];
+const cases = [singapore, london, helsinki, zurich, gaza, tokyo, washington, newYork];
 const screening = coverage.local2026Screening;
 if (
   clinicalClaims.candidateCount !== coverage.candidateCount ||
@@ -198,6 +199,7 @@ const rows = [
             <th scope="col">{zh ? "加沙功能区" : "Gaza functional area"}</th>
             <th scope="col">{zh ? "东京功能区" : "Tokyo functional area"}</th>
             <th scope="col">{zh ? "华盛顿功能区" : "Washington functional area"}</th>
+            <th scope="col">{zh ? "纽约功能区" : "New York functional area"}</th>
           </tr>
         </thead>
         <tbody>
@@ -303,6 +305,11 @@ const rows = [
         href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-washington-case.md"
         >{zh ? "华盛顿条件性案例" : "Washington conditional case"}</a
       >
+      {" · "}
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-new-york-case.md"
+        >{zh ? "纽约部分维度案例" : "New York partial case"}</a
+      >
     </p>
     <p>
       {
@@ -323,6 +330,13 @@ const rows = [
         zh
           ? "华盛顿有七项条件判断：PCS／ISR／MED／LON／TEC／OPT 为 60，RES 为 40；GSS 未定，无总分。全国统一药品代码查询保留 254 条 2024 公开理赔，其中一条有 13 位行内去重受益人，登记地址与已开业 Sterling 诊所一致，地址插值点落在冻结功能区。理赔地址不是治疗地点，药品单位不是输液次数，缺记录不证明缺服务。LON 60 依赖当地交付推定、疾病路径代表性、服务与适当安全监测延续，以及普通合资格居民通常能获得并承担的假设；费用、适应证和严重风险保留，不代表健康人延寿或普及。食物约束与退出路径仍有居民、审批、负担和全区适用假设；两起袭击的处置不证明总体安全影响低。七项数学域 49—64；撤回 LON 或 OPT 为 43—68，撤回 RES 为 45—70，均不是可靠排除界限。"
           : "Washington has seven conditional judgments: PCS, ISR, MED, LON, TEC and OPT at 60, and RES at 40. GSS remains unresolved, with no total centre. The same nationwide drug-code query retains all 254 published 2024 claims records. One has 13 distinct beneficiaries within that record; its registered address matches the opened Sterling clinic, and the interpolated address point lies in the frozen FUA. A claims address is not a treatment site; drug units are not infusions, and absent records do not establish absent service. LON 60 requires local-delivery, disease-pathway relevance, service and appropriate safety-monitoring continuity, and ordinary eligible residents' access and affordability assumptions. Costs, eligibility and serious risks remain; no healthy-person lifespan gain or widespread uptake is established. Food and exit judgments still require resident, approval, affordability and whole-area assumptions; responses to two attacks do not establish low overall safety impact. The seven judgments give 49–64; withdrawing LON or OPT gives 43–68 and RES gives 45–70. None is a reliable exclusion bound."
+      }
+    </p>
+    <p>
+      {
+        zh
+          ? "纽约五项条件性 60：ISR、MED、LON、TEC、OPT；PCS、GSS、RES 未定，无总分中心。2026 全年医院与数字报告提供实际交付，2025 临床访谈支持有限长寿采用；登记地址不用于归属医院给药或居民人数。合资格住房家庭采用 83.4% 不是全市覆盖。短信 911 实际故障时语音仍可用，不证明所有发短信者得到帮助。热损失和援助缺口、资源调查及被阻止的袭击计划均已审阅，尚不足以选择其余整维档位。五项仍需普通居民资格、负担、延续及全功能区假设；数学域为 36—76，撤回 MED 为 27—82，撤回 LON 为 30—80，均不是入围或排除依据。"
+          : "New York has five conditional 60 judgments: ISR, MED, LON, TEC and OPT. PCS, GSS and RES remain unresolved, with no total centre. Full-year 2026 hospital and digital reports document delivery; a 2025 clinical interview supports limited longevity adoption. Registered addresses do not assign hospital administrations or resident counts. Adoption by 83.4% of eligible housing households is not citywide coverage. Voice 911 remained available during an actual text-service outage, without proving all texters received help. Heat losses and aid gaps, resource evidence and a disrupted attack plot are reviewed but do not yet justify the other whole-dimension anchors. The five judgments still require resident eligibility, affordability, continuity and whole-FUA assumptions. Their mathematical domain is 36–76; withdrawing MED gives 27–82 and LON gives 30–80. None establishes qualification or exclusion."
       }
     </p>
     <p>

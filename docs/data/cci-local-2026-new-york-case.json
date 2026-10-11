@@ -1,0 +1,339 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 7244,
+  "name": "New York",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "evidenceReview": "cci-local-2026-new-york-case.md",
+  "expectedConditionalTotal": null,
+  "limitations": "All eight dimensions and 31 subpillars reviewed, not fully measured; PCS/GSS/RES remain unresolved. Conditional anchors require explicit ordinary-resident, locality, continuity and FUA assumptions. No global ranking, reliable exclusion bound, zero imputation or healthy-person lifespan benefit. Rejecting necessary assumptions restores unknown.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": null,
+      "rationale": "The 2026 heat report distinguishes observed heat-stress deaths from modelled heat-exacerbated mortality, with substantial burden on non-extreme days. Actual July 2026 cooling activation and outreach coexist with unmet home-cooling demand and early aid closure. The burden is not measured for median-income citizens or the frozen FUA, and other hazards/protection effects remain incomplete.",
+      "assumption": "No justified whole-dimension anchor yet. Do not infer sufficient ordinary-resident protection from activated sites, or a 40 score from citywide deaths without reviewing representative exposure, home protection and remaining hazards.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "unresolved"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "A May 2026 Justice Department release describes an alleged Manhattan synagogue plot and actual disruption/protection; overseas alleged attacks and victims are not New York casualties. These selected records and ordinary-crime trends do not establish annual whole-FUA organised-violence, regional-spillover or strategic-impact profiles. Charges are not convictions.",
+      "assumption": "No justified whole-dimension anchor yet. A blocked plot supports mitigation but neither zero harm in a selected plot nor general crime decline proves low overall resident impact.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "partial",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Actual fiscal-2026 hospital/digital services and activated heat measures support execution. The April 2026 OIG report separates 159 fully implemented NYPD recommendations from partial implementation, acceptance in principle and rejection; its combined progress percentage is not full implementation. Public reporting is not itself service quality or whole-FUA accountability.",
+      "assumption": "Observed execution and oversight continue through the cutoff, apply to ordinary citizens across the FUA, and reviewed defects have not become a broader unmitigated institutional bottleneck. Rejecting continuity, reach or this bottleneck assumption restores unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "The 2025 water report, dated food-service delivery and resident energy-insecurity evidence support real supply and constraints. Food population estimates, a 2022 energy survey and selected 2025 focus groups do not specifically measure median-income citizens in the frozen FUA. Aid eligibility, housing conditions and observed barriers remain, without evidence that relief resolves them for the target resident.",
+      "assumption": "No justified whole-dimension anchor yet. Water standards and food-distribution volume cannot cancel affordability constraints; aggregate percentages or selected above-aid-threshold households do not by themselves justify 40, 60 or exclusion for the target resident.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "unresolved"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "The September 2026 MMR hospital chapter reports actual delivery, primary-care appointment availability and patient outcomes/experience, including 1,170,529 unique patients, a nine-day third-next adult appointment and 69.9% glycaemic control among diagnosed patients. Eligibility/method changes explain some apparent declines; crisis continuity and median-resident affordability are not fully measured.",
+      "assumption": "Dated services persist and ordinary local citizens can usually obtain clinically adequate necessary routine/specialist care under usual coverage across the FUA. NYC Care is a conditional access programme, not universal insurance; observed patients and listed benefits do not prove affordability or eligibility for the modelled resident. Rejecting these assumptions restores unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "Credible early-Alzheimer trial/regulatory evidence connects to a September 2025 NYU clinician report of actual clinical lecanemab and donanemab treatment. The current clinician address point lies in the FUA, but historical treatment location/continuity remains an assumption. The 28 exact claims-address signals are independent research leads, not NYU administrations or local residents; the two non-exact signals remain review. Eligibility, costs and serious ARIA risk are retained; presymptomatic plans/trials are not completed prevention.",
+      "assumption": "The clinician-reported treatment represents local delivery, the limited disease-specific pathway is relevant to LON readiness, and services with appropriate current safety monitoring continue through the cutoff. Clinically eligible median-income citizens can usually obtain and afford diagnosis, referral, treatment and follow-up across the FUA. Rejecting locality, pathway relevance, continuity, monitoring or ordinary access restores unknown; no healthy-person lifespan benefit or universal eligibility is assumed.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "NYU FY2025 disclosures, patents and licensing establish scoped output and industry connections; FY2026 Big Apple Connect adoption and public digital delivery support actual limited diffusion. Counts span institutional and eligible-programme scopes, not the FUA population. The active-unit denominator was updated; cumulative LinkNYC subscribers are not current local residents or distinct households.",
+      "assumption": "Observed capabilities persist and provide limited industry connections and resident diffusion across the area. One university/system and targeted housing programmes are applicable partial evidence, not whole-industry representation or independent critical-node resilience. Rejecting continuity or reach restores unknown; counts and uptake alone do not justify 80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Actual 2025 airport use, shared section-41 application conditions and national wire-capable account terms support conditional transport, legal and asset paths. FY2026 records show a 110-minute Text-To-911 outage with voice service unaffected and 12 texters notified, alongside public communication services. Announced airport shuttle/replacement projects are not completed rides or future capacity; bounce messages do not prove all texters reached help.",
+      "assumption": "Observed channels and applicable terms persist across the FUA; ordinary citizens can usually obtain and afford transport, a qualifying residence-purpose route, an approved wire-capable account/compliant destination and an accessible alternative communication channel. Applications are not approvals, and voice availability is not universal accessible backup. Rejecting ordinary eligibility, affordability, temporal/boundary applicability or alternative access restores unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "retrievedOn": "2026-10-12",
+  "researchPriority": {
+    "basis": "directory_associations_after_existing_seven_cases_not_performance",
+    "associatedDirectoryRecords": 2730,
+    "source": "cci-openalex-institution-fua.csv",
+    "sourceSha256": "b59735ba074e3e1b8e05f1d08bd672ef1d1ec219303cd9a788c93fc2a5e798ed"
+  },
+  "sourceSnapshots": [
+    {
+      "url": "https://a816-dohbesp.nyc.gov/IndicatorPublic/data-features/heat-report/",
+      "publishedOn": "2026-06-15",
+      "retrievedOn": "2026-10-12",
+      "bytes": 84960,
+      "sha256": "3029b864ecb5a71bdf96ebd62606464325284f78c380ecf817e2b7f6a886c9a9",
+      "scope": "Full primary text reviewed: 2016-2025 heat-stress average versus 2014-2023 modelled heat-exacerbated average, ten-year rolling windows and provisional 2024/2025 certificates; not a 2026 death count or local median-income/FUA estimate. Release date corroborated by the official June 15 notice."
+    },
+    {
+      "url": "https://home4.nyc.gov/site/em/about/press-releases/20260701_pr_NYCEM-Mayor-Mamdani-Expands-Emergency-Heat-Measures.page",
+      "publishedOn": "2026-07-01",
+      "retrievedOn": "2026-10-12",
+      "bytes": 37817,
+      "sha256": "f7b6ae1d591ff746cb0ed16a3d2cecd5850f1cb1672dbf82ac80fa02646522cc",
+      "scope": "Actual July 1 activation and public digital directions; July 3-5 extra openings and newly launched vans are announced arrangements, not verified attendance, completed trips or health effects. Grid-conservation requests retained."
+    },
+    {
+      "url": "https://www.nyc.gov/assets/operations/downloads/pdf/mmr2026/hhc.pdf",
+      "publishedOn": "2026-09-17",
+      "retrievedOn": "2026-10-12",
+      "bytes": 190252,
+      "sha256": "e6c22ad3cd10292d94fadcfdd5ae2080f77b98696eb026c378a0cf6bec664b95",
+      "scope": "All ten pages extracted, PDF pp.1-8 (printed pp.215-222) reviewed, pp.5/7/8 visually checked. FY26 actuals separated from targets and four-month report. Mammography eligibility broadened; eConsult workflow changed, inpatient/post-acute series revised, financial ratio omits final quarter. NYC hospital network, not whole FUA or citizen/median-income sample. Read via official home4 host.",
+      "retrievedUrl": "https://home4.nyc.gov/assets/operations/downloads/pdf/mmr2026/hhc.pdf"
+    },
+    {
+      "url": "https://www.nyc.gov/assets/operations/downloads/pdf/mmr2026/oti.pdf",
+      "publishedOn": "2026-09-17",
+      "retrievedOn": "2026-10-12",
+      "bytes": 202342,
+      "sha256": "72b875f09c2f6ecbea86bc6d6322993086e42f2ef07ada64b55ca4eccb8393aa",
+      "scope": "All eight pages extracted; PDF pp.3,5-6 (printed pp.461,463-464) reviewed, p.3 visually checked. May 2026 TT911 outage/voice availability and corrective action; cumulative subscribers and eligible-household adoption are separate populations. Active-unit denominator changed. Read via official home4 host.",
+      "retrievedUrl": "https://home4.nyc.gov/assets/operations/downloads/pdf/mmr2026/oti.pdf"
+    },
+    {
+      "url": "https://www.nyc.gov/assets/doi/reports/pdf/2026/08OIGNYPD.AR.Release.Rpt.04.15.2026.pdf",
+      "publishedOn": "2026-04-15",
+      "retrievedOn": "2026-10-12",
+      "bytes": 2961771,
+      "sha256": "1023152fdeba7e94ee3f98e2635bc3530dd57169ec4e9feac649d9754621d0ca",
+      "scope": "All 65 pages extracted; release pp.1-2 and methodological/main-status discussion through printed p.10 reviewed. 159/275 fully implemented, 27 partial, 26 accepted in principle, 47 rejected; combined >75% is not completed implementation. New late-2025 recommendations have stated assessment limits. Read via official home4 host.",
+      "retrievedUrl": "https://home4.nyc.gov/assets/doi/reports/pdf/2026/08OIGNYPD.AR.Release.Rpt.04.15.2026.pdf"
+    },
+    {
+      "url": "https://www.nyc.gov/assets/foodpolicy/downloads/pdf/NYC-Food-by-the-Numbers-2025.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 25285498,
+      "sha256": "a40f43e265ccc0670fb777fa84c330ca7946747447019065946f74156e102df5",
+      "scope": "December 2025 issue; all 16 pages extracted, cover and food insecurity/access pages reviewed. 2023 Feeding America population estimates, FY2025/other period service counts and future policy are distinct. No median-income citizen/FUA estimate; exact public-release day/archive unverified. Read via official home4 host.",
+      "retrievedUrl": "https://home4.nyc.gov/assets/foodpolicy/downloads/pdf/NYC-Food-by-the-Numbers-2025.pdf"
+    },
+    {
+      "url": "https://www.nyc.gov/assets/dep/downloads/pdf/water/drinking-water/drinking-water-supply-quality-report/2025-drinking-water-supply-quality-report.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 18403074,
+      "sha256": "b08c91a50768fbfced4be715c61b485d61a56cb61afe80b0bb2ce29d3f252dff",
+      "scope": "2025 observations; all 20 pages extracted, source-system description, 2025 tables and footnotes reviewed. Utility service scope differs from FUA; no independent-source redundancy or household affordability inferred. Exact public-release day/archive unverified. Read via official home4 host.",
+      "retrievedUrl": "https://home4.nyc.gov/assets/dep/downloads/pdf/water/drinking-water/drinking-water-supply-quality-report/2025-drinking-water-supply-quality-report.pdf"
+    },
+    {
+      "url": "https://e2h2hernandez.com/wp-content/uploads/2025/12/Powering-Up-for-Health-Policy-Solutions-for-EI-in-NYC-E2H2_Report_final.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 4674780,
+      "sha256": "97824fedfb09001fc9fa9201c92beb9ecdd15b6bb2b0598121358ecba12e6c79",
+      "scope": "December 2025 issue, 48 pages extracted; executive summary, 2022 survey discussion and policy-versus-delivery distinction reviewed. Economic/any-indicator measures differ; policy recommendations are not completed relief, no median-income FUA estimate."
+    },
+    {
+      "url": "https://www.nyc.gov/assets/doh/downloads/pdf/earlyint/ei-community-voices-energy-insecurity.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 205092,
+      "sha256": "a3492c19130893b86c4280a6573bf7b6f0a4196ba31327b456c3b04f974ccfb8",
+      "scope": "Summer-2025 four focus groups in Bronx/Queens, selected participants and above-aid-threshold accounts. Qualitative barriers are evidence but not population prevalence, precise median income, nationality or FUA measurement. Current download lacks verified publication day/cutoff archive. Read via official home4 host.",
+      "retrievedUrl": "https://home4.nyc.gov/assets/doh/downloads/pdf/earlyint/ei-community-voices-energy-insecurity.pdf"
+    },
+    {
+      "url": "https://physicianfocus.nyulangone.org/beyond-beta-amyloid-dr-martin-sadowski-on-the-next-era-of-alzheimers-care/",
+      "publishedOn": "2025-09-04",
+      "retrievedOn": "2026-10-12",
+      "bytes": 61924,
+      "sha256": "5ccb060845c92e2971cc85e8d324819284a399fd043f231e1573e0f531acc4e0",
+      "scope": "Full interview read; declared publication/modified metadata September 4, 2025. Clinician reports actual clinical use over previous two years/early 2025. No local administration count, controlled city outcomes or complete eligible-resident access; presymptomatic goals and tau trials are future/investigational."
+    },
+    {
+      "url": "https://nyulangone.org/doctors/1407840127/martin-sadowski",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 352014,
+      "sha256": "aeccf3c7990b8afccf16ded70c238766942ac15e9b37d85c5a4947107d5df55e",
+      "scope": "Current clinician page/address/insurance list corroborate institutional pathway, not a frozen historical location, drug authorisation, appointments or affordability. Do not attribute a claims NPI to NYU solely from its address."
+    },
+    {
+      "url": "https://nyulangone.org/files/2025-annual-report.pdf",
+      "publishedOn": "2025-11-17",
+      "retrievedOn": "2026-10-12",
+      "bytes": 4944096,
+      "sha256": "c809cfede067c2bbad76b1352a8cba8c8e117e2a1b17f0d68798d8b341ca3dc0",
+      "scope": "All 52 pages extracted; PDF p.23 (printed p.19) visually checked: institution-wide FY25 TOV output/industry links. Licensing activity 109 is not all 840 agreements, patent applications are not 48 issued US patents. Release date declared by official financial-report index; no city-wide/per-capita score or external hospital-rank bonus."
+    },
+    {
+      "url": "https://www.panynj.gov/content/dam/airports/statistics/statistics-general-info/annual-atr/ATR_2025.pdf",
+      "publishedOn": "2026-04-10",
+      "retrievedOn": "2026-10-12",
+      "bytes": 13473547,
+      "sha256": "b916d237820b473f48327def219f8f243448bd8daf4bb02eff8ea4fdea76b9cf",
+      "scope": "All text extracted; dated aviation letter and airport operations/ground-service discussion reviewed. 142.7 million regional passenger movements in 2025 are not deduplicated local residents. EWR schedule/runway/ATC constraints retained; planned 2026-2029 improvements not operational capacity. Cover-letter date, exact archive not verified."
+    },
+    {
+      "url": "https://www.portauthoritybuilds.com/redevelopment/us/en/ewr/news/port-authority-advances--3-5-billion-airtrain-newark-replacement.html",
+      "publishedOn": "2026-01-13",
+      "retrievedOn": "2026-10-12",
+      "bytes": 92425,
+      "sha256": "131234c160795fadd9ff744b9c54e6c76ee82a9ac1ddc6de9fb6fca2ceef4c66",
+      "scope": "Dated notice, current body modified July 2026: January-15 announced AirTrain disruption, replacement shuttles and later work. Not verified completed shuttle journeys; 2029 replacement/forecast capacity not credited. Expired NJ Transit notice not treated as current operating proof."
+    },
+    {
+      "url": "https://geocoding.geo.census.gov/geocoder/locations/address?street=145%20East%2032nd%20Street&city=New%20York&state=NY&zip=10016&benchmark=4&format=json",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 671,
+      "sha256": "e95408b3d2392e01ac8634fd054e15fc5c0f89bb811f8fd80f0eec24ca3b9cac",
+      "scope": "Current Census benchmark 4: one interpolated address-range point intersects frozen FUA 7244 using existing checksum-validated geometry and projection. Not a historical treatment-site, patient-residence or whole-area service measurement."
+    },
+    {
+      "url": "https://www.nyc.gov/mayors-office/news/2026/09/more-affordable--safer--better-run--mayor-mamdani-s-first-manage",
+      "publishedOn": "2026-09-17",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Official primary page read via web: FY26 MMR released September 17, covers July 1, 2025 to June 30, 2026. Direct home4 request failed; no response-error hash used as content."
+    },
+    {
+      "url": "https://nyulangone.org/our-story/nyu-langone-financial-reports",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Official index primary text reviewed: FY25 annual report released November 17, 2025. Current page, no archive or content-byte snapshot claimed."
+    },
+    {
+      "url": "https://www.justice.gov/usao-sdny/pr/iraqi-national-arrested-and-charged-providing-material-support-iranian-backed",
+      "publishedOn": "2026-05-15",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Primary release read via web, updated May 19. Arrest, alleged overseas attacks and alleged US plots; Manhattan disruption reported. Curl returned a challenge document, not source bytes; not hashed as evidence. Charges are allegations, not convictions or completed NY casualties."
+    },
+    {
+      "url": "https://www.cms.gov/newsroom/press-releases/statement-broader-medicare-coverage-leqembi-available-following-fda-traditional-approval",
+      "publishedOn": "2023-07-06",
+      "retrievedOn": "2026-10-12",
+      "bytes": 55743,
+      "sha256": "4f62e357fbb58b44ae6f7eb238cb3e2a728dc2841245e7127e2bf0e97065c0bf",
+      "scope": "Medicare, disease and registry conditions, not universal citizen eligibility"
+    },
+    {
+      "url": "https://www.fda.gov/news-events/press-announcements/fda-converts-novel-alzheimers-disease-treatment-traditional-approval",
+      "publishedOn": "2023-07-06",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Primary page read through web tool; direct-download hash unavailable, not represented as a downloaded snapshot; national trial and approval, not local delivery"
+    },
+    {
+      "url": "https://www.chase.com/content/dam/chase-ux/documents/personal/checking/ABSF-en.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 488107,
+      "sha256": "69836d755532c957e9dab7bd49f8bea6f68b5eb01671bc5b58d803226b2626d1",
+      "scope": "Effective June 14 2026 personal-account edition, PDF pp.1-3,13,15 reviewed. Total Checking terms and international-wire fees with account approval, exchange spreads and intermediary costs; Secure Checking excludes outgoing wires. File metadata is not publication/cutoff archive. Neither every account nor every local citizen has this channel; no completed resident transfer, asset liquidation, approvals or crisis continuity inferred."
+    },
+    {
+      "url": "https://www.fda.gov/drugs/drug-safety-communications/fda-recommend-additional-earlier-mri-monitoring-patients-alzheimers-disease-taking-leqembi-lecanemab",
+      "publishedOn": "2025-08-28",
+      "retrievedOn": "2026-10-12",
+      "bytes": 48310,
+      "sha256": "a51f461d934676b41a73288137b715d620449d8c37f7a6a0933b22512b71416d",
+      "scope": "August 28, 2025 safety communication adds MRI before the third infusion and retains serious/fatal ARIA risk. National safety evidence, not local harm incidence or proof the clinic adopted the update."
+    },
+    {
+      "url": "https://home4.nyc.gov/site/doh/about/press/pr2026/nyc-health-department-releases-report-on-heat-related-deaths.page",
+      "publishedOn": "2026-06-15",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Official primary release read via web: publishes the 2026 report, identifies home-cooling constraints and June 5 early HEAP closure. No original byte snapshot or city-median/FUA risk estimate claimed."
+    }
+  ],
+  "claimSignals": {
+    "coverageManifest": "cci-cms-lecanemab-fua-audit.json",
+    "coverageManifestSha256": "20b249db15a31295fe74a287e0bccd27b2b9e1e8b49611fe51a6f82de008a3d6",
+    "exactRegisteredNpiRecords": 28,
+    "nonExactPossibleNpiRecords": 2,
+    "meaning": "Not local administration counts, NYU NPI affiliations, patient residences or resident affordability; all records retained in the complete national source."
+  },
+  "clinicBoundaryCheck": {
+    "source": "clinic-geocode.json",
+    "matchedAddress": "145 E 32ND ST, NEW YORK, NY, 10016",
+    "interpolatedLongitude": -73.979896822399,
+    "interpolatedLatitude": 40.744861031626,
+    "fuaMatches": [7244],
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "method": "Existing checksum-validated GHS-FUA load, always_xy EPSG:4326 to ESRI:54009 point intersection; current address range only, not historical treatment or whole-FUA reach."
+  },
+  "sharedLegalPath": {
+    "source": "cci-legal-mobility-rules.json",
+    "sourceSha256": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
+    "rule": "section41_citizen_onshore_application_germany",
+    "meaning": "Conditional US-citizen onshore application procedure only; qualification/resources/insurance/approval remain necessary, no automatic residence or work entitlement."
+  }
+}
