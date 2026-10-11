@@ -51,15 +51,15 @@
     },
     {
       "id": "RES",
-      "score": null,
-      "rationale": "Historical and national water context and exercise requests for dialysis water provide only partial leads; food, energy, logistics and household burdens remain unresolved.",
-      "assumption": "No whole-dimension judgment is supported yet; single-resource context and requested backup do not establish usual supply or affordability, and missing evidence is not failure.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Actual water operations, regional electricity continuity and monthly Tokyo produce-market deliveries support ordinary resource supply; partial blackout backup, shared power/fuel dependencies and household spending constraints prevent a high-grade judgment.",
+      "assumption": "Observed ordinary supply persists across the functional area and necessary food, water and energy are usually obtainable and affordable for the median-income local resident; operator areas, wholesale flows and household means do not measure that full profile. Rejecting this assumption leaves RES unresolved.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
-        "water": "context",
-        "food": "unresolved",
-        "energy": "unresolved",
-        "supply_chain": "unresolved"
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
       }
     },
     {

@@ -177,15 +177,19 @@ assert.deepEqual(total({ ...gaza, MED: 40 }), { center: null, lower: 17, upper: 
 const gazaWithoutMed = { ...gaza };
 delete gazaWithoutMed.MED;
 assert.deepEqual(total(gazaWithoutMed), { center: null, lower: 11, upper: 71 });
-assert.deepEqual(total(tokyo), { center: null, lower: 39, upper: 74 });
-assert(!("GSS" in tokyo) && !("RES" in tokyo) && !("OPT" in tokyo));
-assert.deepEqual(total({ ...tokyo, TEC: 80 }), { center: null, lower: 41, upper: 76 });
+assert.deepEqual(total(tokyo), { center: null, lower: 45, upper: 70 });
+assert(!("GSS" in tokyo) && !("OPT" in tokyo));
+assert.equal(tokyo.RES, 60);
+const tokyoWithoutRes = { ...tokyo };
+delete tokyoWithoutRes.RES;
+assert.deepEqual(total(tokyoWithoutRes), { center: null, lower: 39, upper: 74 });
+assert.deepEqual(total({ ...tokyo, TEC: 80 }), { center: null, lower: 47, upper: 72 });
 const tokyoWithoutLon = { ...tokyo };
 delete tokyoWithoutLon.LON;
-assert.deepEqual(total(tokyoWithoutLon), { center: null, lower: 33, upper: 78 });
+assert.deepEqual(total(tokyoWithoutLon), { center: null, lower: 39, upper: 74 });
 const tokyoWithoutMed = { ...tokyo };
 delete tokyoWithoutMed.MED;
-assert.deepEqual(total(tokyoWithoutMed), { center: null, lower: 30, upper: 80 });
+assert.deepEqual(total(tokyoWithoutMed), { center: null, lower: 36, upper: 76 });
 const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
   (c: { efua_id: string }) => c.efua_id === "5129"
 );
@@ -224,6 +228,7 @@ console.log({
     gaza: { partial: total(gaza), unresolvedMED: total(gazaWithoutMed) },
     tokyo: {
       partial: total(tokyo),
+      unresolvedRES: total(tokyoWithoutRes),
       unresolvedLON: total(tokyoWithoutLon),
       unresolvedMED: total(tokyoWithoutMed),
     },
