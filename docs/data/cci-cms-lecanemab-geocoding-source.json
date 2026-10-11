@@ -1,0 +1,27 @@
+{
+  "status": "complete_public_provider_address_geocoding_not_treatment_locations",
+  "endpoint": "https://geocoding.geo.census.gov/geocoder/locations/addressbatch",
+  "benchmark": "Public_AR_Current",
+  "benchmarkId": 4,
+  "retrievedOn": "2026-10-12",
+  "recordCount": 254,
+  "claimsCsvSha256": "07196f56adec4a5315f45fe4316bfe4a0c10a8d0281394ac74703ca72af767d5",
+  "files": {
+    "cci-cms-lecanemab-addresses.csv": {
+      "bytes": 12918,
+      "sha256": "ba605a15826657ef11fef4cb9d3fedc47fbe390b9a9e8768e1319800a3bafade"
+    },
+    "cci-cms-lecanemab-geocodes.csv": {
+      "bytes": 40502,
+      "sha256": "df6a87afcf0f3f315b98cae8980c49e7d65c347eb3338e8d5c731a8f0cdd770e"
+    }
+  },
+  "documentation": {
+    "url": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.pdf",
+    "version": "02/2026",
+    "bytes": 379352,
+    "sha256": "1d9914e8098f270f91d3e9d6e92cc373dfddeb4ab4f655734783a1d67988893a"
+  },
+  "method": "One batch, all 254 source NPIs, no header: NPI, source street1, city, state, ZIP. Suite in street1 retained; separate street2 not submitted and remains in source. No manual address repair, guessed coordinates, nearest city or population filter. curl --form addressFile=@addresses.csv --form benchmark=4 ENDPOINT --output geocodes.csv. Response retains exact submitted-address echo, match quality, matched address and interpolated point where provided.",
+  "limitations": "Current benchmark retrieved after the evidence cutoff is used only for mapping historical registered addresses, not 2026 clinical measurement. Exact is a Census address-range match, not a verified structure, suite, historical provider location or treatment site. Non-exact, No_Match and Tie remain review states. Public professional addresses only; no patient data submitted."
+}

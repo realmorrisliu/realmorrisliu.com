@@ -102,12 +102,12 @@ def legal_mobility_rules(document):
     return result
 
 
-def matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports, legal, cases=()):
+def matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports, claims, legal, cases=()):
     expected = {r["efua_id"] for r in candidates}
     if len(expected) != len(candidates):
         raise ValueError("Duplicate universe IDs")
-    history, spatial, violence, healthcare, governance, seismic, water, wup, airports = [
-        indexed(rows, expected) for rows in (history, spatial, violence, healthcare, governance, seismic, water, wup, airports)]
+    history, spatial, violence, healthcare, governance, seismic, water, wup, airports, claims = [
+        indexed(rows, expected) for rows in (history, spatial, violence, healthcare, governance, seismic, water, wup, airports, claims)]
     network = network_coverage(network, expected)
     cases = local_cases(cases, expected)
     legal = legal_mobility_rules(legal)
@@ -152,6 +152,13 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
         airport_status = 'directory_points_only' if airport_count else 'no_in_area_point_not_no_transport'
         if airports[key]['status'] != airport_status:
             raise ValueError('Airport directory status mismatch')
+        exact_claims = int(claims[key]['exact_registered_npi_records'])
+        uncertain_claims = int(claims[key]['uncertain_address_npi_records'])
+        claims_status = 'exact_registered_address_signal' if exact_claims else (
+            'no_exact_signal_not_no_adoption' if candidate['country_iso'] == 'USA' else 'outside_payer_frame_not_no_adoption')
+        if (exact_claims < 0 or uncertain_claims < 0 or claims[key]['country_iso'] != candidate['country_iso']
+                or claims[key]['status'] != claims_status or (exact_claims and candidate['country_iso'] != 'USA')):
+            raise ValueError('Invalid claims address coverage or payer frame')
         rule = legal.get(candidate['country_iso'])
         rows.append({
             "efua_id": key, "source_name": candidate["source_name"], "country_iso": candidate["country_iso"],
@@ -159,7 +166,7 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
             "PCS": pcs, "GSS": "partial_event_history" if events else "no_assigned_events_not_zero_risk",
             "ISR": "country_context_only" if context_count else "country_context_missing",
             "RES": "country_urban_water_context_only" if water_count else "water_context_missing",
-            "MED": med, "LON": "not_assembled",
+            "MED": med, "LON": "partial_claims_registered_address_signal" if exact_claims else "not_assembled",
             "TEC": "partial_network_samples" if network[key]["network_sample_connection_types"] else "network_samples_missing",
             "OPT": "airport_directory_points_only" if airport_count else "no_in_area_airport_point_not_no_access",
             "airport_directory_points": airport_count,
@@ -167,6 +174,9 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
             "legal_mobility_status": rule['status'] if rule else 'no_reviewed_path_not_no_right',
             "legal_mobility_rule": rule['id'] if rule else '',
             "legal_mobility_destination": rule['destinationCountryIso'] if rule else '',
+            'lon_claims_exact_registered_npi_records': exact_claims,
+            'lon_claims_uncertain_address_npi_records': uncertain_claims,
+            'lon_claims_scope_status': claims_status,
             **network[key],
             "ucdb_intersecting_centres": s["intersecting_centres"],
             "wup_2025_intersecting_centres": wup_count,
@@ -211,6 +221,7 @@ def main():
     network = read("cci-ookla-efua-sampled-measurements.csv", "cci-ookla-efua-sampled-measurements.json", "csvSha256")
     wup = read("cci-wup-2025-fua-coverage.csv", "cci-wup-2025-crosswalk.json", "outputs", True)
     airports = read("cci-ourairports-efua-coverage.csv", "cci-ourairports-fua-audit.json", "outputs", True)
+    claims = read("cci-cms-lecanemab-efua-coverage.csv", "cci-cms-lecanemab-fua-audit.json", "outputs", True)
     legal_path = folder / 'cci-legal-mobility-rules.json'
     legal = json.loads(legal_path.read_text())
     review = ROOT / 'docs' / legal['evidenceReview']
@@ -230,7 +241,7 @@ def main():
                              'provenance': review.name,
                              'provenanceSha256': hashlib.sha256(review.read_bytes()).hexdigest()}
         cases.append(case)
-    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports, legal, cases)
+    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports, claims, legal, cases)
     output = folder / "cci-global-evidence-matrix.csv"
     with output.open("w", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
@@ -275,6 +286,7 @@ def main():
                              "GSS": ["organized_violence: partial historical events only"],
                              "ISR": ["governance: country context only"],
                              "MED": ["access: historical spatial model only"],
+                             "LON": ["translation: 2024 published single-drug Medicare FFS claims associated with next-year-end provider registered addresses; exact Census range points are not treatment sites or patient residences; missing, uncertain and outside-payer states retained, no resident access, quality or whole-dimension score"],
                              "TEC": ["digital_infrastructure: self-selected 2026 Q3 network tests only; boundary sensitivity retained, not population access or complete technology capability"],
                              "OPT": ["transport_redundancy: directory airport points and scheduled nonclosed flags only; no resident access, routes, independent alternatives or common failures measured",
                                      "legal_mobility: reviewed Germany/France conditions under modelled citizenship only; conditional residence rights differ from section 41 onshore applications, which are not approved residence or work; no actual affordability, employment or crisis operation measured"]},

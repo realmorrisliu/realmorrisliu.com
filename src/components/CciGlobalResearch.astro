@@ -7,6 +7,7 @@ import works from "../../docs/data/cci-openalex-filter-inventory.json";
 import authorships from "../../docs/data/cci-openalex-authorship-inventory.json";
 import affiliations from "../../docs/data/cci-openalex-global-affiliation-audit.json";
 import airports from "../../docs/data/cci-ourairports-fua-audit.json";
+import clinicalClaims from "../../docs/data/cci-cms-lecanemab-fua-audit.json";
 import singapore from "../../docs/data/cci-local-2026-singapore-case.json";
 import london from "../../docs/data/cci-local-2026-london-case.json";
 import helsinki from "../../docs/data/cci-local-2026-helsinki-case.json";
@@ -29,6 +30,12 @@ const counts = coverage.dimensionStatusCounts;
 const legal = coverage.legalMobility.statusCounts;
 const cases = [singapore, london, helsinki, zurich, gaza, tokyo, washington];
 const screening = coverage.local2026Screening;
+if (
+  clinicalClaims.candidateCount !== coverage.candidateCount ||
+  clinicalClaims.status !== "registered_claims_address_signal_not_local_delivery_or_scores"
+) {
+  throw new Error("Clinical claims address audit disagrees with the candidate scope");
+}
 if (
   rankAudit.candidateCount !== coverage.candidateCount ||
   rankAudit.conditionalCaseCount !== cases.length ||
@@ -95,8 +102,8 @@ const rows = [
   [
     "LON",
     zh
-      ? "尚未形成同口径的临床转化、监管与居民可及证据。"
-      : "Comparable evidence of clinical translation, regulation and resident access is not yet assembled.",
+      ? `${n(counts.LON.partial_claims_registered_address_signal)} 个功能区有 2024 年单药 Medicare FFS 理赔提供者登记地址信号：全国 ${n(clinicalClaims.recordCount)} 条公开记录统一定位，${n(clinicalClaims.mappingStatusCounts.exact_registered_address_signal)} 条精确地址记录唯一落入候选范围；非精确、未匹配、多解及界外结果全部保留。登记地址来自次年末，不是治疗地点或患者住所；计费单位不是输液次数，也不跨提供者累加成去重病人数。美国 ${n(clinicalClaims.coverageStatusCounts.no_exact_signal_not_no_adoption)} 个无精确信号，其他国家 ${n(clinicalClaims.coverageStatusCounts.outside_payer_frame_not_no_adoption)} 个不在该医保范围内，两者均不等于没有服务。仍须核验当地交付、适当监测、2026 延续及居民资格和负担，信号不自动给 LON 分数。`
+      : `${n(counts.LON.partial_claims_registered_address_signal)} areas have registered-provider-address signals from 2024 single-drug Medicare FFS claims. All ${n(clinicalClaims.recordCount)} published records were geocoded uniformly; ${n(clinicalClaims.mappingStatusCounts.exact_registered_address_signal)} exact address records intersect one candidate area. Non-exact, unmatched, tied and outside-frame results remain. Next-year-end registered addresses are not treatment sites or patient homes; billing units are not infusions, and beneficiary counts are not deduplicated across providers. ${n(clinicalClaims.coverageStatusCounts.no_exact_signal_not_no_adoption)} US candidates lack an exact signal; ${n(clinicalClaims.coverageStatusCounts.outside_payer_frame_not_no_adoption)} in other countries are outside this payer frame. Neither establishes absent service. Local delivery, appropriate monitoring, 2026 continuity, resident eligibility and affordability still require review; signals grant no automatic LON score.`,
   ],
   [
     "TEC",
@@ -358,6 +365,16 @@ const rows = [
         ))
       }
     </dl>
+    <p>
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-cms-lecanemab-adoption-signals.md"
+        >{
+          zh
+            ? "查看理赔原始范围、全部定位结果及评分限制"
+            : "Claims scope, all address results and limits on scoring"
+        }</a
+      >
+    </p>
     <a
       href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-legal-mobility.md"
       >{

@@ -39,7 +39,8 @@
       "population_denominator_zero": 1
     },
     "LON": {
-      "not_assembled": 9031
+      "not_assembled": 8969,
+      "partial_claims_registered_address_signal": 62
     },
     "TEC": {
       "partial_network_samples": 8255,
@@ -131,6 +132,9 @@
     "GSS": ["organized_violence: partial historical events only"],
     "ISR": ["governance: country context only"],
     "MED": ["access: historical spatial model only"],
+    "LON": [
+      "translation: 2024 published single-drug Medicare FFS claims associated with next-year-end provider registered addresses; exact Census range points are not treatment sites or patient residences; missing, uncertain and outside-payer states retained, no resident access, quality or whole-dimension score"
+    ],
     "TEC": [
       "digital_infrastructure: self-selected 2026 Q3 network tests only; boundary sensitivity retained, not population access or complete technology capability"
     ],
@@ -196,6 +200,11 @@
       "provenance": "cci-ourairports-fua-audit.json",
       "provenanceSha256": "181521e4b201c6ebda62183e0beba0b713cd3dfbd5fc2d3ce07496c209f943c4"
     },
+    "cci-cms-lecanemab-efua-coverage.csv": {
+      "sha256": "5f17f2e126ad25080219acfe749ae0904255a8a1362a00866993cbfb6aea9f80",
+      "provenance": "cci-cms-lecanemab-fua-audit.json",
+      "provenanceSha256": "20b249db15a31295fe74a287e0bccd27b2b9e1e8b49611fe51a6f82de008a3d6"
+    },
     "cci-legal-mobility-rules.json": {
       "sha256": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
       "provenance": "cci-legal-mobility.md",
@@ -237,6 +246,6 @@
       "provenanceSha256": "3419b58741fe753ae5f09c3de5e3c5a882b377adb3fde94fb0a11ce63fb135b9"
     }
   },
-  "scriptSha256": "9326875a93be7ce1a382203e8daa5da7543d604deb5c11ebbaab7e7a16c4c319",
-  "csvSha256": "3b97af4886b0d35bfa8d6d8e02bf9e4aa1ae3f664b8c6baa473e99a80a66cd54"
+  "scriptSha256": "9475660d0fc622a0d609e16817356ddff3456c5b3b933cbf075f4dcfe7442ec4",
+  "csvSha256": "f0123bbce338e3cb7c1bb0ec6847f7e864e9d857ed41f2f5421241bb55937acc"
 }
