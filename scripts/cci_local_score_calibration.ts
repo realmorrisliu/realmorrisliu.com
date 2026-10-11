@@ -131,6 +131,12 @@ for (const scores of [singapore, london]) {
   assert.equal(total(scores, { ...weights, MED: 10, LON: 15 }).center, 57);
 }
 assert.deepEqual(singapore, london);
+const singaporeWithoutTec = { ...singapore };
+delete singaporeWithoutTec.TEC;
+assert.deepEqual(total(singaporeWithoutTec), { center: null, lower: 52, upper: 62 });
+const singaporeWithoutMedAndTec = { ...singaporeWithoutTec };
+delete singaporeWithoutMedAndTec.MED;
+assert.deepEqual(total(singaporeWithoutMedAndTec), { center: null, lower: 43, upper: 68 });
 assert.equal(total(helsinki).center, 60);
 assert.equal(total({ ...helsinki, MED: 40 }).center, 57);
 assert.equal(total({ ...helsinki, LON: 40 }).center, 58);
@@ -173,6 +179,10 @@ console.log({
   })),
   comparison: {
     current: { singapore: 58, london: 58 },
+    singaporeUnresolved: {
+      TEC: total(singaporeWithoutTec),
+      MEDAndTEC: total(singaporeWithoutMedAndTec),
+    },
     conditionalMED40OPT80: { singapore: 58, london: 57 },
     sameScenarioMED10OPT15: { singapore: 58, london: 59 },
     helsinki: { current: 60, conditionalMED40: 57, unresolvedLON: total(helsinkiWithoutLon) },
