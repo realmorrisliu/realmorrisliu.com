@@ -1,0 +1,118 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 5129,
+  "name": "Tokyo",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "evidenceReview": "cci-local-2026-tokyo-case.md",
+  "expectedConditionalTotal": null,
+  "limitations": "All 31 subpillars are reviewed, not all are measured. Scores require the stated assumptions; unknown evidence remains unknown. This is neither a global ranking nor an exclusion bound. Rejecting a necessary assumption requires reassessment, not automatic retention of its score.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Residential seismic estimates, implemented cooling facilities and public heat information, alongside disaster medical preparation, support protection; heat burden, wooden-housing gaps and unreviewed hazards and locations remain material.",
+      "assumption": "Observed protection usually works and other major hazards do not already cause broader unmitigated failure; rejecting this assumption leaves PCS unresolved.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "unresolved",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "unresolved"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "The 2025 civil-protection revision addresses missile response, but historical events and a plan do not establish current local impact or mitigation effectiveness.",
+      "assumption": "Current organised violence, regional conflict and strategic mitigation have not been sufficiently cross-checked for an overall judgment; unknown is not unsafe.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "context"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Delivered medical-service changes, public information, resident surveys and an actual exercise debrief support execution; group reach and real crisis recovery remain incomplete.",
+      "assumption": "Observed execution persists and supports usual operation of major services; surveys and exercises do not measure whole-FUA institutional outcomes.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "Historical and national water context and exercise requests for dialysis water provide only partial leads; food, energy, logistics and household burdens remain unresolved.",
+      "assumption": "No whole-dimension judgment is supported yet; single-resource context and requested backup do not establish usual supply or affordability, and missing evidence is not failure.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "context",
+        "food": "unresolved",
+        "energy": "unresolved",
+        "supply_chain": "unresolved"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "Actual emergency and specialist care, referral pathways and specified insurance cost protection support access; ambulance pressure, dialysis coordination gaps, routine quality and waits remain constraints or unknowns.",
+      "assumption": "Necessary care is usually obtainable, clinically adequate and affordable under usual coverage, and observed delivery persists; national caps do not measure median local household burdens.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "unresolved",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "A credible early-Alzheimer clinical result, regulator conditions and actual local annual drug-administration cases establish a limited translation pathway; eligibility, safety, cost and broad access remain restricted.",
+      "assumption": "The reviewed disease-specific pathway supports limited health-longevity translation readiness and delivery persists; rejecting representativeness or access leaves LON unresolved, not automatically 40.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Actual annual research and collaborations, network samples and digital-use surveys support research, industry connections and partial diffusion; whole-FUA output, multiple industries and independent critical nodes remain unverified.",
+      "assumption": "Observed research, industry connections and digital capabilities persist; survey denominators and selection do not establish random-sample reach among median-income local citizens.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": null,
+      "rationale": "Airport directories, conditional overseas pension payments and youth mobility programmes support limited leads, not ordinary residents' complete exit capabilities.",
+      "assumption": "Actual independent transport, ordinary-age long-term eligibility, funds and communication continuity remain unresolved; directory points, youth rights and pensions do not fill them.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "transport_redundancy": "context",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "unresolved"
+      }
+    }
+  ]
+}

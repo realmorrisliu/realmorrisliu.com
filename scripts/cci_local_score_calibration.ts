@@ -51,7 +51,7 @@ assert.equal(
 );
 assert.equal(total(a.scores, sensitivity).center, 55);
 assert.equal(total(b.scores, sensitivity).center, 57);
-const realCases = ["singapore", "london", "helsinki", "zurich", "gaza"].map(city =>
+const realCases = ["singapore", "london", "helsinki", "zurich", "gaza", "tokyo"].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
   )
@@ -93,7 +93,7 @@ const realScores = realCases.map(realCase => {
   assert.equal(total(scores).center, realCase.expectedConditionalTotal);
   return scores;
 });
-const [singapore, london, helsinki, zurich, gaza] = realScores;
+const [singapore, london, helsinki, zurich, gaza, tokyo] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
 );
@@ -177,6 +177,22 @@ assert.deepEqual(total({ ...gaza, MED: 40 }), { center: null, lower: 17, upper: 
 const gazaWithoutMed = { ...gaza };
 delete gazaWithoutMed.MED;
 assert.deepEqual(total(gazaWithoutMed), { center: null, lower: 11, upper: 71 });
+assert.deepEqual(total(tokyo), { center: null, lower: 39, upper: 74 });
+assert(!("GSS" in tokyo) && !("RES" in tokyo) && !("OPT" in tokyo));
+assert.deepEqual(total({ ...tokyo, TEC: 80 }), { center: null, lower: 41, upper: 76 });
+const tokyoWithoutLon = { ...tokyo };
+delete tokyoWithoutLon.LON;
+assert.deepEqual(total(tokyoWithoutLon), { center: null, lower: 33, upper: 78 });
+const tokyoWithoutMed = { ...tokyo };
+delete tokyoWithoutMed.MED;
+assert.deepEqual(total(tokyoWithoutMed), { center: null, lower: 30, upper: 80 });
+const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (c: { efua_id: string }) => c.efua_id === "5129"
+);
+assert(tokyoPosition);
+assert.equal(tokyoPosition.center, null);
+assert.equal(tokyoPosition.bestPosition, 1);
+assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount);
 assert.equal(total({ ...london, OPT: 80 }).center, 60);
 const londonCounterfactual = { ...london, MED: 40, OPT: 80 };
 const exitSensitivity = { ...weights, MED: 10, OPT: 15 };
@@ -206,5 +222,10 @@ console.log({
     helsinki: { current: 60, conditionalMED40: 57, unresolvedLON: total(helsinkiWithoutLon) },
     zurich: { current: 58, conditionalOPT80: 60, unresolvedLON: total(zurichWithoutLon) },
     gaza: { partial: total(gaza), unresolvedMED: total(gazaWithoutMed) },
+    tokyo: {
+      partial: total(tokyo),
+      unresolvedLON: total(tokyoWithoutLon),
+      unresolvedMED: total(tokyoWithoutMed),
+    },
   },
 });

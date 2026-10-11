@@ -12,6 +12,7 @@ import london from "../../docs/data/cci-local-2026-london-case.json";
 import helsinki from "../../docs/data/cci-local-2026-helsinki-case.json";
 import zurich from "../../docs/data/cci-local-2026-zurich-case.json";
 import gaza from "../../docs/data/cci-local-2026-gaza-case.json";
+import tokyo from "../../docs/data/cci-local-2026-tokyo-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -24,7 +25,7 @@ const { currentLang } = Astro.props;
 const zh = currentLang === "zh";
 const n = (value: number) => value.toLocaleString(zh ? "zh-CN" : "en-GB");
 const counts = coverage.dimensionStatusCounts;
-const cases = [singapore, london, helsinki, zurich, gaza];
+const cases = [singapore, london, helsinki, zurich, gaza, tokyo];
 const screening = coverage.local2026Screening;
 if (
   rankAudit.candidateCount !== coverage.candidateCount ||
@@ -162,7 +163,7 @@ const rows = [
       {
         zh
           ? `口径为 2026 年、本国公民、通常长期居住、当地中位收入和通常医保；证据截止 2026-10-10。${n(cases.length)} 份案例逐项审阅了八维及全部 31 个子支柱，其中 ${n(screening.completeConditionalCaseCount)} 份有完整条件性中心、${n(screening.partialCaseCount)} 份仅有部分维度判断。部分判断依赖明确假设，不表示每项均有充分测量；“—”表示未定，不能填零或生成总分。后续复核另记实际查阅日期。`
-          : `These cases assess local citizens who usually reside in the city, at median local income and with usual healthcare coverage, in 2026. The evidence cutoff is 10 October 2026. All ${n(cases.length)} reviews cover eight dimensions and 31 subpillars: ${n(screening.completeConditionalCaseCount)} have complete conditional centres and ${n(screening.partialCaseCount)} has only partial judgments. Explicit assumptions do not establish complete measurements. “—” means unresolved, with no zero imputation or total centre. Subsequent checks record actual retrieval dates.`
+          : `These cases assess local citizens who usually reside in the city, at median local income and with usual healthcare coverage, in 2026. The evidence cutoff is 10 October 2026. All ${n(cases.length)} reviews cover eight dimensions and 31 subpillars: ${n(screening.completeConditionalCaseCount)} have complete conditional centres and ${n(screening.partialCaseCount)} have only partial judgments. Explicit assumptions do not establish complete measurements. “—” means unresolved, with no zero imputation or total centre. Subsequent checks record actual retrieval dates.`
       }
     </p>
     <div
@@ -186,6 +187,7 @@ const rows = [
             <th scope="col">{zh ? "赫尔辛基" : "Helsinki"}</th>
             <th scope="col">{zh ? "苏黎世" : "Zurich"}</th>
             <th scope="col">{zh ? "加沙功能区" : "Gaza functional area"}</th>
+            <th scope="col">{zh ? "东京功能区" : "Tokyo functional area"}</th>
           </tr>
         </thead>
         <tbody>
@@ -274,6 +276,11 @@ const rows = [
         href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-gaza-case.md"
         >{zh ? "加沙部分维度案例" : "Gaza partial case"}</a
       >
+      {" · "}
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-tokyo-case.md"
+        >{zh ? "东京部分维度案例" : "Tokyo partial case"}</a
+      >
     </p>
     <p>
       {
@@ -285,8 +292,15 @@ const rows = [
     <p>
       {
         zh
+          ? "东京功能区新增五项条件性 60：PCS、ISR、MED、LON、TEC；GSS、RES、OPT 未定，无总分中心。2025 年度原始报告中的实际治疗、研究和合作支持有限能力；特定疾病的人体结果不等于健康居民普遍可用。两份数字调查的抽样与分母不同，不合并为居民普及率，亦不足以支持 TEC 80。固定五项判断后的数学域为 39—74，LON 假设撤回则为 33—78；这不是可信城市界限，东京仍可能影响入围。"
+          : "Tokyo has five conditional 60 judgments: PCS, ISR, MED, LON and TEC. GSS, RES and OPT remain unresolved, with no total centre. Actual treatment, research and collaborations in the FY2025 report support limited capabilities; disease-specific clinical evidence does not establish access for healthy residents. Two digital surveys have different sampling and denominators; they cannot be pooled into population adoption or establish TEC 80. Fixing five judgments gives a mathematical domain of 39–74; withdrawing LON gives 33–78. Neither is a reliable city bound; Tokyo remains a possible shortlist competitor."
+      }
+    </p>
+    <p>
+      {
+        zh
           ? `已对现有全量矩阵检视提前排除是否有依据：${n(screening.retainedCount)} 个候选全部保留，有依据的排除为 ${n(screening.supportedExclusionCount)}。其中 ${n(screening.completeConditionalCaseCount)} 个有完整条件性中心、${n(screening.partialCaseCount)} 个仅有部分维度判断，${n(screening.unassessedCount)} 个尚无此类八维审阅。筛查只检查现有证据能否排除候选，不等于完成全量评分；局部底表和条件性分数均不能作为可靠排除界限。下一步补证须覆盖仍可能改变入围结论的竞争者。`
-          : `An exclusion screen of the assembled matrix retains all ${n(screening.retainedCount)} candidates, with ${n(screening.supportedExclusionCount)} supported exclusions. ${n(screening.completeConditionalCaseCount)} have complete conditional centres, ${n(screening.partialCaseCount)} has partial judgments, and ${n(screening.unassessedCount)} lack such eight-dimension reviews. This checks whether current evidence supports exclusion, not whether every city has been fully scored. Partial sources and conditional scores establish no reliable exclusion bounds. Further assessment must cover competitors that could change the shortlist.`
+          : `An exclusion screen of the assembled matrix retains all ${n(screening.retainedCount)} candidates, with ${n(screening.supportedExclusionCount)} supported exclusions. ${n(screening.completeConditionalCaseCount)} have complete conditional centres, ${n(screening.partialCaseCount)} have partial judgments, and ${n(screening.unassessedCount)} lack such eight-dimension reviews. This checks whether current evidence supports exclusion, not whether every city has been fully scored. Partial sources and conditional scores establish no reliable exclusion bounds. Further assessment must cover competitors that could change the shortlist.`
       }
     </p>
     <p>

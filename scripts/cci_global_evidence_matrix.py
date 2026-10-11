@@ -181,7 +181,7 @@ def main():
     wup = read("cci-wup-2025-fua-coverage.csv", "cci-wup-2025-crosswalk.json", "outputs", True)
     airports = read("cci-ourairports-efua-coverage.csv", "cci-ourairports-fua-audit.json", "outputs", True)
     cases = []
-    for city in ('singapore', 'london', 'helsinki', 'zurich', 'gaza'):
+    for city in ('singapore', 'london', 'helsinki', 'zurich', 'gaza', 'tokyo'):
         path = folder / f'cci-local-2026-{city}-case.json'
         case = json.loads(path.read_text())
         review = ROOT / 'docs' / case['evidenceReview']
