@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { DIMENSIONS, type DimensionId } from "../src/cci/model";
 
@@ -91,6 +92,27 @@ const realScores = realCases.map(realCase => {
   return scores;
 });
 const [singapore, london, helsinki, zurich] = realScores;
+const rankAudit = JSON.parse(
+  readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
+);
+assert.equal(rankAudit.status, "arithmetic_identifiability_audit_not_ranking");
+assert.deepEqual(rankAudit.weights, weights);
+assert.equal(rankAudit.conditionalCaseCount, realCases.length);
+const digest = (path: string) =>
+  createHash("sha256")
+    .update(readFileSync(new URL(`../${path}`, import.meta.url)))
+    .digest("hex");
+for (const [path, hash] of Object.entries(rankAudit.inputs)) {
+  assert(
+    /^(cci-[a-z0-9.-]+\.(json|csv|md)|src\/cci\/data\/releases\/cci-2026\.10\.3\.json)$/.test(path)
+  );
+  const target = path.includes("/")
+    ? path
+    : `${path.endsWith(".md") ? "docs" : "docs/data"}/${path}`;
+  assert.equal(digest(target), hash, `Stale rank audit input: ${path}`);
+}
+assert.equal(digest("scripts/cci_local_rank_audit.py"), rankAudit.scriptSha256);
+assert.equal(digest("docs/data/cci-local-2026-rank-audit.csv"), rankAudit.csvSha256);
 for (const scores of [singapore, london]) {
   assert.equal(total({ ...scores, MED: 40 }).center, 55);
   assert.equal(total({ ...scores, LON: 60 }).center, 60);

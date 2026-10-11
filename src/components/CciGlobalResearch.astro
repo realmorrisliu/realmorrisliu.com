@@ -11,6 +11,7 @@ import singapore from "../../docs/data/cci-local-2026-singapore-case.json";
 import london from "../../docs/data/cci-local-2026-london-case.json";
 import helsinki from "../../docs/data/cci-local-2026-helsinki-case.json";
 import zurich from "../../docs/data/cci-local-2026-zurich-case.json";
+import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
 
@@ -24,6 +25,16 @@ const n = (value: number) => value.toLocaleString(zh ? "zh-CN" : "en-GB");
 const counts = coverage.dimensionStatusCounts;
 const cases = [singapore, london, helsinki, zurich];
 const screening = coverage.local2026Screening;
+if (
+  rankAudit.candidateCount !== coverage.candidateCount ||
+  rankAudit.conditionalCaseCount !== cases.length ||
+  rankAudit.status !== "arithmetic_identifiability_audit_not_ranking"
+) {
+  throw new Error("Rank identifiability audit disagrees with the current candidate scope");
+}
+const fixedPositionCases = rankAudit.scenarios.fixed_conditional_centers.caseResults;
+const helsinkiPosition = fixedPositionCases.find(c => c.efua_id === String(helsinki.candidateId));
+if (!helsinkiPosition) throw new Error("Helsinki calibration is missing from the position audit");
 if (cases.length !== screening.conditionalCaseCount) {
   throw new Error("Local calibration case count disagrees with the global matrix");
 }
@@ -235,6 +246,18 @@ const rows = [
           ? `已对现有全量矩阵检视提前排除是否有依据：${n(screening.retainedCount)} 个候选全部保留，有依据的排除为 ${n(screening.supportedExclusionCount)}。其中 ${n(screening.conditionalCaseCount)} 个有条件性校准案例，${n(screening.unassessedCount)} 个尚无此类八维评价。筛查只检查现有证据能否排除候选，不等于完成全量评分；局部底表和条件性分数均不能作为可靠排除界限。下一步补证须覆盖仍可能改变入围结论的竞争者。`
           : `An exclusion screen of the assembled matrix retains all ${n(screening.retainedCount)} candidates, with ${n(screening.supportedExclusionCount)} supported exclusions. ${n(screening.conditionalCaseCount)} have conditional calibration cases; ${n(screening.unassessedCount)} lack such eight-dimension reviews. This checks whether current evidence supports exclusion, not whether every city has been fully scored. Partial sources and conditional scores establish no reliable exclusion bounds. Further assessment must cover competitors that could change the shortlist.`
       }
+    </p>
+    <p>
+      {
+        zh
+          ? `全候选入围可判定性演算已覆盖 ${n(rankAudit.candidateCount)} 个冻结功能区、${n(Object.keys(rankAudit.scenarios).length)} 组情景。即使暂时固定四城条件性中心，赫尔辛基的算术位置仍可为 ${n(helsinkiPosition.bestPosition)}—${n(helsinkiPosition.worstPosition)}；其余竞争者仍未知，不能把少数案例的比较当作入围证明。逐维撤回必要假设后，总分中心为空。未知项的 0—100 是数学域端点，不是评分、概率或可靠城市界限；较新未匹配中心亦未被排除。`
+          : `A shortlist-identifiability calculation covers all ${n(rankAudit.candidateCount)} frozen areas across ${n(Object.keys(rankAudit.scenarios).length)} scenarios. Even temporarily fixing the four conditional centres leaves Helsinki's arithmetic position between ${n(helsinkiPosition.bestPosition)} and ${n(helsinkiPosition.worstPosition)}. Unassessed competitors remain unknown; comparisons among a few cases cannot prove membership. Withdrawing a dimension's necessary assumptions removes the total's centre. The 0–100 endpoints for unknowns are mathematical domains, not scores, probabilities or reliable city bounds; newer unmatched centres are also not excluded.`
+      }
+      {" "}
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-rank-audit.md"
+        >{zh ? "查看演算与逐行结果" : "Review the calculation and every candidate row"}</a
+      >
     </p>
   </div>
   <details class="cci-reasons">
