@@ -8,7 +8,7 @@
   "boundaryVersion": "GHS-FUA R2019A",
   "boundaryReview": "unresolved",
   "evidenceReview": "cci-local-2026-tokyo-case.md",
-  "expectedConditionalTotal": null,
+  "expectedConditionalTotal": 60,
   "limitations": "All 31 subpillars are reviewed, not all are measured. Scores require the stated assumptions; unknown evidence remains unknown. This is neither a global ranking nor an exclusion bound. Rejecting a necessary assumption requires reassessment, not automatic retention of its score.",
   "dimensions": [
     {
@@ -26,10 +26,10 @@
     },
     {
       "id": "GSS",
-      "score": null,
-      "rationale": "Actual 2025 Tokyo organised-crime enforcement, current national organised-violence evidence, the 2026 defence review and the local civil-protection plan establish activity, threats and mitigation mechanisms. Detected persons are not incidents, victims or a measure of low current resident impact.",
-      "assumption": "Current low resident impact, whole-FUA coverage and mitigation effectiveness remain unverified; enforcement and preparedness alone cannot choose an overall grade. Unknown is not unsafe.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Local 2025 police victim counts provide actual violence-impact evidence alongside operating enforcement. Corrected national gunfire and gang-conflict statistics supply narrowly defined background, while reviewed September and October 2026 missile notices report no confirmed aircraft or ship damage at those snapshots. Together they support limited recorded impact and operating mitigation, with organised crime, concealed weapons and regional strategic threats retained as counterevidence; no national zero becomes a Tokyo measurement.",
+      "assumption": "Observed limited violence impact and operating mitigation remain applicable through the cutoff and across the functional area, without broader unobserved resident or corridor disruption. Police jurisdiction, reporting coverage and selected missile snapshots do not establish this full profile; rejecting temporal continuity or boundary applicability leaves GSS unresolved.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "organized_violence": "partial",
         "regional_conflict": "context",

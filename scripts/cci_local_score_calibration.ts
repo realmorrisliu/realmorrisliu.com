@@ -177,31 +177,34 @@ assert.deepEqual(total({ ...gaza, MED: 40 }), { center: null, lower: 17, upper: 
 const gazaWithoutMed = { ...gaza };
 delete gazaWithoutMed.MED;
 assert.deepEqual(total(gazaWithoutMed), { center: null, lower: 11, upper: 71 });
-assert.deepEqual(total(tokyo), { center: null, lower: 51, upper: 66 });
-assert(!("GSS" in tokyo));
+assert.deepEqual(total(tokyo), { center: 60, lower: 60, upper: 60 });
+assert.equal(tokyo.GSS, 60);
+const tokyoWithoutGss = { ...tokyo };
+delete tokyoWithoutGss.GSS;
+assert.deepEqual(total(tokyoWithoutGss), { center: null, lower: 51, upper: 66 });
+assert.equal(total({ ...tokyo, GSS: 40 }).center, 57);
 assert.equal(tokyo.OPT, 60);
 const tokyoWithoutOpt = { ...tokyo };
 delete tokyoWithoutOpt.OPT;
-assert.deepEqual(total(tokyoWithoutOpt), { center: null, lower: 45, upper: 70 });
-assert.deepEqual(total({ ...tokyo, GSS: 60 }), { center: 60, lower: 60, upper: 60 });
+assert.deepEqual(total(tokyoWithoutOpt), { center: null, lower: 54, upper: 64 });
 assert.equal(tokyo.RES, 60);
 const tokyoWithoutRes = { ...tokyo };
 delete tokyoWithoutRes.RES;
-assert.deepEqual(total(tokyoWithoutRes), { center: null, lower: 45, upper: 70 });
-assert.deepEqual(total({ ...tokyo, TEC: 80 }), { center: null, lower: 53, upper: 68 });
+assert.deepEqual(total(tokyoWithoutRes), { center: null, lower: 54, upper: 64 });
+assert.deepEqual(total({ ...tokyo, TEC: 80 }), { center: 62, lower: 62, upper: 62 });
 const tokyoWithoutLon = { ...tokyo };
 delete tokyoWithoutLon.LON;
-assert.deepEqual(total(tokyoWithoutLon), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total(tokyoWithoutLon), { center: null, lower: 54, upper: 64 });
 const tokyoWithoutMed = { ...tokyo };
 delete tokyoWithoutMed.MED;
-assert.deepEqual(total(tokyoWithoutMed), { center: null, lower: 42, upper: 72 });
+assert.deepEqual(total(tokyoWithoutMed), { center: null, lower: 51, upper: 66 });
 const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
   (c: { efua_id: string }) => c.efua_id === "5129"
 );
 assert(tokyoPosition);
-assert.equal(tokyoPosition.center, null);
+assert.equal(tokyoPosition.center, 60);
 assert.equal(tokyoPosition.bestPosition, 1);
-assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount);
+assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 4);
 assert.equal(total({ ...london, OPT: 80 }).center, 60);
 const londonCounterfactual = { ...london, MED: 40, OPT: 80 };
 const exitSensitivity = { ...weights, MED: 10, OPT: 15 };
@@ -232,7 +235,8 @@ console.log({
     zurich: { current: 58, conditionalOPT80: 60, unresolvedLON: total(zurichWithoutLon) },
     gaza: { partial: total(gaza), unresolvedMED: total(gazaWithoutMed) },
     tokyo: {
-      partial: total(tokyo),
+      current: total(tokyo),
+      unresolvedGSS: total(tokyoWithoutGss),
       unresolvedOPT: total(tokyoWithoutOpt),
       unresolvedRES: total(tokyoWithoutRes),
       unresolvedLON: total(tokyoWithoutLon),

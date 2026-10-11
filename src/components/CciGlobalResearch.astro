@@ -163,7 +163,7 @@ const rows = [
       {
         zh
           ? `口径为 2026 年、本国公民、通常长期居住、当地中位收入和通常医保；证据截止 2026-10-10。${n(cases.length)} 份案例逐项审阅了八维及全部 31 个子支柱，其中 ${n(screening.completeConditionalCaseCount)} 份有完整条件性中心、${n(screening.partialCaseCount)} 份仅有部分维度判断。部分判断依赖明确假设，不表示每项均有充分测量；“—”表示未定，不能填零或生成总分。后续复核另记实际查阅日期。`
-          : `These cases assess local citizens who usually reside in the city, at median local income and with usual healthcare coverage, in 2026. The evidence cutoff is 10 October 2026. All ${n(cases.length)} reviews cover eight dimensions and 31 subpillars: ${n(screening.completeConditionalCaseCount)} have complete conditional centres and ${n(screening.partialCaseCount)} have only partial judgments. Explicit assumptions do not establish complete measurements. “—” means unresolved, with no zero imputation or total centre. Subsequent checks record actual retrieval dates.`
+          : `These cases assess local citizens who usually reside in the city, at median local income and with usual healthcare coverage, in 2026. The evidence cutoff is 10 October 2026. All ${n(cases.length)} reviews cover eight dimensions and 31 subpillars: ${n(screening.completeConditionalCaseCount)} with complete conditional centres and ${n(screening.partialCaseCount)} with only partial judgments. Explicit assumptions do not establish complete measurements. “—” means unresolved, with no zero imputation or total centre. Subsequent checks record actual retrieval dates.`
       }
     </p>
     <div
@@ -279,7 +279,7 @@ const rows = [
       {" · "}
       <a
         href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-tokyo-case.md"
-        >{zh ? "东京部分维度案例" : "Tokyo partial case"}</a
+        >{zh ? "东京条件性案例" : "Tokyo conditional case"}</a
       >
     </p>
     <p>
@@ -292,15 +292,15 @@ const rows = [
     <p>
       {
         zh
-          ? "东京功能区现有七项条件性 60：PCS、ISR、RES、MED、LON、TEC、OPT；GSS 未定，无总分中心。实际机场客流、接驳、附条件的长期居留申请、个人跨境资金与已启用通信备援支持 OPT；申请不是获批权利，费用、账户检查、设备与共同失效仍有条件。当前执法和战略防御机制不能证明低居民暴力影响，因此 GSS 不补分。给定数学域为 51—66，撤回 OPT、RES 或 LON 假设为 45—70；这不是可信城市界限，东京仍可能影响入围。"
-          : "Tokyo has seven conditional 60 judgments: PCS, ISR, RES, MED, LON, TEC and OPT. GSS remains unresolved, with no total centre. Actual airport flows, local connections, conditional long-term residence applications, personal cross-border transfers and activated emergency roaming support OPT. Applications do not confer approval; costs, bank checks, devices and shared failures remain constraints. Current enforcement and strategic defence mechanisms do not establish low resident violence impact, so GSS is not filled in. The conditional mathematical domain is 51–66; withdrawing OPT, RES or LON gives 45–70. Neither is a reliable city bound; Tokyo remains a possible shortlist competitor."
+          ? "东京八维条件性判断均为 60，原权重总分为 60。当地实际受害表、狭义全国暴力统计和截止日前部分导弹事件的航船损害通报，与运作中的缓解机制一并支持 GSS；全国统计不变成本地零风险，执法人数不变成受害人数。延续至截止日和全功能区适配仍是假设，撤回 GSS 后无中心、数学域 51—66。实际退出通道亦有资格与负担条件；撤回 OPT、RES 或 LON 后无中心、域 54—64。条件性 60 不证明优于其他案例或全球入围。"
+          : "Tokyo has eight conditional 60 judgments, giving a total of 60 under the original weights. Local victim counts, narrowly defined national violence statistics and aircraft or ship damage notices for selected missile events before the cutoff support GSS alongside operating mitigation. National statistics do not establish zero local risk, and detected persons are not victims. Temporal continuity and whole-FUA applicability remain assumptions; withdrawing GSS removes the centre and gives a mathematical domain of 51–66. Exit channels also have eligibility and affordability conditions; withdrawing OPT, RES or LON removes the centre and gives 54–64. Conditional 60 establishes neither superiority over other cases nor global qualification."
       }
     </p>
     <p>
       {
         zh
           ? `已对现有全量矩阵检视提前排除是否有依据：${n(screening.retainedCount)} 个候选全部保留，有依据的排除为 ${n(screening.supportedExclusionCount)}。其中 ${n(screening.completeConditionalCaseCount)} 个有完整条件性中心、${n(screening.partialCaseCount)} 个仅有部分维度判断，${n(screening.unassessedCount)} 个尚无此类八维审阅。筛查只检查现有证据能否排除候选，不等于完成全量评分；局部底表和条件性分数均不能作为可靠排除界限。下一步补证须覆盖仍可能改变入围结论的竞争者。`
-          : `An exclusion screen of the assembled matrix retains all ${n(screening.retainedCount)} candidates, with ${n(screening.supportedExclusionCount)} supported exclusions. ${n(screening.completeConditionalCaseCount)} have complete conditional centres, ${n(screening.partialCaseCount)} have partial judgments, and ${n(screening.unassessedCount)} lack such eight-dimension reviews. This checks whether current evidence supports exclusion, not whether every city has been fully scored. Partial sources and conditional scores establish no reliable exclusion bounds. Further assessment must cover competitors that could change the shortlist.`
+          : `An exclusion screen of the assembled matrix retains all ${n(screening.retainedCount)} candidates, with ${n(screening.supportedExclusionCount)} supported exclusions. Reviews include ${n(screening.completeConditionalCaseCount)} with complete conditional centres and ${n(screening.partialCaseCount)} with partial judgments; ${n(screening.unassessedCount)} candidates lack such eight-dimension reviews. This checks whether current evidence supports exclusion, not whether every city has been fully scored. Partial sources and conditional scores establish no reliable exclusion bounds. Further assessment must cover competitors that could change the shortlist.`
       }
     </p>
     <p>
