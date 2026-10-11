@@ -116,6 +116,19 @@ const digest = (path: string) =>
   createHash("sha256")
     .update(readFileSync(new URL(`../${path}`, import.meta.url)))
     .digest("hex");
+const coverage = JSON.parse(
+  readFileSync(new URL("../docs/data/cci-global-evidence-matrix.json", import.meta.url), "utf8")
+);
+const legal = coverage.legalMobility;
+assert.equal(legal.targetYear, 2026);
+assert.equal(legal.evidenceCutoff, "2026-10-10");
+assert.equal(legal.residentPerspective, realCases[0].residentPerspective);
+assert.equal(
+  Object.values(legal.statusCounts).reduce((a: number, b) => a + (b as number), 0),
+  coverage.candidateCount
+);
+assert.equal(digest("scripts/cci_global_evidence_matrix.py"), coverage.scriptSha256);
+assert.equal(digest("docs/data/cci-global-evidence-matrix.csv"), coverage.csvSha256);
 for (const [path, hash] of Object.entries(rankAudit.inputs)) {
   assert(
     /^(cci-[a-z0-9.-]+\.(json|csv|md)|src\/cci\/data\/releases\/cci-2026\.10\.3\.json)$/.test(path)

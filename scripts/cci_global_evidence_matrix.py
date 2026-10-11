@@ -5,6 +5,7 @@ import hashlib
 import json
 import math
 from collections import Counter
+from datetime import date
 from pathlib import Path
 
 from cci_global_coverage import DIMENSIONS, ROOT
@@ -76,7 +77,32 @@ def network_coverage(rows, expected):
     return result
 
 
-def matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports, cases=()):
+def legal_mobility_rules(document):
+    if (document['status'] != 'conditional_legal_paths_not_opt_scores'
+            or document['targetYear'] != 2026 or document['evidenceCutoff'] != '2026-10-10'
+            or document['residentPerspective'] != 'local_citizen_ordinary_resident_median_income_usual_coverage'
+            or not document['citizenshipAssumption']):
+        raise ValueError('Legal mobility protocol mismatch')
+    sources = {s['id'] for s in document['sources']}
+    if len(sources) != len(document['sources']) or any(
+            date.fromisoformat(s['versionDate']) > date.fromisoformat(document['evidenceCutoff'])
+            for s in document['sources']):
+        raise ValueError('Duplicate source or post-cutoff legal evidence')
+    result = {}
+    if len({r['id'] for r in document['rules']}) != len(document['rules']):
+        raise ValueError('Duplicate legal rule')
+    for rule in document['rules']:
+        if (rule['status'] != 'conditional_legal_path_under_citizenship_assumption'
+                or not rule['conditions'] or not rule['sources'] or not set(rule['sources']) <= sources):
+            raise ValueError('Legal rule needs conditions and known sources')
+        for country in rule['originCountryIso']:
+            if country in result or country == rule['destinationCountryIso']:
+                raise ValueError('Duplicate citizenship rule or domestic destination')
+            result[country] = rule
+    return result
+
+
+def matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports, legal, cases=()):
     expected = {r["efua_id"] for r in candidates}
     if len(expected) != len(candidates):
         raise ValueError("Duplicate universe IDs")
@@ -84,6 +110,7 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
         indexed(rows, expected) for rows in (history, spatial, violence, healthcare, governance, seismic, water, wup, airports)]
     network = network_coverage(network, expected)
     cases = local_cases(cases, expected)
+    legal = legal_mobility_rules(legal)
     rows = []
     for candidate in candidates:
         key = candidate["efua_id"]
@@ -125,6 +152,7 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
         airport_status = 'directory_points_only' if airport_count else 'no_in_area_point_not_no_transport'
         if airports[key]['status'] != airport_status:
             raise ValueError('Airport directory status mismatch')
+        rule = legal.get(candidate['country_iso'])
         rows.append({
             "efua_id": key, "source_name": candidate["source_name"], "country_iso": candidate["country_iso"],
             "historical_research_slug": h["research_slug"], "historical_research_scope": h["research_scope"],
@@ -136,6 +164,9 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
             "OPT": "airport_directory_points_only" if airport_count else "no_in_area_airport_point_not_no_access",
             "airport_directory_points": airport_count,
             "scheduled_nonclosed_airport_directory_points": scheduled_count,
+            "legal_mobility_status": rule['status'] if rule else 'no_reviewed_path_not_no_right',
+            "legal_mobility_rule": rule['id'] if rule else '',
+            "legal_mobility_destination": rule['destinationCountryIso'] if rule else '',
             **network[key],
             "ucdb_intersecting_centres": s["intersecting_centres"],
             "wup_2025_intersecting_centres": wup_count,
@@ -180,6 +211,14 @@ def main():
     network = read("cci-ookla-efua-sampled-measurements.csv", "cci-ookla-efua-sampled-measurements.json", "csvSha256")
     wup = read("cci-wup-2025-fua-coverage.csv", "cci-wup-2025-crosswalk.json", "outputs", True)
     airports = read("cci-ourairports-efua-coverage.csv", "cci-ourairports-fua-audit.json", "outputs", True)
+    legal_path = folder / 'cci-legal-mobility-rules.json'
+    legal = json.loads(legal_path.read_text())
+    review = ROOT / 'docs' / legal['evidenceReview']
+    if review.parent != ROOT / 'docs' or not review.is_file():
+        raise ValueError('Legal review must be an existing document')
+    inputs[legal_path.name] = {'sha256': hashlib.sha256(legal_path.read_bytes()).hexdigest(),
+                               'provenance': review.name,
+                               'provenanceSha256': hashlib.sha256(review.read_bytes()).hexdigest()}
     cases = []
     for city in ('singapore', 'london', 'helsinki', 'zurich', 'gaza', 'tokyo'):
         path = folder / f'cci-local-2026-{city}-case.json'
@@ -191,7 +230,7 @@ def main():
                              'provenance': review.name,
                              'provenanceSha256': hashlib.sha256(review.read_bytes()).hexdigest()}
         cases.append(case)
-    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports, cases)
+    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports, legal, cases)
     output = folder / "cci-global-evidence-matrix.csv"
     with output.open("w", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
@@ -210,6 +249,14 @@ def main():
         "boundaryMeaning": "Centre intersections describe geometric coverage only. UCDB and WUP are separate sources; their IDs and counts cannot be merged directly. Zero intersections do not exclude a candidate or imply a score.",
         "dimensionStatusCounts": {d: dict(Counter(r[d] for r in rows)) for d in DIMENSIONS},
         "scoreStatusCounts": dict(Counter(r["cci_score_status"] for r in rows)),
+        "legalMobility": {
+            'targetYear': legal['targetYear'], 'evidenceCutoff': legal['evidenceCutoff'],
+            'residentPerspective': legal['residentPerspective'],
+            'statusCounts': dict(Counter(r['legal_mobility_status'] for r in rows)),
+            'ruleCandidateCounts': dict(Counter(r['legal_mobility_rule'] for r in rows if r['legal_mobility_rule'])),
+            'countryCandidateCounts': dict(sorted(Counter(r['country_iso'] for r in rows if r['legal_mobility_rule']).items())),
+            'meaning': 'Conditional destination-specific legal paths under the local citizenship assumption. Unknown is not denial; residence does not establish citizenship. No affordability, job access, crisis operation, whole OPT score or exclusion bound established.',
+        },
         "local2026Screening": {
             "targetYear": 2026, "evidenceCutoff": "2026-10-10",
             "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
@@ -229,7 +276,8 @@ def main():
                              "ISR": ["governance: country context only"],
                              "MED": ["access: historical spatial model only"],
                              "TEC": ["digital_infrastructure: self-selected 2026 Q3 network tests only; boundary sensitivity retained, not population access or complete technology capability"],
-                             "OPT": ["transport_redundancy: directory airport points and scheduled nonclosed flags only; no resident access, routes, independent alternatives or common failures measured"]},
+                             "OPT": ["transport_redundancy: directory airport points and scheduled nonclosed flags only; no resident access, routes, independent alternatives or common failures measured",
+                                     "legal_mobility: conditional Germany/France paths under modelled citizenship only; no actual affordability, employment or crisis operation measured"]},
         "sourceJoinKey": "efua_id; source tables and their provenance remain authoritative for values and limitations",
         "inputs": inputs, "scriptSha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "csvSha256": hashlib.sha256(output.read_bytes()).hexdigest(),

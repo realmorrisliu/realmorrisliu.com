@@ -53,6 +53,52 @@
   "scoreStatusCounts": {
     "not_computed_under_global_protocol": 9031
   },
+  "legalMobility": {
+    "targetYear": 2026,
+    "evidenceCutoff": "2026-10-10",
+    "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+    "statusCounts": {
+      "no_reviewed_path_not_no_right": 8521,
+      "conditional_legal_path_under_citizenship_assumption": 510
+    },
+    "ruleCandidateCounts": {
+      "other_eu_citizen_to_germany": 422,
+      "german_eea_swiss_citizen_to_france": 88
+    },
+    "countryCandidateCounts": {
+      "AUT": 6,
+      "BEL": 10,
+      "BGR": 7,
+      "CHE": 13,
+      "CYP": 3,
+      "CZE": 12,
+      "DEU": 70,
+      "DNK": 4,
+      "ESP": 66,
+      "EST": 2,
+      "FIN": 6,
+      "FRA": 65,
+      "GRC": 10,
+      "HRV": 5,
+      "HUN": 10,
+      "IRL": 3,
+      "ISL": 1,
+      "ITA": 79,
+      "LTU": 6,
+      "LUX": 1,
+      "LVA": 3,
+      "MLT": 1,
+      "NLD": 25,
+      "NOR": 4,
+      "POL": 42,
+      "PRT": 7,
+      "ROU": 30,
+      "SVK": 6,
+      "SVN": 2,
+      "SWE": 11
+    },
+    "meaning": "Conditional destination-specific legal paths under the local citizenship assumption. Unknown is not denial; residence does not establish citizenship. No affordability, job access, crisis operation, whole OPT score or exclusion bound established."
+  },
   "local2026Screening": {
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
@@ -80,7 +126,8 @@
       "digital_infrastructure: self-selected 2026 Q3 network tests only; boundary sensitivity retained, not population access or complete technology capability"
     ],
     "OPT": [
-      "transport_redundancy: directory airport points and scheduled nonclosed flags only; no resident access, routes, independent alternatives or common failures measured"
+      "transport_redundancy: directory airport points and scheduled nonclosed flags only; no resident access, routes, independent alternatives or common failures measured",
+      "legal_mobility: conditional Germany/France paths under modelled citizenship only; no actual affordability, employment or crisis operation measured"
     ]
   },
   "sourceJoinKey": "efua_id; source tables and their provenance remain authoritative for values and limitations",
@@ -140,6 +187,11 @@
       "provenance": "cci-ourairports-fua-audit.json",
       "provenanceSha256": "181521e4b201c6ebda62183e0beba0b713cd3dfbd5fc2d3ce07496c209f943c4"
     },
+    "cci-legal-mobility-rules.json": {
+      "sha256": "64a78a3f42d774af162992354691a1709080138f16c76fbd6a0f383107ed78ce",
+      "provenance": "cci-legal-mobility.md",
+      "provenanceSha256": "1139a6fb1df3c48ff137089a473ec4d33bc2406b439696cae4058b1837592783"
+    },
     "cci-local-2026-singapore-case.json": {
       "sha256": "26a925a90d2474381d3f97f11a36fb400428b3793752d700033f8f14e3203cc5",
       "provenance": "cci-local-2026-singapore-case.md",
@@ -171,6 +223,6 @@
       "provenanceSha256": "21c8ac52eb75e37b9b38d37937c3677ed4928d6a169ba90e1cf3e2b461a18efa"
     }
   },
-  "scriptSha256": "10a3c3eb5773bf899c273c4733fcb5609d1e8417c6e4162d1585f5a26c5cde54",
-  "csvSha256": "906f33cf94bbad3cfce1e1f2f5642e093f35bc48ce8306571a4bffd8d1d1048a"
+  "scriptSha256": "f12c984d5c254c2e5c472330f413f843c25a5c9b59076f8ced02f69fb21a4aac",
+  "csvSha256": "3fae55212893aba69d69ecea47e172011d4f2cbcceb16fa83c29d6a6a17f2d48"
 }

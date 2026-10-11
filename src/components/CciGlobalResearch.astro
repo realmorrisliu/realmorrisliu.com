@@ -25,6 +25,7 @@ const { currentLang } = Astro.props;
 const zh = currentLang === "zh";
 const n = (value: number) => value.toLocaleString(zh ? "zh-CN" : "en-GB");
 const counts = coverage.dimensionStatusCounts;
+const legal = coverage.legalMobility.statusCounts;
 const cases = [singapore, london, helsinki, zurich, gaza, tokyo];
 const screening = coverage.local2026Screening;
 if (
@@ -105,8 +106,8 @@ const rows = [
   [
     "OPT",
     zh
-      ? `${n(counts.OPT.airport_directory_points_only)} 个候选内有机场目录坐标点，其中 ${n(airports.candidatesWithScheduledNonclosedPoints)} 个有标记为提供定期航班且非关闭状态的机场。目录标记尚未证明实际运营或居民可用；功能区外的机场也可能服务当地居民，没有区内点位不等于无法出行。交通冗余、迁移权利、资产与网络连续性仍需补证。`
-      : `${n(counts.OPT.airport_directory_points_only)} candidates contain airport directory points; ${n(airports.candidatesWithScheduledNonclosedPoints)} contain airports marked as having scheduled service and not closed. Directory flags do not establish actual operations or resident access; airports outside an area may serve its residents, so no in-area point does not mean no transport. Redundancy, legal mobility, assets and network continuity remain unresolved.`,
+      ? `${n(counts.OPT.airport_directory_points_only)} 个候选内有机场目录坐标点，其中 ${n(airports.candidatesWithScheduledNonclosedPoints)} 个有定期服务且非关闭标记；目录不证明实际运营或居民可用，区外机场亦可能提供服务。另有 ${n(legal.conditional_legal_path_under_citizenship_assumption)} 个功能区在本国公民假设下关联德国或法国的附条件法律路径，就业、资源及医保等要求仍保留；${n(legal.no_reviewed_path_not_no_right)} 个资格待查，不等于无权迁移。居住不证明国籍，合法路径不证明负担得起或危机可用；仍未形成完整 OPT 分数。`
+      : `${n(counts.OPT.airport_directory_points_only)} candidates contain airport directory points; ${n(airports.candidatesWithScheduledNonclosedPoints)} have scheduled-service and nonclosed flags. A directory does not establish operations or resident access; outside airports may also serve residents. Separately, ${n(legal.conditional_legal_path_under_citizenship_assumption)} functional areas have conditional legal paths to Germany or France under the local-citizenship assumption, retaining employment, resources and insurance requirements. ${n(legal.no_reviewed_path_not_no_right)} remain unreviewed, which does not mean denial. Residence does not establish citizenship; legal paths do not establish affordability or crisis operation. No complete OPT score follows.`,
   ],
 ] as const;
 ---
@@ -336,6 +337,14 @@ const rows = [
         ))
       }
     </dl>
+    <a
+      href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-legal-mobility.md"
+      >{
+        zh
+          ? "查看迁居法律来源、条件与国籍假设"
+          : "Legal sources, conditions and citizenship assumptions"
+      }</a
+    >
   </details>
 </section>
 

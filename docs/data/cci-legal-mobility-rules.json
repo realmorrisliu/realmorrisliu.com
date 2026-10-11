@@ -1,0 +1,101 @@
+{
+  "status": "conditional_legal_paths_not_opt_scores",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedAt": "2026-10-12",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "evidenceReview": "cci-legal-mobility.md",
+  "citizenshipAssumption": "The modelled local resident is a citizen of the country identified by the candidate ISO code. Geographic residence does not establish citizenship; territories and foreign residents do not inherit another country code here.",
+  "sources": [
+    {
+      "id": "de_law",
+      "url": "https://www.gesetze-im-internet.de/freiz_gg_eu_2004/BJNR198600004.html",
+      "versionDate": "2026-07-16",
+      "versionMeaning": "Latest amendment shown in the official consolidated text; retrieved after the cutoff.",
+      "clauses": ["1(2)(1)", "2(2)(1)", "2(2)(1a)", "2a(1)", "4", "5(2)-(4)", "6"],
+      "retrievedBytes": 75349,
+      "retrievedSha256": "b53478451d8605d7b5b31aeee028542c9d415df2dedfef634e66a0d60433c0fe"
+    },
+    {
+      "id": "fr_law",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042777382",
+      "versionDate": "2022-02-24",
+      "versionMeaning": "L233-1 in force since 2021-05-01; displayed Conseil d Etat amendment dated 2022-02-24. L200-2 and L200-3 also read through the code book.",
+      "clauses": ["L200-2", "L200-3", "L233-1"],
+      "scopeUrl": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006070158/LEGISCTA000042770930/",
+      "retrievedBytes": null,
+      "retrievedSha256": null,
+      "retrievalLimitation": "Official text read using web access; direct byte download returned HTTP 403. No raw hash or archived cutoff-day page claimed."
+    },
+    {
+      "id": "fr_guidance",
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2651",
+      "versionDate": "2026-04-01",
+      "versionMeaning": "Official DILA page verification date, not a measured resident outcome.",
+      "retrievedBytes": 107393,
+      "retrievedSha256": "a24949ad1e8b6b0652a05c10df93794c30fb19939de3fa0a6fdb8c4b307f1a63"
+    },
+    {
+      "id": "eu_members",
+      "url": "https://european-union.europa.eu/principles-countries-history/eu-countries_en",
+      "versionDate": "2013-07-01",
+      "versionMeaning": "Latest accession among the 27 current members, not webpage publication date. All entries and page 1 checked; pre-cutoff membership corroborated by the April 2026 French guidance country list.",
+      "paginationUrl": "https://european-union.europa.eu/principles-countries-history/eu-countries_en?page=1",
+      "retrievedBytes": null,
+      "retrievedSha256": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "other_eu_citizen_to_germany",
+      "originCountryIso": [
+        "AUT",
+        "BEL",
+        "BGR",
+        "CYP",
+        "CZE",
+        "DNK",
+        "ESP",
+        "EST",
+        "FIN",
+        "FRA",
+        "GRC",
+        "HRV",
+        "HUN",
+        "IRL",
+        "ITA",
+        "LTU",
+        "LUX",
+        "LVA",
+        "MLT",
+        "NLD",
+        "POL",
+        "PRT",
+        "ROU",
+        "SVK",
+        "SVN",
+        "SWE"
+      ],
+      "destinationCountryIso": "DEU",
+      "sources": ["de_law", "eu_members"],
+      "status": "conditional_legal_path_under_citizenship_assumption",
+      "conditions": [
+        "Valid identity document and qualifying free-movement status; no visa or residence title required for Union citizens.",
+        "Workers have a residence path; job-seeking is limited to six months unless continued search and genuine hiring prospects are demonstrated.",
+        "Non-employed citizens require sufficient resources and health insurance; compliance can be checked and the right can be lost. Public-order, security and health restrictions remain."
+      ]
+    },
+    {
+      "id": "german_eea_swiss_citizen_to_france",
+      "originCountryIso": ["CHE", "DEU", "ISL", "LIE", "NOR"],
+      "destinationCountryIso": "FRA",
+      "sources": ["fr_law", "fr_guidance"],
+      "status": "conditional_legal_path_under_citizenship_assumption",
+      "conditions": [
+        "EU citizenship or equivalent status under L200-3; valid identity document and public-order requirements.",
+        "Residence beyond three months requires professional activity, or sufficient resources and health insurance; this is not unconditional long-term residence.",
+        "The official worker guidance says no residence title is required, while regulated professions and certain public jobs have conditions."
+      ]
+    }
+  ]
+}

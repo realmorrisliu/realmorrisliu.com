@@ -96,6 +96,13 @@ def build():
             for r in matrix_rows.values()):
         raise ValueError('Invalid matrix count or case status')
     cases = []
+    reference = matrix['inputs']['cci-legal-mobility-rules.json']
+    verified('cci-legal-mobility-rules.json', reference['sha256'])
+    review = ROOT / 'docs' / reference['provenance']
+    if (review.parent != ROOT / 'docs' or review.name != 'cci-legal-mobility.md'
+            or hashlib.sha256(review.read_bytes()).hexdigest() != reference['provenanceSha256']):
+        raise ValueError('Stale legal mobility review')
+    inputs[review.name] = reference['provenanceSha256']
     for name, reference in matrix['inputs'].items():
         if not name.startswith('cci-local-2026-'):
             continue
