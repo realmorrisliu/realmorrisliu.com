@@ -27,11 +27,11 @@
     {
       "id": "GSS",
       "score": 60,
-      "rationale": "Cantonal risk management supports mitigation while regional conflict and strategic risks persist; no matched historical event does not establish low current local violence.",
-      "assumption": "Ordinary life is not broadly and persistently blocked. Risk registers and programme progress are neither local event rates nor failure probabilities.",
+      "rationale": "Actual May 2026 station injuries and police/rescue response support partial local impact and mitigation evidence. The June 2026 national assessment identifies radicalisation and direct hybrid threats; municipal crime offences are not victim counts. These together retain conditional 60, not an automatic 40 or 80.",
+      "assumption": "The reported Winterthur station incident is within the frozen FUA under the documented station-area location assumption; ordinary life is not broadly and persistently blocked across the FUA through the cutoff. Selected response does not establish prevention effectiveness, absence of other attacks, or stress resilience of strategic corridors. Rejecting temporal, spatial or impact representativeness leaves GSS unresolved.",
       "conditionalAlternatives": [40, 80],
       "subpillars": {
-        "organized_violence": "unresolved",
+        "organized_violence": "partial",
         "regional_conflict": "context",
         "strategic_exposure": "context"
       }
@@ -114,5 +114,73 @@
         "network_continuity": "partial"
       }
     }
-  ]
+  ],
+  "gssImpactReview": {
+    "retrievedAt": "2026-10-12",
+    "status": "actual_partial_impact_and_high_anchor_challenge_not_new_score",
+    "event": {
+      "date": "2026-05-28",
+      "reportedPlace": "Winterthur railway station",
+      "injuredPersons": 3,
+      "reportedFatalities": null,
+      "fatalitiesMeaning": "Not stated in the police notice; not imputed to zero.",
+      "response": "Police arrest and hospital transport; multiple police and rescue services deployed. No verified arrest time, subsequent recovery or casualty-free prevention claimed.",
+      "classificationPublicationDate": "2026-06-25",
+      "classification": "NDB describes a jihadistically radicalised attacker.",
+      "independentEventCount": 1,
+      "sameEventMeaning": "May police notice and June national assessment concern one event, not two independent attacks."
+    },
+    "municipalCrimeContext": {
+      "observedYear": 2025,
+      "publicationDate": "2026-03-23",
+      "reportPrintedPage": 117,
+      "section": "5.1.26 Stadt Zürich gesamt",
+      "completedHomicideOffences": 2,
+      "attemptedHomicideOffences": 20,
+      "totalCriminalCodeOffences": 44434,
+      "countUnit": "police_recorded_offences_not_deaths_or_organised_violence_rate",
+      "geographicScope": "Zurich municipality, not the whole FUA or the Winterthur event."
+    },
+    "boundary": {
+      "status": "reported_station_area_under_location_assumption_not_exact_scene",
+      "candidateId": 1479,
+      "geoPackageSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+      "representativeAddress": "Bahnhofplatz 1 <b>8400 Winterthur</b>",
+      "latitude": 47.49921798706055,
+      "longitude": 8.723490715026855,
+      "distanceToBoundaryProjectedMetres": 9200.146,
+      "chosenLocationSensitivityProjectedMetres": 2000,
+      "entireSensitivityBufferCovered": true,
+      "meaning": "Official address near the reported station, not an incident coordinate. 2 km is a research location-sensitivity choice, not a police accuracy or probability. Current address persistence to the event date remains assumed; no whole-FUA safety measurement."
+    },
+    "sources": [
+      {
+        "url": "https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2026/05/winterthur_angriff.html",
+        "publicationDate": "2026-05-28",
+        "sha256": "9d9c8328ab766262d8f6727efb27a001d1b6ad4e1a6df84dc383cd589a082654",
+        "bytes": 51787
+      },
+      {
+        "url": "https://www.vbs.admin.ch/de/newnsb/jyRmuld1hBVy",
+        "publicationDate": "2026-06-25",
+        "sha256": null,
+        "bytes": null,
+        "retrievalLimitation": "Official press release read through web access; direct byte download closed the connection. No original full NDB annual report read or raw hash claimed."
+      },
+      {
+        "url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/sicherheit-justiz/delikte-praevention/dokumente/pks/aktuell/jahresbericht_2025.pdf",
+        "publicationDate": "2026-03-23",
+        "sha256": "cff4b7fad2544394ee3c764d0410ce1a4b985a162099955d3ad45386ac7832af",
+        "bytes": 6989421,
+        "pages": 120
+      },
+      {
+        "url": "https://api3.geo.admin.ch/rest/services/api/SearchServer?searchText=Winterthur%20Bahnhof&type=locations&limit=5",
+        "publicationDate": null,
+        "sha256": "89586c066937915a465dc210f7ac819ab703b7cc0955f5e7c272e3f62ed3b83a",
+        "bytes": 3942,
+        "meaning": "First exact address result Bahnhofplatz 1, not a station or incident coordinate. Undated current geolocation is used only with a persistence assumption."
+      }
+    ]
+  }
 }

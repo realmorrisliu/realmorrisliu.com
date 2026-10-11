@@ -176,6 +176,14 @@ const helsinkiWithoutLon: Partial<Record<DimensionId, number>> = { ...helsinki }
 delete helsinkiWithoutLon.LON;
 assert.deepEqual(total(helsinkiWithoutLon), { center: null, lower: 54, upper: 64 });
 assert.equal(total(zurich).center, 58);
+assert.equal(total({ ...zurich, GSS: 40 }).center, 55);
+assert.equal(total({ ...zurich, GSS: 80 }).center, 61);
+const zurichWithoutGss: Partial<Record<DimensionId, number>> = { ...zurich };
+delete zurichWithoutGss.GSS;
+assert.deepEqual(total(zurichWithoutGss), { center: null, lower: 49, upper: 64 });
+const zurichWithoutGssAndLon = { ...zurichWithoutGss };
+delete zurichWithoutGssAndLon.LON;
+assert.deepEqual(total(zurichWithoutGssAndLon), { center: null, lower: 45, upper: 70 });
 assert.equal(total({ ...zurich, MED: 40 }).center, 55);
 assert.equal(total({ ...zurich, OPT: 80 }).center, 60);
 assert.equal(total({ ...zurich, LON: 60 }).center, 60);
@@ -245,7 +253,14 @@ console.log({
     conditionalMED40OPT80: { singapore: 58, london: 57 },
     sameScenarioMED10OPT15: { singapore: 58, london: 59 },
     helsinki: { current: 60, conditionalMED40: 57, unresolvedLON: total(helsinkiWithoutLon) },
-    zurich: { current: 58, conditionalOPT80: 60, unresolvedLON: total(zurichWithoutLon) },
+    zurich: {
+      current: 58,
+      conditionalOPT80: 60,
+      conditionalGSS80: 61,
+      unresolvedGSS: total(zurichWithoutGss),
+      unresolvedGSSAndLON: total(zurichWithoutGssAndLon),
+      unresolvedLON: total(zurichWithoutLon),
+    },
     gaza: { partial: total(gaza), unresolvedMED: total(gazaWithoutMed) },
     tokyo: {
       current: total(tokyo),
