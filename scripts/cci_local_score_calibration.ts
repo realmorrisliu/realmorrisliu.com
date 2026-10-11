@@ -50,7 +50,7 @@ assert.equal(
 );
 assert.equal(total(a.scores, sensitivity).center, 55);
 assert.equal(total(b.scores, sensitivity).center, 57);
-const realCases = ["singapore", "london", "helsinki"].map(city =>
+const realCases = ["singapore", "london", "helsinki", "zurich"].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
   )
@@ -90,7 +90,7 @@ const realScores = realCases.map(realCase => {
   assert.equal(total(scores).center, realCase.expectedConditionalTotal);
   return scores;
 });
-const [singapore, london, helsinki] = realScores;
+const [singapore, london, helsinki, zurich] = realScores;
 for (const scores of [singapore, london]) {
   assert.equal(total({ ...scores, MED: 40 }).center, 55);
   assert.equal(total({ ...scores, LON: 60 }).center, 60);
@@ -109,6 +109,14 @@ assert.equal(total({ ...helsinki, TEC: 80 }).center, 62);
 const helsinkiWithoutLon: Partial<Record<DimensionId, number>> = { ...helsinki };
 delete helsinkiWithoutLon.LON;
 assert.deepEqual(total(helsinkiWithoutLon), { center: null, lower: 54, upper: 64 });
+assert.equal(total(zurich).center, 58);
+assert.equal(total({ ...zurich, MED: 40 }).center, 55);
+assert.equal(total({ ...zurich, OPT: 80 }).center, 60);
+assert.equal(total({ ...zurich, LON: 60 }).center, 60);
+assert.equal(total({ ...zurich, LON: 60, OPT: 80 }).center, 62);
+const zurichWithoutLon: Partial<Record<DimensionId, number>> = { ...zurich };
+delete zurichWithoutLon.LON;
+assert.deepEqual(total(zurichWithoutLon), { center: null, lower: 54, upper: 64 });
 assert.equal(total({ ...london, OPT: 80 }).center, 60);
 const londonCounterfactual = { ...london, MED: 40, OPT: 80 };
 const exitSensitivity = { ...weights, MED: 10, OPT: 15 };
@@ -132,5 +140,6 @@ console.log({
     conditionalMED40OPT80: { singapore: 58, london: 57 },
     sameScenarioMED10OPT15: { singapore: 58, london: 59 },
     helsinki: { current: 60, conditionalMED40: 57, unresolvedLON: total(helsinkiWithoutLon) },
+    zurich: { current: 58, conditionalOPT80: 60, unresolvedLON: total(zurichWithoutLon) },
   },
 });

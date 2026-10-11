@@ -1,0 +1,242 @@
+{
+  "status": "complete_2025_affiliation_diagnostics_not_city_output",
+  "authorshipManifestSha256": "890631160a49153035191cefdf8aab8afde729cc2725486dec56902bf9924d85",
+  "filterInventorySha256": "2be604507128fb3e7a176f0f0efffb6a6706214a7dea3c2314867beeb4fd8199",
+  "institutionDirectorySha256": "b59735ba074e3e1b8e05f1d08bd672ef1d1ec219303cd9a788c93fc2a5e798ed",
+  "scriptSha256": "dfd7a9e2570464e1cf6cb2b40137ce59e365f0d3ae23b3255740f26940bb1378",
+  "affiliationRuleSha256": "86227857c9da25442e26e9d658a2b077336ca3cb45a04285fba5054c6464e350",
+  "counts": {
+    "records": 45069447,
+    "works": 45069447,
+    "works_with_unassessed_incomplete_authorships": 0,
+    "authorships": 154673582,
+    "no_matched_institution": 32935443,
+    "no_affiliation_records": 29173267,
+    "authorships_with_single_consistent_directory_fua": 114495829,
+    "works_with_any_single_consistent_directory_fua": 26684579,
+    "works_with_all_authorships_single_consistent_directory_fua": 23934309,
+    "works_with_no_authorships": 934310,
+    "unmatched_raw_affiliation": 5028240,
+    "raw_flat_id_disagreement": 5578,
+    "multiple_directory_fuas": 3647135,
+    "institution_without_unique_directory_fua": 1816653,
+    "direct_parent_child_overlap": 1639344,
+    "institution_missing_from_directory": 92906
+  },
+  "authorshipCountStatuses": {
+    "count_matches": 44135137,
+    "no_authors": 934310
+  },
+  "examples": {
+    "no_matched_institution": [
+      {
+        "workId": "https://openalex.org/W4410038257",
+        "authorshipPosition": 0,
+        "directInstitutionIds": [],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4410038257",
+        "authorshipPosition": 1,
+        "directInstitutionIds": [],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4409204908",
+        "authorshipPosition": 0,
+        "directInstitutionIds": [],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      }
+    ],
+    "no_affiliation_records": [
+      {
+        "workId": "https://openalex.org/W4410038257",
+        "authorshipPosition": 0,
+        "directInstitutionIds": [],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4410038257",
+        "authorshipPosition": 1,
+        "directInstitutionIds": [],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4410475368",
+        "authorshipPosition": 0,
+        "directInstitutionIds": [],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      }
+    ],
+    "unmatched_raw_affiliation": [
+      {
+        "workId": "https://openalex.org/W4409204908",
+        "authorshipPosition": 0,
+        "directInstitutionIds": [],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4409204951",
+        "authorshipPosition": 0,
+        "directInstitutionIds": [],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4409204951",
+        "authorshipPosition": 1,
+        "directInstitutionIds": [],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      }
+    ],
+    "raw_flat_id_disagreement": [
+      {
+        "workId": "https://openalex.org/W4415380396",
+        "authorshipPosition": 0,
+        "directInstitutionIds": ["https://openalex.org/I4210097606"],
+        "directoryFuaIds": ["4396"],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4416414835",
+        "authorshipPosition": 0,
+        "directInstitutionIds": ["https://openalex.org/I3130477979"],
+        "directoryFuaIds": ["3472"],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4406380680",
+        "authorshipPosition": 0,
+        "directInstitutionIds": ["https://openalex.org/I158012942"],
+        "directoryFuaIds": ["7032"],
+        "parentChildPairs": []
+      }
+    ],
+    "multiple_directory_fuas": [
+      {
+        "workId": "https://openalex.org/W4415740036",
+        "authorshipPosition": 0,
+        "directInstitutionIds": [
+          "https://openalex.org/I40120149",
+          "https://openalex.org/I4210099347"
+        ],
+        "directoryFuaIds": ["2262", "4792"],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W7090748453",
+        "authorshipPosition": 0,
+        "directInstitutionIds": [
+          "https://openalex.org/I4391012558",
+          "https://openalex.org/I883909435"
+        ],
+        "directoryFuaIds": ["2481", "976"],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W7078315120",
+        "authorshipPosition": 0,
+        "directInstitutionIds": [
+          "https://openalex.org/I1291425158",
+          "https://openalex.org/I4210164937"
+        ],
+        "directoryFuaIds": ["1255", "5550"],
+        "parentChildPairs": []
+      }
+    ],
+    "institution_without_unique_directory_fua": [
+      {
+        "workId": "https://openalex.org/W7077041430",
+        "authorshipPosition": 0,
+        "directInstitutionIds": ["https://openalex.org/I205783295"],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W7077066955",
+        "authorshipPosition": 0,
+        "directInstitutionIds": ["https://openalex.org/I205783295"],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W7090823319",
+        "authorshipPosition": 2,
+        "directInstitutionIds": ["https://openalex.org/I60858718"],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      }
+    ],
+    "direct_parent_child_overlap": [
+      {
+        "workId": "https://openalex.org/W6912076759",
+        "authorshipPosition": 1,
+        "directInstitutionIds": [
+          "https://openalex.org/I1322597698",
+          "https://openalex.org/I193662353",
+          "https://openalex.org/I932564295"
+        ],
+        "directoryFuaIds": ["1427", "1793"],
+        "parentChildPairs": [
+          ["https://openalex.org/I932564295", "https://openalex.org/I1322597698"]
+        ]
+      },
+      {
+        "workId": "https://openalex.org/W4409900397",
+        "authorshipPosition": 0,
+        "directInstitutionIds": [
+          "https://openalex.org/I191972202",
+          "https://openalex.org/I4210126505"
+        ],
+        "directoryFuaIds": ["357", "7466"],
+        "parentChildPairs": [
+          ["https://openalex.org/I4210126505", "https://openalex.org/I191972202"]
+        ]
+      },
+      {
+        "workId": "https://openalex.org/W4409900397",
+        "authorshipPosition": 1,
+        "directInstitutionIds": [
+          "https://openalex.org/I191972202",
+          "https://openalex.org/I4210126505"
+        ],
+        "directoryFuaIds": ["357", "7466"],
+        "parentChildPairs": [
+          ["https://openalex.org/I4210126505", "https://openalex.org/I191972202"]
+        ]
+      }
+    ],
+    "institution_missing_from_directory": [
+      {
+        "workId": "https://openalex.org/W7084500437",
+        "authorshipPosition": 7,
+        "directInstitutionIds": ["https://openalex.org/I4210086935"],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W6949907931",
+        "authorshipPosition": 0,
+        "directInstitutionIds": ["https://openalex.org/I4210109160"],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      },
+      {
+        "workId": "https://openalex.org/W4409970982",
+        "authorshipPosition": 0,
+        "directInstitutionIds": ["https://openalex.org/I4210129993"],
+        "directoryFuaIds": [],
+        "parentChildPairs": []
+      }
+    ]
+  },
+  "limitations": "Counts labelled works describe complete declared bylines only; records include incomplete lists retained as unassessed. Ambiguity flags overlap. No actual research-site verification, intellectual-version deduplication, fractional credit, city output or CCI score. Unknown affiliations are never redistributed to known cities."
+}

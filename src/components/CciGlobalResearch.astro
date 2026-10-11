@@ -5,10 +5,12 @@ import wup from "../../docs/data/cci-wup-2025-crosswalk.json";
 import institutions from "../../docs/data/cci-openalex-institution-source.json";
 import works from "../../docs/data/cci-openalex-filter-inventory.json";
 import authorships from "../../docs/data/cci-openalex-authorship-inventory.json";
+import affiliations from "../../docs/data/cci-openalex-global-affiliation-audit.json";
 import airports from "../../docs/data/cci-ourairports-fua-audit.json";
 import singapore from "../../docs/data/cci-local-2026-singapore-case.json";
 import london from "../../docs/data/cci-local-2026-london-case.json";
 import helsinki from "../../docs/data/cci-local-2026-helsinki-case.json";
+import zurich from "../../docs/data/cci-local-2026-zurich-case.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
 
@@ -20,13 +22,20 @@ const { currentLang } = Astro.props;
 const zh = currentLang === "zh";
 const n = (value: number) => value.toLocaleString(zh ? "zh-CN" : "en-GB");
 const counts = coverage.dimensionStatusCounts;
-const cases = [singapore, london, helsinki];
+const cases = [singapore, london, helsinki, zurich];
 const screening = coverage.local2026Screening;
 if (cases.length !== screening.conditionalCaseCount) {
   throw new Error("Local calibration case count disagrees with the global matrix");
 }
 if (authorships.records !== works.records || authorships.files !== works.files) {
   throw new Error("Authorship inventory disagrees with the frozen work inventory");
+}
+if (
+  affiliations.status !== "complete_2025_affiliation_diagnostics_not_city_output" ||
+  affiliations.counts.records !== works.records ||
+  affiliations.authorshipManifestSha256 !== authorships.manifestSha256
+) {
+  throw new Error("Affiliation diagnostics disagree with the verified authorship inventory");
 }
 const rows = [
   [
@@ -68,8 +77,8 @@ const rows = [
   [
     "TEC",
     zh
-      ? `${n(counts.TEC.partial_network_samples)} 个候选有 2026 年第三季度网络测速样本，${n(counts.TEC.network_samples_missing)} 个缺少样本；样本存在选择与边界差异，尚不代表居民覆盖、科研、产业或技术普及。另已核验 ${n(institutions.recordCount)} 条科研机构目录记录，以及 ${n(works.records)} 条 2025 年 OpenAlex 记录的 ID 唯一性。后者包含数据集等类型，并非全部为论文；ID 唯一也不代表同一成果的不同版本已去重。已完成全部 ${n(authorships.files)} 个分区的作者单位投影；名单长度一致不证明原始单位完整，城市归属仍待审计，未形成知识产出分数。`
-      : `${n(counts.TEC.partial_network_samples)} candidates have Q3 2026 network test samples; ${n(counts.TEC.network_samples_missing)} lack samples. Selection and boundary effects remain; these do not establish resident coverage, research, industry or technology adoption. A further ${n(institutions.recordCount)} research institution directory records have been verified, alongside ID uniqueness for ${n(works.records)} OpenAlex records from 2025. These include datasets and other types, not just papers; unique IDs do not establish deduplication of versions of the same work. Authorship projections are complete for all ${n(authorships.files)} partitions; matching list lengths do not prove original affiliation completeness. City attribution still requires audit; no knowledge-output scores have been produced.`,
+      ? `${n(counts.TEC.partial_network_samples)} 个候选有 2026 年第三季度网络测速样本，${n(counts.TEC.network_samples_missing)} 个缺少样本；样本存在选择与边界差异，尚不代表居民覆盖、科研、产业或技术普及。另已核验 ${n(institutions.recordCount)} 条科研机构目录记录，以及 ${n(works.records)} 条 2025 年 OpenAlex 记录的 ID 唯一性。后者包含数据集等类型，并非全部为论文；ID 唯一也不代表同一成果的不同版本已去重。已完成全部 ${n(authorships.files)} 个分区的作者单位投影；名单长度一致不证明原始单位完整。全量目录地点诊断已完成，涉及 ${n(affiliations.counts.authorships)} 条作者记录，其中 ${n(affiliations.counts.multiple_directory_fuas)} 条涉及多个目录功能区；歧义标记可重叠。实际研究地点、版本去重与贡献分摊仍未完成，未形成知识产出分数。`
+      : `${n(counts.TEC.partial_network_samples)} candidates have Q3 2026 network test samples; ${n(counts.TEC.network_samples_missing)} lack samples. Selection and boundary effects remain; these do not establish resident coverage, research, industry or technology adoption. A further ${n(institutions.recordCount)} research institution directory records have been verified, alongside ID uniqueness for ${n(works.records)} OpenAlex records from 2025. These include datasets and other types, not just papers; unique IDs do not establish deduplication of versions of the same work. Authorship projections are complete for all ${n(authorships.files)} partitions; matching list lengths do not prove original affiliation completeness. Full directory-location diagnostics are complete for ${n(affiliations.counts.authorships)} authorship records, including ${n(affiliations.counts.multiple_directory_fuas)} involving multiple directory areas; ambiguity flags overlap. Actual research sites, version deduplication and credit allocation remain unresolved; no knowledge-output scores have been produced.`,
   ],
   [
     "OPT",
@@ -86,7 +95,7 @@ const rows = [
       {zh ? "全球 Top 32 研究进展" : "Global Top 32 research progress"}
     </h2>
     <p>
-      <time datetime="2026-10-10">2026-10-10</time> · {
+      <time datetime="2026-10-12">2026-10-12</time> · {
         zh
           ? "独立研究进度，不属于上方所选历史发布。全球 Top 32 尚未确定。"
           : "Separate research status, not part of the historical release selected above. A global Top 32 has not been established."
@@ -119,8 +128,8 @@ const rows = [
     <p>
       {
         zh
-          ? "口径为 2026 年、本国公民、通常长期居住、当地中位收入和通常医保；证据截止 2026-10-10。三份案例逐项审阅了八维及全部 31 个子支柱，部分判断依赖明确假设，尚不表示每项均有充分测量。"
-          : "These cases assess local citizens who usually reside in the city, at median local income and with usual healthcare coverage, in 2026. The evidence cutoff is 10 October 2026. Each reviews all eight dimensions and 31 subpillars; some judgments depend on explicit assumptions, and not every item is fully measured."
+          ? "口径为 2026 年、本国公民、通常长期居住、当地中位收入和通常医保；证据截止 2026-10-10。四份案例逐项审阅了八维及全部 31 个子支柱，部分判断依赖明确假设，尚不表示每项均有充分测量。后续复核另记实际查阅日期，不回填到截止日。"
+          : "These cases assess local citizens who usually reside in the city, at median local income and with usual healthcare coverage, in 2026. The evidence cutoff is 10 October 2026. Each reviews all eight dimensions and 31 subpillars; some judgments depend on explicit assumptions, and not every item is fully measured. Subsequent checks record their actual retrieval dates rather than backdating them to the cutoff."
       }
     </p>
     <div
@@ -142,6 +151,7 @@ const rows = [
             <th scope="col">{zh ? "新加坡" : "Singapore"}</th>
             <th scope="col">{zh ? "伦敦" : "London"}</th>
             <th scope="col">{zh ? "赫尔辛基" : "Helsinki"}</th>
+            <th scope="col">{zh ? "苏黎世" : "Zurich"}</th>
           </tr>
         </thead>
         <tbody>
@@ -170,6 +180,13 @@ const rows = [
         zh
           ? "新加坡与伦敦同为 58，不证明能力相等或稳定并列。医疗等待不能仅因超出行政目标就自动取 40；科研强不能代替居民扩散；长期迁居权不能覆盖交通、资金及通信的全部退出条件。长寿路径的代表性假设最需挑战：若不接受该假设，LON 应保持未定，总分中心也应为空。"
           : "Singapore and London both have conditional totals of 58; this does not establish equal capability or a stable tie. Missing an administrative waiting target does not automatically imply MED 40; strong research does not establish resident diffusion, and residence rights do not cover every transport, financial or communication condition. Longevity pathway representativeness is the weakest assumption: rejecting it leaves LON unresolved and removes the total's central estimate."
+      }
+    </p>
+    <p>
+      {
+        zh
+          ? "苏黎世条件性总分为 58。DO-HEALTH 的主要临床终点与后续生物时钟分析分开判读，并保留跌倒分析的可能益处；拒绝路径代表性假设则 LON 未定、无总分中心。铁路、航空和迁居资格支持退出路径，但移动紧急呼叫备电要求到 2031 年才落实，不能计作当前 OPT 80。历史心外科质量反证也不自动变成 2026 当前失效率。四份案例仍未建立真实 80 分锚点或跨研究者一致性。"
+          : "Zurich's conditional total is 58. DO-HEALTH's primary clinical outcomes are distinguished from later clock analysis, while possible benefit in the fall analysis is retained. Rejecting pathway representativeness leaves LON unresolved and removes the total's centre. Rail, aviation and residence rights support exit channels, but mobile emergency-call backup requirements apply from 2031; they do not establish current OPT 80. Historical cardiac-surgery failures are not 2026 failure rates. The four cases still establish neither a verified real-world 80 anchor nor inter-reviewer consistency."
       }
     </p>
     <p>
@@ -205,6 +222,11 @@ const rows = [
       <a
         href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-helsinki-case.md"
         >{zh ? "赫尔辛基案例" : "Helsinki case"}</a
+      >
+      {" · "}
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-zurich-case.md"
+        >{zh ? "苏黎世案例" : "Zurich case"}</a
       >
     </p>
     <p>
