@@ -230,19 +230,24 @@ assert(tokyoPosition);
 assert.equal(tokyoPosition.center, 60);
 assert.equal(tokyoPosition.bestPosition, 1);
 assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 4);
-assert.deepEqual(total(washington), { center: null, lower: 37, upper: 72 });
+assert.deepEqual(total(washington), { center: null, lower: 43, upper: 68 });
 assert.equal(washington.RES, 40);
-for (const dimension of ["GSS", "LON", "OPT"] as const) {
+assert.equal(washington.OPT, 60);
+for (const dimension of ["GSS", "LON"] as const) {
   assert.equal(washington[dimension], undefined);
 }
+const washingtonWithoutOpt = { ...washington };
+delete washingtonWithoutOpt.OPT;
+assert.deepEqual(total(washingtonWithoutOpt), { center: null, lower: 37, upper: 72 });
 const washingtonWithoutRes = { ...washington };
 delete washingtonWithoutRes.RES;
-assert.deepEqual(total(washingtonWithoutRes), { center: null, lower: 33, upper: 78 });
+assert.deepEqual(total(washingtonWithoutRes), { center: null, lower: 39, upper: 74 });
 const washingtonWithoutMed = { ...washington };
 delete washingtonWithoutMed.MED;
-assert.deepEqual(total(washingtonWithoutMed), { center: null, lower: 28, upper: 78 });
-assert.deepEqual(total({ ...washington, RES: 60 }), { center: null, lower: 39, upper: 74 });
-assert.deepEqual(total({ ...washington, ISR: 40 }), { center: null, lower: 34, upper: 69 });
+assert.deepEqual(total(washingtonWithoutMed), { center: null, lower: 34, upper: 74 });
+assert.deepEqual(total({ ...washington, RES: 60 }), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total({ ...washington, ISR: 40 }), { center: null, lower: 40, upper: 65 });
+assert.deepEqual(total({ ...washington, OPT: 40 }), { center: null, lower: 41, upper: 66 });
 const washingtonPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
   (c: { efua_id: string }) => c.efua_id === "7068"
 );
@@ -296,6 +301,7 @@ console.log({
     },
     washington: {
       partial: total(washington),
+      unresolvedOPT: total(washingtonWithoutOpt),
       unresolvedRES: total(washingtonWithoutRes),
       unresolvedMED: total(washingtonWithoutMed),
     },

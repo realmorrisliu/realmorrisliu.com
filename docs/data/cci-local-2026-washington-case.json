@@ -27,13 +27,13 @@
     {
       "id": "GSS",
       "score": null,
-      "rationale": "Preliminary District police counts document actual violence but do not isolate organised violence or measure whole-FUA regional and strategic effects. Historical zero assigned events is not zero risk.",
-      "assumption": "No justified whole-dimension anchor yet; impact, mitigation, time and boundary applicability need review before assigning a score.",
+      "rationale": "Dated court records and Justice Department notices describe the May 2025 museum attack with two deaths and the November 2025 Guard attack with one death and one critically injured person, together with actual police, emergency and on-scene responses. They are selected incidents, not annual whole-FUA rates or proof of organised-group membership; charges and prosecutor accounts are not convictions. Their local effects do not yet establish the broader regional or strategic impact profile required for an anchor.",
+      "assumption": "No justified whole-dimension anchor yet. Actual incident response supports mitigation but neither a small selected incident set nor preliminary ordinary-crime counts establishes low overall resident impact. Whole-area, temporal and broader threat effects remain unresolved.",
       "conditionalAlternatives": [],
       "subpillars": {
-        "organized_violence": "unresolved",
+        "organized_violence": "partial",
         "regional_conflict": "unresolved",
-        "strategic_exposure": "unresolved"
+        "strategic_exposure": "partial"
       }
     },
     {
@@ -103,15 +103,15 @@
     },
     {
       "id": "OPT",
-      "score": null,
-      "rationale": "Actual 2025 IAD and DCA passenger journeys and routes support transport, with shutdown and accident aftereffects and announced airspace adjustments retained. German section 41 gives US citizens a conditional onshore residence-title application route; it does not establish approved long-term residence or work, individual qualification or affordability. Asset portability and stressed communications remain unreviewed.",
-      "assumption": "No whole-dimension anchor yet. The local-US-citizen assumption selects the shared section 41 rule; purpose, approval, resources, employment and age-related conditions remain. Rejecting citizenship leaves this item unknown. Passenger journeys are not unique residents and an announced closure is not completed execution; one application route cannot establish OPT 60 or 80.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Actual 2025 airport traffic and Silver Line airport-station trips support transport and ground access. The shared German section 41 application route, effective personal international-wire services and the January 2026 local outage/restoration notice support multiple conditional exit and connection paths. Residence approval, account approval and product restrictions, exchange spreads, disrupted 911 calls and shared failures are retained. Provider terms are not proof of a local resident completing a transfer; suggested alternatives are not measured universal backup.",
+      "assumption": "Observed channels and dated source versions remain applicable through the cutoff and across the FUA, and the median-income local citizen can usually obtain and afford usable travel, a qualifying residence-purpose pathway, a wire-capable account with compliant funds and destination access, and an alternative means of emergency contact when needed. Citizenship and median income do not establish job offers, qualifications, permission, bank approval or backup access. Rejecting ordinary availability, affordability, temporal or boundary applicability restores OPT to unresolved, not an automatic 40 or retained 60.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "transport_redundancy": "partial",
         "legal_mobility": "partial",
-        "asset_portability": "unresolved",
-        "network_continuity": "unresolved"
+        "asset_portability": "partial",
+        "network_continuity": "partial"
       }
     }
   ],
@@ -290,12 +290,100 @@
       "bytes": 3902632,
       "sha256": "5c0e71de37ca949b4d5a3c05ef8dad3fbd4bfef126d8d98f9850fa48129ab16c",
       "scope": "Cover and PDF pp.5-6 (printed pp.8-11) reviewed: actual Washington implantations and separate Baltimore aftercare. PDF created/modified 2026-06-08 is file metadata, not publication day; exact public-release date and cutoff archive unverified. No local controlled outcomes, 2026 annual count or median-resident access inferred."
+    },
+    {
+      "url": "https://www.justice.gov/opa/pr/alleged-perpetrator-shooting-washington-dc-charged-hate-crimes",
+      "publishedOn": "2025-08-07",
+      "retrievedOn": "2026-10-12",
+      "bytes": 90932,
+      "sha256": "f35be6df45ef7df11290acdd4086b01928f5091d83c53fee2c4ef2c2cdf7e168",
+      "scope": "May 21 museum attack: two deaths, two escaped uninjured and arrest/investigation. Prosecutorial allegations, not convictions; same incident as complaint, not an independent event or whole-FUA rate."
+    },
+    {
+      "url": "https://www.justice.gov/usao-dc/media/1401421/dl",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 325699,
+      "sha256": "f221e84d3a3bf11b829e42f654f83d3b952dd0733caca8e7f316498cc2f98d08",
+      "scope": "Complaint and supporting affidavit, seven PDF pages; filed May 22 for May 21 event. Actual injury/death and response accounts support partial GSS; probable cause is not a trial verdict or verified organised-group membership. May 22 is the court filing date, not a verified public-release day or pre-cutoff archive."
+    },
+    {
+      "url": "https://www.justice.gov/usao-dc/pr/lakanwal-newly-indicted-shooting-guardsmen-near-white-house-killed-sarah-beckstrom",
+      "publishedOn": "2026-01-09",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Dated primary release read through web search: November 26 DC attack, one death on November 27, one critically injured person and two responding majors. Allegations are attributed; direct download returned a bot challenge despite HTTP 200, so no content snapshot hash claimed."
+    },
+    {
+      "url": "https://www.justice.gov/usao-dc/media/1422931/dl",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 142086,
+      "sha256": "ceef4e53e1c33b60ee1efec5745bb5498db3580fe9d66f1f93b8f14ba3ed7b21",
+      "scope": "Five-page indictment, read in full; charges November 26/27 events. DOJ January 9 release identifies its unsealing; PDF creation January 12 is metadata, not verified publication day or cutoff archive. State of Washington is the alleged origin, not the DC incident location."
+    },
+    {
+      "url": "https://www.fairfaxcounty.gov/transportation/sites/transportation/files/Assets/Documents/PDF/dulles%20tax%20advisory%20board/March%2025%202025/Silver%20Line%20Update_Commission2025.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 255408,
+      "sha256": "bfdc153c83cc72397aeaa88119e372d8a97008668e0d091fccaa19c720ca463c",
+      "scope": "One-page March 25 2025 meeting material attributes figures to WMATA as of February 27: Dulles station 3.23 million cumulative customer trips since November 2022 opening, not unique airport users. March 20 PDF metadata is not publication; exact public-release day/cutoff archive and full-FUA access unverified."
+    },
+    {
+      "url": "https://www.wmata.com/content/dam/wmata-com/migrated-assets/about/records/upload/tariff-47.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 536436,
+      "sha256": "c8c39ee9392be174f92704ab8939cc2581d03cc785f87b5daa5b1c9a76138365",
+      "scope": "Effective November 18 2025 edition; cover and pp.9-11 reviewed, regular rail $2.25-$6.75 excluding surcharge/differentials and payment requirements. PDF metadata November 17 is not publication; no pre-cutoff archive or whole-resident affordability measured. Supersedes the unused May 2025 edition."
+    },
+    {
+      "url": "https://www.wmata.com/news/wmata-board-of-directors-adopts-fy2027-budget-with-expanded-service-and-no-fare-increase.html",
+      "publishedOn": "2026-04-23",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Primary operator page read through web tool: approved FY2027 budget retains rail/bus fares. December changes and modernisation funding are plans, not delivered redundancy. No raw download hash claimed."
+    },
+    {
+      "url": "https://www.chase.com/content/dam/chase-ux/documents/personal/checking/ABSF-en.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 488107,
+      "sha256": "69836d755532c957e9dab7bd49f8bea6f68b5eb01671bc5b58d803226b2626d1",
+      "scope": "Effective June 14 2026 personal-account edition, PDF pp.1-3,13,15 reviewed. Total Checking terms and international-wire fees with account approval, exchange spreads and intermediary costs; Secure Checking excludes outgoing wires. File metadata is not publication/cutoff archive. Neither every account nor every local citizen has this channel; no completed resident transfer, asset liquidation, approvals or crisis continuity inferred."
+    },
+    {
+      "url": "https://www.consumerfinance.gov/ask-cfpb/if-i-want-to-use-my-bank-or-credit-union-to-send-money-to-someone-in-another-country-do-i-have-any-federal-protection-en-1733/",
+      "publishedOn": "2024-10-03",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Primary consumer rule explanation last reviewed October 3 2024; qualifying remittances over $15 and provider-volume conditions. Rights and disclosures are not transfer approval, delivery, a capital-transfer ceiling or city performance. Read through web tool; direct download unavailable, no raw hash claimed."
+    },
+    {
+      "url": "https://trainingtrack.hsema.dc.gov/NRssV2/RssFeed/AlertDetails/63703",
+      "publishedOn": "2026-01-14",
+      "retrievedOn": "2026-10-12",
+      "bytes": 2561,
+      "sha256": "b8a61ffb16bb81f501e21455fdae8a7ef85e7efd49ad821b4a9e01e4ab2324df",
+      "scope": "Local final update at 11:14 PM relays Verizon restoration after some users could not reach 911, and recommends another carrier, landline or station. Provider-reported restoration is not independent universal verification; advice does not measure alternative access/use or local outage duration."
+    },
+    {
+      "url": "https://docs.fcc.gov/public/attachments/DA-26-94A1.pdf",
+      "publishedOn": "2026-01-28",
+      "retrievedOn": "2026-10-12",
+      "bytes": 156059,
+      "sha256": "0350a51bfd46146990f1a9e75b5c7ba99564bdf2fd4c063427377b7a4cee495c",
+      "scope": "All three pages reviewed: national outage and investigation invitation, not final findings, a DC-specific duration/rate or zero injuries. Media-attributed national scale is not local measurement; March comment deadline does not establish current investigation status."
     }
   ],
   "legalMobilityReview": {
     "rules": "cci-legal-mobility-rules.json",
     "ruleId": "section41_citizen_onshore_application_germany",
     "evidenceReview": "cci-legal-mobility.md",
-    "meaning": "Conditional procedural application route only; no automatic OPT grade or long-term residence/work entitlement."
+    "meaning": "Conditional procedural application route only; no automatic long-term residence/work entitlement. OPT 60 also depends on transport, asset and communication evidence and explicitly withdrawable ordinary-access assumptions."
   }
 }
