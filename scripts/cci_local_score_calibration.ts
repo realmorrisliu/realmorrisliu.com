@@ -177,19 +177,24 @@ assert.deepEqual(total({ ...gaza, MED: 40 }), { center: null, lower: 17, upper: 
 const gazaWithoutMed = { ...gaza };
 delete gazaWithoutMed.MED;
 assert.deepEqual(total(gazaWithoutMed), { center: null, lower: 11, upper: 71 });
-assert.deepEqual(total(tokyo), { center: null, lower: 45, upper: 70 });
-assert(!("GSS" in tokyo) && !("OPT" in tokyo));
+assert.deepEqual(total(tokyo), { center: null, lower: 51, upper: 66 });
+assert(!("GSS" in tokyo));
+assert.equal(tokyo.OPT, 60);
+const tokyoWithoutOpt = { ...tokyo };
+delete tokyoWithoutOpt.OPT;
+assert.deepEqual(total(tokyoWithoutOpt), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total({ ...tokyo, GSS: 60 }), { center: 60, lower: 60, upper: 60 });
 assert.equal(tokyo.RES, 60);
 const tokyoWithoutRes = { ...tokyo };
 delete tokyoWithoutRes.RES;
-assert.deepEqual(total(tokyoWithoutRes), { center: null, lower: 39, upper: 74 });
-assert.deepEqual(total({ ...tokyo, TEC: 80 }), { center: null, lower: 47, upper: 72 });
+assert.deepEqual(total(tokyoWithoutRes), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total({ ...tokyo, TEC: 80 }), { center: null, lower: 53, upper: 68 });
 const tokyoWithoutLon = { ...tokyo };
 delete tokyoWithoutLon.LON;
-assert.deepEqual(total(tokyoWithoutLon), { center: null, lower: 39, upper: 74 });
+assert.deepEqual(total(tokyoWithoutLon), { center: null, lower: 45, upper: 70 });
 const tokyoWithoutMed = { ...tokyo };
 delete tokyoWithoutMed.MED;
-assert.deepEqual(total(tokyoWithoutMed), { center: null, lower: 36, upper: 76 });
+assert.deepEqual(total(tokyoWithoutMed), { center: null, lower: 42, upper: 72 });
 const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
   (c: { efua_id: string }) => c.efua_id === "5129"
 );
@@ -228,6 +233,7 @@ console.log({
     gaza: { partial: total(gaza), unresolvedMED: total(gazaWithoutMed) },
     tokyo: {
       partial: total(tokyo),
+      unresolvedOPT: total(tokyoWithoutOpt),
       unresolvedRES: total(tokyoWithoutRes),
       unresolvedLON: total(tokyoWithoutLon),
       unresolvedMED: total(tokyoWithoutMed),

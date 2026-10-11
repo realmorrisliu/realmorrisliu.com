@@ -27,13 +27,13 @@
     {
       "id": "GSS",
       "score": null,
-      "rationale": "The 2025 civil-protection revision addresses missile response, but historical events and a plan do not establish current local impact or mitigation effectiveness.",
-      "assumption": "Current organised violence, regional conflict and strategic mitigation have not been sufficiently cross-checked for an overall judgment; unknown is not unsafe.",
+      "rationale": "Actual 2025 Tokyo organised-crime enforcement, current national organised-violence evidence, the 2026 defence review and the local civil-protection plan establish activity, threats and mitigation mechanisms. Detected persons are not incidents, victims or a measure of low current resident impact.",
+      "assumption": "Current low resident impact, whole-FUA coverage and mitigation effectiveness remain unverified; enforcement and preparedness alone cannot choose an overall grade. Unknown is not unsafe.",
       "conditionalAlternatives": [],
       "subpillars": {
-        "organized_violence": "unresolved",
-        "regional_conflict": "unresolved",
-        "strategic_exposure": "context"
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
       }
     },
     {
@@ -103,15 +103,15 @@
     },
     {
       "id": "OPT",
-      "score": null,
-      "rationale": "Airport directories, conditional overseas pension payments and youth mobility programmes support limited leads, not ordinary residents' complete exit capabilities.",
-      "assumption": "Actual independent transport, ordinary-age long-term eligibility, funds and communication continuity remain unresolved; directory points, youth rights and pensions do not fill them.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Actual Haneda international passenger flows and local airport bus service, a non-youth German residence-application pathway for Japanese citizens, regulated personal cross-border remittance and actually activated emergency roaming support multiple exit and connection channels. Approval, affordability, bank checks and shared disruption remain constraints.",
+      "assumption": "Observed channels usually remain accessible and affordable to the median-income local citizen across the functional area, with destination-specific eligibility and permission where required. Neither citizenship nor median income establishes job offers, qualifications or approval; rejecting ordinary access or affordability leaves OPT unresolved.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
-        "transport_redundancy": "context",
+        "transport_redundancy": "partial",
         "legal_mobility": "partial",
         "asset_portability": "partial",
-        "network_continuity": "unresolved"
+        "network_continuity": "partial"
       }
     }
   ]

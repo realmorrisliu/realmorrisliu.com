@@ -77,8 +77,8 @@
           "efua_id": "5129",
           "source_name": "Tokyo",
           "center": null,
-          "lower": 45.0,
-          "upper": 70.0,
+          "lower": 51.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -137,8 +137,8 @@
           "efua_id": "5129",
           "source_name": "Tokyo",
           "center": null,
-          "lower": 36.0,
-          "upper": 76.0,
+          "lower": 42.0,
+          "upper": 72.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -197,8 +197,8 @@
           "efua_id": "5129",
           "source_name": "Tokyo",
           "center": null,
-          "lower": 45.0,
-          "upper": 70.0,
+          "lower": 51.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -257,8 +257,8 @@
           "efua_id": "5129",
           "source_name": "Tokyo",
           "center": null,
-          "lower": 36.0,
-          "upper": 76.0,
+          "lower": 42.0,
+          "upper": 72.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -317,8 +317,8 @@
           "efua_id": "5129",
           "source_name": "Tokyo",
           "center": null,
-          "lower": 39.0,
-          "upper": 74.0,
+          "lower": 45.0,
+          "upper": 70.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -377,8 +377,8 @@
           "efua_id": "5129",
           "source_name": "Tokyo",
           "center": null,
-          "lower": 36.0,
-          "upper": 76.0,
+          "lower": 42.0,
+          "upper": 72.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -437,8 +437,8 @@
           "efua_id": "5129",
           "source_name": "Tokyo",
           "center": null,
-          "lower": 39.0,
-          "upper": 74.0,
+          "lower": 45.0,
+          "upper": 70.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -497,8 +497,8 @@
           "efua_id": "5129",
           "source_name": "Tokyo",
           "center": null,
-          "lower": 39.0,
-          "upper": 74.0,
+          "lower": 45.0,
+          "upper": 70.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -649,14 +649,14 @@
     "cci-local-2026-zurich-case.md": "61c2796dc5d20f17412f5f0b6e48bdc125380c19990ba89131cdf1e5f06a496c",
     "cci-local-2026-gaza-case.json": "cfed62c5791dbc4647273e51199930e1723d922abe5d4cf34bb5b23c02eb46cf",
     "cci-local-2026-gaza-case.md": "14c2b2a2ea13119a9931d365e9eea5fec2ee797a9c34af79c4578b1aada3c7d4",
-    "cci-local-2026-tokyo-case.json": "c43184e56e91add2fc50acd7a31bf8c0078c698a55b41f2a08f42e7c488eaa3d",
-    "cci-local-2026-tokyo-case.md": "7837a77fb83b2cf888824c43e7a4f0202fa332c5c66eb6c0a9ed765ecef07cd5",
+    "cci-local-2026-tokyo-case.json": "b2e93f257602bc219cfc16339e91e7c4792392bf32c09786eac87dc4ae1f4f5b",
+    "cci-local-2026-tokyo-case.md": "0a43b4e691b6825a13393b7ce29a373979b9f9542bded1fbeb0778e6f86e9ef0",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "8e8c136afbe0dc87a15aaf2b823deb2724c8fe9af1c5caf210ad4ac1d3c75cfa",
+    "cci-global-evidence-matrix.json": "e586cfc8b928722fb4dd6d53d6dd8707dd122f14b09e28e2fa6c731a055d649e",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "92f1c9bcd6b28aadb9f8e7899ea265b22fc8e60f1506678d8aad022d69a45823"
+    "cci-local-2026-scoring-calibration.md": "3f019684e8b5eb2c7883f75b72bfee78761a4db00747ebc0c9282c6ef2c75e99"
   },
   "scriptSha256": "dd91a29a0d30606bb5963b81664df0d7fdac00bd232a0e4fc1fa665d63cd61e3",
-  "csvSha256": "b279a1206d2b6d8e87465fcc46cce9995f559a033755fffd155dcc87b9487c53",
+  "csvSha256": "c5ec0f6ead161290af8ede3a7c71daf8b2d74832b3ef17c591b449d407b79dc8",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }
