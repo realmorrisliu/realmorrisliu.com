@@ -77,15 +77,15 @@
     },
     {
       "id": "LON",
-      "score": null,
-      "rationale": "A credible early-Alzheimer confirmatory trial, traditional FDA approval and conditional Medicare coverage establish a national clinical pathway. A current McLean clinic lists lecanemab, but its publication date, local delivery before the cutoff and resident access have not been verified. A dated local educational article is not a drug-administration record. A dated Washington LVAD delivery report supports MED specialist capacity; it does not independently establish an applicable longevity-specific translation and resident-access chain. General specialist treatment is not automatically scored again as LON.",
-      "assumption": "Do not infer cutoff delivery or healthy-person lifespan benefit from national approval or an undated service list. Dated local adoption and an applicable access pathway are needed before selecting an anchor.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "A credible early-Alzheimer confirmatory trial and FDA approval now connect to actual 2024 Medicare FFS lecanemab claims for a provider whose end-following-year NPPES address matches the dated Sterling clinic opening. The address-range point intersects the frozen FUA; claims are not treatment-site or patient-residence coordinates. Dated referral, insurance and 2025 network delivery records support a limited adoption pathway. Eligibility, coinsurance, referral/MRI logistics and serious ARIA risk remain constraints; the 2024 referral form predates the 2025 FDA safety update. No local clinical outcome or healthy-person lifespan gain is established.",
+      "assumption": "The selected historical claims represent delivery within the functional area, the limited disease-specific pathway is relevant to LON readiness, and actual services and appropriate current safety monitoring persist through the cutoff. An ordinarily insured, clinically eligible local median-income citizen can usually obtain and afford diagnosis, referral, treatment and follow-up across the FUA; citizenship, listed insurance and observed Medicare beneficiaries do not establish these conditions. Rejecting location, continuity, pathway representativeness, monitoring or ordinary access restores LON to unresolved; verified important unrelieved barriers can justify 40, not source absence alone.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "translation": "partial",
         "trial_maturity": "partial",
-        "regulatory_adoption": "context",
-        "resident_access": "unresolved"
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
       }
     },
     {
@@ -378,6 +378,94 @@
       "bytes": 156059,
       "sha256": "0350a51bfd46146990f1a9e75b5c7ba99564bdf2fd4c063427377b7a4cee495c",
       "scope": "All three pages reviewed: national outage and investigation invitation, not final findings, a DC-specific duration/rate or zero injuries. Media-attributed national scale is not local measurement; March comment deadline does not establish current investigation status."
+    },
+    {
+      "url": "https://data.cms.gov/data-api/v1/dataset/335e5f35-eca6-482d-87b3-f99883e213e3/data?filter%5BHCPCS_Cd%5D=J0174&size=5000&offset=0",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 231085,
+      "sha256": "166a75d0c50095dd972895c3f5758147a6247df6471a1bec6d1980d2a5df39db",
+      "scope": "All published 2024 J0174 provider/HCPCS/place-of-service rows, no geographic filter. Static year-specific API, not latest alias. 254 distinct NPI records, all non-facility O, minimum 11 beneficiaries; not a patient-level file."
+    },
+    {
+      "url": "https://data.cms.gov/data-api/v1/dataset/335e5f35-eca6-482d-87b3-f99883e213e3/data?filter%5BHCPCS_Cd%5D=J0174&size=5000&offset=254",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "scope": "Pagination end check: offset 254 returns an empty array. This verifies the filtered published query, not unsuppressed claims or all treatment settings."
+    },
+    {
+      "url": "https://data.cms.gov/data-api/v1/dataset/335e5f35-eca6-482d-87b3-f99883e213e3/dictionary",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 9907,
+      "sha256": "d23a9ba5fbd94b110cb5eeb11c32a64f58045bc5b6628d9accc37040c96069bb",
+      "scope": "Attached data dictionary: J0174 is 1 mg; beneficiary count is distinct only within NPI/code/place-of-service, day count is beneficiary-days, address is NPPES, O is non-facility, not exact physical site."
+    },
+    {
+      "url": "https://data.cms.gov/data-api/v1/dataset-resources/335e5f35-eca6-482d-87b3-f99883e213e3",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 1625,
+      "sha256": "68dac6a5fd8675180fa7aac9a69291e01f5883442f96dca24ae942a75bbcb8cf",
+      "scope": "The 2024 dataset attaches the March 2025 dictionary and methodology; do not relabel them as 2026 documents. Original CSV size 3,250,282,192 bytes."
+    },
+    {
+      "url": "https://data.cms.gov/sites/default/files/2025-04/MUP_PHY_RY25_202350312_Methodology_508.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 319334,
+      "sha256": "daf2ddb6ab19a416ce9b0b5165750dca7e90380a03bc77350083b390e913e726",
+      "scope": "All eight pages extracted; pp.3-6 reviewed. Final-action non-institutional Part B FFS claims; records with ten or fewer beneficiaries suppressed. NPPES demographics extracted at end of year following service year, implying end-2025 address for 2024 data under the stated rule, not a 2024 treatment coordinate. No Medicare Advantage, uninsured, other payers or hospital facility payments; no quality outcomes."
+    },
+    {
+      "url": "https://www.12stonehealth.com/2024/07/19/twelvestone-health-partners-announces-sterling-and-stone-springs-va-infusion-center-openings/",
+      "publishedOn": "2024-07-19",
+      "retrievedOn": "2026-10-12",
+      "bytes": 136978,
+      "sha256": "550ef6fe6b46e37ff6a262327556ebf9f3ea43614ddab50272e274d29ebd1845",
+      "scope": "Page posted July 19, 2024, body announcement July 18: opened Sterling and Dulles centres. Sterling address matches the selected claims record, not proof each claim occurred there."
+    },
+    {
+      "url": "https://www.12stonehealth.com/wp-content/uploads/2024/08/Leqembi-Order-Form-08.22.24.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 275259,
+      "sha256": "b13abd5362bb38d26d51501b3c6976bda52a4e18946755818cd8f1787554237d",
+      "scope": "Three-page public blank template, first two pages read; version 08.22.24 is form version, not verified publication day. Referral, amyloid, eligibility, MRI and Medicare registry requirements; not completed patient records. Its MRI schedule predates the FDA August 2025 update and is not a current safety protocol."
+    },
+    {
+      "url": "https://www.12stonehealth.com/wp-content/uploads/2024/06/VA-Participating-Insurance-List-6.05.24.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 3048298,
+      "sha256": "370c7fb6aaef83ba81f3848b9e861950ac100b4e3273ffd633d1df080a61ba70",
+      "scope": "One scanned page visually reviewed: insurance contracts as of 6.1.24, including Medicare, Sterling and Dulles addresses; list subject to change and verification, not lecanemab authorisation or affordability. As-of date is not publication day."
+    },
+    {
+      "url": "https://www.12stonehealth.com/2025/06/24/supporting-families-supporting-progression-how-twelvestone-is-offering-hope-for-alzheimers-care-with-leqembi/",
+      "publishedOn": "2025-06-24",
+      "retrievedOn": "2026-10-12",
+      "bytes": 140842,
+      "sha256": "12489fe808361b4056e72d39415300c78db19ab9abc148ce0eb0dfc4d1040fb4",
+      "scope": "Posted June 24, 2025: provider reports delivering Leqembi, coordinating referrals, monitoring and benefit/prior-authorisation checks. Network statement, not Sterling patient outcomes or automatic coverage. Promotional efficacy wording is not used as independent trial evidence."
+    },
+    {
+      "url": "https://www.fda.gov/drugs/drug-safety-communications/fda-recommend-additional-earlier-mri-monitoring-patients-alzheimers-disease-taking-leqembi-lecanemab",
+      "publishedOn": "2025-08-28",
+      "retrievedOn": "2026-10-12",
+      "bytes": 48310,
+      "sha256": "a51f461d934676b41a73288137b715d620449d8c37f7a6a0933b22512b71416d",
+      "scope": "August 28, 2025 safety communication adds MRI before the third infusion and retains serious/fatal ARIA risk. National safety evidence, not local harm incidence or proof the clinic adopted the update."
+    },
+    {
+      "url": "https://geocoding.geo.census.gov/geocoder/locations/address?street=46440%20Benedict%20Dr&city=Sterling&state=VA&zip=20164&benchmark=Public_AR_Current&format=json",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 679,
+      "sha256": "35f3210c28b70665cdca8fdfd3824fddb11a3490837b6f4814bc34f665873c00",
+      "scope": "Current Census benchmark 4 yields one interpolated address-range point, not a verified building centroid or historical treatment site. Point projected to ESRI:54009 intersects only frozen eFUA 7068; whole-area resident coverage remains unresolved."
     }
   ],
   "legalMobilityReview": {
@@ -385,5 +473,27 @@
     "ruleId": "section41_citizen_onshore_application_germany",
     "evidenceReview": "cci-legal-mobility.md",
     "meaning": "Conditional procedural application route only; no automatic long-term residence/work entitlement. OPT 60 also depends on transport, asset and communication evidence and explicitly withdrawable ordinary-access assumptions."
+  },
+  "localLonClaimsReview": {
+    "sourceManifest": "cci-cms-2024-lecanemab-source.json",
+    "csv": "cci-cms-2024-lecanemab-claims.csv",
+    "csvSha256": "07196f56adec4a5315f45fe4316bfe4a0c10a8d0281394ac74703ca72af767d5",
+    "reviewedNpi": "1205116373",
+    "hcpcsCode": "J0174",
+    "placeOfService": "O",
+    "observedYear": 2024,
+    "distinctBeneficiariesWithinRecord": 13,
+    "beneficiaryDaysWithinRecord": 67,
+    "drugBillingUnits1mg": 49100,
+    "registeredProviderAddress": "46440 Benedict Dr Ste 111, Sterling, VA 20164",
+    "addressSnapshotRule": "End of calendar year following reporting year per attached CMS methodology; address is not claim-site geography.",
+    "censusMatchedAddress": "46440 BENEDICT DR, STERLING, VA, 20164",
+    "censusInterpolatedLongitude": -77.393805072642,
+    "censusInterpolatedLatitude": 39.024290915873,
+    "geocodingBenchmark": "Public_AR_Current (4), retrieved 2026-10-12",
+    "fuaPointMatches": [7068],
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "boundaryMethod": "Existing cci_global_crosswalk.load with source checksum, always_xy EPSG:4326 to ESRI:54009, point intersects frozen polygon; shapely 2.1.2 and pyproj 3.7.2. One address point, not whole-FUA service coverage.",
+    "interpretation": "Historical actual billed adoption signal with explicit site and resident-access assumptions; 49,100 is drug units, 67 is beneficiary-days, 13 is distinct beneficiaries within this record, not FUA residents or healthy-person longevity outcomes."
   }
 }

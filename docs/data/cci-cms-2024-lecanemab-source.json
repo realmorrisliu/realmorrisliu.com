@@ -1,0 +1,63 @@
+{
+  "status": "published_claims_adoption_signal_not_city_scores",
+  "datasetId": "335e5f35-eca6-482d-87b3-f99883e213e3",
+  "catalogUrl": "https://catalog.data.gov/dataset/medicare-physician-other-practitioners-by-provider-and-service-2024-12-01",
+  "catalogModifiedOn": "2026-05-21",
+  "observedFrom": "2024-01-01",
+  "observedThrough": "2024-12-31",
+  "retrievedOn": "2026-10-12",
+  "hcpcsCode": "J0174",
+  "billingUnit": "1 mg lecanemab-irmb, not an infusion or person",
+  "publishedRecordCount": 254,
+  "distinctProviderNpiCount": 254,
+  "placeOfServiceCounts": {
+    "O": 254
+  },
+  "minimumBeneficiariesPerPublishedRecord": 11,
+  "csv": "cci-cms-2024-lecanemab-claims.csv",
+  "csvSha256": "07196f56adec4a5315f45fe4316bfe4a0c10a8d0281394ac74703ca72af767d5",
+  "sourceSnapshots": [
+    {
+      "url": "https://data.cms.gov/data-api/v1/dataset/335e5f35-eca6-482d-87b3-f99883e213e3/data?filter%5BHCPCS_Cd%5D=J0174&size=5000&offset=0",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 231085,
+      "sha256": "166a75d0c50095dd972895c3f5758147a6247df6471a1bec6d1980d2a5df39db",
+      "scope": "All published 2024 J0174 provider/HCPCS/place-of-service rows, no geographic filter. Static year-specific API, not latest alias. 254 distinct NPI records, all non-facility O, minimum 11 beneficiaries; not a patient-level file."
+    },
+    {
+      "url": "https://data.cms.gov/data-api/v1/dataset/335e5f35-eca6-482d-87b3-f99883e213e3/data?filter%5BHCPCS_Cd%5D=J0174&size=5000&offset=254",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "scope": "Pagination end check: offset 254 returns an empty array. This verifies the filtered published query, not unsuppressed claims or all treatment settings."
+    },
+    {
+      "url": "https://data.cms.gov/data-api/v1/dataset/335e5f35-eca6-482d-87b3-f99883e213e3/dictionary",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 9907,
+      "sha256": "d23a9ba5fbd94b110cb5eeb11c32a64f58045bc5b6628d9accc37040c96069bb",
+      "scope": "Attached data dictionary: J0174 is 1 mg; beneficiary count is distinct only within NPI/code/place-of-service, day count is beneficiary-days, address is NPPES, O is non-facility, not exact physical site."
+    },
+    {
+      "url": "https://data.cms.gov/data-api/v1/dataset-resources/335e5f35-eca6-482d-87b3-f99883e213e3",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 1625,
+      "sha256": "68dac6a5fd8675180fa7aac9a69291e01f5883442f96dca24ae942a75bbcb8cf",
+      "scope": "The 2024 dataset attaches the March 2025 dictionary and methodology; do not relabel them as 2026 documents. Original CSV size 3,250,282,192 bytes."
+    },
+    {
+      "url": "https://data.cms.gov/sites/default/files/2025-04/MUP_PHY_RY25_202350312_Methodology_508.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 319334,
+      "sha256": "daf2ddb6ab19a416ce9b0b5165750dca7e90380a03bc77350083b390e913e726",
+      "scope": "All eight pages extracted; pp.3-6 reviewed. Final-action non-institutional Part B FFS claims; records with ten or fewer beneficiaries suppressed. NPPES demographics extracted at end of year following service year, implying end-2025 address for 2024 data under the stated rule, not a 2024 treatment coordinate. No Medicare Advantage, uninsured, other payers or hospital facility payments; no quality outcomes."
+    }
+  ],
+  "method": "Exact HCPCS filter only, size 5000, offset 0; offset 254 empty. All response fields and all rows retained in CSV in source order. CSV standard library writer, LF endings. No provider/city/population/performance exclusions.",
+  "limitations": "Published records only; absence is not absence of treatment. Address may move and does not identify where services or patients were located. Beneficiary counts cannot be added as deduplicated people across providers. Drug units are not administrations; beneficiary-days are not necessarily complete infusions. This query omits institutional/hospital facility claims, Medicare Advantage, private and other coverage, suppressed providers, other drugs/codes and 2025/2026 services. No treatment quality, healthy-person lifespan effect, local median-income affordability, FUA-wide coverage, whole LON scores or ranks inferred."
+}

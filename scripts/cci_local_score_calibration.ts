@@ -230,24 +230,45 @@ assert(tokyoPosition);
 assert.equal(tokyoPosition.center, 60);
 assert.equal(tokyoPosition.bestPosition, 1);
 assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 4);
-assert.deepEqual(total(washington), { center: null, lower: 43, upper: 68 });
+assert.deepEqual(total(washington), { center: null, lower: 49, upper: 64 });
 assert.equal(washington.RES, 40);
 assert.equal(washington.OPT, 60);
-for (const dimension of ["GSS", "LON"] as const) {
-  assert.equal(washington[dimension], undefined);
-}
+assert.equal(washington.LON, 60);
+assert.equal(washington.GSS, undefined);
+const washingtonWithoutLon = { ...washington };
+delete washingtonWithoutLon.LON;
+assert.deepEqual(total(washingtonWithoutLon), { center: null, lower: 43, upper: 68 });
 const washingtonWithoutOpt = { ...washington };
 delete washingtonWithoutOpt.OPT;
-assert.deepEqual(total(washingtonWithoutOpt), { center: null, lower: 37, upper: 72 });
+assert.deepEqual(total(washingtonWithoutOpt), { center: null, lower: 43, upper: 68 });
 const washingtonWithoutRes = { ...washington };
 delete washingtonWithoutRes.RES;
-assert.deepEqual(total(washingtonWithoutRes), { center: null, lower: 39, upper: 74 });
+assert.deepEqual(total(washingtonWithoutRes), { center: null, lower: 45, upper: 70 });
 const washingtonWithoutMed = { ...washington };
 delete washingtonWithoutMed.MED;
-assert.deepEqual(total(washingtonWithoutMed), { center: null, lower: 34, upper: 74 });
-assert.deepEqual(total({ ...washington, RES: 60 }), { center: null, lower: 45, upper: 70 });
-assert.deepEqual(total({ ...washington, ISR: 40 }), { center: null, lower: 40, upper: 65 });
-assert.deepEqual(total({ ...washington, OPT: 40 }), { center: null, lower: 41, upper: 66 });
+assert.deepEqual(total(washingtonWithoutMed), { center: null, lower: 40, upper: 70 });
+assert.deepEqual(total({ ...washington, RES: 60 }), { center: null, lower: 51, upper: 66 });
+assert.deepEqual(total({ ...washington, ISR: 40 }), { center: null, lower: 46, upper: 61 });
+assert.deepEqual(total({ ...washington, OPT: 40 }), { center: null, lower: 47, upper: 62 });
+assert.deepEqual(total({ ...washington, LON: 40 }), { center: null, lower: 47, upper: 62 });
+assert.equal(total({ ...washington, GSS: 60 }).center, 58);
+const claimsReview = realCases[6].localLonClaimsReview;
+const claimsSource = JSON.parse(
+  readFileSync(new URL("../docs/data/cci-cms-2024-lecanemab-source.json", import.meta.url), "utf8")
+);
+assert.equal(claimsSource.status, "published_claims_adoption_signal_not_city_scores");
+assert.equal(claimsSource.publishedRecordCount, 254);
+assert.equal(claimsReview.csvSha256, claimsSource.csvSha256);
+assert.equal(
+  createHash("sha256")
+    .update(readFileSync(new URL(`../docs/data/${claimsSource.csv}`, import.meta.url)))
+    .digest("hex"),
+  claimsSource.csvSha256
+);
+assert.equal(claimsReview.distinctBeneficiariesWithinRecord, 13);
+assert.equal(claimsReview.beneficiaryDaysWithinRecord, 67);
+assert.equal(claimsReview.drugBillingUnits1mg, 49100);
+assert.deepEqual(claimsReview.fuaPointMatches, [7068]);
 const washingtonPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
   (c: { efua_id: string }) => c.efua_id === "7068"
 );
@@ -301,6 +322,7 @@ console.log({
     },
     washington: {
       partial: total(washington),
+      unresolvedLON: total(washingtonWithoutLon),
       unresolvedOPT: total(washingtonWithoutOpt),
       unresolvedRES: total(washingtonWithoutRes),
       unresolvedMED: total(washingtonWithoutMed),

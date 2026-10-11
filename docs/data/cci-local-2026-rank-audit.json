@@ -95,8 +95,8 @@
           "efua_id": "7068",
           "source_name": "Washington D.C.",
           "center": null,
-          "lower": 43.0,
-          "upper": 68.0,
+          "lower": 49.0,
+          "upper": 64.0,
           "bestPosition": 1,
           "worstPosition": 9031
         }
@@ -164,8 +164,8 @@
           "efua_id": "7068",
           "source_name": "Washington D.C.",
           "center": null,
-          "lower": 34.0,
-          "upper": 74.0,
+          "lower": 40.0,
+          "upper": 70.0,
           "bestPosition": 1,
           "worstPosition": 9031
         }
@@ -233,8 +233,8 @@
           "efua_id": "7068",
           "source_name": "Washington D.C.",
           "center": null,
-          "lower": 43.0,
-          "upper": 68.0,
+          "lower": 49.0,
+          "upper": 64.0,
           "bestPosition": 1,
           "worstPosition": 9031
         }
@@ -302,8 +302,8 @@
           "efua_id": "7068",
           "source_name": "Washington D.C.",
           "center": null,
-          "lower": 34.0,
-          "upper": 74.0,
+          "lower": 40.0,
+          "upper": 70.0,
           "bestPosition": 1,
           "worstPosition": 9031
         }
@@ -371,8 +371,8 @@
           "efua_id": "7068",
           "source_name": "Washington D.C.",
           "center": null,
-          "lower": 39.0,
-          "upper": 74.0,
+          "lower": 45.0,
+          "upper": 70.0,
           "bestPosition": 1,
           "worstPosition": 9031
         }
@@ -440,8 +440,8 @@
           "efua_id": "7068",
           "source_name": "Washington D.C.",
           "center": null,
-          "lower": 34.0,
-          "upper": 74.0,
+          "lower": 40.0,
+          "upper": 70.0,
           "bestPosition": 1,
           "worstPosition": 9031
         }
@@ -578,8 +578,8 @@
           "efua_id": "7068",
           "source_name": "Washington D.C.",
           "center": null,
-          "lower": 37.0,
-          "upper": 72.0,
+          "lower": 43.0,
+          "upper": 68.0,
           "bestPosition": 1,
           "worstPosition": 9031
         }
@@ -647,8 +647,8 @@
           "efua_id": "7068",
           "source_name": "Washington D.C.",
           "center": null,
-          "lower": 37.0,
-          "upper": 72.0,
+          "lower": 43.0,
+          "upper": 68.0,
           "bestPosition": 1,
           "worstPosition": 9031
         }
@@ -743,14 +743,14 @@
     "cci-local-2026-gaza-case.md": "14c2b2a2ea13119a9931d365e9eea5fec2ee797a9c34af79c4578b1aada3c7d4",
     "cci-local-2026-tokyo-case.json": "914a398172019a3e7f0265fef3eec2a9a6ae970f2c44b143771ca73fe7b03363",
     "cci-local-2026-tokyo-case.md": "21c8ac52eb75e37b9b38d37937c3677ed4928d6a169ba90e1cf3e2b461a18efa",
-    "cci-local-2026-washington-case.json": "794e40bdaae9b6a89cbfd0c7903a6d754e2a0c76d8e10e6a349e0f8a4ee1ce0c",
-    "cci-local-2026-washington-case.md": "9d2fd2a83fbb1ec089cbea638af05d0465dd38969cb5564bf2a6df282e406878",
+    "cci-local-2026-washington-case.json": "ed1a44f4d111ee8c81c79b777a497ed266b004fe678066bc1337ce224130ee14",
+    "cci-local-2026-washington-case.md": "3419b58741fe753ae5f09c3de5e3c5a882b377adb3fde94fb0a11ce63fb135b9",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "20802c0d24b3b184329621931d59e81f9c57349744d441b9a91e27d1099bbbe2",
+    "cci-global-evidence-matrix.json": "c7b2d3b6d5d90a8be9173d26f965630d3a65abdfc18860a2b59b046459ac2250",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "8e7bc67aee03b338267bcc390643ea7da8a3ba41564e4be4dd397dd730de088f"
+    "cci-local-2026-scoring-calibration.md": "d0a83f70f2fd129b3002046c7c080c229cd3ee7433e553baae69e781dc5069a5"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "0c7a5cfbb475829f66cd2640ffca63ad78150520b8a41c0c1b2d9cc90ea31d02",
+  "csvSha256": "404229cb1df3dcb27a37acdc2ebca969f3d66fd5fcb723d2abb2b67a9f605774",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }
