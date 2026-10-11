@@ -1,0 +1,269 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "retrievedOn": "2026-10-12",
+  "candidateId": 2702,
+  "name": "Paris",
+  "evidenceReview": "cci-local-2026-paris-case.md",
+  "expectedConditionalTotal": null,
+  "limitations": "Eight dimensions and 31 subpillars reviewed, not fully measured. ISR/MED/TEC/OPT conditional 60, LON conditional 40; PCS/GSS/RES unknown. Regulatory caution is not itself poor care; LON requires a contested pathway-relevance assumption. Institutional, municipal, regional and national scopes differ from the frozen FUA. No ranking, exclusion bound or healthy-person lifespan gain; reject necessary assumptions to restore unknown.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": null,
+      "rationale": "Regional heat-impact estimates and municipal cooling/referral arrangements document hazard and response. Modelled heat-attributable deaths differ from all-cause excess deaths and do not describe 2026 median-income citizens. Home protection, remaining hazards and whole-FUA applicability are not sufficiently established.",
+      "assumption": "No whole-dimension anchor: neither declared cooling sites nor regional deaths establishes adequate target-resident protection or an unmitigated target-resident bottleneck.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "unresolved",
+        "geophysical": "context",
+        "severe_weather_wildfire": "unresolved"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "DGSI describes national terrorist threats and disrupted plots, not an annual Paris victim or interruption series. Existing historical events and general crime context do not resolve organised violence, regional spillover and strategic impacts for the current FUA.",
+      "assumption": "National mitigation is relevant context, not proof of low Paris impact or zero unreported incidents. Review actual local impacts and the broader regional/strategic profile before choosing an anchor.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "context",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Actual municipal contact channels, delivered hospital services and restored capacity support limited execution and adaptation. Received contacts do not prove all requests were resolved; financial pressure and incomplete crisis/group reach remain.",
+      "assumption": "Observed execution persists, ordinary citizens can usually reach major services across the area, and reviewed shortfalls do not constitute a broader unmitigated institutional bottleneck. Reject continuity, reach or representativeness to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "context"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "Actual water quality/delivery and wholesale food arrivals support supply. The 2026 INSEE publication models housing-energy vulnerability using older housing/income/energy inputs, not current bills or food affordability. Non-poor households are not the median citizen; operator scopes and crisis dependencies remain incomplete.",
+      "assumption": "Do not offset affordability with tonnes or compliant water. Current essential-resource burden and mitigation must support usual availability/affordability for 60, or an important persistent target-resident bottleneck for 40. A historical model and aggregate groups do not settle that choice.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "context",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "Dated hospital delivery, scoped historical certification and the current insurance/payment pathway support care. Certification is 2022-2024, not 2026 adverse-outcome measurement. Referrals, complementary coverage, daily charges and financial pressure limit universal access/affordability claims.",
+      "assumption": "Necessary routine/specialist care remains clinically adequate and usually obtainable/affordable under usual coverage across the FUA. Historical certification, service volume and national reimbursement rules are partial support, not proof for every resident; reject quality, access, affordability or continuity assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 40,
+      "rationale": "Human early-Alzheimer evidence and European authorisations coexist with French early-access refusals and negative reimbursement evaluations. These establish a limited adopted/payment route, not absence of private care, trials or other longevity pathways. Clinical significance and safety are disputed; approval alone is not resident benefit.",
+      "assumption": "The reviewed disease-specific pathway is relevant to limited LON readiness, its ordinary covered adoption gap persists locally through the cutoff, and unreviewed routes do not remove that gap. This is not a penalty for appropriate regulatory caution or an inference of poor medical care. Reject pathway relevance, net-benefit applicability, continuity or representativeness to restore unknown; no healthy-person lifespan gain assumed.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Scoped research output and actual licensing income support knowledge/industry connections; implemented hospital digital use and older regional usage modelling provide limited diffusion evidence. Partnership announcements, patent counts and statistical predictions do not establish whole-industry or current household adoption.",
+      "assumption": "Observed capacity persists and offers limited industry connections and usable resident diffusion across the area. Older modelled use and one institutional network are partial support; reject continuity, diffusion or boundary applicability to restore unknown. Independent critical-node resilience is not established.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Actual airport/rail operation and compensation coexist with service shortfalls. Reviewed EU-to-Germany rights, conditional bank transfer terms and operating public contact channels support limited exit paths, not approved accounts, universal relocation or independent crisis backup.",
+      "assumption": "An ordinary French citizen can usually obtain and afford appropriate transport, a qualifying German residence purpose, an approved account/compliant transfer and usable communications across the area; channels persist through the cutoff. Rights, contact counts and advertised banking do not prove actual approval, successful transfers or stress redundancy. Reject these assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "researchPriority": {
+    "basis": "directory_associations_after_existing_eight_cases_not_performance",
+    "associatedDirectoryRecords": 2724,
+    "source": "cci-openalex-institution-fua.csv",
+    "sourceSha256": "b59735ba074e3e1b8e05f1d08bd672ef1d1ec219303cd9a788c93fc2a5e798ed"
+  },
+  "sourceSnapshots": [
+    {
+      "url": "https://www.aphp.fr/sites/default/files/2026-09/APHP_RA2025_Digital_17092026.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 4637447,
+      "sha256": "9bb6382bb2a4611cb786910d3578068c17dec92a3c483a247fb9cedfacf0e9e0",
+      "scope": "Final 52-page report; relevant PDF pp.11,19,29,38,40-46,50 read; pp.41/45/46 visually checked. 2025 encounters are not distinct residents; certification dates are 2022-2024. Principal/consolidated deficits differ; patent investment is not licence revenue. Official index updated 24 September 2026, not verified first-publication day; replaces public CME draft containing placeholders. Network includes sites outside the FUA."
+    },
+    {
+      "url": "https://www.paris.fr/pages/3975-la-ville-au-bout-du-fil-7723",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 325438,
+      "sha256": "4892b0e13ebcbafc31376b5d680d05cc6d74b78a013fe010e545993c8071dc70",
+      "scope": "Page updated 28 May 2026: 2024 incoming calls/emails and usual telephone/digital public-service channels. Received contacts are not resolved cases, distinct residents, crisis accessibility or whole-FUA delivery."
+    },
+    {
+      "url": "https://www.aphp.fr/actualites/apinnov-2026-retour-sur-cette-22e-edition",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 188179,
+      "sha256": "07895fc98f037ee2bf84ceb25523b4b17f21fade9d3b4f48245f9d6ae52d863b",
+      "scope": "Page updated 26 May 2026, reporting 12 May event and 2025 actual commercialisation receipts: nearly 200 active licences, EUR27m. Patent families differ from granted patents; receipts are scoped institutional transfer, not city-wide output or general diffusion."
+    },
+    {
+      "url": "https://www.ameli.fr/assure/remboursements/rembourse/hospitalisation-chirurgie",
+      "publishedOn": "2026-10-07",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Primary insurer text read through web; direct download 403. Generally 80% covered hospital costs; daily EUR23 since 1 March 2026 (psychiatry EUR17), complementary coverage/exemptions and other charges conditional. National applicable rules, not measured resident affordability; no failed-response hash."
+    },
+    {
+      "url": "https://www.has-sante.fr/upload/docs/application/pdf/2026-03/dir1/dc2026.0050_sem_kisunla_ap561_12032026_vd.pdf",
+      "publishedOn": "2026-03-20",
+      "retrievedOn": "2026-10-12",
+      "bytes": 123379,
+      "sha256": "455965835bb039446d379cb2b47c766ddc54ad15b49dc6796c29560acb7d2ad5",
+      "scope": "All three decision pages reviewed; decision dated 12 March, official decision index published 20 March 2026. Donanemab early access refused; decision also states ministers followed the October 2025 lecanemab negative coverage advice. European authorisation remains distinct from access/payment. Clinical relevance, ARIA and organisational concerns retained; footer contains a 2025 year typo, not a different decision."
+    },
+    {
+      "url": "https://www.has-sante.fr/jcms/p_3995811/fr/kisunla-donanemab-maladie-d-alzheimer",
+      "publishedOn": "2026-05-26",
+      "retrievedOn": "2026-10-12",
+      "bytes": 85383,
+      "sha256": "6e972a26aeb80fda4335a69473b75131077fb8c549eace516c4f210d8fcf73f1",
+      "scope": "6 May CT negative reimbursement advice published 26 May. Advice is not a new final ministerial coverage decision; limited indicated early Alzheimer population, modest benefit and safety/monitoring concerns, not a rejection of all longevity care."
+    },
+    {
+      "url": "https://invs.santepubliquefrance.fr/sites/default/files/rdd/document/bullreg_chaleur_idf_bilan_2025.pdf",
+      "publishedOn": "2026-02-26",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1162174,
+      "sha256": "c54e274691fc2da9d278395abafa159cf8b12e12546effc9dabae2ce820c4063",
+      "scope": "14 pages extracted; pp.1,8-13 reviewed. Regional summer-2025 heat-attributable mortality model differs from all-cause excess mortality and 2026 deaths; observed iCanicule visits have defined diagnoses and age groups. Original download link returned HTML, excluded; valid official PDF used. No median-citizen or exact FUA rate."
+    },
+    {
+      "url": "https://www.paris.fr/pages/la-canicule-5469",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 370847,
+      "sha256": "fc73ff11f2f42f21451d58743dcc0398b9992c9a8f192e56a58a98cd26ffd7b2",
+      "scope": "Municipal arrangements page updated 24 June 2026; cooling locations/referral scheme and declared seasonal operation, not verified attendance or protection outcomes. Its future-tense June-1 wording is retained as a dating limitation, not completed-response proof."
+    },
+    {
+      "url": "https://www.eaudeparis.fr/sites/default/files/2026-08/EDP-RA-2025_web_compressed%20%283%29.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 6093123,
+      "sha256": "ef84663633e4ab2a005510d7709a450880700a3f2b8788640970b7ad33e862e7",
+      "scope": "38 pages extracted; actual 2025 production/price/quality and infrastructure pp.10,15,17,20,24 read, p.17 visually checked. Paris municipal utility is not the FUA; compliant PFAS sampling is not zero contamination. Report index first dated 7 July, updated 29 September; exact publication of this linked version unverified."
+    },
+    {
+      "url": "https://cms.rungisinternational.com/uploads/RUNGIS_RAPPORT_ANNUEL_2025_df246244b6.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 6429840,
+      "sha256": "6eb37efd18dc933ce47b323c502a4ce2889cf62aaabe615722d872b8efb4faa7",
+      "scope": "25 two-page spreads extracted; PDF p.23 (printed42-43) visually checked: 1,710,592 tonnes physical-market food arrivals in 2025, distinct from horticulture and estimated turnover. Wholesale flow is not household access/affordability; future multimodal works excluded. Exact release/cutoff archive unverified."
+    },
+    {
+      "url": "https://www.insee.fr/fr/statistiques/8744988",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 168193,
+      "sha256": "df1cc78163837163ff16ce693c231b0bcb890e2d723ca6ef5871a9b2ff46ec44",
+      "scope": "February 2026 issue, full method/group definitions read. Model uses 2021 energy prices, Fideli2022 and DPE2022-2023 inputs; conventional energy expenses, not actual 2026 bills or rationing. Poor/non-poor groups and regional/departmental scopes do not identify median-citizen FUA burden; renovation/price scenarios are not observed results."
+    },
+    {
+      "url": "https://www.insee.fr/fr/statistiques/fichier/7636058/ia85.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 1669337,
+      "sha256": "afd048aeb71324caffa607f361b532139b48a0053878a5befa06f3c43de33b02",
+      "scope": "June 2023 four-page paper, methods/region discussion read. TIC2019 raw survey and local econometric predictions are distinguished; Ile-de-France usage predictions are neither 2026 observations nor an eFUA population measurement. Used only as dated partial/context evidence."
+    },
+    {
+      "url": "https://presse.iledefrance-mobilites.fr/reseau-ferre-francilien-des-resultats-en-hausse-en-2025/?lang=fr",
+      "publishedOn": "2026-05-20",
+      "retrievedOn": "2026-10-12",
+      "bytes": 141771,
+      "sha256": "7f8d768b079a4c72821487515105f81ae87f9f6676d6f6e609cb3cb56ed18e3f",
+      "scope": "2025 actual performance and 2026 compensation, including ongoing weak lines and information shortfalls. Metro rush-hour performance differs from all-trip punctuality; compensation does not reverse lost journeys or prove independent backup."
+    },
+    {
+      "url": "https://presse.groupeadp.fr/trafic2025/?lang=fr",
+      "publishedOn": "2026-01-15",
+      "retrievedOn": "2026-10-12",
+      "bytes": 220367,
+      "sha256": "82284215de9650fbabb192797b59653475303b254d4293e305595660a34db128",
+      "scope": "2025 Paris Aeroport traffic/aircraft movements separate from global ADP and December-only figures; passenger movements are not unique local residents, affordable routes or last-mile independent alternatives."
+    },
+    {
+      "url": "https://mabanque.bnpparibas/fr/gerer/cartes-moyens-paiement/moyens-paiement/virement-international",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Official primary text read via web, direct download403. Terms cite 1 January2026 tariffs/1 May currency list: approved adult account, digital-key activation, beneficiary/currency conditions, exchange margin/correspondent fees and weekend volatility exception. Current promotional deadline excluded; exact page publication/archive unverified, no successful transfers or universal account eligibility."
+    },
+    {
+      "url": "https://www.dgsi.interieur.gouv.fr/dgsi-a-vos-cotes/lutte-contre-terrorisme/letat-de-menace-terroriste-en-france",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Official threat assessment read via web, direct download403: national plots/long-period victims, not Paris 2026 impact. Exact page publication/archive unverified; no failed-response hash or local zero-risk inference."
+    },
+    {
+      "url": "https://www.fda.gov/news-events/press-announcements/fda-converts-novel-alzheimers-disease-treatment-traditional-approval",
+      "publishedOn": "2023-07-06",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Primary page read through web tool; direct-download hash unavailable, not represented as a downloaded snapshot; national trial and approval, not local delivery"
+    }
+  ],
+  "sharedLegalPath": {
+    "source": "cci-legal-mobility-rules.json",
+    "sourceSha256": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
+    "rule": "other_eu_citizen_to_germany",
+    "meaning": "French local citizenship assumption; conditional EU worker/jobseeker/self-funded residence purposes and safeguards, not unconditional settlement, citizenship or automatic access to all benefits."
+  }
+}

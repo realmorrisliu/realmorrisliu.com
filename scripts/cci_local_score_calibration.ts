@@ -60,6 +60,7 @@ const realCases = [
   "tokyo",
   "washington",
   "new-york",
+  "paris",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -102,7 +103,7 @@ const realScores = realCases.map(realCase => {
   assert.equal(total(scores).center, realCase.expectedConditionalTotal);
   return scores;
 });
-const [singapore, london, helsinki, zurich, gaza, tokyo, washington, newYork] = realScores;
+const [singapore, london, helsinki, zurich, gaza, tokyo, washington, newYork, paris] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
 );
@@ -307,6 +308,34 @@ assert.equal(newYorkPosition.center, null);
 assert.equal(newYorkPosition.bestPosition, 1);
 assert.equal(newYorkPosition.worstPosition, rankAudit.candidateCount);
 assert.deepEqual(realCases[7].clinicBoundaryCheck.fuaMatches, [7244]);
+assert.deepEqual(total(paris), { center: null, lower: 34, upper: 74 });
+for (const dimension of ["PCS", "GSS", "RES"] as const) {
+  assert.equal(paris[dimension], undefined);
+}
+for (const [dimension, lower, upper] of [
+  ["ISR", 25, 80],
+  ["MED", 25, 80],
+  ["LON", 30, 80],
+  ["TEC", 28, 78],
+  ["OPT", 28, 78],
+] as const) {
+  const withdrawn = { ...paris };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...paris, LON: 60 }), { center: null, lower: 36, upper: 76 });
+assert.deepEqual(total({ ...paris, MED: 40 }), { center: null, lower: 31, upper: 71 });
+const parisPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (c: { efua_id: string }) => c.efua_id === "2702"
+);
+assert(parisPosition);
+assert.equal(parisPosition.center, null);
+assert.equal(parisPosition.bestPosition, 1);
+assert.equal(parisPosition.worstPosition, rankAudit.candidateCount);
+assert.equal(
+  realCases[8].sharedLegalPath.sourceSha256,
+  digest("docs/data/cci-legal-mobility-rules.json")
+);
 assert.equal(total({ ...london, OPT: 80 }).center, 60);
 const londonCounterfactual = { ...london, MED: 40, OPT: 80 };
 const exitSensitivity = { ...weights, MED: 10, OPT: 15 };
@@ -364,5 +393,6 @@ console.log({
       unresolvedLON: total(newYorkWithoutLon),
       unresolvedOPT: total(newYorkWithoutOpt),
     },
+    paris: { partial: total(paris) },
   },
 });

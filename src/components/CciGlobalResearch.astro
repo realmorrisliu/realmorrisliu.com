@@ -16,6 +16,7 @@ import gaza from "../../docs/data/cci-local-2026-gaza-case.json";
 import tokyo from "../../docs/data/cci-local-2026-tokyo-case.json";
 import washington from "../../docs/data/cci-local-2026-washington-case.json";
 import newYork from "../../docs/data/cci-local-2026-new-york-case.json";
+import paris from "../../docs/data/cci-local-2026-paris-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -29,7 +30,7 @@ const zh = currentLang === "zh";
 const n = (value: number) => value.toLocaleString(zh ? "zh-CN" : "en-GB");
 const counts = coverage.dimensionStatusCounts;
 const legal = coverage.legalMobility.statusCounts;
-const cases = [singapore, london, helsinki, zurich, gaza, tokyo, washington, newYork];
+const cases = [singapore, london, helsinki, zurich, gaza, tokyo, washington, newYork, paris];
 const screening = coverage.local2026Screening;
 if (
   clinicalClaims.candidateCount !== coverage.candidateCount ||
@@ -200,6 +201,7 @@ const rows = [
             <th scope="col">{zh ? "东京功能区" : "Tokyo functional area"}</th>
             <th scope="col">{zh ? "华盛顿功能区" : "Washington functional area"}</th>
             <th scope="col">{zh ? "纽约功能区" : "New York functional area"}</th>
+            <th scope="col">{zh ? "巴黎功能区" : "Paris functional area"}</th>
           </tr>
         </thead>
         <tbody>
@@ -309,6 +311,9 @@ const rows = [
       <a
         href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-new-york-case.md"
         >{zh ? "纽约部分维度案例" : "New York partial case"}</a
+      > · <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-paris-case.md"
+        >{zh ? "巴黎部分维度案例" : "Paris partial case"}</a
       >
     </p>
     <p>
@@ -344,6 +349,13 @@ const rows = [
         zh
           ? "纽约 RES 收入与援助复核：宽收入组不等于中位居民，2025 年超门槛访谈不能直接沿用到已扩大资格的 2026 年。SEC 披露确认 EEAP 已启动并有实际批准；批准不等于援助后负担已解除。两类证据均未支持目标居民的整维档位，RES 继续未定；下一步核验援助后必要支出和未满足需求。"
           : "New York RES income and relief review: a broad income group is not the median resident, and 2025 eligibility barriers cannot simply carry into expanded 2026 rules. SEC disclosure confirms EEAP launch and actual approvals; approval does not establish affordable post-aid costs. Neither source yet supports a whole-dimension anchor for the target resident. RES remains unknown; the next check is post-aid essential costs and unmet needs."
+      }
+    </p>
+    <p>
+      {
+        zh
+          ? "巴黎 ISR、MED、TEC、OPT 条件性 60，LON 条件性 40；PCS、GSS、RES 未定，无总分中心。实际服务、许可与运行支持有限能力，历史认证和旧模型不变成当前全区结果。长寿低档只指已审疾病路径的采用／支付缺口，并保留临床意义和安全争议；审慎监管不直接扣分，不推断无私费、试验或其他路径。拒绝路径、净受益适用性或代表性假设时，LON 撤回为未知。数学域 34—74；撤回 LON 为 30—80，均不证明入围或排除。"
+          : "Paris has conditional 60 judgments for ISR, MED, TEC and OPT, and 40 for LON. PCS, GSS and RES remain unknown, without a total centre. Actual services, licensing and operations support limited capability; historical certification and older models are not current whole-area outcomes. LON 40 concerns the reviewed disease pathway's adoption/payment gap, retaining clinical-significance and safety disputes. Regulatory caution is not itself penalised; private care, trials and other pathways are not assumed absent. Rejecting pathway relevance, net-benefit applicability or representativeness restores unknown LON. The mathematical domain is 34–74; withdrawing LON gives 30–80. Neither proves qualification or exclusion."
       }
     </p>
     <p>
