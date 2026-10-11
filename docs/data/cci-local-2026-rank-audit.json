@@ -20,6 +20,15 @@
   },
   "supportedExclusionCount": 0,
   "qualified32ndPlaceThreshold": null,
+  "outsideFrameReview": {
+    "manifest": "cci-unmatched-centre-review.json",
+    "manifestSha256": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
+    "csvSha256": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
+    "recordCount": 4141,
+    "reviewGroupCount": 2432,
+    "groupsWithIndirectFuaLink": 50,
+    "globalRankingEligible": false
+  },
   "candidateMembershipCounts": {
     "unresolved_not_ranking_eligibility": 9031
   },
@@ -536,6 +545,8 @@
     }
   },
   "inputs": {
+    "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
+    "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
     "cci-global-evidence-matrix.csv": "2ec5bc7e242eb0cbe3da2072928da50518abe97fac8feede7a2aff7234e0be7f",
     "cci-local-2026-singapore-case.json": "26a925a90d2474381d3f97f11a36fb400428b3793752d700033f8f14e3203cc5",
@@ -549,11 +560,11 @@
     "cci-local-2026-gaza-case.json": "cfed62c5791dbc4647273e51199930e1723d922abe5d4cf34bb5b23c02eb46cf",
     "cci-local-2026-gaza-case.md": "14c2b2a2ea13119a9931d365e9eea5fec2ee797a9c34af79c4578b1aada3c7d4",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "f5ecc1ecc41a016d1bdec2e36b51116cb153e81338fd89b60f6238e8f794b63b",
+    "cci-global-evidence-matrix.json": "73dbc8700c6f3675e3c39b897988f363db066ae6a6845af901550d9ac58dd874",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
     "cci-local-2026-scoring-calibration.md": "4c4cb31c094cb37c88eeb2fa82bd8a550e712b090aef270127f3b376c6014e04"
   },
-  "scriptSha256": "e3c969320e4df6cd812de9de077821700aa846b7f64425e2bcb5180a1af39096",
+  "scriptSha256": "dd91a29a0d30606bb5963b81664df0d7fdac00bd232a0e4fc1fa665d63cd61e3",
   "csvSha256": "7ab3539479ce70e48f599ec661152d5aee3d84a0c5d2e5e30e9ba32c1c12fb98",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }

@@ -98,6 +98,13 @@ const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
 );
 assert.equal(rankAudit.status, "arithmetic_identifiability_audit_not_ranking");
+const outsideFrameReview = JSON.parse(
+  readFileSync(new URL("../docs/data/cci-unmatched-centre-review.json", import.meta.url), "utf8")
+);
+assert.equal(outsideFrameReview.globalRankingEligible, false);
+assert.equal(rankAudit.outsideFrameReview.recordCount, outsideFrameReview.recordCount);
+assert.equal(rankAudit.outsideFrameReview.reviewGroupCount, outsideFrameReview.reviewGroupCount);
+assert.equal(rankAudit.outsideFrameReview.globalRankingEligible, false);
 assert.deepEqual(rankAudit.weights, weights);
 assert.equal(rankAudit.conditionalCaseCount, realCases.length);
 assert.equal(
@@ -120,6 +127,17 @@ for (const [path, hash] of Object.entries(rankAudit.inputs)) {
 }
 assert.equal(digest("scripts/cci_local_rank_audit.py"), rankAudit.scriptSha256);
 assert.equal(digest("docs/data/cci-local-2026-rank-audit.csv"), rankAudit.csvSha256);
+assert.equal(digest("scripts/cci_unmatched_centre_review.py"), outsideFrameReview.scriptSha256);
+assert.equal(digest("docs/data/cci-unmatched-centre-review.csv"), outsideFrameReview.csvSha256);
+for (const [name, reference] of Object.entries(outsideFrameReview.inputs) as [
+  string,
+  { sha256: string; provenance: string; provenanceSha256: string },
+][]) {
+  assert(/^cci-[a-z0-9.-]+\.csv$/.test(name));
+  assert(/^cci-[a-z0-9.-]+\.json$/.test(reference.provenance));
+  assert.equal(digest(`docs/data/${name}`), reference.sha256);
+  assert.equal(digest(`docs/data/${reference.provenance}`), reference.provenanceSha256);
+}
 for (const scores of [singapore, london]) {
   assert.equal(total({ ...scores, MED: 40 }).center, 55);
   assert.equal(total({ ...scores, LON: 60 }).center, 60);

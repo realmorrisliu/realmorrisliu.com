@@ -29,7 +29,9 @@ const screening = coverage.local2026Screening;
 if (
   rankAudit.candidateCount !== coverage.candidateCount ||
   rankAudit.conditionalCaseCount !== cases.length ||
-  rankAudit.status !== "arithmetic_identifiability_audit_not_ranking"
+  rankAudit.status !== "arithmetic_identifiability_audit_not_ranking" ||
+  rankAudit.outsideFrameReview.manifestSha256 !== coverage.outsideFrameReview.manifestSha256 ||
+  rankAudit.outsideFrameReview.globalRankingEligible !== false
 ) {
   throw new Error("Rank identifiability audit disagrees with the current candidate scope");
 }
@@ -133,6 +135,18 @@ const rows = [
           ? `UCDB R2024A 有 ${n(boundaries.centreOverlapCounts.no_overlap)} 个中心与旧功能区无交集；WUP 2025 的 ${n(wup.urbanCentres)} 个中心中有 ${n(wup.centreOverlapCounts.no_overlap)} 个无交集，其中 ${n(wup.wupCentresOutsideFuaAndUcdb)} 个也与 UCDB 无交集。两套来源的数量不能直接相加，边界迁移仍未解决。未收录、未匹配或资料缺失均不代表表现较差。`
           : `${n(boundaries.centreOverlapCounts.no_overlap)} UCDB R2024A centres do not overlap the older functional areas. Of ${n(wup.urbanCentres)} WUP 2025 centres, ${n(wup.centreOverlapCounts.no_overlap)} have no such overlap, including ${n(wup.wupCentresOutsideFuaAndUcdb)} that also do not overlap UCDB. Counts from the two sources cannot be added together; boundary migration remains unresolved. Omission, unmatched boundaries and missing data are not negative assessments.`
       }
+    </p>
+    <p>
+      {
+        zh
+          ? `旧候选范围之外的 ${n(coverage.outsideFrameReview.recordCount)} 条未匹配中心记录已逐条保留，按跨来源交集组成 ${n(coverage.outsideFrameReview.reviewGroupCount)} 个边界复核组，其中 ${n(coverage.outsideFrameReview.groupsWithIndirectFuaLink)} 组存在间接旧 FUA 联系。这些是记录与复核组数量，不是去重城市数；间接联系不证明居民已被覆盖，也不继承分数。其八维与总分均未定，当前名次演算仍只限于旧 ${n(coverage.candidateCount)} 个功能区。范围缺口已接入资格检查，尚不能发布全球 Top 32。`
+          : `All ${n(coverage.outsideFrameReview.recordCount)} unmatched centre records outside the old frame are retained in ${n(coverage.outsideFrameReview.reviewGroupCount)} boundary-review groups based on cross-source overlap; ${n(coverage.outsideFrameReview.groupsWithIndirectFuaLink)} groups have indirect links to old FUAs. These are record and review-group counts, not deduplicated city counts. Indirect links establish neither resident coverage nor inherited scores. All eight dimensions and totals remain unresolved; position arithmetic still covers only the older ${n(coverage.candidateCount)} functional areas. The scope gap is now included in eligibility checks; a global Top 32 cannot yet be published.`
+      }
+      {" "}
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-unmatched-centre-review.md"
+        >{zh ? "查看未匹配中心逐条登记" : "Review every unmatched centre record"}</a
+      >
     </p>
     <p>
       {

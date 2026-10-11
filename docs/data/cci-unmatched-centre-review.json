@@ -1,0 +1,39 @@
+{
+  "status": "unmatched_centre_competitor_review_not_candidate_migration_or_ranking",
+  "sourceVersions": {
+    "ucdb": "GHS-UCDB R2024A V1.2",
+    "wup": "GHS-WUP R2025A V1.1, Year=2025"
+  },
+  "recordCount": 4141,
+  "sourceRecordCounts": {
+    "ucdb": 1861,
+    "wup": 2280
+  },
+  "reviewGroupCount": 2432,
+  "groupsWithIndirectFuaLink": 50,
+  "groupsWithoutIndirectFuaLink": 2382,
+  "unresolvedIdentityRecordCount": 4141,
+  "supportedExclusionCount": 0,
+  "globalRankingEligible": false,
+  "inputs": {
+    "cci-ucdb-efua-centre-coverage.csv": {
+      "sha256": "eb9c58a50739f318b3c9f4645c08428162616a67fccd88625ffeb3d76a3c3109",
+      "provenance": "cci-ucdb-efua-crosswalk.json",
+      "provenanceSha256": "e5aeb965114a9cb8a972946af360b14116fb30effb8578a2b7359a5184ec1cdb"
+    },
+    "cci-wup-2025-centre-coverage.csv": {
+      "sha256": "b737c8336838119fd03f0a1a4b695354ded5f943dceb2d83fd6b3db78b50f8a0",
+      "provenance": "cci-wup-2025-crosswalk.json",
+      "provenanceSha256": "14fffd62e6c3053cd1cf8a00f49e2cd86c5c76f8f0e00dfe4e884f27027be565"
+    },
+    "cci-wup-2025-ucdb-overlaps.csv": {
+      "sha256": "edc4dd52fe28b5a7bb4630d094f7508d346cb2e555495b15e323e614c1327e81",
+      "provenance": "cci-wup-2025-crosswalk.json",
+      "provenanceSha256": "14fffd62e6c3053cd1cf8a00f49e2cd86c5c76f8f0e00dfe4e884f27027be565"
+    }
+  },
+  "scriptSha256": "2601fc8b29ede7ac09a6a68351fc045d097ecb24f676915602d6f277e0ac37b3",
+  "csvSha256": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
+  "method": "Every newer centre without direct positive-area FUA overlap is retained. Connected components of their cross-source overlap graph are review groups only. Links to other-source centres with FUA overlap remain explicit indirect contacts.",
+  "limitations": "Records and graph groups are not counts of distinct cities. Overlap, including transitive overlap, establishes neither identity nor FUA resident coverage. No centre inherits scores or an exclusion from an overlapping centre. All eight dimensions and total centres remain unassessed. Frozen FUA candidates remain separate; do not add these records to their ranking count. This review does not cover every settlement below the source definitions or resolve migration."
+}

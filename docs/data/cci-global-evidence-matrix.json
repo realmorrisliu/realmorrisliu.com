@@ -1,6 +1,15 @@
 {
   "status": "partial_evidence_inventory_not_ranking",
   "candidateCount": 9031,
+  "outsideFrameReview": {
+    "manifest": "cci-unmatched-centre-review.json",
+    "manifestSha256": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
+    "csvSha256": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
+    "recordCount": 4141,
+    "reviewGroupCount": 2432,
+    "groupsWithIndirectFuaLink": 50,
+    "globalRankingEligible": false
+  },
   "boundaryCoverageCounts": {
     "withoutUcdbCentreOverlap": 1156,
     "withoutWup2025CentreOverlap": 997
@@ -157,6 +166,6 @@
       "provenanceSha256": "14c2b2a2ea13119a9931d365e9eea5fec2ee797a9c34af79c4578b1aada3c7d4"
     }
   },
-  "scriptSha256": "25262f67f37d08c926aff1e0cc1b47491a4ad5cb108a025f5e32ef50f89beec5",
+  "scriptSha256": "e0da84cae93aeaba6c3ec8cbb650db4f1f3017ea045ddfaf86ef2b4923cccd41",
   "csvSha256": "2ec5bc7e242eb0cbe3da2072928da50518abe97fac8feede7a2aff7234e0be7f"
 }

@@ -8,6 +8,7 @@ from collections import Counter
 from pathlib import Path
 
 from cci_global_coverage import DIMENSIONS, ROOT
+from cci_unmatched_centre_review import verify as verify_unmatched_centres
 
 
 def indexed(rows, expected):
@@ -154,6 +155,7 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
 def main():
     folder = ROOT / "docs/data"
     inputs = {}
+    outside = verify_unmatched_centres()
 
     def read(name, manifest_name, field, nested=False):
         metadata_path = folder / manifest_name
@@ -197,6 +199,12 @@ def main():
         writer.writerows(rows)
     summary = {
         "status": "partial_evidence_inventory_not_ranking", "candidateCount": len(rows),
+        "outsideFrameReview": {
+            "manifest": "cci-unmatched-centre-review.json",
+            "manifestSha256": hashlib.sha256((folder / "cci-unmatched-centre-review.json").read_bytes()).hexdigest(),
+            **{k: outside[k] for k in ('csvSha256', 'recordCount', 'reviewGroupCount',
+                                       'groupsWithIndirectFuaLink', 'globalRankingEligible')},
+        },
         "boundaryCoverageCounts": {"withoutUcdbCentreOverlap": sum(int(r["ucdb_intersecting_centres"]) == 0 for r in rows),
                                    "withoutWup2025CentreOverlap": sum(r["wup_2025_intersecting_centres"] == 0 for r in rows)},
         "boundaryMeaning": "Centre intersections describe geometric coverage only. UCDB and WUP are separate sources; their IDs and counts cannot be merged directly. Zero intersections do not exclude a candidate or imply a score.",

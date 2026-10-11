@@ -12,6 +12,7 @@ from pathlib import Path
 
 from cci_global_coverage import DIMENSIONS, ROOT
 from cci_global_evidence_matrix import indexed, local_cases
+from cci_unmatched_centre_review import verify as verify_unmatched_centres
 
 
 def total(scores, weights):
@@ -72,6 +73,14 @@ def build():
             raise ValueError(f'Stale input hash: {name}')
         inputs[name] = digest
         return raw
+
+    outside = verify_unmatched_centres()
+    scope = matrix['outsideFrameReview']
+    verified('cci-unmatched-centre-review.json', scope['manifestSha256'])
+    verified('cci-unmatched-centre-review.csv', scope['csvSha256'])
+    if any(scope[k] != outside[k] for k in ('recordCount', 'reviewGroupCount',
+                                           'groupsWithIndirectFuaLink', 'globalRankingEligible')):
+        raise ValueError('Outside-frame competitor review disagrees with matrix')
 
     universe_path = folder / 'cci-global-candidates-r2019a.provenance.json'
     universe = json.loads(universe_path.read_text())
@@ -159,6 +168,7 @@ def build():
         'partialCaseCount': sum(c['expectedConditionalTotal'] is None for c in cases),
         'unassessedCount': len(candidates) - len(cases), 'weights': weights,
         'supportedExclusionCount': 0, 'qualified32ndPlaceThreshold': None,
+        'outsideFrameReview': scope,
         'candidateMembershipCounts': dict(Counter(r['membership_status'] for r in rows)),
         'scenarios': scenarios, 'inputs': inputs,
         'scriptSha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
