@@ -255,7 +255,7 @@ def main():
             'statusCounts': dict(Counter(r['legal_mobility_status'] for r in rows)),
             'ruleCandidateCounts': dict(Counter(r['legal_mobility_rule'] for r in rows if r['legal_mobility_rule'])),
             'countryCandidateCounts': dict(sorted(Counter(r['country_iso'] for r in rows if r['legal_mobility_rule']).items())),
-            'meaning': 'Conditional destination-specific legal paths under the local citizenship assumption. Unknown is not denial; residence does not establish citizenship. No affordability, job access, crisis operation, whole OPT score or exclusion bound established.',
+            'meaning': 'Reviewed destination-specific legal conditions under the local citizenship assumption: EU/EEA/Swiss conditional residence rights and section 41 procedural onshore applications are distinct. An application route is not approved residence or work. Unknown is not denial; residence does not establish citizenship. No affordability, job access, crisis operation, whole OPT score or exclusion bound established.',
         },
         "local2026Screening": {
             "targetYear": 2026, "evidenceCutoff": "2026-10-10",
@@ -277,7 +277,7 @@ def main():
                              "MED": ["access: historical spatial model only"],
                              "TEC": ["digital_infrastructure: self-selected 2026 Q3 network tests only; boundary sensitivity retained, not population access or complete technology capability"],
                              "OPT": ["transport_redundancy: directory airport points and scheduled nonclosed flags only; no resident access, routes, independent alternatives or common failures measured",
-                                     "legal_mobility: conditional Germany/France paths under modelled citizenship only; no actual affordability, employment or crisis operation measured"]},
+                                     "legal_mobility: reviewed Germany/France conditions under modelled citizenship only; conditional residence rights differ from section 41 onshore applications, which are not approved residence or work; no actual affordability, employment or crisis operation measured"]},
         "sourceJoinKey": "efua_id; source tables and their provenance remain authoritative for values and limitations",
         "inputs": inputs, "scriptSha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "csvSha256": hashlib.sha256(output.read_bytes()).hexdigest(),

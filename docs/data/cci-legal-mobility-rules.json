@@ -12,7 +12,7 @@
       "url": "https://www.gesetze-im-internet.de/freiz_gg_eu_2004/BJNR198600004.html",
       "versionDate": "2026-07-16",
       "versionMeaning": "Latest amendment shown in the official consolidated text; retrieved after the cutoff.",
-      "clauses": ["1(2)(1)", "2(2)(1)", "2(2)(1a)", "2a(1)", "4", "5(2)-(4)", "6"],
+      "clauses": ["1(2)(1)", "2(2)(1)", "2(2)(1a)", "2a(1)", "4", "5(2)-(4)", "6", "1(2)(6)"],
       "retrievedBytes": 75349,
       "retrievedSha256": "b53478451d8605d7b5b31aeee028542c9d415df2dedfef634e66a0d60433c0fe"
     },
@@ -43,6 +43,27 @@
       "paginationUrl": "https://european-union.europa.eu/principles-countries-history/eu-countries_en?page=1",
       "retrievedBytes": null,
       "retrievedSha256": null
+    },
+    {
+      "id": "de_aufenthv",
+      "url": "https://www.gesetze-im-internet.de/aufenthv/BJNR294510004.html",
+      "versionDate": "2026-07-22",
+      "versionMeaning": "Latest amendment in the full official text is 2026-07-22; section 41 read in full, including the 90-day deadline and ICT exception. Retrieval after cutoff is not a cutoff-day archive.",
+      "clauses": ["41(1)", "41(3)", "41(4)"],
+      "retrievedBytes": 438245,
+      "retrievedSha256": "88be848b6960d1a6f4ee61f3f0cde930f9cb5a1c3fe188bf6f937f6872e62938",
+      "sectionUrl": "https://www.gesetze-im-internet.de/aufenthv/__41.html",
+      "sectionBytes": 4613,
+      "sectionSha256": "0294e3696361d9294ae75c66475ccb897dcf68e1ffd1346fabf3a83104f74c85"
+    },
+    {
+      "id": "de_aufenthg",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/BJNR195010004.html",
+      "versionDate": "2026-07-22",
+      "versionMeaning": "Official full citation incorporates amendments dated 2026-07-22; the Stand line says 2026-07-21 and notes incorporated July 22 amendments with documentary processing not final. Relevant clauses read; no cutoff-day archive claimed.",
+      "clauses": ["2(3)", "4a", "5", "18(2)-(3)", "18b"],
+      "retrievedBytes": 979856,
+      "retrievedSha256": "035c430b7411f9bd8bb547aa4d6e0c1ade1e52c89089ba55b553977cf5f831a6"
     }
   ],
   "rules": [
@@ -95,6 +116,20 @@
         "EU citizenship or equivalent status under L200-3; valid identity document and public-order requirements.",
         "Residence beyond three months requires professional activity, or sufficient resources and health insurance; this is not unconditional long-term residence.",
         "The official worker guidance says no residence title is required, while regulated professions and certain public jobs have conditions."
+      ]
+    },
+    {
+      "id": "section41_citizen_onshore_application_germany",
+      "originCountryIso": ["AUS", "CAN", "GBR", "ISR", "JPN", "KOR", "NZL", "USA"],
+      "destinationCountryIso": "DEU",
+      "sources": ["de_aufenthv", "de_aufenthg", "de_law"],
+      "status": "conditional_legal_path_under_citizenship_assumption",
+      "conditions": [
+        "Section 41(1) allows visa-free entry also for a non-short stay and an application for the required residence title from within Germany. This is a procedural application route, not automatic permission for long-term residence or employment. British nationality must satisfy the referenced FreizuegG/EU section 1(2)(6) definition; residence or a territorial code does not establish this status.",
+        "The required residence title must be applied for within 90 days of entry; expulsion or a shortened stay may end the deadline earlier. Section 41(4) excludes ICT-card applications from this route.",
+        "A qualifying residence purpose and its substantive conditions remain necessary. General section 5 conditions usually include secured livelihood, adequate health insurance under section 2(3), identity, passport and absence of expulsion grounds; median income at origin does not prove these conditions.",
+        "The reviewed academic skilled-worker example under sections 18 and 18b requires a recognised or comparable degree, a specific qualified-job offer, required professional permission and employment-agency approval where applicable. First section 18a/18b permits after age 45 normally require the statutory salary level or adequate retirement provision, subject to stated exceptions. Do not assume the ordinary resident qualifies.",
+        "Visa-free entry and filing an application do not by themselves authorise employment under section 4a. No processing time, job availability, resident affordability or crisis operation is established."
       ]
     }
   ]

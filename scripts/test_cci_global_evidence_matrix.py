@@ -13,7 +13,11 @@ class EvidenceMatrixTest(unittest.TestCase):
         self.assertEqual(rules['FIN']['destinationCountryIso'], 'DEU')
         self.assertEqual(rules['DEU']['destinationCountryIso'], 'FRA')
         self.assertEqual(rules['CHE']['destinationCountryIso'], 'FRA')
-        self.assertNotIn('JPN', rules)
+        for country in ('AUS', 'CAN', 'GBR', 'ISR', 'JPN', 'KOR', 'NZL', 'USA'):
+            self.assertEqual(rules[country]['id'], 'section41_citizen_onshore_application_germany')
+            self.assertEqual(rules[country]['destinationCountryIso'], 'DEU')
+        for country in ('BRA', 'ASM', 'PRI', 'GIB'):
+            self.assertNotIn(country, rules)
         for field, value in [('residentPerspective', 'foreign_resident'), ('evidenceCutoff', '2026-10-12')]:
             with self.assertRaisesRegex(ValueError, 'protocol mismatch'):
                 legal_mobility_rules({**self.legal, field: value})
@@ -82,6 +86,11 @@ class EvidenceMatrixTest(unittest.TestCase):
         self.assertEqual(with_path['cci_score_status'], row['cci_score_status'])
         self.assertEqual(with_path['local2026_screening_status'], row['local2026_screening_status'])
         self.assertEqual(with_path['OPT'], row['OPT'])
+        candidates[0]['country_iso'] = 'USA'
+        application = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, self.legal)[0]
+        self.assertEqual(application['legal_mobility_rule'], 'section41_citizen_onshore_application_germany')
+        for field in ('OPT', 'cci_score_status', 'local2026_screening_status'):
+            self.assertEqual(application[field], row[field])
         candidates[0]['country_iso'] = 'AAA'
         self.assertEqual(row["TEC"], "network_samples_missing")
         self.assertEqual(row["wup_2025_intersecting_centres"], 0)

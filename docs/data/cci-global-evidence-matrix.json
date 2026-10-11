@@ -58,17 +58,20 @@
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
     "statusCounts": {
-      "no_reviewed_path_not_no_right": 8521,
-      "conditional_legal_path_under_citizenship_assumption": 510
+      "no_reviewed_path_not_no_right": 7981,
+      "conditional_legal_path_under_citizenship_assumption": 1050
     },
     "ruleCandidateCounts": {
+      "section41_citizen_onshore_application_germany": 540,
       "other_eu_citizen_to_germany": 422,
       "german_eea_swiss_citizen_to_france": 88
     },
     "countryCandidateCounts": {
+      "AUS": 20,
       "AUT": 6,
       "BEL": 10,
       "BGR": 7,
+      "CAN": 35,
       "CHE": 13,
       "CYP": 3,
       "CZE": 12,
@@ -78,26 +81,32 @@
       "EST": 2,
       "FIN": 6,
       "FRA": 65,
+      "GBR": 91,
       "GRC": 10,
       "HRV": 5,
       "HUN": 10,
       "IRL": 3,
       "ISL": 1,
+      "ISR": 9,
       "ITA": 79,
+      "JPN": 88,
+      "KOR": 30,
       "LTU": 6,
       "LUX": 1,
       "LVA": 3,
       "MLT": 1,
       "NLD": 25,
       "NOR": 4,
+      "NZL": 7,
       "POL": 42,
       "PRT": 7,
       "ROU": 30,
       "SVK": 6,
       "SVN": 2,
-      "SWE": 11
+      "SWE": 11,
+      "USA": 260
     },
-    "meaning": "Conditional destination-specific legal paths under the local citizenship assumption. Unknown is not denial; residence does not establish citizenship. No affordability, job access, crisis operation, whole OPT score or exclusion bound established."
+    "meaning": "Reviewed destination-specific legal conditions under the local citizenship assumption: EU/EEA/Swiss conditional residence rights and section 41 procedural onshore applications are distinct. An application route is not approved residence or work. Unknown is not denial; residence does not establish citizenship. No affordability, job access, crisis operation, whole OPT score or exclusion bound established."
   },
   "local2026Screening": {
     "targetYear": 2026,
@@ -127,7 +136,7 @@
     ],
     "OPT": [
       "transport_redundancy: directory airport points and scheduled nonclosed flags only; no resident access, routes, independent alternatives or common failures measured",
-      "legal_mobility: conditional Germany/France paths under modelled citizenship only; no actual affordability, employment or crisis operation measured"
+      "legal_mobility: reviewed Germany/France conditions under modelled citizenship only; conditional residence rights differ from section 41 onshore applications, which are not approved residence or work; no actual affordability, employment or crisis operation measured"
     ]
   },
   "sourceJoinKey": "efua_id; source tables and their provenance remain authoritative for values and limitations",
@@ -188,9 +197,9 @@
       "provenanceSha256": "181521e4b201c6ebda62183e0beba0b713cd3dfbd5fc2d3ce07496c209f943c4"
     },
     "cci-legal-mobility-rules.json": {
-      "sha256": "64a78a3f42d774af162992354691a1709080138f16c76fbd6a0f383107ed78ce",
+      "sha256": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
       "provenance": "cci-legal-mobility.md",
-      "provenanceSha256": "1139a6fb1df3c48ff137089a473ec4d33bc2406b439696cae4058b1837592783"
+      "provenanceSha256": "34e41625f9e78832f4139e4a350fd4c48d7fc333ac876838fdaa63254d8e1179"
     },
     "cci-local-2026-singapore-case.json": {
       "sha256": "26a925a90d2474381d3f97f11a36fb400428b3793752d700033f8f14e3203cc5",
@@ -223,11 +232,11 @@
       "provenanceSha256": "21c8ac52eb75e37b9b38d37937c3677ed4928d6a169ba90e1cf3e2b461a18efa"
     },
     "cci-local-2026-washington-case.json": {
-      "sha256": "f76acab5398317cd42db809d4f3b9974342e02447338f94aa001084d4409a092",
+      "sha256": "2a7ba806b754061344f7fba51ce8b81ddd61c30bcd2960b003c9be406b83b46a",
       "provenance": "cci-local-2026-washington-case.md",
-      "provenanceSha256": "24c60a27d87936f9bcf7d90d3f25b18cbb0bfa306a8eda2d7b33cd8b79ea4347"
+      "provenanceSha256": "99d5f173954ac4221aa89c8bb25e19101b2a87af90979f06c795dd9c9fee8409"
     }
   },
-  "scriptSha256": "fca600f962a7752858925a28c00c98e4c2b51f87193b2ed56a2be7d7d756ea96",
-  "csvSha256": "61ea4892aa3f40c03b8c970b8555695d8726c5d980bb571e63ef03ae405726fe"
+  "scriptSha256": "9326875a93be7ce1a382203e8daa5da7543d604deb5c11ebbaab7e7a16c4c319",
+  "csvSha256": "3b97af4886b0d35bfa8d6d8e02bf9e4aa1ae3f664b8c6baa473e99a80a66cd54"
 }
