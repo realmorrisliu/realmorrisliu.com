@@ -27,7 +27,7 @@
     {
       "id": "GSS",
       "score": null,
-      "rationale": "A May 2026 Justice Department release describes an alleged Manhattan synagogue plot and actual disruption/protection; overseas alleged attacks and victims are not New York casualties. These selected records and ordinary-crime trends do not establish annual whole-FUA organised-violence, regional-spillover or strategic-impact profiles. Charges are not convictions.",
+      "rationale": "A May 2026 Justice Department release describes an alleged Manhattan synagogue plot and actual disruption/protection; overseas alleged attacks and victims are not New York casualties. These selected records and ordinary-crime trends do not establish annual whole-FUA organised-violence, regional-spillover or strategic-impact profiles. Charges are not convictions. A shared 2026 preliminary-event review found event623566 date conflict: the cited February2026 DOJ indictment describes an alleged April2024 double murder, not new2026 deaths. The raw record is retained in temporal quarantine, not silently corrected or added to current impacts. No retained assigned record does not establish low violence.",
       "assumption": "No justified whole-dimension anchor yet. A blocked plot supports mitigation but neither zero harm in a selected plot nor general crime decline proves low overall resident impact.",
       "conditionalAlternatives": [],
       "subpillars": {
@@ -336,6 +336,14 @@
       "bytes": null,
       "sha256": null,
       "scope": "Official primary release read via web: publishes the 2026 report, identifies home-cooling constraints and June 5 early HEAP closure. No original byte snapshot or city-median/FUA risk estimate claimed."
+    },
+    {
+      "url": "https://www.justice.gov/opa/pr/twenty-seven-members-and-associates-tren-de-aragua-splinter-faction-anti-tren-charged-2024",
+      "publishedOn": "2026-02-13",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Primary official text reviewed via web: allegations of April15,2024 double murder, with February2026 superseding indictment and actual enforcement. Indictment is not conviction or new2026 deaths. No direct raw snapshot claimed."
     }
   ],
   "claimSignals": {
@@ -359,5 +367,11 @@
     "sourceSha256": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
     "rule": "section41_citizen_onshore_application_germany",
     "meaning": "Conditional US-citizen onshore application procedure only; qualification/resources/insurance/approval remain necessary, no automatic residence or work entitlement."
+  },
+  "currentViolenceReview": {
+    "source": "cci-ucdp-candidate-2026.json",
+    "eventId": 623566,
+    "status": "quarantined_source_event_date_conflict_not_2026_impact",
+    "meaning": "Dataset date2026-03-30 conflicts with cited DOJ allegations about2024-04-15. Publication/indictment dates are distinct from occurrence; original values retained, no conviction or current casualty claim."
   }
 }

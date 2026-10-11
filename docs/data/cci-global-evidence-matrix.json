@@ -109,6 +109,16 @@
     },
     "meaning": "Reviewed destination-specific legal conditions under the local citizenship assumption: EU/EEA/Swiss conditional residence rights and section 41 procedural onshore applications are distinct. An application route is not approved residence or work. Unknown is not denial; residence does not establish citizenship. No affordability, job access, crisis operation, whole OPT score or exclusion bound established."
   },
+  "preliminary2026Violence": {
+    "manifest": "cci-ucdp-candidate-2026.json",
+    "manifestSha256": "244c0847ce5fbf7bbdefd3fc0f52be60455c2cc64dc42b46b6560968508ca1ed",
+    "window": "2026-01-01/2026-08-31",
+    "candidatesWithClearPreciseEvents": 307,
+    "candidatesWithPendingPreciseEvents": 306,
+    "publicationBeforeCutoffVerified": false,
+    "releaseAssumption": "Fixed monthly versions, stated extraction schedule and pre-cutoff HTTP Last-Modified support inferred pre-cutoff availability; no independent historical archive obtained. Modification time is not verified publication time. This assumption is withdrawable; no case score or exclusion uses this intake.",
+    "meaning": "Clear and pending current-window coded points retained separately; preliminary source and temporal-review limits remain. Zero is a table count, not zero violence or low risk. Existing GSS states and judgments unchanged; no score or exclusion uses this intake."
+  },
   "local2026Screening": {
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
@@ -129,7 +139,9 @@
   "subpillarSupport": {
     "PCS": ["geophysical: reference-rock seismic hazard only, not building losses"],
     "RES": ["water: country urban service context only, not city reliability"],
-    "GSS": ["organized_violence: partial historical events only"],
+    "GSS": [
+      "organized_violence: partial historical events plus separate preliminary January-August 2026 coded-point review; source release assumption, temporal conflicts, pending statuses and unassigned records retained, not complete impacts or GSS scores"
+    ],
     "ISR": ["governance: country context only"],
     "MED": ["access: historical spatial model only"],
     "LON": [
@@ -163,7 +175,7 @@
     "cci-ucdp-2021-2025-efua.csv": {
       "sha256": "89a6049ae41179b3e1ffe5c2e3d47a8e74fd2add5f32d75c8689802f724a46df",
       "provenance": "cci-ucdp-2021-2025.json",
-      "provenanceSha256": "925f3415335aa635ae06272ed298bccbc87f466d6ff4eb302f16f6b4e0cc300e"
+      "provenanceSha256": "01087550c3a802a5a60506494b4ce50a62b230200898dc6f8aa28669fa4d6e0d"
     },
     "cci-healthcare-efua-population.csv": {
       "sha256": "f079428abaaada9a35856b186f0b9525ada7ae3fd2770c32d65d6154a10d8505",
@@ -204,6 +216,11 @@
       "sha256": "5f17f2e126ad25080219acfe749ae0904255a8a1362a00866993cbfb6aea9f80",
       "provenance": "cci-cms-lecanemab-fua-audit.json",
       "provenanceSha256": "20b249db15a31295fe74a287e0bccd27b2b9e1e8b49611fe51a6f82de008a3d6"
+    },
+    "cci-ucdp-candidate-2026-efua.csv": {
+      "sha256": "3c7c7629f63a2af05106b1991319bb0b7d388a9dc0ee530876f1afaa45c8d6e7",
+      "provenance": "cci-ucdp-candidate-2026.json",
+      "provenanceSha256": "244c0847ce5fbf7bbdefd3fc0f52be60455c2cc64dc42b46b6560968508ca1ed"
     },
     "cci-legal-mobility-rules.json": {
       "sha256": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
@@ -246,9 +263,9 @@
       "provenanceSha256": "3419b58741fe753ae5f09c3de5e3c5a882b377adb3fde94fb0a11ce63fb135b9"
     },
     "cci-local-2026-new-york-case.json": {
-      "sha256": "7ba8e0d81e4e2a51f738393ceed8a34a2c8bf95379c425865bff44cf9f75c0d0",
+      "sha256": "febf7642c6ae74c73418027e12cce3edf619b462ab57878206511ada4d55c2ca",
       "provenance": "cci-local-2026-new-york-case.md",
-      "provenanceSha256": "aaa3716cf086bec5c87a035da974e304a443da70a9cb01f24926ca49b91cfd8d"
+      "provenanceSha256": "3d724c5ed61465a707c5036368b9899d62bc428482588a34410691ff6ad5e594"
     },
     "cci-local-2026-paris-case.json": {
       "sha256": "d9db374a4c53cf0c70011507b65239f97e7e3e424b0d1ccadc67d7c3d595334e",
@@ -261,6 +278,6 @@
       "provenanceSha256": "a41f2ec2b204fa0ca51eafcad62e9826f41b8681a7056f2d3b65a49342dcb1e1"
     }
   },
-  "scriptSha256": "54f7f3f5562d173b6a07229373785943d00b25819599a70c88182077bf92da88",
-  "csvSha256": "52265c4d96723f007b1e42a7f5a0c51e3d65e3e4948d0d653391515b692262b0"
+  "scriptSha256": "9179af12f6ef65b9a4df9a1a2b305968ff3565f687a4af01d45b1eda9c59f280",
+  "csvSha256": "ef0fa2a68400e184d34babb1a0046768d8e6ccd2207bccb930a306731061bdd1"
 }

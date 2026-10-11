@@ -1,0 +1,87 @@
+{
+  "status": "preliminary_violence_review_not_gss_scores",
+  "retrievedOn": "2026-10-12",
+  "evidenceCutoff": "2026-10-10",
+  "window": "2026-01-01/2026-08-31",
+  "candidateCount": 9031,
+  "sourceRecordCount": 13685,
+  "uniqueEventCount": 13659,
+  "overlapCount": 26,
+  "revisedOverlapCount": 6,
+  "sources": [
+    {
+      "url": "https://ucdp.uu.se/downloads/candidateged/GEDEvent_v26_01_26_06.csv",
+      "sha256": "68dd3d363b8edf4808bd6bf6f5d0412c3c722ffb1db367aeb8eff48bab80589a",
+      "bytes": 7800501,
+      "recordCount": 10051,
+      "httpLastModified": "2026-07-20T17:46:11Z",
+      "publishedOn": null
+    },
+    {
+      "url": "https://ucdp.uu.se/downloads/candidateged/GEDEvent_v26_0_7.csv",
+      "sha256": "9fc2c6dd85eee91845512e8ef1055281d9fd028fb98748a6f2a27c6e8aa8c562",
+      "bytes": 1357690,
+      "recordCount": 1828,
+      "httpLastModified": "2026-08-20T22:26:48Z",
+      "publishedOn": null
+    },
+    {
+      "url": "https://ucdp.uu.se/downloads/candidateged/GEDEvent_v26_0_8.csv",
+      "sha256": "2ad6e0b2bfdbaa31873716a3455096923a8539519d69d96aeeea2d0f44a34593",
+      "bytes": 1443396,
+      "recordCount": 1806,
+      "httpLastModified": "2026-09-20T20:44:14Z",
+      "publishedOn": null
+    }
+  ],
+  "codebookUrl": "https://ucdp.uu.se/downloads/candidateged/ucdp-candidate-codebook1.5.pdf",
+  "codebookSha256": "0107eac75e0b0bf0c0c1f2146dd1818af8ec943e254471b73453f53a64384d33",
+  "indexUrl": "https://ucdp.uu.se/downloads/index.html",
+  "indexSha256": "6739bd1dcc85b5e3467342c0da4e38577375eba8ac94470e6a78f49c77d97f2a",
+  "temporalReviewMeaning": "All listed source dates preceding an event start, any source date after the cutoff, or no source date triggers retained review, not proof of error: earlier material may legitimately identify actors. These records are not counted as current assigned impacts until reviewed. Source dates remain distinct from event dates.",
+  "verifiedTemporalConflict": {
+    "eventId": 623566,
+    "candidateId": 7244,
+    "datasetDate": "2026-03-30",
+    "sourceUrl": "https://www.justice.gov/opa/pr/twenty-seven-members-and-associates-tren-de-aragua-splinter-faction-anti-tren-charged-2024",
+    "sourcePublishedOn": "2026-02-13",
+    "sourceAllegedEventDate": "2024-04-15",
+    "meaning": "Source describes alleged 2024 double murder; 2026 indictment is not new deaths. Dataset value retained without silently rewriting or attributing a 2026 event. Source allegations are not conviction. Other temporal flags are not automatically proved errors."
+  },
+  "publicationBeforeCutoffVerified": false,
+  "releaseAssumption": "Fixed monthly versions, stated extraction schedule and pre-cutoff HTTP Last-Modified support inferred pre-cutoff availability; no independent historical archive obtained. Modification time is not verified publication time. This assumption is withdrawable; no case score or exclusion uses this intake.",
+  "dispositions": {
+    "outside_frame": 2670,
+    "pending_precise_assigned": 1528,
+    "clear_precise_assigned": 2485,
+    "coarse_location": 6864,
+    "inconsistent_fatality_estimates": 44,
+    "source_date_review_required": 44,
+    "crosses_window": 24
+  },
+  "codeStatusCounts": {
+    "Check dyad": 3317,
+    "Clear": 8545,
+    "Check deaths": 600,
+    "Check vague or biased source": 286,
+    "Check type of violence": 326,
+    "Check geography": 384,
+    "Check": 193,
+    "Check incompatibility": 8
+  },
+  "candidatesWithClearPreciseEvents": 307,
+  "candidatesWithPendingPreciseEvents": 306,
+  "efuaSourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+  "repairedEfuaCount": 136,
+  "scriptSha256": "96059aafcdc0530ce6f653174f58ef6b99a7728e2fc47fffc83f7a1d141fa531",
+  "locationHelperSha256": "377711ca486b94372871bbf33956f7700156dbdad08a7e67bb5927d4d57fec2e",
+  "geometryHelperSha256": "713981315966affdd5fbd7133b883bd8e79fa83965bdfaa7498dfb6db5d5b497",
+  "files": {
+    "cci-ucdp-candidate-2026-efua.csv": "3c7c7629f63a2af05106b1991319bb0b7d388a9dc0ee530876f1afaa45c8d6e7",
+    "cci-ucdp-candidate-2026-events.csv": "ef622055eb261d82e4e0e80b084450a9d229a8e55aaed9694a0be50d865097f0",
+    "cci-ucdp-candidate-2026-overlaps.csv": "3678e17adad5ec30377c221b7098945e96c4618ecfdee3d0260552512e40c967"
+  },
+  "method": "All frozen candidates retained. Quarter/July/August releases merged by persistent ID, retaining later release once and documenting every overlap. Clear and pending precise-coded points remain separate. Dates must lie wholly within January-August. Coarse, outside, ambiguous, source-date-review and inconsistent records are retained, never repaired or guessed. Fatality bounds only summed for assigned Clear records.",
+  "limitations": "Preliminary codes can change and overlapping deaths with different IDs are not adjudicated. Clear does not mean final confirmation. Precision 1 can be a settlement centroid, not GPS. September/October, nonlethal impacts, reporting gaps, regional/strategic exposure, mitigation and resident-specific outcomes remain unresolved. No match is not zero risk; counts and fatality bounds are not rates, complete city impacts, GSS scores or exclusion bounds.",
+  "license": "CC BY 4.0; cite Hegre, Croicu, Eck and Högbladh (2020), Introducing the UCDP Candidate Events Dataset; Högbladh (2026), Codebook v1.5."
+}

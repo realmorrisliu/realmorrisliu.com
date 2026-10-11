@@ -131,6 +131,36 @@ const digest = (path: string) =>
 const coverage = JSON.parse(
   readFileSync(new URL("../docs/data/cci-global-evidence-matrix.json", import.meta.url), "utf8")
 );
+const currentViolence = JSON.parse(
+  readFileSync(new URL("../docs/data/cci-ucdp-candidate-2026.json", import.meta.url), "utf8")
+);
+assert.equal(currentViolence.status, "preliminary_violence_review_not_gss_scores");
+assert.equal(currentViolence.candidateCount, coverage.candidateCount);
+assert.equal(currentViolence.publicationBeforeCutoffVerified, false);
+assert.equal(
+  currentViolence.uniqueEventCount,
+  currentViolence.sourceRecordCount - currentViolence.overlapCount
+);
+assert.equal(currentViolence.revisedOverlapCount, 6);
+assert.equal(
+  currentViolence.verifiedTemporalConflict.eventId,
+  realCases[7].currentViolenceReview.eventId
+);
+assert.equal(
+  realCases[7].currentViolenceReview.status,
+  "quarantined_source_event_date_conflict_not_2026_impact"
+);
+assert.equal(digest("scripts/cci_ucdp_candidate_exposure.py"), currentViolence.scriptSha256);
+assert.equal(digest("scripts/cci_ucdp_exposure.py"), currentViolence.locationHelperSha256);
+assert.equal(digest("scripts/cci_global_crosswalk.py"), currentViolence.geometryHelperSha256);
+assert.equal(
+  digest("docs/data/cci-ucdp-candidate-2026.json"),
+  coverage.preliminary2026Violence.manifestSha256
+);
+for (const [name, hash] of Object.entries(currentViolence.files)) {
+  assert(/^cci-ucdp-candidate-2026-[a-z]+\.csv$/.test(name));
+  assert.equal(digest(`docs/data/${name}`), hash);
+}
 const legal = coverage.legalMobility;
 assert.equal(legal.targetYear, 2026);
 assert.equal(legal.evidenceCutoff, "2026-10-10");

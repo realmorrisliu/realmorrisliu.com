@@ -102,12 +102,13 @@ def legal_mobility_rules(document):
     return result
 
 
-def matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports, claims, legal, cases=()):
+def matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports, claims, legal, current_violence, cases=()):
     expected = {r["efua_id"] for r in candidates}
     if len(expected) != len(candidates):
         raise ValueError("Duplicate universe IDs")
     history, spatial, violence, healthcare, governance, seismic, water, wup, airports, claims = [
         indexed(rows, expected) for rows in (history, spatial, violence, healthcare, governance, seismic, water, wup, airports, claims)]
+    current_violence = indexed(current_violence, expected)
     network = network_coverage(network, expected)
     cases = local_cases(cases, expected)
     legal = legal_mobility_rules(legal)
@@ -133,6 +134,10 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
         events = sum(int(v[f"recorded_events_{year}"]) for year in range(2021, 2026))
         if events < 0:
             raise ValueError("Negative recorded event count")
+        clear_current = int(current_violence[key]["clear_precise_events"])
+        pending_current = int(current_violence[key]["pending_precise_events"])
+        if min(clear_current, pending_current) < 0:
+            raise ValueError("Negative preliminary event count")
         med = {
             "partial_travel_evidence": "partial_access_model",
             "no_observed_motorized_population": "travel_model_missing",
@@ -182,6 +187,8 @@ def matrix(candidates, history, spatial, violence, healthcare, governance, seism
             "wup_2025_intersecting_centres": wup_count,
             "ucdb_centre_area_share": s["centre_area_share"],
             "ucdp_assigned_events_2021_2025": events,
+            "ucdp_2026_clear_precise_events": clear_current,
+            "ucdp_2026_pending_precise_events": pending_current,
             "wgi_country_dimensions_available": context_count,
             "wgi_lookup_economy_code": g["lookup_economy_code"],
             "cci_score_status": "not_computed_under_global_protocol",
@@ -222,6 +229,12 @@ def main():
     wup = read("cci-wup-2025-fua-coverage.csv", "cci-wup-2025-crosswalk.json", "outputs", True)
     airports = read("cci-ourairports-efua-coverage.csv", "cci-ourairports-fua-audit.json", "outputs", True)
     claims = read("cci-cms-lecanemab-efua-coverage.csv", "cci-cms-lecanemab-fua-audit.json", "outputs", True)
+    current_violence = read("cci-ucdp-candidate-2026-efua.csv", "cci-ucdp-candidate-2026.json", "files", True)
+    current_source = json.loads((folder / "cci-ucdp-candidate-2026.json").read_text())
+    if (current_source["status"] != "preliminary_violence_review_not_gss_scores"
+            or current_source["candidateCount"] != len(candidates)
+            or current_source["publicationBeforeCutoffVerified"] is not False):
+        raise ValueError("Preliminary violence protocol mismatch")
     legal_path = folder / 'cci-legal-mobility-rules.json'
     legal = json.loads(legal_path.read_text())
     review = ROOT / 'docs' / legal['evidenceReview']
@@ -241,7 +254,7 @@ def main():
                              'provenance': review.name,
                              'provenanceSha256': hashlib.sha256(review.read_bytes()).hexdigest()}
         cases.append(case)
-    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports, claims, legal, cases)
+    rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports, claims, legal, current_violence, cases)
     output = folder / "cci-global-evidence-matrix.csv"
     with output.open("w", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
@@ -268,6 +281,13 @@ def main():
             'countryCandidateCounts': dict(sorted(Counter(r['country_iso'] for r in rows if r['legal_mobility_rule']).items())),
             'meaning': 'Reviewed destination-specific legal conditions under the local citizenship assumption: EU/EEA/Swiss conditional residence rights and section 41 procedural onshore applications are distinct. An application route is not approved residence or work. Unknown is not denial; residence does not establish citizenship. No affordability, job access, crisis operation, whole OPT score or exclusion bound established.',
         },
+        "preliminary2026Violence": {
+            "manifest": "cci-ucdp-candidate-2026.json",
+            "manifestSha256": hashlib.sha256((folder / "cci-ucdp-candidate-2026.json").read_bytes()).hexdigest(),
+            **{key: current_source[key] for key in ("window", "candidatesWithClearPreciseEvents",
+               "candidatesWithPendingPreciseEvents", "publicationBeforeCutoffVerified", "releaseAssumption")},
+            "meaning": "Clear and pending current-window coded points retained separately; preliminary source and temporal-review limits remain. Zero is a table count, not zero violence or low risk. Existing GSS states and judgments unchanged; no score or exclusion uses this intake.",
+        },
         "local2026Screening": {
             "targetYear": 2026, "evidenceCutoff": "2026-10-10",
             "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
@@ -283,7 +303,7 @@ def main():
         "historicalMeaning": "Historical city research references are not global-protocol scores; union members do not inherit duplicated scores.",
         "subpillarSupport": {"PCS": ["geophysical: reference-rock seismic hazard only, not building losses"],
                              "RES": ["water: country urban service context only, not city reliability"],
-                             "GSS": ["organized_violence: partial historical events only"],
+                             "GSS": ["organized_violence: partial historical events plus separate preliminary January-August 2026 coded-point review; source release assumption, temporal conflicts, pending statuses and unassigned records retained, not complete impacts or GSS scores"],
                              "ISR": ["governance: country context only"],
                              "MED": ["access: historical spatial model only"],
                              "LON": ["translation: 2024 published single-drug Medicare FFS claims associated with next-year-end provider registered addresses; exact Census range points are not treatment sites or patient residences; missing, uncertain and outside-payer states retained, no resident access, quality or whole-dimension score"],

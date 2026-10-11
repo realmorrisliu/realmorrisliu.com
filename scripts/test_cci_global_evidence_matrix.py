@@ -78,18 +78,19 @@ class EvidenceMatrixTest(unittest.TestCase):
                    for mode in ('fixed','mobile')]
         airports = [{**base, "directory_point_airports": "0", "scheduled_nonclosed_directory_points": "0", "status": "no_in_area_point_not_no_transport"}]
         claims = [{**base, 'country_iso': 'AAA', 'exact_registered_npi_records': '0', 'uncertain_address_npi_records': '0', 'status': 'outside_payer_frame_not_no_adoption'}]
-        row = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal)[0]
+        current_violence = [{**base, 'clear_precise_events': '0', 'pending_precise_events': '1'}]
+        row = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal, current_violence)[0]
         self.assertEqual(row["OPT"], "no_in_area_airport_point_not_no_access")
         self.assertEqual(row['legal_mobility_status'], 'no_reviewed_path_not_no_right')
         candidates[0]['country_iso'] = claims[0]['country_iso'] = 'FIN'
-        with_path = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal)[0]
+        with_path = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal, current_violence)[0]
         self.assertEqual(with_path['legal_mobility_rule'], 'other_eu_citizen_to_germany')
         self.assertEqual(with_path['cci_score_status'], row['cci_score_status'])
         self.assertEqual(with_path['local2026_screening_status'], row['local2026_screening_status'])
         self.assertEqual(with_path['OPT'], row['OPT'])
         candidates[0]['country_iso'] = claims[0]['country_iso'] = 'USA'
         claims[0]['status'] = 'no_exact_signal_not_no_adoption'
-        application = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal)[0]
+        application = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal, current_violence)[0]
         self.assertEqual(application['legal_mobility_rule'], 'section41_citizen_onshore_application_germany')
         for field in ('OPT', 'cci_score_status', 'local2026_screening_status'):
             self.assertEqual(application[field], row[field])
@@ -98,8 +99,15 @@ class EvidenceMatrixTest(unittest.TestCase):
         self.assertEqual(row["TEC"], "network_samples_missing")
         self.assertEqual(row["wup_2025_intersecting_centres"], 0)
         with self.assertRaisesRegex(ValueError, "full candidate universe"):
-            matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, [], airports, claims, self.legal)
+            matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, [], airports, claims, self.legal, current_violence)
         self.assertEqual(row["GSS"], "no_assigned_events_not_zero_risk")
+        self.assertEqual(row['ucdp_2026_pending_precise_events'], 1)
+        for current_rows, error in [
+                ([], 'full candidate universe'),
+                ([{**current_violence[0], 'clear_precise_events': '-1'}], 'Negative preliminary')]:
+            with self.assertRaisesRegex(ValueError, error):
+                matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal, current_rows)
+
         self.assertEqual(row["ISR"], "country_context_only")
         self.assertEqual(row["MED"], "travel_model_missing")
         self.assertEqual(row["PCS"], "seismic_model_missing")
@@ -110,7 +118,7 @@ class EvidenceMatrixTest(unittest.TestCase):
         self.assertEqual(row['local2026_screening_status'], 'retained_no_supported_exclusion')
         case = json.loads((Path(__file__).resolve().parents[1] / 'docs/data/cci-local-2026-london-case.json').read_text())
         case['candidateId'] = 1
-        reviewed = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal, [case])[0]
+        reviewed = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal, current_violence, [case])[0]
         self.assertEqual(reviewed['local2026_case_status'], 'conditional_calibration_not_ranking')
         self.assertEqual(reviewed['local2026_retention_reason'], 'conditional_scores_not_exclusion_bounds')
         self.assertEqual(reviewed['local2026_screening_status'], 'retained_no_supported_exclusion')
@@ -122,7 +130,7 @@ class EvidenceMatrixTest(unittest.TestCase):
         wup[0]["intersecting_centres"] = "3"
         seismic[0]["status"] = "partial_seismic_hazard_model"
         water[0]["available_indicators"] = "0"
-        row = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal)[0]
+        row = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal, current_violence)[0]
         self.assertEqual(row["OPT"], "airport_directory_points_only")
         self.assertEqual(row["scheduled_nonclosed_airport_directory_points"], 1)
         self.assertEqual(row["TEC"], "partial_network_samples")
@@ -135,7 +143,7 @@ class EvidenceMatrixTest(unittest.TestCase):
 
         candidates[0]['country_iso'] = claims[0]['country_iso'] = 'USA'
         claims[0].update(exact_registered_npi_records='2', uncertain_address_npi_records='1', status='exact_registered_address_signal')
-        signal = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal)[0]
+        signal = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal, current_violence)[0]
         self.assertEqual(signal['LON'], 'partial_claims_registered_address_signal')
         self.assertEqual(signal['lon_claims_exact_registered_npi_records'], 2)
         self.assertEqual(signal['cci_score_status'], 'not_computed_under_global_protocol')
@@ -144,20 +152,20 @@ class EvidenceMatrixTest(unittest.TestCase):
                 {'exact_registered_npi_records': '-1'}, {'uncertain_address_npi_records': '-1'},
                 {'status': 'no_exact_signal_not_no_adoption'}, {'country_iso': 'CAN'}):
             with self.assertRaisesRegex(ValueError, 'claims address coverage'):
-                matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, [{**claims[0], **mutate}], self.legal)
+                matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, [{**claims[0], **mutate}], self.legal, current_violence)
         with self.assertRaisesRegex(ValueError, 'full candidate universe'):
-            matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, [], self.legal)
+            matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, [], self.legal, current_violence)
 
         airports[0]['scheduled_nonclosed_directory_points'] = '3'
         with self.assertRaisesRegex(ValueError, 'airport directory accounting'):
-            matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal)
+            matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal, current_violence)
         airports[0]['scheduled_nonclosed_directory_points'] = '1'
         with self.assertRaisesRegex(ValueError, 'full candidate universe'):
-            matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, [], claims, self.legal)
+            matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, [], claims, self.legal, current_violence)
 
         wup[0]['intersecting_centres'] = '-1'
         with self.assertRaisesRegex(ValueError, 'Negative WUP centre count'):
-            matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal)
+            matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal, current_violence)
 
         network[0]['centroid_avg_d_kbps_valid_tests'] = '0'
         with self.assertRaises(ValueError):

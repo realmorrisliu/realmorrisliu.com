@@ -7,6 +7,7 @@ import works from "../../docs/data/cci-openalex-filter-inventory.json";
 import authorships from "../../docs/data/cci-openalex-authorship-inventory.json";
 import affiliations from "../../docs/data/cci-openalex-global-affiliation-audit.json";
 import airports from "../../docs/data/cci-ourairports-fua-audit.json";
+import currentViolence from "../../docs/data/cci-ucdp-candidate-2026.json";
 import clinicalClaims from "../../docs/data/cci-cms-lecanemab-fua-audit.json";
 import singapore from "../../docs/data/cci-local-2026-singapore-case.json";
 import london from "../../docs/data/cci-local-2026-london-case.json";
@@ -58,6 +59,13 @@ if (
   rankAudit.outsideFrameReview.globalRankingEligible !== false
 ) {
   throw new Error("Rank identifiability audit disagrees with the current candidate scope");
+}
+if (
+  currentViolence.candidateCount !== coverage.candidateCount ||
+  currentViolence.status !== "preliminary_violence_review_not_gss_scores" ||
+  currentViolence.publicationBeforeCutoffVerified !== false
+) {
+  throw new Error("Preliminary violence review disagrees with current scope or publication status");
 }
 const fixedPositionCases = rankAudit.scenarios.fixed_conditional_centers.caseResults;
 const helsinkiPosition = fixedPositionCases.find(c => c.efua_id === String(helsinki.candidateId));
@@ -373,6 +381,17 @@ const rows = [
           ? "巴黎 ISR、MED、TEC、OPT 条件性 60，LON 条件性 40；PCS、GSS、RES 未定，无总分中心。实际服务、许可与运行支持有限能力，历史认证和旧模型不变成当前全区结果。长寿低档只指已审疾病路径的采用／支付缺口，并保留临床意义和安全争议；审慎监管不直接扣分，不推断无私费、试验或其他路径。拒绝路径、净受益适用性或代表性假设时，LON 撤回为未知。数学域 34—74；撤回 LON 为 30—80，均不证明入围或排除。"
           : "Paris has conditional 60 judgments for ISR, MED, TEC and OPT, and 40 for LON. PCS, GSS and RES remain unknown, without a total centre. Actual services, licensing and operations support limited capability; historical certification and older models are not current whole-area outcomes. LON 40 concerns the reviewed disease pathway's adoption/payment gap, retaining clinical-significance and safety disputes. Regulatory caution is not itself penalised; private care, trials and other pathways are not assumed absent. Rejecting pathway relevance, net-benefit applicability or representativeness restores unknown LON. The mathematical domain is 34–74; withdrawing LON gives 30–80. Neither proves qualification or exclusion."
       }
+    </p>
+    <p>
+      {
+        zh
+          ? `同一规则审阅了 2026 年一至八月的初步组织暴力：${n(currentViolence.candidatesWithClearPreciseEvents)} 个候选有保留的 Clear 编码点，${n(currentViolence.candidatesWithPendingPreciseEvents)} 个有待核查编码点，两组可重叠，均不是完整安全影响或 GSS 分数。跨月重复、后版修订、粗位置、时点冲突及异常值分别保留。纽约一条记录引用的原文描述涉嫌 2024 年双重谋杀与 2026 年起诉，已隔离而未计为当年新增死亡。修改时间和发布周期仅支持截止日前可用的假设，独立历史存档尚未核验。无保留归属不证明安全，十案例档位未变；后续须补当地完整影响、区域／战略暴露和实际缓解。`
+          : `A consistent review covers preliminary organised violence for January–August 2026: ${n(currentViolence.candidatesWithClearPreciseEvents)} candidates have retained Clear coded points and ${n(currentViolence.candidatesWithPendingPreciseEvents)} have pending coded points; groups can overlap, and neither establishes complete safety impacts or GSS scores. Monthly overlaps, later revisions, coarse locations, temporal conflicts and anomalous values remain separate. One New York record cites a source describing an alleged 2024 double murder and a 2026 indictment; it is quarantined rather than counted as new deaths. Modification times and the release schedule support only an assumption of pre-cutoff availability; an independent historical archive is unverified. An absence of retained assignments does not establish safety or absent violence. Ten case judgments remain unchanged; complete local impacts, regional and strategic exposure, and actual mitigation still need evidence.`
+      }
+      {" "}<a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-ucdp-candidate-2026-review.md"
+        >{zh ? "当年事件与共同判档检验" : "Current-event and shared-anchor review"}</a
+      >
     </p>
     <p>
       {

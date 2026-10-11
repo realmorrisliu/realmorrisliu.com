@@ -25,11 +25,11 @@ def fatalities(row):
     return (low, best, high) if 0 <= low <= best <= high and high >= 1 else None
 
 
-def locate(row, tree, transform):
+def locate(row, tree, transform, window=(date(2021, 1, 1), date(2025, 12, 31))):
     start, end = date.fromisoformat(row["date_start"][:10]), date.fromisoformat(row["date_end"][:10])
     if start > end:
         raise ValueError("Reversed event dates")
-    if start < date(2021, 1, 1) or end > date(2025, 12, 31):
+    if start < window[0] or end > window[1]:
         return "crosses_window", []
     precision = int(row["where_prec"])
     if precision not in range(1, 8):
