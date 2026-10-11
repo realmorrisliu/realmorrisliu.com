@@ -7,6 +7,7 @@ import works from "../../docs/data/cci-openalex-filter-inventory.json";
 import airports from "../../docs/data/cci-ourairports-fua-audit.json";
 import singapore from "../../docs/data/cci-local-2026-singapore-case.json";
 import london from "../../docs/data/cci-local-2026-london-case.json";
+import helsinki from "../../docs/data/cci-local-2026-helsinki-case.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
 
@@ -18,7 +19,7 @@ const { currentLang } = Astro.props;
 const zh = currentLang === "zh";
 const n = (value: number) => value.toLocaleString(zh ? "zh-CN" : "en-GB");
 const counts = coverage.dimensionStatusCounts;
-const cases = [singapore, london];
+const cases = [singapore, london, helsinki];
 const screening = coverage.local2026Screening;
 if (cases.length !== screening.conditionalCaseCount) {
   throw new Error("Local calibration case count disagrees with the global matrix");
@@ -114,7 +115,7 @@ const rows = [
     <p>
       {
         zh
-          ? "口径为 2026 年、本国公民、通常长期居住、当地中位收入和通常医保；证据截止 2026-10-10。两份案例逐项审阅了八维及全部 31 个子支柱，部分判断依赖明确假设，尚不表示每项均有充分测量。"
+          ? "口径为 2026 年、本国公民、通常长期居住、当地中位收入和通常医保；证据截止 2026-10-10。三份案例逐项审阅了八维及全部 31 个子支柱，部分判断依赖明确假设，尚不表示每项均有充分测量。"
           : "These cases assess local citizens who usually reside in the city, at median local income and with usual healthcare coverage, in 2026. The evidence cutoff is 10 October 2026. Each reviews all eight dimensions and 31 subpillars; some judgments depend on explicit assumptions, and not every item is fully measured."
       }
     </p>
@@ -136,6 +137,7 @@ const rows = [
             <th scope="col">{zh ? "维度／原权重" : "Dimension / original weight"}</th>
             <th scope="col">{zh ? "新加坡" : "Singapore"}</th>
             <th scope="col">{zh ? "伦敦" : "London"}</th>
+            <th scope="col">{zh ? "赫尔辛基" : "Helsinki"}</th>
           </tr>
         </thead>
         <tbody>
@@ -162,8 +164,15 @@ const rows = [
     <p>
       {
         zh
-          ? "两城同为 58，不证明能力相等或稳定并列。医疗等待不能仅因超出行政目标就自动取 40；科研强不能代替居民扩散；长期迁居权不能覆盖交通、资金及通信的全部退出条件。长寿路径的代表性假设最需挑战：若不接受该假设，LON 应保持未定，总分中心也应为空。"
-          : "Both conditional totals are 58; this does not establish equal capability or a stable tie. Missing an administrative waiting target does not automatically imply MED 40; strong research does not establish resident diffusion, and residence rights do not cover every transport, financial or communication condition. Longevity pathway representativeness is the weakest assumption: rejecting it leaves LON unresolved and removes the total's central estimate."
+          ? "新加坡与伦敦同为 58，不证明能力相等或稳定并列。医疗等待不能仅因超出行政目标就自动取 40；科研强不能代替居民扩散；长期迁居权不能覆盖交通、资金及通信的全部退出条件。长寿路径的代表性假设最需挑战：若不接受该假设，LON 应保持未定，总分中心也应为空。"
+          : "Singapore and London both have conditional totals of 58; this does not establish equal capability or a stable tie. Missing an administrative waiting target does not automatically imply MED 40; strong research does not establish resident diffusion, and residence rights do not cover every transport, financial or communication condition. Longevity pathway representativeness is the weakest assumption: rejecting it leaves LON unresolved and removes the total's central estimate."
+      }
+    </p>
+    <p>
+      {
+        zh
+          ? "赫尔辛基条件性总分为 60。FINGER 有两年人体认知试验结果，但当前免费记忆小组不等于完整干预已交付；LON 60 依赖有限转化路径的连接假设，拒绝该假设则无总分中心。仅在新的必要治疗阻断依据支持 MED 40 时，总分变为 57，低于另外两城当前的 58。这说明 2 分差不足以证明确定优劣。实际数字服务采用也尚不足以支持 TEC 80。"
+          : "Helsinki's conditional total is 60. FINGER has a two-year human cognitive result, but current free memory groups do not establish delivery of the complete intervention. LON 60 depends on a limited translation-pathway assumption; rejecting it removes the total's centre. Only if new evidence of blocked necessary care supports MED 40 does the total become 57, below the other two cases' current 58. A two-point gap does not establish superiority. Actual digital-service adoption also falls short of the evidence needed for TEC 80."
       }
     </p>
     <p>
@@ -187,6 +196,11 @@ const rows = [
       <a
         href="https://github.com/realmorrisliu/realmorrisliu.com/blob/ea5288b8441fe07c2a2e6485a6ed35a5e8903f24/docs/cci-local-2026-london-case.md"
         >{zh ? "伦敦案例" : "London case"}</a
+      >
+      {" · "}
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-helsinki-case.md"
+        >{zh ? "赫尔辛基案例" : "Helsinki case"}</a
       >
     </p>
     <p>

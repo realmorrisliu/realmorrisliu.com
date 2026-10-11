@@ -48,8 +48,8 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 2,
-    "unassessedCount": 9029,
+    "conditionalCaseCount": 3,
+    "unassessedCount": 9028,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -138,8 +138,13 @@
       "sha256": "c1b88740cbafea92cc9b2a99881f3360f4199544b77d4fc184ed34a9ae434f66",
       "provenance": "cci-local-2026-london-case.md",
       "provenanceSha256": "8ddf06116b3684fc5fad197e3d7a89f074474669f44d701a7f653db52f3611ff"
+    },
+    "cci-local-2026-helsinki-case.json": {
+      "sha256": "3e69537cd5e9d8896ce5c4928838c6d2ffb46ba7ea2e26e5ca54eac435def867",
+      "provenance": "cci-local-2026-helsinki-case.md",
+      "provenanceSha256": "8b6023a8fda2d71bc823edc804cb4136a8744880f9f8817ad99dbc029308658f"
     }
   },
-  "scriptSha256": "db9602881546bdd414add7ed6a67d381ba93c336625cc8ea456be83cfbc4f461",
-  "csvSha256": "a99472b45dd86ea9ad5d55fee41f987590a5e5ec7579382559c43000cd94d92d"
+  "scriptSha256": "39c3d3d90b5641fce51c3edd4b11a0c181930116fa840a7728eaece8c06b3dab",
+  "csvSha256": "5d4cbb1fbbaedac92c4708419b8a08204c9ecb9b7aadce7f242e7b03766ccbed"
 }

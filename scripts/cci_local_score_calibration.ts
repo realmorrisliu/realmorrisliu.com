@@ -50,7 +50,7 @@ assert.equal(
 );
 assert.equal(total(a.scores, sensitivity).center, 55);
 assert.equal(total(b.scores, sensitivity).center, 57);
-const realCases = ["singapore", "london"].map(city =>
+const realCases = ["singapore", "london", "helsinki"].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
   )
@@ -88,6 +88,10 @@ const realScores = realCases.map(realCase => {
     realCase.dimensions.map((d: { id: DimensionId; score: number }) => [d.id, d.score])
   ) as Record<DimensionId, number>;
   assert.equal(total(scores).center, realCase.expectedConditionalTotal);
+  return scores;
+});
+const [singapore, london, helsinki] = realScores;
+for (const scores of [singapore, london]) {
   assert.equal(total({ ...scores, MED: 40 }).center, 55);
   assert.equal(total({ ...scores, LON: 60 }).center, 60);
   assert.equal(total({ ...scores, TEC: 80 }).center, 60);
@@ -96,10 +100,15 @@ const realScores = realCases.map(realCase => {
   delete unresolvedLon.LON;
   assert.deepEqual(total(unresolvedLon), { center: null, lower: 54, upper: 64 });
   assert.equal(total(scores, { ...weights, MED: 10, LON: 15 }).center, 57);
-  return scores;
-});
-const [singapore, london] = realScores;
+}
 assert.deepEqual(singapore, london);
+assert.equal(total(helsinki).center, 60);
+assert.equal(total({ ...helsinki, MED: 40 }).center, 57);
+assert.equal(total({ ...helsinki, LON: 40 }).center, 58);
+assert.equal(total({ ...helsinki, TEC: 80 }).center, 62);
+const helsinkiWithoutLon: Partial<Record<DimensionId, number>> = { ...helsinki };
+delete helsinkiWithoutLon.LON;
+assert.deepEqual(total(helsinkiWithoutLon), { center: null, lower: 54, upper: 64 });
 assert.equal(total({ ...london, OPT: 80 }).center, 60);
 const londonCounterfactual = { ...london, MED: 40, OPT: 80 };
 const exitSensitivity = { ...weights, MED: 10, OPT: 15 };
@@ -122,5 +131,6 @@ console.log({
     current: { singapore: 58, london: 58 },
     conditionalMED40OPT80: { singapore: 58, london: 57 },
     sameScenarioMED10OPT15: { singapore: 58, london: 59 },
+    helsinki: { current: 60, conditionalMED40: 57, unresolvedLON: total(helsinkiWithoutLon) },
   },
 });

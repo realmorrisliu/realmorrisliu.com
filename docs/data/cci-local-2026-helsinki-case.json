@@ -1,0 +1,118 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 687,
+  "name": "Helsinki",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "evidenceReview": "cci-local-2026-helsinki-case.md",
+  "expectedConditionalTotal": 60,
+  "limitations": "All 31 subpillars are reviewed, not all are measured. Scores require the stated assumptions; unknown evidence remains unknown. This is neither a global ranking nor an exclusion bound. Rejecting a necessary assumption requires reassessment, not automatic retention of its score.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Implemented coastal protection and cooling in priority care facilities support protection; heat, rainfall and slippery winter conditions remain material hazards.",
+      "assumption": "Implemented protection usually works; unreviewed locations and groups do not already face broader unmitigated failure.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": 60,
+      "rationale": "National intelligence assessment and local preparedness support mitigation while regional and strategic risks persist; older unmatched events do not establish low current local violence.",
+      "assumption": "Ordinary life is not broadly and persistently blocked; national forecasts do not measure city-level violence and unreviewed strategic scenarios remain open.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Published delivery results, implemented service changes and preparedness exercises support execution; group reach and actual crisis recovery remain incompletely measured.",
+      "assumption": "Observed execution persists and supports usual operation of major services; the reviewed domains are not a complete city-wide performance measurement.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "Water monitoring, actual energy delivery and port logistics support usual supply; common electricity dependencies, current backup capacity and household burdens remain unresolved.",
+      "assumption": "Essential resources are usually available and affordable for median-income residents; regional operator evidence does not measure the whole FUA.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "context",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "Free primary appointments, specified public fees and actual specialist treatment support care pathways; dental delays, voucher conditions and specialist and communication barriers remain constraints.",
+      "assumption": "Necessary care is usually obtainable and clinically adequate; waits and alternative-pathway charges have not become broad unmitigated barriers. Routine clinical outcomes remain unmeasured.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "unresolved",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "FINGER includes local centres and a two-year randomised human cognitive result; related public services provide a limited translation pathway, without proving current delivery of the full intervention or general resident benefit.",
+      "assumption": "The verified human result and related local services support limited translation readiness. This connection must be challenged; rejecting it leaves LON unresolved rather than automatically assigning 40.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Concrete research, a research-linked commercialisation portfolio, network samples and actual public digital-service adoption support capability; sustained output across the FUA, broad industry adoption and group reach remain incomplete.",
+      "assumption": "Observed research, commercialisation and service adoption persist; evidence from one service domain supports partial diffusion rather than all-industry or whole-resident measurement.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Delivered aviation and international ferries, conditional EU residence and work rights and overseas payment of accrued earnings-related pensions support usable channels; common failures and communications remain unresolved.",
+      "assumption": "Median-income residents usually have usable travel and relocation funds, accounts and communications; legal eligibility does not guarantee jobs, housing or independent transport substitutes.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "unresolved"
+      }
+    }
+  ]
+}
