@@ -220,7 +220,7 @@ def main():
                                'provenance': review.name,
                                'provenanceSha256': hashlib.sha256(review.read_bytes()).hexdigest()}
     cases = []
-    for city in ('singapore', 'london', 'helsinki', 'zurich', 'gaza', 'tokyo'):
+    for city in ('singapore', 'london', 'helsinki', 'zurich', 'gaza', 'tokyo', 'washington'):
         path = folder / f'cci-local-2026-{city}-case.json'
         case = json.loads(path.read_text())
         review = ROOT / 'docs' / case['evidenceReview']

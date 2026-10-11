@@ -13,6 +13,7 @@ import helsinki from "../../docs/data/cci-local-2026-helsinki-case.json";
 import zurich from "../../docs/data/cci-local-2026-zurich-case.json";
 import gaza from "../../docs/data/cci-local-2026-gaza-case.json";
 import tokyo from "../../docs/data/cci-local-2026-tokyo-case.json";
+import washington from "../../docs/data/cci-local-2026-washington-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -26,7 +27,7 @@ const zh = currentLang === "zh";
 const n = (value: number) => value.toLocaleString(zh ? "zh-CN" : "en-GB");
 const counts = coverage.dimensionStatusCounts;
 const legal = coverage.legalMobility.statusCounts;
-const cases = [singapore, london, helsinki, zurich, gaza, tokyo];
+const cases = [singapore, london, helsinki, zurich, gaza, tokyo, washington];
 const screening = coverage.local2026Screening;
 if (
   rankAudit.candidateCount !== coverage.candidateCount ||
@@ -189,6 +190,7 @@ const rows = [
             <th scope="col">{zh ? "苏黎世" : "Zurich"}</th>
             <th scope="col">{zh ? "加沙功能区" : "Gaza functional area"}</th>
             <th scope="col">{zh ? "东京功能区" : "Tokyo functional area"}</th>
+            <th scope="col">{zh ? "华盛顿功能区" : "Washington functional area"}</th>
           </tr>
         </thead>
         <tbody>
@@ -289,6 +291,11 @@ const rows = [
         href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-tokyo-case.md"
         >{zh ? "东京条件性案例" : "Tokyo conditional case"}</a
       >
+      {" · "}
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-washington-case.md"
+        >{zh ? "华盛顿条件性案例" : "Washington conditional case"}</a
+      >
     </p>
     <p>
       {
@@ -302,6 +309,13 @@ const rows = [
         zh
           ? "东京八维条件性判断均为 60，原权重总分为 60。当地实际受害表、狭义全国暴力统计和截止日前部分导弹事件的航船损害通报，与运作中的缓解机制一并支持 GSS；全国统计不变成本地零风险，执法人数不变成受害人数。延续至截止日和全功能区适配仍是假设，撤回 GSS 后无中心、数学域 51—66。实际退出通道亦有资格与负担条件；撤回 OPT、RES 或 LON 后无中心、域 54—64。条件性 60 不证明优于其他案例或全球入围。"
           : "Tokyo has eight conditional 60 judgments, giving a total of 60 under the original weights. Local victim counts, narrowly defined national violence statistics and aircraft or ship damage notices for selected missile events before the cutoff support GSS alongside operating mitigation. National statistics do not establish zero local risk, and detected persons are not victims. Temporal continuity and whole-FUA applicability remain assumptions; withdrawing GSS removes the centre and gives a mathematical domain of 51–66. Exit channels also have eligibility and affordability conditions; withdrawing OPT, RES or LON removes the centre and gives 54–64. Conditional 60 establishes neither superiority over other cases nor global qualification."
+      }
+    </p>
+    <p>
+      {
+        zh
+          ? "华盛顿有五项条件判断：PCS／ISR／MED／TEC 为 60，RES 为 40；GSS／LON／OPT 未定，无总分。实际研究和服务交付不抵消中等收入群体的食物约束；调查按家庭收入三等分，并非精确中位居民或整个功能区实测，RES 40 依赖代表性及延续假设。警务记录缺项保留替代记录回应，不因公开问题自动把 ISR 降至 40；未注明日期的长寿治疗入口不当作截止日前给药实绩。固定五项判断的数学域为 37—72，撤回 RES 后为 33—78；二者都不是可靠排除界限。"
+          : "Washington has five conditional judgments: PCS, ISR, MED and TEC at 60, and RES at 40. GSS, LON and OPT remain unresolved, with no total centre. Delivered research and services do not remove middle-income food constraints. The survey uses household-income thirds rather than exact median residents or the entire FUA; RES 40 depends on representativeness and continuity. Police-record gaps retain the alternative-record response and do not automatically lower ISR to 40. An undated longevity-treatment entry is not pre-cutoff administration evidence. Fixing five judgments gives a mathematical domain of 37–72; withdrawing RES gives 33–78. Neither is a reliable exclusion bound."
       }
     </p>
     <p>

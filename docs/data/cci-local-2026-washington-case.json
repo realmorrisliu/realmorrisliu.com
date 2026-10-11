@@ -1,0 +1,287 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 7068,
+  "name": "Washington D.C.",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "evidenceReview": "cci-local-2026-washington-case.md",
+  "expectedConditionalTotal": null,
+  "limitations": "All 31 subpillars are reviewed, not all are measured. Scores require the stated assumptions; unknown evidence remains unknown. This is neither a global ranking nor an exclusion bound. Rejecting a necessary assumption requires reassessment, not automatic retention of its score.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "An actually activated June 2026 heat alert, existing cooling sites and accessible transport support protection. Whole-FUA reach, health-loss reduction, other hazards and outage operation remain unverified.",
+      "assumption": "Observed protection usually works, persists and applies across the functional area without broader unmitigated failure from unreviewed hazards; rejecting these assumptions leaves PCS unresolved.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "unresolved",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "unresolved"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "Preliminary District police counts document actual violence but do not isolate organised violence or measure whole-FUA regional and strategic effects. Historical zero assigned events is not zero risk.",
+      "assumption": "No justified whole-dimension anchor yet; impact, mitigation, time and boundary applicability need review before assigning a score.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Delivered heat, food-access and digital services and operating complaints oversight support execution. An audit of complaint-related police stop reports identifies missing mandated fields; MPD describes alternative customised records. Neither transparent disclosure nor incomplete stock fields establish whole-area institutional failure.",
+      "assumption": "Observed execution persists and major services usually operate; the reviewed historical documentation defect has not become a broader unmitigated institutional bottleneck. Rejecting temporal, resident or boundary applicability leaves ISR unresolved.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "unresolved"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 40,
+      "rationale": "A 2026 probability-based regional survey reports food insecurity in approximately one quarter of middle-income households, defined by income thirds. Actual food-access help and ordinary water operations do not establish that this material resource constraint is relieved. The survey does not specifically measure median-income citizens or the frozen FUA.",
+      "assumption": "The surveyed middle-income household experience applies to ordinary local citizens across the FUA and persists through the cutoff as an important insufficiently relieved basic-resource constraint. Rejecting representativeness or continuity leaves RES unresolved; verified relief plus usual other supplies can justify reassessment to 60, not an automatic upgrade.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "unresolved",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "A dated local 2024 report describes an operating hypertension telehealth clinic with in-person links and observed benefits, alongside device and assistance barriers. Current emergency and specialist pages corroborate service pathways but are not frozen cutoff snapshots; insurance cost protection has coverage and exclusion conditions. Routine quality, waits and crisis continuity remain unverified.",
+      "assumption": "Historical actual services persist and necessary treatment is usually obtainable, clinically adequate and affordable under usual coverage for the target resident. Undated pages and national insurance rules do not establish these conditions; rejecting them leaves MED unresolved.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "unresolved",
+        "specialist_capacity": "partial",
+        "system_continuity": "unresolved"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "A credible early-Alzheimer confirmatory trial, traditional FDA approval and conditional Medicare coverage establish a national clinical pathway. A current McLean clinic lists lecanemab, but its publication date, local delivery before the cutoff and resident access have not been verified. A dated local educational article is not a drug-administration record.",
+      "assumption": "Do not infer cutoff delivery or healthy-person lifespan benefit from national approval or an undated service list. Dated local adoption and an applicable access pathway are needed before selecting an anchor.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "context",
+        "resident_access": "unresolved"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Actual FY2025 GW sponsored research, patents and licensing alongside delivered digital workshops and outdoor Wi-Fi support output, industry links and partial diffusion. One university does not measure whole-FUA production; federal dependence and the June 2025 departure of a programme supplier remain counterevidence. Workshops and hotspots are not adoption rates.",
+      "assumption": "Observed research and digital capabilities persist and support limited industry connections and resident diffusion across the target area. Rejecting continuity or applicability leaves TEC unresolved; strong broad adoption and independent critical nodes are still needed for 80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": null,
+      "rationale": "Actual 2025 IAD and DCA passenger journeys and routes support transport channels, with shutdown and accident aftereffects and announced airspace adjustments retained. Long-term migration eligibility, asset portability, affordability and stressed communications have not been jointly reviewed.",
+      "assumption": "No whole-dimension anchor yet; unreviewed legal pathways are not absence of rights, passenger journeys are not unique residents and an announced closure is not an execution record.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "unresolved",
+        "asset_portability": "unresolved",
+        "network_continuity": "unresolved"
+      }
+    }
+  ],
+  "retrievedOn": "2026-10-12",
+  "researchPriority": {
+    "basis": "directory_associations_after_existing_six_cases_not_performance",
+    "associatedDirectoryRecords": 3098,
+    "source": "cci-openalex-institution-fua.csv",
+    "sourceSha256": "b59735ba074e3e1b8e05f1d08bd672ef1d1ec219303cd9a788c93fc2a5e798ed"
+  },
+  "sourceSnapshots": [
+    {
+      "url": "https://mayor.dc.gov/release/mayor-bowser-activates-extreme-heat-alert-urges-residents-and-visitors-exercise-caution-and",
+      "publishedOn": "2026-06-12",
+      "retrievedOn": "2026-10-12",
+      "bytes": 89932,
+      "sha256": "ba374fd635e38afbde0c8da7dfa06d1ce20c96a0176305b5af1bfcf0b167da6e",
+      "scope": "Heat alert activated 2026-06-12, not health outcome or full-FUA coverage"
+    },
+    {
+      "url": "https://policecomplaints.dc.gov/sites/default/files/dc/sites/office%20of%20police%20complaints/publication/attachments/Stop%20Reports_FINAL.pdf",
+      "publishedOn": "2025-09-29",
+      "retrievedOn": "2026-10-12",
+      "bytes": 312562,
+      "sha256": "3945d943f00c590fdb293ca565757e4f9a874577aac6782d827f087ecbc55d6c",
+      "scope": "77 complaint-related reports from 2021-09 to 2025-03; all six pages reviewed, including MPD alternative-record response"
+    },
+    {
+      "url": "https://code.dccouncil.gov/us/dc/council/code/sections/5-113.01",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 37685,
+      "sha256": "6f20927a93d811d3397cc9b07bf0c7e7ab13ac6c2e45fac2bdb710e4df8cb3cc",
+      "scope": "Official record requirements; listed amendments through 2024, current page has no publication timestamp"
+    },
+    {
+      "url": "https://hunger-report.capitalareafoodbank.org/report-2026/",
+      "publishedOn": "2026-09",
+      "retrievedOn": "2026-10-12",
+      "bytes": 313987,
+      "sha256": "edb1cd99946379e00186538264134298b6f2d3cfd6f7eea660291ef9eebb7cd6",
+      "scope": "Survey 2026-05-04 to 2026-05-16, n=3804 adults, weighted regional household experiences over preceding 12 months; exact publication day unverified"
+    },
+    {
+      "url": "https://hunger-report.capitalareafoodbank.org/wp-content/uploads/2026/09/CAFB_HungerReport2026_Charts-Graphs_Final_Food-insecurity-disproportionately-affects-lower-and-middle-income-households-in-the-DMV-scaled.png",
+      "publishedOn": "2026-09",
+      "retrievedOn": "2026-10-12",
+      "bytes": 432209,
+      "sha256": "3bbc5a1eb96809b630918ab44ed0ae845ce45060c05645bbcbb55781a04f99c6",
+      "scope": "Original chart visually read; household-income thirds, not dollar brackets or exact median-citizen sample"
+    },
+    {
+      "url": "https://dchealth.dc.gov/release/dc-health-instacart-and-marthas-table-expand-grocery-access-pilot-program-extending-food",
+      "publishedOn": "2026-06-12",
+      "retrievedOn": "2026-10-12",
+      "bytes": 90278,
+      "sha256": "b308c79a14728fc2f9f954ce70adc64b64124efed4f21df2e874fb50fa370b9f",
+      "scope": "Over 1000 families already received shopping access since 2025-10; expansion not treated as completed relief"
+    },
+    {
+      "url": "https://www.dcwater.com/sites/default/files/document/2026-06/documents/2026_CCR_6.11.26_FINAL.pdf",
+      "publishedOn": "2026-06-16",
+      "retrievedOn": "2026-10-12",
+      "bytes": 7917513,
+      "sha256": "00d4f6197b744fac344b5466f36fa81cb4491cf0916a4125a2f201fb604ef336",
+      "scope": "2025 measurements; all 23 pages extracted; pp.5,17-21 reviewed for common source, standards and customer-tap exceptions"
+    },
+    {
+      "url": "https://www.epa.gov/system/files/documents/2026-07/2025-dc-annual-drinking-water-compliance-report.pdf",
+      "publishedOn": "2026-07-02",
+      "retrievedOn": "2026-10-12",
+      "bytes": 351468,
+      "sha256": "297f6651f8bdabaf5e091f1f0c3278aeecfe505f26a60ca3adbc0dba684c4fe7",
+      "scope": "Report dated 2026-06-30, observed 2025; pp.18-19 attribute violations to distinct PWSs, not DC Water or full FUA"
+    },
+    {
+      "url": "https://www.medstarhealth.org/-/media/project/mho/medstar/newsletters-pdf/medstar-washington-hospital-center/whc-connections-may-june-2024-final-2.pdf",
+      "publishedOn": "2024-05/06",
+      "retrievedOn": "2026-10-12",
+      "bytes": 7864037,
+      "sha256": "544ef7ee1b2dd801de43edd43b8fdce85eb926caa85fe6840ad368905a5b6edd",
+      "scope": "Cover and pp.6,16 reviewed; actual hypertension clinic self-report is not controlled quality evidence, Alzheimer article is not local administration"
+    },
+    {
+      "url": "https://www.medstarhealth.org/locations/medstar-washington-hospital-center",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 104028,
+      "sha256": "3519f9f9843163aa0a8ab03d035bed569ceb8bf19b139a9dc2743b34249b5185",
+      "scope": "Current undated service page includes claimed FY2024 emergency activity; corroboration only, not verified pre-cutoff publication"
+    },
+    {
+      "url": "https://www.healthcare.gov/glossary/out-of-pocket-maximum-limit/",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 418075,
+      "sha256": "403e010935f9851e5c73625211decd1896d6957405ffc01288524a06e2208f56",
+      "scope": "Explicit 2026 Marketplace cap excludes premiums and other uncovered spending; undated page is context, not local affordability evidence"
+    },
+    {
+      "url": "https://www.cms.gov/newsroom/press-releases/statement-broader-medicare-coverage-leqembi-available-following-fda-traditional-approval",
+      "publishedOn": "2023-07-06",
+      "retrievedOn": "2026-10-12",
+      "bytes": 55743,
+      "sha256": "4f62e357fbb58b44ae6f7eb238cb3e2a728dc2841245e7127e2bf0e97065c0bf",
+      "scope": "Medicare, disease and registry conditions, not universal citizen eligibility"
+    },
+    {
+      "url": "https://www.medstarhealth.org/Locations/Infusion-Center-at-McLean",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 79252,
+      "sha256": "e88ab1887da9f1dee6ea7ed330152da9eff1983c22a8e225a189add8d9fcc1a1",
+      "scope": "Current lecanemab service listing; pre-cutoff delivery and ordinary-resident access unresolved, not used to assign LON"
+    },
+    {
+      "url": "https://facultysenate.gwu.edu/sites/g/files/zaxdzs6626/files/2026-01/facsen_researchupdate_january2026_final.pdf",
+      "publishedOn": "2026-01-16",
+      "retrievedOn": "2026-10-12",
+      "bytes": 2064585,
+      "sha256": "cef8b00bde97c416dcc4e9c31526f8a8c823a277ef4029e498fd8240450b6e62",
+      "scope": "All 35 pages extracted; FY2025 metrics pp.11,17; sponsored funding differs from total R&D; FY2026 partial year not annual result"
+    },
+    {
+      "url": "https://dccouncil.gov/wp-content/uploads/2026/02/FY25-26-Performance-Oversight-Pre-Hearing-Response_TO0-01.23.26_Final.pdf.pdf",
+      "publishedOn": "2026-02",
+      "retrievedOn": "2026-10-12",
+      "bytes": 381493,
+      "sha256": "5315cea68312444cf58cec00686f674dd6cf78e20edc4d7864a5b0f4013ef60a",
+      "scope": "All 24 pages extracted; p.23 actual FY2025 workshops and Wi-Fi plus supplier exit; response filename 2026-01-23, precise publication day not verified"
+    },
+    {
+      "url": "https://mpdc.dc.gov/dailycrime?os=f",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 177176,
+      "sha256": "47d0b8a32587547eda5810404a813a10de05daea2ef502c4ef9978c269215e99",
+      "scope": "As-of snapshot 2026-10-07 midnight, preliminary District Code counts not NIBRS, not whole-FUA organised-violence rates"
+    },
+    {
+      "url": "https://www.mwaa.com/news/washingtons-airports-served-record-54-million-passengers-2025",
+      "publishedOn": "2026-02-24",
+      "retrievedOn": "2026-10-12",
+      "bytes": 104363,
+      "sha256": "d54d201df26193ba2539db00fbd735e9d1e83734938fec7da46169eba60da051",
+      "scope": "Observed 2025 passenger journeys and end-2025 routes, not unique residents or pressure capacity"
+    },
+    {
+      "url": "https://www.mwaa.com/news/flight-schedule-adjustments-expected-summer",
+      "publishedOn": "2026-06-16",
+      "retrievedOn": "2026-10-12",
+      "bytes": 104723,
+      "sha256": "edb0866e1a9975c4657cac71c10977d131702d1756c1458c163c5d85f8486646",
+      "scope": "Planned summer 2026 airspace and schedule adjustments, not verified completed closures"
+    },
+    {
+      "url": "https://www.fda.gov/news-events/press-announcements/fda-converts-novel-alzheimers-disease-treatment-traditional-approval",
+      "publishedOn": "2023-07-06",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Primary page read through web tool; direct-download hash unavailable, not represented as a downloaded snapshot; national trial and approval, not local delivery"
+    },
+    {
+      "url": "https://www.capitalareafoodbank.org/hunger-in-our-region/hunger-report/",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 94694,
+      "sha256": "ae7e3dfef99c0758d8a9c26b6f7f9e5020a6c58783522f8b2581e5d8b63ce743",
+      "scope": "Publisher states latest report published September 2026; report-page creation metadata in August is not treated as release date, precise day unresolved"
+    }
+  ]
+}
