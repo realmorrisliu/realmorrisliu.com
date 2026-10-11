@@ -49,7 +49,7 @@ def evaluate(candidates, cases, weights, omitted=()):
     for c in candidates:
         case = cases.get(c['efua_id'])
         scores = {d['id']: d['score'] for d in case['dimensions']
-                  if d['id'] not in omitted} if case else {}
+                  if d['id'] not in omitted and d['score'] is not None} if case else {}
         result = total(scores, weights)
         if case and not omitted and result['center'] != case['expectedConditionalTotal']:
             raise ValueError('Case total disagrees with official weights')
@@ -155,13 +155,15 @@ def build():
         'targetYear': 2026, 'evidenceCutoff': '2026-10-10',
         'residentPerspective': 'local_citizen_ordinary_resident_median_income_usual_coverage',
         'candidateCount': len(candidates), 'conditionalCaseCount': len(cases),
+        'completeConditionalCaseCount': sum(c['expectedConditionalTotal'] is not None for c in cases),
+        'partialCaseCount': sum(c['expectedConditionalTotal'] is None for c in cases),
         'unassessedCount': len(candidates) - len(cases), 'weights': weights,
         'supportedExclusionCount': 0, 'qualified32ndPlaceThreshold': None,
         'candidateMembershipCounts': dict(Counter(r['membership_status'] for r in rows)),
         'scenarios': scenarios, 'inputs': inputs,
         'scriptSha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         'csvSha256': hashlib.sha256(raw_csv).hexdigest(),
-        'limitations': 'Fixed conditional centres are arithmetic assumptions, not reliable city bounds. '
+        'limitations': 'Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. '
                       'Unknown dimensions retain the full model domain, with no centre or weight redistribution. '
                       'Positions account for every frozen candidate and allow any tie order, but are not probabilities '
                       'or verified global ranks. All case scores require necessary assumptions; rejecting them all '

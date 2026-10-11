@@ -1,7 +1,9 @@
 import unittest
+import json
+from pathlib import Path
 
 from cci_global_coverage import DIMENSIONS
-from cci_local_rank_audit import positions, total
+from cci_local_rank_audit import evaluate, positions, total
 
 
 class RankAuditTests(unittest.TestCase):
@@ -25,6 +27,18 @@ class RankAuditTests(unittest.TestCase):
     def test_tie_at_32_does_not_prove_membership(self):
         ranges = [{'lower': 80, 'upper': 80}] * 31 + [{'lower': 60, 'upper': 60}] * 2
         self.assertEqual(positions(ranges)[-1], {'bestPosition': 32, 'worstPosition': 33})
+
+    def test_partial_case_does_not_become_zero_or_a_complete_total(self):
+        case = json.loads((Path(__file__).resolve().parents[1] / 'docs/data/cci-local-2026-gaza-case.json').read_text())
+        candidates = [{'efua_id': '312'}, {'efua_id': '1'}]
+        reviewed, unknown = evaluate(candidates, [case], self.weights)
+        self.assertEqual((reviewed['center'], reviewed['lower'], reviewed['upper']), (None, 14, 59))
+        self.assertEqual((unknown['center'], unknown['lower'], unknown['upper']), (None, 0, 100))
+        rejected = evaluate(candidates, [case], self.weights, ('MED',))[0]
+        self.assertEqual((rejected['center'], rejected['lower'], rejected['upper']), (None, 11, 71))
+        # A low partial judgment still overlaps a 58-point case; it is not an exclusion bound.
+        self.assertEqual(positions([reviewed, {'lower': 58, 'upper': 58}])[0],
+                         {'bestPosition': 1, 'worstPosition': 2})
 
     def test_strictly_lower_candidate_can_be_excluded_only_in_given_domains(self):
         ranges = [{'lower': 60, 'upper': 100}] * 32 + [{'lower': 0, 'upper': 59}]

@@ -35,8 +35,13 @@ def local_cases(cases, expected):
             raise ValueError('Local case protocol mismatch')
         if Counter(d['id'] for d in case['dimensions']) != Counter(DIMENSIONS):
             raise ValueError('Local case needs exactly eight dimensions')
-        if not all(d['score'] in (20, 40, 60, 80) and d['rationale'] and d['assumption'] for d in case['dimensions']):
+        if not all(d['score'] in (None, 20, 40, 60, 80) and d['rationale'] and d['assumption'] for d in case['dimensions']):
             raise ValueError('Local case needs anchored conditional judgments')
+        partial = any(d['score'] is None for d in case['dimensions'])
+        center = case['expectedConditionalTotal']
+        if (partial and center is not None) or (not partial and
+                (type(center) not in (int, float) or not math.isfinite(center) or not 0 <= center <= 100)):
+            raise ValueError('Partial case cannot have a total centre; complete case needs one')
         result[key] = case
     return result
 
@@ -174,7 +179,7 @@ def main():
     wup = read("cci-wup-2025-fua-coverage.csv", "cci-wup-2025-crosswalk.json", "outputs", True)
     airports = read("cci-ourairports-efua-coverage.csv", "cci-ourairports-fua-audit.json", "outputs", True)
     cases = []
-    for city in ('singapore', 'london', 'helsinki', 'zurich'):
+    for city in ('singapore', 'london', 'helsinki', 'zurich', 'gaza'):
         path = folder / f'cci-local-2026-{city}-case.json'
         case = json.loads(path.read_text())
         review = ROOT / 'docs' / case['evidenceReview']
@@ -201,6 +206,8 @@ def main():
             "targetYear": 2026, "evidenceCutoff": "2026-10-10",
             "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
             "conditionalCaseCount": len(cases),
+            "completeConditionalCaseCount": sum(c['expectedConditionalTotal'] is not None for c in cases),
+            "partialCaseCount": sum(c['expectedConditionalTotal'] is None for c in cases),
             "unassessedCount": sum(r['local2026_case_status'] == 'unassessed' for r in rows),
             "retainedCount": len(rows), "supportedExclusionCount": 0,
             "statusCounts": dict(Counter(r['local2026_screening_status'] for r in rows)),

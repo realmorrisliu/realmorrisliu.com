@@ -11,6 +11,7 @@ import singapore from "../../docs/data/cci-local-2026-singapore-case.json";
 import london from "../../docs/data/cci-local-2026-london-case.json";
 import helsinki from "../../docs/data/cci-local-2026-helsinki-case.json";
 import zurich from "../../docs/data/cci-local-2026-zurich-case.json";
+import gaza from "../../docs/data/cci-local-2026-gaza-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -23,7 +24,7 @@ const { currentLang } = Astro.props;
 const zh = currentLang === "zh";
 const n = (value: number) => value.toLocaleString(zh ? "zh-CN" : "en-GB");
 const counts = coverage.dimensionStatusCounts;
-const cases = [singapore, london, helsinki, zurich];
+const cases = [singapore, london, helsinki, zurich, gaza];
 const screening = coverage.local2026Screening;
 if (
   rankAudit.candidateCount !== coverage.candidateCount ||
@@ -35,7 +36,14 @@ if (
 const fixedPositionCases = rankAudit.scenarios.fixed_conditional_centers.caseResults;
 const helsinkiPosition = fixedPositionCases.find(c => c.efua_id === String(helsinki.candidateId));
 if (!helsinkiPosition) throw new Error("Helsinki calibration is missing from the position audit");
-if (cases.length !== screening.conditionalCaseCount) {
+if (
+  cases.length !== screening.conditionalCaseCount ||
+  cases.filter(c => c.expectedConditionalTotal !== null).length !==
+    screening.completeConditionalCaseCount ||
+  cases.filter(c => c.expectedConditionalTotal === null).length !== screening.partialCaseCount ||
+  rankAudit.completeConditionalCaseCount !== screening.completeConditionalCaseCount ||
+  rankAudit.partialCaseCount !== screening.partialCaseCount
+) {
   throw new Error("Local calibration case count disagrees with the global matrix");
 }
 if (authorships.records !== works.records || authorships.files !== works.files) {
@@ -139,8 +147,8 @@ const rows = [
     <p>
       {
         zh
-          ? "口径为 2026 年、本国公民、通常长期居住、当地中位收入和通常医保；证据截止 2026-10-10。四份案例逐项审阅了八维及全部 31 个子支柱，部分判断依赖明确假设，尚不表示每项均有充分测量。后续复核另记实际查阅日期，不回填到截止日。"
-          : "These cases assess local citizens who usually reside in the city, at median local income and with usual healthcare coverage, in 2026. The evidence cutoff is 10 October 2026. Each reviews all eight dimensions and 31 subpillars; some judgments depend on explicit assumptions, and not every item is fully measured. Subsequent checks record their actual retrieval dates rather than backdating them to the cutoff."
+          ? `口径为 2026 年、本国公民、通常长期居住、当地中位收入和通常医保；证据截止 2026-10-10。${n(cases.length)} 份案例逐项审阅了八维及全部 31 个子支柱，其中 ${n(screening.completeConditionalCaseCount)} 份有完整条件性中心、${n(screening.partialCaseCount)} 份仅有部分维度判断。部分判断依赖明确假设，不表示每项均有充分测量；“—”表示未定，不能填零或生成总分。后续复核另记实际查阅日期。`
+          : `These cases assess local citizens who usually reside in the city, at median local income and with usual healthcare coverage, in 2026. The evidence cutoff is 10 October 2026. All ${n(cases.length)} reviews cover eight dimensions and 31 subpillars: ${n(screening.completeConditionalCaseCount)} have complete conditional centres and ${n(screening.partialCaseCount)} has only partial judgments. Explicit assumptions do not establish complete measurements. “—” means unresolved, with no zero imputation or total centre. Subsequent checks record actual retrieval dates.`
       }
     </p>
     <div
@@ -163,6 +171,7 @@ const rows = [
             <th scope="col">{zh ? "伦敦" : "London"}</th>
             <th scope="col">{zh ? "赫尔辛基" : "Helsinki"}</th>
             <th scope="col">{zh ? "苏黎世" : "Zurich"}</th>
+            <th scope="col">{zh ? "加沙功能区" : "Gaza functional area"}</th>
           </tr>
         </thead>
         <tbody>
@@ -181,7 +190,7 @@ const rows = [
           }
           <tr>
             <th scope="row">{zh ? "条件性总分" : "Conditional total"}</th>
-            {cases.map(city => <td>{city.expectedConditionalTotal}</td>)}
+            {cases.map(city => <td>{city.expectedConditionalTotal ?? "—"}</td>)}
           </tr>
         </tbody>
       </table>
@@ -196,8 +205,8 @@ const rows = [
     <p>
       {
         zh
-          ? "苏黎世条件性总分为 58。DO-HEALTH 的主要临床终点与后续生物时钟分析分开判读，并保留跌倒分析的可能益处；拒绝路径代表性假设则 LON 未定、无总分中心。铁路、航空和迁居资格支持退出路径，但移动紧急呼叫备电要求到 2031 年才落实，不能计作当前 OPT 80。历史心外科质量反证也不自动变成 2026 当前失效率。四份案例仍未建立真实 80 分锚点或跨研究者一致性。"
-          : "Zurich's conditional total is 58. DO-HEALTH's primary clinical outcomes are distinguished from later clock analysis, while possible benefit in the fall analysis is retained. Rejecting pathway representativeness leaves LON unresolved and removes the total's centre. Rail, aviation and residence rights support exit channels, but mobile emergency-call backup requirements apply from 2031; they do not establish current OPT 80. Historical cardiac-surgery failures are not 2026 failure rates. The four cases still establish neither a verified real-world 80 anchor nor inter-reviewer consistency."
+          ? "苏黎世条件性总分为 58。DO-HEALTH 的主要临床终点与后续生物时钟分析分开判读，并保留跌倒分析的可能益处；拒绝路径代表性假设则 LON 未定、无总分中心。铁路、航空和迁居资格支持退出路径，但移动紧急呼叫备电要求到 2031 年才落实，不能计作当前 OPT 80。历史心外科质量反证也不自动变成 2026 当前失效率。现有案例仍未建立真实 80 分锚点或跨研究者一致性。"
+          : "Zurich's conditional total is 58. DO-HEALTH's primary clinical outcomes are distinguished from later clock analysis, while possible benefit in the fall analysis is retained. Rejecting pathway representativeness leaves LON unresolved and removes the total's centre. Rail, aviation and residence rights support exit channels, but mobile emergency-call backup requirements apply from 2031; they do not establish current OPT 80. Historical cardiac-surgery failures are not 2026 failure rates. Current cases still establish neither a verified real-world 80 anchor nor inter-reviewer consistency."
       }
     </p>
     <p>
@@ -239,19 +248,31 @@ const rows = [
         href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-zurich-case.md"
         >{zh ? "苏黎世案例" : "Zurich case"}</a
       >
+      {" · "}
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-gaza-case.md"
+        >{zh ? "加沙部分维度案例" : "Gaza partial case"}</a
+      >
     </p>
     <p>
       {
         zh
-          ? `已对现有全量矩阵检视提前排除是否有依据：${n(screening.retainedCount)} 个候选全部保留，有依据的排除为 ${n(screening.supportedExclusionCount)}。其中 ${n(screening.conditionalCaseCount)} 个有条件性校准案例，${n(screening.unassessedCount)} 个尚无此类八维评价。筛查只检查现有证据能否排除候选，不等于完成全量评分；局部底表和条件性分数均不能作为可靠排除界限。下一步补证须覆盖仍可能改变入围结论的竞争者。`
-          : `An exclusion screen of the assembled matrix retains all ${n(screening.retainedCount)} candidates, with ${n(screening.supportedExclusionCount)} supported exclusions. ${n(screening.conditionalCaseCount)} have conditional calibration cases; ${n(screening.unassessedCount)} lack such eight-dimension reviews. This checks whether current evidence supports exclusion, not whether every city has been fully scored. Partial sources and conditional scores establish no reliable exclusion bounds. Further assessment must cover competitors that could change the shortlist.`
+          ? "加沙功能区由全候选历史信号确定调查优先级，再核验截止日前 WHO 与 OCHA 当前证据。PCS 条件性 40，GSS、RES、MED 各 20；ISR、LON、TEC、OPT 未定，无总分。正在运行的医院、援助和转运与严重约束一并判读；没有测速样本不记低分。固定四项判断后的数学域为 14—59，撤回 MED 假设则为 11—71，均不是可靠排除界限。地带范围的资料不能冒充加沙市实测；功能区适配仍未完成。"
+          : "Gaza's research priority follows a historical signal in the full candidate universe, then current WHO and OCHA evidence published before the cutoff. PCS is conditionally 40; GSS, RES and MED are 20. ISR, LON, TEC and OPT remain unresolved, with no total. Operating hospitals, aid and evacuations are retained alongside serious constraints; absent network samples receive no low score. Fixing the four judgments gives a mathematical domain of 14–59; withdrawing the MED assumption gives 11–71. Neither is a reliable exclusion bound. Strip-level evidence is not a Gaza municipality measurement; FUA adaptation remains unresolved."
       }
     </p>
     <p>
       {
         zh
-          ? `全候选入围可判定性演算已覆盖 ${n(rankAudit.candidateCount)} 个冻结功能区、${n(Object.keys(rankAudit.scenarios).length)} 组情景。即使暂时固定四城条件性中心，赫尔辛基的算术位置仍可为 ${n(helsinkiPosition.bestPosition)}—${n(helsinkiPosition.worstPosition)}；其余竞争者仍未知，不能把少数案例的比较当作入围证明。逐维撤回必要假设后，总分中心为空。未知项的 0—100 是数学域端点，不是评分、概率或可靠城市界限；较新未匹配中心亦未被排除。`
-          : `A shortlist-identifiability calculation covers all ${n(rankAudit.candidateCount)} frozen areas across ${n(Object.keys(rankAudit.scenarios).length)} scenarios. Even temporarily fixing the four conditional centres leaves Helsinki's arithmetic position between ${n(helsinkiPosition.bestPosition)} and ${n(helsinkiPosition.worstPosition)}. Unassessed competitors remain unknown; comparisons among a few cases cannot prove membership. Withdrawing a dimension's necessary assumptions removes the total's centre. The 0–100 endpoints for unknowns are mathematical domains, not scores, probabilities or reliable city bounds; newer unmatched centres are also not excluded.`
+          ? `已对现有全量矩阵检视提前排除是否有依据：${n(screening.retainedCount)} 个候选全部保留，有依据的排除为 ${n(screening.supportedExclusionCount)}。其中 ${n(screening.completeConditionalCaseCount)} 个有完整条件性中心、${n(screening.partialCaseCount)} 个仅有部分维度判断，${n(screening.unassessedCount)} 个尚无此类八维审阅。筛查只检查现有证据能否排除候选，不等于完成全量评分；局部底表和条件性分数均不能作为可靠排除界限。下一步补证须覆盖仍可能改变入围结论的竞争者。`
+          : `An exclusion screen of the assembled matrix retains all ${n(screening.retainedCount)} candidates, with ${n(screening.supportedExclusionCount)} supported exclusions. ${n(screening.completeConditionalCaseCount)} have complete conditional centres, ${n(screening.partialCaseCount)} has partial judgments, and ${n(screening.unassessedCount)} lack such eight-dimension reviews. This checks whether current evidence supports exclusion, not whether every city has been fully scored. Partial sources and conditional scores establish no reliable exclusion bounds. Further assessment must cover competitors that could change the shortlist.`
+      }
+    </p>
+    <p>
+      {
+        zh
+          ? `全候选入围可判定性演算已覆盖 ${n(rankAudit.candidateCount)} 个冻结功能区、${n(Object.keys(rankAudit.scenarios).length)} 组情景。即使暂时固定已有条件性判断，赫尔辛基的算术位置仍可为 ${n(helsinkiPosition.bestPosition)}—${n(helsinkiPosition.worstPosition)}；其余竞争者仍未知，不能把少数案例的比较当作入围证明。逐维撤回必要假设后，总分中心为空。未知项的 0—100 是数学域端点，不是评分、概率或可靠城市界限；较新未匹配中心亦未被排除。`
+          : `A shortlist-identifiability calculation covers all ${n(rankAudit.candidateCount)} frozen areas across ${n(Object.keys(rankAudit.scenarios).length)} scenarios. Even temporarily fixing existing conditional judgments leaves Helsinki's arithmetic position between ${n(helsinkiPosition.bestPosition)} and ${n(helsinkiPosition.worstPosition)}. Unassessed competitors remain unknown; comparisons among a few cases cannot prove membership. Withdrawing a dimension's necessary assumptions removes the total's centre. The 0–100 endpoints for unknowns are mathematical domains, not scores, probabilities or reliable city bounds; newer unmatched centres are also not excluded.`
       }
       {" "}
       <a

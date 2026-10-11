@@ -51,7 +51,7 @@ assert.equal(
 );
 assert.equal(total(a.scores, sensitivity).center, 55);
 assert.equal(total(b.scores, sensitivity).center, 57);
-const realCases = ["singapore", "london", "helsinki", "zurich"].map(city =>
+const realCases = ["singapore", "london", "helsinki", "zurich", "gaza"].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
   )
@@ -73,8 +73,8 @@ const realScores = realCases.map(realCase => {
   for (const dimension of DIMENSIONS) {
     const review = realCase.dimensions.find((d: { id: string }) => d.id === dimension.id);
     assert(review && review.rationale && review.assumption);
-    assert([20, 40, 60, 80].includes(review.score));
-    assert(review.conditionalAlternatives.length > 0);
+    assert(review.score === null || [20, 40, 60, 80].includes(review.score));
+    assert.equal(review.conditionalAlternatives.length === 0, review.score === null);
     assert(
       review.conditionalAlternatives.every((score: number) => [20, 40, 60, 80].includes(score))
     );
@@ -86,18 +86,25 @@ const realScores = realCases.map(realCase => {
     );
   }
   const scores = Object.fromEntries(
-    realCase.dimensions.map((d: { id: DimensionId; score: number }) => [d.id, d.score])
-  ) as Record<DimensionId, number>;
+    realCase.dimensions
+      .filter((d: { score: number | null }) => d.score !== null)
+      .map((d: { id: DimensionId; score: number }) => [d.id, d.score])
+  ) as Partial<Record<DimensionId, number>>;
   assert.equal(total(scores).center, realCase.expectedConditionalTotal);
   return scores;
 });
-const [singapore, london, helsinki, zurich] = realScores;
+const [singapore, london, helsinki, zurich, gaza] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
 );
 assert.equal(rankAudit.status, "arithmetic_identifiability_audit_not_ranking");
 assert.deepEqual(rankAudit.weights, weights);
 assert.equal(rankAudit.conditionalCaseCount, realCases.length);
+assert.equal(
+  rankAudit.completeConditionalCaseCount,
+  realScores.filter(s => total(s).center !== null).length
+);
+assert.equal(rankAudit.partialCaseCount, realScores.filter(s => total(s).center === null).length);
 const digest = (path: string) =>
   createHash("sha256")
     .update(readFileSync(new URL(`../${path}`, import.meta.url)))
@@ -139,6 +146,13 @@ assert.equal(total({ ...zurich, LON: 60, OPT: 80 }).center, 62);
 const zurichWithoutLon: Partial<Record<DimensionId, number>> = { ...zurich };
 delete zurichWithoutLon.LON;
 assert.deepEqual(total(zurichWithoutLon), { center: null, lower: 54, upper: 64 });
+assert.deepEqual(total(gaza), { center: null, lower: 14, upper: 59 });
+assert.deepEqual(total({ ...gaza, PCS: 20 }), { center: null, lower: 11, upper: 56 });
+assert.deepEqual(total({ ...gaza, PCS: 60 }), { center: null, lower: 17, upper: 62 });
+assert.deepEqual(total({ ...gaza, MED: 40 }), { center: null, lower: 17, upper: 62 });
+const gazaWithoutMed = { ...gaza };
+delete gazaWithoutMed.MED;
+assert.deepEqual(total(gazaWithoutMed), { center: null, lower: 11, upper: 71 });
 assert.equal(total({ ...london, OPT: 80 }).center, 60);
 const londonCounterfactual = { ...london, MED: 40, OPT: 80 };
 const exitSensitivity = { ...weights, MED: 10, OPT: 15 };
@@ -163,5 +177,6 @@ console.log({
     sameScenarioMED10OPT15: { singapore: 58, london: 59 },
     helsinki: { current: 60, conditionalMED40: 57, unresolvedLON: total(helsinkiWithoutLon) },
     zurich: { current: 58, conditionalOPT80: 60, unresolvedLON: total(zurichWithoutLon) },
+    gaza: { partial: total(gaza), unresolvedMED: total(gazaWithoutMed) },
   },
 });

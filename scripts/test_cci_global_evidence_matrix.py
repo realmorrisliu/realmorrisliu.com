@@ -17,6 +17,17 @@ class EvidenceMatrixTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'protocol mismatch'):
             local_cases([{**case, 'evidenceCutoff': '2026-10-11'}], {'5288'})
 
+    def test_partial_case_preserves_unknown_and_rejects_a_total_center(self):
+        case = json.loads((Path(__file__).resolve().parents[1] / 'docs/data/cci-local-2026-gaza-case.json').read_text())
+        validated = local_cases([case], {'312'})['312']
+        self.assertIsNone(validated['expectedConditionalTotal'])
+        self.assertIsNone(next(d['score'] for d in validated['dimensions'] if d['id'] == 'ISR'))
+        with self.assertRaisesRegex(ValueError, 'Partial case cannot'):
+            local_cases([{**case, 'expectedConditionalTotal': 14}], {'312'})
+        case['dimensions'][0]['score'] = 0
+        with self.assertRaisesRegex(ValueError, 'anchored conditional'):
+            local_cases([case], {'312'})
+
     def test_missing_or_duplicated_candidate_is_rejected(self):
         with self.assertRaises(ValueError):
             indexed([{"efua_id": "1"}], {"1", "2"})

@@ -1,0 +1,118 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 312,
+  "name": "Gaza functional area",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "evidenceReview": "cci-local-2026-gaza-case.md",
+  "expectedConditionalTotal": null,
+  "limitations": "All 31 subpillars are reviewed, not all measured. Four dimensions have conditional judgments; four remain unresolved, with no total centre or redistributed weights. Strip-level evidence is not a Gaza municipality measurement or a resolved FUA population join. No ranking or exclusion bound. Rejecting necessary assumptions leaves their dimensions unresolved.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 40,
+      "rationale": "Identified flood and winter-shelter exposure has important protection constraints; drainage repair and voluntary relocation are operating but materials, land and funding remain inadequate.",
+      "assumption": "Documented weather exposure and inadequate protection materially affect this FUA and persist to the cutoff. Strip-wide counts are not FUA measurements; inconsistent headline and body counts are not used. Conflict itself is not a natural hazard.",
+      "conditionalAlternatives": [20, 60],
+      "subpillars": {
+        "heat_humidity": "unresolved",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": 20,
+      "rationale": "Lower conflict intensity after the ceasefire is retained as mitigation, but current repeated civilian harm and displacement indicate serious protection failure.",
+      "assumption": "Documented major civilian impacts apply to this FUA and persist to the cutoff. Historical event counts are research-priority signals, not current rates; recovered remains and revised totals are not new weekly killings.",
+      "conditionalAlternatives": [40, 60],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "partial",
+        "strategic_exposure": "context"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": null,
+      "rationale": "Response and adaptation activities are observed, but governance, social cohesion and recovery effectiveness are not sufficiently resolved across responsible actors and resident groups.",
+      "assumption": "No whole-dimension tier is assumed. War, national context and missing evidence do not establish governance or resilience failure.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "governance": "context",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "unresolved",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 20,
+      "rationale": "Current essential water and energy shortfalls and constrained logistics support severe basic-supply failure; aid, water trucking and improved food and cargo entry remain positive counterevidence.",
+      "assumption": "Severe basic-supply constraints materially affect ordinary residents in this FUA and persist to the cutoff despite alternatives. Aid dependence alone is not penalized; 2025 famine and projected deterioration are not current observations.",
+      "conditionalAlternatives": [40, 60],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 20,
+      "rationale": "Partially operating hospitals, consultations and evacuations coexist with severe unmet essential cancer, dialysis, diagnostic and rehabilitation needs and fragile system continuity.",
+      "assumption": "Severe necessary-care barriers broadly apply to this FUA and remain inadequately mitigated at the cutoff. Partial operation is neither zero care nor normal necessary-care access; consultation counts do not measure clinical outcomes.",
+      "conditionalAlternatives": [40, 60],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "No sufficiently verified local human-evidence, regulatory-adoption and ordinary-resident access pathway supports a whole-dimension tier.",
+      "assumption": "No tier is assumed. Missing studies, war or MED failure do not establish absent longevity capability.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "unresolved",
+        "trial_maturity": "unresolved",
+        "regulatory_adoption": "unresolved",
+        "resident_access": "unresolved"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": null,
+      "rationale": "Network sample absence and incomplete research-site and diffusion assessment do not support a technology-capability tier.",
+      "assumption": "No tier is assumed. Zero samples do not imply zero connectivity, knowledge production or resident adoption.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "knowledge_output": "unresolved",
+        "industry_density": "unresolved",
+        "digital_infrastructure": "unresolved",
+        "diffusion": "unresolved"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": null,
+      "rationale": "Actual medical evacuation is verified but does not resolve general resident travel, relocation, financial or communication paths.",
+      "assumption": "No whole-dimension tier is assumed from special patient pathways, airport flags or inaccessible procedural pages; ordinary-resident permissions and alternatives require verification.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "unresolved",
+        "asset_portability": "unresolved",
+        "network_continuity": "unresolved"
+      }
+    }
+  ]
+}
