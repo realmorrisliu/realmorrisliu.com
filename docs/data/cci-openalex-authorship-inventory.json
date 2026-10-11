@@ -1,0 +1,26 @@
+{
+  "status": "all_2025_authorship_projections_not_city_output",
+  "sourceSnapshot": "2026-09-23",
+  "publicationYear": 2025,
+  "verifiedOn": "2026-10-12",
+  "evidenceCutoff": "2026-10-10",
+  "files": 2040,
+  "nonemptyFiles": 1871,
+  "records": 45069447,
+  "authorshipCountStatuses": {
+    "count_matches": 44135137,
+    "no_authors": 934310
+  },
+  "columnBytes": 38639273477,
+  "manifestSha256": "890631160a49153035191cefdf8aab8afde729cc2725486dec56902bf9924d85",
+  "manifestBytes": 19346527,
+  "filterInventorySha256": "2be604507128fb3e7a176f0f0efffb6a6706214a7dea3c2314867beeb4fd8199",
+  "metadataCsvSha256": "1a20ef8fb69d061bb03fb1ec5f037cdc69f55c0fe9288be28141365ac771ce83",
+  "scriptHashes": {
+    "cci_openalex_work_authorships.py": "a1eb105495c6c59b7772d7eae8dca829dfca7ad233483d4d0c8e8daf417a8de7",
+    "cci_openalex_attach_authorships.py": "c5cebf54c47f1d4342e893d9e7c8ea468ac9451572c306c8de4b28d76723b384",
+    "cci_openalex_remote_affiliation_probe.py": "6fccdae8122f768b6ff9090b46800f29012135b98b977a4a225941531df28f84"
+  },
+  "verification": "The extraction checked frozen filters and source footers, range identity, selected-field joins, saved Parquet round trips and cached-file hashes before producing its complete manifest. Partition JSON and record/status totals were independently reconciled for this summary. The full geography audit is a separate operation.",
+  "limitations": "Records are unique OpenAlex work IDs across all retained types, not equivalent paper versions or scholarly quality. Matching declared author counts does not prove publisher byline or affiliation completeness. Zero-author records stay unassigned, not city zero output. No intellectual-version deduplication, geographic credit, city output, TEC score or ranking eligibility established."
+}
