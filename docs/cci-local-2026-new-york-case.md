@@ -35,6 +35,14 @@
 
 [2025 年能源政策原报告](https://e2h2hernandez.com/wp-content/uploads/2025/12/Powering-Up-for-Health-Policy-Solutions-for-EI-in-NYC-E2H2_Report_final.pdf)引用 2022 调查并列不同能源困难定义，政策建议不是实际完成援助。[官方居民焦点群组原文](https://www.nyc.gov/assets/doh/downloads/pdf/earlyint/ei-community-voices-energy-insecurity.pdf)记 2025 夏季四组布朗克斯／皇后区访谈，包括有人收入超过援助资格仍有困难；这是具体障碍，不能扩成中位收入公民或全区发生率。移民身份恐惧也不自动转为本国公民的资格障碍。缺少目标收入、国籍、地区及援助后负担适配，RES 继续未定；没有用水合格抵消食物／能源问题，也没有将资料丰富变成分数。
 
+**收入与缓解假设复核（2026-10-12）：** [原始调查论文](https://www.energypolicy.columbia.edu/wp-content/uploads/2024/02/siegel-et-al-2024-energy-insecurity-indicators-associated-with-increased-odds-of-respiratory-mental-health-and.pdf)第 5 页（印刷 264）已目视核表。2022 年调查有 1,950 位非机构居住成年人、参与率 30.4%，对抽样及未响应加权。收入达到贫困线两倍以上的宽组中，19.2% 报告十项指标中至少三项；该组不是当地中位收入，出生地也不等于国籍。总体约 28% 指至少三项经济／居住／应对指标，约 69% 指至少一项，不能误称“经济困难 28%”。疫情期间保护及自报限制也保留。
+
+[Con Edison 2026-02-25 公告](https://www.coned.com/en/about-us/media-center/news/2026/02-25/enhanced-affordability-program-offers-relief--for-more-eligible-con-edison-customers)将 EEAP 资格扩至纽约市／Westchester 相应地区中位收入以下、符合家庭规模等条件的住宅客户；需要申请，EAP 合资格客户不能改用 EEAP。它反驳“2025 年超门槛者在 2026 年仍必然无援助”的推断，但没有证明画像居民一定合资格或已获批。
+
+[2026-08-06 SEC 原披露](https://www.sec.gov/Archives/edgar/data/1047862/000104786226000143/a2q2026earningsreleasepr.htm)第 10 张说明：项目一月启动，至六月 CECONY／O&R 接近两万客户获 EEAP 折扣批准。另记 2025 年纽约／新泽西三个公司合计实际折扣 2.68 亿美元；不是纽约市 EEAP 已付金额。批准与旧项目实际给付都不是援助后负担已解除的测量，客户账户也不是全功能区去重居民。原披露通过 SEC 文本读取，下载的 403 响应不记录为原件哈希，未声称已目视核表。
+
+这次复核改变了推断，而未改变档位：困难不限于低收入，但尚未支持目标居民的重要未缓解瓶颈（40）；援助确有执行，也尚未支持目标居民通常可负担的供给（60）。80 所需的替代来源与共同冲击审查仍未完成。允许有依据的时点／画像／边界推定，不要求完美同年测量；这里缺的是支持这些必要推定的证据。下一步优先核验目标收入附近的援助后必要支出和未满足需求，不能继续用更多总体比例替代该判断。
+
 ## ISR／MED：实际服务和方法修订同时进入判断
 
 医院 MMR PDF 第 3—8 页（印刷 217—222）分别保留叙述、全年实际列、反证和方法。FY2026 实际独立患者 1,170,529，成人第三个可用新预约为 9 天、儿科 13 天；它不是全部患者实际等待中位数。已诊断糖尿病患者适当血糖控制为 69.9%，不是全市治疗有效率；急诊未被接诊即离开为 3.3%，住院患者体验为 65.6%。这些支持实际常规与专业服务，仍保留不完整接诊、等待和体验短板。

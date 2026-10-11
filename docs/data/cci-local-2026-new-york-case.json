@@ -52,8 +52,8 @@
     {
       "id": "RES",
       "score": null,
-      "rationale": "The 2025 water report, dated food-service delivery and resident energy-insecurity evidence support real supply and constraints. Food population estimates, a 2022 energy survey and selected 2025 focus groups do not specifically measure median-income citizens in the frozen FUA. Aid eligibility, housing conditions and observed barriers remain, without evidence that relief resolves them for the target resident.",
-      "assumption": "No justified whole-dimension anchor yet. Water standards and food-distribution volume cannot cancel affordability constraints; aggregate percentages or selected above-aid-threshold households do not by themselves justify 40, 60 or exclusion for the target resident.",
+      "rationale": "Actual water/food delivery and energy constraints coexist with expanded 2026 relief. The original 2022 survey reports 19.2% with three or more indicators in the broad >=200% FPL income group, not median-income citizens. EEAP expanded eligibility and actual approvals counter the assumption that 2025 above-threshold barriers persist unchanged. Approval counts do not measure post-aid burden, and neither source covers the whole frozen FUA or unresolved supply-chain resilience.",
+      "assumption": "No justified whole-dimension anchor yet. Do not identify >=200% FPL with local median income, birthplace with citizenship, 2025 eligibility with 2026 rules, or approved discounts with burdens resolved. A 40 requires a supported important target-resident bottleneck despite mitigation; a 60 requires supported usually available and affordable supply. Neither follows from aggregate prevalence or programme counts alone.",
       "conditionalAlternatives": [],
       "subpillars": {
         "water": "partial",
@@ -190,7 +190,31 @@
       "retrievedOn": "2026-10-12",
       "bytes": 4674780,
       "sha256": "97824fedfb09001fc9fa9201c92beb9ecdd15b6bb2b0598121358ecba12e6c79",
-      "scope": "December 2025 issue, 48 pages extracted; executive summary, 2022 survey discussion and policy-versus-delivery distinction reviewed. Economic/any-indicator measures differ; policy recommendations are not completed relief, no median-income FUA estimate."
+      "scope": "December 2025 issue, 48 pages extracted; introduction defines 28% as at least three of ten economic/physical/coping indicators, versus 69% with any indicator. Neither is an economic-only prevalence. Policy proposals are not delivered relief; original survey and 2026 programme reviewed separately."
+    },
+    {
+      "url": "https://www.energypolicy.columbia.edu/wp-content/uploads/2024/02/siegel-et-al-2024-energy-insecurity-indicators-associated-with-increased-odds-of-respiratory-mental-health-and.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 490059,
+      "sha256": "54d28c2ddb1319a4aa7341abc9b24fe2778aa41fd8a93d27f31de2ae79930456",
+      "scope": "February 2024 original paper, nine pages extracted; methods/limitations and Exhibit 2 (PDF p.5, printed 264) reviewed, table visually checked. February-April 2022 survey: 1,950 noninstitutionalised adults, 30.4% participation, weighted selection/nonresponse. >=200% FPL is broad, not median income; 19.2% report >=3 indicators. Birthplace is not citizenship; pandemic protections and self-report limit temporal/persona inference. Exact publication day unverified."
+    },
+    {
+      "url": "https://www.coned.com/en/about-us/media-center/news/2026/02-25/enhanced-affordability-program-offers-relief--for-more-eligible-con-edison-customers",
+      "publishedOn": "2026-02-25",
+      "retrievedOn": "2026-10-12",
+      "bytes": 106676,
+      "sha256": "8134f42db4cec71b1b4d0963cecc2293be1b748bd8ee44a808ab3aeaddc2a3ae",
+      "scope": "Dated primary eligibility announcement: residential NYC/Westchester customers below respective area median income, household-size/income conditions and application required; EAP-eligible customers cannot use EEAP. Changed eligibility counters unchanged 2025 threshold assumptions, without proving uptake, affordability or whole-FUA applicability."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1047862/000104786226000143/a2q2026earningsreleasepr.htm",
+      "publishedOn": "2026-08-06",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Official SEC Exhibit 99.2 text reviewed, slide 10: January 2026 EEAP launch; nearly 20,000 CECONY/O&R approvals as of June, not completed discounts or post-aid burden. 2025 $268m applied discounts span CECONY/O&R/RECO and NY/NJ, not NYC-only EEAP delivery. Service/account scopes differ from the FUA and resident population. Local SEC/investor downloads returned 403; web primary text valid, no failed-response hash or visual confirmation claimed."
     },
     {
       "url": "https://www.nyc.gov/assets/doh/downloads/pdf/earlyint/ei-community-voices-energy-insecurity.pdf",

@@ -342,6 +342,13 @@ const rows = [
     <p>
       {
         zh
+          ? "纽约 RES 收入与援助复核：宽收入组不等于中位居民，2025 年超门槛访谈不能直接沿用到已扩大资格的 2026 年。SEC 披露确认 EEAP 已启动并有实际批准；批准不等于援助后负担已解除。两类证据均未支持目标居民的整维档位，RES 继续未定；下一步核验援助后必要支出和未满足需求。"
+          : "New York RES income and relief review: a broad income group is not the median resident, and 2025 eligibility barriers cannot simply carry into expanded 2026 rules. SEC disclosure confirms EEAP launch and actual approvals; approval does not establish affordable post-aid costs. Neither source yet supports a whole-dimension anchor for the target resident. RES remains unknown; the next check is post-aid essential costs and unmet needs."
+      }
+    </p>
+    <p>
+      {
+        zh
           ? `已对现有全量矩阵检视提前排除是否有依据：${n(screening.retainedCount)} 个候选全部保留，有依据的排除为 ${n(screening.supportedExclusionCount)}。其中 ${n(screening.completeConditionalCaseCount)} 个有完整条件性中心、${n(screening.partialCaseCount)} 个仅有部分维度判断，${n(screening.unassessedCount)} 个尚无此类八维审阅。筛查只检查现有证据能否排除候选，不等于完成全量评分；局部底表和条件性分数均不能作为可靠排除界限。下一步补证须覆盖仍可能改变入围结论的竞争者。`
           : `An exclusion screen of the assembled matrix retains all ${n(screening.retainedCount)} candidates, with ${n(screening.supportedExclusionCount)} supported exclusions. Reviews include ${n(screening.completeConditionalCaseCount)} with complete conditional centres and ${n(screening.partialCaseCount)} with partial judgments; ${n(screening.unassessedCount)} candidates lack such eight-dimension reviews. This checks whether current evidence supports exclusion, not whether every city has been fully scored. Partial sources and conditional scores establish no reliable exclusion bounds. Further assessment must cover competitors that could change the shortlist.`
       }
