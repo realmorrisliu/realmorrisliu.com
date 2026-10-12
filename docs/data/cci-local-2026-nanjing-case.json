@@ -1,0 +1,822 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "retrievedOn": "2026-10-12",
+  "candidateId": 9701,
+  "name": "Nanjing functional area",
+  "evidenceReview": "cci-local-2026-nanjing-case.md",
+  "expectedConditionalTotal": null,
+  "limitations": "Eight dimensions and31 subpillars reviewed at a conditional/partial level, not fully measured. PCS/GSS/ISR/RES60, LON/OPT40, TEC80 andMED unresolved give mathematical domain49-64, without a total centre or reliable exclusion bound. MED current quality interpretation and ordinary necessary-care/payer/alternative linkage remain under review; specialists and historical cohorts do not fill the score. Locality, continuity, usual-citizen qualification, affordability and residual materiality remain reversible. Administrative, institutional, cloud and multicentre totals are not whole-FUA or median-resident measures; missing is not zero, negative transparency evidence or a ranking exclusion.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Actual cooling-space use, rain pump operation and measured local water-level reduction, completed geohazard remediation and storm drainage repairs establish usable protection. Old-city drainage defects and a2025 actual cracked/tilted landslide retaining wall remain. Design procurement and wildfire teams are not repaired slopes or measured all-resident safety.",
+      "assumption": "Accept limited local/core-city protection results as representative of ordinary9701 citizens, continuing through cutoff, with remaining heat/building/drainage/geohazard constraints materially limited after delivered mitigation. Scope and continuity remain assumptions, not citywide loss rates. Important residual protection gaps could support40; broader effective protection and affordable backup80. Reject locality/representativeness/continuity/materiality to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": 60,
+      "rationale": "A primary prosecutor interview records long-running organized cases56+5 with4 serious and12 minor injuries,2024 indictment and2025 hearing. These are cumulative cases, not current victim rates or convictions. Regional military exercises and strategic transport exposure remain separate from actual local attack. Current alarm tests and community response exercises are usable but not wartime adequate coverage.",
+      "assumption": "Accept current ordinary-life/core-route impacts as limited and local enforcement/response as normally usable despite retained organized harm and regional threats. No UCDP matched event does not establish absent violence. Continuing material gang coercion or strategic channel restriction could support40; wider low-impact and effective-alternative evidence80. Reject time/locality/impact/response representativeness to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Delivered legal aid, wage recovery, community property-service fallback, hotline correction and completed residential-fire remediation establish current execution. The2024 Mingshang Xiyuan fire killed15 with late detection/evacuation and property/regulatory failures;10 criminal measures are not convictions. The affected households long-term rehousing/compensation tail remains unmeasured. Hotline90.1% and completed remediation counts are not all-resident resolution or full recovery.",
+      "assumption": "Accept normally reachable current core services and sufficiently effective continuing remediation, with the known failures and unmeasured recovery tail not constituting a wider important persistent unmitigated barrier. This assumption is especially contestable: actual continuing victim-recovery or repeated fire-safety barriers could strengthen40 without majority harm. Broader rights/recovery results and usable alternatives80. Missing recovery evidence itself is not a penalty; if necessary scope/continuity/access/materiality cannot be defended, restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "Actual2025Q1 water monitoring reports72 compliant samples:10plant,52terminal,10secondary, not72terminal or full-FUA household coverage. A2026H1 utility report gives average household outage below0.05h, not no outage for every resident; planned UHV and year-end monitoring are not delivered. Actual wholesale arrivals and working trade channels coexist with external dependence,2026 rural pipe/pressure/repair constraints and partially completed upgrades. An already operating Pingshan pressure station and170km completed pipes are scoped mitigation, not full project completion.",
+      "assumption": "Accept current core water/energy/food provision and delivered rural mitigation as reasonably representative and usually usable/affordable for ordinary9701 citizens, continuing through cutoff, with residual supply, household pressure and external/common-channel constraints important weaknesses but not an important overall unmitigated bottleneck. Price observations, average outages and sampled compliance do not prove median-resident budgets or full local coverage. Evidence of important remaining unmet necessities or shared-channel constraints after mitigation could support40, more effective affordable backup80; reject locality/resident/continuity/affordability/materiality assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": null,
+      "rationale": "Actual2025 hospital/community admissions and surgery,2024 regional referrals and two hospital remedial processes establish delivery. Gulou2018-2024 thrombus214-person retrospective care and2013-2021 aortic1295-person surgery establish scoped actual treatment, not current full-area quality or causal therapy effects. Aortic table77/645AKI deaths conflicts with正文71; fully adjusted thrombus-dissolution association is nonsignificant. TCM2025 acknowledges quality-control and acute/complex-care weaknesses with implemented management/training; claims of improvement, plans and service volumes are not proof all failures resolved. Current usual insurance has registration/payment/provider/clinical conditions; specific outpatient-disease inpatient relief does not cover every treatment or prove net household affordability.",
+      "assumption": "No anchor selected while substantive current quality interpretation, usable timely alternatives and ordinary legally insured necessary-care access/payment/continuity across9701 remain under review. This is an incomplete discriminating clinical/resident chain, not a requirement for a perfect population denominator or a penalty from missing originals. A defensible usually adequate and affordable multi-provider path could support60; material unrelieved care/quality/wait/payment bottlenecks40, wider clinical results and pressure backup80. Historical high-risk case mix or data conflicts alone do not choose a tier. Other dimensions do not fill MED.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 40,
+      "rationale": "Shared randomized human evidence and Chinese disease-specific approval connect to actual Nanjing First Hospital treatment in a seven-hospital cohort.407 treated and321 monitored MRI records are not Nanjing counts;39ARIA and4symptomaticARIA use321,15 mixed subjective withdrawals are not all financial. A local primary2026 interview records eligible patients foregoing treatment because of cost, ongoing hospital-supply barriers and current30%-or-higher reimbursement for some supplementary-insured patients. Usual basic insurance does not presume voluntary Ninghuibao enrollment or these antibodies coverage.",
+      "assumption": "Accept limited disease-specific readiness relevance, local actual appropriate treatment and monitoring continuity, with economic/transport/supply barriers remaining important for eligible ordinary citizens after actual supplementary-insurance mitigation. Not inferred from missing complete bills, brands or income averages. Usual sufficiently affordable whole-course access could support60, broader mature pathways80; reject locality/representativeness/continuity/remaining materiality to restore unknown.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 80,
+      "rationale": "Southeast University actual licenses/transfers, separately reported manufacturing and production-line observation, deployed enterprise5G and actually used digital services/elderly training establish multiple producers and diffusion. Institution/group turnover and contracts are not all local realized revenue,36.8wan service visits and7.3wan training visits are not unique citizens. Financing/skill barriers and actual funding/assistance remain together. Directory article associations only sequence research.",
+      "assumption": "Accept multiple production nodes, current adoption and delivered assistance as reasonably representative of9701 core industry and usual citizens and continuing through cutoff, with remaining finance/device/skill constraints materially mitigated rather than an important general diffusion break. No perfect output denominator or failure-switching test is imposed only here. Evidence of important remaining diffusion barriers could support60, a major production-to-use break40; reject locality/resident relevance/continuity/mitigation assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 60],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 40,
+      "rationale": "Actual Lukou air traffic, rail and metro channels coexist with conditional German skilled-worker national-visa application and lawful current-account/settled-emigrant asset paths.USD50000 is a convenient FX allowance, not an all-transfer ceiling; capital purposes and prior permanent-status sequencing matter. Actual Nanjing Tencent-cloud probes found479 blocked outbound domains while domestic controls worked; cloud measurements are not household failure rates. Operator event assurance and official roaming are mitigation, not proof all critical cross-border services work affordably.",
+      "assumption": "Accept asset-purpose/order constraints and measured selective cross-border blocking as important to ordinary citizens core initial-migration resources and key contacts after existing transport/bank/phone mitigation. Cloud-node physical locality, household applicability,2024-to-cutoff continuity and residual importance remain assumptions. Usual lawful affordable financial and communication alternatives supporting key purposes could support60, stronger tested alternatives80. Reject these assumptions to restore unknown; normal destination qualification alone is not denial, and restrictions are not an overall inability to leave.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "context",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "researchPriority": {
+    "basis": "all9031_record_associations_first_unreviewed_not_performance",
+    "source": "cci-openalex-efua-record-presence.csv",
+    "sourceSha256": "cb777baaa3ec09fe78a2c07ac8a260d0fb8ad4b8b95996eea0a5367f0e11f013",
+    "field": "article__xpac_false__retracted_false",
+    "recordAssociations": 71454,
+    "rule": "All9031 candidates sorted by descending qualifying core nonretracted article-ID directory associations then numeric efua_id; skip20 registered reviews only to sequence research. No output/quality score, eligibility or exclusion."
+  },
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "referencePoints": [
+      {
+        "label": "Nanjing central approximate reference",
+        "longitude": 118.7969,
+        "latitude": 32.0603,
+        "fuaMatches": [9701]
+      },
+      {
+        "label": "Lukou airport approximate reference",
+        "longitude": 118.862,
+        "latitude": 31.742,
+        "fuaMatches": [9701]
+      },
+      {
+        "label": "Pukou urban approximate reference",
+        "longitude": 118.627,
+        "latitude": 32.059,
+        "fuaMatches": [9679]
+      },
+      {
+        "label": "Liuhe urban approximate reference",
+        "longitude": 118.843,
+        "latitude": 32.348,
+        "fuaMatches": [9701]
+      },
+      {
+        "label": "Jiangning urban approximate reference",
+        "longitude": 118.84,
+        "latitude": 31.953,
+        "fuaMatches": [9701]
+      },
+      {
+        "label": "Gulou hospital central approximate reference",
+        "longitude": 118.782,
+        "latitude": 32.062,
+        "fuaMatches": [9701]
+      },
+      {
+        "label": "Jiangsu provincial hospital Guangzhou-road approximate reference",
+        "longitude": 118.77,
+        "latitude": 32.051,
+        "fuaMatches": [9701]
+      },
+      {
+        "label": "Zhongda hospital central approximate reference",
+        "longitude": 118.789,
+        "latitude": 32.081,
+        "fuaMatches": [9701]
+      },
+      {
+        "label": "Nanjing University Xianlin approximate reference",
+        "longitude": 118.964,
+        "latitude": 32.12,
+        "fuaMatches": [9701]
+      },
+      {
+        "label": "Southeast University Jiulonghu approximate reference",
+        "longitude": 118.82,
+        "latitude": 31.881,
+        "fuaMatches": [9701]
+      },
+      {
+        "label": "Lishui urban approximate reference",
+        "longitude": 119.028,
+        "latitude": 31.651,
+        "fuaMatches": [9811]
+      },
+      {
+        "label": "Gaochun urban approximate reference",
+        "longitude": 118.892,
+        "latitude": 31.327,
+        "fuaMatches": [9821]
+      },
+      {
+        "label": "Jurong urban approximate reference",
+        "longitude": 119.168,
+        "latitude": 31.946,
+        "fuaMatches": [9801]
+      },
+      {
+        "label": "Zhenjiang urban approximate reference",
+        "longitude": 119.425,
+        "latitude": 32.187,
+        "fuaMatches": [9805]
+      }
+    ],
+    "method": "Checksum-validated full9031 GHS-FUA load; EPSG4326 to ESRI54009 always_xy point intersection.",
+    "meaning": "Analyst approximate references only, not exact event/treatment sites, institution footprints, full jurisdictions or resident service coverage."
+  },
+  "sharedLegalPath": {
+    "source": "cci-legal-mobility-rules.json",
+    "sourceSha256": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
+    "rule": "chinese_citizen_skilled_work_national_visa_germany",
+    "meaning": "Existing shared all1539CHN rule; normally pre-entry visa and substantive qualifications, not approved residence, work, median-resident affordability or OPT score."
+  },
+  "clinicalChecks": {
+    "adTreatedAllCentres": 407,
+    "adMriMonitoredAllCentres": 321,
+    "adAriaAllCentres": 39,
+    "adSymptomaticAriaAllCentres": 4,
+    "adFollowedAllCentres": 405,
+    "adWithdrawnAllCentres": 38,
+    "adMixedSubjectiveWithdrawalsAllCentres": 15,
+    "allSubjectiveWithdrawalsAreFinancialOrNanjing": false,
+    "adSixMonthTreatedSubset": 182,
+    "adCognitiveFollowupCounts": {
+      "MMSE": 112,
+      "CDR": 72,
+      "ADL": 46
+    },
+    "adUntreatedControlPresent": false,
+    "adFdrCognitiveBenefitEstablished": false,
+    "healthyResidentLifespanBenefitEstablished": false,
+    "usualCoverageAssumesSupplementaryEnrollment": false,
+    "lecanemabNinghuibaoCoverageVerified": false,
+    "completeMedianPatientBillMeasured": false,
+    "thrombusPatients": 214,
+    "thrombusTreatmentGroupPatients": [26, 118, 70],
+    "thrombusFullyAdjustedDissolutionOr": 2.52,
+    "thrombusFullyAdjustedDissolutionCi": [0.72, 9.01],
+    "retrospectiveAssociationsAreCausalBenefit": false,
+    "aorticSurgeryPatients": 1295,
+    "aorticAkiPatients": 645,
+    "aorticAkiTableDeaths": 77,
+    "aorticAkiTextDeaths": 71,
+    "aorticAkiDeathCountsConflictUnresolved": true,
+    "historicalCohortsAre2026FuaQuality": false,
+    "currentWholeMedAnchorEstablished": false
+  },
+  "securityChecks": {
+    "mingshangFireDate": "2024-02-23",
+    "fireDeaths": 15,
+    "fireSeriousInjuries": 2,
+    "fireMinorOrSlightInjuries": 42,
+    "fireVictimLongTermRecoveryVerified": false,
+    "residentialFireCountedAsWildfireOrOrganizedViolence": false,
+    "organizedCumulativeCases": [56, 5],
+    "organizedSeriousInjuries": 4,
+    "organizedMinorInjuries": 12,
+    "indictmentOrCriminalMeasuresAreConvictions": false,
+    "disclosureRequests": 10300,
+    "priorCarriedRequests": 268,
+    "processedRequests": 10229,
+    "carriedRequests": 339,
+    "hotlineSatisfactionDenominatorVerified": false
+  },
+  "mobilityChecks": {
+    "fxConvenientAllowanceUsd": 50000,
+    "thresholdIsAbsoluteTransferCeiling": false,
+    "assetTransferGuideRequiresPriorPermanentStatus": true,
+    "nanjingCloudObservationDate": "2024-07-10",
+    "outboundBlockedDomainsSingapore": 479,
+    "outboundBlockedDomainsUs": 479,
+    "domesticControlBlockedDomains": 0,
+    "usToNanjingBlockedDomains": 440,
+    "cloudCountsAreHouseholdFailureRates": false,
+    "dedicatedInternationalChannelIsUsualHouseholdAccess": false,
+    "serviceSystemRecoveryIsCommunicationsRecovery": false
+  },
+  "resourceChecks": {
+    "waterSamples": 72,
+    "waterCompliantSamples": 72,
+    "waterSampleTypeCounts": {
+      "plant": 10,
+      "terminal": 52,
+      "secondary": 10
+    },
+    "waterCountsAreWholeFuaHouseholdRates": false,
+    "reported2026H1AverageOutageHoursUpperBound": 0.05,
+    "averageMeansNoResidentOutage": false,
+    "ruralPipesCompletedKmJune2026": 170,
+    "ruralPipesProjectKmJune2026": 270,
+    "allRuralUpgradesCompleteByCutoffVerified": false,
+    "plannedUhvIsDeliveredAlternative": false,
+    "wholesaleArrivalsTonnes20250207": 3173,
+    "pricesAreMedianResidentBudget": false,
+    "ruralSeptemberPipesCompletedKm": 220,
+    "ruralSeptemberProjectKm": 255.15,
+    "ruralSeptemberPumpStationsCreatedOrModified": 10,
+    "ruralSeptemberPumpStationsOperating": 8,
+    "juneAndSeptemberProjectDenominatorsReconciled": false
+  },
+  "focusedReviews": [
+    {
+      "path": "cci-nanjing-protection-institutions-review.md",
+      "sha256": "358685ddf9abfcccd48472245303bf8a6676d8253edd9d81c9a1e43d995cc7f5"
+    },
+    {
+      "path": "cci-nanjing-technology-longevity-exit-review.md",
+      "sha256": "646a5bbe3083f5a8078fbb22a9736d763a1f1537be882753ffb65177335acc76"
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "url": "https://gdb.nanjing.gov.cn/njsrmfkbgs/202509/t20250930_5660538.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 13760,
+      "sha256": "ea4fa836e8e19c1d7eb131107be98cdf3c1ea8197160a7ab2804c9634b915abf",
+      "publicationObservationContext": "市国动办；发布2025-09-30，观察7/2—9/29；生效不适用",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.nanjing.gov.cn/msxx/202607/t20260727_5883325.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 38079,
+      "sha256": "4178764e9c1959312b56243ccde255fd9c8ef636908b006ee733fc71687568bf",
+      "publicationObservationContext": "市政府站原走访；发布2026-07-27，观察当季点位及当次现场；生效不适用",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://shuiwu.nanjing.gov.cn/bmdt/202608/t20260813_5893519.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 29287,
+      "sha256": "3b4cfbbc56e513492ff65422ca1adf25cba03ada3ffe3e9b40976515c8113d26",
+      "publicationObservationContext": "市水务局原记录；发布2026-08-13，观察8/8—11及当年汛前；生效不适用",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.nanjing.gov.cn/zzb/zfxxgk/fdzdgknr/szfjbgtwj/202608/t20260807_5890796.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 161489,
+      "sha256": "2a65cc7d86987519fa0e581b00451660b4e94ac70cccf333437258b54b4dd0d4",
+      "publicationObservationContext": "市政府办公厅；签署／正文7/31，URL8/7；2025基线、2021—25回顾、2026—30规划执行期；未来任务不当当前结果",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://shuiwu.nanjing.gov.cn/mtbd/202508/t20250812_5626899.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 19077,
+      "sha256": "cfa95347925e3b41f59db4c3efa29a83ae518c805cb96c76ce16f3013c011e61",
+      "publicationObservationContext": "水务局刊载龙虎网原参与者采访；发布2025-08-12，观察当期“竹节草”；生效不适用",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://safety.nanjing.gov.cn/njsaqscjdglj/202412/t20241220_5037086.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 31766,
+      "sha256": "491c3b06b791e1983a5688f919eb8ad69739b57252f9ed3ed670e31903ffb516",
+      "publicationObservationContext": "市应急局原发布会记录；发布2024-12-20，观察12/18现状，防火期11/1—2025/4/30；报告生效不适用",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "http://www.njgl.gov.cn/glqrmzf/202502/t20250205_5068514.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 162222,
+      "sha256": "08817aab6753e0b03b05c1b1ab1e4051618b8d9539e1cb2a074284bb2ce97658",
+      "publicationObservationContext": "鼓楼政府；正文／生成2025-01-27、URL2/5；回顾2024，报告生效不适用；官方HTTP",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "http://www.njgl.gov.cn/glqrmzf/202602/t20260211_5791844.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 85365,
+      "sha256": "cd324e951a923f2c773750aeaa1fd6ccf8a08e7aa24987877f76185cdd98d245",
+      "publicationObservationContext": "鼓楼政府；讲话2026-01-08、正文／生成2/9、URL2/11；回顾2025，报告生效不适用；官方HTTP",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://cg.nith.edu.cn/zcglc/cgxxfwl/20251224/7184.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 37857,
+      "sha256": "a79642862f84bee1b3fb938f1b0ff2fc35ea0e89c552a3f692cabcc5e60cbbab",
+      "publicationObservationContext": "南京旅游职业学院当事机构采购原公告；发布2025-12-24，观察截至公告现场缺陷；采购不证明施工完成，报告生效不适用",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.spp.gov.cn/zdgz/202507/t20250704_700383.shtml",
+      "retrievedOn": "2026-10-12",
+      "bytes": 35739,
+      "sha256": "63ad4691c812d5f9e2661b90206ad7eb1d5b5ad4dcee5d7fe8d0aeda1bf92070",
+      "publicationObservationContext": "最高检刊载检察日报直接采访；发布2025-07-04；1998起历史、2024/12起诉、2025/6庭审；生效不适用",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://newspaper.jcrb.com/2025/20250704/20250704_001/news-zgjcb-10939-20250704-m-001-300.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 926501,
+      "sha256": "23233be8673eef056ab8c3151dc268c1bfe14340f461fe2501148a6779cea226",
+      "publicationObservationContext": "同采访原报第1版；2025-07-04；同源不独立佐证；生效不适用",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://newspaper.jcrb.com/2025/20250704/20250704_004/news-zgjcb-10939-20250704-m-004-300.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1224582,
+      "sha256": "e9294a7d43ace43b4b0b39e95eabd23ff9f582f2161dc311fe4fb019555fab33",
+      "publicationObservationContext": "同采访第4版续页；2025-07-04；同源且累计损害／诉讼阶段；生效不适用",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16429616.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 15455,
+      "sha256": "81c66f150350760b2059af6ba96ad8bad94128b260acf21d5aaee4617a98cdb3",
+      "publicationObservationContext": "国防部原发布；2025-12-29、观察当日区域演习；生效不适用；官方HTTP",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://gdb.nanjing.gov.cn/rfkx/202509/t20250919_5653053.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 16515,
+      "sha256": "9ae18850fdc5663f6840e31b61e190a40515fbfcd9d10c96e9efa5fddb2eccce",
+      "publicationObservationContext": "市国动办；发布2025-09-19，观察9/18试鸣／演练；生效不适用",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.nanjing.gov.cn/zzb/zfxxgk/zfxxgknb/202603/t20260306_5801654.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 81217,
+      "sha256": "b1b6ad6d99901c3c83225d91101561d838c560fd8002fcfff4e93c28b2fabef9",
+      "publicationObservationContext": "市政府原年度报告；发布2026-03-06，观察2025-01-01—12-31；生效不适用",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.nanjing.gov.cn/zgnjsjb/jrtt/202601/t20260127_5779452.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 15916,
+      "sha256": "0e5c83e2496587d4760ab4e0343abec9cd82d1c84b3aa6130dddab1a7860aa4a",
+      "publicationObservationContext": "市政府站年度运行原发布；2026-01-27，观察2025年度、平台累计期起点未精确给出；生效不适用",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://njsj.nanjing.gov.cn/njszwfwglbgs/202508/t20250815_5628973.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 23167,
+      "sha256": "0c777d6a8ad8913a415db4385dcdbdb2f45ee826283b74ea1b6d6af5c9482247",
+      "publicationObservationContext": "市数据局平台原公告；2025-08-15，观察升级上线及评价改制；生效不适用",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://js.119.gov.cn/202412/a86ec2cee62446249eae11176947ceee_c_f2f4ef2bfc6448109e82.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 49947,
+      "sha256": "f97c45377639f9aad7720b749cd9423e30ef2a161e81df3b419b0266da7c71a2",
+      "publicationObservationContext": "省消防总队原事故调查通报；正文2024-11-27、URL2024/12；事故2/23，调查截至通报；生效不适用",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.nanjing.gov.cn/xxgkn/jytabljggk/2025njytabl/shirddbjy/202512/t20251205_5705992.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 68960,
+      "sha256": "e287cb5b5d7b430306c98ddd28d3104ad3205e9558715c2c7b51cf69bcd99663",
+      "publicationObservationContext": "市消防局人大建议原答复；发布2025-12-05；2024以来整治至答复、部分统计止2024/12/31；生效不适用",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.nanjing.gov.cn/zdgk/202603/t20260320_5809762.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 44531,
+      "sha256": "1e7147a251f4b8824a587813b9593db6e38e898b882fce8ad40c1ac2d28716ba",
+      "publicationObservationContext": "市政府原法治报告；2026-03-20，观察2025年度；生效不适用",
+      "scope": "Reviewed in cci-nanjing-protection-institutions-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://ttc.seu.edu.cn/2025/0211/c51815a518354/page.htm",
+      "retrievedOn": "2026-10-12",
+      "bytes": 27796,
+      "sha256": "9a8c81100d3b93d84346898427862b6af12d6a2c72c17f33ae8090d48a8754c6",
+      "publicationObservationContext": "2025-02-11发布／2024机构观察，含多地合同",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://ttc.seu.edu.cn/2026/0215/c51815a555934/page.htm",
+      "retrievedOn": "2026-10-12",
+      "bytes": 42585,
+      "sha256": "b25e63d03556845ef8565ec910f1190f28fdfa7eb43656e5998d26d2a430439b",
+      "publicationObservationContext": "2026-02-15发布／2025机构观察，收益非全部到账",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://static.cninfo.com.cn/finalpage/2026-03-28/1225046330.PDF",
+      "retrievedOn": "2026-10-12",
+      "bytes": 8729795,
+      "sha256": "794f500e39706614ea4b278ab4039ff23be0be536d8f1ae3376133ff99117232",
+      "publicationObservationContext": "路径2026-03-28；2025集团／子公司观察，独立首发日未核",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://ils.seu.edu.cn/2025/0424/c22864a526052/page.htm",
+      "retrievedOn": "2026-10-12",
+      "bytes": 30365,
+      "sha256": "22ca21401f4984084a334360b30ebd5065fbb7eb5686ebf0d1106b3b7cbefc9e",
+      "publicationObservationContext": "2025-04-24发布／04-23参访，生产地点未逐址核",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://tjj.nanjing.gov.cn/njstjj/202504/t20250401_5108470.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 205971,
+      "sha256": "931b1082c235775ec9bcad7c3d5a039f09e09386957fad5f886fab7c1ca8980e",
+      "publicationObservationContext": "2025-04-01发布／正文2025-03编制／2024行政市",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://tjj.nanjing.gov.cn/njstjj/202602/t20260204_5786810.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 72526,
+      "sha256": "77aa93052da51ff9c0a2495200df3c5564267b219c78014ced8bd138eb180e63",
+      "publicationObservationContext": "2026-02-04发布／2025行政市，均值非中位",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://jsca.miit.gov.cn/xwdt/gsxg/art/2026/art_99bf5f5bb4e541bdb16f4a2daacc385c.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 8688,
+      "sha256": "2fc8b150d8e369e1f5f087c3528d945844c2349624e80cd0d20a0f9b0e0e5fbf",
+      "publicationObservationContext": "2026-02-03发布／2025年末设施及年度运营结果",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.nanjing.gov.cn/xxgkn/jytabljggk/2025njytabl/shirddbjy/202512/t20251205_5706071.html?source=public",
+      "retrievedOn": "2026-10-12",
+      "bytes": 62320,
+      "sha256": "c851ed587850e44a3b0b8f28dfabb5da604fd739d48449e6a9429242c6ae24bb",
+      "publicationObservationContext": "2025-12-05网页／07-17落款；累计使用起期未明",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://njsj.nanjing.gov.cn/zxgg/202604/t20260410_5821810.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 76185,
+      "sha256": "99d5db0e96e60a1166bf55ba3e9bca4e614e72ef3bb9e75d0464e96e57e9fdef",
+      "publicationObservationContext": "2026-04-10发布／已交付整改，非居民使用分母",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://mzj.nanjing.gov.cn/njsmzj/mzdt/202411/t20241121_5015836.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 22523,
+      "sha256": "90612051427ab58fb08dbdd15aa66ac2f66304333fc7ad96b37cd4d6652c76ed",
+      "publicationObservationContext": "2024-11-21发布／2024已完成培训，单位人次",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.pmda.go.jp/files/000265887.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 799642,
+      "sha256": "5683f7f163ba47d09384be3bf5e6dfa9f8549885af79b4c4b8e969449d8c7cca",
+      "publicationObservationContext": "2023-12原批准时指南／18月国际随机人体，物理第10页表1",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13232039/fullTextXML",
+      "retrievedOn": "2026-10-12",
+      "bytes": 132674,
+      "sha256": "e36e0b6324fdd09613f060b22ab0196a9d159482bc68ec9ef7cad910635cfd59",
+      "publicationObservationContext": "2025-11-11在线／2026-06纸本；2024-06-26至2025-05-26给药",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12740558/fullTextXML",
+      "retrievedOn": "2026-10-12",
+      "bytes": 8227,
+      "sha256": "d503e48e7c8612575d2bb0d52b3abbe9e1de5ada27e74b390328fb24e46660b9",
+      "publicationObservationContext": "2025-12-25会议摘要；90已招募，资料截止未明",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://doss.xhby.net/zpaper/xhrb/pc/att/202604/15/d0ad2247-d77f-4170-9d66-b4a473bcf2c9.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1265557,
+      "sha256": "273db977ae86aa96bbb2a01e7ef3eb5c7f698c90af7e6a61c93976ec5befc128",
+      "publicationObservationContext": "2026-04-15原版第5版采访；既往放弃／当前部分商保缓解",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.nanjing.gov.cn/msxx/202509/t20250917_5650868.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 31533,
+      "sha256": "b2de4b4c99f18d919dff071c0c6f89e7701fcf3bed702032d4a9ce3abaf4c097",
+      "publicationObservationContext": "2025-09-17发布／09-16上线；六期方案非完整合同",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://ybj.nanjing.gov.cn/ztzl/cxjmyb/202601/t20260116_5770806.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 45191,
+      "sha256": "6bdb5dc527fab57c450d83f7704373d4be964447a43e53badf41d10274ee2689",
+      "publicationObservationContext": "2026-01-16发布／2025工作及六期当前参保；非AD已赔",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://hd.caac.gov.cn/HD_XXGK/HD_TJSJ/202602/P020260227413264760427.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 73770,
+      "sha256": "de43d2090a37a45a325d52161197ed98f1df21bf96acae2a3087d91e74062eee",
+      "publicationObservationContext": "路径2026-02-27／2025机场实绩；独立首发日未核",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.safe.gov.cn/jiangsu/2023/0830/978.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 180025,
+      "sha256": "ab12da297cdea84e2fb381eb9b0b450a2db4a353c98460d310ed9efffef2028b",
+      "publicationObservationContext": "题面2026-09-28；路径／索引2023，当前下载入口",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.safe.gov.cn/jiangsu/file/file/20241223/83d2d4bce5dc4f75a24e0f95725fc6ad.doc",
+      "retrievedOn": "2026-10-12",
+      "bytes": 72192,
+      "sha256": "b30280105461a409f307e1b4d58dbfd0b76954987b0d24093f46f7d1a9409217",
+      "publicationObservationContext": "路径2024-12-23；当前入口所链原指南，独立成文日未核",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://gfw.report/publications/sp25/en/",
+      "retrievedOn": "2026-10-12",
+      "bytes": 219207,
+      "sha256": "2b2db1aa4d6ab3c69f7a7203368730e0fcd3fe06a52a88c7a6fc9215027e3f84",
+      "publicationObservationContext": "2025-05-11首发项目；南京识别实测2024-07-10",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://gfw.report/publications/sp25/data/paper/paper.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1025009,
+      "sha256": "5f6c3647feeab362420a40a6f8a7c4c12966a243fcb21d40ae18bc647d2729c1",
+      "publicationObservationContext": "IEEE S&P2025／项目2025-05-11；南京2024-07-10表1／图3",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://wap.js.10086.cn/GMZWSYFS.thtml",
+      "retrievedOn": "2026-10-12",
+      "bytes": 2959,
+      "sha256": "1a43c30f32adabcbe3fcd423c66d0e57fa5304ae9bda1a6e5345afd73f605fe8",
+      "publicationObservationContext": "当前运营商原服务页；未标发布日期／资费，截止前版本未核",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://english.nmpa.gov.cn/2024-01/09/c_986552.htm",
+      "retrievedOn": "2026-10-12",
+      "bytes": 10652,
+      "sha256": "0bdf7c259f3776663c68d3e126dcb661c487e795fc369d3a948346ff43e2e81a",
+      "publicationObservationContext": "2024-01-09监管原批准；同日共用缓存复用",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.safe.gov.cn/shanghai/2019/1213/1198.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 20527,
+      "sha256": "933be3dc461d973af1d80a9366946701b81ee48d9f4bc8d70939fb9074cd4c73",
+      "publicationObservationContext": "2019-12-13原法定人物说明；同日共用缓存复用",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.mofcom.gov.cn/zcfb/zgdwjjmywg/art/2020/art_0dd36157a03f494db7571002c7f785b8.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 148041,
+      "sha256": "14171f27d3ce961e344a1daa9fca9742c21b1926180d3bd5502ecf57ded4020b",
+      "publicationObservationContext": "2020-08-28规则／2020-12-01政府转载；同日共用缓存复用",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://ybj.nanjing.gov.cn/ztzl/dcbz/202510/t20251016_5671127.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 14142,
+      "sha256": "26b3877676db9574c48071777fbbbbb3da9a9cb1af8ac9d857aa6ec7cb4faf24",
+      "publicationObservationContext": "2025-10-16 16:53医保局转刊；唯一正文链接指向六期微信原文；检索2026-10-12",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://mp.weixin.qq.com/s/MROlxUhdD9pxpnBqkKs0RQ",
+      "retrievedOn": "2026-10-12",
+      "bytes": 3603158,
+      "sha256": "7bb0d35760fbcefd7f29d8e5f1095c1833329725af8644e62ff88bd82480ae4f",
+      "publicationObservationContext": "2025-09-16 15:10:40 UTC+8原文元数据／09-16上线；非保险人完整合同；检索2026-10-12",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/ZsNv3o8qFAHEs7JKqJMvbvkicJ6dy2bCKWedU7h9k5vjXuuwElpTCUjBXGtm0wSREtcpYmhwrQkp7niapKJ632pQ/640?wx_fmt=png&from=appmsg",
+      "retrievedOn": "2026-10-12",
+      "bytes": 117497,
+      "sha256": "7354576378b02ff27c204fa44e5c260bfb89a4969fe89c49c0e9c8ca71825894",
+      "publicationObservationContext": "六期原文所链参保原图，已目视；无可直接解码的投保二维码；检索2026-10-12",
+      "scope": "Reviewed in cci-nanjing-technology-longevity-exit-review.md; original publication/observation/effective dates, cohort, place and eligibility remain separate. Current bytes are not a cutoff-day archive. Institution/multicentre/jurisdiction/cloud sources are not full-FUA or median-resident measurements; same upstream HTML/PDF sources are not independent corroboration. Official HTTP retains lack of TLS transport assurance."
+    },
+    {
+      "url": "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2026.1723890/pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1664671,
+      "sha256": "1fca0b355b34846064329ddbfca71c59713e0b93455db3dcb6dd5fc53c774de6",
+      "publicationObservationContext": "Published2026-02-18; Gulou2018-2024 retrospective214-person cohort, adjustment not causal effect.",
+      "scope": "Parent review in cci-local-2026-nanjing-case.md; clinical, institution and administrative scopes remain separate from current9701 ordinary residents. Current bytes not cutoff-day archive."
+    },
+    {
+      "url": "https://www.frontiersin.org/journals/cardiovascular-medicine/articles/10.3389/fcvm.2024.1364332/pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 11030827,
+      "sha256": "940474e80bc1d58bc235c4be3c67138cdd8c8132d5bc7c17f13297a4f652caf1",
+      "publicationObservationContext": "Published2024-04-19;2013-2021 high-risk surgery cohort, AKI table/text deaths disagree.",
+      "scope": "Parent review in cci-local-2026-nanjing-case.md; clinical, institution and administrative scopes remain separate from current9701 ordinary residents. Current bytes not cutoff-day archive."
+    },
+    {
+      "url": "https://www.nj12320.org/nj12320img/files/%E5%8D%97%E4%BA%AC%E5%8D%AB%E7%94%9F%E4%BF%A1%E6%81%AF%E5%8C%96%E7%AE%80%E6%8A%A5%E7%AC%AC155%E6%9C%9F.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 441068,
+      "sha256": "be05ba1bc8b0cbfa337604bcab1815d06e45b87a44c384d23cfb38e857735d2b",
+      "publicationObservationContext": "2025-01-24 information-centre bulletin reviewing2024 actual delivery, indices not unique residents.",
+      "scope": "Parent review in cci-local-2026-nanjing-case.md; clinical, institution and administrative scopes remain separate from current9701 ordinary residents. Current bytes not cutoff-day archive."
+    },
+    {
+      "url": "https://www.jssjw.gov.cn/art/2025/6/6/art_1834_34609.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 53827,
+      "sha256": "8bfe09032a7d1cbbd11db61c834b40f1d7be8233a5b7e7970914c08975c37436",
+      "publicationObservationContext": "Published2025-06-06,2024 inspection and2025 implemented management; future enrollment and plans not delivered.",
+      "scope": "Parent review in cci-local-2026-nanjing-case.md; clinical, institution and administrative scopes remain separate from current9701 ordinary residents. Current bytes not cutoff-day archive."
+    }
+  ],
+  "webOnlySourceReviews": [
+    {
+      "url": "https://wjw.nanjing.gov.cn/njswshjhsywyh/202504/t20250403_5111067.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "2025-04-03 publication/2025Q1 water sample72=10+52+10, all compliant; not whole-FUA households.",
+      "limitation": "Official original page body read via web; local request returned403 or no valid original bytes were acquired. No failure-response hash substitutes for the source; observation/publication dates remain distinct."
+    },
+    {
+      "url": "https://www.nanjing.gov.cn/njxx/202607/t20260729_5884933.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "2026-07-29 publication/2026H1 averaged utility outage<0.05h; futureUHV not delivered.",
+      "limitation": "Official original page body read via web; local request returned403 or no valid original bytes were acquired. No failure-response hash substitutes for the source; observation/publication dates remain distinct."
+    },
+    {
+      "url": "https://shuiwu.nanjing.gov.cn/bmdt/202606/t20260615_5859556.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "2026-06-15 publication; scoped completed Pingshan pressure station and170/270km upgrade, remaining works not done.",
+      "limitation": "Official original page body read via web; local request returned403 or no valid original bytes were acquired. No failure-response hash substitutes for the source; observation/publication dates remain distinct."
+    },
+    {
+      "url": "https://shuiwu.nanjing.gov.cn/mtbd/202609/t20260911_5908901.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "2026-09-11 direct water-operator/household interview; small pipes and repair constraints with upgrade progress.",
+      "limitation": "Official original page body read via web; local request returned403 or no valid original bytes were acquired. No failure-response hash substitutes for the source; observation/publication dates remain distinct."
+    },
+    {
+      "url": "https://nyncj.nanjing.gov.cn/fww/fxyc/202502/t20250211_5071985.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "2025-02-11 publication/02-07 arrivals3173t and monitored prices; interviewed trade channels, not resident budget.",
+      "limitation": "Official original page body read via web; local request returned403 or no valid original bytes were acquired. No failure-response hash substitutes for the source; observation/publication dates remain distinct."
+    },
+    {
+      "url": "https://wjw.nanjing.gov.cn/njswshjhsywyh/202607/t20260727_5883585.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "2026-07-27 publication/2025 actual hospital/community admissions and operations, not unique local citizens.",
+      "limitation": "Official original page body read via web; local request returned403 or no valid original bytes were acquired. No failure-response hash substitutes for the source; observation/publication dates remain distinct."
+    },
+    {
+      "url": "https://jw.nanjing.gov.cn/xwzx/ttxw/swjdbqxctb/202507/t20250714_5606143.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "2025-07-14 original Gulou rectification; actual added clinics/triage coordination, self-reported improvement not measured full quality.",
+      "limitation": "Official original page body read via web; local request returned403 or no valid original bytes were acquired. No failure-response hash substitutes for the source; observation/publication dates remain distinct."
+    },
+    {
+      "url": "https://www.nanjing.gov.cn/zzb/hdhy/hygq_72666/202606/t20260626_5866766.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "2026-06-26 specific outpatient-disease insured inpatient deductible relief, not all benefits or bills.",
+      "limitation": "Official original page body read via web; local request returned403 or no valid original bytes were acquired. No failure-response hash substitutes for the source; observation/publication dates remain distinct."
+    },
+    {
+      "url": "https://www.nanjing.gov.cn/hdjl/hygq/202601/t20260113_5764410.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "2026-01-13 household-registration transfer within90days and payment timing; no automatic resident coverage.",
+      "limitation": "Official original page body read via web; local request returned403 or no valid original bytes were acquired. No failure-response hash substitutes for the source; observation/publication dates remain distinct."
+    }
+  ],
+  "geohazardBoundaryCheck": {
+    "source": "https://cg.nith.edu.cn/zcglc/cgxxfwl/20251224/7184.html",
+    "sourceCoordinateMeaning": "华严岗校区A栋东侧滑坡项目中心",
+    "longitude": 118.74345,
+    "latitude": 32.079150000000006,
+    "fuaMatches": [9701],
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "method": "EPSG4326 to ESRI54009 always_xy intersection; assumes published coordinate CRS is WGS84; source did not declare coordinate datum"
+  }
+}

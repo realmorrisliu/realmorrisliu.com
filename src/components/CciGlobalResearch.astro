@@ -30,6 +30,7 @@ import prague from "../../docs/data/cci-local-2026-prague-case.json";
 import beijing from "../../docs/data/cci-local-2026-beijing-case.json";
 import shanghai from "../../docs/data/cci-local-2026-shanghai-case.json";
 import jakarta from "../../docs/data/cci-local-2026-jakarta-case.json";
+import nanjing from "../../docs/data/cci-local-2026-nanjing-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -64,8 +65,10 @@ const cases = [
   beijing,
   shanghai,
   jakarta,
+  nanjing,
 ];
 const caseNamesZh: Record<number, string> = {
+  [nanjing.candidateId]: "南京功能区",
   [jakarta.candidateId]: "雅加达功能区",
   [singapore.candidateId]: "新加坡",
   [london.candidateId]: "伦敦",
@@ -192,6 +195,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [nanjing.candidateId]: [
+    zh
+      ? "南京 PCS／GSS／ISR／RES 条件性 60，LON／OPT 条件性 40，TEC 条件性 80；MED 未定，数学域 49—64，无总分中心。实际纳凉、泵闸、社区与资源交付同住宅火灾失效、供水短板一起判读。浦口、溧水、高淳等行政名称不自动归入本功能区；全部目录关联仅安排研究顺序，不授予入围名额。"
+      : "Nanjing has conditional 60 judgments for PCS, GSS, ISR and RES, 40 for LON and OPT, and 80 for TEC. MED remains unresolved: the mathematical domain is 49–64, without a total centre. Actual cooling, drainage, community and resource delivery are read alongside residential-fire failures and water-service gaps. Administrative names such as Pukou, Lishui and Gaochun do not establish membership in this FUA; directory associations only sequence research, granting no shortlist place.",
+    zh
+      ? "72 份合格水样含 10 出厂、52 末梢、10 二次供水，不是全区家庭水质率；供电户均和旧临床队列不代当前居民结果。MED 的质量解释、通常参保路径及及时可承担替代仍在审阅。长寿实际给药与费用放弃、部分商保缓解并存，正式六期入口未取得两药完整支付责任；未知不记覆盖或排除。必要假设拒绝即撤回相应维度，火灾住户长期恢复与家庭通信适用仍需核。"
+      : "The 72 compliant water samples include 10 plant, 52 terminal and 10 secondary-supply samples, not a full-area household rate. Average utility outages and older clinical cohorts do not establish current resident outcomes. MED quality interpretation, usual-insurance paths and timely affordable alternatives remain under review. Actual longevity treatment, cost-related foregoing and partial supplementary-insurance relief coexist; the official sixth-period entry did not provide complete payment terms for the two antibodies. Unknown coverage is neither inclusion nor exclusion. Rejecting necessary assumptions withdraws the corresponding judgment; fire-victim long-term recovery and household communications applicability remain unresolved.",
+  ],
   [jakarta.candidateId]: [
     zh
       ? "雅加达 PCS／GSS／ISR／RES 条件性 40，MED／TEC／OPT 条件性 60，LON 未定；数学域 43—53，无总分中心。实际防护、救援、调查和服务与反复洪灾、侵害及恢复／水质约束共同判读。功能区跨 DKI、万丹和西爪哇；德波、茂物和勿加泗参考点在区内，行政总量和局部样本不当全区居民率。研究顺序来自全量目录关联，不是提名或得分。"
@@ -306,6 +317,10 @@ const caseNotes: Record<number, string[]> = {
   ],
 };
 const caseReviewLinks: Record<number, { href: string; label: string }> = {
+  [nanjing.candidateId]: {
+    href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-nanjing-technology-longevity-exit-review.md",
+    label: zh ? "临床、保险与退出核查" : "Clinical, insurance and exit review",
+  },
   [jakarta.candidateId]: {
     href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-jakarta-technology-longevity-exit-review.md",
     label: zh ? "长寿、技术与资金通道原件复核" : "Longevity, technology and financial-path sources",

@@ -72,6 +72,7 @@ const realCases = [
   "beijing",
   "shanghai",
   "jakarta",
+  "nanjing",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -135,6 +136,7 @@ const [
   beijing,
   shanghai,
   jakarta,
+  nanjing,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -1014,6 +1016,85 @@ const jakartaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
 assert(jakartaPosition);
 assert.equal(jakartaPosition.bestPosition, 10);
 assert.equal(jakartaPosition.worstPosition, rankAudit.candidateCount);
+
+assert.deepEqual(total(nanjing), { center: null, lower: 49, upper: 64 });
+assert(!Object.hasOwn(nanjing, "MED"));
+for (const [id, lower, upper] of [
+  ["PCS", 40, 70],
+  ["GSS", 40, 70],
+  ["ISR", 40, 70],
+  ["RES", 43, 68],
+  ["LON", 45, 70],
+  ["TEC", 41, 66],
+  ["OPT", 45, 70],
+] as const) {
+  const withdrawn = { ...nanjing };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.equal(total({ ...nanjing, MED: 60 }).center, 58);
+assert.equal(total({ ...nanjing, MED: 40 }).center, 55);
+const nanjingCase = realCases[20];
+for (const review of nanjingCase.focusedReviews)
+  assert.equal(review.sha256, digest(`docs/${review.path}`));
+assert.equal(
+  nanjingCase.researchPriority.sourceSha256,
+  digest(`docs/data/${nanjingCase.researchPriority.source}`)
+);
+assert.equal(nanjingCase.researchPriority.recordAssociations, 71454);
+assert.equal(
+  nanjingCase.sharedLegalPath.sourceSha256,
+  digest("docs/data/cci-legal-mobility-rules.json")
+);
+assert.equal(
+  nanjingCase.sharedLegalPath.rule,
+  "chinese_citizen_skilled_work_national_visa_germany"
+);
+assert.equal(nanjingCase.referenceBoundaryCheck.referencePoints.length, 14);
+assert.deepEqual(nanjingCase.geohazardBoundaryCheck.fuaMatches, [9701]);
+assert.deepEqual(
+  nanjingCase.referenceBoundaryCheck.referencePoints.find(
+    (p: { label: string }) => p.label === "Pukou urban approximate reference"
+  ).fuaMatches,
+  [9679]
+);
+assert.equal(
+  Object.values(nanjingCase.resourceChecks.waterSampleTypeCounts).reduce(
+    (a: number, b) => a + (b as number),
+    0
+  ),
+  nanjingCase.resourceChecks.waterSamples
+);
+assert.equal(
+  nanjingCase.clinicalChecks.thrombusTreatmentGroupPatients.reduce(
+    (a: number, b: number) => a + b,
+    0
+  ),
+  nanjingCase.clinicalChecks.thrombusPatients
+);
+assert.notEqual(
+  nanjingCase.clinicalChecks.aorticAkiTableDeaths,
+  nanjingCase.clinicalChecks.aorticAkiTextDeaths
+);
+assert.equal(nanjingCase.clinicalChecks.currentWholeMedAnchorEstablished, false);
+assert.equal(nanjingCase.clinicalChecks.lecanemabNinghuibaoCoverageVerified, false);
+assert.equal(
+  nanjingCase.securityChecks.disclosureRequests + nanjingCase.securityChecks.priorCarriedRequests,
+  nanjingCase.securityChecks.processedRequests + nanjingCase.securityChecks.carriedRequests
+);
+assert.equal(nanjingCase.sourceSnapshots.length, 52);
+assert.equal(nanjingCase.webOnlySourceReviews.length, 9);
+assert(
+  nanjingCase.webOnlySourceReviews.every(
+    (s: { bytes: null; sha256: null }) => s.bytes === null && s.sha256 === null
+  )
+);
+const nanjingPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (c: { efua_id: string }) => c.efua_id === "9701"
+);
+assert(nanjingPosition);
+assert.equal(nanjingPosition.bestPosition, 1);
+assert.equal(nanjingPosition.worstPosition, rankAudit.candidateCount);
 
 const praguePosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
   (c: { efua_id: string }) => c.efua_id === "535"
