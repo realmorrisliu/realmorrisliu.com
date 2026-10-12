@@ -29,7 +29,7 @@
 
 [当前医保原文](https://www.ameli.fr/assure/remboursements/rembourse/hospitalisation-chirurgie)发表于 2026-10-07，支付比例、住院日费用、补充保障和豁免分别判读，不将公共医院当作免费治疗。普通居民资格、必要治疗实际等待和费用可承担性仍为 MED 的必要假设。[市级联系服务](https://www.paris.fr/pages/3975-la-ville-au-bout-du-fil-7723)记录较早的实际来电／邮件，不能当作全部请求得到解决或全区灾时通信。
 
-[APinnov 2026 原发布](https://www.aphp.fr/actualites/apinnov-2026-retour-sur-cette-22e-edition)报告实际 2025 年许可与转化收入；专利族、活跃许可、投资和收入不混为一项产出。[INSEE 数字原研究](https://www.insee.fr/fr/statistiques/fichier/7636058/ia85.pdf)的较早调查与地方建模也分开，不能称当前采用率。TEC 60 不依靠目录数量或医院排名，尚未支持全产业普及与独立关键节点的 80。
+[APinnov 2026 原发布](https://www.aphp.fr/actualites/apinnov-2026-retour-sur-cette-22e-edition)报告实际 2025 年许可与转化收入；专利族、活跃许可、投资和收入不混为一项产出。[INSEE 数字原研究](https://www.insee.fr/fr/statistiques/fichier/7636058/ia85.pdf)的较早调查与地方建模也分开，不能称当前采用率。TEC 60 不依靠目录数量或医院排名，多主体生产与实际扩散仍需实质复核；每节点独立压力测试不是 TEC 门槛，60 依赖有限已审能力的代表性与延续，拒绝则未定，不用未知项本身封顶。
 
 ## 长寿路径：支付缺口与临床争议同时保留
 

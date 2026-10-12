@@ -91,8 +91,8 @@
     {
       "id": "TEC",
       "score": 60,
-      "rationale": "Concrete research-derived commercialisation, industry context, network samples and delivered digital support establish capacity; broad deep adoption and whole-resident reach are unverified.",
-      "assumption": "Observed research, industry and diffusion capacities persist; the reviewed nodes indicate real capability but do not represent complete city measurement.",
+      "rationale": "Actual research-derived commercialisation and delivered digital support establish capability alongside local hearing evidence of connection, upgrade and affordability constraints. Delivered mitigation is retained; forecast support totals and older UK-wide SME rates are not current London measurements.",
+      "assumption": "Reviewed capacities and local constraints persist to the cutoff and reasonably apply to ordinary median-income residents and the FUA. The observed connection/diffusion bottlenecks remain material after delivered mitigation; their 2026 residual incidence is not measured. This is a provisional representativeness judgment, not a cap based on unknown higher-tier evidence. Rejecting these necessary assumptions restores unknown TEC; broader actual output/use and effective mitigation could support 80.",
       "conditionalAlternatives": [40, 80],
       "subpillars": {
         "knowledge_output": "partial",
@@ -114,5 +114,11 @@
         "network_continuity": "unresolved"
       }
     }
-  ]
+  ],
+  "technologyReview": {
+    "path": "docs/cci-technology-tier-consistency.md",
+    "sha256": "e4ae148b365ee7eddda2152bb260f840a902612b8129d39b20c1728f9b96d8c5",
+    "reviewedOn": "2026-10-12",
+    "status": "conditional_60_constraints_and_mitigation_not_missingness_penalty"
+  }
 }

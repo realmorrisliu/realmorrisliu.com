@@ -8,7 +8,7 @@
   "boundaryVersion": "GHS-FUA R2019A",
   "boundaryReview": "unresolved",
   "evidenceReview": "cci-local-2026-helsinki-case.md",
-  "expectedConditionalTotal": 60,
+  "expectedConditionalTotal": 62,
   "limitations": "All 31 subpillars are reviewed, not all are measured. Scores require the stated assumptions; unknown evidence remains unknown. This is neither a global ranking nor an exclusion bound. Rejecting a necessary assumption requires reassessment, not automatic retention of its score.",
   "dimensions": [
     {
@@ -90,10 +90,10 @@
     },
     {
       "id": "TEC",
-      "score": 60,
-      "rationale": "Concrete research, a research-linked commercialisation portfolio, network samples and actual public digital-service adoption support capability; sustained output across the FUA, broad industry adoption and group reach remain incomplete.",
-      "assumption": "Observed research, commercialisation and service adoption persist; evidence from one service domain supports partial diffusion rather than all-industry or whole-resident measurement.",
-      "conditionalAlternatives": [40, 80],
+      "score": 80,
+      "rationale": "Sustained output from two universities, actual technology transfers and long-term industry absorption connect with broad capital-region use of commerce, authentication and public services, plus delivered local services and assistance. Corporate financing/employment pressures and national older-age usage gaps remain counterevidence, not whole-FUA failure measurements.",
+      "assumption": "The reviewed multi-producer activity, PKS adoption and Helsinki municipal delivery reasonably apply to FUA 687 and ordinary eligible median-income citizens, and persist to the cutoff. Actual service response and assistance materially mitigate the reviewed diffusion barriers; their whole-group reach is not measured. If financing or group-access constraints remain material after mitigation, reassess 60. Rejecting necessary spatial, continuity or resident-usability assumptions restores unknown TEC.",
+      "conditionalAlternatives": [40, 60],
       "subpillars": {
         "knowledge_output": "partial",
         "industry_density": "partial",
@@ -114,5 +114,11 @@
         "network_continuity": "unresolved"
       }
     }
-  ]
+  ],
+  "technologyReview": {
+    "path": "docs/cci-helsinki-technology-calibration.md",
+    "sha256": "7122838c194b0f8c8d57e1c30b6efb478e4eae5fc68c9f4bf8651f72fbb7c589",
+    "reviewedOn": "2026-10-12",
+    "status": "conditional_80_judgment_not_objective_scale_or_global_eligibility"
+  }
 }

@@ -229,13 +229,20 @@ assert.deepEqual(total(singaporeWithoutTec), { center: null, lower: 52, upper: 6
 const singaporeWithoutMedAndTec = { ...singaporeWithoutTec };
 delete singaporeWithoutMedAndTec.MED;
 assert.deepEqual(total(singaporeWithoutMedAndTec), { center: null, lower: 43, upper: 68 });
-assert.equal(total(helsinki).center, 60);
-assert.equal(total({ ...helsinki, MED: 40 }).center, 57);
-assert.equal(total({ ...helsinki, LON: 40 }).center, 58);
-assert.equal(total({ ...helsinki, TEC: 80 }).center, 62);
+assert.equal(helsinki.TEC, 80);
+assert.equal(total(helsinki).center, 62);
+assert.equal(total({ ...helsinki, MED: 40 }).center, 59);
+assert.equal(total({ ...helsinki, LON: 40 }).center, 60);
+assert.equal(total({ ...helsinki, TEC: 60 }).center, 60);
+for (const caseInput of [realCases[1], realCases[2]]) {
+  assert.equal(caseInput.technologyReview.sha256, digest(caseInput.technologyReview.path));
+}
 const helsinkiWithoutLon: Partial<Record<DimensionId, number>> = { ...helsinki };
 delete helsinkiWithoutLon.LON;
-assert.deepEqual(total(helsinkiWithoutLon), { center: null, lower: 54, upper: 64 });
+assert.deepEqual(total(helsinkiWithoutLon), { center: null, lower: 56, upper: 66 });
+const helsinkiWithoutTec = { ...helsinki };
+delete helsinkiWithoutTec.TEC;
+assert.deepEqual(total(helsinkiWithoutTec), { center: null, lower: 54, upper: 64 });
 assert.equal(total(zurich).center, 58);
 assert.equal(total({ ...zurich, GSS: 40 }).center, 55);
 assert.equal(total({ ...zurich, GSS: 80 }).center, 61);
@@ -285,7 +292,7 @@ const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.
 );
 assert(tokyoPosition);
 assert.equal(tokyoPosition.center, 60);
-assert.equal(tokyoPosition.bestPosition, 1);
+assert.equal(tokyoPosition.bestPosition, 2);
 assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 3);
 assert.deepEqual(total(washington), { center: null, lower: 49, upper: 64 });
 assert.equal(washington.RES, 40);
@@ -563,7 +570,13 @@ console.log({
     conditionalMED40OPT80: { singapore: total(singapore).center, london: 57 },
     sameScenarioMED10OPT15: { singapore: 60, london: 59 },
     sameScenarioWithSingaporeTEC60: { singapore: 58, london: 59 },
-    helsinki: { current: 60, conditionalMED40: 57, unresolvedLON: total(helsinkiWithoutLon) },
+    helsinki: {
+      current: 62,
+      conditionalMED40: 59,
+      conditionalTEC60: 60,
+      unresolvedLON: total(helsinkiWithoutLon),
+      unresolvedTEC: total(helsinkiWithoutTec),
+    },
     zurich: {
       current: 58,
       conditionalOPT80: 60,
