@@ -398,8 +398,8 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
       <p class="research-note">
         {
           zh
-            ? `独立研究进度，不属于上方所选历史发布。已登记的 ${n(coverage.candidateCount)} 个功能城市区中，${n(coverage.scoreStatusCounts.not_computed_under_global_protocol)} 个仍未完成全球统一规则下的完整评分；局部证据关联不是合格城市数或完成率。`
-            : `Separate from the historical release selected above. Of ${n(coverage.candidateCount)} registered functional urban areas, ${n(coverage.scoreStatusCounts.not_computed_under_global_protocol)} still lack complete assessments under the common global protocol. Partial evidence links are not qualified cities or completion rates.`
+            ? `本区独立于上方历史发布。候选范围为 ${n(coverage.candidateCount)} 个功能城市区；条件性案例和局部证据关联均不表示已取得全球排名资格。`
+            : `Separate from the historical release above. The scope includes ${n(coverage.candidateCount)} functional urban areas; conditional cases and partial evidence links do not establish global ranking eligibility.`
         }
       </p>
     </div>
@@ -470,8 +470,8 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
     <p id="research-table-hint" class="research-table-hint">
       {
         zh
-          ? "表格可横向滚动；点击城市名称查看对应依据。"
-          : "Scroll the table horizontally; select a city name to find its evidence."
+          ? "在表格内滚动查看全部城市；窄屏可横向滚动。点击城市名称展开依据。"
+          : "Scroll within the table for all cities, or sideways on narrow screens. Select a city name to open its evidence."
       }
     </p>
     <div
@@ -497,6 +497,9 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
                   <abbr title={cciCopy[currentLang].dimensions[dimension.id].name}>
                     {dimension.id}
                   </abbr>
+                  <span class="research-dimension-name">
+                    {cciCopy[currentLang].dimensions[dimension.id].name}
+                  </span>
                   <small>{dimension.weight}%</small>
                 </th>
               ))
@@ -759,6 +762,7 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
   .research-conclusion {
     margin-top: 0;
     font-size: var(--cci-type-body-large);
+    font-weight: 500;
   }
   .research-progress {
     align-self: start;
@@ -805,19 +809,28 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
   }
   .research-nav {
     gap: 0.5rem 2rem;
-    padding: 0.5rem 0 1rem;
+    padding: 0 0 0.5rem;
     border-bottom: 1px solid var(--cci-rule-light);
+  }
+  .research-nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
   }
   .research-table {
     margin-top: 0.5rem;
+    max-height: 32rem;
+    overflow: auto;
   }
   .research-table:focus-visible {
     outline: 2px solid var(--cci-action);
     outline-offset: 4px;
   }
   .research-table table {
-    min-width: 48rem;
+    min-width: 60rem;
     table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
   }
   caption {
     padding-bottom: 0.75rem;
@@ -827,6 +840,28 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
   .research-table :is(th, td) {
     padding: 0.75rem 0.5rem;
     text-align: right;
+  }
+  .research-table thead th {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    background: var(--cci-soft);
+    border-top: 1px solid var(--cci-rule);
+    border-bottom: 1px solid var(--cci-faint);
+    white-space: normal;
+  }
+  .research-table thead tr > :first-child {
+    z-index: 3;
+    background: var(--cci-soft);
+  }
+  .research-dimension-name {
+    display: block;
+    margin: 0.25rem 0;
+    font-size: var(--cci-type-mono);
+    font-weight: 400;
+    line-height: 1.5;
+    white-space: normal;
+    text-wrap: balance;
   }
   .research-table tr > :first-child {
     position: sticky;
@@ -842,6 +877,9 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
   }
   .research-table tbody th {
     font-weight: 400;
+  }
+  .research-table tbody tr:hover > :is(th, td) {
+    background: var(--cci-soft);
   }
   .research-table small {
     display: block;
@@ -884,13 +922,28 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
     scroll-margin-top: 1.5rem;
   }
   .research-case > summary {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
     padding: 1rem 0;
     font-weight: 500;
     cursor: pointer;
   }
+  .research-case > summary::before {
+    content: "+";
+    width: 1rem;
+    flex: 0 0 1rem;
+    font-weight: 400;
+  }
+  .research-case[open] > summary::before {
+    content: "−";
+  }
+  .research-case > summary::-webkit-details-marker {
+    display: none;
+  }
   .research-case-status {
-    float: right;
-    margin-inline-start: 1rem;
+    margin-inline-start: auto;
     color: var(--cci-muted);
     font-size: var(--cci-type-label);
   }
@@ -921,15 +974,17 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
       gap: 0.75rem;
     }
     .research-table table {
-      min-width: 44rem;
+      min-width: 56rem;
+    }
+    .research-table {
+      max-height: 28rem;
     }
     .research-table tr > :first-child {
       width: 10rem;
     }
     .research-case-status {
-      float: none;
-      display: block;
-      margin-inline-start: 1rem;
+      flex-basis: 100%;
+      margin-inline-start: 2rem;
     }
   }
 </style>
