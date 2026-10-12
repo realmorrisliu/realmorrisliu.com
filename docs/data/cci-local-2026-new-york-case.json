@@ -8,28 +8,28 @@
   "boundaryVersion": "GHS-FUA R2019A",
   "boundaryReview": "unresolved",
   "evidenceReview": "cci-local-2026-new-york-case.md",
-  "expectedConditionalTotal": null,
-  "limitations": "All eight dimensions and 31 subpillars reviewed, not fully measured; PCS/GSS/RES remain unresolved. Conditional anchors require explicit ordinary-resident, locality, continuity and FUA assumptions. No global ranking, reliable exclusion bound, zero imputation or healthy-person lifespan benefit. Rejecting necessary assumptions restores unknown.",
+  "expectedConditionalTotal": 58,
+  "limitations": "All eight dimensions and31 subpillars reviewed, not fully measured. Seven conditional60 judgments andRES40 give a conditional centre58; every score requires the stated assumptions. No global ranking, reliable exclusion bound, zero imputation or healthy-person lifespan benefit. Rejecting a necessary assumption restores that dimension to unknown and removes the centre. FUA, jurisdictions, study cohorts and service areas differ.",
   "dimensions": [
     {
       "id": "PCS",
-      "score": null,
-      "rationale": "The 2026 heat report distinguishes observed heat-stress deaths from modelled heat-exacerbated mortality, with substantial burden on non-extreme days. Actual July 2026 cooling activation and outreach coexist with unmet home-cooling demand and early aid closure. The burden is not measured for median-income citizens or the frozen FUA, and other hazards/protection effects remain incomplete.",
-      "assumption": "No justified whole-dimension anchor yet. Do not infer sufficient ordinary-resident protection from activated sites, or a 40 score from citywide deaths without reviewing representative exposure, home protection and remaining hazards.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Completed drainage work, FY2025 maintenance and scoped actualJuly2025 storm performance, FY2024 Stamford gate operation, and2026 snow clearing/placements support operating protection. Actual heat, NJ flood and cold harms, home cooling/aid gaps, unfinished works and old-building/smoke vulnerability remain. Facilities, report counts and modelled avoided losses are not whole-FUA resident outcomes.",
+      "assumption": "Accept reviewed major protection/response continuing through cutoff and being usually usable for the target resident across7244. Cross-state evidence has limited representativeness; known thermal/flood/cold gaps have not become a broader persistent ordinary-resident/essential-corridor bottleneck without usable mitigation. This is a reversible inference, not a loss-rate measurement or guarantee from income/citizenship. Reject any necessary temporal/spatial/ordinary-protection/bottleneck assumption to restore unknown; verified important unrelieved constraints could support40, stronger multi-hazard protection and backup80.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "heat_humidity": "partial",
         "flood_sea_level": "partial",
         "geophysical": "partial",
-        "severe_weather_wildfire": "unresolved"
+        "severe_weather_wildfire": "partial"
       }
     },
     {
       "id": "GSS",
-      "score": null,
-      "rationale": "A May 2026 Justice Department release describes an alleged Manhattan synagogue plot and actual disruption/protection; overseas alleged attacks and victims are not New York casualties. These selected records and ordinary-crime trends do not establish annual whole-FUA organised-violence, regional-spillover or strategic-impact profiles. Charges are not convictions. A shared 2026 preliminary-event review found event623566 date conflict: the cited February2026 DOJ indictment describes an alleged April2024 double murder, not new2026 deaths. The raw record is retained in temporal quarantine, not silently corrected or added to current impacts. No retained assigned record does not establish low violence.",
-      "assumption": "No justified whole-dimension anchor yet. A blocked plot supports mitigation but neither zero harm in a selected plot nor general crime decline proves low overall resident impact.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Actual March2026 IED danger and on-site custody/bomb response/limited evacuation then return, August synagogue harm and same-service continuation, historical cross-state gang harm with actual2026 enforcement, and completed NJNY event security/transport coordination support operating mitigation. Alleged historical injuries are not2026 new deaths or convictions; single-person bias attacks are not assigned organizational membership. Targeted harm, repeated threats, chance in avoided blast damage and non-terror rail/road disruptions remain. Existing event623566 date quarantine is unchanged.",
+      "assumption": "Accept reviewed local impacts, response/restoration and cross-state coordination as indicative of usually usable ordinary life/essential corridors across7244 without wider unobserved persistent organized-violence/regional/strategic disruption. Current reach, continuity and full scope are assumptions, not complete victim rates; income/citizenship do not guarantee equal protection and targeted harms are not averaged away. Reject a necessary assumption to restore unknown; verified important continuing bottlenecks after mitigation could support40, stronger city/regional low-impact and effective response evidence80.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "organized_violence": "partial",
         "regional_conflict": "partial",
@@ -51,15 +51,15 @@
     },
     {
       "id": "RES",
-      "score": null,
-      "rationale": "Actual water/food delivery and energy constraints coexist with expanded 2026 relief. The original 2022 survey reports 19.2% with three or more indicators in the broad >=200% FPL income group, not median-income citizens. EEAP expanded eligibility and actual approvals counter the assumption that 2025 above-threshold barriers persist unchanged. Approval counts do not measure post-aid burden, and neither source covers the whole frozen FUA or unresolved supply-chain resilience.",
-      "assumption": "No justified whole-dimension anchor yet. Do not identify >=200% FPL with local median income, birthplace with citizenship, 2025 eligibility with 2026 rules, or approved discounts with burdens resolved. A 40 requires a supported important target-resident bottleneck despite mitigation; a 60 requires supported usually available and affordable supply. Neither follows from aggregate prevalence or programme counts alone.",
-      "conditionalAlternatives": [],
+      "score": 40,
+      "rationale": "Primary2023 PovertyTracker food-need shortfalls persist across broad non-poor income bands, with2024 consumption adjustments adding a later price-pressure signal from overlapping study cohorts rather than independent statistical confirmation. ActualJuly2026 EEAP discounts, a typical median-household energy model below6% under DOE scope, running water/food delivery and scoped storm power restoration are retained as positive counterevidence. Cutbacks are not all unmet necessities, SPM is not FPL/AMI/local median, and benefits or model assumptions are not post-aid outcomes.",
+      "assumption": "Accept actual food-need shortfalls in the reviewed non-poor income bands as indicative of an important target median-income local-citizen affordability constraint; core-city experience has limited FUA representativeness and the constraint remains important through cutoff despite actual relief. Citizenship, exact median income, NJ/CT reach and2026 post-relief need are not jointly measured. Do not presume EEAP ineffective; rejecting resident/income/scope/continuity/materiality assumptions restores unknown. Supported usual affordability and sufficiently relieved shortages could justify60; broader supply/backup/common-shock evidence80.",
+      "conditionalAlternatives": [60, 80],
       "subpillars": {
         "water": "partial",
         "food": "partial",
         "energy": "partial",
-        "supply_chain": "unresolved"
+        "supply_chain": "partial"
       }
     },
     {
@@ -373,5 +373,60 @@
     "eventId": 623566,
     "status": "quarantined_source_event_date_conflict_not_2026_impact",
     "meaning": "Dataset date2026-03-30 conflicts with cited DOJ allegations about2024-04-15. Publication/indictment dates are distinct from occurrence; original values retained, no conviction or current casualty claim."
+  },
+  "physicalRiskReview": {
+    "path": "docs/cci-new-york-physical-risk-review.md",
+    "sha256": "14c533193cde24f84f382b8b4a25d75b68dd88a7f05c424ef30798ecf27dbc3a"
+  },
+  "securityReview": {
+    "path": "docs/cci-new-york-security-review.md",
+    "sha256": "d02d019c11fdeee0e85555ef41a5ec263966b63d8e5b11b9b1fe1a3fa79d319f"
+  },
+  "resourceReview": {
+    "path": "docs/cci-new-york-resource-review.md",
+    "sha256": "e83087c4e56a76c097744c9e0285c9b866456cf68a377f126b6fb192a55690dd"
+  },
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "referencePoints": [
+      {
+        "label": "North Plainfield approximate municipal reference",
+        "longitude": -74.4274,
+        "latitude": 40.6301,
+        "fuaMatches": [7244]
+      },
+      {
+        "label": "Newark approximate municipal reference",
+        "longitude": -74.17,
+        "latitude": 40.74,
+        "fuaMatches": [7244]
+      },
+      {
+        "label": "Stamford approximate municipal reference",
+        "longitude": -73.5387,
+        "latitude": 41.0534,
+        "fuaMatches": [7244]
+      },
+      {
+        "label": "Gracie Mansion approximate place reference",
+        "longitude": -73.943,
+        "latitude": 40.776,
+        "fuaMatches": [7244]
+      },
+      {
+        "label": "Central Synagogue approximate place reference",
+        "longitude": -73.97,
+        "latitude": 40.759,
+        "fuaMatches": [7244]
+      },
+      {
+        "label": "St Albans Queens approximate neighbourhood reference",
+        "longitude": -73.765,
+        "latitude": 40.694,
+        "fuaMatches": [7244]
+      }
+    ],
+    "method": "Checksum-validated complete9031 GHS-FUA load; always_xy4326 to54009 point intersection.",
+    "meaning": "Approximate analyst-selected reference points only; no exact event/treatment locations, whole administrative or utility service footprints, resident distributions or inherited scores established."
   }
 }

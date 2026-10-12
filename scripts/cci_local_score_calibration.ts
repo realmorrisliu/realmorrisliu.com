@@ -303,7 +303,7 @@ const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.
 assert(tokyoPosition);
 assert.equal(tokyoPosition.center, 62);
 assert.equal(tokyoPosition.bestPosition, 1);
-assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 5);
+assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 6);
 assert.deepEqual(total(washington), { center: 58, lower: 58, upper: 58 });
 assert.equal(washington.RES, 40);
 assert.equal(washington.OPT, 60);
@@ -368,32 +368,59 @@ for (const point of realCases[6].referenceBoundaryCheck.referencePoints) {
   assert.deepEqual(point.fuaMatches, [7068]);
 }
 
-assert.deepEqual(total(newYork), { center: null, lower: 36, upper: 76 });
-for (const dimension of ["PCS", "GSS", "RES"] as const) {
-  assert.equal(newYork[dimension], undefined);
+assert.deepEqual(total(newYork), { center: 58, lower: 58, upper: 58 });
+assert.equal(newYork.RES, 40);
+for (const [dimension, lower, upper] of [
+  ["PCS", 49, 64],
+  ["GSS", 49, 64],
+  ["ISR", 49, 64],
+  ["MED", 49, 64],
+  ["RES", 54, 64],
+  ["LON", 52, 62],
+  ["TEC", 52, 62],
+  ["OPT", 52, 62],
+] as const) {
+  const withdrawn = { ...newYork };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
 }
 const newYorkWithoutMed = { ...newYork };
 delete newYorkWithoutMed.MED;
-assert.deepEqual(total(newYorkWithoutMed), { center: null, lower: 27, upper: 82 });
+assert.deepEqual(total(newYorkWithoutMed), { center: null, lower: 49, upper: 64 });
 const newYorkWithoutLon = { ...newYork };
 delete newYorkWithoutLon.LON;
-assert.deepEqual(total(newYorkWithoutLon), { center: null, lower: 30, upper: 80 });
+assert.deepEqual(total(newYorkWithoutLon), { center: null, lower: 52, upper: 62 });
 const newYorkWithoutOpt = { ...newYork };
 delete newYorkWithoutOpt.OPT;
-assert.deepEqual(total(newYorkWithoutOpt), { center: null, lower: 30, upper: 80 });
-assert.deepEqual(total({ ...newYork, MED: 40 }), { center: null, lower: 33, upper: 73 });
-assert.deepEqual(total({ ...newYork, LON: 40 }), { center: null, lower: 34, upper: 74 });
-assert.deepEqual(total({ ...newYork, PCS: 40 }), { center: null, lower: 42, upper: 67 });
-assert.deepEqual(total({ ...newYork, RES: 40 }), { center: null, lower: 40, upper: 70 });
-assert.deepEqual(total({ ...newYork, GSS: 60 }), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total(newYorkWithoutOpt), { center: null, lower: 52, upper: 62 });
+assert.equal(total({ ...newYork, MED: 40 }).center, 55);
+assert.equal(total({ ...newYork, LON: 40 }).center, 56);
+for (const dimension of ["PCS", "GSS"] as const) {
+  assert.equal(newYork[dimension], 60);
+  assert.equal(total({ ...newYork, [dimension]: 40 }).center, 55);
+  assert.equal(total({ ...newYork, [dimension]: 80 }).center, 61);
+}
+assert.equal(total({ ...newYork, RES: 60 }).center, 60);
+assert.equal(total({ ...newYork, RES: 80 }).center, 62);
 const newYorkPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
   (c: { efua_id: string }) => c.efua_id === "7244"
 );
 assert(newYorkPosition);
-assert.equal(newYorkPosition.center, null);
-assert.equal(newYorkPosition.bestPosition, 1);
+assert.equal(newYorkPosition.center, 58);
+assert.equal(newYorkPosition.bestPosition, 4);
 assert.equal(newYorkPosition.worstPosition, rankAudit.candidateCount);
 assert.deepEqual(realCases[7].clinicBoundaryCheck.fuaMatches, [7244]);
+assert.equal(realCases[7].referenceBoundaryCheck.referencePoints.length, 6);
+for (const point of realCases[7].referenceBoundaryCheck.referencePoints) {
+  assert.deepEqual(point.fuaMatches, [7244]);
+}
+for (const review of [
+  realCases[7].physicalRiskReview,
+  realCases[7].securityReview,
+  realCases[7].resourceReview,
+]) {
+  assert.equal(review.sha256, digest(review.path));
+}
 assert.deepEqual(total(paris), { center: null, lower: 34, upper: 74 });
 for (const dimension of ["PCS", "GSS", "RES"] as const) {
   assert.equal(paris[dimension], undefined);
