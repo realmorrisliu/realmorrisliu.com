@@ -24,6 +24,7 @@ import osakaKyoto from "../../docs/data/cci-local-2026-osaka-kyoto-case.json";
 import boston from "../../docs/data/cci-local-2026-boston-case.json";
 import seoul from "../../docs/data/cci-local-2026-seoul-case.json";
 import lisbon from "../../docs/data/cci-local-2026-lisbon-case.json";
+import chicago from "../../docs/data/cci-local-2026-chicago-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -53,6 +54,7 @@ const cases = [
   boston,
   seoul,
   lisbon,
+  chicago,
 ];
 const caseNamesZh: Record<number, string> = {
   [singapore.candidateId]: "新加坡",
@@ -70,6 +72,7 @@ const caseNamesZh: Record<number, string> = {
   [boston.candidateId]: "波士顿功能区",
   [seoul.candidateId]: "首尔功能区",
   [lisbon.candidateId]: "里斯本功能区",
+  [chicago.candidateId]: "芝加哥功能区",
 };
 const screening = coverage.local2026Screening;
 if (
@@ -481,6 +484,26 @@ const rows = [
         href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-seoul-clinical-review.md"
       >
         {zh ? "临床证据与改档条件" : "Clinical evidence and conditions for revision"}
+      </a>
+    </p>
+    <p>
+      {
+        zh
+          ? "芝加哥功能区 PCS／RES 条件性 40，ISR／LON／TEC／OPT 条件性 60；GSS／MED 未定，无中心、数学域 37—67。跨州范围保留 Gary 等地实际长断电与资源损失，也保留已经完成的恢复和援助；启动监管调查不等于责任已认定。水务通知缺口与补发整改共同判读，数字旧数重刊与客流方法重述不当新实绩。LON 依据人体／监管和实际当地采用，仍依赖监测、医保负担与延续假设；不因此给整维 MED 补分。必要假设拒绝则未知，现有部分域不证明入围或排除。"
+          : "Chicago has conditional 40 judgments for PCS and RES, and 60 for ISR, LON, TEC and OPT. GSS and MED remain unresolved, without a centre and with a mathematical domain of 37–67. The cross-state FUA retains actual prolonged outages and resource losses around Gary alongside completed restoration and relief. A regulatory investigation is not a liability finding. Water-notification failures and correction are read together; reprinted digital figures and restated transit counts are not new measurements or growth. LON combines human/regulatory evidence and actual local adoption, with reversible monitoring, insurance affordability and continuity assumptions. It does not fill MED. Rejecting necessary assumptions restores unknown; the partial domain establishes neither qualification nor exclusion."
+      }
+    </p>
+    <p class="text-muted-foreground text-sm">
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-chicago-case.md"
+      >
+        {zh ? "芝加哥评分案例与原件" : "Chicago scoring case and sources"}
+      </a>
+      ·
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-chicago-clinical-review.md"
+      >
+        {zh ? "医疗质量、资格与临床路径复核" : "Quality, eligibility and clinical-pathway review"}
       </a>
     </p>
     <p>

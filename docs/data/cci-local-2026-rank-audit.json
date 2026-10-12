@@ -4,10 +4,10 @@
   "evidenceCutoff": "2026-10-10",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
-  "conditionalCaseCount": 15,
+  "conditionalCaseCount": 16,
   "completeConditionalCaseCount": 5,
-  "partialCaseCount": 10,
-  "unassessedCount": 9016,
+  "partialCaseCount": 11,
+  "unassessedCount": 9015,
   "weights": {
     "PCS": 15,
     "GSS": 15,
@@ -143,6 +143,15 @@
           "lower": 58.0,
           "upper": 58.0,
           "bestPosition": 4,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "6654",
+          "source_name": "Chicago",
+          "center": null,
+          "lower": 37.0,
+          "upper": 67.0,
+          "bestPosition": 1,
           "worstPosition": 9031
         },
         {
@@ -283,6 +292,15 @@
           "center": null,
           "lower": 49.0,
           "upper": 64.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "6654",
+          "source_name": "Chicago",
+          "center": null,
+          "lower": 31.0,
+          "upper": 76.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -428,6 +446,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "6654",
+          "source_name": "Chicago",
+          "center": null,
+          "lower": 37.0,
+          "upper": 67.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "7068",
           "source_name": "Washington D.C.",
           "center": null,
@@ -565,6 +592,15 @@
           "center": null,
           "lower": 49.0,
           "upper": 64.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "6654",
+          "source_name": "Chicago",
+          "center": null,
+          "lower": 28.0,
+          "upper": 73.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -710,6 +746,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "6654",
+          "source_name": "Chicago",
+          "center": null,
+          "lower": 33.0,
+          "upper": 73.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "7068",
           "source_name": "Washington D.C.",
           "center": null,
@@ -847,6 +892,15 @@
           "center": null,
           "lower": 49.0,
           "upper": 64.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "6654",
+          "source_name": "Chicago",
+          "center": null,
+          "lower": 37.0,
+          "upper": 67.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -992,6 +1046,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "6654",
+          "source_name": "Chicago",
+          "center": null,
+          "lower": 31.0,
+          "upper": 71.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "7068",
           "source_name": "Washington D.C.",
           "center": null,
@@ -1129,6 +1192,15 @@
           "center": null,
           "lower": 52.0,
           "upper": 62.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "6654",
+          "source_name": "Chicago",
+          "center": null,
+          "lower": 31.0,
+          "upper": 71.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1274,6 +1346,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "6654",
+          "source_name": "Chicago",
+          "center": null,
+          "lower": 31.0,
+          "upper": 71.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "7068",
           "source_name": "Washington D.C.",
           "center": null,
@@ -1415,6 +1496,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "6654",
+          "source_name": "Chicago",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "7068",
           "source_name": "Washington D.C.",
           "center": null,
@@ -1448,7 +1538,7 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "21c8ca9e16446a904341629f0fbc6b3c3abd432038f2271c9fb6811bfa2f2d5c",
+    "cci-global-evidence-matrix.csv": "b372a7b76364b0fcf5d34cde9f930a7d5e3e4d765981a696455393451eba0906",
     "cci-legal-mobility-rules.json": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
     "cci-legal-mobility.md": "34e41625f9e78832f4139e4a350fd4c48d7fc333ac876838fdaa63254d8e1179",
     "cci-local-2026-singapore-case.json": "6c5412e214060111201410a0a1a12cb9618f2c3dc5aaff725fdfda683b7696e4",
@@ -1481,12 +1571,14 @@
     "cci-local-2026-seoul-case.md": "0176f2f322df7f485fcbfd64a1fea619b1e3a4c2e2c836d0d04184f4806414ee",
     "cci-local-2026-lisbon-case.json": "b8f5d1bbd92720731eee4442a065c9460d805c3d1084ade2879913e6fe4f4470",
     "cci-local-2026-lisbon-case.md": "95f90c78d34ee63b3615fca9538deb31b09db639b0b46875355513841af962e2",
+    "cci-local-2026-chicago-case.json": "87188c878bc752de873d8373415c8949a89c0d37587b013323ae7cb104bbe25e",
+    "cci-local-2026-chicago-case.md": "041bdc7edfd254deb56677553feedef7808e98bf3f1cce072984f359ef18015f",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "dea9d3281330c55daadfac1d2a7e703a10eddb690aab6480d8a03fb1365c3f8b",
+    "cci-global-evidence-matrix.json": "f47c33ae128e97a38320f86bbcb3e9f77df1c155f3d223090bd16d88e6aa5b0f",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "09940778e4bfa629f24b0410f13be6cf3398aaf1fe8f4715e683eeba7e77e49c"
+    "cci-local-2026-scoring-calibration.md": "906d28b39f72908049bf5dd491c4b46e4a896e4ffa9661973ed922ae450a0d47"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "00e58337dc19d160be046040eaef18609563d3f16bbce66b28ebb27d8954f9ea",
+  "csvSha256": "abe7974f391645dc8bf86f8b28da27042c5b7c7c71b001e1611dd4215dcd391f",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }

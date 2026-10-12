@@ -67,6 +67,7 @@ const realCases = [
   "boston",
   "seoul",
   "lisbon",
+  "chicago",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -125,6 +126,7 @@ const [
   boston,
   seoul,
   lisbon,
+  chicago,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -629,6 +631,36 @@ assert.equal(
   realCases[14].sharedLegalPath.sourceSha256,
   digest("docs/data/cci-legal-mobility-rules.json")
 );
+assert.deepEqual(total(chicago), { center: null, lower: 37, upper: 67 });
+assert.equal(chicago.PCS, 40);
+assert.equal(chicago.RES, 40);
+assert.equal(chicago.LON, 60);
+assert.equal(chicago.MED, undefined);
+assert.equal(chicago.GSS, undefined);
+const chicagoWithoutRes = { ...chicago };
+delete chicagoWithoutRes.RES;
+assert.deepEqual(total(chicagoWithoutRes), { center: null, lower: 33, upper: 73 });
+assert.deepEqual(total({ ...chicago, MED: 60 }), { center: null, lower: 46, upper: 61 });
+assert.equal(realCases[15].clinicalReview.sha256, digest(realCases[15].clinicalReview.path));
+assert.equal(realCases[15].stormReview.iurcFinalLiabilityFinding, false);
+assert.equal(realCases[15].stormReview.sameDenominatorVerified, false);
+assert.equal(realCases[15].waterReview.monitoringFailureIsContaminationFinding, false);
+assert.equal(realCases[15].waterReview.hiddenLoremIpsumUsed, false);
+assert.equal(realCases[15].digitalReview.is2025Measurement, false);
+assert.equal(realCases[15].transitReview.restatementIsNewObservedGrowth, false);
+assert.equal(realCases[15].lonReview.uniqueFuaBeneficiaryTotal, null);
+assert.equal(realCases[15].lonReview.localCurrentEarlierMriImplementationVerified, false);
+assert.equal(
+  realCases[15].lonReview.illinoisAssistanceAutomaticallyAppliesToIndianaResidents,
+  false
+);
+for (const point of realCases[15].referenceBoundaryCheck.referencePoints) {
+  assert.deepEqual(point.fuaMatches, [6654]);
+}
+assert.equal(
+  realCases[15].sharedLegalPath.sourceSha256,
+  digest("docs/data/cci-legal-mobility-rules.json")
+);
 const tokyoWithoutTec = { ...tokyo };
 delete tokyoWithoutTec.TEC;
 assert.deepEqual(total(tokyoWithoutTec), { center: null, lower: 54, upper: 64 });
@@ -702,5 +734,6 @@ console.log({
     boston: { partial: total(boston) },
     seoul: { partial: total(seoul), withoutLon: total(seoulWithoutLon) },
     lisbon: { partial: total(lisbon), withoutMed: total(lisbonWithoutMed) },
+    chicago: { partial: total(chicago), withoutRes: total(chicagoWithoutRes) },
   },
 });

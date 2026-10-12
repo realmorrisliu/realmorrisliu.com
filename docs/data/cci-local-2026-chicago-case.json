@@ -1,0 +1,425 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "retrievedOn": "2026-10-12",
+  "candidateId": 6654,
+  "name": "Chicago",
+  "evidenceReview": "cci-local-2026-chicago-case.md",
+  "expectedConditionalTotal": null,
+  "limitations": "Conditional research judgments, not full measurements or ranking. Cross-state FUA, municipal/county/operator scopes and cohorts differ. Reversible resident/scope/time/cutoff-availability/materiality assumptions. No missingness penalty, total centre or reliable exclusion bound.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 40,
+      "rationale": "NWS records actual2025 flood rescues, flooded basements and interrupted roads;2026 wind damage and a Gary fatality plus long recovery demonstrate consequential protection gaps. Actual TARP storage, green infrastructure, alerts and repair mitigate these effects; planned reservoir capacity is not operational. Heat and geophysical evidence remain partial.",
+      "assumption": "Accept scoped, repeated flood/wind impacts as a material constraint for the cross-state FUA and ordinary residents after observed mitigation, and the underlying vulnerability persisting to the cutoff. This is not a uniform household loss estimate, a rate from event counts or a failure finding against a utility. If mitigation is judged adequate60 remains an alternative; reject necessary scope/time/materiality assumptions to restore unknown.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "heat_humidity": "context",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "Assigned event absence and ordinary crime cannot establish organised-violence, regional or strategic impact for the whole FUA. No justified whole-dimension anchor.",
+      "assumption": "No zero-risk inference from missing event records, country background, crime totals or prosecution dates.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Actual public reporting and corrected water-notification/filter-monitoring failures, regional service delivery, mutual-aid repair and relief demonstrate execution and accountability with important group/recovery gaps. The IURC commenced an investigation, not a final negligence finding. Funding and scheduled events are not completed household benefits.",
+      "assumption": "Accept the reviewed municipal/county/regulator/operator outcomes as limited evidence that major institutions generally function in the FUA and ordinary profile, with meaningful uneven recovery and access. Broader social cohesion is not directly measured. Reject necessary scope/time/representativeness assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 40,
+      "rationale": "Actual water treatment, regional food delivery and electric restoration coexist with lead-service qualification/cost constraints, sustained food need and2026 local10-to14-day loss of electricity with spoiled food/medicines and disabled pumps. Real completed relief/repair is retained; operator totals and pantry visits are not unique FUA households or median-income rates.",
+      "assumption": "Accept the observed linked power/food/storage failures as a material resource-continuity constraint across relevant parts of the FUA after actual mitigation, not assume all ordinary residents are poor or affected. Persistent vulnerability at cutoff and ordinary-profile applicability remain reversible. Accepting sufficient recovery/alternatives could support60; reject scope/time/materiality assumptions to restore unknown.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": null,
+      "rationale": "Actual local routine/specialist care, selected outcomes and safety-net referrals/financial mitigation coexist with waiting-before-exit, chronic-control, infection and insurance constraints. Cohorts, time, usual insured median-income profile and cross-state FUA are not connected sufficiently for40 or60. Medicine-storage loss is not provider-wide failure.",
+      "assumption": "No whole-dimension anchor from care availability, a selected0% specialist outcome,2024 safety-net processes, research, claims addresses or poverty-qualified assistance. Keep actual mitigation and unresolved access/quality/cost/continuity together.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "unresolved"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "FDA disease-specific phaseIII/traditional approval and conditional Medicare payment,2024 actual nonfacility claims signals, local2023 provision/2024 prescribing and monitoring arrangements and current infusion entry support limited translation. Registered addresses are not treatment sites or unique local residents; old price and MRI schedules do not prove current net cost or adequate monitoring. Financial assistance has geographic/coverage exclusions.",
+      "assumption": "Accept disease-path representativeness, limited local delivery inference and historical-to-cutoff continuity, adequate current MRI/safety practice including2025 earlier MRI, and eligible ordinary median-income residents normally able to enter and afford insured care. Current undated and dated-report availability at cutoff remains assumed. Reject any necessary scope/time/safety/eligibility/affordability assumption to restore unknown; verified material access barriers could support40, distinct mature pathways and broad actual access80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Northwestern actual FY2025 patents, executed agreements and startups, UChicago FY2026 executed licenses/options and local-business support, and used public-library/digital services demonstrate multiple productive nodes. Scoped2023 digital access/affordability barriers reiterated in2025 and completed2025 support coexist; wireline absence is not absence of all internet. Off-site programmes and aggregate funds are not FUA output.",
+      "assumption": "Accept actual multi-node capability and locally relevant use continue to2026, and observed access/skills constraints remain material after documented mitigation. Older survey/Census-based figures are not2025 or2026 measurements, nor median-income prevalence. If barriers are judged sufficiently mitigated80 is a plausible alternative; reject necessary timing/scope/resident/materiality assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Actual two-airport routes/traffic and2026 transit boardings, bank international transfers and a conditional US-citizen German residence-application path support ordinary options. Shared regional storm exposure, constrained bank/account/fees and communications failures remain; neither airport counts nor emergency-only charging prove independent household fallback.",
+      "assumption": "Accept ordinary citizens can normally qualify for and afford transport/accounts/communications and relevant pathways continue at cutoff across the FUA. Residence application is not residence/work entitlement. Undated bank conditions need pre-cutoff availability assumption. Reject necessary qualification/cost/time/scope assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "referencePoints": [
+      {
+        "label": "Chicago approximate reference",
+        "longitude": -87.6298,
+        "latitude": 41.8781,
+        "fuaMatches": [6654]
+      },
+      {
+        "label": "Evanston approximate reference",
+        "longitude": -87.6877,
+        "latitude": 42.0451,
+        "fuaMatches": [6654]
+      },
+      {
+        "label": "Northwestern Chicago approximate reference",
+        "longitude": -87.6197,
+        "latitude": 41.8948,
+        "fuaMatches": [6654]
+      },
+      {
+        "label": "UChicago Hyde Park approximate reference",
+        "longitude": -87.5987,
+        "latitude": 41.7886,
+        "fuaMatches": [6654]
+      },
+      {
+        "label": "Argonne approximate campus approximate reference",
+        "longitude": -87.9848,
+        "latitude": 41.7089,
+        "fuaMatches": [6654]
+      },
+      {
+        "label": "O Hare approximate reference",
+        "longitude": -87.9073,
+        "latitude": 41.9742,
+        "fuaMatches": [6654]
+      },
+      {
+        "label": "Midway approximate reference",
+        "longitude": -87.7524,
+        "latitude": 41.7868,
+        "fuaMatches": [6654]
+      },
+      {
+        "label": "Gary approximate reference",
+        "longitude": -87.3464,
+        "latitude": 41.5934,
+        "fuaMatches": [6654]
+      }
+    ],
+    "method": "Checksum-validated full9031 GHS-FUA load; EPSG4326 to ESRI54009 always_xy point intersection.",
+    "meaning": "Approximate references only, not full footprints, actual treatment sites, household exposure or operator service areas."
+  },
+  "sharedLegalPath": {
+    "source": "cci-legal-mobility-rules.json",
+    "sourceSha256": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
+    "rule": "section41_citizen_onshore_application_germany",
+    "meaning": "UScitizen conditional application only; purpose, resources, approval and costs remain, not residence/work entitlement."
+  },
+  "stormReview": {
+    "eventOn": "2026-08-11",
+    "nirpcReportDated": "2026-09-17",
+    "localResidentReportedOutageDays": [10, 14],
+    "restorationDeclaredSubstantiallyCompleteOn": "2026-08-26",
+    "iurcOrderApprovedOn": "2026-09-22",
+    "iurcFinalLiabilityFinding": false,
+    "nirpcPeakCustomers": 317000,
+    "nirpcOutageIncidentsMoreThan": 374500,
+    "iurcAffectedCustomers": 387010,
+    "sameDenominatorVerified": false,
+    "fullFuaHouseholdRate": null,
+    "ordinaryIndependentFallbackVerified": false
+  },
+  "waterReview": {
+    "observationYear": 2025,
+    "currentPdfMetadataTitle": "CCR2025_Draft_06.08.26",
+    "firstPublicationVerified": false,
+    "leadNotificationFailureReported": true,
+    "reportSaysNotificationsSentIn2025": true,
+    "reportSaysCertifiedFor2026": true,
+    "monitoringFailureIsContaminationFinding": false,
+    "leadTableVisuallyChecked": true,
+    "lead90thPercentilePpb": [8.2, 9.4],
+    "leadSitesExceedingActionLevel": 5,
+    "leadSampleSiteDenominator": null,
+    "hiddenLoremIpsumUsed": false,
+    "arsenicHighestRangeConflictResolved": false,
+    "medianIncomeResidentAutomaticallyQualifiesForEquityReplacement": false
+  },
+  "digitalReview": {
+    "planYear": 2023,
+    "announcementPublishedOn": "2025-09-11",
+    "wirelineAbsentPercent": 27,
+    "computerAbsentPercent": 21,
+    "originalAcsWindowVerified": false,
+    "is2025Measurement": false,
+    "is2026Measurement": false,
+    "noWirelineMeansNoInternet": false,
+    "suburbanSurveyResponses": 3179,
+    "noHomeInternetSurveySubset": 279,
+    "county2025EventsMoreThan": 200,
+    "eventsAreCompletedHouseholdConnections": false
+  },
+  "transitReview": {
+    "observationMonth": "2026-07",
+    "reportPreparedOn": "2026-08-14",
+    "actualBoardings": 30656825,
+    "calendarAdjustedBoardings": 30421103,
+    "boardingsAreUniqueResidents": false,
+    "methodologyRestatementEffectiveOn": "2026-03-20",
+    "restated2025MillionRides": 338,
+    "original2025MillionRides": 319.2,
+    "restatementIsNewObservedGrowth": false
+  },
+  "sourceSnapshots": [
+    {
+      "url": "https://chicagoccr.org/docs/2025_WaterQualityReport.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1047447,
+      "sha256": "9beb63b54780c97c08b61921a00d3ad28f5a492dd7f63e178dba70710ccdc75d",
+      "publishedOn": null,
+      "scope": "DWM current2025CCR; June2026 metadata not first-publication proof; source-table image checked."
+    },
+    {
+      "url": "https://www.cookcountyil.gov/sites/g/files/ywwepo161/files/documents/2026-01/OOP%20-%20Policy%20Roadmap%202025%20V3%20WEB.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 40938635,
+      "sha256": "cac5671fba941c3a896ee6fae5e8b34d61149158222c64acd595a0b00025f8f1",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://www.northwestern.edu/invo-inventive-activity-report/reports/fy-2025/index1.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 13932,
+      "sha256": "62cdf693c69156e0e57e38b57ce7a64079b5b8ada22bcfa60968a4e2092e6f8d",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://mwrd.org/news/10-am-storm-update",
+      "retrievedOn": "2026-10-12",
+      "bytes": 89880,
+      "sha256": "b63a79d9c639bbd9215c950def5ec403ab5eb354fa83a9b203a21403bdafd04b",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://www.cookcountyil.gov/news/cook-county-launches-new-digital-equity-website-expand-access-inclusion-and-opportunity",
+      "retrievedOn": "2026-10-12",
+      "bytes": 74277,
+      "sha256": "ca672d089c8ba5b5ad054496b559ec7fedfee0fff728028f29295f7a74c756b2",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://polsky.uchicago.edu/2026/10/09/impact-in-action-fy26/",
+      "retrievedOn": "2026-10-12",
+      "bytes": 199667,
+      "sha256": "ab56e6ac0c47806d0c1cd821c49c62704cb04a68d02aca65a69e848024841d7d",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://poweringlives.comed.com/storms-were-historic-the-outages-could-have-been-too/",
+      "retrievedOn": "2026-10-12",
+      "bytes": 77870,
+      "sha256": "bd99389a22ceddc6200c9b493d6e0b7095155447cb6ff8e0db91c61ccf24d6ce",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://poweringlives.comed.com/comed-visits-communities-to-connect-thousands-of-customers-to-bill-support/",
+      "retrievedOn": "2026-10-12",
+      "bytes": 75889,
+      "sha256": "928c2057ae6e33a680b6d099b8242b187418569249a2c3baaddf002401ea5d3b",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://www.transitchicago.com/assets/1/6/Monthly_Ridership_2026-7.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1668049,
+      "sha256": "98801a31ac7e80fae70664265219951bdaa835eb00acaf4c8e5cc790e68fdf56",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://www.transitchicago.com/assets/1/6/2025_Fall_Biannual_Survey.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 554284,
+      "sha256": "3b8cc157f184cceddabc86e5fb74c088554e63a292778e2ea0fb2780328afe44",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://www.transitchicago.com/assets/1/6/MEMO_-_Ridership_Update_3.20.2026.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 409005,
+      "sha256": "fdea20563282987251d4c88d99423da48348d2eaf62531bbe7b81f831d77493c",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://www.flychicago.com/SiteCollectionImages/Business/LGAU2025/6675%20-%20Legislative%20Guide%202025%20-%20FINAL%20-%2010-14-25%20-%20LOW%20RES.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 23162762,
+      "sha256": "44566cafb816c481821e98d91ed72cc2c921baf63069ec29a620ef4ad590c533",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://www.weather.gov/media/lot/stormdata/pdf/Jul2025.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 103559,
+      "sha256": "3935c3ba46ca77ef8d6e473ce56d08c974f50a8ea357b08748b4f0c90caa7a8a",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://www.in.gov/nirpc/files/2026-Storm-Event-and-Restoration-Effort-Summary.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 2093190,
+      "sha256": "ca2accaa0d107002c31def9b96b552cd34dc83b0453b928e195eb6513e75e991",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://www.in.gov/iurc/files/ord_46453_092226.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 258956,
+      "sha256": "c3c21c17b9a7aba4058bc1068fc1b173cd8ede2a8fa219a858d4716b7dd65223",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://www.weather.gov/lot/2026_08_11_Derecho",
+      "retrievedOn": "2026-10-12",
+      "bytes": 138677,
+      "sha256": "027f8b4f18384a9095905f8672c9ec586805853a54407d74e939291a350921d5",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://www.nipsco.com/our-company/news-room/news-article/nipsco-and-community-partners-host-storm-community-support-events",
+      "retrievedOn": "2026-10-12",
+      "bytes": 399433,
+      "sha256": "8295680b91acae4d87e18d8f2a78f7cf526b3071fc59533a0dede61d1c76aa60",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://www.cookcountyil.gov/sites/g/files/ywwepo161/files/documents/2023-10/FINAL-Cook%20County%20DE%20Plan_pages.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 6443082,
+      "sha256": "fc0909810de3bb78ac8a4b96478425f02fd6d75f5e165932a7c9b4d2e940804f",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    },
+    {
+      "url": "https://info.bankofamerica.com/en/digital-banking/wire-transfers",
+      "retrievedOn": "2026-10-12",
+      "bytes": 166861,
+      "sha256": "bbb5640ea900016c5789616f4f196b37cfe0719b5db1b7811817300369c57c93",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; first-publication and cutoff version not authenticated by hash. See case note for actual period, dates and applicability."
+    }
+  ],
+  "webReadSources": [
+    {
+      "url": "https://annualreport.chicagosfoodbank.org/story/meeting-record-needs/",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "FY2025 actual network delivery/visits, first-publication and exact cutoff bytes not independently archived."
+    },
+    {
+      "url": "https://www.chipublib.org/news/board-of-directors-meeting-minutes-may-20-2025/",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": "2025-09-16",
+      "bytes": null,
+      "sha256": null,
+      "scope": "May20 meeting report of actual use and completed facilities; future student accounts not treated as completed."
+    }
+  ],
+  "clinicalReview": {
+    "path": "docs/cci-chicago-clinical-review.md",
+    "sha256": "cd7f7c492c5a2c355e7dedf4b851eea46edd77b96b2368bc9efc7050677dc13d"
+  },
+  "lonReview": {
+    "claimsYear": 2024,
+    "registeredNpiSignals": 4,
+    "beneficiariesByRecord": [14, 14, 21, 11],
+    "uniqueFuaBeneficiaryTotal": null,
+    "npiHospitalAffiliationVerified": false,
+    "localCurrentCohortVerified": false,
+    "localCurrentEarlierMriImplementationVerified": false,
+    "localOrdinaryNetCostVerified": false,
+    "signedProviderStatementDated": "2024-10-03",
+    "statementPriceLabelConflictResolved": false,
+    "policyIncludes2026Fpl": true,
+    "policyNextReviewDateMeansExpired": false,
+    "illinoisAssistanceAutomaticallyAppliesToIndianaResidents": false
+  }
+}
