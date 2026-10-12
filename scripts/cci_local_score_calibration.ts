@@ -74,6 +74,7 @@ const realCases = [
   "jakarta",
   "nanjing",
   "guangzhou",
+  "wuhan",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -139,6 +140,7 @@ const [
   jakarta,
   nanjing,
   guangzhou,
+  wuhan,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -1016,7 +1018,7 @@ const jakartaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
   (c: { efua_id: string }) => c.efua_id === "4897"
 );
 assert(jakartaPosition);
-assert.equal(jakartaPosition.bestPosition, 10);
+assert.equal(jakartaPosition.bestPosition, 11);
 assert.equal(jakartaPosition.worstPosition, rankAudit.candidateCount);
 
 assert.deepEqual(total(nanjing), { center: null, lower: 49, upper: 64 });
@@ -1266,3 +1268,97 @@ const guangzhouPosition = rankAudit.scenarios.fixed_conditional_centers.caseResu
 assert(guangzhouPosition);
 assert.equal(guangzhouPosition.bestPosition, 1);
 assert.equal(guangzhouPosition.worstPosition, rankAudit.candidateCount);
+
+assert.deepEqual(total(wuhan), { center: null, lower: 54, upper: 64 });
+assert(!Object.hasOwn(wuhan, "LON"));
+for (const [dimension, lower, upper] of [
+  ["PCS", 45, 70],
+  ["GSS", 45, 70],
+  ["ISR", 45, 70],
+  ["RES", 48, 68],
+  ["MED", 45, 70],
+  ["TEC", 46, 66],
+  ["OPT", 50, 70],
+] as const) {
+  const withdrawn = { ...wuhan };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...wuhan, ISR: 40 }), { center: null, lower: 51, upper: 61 });
+const wuhanCase = realCases[22];
+for (const review of wuhanCase.focusedReviews)
+  assert.equal(review.sha256, digest(`docs/${review.path}`));
+assert.equal(
+  wuhanCase.researchPriority.sourceSha256,
+  digest(`docs/data/${wuhanCase.researchPriority.source}`)
+);
+assert.equal(wuhanCase.researchPriority.recordAssociations, 54367);
+assert.equal(
+  wuhanCase.sharedLegalPath.sourceSha256,
+  digest("docs/data/cci-legal-mobility-rules.json")
+);
+assert.equal(wuhanCase.referenceBoundaryCheck.referencePoints.length, 16);
+for (const [label, expected] of [
+  ["Tianhe airport approximate reference", []],
+  ["Huangpi urban approximate reference", [9020]],
+  ["Xinzhou urban approximate reference", [9118]],
+] as const)
+  assert.deepEqual(
+    wuhanCase.referenceBoundaryCheck.referencePoints.find(
+      (point: { label: string }) => point.label === label
+    )?.fuaMatches,
+    expected
+  );
+assert.equal(
+  Object.values(wuhanCase.resourceChecks.waterSampleTypeCounts).reduce(
+    (sum: number, value) => sum + (value as number),
+    0
+  ),
+  wuhanCase.resourceChecks.septemberWaterRecords
+);
+assert.equal(wuhanCase.resourceChecks.septemberWaterRecords, 7);
+assert.equal(wuhanCase.resourceChecks.permanganateIndexUnreportedRows, 6);
+assert.equal(wuhanCase.resourceChecks.waterTableRowsAreAllFuaHouseholds, false);
+assert.equal(wuhanCase.resourceChecks.powerIndicatorsSameDenominatorVerified, false);
+assert.equal(
+  wuhanCase.securityChecks.disclosureNewRequests +
+    wuhanCase.securityChecks.disclosurePriorCarriedRequests,
+  wuhanCase.securityChecks.disclosureProcessedRequests +
+    wuhanCase.securityChecks.disclosureCarriedRequests
+);
+assert.equal(wuhanCase.securityChecks.accidentCompensationFullyPaidOn, "2025-08-04");
+assert.equal(wuhanCase.securityChecks.accidentInspectionRepairAcceptanceVerified, false);
+assert.equal(wuhanCase.securityChecks.satisfactionIsUnadjustedResidentRating, false);
+assert.equal(
+  wuhanCase.clinicalChecks.dialysisAavDeaths + wuhanCase.clinicalChecks.dialysisAavCensored,
+  wuhanCase.clinicalChecks.dialysisAavPatients
+);
+assert.equal(
+  wuhanCase.clinicalChecks.dialysisAavCensoringAdministrative +
+    wuhanCase.clinicalChecks.dialysisAavCensoringLost,
+  wuhanCase.clinicalChecks.dialysisAavCensored
+);
+assert.equal(wuhanCase.clinicalChecks.dialysisFiveYearSurvivalIsRawPatientProportion, false);
+assert.equal(wuhanCase.clinicalChecks.residentFixedWaitingMonths, 3);
+assert.equal(wuhanCase.clinicalChecks.nominalPercentageIsFullBillCoverage, false);
+assert.equal(wuhanCase.clinicalChecks.fuhankangFormal2026Images, 15);
+assert.equal(wuhanCase.clinicalChecks.unlistedAntibodiesProveNoInpatientPayment, false);
+assert.equal(wuhanCase.clinicalChecks.localActualInfusionOriginalVerified, false);
+assert.equal(wuhanCase.mobilityChecks.gfwPaperHasWuhanMeasurementPoint, false);
+assert.equal(
+  wuhanCase.mobilityChecks.satelliteEmergencyVoiceProvesInternationalDataContinuity,
+  false
+);
+assert.equal(wuhanCase.sourceSnapshots.length, 96);
+assert.equal(wuhanCase.webOnlySourceReviews.length, 3);
+assert(
+  wuhanCase.webOnlySourceReviews.every(
+    (source: { bytes: null; sha256: null }) => source.bytes === null && source.sha256 === null
+  )
+);
+const wuhanPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (row: { efua_id: string }) => row.efua_id === "8989"
+);
+assert(wuhanPosition);
+assert.equal(wuhanPosition.bestPosition, 1);
+assert.equal(wuhanPosition.worstPosition, rankAudit.candidateCount - 1);

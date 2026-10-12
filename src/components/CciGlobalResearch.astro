@@ -32,6 +32,7 @@ import shanghai from "../../docs/data/cci-local-2026-shanghai-case.json";
 import jakarta from "../../docs/data/cci-local-2026-jakarta-case.json";
 import nanjing from "../../docs/data/cci-local-2026-nanjing-case.json";
 import guangzhou from "../../docs/data/cci-local-2026-guangzhou-case.json";
+import wuhan from "../../docs/data/cci-local-2026-wuhan-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -68,8 +69,10 @@ const cases = [
   jakarta,
   nanjing,
   guangzhou,
+  wuhan,
 ];
 const caseNamesZh: Record<number, string> = {
+  [wuhan.candidateId]: "武汉功能区",
   [guangzhou.candidateId]: "广州功能区",
   [nanjing.candidateId]: "南京功能区",
   [jakarta.candidateId]: "雅加达功能区",
@@ -198,6 +201,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [wuhan.candidateId]: [
+    zh
+      ? "武汉 PCS／GSS／ISR／RES／MED 条件性 60、TEC 条件性 80、OPT 条件性 40；LON 未定，数学域 54—64，无总分中心。实际纳凉、排涝、司法救济、资源、治疗及产业应用与漏检、历史诊疗中断和居民支付条件共同判读。黄陂、新洲、鄂州及黄石中心点属于其他功能区；天河机场点在旧区全集之外，但仍可服务居民。行政名称不能替代实际项目或治疗地点。"
+      : "Wuhan has conditional 60 judgments for PCS, GSS, ISR, RES and MED, 80 for TEC and 40 for OPT. LON remains unresolved: the mathematical domain is 54–64, without a total centre. Actual cooling, drainage, legal remedies, provision, care and industrial use are read with missed inspections, historical care interruption and resident payment conditions. Huangpi, Xinzhou, Ezhou and Huangshi centre references belong to other areas; the Tianhe airport point lies outside the old-area union but can still serve residents. Administrative names do not establish project or treatment locations.",
+    zh
+      ? "七份饮水记录只含有限项目；可靠率与户均停电分钟数未核同分母。旧临床窗口不当 2026 全区结果，透析五年存活为删失处理后的估计；MED 的质量延续、通常资格、支付及适当替代推定可撤回。旧医保重公布不代全部新待遇。正式福汉康住院／特药责任已核，未列两药不等人人不可得，当地实际给药与监护仍未闭。GFW 原论文没有武汉测点；全国机制仅作明确适用假设，卫星应急语音不证明国际数据连续。"
+      : "Seven water records cover limited tests; power reliability and average outage minutes have no verified common denominator. Older clinical windows are not 2026 whole-area outcomes, and five-year dialysis survival accounts for censoring. MED assumptions about quality continuity, usual eligibility, payment and appropriate alternatives are reversible. Republishing an older insurance rule does not settle every updated benefit. Formal Fuhankang inpatient and listed-drug terms were reviewed; unlisted antibodies do not establish universal inaccessibility, while actual local administration and monitoring remain unresolved. The GFW paper has no Wuhan test point: national mechanisms require explicit applicability assumptions, and satellite emergency voice does not establish international data continuity.",
+  ],
   [guangzhou.candidateId]: [
     zh
       ? "广州 PCS／GSS／ISR／RES 条件性 60、TEC 条件性 80、OPT 条件性 40；MED／LON 未定，数学域 45—70，无总分中心。真实防护、资源、产业化和居民服务与住宅返涌、监管漏检及通道限制共同判读。本功能区含部分佛山；白云机场、番禺／南沙等参考点在区外，行政市总量与各市医保不能直接套给整个功能区。"
@@ -328,6 +339,10 @@ const caseNotes: Record<number, string[]> = {
   ],
 };
 const caseReviewLinks: Record<number, { href: string; label: string }> = {
+  [wuhan.candidateId]: {
+    href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-wuhan-medical-quality-review.md",
+    label: zh ? "医疗质量与连续性复核" : "Care quality and continuity review",
+  },
   [guangzhou.candidateId]: {
     href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-guangzhou-resources-medicine-review.md",
     label: zh ? "资源与医疗复核" : "Resources and healthcare review",
