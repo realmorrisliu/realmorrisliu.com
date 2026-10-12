@@ -509,25 +509,27 @@ assert.equal(
   digest("docs/data/cci-legal-mobility-rules.json")
 );
 const londonCounterfactual = { ...london, MED: 40, OPT: 80 };
-assert.deepEqual(total(osakaKyoto), { center: null, lower: 42, upper: 72 });
-for (const dimension of ["GSS", "MED"] as const) {
-  assert.equal(osakaKyoto[dimension], undefined);
-}
+assert.deepEqual(total(osakaKyoto), { center: null, lower: 51, upper: 66 });
+assert.equal(osakaKyoto.GSS, 60);
+assert.equal(osakaKyoto.MED, undefined);
 for (const [dimension, lower, upper] of [
-  ["PCS", 33, 78],
-  ["ISR", 33, 78],
-  ["RES", 36, 76],
-  ["LON", 36, 76],
-  ["TEC", 36, 76],
-  ["OPT", 36, 76],
+  ["PCS", 42, 72],
+  ["GSS", 42, 72],
+  ["ISR", 42, 72],
+  ["RES", 45, 70],
+  ["LON", 45, 70],
+  ["TEC", 45, 70],
+  ["OPT", 45, 70],
 ] as const) {
   const withdrawn = { ...osakaKyoto };
   delete withdrawn[dimension];
   assert.deepEqual(total(withdrawn), { center: null, lower, upper });
 }
-assert.deepEqual(total({ ...osakaKyoto, MED: 60 }), { center: null, lower: 51, upper: 66 });
-assert.deepEqual(total({ ...osakaKyoto, MED: 40 }), { center: null, lower: 48, upper: 63 });
-assert.equal(total({ ...osakaKyoto, GSS: 60, MED: 60 }).center, 60);
+assert.equal(total({ ...osakaKyoto, MED: 60 }).center, 60);
+assert.equal(total({ ...osakaKyoto, MED: 40 }).center, 57);
+assert.equal(total({ ...osakaKyoto, MED: 80 }).center, 63);
+assert.deepEqual(total({ ...osakaKyoto, GSS: 40 }), { center: null, lower: 48, upper: 63 });
+assert.deepEqual(total({ ...osakaKyoto, GSS: 80 }), { center: null, lower: 54, upper: 69 });
 const osakaKyotoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
   (c: { efua_id: string }) => c.efua_id === "3956"
 );
@@ -544,9 +546,22 @@ for (const point of realCases[11].referenceBoundaryCheck.referencePoints) {
   assert.deepEqual(point.fuaMatches, [3956]);
 }
 assert.equal(realCases[11].clinicalReview.sha256, digest(realCases[11].clinicalReview.path));
+for (const review of [realCases[11].securityReview, realCases[11].medicalReassessment]) {
+  assert.equal(review.sha256, digest(review.path));
+}
 assert.equal(realCases[11].qualityReview.status, "interpretation_unresolved_not_all_care_failure");
 assert.equal(realCases[11].qualityReview.firstPublicationVerified, false);
 const qualityReview = realCases[11].qualityReview;
+assert.equal(qualityReview.postingAnnouncement.publisherClaimedPublishedOn, "2026-09-25");
+assert(
+  qualityReview.postingAnnouncement.publisherClaimedPublishedOn <= realCases[11].evidenceCutoff
+);
+assert.equal(
+  qualityReview.postingAnnouncement.sha256,
+  realCases[11].sourceSnapshots.find(
+    (s: { url: string }) => s.url === qualityReview.postingAnnouncement.source
+  )?.sha256
+);
 assert.equal(qualityReview.observationPeriod, null);
 assert.equal(qualityReview.hospitalExtractionBranch, null);
 assert.equal(qualityReview.hospitalImplementationVerified, false);

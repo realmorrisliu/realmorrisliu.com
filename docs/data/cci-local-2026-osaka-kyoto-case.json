@@ -10,7 +10,7 @@
   "evidenceReview": "cci-local-2026-osaka-kyoto-case.md",
   "expectedConditionalTotal": null,
   "retrievedOn": "2026-10-12",
-  "limitations": "Eight dimensions/31 subpillars reviewed, not fully measured. Six conditional60 judgments; GSS/MED unknown. FUA, municipal/prefectural/operator/institution scopes differ. Assumptions are withdrawable; no ranking/exclusion bound, inherited score, default imputation, population clinical benefit or ordinary commercial iPSC delivery.",
+  "limitations": "Eight dimensions/31 subpillars reviewed, not fully measured. Seven conditional60 judgments; MED unknown. FUA, municipal/prefectural/operator/institution scopes differ. Assumptions are withdrawable; no ranking/exclusion bound, inherited score, default imputation, population clinical benefit or ordinary commercial iPSC delivery.",
   "dimensions": [
     {
       "id": "PCS",
@@ -27,14 +27,14 @@
     },
     {
       "id": "GSS",
-      "score": null,
-      "rationale": "No retained preliminary violence points does not establish low impact. Recorded group assault/threat cases and enforcement show scoped activity, not a complete victim profile; regional/strategic resident and corridor impacts remain unresolved.",
-      "assumption": "No justified whole-dimension anchor: absent event assignments, arrests and national background do not settle full local impact and mitigation.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Actual2025 local assault/threat harm and armed-group interception, completed Expo policing with a scoped no-major-incident report, continuing2026 gang-conflict controls and actual police-fire response support operating mitigation with important remaining threats. Recent official missile snapshots report no confirmed aircraft/ship damage at those moments, not no local disruption. Police clearances and murder-recognition counts are not victim/death rates; local staffing and targeted harm remain counterevidence.",
+      "assumption": "Accept the reviewed scoped impacts and actual response as indicative that ordinary life and essential corridors usually remain usable across3956 at cutoff, without wider unobserved persistent organized-violence/regional/strategic disruption. This is a reversible resident/impact/space/time/continuity inference at the same level asTokyo, not a complete low-impact measurement. Preserve targeted harm and continuing conflict; reject any necessary assumption to restore unknown. Verified material remaining resident/corridor constraints could support40; stronger city/regional low-impact and effective response evidence80.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "organized_violence": "partial",
         "regional_conflict": "context",
-        "strategic_exposure": "unresolved"
+        "strategic_exposure": "partial"
       }
     },
     {
@@ -66,8 +66,8 @@
     {
       "id": "MED",
       "score": null,
-      "rationale": "Actual emergency/specialist delivery and cost protection coexist with capacity limits and mixed quality processes. Kyoto timing86/1604=5.36% is not infection or absent-medication rate. The hospital year label differs from the official June2025-May2026 discharge cohort, with admission/exclusion and two extraction branches. Actual adherence/branch, cause/impact and pre-cutoff hospital byte publication remain unverified.",
-      "assumption": "No chosen anchor pending substantive quality interpretation and whole-area usual quality/access/cost/continuity. MED60 needs supported ordinary adequacy, not dismissal as a presumed recording artefact; one process metric or request acceptance is not whole-area MED40.",
+      "rationale": "Actual emergency/specialist delivery and cost protection now have additional provider quality processes, readmission and referral records. High process ratios from Toyonaka and Osaka City are not pooled into a FUA rate or used to explain Kyoto86/1604=5.36%. Kyoto reports actual wrong-site brain resection and two missed-result follow-up harms; completed responsibility/training steps differ from planned alerts and unverified recurrence prevention. Official news claims25September posting, without authenticating pre-cutoff current indicator bytes. Kyoto extraction, low-value cause/clinical impacts and ordinary timely alternatives remain unresolved; no cross-metric causal link or whole-area failure rate is established.",
+      "assumption": "No chosen anchor pending substantive quality interpretation, current mitigation effects and ordinary timely usable alternatives/access/cost/continuity across the FUA. Other providers and national caps do not show the target resident can transfer promptly or afford all necessary care; known serious harm is retained without defaulting the whole area to40 or60. Mere source absence is not low-quality evidence.",
       "conditionalAlternatives": [],
       "subpillars": {
         "access": "partial",
@@ -205,6 +205,12 @@
       "1": "within_one_hour_before_surgery",
       "2": "over_one_up_to_two_hours_before_surgery",
       "3": "over_two_hours_before_surgery"
+    },
+    "postingAnnouncement": {
+      "publisherClaimedPublishedOn": "2026-09-25",
+      "source": "https://www.kuhp.kyoto-u.ac.jp/news/news.json",
+      "sha256": "caa9216103c1cb8b516ffab946eadac695cc88d465330a96b781e2710cc10d40",
+      "meaning": "Current official news metadata says the FY2025 hospital indicators were posted on25September2026. It does not authenticate the current indicator bytes as the pre-cutoff version; firstPublicationVerified remains false for those bytes."
     }
   },
   "sharedLegalPath": {
@@ -453,6 +459,22 @@
       "bytes": 1973519,
       "sha256": "7ffa74601ab381af124f9da00d91ba50145c134b5fb4e9cbd9a495dc9ff53b3f",
       "scope": "MHLWMay14,2026 p63 confirms DPCoffice channel, not hospital values, results or cause. Only relevant ownership section reviewed."
+    },
+    {
+      "url": "https://www.kuhp.kyoto-u.ac.jp/news/news.json",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 245257,
+      "sha256": "caa9216103c1cb8b516ffab946eadac695cc88d465330a96b781e2710cc10d40",
+      "scope": "Current dynamic news feed claims the FY2025 indicator posting date2026-09-25, not the historic authenticity of current indicator values or the initial publication date of the whole feed."
     }
-  ]
+  ],
+  "securityReview": {
+    "path": "docs/cci-osaka-kyoto-security-review.md",
+    "sha256": "63fbd0ce71c9543f805f2856fb7c8fe2b0c0253d8b0dc84b5cea4357e7c7f60b"
+  },
+  "medicalReassessment": {
+    "path": "docs/cci-osaka-kyoto-med-reassessment.md",
+    "sha256": "16d606601939c42ef25c6dd1d6c9e4e5f45a509a6fcb67d27290ad0c7bcae6a9"
+  }
 }
