@@ -44,6 +44,7 @@ def audit(cache, filters, manifest, inventory, metadata_rows, directory, filter_
     script_hashes = {name: digest(ROOT / 'scripts' / name) for name in ('cci_openalex_work_authorships.py', 'cci_openalex_attach_authorships.py', 'cci_openalex_remote_affiliation_probe.py')}
     counts = Counter({'records': 0, 'works': 0, 'works_with_unassessed_incomplete_authorships': 0})
     statuses, strata, examples = Counter(), Counter(), {}
+    record_presence = Counter()
     for part in sorted(parts, key=lambda p: p['fileIndex']):
         stem = f"{part['fileIndex']:04}"
         frozen = frozen_filters[part['fileIndex']]
@@ -87,17 +88,39 @@ def audit(cache, filters, manifest, inventory, metadata_rows, directory, filter_
                     complete.append(work)
                 else:
                     counts['works_with_unassessed_incomplete_authorships'] += 1
-            result = inspect(complete, directory)
+            result = inspect(complete, directory, record_presence)
             counts.update(result['counts'])
             for flag, items in result['examples'].items():
                 examples.setdefault(flag, []).extend(items[:max(0, 3 - len(examples.get(flag, [])))])
         if dict(part_statuses) != part['authorshipCountStatuses']:
             raise ValueError('Partition authorship status counts mismatch')
         statuses.update(part_statuses)
+        if part['fileIndex'] % 50 == 0:
+            print(f"Verified partition {part['fileIndex']}; {counts['records']} records", flush=True)
     expected_strata = {(r['type'], r['isXpac'], r['isRetracted']): r['count'] for r in inventory['typeCorpusRetractionCounts']}
     if counts['records'] != inventory['records'] or dict(strata) != expected_strata or counts['works'] + counts['works_with_unassessed_incomplete_authorships'] != counts['records']:
         raise ValueError('Incomplete global diagnostic accounting')
-    return {'counts': dict(counts), 'authorshipCountStatuses': dict(statuses), 'examples': examples}
+    return {'counts': dict(counts), 'authorshipCountStatuses': dict(statuses), 'examples': examples,
+            'recordPresence': record_presence}
+
+
+def presence_rows(candidates, strata, presence):
+    identifiers = {r['efua_id'] for r in candidates}
+    if len(identifiers) != len(candidates) or any(key[0] not in identifiers for key in presence):
+        raise ValueError('Unknown or duplicate candidate in directory presence')
+    columns = {f"{r['type']}__xpac_{str(r['isXpac']).lower()}__retracted_{str(r['isRetracted']).lower()}":
+               (r['type'], r['isXpac'], r['isRetracted']) for r in strata}
+    if len(columns) != len(strata) or any(key[1:] not in columns.values() or count <= 0 for key, count in presence.items()):
+        raise ValueError('Invalid directory presence stratum or count')
+    rows = []
+    for candidate in candidates:
+        identifier = candidate['efua_id']
+        counts = {column: presence.get((identifier, *key), 0) for column, key in columns.items()}
+        total = sum(counts.values())
+        rows.append({'efua_id': identifier, 'source_name': candidate['source_name'], 'country_iso': candidate['country_iso'],
+                     'record_presence': total,
+                     'status': 'directory_record_association_not_output' if total else 'no_qualifying_association_not_no_research', **counts})
+    return rows
 
 
 def main():
@@ -124,12 +147,43 @@ def main():
         raise ValueError('Duplicate institution ID')
     filter_manifest = json.loads((args.filters / 'manifest.json').read_text())
     result = audit(args.cache, args.filters, manifest, inventory, list(csv.DictReader(metadata_path.open())), directory, filter_manifest['partitions'])
+    presence = result.pop('recordPresence')
+    candidate_path = folder / 'cci-global-candidates-r2019a.csv'
+    candidate_manifest = folder / 'cci-global-candidates-r2019a.provenance.json'
+    candidate_source = json.loads(candidate_manifest.read_text())
+    if digest(candidate_path) != candidate_source['csvSha256']:
+        raise ValueError('Candidate checksum mismatch')
+    candidates = list(csv.DictReader(candidate_path.open()))
+    if len(candidates) != candidate_source['rowCount']:
+        raise ValueError('Candidate count mismatch')
+    rows = presence_rows(candidates, inventory['typeCorpusRetractionCounts'], presence)
     output = {'status': 'complete_2025_affiliation_diagnostics_not_city_output', 'authorshipManifestSha256': digest(manifest_path), 'filterInventorySha256': digest(inventory_path), 'institutionDirectorySha256': digest(directory_path), 'scriptSha256': digest(Path(__file__)), 'affiliationRuleSha256': digest(ROOT / 'scripts/cci_openalex_affiliation_audit.py'), **result,
               'limitations': 'Counts labelled works describe complete declared bylines only; records include incomplete lists retained as unassessed. Ambiguity flags overlap. No actual research-site verification, intellectual-version deduplication, fractional credit, city output or CCI score. Unknown affiliations are never redistributed to known cities.'}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     temporary = args.output.with_suffix(args.output.suffix + '.part')
     temporary.write_text(json.dumps(output, indent=2) + '\n')
     temporary.replace(args.output)
+    presence_path = args.output.parent / 'cci-openalex-efua-record-presence.csv'
+    temporary = presence_path.with_suffix('.csv.part')
+    with temporary.open('w', newline='') as stream:
+        writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator='\n')
+        writer.writeheader()
+        writer.writerows(rows)
+    temporary.replace(presence_path)
+    summary = {'status': 'complete_2025_directory_record_associations_not_output_or_scores',
+               'snapshotDate': '2026-09-23', 'publicationYear': 2025, 'evidenceCutoff': '2026-10-10',
+               'candidateCount': len(rows), 'candidatesWithAssociation': sum(r['record_presence'] > 0 for r in rows),
+               'recordCandidateAssociations': sum(presence.values()),
+               'distinctRecordsWithAssociation': result['counts']['works_with_any_single_consistent_directory_fua'],
+               'counts': result['counts'], 'typeCorpusRetractionCounts': inventory['typeCorpusRetractionCounts'],
+               'csvSha256': digest(presence_path), 'candidateCsvSha256': digest(candidate_path),
+               'candidateManifestSha256': digest(candidate_manifest), 'diagnosticSha256': digest(args.output),
+               **{key: output[key] for key in ('authorshipManifestSha256', 'filterInventorySha256', 'institutionDirectorySha256', 'scriptSha256', 'affiliationRuleSha256')},
+               'limitations': 'Each work ID counts once per qualifying directory FUA, with all eight ambiguity flags false for the qualifying author. A record can associate with multiple FUAs; candidate counts cannot be summed as unique global works or contribution. All types, corpus and retraction flags including null remain separate. Zero is no qualifying directory association, not no research. Directory location is not actual research site; no intellectual-version deduplication, research quality, resident diffusion, TEC score or exclusion bound.'}
+    summary_path = args.output.parent / 'cci-openalex-efua-record-presence.json'
+    temporary = summary_path.with_suffix('.json.part')
+    temporary.write_text(json.dumps(summary, indent=2) + '\n')
+    temporary.replace(summary_path)
     print(result['counts'])
 
 

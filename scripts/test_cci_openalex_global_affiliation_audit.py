@@ -9,7 +9,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 from cci_global_crosswalk import ROOT, digest
-from cci_openalex_global_affiliation_audit import audit
+from cci_openalex_global_affiliation_audit import audit, presence_rows
 
 
 def fixture(folder, complete_only=False):
@@ -48,6 +48,19 @@ def fixture(folder, complete_only=False):
 
 
 class GlobalAffiliationAuditTests(unittest.TestCase):
+    def test_presence_rows_retain_zero_candidates_and_reject_unknowns(self):
+        candidates = [{'efua_id': identifier, 'source_name': 'Example', 'country_iso': 'XXX'} for identifier in ('1', '2')]
+        strata = [{'type': 'dataset', 'isXpac': True, 'isRetracted': None, 'count': 1}]
+        presence = Counter({('1', 'dataset', True, None): 1})
+        rows = presence_rows(candidates, strata, presence)
+        self.assertEqual([r['record_presence'] for r in rows], [1, 0])
+        self.assertEqual(rows[0]['dataset__xpac_true__retracted_none'], 1)
+        self.assertEqual(rows[1]['status'], 'no_qualifying_association_not_no_research')
+        with self.assertRaisesRegex(ValueError, 'candidate'):
+            presence_rows(candidates[:1], strata, Counter({('2', 'dataset', True, None): 1}))
+        with self.assertRaisesRegex(ValueError, 'stratum'):
+            presence_rows(candidates, strata, Counter({('1', 'article', True, None): 1}))
+
     def test_empty_partition_is_accounted_without_authorship_parquet(self):
         with tempfile.TemporaryDirectory() as temporary:
             args = fixture(Path(temporary))
@@ -78,6 +91,7 @@ class GlobalAffiliationAuditTests(unittest.TestCase):
             small = audit(*args, batch_size=1)
             self.assertEqual(small, audit(*args, batch_size=3))
             counts = small['counts']
+            self.assertEqual(small['recordPresence'], {('1', 'article', False, False): 1})
             self.assertEqual(counts['records'], 4)
             self.assertEqual(counts['works_with_unassessed_incomplete_authorships'], 2)
             self.assertEqual(counts['works'], 2)

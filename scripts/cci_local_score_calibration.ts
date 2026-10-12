@@ -155,6 +155,38 @@ const digest = (path: string) =>
 const coverage = JSON.parse(
   readFileSync(new URL("../docs/data/cci-global-evidence-matrix.json", import.meta.url), "utf8")
 );
+const recordPresence = JSON.parse(
+  readFileSync(
+    new URL("../docs/data/cci-openalex-efua-record-presence.json", import.meta.url),
+    "utf8"
+  )
+);
+assert.equal(
+  recordPresence.status,
+  "complete_2025_directory_record_associations_not_output_or_scores"
+);
+assert.equal(recordPresence.candidateCount, coverage.candidateCount);
+assert.equal(recordPresence.publicationYear, 2025);
+assert.equal(recordPresence.snapshotDate, "2026-09-23");
+assert.equal(recordPresence.evidenceCutoff, "2026-10-10");
+assert.equal(recordPresence.distinctRecordsWithAssociation, 26684579);
+assert.equal(recordPresence.counts.works_with_unassessed_incomplete_authorships, 0);
+assert(recordPresence.recordCandidateAssociations >= recordPresence.distinctRecordsWithAssociation);
+assert.deepEqual(
+  coverage.researchDirectorySignals,
+  Object.fromEntries(
+    Object.keys(coverage.researchDirectorySignals).map(key => [key, recordPresence[key]])
+  )
+);
+for (const [path, hash] of [
+  ["docs/data/cci-openalex-efua-record-presence.csv", recordPresence.csvSha256],
+  ["docs/data/cci-global-candidates-r2019a.csv", recordPresence.candidateCsvSha256],
+  ["docs/data/cci-openalex-global-affiliation-audit.json", recordPresence.diagnosticSha256],
+  ["scripts/cci_openalex_global_affiliation_audit.py", recordPresence.scriptSha256],
+  ["scripts/cci_openalex_affiliation_audit.py", recordPresence.affiliationRuleSha256],
+]) {
+  assert.equal(digest(path), hash);
+}
 const currentViolence = JSON.parse(
   readFileSync(new URL("../docs/data/cci-ucdp-candidate-2026.json", import.meta.url), "utf8")
 );

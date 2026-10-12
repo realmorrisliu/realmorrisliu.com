@@ -54,6 +54,17 @@
   "scoreStatusCounts": {
     "not_computed_under_global_protocol": 9031
   },
+  "researchDirectorySignals": {
+    "status": "complete_2025_directory_record_associations_not_output_or_scores",
+    "snapshotDate": "2026-09-23",
+    "publicationYear": 2025,
+    "evidenceCutoff": "2026-10-10",
+    "candidateCount": 9031,
+    "candidatesWithAssociation": 3692,
+    "recordCandidateAssociations": 30650691,
+    "distinctRecordsWithAssociation": 26684579,
+    "limitations": "Each work ID counts once per qualifying directory FUA, with all eight ambiguity flags false for the qualifying author. A record can associate with multiple FUAs; candidate counts cannot be summed as unique global works or contribution. All types, corpus and retraction flags including null remain separate. Zero is no qualifying directory association, not no research. Directory location is not actual research site; no intellectual-version deduplication, research quality, resident diffusion, TEC score or exclusion bound."
+  },
   "legalMobility": {
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
@@ -148,7 +159,8 @@
       "translation: 2024 published single-drug Medicare FFS claims associated with next-year-end provider registered addresses; exact Census range points are not treatment sites or patient residences; missing, uncertain and outside-payer states retained, no resident access, quality or whole-dimension score"
     ],
     "TEC": [
-      "digital_infrastructure: self-selected 2026 Q3 network tests only; boundary sensitivity retained, not population access or complete technology capability"
+      "digital_infrastructure: self-selected 2026 Q3 network tests only; boundary sensitivity retained, not population access or complete technology capability",
+      "knowledge_output: 2025 work-ID presence associated with qualifying frozen institution directory FUAs; types, corpus and retraction flags retained separately; not verified research sites, deduplicated intellectual works, contributions, quality or resident diffusion; zero associations do not imply zero research"
     ],
     "OPT": [
       "transport_redundancy: directory airport points and scheduled nonclosed flags only; no resident access, routes, independent alternatives or common failures measured",
@@ -221,6 +233,11 @@
       "sha256": "3c7c7629f63a2af05106b1991319bb0b7d388a9dc0ee530876f1afaa45c8d6e7",
       "provenance": "cci-ucdp-candidate-2026.json",
       "provenanceSha256": "244c0847ce5fbf7bbdefd3fc0f52be60455c2cc64dc42b46b6560968508ca1ed"
+    },
+    "cci-openalex-efua-record-presence.csv": {
+      "sha256": "cb777baaa3ec09fe78a2c07ac8a260d0fb8ad4b8b95996eea0a5367f0e11f013",
+      "provenance": "cci-openalex-efua-record-presence.json",
+      "provenanceSha256": "0a926b6958d38f4f532b6a7e80068001d2a280180fd68d6544262fde52ef192e"
     },
     "cci-legal-mobility-rules.json": {
       "sha256": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
@@ -313,6 +330,6 @@
       "provenanceSha256": "db553c730a51b2622040ce2d09696dd010fde7a9142e79b752977ecd0347f8d4"
     }
   },
-  "scriptSha256": "225a16ace3a8d32f479b0ce719305bb7a2b741343096db64916d3b477d133ed5",
-  "csvSha256": "0c466ac47aaa6331fac9dd1dbf1ca08c476cfc0f54c10059cd5fdbc869ea276c"
+  "scriptSha256": "8a2f085b0b6386685bee33759f74de3bdca1ffa528cd3acf4bb0584db42a2abd",
+  "csvSha256": "abd4829a10963480466ae5c7b424e731a329c6fcb074a6ab3f4ce4a820f28199"
 }

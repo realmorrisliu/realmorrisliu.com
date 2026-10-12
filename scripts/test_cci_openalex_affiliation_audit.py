@@ -1,9 +1,31 @@
 import unittest
+from collections import Counter
 
 from cci_openalex_affiliation_audit import inspect
 
 
 class AffiliationAuditTests(unittest.TestCase):
+    def test_record_presence_deduplicates_local_authors_and_retains_strata(self):
+        directory = {i: {'efua_ids': location, 'mapping_status': 'directory_point_match'}
+                     for i, location in (('I1', '1'), ('I2', '2'))}
+        authors = [{'affiliations': [{'institution_ids': [i]}],
+                    'institutions': [{'id': i, 'lineage': [i]}]} for i in directory]
+        rows = [{'id': 'W1', 'publication_year': 2025, 'authors_count': 4,
+                 'authorships': [authors[0], authors[0], authors[1], {}],
+                 'type': 'article', 'is_xpac': False, 'is_retracted': False},
+                {'id': 'W2', 'publication_year': 2025, 'authors_count': 1,
+                 'authorships': [authors[0]], 'type': 'dataset', 'is_xpac': True, 'is_retracted': None}]
+        presence = Counter()
+        result = inspect(rows, directory, presence)
+        self.assertEqual(result, inspect(rows, directory))
+        self.assertEqual(presence, {('1', 'article', False, False): 1,
+                                   ('2', 'article', False, False): 1,
+                                   ('1', 'dataset', True, None): 1})
+        rows[0]['authorships'][2]['affiliations'].append({'raw_affiliation_string': 'Unknown', 'institution_ids': []})
+        rejected = Counter()
+        inspect(rows, directory, rejected)
+        self.assertNotIn(('2', 'article', False, False), rejected)
+
     def test_parent_overlap_and_unknown_affiliation_are_not_redistributed(self):
         directory = {'child': {'efua_ids': '1', 'mapping_status': 'directory_point_match'},
                      'parent': {'efua_ids': '2', 'mapping_status': 'directory_point_match'}}

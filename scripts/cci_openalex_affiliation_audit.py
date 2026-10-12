@@ -11,7 +11,7 @@ import pyarrow.parquet as pq
 from cci_global_crosswalk import ROOT, digest
 
 
-def inspect(records, directory):
+def inspect(records, directory, record_presence=None):
     counts = Counter()
     examples = {}
     for work in records:
@@ -23,6 +23,7 @@ def inspect(records, directory):
             raise ValueError('Incomplete author list')
         counts['authorships'] += len(authors)
         consistent_authors = 0
+        work_locations = set()
         for position, author in enumerate(authors):
             affiliations = author.get('affiliations') or []
             institutions = author.get('institutions') or []
@@ -43,6 +44,7 @@ def inspect(records, directory):
             }
             if len(locations) == 1 and not any(flags.values()):
                 consistent_authors += 1
+                work_locations.update(locations)
             for flag, present in flags.items():
                 if present:
                     counts[flag] += 1
@@ -53,6 +55,9 @@ def inspect(records, directory):
         # An empty author list cannot establish complete geographic attribution.
         counts['works_with_all_authorships_single_consistent_directory_fua'] += bool(authors) and consistent_authors == len(authors)
         counts['works_with_no_authorships'] += not authors
+        if record_presence is not None:
+            # Directory association is not a verified research site or contribution.
+            record_presence.update((location, work['type'], work['is_xpac'], work['is_retracted']) for location in work_locations)
     return {'counts': dict(counts), 'examples': examples}
 
 

@@ -1,0 +1,574 @@
+{
+  "status": "complete_2025_directory_record_associations_not_output_or_scores",
+  "snapshotDate": "2026-09-23",
+  "publicationYear": 2025,
+  "evidenceCutoff": "2026-10-10",
+  "candidateCount": 9031,
+  "candidatesWithAssociation": 3692,
+  "recordCandidateAssociations": 30650691,
+  "distinctRecordsWithAssociation": 26684579,
+  "counts": {
+    "records": 45069447,
+    "works": 45069447,
+    "works_with_unassessed_incomplete_authorships": 0,
+    "authorships": 154673582,
+    "no_matched_institution": 32935443,
+    "no_affiliation_records": 29173267,
+    "authorships_with_single_consistent_directory_fua": 114495829,
+    "works_with_any_single_consistent_directory_fua": 26684579,
+    "works_with_all_authorships_single_consistent_directory_fua": 23934309,
+    "works_with_no_authorships": 934310,
+    "unmatched_raw_affiliation": 5028240,
+    "raw_flat_id_disagreement": 5578,
+    "multiple_directory_fuas": 3647135,
+    "institution_without_unique_directory_fua": 1816653,
+    "direct_parent_child_overlap": 1639344,
+    "institution_missing_from_directory": 92906
+  },
+  "typeCorpusRetractionCounts": [
+    {
+      "type": "article",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 7050502
+    },
+    {
+      "type": "article",
+      "isXpac": false,
+      "isRetracted": null,
+      "count": 4
+    },
+    {
+      "type": "article",
+      "isXpac": false,
+      "isRetracted": true,
+      "count": 2115
+    },
+    {
+      "type": "article",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 1395040
+    },
+    {
+      "type": "article",
+      "isXpac": true,
+      "isRetracted": null,
+      "count": 36
+    },
+    {
+      "type": "article",
+      "isXpac": true,
+      "isRetracted": true,
+      "count": 57
+    },
+    {
+      "type": "book",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 157394
+    },
+    {
+      "type": "book",
+      "isXpac": false,
+      "isRetracted": null,
+      "count": 8
+    },
+    {
+      "type": "book",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 45708
+    },
+    {
+      "type": "book",
+      "isXpac": true,
+      "isRetracted": null,
+      "count": 2
+    },
+    {
+      "type": "book-chapter",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 883036
+    },
+    {
+      "type": "book-chapter",
+      "isXpac": false,
+      "isRetracted": null,
+      "count": 26
+    },
+    {
+      "type": "book-chapter",
+      "isXpac": false,
+      "isRetracted": true,
+      "count": 26
+    },
+    {
+      "type": "book-chapter",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 63570
+    },
+    {
+      "type": "book-chapter",
+      "isXpac": true,
+      "isRetracted": null,
+      "count": 2
+    },
+    {
+      "type": "book-review",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 27250
+    },
+    {
+      "type": "book-review",
+      "isXpac": false,
+      "isRetracted": true,
+      "count": 13
+    },
+    {
+      "type": "book-review",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 3007
+    },
+    {
+      "type": "conference-abstract",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 171231
+    },
+    {
+      "type": "conference-abstract",
+      "isXpac": false,
+      "isRetracted": true,
+      "count": 4
+    },
+    {
+      "type": "conference-abstract",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 7184
+    },
+    {
+      "type": "conference-paper",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 978190
+    },
+    {
+      "type": "conference-paper",
+      "isXpac": false,
+      "isRetracted": null,
+      "count": 206
+    },
+    {
+      "type": "conference-paper",
+      "isXpac": false,
+      "isRetracted": true,
+      "count": 75
+    },
+    {
+      "type": "conference-paper",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 141581
+    },
+    {
+      "type": "conference-paper",
+      "isXpac": true,
+      "isRetracted": null,
+      "count": 5
+    },
+    {
+      "type": "conference-paper",
+      "isXpac": true,
+      "isRetracted": true,
+      "count": 1
+    },
+    {
+      "type": "data-paper",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 3410
+    },
+    {
+      "type": "data-paper",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 789
+    },
+    {
+      "type": "dataset",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 1908418
+    },
+    {
+      "type": "dataset",
+      "isXpac": false,
+      "isRetracted": null,
+      "count": 8716
+    },
+    {
+      "type": "dataset",
+      "isXpac": false,
+      "isRetracted": true,
+      "count": 6
+    },
+    {
+      "type": "dataset",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 23240113
+    },
+    {
+      "type": "dataset",
+      "isXpac": true,
+      "isRetracted": null,
+      "count": 1156
+    },
+    {
+      "type": "dataset",
+      "isXpac": true,
+      "isRetracted": true,
+      "count": 5
+    },
+    {
+      "type": "dissertation",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 450829
+    },
+    {
+      "type": "dissertation",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 218687
+    },
+    {
+      "type": "editorial",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 39019
+    },
+    {
+      "type": "editorial",
+      "isXpac": false,
+      "isRetracted": null,
+      "count": 136
+    },
+    {
+      "type": "editorial",
+      "isXpac": false,
+      "isRetracted": true,
+      "count": 5
+    },
+    {
+      "type": "editorial",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 3467
+    },
+    {
+      "type": "editorial",
+      "isXpac": true,
+      "isRetracted": null,
+      "count": 3
+    },
+    {
+      "type": "erratum",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 41129
+    },
+    {
+      "type": "erratum",
+      "isXpac": false,
+      "isRetracted": true,
+      "count": 33
+    },
+    {
+      "type": "erratum",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 1723
+    },
+    {
+      "type": "erratum",
+      "isXpac": true,
+      "isRetracted": true,
+      "count": 1
+    },
+    {
+      "type": "letter",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 12097
+    },
+    {
+      "type": "letter",
+      "isXpac": false,
+      "isRetracted": true,
+      "count": 7
+    },
+    {
+      "type": "letter",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 466
+    },
+    {
+      "type": "libguides",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 2
+    },
+    {
+      "type": "other",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 1288948
+    },
+    {
+      "type": "other",
+      "isXpac": false,
+      "isRetracted": null,
+      "count": 51
+    },
+    {
+      "type": "other",
+      "isXpac": false,
+      "isRetracted": true,
+      "count": 9
+    },
+    {
+      "type": "other",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 4691247
+    },
+    {
+      "type": "other",
+      "isXpac": true,
+      "isRetracted": null,
+      "count": 97
+    },
+    {
+      "type": "other",
+      "isXpac": true,
+      "isRetracted": true,
+      "count": 19
+    },
+    {
+      "type": "paratext",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 181552
+    },
+    {
+      "type": "paratext",
+      "isXpac": false,
+      "isRetracted": null,
+      "count": 95584
+    },
+    {
+      "type": "paratext",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 9533
+    },
+    {
+      "type": "paratext",
+      "isXpac": true,
+      "isRetracted": null,
+      "count": 3108
+    },
+    {
+      "type": "peer-review",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 220733
+    },
+    {
+      "type": "peer-review",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 21590
+    },
+    {
+      "type": "preprint",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 809888
+    },
+    {
+      "type": "preprint",
+      "isXpac": false,
+      "isRetracted": true,
+      "count": 132
+    },
+    {
+      "type": "preprint",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 234768
+    },
+    {
+      "type": "preprint",
+      "isXpac": true,
+      "isRetracted": true,
+      "count": 3
+    },
+    {
+      "type": "reference-entry",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 54607
+    },
+    {
+      "type": "reference-entry",
+      "isXpac": false,
+      "isRetracted": null,
+      "count": 6
+    },
+    {
+      "type": "reference-entry",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 737
+    },
+    {
+      "type": "report",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 97223
+    },
+    {
+      "type": "report",
+      "isXpac": false,
+      "isRetracted": true,
+      "count": 5
+    },
+    {
+      "type": "report",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 92224
+    },
+    {
+      "type": "report",
+      "isXpac": true,
+      "isRetracted": true,
+      "count": 13
+    },
+    {
+      "type": "retraction",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 1377
+    },
+    {
+      "type": "retraction",
+      "isXpac": false,
+      "isRetracted": true,
+      "count": 5751
+    },
+    {
+      "type": "retraction",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 98
+    },
+    {
+      "type": "retraction",
+      "isXpac": true,
+      "isRetracted": true,
+      "count": 31
+    },
+    {
+      "type": "review",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 105947
+    },
+    {
+      "type": "review",
+      "isXpac": false,
+      "isRetracted": true,
+      "count": 64
+    },
+    {
+      "type": "review",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 10890
+    },
+    {
+      "type": "software",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 35285
+    },
+    {
+      "type": "software",
+      "isXpac": false,
+      "isRetracted": null,
+      "count": 1
+    },
+    {
+      "type": "software",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 139922
+    },
+    {
+      "type": "software-paper",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 956
+    },
+    {
+      "type": "software-paper",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 936
+    },
+    {
+      "type": "standard",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 15630
+    },
+    {
+      "type": "standard",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 2164
+    },
+    {
+      "type": "supplementary-materials",
+      "isXpac": false,
+      "isRetracted": false,
+      "count": 33112
+    },
+    {
+      "type": "supplementary-materials",
+      "isXpac": true,
+      "isRetracted": false,
+      "count": 58716
+    }
+  ],
+  "csvSha256": "cb777baaa3ec09fe78a2c07ac8a260d0fb8ad4b8b95996eea0a5367f0e11f013",
+  "candidateCsvSha256": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
+  "candidateManifestSha256": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
+  "diagnosticSha256": "5cc6c8520abb5feea791cefacce13dd8400fd68561c8e40b1f5ea7a4e4848ad6",
+  "authorshipManifestSha256": "890631160a49153035191cefdf8aab8afde729cc2725486dec56902bf9924d85",
+  "filterInventorySha256": "2be604507128fb3e7a176f0f0efffb6a6706214a7dea3c2314867beeb4fd8199",
+  "institutionDirectorySha256": "b59735ba074e3e1b8e05f1d08bd672ef1d1ec219303cd9a788c93fc2a5e798ed",
+  "scriptSha256": "38fa9494b2e559776da0783fd8eefe0171719ba904950439ef067f8f692c5aef",
+  "affiliationRuleSha256": "ac6b93a44906d8140b85208a666484f7272fa5028c111473e2c61290b371ef3b",
+  "limitations": "Each work ID counts once per qualifying directory FUA, with all eight ambiguity flags false for the qualifying author. A record can associate with multiple FUAs; candidate counts cannot be summed as unique global works or contribution. All types, corpus and retraction flags including null remain separate. Zero is no qualifying directory association, not no research. Directory location is not actual research site; no intellectual-version deduplication, research quality, resident diffusion, TEC score or exclusion bound."
+}

@@ -230,6 +230,17 @@ def main():
     airports = read("cci-ourairports-efua-coverage.csv", "cci-ourairports-fua-audit.json", "outputs", True)
     claims = read("cci-cms-lecanemab-efua-coverage.csv", "cci-cms-lecanemab-fua-audit.json", "outputs", True)
     current_violence = read("cci-ucdp-candidate-2026-efua.csv", "cci-ucdp-candidate-2026.json", "files", True)
+    research = read('cci-openalex-efua-record-presence.csv', 'cci-openalex-efua-record-presence.json', 'csvSha256')
+    research_source = json.loads((folder / 'cci-openalex-efua-record-presence.json').read_text())
+    if (research_source['status'] != 'complete_2025_directory_record_associations_not_output_or_scores'
+            or research_source['candidateCount'] != len(candidates)
+            or research_source['snapshotDate'] != '2026-09-23' or research_source['publicationYear'] != 2025
+            or research_source['evidenceCutoff'] != '2026-10-10'
+            or research_source['candidateCsvSha256'] != inputs['cci-global-candidates-r2019a.csv']['sha256']
+            or research_source['scriptSha256'] != hashlib.sha256((ROOT / 'scripts/cci_openalex_global_affiliation_audit.py').read_bytes()).hexdigest()
+            or research_source['affiliationRuleSha256'] != hashlib.sha256((ROOT / 'scripts/cci_openalex_affiliation_audit.py').read_bytes()).hexdigest()
+            or research_source['diagnosticSha256'] != hashlib.sha256((folder / 'cci-openalex-global-affiliation-audit.json').read_bytes()).hexdigest()):
+        raise ValueError('Research directory association protocol mismatch')
     current_source = json.loads((folder / "cci-ucdp-candidate-2026.json").read_text())
     if (current_source["status"] != "preliminary_violence_review_not_gss_scores"
             or current_source["candidateCount"] != len(candidates)
@@ -255,6 +266,17 @@ def main():
                              'provenanceSha256': hashlib.sha256(review.read_bytes()).hexdigest()}
         cases.append(case)
     rows = matrix(candidates, history, spatial, violence, healthcare, governance, seismic, water, network, wup, airports, claims, legal, current_violence, cases)
+    research = indexed(research, {r['efua_id'] for r in candidates})
+    for row in rows:
+        signal = research[row['efua_id']]
+        total = int(signal['record_presence'])
+        expected_status = 'directory_record_association_not_output' if total else 'no_qualifying_association_not_no_research'
+        if total < 0 or signal['status'] != expected_status or sum(int(v) for k, v in signal.items() if '__xpac_' in k) != total:
+            raise ValueError('Research directory association accounting mismatch')
+        row.update(tec_directory_record_associations=total, tec_directory_record_status=signal['status'])
+    if (sum(r['tec_directory_record_associations'] for r in rows) != research_source['recordCandidateAssociations']
+            or sum(r['tec_directory_record_associations'] > 0 for r in rows) != research_source['candidatesWithAssociation']):
+        raise ValueError('Global research directory association totals mismatch')
     output = folder / "cci-global-evidence-matrix.csv"
     with output.open("w", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
@@ -273,6 +295,7 @@ def main():
         "boundaryMeaning": "Centre intersections describe geometric coverage only. UCDB and WUP are separate sources; their IDs and counts cannot be merged directly. Zero intersections do not exclude a candidate or imply a score.",
         "dimensionStatusCounts": {d: dict(Counter(r[d] for r in rows)) for d in DIMENSIONS},
         "scoreStatusCounts": dict(Counter(r["cci_score_status"] for r in rows)),
+        'researchDirectorySignals': {key: research_source[key] for key in ('status', 'snapshotDate', 'publicationYear', 'evidenceCutoff', 'candidateCount', 'candidatesWithAssociation', 'recordCandidateAssociations', 'distinctRecordsWithAssociation', 'limitations')},
         "legalMobility": {
             'targetYear': legal['targetYear'], 'evidenceCutoff': legal['evidenceCutoff'],
             'residentPerspective': legal['residentPerspective'],
@@ -307,7 +330,8 @@ def main():
                              "ISR": ["governance: country context only"],
                              "MED": ["access: historical spatial model only"],
                              "LON": ["translation: 2024 published single-drug Medicare FFS claims associated with next-year-end provider registered addresses; exact Census range points are not treatment sites or patient residences; missing, uncertain and outside-payer states retained, no resident access, quality or whole-dimension score"],
-                             "TEC": ["digital_infrastructure: self-selected 2026 Q3 network tests only; boundary sensitivity retained, not population access or complete technology capability"],
+                             "TEC": ["digital_infrastructure: self-selected 2026 Q3 network tests only; boundary sensitivity retained, not population access or complete technology capability",
+                                     "knowledge_output: 2025 work-ID presence associated with qualifying frozen institution directory FUAs; types, corpus and retraction flags retained separately; not verified research sites, deduplicated intellectual works, contributions, quality or resident diffusion; zero associations do not imply zero research"],
                              "OPT": ["transport_redundancy: directory airport points and scheduled nonclosed flags only; no resident access, routes, independent alternatives or common failures measured",
                                      "legal_mobility: reviewed Germany/France conditions under modelled citizenship only; conditional residence rights differ from section 41 onshore applications, which are not approved residence or work; no actual affordability, employment or crisis operation measured"]},
         "sourceJoinKey": "efua_id; source tables and their provenance remain authoritative for values and limitations",
