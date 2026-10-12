@@ -1,0 +1,358 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "retrievedOn": "2026-10-12",
+  "candidateId": 94,
+  "name": "Seoul",
+  "evidenceReview": "cci-local-2026-seoul-case.md",
+  "expectedConditionalTotal": null,
+  "limitations": "Eight dimensions and31subpillars reviewed, not fully measured. PCS/ISR/TEC/OPT conditional60, LON conditional40; GSS/RES/MED unknown. Municipal, provider and operator scopes are not whole-FUA measurements. Reversible cutoff/time/resident/representativeness/materiality assumptions; no missingness penalty, ranking, exclusion bound, healthy-person longevity claim or inherited historic score.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Delivered basement flood barriers and actual heat shelters, patrols and road washing support protection; planned tunnels, payments and future work suspensions are not delivered results. Whole-area effects and remaining hazards are unmeasured.",
+      "assumption": "Accept major protection usually works, persists from its observation window and reasonably represents the target resident/FUA; other unreviewed hazards do not constitute broader unmitigated failure. Flood page first publication is unverified. Reject necessary availability, time, effectiveness or scope assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "unresolved"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "Zero assigned historical or retained preliminary events do not establish low violence impact. Complete local, regional and strategic consequences and mitigation remain unresolved.",
+      "assumption": "No whole-dimension anchor; no absence-of-record, ordinary-crime or national-background imputation.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Actual welfare connections, public-rental stock additions, digital assistance and heat response support execution and adaptation. Social inclusion remains below its own2022 baseline; the composite municipal index is not a CCI score. Crisis recovery and whole-area/group outcomes remain unmeasured.",
+      "assumption": "Accept scoped services reasonably represent functioning major institutions, persist and apply to ordinary residents/FUA; group and recovery limitations remain material. Reject necessary continuity, adequacy or representativeness to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "unresolved"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "Arisu2025 supply and tested water compliance are positive local results; raw-source concentration and household pipes differ from treatment output. KEPCO-wide SAIDI is operator context, not Seoul reliability or a household guarantee. Food, whole-area burdens and supply-chain substitution remain unresolved.",
+      "assumption": "No whole-dimension anchor from water or a national operator mean. Preserve municipal/operator boundaries and real observation periods; unknown is not failure.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "partial",
+        "food": "unresolved",
+        "energy": "context",
+        "supply_chain": "unresolved"
+      }
+    },
+    {
+      "id": "MED",
+      "score": null,
+      "rationale": "NHIS eligibility/payment protection and actual Seoul emergency response support parts of access and specialist capability. ROSC is not discharge survival; nationwide outcomes do not measure Seoul routine quality. General necessary care, costs and continuity remain unresolved.",
+      "assumption": "No whole-dimension anchor. Anti-amyloid specialist bottlenecks do not establish failure of ordinary medicine; coverage rules do not establish local treatment quality or affordability.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "unresolved",
+        "specialist_capacity": "partial",
+        "system_continuity": "unresolved"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 40,
+      "rationale": "Human and MFDS regulatory evidence connect to actual Asan/Guro treatment and safety mitigation. Actual waitlisting, new-start capacity decline, longer waits, limited successful transfers and reported nonreimbursement/high out-of-pocket and unpaid safety labour together support a material resident-access discontinuity. Two institutions using the same drug are not two independent longevity pathways.",
+      "assumption": "Accept the limited disease pathway as representative of clinical translation readiness; observed2025 capacity barriers and2026 authors' cost statements remain material for ordinary eligible median-income residents at cutoff and reasonably apply to the FUA. Fees/income ratios and current waiting updates are not measured. Actual treatment is counterevidence to universal exclusion. Reject pathway relevance, materiality, affordability relevance, time, cutoff availability or scope assumptions to restore unknown.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Scoped SNU medical-research output and reported technology transfers, actual network samples, resident digital-use reporting and delivered guides support production and diffusion. Ongoing smartphone/kiosk difficulties and age differences coexist with assistance; broad AI-ever-use includes recommendations and is not essential-service completion or general worker adoption.",
+      "assumption": "Accept the scoped production and industrial connection as relevant, pre-cutoff available and continuous; actual device/service skill barriers remain material after delivered assistance and reasonably apply to ordinary residents/FUA. No score cap from unmeasured higher-tier capability or missing data; reject necessary cutoff, time, scope or materiality assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Actual August2026 Incheon traffic, documented rail/bus airport access, public connectivity, bank remittance channels and the shared conditional German onshore application path support usable multiple channels. September statistics are not used because pre-cutoff release is unverified.",
+      "assumption": "Accept ordinary citizens generally qualify for and can afford suitable transport, accounts and communication; scoped documented routes/services reasonably persist and apply to the FUA. Bank effective-date and publication/cutoff availability assumptions remain; application is not approved residence/work. No independent crisis redundancy proven; reject necessary assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "referencePoints": [
+      {
+        "label": "Seoul approximate city reference",
+        "longitude": 126.978,
+        "latitude": 37.5665,
+        "fuaMatches": [94]
+      },
+      {
+        "label": "SNU Gwanak approximate campus reference",
+        "longitude": 126.952,
+        "latitude": 37.4599,
+        "fuaMatches": [94]
+      },
+      {
+        "label": "Yonsei Sinchon approximate campus reference",
+        "longitude": 126.938,
+        "latitude": 37.5658,
+        "fuaMatches": [94]
+      },
+      {
+        "label": "Suwon approximate reference",
+        "longitude": 127.0286,
+        "latitude": 37.2636,
+        "fuaMatches": [94]
+      },
+      {
+        "label": "Incheon approximate reference",
+        "longitude": 126.7052,
+        "latitude": 37.4563,
+        "fuaMatches": [94]
+      },
+      {
+        "label": "Incheon airport approximate reference",
+        "longitude": 126.451,
+        "latitude": 37.4602,
+        "fuaMatches": [94]
+      },
+      {
+        "label": "Gimpo airport approximate reference",
+        "longitude": 126.7906,
+        "latitude": 37.5583,
+        "fuaMatches": [94]
+      }
+    ],
+    "meaning": "Approximate reference points only, not full municipal/campus/provider footprints, actual treatment sites or resident coverage.",
+    "method": "Existing checksum-validated complete GHS-FUA load; EPSG4326 to ESRI54009 always_xy point intersection."
+  },
+  "sharedLegalPath": {
+    "source": "cci-legal-mobility-rules.json",
+    "sourceSha256": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
+    "rule": "section41_citizen_onshore_application_germany",
+    "meaning": "Korean-citizen conditional application only: purpose, resources, approval and costs remain, not residence/work entitlement."
+  },
+  "clinicalReview": {
+    "path": "docs/cci-seoul-clinical-review.md",
+    "sha256": "9d8d3d33d8d189389ae9f0b1e7143a9c9b329123cc5cc11c0375a4a6e5138679"
+  },
+  "clinicalAccessReview": {
+    "status": "conditional_material_access_discontinuity_not_universal_exclusion",
+    "observationBefore": "2025-10-01",
+    "publishedOn": "2026-07-14",
+    "pmcReleasedOn": "2026-10-10",
+    "startedPatients": 115,
+    "priorAducanumabExcluded": 3,
+    "includedPatients": 112,
+    "waitlistedPatients": 64,
+    "newStartsPerWeekAtMonth6": 6,
+    "newStartsPerWeekAtMonth9": 2,
+    "waitingWeeksEarlier": 7,
+    "waitingWeeksLater": 20,
+    "successfullyTransferred": 18,
+    "transferAttemptDenominator": null,
+    "measured2026CutoffWaiting": false,
+    "measuredMedianResidentCostIncomeRatio": false,
+    "hypothesisWithdrawal": "unknown_not_default60"
+  },
+  "sourceSnapshots": [
+    {
+      "url": "https://arisu.seoul.go.kr/home/sub?menukey=7341&mode=list&page=1&searchIs=Y",
+      "publishedOn": "2026-06-22",
+      "retrievedOn": "2026-10-12",
+      "bytes": 59814,
+      "sha256": "fbeb935e531307f7e342b57e5056244b9110a2bfcc32803551e776b7bef9b159",
+      "scope": "Owner index explicitly dates2025 quality-report posting; not assurance of unchanged historic bytes."
+    },
+    {
+      "url": "https://english.seoul.go.kr/we-come-to-you-to-help-using-self-service-kiosks-and-ai-tools-seouls-digital-guides-have-helped-more-than-one-million-citizens-so-far/",
+      "publishedOn": "2026-08-06",
+      "retrievedOn": "2026-10-12",
+      "bytes": 116030,
+      "sha256": "a51457d0c70b1e2360222e0d21776b922d24ba9be1122c77f8a0f134703a9540",
+      "scope": "2022—2026 cumulative assists; July15 service started. Consultation counts are not distinct residents or completed necessary transactions."
+    },
+    {
+      "url": "https://english.seoul.go.kr/seoul-residents-report-heavier-workloads-and-earlier-preparation-for-the-future/",
+      "publishedOn": "2026-03-11",
+      "retrievedOn": "2026-10-12",
+      "bytes": 116367,
+      "sha256": "34cb7d635bd9e434447bf6ea41ab87ca11f24091f2268d16a22c7a27000a4114",
+      "scope": "2025 self-reported ever-use of broadly defined AI; headline methodology only, exact question weighting/denominator not independently verified. Preferences and fears are not performance."
+    },
+    {
+      "url": "https://english.seoul.go.kr/seouls-going-together-with-the-socially-vulnerable-initiative-shows-gains-across-all-six-areas-for-the-first-time/",
+      "publishedOn": "2026-09-03",
+      "retrievedOn": "2026-10-12",
+      "bytes": 121593,
+      "sha256": "9dc444cb3cd8c09c07782192cb508818269b9e59b061c39c46b035700dfefd42",
+      "scope": "Actual2025 welfare connections and stock additions, index uses2022 baseline; future budget not delivery, composite index not CCI."
+    },
+    {
+      "url": "https://world.seoul.go.kr/responding-to-this-years-first-highest-level-heat-wave-warning-issued-at-11-am-seoul-takes-all-out-measures-to-cool-the-heat-and-protect-vulnerable-groups/",
+      "publishedOn": "2026-08-14",
+      "retrievedOn": "2026-10-12",
+      "bytes": 103513,
+      "sha256": "ee75a38a6dd6b658d5f44242e7a881637067b8faf7946577a03ba92b97f201f1",
+      "scope": "Actual current heat shelters/patrols/road washing versus future payments, nursing visits and suspensions kept separate."
+    },
+    {
+      "url": "https://www.kepco.co.kr/home/esg/esgdata/entire/conts.do",
+      "publishedOn": "2026-07-07",
+      "retrievedOn": "2026-10-12",
+      "bytes": 303920,
+      "sha256": "cd8532eb042b97b017485aaaf7b6e31f7c13e08000bbac2bbb6460a9465681cd",
+      "scope": "Operator-wide2025 SAIDI9.32minutes, not Seoul/FUA or household maximum."
+    },
+    {
+      "url": "https://www.kebhana.com/cont/customer/customer01/customer0102/customer010204/index%2C1%2Clist%2C2.jsp",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 354111,
+      "sha256": "4ff4cb2bf3d8b7d0e4d0e3a338a3bc9b5319228b048fb702d5f8ead8db15eef9",
+      "scope": "Current bank FAQ effective revision2026-01-01; all-institution annual USD100000 undocumented-payment limit excludes reportable overseas investment/property. First publication/cutoff bytes unverified."
+    },
+    {
+      "url": "https://arisu.seoul.go.kr/home/board/download.do?menukey=7341&fsn=1782101593-700-338&bsn=1755586480-822-739&dsn=1782101347-242-644",
+      "publishedOn": "2026-06-22",
+      "retrievedOn": "2026-10-12",
+      "bytes": 11156295,
+      "sha256": "890063770b2119e42540cb558315f765c749b8065f812643f0fee827834a7928",
+      "scope": "Original2025 report. Read supply/water tables and service scope:2025 observation,2026 monitoring-count context separate."
+    },
+    {
+      "url": "https://english.seoul.go.kr/wp-content/uploads/2026/03/seoulguide_eng.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 25560334,
+      "sha256": "15eb994ca2542e9d795cce941f3109fa3c4639646221cc380aa71bc4ae736eee",
+      "scope": "Read airport rail/bus access and communications sections; URL and March2026 event content do not prove first publication, availability before cutoff is an assumption."
+    },
+    {
+      "url": "https://mediahub.seoul.go.kr/news/article/newsArticlePrintPopup.do?articleNo=2014470",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 21474,
+      "sha256": "0b7add29bfde280241f24812f1e2ff3335721bb7a83642bb3d879a401bc03e29",
+      "scope": "2025 city plan explicitly reports16281 basement households with barriers as ofApril2025; plans separated, first publication unverified."
+    },
+    {
+      "url": "https://snumrc.snu.ac.kr/activity/publications",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 27482,
+      "sha256": "cd9da64a0cecf1bba1d5d84af65a8bed5fb198095323db9879f6f360ce437dd0",
+      "scope": "Scoped institute ledger2023/24/25 SCI516/612/309 and2025 technology transfers3; blank2024 transfer cell unknown, no whole-city production or density. First publication unverified."
+    },
+    {
+      "url": "https://airinfo.airport.kr/fsmFsn/co_ko/statisticCategoryOfTimeSeries.do?firstYn=1&stYear=2026&stMonth=08&edYear=2026&edMonth=08&tmType=TM_A",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 22225,
+      "sha256": "c77385070a25b872c16a4fa80adea0d2016e70f979347fc41e3c8386a5f7d859",
+      "scope": "Actual2026August flights38624/passenger movements7072244; arrivals+departures, not distinct local residents. Owner says monthly publication after fifth business day of following month; pre-cutoff release inference remains conditional."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13651225/fullTextXML",
+      "publishedOn": "2026-07-14",
+      "retrievedOn": "2026-10-12",
+      "bytes": 100109,
+      "sha256": "96f9f8869e7cb20aea7134e51a8f2dc06ab61710b66f496dc620d6ee7985b538",
+      "scope": "Valid complete originalJATS, DOI verified;2025 treatment/implementation, PMC release2026-10-10; costs/current continuation remain assumptions."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13461769/fullTextXML",
+      "publishedOn": "2026-08-11",
+      "retrievedOn": "2026-10-12",
+      "bytes": 99277,
+      "sha256": "d32cc21ad653c3561547a9880e75a4b241b1f43542e8e85cff70344217745784",
+      "scope": "Valid complete originalJATS, DOI verified;2024Dec—2025Oct single-centre cohort, not causal efficacy or comparator quality."
+    },
+    {
+      "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202401277",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 488003,
+      "sha256": "65708cab2d9aca74d01af7804f93e787cdcec8b4094668de5770307be021a021",
+      "scope": "Current regulator label with2024approval and2025changes; MRI3/5/7/14 not rewritten into2025 cohorts; exact cutoff wording unarchived."
+    },
+    {
+      "url": "https://www.nhis.or.kr/nhis/minwon/wbhapa01000m01.do?mode=view&articleNo=10946900",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 278132,
+      "sha256": "791ccaba55bc71f918fbbc7c26161f74753a9f47b70dc23a99e2b366c6415196",
+      "scope": "Actual2026 cap table, first2026 table publication unknown; noncovered amounts excluded, income not premium percentile."
+    },
+    {
+      "url": "https://www.seoul.go.kr/news/news_report.do?nttNo=460200",
+      "publishedOn": "2026-06-23",
+      "retrievedOn": "2026-10-12",
+      "bytes": 109100,
+      "sha256": "ab4bb3c8b92441104c87e8c4ac1105e318f7d2d5928494224d347744b7cf3306",
+      "scope": "2025municipal ROSC13.4%, not survival to discharge or wholeFUA quality."
+    },
+    {
+      "url": "https://kdca.go.kr/bbs/kdca/42/240821/download.do",
+      "publishedOn": "2025-12-09",
+      "retrievedOn": "2026-10-12",
+      "bytes": 951848,
+      "sha256": "060a6b608784b154a521c20884c8be352418563b52b0ede753b01a1caaff48ea",
+      "scope": "2024national119 transportedcardiac arrest cohort, not Seoul routine care."
+    }
+  ],
+  "excludedEvidence": [
+    {
+      "url": "https://airinfo.airport.kr/co_ko/651/subview.do",
+      "observationMonth": "2026-09",
+      "preCutoffPublicationVerified": false,
+      "usedForScoring": false,
+      "reason": "Current live table containsSeptember results, but actual release before2026-10-10 is not verified. Owner publication rule alone does not certify timing."
+    }
+  ],
+  "unavailableOriginals": [
+    {
+      "url": "https://www.snu.ac.kr/about/downloads?md=down&bbsidx=165605&fileidx=48254",
+      "reason": "Owner-linked2025statistical-yearbook attachment returned404; no output figures inferred, no error-body hash treated as original."
+    }
+  ]
+}

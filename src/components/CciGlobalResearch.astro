@@ -22,6 +22,7 @@ import sanJose from "../../docs/data/cci-local-2026-san-jose-case.json";
 import losAngeles from "../../docs/data/cci-local-2026-los-angeles-case.json";
 import osakaKyoto from "../../docs/data/cci-local-2026-osaka-kyoto-case.json";
 import boston from "../../docs/data/cci-local-2026-boston-case.json";
+import seoul from "../../docs/data/cci-local-2026-seoul-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -49,6 +50,7 @@ const cases = [
   losAngeles,
   osakaKyoto,
   boston,
+  seoul,
 ];
 const caseNamesZh: Record<number, string> = {
   [singapore.candidateId]: "新加坡",
@@ -64,6 +66,7 @@ const caseNamesZh: Record<number, string> = {
   [losAngeles.candidateId]: "洛杉矶功能区",
   [osakaKyoto.candidateId]: "大阪—京都功能区",
   [boston.candidateId]: "波士顿功能区",
+  [seoul.candidateId]: "首尔功能区",
 };
 const screening = coverage.local2026Screening;
 if (
@@ -456,6 +459,26 @@ const rows = [
         href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-boston-case.md"
         >{zh ? "波士顿案例与原件" : "Boston case and sources"}</a
       >
+    </p>
+    <p>
+      {
+        zh
+          ? "首尔 PCS／ISR／TEC／OPT 条件性 60，LON 条件性 40；GSS／RES／MED 未定，无总分中心、数学域 34—74。真实保护、福利衔接、研究转移、数字辅助和交通支持有限能力。两院已治疗与安全监测是重要正向证据；候补、容量下降、等待延长、转诊受限及非报销费用／安全劳动的组合支持长寿居民链的明显约束。40 仍依赖疾病路径代表性、费用重要性、2025→2026 延续和范围适用，拒绝则未知；新证据证明费用可承担且主要瓶颈缓解，再审 60，域 36—76。撤回 LON 为 30—80，均不证明入围或排除。自主循环恢复不当出院生存，单药断点不降低全部医疗。九月机场表截止前公开未核清，未用于评分；七个近似点不验证完整地域或治疗地点。"
+          : "Seoul has conditional 60 judgments for PCS, ISR, TEC and OPT, and 40 for LON. GSS, RES and MED remain unknown, without a total centre and with a mathematical domain of 34–74. Delivered protection, welfare connections, research transfer, digital assistance and transport support scoped capability. Actual treatment and safety monitoring at two providers are important positive evidence; waitlisting, reduced start capacity, longer waits, limited transfers and reported nonreimbursed costs and safety labour together support a material resident-access discontinuity. LON 40 still requires pathway-relevance, cost-materiality, 2025-to-2026 continuity and scope assumptions; rejection restores unknown. New evidence of affordable costs and substantive bottleneck mitigation would support reviewing 60, giving 36–76. Withdrawing LON gives 30–80; neither establishes qualification or exclusion. Return of spontaneous circulation is not discharge survival, and a single-drug bottleneck does not downgrade general medicine. September airport statistics have unverified pre-cutoff publication and are unused; seven approximate points verify neither whole boundaries nor treatment sites."
+      }
+    </p>
+    <p class="text-muted-foreground text-sm">
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-seoul-case.md"
+      >
+        {zh ? "首尔评分案例与原件" : "Seoul scoring case and sources"}
+      </a>
+      ·
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-seoul-clinical-review.md"
+      >
+        {zh ? "临床证据与改档条件" : "Clinical evidence and conditions for revision"}
+      </a>
     </p>
     <p>
       {

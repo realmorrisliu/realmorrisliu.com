@@ -65,6 +65,7 @@ const realCases = [
   "los-angeles",
   "osaka-kyoto",
   "boston",
+  "seoul",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -121,6 +122,7 @@ const [
   losAngeles,
   osakaKyoto,
   boston,
+  seoul,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -573,6 +575,35 @@ assert.equal(
   realCases[12].sharedLegalPath.sourceSha256,
   digest("docs/data/cci-legal-mobility-rules.json")
 );
+assert.deepEqual(total(seoul), { center: null, lower: 34, upper: 74 });
+assert.equal(seoul.LON, 40);
+for (const dimension of ["GSS", "RES", "MED"] as const) {
+  assert.equal(seoul[dimension], undefined);
+}
+const seoulWithoutLon = { ...seoul };
+delete seoulWithoutLon.LON;
+assert.deepEqual(total(seoulWithoutLon), { center: null, lower: 30, upper: 80 });
+assert.deepEqual(total({ ...seoul, LON: 60 }), { center: null, lower: 36, upper: 76 });
+assert.equal(realCases[13].clinicalReview.sha256, digest(realCases[13].clinicalReview.path));
+const seoulAccess = realCases[13].clinicalAccessReview;
+assert.equal(
+  seoulAccess.startedPatients - seoulAccess.priorAducanumabExcluded,
+  seoulAccess.includedPatients
+);
+assert(seoulAccess.pmcReleasedOn <= realCases[13].evidenceCutoff);
+assert(seoulAccess.observationBefore < seoulAccess.publishedOn);
+assert.equal(seoulAccess.transferAttemptDenominator, null);
+assert.equal(seoulAccess.measured2026CutoffWaiting, false);
+assert.equal(seoulAccess.measuredMedianResidentCostIncomeRatio, false);
+assert.equal(realCases[13].excludedEvidence[0].usedForScoring, false);
+assert.equal(realCases[13].excludedEvidence[0].preCutoffPublicationVerified, false);
+for (const point of realCases[13].referenceBoundaryCheck.referencePoints) {
+  assert.deepEqual(point.fuaMatches, [94]);
+}
+assert.equal(
+  realCases[13].sharedLegalPath.sourceSha256,
+  digest("docs/data/cci-legal-mobility-rules.json")
+);
 const tokyoWithoutTec = { ...tokyo };
 delete tokyoWithoutTec.TEC;
 assert.deepEqual(total(tokyoWithoutTec), { center: null, lower: 54, upper: 64 });
@@ -644,5 +675,6 @@ console.log({
     losAngeles: { partial: total(losAngeles) },
     osakaKyoto: { partial: total(osakaKyoto) },
     boston: { partial: total(boston) },
+    seoul: { partial: total(seoul), withoutLon: total(seoulWithoutLon) },
   },
 });
