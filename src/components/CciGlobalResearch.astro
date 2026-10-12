@@ -27,6 +27,7 @@ import seoul from "../../docs/data/cci-local-2026-seoul-case.json";
 import lisbon from "../../docs/data/cci-local-2026-lisbon-case.json";
 import chicago from "../../docs/data/cci-local-2026-chicago-case.json";
 import prague from "../../docs/data/cci-local-2026-prague-case.json";
+import beijing from "../../docs/data/cci-local-2026-beijing-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -58,6 +59,7 @@ const cases = [
   lisbon,
   chicago,
   prague,
+  beijing,
 ];
 const caseNamesZh: Record<number, string> = {
   [singapore.candidateId]: "新加坡",
@@ -77,6 +79,7 @@ const caseNamesZh: Record<number, string> = {
   [lisbon.candidateId]: "里斯本功能区",
   [chicago.candidateId]: "芝加哥功能区",
   [prague.candidateId]: "布拉格功能区",
+  [beijing.candidateId]: "北京功能区",
 };
 const screening = coverage.local2026Screening;
 if (
@@ -271,8 +274,22 @@ const caseNotes: Record<number, string[]> = {
       ? "布拉格功能区 ISR／LON／OPT 条件性 60、TEC 条件性 80；PCS／GSS／RES／MED 未定，无中心、数学域 29—84。多主体实际科研／产业部署、广泛数字使用与已完成日常服务支持同一技术高档锚点；全部大学产出和应用用户不当本区成果或去重居民，范围／使用者／延续假设拒绝则未知，已核实的重要扩散瓶颈可审 60。克拉德诺参考点落入另一功能区 387，不继承布拉格分数。实际停电恢复和应急备电与交通／热水中断共同保留；给药、产品分发和合资格居民获保分开，当前安全与负担仍是假设。LON 不填 MED；其部分域不支持入围或排除。"
       : "Prague has conditional 60 judgments for ISR, LON and OPT, and 80 for TEC. PCS, GSS, RES and MED remain unresolved, with no centre and a mathematical domain of 29–84. Multiple productive institutions, deployed industry products, broad digital use and completed everyday services support the shared high TEC anchor. University-wide outputs and app users are not all local products or unique residents; rejecting necessary scope, user or continuity assumptions restores unknown. Verified material diffusion barriers could support 60. Kladno's reference lies in FUA 387 and inherits no Prague score. Actual restoration and emergency backup are read alongside transport and hot-water disruption. Administrations, distributed products and eligible insured residents remain distinct, with reversible current safety and affordability assumptions. LON does not fill MED; the partial domain establishes neither qualification nor exclusion.",
   ],
+  [beijing.candidateId]: [
+    zh
+      ? "北京功能区六维条件性 60、TEC 80、OPT 40，条件中心 60。多主体实际转化、数字使用及辅助交付支持技术高档；资本用途／定居顺序限制与实际跨境通信约束，结合强交通和合法支付缓解，支持 OPT 的重要约束判断。资料记录数只用于全量候选的研究顺序，不用于评分或入围。"
+      : "Beijing has six conditional 60 judgments, TEC 80 and OPT 40, giving a conditional centre of 60. Multiple institutions' actual transfers, digital use and assisted delivery support the high TEC anchor. Capital-purpose and settlement-order constraints plus measured cross-border restrictions are read alongside strong transport and lawful payments for OPT. Directory record counts determine research sequence only, never scores or qualification.",
+    zh
+      ? "密云／怀柔和太师屯参考点不属本区，外围死伤不填本地损失率。医疗过程短板和旧治疗经济延迟仍保留；原论文为 42 给药／29 半年、ARIA 3/42、调整后组间认知差异未显著，后续新闻队列不混用。自愿普惠险不等于通常基本医保，单次报销报道不证明中位居民完整负担。拒绝任何必要范围、居民、持续性或重要性假设即撤回该维与总分中心，不证明全球入围。"
+      : "Miyun, Huairou and Taishitun reference points are outside this FUA; peripheral casualties are not local loss rates. Clinical-process gaps and earlier economic treatment delays remain. The original paper has 42 treated, 29 six-month patients, 3 ARIA cases and no significant adjusted between-group cognitive result; later news cohorts stay separate. Voluntary supplementary cover is not usual basic insurance, and one reimbursement report does not establish complete median-resident costs. Rejecting any necessary scope, resident, continuity or materiality assumption withdraws that dimension and the total centre. Global qualification remains unproven.",
+  ],
 };
 const caseReviewLinks: Record<number, { href: string; label: string }> = {
+  [beijing.candidateId]: {
+    href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-beijing-technology-longevity-exit-review.md",
+    label: zh
+      ? "北京技术、临床与离开路径复核"
+      : "Beijing technology, clinical and exit-path review",
+  },
   [washington.candidateId]: {
     href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-washington-security-review.md",
     label: zh

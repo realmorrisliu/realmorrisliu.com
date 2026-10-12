@@ -1,0 +1,797 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "candidateId": 7704,
+  "name": "Beijing",
+  "evidenceReview": "cci-local-2026-beijing-case.md",
+  "expectedConditionalTotal": 60,
+  "retrievedOn": "2026-10-12",
+  "limitations": "Eight dimensions and31 subpillars reviewed, not fully measured. Six conditional60 judgments, TEC80 andOPT40 give60 under original weights. Every score requires explicit locality, ordinary-resident, continuity and materiality assumptions; rejecting any necessary assumption restores unknown and removes the centre. Municipal statistics, peripheral disasters, providers, cohorts and cloud-city labels differ from eFUA7704. Supplementary insurance is voluntary, not usual basic coverage. No global ranking, reliable exclusion bound, healthy-person longevity claim or zero imputation.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Completed15 waterlogging-point works, existing scoped cooling stations, delivered seismic monitoring and actualJuly2026 pumping/cross-area response support operating protection. Low bridges, drainage weaknesses, road closures/bus changes and regional fire damage remain. Miyun/Taishitun flood deaths and care-home transfer-plan failure are outside the checked7704 reference, retained as shared institutional/regional pressure rather than local loss rates.",
+      "assumption": "Accept core protection being usually usable for target residents, limited core-area/FUA representativeness and continuity through cutoff. Remaining heat/building/drainage/fire weaknesses have not become a broader persistent unmitigated important ordinary-resident or essential-corridor danger. Monitoring is not retrofitting; municipal totals are not FUA loss measurements. Reject a necessary assumption to restore unknown; verified important post-mitigation constraints support40, stronger multi-hazard protection/backup80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": 60,
+      "rationale": "Actual housing-intermediary groups using violent threats and contemporary enforcement retain organized harm alongside mitigation. Police clearance statistics are not incidence or zero violence. ActualTaiwan-region military exercises provide regional context, not a Beijing attack. September2026 air-defence sirens/community exercises establish scoped response, not wartime shelter effectiveness or attack probability.",
+      "assumption": "Accept reviewed enforcement/ordinary-service delivery as limited evidence of usually functioning life and essential corridors across7704, with comparatively limited current organized-violence impact despite retained regional/strategic threats. Capital strategic exposure, impact extent, resident reach and continuity remain explicit inferences, not inferred safety from zero coded events. Reject necessary applicability/limited-impact assumptions to restore unknown; important continuing threats affecting life or corridors could support40, broader low-impact/effective-response evidence80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Actual2025 hotline handling, completed protection changes, July2026 multi-operator response and targeted community cooperation establish execution. Hotline97.3% resolution/97.7% satisfaction have unverified full denominators and a changed business-dispatch scope, not universal trust. Police admit procedural/service-linking gaps; regional care-home plan failure and partial restoration retain serious counterevidence.",
+      "assumption": "Accept core municipal execution and targeted cooperation being usually reachable by ordinary citizens across7704, and reviewed changes/recovery continuing through cutoff without a broader important unmitigated institutional bottleneck. Regional response is informative about common organizations but not equal FUA protection or fully completed recovery. Reject resident/boundary/continuity assumptions to restore unknown; important ongoing execution/trust/recovery constraints could support40, stronger outcome/reach/backup evidence80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "Actual2025 water allocation/public delivery, operating multi-source storage, Xinfadi2025 trade and2026 reserves, completed holiday supply, energy delivery and scoped regional restoration support running provision. Urban south-transfer reliance near80% and shared logistics failures remain. Reclaimed ecological water is not all drinking backup; water/statistical tables differ. Tariffs and mean per-capita income do not measure median household post-aid essential burden.",
+      "assumption": "Accept core supplier/market delivery and limited municipal evidence as applicable to7704 ordinary residents, service/reserve continuity and usual affordability at local median income. External dependence has not created important sustained unmet necessities after existing mitigation. Miyun restoration is regional, not7704 household outcomes; old2022 electricity reliability is not2026. Reject affordability/reach/continuity assumptions to restore unknown; actual unmet needs/common-channel bottlenecks could support40, adequate alternatives and affordable common-shock continuity80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "Actual2025 routine/community/specialist delivery, emergency response and maternal/infant outcomes support clinical services. A primary2023 nine-hospital convenience study retains real oncology process gaps: non-oncology TNM15/32, preoperative staging24/64, applicable major-surgery discussion16/37 and radiation follow-up11/28. These are processes, not cure or currentFUA harm rates; remediation outcomes and anonymous hospital locations remain unknown. Current insurance conditions create eligibility, referral, deductible and excluded-cost constraints.",
+      "assumption": "Accept multi-provider necessary care and usable alternative clinical paths usually available across7704, with lawful continuous usual employee/resident basic insurance and appropriate referral/payment eligibility for the target citizen. Long-term citizenship is not Beijing hukou. Usual affordability/adequate quality and continuity are reversible inferences; mean gross hospital fees are not median net bills. Known process gaps remain material weaknesses but are not assumed to block current necessary care after available paths. Reject any necessary assumption to restore unknown; important unrelieved quality/wait/payment bottlenecks support40 without requiring majority harm; stronger outcomes/backup80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "Credible shared early-Alzheimer human/regulatory pathway connects to actualPUMCH andLuhe administrations and monitored local practice. The January2026 originalPUMCH paper fixes42 treated/29 six-month patients, ARIA3/42 with one moderate progression, and no statistically significant adjusted between-group cognitive/ADL result. The later65-person news cohort is distinct. Actualeconomic treatment delays coexist with2026 voluntary supplementary special-drug benefits and a scoped actualdonanemab reimbursement observation; these do not establish basic-insurance coverage or whole-course net costs.",
+      "assumption": "Use the same limited disease-pathway standard asNYC/Tokyo: accept reviewed clinical delivery as local and relevant toLON readiness, continuing appropriate safety monitoring, and clinically eligible median-income citizens usually able to obtain and afford diagnosis, referral, treatment and follow-up across7704. Do not assume every basic-insurance resident bought supplementary cover or infer affordability from65%/35% alone. Residual economic barriers after current mitigation are important but do not under this reversible judgment sever the usually usable pathway. Reject locality/relevance/monitoring/ordinary-access/materiality/continuity to restore unknown; important remaining payment/capacity bottlenecks could support40, multiple mature accessible pathways80. No healthy-person lifespan benefit or significant local efficacy is claimed.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 80,
+      "rationale": "Tsinghua actual393 transfers over three years andBISTU completed transfer funding establish multiple production/industry connections, not all local outputs or net licensing returns. Broad digital infrastructure and actualcard settlement/use with completed assisted delivery support diffusion. Financing/activation/skill gaps and older channels continuing remain; card connections/visits are not unique resident adoption. NoOpenAlex record count converts to a score.",
+      "assumption": "Accept multi-institution capabilities continuing through cutoff and representing7704 main knowledge/industrial activity; reviewed usage and assistance reasonably represent broad ordinary-resident digital diffusion. Remaining financing/group barriers after delivered mitigation do not form a material overall diffusion break. Reject any necessary spatial/user/continuity/bottleneck assumption to restore unknown; justified important residual constraints support60. TEC80 does not require instant substitution or separate pressure testing at every node; cross-border network limitations are interpreted inOPT rather than mechanically double deducted.",
+      "conditionalAlternatives": [60],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 40,
+      "rationale": "Actual2025 use ofCapital and externalDaxing airports, legalGermany work/residence applications and authentic current-account payments support transport/legal/financial paths. USD50000 is a simplified annual exchange allowance, not all-transfer ceiling. Capital-purpose restrictions and settlement-before-emigrant-property-transfer conditions remain. ActualBeijing-labelled cloud measurements show selective cross-border blocking and a74-minute TCP443 disruption; other ports/emergency communication provide limited alternatives, not universal household backup.",
+      "assumption": "Accept that capital-purpose/settlement-order constraints and measured cross-border limitations materially affect ordinary citizens initial relocation resources and essential connections despite transport, lawful current payments and eventual emigrant transfer mitigation. A foreign qualification/employer/application is not guaranteed approval. Cloud-city labels need actualFUA location/household-relevance and continuity assumptions; regional satellite restoration is not universal cross-border replacement. Reject materiality/resident/locality/temporal applicability to restore unknown; usual adequately mitigated migration/asset/communication paths could support60 or stronger alternatives80. This is not a reliable global exclusion bound or a claim residents cannot leave.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "researchPriority": {
+    "basis": "all9031_record_associations_first_unreviewed_not_performance",
+    "source": "cci-openalex-efua-record-presence.csv",
+    "sourceSha256": "cb777baaa3ec09fe78a2c07ac8a260d0fb8ad4b8b95996eea0a5367f0e11f013",
+    "field": "article__xpac_false__retracted_false",
+    "recordAssociations": 178522,
+    "rule": "All9031 candidates sorted by descending qualifying core nonretracted article-ID directory associations, then numeric efua_id; skip the17 existing case reviews only for research sequencing. Not quality, output score, eligibility or exclusion."
+  },
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "referencePoints": [
+      {
+        "label": "Beijing central approximate reference",
+        "longitude": 116.4074,
+        "latitude": 39.9042,
+        "fuaMatches": [7704]
+      },
+      {
+        "label": "Miyun urban approximate reference",
+        "longitude": 116.843,
+        "latitude": 40.376,
+        "fuaMatches": [7774]
+      },
+      {
+        "label": "Taishitun approximate reference",
+        "longitude": 117.097,
+        "latitude": 40.533,
+        "fuaMatches": []
+      },
+      {
+        "label": "Huairou urban approximate reference",
+        "longitude": 116.642,
+        "latitude": 40.316,
+        "fuaMatches": [7746]
+      },
+      {
+        "label": "Changping urban approximate reference",
+        "longitude": 116.235,
+        "latitude": 40.218,
+        "fuaMatches": [7704]
+      },
+      {
+        "label": "Peking University approximate reference",
+        "longitude": 116.305,
+        "latitude": 39.992,
+        "fuaMatches": [7704]
+      },
+      {
+        "label": "Tsinghua approximate reference",
+        "longitude": 116.326,
+        "latitude": 40.001,
+        "fuaMatches": [7704]
+      },
+      {
+        "label": "Capital airport approximate reference",
+        "longitude": 116.597,
+        "latitude": 40.08,
+        "fuaMatches": [7704]
+      },
+      {
+        "label": "Daxing airport approximate reference",
+        "longitude": 116.41,
+        "latitude": 39.51,
+        "fuaMatches": []
+      }
+    ],
+    "method": "Checksum-validated full9031 GHS-FUA load; EPSG4326 to ESRI54009 always_xy point intersection.",
+    "meaning": "Analyst approximate reference points only; not exact event/treatment locations, full institutions/municipal footprints or resident coverage."
+  },
+  "clinicalChecks": {
+    "treatedCohort": 42,
+    "sixMonthCohort": 29,
+    "ariaCases": 3,
+    "moderateAriaProgression": true,
+    "adjustedBetweenGroupCognitionSignificant": false,
+    "laterNewsCohortIsSameDenominator": false,
+    "supplementaryInsuranceIsUsualBasicCoverage": false,
+    "fullReimbursementVideoViewed": false,
+    "completeMedianPatientBillMeasured": false
+  },
+  "focusedReviews": [
+    {
+      "path": "docs/cci-beijing-protection-institutions-review.md",
+      "sha256": "48e048826dfb6c8cf87b21fb6999301a5946143e0e754c0edd02898183370067"
+    },
+    {
+      "path": "docs/cci-beijing-resources-medicine-review.md",
+      "sha256": "4a203d0e186299eb1cc03a4a117344858c638f4c70fda1fa56ee0b980f17e9bd"
+    },
+    {
+      "path": "docs/cci-beijing-technology-longevity-exit-review.md",
+      "sha256": "66294344984968378e71c97202ccade2377fd981fe21d73f25adcc8274fb9d78"
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "url": "https://www.beijing.gov.cn/shipin/Interviewlive/1401.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 70490,
+      "sha256": "eaa27d6e6e6718e509ed675b11711497469e1556d5441ae7fc53a53871161e20",
+      "publicationObservationContext": "2026-06-02",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-06-02"
+    },
+    {
+      "url": "https://www.beijing.gov.cn/shipin/Interviewlive/1262.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 71180,
+      "sha256": "eadf5aa3f96aa72055fd99c9aa5fecfdb4230bc7173f6fe70de0b622701eb295",
+      "publicationObservationContext": "2025-07-31",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2025-07-31"
+    },
+    {
+      "url": "https://swj.beijing.gov.cn/zwgk/zzgc/202602/t20260225_4539436.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 95182,
+      "sha256": "c1923326717d580aaf7202bb3c5084ad156a57baa3cd2ba36d7354e9b2e4a6cf",
+      "publicationObservationContext": "2026-02-25；观察截至2025-12",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-02-25"
+    },
+    {
+      "url": "https://www.beijing.gov.cn/shipin/Interviewlive/1305.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 72714,
+      "sha256": "197de4e31ffac05c1a39ffb461eba538dc8c4cf0f716c53af879ef3bfab5d5f2",
+      "publicationObservationContext": "2025-11-06",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2025-11-06"
+    },
+    {
+      "url": "https://jkj.beijing.gov.cn/zwgk/gzdt/202509/t20250903_4189786.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 20544,
+      "sha256": "7416a71fde91d08d7707a7f033381a9fe201633d458b7f435e85d85fddb8ec57",
+      "publicationObservationContext": "正文2025-08-05；URL2025-09",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2025-08-05"
+    },
+    {
+      "url": "https://wjw.beijing.gov.cn/xwzx_20031/xwfb/202608/t20260806_4810953.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 23107,
+      "sha256": "5dd8ffbda6eefd6201f01177cf3957d0414337c3c94c8c37e2f2a5f1529221e0",
+      "publicationObservationContext": "正文2026-08-05；URL8/6",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-08-05"
+    },
+    {
+      "url": "https://gaj.beijing.gov.cn/wsgs/gkgs/202603/P020260320354805183837.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 174572,
+      "sha256": "08e5eecfa27eeb48f93791febed4f1a03698e3f53c3b792804745b57174b441b",
+      "publicationObservationContext": "索引2026-03-20；2025年度",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-03-20"
+    },
+    {
+      "url": "https://www.beijing.gov.cn/ywdt/yaowen/202609/t20260924_4878931.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 46616,
+      "sha256": "e0e06a0b37f1d123dc2115b7ee2ff8855d2135c069a1ded4d4b54343a1f53a96",
+      "publicationObservationContext": "2026-09-24；混合历史窗口",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-09-24"
+    },
+    {
+      "url": "https://www.beijing.gov.cn/hudong/jpzt/2025ndsjbg/202604/P020260422349751159367.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 17452104,
+      "sha256": "f1e75346082eca67102eae37f1118dec8c79c7e35dac0fba857ee909f6b8520f",
+      "publicationObservationContext": "题名2026-04；2025年度",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://www.bj148.org/ztk/2026nzt/zftll/yw/202605/t20260515_1680338.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 89864,
+      "sha256": "ef7e7ac3e4b16e7c3a37c21ffe35ba51fd32fe5b3727a7a2c019696ae9e00460",
+      "publicationObservationContext": "2026-05-15；2025年以来",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-05-15"
+    },
+    {
+      "url": "https://www.bjzgh.org/zt/2026sql/hxyx/202607/20260730/j_2026073011225100017853817963254583.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 6243,
+      "sha256": "cf3191e9cd228edcd6f88f11d06f0bf44075d6ff55dabe4288c28700d3249dd8",
+      "publicationObservationContext": "2026-07-30",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-07-30"
+    },
+    {
+      "url": "https://gzw.beijing.gov.cn/xxfb/gzyw/bjsgzdt/202607/t20260715_4765303.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 34475,
+      "sha256": "015c7d78d9dda0223cfa6ed3d9b079196dc5c4589aeda50025983ae846e41fa2",
+      "publicationObservationContext": "2026-07-15；实绩7/10–12",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-07-15"
+    },
+    {
+      "url": "https://www.beijing.gov.cn/ywdt/gzdt/202509/t20250922_4207351.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 34329,
+      "sha256": "009482fb581332146297aefc80824612e1c4b791cba28f2adff540eab64d8d04",
+      "publicationObservationContext": "2025-09-22；备用不混入2026",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2025-09-22"
+    },
+    {
+      "url": "https://gdb.beijing.gov.cn/rf_ywdt/rf_gzldt/202609/t20260919_4871191.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 170178,
+      "sha256": "0f82123322d8d98a0967069286738d22855ace3bcb00630a501fdcc49c672f23",
+      "publicationObservationContext": "2026-09-19",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-09-19"
+    },
+    {
+      "url": "https://gaj.beijing.gov.cn/xxfb/jwbd/202609/t20260908_4855484.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 24473,
+      "sha256": "9219c7bcca427cb4177fdb422f2f4d64a8a000836deffc4f83dea91e259c2400",
+      "publicationObservationContext": "列表9/6；正文/URL9/8，事发9/1",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://gaj.beijing.gov.cn/xxfb/jwbd/202608/t20260828_4841373.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 24221,
+      "sha256": "5cd2d7db4b4717f1733a530756112fadf42b2c05931a1fb84e9c71be15c1d2ac",
+      "publicationObservationContext": "2026-08-28",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-08-28"
+    },
+    {
+      "url": "https://www.bjdzj.gov.cn/bjdzj_mobile/index/xyyw/2025080108283962748/index.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 27951,
+      "sha256": "9f1b1f8ae6a8e729f932c1a67898cbcaf353a3eacd76d3f4c94768cebf63528e",
+      "publicationObservationContext": "正文2025-08-03；URL8/1",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2025-08-03"
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16429616.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 15455,
+      "sha256": "81c66f150350760b2059af6ba96ad8bad94128b260acf21d5aaee4617a98cdb3",
+      "publicationObservationContext": "2025-12-29；官方HTTP",
+      "scope": "Reviewed in cci-beijing-protection-institutions-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2025-12-29"
+    },
+    {
+      "url": "https://tjj.beijing.gov.cn/zxfbu/202603/t20260324_4564401.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 66691,
+      "sha256": "4dd6578b251e2922bdd5970ed646fb313c453adce2356ab0bbe2cb3db2fa31b2",
+      "publicationObservationContext": "观察 2025；发布 2026-03-25",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://swj.beijing.gov.cn/zwgk/szygb/index.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 21086,
+      "sha256": "6f1300612e4c395148e70ce822ac2ccc6e2aca4013c48a6f855e0299b6b13e4a",
+      "publicationObservationContext": "目录标 2026-04-24",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://swj.beijing.gov.cn/zwgk/szygb/202605/P020260520541745105564.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 4893269,
+      "sha256": "087736b1a3feb4da4d7b1d7eedddd782d0f19419177ff10562cad0d4d0a89c9b",
+      "publicationObservationContext": "观察 2025；当前 PDF 五月版本",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://www.beijing.gov.cn/shipin/Interviewlive/1165.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 73933,
+      "sha256": "b4a536cfa8d8c0cb7401495c465797e4aee0cf85fac1fb664e06e2ce93dc1a54",
+      "publicationObservationContext": "发布／截至 2024-12-27",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://www.beijing.gov.cn/ywdt/gqrd/202602/t20260204_4491091.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 37518,
+      "sha256": "3693cabf1af3381496efd5836df5fd8f59562cc1f90f7f67ff2e88e29b593283",
+      "publicationObservationContext": "2025 交易／2026-02 初库存；发布 2026-02-04",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://sw.beijing.gov.cn/zwxx/swxx/202602/t20260225_4538882.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 49982,
+      "sha256": "67478176e22dae6530dde755735acd1422777bca2c2dadd5d73fe68a74a50e0f",
+      "publicationObservationContext": "观察 2026-02-15—23；发布 2026-02-25",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://csglw.beijing.gov.cn/sy/syztzl/scsglwyhyshjzcjc/zcjc/dlkkx/202401/t20240105_3526984.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 26531,
+      "sha256": "c501c539c198d53bf9bfb862270c81cc074f8dc6087267678bd11c35c46b1ae8",
+      "publicationObservationContext": "观察 2022；发布 2024-01-05",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://www.beijing.gov.cn/ywdt/zwzt/sww/ybs/my/202512/t20251205_4323218.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 33951,
+      "sha256": "abb065df88e642838ff86620ccf302b5ececf26394ec063c89be353783882bd0",
+      "publicationObservationContext": "2025-07 灾害／截至 2025-12-05 恢复",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://www.beijing.gov.cn/fwcj/jiage/ggfw1/661ccdcc81e5641581784c4f.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 25089,
+      "sha256": "e9615080a1761a6bfdd44eb9bdc8a278099b1696b0b9080761c719d1364033a0",
+      "publicationObservationContext": "当前价表；历史字节未验",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://www.beijing.gov.cn/fwcj/jiage/ggfw1/65b8999311a82834a863952a.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 22999,
+      "sha256": "3bb179fc74d2dbefea693a188acfbfa912ec35f4a7fa8a8c7feba1de28ba05dc",
+      "publicationObservationContext": "当前价表；历史字节未验",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://wjw.beijing.gov.cn/sjfb/bjstjgb/bjsyjgb2025/202605/t20260529_4672767.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 15956,
+      "sha256": "e362ae76c99d409c99db5de2369b52802015320e1f58b94914826200962b1e43",
+      "publicationObservationContext": "观察 2025；发布 2026-05-29",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://wjw.beijing.gov.cn/sjfb/bjstjgb/bjsyjgb2025/202605/t20260529_4672761.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 13390,
+      "sha256": "9f2a3c8ec3709e2861da5d9bdb5a940aa5550d92bea11931bd42bf5ce3c5127e",
+      "publicationObservationContext": "观察 2025；发布 2026-05-29",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://wjw.beijing.gov.cn/sjfb/bjstjgb/bjsyjgb2025/202605/t20260529_4672717.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 13222,
+      "sha256": "63a6bc9e7f90c77a548f2c2137b0a6ac90019cb990db1c23969dba1ddbd5e906",
+      "publicationObservationContext": "观察 2025；发布 2026-05-29",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://www.beijing.gov.cn/shipin/Interviewlive/1090.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 80210,
+      "sha256": "5229e27211b39e3806088bcc5aa6e445aa44dc7f0f93b0c7a34597e5b18bfada",
+      "publicationObservationContext": "发布 2024-08-22；分项实际窗口未全部说明",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://xhyxzz.pumch.cn/article/doi/10.12290/xhyxzz.2024-0265?viewType=HTML",
+      "retrievedOn": "2026-10-12",
+      "bytes": 333895,
+      "sha256": "eaada7425e0535abcc66dc4eed9f21d73024fe1692467296de75b60bbf545bc6",
+      "publicationObservationContext": "观察 2023-01—10；在线 2024-08-12",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://xhyxzz.pumch.cn/cn/article/pdf/preview/10.12290/xhyxzz.2024-0265.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1737671,
+      "sha256": "4a6e0b004e8d053763ad275e22f8c97309643c26a819a81b287b3af0595ef102",
+      "publicationObservationContext": "观察 2023-01—10；印刷 2025-03",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://wjw.beijing.gov.cn/sjfb/bjstjgb/bjsyjgb2025/202605/t20260529_4672730.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 14900,
+      "sha256": "d6831fd5d1fb5a6995e806dad71ab94389dec1f582651b548eec91b4321e5512",
+      "publicationObservationContext": "检查 2025-01-01—12-31；发布 2026-05-29",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://ybj.beijing.gov.cn/2020_zwfw/2020_cjwt/202601/t20260115_4432703.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 80924,
+      "sha256": "0f97bd6e0304a8486274a448cd53602e5d8b995beb50df9ca1eaaa37951f6f31",
+      "publicationObservationContext": "2026 资格；正文日期 2026-01-09",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://www.beijing.gov.cn/fuwu/bmfw/bmzt/cxyb/",
+      "retrievedOn": "2026-10-12",
+      "bytes": 30076,
+      "sha256": "7478f7d6d2cb05daaf9e36ed350295e5db8507bf8140845954e335f676365f6d",
+      "publicationObservationContext": "2026 参保及保障期；当前服务页",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://www.beijing.gov.cn/fuwu/bmfw/bmzt/cxyb/201801/t20180110_1855756.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 28772,
+      "sha256": "8f82a67918da28d7d0f7eb24e013a48df3c4a72c0c27b30131dcd736a0385748",
+      "publicationObservationContext": "正文日期 2023-11-17；当前比例",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://www.beijing.gov.cn/fuwu/bmfw/bmzt/cxyb/201801/W020231219440812611997.png",
+      "retrievedOn": "2026-10-12",
+      "bytes": 154791,
+      "sha256": "cac517a6cb1aa25b29cc2710b58785c0b401bf0393212f7e810ccfb5c224c0ef",
+      "publicationObservationContext": "原比例图片；首次字节发布时间未验",
+      "scope": "Reviewed in cci-beijing-resources-medicine-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://www.beijing.gov.cn/shipin/Interviewlive/1377.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 77915,
+      "sha256": "a73c3212d3a9bf265339d26425970d71b78d46cf85ec5db7a951078ed6755d19",
+      "publicationObservationContext": "2026-04-03；主管发布会原实录；近三年机构转化",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-04-03"
+    },
+    {
+      "url": "https://xcb.bistu.edu.cn/docs/2025-11/e3b24afe040047f9a3c360c3d458be8f.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 26689471,
+      "sha256": "731b88428fd47393eb1cab26e3cb47b038e2a88b4020da2078ce061fedb68d6f",
+      "publicationObservationContext": "题面2025-10-28；PDF创建2025-11-06；大学原校报，4页；核第3页",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://tjj.beijing.gov.cn/tjsj_31433/tjgb_31445/ndgb_31446/202603/t20260326_4566469.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 68573,
+      "sha256": "4eaf3cd2253df8336170e344762c5b37480899738790ae59c92e19022d649a72",
+      "publicationObservationContext": "2026-03-25；2025行政市初步统计",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-03-25"
+    },
+    {
+      "url": "https://www.beijing.gov.cn/shipin/Interviewlive/1325.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 65214,
+      "sha256": "8b923d127fd101a195ed05d466d692aed5a6083de94cf0fdf15b147f1096bb4d",
+      "publicationObservationContext": "2025-12-09；主管／银行原发言；非第三方独立审计",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2025-12-09"
+    },
+    {
+      "url": "https://mzj.beijing.gov.cn/art/2026/9/21/art_10690_1748.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 15219,
+      "sha256": "1354d0bae69c205554dff2b88173e1c5f48e04083d222d3445eff94b88b3af4d",
+      "publicationObservationContext": "2026-09-21；民政原答复；资格／代办",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-09-21"
+    },
+    {
+      "url": "https://www.pumch.cn/detail/44847.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 36742,
+      "sha256": "b1370d496c6aefdfbf506d48b64a2669ae175b5bf44c6ee964803a47fc2b1e96",
+      "publicationObservationContext": "2026-02-27；医院原新闻；论文冲突不择有利值",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-02-27"
+    },
+    {
+      "url": "https://news.ccmu.edu.cn/fykx_11926/261c5b3f601744928a39a3bc902440cb.htm",
+      "retrievedOn": "2026-10-12",
+      "bytes": 17826,
+      "sha256": "a1cb293fa27313007854c0d8f91617462e59844750926a3d840c2372fce1617c",
+      "publicationObservationContext": "2026-04-28；附院来源原稿；单例实际给药",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-04-28"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12882609/fullTextXML",
+      "retrievedOn": "2026-10-12",
+      "bytes": 111268,
+      "sha256": "7cc0615f48985594550353c30f71b37da7308f265687571178c5b9f6f42e0015",
+      "publicationObservationContext": "2026-01-10；Europe PMC全文13页论文内容；观察至2025-07-15",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://www.nhsa.gov.cn/attach/Ypsnsp2025/YPSW202500485/YPSW202500485.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1698533,
+      "sha256": "d2ae75fdf0d925851452bcd1350786564511cc05802a2dd906ea01a32f67871c",
+      "publicationObservationContext": "申报2025-07-20；NHSA公示厂家原申报，7页；非监管独立疗效结论",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://ybj.beijing.gov.cn/zwgk/2024zcwj/202512/W020251230586982512630.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 807967,
+      "sha256": "a31e15725cf08b41d7997157e1885ec78299e155ddce86a2e9862325c2af4e22",
+      "publicationObservationContext": "2025目录；2026-01-01起；北京医保局原国家商保目录附件，5页；非普惠合同",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-01-01"
+    },
+    {
+      "url": "https://ybj.beijing.gov.cn/2020_zwfw/2020_cjwt/202511/t20251112_4278670.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 80626,
+      "sha256": "da52da817b922f50f7fdc44f4b478bbc140059797979830e8586d69babecc5ab",
+      "publicationObservationContext": "正文2025-11-26；主管2026计划赔付责任；非个案已赔",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2025-11-26"
+    },
+    {
+      "url": "https://www.bjmtg.gov.cn/bjmtg/c102950/202511/a1a3cab1cc6a4b6ab15083cb95e59a5e.shtml",
+      "retrievedOn": "2026-10-12",
+      "bytes": 70043,
+      "sha256": "0e0adf081cfa39cfdda22b4fca7c5800cc07c3e24e017ac65e569ca1cf5f9472",
+      "publicationObservationContext": "2025-11-13；政府责任答复；2026有效保单",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2025-11-13"
+    },
+    {
+      "url": "https://www.caac.gov.cn/XXGK/XXGK/TJSJ/202602/t20260226_230119.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 48361,
+      "sha256": "8f6902dc4e1852da2bb2a89fd464c911b72b1048eb89cca60348d06346048b01",
+      "publicationObservationContext": "2026-02-26；主管公报发布资格",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-02-26"
+    },
+    {
+      "url": "https://www.caac.gov.cn/XXGK/XXGK/TJSJ/202602/P020260226360830234339.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 231893,
+      "sha256": "58f1b5ba79a52773fb0177099c6a2a432588515fc537eb3e6a118fd26ce42f49",
+      "publicationObservationContext": "2026-02-26；2025机场实际生产公报",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-02-26"
+    },
+    {
+      "url": "https://www.beijing.gov.cn/ywdt/gqrd/202501/t20250103_3980373.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 35189,
+      "sha256": "8a192c531ca68e4b4dc6fd4574dc278c371b4b7c46d84e35b98622af040c17fa",
+      "publicationObservationContext": "2025-01-03；来源大兴区政府；2024实际航运",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2025-01-03"
+    },
+    {
+      "url": "https://china.diplo.de/resource/blob/1341662/0926febcdc900cb3e8594b09b7d7355b/pdf-merkblatt-natvisum-arbeitsaufnahme-data.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 439574,
+      "sha256": "ddb4e22c8a8054745bf543e1293e569748b56824991b4f797d3a8f1605adbf6b",
+      "publicationObservationContext": "2025-12版；德国驻华原工作签证材料；数字冲突不计算",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://www.mofcom.gov.cn/zcfb/zgdwjjmywg/art/2020/art_0dd36157a03f494db7571002c7f785b8.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 148041,
+      "sha256": "14171f27d3ce961e344a1daa9fca9742c21b1926180d3bd5502ecf57ded4020b",
+      "publicationObservationContext": "2020-08-28原发布日期／2020-12-01政府转载；政府所载原外汇业务规则；非北京实付率",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://www.safe.gov.cn/shanghai/2019/1213/1198.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 20527,
+      "sha256": "933be3dc461d973af1d80a9366946701b81ee48d9f4bc8d70939fb9074cd4c73",
+      "publicationObservationContext": "2019-12-13；SAFE分局规则说明；旧版延续假设明示",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2019-12-13"
+    },
+    {
+      "url": "https://www.safe.gov.cn/beijing/file/file/20230830/f8febfd2777b4b3091d7a19d2a92c207.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1040561,
+      "sha256": "f19a66a55f4ce8e5ba800b84005625dfac1e201fa83d795e65e24da1753f9bfe",
+      "publicationObservationContext": "2023-08；北京分局办事指南；齐备期限非批准率",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://www.safe.gov.cn/safe/2025/0915/26537.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 35217,
+      "sha256": "ca0c8eb6d266215568663486c01301847277f23977a3d605a537620c72fa5c68",
+      "publicationObservationContext": "2025-09-15；主管改革解释；用途及人物区分",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2025-09-15"
+    },
+    {
+      "url": "https://gfw.report/blog/gfw_unconditional_rst_20250820/en/",
+      "retrievedOn": "2026-10-12",
+      "bytes": 42231,
+      "sha256": "3a94bc5ed4d47b0b34feaca8ff6e7acc4d0bcc3d0e028310c15e02f822919ede",
+      "publicationObservationContext": "2025-08-20；研究者原创74分钟测量；非全居民损失",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2025-08-20"
+    },
+    {
+      "url": "https://gfw.report/publications/usenixsecurity25/data/paper/quic-sni.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 644296,
+      "sha256": "72bba1c5b993e51f3fc802bbb2fd8e883cdbbcaa9b2fea3da0f746c1f79d03e2",
+      "publicationObservationContext": "原项目2025-07-31；研究者原创20页论文；非家庭抽样",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration."
+    },
+    {
+      "url": "https://xzfg.moj.gov.cn/mobile/law/detail?LawID=1713",
+      "retrievedOn": "2026-10-12",
+      "bytes": 21997,
+      "sha256": "ab8a58cdb0385529b875fa01c8dfccb213fa55d36c5132d032ef04f12a86d3a1",
+      "publicationObservationContext": "2024-03-10修订；司法部现行法全文；不概括所有VPN违法",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2024-03-10"
+    },
+    {
+      "url": "https://yjglj.beijing.gov.cn/art/2025/9/19/art_10988_689896.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 25839,
+      "sha256": "e700e1c622c546a8c5210cc1cb05b7e7519c800fd254369b638ba7224bb0ee81",
+      "publicationObservationContext": "2025-09-19；应急主管记述实际抢通；邻区背景",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2025-09-19"
+    },
+    {
+      "url": "https://www.caac.gov.cn/XXGK/XXGK/TJSJ/202602/P020260226360830390937.xlsx",
+      "retrievedOn": "2026-10-12",
+      "bytes": 42924,
+      "sha256": "0f74dc7bbac864ddc64c6e940f5c4b0710a3d1ad61e77eb0dc0085ba61908794",
+      "publicationObservationContext": "2026-02-26；2025机场实际数量原表，名次不用于CCI",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2026-02-26"
+    },
+    {
+      "url": "https://english.nmpa.gov.cn/2024-01/09/c_986552.htm",
+      "retrievedOn": "2026-10-12",
+      "bytes": 10652,
+      "sha256": "0bdf7c259f3776663c68d3e126dcb661c487e795fc369d3a948346ff43e2e81a",
+      "publicationObservationContext": "2024-01-09；监管原公告；不依厂家自填",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2024-01-09"
+    },
+    {
+      "url": "https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/tzxx/202511/t20251106_4263955.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 17349,
+      "sha256": "ae4bb6d9f5f3d9303843c86f232b4370027d5e946c22fddabbed0b834b7e5041",
+      "publicationObservationContext": "2025-11-06；主管供稿原图发布资格",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2025-11-06"
+    },
+    {
+      "url": "https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/tzxx/202511/W020251106352670461619.jpg",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1241127,
+      "sha256": "51213a1fef9138fab5b0d07d914838b8531d785cd1d735499855e02506b5e4a1",
+      "publicationObservationContext": "2025-11-06；主管原保障说明；已目视特药2责任列，未得全合同",
+      "scope": "Reviewed in cci-beijing-technology-longevity-exit-review.md; source-specific limits and original dates apply. Municipal/jurisdiction/operating-network/study scopes are not whole-FUA or median-resident measurements; retrieval does not prove pre-cutoff identical bytes. Same upstream reports are not independent corroboration.",
+      "publishedOn": "2025-11-06"
+    },
+    {
+      "url": "https://item.btime.com/21t9or3f423crh6gl8ijokevtif",
+      "retrievedOn": "2026-10-12",
+      "bytes": 402941,
+      "sha256": "d84f2d1d0ebc54be73680482e0e85f799c208d236e4640bc6fd9cf0cfa43fa18",
+      "publicationObservationContext": "2026-04-14 19:01:58；北京新闻现场观察原报道；网页正文和元数据，未看全视频／票据",
+      "scope": "Original broadcaster publication body/metadata, 2026-04-14 19:01:58, 1:17; reporter describes that morning interview with family after a first reimbursement settlement. Full video and bill not examined. Not all hospital patients, verified payout amount, universal eligibility, full median patient cost or independent insurer contract.",
+      "publishedOn": "2026-04-14"
+    }
+  ]
+}

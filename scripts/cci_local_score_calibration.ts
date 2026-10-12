@@ -69,6 +69,7 @@ const realCases = [
   "lisbon",
   "chicago",
   "prague",
+  "beijing",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -129,6 +130,7 @@ const [
   lisbon,
   chicago,
   prague,
+  beijing,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -335,7 +337,7 @@ const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.
 assert(tokyoPosition);
 assert.equal(tokyoPosition.center, 62);
 assert.equal(tokyoPosition.bestPosition, 1);
-assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 6);
+assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 7);
 assert.deepEqual(total(washington), { center: 58, lower: 58, upper: 58 });
 assert.equal(washington.RES, 40);
 assert.equal(washington.OPT, 60);
@@ -383,7 +385,7 @@ const washingtonPosition = rankAudit.scenarios.fixed_conditional_centers.caseRes
 );
 assert(washingtonPosition);
 assert.equal(washingtonPosition.center, 58);
-assert.equal(washingtonPosition.bestPosition, 4);
+assert.equal(washingtonPosition.bestPosition, 5);
 assert.equal(washingtonPosition.worstPosition, rankAudit.candidateCount);
 assert.equal(total({ ...washington, GSS: 40 }).center, 55);
 assert.equal(total({ ...washington, GSS: 80 }).center, 61);
@@ -439,7 +441,7 @@ const newYorkPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
 );
 assert(newYorkPosition);
 assert.equal(newYorkPosition.center, 58);
-assert.equal(newYorkPosition.bestPosition, 4);
+assert.equal(newYorkPosition.bestPosition, 5);
 assert.equal(newYorkPosition.worstPosition, rankAudit.candidateCount);
 assert.deepEqual(realCases[7].clinicBoundaryCheck.fuaMatches, [7244]);
 assert.equal(realCases[7].referenceBoundaryCheck.referencePoints.length, 6);
@@ -780,6 +782,63 @@ assert.equal(
   realCases[16].sharedLegalPath.sourceSha256,
   digest("docs/data/cci-legal-mobility-rules.json")
 );
+assert.deepEqual(total(beijing), { center: 60, lower: 60, upper: 60 });
+assert.equal(beijing.TEC, 80);
+assert.equal(beijing.OPT, 40);
+for (const [dimension, lower, upper] of [
+  ["PCS", 51, 66],
+  ["GSS", 51, 66],
+  ["ISR", 51, 66],
+  ["MED", 51, 66],
+  ["RES", 54, 64],
+  ["LON", 54, 64],
+  ["TEC", 52, 62],
+  ["OPT", 56, 66],
+] as const) {
+  const withdrawn = { ...beijing };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.equal(total({ ...beijing, LON: 40 }).center, 58);
+assert.equal(total({ ...beijing, TEC: 60 }).center, 58);
+assert.equal(total({ ...beijing, OPT: 60 }).center, 62);
+assert.equal(total({ ...beijing, MED: 40 }).center, 57);
+const beijingCase = realCases[17];
+for (const review of beijingCase.focusedReviews) {
+  assert.equal(review.sha256, digest(review.path));
+}
+assert.equal(
+  beijingCase.researchPriority.sourceSha256,
+  digest(`docs/data/${beijingCase.researchPriority.source}`)
+);
+assert.equal(beijingCase.researchPriority.recordAssociations, 178522);
+assert.equal(beijingCase.referenceBoundaryCheck.referencePoints.length, 9);
+for (const [label, matches] of [
+  ["Miyun urban approximate reference", [7774]],
+  ["Huairou urban approximate reference", [7746]],
+  ["Taishitun approximate reference", []],
+  ["Daxing airport approximate reference", []],
+] as const) {
+  assert.deepEqual(
+    beijingCase.referenceBoundaryCheck.referencePoints.find(
+      (p: { label: string }) => p.label === label
+    ).fuaMatches,
+    matches
+  );
+}
+assert.equal(beijingCase.clinicalChecks.treatedCohort, 42);
+assert.equal(beijingCase.clinicalChecks.sixMonthCohort, 29);
+assert.equal(beijingCase.clinicalChecks.ariaCases, 3);
+assert.equal(beijingCase.clinicalChecks.adjustedBetweenGroupCognitionSignificant, false);
+assert.equal(beijingCase.clinicalChecks.supplementaryInsuranceIsUsualBasicCoverage, false);
+assert.equal(beijingCase.clinicalChecks.fullReimbursementVideoViewed, false);
+const beijingPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (c: { efua_id: string }) => c.efua_id === "7704"
+);
+assert(beijingPosition);
+assert.equal(beijingPosition.bestPosition, 3);
+assert.equal(beijingPosition.worstPosition, rankAudit.candidateCount - 5);
+
 const praguePosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
   (c: { efua_id: string }) => c.efua_id === "535"
 );
