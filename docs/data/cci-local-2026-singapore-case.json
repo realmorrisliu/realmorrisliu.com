@@ -8,7 +8,7 @@
   "boundaryVersion": "GHS-FUA R2019A",
   "boundaryReview": "unresolved",
   "evidenceReview": "cci-local-2026-singapore-case.md",
-  "expectedConditionalTotal": 58,
+  "expectedConditionalTotal": 60,
   "limitations": "All 31 subpillars are reviewed, not all are measured. Scores require the stated assumptions; unknown evidence remains unknown. This is neither a global ranking nor an exclusion bound. Rejecting a necessary assumption requires reassessment, not automatic retention of its score.",
   "dimensions": [
     {
@@ -90,10 +90,10 @@
     },
     {
       "id": "TEC",
-      "score": 60,
-      "rationale": "Actual patents and commercialisation, cross-sector digital activity, network samples and digital participation support capacity. The October 2026 report adds observed enterprise adoption and surveyed worker use and benefits, alongside training barriers; denominators, self-report and coverage limits prevent automatic promotion to 80.",
-      "assumption": "Observed capabilities and broadly usable services persist to the cutoff and apply to ordinary citizen residents. Worker-survey representation, FUA coverage and independent critical-node operation remain unverified. Accepting these limitations does not prove 80; rejecting the necessary broad-use assumption leaves TEC unresolved, not automatically 40 or 60.",
-      "conditionalAlternatives": [40, 80],
+      "score": 80,
+      "rationale": "Observed research-to-industry delivery across universities, A*STAR and firms, broad enterprise adoption, actual public-service transactions and completed assisted services support strong distributed capacity and diffusion. Skills differences and growth-financing bottlenecks remain; neither non-use of AI nor missing perfect surveys establishes a major unmitigated whole-dimension constraint. This is a conditional research judgment, not a measured 80 or a global percentile.",
+      "assumption": "The observed multi-producer ecosystem and broad ordinary-resident usability persist to the cutoff and reasonably apply to the Singapore FUA. National, institutional, worker and service-transaction denominators are not FUA-wide resident measurements. Completed assistance materially mitigates the reviewed access barriers; it does not establish independent outage fallback. Rejecting these necessary applicability/mitigation assumptions leaves TEC unresolved. If supported financing or group-access constraints remain material after mitigation, reassess 60; broad unmitigated failure could support 40.",
+      "conditionalAlternatives": [40, 60],
       "subpillars": {
         "knowledge_output": "partial",
         "industry_density": "partial",
@@ -114,5 +114,11 @@
         "network_continuity": "partial"
       }
     }
-  ]
+  ],
+  "technologyReview": {
+    "path": "docs/cci-singapore-technology-calibration.md",
+    "sha256": "34faeef158ec519249c8a993619526fbdae8fa926bcb349923ba5d053b738312",
+    "reviewedOn": "2026-10-12",
+    "status": "conditional_80_judgment_not_objective_scale_or_global_eligibility"
+  }
 }

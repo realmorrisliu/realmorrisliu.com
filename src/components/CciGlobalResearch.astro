@@ -48,6 +48,20 @@ const cases = [
   losAngeles,
   osakaKyoto,
 ];
+const caseNamesZh: Record<number, string> = {
+  [singapore.candidateId]: "新加坡",
+  [london.candidateId]: "伦敦",
+  [helsinki.candidateId]: "赫尔辛基",
+  [zurich.candidateId]: "苏黎世",
+  [gaza.candidateId]: "加沙功能区",
+  [tokyo.candidateId]: "东京功能区",
+  [washington.candidateId]: "华盛顿功能区",
+  [newYork.candidateId]: "纽约功能区",
+  [paris.candidateId]: "巴黎功能区",
+  [sanJose.candidateId]: "源名 San Jose 的功能区",
+  [losAngeles.candidateId]: "洛杉矶功能区",
+  [osakaKyoto.candidateId]: "大阪—京都功能区",
+};
 const screening = coverage.local2026Screening;
 if (
   clinicalClaims.candidateCount !== coverage.candidateCount ||
@@ -217,16 +231,11 @@ const rows = [
         <thead>
           <tr>
             <th scope="col">{zh ? "维度／原权重" : "Dimension / original weight"}</th>
-            <th scope="col">{zh ? "新加坡" : "Singapore"}</th>
-            <th scope="col">{zh ? "伦敦" : "London"}</th>
-            <th scope="col">{zh ? "赫尔辛基" : "Helsinki"}</th>
-            <th scope="col">{zh ? "苏黎世" : "Zurich"}</th>
-            <th scope="col">{zh ? "加沙功能区" : "Gaza functional area"}</th>
-            <th scope="col">{zh ? "东京功能区" : "Tokyo functional area"}</th>
-            <th scope="col">{zh ? "华盛顿功能区" : "Washington functional area"}</th>
-            <th scope="col">{zh ? "纽约功能区" : "New York functional area"}</th>
-            <th scope="col">{zh ? "巴黎功能区" : "Paris functional area"}</th>
-            <th scope="col">{zh ? "源名 San Jose 的功能区" : "Source-named San Jose FUA"}</th>
+            {
+              cases.map(city => (
+                <th scope="col">{zh ? (caseNamesZh[city.candidateId] ?? city.name) : city.name}</th>
+              ))
+            }
           </tr>
         </thead>
         <tbody>
@@ -253,22 +262,22 @@ const rows = [
     <p>
       {
         zh
-          ? "新加坡与伦敦同为 58，不证明能力相等或稳定并列。医疗等待不能仅因超出行政目标就自动取 40；科研强不能代替居民扩散；长期迁居权不能覆盖交通、资金及通信的全部退出条件。长寿路径的代表性假设最需挑战：若不接受该假设，LON 应保持未定，总分中心也应为空。"
-          : "Singapore and London both have conditional totals of 58; this does not establish equal capability or a stable tie. Missing an administrative waiting target does not automatically imply MED 40; strong research does not establish resident diffusion, and residence rights do not cover every transport, financial or communication condition. Longevity pathway representativeness is the weakest assumption: rejecting it leaves LON unresolved and removes the total's central estimate."
+          ? "新加坡条件性总分现为 60，伦敦为 58；2 分差不证明确定优劣。医疗等待不能仅因超出行政目标就自动取 40；科研强不能代替居民扩散；长期迁居权不能覆盖交通、资金及通信的全部退出条件。长寿路径的代表性假设最需挑战：若不接受该假设，LON 应保持未定，总分中心也应为空。"
+          : "Singapore now has a conditional total of 60 and London 58; this two-point gap does not establish superiority. Missing an administrative waiting target does not automatically imply MED 40; strong research does not establish resident diffusion, and residence rights do not cover every transport, financial or communication condition. Longevity pathway representativeness is the weakest assumption: rejecting it leaves LON unresolved and removes the total's central estimate."
       }
     </p>
     <p>
       {
         zh
-          ? "新加坡高档再检验已核验截止日前 IMDA 2026 原始报告：企业采用与工人实际使用、受益分别判读，培训差异不自动扣分，较高采用率也不自动支持 TEC 80。MOH 明确未追踪所询问的费用相关延迟／放弃治疗数据；这是已确认的测量缺口，不是未满足需求为零或普遍医疗失效。TEC 与 MED 仍依赖必要假设；仅 TEC 未定则总分无中心、数学域为 52—62，两项同时未定则为 43—68。"
-          : "Singapore's high-tier review verifies the pre-cutoff IMDA 2026 report. Enterprise adoption, worker use and reported benefits have different denominators; training differences do not automatically lower a score, and high adoption does not establish TEC 80. MOH confirms it does not track the requested cost-related delayed or forgone-care data. This is a measurement gap, not zero unmet need or widespread care failure. TEC and MED still require necessary assumptions: unresolved TEC removes the total's centre, giving a mathematical domain of 52–62; unresolved MED and TEC give 43–68."
+          ? "新加坡 TEC 复核为条件性 80：NRF 多机构实际转化、IMDA 企业／工人采用与居民数字使用、已完成辅助交易共同支持高档。不同分母不合并；技能和融资短板保留，若在缓解后仍构成重要限制，可重审 60。多生产者延续、通常居民广泛可用及空间／时点适用仍须假设，拒绝则 TEC 未定。MOH 明确未追踪所询问的费用相关延迟／放弃治疗数据；这是已确认的测量缺口，不是未满足需求为零或普遍医疗失效。TEC 与 MED 仍依赖必要假设；仅 TEC 未定则总分无中心、数学域为 52—62，两项同时未定则为 43—68。"
+          : "Singapore's TEC is reassessed as a conditional 80: actual multi-institution translation, enterprise/worker adoption, resident digital use and completed assisted transactions jointly support the higher tier. Denominators remain separate. Skills and financing gaps are retained; material constraints after mitigation could support 60. Continuing multi-producer capacity, broad ordinary-resident usability and spatial/time applicability remain assumptions; rejecting them leaves TEC unknown. MOH confirms it does not track the requested cost-related delayed or forgone-care data. This is a measurement gap, not zero unmet need or widespread care failure. TEC and MED still require necessary assumptions: unresolved TEC removes the total's centre, giving a mathematical domain of 52–62; unresolved MED and TEC give 43–68."
       }
     </p>
     <p>
       {
         zh
-          ? "苏黎世条件性总分为 58。DO-HEALTH 的主要临床终点与后续生物时钟分析分开判读，并保留跌倒分析的可能益处；拒绝路径代表性假设则 LON 未定、无总分中心。铁路、航空和迁居资格支持退出路径，但移动紧急呼叫备电要求到 2031 年才落实，不能计作当前 OPT 80。历史心外科质量反证也不自动变成 2026 当前失效率。现有案例仍未建立真实 80 分锚点或跨研究者一致性。"
-          : "Zurich's conditional total is 58. DO-HEALTH's primary clinical outcomes are distinguished from later clock analysis, while possible benefit in the fall analysis is retained. Rejecting pathway representativeness leaves LON unresolved and removes the total's centre. Rail, aviation and residence rights support exit channels, but mobile emergency-call backup requirements apply from 2031; they do not establish current OPT 80. Historical cardiac-surgery failures are not 2026 failure rates. Current cases still establish neither a verified real-world 80 anchor nor inter-reviewer consistency."
+          ? "苏黎世条件性总分为 58。DO-HEALTH 的主要临床终点与后续生物时钟分析分开判读，并保留跌倒分析的可能益处；拒绝路径代表性假设则 LON 未定、无总分中心。铁路、航空和迁居资格支持退出路径，但移动紧急呼叫备电要求到 2031 年才落实，不能计作当前 OPT 80。历史心外科质量反证也不自动变成 2026 当前失效率。新加坡的条件性 TEC 80 不证明其他维度高档或跨研究者一致性。"
+          : "Zurich's conditional total is 58. DO-HEALTH's primary clinical outcomes are distinguished from later clock analysis, while possible benefit in the fall analysis is retained. Rejecting pathway representativeness leaves LON unresolved and removes the total's centre. Rail, aviation and residence rights support exit channels, but mobile emergency-call backup requirements apply from 2031; they do not establish current OPT 80. Historical cardiac-surgery failures are not 2026 failure rates. Singapore's conditional TEC 80 establishes neither higher tiers elsewhere nor inter-reviewer consistency."
       }
     </p>
     <p>
@@ -281,15 +290,15 @@ const rows = [
     <p>
       {
         zh
-          ? "赫尔辛基条件性总分为 60。FINGER 有两年人体认知试验结果，但当前免费记忆小组不等于完整干预已交付；LON 60 依赖有限转化路径的连接假设，拒绝该假设则无总分中心。仅在新的必要治疗阻断依据支持 MED 40 时，总分变为 57，低于另外两城当前的 58。这说明 2 分差不足以证明确定优劣。实际数字服务采用也尚不足以支持 TEC 80。"
-          : "Helsinki's conditional total is 60. FINGER has a two-year human cognitive result, but current free memory groups do not establish delivery of the complete intervention. LON 60 depends on a limited translation-pathway assumption; rejecting it removes the total's centre. Only if new evidence of blocked necessary care supports MED 40 does the total become 57, below the other two cases' current 58. A two-point gap does not establish superiority. Actual digital-service adoption also falls short of the evidence needed for TEC 80."
+          ? "赫尔辛基条件性总分为 60。FINGER 有两年人体认知试验结果，但当前免费记忆小组不等于完整干预已交付；LON 60 依赖有限转化路径的连接假设，拒绝该假设则无总分中心。仅在新的必要治疗阻断依据支持 MED 40 时，总分变为 57，低于新加坡当前的 60 和伦敦的 58。这说明 2 分差不足以证明确定优劣。实际数字服务采用也尚不足以支持 TEC 80。"
+          : "Helsinki's conditional total is 60. FINGER has a two-year human cognitive result, but current free memory groups do not establish delivery of the complete intervention. LON 60 depends on a limited translation-pathway assumption; rejecting it removes the total's centre. Only if new evidence of blocked necessary care supports MED 40 does the total become 57, below Singapore's current 60 and London's 58. A two-point gap does not establish superiority. Actual digital-service adoption also falls short of the evidence needed for TEC 80."
       }
     </p>
     <p>
       {
         zh
-          ? "在伦敦 MED 40、OPT 80 的条件情景下，原权重总分为 57；仅将 MED 的 5 个权重点移至 OPT，就变为 59，与新加坡该权重下的 58 比较，次序翻转。这是敏感性演算，不是已经取得的新证据，正式权重不变。"
-          : "In the conditional London scenario MED 40 / OPT 80, the original-weight total is 57. Moving five weight points from MED to OPT yields 59, reversing the order against Singapore's 58 under those weights. This is a sensitivity exercise, not newly established evidence; official weights remain unchanged."
+          ? "在伦敦 MED 40、OPT 80 的条件情景下，原权重总分为 57；仅将 MED 的 5 个权重点移至 OPT，就变为 59，仍低于新加坡该权重下的 60；若新加坡采用 TEC 60 的替代判断，总分为 58，该情景才翻转。这是敏感性演算，不是已经取得的新证据，正式权重不变。"
+          : "In the conditional London scenario MED 40 / OPT 80, the original-weight total is 57. Moving five weight points from MED to OPT yields 59, still below Singapore's 60; Singapore's alternative TEC 60 judgment instead yields 58 and allows that scenario to reverse the order. This is a sensitivity exercise, not newly established evidence; official weights remain unchanged."
       }
     </p>
     <p>
@@ -318,7 +327,7 @@ const rows = [
       >
       {" · "}
       <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/ea5288b8441fe07c2a2e6485a6ed35a5e8903f24/docs/cci-local-2026-london-case.md"
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-london-case.md"
         >{zh ? "伦敦案例" : "London case"}</a
       >
       {" · "}

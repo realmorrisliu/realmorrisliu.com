@@ -208,16 +208,21 @@ for (const [name, reference] of Object.entries(outsideFrameReview.inputs) as [
   assert.equal(digest(`docs/data/${reference.provenance}`), reference.provenanceSha256);
 }
 for (const scores of [singapore, london]) {
-  assert.equal(total({ ...scores, MED: 40 }).center, 55);
-  assert.equal(total({ ...scores, LON: 60 }).center, 60);
+  const base = total(scores).center;
+  assert(base !== null);
+  assert.equal(total({ ...scores, MED: 40 }).center, base - 3);
+  assert.equal(total({ ...scores, LON: 60 }).center, base + 2);
   assert.equal(total({ ...scores, TEC: 80 }).center, 60);
   assert.equal(total({ ...scores, LON: 60, TEC: 80 }).center, 62);
   const unresolvedLon: Partial<Record<DimensionId, number>> = { ...scores };
   delete unresolvedLon.LON;
-  assert.deepEqual(total(unresolvedLon), { center: null, lower: 54, upper: 64 });
-  assert.equal(total(scores, { ...weights, MED: 10, LON: 15 }).center, 57);
+  assert.deepEqual(total(unresolvedLon), { center: null, lower: base - 4, upper: base + 6 });
+  assert.equal(total(scores, { ...weights, MED: 10, LON: 15 }).center, base - 1);
 }
-assert.deepEqual(singapore, london);
+assert.equal(singapore.TEC, 80);
+assert.equal(total(singapore).center, 60);
+assert.deepEqual({ ...singapore, TEC: 60 }, london);
+assert.equal(realCases[0].technologyReview.sha256, digest(realCases[0].technologyReview.path));
 const singaporeWithoutTec = { ...singapore };
 delete singaporeWithoutTec.TEC;
 assert.deepEqual(total(singaporeWithoutTec), { center: null, lower: 52, upper: 62 });
@@ -281,7 +286,7 @@ const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.
 assert(tokyoPosition);
 assert.equal(tokyoPosition.center, 60);
 assert.equal(tokyoPosition.bestPosition, 1);
-assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 4);
+assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 3);
 assert.deepEqual(total(washington), { center: null, lower: 49, upper: 64 });
 assert.equal(washington.RES, 40);
 assert.equal(washington.OPT, 60);
@@ -535,7 +540,8 @@ assert.equal(
 const exitSensitivity = { ...weights, MED: 10, OPT: 15 };
 assert.equal(total(londonCounterfactual).center, 57);
 assert.equal(total(londonCounterfactual, exitSensitivity).center, 59);
-assert.equal(total(singapore, exitSensitivity).center, 58);
+assert.equal(total(singapore, exitSensitivity).center, 60);
+assert.equal(total({ ...singapore, TEC: 60 }, exitSensitivity).center, 58);
 console.log({
   status: input.status,
   totals: input.cases.map((c: { id: string; scores: Record<DimensionId, number> }) => ({
@@ -549,13 +555,14 @@ console.log({
     conditionalTotal: c.expectedConditionalTotal,
   })),
   comparison: {
-    current: { singapore: 58, london: 58 },
+    current: { singapore: total(singapore).center, london: total(london).center },
     singaporeUnresolved: {
       TEC: total(singaporeWithoutTec),
       MEDAndTEC: total(singaporeWithoutMedAndTec),
     },
-    conditionalMED40OPT80: { singapore: 58, london: 57 },
-    sameScenarioMED10OPT15: { singapore: 58, london: 59 },
+    conditionalMED40OPT80: { singapore: total(singapore).center, london: 57 },
+    sameScenarioMED10OPT15: { singapore: 60, london: 59 },
+    sameScenarioWithSingaporeTEC60: { singapore: 58, london: 59 },
     helsinki: { current: 60, conditionalMED40: 57, unresolvedLON: total(helsinkiWithoutLon) },
     zurich: {
       current: 58,

@@ -40,11 +40,11 @@
         {
           "efua_id": "154",
           "source_name": "Singapore",
-          "center": 58.0,
-          "lower": 58.0,
-          "upper": 58.0,
-          "bestPosition": 3,
-          "worstPosition": 9031
+          "center": 60.0,
+          "lower": 60.0,
+          "upper": 60.0,
+          "bestPosition": 1,
+          "worstPosition": 9028
         },
         {
           "efua_id": "312",
@@ -52,7 +52,7 @@
           "center": null,
           "lower": 14.0,
           "upper": 59.0,
-          "bestPosition": 3,
+          "bestPosition": 4,
           "worstPosition": 9031
         },
         {
@@ -62,7 +62,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 1,
-          "worstPosition": 9027
+          "worstPosition": 9028
         },
         {
           "efua_id": "1255",
@@ -79,7 +79,7 @@
           "center": 58.0,
           "lower": 58.0,
           "upper": 58.0,
-          "bestPosition": 3,
+          "bestPosition": 4,
           "worstPosition": 9031
         },
         {
@@ -116,7 +116,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 1,
-          "worstPosition": 9027
+          "worstPosition": 9028
         },
         {
           "efua_id": "5288",
@@ -124,7 +124,7 @@
           "center": 58.0,
           "lower": 58.0,
           "upper": 58.0,
-          "bestPosition": 3,
+          "bestPosition": 4,
           "worstPosition": 9031
         },
         {
@@ -155,8 +155,8 @@
           "efua_id": "154",
           "source_name": "Singapore",
           "center": null,
-          "lower": 49.0,
-          "upper": 64.0,
+          "lower": 51.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -269,8 +269,8 @@
           "efua_id": "154",
           "source_name": "Singapore",
           "center": null,
-          "lower": 49.0,
-          "upper": 64.0,
+          "lower": 51.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -383,8 +383,8 @@
           "efua_id": "154",
           "source_name": "Singapore",
           "center": null,
-          "lower": 49.0,
-          "upper": 64.0,
+          "lower": 51.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -497,8 +497,8 @@
           "efua_id": "154",
           "source_name": "Singapore",
           "center": null,
-          "lower": 52.0,
-          "upper": 62.0,
+          "lower": 54.0,
+          "upper": 64.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -611,8 +611,8 @@
           "efua_id": "154",
           "source_name": "Singapore",
           "center": null,
-          "lower": 49.0,
-          "upper": 64.0,
+          "lower": 51.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -725,8 +725,8 @@
           "efua_id": "154",
           "source_name": "Singapore",
           "center": null,
-          "lower": 54.0,
-          "upper": 64.0,
+          "lower": 56.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -953,8 +953,8 @@
           "efua_id": "154",
           "source_name": "Singapore",
           "center": null,
-          "lower": 52.0,
-          "upper": 62.0,
+          "lower": 54.0,
+          "upper": 64.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1181,18 +1181,18 @@
     "cci-global-evidence-matrix.csv": "3b33ec5d8c8ed85310bd211f73ae3099b35c9a0209629e3d8d00802ac85efd32",
     "cci-legal-mobility-rules.json": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
     "cci-legal-mobility.md": "34e41625f9e78832f4139e4a350fd4c48d7fc333ac876838fdaa63254d8e1179",
-    "cci-local-2026-singapore-case.json": "26a925a90d2474381d3f97f11a36fb400428b3793752d700033f8f14e3203cc5",
-    "cci-local-2026-singapore-case.md": "fa21b0082e2ff7720a98066ce25304bb90aa68b69a009fd406d451af5a52a58f",
+    "cci-local-2026-singapore-case.json": "6c5412e214060111201410a0a1a12cb9618f2c3dc5aaff725fdfda683b7696e4",
+    "cci-local-2026-singapore-case.md": "8e7e4269e7a6ad2cfc1918b7fd8f64de5bc2fbd497a75d90f9385396bbb1264d",
     "cci-local-2026-london-case.json": "c1b88740cbafea92cc9b2a99881f3360f4199544b77d4fc184ed34a9ae434f66",
-    "cci-local-2026-london-case.md": "8ddf06116b3684fc5fad197e3d7a89f074474669f44d701a7f653db52f3611ff",
+    "cci-local-2026-london-case.md": "94f598e54ed7493bae1717b7fcec73cf9f90067bf90d69404f8c2bf706c821fb",
     "cci-local-2026-helsinki-case.json": "3e69537cd5e9d8896ce5c4928838c6d2ffb46ba7ea2e26e5ca54eac435def867",
-    "cci-local-2026-helsinki-case.md": "8b6023a8fda2d71bc823edc804cb4136a8744880f9f8817ad99dbc029308658f",
+    "cci-local-2026-helsinki-case.md": "a33b4bf0727cf0d967d3fdd52f4e94bf18e5e9bb651114578ff51cf10f8e9682",
     "cci-local-2026-zurich-case.json": "c0f56bba172a1f9d8dab4c6ab078fd0de295aae5a761b785b4bffe9738dfbed8",
     "cci-local-2026-zurich-case.md": "61c43ca9677ba987bb96f37fbab3c79650a5d5851f4240bad9cc14833f06be7b",
     "cci-local-2026-gaza-case.json": "cfed62c5791dbc4647273e51199930e1723d922abe5d4cf34bb5b23c02eb46cf",
     "cci-local-2026-gaza-case.md": "14c2b2a2ea13119a9931d365e9eea5fec2ee797a9c34af79c4578b1aada3c7d4",
     "cci-local-2026-tokyo-case.json": "914a398172019a3e7f0265fef3eec2a9a6ae970f2c44b143771ca73fe7b03363",
-    "cci-local-2026-tokyo-case.md": "21c8ac52eb75e37b9b38d37937c3677ed4928d6a169ba90e1cf3e2b461a18efa",
+    "cci-local-2026-tokyo-case.md": "e3f99cf1a4004e8ddceea189cb649ae1d94ae862fd3a2b47293d737a79255727",
     "cci-local-2026-washington-case.json": "ed1a44f4d111ee8c81c79b777a497ed266b004fe678066bc1337ce224130ee14",
     "cci-local-2026-washington-case.md": "3419b58741fe753ae5f09c3de5e3c5a882b377adb3fde94fb0a11ce63fb135b9",
     "cci-local-2026-new-york-case.json": "febf7642c6ae74c73418027e12cce3edf619b462ab57878206511ada4d55c2ca",
@@ -1206,11 +1206,11 @@
     "cci-local-2026-osaka-kyoto-case.json": "32fb18aea57304ef0af801583e68f77cb23519b05ad911e689d1548dfca5a7a2",
     "cci-local-2026-osaka-kyoto-case.md": "a075ed4137cf939b94dd6eaa0e1cdf7ff507467355ded5fd63546c45af703b4d",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "78a054c3563990a5c398ba0964d0af662d0d29c83cec4f12d34f913ddf01c0c2",
+    "cci-global-evidence-matrix.json": "b8ad647e4af547fba7d127a0d8311ca6267844889d8a6a9b168ae29a29839168",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "09ff1b51f40c61c84f4952d683212ca34cd6048abec82e77c8a6e0a5bf72c2de"
+    "cci-local-2026-scoring-calibration.md": "33a3c61a69eb569342ead75be1ae738460faeeef6447a7e5a0c9d1f24e3ecd4b"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "e7c63a8d47df7560c0b6dfb23c815f825b3a0bb483d5b931eac5382466cd1110",
+  "csvSha256": "fe866bfad3beda93159a6c700e9f0b6974dd62cc0f24426a2f6ba8abc5dae57d",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }
