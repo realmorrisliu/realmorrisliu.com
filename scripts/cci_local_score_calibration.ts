@@ -66,6 +66,7 @@ const realCases = [
   "osaka-kyoto",
   "boston",
   "seoul",
+  "lisbon",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -123,6 +124,7 @@ const [
   osakaKyoto,
   boston,
   seoul,
+  lisbon,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -604,6 +606,29 @@ assert.equal(
   realCases[13].sharedLegalPath.sourceSha256,
   digest("docs/data/cci-legal-mobility-rules.json")
 );
+assert.deepEqual(total(lisbon), { center: null, lower: 27, upper: 77 });
+assert.equal(lisbon.MED, 40);
+for (const dimension of ["PCS", "GSS", "RES", "LON"] as const) {
+  assert.equal(lisbon[dimension], undefined);
+}
+const lisbonWithoutMed = { ...lisbon };
+delete lisbonWithoutMed.MED;
+assert.deepEqual(total(lisbonWithoutMed), { center: null, lower: 21, upper: 86 });
+assert.deepEqual(total({ ...lisbon, MED: 60 }), { center: null, lower: 30, upper: 80 });
+assert.equal(realCases[14].clinicalReview.sha256, digest(realCases[14].clinicalReview.path));
+assert.equal(realCases[14].medicalWaitReview.samePopulationDenominator, false);
+assert.equal(realCases[14].medicalWaitReview.meanWaitingIs2026CutoffMeasurement, false);
+assert.equal(realCases[14].medicalWaitReview.medianConflictResolved, false);
+assert.equal(realCases[14].medicalWaitReview.qualityFlag.stableRiskAdjustedOutcomeVerified, false);
+assert.equal(realCases[14].excludedEvidence[0].usedForCutoffScoring, false);
+assert(realCases[14].excludedEvidence[0].displayedUpdatedOn > realCases[14].evidenceCutoff);
+for (const point of realCases[14].referenceBoundaryCheck.referencePoints) {
+  assert.deepEqual(point.fuaMatches, [310]);
+}
+assert.equal(
+  realCases[14].sharedLegalPath.sourceSha256,
+  digest("docs/data/cci-legal-mobility-rules.json")
+);
 const tokyoWithoutTec = { ...tokyo };
 delete tokyoWithoutTec.TEC;
 assert.deepEqual(total(tokyoWithoutTec), { center: null, lower: 54, upper: 64 });
@@ -676,5 +701,6 @@ console.log({
     osakaKyoto: { partial: total(osakaKyoto) },
     boston: { partial: total(boston) },
     seoul: { partial: total(seoul), withoutLon: total(seoulWithoutLon) },
+    lisbon: { partial: total(lisbon), withoutMed: total(lisbonWithoutMed) },
   },
 });

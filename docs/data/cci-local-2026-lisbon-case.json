@@ -1,0 +1,418 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "retrievedOn": "2026-10-12",
+  "candidateId": 310,
+  "name": "Lisbon",
+  "evidenceReview": "cci-local-2026-lisbon-case.md",
+  "expectedConditionalTotal": null,
+  "limitations": "All8dimensions and31subpillars reviewed, not fully measured. ISR/TEC/OPT conditional60, MED conditional40; PCS/GSS/RES/LON unknown. Municipal/operator/institutional scopes and actual cohorts are not full-FUA or median-income measurements. Reversible cutoff/time/scope/representativeness/materiality assumptions; no missingness penalty, reliable exclusion bound or ranking.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": null,
+      "rationale": "Municipal2025 spending supports seismic/tsunami and drainage work, but expenditure and tunnels still under construction do not demonstrate completed whole-area protection. Heat, weather exposure and resident outcomes remain unresolved.",
+      "assumption": "No whole-dimension anchor from a hazard model, expenditure or a future work programme. Keep adaptation and time applicability separate.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "heat_humidity": "unresolved",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "unresolved"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "No assigned historical or preliminary events do not establish low organised-violence impact. Local, regional and strategic consequences and mitigation remain insufficient for a whole-dimension anchor.",
+      "assumption": "No zero-risk inference from missing records, ordinary crime or national background.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Actual emergency-generator/satellite response, field operations and post-power-restoration traffic recovery support execution, adaptation and crisis response. Welfare/emergency funding and accountability records support scoped services but not population-wide cohesion or independent outcomes.",
+      "assumption": "Accept scoped municipal/provider results as relevant to ordinary residents and FUA and continuing in2026; major institutions generally function while group and crisis limitations remain material. Undated reports require a pre-cutoff availability assumption. Reject necessary time/scope/adequacy assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "EPAL2025 water reserves maintained service for most customers during the blackout while local restrictions and actual annual interruptions persisted. Water-quality compliance indices are not household safety probabilities. Food, energy affordability and independent supply-chain substitution remain unresolved.",
+      "assumption": "No whole-dimension anchor from an operator summary, water result or one restored disruption. Keep wholesale/direct customers, events, delivery points, population and provider geography distinct.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "partial",
+        "food": "unresolved",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 40,
+      "rationale": "ERS2025H2 records actual completed first-consultation lateness at multiple local providers; ULSLO reports substantial waiting stocks and involuntary lack of assigned family doctors. Actual care, surgical timeliness, transfer vouchers and primary-care consultations mitigate but do not erase the observed access/continuity constraints. Unclosed mortality coding is not itself the low-score basis.",
+      "assumption": "Accept scoped cohorts as relevant to ordinary eligible median-income residents/FUA,2025-to-2026 continuity and timeliness constraints remaining material after observed mitigation. No cutoff waiting update or full risk-adjusted cohort demonstrated. Reject necessary representativeness, time or materiality assumptions to restore unknown.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "EMA human/regulatory evidence and a Luz Lisbon actual first-treatment statement are positive capabilities, but exact local product, payments, monitoring and ordinary eligible resident affordability are not connected. The payment tracker observed on11October cannot certify10October status; missing SNS access date does not rule out early/private access.",
+      "assumption": "No justified whole-dimension anchor. Do not inherit Paris/Seoul40 or default60 from approval, marketing, missing records or unlinked actual therapy.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "unresolved"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "IST actual scientific output and contracted-research receipts, municipal network samples and real digital parking/shop use support production, industrial connection and adoption. Research-contract receipts fell, ongoing metering faults and narrowly surveyed senior service barriers coexist with alternative channels, published assistance and completed trainer preparation. Seven licensing contracts were in negotiation, not executed licences.",
+      "assumption": "Accept scoped institutional results, limited industry connection and service use as relevant, pre-cutoff available and continuing; reported innovation/skill constraints remain material after actual mitigation and reasonably apply to ordinary residents/FUA. One narrow survey is not population prevalence. Unknown wider capability does not cap the score; reject necessary time/scope/materiality assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Actual Lisbon airport traffic, road/metro/bus access and bank SEPA channels plus EU-citizen conditional German residence rules support multiple ordinary channels. Actual mobile/fixed/internet failure contrasts with municipal emergency satellite/generator operation; emergency continuity is not universal resident fallback.",
+      "assumption": "Accept normal operations persist, undated current source conditions were pre-cutoff available and ordinary citizens can qualify for and afford transport/accounts/communications. Legal rights retain purpose/resources conditions; no independent crisis redundancy established. Reject necessary availability, time, cost or scope assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "referencePoints": [
+      {
+        "label": "Lisbon approximate city reference",
+        "longitude": -9.1393,
+        "latitude": 38.7223,
+        "fuaMatches": [310]
+      },
+      {
+        "label": "Sintra approximate reference",
+        "longitude": -9.3817,
+        "latitude": 38.8029,
+        "fuaMatches": [310]
+      },
+      {
+        "label": "Cascais approximate reference",
+        "longitude": -9.4215,
+        "latitude": 38.6979,
+        "fuaMatches": [310]
+      },
+      {
+        "label": "Almada approximate reference",
+        "longitude": -9.1569,
+        "latitude": 38.6803,
+        "fuaMatches": [310]
+      },
+      {
+        "label": "Lisbon airport approximate reference",
+        "longitude": -9.1342,
+        "latitude": 38.7742,
+        "fuaMatches": [310]
+      },
+      {
+        "label": "IST Alameda approximate reference",
+        "longitude": -9.1387,
+        "latitude": 38.7368,
+        "fuaMatches": [310]
+      }
+    ],
+    "meaning": "Approximate reference points only, not complete municipal/campus/provider footprints, treatment sites or resident coverage.",
+    "method": "Existing checksum-validated complete9031 GHS-FUA load; EPSG4326 to ESRI54009 always_xy point intersection."
+  },
+  "sharedLegalPath": {
+    "source": "cci-legal-mobility-rules.json",
+    "sourceSha256": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
+    "rule": "other_eu_citizen_to_germany",
+    "meaning": "Portuguese citizenship under the local profile supports conditional EU residence: purpose/resources and ordinary affordability still require review; not automatic universal permanent residence."
+  },
+  "clinicalReview": {
+    "path": "docs/cci-lisbon-clinical-review.md",
+    "sha256": "6789542aff0f9644107acfa1c4107cb1edceb136790f6be2b03aff5254cc06cb"
+  },
+  "medicalWaitReview": {
+    "observationPeriod": "2025-H2",
+    "publishedOn": "2026-05-11",
+    "completedFirstConsultationsLatePercent": {
+      "ULS Lisboa Ocidental": 54.9,
+      "ULS Santa Maria": 44.9,
+      "ULS São José": 56.7
+    },
+    "samePopulationDenominator": false,
+    "waitlistAsOf": "2025-12-31",
+    "firstConsultationWaitlistPersons": 56671,
+    "firstConsultationMeanWaitingDays": 248,
+    "surgicalWaitlistPersons": 10192,
+    "surgicalWaitlistMedianMonthsFromTable": 4.7,
+    "surgicalWaitlistMedianMonthsFromProse": 4.1,
+    "medianConflictResolved": false,
+    "surgicalWaitlistWithinTmrgPercent": 53.8,
+    "completedSurgeryWithinTmrgPercent": 79,
+    "meanWaitingIs2026CutoffMeasurement": false,
+    "qualityFlag": {
+      "adjustedMortalityReported": 1.866,
+      "sicaExtractedOn": "2026-04-21",
+      "codingClosed": false,
+      "stableRiskAdjustedOutcomeVerified": false,
+      "gdhPercentMeaningResolved": false
+    }
+  },
+  "serviceContinuityReview": {
+    "operator": "EPAL",
+    "observationYear": 2025,
+    "blackoutOn": "2025-04-28",
+    "summaryClaimsUninterruptedService": true,
+    "operationalAccountNotesLocalRestrictions": true,
+    "mostCustomersSuppliedFromReserves": true,
+    "directServiceInterruptionsOver4Hours": 159,
+    "directServiceInterruptionsOver12Hours": 4,
+    "wholeFuaHouseholdInterruptionRate": null,
+    "ordinaryCommunicationsIndependentFallbackVerified": false
+  },
+  "technologyUseReview": {
+    "digitalParkingSharePercent": 74,
+    "digitalParkingDenominator": "annual_on_street_revenue_not_users_or_payment_count",
+    "localSeniorStructuredQuestionnaires": 20,
+    "combinedQuestionnairesMunicipalArticle": 75,
+    "combinedQuestionnairesNewsletter": 70,
+    "questionnaireCountConflictResolved": false,
+    "completedLicencesInferredFromSevenNegotiations": false
+  },
+  "sourceSnapshots": [
+    {
+      "url": "https://www.epal.pt/EPAL/docs/default-source/epal/relatorio-contas/relat%C3%B3rio-e-contas-2025.pdf?sfvrsn=0",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 9883623,
+      "sha256": "bceda2e8550ba97548656c6de3a360e160d495ea0e5d7f1ff739ec8f37b65b21",
+      "scope": "Read operations91, service118 and water105 with scope19: majority preserved during blackout/local restrictions, direct service interruptions159/4, not uninterrupted all-household service. Owner dated1April2026 release confirms approval; exact first PDF publication/pre-cutoff availability remains a withdrawable assumption."
+    },
+    {
+      "url": "https://www.epal.pt/EPAL/menu/legal/not%C3%ADcias/2026/04/01/resultados-do-exerc%C3%ADcio-de-2025",
+      "publishedOn": "2026-04-01",
+      "retrievedOn": "2026-10-12",
+      "bytes": 46883,
+      "sha256": "f7558bf2ca9b8ca090eb3574d0c1965c4283a1f25bc9bfc9eef399752b3436cf",
+      "scope": "Official statement says report approved yesterday; does not certify historic PDF bytes or all-household continuity."
+    },
+    {
+      "url": "https://www.emel.pt/fotos/financeiro/rg_emel_2025_signed_4106106166a01bcf98d709.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 16480566,
+      "sha256": "cb3d76246269fb4da2f3f72217cbb53c4127afc0c8c87a9cec0bd983cf4d0bc8",
+      "scope": "Read printed25/49/50/53: traffic recovery after power restored,74%parking-revenue share, actual virtual/physical requests and device faults; signed23March2026 not independently verified first publication."
+    },
+    {
+      "url": "https://conselhodeescola.tecnico.ulisboa.pt/documentos-aprovados/atividades-e-contas-do-ist/",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 28026,
+      "sha256": "6e915cf1ee2de0be1b7b0234d31574c8b33b5969f9f6e1d6138ca839d024e280",
+      "scope": "Official owner links2024 activityPDF and2025 managementZIP; index heading2026 is not first-publication certification."
+    },
+    {
+      "url": "https://www.lisboa.pt/fileadmin/portal/municipio/organizacao/financas/2025/prestacao_de_contas_2025.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 5974118,
+      "sha256": "483f49f8f9d5bb94b2beb3eecd4bf23a8b794c4452904221ea150bcf99d9f306",
+      "scope": "Browser confirmed official2025 link; read spending/ongoing-work sections68/69, not completed seismic protection or full-city results; first publication unverified."
+    },
+    {
+      "url": "https://www.domokos.gr/wp-content/uploads/2025/10/NewsLetter-No1_PR.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 1451895,
+      "sha256": "0437a7e215701f4ac894c76ad921d0b172b3019c151454ca6757c37e8c36b7c5",
+      "scope": "Original project newsletterApril—July2025, first publication unverified. Combined70 questionnaire count conflicts with municipal75; no local population rate inferred."
+    },
+    {
+      "url": "https://www.ana.pt/pt/negocios/aviacao/os-nossos-aeroportos",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 146185,
+      "sha256": "381e1f8db8abee8233e547fbfc2e29496438614d1af2e92909db5ef7cc312570",
+      "scope": "Owner2025 Lisbon airport passenger movements36.1million and actual access options; current undated page and whole-year observation not cutoff snapshot."
+    },
+    {
+      "url": "https://drive.tecnico.ulisboa.pt/download/570023764878071",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 18778541,
+      "sha256": "38cf6971b3f669571e5336390ec76b096f91ca9b08c593adf498d5b03c4b8e03",
+      "scope": "Owner original2024 activity report or2025 managementZIP. Observation year and first publication remain distinct;2025 seven negotiated licences not delivered."
+    },
+    {
+      "url": "https://drive.tecnico.ulisboa.pt/download/851498741605798",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 1567266,
+      "sha256": "0da6ad3f35b5c4554e6bee443ff01fc46726d7c896ad1d33aaac8dd8130e84fe",
+      "scope": "Owner original2024 activity report or2025 managementZIP. Observation year and first publication remain distinct;2025 seven negotiated licences not delivered."
+    },
+    {
+      "url": "https://www.ers.pt/media/xoeifia0/monitorizac-o-es_te2s2025.pdf",
+      "publishedOn": "2026-05-11",
+      "retrievedOn": "2026-10-12",
+      "bytes": 889184,
+      "sha256": "4170109e540973d8febdfec0282b0280c2447c62f1c834db4abee4510acc1454",
+      "scope": "2025H2 completed first consultations, provider percentages; TMRG analogy and CTH/RSE limitations retained."
+    },
+    {
+      "url": "https://ulslo.min-saude.pt/images/documents/informacao_gestao/ULSLO_RGC_2025_signed_signed_Optimized.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 3901761,
+      "sha256": "a918ba65fc0c76b532c254422c2805ab07ebf7608f8f2d85d5dfdff14a07247a",
+      "scope": "2025 delivery, waits and mitigation; original table/prose conflict and unclosed coding retained. Owner updated11May2026, first exact publication unverified."
+    },
+    {
+      "url": "https://www.ers.pt/pt/utentes/perguntas-frequentes/faq/acesso-de-cidadaos-estrangeiros-a-prestacao-de-cuidados-de-saude-no-servico-nacional-de-saude/",
+      "publishedOn": "2026-08-12",
+      "retrievedOn": "2026-10-12",
+      "bytes": 200795,
+      "sha256": "f2ced4114129d7c8c6651751cf8698bc80223b60eef63434e3712cac34bf64ad",
+      "scope": "Direct Portuguese citizen SNS eligibility under explicit profile, not city quality or universal private coverage."
+    },
+    {
+      "url": "https://www.ers.pt/pt/utentes/perguntas-frequentes/faq/taxas-moderadoras-do-sns",
+      "publishedOn": "2026-02-18",
+      "retrievedOn": "2026-10-12",
+      "bytes": 235607,
+      "sha256": "82834290fe4703c411f2f26d722e4b652c21bebe3bb01ef85f9767d0bf5f1ec0",
+      "scope": "SNS referral/fee exemptions do not extend automatically to drug reimbursement/private services."
+    },
+    {
+      "url": "https://www.ema.europa.eu/pt/documents/product-information/leqembi-epar-product-information_pt.pdf",
+      "publishedOn": "2026-08-05",
+      "retrievedOn": "2026-10-12",
+      "bytes": 436835,
+      "sha256": "b9a3347ac776f7f43a7a36cc038bb2bcc4ffc2dfa08e731ccb61da1ef2f58d86",
+      "scope": "Current regulator label and controlled access, EU eligible subgroup757/764; not Lisbon measured outcomes or proven local monitoring."
+    },
+    {
+      "url": "https://www.hospitaldaluz.pt/lisboa/pt/comunicacao/noticias/tratamento-para-o-alzheimer-avanca-no-hll",
+      "publishedOn": "2026-03-06",
+      "retrievedOn": "2026-10-12",
+      "bytes": 72733,
+      "sha256": "a616cfaf527354faec54aec1d03457874741741bbf311c8b3f80692aca87c16a",
+      "scope": "Actual first treatment in JSON-LD, modified21July2026; exact drug unspecified and EMA2024 claim conflicts with actual2025AIM, no resident cost or monitoring inferred."
+    },
+    {
+      "url": "https://www.infarmed.pt/web/infarmed/tracker-de-processos",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 331854,
+      "sha256": "7b713edf9516c29bc5484b6ea64f28fc7077a29d4878446293dbf1eca4f447ed",
+      "scope": "Current payment procedure allows early-access pathways, not historic cutoff status or local outcomes."
+    }
+  ],
+  "archiveMembers": [
+    {
+      "file": "ist-2025-Doc.pdf",
+      "zipMember": "Relatorio_Gestao_Contas_IST_2025/Doc.pdf",
+      "bytes": 399609,
+      "sha256": "43cddb8d125e7d1d790ea1599d6783f8b4d486455a0f8f50fc52aa582ead4850"
+    },
+    {
+      "file": "ist-2025-Parecer CG Relatorio Gest╞o Contas IST 2025.pdf",
+      "zipMember": "Relatorio_Gestao_Contas_IST_2025/Parecer CG Relatorio Gest╞o Contas IST 2025.pdf",
+      "bytes": 246427,
+      "sha256": "de16dbea3c832ef28b19edc9d44248e0b0076218963edb0081eb2a69927103da"
+    },
+    {
+      "file": "ist-2025-Relatorio_Gestao_Contas_IST_2025_CE.pdf",
+      "zipMember": "Relatorio_Gestao_Contas_IST_2025/Relatorio_Gestao_Contas_IST_2025_CE.pdf",
+      "bytes": 19043182,
+      "sha256": "4a88274c6563c97e7bf933089e3b983252d8c94c3873bf84c57264f63fc84e7b"
+    }
+  ],
+  "readOnlyObservedSources": [
+    {
+      "url": "https://informacao.lisboa.pt/noticias/detalhe/iluminacao-publica-restabelecida-gradualmente-em-lisboa",
+      "publishedOn": "2025-04-29",
+      "method": "Browser rendered primary page, full relevant crisis paragraphs; rawCLI403 excluded.",
+      "meaning": "Power restoration started20:45 after11:33 outage; actual emergency generator/satellite fallback does not cover all ordinary residents."
+    },
+    {
+      "url": "https://informacao.lisboa.pt/noticias/detalhe/seniores-de-lisboa-mostram-interesse-em-superar-desafios-digitais",
+      "publishedOn": "2025-10-10",
+      "method": "Browser rendered primary page, local20/combined75 questionnaires and barriers.",
+      "meaning": "Narrow June2025 needs sample; not population prevalence, preserve conflict with newsletter70."
+    },
+    {
+      "url": "https://informacao.lisboa.pt/noticias/detalhe/tecnologia-acessivel-aproxima-seniores-do-digital",
+      "publishedOn": "2026-04-09",
+      "method": "Browser rendered primary page and displayed timestamp.",
+      "meaning": "Published manual and actual trainer preparation in Greece; future local application is not completed Lisbon resident training."
+    },
+    {
+      "url": "https://www.cgd.pt/Particulares/Contas/Pages/Transferencias-credito-SEPA.aspx",
+      "publishedOn": null,
+      "method": "Primary web-tool text; raw download failed.",
+      "meaning": "SEPA euro cross-border service, channel/account/IBAN conditions; cutoff availability unarchived, not universal free unrestricted transfers."
+    },
+    {
+      "url": "https://www.cgd.pt/Precario/Documents/Folheto-Completo-Comissoes-Despesas.pdf?v=1",
+      "publishedOn": null,
+      "method": "Primary web-tool personal-transfer section35—39, effective28May2026; raw download failed.",
+      "meaning": "Channels/packages/taxes/correspondent costs conditional; no inferred fee-income ratio or all-household portability."
+    }
+  ],
+  "excludedEvidence": [
+    {
+      "url": "https://extranet.infarmed.pt/siats/Publico/Processos/InfoDetalhesProcesso.aspx",
+      "displayedUpdatedOn": "2026-10-11",
+      "usedForCutoffScoring": false,
+      "bytes": 38411,
+      "sha256": "f91197093c338d60597f1ecf39dd8e0e0423a10a1974c8a8d06260b22dd393ab",
+      "reason": "Current LEQEMBI payment query updated after cutoff; no historic decision inferred and blank SNS date does not rule out early/private access."
+    }
+  ],
+  "unavailableOriginals": [
+    {
+      "url": "https://www.metrolisboa.pt/institucional/wp-content/uploads/sites/2/2026/09/relatorio_consolidado_2025.pdf",
+      "reason": "Owner link verified in browser; download timed out without returned completed artifact, not treated as a read/hashed original or absent resident service."
+    }
+  ]
+}

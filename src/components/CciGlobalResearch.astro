@@ -23,6 +23,7 @@ import losAngeles from "../../docs/data/cci-local-2026-los-angeles-case.json";
 import osakaKyoto from "../../docs/data/cci-local-2026-osaka-kyoto-case.json";
 import boston from "../../docs/data/cci-local-2026-boston-case.json";
 import seoul from "../../docs/data/cci-local-2026-seoul-case.json";
+import lisbon from "../../docs/data/cci-local-2026-lisbon-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -51,6 +52,7 @@ const cases = [
   osakaKyoto,
   boston,
   seoul,
+  lisbon,
 ];
 const caseNamesZh: Record<number, string> = {
   [singapore.candidateId]: "新加坡",
@@ -67,6 +69,7 @@ const caseNamesZh: Record<number, string> = {
   [osakaKyoto.candidateId]: "大阪—京都功能区",
   [boston.candidateId]: "波士顿功能区",
   [seoul.candidateId]: "首尔功能区",
+  [lisbon.candidateId]: "里斯本功能区",
 };
 const screening = coverage.local2026Screening;
 if (
@@ -478,6 +481,26 @@ const rows = [
         href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-seoul-clinical-review.md"
       >
         {zh ? "临床证据与改档条件" : "Clinical evidence and conditions for revision"}
+      </a>
+    </p>
+    <p>
+      {
+        zh
+          ? "里斯本 ISR／TEC／OPT 条件性 60、MED 条件性 40；PCS／GSS／RES／LON 未定，无中心、数学域 27—77。医疗低档依据多机构实际首诊超时、等待库存与家庭医生缺口，与已发生接诊、转移及下沉服务一起判读；已治疗者与等待者分母不混用。质量编码未闭与原表／文字冲突保留，不直接当稳定死亡结局。LON 有首批给药正向声明，但产品、支付、监测和普通居民费用未连通；截止后更新的支付查询不回填，更不由未知取低档。供水储备保住多数用户，同时保留局部限制和年度中断；摘要不等于所有住户零中断。停车数字支付的 74% 是收入份额，不是居民率；谈判许可不算已执行。判断依赖范围、延续与缓解后仍重要，拒绝则未知。撤回 MED 为 21—86，新依据支持 MED 60 才为 30—80，均不证明入围或排除。"
+          : "Lisbon has conditional 60 judgments for ISR, TEC and OPT, and 40 for MED. PCS, GSS, RES and LON remain unknown, without a centre and with a mathematical domain of 27–77. MED combines actual late first consultations at multiple providers, waiting stocks and family-doctor gaps with delivered care, transfers and primary-care mitigation; completed and waiting cohorts have different denominators. Unclosed quality coding and table/prose conflicts remain, without being treated as stable mortality outcomes. An actual first-treatment statement supports LON capability, but product, payments, monitoring and ordinary resident costs are not connected. A payment query updated after the cutoff is not backfilled, and unknowns do not receive low scores. Water reserves served most customers, with local restrictions and annual interruptions retained; summaries do not prove uninterrupted service to every household. Digital parking payments account for 74% of revenue, not residents, and negotiated licences are not executed licences. Judgments require scope, continuity and material constraints after mitigation; rejection restores unknown. Withdrawing MED gives 21–86; new evidence supporting MED 60 would give 30–80. Neither establishes qualification or exclusion."
+      }
+    </p>
+    <p class="text-muted-foreground text-sm">
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-lisbon-case.md"
+      >
+        {zh ? "里斯本评分案例与原件" : "Lisbon scoring case and sources"}
+      </a>
+      ·
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-lisbon-clinical-review.md"
+      >
+        {zh ? "医疗等待、质量与临床路径复核" : "Waiting, quality and clinical-pathway review"}
       </a>
     </p>
     <p>
