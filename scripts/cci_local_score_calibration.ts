@@ -68,6 +68,7 @@ const realCases = [
   "seoul",
   "lisbon",
   "chicago",
+  "prague",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -127,6 +128,7 @@ const [
   seoul,
   lisbon,
   chicago,
+  prague,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -661,6 +663,37 @@ assert.equal(
   realCases[15].sharedLegalPath.sourceSha256,
   digest("docs/data/cci-legal-mobility-rules.json")
 );
+assert.deepEqual(total(prague), { center: null, lower: 29, upper: 84 });
+assert.equal(prague.TEC, 80);
+assert.equal(prague.MED, undefined);
+assert.equal(prague.LON, 60);
+const pragueWithoutTec = { ...prague };
+delete pragueWithoutTec.TEC;
+assert.deepEqual(total(pragueWithoutTec), { center: null, lower: 21, upper: 86 });
+assert.deepEqual(total({ ...prague, TEC: 60 }), { center: null, lower: 27, upper: 82 });
+assert.deepEqual(total({ ...prague, MED: 60 }), { center: null, lower: 38, upper: 78 });
+assert.equal(realCases[16].clinicalReview.sha256, digest(realCases[16].clinicalReview.path));
+assert.equal(realCases[16].technologyReview.appUsersAreUniqueFuaResidents, false);
+assert.equal(realCases[16].technologyReview.allUniversityOutputsAssignedToPrague, false);
+assert.equal(realCases[16].lonReview.sameDeduplicatedCohortVerified, false);
+assert.equal(realCases[16].lonReview.productsAreTreatedResidents, false);
+assert.equal(realCases[16].recoveryReview.forecastWeekendRepairIsVerifiedCompletion, false);
+const praguePoints = realCases[16].referenceBoundaryCheck.referencePoints;
+assert.equal(praguePoints.length, 8);
+for (const point of praguePoints) {
+  assert.deepEqual(point.fuaMatches, point.label.startsWith("Kladno") ? [387] : [535]);
+}
+assert.equal(realCases[16].sharedLegalPath.rule, "other_eu_citizen_to_germany");
+assert.equal(
+  realCases[16].sharedLegalPath.sourceSha256,
+  digest("docs/data/cci-legal-mobility-rules.json")
+);
+const praguePosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (c: { efua_id: string }) => c.efua_id === "535"
+);
+assert(praguePosition);
+assert.equal(praguePosition.bestPosition, 1);
+assert.equal(praguePosition.worstPosition, rankAudit.candidateCount);
 const tokyoWithoutTec = { ...tokyo };
 delete tokyoWithoutTec.TEC;
 assert.deepEqual(total(tokyoWithoutTec), { center: null, lower: 54, upper: 64 });
@@ -735,5 +768,6 @@ console.log({
     seoul: { partial: total(seoul), withoutLon: total(seoulWithoutLon) },
     lisbon: { partial: total(lisbon), withoutMed: total(lisbonWithoutMed) },
     chicago: { partial: total(chicago), withoutRes: total(chicagoWithoutRes) },
+    prague: { partial: total(prague), withoutTec: total(pragueWithoutTec) },
   },
 });

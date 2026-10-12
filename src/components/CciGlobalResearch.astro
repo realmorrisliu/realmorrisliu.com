@@ -25,6 +25,7 @@ import boston from "../../docs/data/cci-local-2026-boston-case.json";
 import seoul from "../../docs/data/cci-local-2026-seoul-case.json";
 import lisbon from "../../docs/data/cci-local-2026-lisbon-case.json";
 import chicago from "../../docs/data/cci-local-2026-chicago-case.json";
+import prague from "../../docs/data/cci-local-2026-prague-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -55,6 +56,7 @@ const cases = [
   seoul,
   lisbon,
   chicago,
+  prague,
 ];
 const caseNamesZh: Record<number, string> = {
   [singapore.candidateId]: "新加坡",
@@ -73,6 +75,7 @@ const caseNamesZh: Record<number, string> = {
   [seoul.candidateId]: "首尔功能区",
   [lisbon.candidateId]: "里斯本功能区",
   [chicago.candidateId]: "芝加哥功能区",
+  [prague.candidateId]: "布拉格功能区",
 };
 const screening = coverage.local2026Screening;
 if (
@@ -484,6 +487,26 @@ const rows = [
         href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-seoul-clinical-review.md"
       >
         {zh ? "临床证据与改档条件" : "Clinical evidence and conditions for revision"}
+      </a>
+    </p>
+    <p>
+      {
+        zh
+          ? "布拉格功能区 ISR／LON／OPT 条件性 60、TEC 条件性 80；PCS／GSS／RES／MED 未定，无中心、数学域 29—84。多主体实际科研／产业部署、广泛数字使用与已完成日常服务支持同一技术高档锚点；全部大学产出和应用用户不当本区成果或去重居民，范围／使用者／延续假设拒绝则未知，已核实的重要扩散瓶颈可审 60。克拉德诺参考点落入另一功能区 387，不继承布拉格分数。实际停电恢复和应急备电与交通／热水中断共同保留；给药、产品分发和合资格居民获保分开，当前安全与负担仍是假设。LON 不填 MED；其部分域不支持入围或排除。"
+          : "Prague has conditional 60 judgments for ISR, LON and OPT, and 80 for TEC. PCS, GSS, RES and MED remain unresolved, with no centre and a mathematical domain of 29–84. Multiple productive institutions, deployed industry products, broad digital use and completed everyday services support the shared high TEC anchor. University-wide outputs and app users are not all local products or unique residents; rejecting necessary scope, user or continuity assumptions restores unknown. Verified material diffusion barriers could support 60. Kladno's reference lies in FUA 387 and inherits no Prague score. Actual restoration and emergency backup are read alongside transport and hot-water disruption. Administrations, distributed products and eligible insured residents remain distinct, with reversible current safety and affordability assumptions. LON does not fill MED; the partial domain establishes neither qualification nor exclusion."
+      }
+    </p>
+    <p class="text-muted-foreground text-sm">
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-prague-case.md"
+      >
+        {zh ? "布拉格评分案例与原件" : "Prague scoring case and sources"}
+      </a>
+      {" · "}
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-prague-clinical-review.md"
+      >
+        {zh ? "布拉格临床复核" : "Prague clinical review"}
       </a>
     </p>
     <p>

@@ -1,0 +1,445 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "retrievedOn": "2026-10-12",
+  "candidateId": 535,
+  "name": "Prague",
+  "evidenceReview": "cci-local-2026-prague-case.md",
+  "expectedConditionalTotal": null,
+  "limitations": "Conditional research judgments, not measurements or ranking. Institution/operator/municipal areas and user/patient cohorts differ from the full FUA. Resident eligibility, affordability, current continuity and pre-cutoff availability assumptions remain reversible. Unknowns do not penalise capability or transparency.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": null,
+      "rationale": "Current cooling-map delivery and water/flood evidence support scoped mitigation, but exposure, protection effectiveness and geophysical/severe-weather applicability do not justify a whole-dimension anchor. A mapped drinking fountain is not an evaluated cooling outcome.",
+      "assumption": "No score from a climate plan, map launch, partial hazards or a web retrieval failure.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "unresolved"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "The June2025 main-station threat was investigated and resolved with international cooperation, not an executed bombing. This does not connect organised violence, regional conflict and strategic exposure sufficiently for a whole-dimension anchor.",
+      "assumption": "No zero-risk inference from assigned-event absence, ordinary crime, arrest or nationality; preserve threat and actual mitigation without extrapolating all-city impact.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Actual July2025 emergency-site backup activation and fuel replenishment, completed electric restoration, digital submissions and scoped service feedback demonstrate functioning delivery and adaptation. Transport/hot-water disruption and uneven district integration remain; mixed customer satisfaction is not social cohesion or a whole-resident outcome.",
+      "assumption": "Accept these actual institutional/service outcomes as relevant to generally functioning institutions for ordinary FUA residents, continuing to cutoff with meaningful group/scope gaps. Broader social cohesion remains an inference, not a measurement. Reject necessary scope/time/resident/representativeness assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "Actual water supply, multiple water inputs, measured losses and electricity restoration coexist with correlated hot-water equipment damage. Food, supply-chain alternatives and ordinary net essential costs are not connected enough to choose40 or60; provider recovery does not prove independent household fallback.",
+      "assumption": "Do not infer affordability from tariffs, poverty from aid programmes, or complete resilience from five-hour electric restoration; food and supply-chain gaps remain unresolved.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "partial",
+        "food": "unresolved",
+        "energy": "partial",
+        "supply_chain": "unresolved"
+      }
+    },
+    {
+      "id": "MED",
+      "score": null,
+      "rationale": "VFN2026 reported approximate waits, actual oncology delivery and insured-care routes coexist with long waits and Motol cognitive-intake restrictions plus alternative referral/clinic paths. Routine quality and pressure continuity are not connected to the ordinary resident sufficiently to distinguish40 and60.",
+      "assumption": "Threshold-selected average waiting listings are not complete completed/pending patient cohorts; one specialty intake restriction is not all-medicine failure. Single-disease actual CAR-T administration does not fill routine quality, access or continuity.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "unresolved",
+        "specialist_capacity": "partial",
+        "system_continuity": "unresolved"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "Actual2025 local CAR-T administration, credible human/regulatory evidence, a reviewed Czech approved inpatient reimbursement route with individual approval and local specialist monitoring support limited translation.21 versus23 patient counts and44 distributed products are distinct unresolved counts, not a deduplicated cohort or44 treated residents.",
+      "assumption": "Accept disease-path representativeness and locally relevant approved treatment continuing at cutoff, appropriate current safety/follow-up, and eligible ordinary insured median-income residents normally able to enter and afford care. National payment rules do not prove individual payment or local patient residence. Reject necessary scope/time/safety/eligibility/cost assumptions to restore unknown; verified material access gaps could support40, distinct mature broadly accessible pathways80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 80,
+      "rationale": "Charles2025 actual patents/licenses, CTU FIT publications and deployed industrial/security products provide multiple productive nodes; OICT2025 broad transport-app use, actual municipal digital submissions and completed2026 sensor-to-routine-service delivery connect knowledge to use. University-wide outputs and app users are not all local products or unique FUA residents; pilots/planned services are not completed general integration.",
+      "assumption": "Accept the multi-node capability and substantial ordinary-resident diffusion are locally relevant and sustained to cutoff, without deriving a resident rate from user counts or assigning all university/network outputs to535.80 follows the same high-capability anchor as Singapore: no single production node controls all critical knowledge/industry/diffusion, not perfect equality or independent testing of every product. If documented integration/skills/cost barriers remain material after mitigation60 is an alternative; missing data or lower licensing income alone cannot cap at60. Reject necessary scope/time/user/resident assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 60],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Actual airport routes/traffic and used transport channels, a Czech-citizen conditional EU mobility route and actual bank cross-border service support ordinary options. The2025 blackout interrupted metro/trams; bank deadlines, account/AML/cost conditions and shared dependence remain. Multiple modes are not independent power/communication fallbacks.",
+      "assumption": "Accept ordinary citizens can normally qualify for and afford reviewed transport/accounts/communications and pathways continue at cutoff across the FUA. German residence rights retain employment/search/resources/insurance conditions. Undated bank guidance requires cutoff availability assumption. Reject necessary eligibility/cost/time/scope assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "referencePoints": [
+      {
+        "label": "Prague approximate reference",
+        "longitude": 14.4378,
+        "latitude": 50.0755,
+        "fuaMatches": [535]
+      },
+      {
+        "label": "Prague Airport approximate reference",
+        "longitude": 14.2632,
+        "latitude": 50.1008,
+        "fuaMatches": [535]
+      },
+      {
+        "label": "Troja approximate reference",
+        "longitude": 14.4267,
+        "latitude": 50.1163,
+        "fuaMatches": [535]
+      },
+      {
+        "label": "Charles University Karolinum approximate reference",
+        "longitude": 14.4231,
+        "latitude": 50.0874,
+        "fuaMatches": [535]
+      },
+      {
+        "label": "CTU Dejvice approximate reference",
+        "longitude": 14.3885,
+        "latitude": 50.103,
+        "fuaMatches": [535]
+      },
+      {
+        "label": "Kladno approximate reference",
+        "longitude": 14.1028,
+        "latitude": 50.1473,
+        "fuaMatches": [387]
+      },
+      {
+        "label": "Káraný approximate reference",
+        "longitude": 14.7312,
+        "latitude": 50.1741,
+        "fuaMatches": [535]
+      },
+      {
+        "label": "Říčany approximate reference",
+        "longitude": 14.6542,
+        "latitude": 49.9917,
+        "fuaMatches": [535]
+      }
+    ],
+    "method": "Checksum-validated full9031 GHS-FUA load; EPSG4326 to ESRI54009 always_xy point intersection.",
+    "meaning": "Approximate references only. Kladno is387, not535; no inherited Prague score or exclusion. Points do not verify full institution/service footprints, actual treatment or patient residence."
+  },
+  "sharedLegalPath": {
+    "source": "cci-legal-mobility-rules.json",
+    "sourceSha256": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
+    "rule": "other_eu_citizen_to_germany",
+    "meaning": "Czech citizen under explicit citizenship assumption; conditional worker/search/resources/insurance path, not unconditional residence or affordability."
+  },
+  "technologyReview": {
+    "charlesUniversityWideNewLicenses2025": 43,
+    "charlesUniversityWideGrantedPatents2025": 24,
+    "charlesTableVisuallyChecked": true,
+    "allUniversityOutputsAssignedToPrague": false,
+    "fitReportedJournalArticles2025": 56,
+    "fitReportedConferenceContributions2025": 86,
+    "portalSubmissions2025": 11666,
+    "portalUniqueUsers2025": 861619,
+    "appAnnualUsersMoreThan": 3000000,
+    "appUsersAreUniqueFuaResidents": false,
+    "glassPilotEndedOn": "2026-07-31",
+    "glassRoutineOperationStartedOn": "2026-08-01",
+    "futureServicesCountedAsCompleted": false
+  },
+  "recoveryReview": {
+    "eventOn": "2025-07-04",
+    "preDeclaredAllLocationsRestoredWithinHours": 5,
+    "isFullFuaHouseholdOutcome": false,
+    "emergencySitesActuallySwitchedToBackup": true,
+    "metroTramsInterrupted": true,
+    "hotWaterEquipmentDamageReported": true,
+    "forecastWeekendRepairIsVerifiedCompletion": false
+  },
+  "clinicalReview": {
+    "path": "docs/cci-prague-clinical-review.md",
+    "sha256": "3ca5ab16abf76b8e51ec07ac2f53de3a17c8ab15e1aef0d3a63927037f27c811"
+  },
+  "lonReview": {
+    "uhktClinicalDivision2025Patients": 21,
+    "uhktIntensiveCare2025Patients": 23,
+    "sameDeduplicatedCohortVerified": false,
+    "productsDistributed2025": 44,
+    "productsAreTreatedResidents": false,
+    "ordinaryLocalPatientNetCostVerified": false,
+    "inpatientPaymentRequiresIndividualApproval": true
+  },
+  "sourceSnapshots": [
+    {
+      "url": "https://www.pvk.cz/o-spolecnosti/zakladni-informace/",
+      "bytes": 24309,
+      "sha256": "a7c75e86b77285bf445d042addad5ace8e64d2a290e2e2aebdfe7338128143cc",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://operatorict.cz/informace/vyrocni-zpravy",
+      "bytes": 302882,
+      "sha256": "449a09fdb7bdc3bd4045a500179c5fc7ce86e6e81efce924c29b0318d2080034",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://cuni.cz/UK-15927.html",
+      "bytes": 60854,
+      "sha256": "c4f0e594194b2e64097861953888487eec881a1a2504308bbb9942c9f436960c",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://www.pvk.cz/res/archive/593/266356.pdf?seek=1785753419",
+      "bytes": 8585021,
+      "sha256": "0a2e61f4ed02f494959374970b2c0ed07b450407d57468306cfaff4796a67e87",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://www.pre.cz/Files/profil-spolecnosti/o-nas/vyrocni-zpravy/annual-report/annual-report-2025/",
+      "bytes": 6653276,
+      "sha256": "247f19da02bb25ad22d31e338edbb3adbb8a5d3ebb4371b35fab0f1443988cb3",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://www.pvk.cz/vse-o-vode/pitna-voda/",
+      "bytes": 72350,
+      "sha256": "999b1a7ea804c8dfd6e6336f22cc4fa01e816ec2dd3f6d32143303e961e1b375",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://framerusercontent.com/assets/9GZirwJg3wXyQTJwbaaT9xGE9w.pdf",
+      "bytes": 17027617,
+      "sha256": "60b90bf221a7e4bebe58013a4811f4a77e1b119fb5ade7af982baad211ff1bec",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://cuni.cz/UK-15927-version1-084.pdf",
+      "bytes": 450373,
+      "sha256": "bcf715196cd08e70ec9c37e62f74b26f7b861cf12f950703ef33cdcf32ac83fb",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://www.pvk.cz/res/archive/899/266329.pdf?seek=1785142239",
+      "bytes": 13533365,
+      "sha256": "e0be829e819f68f93a88148c5f4d4e4531b6c03aa5411975d565d366731c2672",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://fit.cvut.cz/fakulta/informacni-deska/vyrocni-zpravy/vyrocni-zprava-2025.pdf",
+      "bytes": 13322186,
+      "sha256": "2bb0f57237c9b82de58d3fdd03ef6d8cc9a60918d0f6e5122c4bc70b8c797f18",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://www.pvk.cz/aktuality/pruzkum-spokojenosti-se-sluzbami-pvk-je-spokojeno-96-procent-respondentu/",
+      "bytes": 22951,
+      "sha256": "7ec333a8b804f8159d60b25f954b62bec246f9e2009f2bc25a91f2d0aab96349",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://www.prg.aero/en/return-record-numbers-prague-airport-handles-close-178-million-passengers-2025",
+      "bytes": 54042,
+      "sha256": "37ea3d33ba5756afc1ff09f026a5ba9d4278be7374b872b837494c99a3e6f792",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://www.sshmp.cz/aktuality/vypadek-proudu-v-praze-4-cervence-2025-neohrozil-chod-klicovych-slozek-sshmp-byla-pripravena",
+      "bytes": 32052,
+      "sha256": "ba105e3947e8b3d74994112bf6b8ce6de38dff1679e48a60e390619ab6e26343",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://www.praha7.cz/vypadek-elektricke-energie-v-praze/",
+      "bytes": 56737,
+      "sha256": "af382ff4434d6e7b51402d48394375580d10c86bbcea3d90e5b440a152690fc9",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://www.ptas.cz/aktuality/vypadek-dodavek-teple-vody/",
+      "bytes": 29468,
+      "sha256": "40a283966a1b0ed2694620f228d7b6256628fe311250eda218a551dc0ff16600",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://www.csas.cz/en/faqs/how-do-i-send-money-abroad",
+      "bytes": 146437,
+      "sha256": "3c7bb8e3508a38594e4379f69a7371b58db49e80e4c20d41c7413aaefb55fc38",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://www.csas.cz/cs/o-nas/pro-media/tiskove-zpravy/2023/05/04/mobilni-george-umi-nove-odeslat-zahranicni-platby-i-v-jine-mene-nez-v-eurech",
+      "bytes": 119318,
+      "sha256": "839bc04d2e2c92ce28b7d06623631a4c780b471b35f04ab92dfbbaff7c19e6d7",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://operatorict.cz/novinky/dynamick%C3%BD-svoz-skla-se-v-praze-11-osv%C4%9Bd%C4%8Dil-hlavn%C3%AD-m%C4%9Bsto-jej-proto-roz%C5%A1i%C5%99uje-i-do-dal%C5%A1%C3%AD-oblasti",
+      "bytes": 307032,
+      "sha256": "f82963247d89eb80956342be8d8bfdda70fe77da8aa2ff4ea9cb1afb36e5d63d",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Current valid original bytes; owner-linked reports where relevant. Hash does not authenticate first publication or cutoff-day version. Observation scope and dates retained in case note."
+    },
+    {
+      "url": "https://www.vfn.cz/wp-content/uploads/2026/02/Cekaci-doby-2026-v2.pdf",
+      "bytes": 190878,
+      "sha256": "b65858341e56b7ccc46d8311c323ad54fa46fd10105b9260f4466a615d3ba83e",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Valid clinical original; observation/date/version applicability and safety/payment limits retained in clinical review. Current bytes do not authenticate historical cutoff publication."
+    },
+    {
+      "url": "https://www.vfn.cz/wp-content/uploads/2025/09/TZ-KOC-a-nove-denni-stacionare-Onkologicke-kliniky-29-9-2025.pdf",
+      "bytes": 314445,
+      "sha256": "2082d3413d5bc577466fb85e4ec25d7c31b50b3f9e9ef1e20c9fa2092c13449f",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Valid clinical original; observation/date/version applicability and safety/payment limits retained in clinical review. Current bytes do not authenticate historical cutoff publication."
+    },
+    {
+      "url": "https://www.vzp.cz/pojistenci/informace-a-zivotni-situace/naroky-pojistence/zdravotni-sluzby-hrazene-ze-zdravotniho-pojisteni",
+      "bytes": 49501,
+      "sha256": "13ac41021acb394ebeb84c72558c960ced35b2727e11203a057ed485ead67d72",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Valid clinical original; observation/date/version applicability and safety/payment limits retained in clinical review. Current bytes do not authenticate historical cutoff publication."
+    },
+    {
+      "url": "https://www.uhkt.cz/soubory2/vz-25-online.pdf",
+      "bytes": 33591492,
+      "sha256": "e4f891b7e9580fd2461e1caf8e35e4c8315da4c5ad953f8b24b3feb0d8f8d6bf",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Valid clinical original; observation/date/version applicability and safety/payment limits retained in clinical review. Current bytes do not authenticate historical cutoff publication."
+    },
+    {
+      "url": "https://www.hematology.cz/wp-content/uploads/2023/01/20-Bunecna-terapie-CAR-T-verze-01-2023.pdf",
+      "bytes": 84287,
+      "sha256": "8413dd7ab844c14adde16df95049858b0211bdb173aa719ffdbce5d62dbcab4f",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Valid clinical original; observation/date/version applicability and safety/payment limits retained in clinical review. Current bytes do not authenticate historical cutoff publication."
+    },
+    {
+      "url": "https://sukl.gov.cz/wp-content/uploads/2024/07/CAR-T-pripravky-Riziko-sekundarnich-malignit-z-T-lymfocytu.pdf",
+      "bytes": 141644,
+      "sha256": "d607aef1950a7456bb497d02e9398c36ae844514121b20cd424c988f6d3cd6fb",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Valid clinical original; observation/date/version applicability and safety/payment limits retained in clinical review. Current bytes do not authenticate historical cutoff publication."
+    },
+    {
+      "url": "https://sukl.gov.cz/nezarazene-cs/vyjadreni-statniho-ustavu-pro-kontrolu-leciv-k-moznosti-hrazeni-biologicke-lecby-alzheimerovy-choroby-dle-%C2%A7-16-zakona-o-verejnem-zdravotnim-pojisteni/",
+      "bytes": 120148,
+      "sha256": "88945791a9aa4346a7ddfbfa0c8a85845e7257d7a2b95e747c1272c521a5cc05",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Valid clinical original; observation/date/version applicability and safety/payment limits retained in clinical review. Current bytes do not authenticate historical cutoff publication."
+    },
+    {
+      "url": "https://www.czech-neuro.cz/content/uploads/2026/07/bez-kodu_stanovisko-ns-biologicka-lecba-alzheimer_23_6_2026.pdf",
+      "bytes": 759657,
+      "sha256": "37ccaf7507643bea2ea851a5190ac603db0c302299b8812541ec47d19383cb98",
+      "retrievedOn": "2026-10-12",
+      "publishedOn": null,
+      "scope": "Valid clinical original; observation/date/version applicability and safety/payment limits retained in clinical review. Current bytes do not authenticate historical cutoff publication."
+    }
+  ],
+  "webReadSources": [
+    {
+      "url": "https://policie.gov.cz/clanek/vyhrozoval-utokem-nejen-na-vlakove-nadrazi.aspx",
+      "publishedOn": "2025-06-23",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Prague main-station threat and resolved investigation; not executed bombing."
+    },
+    {
+      "url": "https://operatorict.cz/novinky/praha-spou%C5%A1t%C3%AD-mapu-o%C3%A1z-chladu.-obyvatel%C5%AFm-pom%C5%AF%C5%BEe-naj%C3%ADt-%C3%BAlevu-b%C4%9Bhem-hork%C3%BDch-letn%C3%ADch-dn%C5%AF",
+      "publishedOn": "2026-07-02",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Current cooling-map launch, not measured resident cooling or completed future public-building integration."
+    }
+  ]
+}
