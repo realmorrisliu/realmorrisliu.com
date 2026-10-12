@@ -8,7 +8,7 @@
   "boundaryVersion": "GHS-FUA R2019A",
   "boundaryReview": "unresolved",
   "evidenceReview": "cci-local-2026-washington-case.md",
-  "expectedConditionalTotal": null,
+  "expectedConditionalTotal": 58,
   "limitations": "All 31 subpillars are reviewed, not all are measured. Scores require the stated assumptions; unknown evidence remains unknown. This is neither a global ranking nor an exclusion bound. Rejecting a necessary assumption requires reassessment, not automatic retention of its score.",
   "dimensions": [
     {
@@ -26,13 +26,13 @@
     },
     {
       "id": "GSS",
-      "score": null,
-      "rationale": "Dated court records and Justice Department notices describe the May 2025 museum attack with two deaths and the November 2025 Guard attack with one death and one critically injured person, together with actual police, emergency and on-scene responses. They are selected incidents, not annual whole-FUA rates or proof of organised-group membership; charges and prosecutor accounts are not convictions. Their local effects do not yet establish the broader regional or strategic impact profile required for an anchor.",
-      "assumption": "No justified whole-dimension anchor yet. Actual incident response supports mitigation but neither a small selected incident set nor preliminary ordinary-crime counts establishes low overall resident impact. Whole-area, temporal and broader threat effects remain unresolved.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Actual2025 targeted harm and2026 Hilton/Mall violence, a disrupted multi-person plot aimed at the White House, actual local coordination and resumed civil-event activity support operating mitigation with important strategic exposure. A Mall bystander was injured; strategic risk is not confined to protectees. GAO policy/learning gaps and local funding pressures remain counterevidence alongside implemented guidance and actual response. National threat and historical protective-event inventories are background, not FUA violence rates.",
+      "assumption": "Accept the reviewed localized impacts, actual interruption/response/resumption and continuing coordination as indicative that ordinary residence and essential corridors are normally usable across7068 at cutoff, without broader persistent strategic/conflict disruption. This is reversible impact/space/time/resident representativeness, not a complete low-impact measurement or inference from zero coded events. Targeted-community harm remains material and is not averaged away.2026-Feb operations and national assessments need cutoff continuity/applicability assumptions. Reject any necessary assumption to restore unknown; verified material persistent resident/corridor constraints after mitigation could support40, stronger low-impact and effective backup evidence80.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "organized_violence": "partial",
-        "regional_conflict": "unresolved",
+        "regional_conflict": "context",
         "strategic_exposure": "partial"
       }
     },
@@ -466,6 +466,86 @@
       "bytes": 679,
       "sha256": "35f3210c28b70665cdca8fdfd3824fddb11a3490837b6f4814bc34f665873c00",
       "scope": "Current Census benchmark 4 yields one interpolated address-range point, not a verified building centroid or historical treatment site. Point projected to ESRI:54009 intersects only frozen eFUA 7068; whole-area resident coverage remains unresolved."
+    },
+    {
+      "url": "https://hsema.dc.gov/sites/default/files/dc/sites/hsema/release_content/attachments/FY25_HSEMA_Performance_Oversight_Testimony.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 155545,
+      "sha256": "957f67b5f630e71668d67e299f5118e15df2b48f4468b3ed9ca71443ee64ff8b",
+      "scope": "February9/2026 testimony on FY2025/FY2026 to date; actual coordination, funding and mitigations, not year-end outcomes. Current bytes do not authenticate cutoff-day version."
+    },
+    {
+      "url": "https://www.justice.gov/usao-dc/media/1439541/dl?inline=",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 127458,
+      "sha256": "2dd555db7ee83fada23eb6f234f755c03fea6af53f05ee48e7063d7d59b41857",
+      "scope": "May5 filed indictment for April25, four counts not four incidents; scan visually reviewed, not final judgment. Current bytes do not authenticate cutoff-day version."
+    },
+    {
+      "url": "https://files.gao.gov/assets/gao-26-108455.pdf",
+      "publishedOn": "2026-09-03",
+      "retrievedOn": "2026-10-12",
+      "bytes": 3458478,
+      "sha256": "7cadf9f66483cad525470af9571d1f1ca0f4471a99fca5a27a9e0e673edf19d5",
+      "scope": "GAO public report. Historical national protective incidents differ from local violence; July2026 review and partial actual remediation retained. Current bytes do not authenticate cutoff-day version."
+    },
+    {
+      "url": "https://www.justice.gov/opa/pr/five-men-arrested-and-charged-plot-attack-and-kill-government-officials-and-others-attending",
+      "publishedOn": "2026-06-16",
+      "retrievedOn": "2026-10-12",
+      "bytes": 103387,
+      "sha256": "ba4571b4ad6528316ce36db70e715291c3296d74b81798590dbb706a7c587dd8",
+      "scope": "Actual arrests of alleged coordinated plot aimed at June14 White House event, not executed local attack or final judgment. Current bytes do not authenticate cutoff-day version."
+    },
+    {
+      "url": "https://www.justice.gov/opa/pr/suspect-white-house-correspondents-dinner-shooting-charged-attempt-assassinate-president",
+      "publishedOn": "2026-04-27",
+      "retrievedOn": "2026-10-12",
+      "bytes": 95257,
+      "sha256": "554035caf7e42b883fb049004e4d3fa6760264785b32435dd0ffd5cdc9166e17",
+      "scope": "DOJ prosecutorial account of April25 event, not conviction or separate annual-rate evidence. Current bytes do not authenticate cutoff-day version."
+    },
+    {
+      "url": "https://www.uscp.gov/media-center/press-releases/uscp-threat-assessment-cases-2025",
+      "publishedOn": "2026-01-27",
+      "retrievedOn": "2026-10-12",
+      "bytes": 41293,
+      "sha256": "917cc106090867aa3c0571929092dee40d5d9f496dcbf28dc89cc74ec18e5378",
+      "scope": "Actual monitoring scope, interruption/rescheduling or July24 observed resumption as distinguished in case note. Neither national case counts nor one resumed event establishes FUA safety."
+    },
+    {
+      "url": "https://whca.press/2026/06/02/whca-announces-summer-dinner/",
+      "publishedOn": "2026-06-02",
+      "retrievedOn": "2026-10-12",
+      "bytes": 81242,
+      "sha256": "1403d8e6a3dbe57e16621d895b630e0fdcef18d7e69bcfd63e521ad043d4ee3b",
+      "scope": "Actual monitoring scope, interruption/rescheduling or July24 observed resumption as distinguished in case note. Neither national case counts nor one resumed event establishes FUA safety."
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/DCPD-202600491/html/DCPD-202600491.htm",
+      "publishedOn": "2026-07-27",
+      "retrievedOn": "2026-10-12",
+      "bytes": 92406,
+      "sha256": "419918f9031b4dddf033e1c61145b8d54988d101db3739a7a3115adcc00f06e8",
+      "scope": "Actual monitoring scope, interruption/rescheduling or July24 observed resumption as distinguished in case note. Neither national case counts nor one resumed event establishes FUA safety."
+    },
+    {
+      "url": "https://www.justice.gov/usao-dc/pr/texas-man-charged-shooting-secret-service-agent-near-washington-monument-national-mall",
+      "publishedOn": "2026-05-06",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Valid web original; direct returned interstitial is not valid original-byte evidence. May4 bystander injury and response; nearby motorcade does not establish attack intent."
+    },
+    {
+      "url": "https://www.odni.gov/files/ODNI/documents/assessments/ATA-2026-Unclassified-Report.pdf",
+      "publishedOn": "2026-03-18",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Official web PDF; current byte download unavailable. National prospective context, not Washington measured conflict or local damage."
     }
   ],
   "legalMobilityReview": {
@@ -495,5 +575,100 @@
     "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
     "boundaryMethod": "Existing cci_global_crosswalk.load with source checksum, always_xy EPSG:4326 to ESRI:54009, point intersects frozen polygon; shapely 2.1.2 and pyproj 3.7.2. One address point, not whole-FUA service coverage.",
     "interpretation": "Historical actual billed adoption signal with explicit site and resident-access assumptions; 49,100 is drug units, 67 is beneficiary-days, 13 is distinct beneficiaries within this record, not FUA residents or healthy-person longevity outcomes."
+  },
+  "securityReview": {
+    "path": "docs/cci-washington-security-review.md",
+    "sha256": "4eb4191a703a237ece7291e1d256e83a9df880b73bf52e408b6fe96fca778e6b",
+    "sameAnchorAsExistingCompleteCases": true,
+    "fullFuaImpactMeasurement": false,
+    "targetedCommunityHarmIgnored": false,
+    "hiltonAttackOn": "2026-04-25",
+    "hiltonIndictedOn": "2026-05-05",
+    "mallShootingOn": "2026-05-04",
+    "mallPressReleaseOn": "2026-05-06",
+    "mallBystanderInjured": true,
+    "mallMotorcadeAssassinationIntentEstablished": false,
+    "ufcPlannedTargetOn": "2026-06-14",
+    "ufcPlotIsExecutedAttack": false,
+    "gaoPublishedOn": "2026-09-03",
+    "gaoProtectiveEventsObservationWindow": "FY2015-FY2025",
+    "gao83EventsAreWashingtonViolentAttacks": false,
+    "gaoOldRecommendationsCompletedByJuly2026": 3,
+    "gaoOldRecommendationsPartiallyAddressedByJuly2026": 4,
+    "gaoOldRecommendationsNoStepsByJuly2026": 1,
+    "allRecommendationsImplemented": false,
+    "uscp2025ThreatAssessmentCases": 14938,
+    "uscpCasesAreFuaAttacks": false,
+    "whcaResumptionObservedOn": "2026-07-24",
+    "whcaTranscriptReleasedOn": "2026-07-27",
+    "resumptionProvesAllResidentsSafe": false,
+    "may23OriginalStatementRead": false
+  },
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "referencePoints": [
+      {
+        "label": "Washington approximate reference",
+        "longitude": -77.0369,
+        "latitude": 38.9072,
+        "fuaMatches": [7068]
+      },
+      {
+        "label": "Washington Hilton approximate reference",
+        "longitude": -77.045,
+        "latitude": 38.9164,
+        "fuaMatches": [7068]
+      },
+      {
+        "label": "15th/Independence approximate reference",
+        "longitude": -77.0337,
+        "latitude": 38.8877,
+        "fuaMatches": [7068]
+      },
+      {
+        "label": "Capital Jewish Museum approximate reference",
+        "longitude": -77.0189,
+        "latitude": 38.897,
+        "fuaMatches": [7068]
+      },
+      {
+        "label": "Farragut West approximate reference",
+        "longitude": -77.0394,
+        "latitude": 38.9013,
+        "fuaMatches": [7068]
+      },
+      {
+        "label": "Pentagon approximate reference",
+        "longitude": -77.0563,
+        "latitude": 38.8719,
+        "fuaMatches": [7068]
+      },
+      {
+        "label": "Arlington approximate reference",
+        "longitude": -77.1068,
+        "latitude": 38.8799,
+        "fuaMatches": [7068]
+      },
+      {
+        "label": "Dulles approximate reference",
+        "longitude": -77.4558,
+        "latitude": 38.9531,
+        "fuaMatches": [7068]
+      },
+      {
+        "label": "Sterling approximate reference",
+        "longitude": -77.4291,
+        "latitude": 39.0067,
+        "fuaMatches": [7068]
+      },
+      {
+        "label": "Quantico approximate reference",
+        "longitude": -77.3053,
+        "latitude": 38.5227,
+        "fuaMatches": [7068]
+      }
+    ],
+    "method": "Checksum-validated full9031 GHS-FUA load; EPSG4326 to ESRI54009 always_xy point intersection.",
+    "meaning": "Approximate references only, not complete administrative/institution/service boundaries, exact incident footprints, victims residence or exposure."
   }
 }

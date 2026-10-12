@@ -303,28 +303,31 @@ const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.
 assert(tokyoPosition);
 assert.equal(tokyoPosition.center, 62);
 assert.equal(tokyoPosition.bestPosition, 1);
-assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 4);
-assert.deepEqual(total(washington), { center: null, lower: 49, upper: 64 });
+assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 5);
+assert.deepEqual(total(washington), { center: 58, lower: 58, upper: 58 });
 assert.equal(washington.RES, 40);
 assert.equal(washington.OPT, 60);
 assert.equal(washington.LON, 60);
-assert.equal(washington.GSS, undefined);
+assert.equal(washington.GSS, 60);
+const washingtonWithoutGss = { ...washington };
+delete washingtonWithoutGss.GSS;
+assert.deepEqual(total(washingtonWithoutGss), { center: null, lower: 49, upper: 64 });
 const washingtonWithoutLon = { ...washington };
 delete washingtonWithoutLon.LON;
-assert.deepEqual(total(washingtonWithoutLon), { center: null, lower: 43, upper: 68 });
+assert.deepEqual(total(washingtonWithoutLon), { center: null, lower: 52, upper: 62 });
 const washingtonWithoutOpt = { ...washington };
 delete washingtonWithoutOpt.OPT;
-assert.deepEqual(total(washingtonWithoutOpt), { center: null, lower: 43, upper: 68 });
+assert.deepEqual(total(washingtonWithoutOpt), { center: null, lower: 52, upper: 62 });
 const washingtonWithoutRes = { ...washington };
 delete washingtonWithoutRes.RES;
-assert.deepEqual(total(washingtonWithoutRes), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total(washingtonWithoutRes), { center: null, lower: 54, upper: 64 });
 const washingtonWithoutMed = { ...washington };
 delete washingtonWithoutMed.MED;
-assert.deepEqual(total(washingtonWithoutMed), { center: null, lower: 40, upper: 70 });
-assert.deepEqual(total({ ...washington, RES: 60 }), { center: null, lower: 51, upper: 66 });
-assert.deepEqual(total({ ...washington, ISR: 40 }), { center: null, lower: 46, upper: 61 });
-assert.deepEqual(total({ ...washington, OPT: 40 }), { center: null, lower: 47, upper: 62 });
-assert.deepEqual(total({ ...washington, LON: 40 }), { center: null, lower: 47, upper: 62 });
+assert.deepEqual(total(washingtonWithoutMed), { center: null, lower: 49, upper: 64 });
+assert.equal(total({ ...washington, RES: 60 }).center, 60);
+assert.equal(total({ ...washington, ISR: 40 }).center, 55);
+assert.equal(total({ ...washington, OPT: 40 }).center, 56);
+assert.equal(total({ ...washington, LON: 40 }).center, 56);
 assert.equal(total({ ...washington, GSS: 60 }).center, 58);
 const claimsReview = realCases[6].localLonClaimsReview;
 const claimsSource = JSON.parse(
@@ -347,9 +350,24 @@ const washingtonPosition = rankAudit.scenarios.fixed_conditional_centers.caseRes
   (c: { efua_id: string }) => c.efua_id === "7068"
 );
 assert(washingtonPosition);
-assert.equal(washingtonPosition.center, null);
-assert.equal(washingtonPosition.bestPosition, 1);
+assert.equal(washingtonPosition.center, 58);
+assert.equal(washingtonPosition.bestPosition, 4);
 assert.equal(washingtonPosition.worstPosition, rankAudit.candidateCount);
+assert.equal(total({ ...washington, GSS: 40 }).center, 55);
+assert.equal(total({ ...washington, GSS: 80 }).center, 61);
+assert.equal(realCases[6].securityReview.sha256, digest(realCases[6].securityReview.path));
+assert.equal(realCases[6].securityReview.fullFuaImpactMeasurement, false);
+assert.equal(realCases[6].securityReview.mallMotorcadeAssassinationIntentEstablished, false);
+assert.equal(realCases[6].securityReview.ufcPlotIsExecutedAttack, false);
+assert.equal(realCases[6].securityReview.gao83EventsAreWashingtonViolentAttacks, false);
+assert.equal(realCases[6].securityReview.uscpCasesAreFuaAttacks, false);
+assert.equal(realCases[6].securityReview.resumptionProvesAllResidentsSafe, false);
+assert.equal(realCases[6].securityReview.may23OriginalStatementRead, false);
+assert.equal(realCases[6].referenceBoundaryCheck.referencePoints.length, 10);
+for (const point of realCases[6].referenceBoundaryCheck.referencePoints) {
+  assert.deepEqual(point.fuaMatches, [7068]);
+}
+
 assert.deepEqual(total(newYork), { center: null, lower: 36, upper: 76 });
 for (const dimension of ["PCS", "GSS", "RES"] as const) {
   assert.equal(newYork[dimension], undefined);
@@ -748,7 +766,8 @@ console.log({
       unresolvedMED: total(tokyoWithoutMed),
     },
     washington: {
-      partial: total(washington),
+      current: total(washington),
+      unresolvedGSS: total(washingtonWithoutGss),
       unresolvedLON: total(washingtonWithoutLon),
       unresolvedOPT: total(washingtonWithoutOpt),
       unresolvedRES: total(washingtonWithoutRes),
