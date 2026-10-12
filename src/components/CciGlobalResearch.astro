@@ -337,20 +337,53 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
     <h2 id="global-research-title">
       {zh ? "全球 Top 32 研究进展" : "Global Top 32 research progress"}
     </h2>
-    <p>
-      <time datetime="2026-10-12">2026-10-12</time> · {
-        zh
-          ? "独立研究进度，不属于上方所选历史发布。全球 Top 32 尚未确定。"
-          : "Separate research status, not part of the historical release selected above. A global Top 32 has not been established."
-      }
+    <p class="research-date">
+      {zh ? "研究更新" : "Research update"} · <time datetime="2026-10-12">2026-10-12</time>
     </p>
-    <p>
-      {
-        zh
-          ? `已登记 ${n(coverage.candidateCount)} 个功能城市区；${n(coverage.scoreStatusCounts.not_computed_under_global_protocol)} 个仍未完成全球统一规则下的完整评分。以下数量表示局部证据关联，不是合格城市数或完成率。`
-          : `${n(coverage.candidateCount)} functional urban areas are registered; ${n(coverage.scoreStatusCounts.not_computed_under_global_protocol)} still lack complete assessments under a common global protocol. Counts below describe partial evidence links, not qualified cities or completion rates.`
-      }
-    </p>
+  </div>
+  <div class="research-overview">
+    <div>
+      <p class="research-conclusion">
+        {
+          zh
+            ? "全球 Top 32 尚未确定。现有案例用于校准评分规则，入围结论仍需验证其他候选。"
+            : "A global Top 32 has not been established. Current cases calibrate the scoring rules; inclusion still needs to be tested against other candidates."
+        }
+      </p>
+      <p class="research-note">
+        {
+          zh
+            ? `独立研究进度，不属于上方所选历史发布。已登记的 ${n(coverage.candidateCount)} 个功能城市区中，${n(coverage.scoreStatusCounts.not_computed_under_global_protocol)} 个仍未完成全球统一规则下的完整评分；局部证据关联不是合格城市数或完成率。`
+            : `Separate from the historical release selected above. Of ${n(coverage.candidateCount)} registered functional urban areas, ${n(coverage.scoreStatusCounts.not_computed_under_global_protocol)} still lack complete assessments under the common global protocol. Partial evidence links are not qualified cities or completion rates.`
+        }
+      </p>
+    </div>
+    <dl class="research-progress" aria-label={zh ? "评分研究进度" : "Scoring research progress"}>
+      <div>
+        <dt>{zh ? "已审阅案例" : "Cases reviewed"}</dt>
+        <dd>
+          {n(cases.length)}{zh ? " 份 · 八维及 31 个子支柱" : " · Eight dimensions, 31 subpillars"}
+        </dd>
+      </div>
+      <div>
+        <dt>{zh ? "条件性评分" : "Conditional assessments"}</dt>
+        <dd>
+          {
+            zh
+              ? `${n(screening.completeConditionalCaseCount)} 份完整 · ${n(screening.partialCaseCount)} 份部分判断`
+              : `${n(screening.completeConditionalCaseCount)} complete · ${n(screening.partialCaseCount)} partial`
+          }
+        </dd>
+      </div>
+      <div>
+        <dt>{zh ? "待审阅候选" : "Candidates awaiting review"}</dt>
+        <dd>
+          {n(screening.unassessedCount)}{
+            zh ? " 个 · 尚无此类八维审阅" : " · No such eight-dimension review"
+          }
+        </dd>
+      </div>
+    </dl>
   </div>
   <nav class="research-nav" aria-label={zh ? "研究进展导航" : "Research progress navigation"}>
     <a href="#local-calibration">{zh ? "评分案例" : "Scorecards"}</a>
@@ -360,11 +393,33 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
   </nav>
   <div id="local-calibration">
     <h3>{zh ? "当地居民评分校准" : "Local-resident scoring calibration"}</h3>
-    <p>
+    <dl class="research-profile">
+      <div>
+        <dt>{zh ? "评价对象" : "Resident profile"}</dt>
+        <dd>
+          {
+            zh
+              ? "本国公民，通常长期居住，当地中位收入和通常医保。"
+              : "Local citizens who usually reside in the city, at median local income and with usual healthcare coverage."
+          }
+        </dd>
+      </div>
+      <div>
+        <dt>{zh ? "评价时点" : "Assessment period"}</dt>
+        <dd>
+          {
+            zh
+              ? "2026 年 · 证据截止 2026-10-10；后续复核另记实际查阅日期。"
+              : "2026 · Evidence cutoff: 10 October 2026. Subsequent checks record actual retrieval dates."
+          }
+        </dd>
+      </div>
+    </dl>
+    <p class="research-note">
       {
         zh
-          ? `口径为 2026 年、本国公民、通常长期居住、当地中位收入和通常医保；证据截止 2026-10-10。${n(cases.length)} 份案例逐项审阅了八维及全部 31 个子支柱，其中 ${n(screening.completeConditionalCaseCount)} 份有完整条件性中心、${n(screening.partialCaseCount)} 份仅有部分维度判断。部分判断依赖明确假设，不表示每项均有充分测量；“—”表示未定，不能填零或生成总分。后续复核另记实际查阅日期。`
-          : `These cases assess local citizens who usually reside in the city, at median local income and with usual healthcare coverage, in 2026. The evidence cutoff is 10 October 2026. All ${n(cases.length)} reviews cover eight dimensions and 31 subpillars: ${n(screening.completeConditionalCaseCount)} with complete conditional centres and ${n(screening.partialCaseCount)} with only partial judgments. Explicit assumptions do not establish complete measurements. “—” means unresolved, with no zero imputation or total centre. Subsequent checks record actual retrieval dates.`
+          ? "评分依赖明确假设，不表示每项均有充分测量。“—”表示未定，不能填零或生成总分。"
+          : "Scores depend on explicit assumptions, not complete measurements. “—” means unresolved, with no zero imputation or total centre."
       }
     </p>
     <p id="research-table-hint" class="research-table-hint">
@@ -617,6 +672,7 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
 <style>
   #global-research {
     --research-measure: 72ch;
+    max-width: 70rem;
   }
   :lang(zh) #global-research {
     --research-measure: 38em;
@@ -628,6 +684,53 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
   }
   #global-research p {
     margin-bottom: 1rem;
+  }
+  #global-research .cci-section-heading {
+    margin-bottom: 1.5rem;
+  }
+  #global-research .research-date,
+  .research-note {
+    color: var(--cci-muted);
+    font-size: var(--cci-type-label);
+  }
+  .research-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  .research-conclusion {
+    margin-top: 0;
+    font-size: var(--cci-type-body-large);
+  }
+  .research-progress {
+    align-self: start;
+    gap: 0;
+    margin: 0;
+    border-top: 1px solid var(--cci-rule-light);
+  }
+  .research-progress > div,
+  .research-profile > div {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--cci-rule-light);
+    font-size: var(--cci-type-label);
+  }
+  .research-progress dt,
+  .research-profile dt {
+    color: var(--cci-muted);
+  }
+  .research-progress dd,
+  .research-profile dd {
+    margin: 0;
+    color: var(--cci-ink);
+  }
+  .research-profile {
+    max-width: var(--research-measure);
+    gap: 0;
+    margin: 0 0 1rem;
   }
   h3 {
     margin: 2rem 0 1rem;
@@ -644,7 +747,8 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
     font-size: var(--cci-type-label);
   }
   .research-nav {
-    padding-bottom: 1rem;
+    gap: 0.5rem 2rem;
+    padding: 0.5rem 0 1rem;
     border-bottom: 1px solid var(--cci-rule-light);
   }
   .research-table {
@@ -724,15 +828,18 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
   }
   .research-case > summary {
     padding: 1rem 0;
+    font-weight: 500;
     cursor: pointer;
   }
   .research-case-status {
+    float: right;
     margin-inline-start: 1rem;
     color: var(--cci-muted);
     font-size: var(--cci-type-label);
   }
   .research-case-body {
-    padding: 0.5rem 0 1.5rem 1rem;
+    max-width: var(--research-measure);
+    padding: 0.5rem 0 1.5rem;
     scroll-margin-top: 6rem;
   }
   dl {
@@ -744,7 +851,18 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
     margin: 0.5rem 0 0;
     color: var(--cci-muted);
   }
+  @media (max-width: 900px) {
+    .research-overview {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+  }
   @media (max-width: 640px) {
+    .research-progress > div,
+    .research-profile > div {
+      grid-template-columns: 6.5rem minmax(0, 1fr);
+      gap: 0.75rem;
+    }
     .research-table table {
       min-width: 44rem;
     }
@@ -752,6 +870,7 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
       width: 10rem;
     }
     .research-case-status {
+      float: none;
       display: block;
       margin-inline-start: 1rem;
     }
