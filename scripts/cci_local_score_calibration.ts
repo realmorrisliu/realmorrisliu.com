@@ -506,6 +506,22 @@ for (const point of realCases[11].referenceBoundaryCheck.referencePoints) {
 assert.equal(realCases[11].clinicalReview.sha256, digest(realCases[11].clinicalReview.path));
 assert.equal(realCases[11].qualityReview.status, "interpretation_unresolved_not_all_care_failure");
 assert.equal(realCases[11].qualityReview.firstPublicationVerified, false);
+const qualityReview = realCases[11].qualityReview;
+assert.equal(qualityReview.observationPeriod, null);
+assert.equal(qualityReview.hospitalExtractionBranch, null);
+assert.equal(qualityReview.hospitalImplementationVerified, false);
+assert(qualityReview.ruleAdmissionOnOrAfter <= qualityReview.ruleDischargeWindow.startOn);
+assert(qualityReview.ruleDischargeWindow.startOn < qualityReview.ruleDischargeWindow.endOn);
+assert(qualityReview.ruleDischargeWindow.endOn <= realCases[11].evidenceCutoff);
+assert.equal(qualityReview.reportedPeriodLabel, "令和7年度");
+assert.notEqual(qualityReview.ruleDischargeWindow.startOn, "2025-04-01");
+assert.equal(qualityReview.codeMeaning["0"], "no_prophylactic_administration");
+assert.equal(qualityReview.codeMeaning["3"], "over_two_hours_before_surgery");
+const qualityRuleSource = realCases[11].sourceSnapshots.find(
+  (s: { url: string }) => s.url === qualityReview.collectionRule.url
+);
+assert(qualityRuleSource);
+assert.equal(qualityRuleSource.sha256, qualityReview.collectionRule.sha256);
 assert.equal(
   Math.round(
     (10000 * realCases[11].qualityReview.numerator) / realCases[11].qualityReview.denominator

@@ -66,7 +66,7 @@
     {
       "id": "MED",
       "score": null,
-      "rationale": "Actual emergency/specialist delivery and income/age-dependent cost protection coexist with capacity refusals and mixed quality processes. Kyoto preoperative antibiotic timing is86/1604=5.36%; the denominator already received prophylaxis, not all operations. Definition/extraction/impact and first publication remain unverified; do not assume away the flag or call it an infection rate.",
+      "rationale": "Actual emergency/specialist delivery and cost protection coexist with capacity limits and mixed quality processes. Kyoto timing86/1604=5.36% is not infection or absent-medication rate. The hospital year label differs from the official June2025-May2026 discharge cohort, with admission/exclusion and two extraction branches. Actual adherence/branch, cause/impact and pre-cutoff hospital byte publication remain unverified.",
       "assumption": "No chosen anchor pending substantive quality interpretation and whole-area usual quality/access/cost/continuity. MED60 needs supported ordinary adequacy, not dismissal as a presumed recording artefact; one process metric or request acceptance is not whole-area MED40.",
       "conditionalAlternatives": [],
       "subpillars": {
@@ -173,19 +173,39 @@
   },
   "clinicalReview": {
     "path": "docs/cci-osaka-kyoto-clinical-review.md",
-    "sha256": "8e6757b4fee3294d6f5ce582bd6064426f5cdf38dcb7cc4f3268ec147c5f1326"
+    "sha256": "69247d503247019717a9608608136821f1abc5a6214114ec3c1fe570eae28921"
   },
   "qualityReview": {
     "status": "interpretation_unresolved_not_all_care_failure",
-    "observationPeriod": "FY2025",
+    "observationPeriod": null,
     "denominator": 1604,
     "numerator": 86,
     "reportedPercent": 5.36,
-    "denominatorMeaning": "General-anaesthesia operations already given prophylactic antibiotics, not all operations or infection outcomes.",
+    "denominatorMeaning": "Reported general-anaesthesia operations with prophylaxis; official cohort/exclusions/record selection apply, actual branch unverified. Not all hospital operations, unmedicated patients or infection outcomes.",
     "source": "https://www.kuhp.kyoto-u.ac.jp/outline/disclosure/data_R08/qi13_preop_anti_rate.tsv",
     "bytes": 14,
     "sha256": "1847cd2f65e079ee398d1101bb52bd2505f0199cd1e9c54128c3fffee15f7b5d",
-    "firstPublicationVerified": false
+    "firstPublicationVerified": false,
+    "reportedPeriodLabel": "令和7年度",
+    "ruleDischargeWindow": {
+      "startOn": "2025-06-01",
+      "endOn": "2026-05-31"
+    },
+    "ruleAdmissionOnOrAfter": "2024-06-01",
+    "hospitalExtractionBranch": null,
+    "hospitalImplementationVerified": false,
+    "collectionRule": {
+      "url": "https://www01.prrism.com/dpc/2026/byoinjoho/08shukeijoken.pdf",
+      "sha256": "ba9a0e6fa9df5a6258ff79ca74dc8fb3cf7ad10229e5ee7f1dec2438c2d2c2c3",
+      "pages": [2, 17, 18],
+      "scope": "Official eligible discharge cohort, not all procedure dates. General-ward admission required; early deaths/newborn deaths/transplants excluded. Form1 branch selects surgery sequence1/anesthesia1or6 and prophylaxis1/2/3 denominator,1numerator. Record-reaggregation branch allowed; actual Kyoto method/adherence unverified."
+    },
+    "codeMeaning": {
+      "0": "no_prophylactic_administration",
+      "1": "within_one_hour_before_surgery",
+      "2": "over_one_up_to_two_hours_before_surgery",
+      "3": "over_two_hours_before_surgery"
+    }
   },
   "sharedLegalPath": {
     "source": "cci-legal-mobility-rules.json",
@@ -304,7 +324,7 @@
       "retrievedOn": "2026-10-12",
       "bytes": 213943,
       "sha256": "778ca8f544719ad5a8de07bd4d32358096b8d9a811fe03d3e85650f051123651",
-      "scope": "FY2025 quality processes with different denominators and antibiotic timing flag; cause/extraction/impact/first-publication unresolved, not presumed artefact."
+      "scope": "Hospital label令和7年度 is not a calendar/April-March window: official2026 rules defineJune2025-May2026 discharge cohort plus earlier admission/exclusions, not all procedure dates. Actual branch/adherence, timing cause/impact and first publication unresolved; no presumed artefact."
     },
     {
       "url": "https://www.hosp.med.osaka-u.ac.jp/pr/files/data2026-35.pdf",
@@ -393,6 +413,46 @@
       "bytes": null,
       "sha256": null,
       "scope": "Actual shared roaming activation on island outside FUA; implementation context, not local pressure success or current continuous outage."
+    },
+    {
+      "url": "https://www01.prrism.com/dpc/2026/byoinjoho/08shukeijoken.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 2611417,
+      "sha256": "ba9a0e6fa9df5a6258ff79ca74dc8fb3cf7ad10229e5ee7f1dec2438c2d2c2c3",
+      "scope": "Official2026 collection rules pp2,17-18, datedoffice indexAugust14; actual hospital branch and collection adherence unknown, not verified pre-cutoff hospital bytes."
+    },
+    {
+      "url": "https://www01.prrism.com/dpc/2026/byoinjoho/08byoinshihyo_FAQ.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 376325,
+      "sha256": "c3248c3219125f23a6eb6dcb429af67a5368868aaa299fe8a4ceb6fab1da9223",
+      "scope": "FAQ ID8 final submitted data and17-19 publication/evaluation referenceOct1; not evidence of actual Kyoto publication or current bytes before cutoff."
+    },
+    {
+      "url": "https://www01.prrism.com/dpc/2025/file/setumei_20250530_2.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 3715656,
+      "sha256": "d525022ab7b3b4cf5ad5a46edb61b5c750b2096c25f2dc963015789fa2cb3b4c",
+      "scope": "Official2025 input code definition p85; optional input permits uncertainty, does not establish hospital extraction error or turn timed-preoperative codes into postoperative/no-giving."
+    },
+    {
+      "url": "https://www01.prrism.com/dpc/2026/byoinjoho/byoinjoho_koukai08.html",
+      "publishedOn": "2026-08-14",
+      "retrievedOn": "2026-10-12",
+      "bytes": 4430,
+      "sha256": "a77145ba04664b435f557c410880274bccd6bce7ca4dbe2caf35bcc292724f38",
+      "scope": "Owningoffice datedAugust14,2026 source index; exact version archive unverified, no patient data submission."
+    },
+    {
+      "url": "https://www.mhlw.go.jp/content/12400000/001701123.pdf",
+      "publishedOn": "2026-05-14",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1973519,
+      "sha256": "7ffa74601ab381af124f9da00d91ba50145c134b5fb4e9cbd9a495dc9ff53b3f",
+      "scope": "MHLWMay14,2026 p63 confirms DPCoffice channel, not hospital values, results or cause. Only relevant ownership section reviewed."
     }
   ]
 }

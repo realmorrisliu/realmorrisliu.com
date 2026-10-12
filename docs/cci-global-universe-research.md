@@ -170,3 +170,9 @@ FROM GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0;
 数据已到手，下一步应做 `ID_UC_G0` 到冻结 2015 eFUA 的空间交叉及逐字段覆盖、缺失值与语义检查。新 UCDB 的 2025 ID 与旧包 `UC_IDs` 不得因都是整数就直接相连；城市中心属性也不能无条件扩展为整个通勤区数值。
 
 本轮未修改候选 CSV、发布数据或 CCI 分数；未完成空间 crosswalk、NaturalSystems 重复成因调查、全部字段的缺失值/异常值审计。全量下载与字典取得不能证明八维资料已经齐备。
+
+### 2026-10-12：对“新版 FUA”描述的反向核查
+
+[2026 原始研究](https://pmc.ncbi.nlm.nih.gov/articles/PMC13149526/)在方法中描述 UCDB 2025 含更新功能区边界；这一描述需要与数据拥有者的实际包对应。再次核验 [FUA 产品页](https://human-settlement.emergency.copernicus.eu/ghs_fua.php)与 [GHSL 目录](https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/)，可定位的功能区仍为 R2019A／2015。已冻结 UCDB v1.2 原件的 16 张表、2,910 个字段和手册未定位到可替代通勤边界的字段／图层；原件 SHA `56e60b7cbfc776b23493d5684aa5d0d7d6940fc3dd9a3881fa52599f20fd80fc` 再次匹配；只读 `gpkg_contents`／`gpkg_geometry_columns` 确认十五个中心多边形主题和一个中心点层，字段未定位到 FUA／通勤标识。这是该包检查范围，不宣称所有渠道均无更新。
+
+研究的[作者数据说明](https://datadryad.org/dataset/doi:10.5061/dryad.905qfttz0)也将实际边界输入指向上述旧 FUA 页面。其 8,919 区模型有自身小区域样本限制，不能据该研究范围排除 CCI 候选；1.38 GB 主压缩包本轮未读取，没有据此声称包内不存在别的文件。没有确认可用的新 FUA 原件、定义、ID 和几何之前，保持旧框架及全量未匹配竞争者；论文描述不作为迁移或继承分数的凭据，全球资格不成立。
