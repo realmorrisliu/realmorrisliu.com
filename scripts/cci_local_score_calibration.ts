@@ -63,6 +63,7 @@ const realCases = [
   "paris",
   "san-jose",
   "los-angeles",
+  "osaka-kyoto",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -117,6 +118,7 @@ const [
   paris,
   sanJose,
   losAngeles,
+  osakaKyoto,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -467,6 +469,53 @@ assert.equal(
   digest("docs/data/cci-legal-mobility-rules.json")
 );
 const londonCounterfactual = { ...london, MED: 40, OPT: 80 };
+assert.deepEqual(total(osakaKyoto), { center: null, lower: 42, upper: 72 });
+for (const dimension of ["GSS", "MED"] as const) {
+  assert.equal(osakaKyoto[dimension], undefined);
+}
+for (const [dimension, lower, upper] of [
+  ["PCS", 33, 78],
+  ["ISR", 33, 78],
+  ["RES", 36, 76],
+  ["LON", 36, 76],
+  ["TEC", 36, 76],
+  ["OPT", 36, 76],
+] as const) {
+  const withdrawn = { ...osakaKyoto };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...osakaKyoto, MED: 60 }), { center: null, lower: 51, upper: 66 });
+assert.deepEqual(total({ ...osakaKyoto, MED: 40 }), { center: null, lower: 48, upper: 63 });
+assert.equal(total({ ...osakaKyoto, GSS: 60, MED: 60 }).center, 60);
+const osakaKyotoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (c: { efua_id: string }) => c.efua_id === "3956"
+);
+assert(osakaKyotoPosition);
+assert.equal(osakaKyotoPosition.center, null);
+assert.equal(osakaKyotoPosition.bestPosition, 1);
+assert.equal(osakaKyotoPosition.worstPosition, rankAudit.candidateCount);
+assert.equal(
+  realCases[11].referenceBoundaryCheck.fuaSha256,
+  realCases[10].referenceBoundaryCheck.fuaSha256
+);
+assert.equal(realCases[11].referenceBoundaryCheck.referencePoints.length, 7);
+for (const point of realCases[11].referenceBoundaryCheck.referencePoints) {
+  assert.deepEqual(point.fuaMatches, [3956]);
+}
+assert.equal(realCases[11].clinicalReview.sha256, digest(realCases[11].clinicalReview.path));
+assert.equal(realCases[11].qualityReview.status, "interpretation_unresolved_not_all_care_failure");
+assert.equal(realCases[11].qualityReview.firstPublicationVerified, false);
+assert.equal(
+  Math.round(
+    (10000 * realCases[11].qualityReview.numerator) / realCases[11].qualityReview.denominator
+  ) / 100,
+  realCases[11].qualityReview.reportedPercent
+);
+assert.equal(
+  realCases[11].sharedLegalPath.sourceSha256,
+  digest("docs/data/cci-legal-mobility-rules.json")
+);
 const exitSensitivity = { ...weights, MED: 10, OPT: 15 };
 assert.equal(total(londonCounterfactual).center, 57);
 assert.equal(total(londonCounterfactual, exitSensitivity).center, 59);
@@ -525,5 +574,6 @@ console.log({
     paris: { partial: total(paris) },
     sanJose: { partial: total(sanJose) },
     losAngeles: { partial: total(losAngeles) },
+    osakaKyoto: { partial: total(osakaKyoto) },
   },
 });

@@ -1,0 +1,398 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "candidateId": 3956,
+  "name": "Osaka [Kyoto]",
+  "evidenceReview": "cci-local-2026-osaka-kyoto-case.md",
+  "expectedConditionalTotal": null,
+  "retrievedOn": "2026-10-12",
+  "limitations": "Eight dimensions/31 subpillars reviewed, not fully measured. Six conditional60 judgments; GSS/MED unknown. FUA, municipal/prefectural/operator/institution scopes differ. Assumptions are withdrawable; no ranking/exclusion bound, inherited score, default imputation, population clinical benefit or ordinary commercial iPSC delivery.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Implemented seismic/coastal works, inspected underground assets, water hardening and cooling facilities support protection. Delayed evacuation roads, partial backup and Kyoto resident preparedness gaps remain; plan grades are not pressure outcomes.",
+      "assumption": "Reviewed protection usually works for major relevant hazards across the FUA through the cutoff. Reject effectiveness, resident reach, continuity or adequacy of unmeasured hazards to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "context"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "No retained preliminary violence points does not establish low impact. Recorded group assault/threat cases and enforcement show scoped activity, not a complete victim profile; regional/strategic resident and corridor impacts remain unresolved.",
+      "assumption": "No justified whole-dimension anchor: absent event assignments, arrests and national background do not settle full local impact and mitigation.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "unresolved"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Actual administrative digital use, executed infrastructure work and service delivery support execution. Delayed works, incomplete shelter training and uneven Kyoto resident preparedness remain counterevidence; official A/C grades are not CCI scores.",
+      "assumption": "Major institutions usually operate and execution persists and reaches ordinary residents across the FUA. Reject representativeness, continuity, group reach or usual recovery capability to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "FY2024 water operation, actual2025 monthly food flows and revised regional electricity continuity support daily supply. A shared river source, partial blackout water capacity, delayed hardening and unmeasured household burdens limit resilience.",
+      "assumption": "Reviewed supply persists and necessary water/food/energy are usually obtainable and affordable for median-income residents across the FUA. Operator areas, wholesale flows and regional averages do not measure this whole profile; reject affordability, continuity, spatial reach or ordinary adequacy to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": null,
+      "rationale": "Actual emergency/specialist delivery and income/age-dependent cost protection coexist with capacity refusals and mixed quality processes. Kyoto preoperative antibiotic timing is86/1604=5.36%; the denominator already received prophylaxis, not all operations. Definition/extraction/impact and first publication remain unverified; do not assume away the flag or call it an infection rate.",
+      "assumption": "No chosen anchor pending substantive quality interpretation and whole-area usual quality/access/cost/continuity. MED60 needs supported ordinary adequacy, not dismissal as a presumed recording artefact; one process metric or request acceptance is not whole-area MED40.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "A primary Osaka report documents actual lecanemab administration/MRI in two cases, alongside credible human regulatory evidence and Kyoto referral pathways. Relative followups are not2026 treatment counts or population efficacy. Local iPSC trial results, conditional approval and reimbursement differ from planned restricted Phase4 and ordinary commercial delivery.",
+      "assumption": "Accept limited disease-pathway representativeness, local hospital applicability, continuing actual delivery, current appropriate safety management and ordinary eligible residents usually obtaining and affording a suitable existing pathway. Reject any necessary assumption to restore unknown; planned iPSC treatment is not delivered treatment or healthy-person lifespan gain.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Actual FY2024 university joint-research receipts/results, Q32026 network samples and FY2025 administrative use support scoped production/connections/diffusion. Online procedures2180 and moving-out portal use about34% have different denominators; grants/patents/plans are not resident benefits.",
+      "assumption": "Knowledge/industry connections and usable digital capability persist and usually support limited ordinary-resident diffusion across the FUA. Reject continuity, representative access or meaningful industry adoption to restore unknown; narrow institutional/admin uptake does not support80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Actual airport-linked railway operation and reported airport traffic support transport channels, with conditional Japanese-citizen residence applications and regulated remittance. Shared roaming has actual activation outside this FUA; service context is not a successful local resilience test.",
+      "assumption": "Ordinary residents usually obtain and afford applicable transport, qualifying approved residence and compliant remittance with usable communications through the cutoff across the FUA. Reject qualification, approval, cost, continuity, spatial reach or usable alternatives to restore unknown; no automatic work/residence entitlement or independent crisis backup.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "researchPriority": {
+    "basis": "directory_associations_after_existing_eleven_cases_not_performance",
+    "associatedDirectoryRecords": 1477,
+    "source": "cci-openalex-institution-fua.csv",
+    "sourceSha256": "b59735ba074e3e1b8e05f1d08bd672ef1d1ec219303cd9a788c93fc2a5e798ed"
+  },
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "referencePoints": [
+      {
+        "label": "Osaka approximate city reference",
+        "longitude": 135.5,
+        "latitude": 34.69,
+        "fuaMatches": [3956]
+      },
+      {
+        "label": "Kyoto approximate city reference",
+        "longitude": 135.77,
+        "latitude": 35.01,
+        "fuaMatches": [3956]
+      },
+      {
+        "label": "Kobe approximate city reference",
+        "longitude": 135.19,
+        "latitude": 34.69,
+        "fuaMatches": [3956]
+      },
+      {
+        "label": "Osaka University Suita approximate campus reference",
+        "longitude": 135.52,
+        "latitude": 34.82,
+        "fuaMatches": [3956]
+      },
+      {
+        "label": "Kyoto University approximate campus reference",
+        "longitude": 135.78,
+        "latitude": 35.03,
+        "fuaMatches": [3956]
+      },
+      {
+        "label": "Kansai airport approximate reference",
+        "longitude": 135.244,
+        "latitude": 34.435,
+        "fuaMatches": [3956]
+      },
+      {
+        "label": "Itami airport approximate reference",
+        "longitude": 135.438,
+        "latitude": 34.785,
+        "fuaMatches": [3956]
+      }
+    ],
+    "meaning": "Approximate reference points only; no whole municipal/prefectural footprints, exposure populations, clinical sites or extra slots established.",
+    "method": "Existing checksum-validated complete GHS-FUA load; always_xy EPSG:4326 to ESRI:54009 point intersection."
+  },
+  "clinicalReview": {
+    "path": "docs/cci-osaka-kyoto-clinical-review.md",
+    "sha256": "8e6757b4fee3294d6f5ce582bd6064426f5cdf38dcb7cc4f3268ec147c5f1326"
+  },
+  "qualityReview": {
+    "status": "interpretation_unresolved_not_all_care_failure",
+    "observationPeriod": "FY2025",
+    "denominator": 1604,
+    "numerator": 86,
+    "reportedPercent": 5.36,
+    "denominatorMeaning": "General-anaesthesia operations already given prophylactic antibiotics, not all operations or infection outcomes.",
+    "source": "https://www.kuhp.kyoto-u.ac.jp/outline/disclosure/data_R08/qi13_preop_anti_rate.tsv",
+    "bytes": 14,
+    "sha256": "1847cd2f65e079ee398d1101bb52bd2505f0199cd1e9c54128c3fffee15f7b5d",
+    "firstPublicationVerified": false
+  },
+  "sharedLegalPath": {
+    "source": "cci-legal-mobility-rules.json",
+    "sourceSha256": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
+    "rule": "section41_citizen_onshore_application_germany",
+    "meaning": "Japanese-citizen conditional application procedure only; no approved residence/work entitlement, qualifications/resources/insurance/approval remain."
+  },
+  "sourceSnapshots": [
+    {
+      "url": "https://www.city.osaka.lg.jp/suido/page/0000651424.html",
+      "publishedOn": "2026-06-10",
+      "retrievedOn": "2026-10-12",
+      "bytes": 56621,
+      "sha256": "ddb2e9c2a7b268274f99bfcc1c3db7c76258b4c50f8314bfe584a8dea70e6a6d",
+      "scope": "FY2025 completed versus delayed works and later targets; A is annual plan attainment, not all physical works complete."
+    },
+    {
+      "url": "https://www.city.osaka.lg.jp/suido/cmsfiles/contents/0000020/20867/R80327.pdf",
+      "publishedOn": "2026-03-27",
+      "retrievedOn": "2026-10-12",
+      "bytes": 690117,
+      "sha256": "a25aa092eb6ab648cbb587e9596b5fcc4878e910976047d22b4ad106a8972228",
+      "scope": "15-page FY2024 water PI original extracted, ordinary supply and partial backup; operating area differs from FUA, not every household/current disaster guarantee."
+    },
+    {
+      "url": "https://www.city.osaka.lg.jp/kikikanrishitsu/cmsfiles/contents/0000418/418108/kyoujinkaR6shinchokukanri.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 1218669,
+      "sha256": "6a8d5f418812ffd37258b2480f83696ccfbd423cecadb2c45088c1d10e4ee5ce",
+      "scope": "20-page FY2024 progress original: A on-track/task complete, B partial, C delayed. Relevant works/support reviewed, not pressure outcomes; first-publication/archive unverified."
+    },
+    {
+      "url": "https://www.city.kyoto.lg.jp/kankyo/page/0000340635.html",
+      "publishedOn": "2026-09-04",
+      "retrievedOn": "2026-10-12",
+      "bytes": 134837,
+      "sha256": "75446efa36e44f551116711bcf028a38b7e774232ca4f5ff5a77be6677e5bf76",
+      "scope": "Conditional-opening cooling locations/hours/capacity, not whole-area reachable backup or loss reduction."
+    },
+    {
+      "url": "https://www.city.kyoto.lg.jp/sogo/page/0000358273.html",
+      "publishedOn": "2026-09-17",
+      "retrievedOn": "2026-10-12",
+      "bytes": 34690,
+      "sha256": "40b0e8756306b98ae9b34ab46dbf9422d318e7ecd6b1f7c407ef1de91a729f8f",
+      "scope": "Current policy review retains actual indicators/resident preparedness weaknesses versus future responses; local grades not mapped to CCI."
+    },
+    {
+      "url": "https://www.city.kyoto.lg.jp/sogo/page/0000358370.html",
+      "publishedOn": "2026-09-17",
+      "retrievedOn": "2026-10-12",
+      "bytes": 25059,
+      "sha256": "2ad18fe892094361db8cb18da0f00146d649dd8791d87e908d1b6ea0aa79b117",
+      "scope": "May25-June9,2026 survey2799 adult registered internet monitors with quotas;118 questions split into two groups, not random citizen/FUA sample."
+    },
+    {
+      "url": "https://osakafu-ichiba.jp/CMS/data/img/products_000042_07.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 106348,
+      "sha256": "5cb5bfbe1431315e4e3c50607beaa902748b7d4a22e20813f2256a4c410b54a0",
+      "scope": "2025 monthly market quantity/value actual flows; first-publication/archive unverified. Not household supply satisfaction, retail basket cost or independent logistics."
+    },
+    {
+      "url": "https://www.occto.or.jp/assets/houkokusho/2025/2025_nenjihoukokusho/denki_no_shitsu_2024_260206.pdf",
+      "publishedOn": "2026-02-06",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1546248,
+      "sha256": "8c50fbf5a479981c1b45af6c38071599e4615128f178f75ac5d172c17ab40f6e",
+      "scope": "20-page revised FY2024 report extracted; table3-31 PDF15/printed12 visually checked: Kansai0.09outages/8minutes per low-voltage lighting customer/year. Regional mean, not city/customer maximum or full user experience."
+    },
+    {
+      "url": "https://www.city.osaka.lg.jp/ictsenryakushitsu/page/0000680879.html",
+      "publishedOn": "2026-06-10",
+      "retrievedOn": "2026-10-12",
+      "bytes": 49409,
+      "sha256": "3cbffcba73b046c6764d703373eb1b1971419ca5ded33586e4d57b189b2dd378",
+      "scope": "FY2025 actual2180 online procedures and moving-out portal use about34%, not all resident uptake. AI403hours/month missed own target; activity grades not effectiveness."
+    },
+    {
+      "url": "https://www.osaka-u.ac.jp/%2B%2Bapi%2B%2B/ja/guide/public-relations/profile/files/UOsaka_profile2025_A3.pdf/%40%40download/file?expand=translations",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 10346389,
+      "sha256": "2dc9d2c56bcd1a36451eb984155db915b0432a9e7cfb447d084600b89e2449e0",
+      "scope": "Profile2025 PDF16/printed28-29 table visually reviewed: joint research1445/11625799thousandJPY FY2024. Receipts/patents not FUA knowledge output or benefits; first-publication/archive unverified."
+    },
+    {
+      "url": "https://www.nankai.co.jp/lib/company/ir/library/tanshin/pdf/260430.pdf",
+      "publishedOn": "2026-04-30",
+      "retrievedOn": "2026-10-12",
+      "bytes": 287243,
+      "sha256": "db732e1c031ea7bb6870d8123c8784768e12fd92c465a0d0eb4129d25f20a32e",
+      "scope": "FY2025 transport actual operation/fare changes and airport train reviewed, not full financial audit, unique resident access or independent crisis alternative."
+    },
+    {
+      "url": "https://assets.kansai-airports.co.jp/6773826b-j_260612-pressrelease_fiscalyear2025.pdf",
+      "publishedOn": "2026-06-12",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Primary indexed FY2025 actual operation/traffic; download403, no original hash/full-report/visual-table claim. Plans and unique resident access not established."
+    },
+    {
+      "url": "https://www.police.pref.osaka.lg.jp/sogo/katsudo/plan/suishinkekka/20758.html",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 52912,
+      "sha256": "f23f38c3122e46b338b6e7f813c61dda851f5a9dc8a27df1f9c202fc2ec739a2",
+      "scope": "Actual group-crime enforcement examples and2024/2025 comparisons; arrests not victims/low-impact proof. First-publication/archive unverified."
+    },
+    {
+      "url": "https://www.kuhp.kyoto-u.ac.jp/outline/disclosure/template_R08.html",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 213943,
+      "sha256": "778ca8f544719ad5a8de07bd4d32358096b8d9a811fe03d3e85650f051123651",
+      "scope": "FY2025 quality processes with different denominators and antibiotic timing flag; cause/extraction/impact/first-publication unresolved, not presumed artefact."
+    },
+    {
+      "url": "https://www.hosp.med.osaka-u.ac.jp/pr/files/data2026-35.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 242784,
+      "sha256": "56b5fbda67d61212ea6b3ffe9e2bad07386b06278c7911bb0e40423b41a923f4",
+      "scope": "FY2025 emergency actual delivery/training, not unique inpatient residents or pressure outcomes. First-publication/archive unverified."
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00701-026-06804-8",
+      "publishedOn": "2026-02-23",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Two-case actual administration/MRI; relative followup not2026newpatientcount. Combined strategy exploratory, not population safety/efficacy/healthy longevity."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12932390/fullTextXML",
+      "publishedOn": "2026-02-23",
+      "retrievedOn": "2026-10-12",
+      "bytes": 43591,
+      "sha256": "39cc31e223b4cfd161684d78a6b76956a30375276b812dd05e980ed7fcf10229",
+      "scope": "Original article XML parsed and clinical body reviewed, not error response or private patient request."
+    },
+    {
+      "url": "https://www.kuhp.kyoto-u.ac.jp/info/20250331.html",
+      "publishedOn": "2025-04-01",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Referral/assessment/caregiver/space requirements, expected roughly3month eligibility assessment, not observed waits/infusioncounts or donanemab dose authority."
+    },
+    {
+      "url": "https://www.nature.com/articles/s41586-025-08700-0",
+      "publishedOn": "2025-04-16",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Local iPSC7patient trial,6efficacyanalysis/24month followup, not controlled broad benefit or commercial access."
+    },
+    {
+      "url": "https://www.sumitomo-pharma.co.jp/news/assets/pdf/ir20260513.pdf",
+      "publishedOn": "2026-05-13",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1457571,
+      "sha256": "5144282d3a5e17fbdce65065b811b1b85793be698a4df7718ada5b8ce253d343",
+      "scope": "PDF22/32 restricted Phase4/futurefirstcase plan:2026-2029 participants only, not35completedpatients/7openfacilities or ordinary commercial delivery."
+    },
+    {
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/juuyou/kougakuiryou/index.html?hl=ja-JP",
+      "publishedOn": "2026-07-31",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Age/income-dependent insured-cost protection fromAugust2026; national qualification rule, not local median income/all costs/actual affordability."
+    },
+    {
+      "url": "https://www.pmda.go.jp/files/000265887.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Shared early-AD human/regulatory evidence per Tokyo/clinical review, not local trial population or current monitoring automatically established."
+    },
+    {
+      "url": "https://www.smbc.co.jp/kojin/direct/service/resources/pdf/goriyou_tebiki.pdf?version=260601",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 7824528,
+      "sha256": "f9edeb193b5229bc86548ac801ff3ad0ec685308dfe040e79bc850a895e1de65",
+      "scope": "Reused verified renderedOctober5,2026 guide; URLJune/old text layer not version. Registration/approval/limits/fees/compliance, not actual transfer or all assets portable."
+    },
+    {
+      "url": "https://newsroom.kddi.com/news/detail/kddi_nr-958_4367.html",
+      "publishedOn": "2026-03-18",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Shared service terms fromApril2026 with device/mode/activation limits; not independent city-tested backup."
+    },
+    {
+      "url": "https://news.kddi.com/important/news/important_202609211787.html",
+      "publishedOn": "2026-09-21",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Actual shared roaming activation on island outside FUA; implementation context, not local pressure success or current continuous outage."
+    }
+  ]
+}

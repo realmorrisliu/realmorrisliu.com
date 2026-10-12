@@ -20,6 +20,7 @@ import newYork from "../../docs/data/cci-local-2026-new-york-case.json";
 import paris from "../../docs/data/cci-local-2026-paris-case.json";
 import sanJose from "../../docs/data/cci-local-2026-san-jose-case.json";
 import losAngeles from "../../docs/data/cci-local-2026-los-angeles-case.json";
+import osakaKyoto from "../../docs/data/cci-local-2026-osaka-kyoto-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -45,6 +46,7 @@ const cases = [
   paris,
   sanJose,
   losAngeles,
+  osakaKyoto,
 ];
 const screening = coverage.local2026Screening;
 if (
@@ -300,6 +302,13 @@ const rows = [
     <p>
       {
         zh
+          ? "源名 Osaka [Kyoto] 是一个功能区，六维条件性 60，GSS／MED 未定；无总分中心，数学域 42—72。实际供给、防护和数字使用与未完成备援／触达共同判读。急诊及专科确有交付，但单院术前抗菌药时点指标的定义、抽取和影响未解决；不假定异常无害保留 MED 60，也不当作全区感染率给 40。原始两病例支持实际有限给药／监测，不证明居民疗效或普遍获得；iPSC 人体试验、附条件批准与计划 Phase 4 分开，未确认首例不记零。七个近似点不验证完整边界或实际治疗地点。"
+          : "Osaka [Kyoto] is one candidate area, with six conditional 60 judgments and GSS/MED unresolved: no total centre and a mathematical domain of 42–72. Actual supply, protection and digital use are reviewed alongside incomplete backup and reach. Emergency and specialist care is delivered, but a hospital's preoperative antibiotic timing metric has unresolved definitions, extraction and impacts; its anomaly is neither assumed harmless to retain MED 60 nor treated as an area-wide infection rate to assign 40. Two primary cases support limited actual drug administration/monitoring, not population efficacy or general access. iPSC human trials, conditional approval and planned Phase 4 remain distinct; an unconfirmed first transplant is not zero delivery. Seven approximate points establish neither complete boundaries nor actual treatment sites."
+      }
+    </p>
+    <p>
+      {
+        zh
           ? "查看支持、反证与假设："
           : "Review supporting evidence, counterevidence and assumptions: "
       }
@@ -351,6 +360,10 @@ const rows = [
       <a
         href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-los-angeles-case.md"
         >{zh ? "洛杉矶部分维度案例" : "Los Angeles partial case"}</a
+      >
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-osaka-kyoto-case.md"
+        >{zh ? "大阪—京都部分维度案例" : "Osaka–Kyoto partial case"}</a
       >
     </p>
     <p>
