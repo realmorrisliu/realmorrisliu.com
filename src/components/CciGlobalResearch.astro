@@ -221,6 +221,39 @@ const rows = [
       }
     </p>
   </div>
+  <div id="publication-scope">
+    <h3>{zh ? "出榜条件与名称" : "Publication conditions and scope"}</h3>
+    <p>
+      {
+        zh
+          ? `先按同一规则评分，再验证入围边界；不必等所有数据完美，但需要解释入围者为何排在其他候选之前。当前只有 ${n(screening.completeConditionalCaseCount)} 份完整条件评分，尚不满足任何前 32 发布条件。`
+          : `Apply the same scoring rules, then test the shortlist boundary. Perfect data are not required, but inclusion must be justified against competing candidates. Only ${n(screening.completeConditionalCaseCount)} complete conditional assessments are currently available; none of the Top 32 publication conditions is met.`
+      }
+    </p>
+    <ol>
+      <li>
+        {
+          zh
+            ? "至少 32 城完成统一评价，公开关键假设和敏感性：可以发布“已评估城市中的 CCI 前 32”，明确已评估范围。"
+            : "With at least 32 consistently assessed cities and disclosed assumptions and sensitivity, publish “CCI Top 32 among assessed cities”, identifying the assessed scope."
+        }
+      </li>
+      <li>
+        {
+          zh
+            ? "整个声明的候选范围均已评价，或有充分依据排除未深入评估者：可以发布“该候选范围内的 CCI 研究前 32”。仍可能入围的未知候选必须保留。"
+            : "When the entire declared candidate scope is assessed, or sufficient evidence excludes candidates not assessed in depth, publish “CCI research Top 32 within the declared scope”. Unresolved candidates that could qualify must be retained."
+        }
+      </li>
+      <li>
+        {
+          zh
+            ? "新旧城市覆盖问题也已解决，遗漏候选不会改变入围结论：才可以发布“全球 CCI Top 32”，附模型假设、敏感性及争议候选。细小分差不表示确定优劣。"
+            : "Only after old and new city coverage is resolved and omitted candidates cannot change inclusion, publish “Global CCI Top 32”, with model assumptions, sensitivity and disputed candidates. Small score gaps do not establish certain superiority."
+        }
+      </li>
+    </ol>
+  </div>
   <div id="local-calibration">
     <h3>{zh ? "当地居民评分校准" : "Local-resident scoring calibration"}</h3>
     <p>
