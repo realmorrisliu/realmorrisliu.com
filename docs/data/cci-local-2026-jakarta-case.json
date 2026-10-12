@@ -1,0 +1,839 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "retrievedOn": "2026-10-12",
+  "candidateId": 4897,
+  "name": "Jakarta functional area",
+  "evidenceReview": "cci-local-2026-jakarta-case.md",
+  "expectedConditionalTotal": null,
+  "limitations": "All eight dimensions and31subpillars reviewed, not fully measured. PCS/GSS/ISR/RES conditional40, MED/TEC/OPT conditional60; LON unknown. Fixed judgments give mathematical domain43-53 with no total centre, probability or reliable exclusion bound. DKI, provider, household samples, upstream systems and manufacturer claims are not full-FUA or median-resident measurements. Current relevance, limited scope/resident representativeness, affordability, continuity and residual-materiality assumptions remain reversible. No imputation, country-governance scoring, ranking eligibility or inherited historical score.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 40,
+      "rationale": "Actual pumping, dredging, rescue and supplies coexist with repeated2025/2026 flood damage across reviewed core/peripheral areas, a2026 leaking river wall and swept-away death, and wind damage to homes and necessary facilities. Heat and earthquake monitoring are not household cooling, compliant buildings or completed retrofits. Temporary coastal walls, planned projects and cleanup are not completed protection or livelihood recovery.",
+      "assumption": "Accept repeated housing/necessary-service protection gaps as important after delivered mitigation, relevant to ordinary4897 citizens and continuing through cutoff. Jurisdiction totals and approximate reference points are not full-FUA losses or exact event sites. Thermal/wildfire uncertainty receives no penalty. Completed repairs and sufficiently restored protection could support60, broader multi-hazard protection and actual alternatives80; reject locality/resident/continuity/materiality assumptions to restore unknown.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": 40,
+      "rationale": "Six human-rights institutions actually investigated2025 protests, recording770 DKI civilian injuries and nationwide11 deaths, not11 Jakarta deaths. Documented2026 acid attack, actual police discipline and an appeal account with unverified original judgment are retained. Peaceful protest itself is not organized violence; harm, agency responsibility and legal conclusions remain distinct. Regional diplomacy and capital-transfer conditions are context, not no threat or2026 completed relocation.",
+      "assumption": "Accept documented organized/coercive harms and peaceful public-participation constraints as important current safety limits despite actual investigation, discipline and penalties. Locality, group relevance, temporal continuation and residual impact are reversible assumptions, not population attack rates or zero risk from UCDP. Better evidence of limited current impacts and effective protection/redress could support60, broader reviewed low impacts and alternatives80; reject necessary assumptions to restore unknown. Pending2026 event640555 remains separate, not new independently verified harm.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 40,
+      "rationale": "Actual complaint processing, audit correction, specific discipline, dredging, supplies and independent investigation establish execution. False remediation photos and validation errors contradict treating completion tags as resolution. The human-rights inquiry records incomplete compensation and recovery; group persecution and unresolved remedies retain rights-realization constraints. Counts, investigator conclusions and proposed disciplinary action are not trust rates, final judgments or fully delivered recovery.",
+      "assumption": "Accept core/peripheral reviewed execution and retained rights/redress/recovery barriers as relevant to ordinary4897 citizens and still important after existing mitigation through cutoff. GSS examines safety harms; ISR examines process, accountability and remedies rather than deducting injuries again. Improved actual access, group protection and delivered redress/recovery could support60, broader results and usable alternatives80. Reject locality/resident/continuity/materiality assumptions to restore unknown.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 40,
+      "rationale": "The2025 household-water table reports495/978 samples meeting E.Coli plus four chemical criteria; it is not a full-FUA unsafe-water or illness rate. North Jakarta129 samples fall below the printed150-per-city requirement; islands0/0 are not zero safe households. Actual supply, storage, targeted price support and food distribution coexist with household-quality and shared upstream-energy constraints. PAM80.24% coverage and44.99% NRW do not measure unique residents or pure physical leakage.",
+      "assumption": "Accept household quality and shared essential-channel constraints as important for ordinary4897 residents and continuing after actual storage/distribution/assistance through cutoff. Targeted2025 assistance is not automatic2026 median-resident entitlement. Sampling, household treatment, citizen/income relevance, provincial scope, affordability and sufficiently limited alternatives are reversible assumptions. Effective affordable mitigation of remaining quality/access constraints could support60, safer affordable provision and common-shock alternatives80; reject necessary assumptions to restore unknown.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "context",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "RSPON2024 actual appropriate-cohort CT270/287 within30minutes and rTPA76/76, BPJS-funded visits and primary-care delivery establish necessary care. NEWSS warning failure, emergency waits beyond4h, referral-system errors and mortality-unit contradictions remain. Registered and active JKN populations differ;95.07% displayed active rate is not the95.15% recalculated active/registered ratio. Provider activity and clinical processes are not resident outcomes, complete quality or net bills.",
+      "assumption": "Accept lawful continuing active usual JKN and applicable provider/referral/clinical conditions, with actual necessary primary/specialist care reasonably relevant across4897 and continuing through cutoff. Usually adequate quality, timely affordable alternatives and absence of an important residual necessary-care bottleneck remain conditional despite known defects, not proof all remediation is complete. Material remaining quality/wait/activation/payment barriers with insufficient alternatives could support40, broader outcomes and effective pressure backup80; reject qualification/locality/quality/affordability/continuity/materiality assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "A local four-arm2019-2023 knee-OA study reports28persons/51knees with inconsistent bilateral/unilateral totals, age and table units; major clinical comparisons and continuous MRI results are not significant. One categorical MRI result does not prove regeneration or healthspan benefit. The2019 registry planned9participants with different dates/ages and currentUNKNOWN status is not2026 recruiting. Specific orthopaedic/ATMP rules, licensed processing, CPOB and brand launch are distinct from product approval and usual-resident access.",
+      "assumption": "Current specific-regimen human evidence, regulatory applicability, actual ongoing delivery and ordinary eligible-resident payment/monitoring have not formed a sufficiently discriminating whole-dimension chain. Missing approval or bill evidence does not prove denial or justify40, and absence of a lecanemab search hit does not prove no other pathway. A credible current compliant, affordable and monitored disease-limited pathway could support conditional60; actual material residual access breaks40; multiple mature resident-accessible paths80. Relevance, locality, time and usual access must be evidenced or explicitly defensible before a score.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "context",
+        "resident_access": "unresolved"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Actual UI licensing, RSCM-manufacturer development/production, deployed Jabotabek5G, JAKI service use and completed training establish scoped production and diffusion. A license is not proved sales or royalties; the same stem-cell pipeline is not two independent alternatives. Official reporting records vulnerable-group access/skills barriers, uncertain active-user denominators and a training numerator/percentage contradiction. Directory associations only sequence research.",
+      "assumption": "Accept limited multi-institution activity, deployment/use and assistance as reasonably relevant to4897 and continuing through cutoff, with documented residual group access/skills constraints still important after actual mitigation. Unknown high-tier facts or smaller royalty amounts do not cap the score. Broader sustained production and diffusion with materially mitigated barriers could support80; a demonstrated overall production-to-adoption break40. Reject locality/user/continuity/materiality assumptions to restore unknown; do not mechanically deduct disaster-service consequences twice.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Two airports have actual operations, with Halim schedule reductions and CGK terminal opening distinct from forecasts. A qualifying Indonesian-citizen German national-visa procedure is not an issued title or job. BI PADG15/2026 makes USD10000/person/month the no-underlying-document FX-buy threshold fromJuly1, not an all-transfer ceiling. Existing Jakarta-linked international backbone and retail Internet service,2026 regional communication results and the2025 Cloudflare CGK incident with actual provider repair support scoped communications. Manual immigration fallback/recovery is administrative/transport evidence, not communications recovery; national priority-point rates are not full-FUA rates.",
+      "assumption": "Accept scoped operating transport, qualifying longer-term application, lawful bank channels and documented international/local communications as usually usable and continuing for ordinary4897 residents through cutoff, including obtainable and affordable alternative contact when needed. Qualifications, employer, livelihood, insurance and fees are not presumed met. Known schedule adjustment, noninstant qualifying migration and common-system dependence retain limited shortcomings after actual mitigation; unknown fees/material execution do not prove an important residual block. Provider labels, regional use, backbone counts and past recovery are not household failover, independent electricity paths or2026 outage rates. Stronger genuinely usable alternatives could support80; material unmitigated transport/asset/communication cuts40. Reject necessary locality/resident/current-continuity/affordability/asset-purpose/alternative/materiality assumptions to restore unknown, even when the other exit subpillars have evidence.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "researchPriority": {
+    "basis": "all9031_record_associations_first_unreviewed_not_performance",
+    "source": "cci-openalex-efua-record-presence.csv",
+    "sourceSha256": "cb777baaa3ec09fe78a2c07ac8a260d0fb8ad4b8b95996eea0a5367f0e11f013",
+    "field": "article__xpac_false__retracted_false",
+    "recordAssociations": 73654,
+    "rule": "All9031 candidates sorted by descending qualifying core nonretracted article-ID directory associations, then numeric efua_id; skip19 registered reviews only for research sequencing. No output/quality score, eligibility or exclusion."
+  },
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "referencePoints": [
+      {
+        "label": "Jakarta central approximate reference",
+        "longitude": 106.8456,
+        "latitude": -6.2088,
+        "fuaMatches": [4897]
+      },
+      {
+        "label": "Soekarno-Hatta airport approximate reference",
+        "longitude": 106.655,
+        "latitude": -6.1256,
+        "fuaMatches": [4897]
+      },
+      {
+        "label": "Halim airport approximate reference",
+        "longitude": 106.891,
+        "latitude": -6.2666,
+        "fuaMatches": [4897]
+      },
+      {
+        "label": "Depok urban approximate reference",
+        "longitude": 106.818,
+        "latitude": -6.402,
+        "fuaMatches": [4897]
+      },
+      {
+        "label": "Universitas Indonesia Depok approximate reference",
+        "longitude": 106.824,
+        "latitude": -6.3608,
+        "fuaMatches": [4897]
+      },
+      {
+        "label": "Bogor urban approximate reference",
+        "longitude": 106.799,
+        "latitude": -6.597,
+        "fuaMatches": [4897]
+      },
+      {
+        "label": "Tangerang urban approximate reference",
+        "longitude": 106.632,
+        "latitude": -6.178,
+        "fuaMatches": [4897]
+      },
+      {
+        "label": "Bekasi urban approximate reference",
+        "longitude": 107.0,
+        "latitude": -6.241,
+        "fuaMatches": [4897]
+      },
+      {
+        "label": "Cikarang urban approximate reference",
+        "longitude": 107.157,
+        "latitude": -6.306,
+        "fuaMatches": [4897]
+      },
+      {
+        "label": "RSCM central campus approximate reference",
+        "longitude": 106.847,
+        "latitude": -6.197,
+        "fuaMatches": [4897]
+      },
+      {
+        "label": "Fatmawati hospital approximate reference",
+        "longitude": 106.801,
+        "latitude": -6.295,
+        "fuaMatches": [4897]
+      },
+      {
+        "label": "Serpong research area approximate reference",
+        "longitude": 106.661,
+        "latitude": -6.354,
+        "fuaMatches": [4897]
+      },
+      {
+        "label": "Bandung urban approximate reference",
+        "longitude": 107.619,
+        "latitude": -6.917,
+        "fuaMatches": [5107]
+      }
+    ],
+    "method": "Checksum-validated full9031 GHS-FUA load; EPSG4326 to ESRI54009 always_xy point intersection.",
+    "meaning": "Analyst approximate references only, not exact events/treatment sites, institution footprints, jurisdiction boundaries or resident service coverage."
+  },
+  "sharedLegalPath": {
+    "source": "cci-legal-mobility-rules.json",
+    "sourceSha256": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
+    "rule": "indonesian_citizen_skilled_work_national_visa_germany",
+    "meaning": "Normally pre-entry national visa and qualifying academic skilled-worker purpose, distinct from section41(1) convenience; no automatic ordinary-resident qualification, visa, title, job, affordability or OPT score."
+  },
+  "clinicalChecks": {
+    "oaReportedPersons": 28,
+    "oaReportedKnees": 51,
+    "oaArmKnees": [13, 12, 12, 14],
+    "oaReportedBilateralPersons": 20,
+    "oaReportedUnilateralPersons": 11,
+    "oaPersonAndKneeCountsConsistent": false,
+    "oaReportedMinimumAge": 50,
+    "oaArmMeanAgesBelowStatedMinimum": [48.75, 48.29],
+    "oaClinicalBetweenArmPValues": {
+      "VAS": 0.139,
+      "WOMAC": 0.587,
+      "IKDC": 0.349
+    },
+    "oaCategoricalMedial12MonthP": 0.024,
+    "oaStudyProvesRegenerationOrHealthspanBenefit": false,
+    "oaRegistryLastUpdate": "2019-01-23",
+    "oaRegistryPlannedEnrollment": 9,
+    "oaRegistryCurrentStatus": "UNKNOWN",
+    "oaRegistryLastKnownStatus": "RECRUITING",
+    "registryAndPaperVersionsReconciled": false,
+    "cpobIsProductMarketingAuthorization": false,
+    "currentRegimenOrdinaryResidentAccessEstablished": false,
+    "ctTimely": 270,
+    "ctEligible": 287,
+    "thrombolysisTreated": 76,
+    "thrombolysisEligible": 76,
+    "processCountsAreFuaHealthOutcomes": false,
+    "ndrUnitsConflictUnresolved": true,
+    "registeredJkn": 10871643,
+    "activeJkn": 10344600,
+    "displayedActivePercent": 95.07,
+    "activePerRegisteredRecalculatedPercent": 95.15,
+    "displayedActiveRateDenominatorVerified": false,
+    "completeMedianPatientBillMeasured": false
+  },
+  "resourceChecks": {
+    "waterSampledHouseholds": 978,
+    "waterCompliantHouseholds": 495,
+    "waterPrintedCompliantPercent": 50.61,
+    "waterCountsAreWholeFuaResidentRates": false,
+    "northJakartaSample": 129,
+    "printedMinimumPerCitySample": 150,
+    "allFiveAdministrativeSamplesMeetPrintedMinimum": false,
+    "islandZeroDenominatorIsZeroSafeWater": false,
+    "pamCoveragePercent": 80.24,
+    "pamNonRevenueWaterPercent": 44.99,
+    "nonRevenueWaterIsAllPhysicalLeakage": false
+  },
+  "securityChecks": {
+    "lnhamDkiCivilianInjured": 770,
+    "lnhamDkiOutpatient": 670,
+    "lnhamDkiInpatient": 100,
+    "lnhamNationalDeaths": 11,
+    "nationalDeathsAreAllJakarta": false,
+    "independentInvestigationActuallyCompleted": true,
+    "acidAttackDate": "2026-03-12",
+    "originalAppealJudgmentRead": false,
+    "currentUcdpEventId": "640555",
+    "currentUcdpDisposition": "pending_precise_assigned",
+    "pendingEventUsedAsVerifiedScoreInput": false
+  },
+  "mobilityChecks": {
+    "fxNoUnderlyingThresholdUsdPerPersonMonth": 10000,
+    "fxRuleEffectiveFrom": "2026-07-01",
+    "thresholdIsAbsoluteTransferCeiling": false,
+    "nationalVisaApplicationIsApprovedResidenceOrWork": false,
+    "immigrationSystem2024RecoveryIsProved2026Outage": false,
+    "immigrationRecoveryIsCommunicationsRecovery": false,
+    "cloudflareIncidentStartedUtc": "2025-08-28T11:52:15.180Z",
+    "cloudflareIncidentMonitoringUtc": "2025-08-28T12:00:32.536Z",
+    "cloudflareIncidentResolvedUtc": "2025-08-28T12:14:05.891Z",
+    "cloudflareIncidentIsWholeFuaShutdown": false,
+    "cloudflareReportedWindowIsHouseholdOutageDuration": false,
+    "moraNetworkDescriptionIsCompletedFutureMerger": false,
+    "nationalPriorityPointRateIsFuaRate": false
+  },
+  "focusedReviews": [
+    {
+      "path": "cci-jakarta-protection-institutions-review.md",
+      "sha256": "b11c87ac73d52946fae857292b9d17d9d7f592d6f2cd3d70b7ade5203eedf08d"
+    },
+    {
+      "path": "cci-jakarta-resources-medicine-review.md",
+      "sha256": "b8b7aeb09a5785fae8d3cc236349636bfb3b68a2c919126dcf1cc7b37e7ec1cd"
+    },
+    {
+      "path": "cci-jakarta-technology-longevity-exit-review.md",
+      "sha256": "dc820dde346a0f24c429ceb6a599328949e0473eda3712d8c54533cfaae1dfbb"
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "url": "https://content.bmkg.go.id/wp-content/uploads/prakiraan_cuaca_mingguan-47.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 460239,
+      "sha256": "ac1d15ce9ebc04a17a7b225fae49c294936908b0bf28b51bb48ee86ee960c0a3",
+      "publicationObservationContext": "BMKG；发布2026-03-23，观察3/19—22；DKI温度／分地区降雨",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://content.bmkg.go.id/wp-content/uploads/Ulasan-GempaBekasi_20082025.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 2000942,
+      "sha256": "5662f8ef6b5961ee05733fdce7918c015af80fd88740bb2d813a503ebddbad2a",
+      "publicationObservationContext": "BMKG；索引2025-08-22，发生8/20；周边监测、不同来源损失",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://bnpb.go.id/berita/perkembangan-situasi-dan-penanganan-bencana-tanggal-9-maret-2025",
+      "retrievedOn": "2026-10-12",
+      "bytes": 111889,
+      "sha256": "514c48f1451b5ac6c0b8efae373263b89baba55c42fb56dc29850ae085561f07",
+      "publicationObservationContext": "BNPB运营快报；2025-03-09，观察截至3/9；各辖区户／人不合计",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.bekasikota.go.id/detail/pemkot-bekasi-lakukan-penanganan-awal-dampak-banjir-dan-imbau-warga-untuk-tetap-tenang",
+      "retrievedOn": "2026-10-12",
+      "bytes": 93566,
+      "sha256": "5c9c1708be4ebd60c75a2127c3b8fca2a85e8fece5434a3d3088cccfc4d9cedc",
+      "publicationObservationContext": "Kota Bekasi；2026-01-23；当期临时灾情及实际物资发放",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://smartcity.bekasikota.go.id/berita/8054",
+      "retrievedOn": "2026-10-12",
+      "bytes": 20413,
+      "sha256": "16033214663b6fcd7a97d1bfee9b0d9f22f5c212a8edb60a57742857f415d7d2",
+      "publicationObservationContext": "Kota Bekasi Smart City；2026-01-18；现场渗漏、死亡与泵闸运行",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.jakarta.go.id/index.php/siaran-pers/6571-SP-HMS-03-2026",
+      "retrievedOn": "2026-10-12",
+      "bytes": 273589,
+      "sha256": "3f02da94667f73b6e7475438bbad2015f62529e73a1424604685bd05de16f3fc",
+      "publicationObservationContext": "DKI／SDA负责人；2026-03-26；2025疏浚、2026截至3/13",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.jakarta.go.id/siaran-pers/6349-SP-HMS-01-2026",
+      "retrievedOn": "2026-10-12",
+      "bytes": 273379,
+      "sha256": "1600542031ea33b80be90ddba4265e92159ee4089495b7f8c576011d8de13462",
+      "publicationObservationContext": "DKI／SDA与BPBD；2026-01-03；当期待命／临时堤，NCICD待完工",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.jakarta.go.id/siaran-pers/7069-SP-HMS-09-2026",
+      "retrievedOn": "2026-10-12",
+      "bytes": 273868,
+      "sha256": "cbdd1d2c232ca4ebf6fffe3a42ae54e75e93dedcfed710f51fd0e7bdf53b5bc1",
+      "publicationObservationContext": "DKI政府原发布；2026-09-28；当天外交论坛及有口径限制的工程表述",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://m.beritajakarta.id/read/150386/Pasukan%20Oranye%20Kalibaru%20Bersihkan%20Material%20Bangunan%20Terdampak%20Puting%20Beliung",
+      "retrievedOn": "2026-10-12",
+      "bytes": 32563,
+      "sha256": "c3606c9012ed42c78a8e1c1bdf9b980ea74332d8fc5c081fc494311c81ce03f1",
+      "publicationObservationContext": "DKI官方媒体直接采访；2026-01-26；当天凌晨风灾、初步建筑损失",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://komnasperempuan.go.id/siaran-pers-detail/siaran-pers-bersama-6-lnham-tentang-laporan-pencarian-fakta-pelanggaran-hak-asasi-manusia-dalam-unjuk-rasa-agustus-september-2025",
+      "retrievedOn": "2026-10-12",
+      "bytes": 143069,
+      "sha256": "460faff7eab28f5805678c5733fa6c02ab7087b6ad40aeca9a812cb6a70c5918",
+      "publicationObservationContext": "六LNHAM／Komnas Perempuan；网页2026-04-23；调查2025-08-27—2026-01-27；尾日期冲突",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://komnasperempuan.go.id/file-manager/frontend/Executive%20Summery%20Laporan%20Pencarian%20Fakta%20Pelanggaran%20Hak%20Asasi%20Manusia%20dalam%20Unjuk%20Rasa%20Agustus-September%202025?ref=IkltVjVTakZqTWxa8019a01b1a006a44df19c2186fff286661cNVNXcHZhVm96Vm14ak0xRnBURU5LYldGWGVHeGliVVowV2xOSk5rbHRTbXhhYWxGNlRucFZORXhYUlROTmJVbDBUa1JSTTAxcE1XbE9lbU41VEZSc2JGcFVRWGRQUkVwclRtcFpNMDVUTlZGU1JWbHBURU5LYTFsWVVteFlNMHBzWTFoV2JHTXpVV2xQYVVsNVRVUkpNa3hVUlhkTVZFVjVTVVJGTVU5cVVUQlBha2t5U1dsM2FWcFlhSGRoV0Vwb1pFZHNkbUpwU1RaSmFrbDNUV3BaZEUxVVFYUk5WRWxuVFZSWk5rNUVVVFpOYWxscFpsRTlQU0k9Ig%3D%3D",
+      "retrievedOn": "2026-10-12",
+      "bytes": 184952,
+      "sha256": "79aed6dfe2c6716bc65d2e58d81ebe7a539611d5a72651cb4a623dea35e41c77",
+      "publicationObservationContext": "六LNHAM正式摘要；签署2026-04-20；上述调查窗口，p2地方／全国分开",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://tribratanews.polri.go.id/blog/nasional-3/aipda-mr-jalani-sidang-kode-etik-terkait-penanganan-unjuk-rasa-93091",
+      "retrievedOn": "2026-10-12",
+      "bytes": 53604,
+      "sha256": "8c305f3d179f3e6a607ec21f9ebc1559006c1f4fd9abefe0d16896fe3daa9005",
+      "publicationObservationContext": "Polri原伦理处分发布；2025-09-30；2025-08-28死亡、9/29伦理审理",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://kontras.org/usut-tuntas-pelaku-penyiraman-air-keras-kepada-andrie-yunus/",
+      "retrievedOn": "2026-10-12",
+      "bytes": 299311,
+      "sha256": "3feb5601c87dc54615c1ecd7f1dbf62176ac1324a685d9df447b71e8f6396039",
+      "publicationObservationContext": "KontraS受害机构原发布；2026-03-13；3/12晚袭击、当时身份未知",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://komnasperempuan.go.id/siaran-pers-detail/siaran-pers-komnas-perempuan-atas-penyerangan-terhadap-pembela-ham-wakil-koordinator-kontras-andrie-yunus",
+      "retrievedOn": "2026-10-12",
+      "bytes": 130786,
+      "sha256": "67597b595f68b455b5f08df9b986989d7df478b2d571ecd70a4300c9bcae09c4",
+      "publicationObservationContext": "Komnas Perempuan；2026-03-13；3/12晚袭击与保护建议",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://kontras.org/siaran-pers-tim-advokasi-untuk-demokrasi-perkembangan-situasi-kasus-andrie-yunus/",
+      "retrievedOn": "2026-10-12",
+      "bytes": 299580,
+      "sha256": "d2662ce1f92855f6f720a4e89035ac326d976841a1727bad4e37e0012aeba843",
+      "publicationObservationContext": "TAUD／KontraS；实际正文2026-06-08；跳转后为诉前裁判执行请求，非3/20",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://kontras.org/putusan-banding-kasus-andrie-yunus-peradilan-sesat-dan-penguatan-impunitas-melalui-peradilan-militer/",
+      "retrievedOn": "2026-10-12",
+      "bytes": 305010,
+      "sha256": "17415a6401c557009c9de63d42dde5494a6020e429772db9b18dd7b125c23e65",
+      "publicationObservationContext": "TAUD／KontraS；2026-09-04；其查阅SIPP的8/20上诉与律师解释，非裁判原文",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://komnasperempuan.go.id/pernyataan-sikap-detail/pernyataan-sikap-komnas-perempuan-mendesak-penghentian-persekusi-dan-penegakan-hukum-atas-kekerasan-terhadap-transpuan",
+      "retrievedOn": "2026-10-12",
+      "bytes": 133084,
+      "sha256": "4c45bddeb70276716786e56afdbb1d4135f9ab3b623a418c150b73fa5c87f3fc",
+      "publicationObservationContext": "Komnas Perempuan；2026-07-20；7/16 Bogor侵害／驱逐，精确点及组织关系待查",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.mkri.id/public/content/persidangan/putusan/putusan_mkri_14254_1778573044.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 951365,
+      "sha256": "1ae0856c176ac9648b38f8a9ff3045786fcb096a2834bcaa9836b85c9b3ed44c",
+      "publicationObservationContext": "宪法法院71/PUU-XXIV/2026；2026-05-12宣告；转移法律条件非截止日总统令穷尽",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.jakarta.go.id/siaran-pers/6602-SP-HMS-04-2026",
+      "retrievedOn": "2026-10-12",
+      "bytes": 272098,
+      "sha256": "bc31085f6ddddfa32faa17476dd7719bd3ad9a5cdfb99419b9929201eed23777",
+      "publicationObservationContext": "DKI Kominfotik；2026-04-07；2025投诉／报告者／完成标签与2026一季度",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.jakarta.go.id/siaran-pers/6596-SP-HMS-04-2026",
+      "retrievedOn": "2026-10-12",
+      "bytes": 272067,
+      "sha256": "bf574c88275c3425839bd39a03c9006fa3dea82704e0eb5198a68cdca4a0193e",
+      "publicationObservationContext": "DKI Kominfotik；2026-04-05；承认验证错误、后续行动含计划",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.jakarta.go.id/siaran-pers/6604-SP-HMS-04-2026",
+      "retrievedOn": "2026-10-12",
+      "bytes": 270114,
+      "sha256": "2744f82c4e7016b648010e8a12557f5a26351fe778a685140fe1769ed908e601",
+      "publicationObservationContext": "DKI Inspektorat；2026-04-07；检查已完成、部分纪律后续为建议",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://m.beritajakarta.id/read/151765/lurah-kalisari-minta-maaf-terkait-unggahan-foto-ai-petugas-disanksi",
+      "retrievedOn": "2026-10-12",
+      "bytes": 30343,
+      "sha256": "0e2377baaf76957d6c05faa7d7d4104823110f0f93142e631ca0bacf7e030198",
+      "publicationObservationContext": "DKI官方媒体直接采访；2026-04-06；主管证言SP1已给，非全部后续执行",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://m.beritajakarta.id/en/read/154812/jaki-fellowship-cities-forum-2026-strengthen-digital-public-services",
+      "retrievedOn": "2026-10-12",
+      "bytes": 31869,
+      "sha256": "6d751d4468af754373b6b5c997397a2678aec9d61af88129ba067bd095581361",
+      "publicationObservationContext": "DKI官方媒体直接采访；2026-08-14；功能已开发，论坛未举行／效果未测",
+      "scope": "Reviewed in cci-jakarta-protection-institutions-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://ppid.pamjaya.co.id/api/informasipublik/106",
+      "retrievedOn": "2026-10-12",
+      "bytes": 12814236,
+      "sha256": "3a2f0dc405b1c1dde2050d3db44aae6cf6c45c655593e5b8ed4b13c98bc8120c",
+      "publicationObservationContext": "PAM原2025年报，解码下载API；记录创建2026-07-24／更新10-01；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://ppid.pamjaya.co.id/api/informasipublik/106",
+      "retrievedOn": "2026-10-12",
+      "bytes": 18953843,
+      "sha256": "b02fba15e81622c8c2bc8153cd58f30ed6bd6f0c13ec12c7f51a6fc2a68bc626",
+      "publicationObservationContext": "PAM实际公开下载响应，含完整PDF；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://ppid.pamjaya.co.id/api/informasipublik/slug/laporan-tahunan-pam-jaya-2025",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1867743,
+      "sha256": "146a78b2d11fc5a7e2e70de24e8d386ff589276ee411d454b0dedd29111ce702",
+      "publicationObservationContext": "PAM原目录历史声明；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://ppid.pamjaya.co.id/_next/static/chunks/app/pdfviewer/%5Bid%5D/page-4e0da47ee83588fc.js",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1277,
+      "sha256": "b86fe09eb4895c3c1208f2e004398dbb61612f687023c7acf7c98f26066fe955",
+      "publicationObservationContext": "官方前端实际使用的下载API调用；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.jakarta.go.id/siaran-pers/6221-SP-HMS-12-2025",
+      "retrievedOn": "2026-10-12",
+      "bytes": 275840,
+      "sha256": "c98b7653dd2d8066377de459e5cc9a36e1e55635f7945401400d2eda3537f3ad",
+      "publicationObservationContext": "政府原运营者2025-12-03发布；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://dinkes.jakarta.go.id/profil-kesehatan",
+      "retrievedOn": "2026-10-12",
+      "bytes": 79025,
+      "sha256": "39383e660ca8c6f6d5f162fc1496d92a738e7a5735173216a1832afbb1307647",
+      "publicationObservationContext": "DKI卫健官方索引，链接身份确认，旧页面日期非新报告首公开；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://drive.google.com/uc?export=download&id=1UKA6e-G8ZEmAB1elpPCycfhxrDZUqPzH",
+      "retrievedOn": "2026-10-12",
+      "bytes": 11164088,
+      "sha256": "705b3e0e06c45f320b38079c11271337b86103c7fc940ec925c86936e52c18a7",
+      "publicationObservationContext": "DKI卫健2025观察，修改2026-07-31，首公开未核；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.jakarta.go.id/siaran-pers/5316-SP-HMS-02-2025",
+      "retrievedOn": "2026-10-12",
+      "bytes": 274550,
+      "sha256": "40c0d073426f6a1ce8977bbb43c2c30562303238e253c0bd5d3e271d9d0d45d0",
+      "publicationObservationContext": "政府原2025-02-19检查；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.jakarta.go.id/index.php/page/program-pangan-bersubsidi-tahun-2025",
+      "retrievedOn": "2026-10-12",
+      "bytes": 279700,
+      "sha256": "06bc2d5e4553fe039b3d0513425e3282b0297e6c35a623ccf029e97d4c550c5f",
+      "publicationObservationContext": "主管2025-01-23公布，01-22启动声明；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.jakarta.go.id/siaran-pers/5775-SP-HMS-08-2025",
+      "retrievedOn": "2026-10-12",
+      "bytes": 270913,
+      "sha256": "11f933ef98d11abf56d87f89ed3dc0bf0f8960705f714dad6671345b13641cef",
+      "publicationObservationContext": "政府2025-08-01原问责通报；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://emedia.dpr.go.id/news/2026/06/22/ateng-sutisna-tagih-solusi-jangka-panjang-usai-pln-putuskan-pemadaman-listrik-bergilir-di-jawa",
+      "retrievedOn": "2026-10-12",
+      "bytes": 356683,
+      "sha256": "f652b88b4262543eea669238e4e73897bfcd235ade366144a0db7af84c18b8d6",
+      "publicationObservationContext": "DPR2026-06-22原监督，06-20声明／06-15会议；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://rspon.go.id/pdf/PELAPORAN/LAPORANTAHUNAN/LAPORANTAHUNANRSPON2024.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 3263795,
+      "sha256": "2923511f0858aa0f2fd606f5f65972abd3a31164171d296fc739809e67c0751a",
+      "publicationObservationContext": "RSPON2025-01-30签署，2024观察；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://puskesmaskemayoran.jakarta.go.id/informasi/laporan.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 6702,
+      "sha256": "813758993b05d136b3eec37ceb8d8807cce211486ac730fafb87f53920f397e7",
+      "publicationObservationContext": "基层官方报告入口；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://puskesmaskemayoran.jakarta.go.id/assets/files/LAPTAH2025.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1178211,
+      "sha256": "dbed18d6c06da2e22dcf9f2034885396633d8bafffc3ed74d733ccf13f081ca2",
+      "publicationObservationContext": "基层2025服务，首公开未核；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://sijaka.jakarta.go.id/dasbor",
+      "retrievedOn": "2026-10-12",
+      "bytes": 72586,
+      "sha256": "f1292b15779387683ad99eb83325226c458e5cb4e9f2009a60ecfc9f6c4685b9",
+      "publicationObservationContext": "DKI Jamkesjak六月2026注册／活跃资料，首公开未核；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://bpjs-kesehatan.go.id/user-manual-mobile-jkn/administrasi%20JKN.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 29193,
+      "sha256": "bb43f9d70ee6f697e175670fc1700644dd4f38fb24b00aa92a3f85c54a01e3ec",
+      "publicationObservationContext": "BPJS当前原注册／管理指引，未标首公开；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://bpjs-kesehatan.go.id/user-manual-mobile-jkn/pelayanan%20jkn.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 14398,
+      "sha256": "814a2f71d040eefe778615fdd6aa357f791e40987df27068dc62aed93637addd",
+      "publicationObservationContext": "BPJS当前原服务入口，未标首公开；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://bpjs-kesehatan.go.id/user-manual-mobile-jkn/iuran%20kepesertaan.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 19731,
+      "sha256": "26ec9592406e766b731f8b1080488efc4a2b9dd9e17213e84a6eb1987c1605d1",
+      "publicationObservationContext": "BPJS当前原缴费／REHAB操作，未标首公开；原件",
+      "scope": "Reviewed in cci-jakarta-resources-medicine-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://innovation.ui.ac.id/ui-tandatangani-kerja-sama-lisensi-printbox-dengan-pt-startup-inovasi-indonesia/",
+      "retrievedOn": "2026-10-12",
+      "bytes": 130349,
+      "sha256": "ab38359992ee71ac55a5106319b30e400aaa46cfeaa5d73f7f861b9bb6ec20fc",
+      "publicationObservationContext": "UI许可，2025-10-08",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.kimiafarma.co.id/id/read/hadirkan-stemxera-perluas-portofolio-bioteknologi-dan-kolaborasi-global",
+      "retrievedOn": "2026-10-12",
+      "bytes": 35242,
+      "sha256": "8d70186a566cd9d046c79f0646ad907f7f4d45d94703557ff7471874cf898a16",
+      "publicationObservationContext": "制造方品牌推出，2026-04-06",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.kimiafarma.co.id/en/read/perkuat-penetrasi-pasar-stemxera-dorong-edukasi-stem-cell-ke-masyarakat",
+      "retrievedOn": "2026-10-12",
+      "bytes": 35173,
+      "sha256": "45c2c59dd0b4f5e0a97f8e64da32b50c52a7d6ae8cc141051643eec6e902e0ca",
+      "publicationObservationContext": "制造方2026-08-29活动，网页独立发布日期未确认",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.telkomsel.com/about-us/news/telkomsel-jadikan-ramadan-terbaik-pelanggan-dengan-menghadirkan-lebih-dari-1400-bts",
+      "retrievedOn": "2026-10-12",
+      "bytes": 145620,
+      "sha256": "08e0dca65768f7d43d78cdca28df0e7fa2ab12fea47f717b4e9f909581173ef5",
+      "publicationObservationContext": "运营商2025-03-12发布／03-11活动",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.jakarta.go.id/storage/files/shares/Laporan%20LPPD/2025/LPPD%20Provinsi%20DKI%20Jakarta%202025.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 12777383,
+      "sha256": "843c1621858f9ed085fafd603bc65fc28cc5408b0fffa162bd68bf49f79ed4ba",
+      "publicationObservationContext": "2025年度／2026编制，独立原发布日期未确认",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://m.beritajakarta.id/read/149864/ppkd-jaktim-realisasikan-pelatihan-bagi-2000-warga",
+      "retrievedOn": "2026-10-12",
+      "bytes": 31844,
+      "sha256": "25fb5c8b0b6b698181a730cc0eccac5ffdfcd4b8b5ea5af6358034ba4a3cdc95",
+      "publicationObservationContext": "2025实际培训／2026-01-02发布",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://mdpi-res.com/d_attachment/biomedicines/biomedicines-12-02332/article_deploy/biomedicines-12-02332.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 443558,
+      "sha256": "07492fa1aace888d532dc9b4bd6d16146effa439c442ff197005bf9efde459e3",
+      "publicationObservationContext": "论文2024-10-14／2019-11至2023-10观察",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11504025/fullTextXML",
+      "retrievedOn": "2026-10-12",
+      "bytes": 100703,
+      "sha256": "8727329f19b42a6f892eebe4c7b0bcacdf1362a500dd0264ed63f2d9e9d8922b",
+      "publicationObservationContext": "同论文JATS，不作为独立队列",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT03800810",
+      "retrievedOn": "2026-10-12",
+      "bytes": 15765,
+      "sha256": "e596a359294eb30be5b8793d118280df21cc264f705800931365cd2b2f5a0ad0",
+      "publicationObservationContext": "登记2019-01-23最后更新／当前提取UNKNOWN",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://keslan.kemkes.go.id/unduhan/fileunduhan_1730690126_681811.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1379654,
+      "sha256": "5aaed13a96753c5758de20a9caa84248b5051e4219fd38a54b43684e36fb0ac8",
+      "publicationObservationContext": "主管2024规范／个别病种条件",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.pom.go.id/siaran-pers/peraturan-bpom-nomor-8-tahun-2025-regulasi-untuk-dorong-pengembangan-produk-terapi-advanced-di-indonesia",
+      "retrievedOn": "2026-10-12",
+      "bytes": 60560,
+      "sha256": "194e44b4afc8c165863983e18a6f5e1ce3d1f3925ef70df65361c795a974585d",
+      "publicationObservationContext": "2025-04-21监管说明／2025-03-06制定8号规则",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://keslan.kemkes.go.id/read/2761/rscm-gandeng-bni-pada-health-talk-sehat-prima-di-usia-emas",
+      "retrievedOn": "2026-10-12",
+      "bytes": 56235,
+      "sha256": "dbbed61e713d41a1612bf534891fb763656fede18d8632ac7dcda28029dec816",
+      "publicationObservationContext": "主管2025-07-22发布／2025-06-18活动",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.badankebijakan.kemkes.go.id/en/kunjungan-menkes-maladewa-ke-rscm/",
+      "retrievedOn": "2026-10-12",
+      "bytes": 199871,
+      "sha256": "d12d6767c980873071df78b131e66fa46e4cd6b4495abcb8d2943fa7e30c7be0",
+      "publicationObservationContext": "主管2024-09-24参访／2024-09-27发布",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://injourney.id/media-publication/news/injourney-mentransformasi-sektor-aviasi-dan-pariwisata-indonesia",
+      "retrievedOn": "2026-10-12",
+      "bytes": 98872,
+      "sha256": "87bff9a4fe922f809e10456c11d006db9fd73f71fde66caa6978d13bcd7f535c",
+      "publicationObservationContext": "运营商2025-03-19已启用与未来设计区分",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://ats-airport.co.id/berita-media/",
+      "retrievedOn": "2026-10-12",
+      "bytes": 72897,
+      "sha256": "997b9012883fc25e27f3150b1aabe72301a4c792976973e71ca7b126b59a6354",
+      "publicationObservationContext": "运营商目录／2025-07-17公告，网页含后续更新",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://jakarta.diplo.de/id-id/service-id/visa-einreise/visa-nasional-1687488",
+      "retrievedOn": "2026-10-12",
+      "bytes": 80966,
+      "sha256": "2bc50817481e0c1523835b654156c0e0d664d47d2b023a9c06ed260111bce0e8",
+      "publicationObservationContext": "使馆2025-03-11长期签证说明",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://jdih.bi.go.id/api/WebJDIH/DownloadFilePeraturan/12384",
+      "retrievedOn": "2026-10-12",
+      "bytes": 161901,
+      "sha256": "797ccf69c98b5dee47dd46edd74aed398fae5f644b5923f294c4fd999b289b1a",
+      "publicationObservationContext": "BI2026-06-29制定／07-01生效",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://jdih.bi.go.id/Web/DaftarPeraturan/Detail/12384",
+      "retrievedOn": "2026-10-12",
+      "bytes": 5251676,
+      "sha256": "a3ffcfb108be65abd3ad5525783e84023cd52bbc68d803f1c05d19cb67ac2506",
+      "publicationObservationContext": "BI法律库源页／内含真实下载API",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.bca.co.id/id/Individu/layanan/pengiriman-uang/Remittance/Outward-Remittance",
+      "retrievedOn": "2026-10-12",
+      "bytes": 105558,
+      "sha256": "f3656148d3f8916215a5b936b7e767584d20fe16f851b7ec37811942f7e7e425",
+      "publicationObservationContext": "当前原服务页，价格独立生效日期未确认",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://jogja.imigrasi.go.id/server-pdn-gangguan-imigrasi-tetap-layani-perlintasan-dan-permohonan-paspor/",
+      "retrievedOn": "2026-10-12",
+      "bytes": 139375,
+      "sha256": "4d17140b5563b985daf2f288555907b4da5b504ac0e3c563d600e5d1a7175fc9",
+      "publicationObservationContext": "移民主管2024-06-21／06-20故障",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://kediri.imigrasi.go.id/sistem-layanan-imigrasi-sudah-pulih-100/",
+      "retrievedOn": "2026-10-12",
+      "bytes": 121279,
+      "sha256": "a628c4307850c304d1ecf9e0e429304f48151c49fb750b3ddbea0a74362be07d",
+      "publicationObservationContext": "移民主管2024-06-28恢复声明",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.moratelindo.co.id/download/public-announcement/2026%20-%20Keterbukaan%20Informasi/2026-03-17%20-%20Rancangan%20Penggabungan%20Usaha%20Ringkas.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 3522748,
+      "sha256": "fd09e7915367d0935bd4134226bc4a3153fb5b3bf1d9ff46aa43eb0d0dcf072f",
+      "publicationObservationContext": "路径2026-03-17；既有运营／2025-09客户，首发日未独立确认",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://aro.telkom.co.id/sites/berita/id_ID/news/telkomgroup-siaga-rafi-2025-menghubungkan-nusantara%2C-satukan-hati-nan-fitri-2899",
+      "retrievedOn": "2026-10-12",
+      "bytes": 115531,
+      "sha256": "5850fda64bf0b4e35dc9dda71749672c39253295b94164f51bb1a192bb0230b4",
+      "publicationObservationContext": "2025-03-18国际冗余准备／现有架构，非家庭切换试验",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.telkomsel.com/about-us/news/kesiapan-jaringan-terdepan-untuk-melayani-sepenuh-hati-telkomsel-jaga-konektivitas",
+      "retrievedOn": "2026-10-12",
+      "bytes": 145260,
+      "sha256": "f51b5a69e6819fb86a3fd62fdb72aa306ab40bd9613b290a311fb424a1646e23",
+      "publicationObservationContext": "2026-04-09发布／正文04-07／RAFI2026实际结果",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    },
+    {
+      "url": "https://www.cloudflarestatus.com/incidents/1chpg2514kq8",
+      "retrievedOn": "2026-10-12",
+      "bytes": 20774,
+      "sha256": "2fbf227432ccd817f3b364a4c3ebae9679d1212fb3dacf86f740c01fc267d69d",
+      "publicationObservationContext": "2025-08-28实际网络事件／resolved；当前原响应",
+      "scope": "Reviewed in cci-jakarta-technology-longevity-exit-review.md; original observation, publication, effective, cohort, geography and eligibility scopes remain separate. Current bytes are not a cutoff-day archive or full-FUA/median-resident measurement. Shared upstream material, PDF/XML and manufacturer/service claims are not independent clinical corroboration."
+    }
+  ]
+}

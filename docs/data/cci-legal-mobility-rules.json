@@ -8,6 +8,14 @@
   "citizenshipAssumption": "The modelled local resident is a citizen of the country identified by the candidate ISO code. Geographic residence does not establish citizenship; territories and foreign residents do not inherit another country code here.",
   "sources": [
     {
+      "id": "de_jakarta_guidance",
+      "url": "https://jakarta.diplo.de/id-de/service/visa-und-einreise/nationale-visa-1686952",
+      "versionDate": "2026-06-29",
+      "versionMeaning": "Embassy Jakarta article date for national visas, including academic skilled-worker applications. Current bytes retrieved after cutoff are not an archived cutoff-day page; the entry visa and subsequent residence title remain distinct.",
+      "retrievedBytes": 89451,
+      "retrievedSha256": "ef06de124780265a85e97d53d4fe3a3f86220550869d5acc6dce78d39dcef34f"
+    },
+    {
       "id": "de_law",
       "url": "https://www.gesetze-im-internet.de/freiz_gg_eu_2004/BJNR198600004.html",
       "versionDate": "2026-07-16",
@@ -67,6 +75,19 @@
     }
   ],
   "rules": [
+    {
+      "id": "indonesian_citizen_skilled_work_national_visa_germany",
+      "originCountryIso": ["IDN"],
+      "destinationCountryIso": "DEU",
+      "sources": ["de_aufenthg", "de_aufenthv", "de_jakarta_guidance"],
+      "status": "conditional_legal_path_under_citizenship_assumption",
+      "conditions": [
+        "For the modelled Indonesian citizen without an independently established entry/residence exemption, section6(3) requires the normally pre-entry national visa for a longer-term purpose. Indonesia is not among section41(1) onshore-application nationalities. Other individual lawful exemptions or unreviewed purposes are not denied.",
+        "The academic skilled-worker purpose under sections18(2)-(3) and18b requires a recognised or comparable degree, a specific qualified-job offer, actual intended employment, professional permission where required and employment-agency approval where applicable. The Embassy Jakarta academic-worker application route supports a real procedure, not an ordinary resident already meeting these conditions.",
+        "General section5 identity, passport, livelihood and absence-of-expulsion conditions remain, with adequate health insurance under section2(3). First section18a/18b permits after age45 normally require the statutory salary or adequate retirement provision, subject to exceptions. No origin-median-income qualification or annual salary amount is inferred.",
+        "Original documents, biometrics, fees and an individual decision remain necessary. National entry visas and subsequent residence titles are distinct; section4a employment permission remains. No approval rate, job, affordability, asset transfer, transport or crisis connectivity is established. Indonesian citizenship is an explicit profile assumption, not inferred from geographic residence. No OPT score follows."
+      ]
+    },
     {
       "id": "other_eu_citizen_to_germany",
       "originCountryIso": [

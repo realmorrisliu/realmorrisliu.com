@@ -103,6 +103,11 @@ class EvidenceMatrixTest(unittest.TestCase):
         self.assertEqual(pre_entry['legal_mobility_rule'], 'chinese_citizen_skilled_work_national_visa_germany')
         for field in ('OPT', 'cci_score_status', 'local2026_screening_status'):
             self.assertEqual(pre_entry[field], row[field])
+        candidates[0]['country_iso'] = claims[0]['country_iso'] = 'IDN'
+        indonesian = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal, current_violence)[0]
+        self.assertEqual(indonesian['legal_mobility_rule'], 'indonesian_citizen_skilled_work_national_visa_germany')
+        for field in ('OPT', 'cci_score_status', 'local2026_screening_status'):
+            self.assertEqual(indonesian[field], row[field])
         candidates[0]['country_iso'] = claims[0]['country_iso'] = 'AAA'
         claims[0]['status'] = 'outside_payer_frame_not_no_adoption'
         self.assertEqual(row["TEC"], "network_samples_missing")

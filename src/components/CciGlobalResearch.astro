@@ -29,6 +29,7 @@ import chicago from "../../docs/data/cci-local-2026-chicago-case.json";
 import prague from "../../docs/data/cci-local-2026-prague-case.json";
 import beijing from "../../docs/data/cci-local-2026-beijing-case.json";
 import shanghai from "../../docs/data/cci-local-2026-shanghai-case.json";
+import jakarta from "../../docs/data/cci-local-2026-jakarta-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -62,8 +63,10 @@ const cases = [
   prague,
   beijing,
   shanghai,
+  jakarta,
 ];
 const caseNamesZh: Record<number, string> = {
+  [jakarta.candidateId]: "雅加达功能区",
   [singapore.candidateId]: "新加坡",
   [london.candidateId]: "伦敦",
   [helsinki.candidateId]: "赫尔辛基",
@@ -184,11 +187,19 @@ const rows = [
   [
     "OPT",
     zh
-      ? `${n(counts.OPT.airport_directory_points_only)} 个候选内有机场目录坐标点，其中 ${n(airports.candidatesWithScheduledNonclosedPoints)} 个有定期服务且非关闭标记；目录不证明实际运营或居民可用，区外机场亦可能提供服务。另有 ${n(legal.conditional_legal_path_under_citizenship_assumption)} 个功能区在本国公民假设下有已审查的德国或法国法律条件，包括附条件居留权、八国公民赴德国境内申请程序，以及中国公民合资格工作居留的通常入境前签证路径；申请不是已获居留或工作权，就业、年龄、资源及医保要求仍保留；${n(legal.no_reviewed_path_not_no_right)} 个资格待查，不等于无权迁移。居住不证明国籍，合法路径不证明负担得起或危机可用；仍未形成完整 OPT 分数。`
-      : `${n(counts.OPT.airport_directory_points_only)} candidates contain airport directory points; ${n(airports.candidatesWithScheduledNonclosedPoints)} have scheduled-service and nonclosed flags. A directory does not establish operations or resident access; outside airports may also serve residents. Separately, ${n(legal.conditional_legal_path_under_citizenship_assumption)} functional areas have reviewed German or French legal conditions under the local-citizenship assumption: conditional residence rights, an onshore application procedure for eight nationalities, and the normally pre-entry national-visa route for eligible Chinese skilled workers are distinct. Application is not approved residence or work; employment, age, resources and insurance conditions remain. ${n(legal.no_reviewed_path_not_no_right)} remain unreviewed, which does not mean denial. Residence does not establish citizenship; legal paths do not establish affordability or crisis operation. No complete OPT score follows.`,
+      ? `${n(counts.OPT.airport_directory_points_only)} 个候选内有机场目录坐标点，其中 ${n(airports.candidatesWithScheduledNonclosedPoints)} 个有定期服务且非关闭标记；目录不证明实际运营或居民可用，区外机场亦可能提供服务。另有 ${n(legal.conditional_legal_path_under_citizenship_assumption)} 个功能区在本国公民假设下有已审查的德国或法国法律条件，包括附条件居留权、八国公民赴德国境内申请程序，以及中国／印尼公民合资格工作居留的通常入境前签证路径；申请不是已获居留或工作权，就业、年龄、资源及医保要求仍保留；${n(legal.no_reviewed_path_not_no_right)} 个资格待查，不等于无权迁移。居住不证明国籍，合法路径不证明负担得起或危机可用；仍未形成完整 OPT 分数。`
+      : `${n(counts.OPT.airport_directory_points_only)} candidates contain airport directory points; ${n(airports.candidatesWithScheduledNonclosedPoints)} have scheduled-service and nonclosed flags. A directory does not establish operations or resident access; outside airports may also serve residents. Separately, ${n(legal.conditional_legal_path_under_citizenship_assumption)} functional areas have reviewed German or French legal conditions under the local-citizenship assumption: conditional residence rights, an onshore application procedure for eight nationalities, and the normally pre-entry national-visa route for eligible Chinese and Indonesian skilled workers are distinct. Application is not approved residence or work; employment, age, resources and insurance conditions remain. ${n(legal.no_reviewed_path_not_no_right)} remain unreviewed, which does not mean denial. Residence does not establish citizenship; legal paths do not establish affordability or crisis operation. No complete OPT score follows.`,
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [jakarta.candidateId]: [
+    zh
+      ? "雅加达 PCS／GSS／ISR／RES 条件性 40，MED／TEC／OPT 条件性 60，LON 未定；数学域 43—53，无总分中心。实际防护、救援、调查和服务与反复洪灾、侵害及恢复／水质约束共同判读。功能区跨 DKI、万丹和西爪哇；德波、茂物和勿加泗参考点在区内，行政总量和局部样本不当全区居民率。研究顺序来自全量目录关联，不是提名或得分。"
+      : "Jakarta has conditional 40 judgments for PCS, GSS, ISR and RES, and 60 for MED, TEC and OPT. LON is unresolved: the mathematical domain is 43–53, without a total centre. Operating protection, rescue, investigation and care are read alongside repeated floods, coercive harms, recovery and water-quality constraints. The FUA spans DKI, Banten and West Java; Depok, Bogor and Bekasi references lie inside it. Administrative totals and local samples are not full-area resident rates. Global directory associations only determine research sequence.",
+    zh
+      ? "长寿原试验报 28 人／51 膝，与旧登记和部分表格存在未解释差异；主要比较不显著，品牌推出或生产质量认证不能补齐当前合规、支付及监护路径。饮水 495/978 是抽样合格数，不是全区安全水率；CT 270/287 与溶栓 76/76 是院内适用队列过程，不是居民结局。买汇每人每月 1 万美元是无需基础交易材料的门槛，超额合法路径保留。现有国际连接与雅加达网络节点修复另有原件；移民系统恢复不当通信恢复。必要假设拒绝即撤回相应维度，不授予排除或全球入围资格。"
+      : "The longevity study reports 28 people and 51 knees, with unresolved registry and table differences and nonsignificant major comparisons. Brand launch or production-quality certification does not establish the current compliant, paid and monitored resident pathway. Water compliance of 495/978 is a sample count; CT 270/287 and thrombolysis 76/76 describe eligible hospital processes, not resident outcomes. USD10,000 per person per month is the no-underlying-document FX-buy threshold; lawful higher transactions remain possible. Existing international links and a repaired Jakarta network incident have separate sources; immigration-system recovery is not communications recovery. Rejecting necessary assumptions withdraws the corresponding judgment, without exclusion or global qualification.",
+  ],
   [singapore.candidateId]: [
     zh
       ? "新加坡 TEC 复核为条件性 80：NRF 多机构实际转化、IMDA 企业／工人采用与居民数字使用、已完成辅助交易共同支持高档。不同分母不合并；技能和融资短板保留，若在缓解后仍构成重要限制，可重审 60。多生产者延续、通常居民广泛可用及空间／时点适用仍须假设，拒绝则 TEC 未定。MOH 明确未追踪所询问的费用相关延迟／放弃治疗数据；这是已确认的测量缺口，不是未满足需求为零或普遍医疗失效。TEC 与 MED 仍依赖必要假设；仅 TEC 未定则总分无中心、数学域为 52—62，两项同时未定则为 43—68。"
@@ -295,6 +306,10 @@ const caseNotes: Record<number, string[]> = {
   ],
 };
 const caseReviewLinks: Record<number, { href: string; label: string }> = {
+  [jakarta.candidateId]: {
+    href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-jakarta-technology-longevity-exit-review.md",
+    label: zh ? "长寿、技术与资金通道原件复核" : "Longevity, technology and financial-path sources",
+  },
   [shanghai.candidateId]: {
     href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-shanghai-technology-longevity-exit-review.md",
     label: zh
