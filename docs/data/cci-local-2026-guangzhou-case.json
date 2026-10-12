@@ -1,0 +1,989 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "retrievedOn": "2026-10-12",
+  "candidateId": 9711,
+  "name": "Guangzhou functional area",
+  "evidenceReview": "cci-local-2026-guangzhou-case.md",
+  "expectedConditionalTotal": null,
+  "limitations": "Eight dimensions and31 subpillars reviewed at conditional/partial levels, not fully measured. PCS/GSS/ISR/RES60, TEC80, OPT40; MED andLON unresolved give mathematical domain45-70 without a total centre, reliable exclusion bound or shortlist proof. The frozen9711 includes part of Foshan, not all Guangzhou or Foshan jurisdictions; healthcare payer boundaries persist inside the same functional area. Locality, continuity, usual legal qualification/coverage, affordability and residual materiality assumptions are reversible. Missing is not zero or negative transparency evidence; full9031 and outside-frame competitors remain.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Cooling actually used by exposed sanitation workers and2026 operation, storm pumps and protected core facilities coexist with recurring residential sewage flooding, geological-risk tasks and a Foshan business-building inundation followed by actual overnight multi-organization recovery. Plans and drainage design are not completed household protection.",
+      "assumption": "Accept scoped core protection and delivered mitigation as representative of9711 ordinary residents, continuing through cutoff with important weaknesses but no wider persistent important unmitigated necessary-living bottleneck. More evidence of important residual household/heat/geological/underground disruption could support40; stronger effective protection/affordable backup80. Reject scope/resident/continuity/residual-materiality assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": 60,
+      "rationale": "The court own2025 report records a March20 final judgment against13 defendants for historical long-running village control and organized coercion in Shachongbei. Actual verdict is not all victims restored or current population violence rate. South China Sea patrols and Taiwan Strait exercises remain regional context, not Guangzhou attacks; actual2025 civil-defense exercise participation is not wartime full capacity.",
+      "assumption": "Accept current ordinary-life and core-route impact as relatively limited and enforcement/response normally usable after reviewed action despite retained historical harm and regional threats. Continuing important coercion or regional/strategic channel blockage could support40; broader low impact and effective alternatives80. Reject time/locality/ordinary reach/impact assumptions to restore unknown; no matched event does not establish safety.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Actual legal remedy processing, worker assistance, school-fee refunds and difficult-resident contact, drainage dispatch and overnight storm response establish functioning delivery. Repeated residential flooding and self-funded cleanup, school implementation gaps, and39 earlier penalties with further illegal LPG activity expose real execution failures.100% inspection/closed findings did not prevent missed issues; proposed accountability and repair are not completed sanctions or resident compensation.",
+      "assumption": "Accept currently reachable core services and continuing scoped mitigation as adequate ordinary operation, retaining important failures and unresolved victim/household recovery tails as weaknesses without inferring wider persistent unmitigated failure. Actual remaining rights/recovery/inspection barriers could strengthen40 without majority harm; broader rights/recovery and effective alternative organizations80. Reject representativeness/continuity/recovery-materiality assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "The2026Q2 original table enumerates225 administrative-city terminal/secondary-water samples, all listed tested projects compliant, including outside9711 points; company2025 pipeline99.99% is a42-test weighted compliance metric, not household rate. Actual food trading8641t/day with8001t external vegetables and rising monitored retail prices, operating electricity and completed65km Nanhai gas-pipe works establish scoped provision. Household and urban-village gaps, external/common pathways and affordability remain.",
+      "assumption": "Accept sampled/local actual water, food, energy and delivered mitigation as reasonably representative, normally usable and affordable for ordinary9711 residents continuing through cutoff. Remaining end-service, price and external/common-channel constraints are important weaknesses but not an evidenced overall important unmitigated necessities bottleneck after mitigation. More evidence of important unmet necessities/common interruption could support40; effective affordable alternatives80. Reject locality/continuity/usual affordability/residual materiality to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": null,
+      "rationale": "Current Guangzhou employee benefits and2026Foshan qualifications, inpatient/extra-city rules establish specific legal paths; actual hospital pricing changes, earlier admitted-insured cost/readmission records and multicentre stroke delivery/quality-process data remain distinct.2017-2020DIP admissions and2014-2015PROMISE are not2026current-resident outcomes; primary tables/text disagreements and selected populations are retained. Guangzhou rules do not apply automatically to Foshan members of the same FUA.",
+      "assumption": "No anchor selected while actual current quality interpretation, usable timely multi-provider necessary-care alternatives and usual-citizen insurance/access/net-burden/continuity links remain under review. This is an unfinished discriminating clinical/resident chain, not a requirement for a perfect median bill or population denominator. A defensible usually adequate timely affordable path could support60; actual important unrelieved clinical/wait/payment constraints40; wider current outcomes and pressure backup80. Historical case mix, volumes, specialist papers or missing originals alone do not choose an anchor.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "Shared disease-specific randomized evidence and Chinese approval, the261-patient21-centre SAIL study and local prescription are reviewed. National patients are not local treatment counts; a prescription is not an infusion. SAIL paired50 CDR-SB5.36to6.02 deteriorated and MMSE comparison was nonsignificant; external comparison/ARIA table-text conflicts remain. The formal2026supplementary policy gives different inpatient/medicine paths, an empty current specified-innovation list and exclusions, not automatic two-antibody/monitoring coverage.",
+      "assumption": "No anchor selected while actual local administration, current ordinarily eligible resident insurance enrollment, drug-path applicability/net cost and appropriate monitoring across Guangzhou/Foshan remain unresolved. Lack of invoices or contracts itself is not40. Credible local delivered, compliant and usually affordable disease-specific path with retained maturity limits could60; actual important residual access barriers after mitigation40; wider mature accessible routes80. Usual basic coverage is not supplementary enrollment; scientific medium-AD study does not expand approved early-AD indication.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "unresolved"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 80,
+      "rationale": "University actual industrialization and a second university verified patent-transfer cash received250300yuan/net245300yuan, multiple technical production/applications,2025administrative industrial/digital data and real public-service transactions, online consultations and elder-assistance delivery support sustained multiple-producer capability. Cross-campus/outside buyers, transactions versus unique residents and residual skills/financing limits remain; record associations and external rankings give no score.",
+      "assumption": "Accept scoped institution/industry and administrative service observations as representative of9711 main production and ordinary-resident diffusion, continuing through cutoff, with delivered assistance making remaining skill/funding barriers not an important overall diffusion bottleneck. This is not every product instantly replaceable or every node stress-tested. Material residual barriers could support60, more evident production/adoption disconnection40. Reject locality/continuity/usual diffusion/mitigation assumptions to restore unknown. Cross-border connectivity remains OPT rather than duplicate TEC deduction.",
+      "conditionalAlternatives": [40, 60],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 40,
+      "rationale": "Actual airport traffic and metro/ground use establish physical channels though Baiyun airport lies in9741. The shared Chinese skilled-work pre-entry visa route is conditional, not permission already granted. Lawful current-account transactions can exceed USD50000with documents; capital-purpose/previous-permanent-status migration-asset conditions remain. A2024Guangzhou Tencent cloud test records479blocked TLS names outbound to SG/US and411US-to-Guangzhou, with domestic control0; actual household outcomes/current operator repair are unmeasured.",
+      "assumption": "Accept specific cloud-test mechanism as representative of ordinary key cross-border connections and continuing to2026, and asset-purpose/prior-status constraints as materially limiting usual relocation resources despite lawful/physical/domestic alternatives. These reversible assumptions, not missing2026tests alone, support40. Current affordable usable communication/asset/transport/legal paths with relief could60; effective alternatives and common-failure checks80. Reject locality/continuity/household/materiality assumptions to restore unknown. No basis for severe universal exit blockade or all-transfer USD50000ceiling.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "context",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "researchPriority": {
+    "basis": "all9031_record_associations_first_unreviewed_not_performance",
+    "source": "cci-openalex-efua-record-presence.csv",
+    "sourceSha256": "cb777baaa3ec09fe78a2c07ac8a260d0fb8ad4b8b95996eea0a5367f0e11f013",
+    "field": "article__xpac_false__retracted_false",
+    "recordAssociations": 64270,
+    "rule": "All9031 candidates sorted by descending qualifying core nonretracted article-ID directory associations then numeric efua_id; skip21 registered reviews only to sequence research. Not output/quality score, eligibility or exclusion."
+  },
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "referencePoints": [
+      {
+        "label": "Guangzhou central approximate reference",
+        "longitude": 113.2644,
+        "latitude": 23.1291,
+        "fuaMatches": [9711]
+      },
+      {
+        "label": "Foshan urban approximate reference",
+        "longitude": 113.1219,
+        "latitude": 23.0215,
+        "fuaMatches": [9711]
+      },
+      {
+        "label": "Baiyun airport approximate reference",
+        "longitude": 113.2988,
+        "latitude": 23.3924,
+        "fuaMatches": [9741]
+      },
+      {
+        "label": "Panyu urban approximate reference",
+        "longitude": 113.384,
+        "latitude": 22.9386,
+        "fuaMatches": [9716]
+      },
+      {
+        "label": "Nansha urban approximate reference",
+        "longitude": 113.525,
+        "latitude": 22.801,
+        "fuaMatches": [9716]
+      },
+      {
+        "label": "Huangpu urban approximate reference",
+        "longitude": 113.458,
+        "latitude": 23.106,
+        "fuaMatches": [9711]
+      },
+      {
+        "label": "Zengcheng urban approximate reference",
+        "longitude": 113.829,
+        "latitude": 23.292,
+        "fuaMatches": [9718]
+      },
+      {
+        "label": "Conghua urban approximate reference",
+        "longitude": 113.586,
+        "latitude": 23.548,
+        "fuaMatches": [9787]
+      },
+      {
+        "label": "Dongguan urban approximate reference",
+        "longitude": 113.7518,
+        "latitude": 23.0207,
+        "fuaMatches": [9718]
+      },
+      {
+        "label": "Shenzhen central approximate reference",
+        "longitude": 114.0579,
+        "latitude": 22.5431,
+        "fuaMatches": [9725]
+      },
+      {
+        "label": "Zhuhai central approximate reference",
+        "longitude": 113.5767,
+        "latitude": 22.2707,
+        "fuaMatches": [9871]
+      },
+      {
+        "label": "Zhongshan central approximate reference",
+        "longitude": 113.3928,
+        "latitude": 22.5176,
+        "fuaMatches": [9839]
+      },
+      {
+        "label": "Nanfang hospital approximate reference",
+        "longitude": 113.326,
+        "latitude": 23.186,
+        "fuaMatches": [9711]
+      },
+      {
+        "label": "Sun Yat-sen first hospital central approximate reference",
+        "longitude": 113.287,
+        "latitude": 23.123,
+        "fuaMatches": [9711]
+      },
+      {
+        "label": "Zhujiang hospital central approximate reference",
+        "longitude": 113.261,
+        "latitude": 23.09,
+        "fuaMatches": [9711]
+      },
+      {
+        "label": "Huadu urban approximate reference",
+        "longitude": 113.211,
+        "latitude": 23.405,
+        "fuaMatches": [9741]
+      }
+    ],
+    "method": "Checksum-validated full9031 GHS-FUA load; EPSG4326 to ESRI54009 always_xy point intersection.",
+    "meaning": "Analyst approximate references only, not exact treatment/event/project coordinates, institution footprints, full jurisdictions or resident service coverage."
+  },
+  "sharedLegalPath": {
+    "source": "cci-legal-mobility-rules.json",
+    "sourceSha256": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
+    "rule": "chinese_citizen_skilled_work_national_visa_germany",
+    "meaning": "Existing shared all1539CHN rule; normally pre-entry visa and substantive qualifications, not approved residence, work, median-resident affordability or OPT score."
+  },
+  "resourceChecks": {
+    "waterSampleEnumeratedSerials": 225,
+    "waterTableObservation": "2026Q2",
+    "waterTableRowsAreAllFuaHouseholds": false,
+    "companyPipelineCompliancePercent": 99.99,
+    "companyComplianceIsHouseholdRate": false,
+    "foodDailyTradingTonnes": 8641,
+    "foodExternalDailyTradingTonnes": 8001,
+    "foodRetailPriceYuanPerJin": 4.4,
+    "foodPriceIsMedianBudget": false,
+    "futurePowerTargetsAreDelivered": false,
+    "completedNanhaiGasPipeKm": 65,
+    "wholeNanhaiIsFua9711": false
+  },
+  "clinicalChecks": {
+    "currentWholeMedAnchorEstablished": false,
+    "dipInpatientEpisodes": [472958, 1841989],
+    "dipObservation": ["2017-01", "2020-06"],
+    "dipOopMeansYuan": [3388.28, 4216.85],
+    "dipMeansAre2026MedianBills": false,
+    "dipDispersionLabelConflictRetained": true,
+    "promiseObservation": ["2014-07", "2015-06"],
+    "promiseCentres": 35,
+    "promiseEligiblePatients": 2059,
+    "promisePrePostPatients": [535, 1524],
+    "promiseThrombolysedPatients": [337, 967],
+    "promiseTableTextConflictRetained": true,
+    "sailNationalPatients": 261,
+    "sailNationalCentres": 21,
+    "sailPairedSixMonthPatients": 50,
+    "sailNationalPatientsAreGuangzhouCounts": false,
+    "sailFigureCdrExternalComparison": "ns",
+    "sailTableSymptomaticAria": 4,
+    "sailTableAllAria": 24,
+    "sailAriaDenominator": 261,
+    "sailClinicalFigureTableTextConflictsRetained": true,
+    "localPrescriptionEstablishesInfusion": false,
+    "sskFormal2026Images": 11,
+    "sskSpecifiedInnovationListCurrentlyEmpty": true,
+    "sskTwoAntibodiesLowDeductibleVerified": false,
+    "sskOrdinaryOutpatientMonitoringPaymentVerified": false,
+    "usualBasicInsurancePresumesSupplementaryEnrollment": false
+  },
+  "securityChecks": {
+    "organizedCaseFinalJudgmentDefendants": 13,
+    "gasPreviousPenalties": 39,
+    "gasActualLocal9711LossLocationVerified": false,
+    "inspectionClosureProvesNoFailures": false,
+    "stormInstitutionRecoveryProvesAllHouseholdsRecovered": false
+  },
+  "mobilityChecks": {
+    "guangzhouCloudToSingaporeBlockedNames": 479,
+    "guangzhouCloudToUsBlockedNames": 479,
+    "usToGuangzhouCloudBlockedNames": 411,
+    "cloudSamplesAreHouseholdRate": false,
+    "convenientFxAllowanceIsAllTransferCeiling": false,
+    "migrationAssetsRequireExistingPermanentStatus": true,
+    "airportInside9711": false
+  },
+  "focusedReviews": [
+    {
+      "path": "cci-guangzhou-protection-institutions-review.md",
+      "sha256": "37c193a12b20a98983b1af0d4ca9a737326def0dbbf1ef3162afe0acc4a8d758"
+    },
+    {
+      "path": "cci-guangzhou-resources-medicine-review.md",
+      "sha256": "5f79bf5011600e628e82971e903a2ca74a05e01734bf00aefb64add55675e442"
+    },
+    {
+      "path": "cci-guangzhou-technology-longevity-exit-review.md",
+      "sha256": "d5bf1e7e9e5cafdf43ee28e011422fd48e89a0351e0053e70fdf6ee81812f236"
+    },
+    {
+      "path": "cci-guangzhou-foshan-insurance-review.md",
+      "sha256": "66f5fd41b0cd858ea9ef8040ae2104bdc96901a7a1e5048d8b649701cfd31683"
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "url": "https://mzj.gz.gov.cn/gkmlpt/content/10/10363/post_10363626.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 47740,
+      "sha256": "d9270dbfd432b079786ed285bced35a5c5e603be7f6219088997000f018256c4",
+      "publicationObservationContext": "民政局原走访；发布2025-07-21，观察当夏、6月以来及累计至发布；生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://cg.gz.gov.cn/zhzx/qjkb/content/post_10856668.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 51033,
+      "sha256": "46f3e49de3fc5737e55c26cab8e14159d928a54e443d496f8215fcfba62f8678",
+      "publicationObservationContext": "城管局海珠运行原报告；2026-06-16，观察当期运行、药品仍计划；生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://swj.gz.gov.cn/swyw/rdxw/content/post_10785379.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 20818,
+      "sha256": "50ef22bb1ab0fb567f06a4383db3b880e50664b6db9f555a08eeda64f6c2cd5e",
+      "publicationObservationContext": "水旱防御中心原记录；发布／事件2026-04-23；生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.gcable.com.cn/xwzx/gddt/content/post_98960.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 46963,
+      "sha256": "99d82660e30fd022b5065fbea47311f95233167c9bfcf4a9ab2862d0530f518d",
+      "publicationObservationContext": "广东广电当事运营商；2025-08-15，观察8/14下午—15日晨；生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://ghzyj.gz.gov.cn/sjb/zw/zcfg/content/post_10242568.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 58587,
+      "sha256": "0dbb14f1ba2bc1c4a04415f114f7f24394150a31b76934ed324a557027545474",
+      "publicationObservationContext": "规划资源局；签署2025-04-21、发布4/28；回顾2024、2025计划执行年；完成量与未来任务分开",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://ghzyj.gz.gov.cn/zwgk/xxgkml3/qt/ghjh/content/post_10194667.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 57789,
+      "sha256": "300725457d853b3a96352fa93c141bec5c5f39bde3a3ccd8b626a7e731805650",
+      "publicationObservationContext": "规划资源局办公室原总结；2025-04-01，回顾2024；生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gaj.gz.gov.cn/gkmlpt/content/9/9571/post_9571682.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 36460,
+      "sha256": "2861884517d977f55407052d0afd6d1c9103e92820adf68cb02678ecfc2700fd",
+      "publicationObservationContext": "公安局原报告；2024-04-01，观察2021—23警情及当期机制；生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.gz.gov.cn/zwgk/gzsrmzfgbn/2024/25/content/post_10640677.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 163103,
+      "sha256": "7c10b9af5cee431d872d0a7afce9856de0715ea83a4fad3d9ea281a64ea2b5e1",
+      "publicationObservationContext": "政府森林火灾预案；签署2024-07-24，2024第25期公报、当前URL10640677重刊；执行预案，非扑救结果",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gzdaily.dayoo.com/pc/html/2025-06/23/content_872_889636.htm",
+      "retrievedOn": "2026-10-12",
+      "bytes": 20363,
+      "sha256": "9123ae4929322b8ea8b347b6151d68cf88cf3bd79872dbf31a697175a1c49034",
+      "publicationObservationContext": "广州日报本报记者肖欢欢现场／居民与居委采访；2025-06-23，观察6/15、16、19及当期；生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.augurit.com/sys-nd/840.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 31197,
+      "sha256": "5c34bb4fb6e59696a973ae0b802f1443027bfcb3e71e6613be15b98ed9d85319",
+      "publicationObservationContext": "奥格当事平台供应商；2025-09-28，观察2025入汛及8/13—15；生效不适用；原响应gzip，已另解码核正文",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://m.thepaper.cn/newsDetail_forward_32184491",
+      "retrievedOn": "2026-10-12",
+      "bytes": 65126,
+      "sha256": "37a3979b11d0946ed2a523d373500997971777c78dddfbab2f9808ae9c211975",
+      "publicationObservationContext": "禅城宣传部官方政务账号、禅城融媒发布；2025-12-15，观察9—11月项目；生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://yjglj.gz.gov.cn/zwgk/tzgg/content/post_10620874.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 29346,
+      "sha256": "567826dce8ea40a2143fb15164c25e4d226761ff31b343203e78eaa31b348909",
+      "publicationObservationContext": "广州应急局原统计；2026-01-04，观察2025-07-01—12-31；生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.gzcourt.gov.cn/upfile/File/202510/20/11492464.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 525986,
+      "sha256": "ff34d86d40628d4b86a7b3a3c7c7bdf7fa99c3a0701d0b92c9cb1f6bca8dfd59",
+      "publicationObservationContext": "广州中院本人通报／刑一庭；题名2025-04-15、URL10/20；2025/3/20终审、1999起历史；终审当日生效，报告不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16395000.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 13985,
+      "sha256": "581f189bfc34ac56c22c9ab9148c759bf9785a58f8dbd5eb9efd2bfa4be4f362",
+      "publicationObservationContext": "国防部南部战区原发布；2025-07-03，观察6月以来及当日巡航；生效不适用；官方HTTP",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16429616.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 15455,
+      "sha256": "81c66f150350760b2059af6ba96ad8bad94128b260acf21d5aaee4617a98cdb3",
+      "publicationObservationContext": "国防部原台海行动发布；2025-12-29，观察当日；生效不适用；官方HTTP",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.gz.gov.cn/attachment/7/7950/7950218/10611389.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 3061556,
+      "sha256": "55c1df1262cb31c0d94acd1494b848a7900f1e760b50612227dcde2d1ceacfcc",
+      "publicationObservationContext": "政府原通告、公报2025第26期9/20；签署2025-09-06，9/20执行；只宣布安排",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://huacheng.gz-cmc.com/pages/2025/09/20/SF14427678cacbfb9d6f664a9e88a217.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 14336,
+      "sha256": "f908ecfc30a59b22f729fcbaf8b46ea4141aff79462cad6b1c9d7400277e79e6",
+      "publicationObservationContext": "广州日报原采访及人防通讯员；2025-09-20，观察当日实际演习／9月教育；生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.gz.gov.cn/gkmlpt/content/10/10718/post_10718452.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 360416,
+      "sha256": "7b5ebcf01e7f95c480a10dd12aae44d0db727ffb629a387586637f47993c3e60",
+      "publicationObservationContext": "政府办公厅本人报告；2026-03-10，观察2025年度；生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.gz.gov.cn/zwgk/fzzfjs/szf/content/post_10660616.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 85422,
+      "sha256": "c6e4bc9a86d19844cc0d89e649a53a41393bf93287cc2fff71e5622de7e192ea",
+      "publicationObservationContext": "市政府本人法治报告、司法局来源；2026-01-23，观察2025年度；生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://sfj.gz.gov.cn/xxgk/xxgkml/gzdt/jcdt/content/post_10684478.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 17820,
+      "sha256": "2733f8ba803af9c5dc518a31e21ac36de8300cf1e188ef370a72f1c795dc3f4e",
+      "publicationObservationContext": "天河司法局本人回顾、市司法局刊载；2026-02-10，观察2025年度；生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://edu.foshan.gov.cn/attachment/0/589/589634/6949795.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 297939,
+      "sha256": "02678fb250a6bac688a8dacb43c63371d7f4a7905062a64c09bb8e3fbb639927",
+      "publicationObservationContext": "佛山教育局本人报告；2025-12-26签署、12/30印发、索引2026-01-21；截至2025/12自报，生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://cg.gz.gov.cn/ztzl/srhw/content/post_10471068.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 50959,
+      "sha256": "8c3bf8be96e85cd85eb5c77c5d497fec4f8a12258ea531c91695fbb37fa9beab",
+      "publicationObservationContext": "城管局海珠原实绩；2025-09-26，观察9/24台风后及晚18—24时；生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.gz.gov.cn/attachment/7/7983/7983651/10716710.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 12242350,
+      "sha256": "bc9753a221cf0791877039159b287c320bb59c89361c8b901634a139f8e8a6bd",
+      "publicationObservationContext": "广州市政府事故调查组本人报告；2026-03-04签署；观察2025/12/6及2023—25监管；建议非最终处罚，生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://yjglj.gz.gov.cn/zwgk/zdlyxxgk/scaqsgdcbgxx/content/post_10715196.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 32607,
+      "sha256": "af5121686a2c352405f3b03802917dc5b1c199d7edef048756a1834e378f9a18",
+      "publicationObservationContext": "应急局原调查发布页；2026-03-09；同源、同事故；生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://edu.foshan.gov.cn/gg/wjgb/index.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 28666,
+      "sha256": "c706705add9454fa3f1dce6ec392066932b8f331def21e8a674e4feae6f01b70",
+      "publicationObservationContext": "佛山教育局原索引；报告列示2026-01-21；索引非报告实绩，生效不适用",
+      "scope": "Reviewed in cci-guangzhou-protection-institutions-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://wjw.gz.gov.cn/xxgk/wgk/jggk/content/post_10919235.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 14693,
+      "sha256": "284313c93a5d283d4c57a9b047d39f64d3d96d56fd361d96fc609cfd513401d2",
+      "publicationObservationContext": "卫健委2026-07-28发布；观察2026Q2；发布页非另一次测量",
+      "scope": "Reviewed in cci-guangzhou-resources-medicine-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://wjw.gz.gov.cn/attachment/8/8054/8054223/10919235.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 412579,
+      "sha256": "29b67eedcf1c04dc18e5728e643fb5352136c10a5d6b2f1bca522ed3cf8d47a2",
+      "publicationObservationContext": "卫健委原表；2026Q2，逐点日期与范围保留",
+      "scope": "Reviewed in cci-guangzhou-resources-medicine-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.gz.gov.cn/gzzcwjk/gzdata/content/post_10132352.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 104940,
+      "sha256": "ef6c848cf9d35e75b1555947e22845b754ab1e38412e1b31421a01405c50f067",
+      "publicationObservationContext": "市正式2025规划；回顾2024，未来各年目标不是实绩",
+      "scope": "Reviewed in cci-guangzhou-resources-medicine-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gxj.gz.gov.cn/zt/dlys/tpxw/content/post_10618337.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 41133,
+      "sha256": "a8d4047fbf71fcb89e830e151de79411f1fd6343cb6c593335f074fdb1f787f6",
+      "publicationObservationContext": "工信局刊载羊城晚报原采风；2025-12-31，观察当期/截至11月部分数据",
+      "scope": "Reviewed in cci-guangzhou-resources-medicine-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://cif.mofcom.gov.cn/site/html/guangdong/html/687017/2026/7/24/1784857540552.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 6836,
+      "sha256": "f6fcac624a097710a57413d4741e0981449dfa7c2ea83fc0029a2189ded3b29d",
+      "publicationObservationContext": "市商务局原周报；2026-07-24，观察07-13—19；原HTML GBK",
+      "scope": "Reviewed in cci-guangzhou-resources-medicine-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.grandblue.cn/uploadfiles/2026/04/20260428221757964.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 6916876,
+      "sha256": "aa3b65f9052f47140b58c134b8123427f819a8ed386c17bc39e5b7cfa2eec514",
+      "publicationObservationContext": "瀚蓝本人报告2026-04；2025合并主体业务，收购公司另有窗",
+      "scope": "Reviewed in cci-guangzhou-resources-medicine-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.gz.gov.cn/gfxwj/sbmgfxwj/gzsylbzj/content/post_8689748.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 174982,
+      "sha256": "664e12813072d99fb5f1704e2af5f85d7cd035ccb55a8c819930a42ad21c560f",
+      "publicationObservationContext": "医保等三机关正式规则；2022-11-30签署，12-01至2026-12-31实施",
+      "scope": "Reviewed in cci-guangzhou-resources-medicine-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://mzj.gz.gov.cn/dsyy/syjdt/content/post_10388233.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 19582,
+      "sha256": "e8fe3bf2539811c16030eb33a947296bfbbb3ff67bce4fdca4edf21694a29f9f",
+      "publicationObservationContext": "市康复医院本人公告；2025，08-01实际收费/结算起点",
+      "scope": "Reviewed in cci-guangzhou-resources-medicine-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1633222/pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 3342952,
+      "sha256": "afe7dc71937e5b8ce29d708375ff2c381347a5811b84b9daa9ecc3497f8c0725",
+      "publicationObservationContext": "2025-09-05发表；2017-01—2020-06职工医保住院",
+      "scope": "Reviewed in cci-guangzhou-resources-medicine-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1569855/pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 304102,
+      "sha256": "e56a74695067b8c517de6de12d469ca0b5657b3b15006a4be5ce2397f6eb3b94",
+      "publicationObservationContext": "2025-05-30发表；2023-11-17—30访谈次数/人数分开",
+      "scope": "Reviewed in cci-guangzhou-resources-medicine-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1746553/pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1044612,
+      "sha256": "27e102be7de1c4abd975305b72310b36d1401fcc8ab21a082c02412548628d40",
+      "publicationObservationContext": "2026-04-10发表；2014-07—2015-06多中心选择队列",
+      "scope": "Reviewed in cci-guangzhou-resources-medicine-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2025.1744943/pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 2142900,
+      "sha256": "2436494ed5e46d28bf884dc62607882f83240f6a9313e2f2d1c571e4c654b204",
+      "publicationObservationContext": "2026-01-13发表/DOI2025；2015—2022单院旧队列，不用于补档",
+      "scope": "Reviewed in cci-guangzhou-resources-medicine-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.zssy.com.cn/node/14077",
+      "retrievedOn": "2026-10-12",
+      "bytes": 73653,
+      "sha256": "1f53ef2f334a0fce33d024bf1498390172b43ecd0994ebea4fbf537eb078f877",
+      "publicationObservationContext": "中山三院服务本人页；未明确版本日，历史适用待核",
+      "scope": "Reviewed in cci-guangzhou-resources-medicine-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://wjw.gz.gov.cn/xxgk/jhzj/content/post_10260624.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 49824,
+      "sha256": "0b23d84126e310659d77b3ab720fec745f65faef727b0d0ec093ef57d9cd7164",
+      "publicationObservationContext": "广州卫健委2025工作回顾/2024实际及2025任务分开",
+      "scope": "Reviewed in cci-guangzhou-resources-medicine-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://guangdong.chinatax.gov.cn/gdsw/fssw_tzgg/2025-12/26/content_1ef0102803aa439da6549c69b4caa81e.shtml",
+      "retrievedOn": "2026-10-12",
+      "bytes": 24065,
+      "sha256": "aa893614cf18e041fb63895d60eed549ea327110e94007890370038c41a4f57f",
+      "publicationObservationContext": "三机关原缴费通知；2025-12-18签署/12-26发布，2026-01-01实施；不代待遇",
+      "scope": "Reviewed in cci-guangzhou-resources-medicine-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.nhsa.gov.cn/art/2025/12/16/art_14_19032.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 13074,
+      "sha256": "499d4c5c5df37ac61d5936d209b551a77a01ac8901f6846946683de5f9ca011c",
+      "publicationObservationContext": "佛山医保主管本人微信，国家医保局刊载2025-12-16；有限真实账单/条件",
+      "scope": "Reviewed in cci-guangzhou-resources-medicine-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://tjj.gz.gov.cn/zzfwzq/tjkx/content/post_10804061.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 52692,
+      "sha256": "38af59a17faf8c96103d37983c43ea387c0fa0338958cfaeab5617f4db21206a",
+      "publicationObservationContext": "发布2026-05-10；行政广州2025初步生产／使用",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://research.sysu.edu.cn/article/2916",
+      "retrievedOn": "2026-10-12",
+      "bytes": 49052,
+      "sha256": "75276b5d2f5dd653bc6f47620840caf0abcd04b5ffa152f37582d46ba6afa7cf",
+      "publicationObservationContext": "发布2025-04-23；实际转让到账，具体研发校区未闭",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://mzj.gz.gov.cn/gk/jytablgz/content/post_10896813.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 34810,
+      "sha256": "4a2c8f988a0e86a50acfd758106717de11366fe2b26a825e16551c4d8be3d744",
+      "publicationObservationContext": "2026-07-10答复；观察2024咨询、2025课程、2021以来定向交付",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://fgw.gz.gov.cn/gkmlpt/content/10/10845/post_10845255.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 63677,
+      "sha256": "ce80e4706ef681b5603cef3bcd8d0a7afad4e22c1f462b6b5b601d5d056163d0",
+      "publicationObservationContext": "成文2026-06-03／发布06-08；市级协作，不独立加人数",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.gzhmu.edu.cn/info/2501/51921.htm",
+      "retrievedOn": "2026-10-12",
+      "bytes": 50278,
+      "sha256": "b3dd31ffeaf3a9274c3f1d752bfcba2df48ff8a67778d8d78e6b3f9c37e8d33b",
+      "publicationObservationContext": "2026-04-20；广医牵头研究记录非本地人数",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13093726/fullTextXML",
+      "retrievedOn": "2026-10-12",
+      "bytes": 138659,
+      "sha256": "1243686d43484613e65f4f5e3262acd487acf49a2c97eb60034cf083869cffb9",
+      "publicationObservationContext": "在线2026-03-13；全国21中心6个月，实际入组日期窗未明",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/763a/13093726/f344d0fda134/ALZ-22-e71231-g003.jpg",
+      "retrievedOn": "2026-10-12",
+      "bytes": 44859,
+      "sha256": "d92debf43d86b333b65f0f3293de2332210d9b2ec7604b604626f863c1dc6534",
+      "publicationObservationContext": "同论文Figure2实际原图，已目视",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13060755/fullTextXML",
+      "retrievedOn": "2026-10-12",
+      "bytes": 4205,
+      "sha256": "e8b9d4febe5c35a7f3ca52789ca36d3342a0bd60137437d021bb362a4ba1d131",
+      "publicationObservationContext": "2026-04-08；只更正通讯单位／地址",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.gz.gov.cn/zt/shb/content/post_10600576.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 81695,
+      "sha256": "ce029b49d6fba39b4dba15aea1af9ac0f4431f5e8cc0494fbf376cee37e579be",
+      "publicationObservationContext": "2025-12-19；2026期宣传、真实入口上游",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.gz.gov.cn/gzybj/gkmlpt/content/10/10608/post_10608680.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 39603,
+      "sha256": "64ac2f844a8aba8d74e915d5fa04399d615f25918892384f069abb6f5973a216",
+      "publicationObservationContext": "2025-12-25六部门倡议；既往非AD赔付不作两药实绩",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.gz.gov.cn/img/1/1547/1547129/10600576.png",
+      "retrievedOn": "2026-10-12",
+      "bytes": 16540,
+      "sha256": "8f2f97dcb58fe6fbdb0722f6c65ef9b31a717bf474a65ab51d5ad6a570b8ba67",
+      "publicationObservationContext": "政府同页公开二维码，已实际解码",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gzssk.shie.com.cn/",
+      "retrievedOn": "2026-10-12",
+      "bytes": 4165,
+      "sha256": "012d34acd203cb99ad78ebf2e72c21537396074f07aa96e57a7756343033cc30",
+      "publicationObservationContext": "当前正式入口应用壳；未标发布日",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gzssk.shie.com.cn/static/js/app.f02efe55.js",
+      "retrievedOn": "2026-10-12",
+      "bytes": 112507,
+      "sha256": "d29d4e90d77183147ee015432d75d1aa1b9ec2554cde0dea496c01b314b9d44f",
+      "publicationObservationContext": "当前实际引用脚本，currentYear=2026；混存旧字段不当现行责任",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gzssk.shie.com.cn/static/js/chunk-7cbf7d5e.da445389.js",
+      "retrievedOn": "2026-10-12",
+      "bytes": 291278,
+      "sha256": "32de4790423e9196ca6af061da23d280160e432b79e73355648fa4178e5c63b4",
+      "publicationObservationContext": "当前实际引用年度组件；2026索引非历史字节存档",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gzssk.shie.com.cn/static/js/chunk-259e9dd0.cf11f351.js",
+      "retrievedOn": "2026-10-12",
+      "bytes": 71690,
+      "sha256": "67221c42989076b3f521c766bfcff33780e4c2709c3b4be03f4f8c312b096f5c",
+      "publicationObservationContext": "2026理赔组件明确引用图片0–10",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.safe.gov.cn/guangdong/2024/1218/2904.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 15755,
+      "sha256": "e1592ca47a976e685f1a07df51d53244caaecdd69510546f5b0c545044f4230b",
+      "publicationObservationContext": "页面2026-06-16；当前附件路径2026-09-28，不等6月原版",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.safe.gov.cn/guangdong/file/file/20260928/d5d91c09d00348619df4e4f5376569ec.docx",
+      "retrievedOn": "2026-10-12",
+      "bytes": 346961,
+      "sha256": "30415028630fe17e712a495957bd077b808ce7a62b513d8a20050ffeda70f8e8",
+      "publicationObservationContext": "附件路径2026-09-28；印刷p301–316移民财产许可",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.xkb.com.cn/articleDetail/401842",
+      "retrievedOn": "2026-10-12",
+      "bytes": 55183,
+      "sha256": "429ff30fcbc59f6976518861c53fbcdc631a61afd9a5f511e64100ed9609eac8",
+      "publicationObservationContext": "2025-05-10 23:59记者原稿；处方非实际输注",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://hlw.mini189.cn/hlw/hgo189gz/index.html?channelSource=gddxweb",
+      "retrievedOn": "2026-10-12",
+      "bytes": 331256,
+      "sha256": "126139f9a388482cffeaa6ba12215569b837257e8eed5da6a10186901043bab1",
+      "publicationObservationContext": "无单独发布日期；现见广州合同／正式入口非实际恢复",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gzssk.shie.com.cn/comstatics/gzhmb/2026/pdf/claimsClauses_0.webp",
+      "retrievedOn": "2026-10-12",
+      "bytes": 136698,
+      "sha256": "5e5137992fcb72f39240b0550caaca14713dc8404e3ea2f26a557d5e5ab7ee26",
+      "publicationObservationContext": "2026年度责任2026-01-01至12-31；图片0，全部目视；未单列发布日",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gzssk.shie.com.cn/comstatics/gzhmb/2026/pdf/claimsClauses_1.webp",
+      "retrievedOn": "2026-10-12",
+      "bytes": 153234,
+      "sha256": "4a396fe025edd17ff8b8b2d69f21e4519eb2d55376a55bdf6fdaa45a5c272435",
+      "publicationObservationContext": "2026年度责任2026-01-01至12-31；图片1，全部目视；未单列发布日",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gzssk.shie.com.cn/comstatics/gzhmb/2026/pdf/claimsClauses_2.webp",
+      "retrievedOn": "2026-10-12",
+      "bytes": 130910,
+      "sha256": "5be44a0a25bfb5b684bbe3f7d958344f474202614137db1df188c719eb005aa5",
+      "publicationObservationContext": "2026年度责任2026-01-01至12-31；图片2，全部目视；未单列发布日",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gzssk.shie.com.cn/comstatics/gzhmb/2026/pdf/claimsClauses_3.webp",
+      "retrievedOn": "2026-10-12",
+      "bytes": 145528,
+      "sha256": "3f567f48e512cb10cd41961d18be8a0968625958f7775c7e8751601e2f3535f2",
+      "publicationObservationContext": "2026年度责任2026-01-01至12-31；图片3，全部目视；未单列发布日",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gzssk.shie.com.cn/comstatics/gzhmb/2026/pdf/claimsClauses_4.webp",
+      "retrievedOn": "2026-10-12",
+      "bytes": 125510,
+      "sha256": "b7725ae501faf1e622bc8b9433f1f80c29f377d0b80150b23e54d1cc12161890",
+      "publicationObservationContext": "2026年度责任2026-01-01至12-31；图片4，全部目视；未单列发布日",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gzssk.shie.com.cn/comstatics/gzhmb/2026/pdf/claimsClauses_5.webp",
+      "retrievedOn": "2026-10-12",
+      "bytes": 129528,
+      "sha256": "a7d5beff36ef759d304a920671a83899b28bd0831d4c1edf0357eaede9850b88",
+      "publicationObservationContext": "2026年度责任2026-01-01至12-31；图片5，全部目视；未单列发布日",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gzssk.shie.com.cn/comstatics/gzhmb/2026/pdf/claimsClauses_6.webp",
+      "retrievedOn": "2026-10-12",
+      "bytes": 159428,
+      "sha256": "776e37f8bc544c8f9eac7242bc4233a6c5ffd091ba997924c4a734fb3df728d0",
+      "publicationObservationContext": "2026年度责任2026-01-01至12-31；图片6，全部目视；未单列发布日",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gzssk.shie.com.cn/comstatics/gzhmb/2026/pdf/claimsClauses_7.webp",
+      "retrievedOn": "2026-10-12",
+      "bytes": 55300,
+      "sha256": "db72c312bde07bfa6e2fadab9749a1f75b7b757a93b8be235e32fb6d4282d83f",
+      "publicationObservationContext": "2026年度责任2026-01-01至12-31；图片7，全部目视；未单列发布日",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gzssk.shie.com.cn/comstatics/gzhmb/2026/pdf/claimsClauses_8.webp",
+      "retrievedOn": "2026-10-12",
+      "bytes": 55772,
+      "sha256": "d722a12f37aac1947341f716f14fe6586efd6d56cf02e13d3b7a22ea6865a042",
+      "publicationObservationContext": "2026年度责任2026-01-01至12-31；图片8，全部目视；未单列发布日",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gzssk.shie.com.cn/comstatics/gzhmb/2026/pdf/claimsClauses_9.webp",
+      "retrievedOn": "2026-10-12",
+      "bytes": 81340,
+      "sha256": "2eb44d247c8b69eee3ee864fdf699bc34942aab5da963c8cec6673f1fcc85503",
+      "publicationObservationContext": "2026年度责任2026-01-01至12-31；图片9，全部目视；未单列发布日",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gzssk.shie.com.cn/comstatics/gzhmb/2026/pdf/claimsClauses_10.webp",
+      "retrievedOn": "2026-10-12",
+      "bytes": 77148,
+      "sha256": "1f1203990248c5697b874cef6c884454625096cc4556c534915c28980ef1932e",
+      "publicationObservationContext": "2026年度责任2026-01-01至12-31；图片10，全部目视；未单列发布日",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://english.nmpa.gov.cn/2024-01/09/c_986552.htm",
+      "retrievedOn": "2026-10-12",
+      "bytes": 10652,
+      "sha256": "0bdf7c259f3776663c68d3e126dcb661c487e795fc369d3a948346ff43e2e81a",
+      "publicationObservationContext": "2024-01-09中国批准",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.pmda.go.jp/files/000265887.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 799642,
+      "sha256": "5683f7f163ba47d09384be3bf5e6dfa9f8549885af79b4c4b8e969449d8c7cca",
+      "publicationObservationContext": "2023-12-19；原RCT表已目视，未借日本支付",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://gfw.report/publications/sp25/data/paper/paper.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1025009,
+      "sha256": "5f6c3647feeab362420a40a6f8a7c4c12966a243fcb21d40ae18bc647d2729c1",
+      "publicationObservationContext": "2025出版；本次采用广州子实验2024-07-10，p4已目视",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.safe.gov.cn/shanghai/2019/1213/1198.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 20527,
+      "sha256": "933be3dc461d973af1d80a9366946701b81ee48d9f4bc8d70939fb9074cd4c73",
+      "publicationObservationContext": "2019-12-13全国人物条件，可有材料超过便利化额度",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.mofcom.gov.cn/zcfb/zgdwjjmywg/art/2020/art_0dd36157a03f494db7571002c7f785b8.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 148041,
+      "sha256": "14171f27d3ce961e344a1daa9fca9742c21b1926180d3bd5502ecf57ded4020b",
+      "publicationObservationContext": "2020-08-28规则／12-01政府转载，当前入口另核2026广东指南",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/BJNR195010004.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 979856,
+      "sha256": "035c430b7411f9bd8bb547aa4d6e0c1ade1e52c89089ba55b553977cf5f831a6",
+      "publicationObservationContext": "共用2026-07-22版本及全1539CHN规则，不另造法条",
+      "scope": "Reviewed in cci-guangzhou-technology-longevity-exit-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.foshan.gov.cn/gzjg/fsylbzj/zwgk/zcfg/content/post_7131139.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 58786,
+      "sha256": "9ac5ee2bead42f045427d573c2c41cf78e7b543a2ea3252197e20aed3aff9c8a",
+      "publicationObservationContext": "Official S1 source;2026 current policy/qualification dates and conditions separately recorded in review.",
+      "scope": "Reviewed in cci-guangzhou-foshan-insurance-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.foshan.gov.cn/attachment/0/604/604003/7131139.wps",
+      "retrievedOn": "2026-10-12",
+      "bytes": 20992,
+      "sha256": "57df06c4c80a71c5cb6627f986c946c7480907a5b14181b40f7fe0fc455e9319",
+      "publicationObservationContext": "Official S2 source;2026 current policy/qualification dates and conditions separately recorded in review.",
+      "scope": "Reviewed in cci-guangzhou-foshan-insurance-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.foshan.gov.cn/gfxwj/szfgfxwj/fssrmzfbgs/content/post_6829451.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 65895,
+      "sha256": "a0392ab752f9daed3f6be5b220e1e042c0eecc09177dd4325cd6f2a781d2600b",
+      "publicationObservationContext": "Official S3 source;2026 current policy/qualification dates and conditions separately recorded in review.",
+      "scope": "Reviewed in cci-guangzhou-foshan-insurance-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.foshan.gov.cn/gzjg/fsylbzj/zwgk/zcfg/content/post_6826716.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 62081,
+      "sha256": "57a2f092744a10fb9742d848fc8f0f5819ac726161c8bb392653261f5423036d",
+      "publicationObservationContext": "Official S4 source;2026 current policy/qualification dates and conditions separately recorded in review.",
+      "scope": "Reviewed in cci-guangzhou-foshan-insurance-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.foshan.gov.cn/zwgk/zcwj/zcjd/bmjd/content/post_7130673.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 15423,
+      "sha256": "b29a470af5409b98f4fc2b8b4e06298f758c6c0da7596683824afb757681b63c",
+      "publicationObservationContext": "Official S5 source;2026 current policy/qualification dates and conditions separately recorded in review.",
+      "scope": "Reviewed in cci-guangzhou-foshan-insurance-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    }
+  ],
+  "webOnlySourceReviews": [
+    {
+      "url": "https://www.scut.edu.cn/new/2025/0609/c443a57598/page.htm",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "Published2025-06-11, actual industrialization observations/campus/outside-buyer scope retained.",
+      "limitation": "Original institution page body reviewed via web, local TLS retrieval failed; no failure response substituted and no transparency deduction."
+    },
+    {
+      "url": "https://www.scut.edu.cn/new/2025/0105/c443a56761/page.htm",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "Published2025-01-05, actual limited product/use observations distinct from future collaboration.",
+      "limitation": "Original institution page body reviewed via web, local TLS retrieval failed; no failure response substituted and no transparency deduction."
+    }
+  ]
+}

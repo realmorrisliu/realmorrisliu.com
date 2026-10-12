@@ -31,6 +31,7 @@ import beijing from "../../docs/data/cci-local-2026-beijing-case.json";
 import shanghai from "../../docs/data/cci-local-2026-shanghai-case.json";
 import jakarta from "../../docs/data/cci-local-2026-jakarta-case.json";
 import nanjing from "../../docs/data/cci-local-2026-nanjing-case.json";
+import guangzhou from "../../docs/data/cci-local-2026-guangzhou-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -66,8 +67,10 @@ const cases = [
   shanghai,
   jakarta,
   nanjing,
+  guangzhou,
 ];
 const caseNamesZh: Record<number, string> = {
+  [guangzhou.candidateId]: "广州功能区",
   [nanjing.candidateId]: "南京功能区",
   [jakarta.candidateId]: "雅加达功能区",
   [singapore.candidateId]: "新加坡",
@@ -195,6 +198,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [guangzhou.candidateId]: [
+    zh
+      ? "广州 PCS／GSS／ISR／RES 条件性 60、TEC 条件性 80、OPT 条件性 40；MED／LON 未定，数学域 45—70，无总分中心。真实防护、资源、产业化和居民服务与住宅返涌、监管漏检及通道限制共同判读。本功能区含部分佛山；白云机场、番禺／南沙等参考点在区外，行政市总量与各市医保不能直接套给整个功能区。"
+      : "Guangzhou has conditional 60 judgments for PCS, GSS, ISR and RES, 80 for TEC and 40 for OPT. MED and LON remain unresolved: the mathematical domain is 45–70, without a total centre. Actual protection, resources, industrialization and resident services are read alongside residential flooding, missed enforcement and channel restrictions. The FUA includes part of Foshan; Baiyun airport, Panyu and Nansha references lie outside. Administrative totals and separate municipal insurance rules do not apply automatically to the entire FUA.",
+    zh
+      ? "2026 水表 225 份含区外样本，不是全区家庭水质率；旧临床观察不因 2026 发表变成当前结果。佛山赴广州有转诊／备案及支付分流，名义比例不是全账单报销。长寿全国给药与当地处方不证明本区输注；正式穗岁康门诊药责任、免赔和空的指定创新清单已核，不能默认两药低免赔或门诊监护覆盖，也不默认普通医保人已买商保。必要假设拒绝即撤回对应维度，不授予入围或排除资格。"
+      : "The 225 records in the 2026 water table include outside-area samples, not a household compliance rate. Publication in 2026 does not make older clinical observations current outcomes. Foshan-to-Guangzhou referrals and registration change payment; nominal percentages do not cover the full bill. National longevity treatment and local prescriptions do not prove local infusions. Formal supplementary-policy medicine terms, deductibles and an empty specified-innovation list were reviewed: neither low-deductible coverage for both antibodies, outpatient monitoring nor ordinary residents' supplementary enrollment is presumed. Rejecting necessary assumptions withdraws the relevant judgment, without inclusion or exclusion qualification.",
+  ],
   [nanjing.candidateId]: [
     zh
       ? "南京 PCS／GSS／ISR／RES 条件性 60，LON／OPT 条件性 40，TEC 条件性 80；MED 未定，数学域 49—64，无总分中心。实际纳凉、泵闸、社区与资源交付同住宅火灾失效、供水短板一起判读。浦口、溧水、高淳等行政名称不自动归入本功能区；全部目录关联仅安排研究顺序，不授予入围名额。"
@@ -317,6 +328,10 @@ const caseNotes: Record<number, string[]> = {
   ],
 };
 const caseReviewLinks: Record<number, { href: string; label: string }> = {
+  [guangzhou.candidateId]: {
+    href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-guangzhou-resources-medicine-review.md",
+    label: zh ? "资源与医疗复核" : "Resources and healthcare review",
+  },
   [nanjing.candidateId]: {
     href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-nanjing-technology-longevity-exit-review.md",
     label: zh ? "临床、保险与退出核查" : "Clinical, insurance and exit review",

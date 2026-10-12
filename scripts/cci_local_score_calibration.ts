@@ -73,6 +73,7 @@ const realCases = [
   "shanghai",
   "jakarta",
   "nanjing",
+  "guangzhou",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -137,6 +138,7 @@ const [
   shanghai,
   jakarta,
   nanjing,
+  guangzhou,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -1181,3 +1183,86 @@ console.log({
     jakarta: { partial: total(jakarta) },
   },
 });
+
+assert.deepEqual(total(guangzhou), { center: null, lower: 45, upper: 70 });
+assert(!Object.hasOwn(guangzhou, "MED") && !Object.hasOwn(guangzhou, "LON"));
+for (const [dimension, lower, upper] of [
+  ["PCS", 36, 76],
+  ["GSS", 36, 76],
+  ["ISR", 36, 76],
+  ["RES", 39, 74],
+  ["TEC", 37, 72],
+  ["OPT", 41, 76],
+] as const) {
+  const withdrawn = { ...guangzhou };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+const guangzhouCase = realCases[21];
+for (const review of guangzhouCase.focusedReviews)
+  assert.equal(review.sha256, digest(`docs/${review.path}`));
+assert.equal(
+  guangzhouCase.researchPriority.sourceSha256,
+  digest(`docs/data/${guangzhouCase.researchPriority.source}`)
+);
+assert.equal(guangzhouCase.researchPriority.recordAssociations, 64270);
+assert.equal(
+  guangzhouCase.sharedLegalPath.sourceSha256,
+  digest("docs/data/cci-legal-mobility-rules.json")
+);
+assert.equal(guangzhouCase.referenceBoundaryCheck.referencePoints.length, 16);
+for (const [label, expected] of [
+  ["Foshan urban approximate reference", [9711]],
+  ["Baiyun airport approximate reference", [9741]],
+  ["Panyu urban approximate reference", [9716]],
+] as const)
+  assert.deepEqual(
+    guangzhouCase.referenceBoundaryCheck.referencePoints.find(
+      (point: { label: string }) => point.label === label
+    )?.fuaMatches,
+    expected
+  );
+assert.equal(guangzhouCase.resourceChecks.waterSampleEnumeratedSerials, 225);
+assert.equal(guangzhouCase.resourceChecks.waterTableRowsAreAllFuaHouseholds, false);
+assert.equal(
+  guangzhouCase.clinicalChecks.promisePrePostPatients.reduce(
+    (sum: number, value: number) => sum + value,
+    0
+  ),
+  guangzhouCase.clinicalChecks.promiseEligiblePatients
+);
+assert.equal(
+  guangzhouCase.clinicalChecks.promiseThrombolysedPatients.reduce(
+    (sum: number, value: number) => sum + value,
+    0
+  ),
+  1304
+);
+assert.equal(guangzhouCase.clinicalChecks.promiseCentres, 35);
+assert.equal(guangzhouCase.clinicalChecks.promiseTableTextConflictRetained, true);
+assert.equal(guangzhouCase.clinicalChecks.dipMeansAre2026MedianBills, false);
+assert.equal(guangzhouCase.clinicalChecks.sailNationalPatientsAreGuangzhouCounts, false);
+assert.equal(guangzhouCase.clinicalChecks.sailFigureCdrExternalComparison, "ns");
+assert.equal(guangzhouCase.clinicalChecks.localPrescriptionEstablishesInfusion, false);
+assert.equal(guangzhouCase.clinicalChecks.sskFormal2026Images, 11);
+assert.equal(guangzhouCase.clinicalChecks.sskSpecifiedInnovationListCurrentlyEmpty, true);
+assert.equal(guangzhouCase.clinicalChecks.sskTwoAntibodiesLowDeductibleVerified, false);
+assert.equal(
+  guangzhouCase.clinicalChecks.usualBasicInsurancePresumesSupplementaryEnrollment,
+  false
+);
+assert.equal(guangzhouCase.mobilityChecks.airportInside9711, false);
+assert.equal(guangzhouCase.mobilityChecks.cloudSamplesAreHouseholdRate, false);
+assert.equal(guangzhouCase.sourceSnapshots.length, 82);
+assert.equal(guangzhouCase.webOnlySourceReviews.length, 2);
+assert(
+  guangzhouCase.webOnlySourceReviews.every(
+    (source: { bytes: null; sha256: null }) => source.bytes === null && source.sha256 === null
+  )
+);
+const guangzhouPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (row: { efua_id: string }) => row.efua_id === "9711"
+);
+assert(guangzhouPosition);
+assert.equal(guangzhouPosition.bestPosition, 1);
+assert.equal(guangzhouPosition.worstPosition, rankAudit.candidateCount);
