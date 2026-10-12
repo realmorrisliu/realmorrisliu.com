@@ -21,6 +21,7 @@ import paris from "../../docs/data/cci-local-2026-paris-case.json";
 import sanJose from "../../docs/data/cci-local-2026-san-jose-case.json";
 import losAngeles from "../../docs/data/cci-local-2026-los-angeles-case.json";
 import osakaKyoto from "../../docs/data/cci-local-2026-osaka-kyoto-case.json";
+import boston from "../../docs/data/cci-local-2026-boston-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -47,6 +48,7 @@ const cases = [
   sanJose,
   losAngeles,
   osakaKyoto,
+  boston,
 ];
 const caseNamesZh: Record<number, string> = {
   [singapore.candidateId]: "新加坡",
@@ -61,6 +63,7 @@ const caseNamesZh: Record<number, string> = {
   [sanJose.candidateId]: "源名 San Jose 的功能区",
   [losAngeles.candidateId]: "洛杉矶功能区",
   [osakaKyoto.candidateId]: "大阪—京都功能区",
+  [boston.candidateId]: "波士顿功能区",
 };
 const screening = coverage.local2026Screening;
 if (
@@ -276,8 +279,8 @@ const rows = [
     <p>
       {
         zh
-          ? "苏黎世条件性总分为 58。DO-HEALTH 的主要临床终点与后续生物时钟分析分开判读，并保留跌倒分析的可能益处；拒绝路径代表性假设则 LON 未定、无总分中心。铁路、航空和迁居资格支持退出路径，但移动紧急呼叫备电要求到 2031 年才落实，不能计作当前 OPT 80。历史心外科质量反证也不自动变成 2026 当前失效率。新加坡／赫尔辛基的条件性 TEC 80 不证明其他维度高档或跨研究者一致性。"
-          : "Zurich's conditional total is 58. DO-HEALTH's primary clinical outcomes are distinguished from later clock analysis, while possible benefit in the fall analysis is retained. Rejecting pathway representativeness leaves LON unresolved and removes the total's centre. Rail, aviation and residence rights support exit channels, but mobile emergency-call backup requirements apply from 2031; they do not establish current OPT 80. Historical cardiac-surgery failures are not 2026 failure rates. Singapore's and Helsinki's conditional TEC 80 judgments establish neither higher tiers elsewhere nor inter-reviewer consistency."
+          ? "苏黎世条件性总分为 58。DO-HEALTH 的主要临床终点与后续生物时钟分析分开判读，并保留跌倒分析的可能益处；拒绝路径代表性假设则 LON 未定、无总分中心。铁路、航空和迁居资格支持退出路径，但移动紧急呼叫备电要求到 2031 年才落实，不能计作当前 OPT 80。历史心外科质量反证也不自动变成 2026 当前失效率。新加坡／赫尔辛基／东京的条件性 TEC 80 不证明其他维度高档或跨研究者一致性。"
+          : "Zurich's conditional total is 58. DO-HEALTH's primary clinical outcomes are distinguished from later clock analysis, while possible benefit in the fall analysis is retained. Rejecting pathway representativeness leaves LON unresolved and removes the total's centre. Rail, aviation and residence rights support exit channels, but mobile emergency-call backup requirements apply from 2031; they do not establish current OPT 80. Historical cardiac-surgery failures are not 2026 failure rates. Singapore's, Helsinki's and Tokyo's conditional TEC 80 judgments establish neither higher tiers elsewhere nor inter-reviewer consistency."
       }
     </p>
     <p>
@@ -385,8 +388,8 @@ const rows = [
     <p>
       {
         zh
-          ? "东京八维条件性判断均为 60，原权重总分为 60。当地实际受害表、狭义全国暴力统计和截止日前部分导弹事件的航船损害通报，与运作中的缓解机制一并支持 GSS；全国统计不变成本地零风险，执法人数不变成受害人数。延续至截止日和全功能区适配仍是假设，撤回 GSS 后无中心、数学域 51—66。实际退出通道亦有资格与负担条件；撤回 OPT、RES 或 LON 后无中心、域 54—64。条件性 60 不证明优于其他案例或全球入围。"
-          : "Tokyo has eight conditional 60 judgments, giving a total of 60 under the original weights. Local victim counts, narrowly defined national violence statistics and aircraft or ship damage notices for selected missile events before the cutoff support GSS alongside operating mitigation. National statistics do not establish zero local risk, and detected persons are not victims. Temporal continuity and whole-FUA applicability remain assumptions; withdrawing GSS removes the centre and gives a mathematical domain of 51–66. Exit channels also have eligibility and affordability conditions; withdrawing OPT, RES or LON removes the centre and gives 54–64. Conditional 60 establishes neither superiority over other cases nor global qualification."
+          ? "东京 TEC 复核为条件性 80，其余七维 60，条件总分 62。两机构持续产出、实际许可与产品化、多用途居民使用、行政办理改善及已运行辅助共同支持高档；合作下降、设备／卡及代理办理限制保留，不因网络调查降低高龄配额或未用 AI 自动扣分。行政东京不等于完整功能区，代表性和通常居民必要使用可行仍是假设；若缓解后瓶颈仍重要可重审 TEC 60，拒绝 TEC 假设则无中心、域 54—64。GSS 实际影响依据不变，撤回 GSS／MED 为 53—68，OPT／RES／LON 为 56—66，均无中心；不证明全球入围。"
+          : "Tokyo's TEC is reassessed as conditional 80, with seven other dimensions at 60 and a total of 62. Sustained output from two institutions, actual licensing and products, multi-purpose resident use, improved administrative processing and operating assistance jointly support the higher tier. Falling collaboration counts and device/card/proxy constraints remain. Survey quotas reducing older-age representation or AI non-use do not automatically lower capability. Administrative Tokyo is not the whole FUA; representativeness and feasible ordinary necessary use remain assumptions. Material barriers after mitigation could support TEC 60; rejecting TEC assumptions removes the centre, giving 54–64. GSS impact evidence is unchanged. Withdrawing GSS or MED gives 53–68; withdrawing OPT, RES or LON gives 56–66. None proves global qualification."
       }
     </p>
     <p>
@@ -441,6 +444,18 @@ const rows = [
           ? "源名 San Jose 的功能区有 ISR／MED／TEC／OPT 四项条件性 60，PCS／GSS／RES／LON 未定，无总分中心。旧金山与圣何塞近似参考点均落在同一冻结候选；这不验证完整市域或治疗地点，也不产生两个名额。实际医院服务修复、许可及交通，与数字外借终止一并判读；旧统计图不冒充当前扩散。准备开药、带过时文字的可获得说明及外地患者研究尚不足以证明当前本地长寿交付，零公开非设施理赔信号也不证明无服务。四项数学域 30—80；撤回 MED／ISR 为 21—86，TEC／OPT 为 24—84。普通居民获得、负担、持续及全区触达仍是假设；这些域不证明入围或排除。"
           : "The source-named San Jose FUA has conditional 60 judgments for ISR, MED, TEC and OPT; PCS, GSS, RES and LON remain unknown, with no total centre. Approximate San Francisco and San Jose reference points fall in the same frozen candidate; this verifies neither complete municipal footprints nor treatment locations and creates no separate slots. Actual hospital restoration, licensing and transport are reviewed alongside discontinued digital lending; older charts are not current diffusion. Planned prescribing, availability wording with obsolete information and nonlocal patient studies do not establish current local longevity delivery. Zero published nonfacility claims signals do not establish absent service. The mathematical domain is 30–80; withdrawing MED or ISR gives 21–86, and TEC or OPT gives 24–84. Ordinary access, affordability, continuity and whole-area reach remain assumptions; these domains prove neither qualification nor exclusion."
       }
+    </p>
+    <p>
+      {
+        zh
+          ? "波士顿功能区新增 PCS／ISR／LON／TEC／OPT 五项条件性 60，GSS／RES／MED 未定；无中心、数学域 36—76。实际流程改进、科研许可、临床采用与接驳支持有限能力，居民数字障碍、招聘压力及治疗风险保留。区域水合格不能覆盖高风险含铅管住户的检测反证，换管缓解也不等于全区风险已解除；单病临床采用不填常规医疗。正文称 10 月 9 日的数字交付页，原元数据 10 月 11 日晚于截止，未计入评分。空间、延续、普通居民通常可得／可负担与缓解后瓶颈重要性仍须假设；五个近似点不验证完整边界或实际治疗地点。"
+          : "Boston adds conditional 60 judgments for PCS, ISR, LON, TEC and OPT; GSS, RES and MED remain unknown, without a centre and with a mathematical domain of 36–76. Actual workflow improvements, licensing, clinical adoption and ground access support scoped capability; digital barriers, staffing pressures and treatment risks remain. Regional water compliance does not erase targeted high-risk lead-pipe household findings, and replacements do not prove area-wide resolution. Disease-specific adoption does not fill routine medicine. A digital-delivery page dated 9 October in its body has 11 October publication metadata, after the cutoff, and is excluded. Spatial applicability, continuity, ordinary access/affordability and material constraints after mitigation remain assumptions; five approximate points verify neither whole boundaries nor treatment sites."
+      }
+      {" "}
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-boston-case.md"
+        >{zh ? "波士顿案例与原件" : "Boston case and sources"}</a
+      >
     </p>
     <p>
       {

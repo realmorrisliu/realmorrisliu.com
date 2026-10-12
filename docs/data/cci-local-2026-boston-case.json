@@ -1,0 +1,255 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 7347,
+  "name": "Boston",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "evidenceReview": "cci-local-2026-boston-case.md",
+  "expectedConditionalTotal": null,
+  "retrievedOn": "2026-10-12",
+  "limitations": "Eight dimensions and31subpillars reviewed, not fully measured. Five conditional60 judgments; GSS/RES/MED unknown. Scoped institutional, municipal and operator results require reversible resident/FUA/time assumptions. Missingness not penalised; no ranking, exclusion bound, imputation, healthy-person longevity benefit or inherited historic score.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Implemented coastal facilities and usable heat-cooling entrances support major protection; effect and whole-area reach remain unmeasured. Plans are not completed works.",
+      "assumption": "Reviewed protection usually works, persists and reasonably applies to the ordinary resident and FUA; unreviewed hazards do not represent broader unmitigated failure. Reject necessary effectiveness, reach or representativeness assumptions to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "unresolved"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "No historical or retained preliminary point assignments do not establish low organised-violence impact. Complete regional and strategic consequences remain unresolved.",
+      "assumption": "No justified whole-dimension anchor. Do not substitute ordinary crime, absent records or national context.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Actual records-service closure improvements, implemented workflows, completed projects and delivered digital assistance support execution. Police exclusions, fees, group gaps and unmeasured crisis recovery remain limitations.",
+      "assumption": "Major institutions usually work for ordinary residents; scoped execution/mitigation reasonably represents the FUA and persists. Reports with unverified first publication require a withdrawable pre-cutoff availability assumption. Reject continuity, representativeness or adequacy to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "unresolved"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "Regional water delivery coexists with targeted high-risk Boston household lead results and actual inspections/replacements. Four of 33 selected samples over the action level are not a whole-population harm rate. Other resources and affordability remain unresolved.",
+      "assumption": "No whole-dimension anchor: neither regional compliance nor one targeted exposure result settles food, energy, supply-chain and ordinary-resident burdens. Unverified first-publication eligibility remains conditional.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "partial",
+        "food": "unresolved",
+        "energy": "unresolved",
+        "supply_chain": "context"
+      }
+    },
+    {
+      "id": "MED",
+      "score": null,
+      "rationale": "Real specialist anti-amyloid care and MRI safety observations support a narrow pathway. They do not establish ordinary routine quality, necessary-care affordability, whole-area access or pressure continuity.",
+      "assumption": "No justified whole-dimension anchor. Do not fill general medicine from specialist adoption, hospital reputation or research capacity.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "unresolved",
+        "specialist_capacity": "partial",
+        "system_continuity": "unresolved"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "Credible human/regulatory evidence connects with the provider ATP account of over 1000 patients receiving lecanemab/donanemab, plus a scoped retrospective safety cohort. Counts are not local-resident prevalence, all-drug patient splits, healthy-person lifespan gains or proof of complete safety adherence.",
+      "assumption": "Accept local-delivery inference, limited disease-pathway representativeness, continuing appropriate monitoring including updated MRI requirements, and ordinary eligible residents generally obtaining and affording suitable care. Author affiliations and approximate reference points are not treatment coordinates; reject any necessary assumption to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "MIT actual licensing/startup activity and local digital use/assistance establish scoped capability alongside actual staffing, affordability and skills constraints. Delivered devices and facilities are retained; post-cutoff October11 publication totals are excluded.",
+      "assumption": "Reviewed constraints remain material after delivered mitigation and reasonably apply to ordinary residents/FUA through the cutoff. This is a provisional constraints/representativeness judgment, not a cap based on unknown high-tier evidence. Reject necessary applicability/continuity to restore unknown; stronger multi-producer capacity, broad usability and mitigation could support 80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Actual Logan ground access, a limited remote-terminal pilot and public communications connect with shared conditional US-citizen residence-application and account-transfer paths. Trips are not unique residents or independent airport alternatives.",
+      "assumption": "Ordinary residents generally have suitable eligibility, funds, accounts and usable accessible communications; normal pathways continue across the FUA. June pilot opening does not prove every service still operates in October. Reject any necessary usability, affordability, continuity or spatial assumption to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "referencePoints": [
+      {
+        "label": "Boston approximate reference",
+        "longitude": -71.0589,
+        "latitude": 42.3601,
+        "fuaMatches": [7347]
+      },
+      {
+        "label": "Cambridge approximate reference",
+        "longitude": -71.1097,
+        "latitude": 42.3736,
+        "fuaMatches": [7347]
+      },
+      {
+        "label": "MIT approximate campus reference",
+        "longitude": -71.092,
+        "latitude": 42.3594,
+        "fuaMatches": [7347]
+      },
+      {
+        "label": "MGH approximate hospital reference",
+        "longitude": -71.0686,
+        "latitude": 42.3627,
+        "fuaMatches": [7347]
+      },
+      {
+        "label": "Boston Logan approximate reference",
+        "longitude": -71.0106,
+        "latitude": 42.3656,
+        "fuaMatches": [7347]
+      }
+    ],
+    "meaning": "Approximate reference points only, not full municipal or provider footprints, actual treatment sites or resident coverage.",
+    "method": "Existing checksum-validated full GHS-FUA load; EPSG4326 to ESRI54009 always_xy point intersection.",
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d"
+  },
+  "sharedLegalPath": {
+    "source": "cci-legal-mobility-rules.json",
+    "sourceSha256": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
+    "rule": "section41_citizen_onshore_application_germany",
+    "meaning": "UScitizen conditional application only; purpose, resources, approval and costs remain, not residence/work entitlement."
+  },
+  "sourceSnapshots": [
+    {
+      "url": "https://dspace.mit.edu/server/api/core/bitstreams/5e900bdc-6594-498f-9593-e7a0d783b01f/content",
+      "publishedOn": "2025-08-15",
+      "retrievedOn": "2026-10-12",
+      "bytes": 911817,
+      "sha256": "3d4fffc232d6e416675646afdf90a0d57f4d95dc7a22629ee0d502d86dfbfb75",
+      "scope": "Actual administrative FY2025 ledger; original MD5 matches repository, not designed-report chart counts."
+    },
+    {
+      "url": "https://dspace.mit.edu/server/api/core/items/5be27900-1427-4688-9759-a2cca70ee275",
+      "publishedOn": "2025-08-15",
+      "retrievedOn": "2026-10-12",
+      "bytes": 4841,
+      "sha256": "42f381dbec0c8fd4fb67aefa900e7507413427841a5434bed809f75d708cd444",
+      "scope": "Official accessioned/available timestamps separated from issued FYend June30."
+    },
+    {
+      "url": "https://www.boston.gov/sites/default/files/file/2025/08/City%20of%20Boston%20-%20Municipal%20Digital%20Equity%20Plan%20-%2020250625.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 4871449,
+      "sha256": "e3f904886057404f5fb7770a396b3212f7aa980f00d7e6d3a0bd4d237a7d9a0a",
+      "scope": "Printed pages8/64/75: actual versus ongoing device delivery, distinct representative/community survey denominators; source eligibility before cutoff is assumed, URL month alone not proof."
+    },
+    {
+      "url": "https://www.boston.gov/news/city-boston-shares-preparations-protect-residents-and-visitors-against-extreme-heat",
+      "publishedOn": "2026-06-26",
+      "retrievedOn": "2026-10-12",
+      "bytes": 80632,
+      "sha256": "a43113d8f919cc7acffcd3a1e43f09ed2ca5ae1139663e6f318bffc5198f6387",
+      "scope": "Usable cooling entrances/hours and conditional transport; no whole-group effects or outage guarantee."
+    },
+    {
+      "url": "https://www.boston.gov/departments/climate-resilience/coastal-resilience-implementation",
+      "publishedOn": "2024-08-01",
+      "retrievedOn": "2026-10-12",
+      "bytes": 137511,
+      "sha256": "2a069885c2554b5a07650121a46d4f146b607e8d3b3a1a9d18378f67923cf3f5",
+      "scope": "Built/ongoing/future separated; metadata dates conflict but both before cutoff, modified Oct7; no historical-byte archive."
+    },
+    {
+      "url": "https://content.boston.gov/sites/default/files/file/2026/04/Annual%20Report%202025_1.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 796291,
+      "sha256": "a70df93de56aac6f48d91f3a99105453469c9b3dcec901a67910d3682b2980b1",
+      "scope": "Actual2025 closure/backlog/workflow, excludes police in relevant rates; exact first publication not independently verified."
+    },
+    {
+      "url": "https://www.mwra.com/your-water-system/drinking-water-quality/annual-water-quality-test-results-main/2025full",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 371764,
+      "sha256": "3902f5c171ea5cfaed7e3c9d3eb71a84a54570e9a512e01e1108052831bbf311",
+      "scope": "Regional supply versus targeted high-risk Boston household lead sample and actual replacements; first-publication availability conditional."
+    },
+    {
+      "url": "https://news.massgeneralbrigham.org/en/hope-for-patients-with-alzheimers-disease",
+      "publishedOn": "2026-10-09",
+      "retrievedOn": "2026-10-12",
+      "bytes": 24222,
+      "sha256": "e08a45cb8787fcdd55ff9d56bf3e50cdbdca1fea05da1e464d67536f76ad74c5",
+      "scope": "Published-time Oct9, modified-time Oct8; ATP actual clinical treatment account, not FUA residents or treatment coordinates."
+    },
+    {
+      "url": "https://www.prnewswire.com/news-releases/massport-opens-americas-first-remote-airport-terminal-powered-by-sita-302787251.html",
+      "publishedOn": "2026-06-01",
+      "retrievedOn": "2026-10-12",
+      "bytes": 210261,
+      "sha256": "8e887b6b1c9f8b52222955e82ae6dddb395e8c08a94ab413b6c4583a9dd9f481",
+      "scope": "Massport/SITA first-party release: actual opening and2025shuttle trips, pilot and future expansion distinguished."
+    }
+  ],
+  "excludedEvidence": [
+    {
+      "url": "https://www.boston.gov/news/celebrating-digital-inclusion-week-2026-keeping-boston-connected",
+      "bodyDate": "2026-10-09",
+      "declaredPublishedOn": "2026-10-11",
+      "declaredModifiedOn": "2026-10-11",
+      "usedForScoring": false,
+      "reason": "Post-cutoff published/modified metadata; no pre-cutoff version verified. Body date not sufficient."
+    }
+  ],
+  "clinicalSafetyReview": {
+    "source": "https://pubmed.ncbi.nlm.nih.gov/42732414/",
+    "publishedOn": "2026-08-13",
+    "observationWindow": ["2023-12-04", "2025-10-28"],
+    "identifiedPatients": 324,
+    "includedPatients": 318,
+    "ariaPatients": 98,
+    "scope": "Valid primary abstract only; no full article/site/exclusion audit or population failure rate. Downloaded challenge HTML rejected as original."
+  }
+}

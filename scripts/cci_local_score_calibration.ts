@@ -64,6 +64,7 @@ const realCases = [
   "san-jose",
   "los-angeles",
   "osaka-kyoto",
+  "boston",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -119,6 +120,7 @@ const [
   sanJose,
   losAngeles,
   osakaKyoto,
+  boston,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -234,7 +236,7 @@ assert.equal(total(helsinki).center, 62);
 assert.equal(total({ ...helsinki, MED: 40 }).center, 59);
 assert.equal(total({ ...helsinki, LON: 40 }).center, 60);
 assert.equal(total({ ...helsinki, TEC: 60 }).center, 60);
-for (const caseInput of [realCases[1], realCases[2]]) {
+for (const caseInput of [realCases[1], realCases[2], realCases[5]]) {
   assert.equal(caseInput.technologyReview.sha256, digest(caseInput.technologyReview.path));
 }
 const helsinkiWithoutLon: Partial<Record<DimensionId, number>> = { ...helsinki };
@@ -266,34 +268,34 @@ assert.deepEqual(total({ ...gaza, MED: 40 }), { center: null, lower: 17, upper: 
 const gazaWithoutMed = { ...gaza };
 delete gazaWithoutMed.MED;
 assert.deepEqual(total(gazaWithoutMed), { center: null, lower: 11, upper: 71 });
-assert.deepEqual(total(tokyo), { center: 60, lower: 60, upper: 60 });
+assert.deepEqual(total(tokyo), { center: 62, lower: 62, upper: 62 });
 assert.equal(tokyo.GSS, 60);
 const tokyoWithoutGss = { ...tokyo };
 delete tokyoWithoutGss.GSS;
-assert.deepEqual(total(tokyoWithoutGss), { center: null, lower: 51, upper: 66 });
-assert.equal(total({ ...tokyo, GSS: 40 }).center, 57);
+assert.deepEqual(total(tokyoWithoutGss), { center: null, lower: 53, upper: 68 });
+assert.equal(total({ ...tokyo, GSS: 40 }).center, 59);
 assert.equal(tokyo.OPT, 60);
 const tokyoWithoutOpt = { ...tokyo };
 delete tokyoWithoutOpt.OPT;
-assert.deepEqual(total(tokyoWithoutOpt), { center: null, lower: 54, upper: 64 });
+assert.deepEqual(total(tokyoWithoutOpt), { center: null, lower: 56, upper: 66 });
 assert.equal(tokyo.RES, 60);
 const tokyoWithoutRes = { ...tokyo };
 delete tokyoWithoutRes.RES;
-assert.deepEqual(total(tokyoWithoutRes), { center: null, lower: 54, upper: 64 });
-assert.deepEqual(total({ ...tokyo, TEC: 80 }), { center: 62, lower: 62, upper: 62 });
+assert.deepEqual(total(tokyoWithoutRes), { center: null, lower: 56, upper: 66 });
+assert.deepEqual(total({ ...tokyo, TEC: 60 }), { center: 60, lower: 60, upper: 60 });
 const tokyoWithoutLon = { ...tokyo };
 delete tokyoWithoutLon.LON;
-assert.deepEqual(total(tokyoWithoutLon), { center: null, lower: 54, upper: 64 });
+assert.deepEqual(total(tokyoWithoutLon), { center: null, lower: 56, upper: 66 });
 const tokyoWithoutMed = { ...tokyo };
 delete tokyoWithoutMed.MED;
-assert.deepEqual(total(tokyoWithoutMed), { center: null, lower: 51, upper: 66 });
+assert.deepEqual(total(tokyoWithoutMed), { center: null, lower: 53, upper: 68 });
 const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
   (c: { efua_id: string }) => c.efua_id === "5129"
 );
 assert(tokyoPosition);
-assert.equal(tokyoPosition.center, 60);
-assert.equal(tokyoPosition.bestPosition, 2);
-assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 3);
+assert.equal(tokyoPosition.center, 62);
+assert.equal(tokyoPosition.bestPosition, 1);
+assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 4);
 assert.deepEqual(total(washington), { center: null, lower: 49, upper: 64 });
 assert.equal(washington.RES, 40);
 assert.equal(washington.OPT, 60);
@@ -544,6 +546,36 @@ assert.equal(
   realCases[11].sharedLegalPath.sourceSha256,
   digest("docs/data/cci-legal-mobility-rules.json")
 );
+assert.deepEqual(total(boston), { center: null, lower: 36, upper: 76 });
+for (const dimension of ["GSS", "RES", "MED"] as const) {
+  assert.equal(boston[dimension], undefined);
+}
+for (const [dimension, lower, upper] of [
+  ["PCS", 27, 82],
+  ["ISR", 27, 82],
+  ["LON", 30, 80],
+  ["TEC", 30, 80],
+  ["OPT", 30, 80],
+] as const) {
+  const withdrawn = { ...boston };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...boston, TEC: 80 }), { center: null, lower: 38, upper: 78 });
+assert.equal(realCases[12].excludedEvidence[0].usedForScoring, false);
+assert(realCases[12].excludedEvidence[0].declaredPublishedOn > realCases[12].evidenceCutoff);
+assert.equal(realCases[12].clinicalSafetyReview.includedPatients, 318);
+assert.equal(realCases[12].referenceBoundaryCheck.referencePoints.length, 5);
+for (const point of realCases[12].referenceBoundaryCheck.referencePoints) {
+  assert.deepEqual(point.fuaMatches, [7347]);
+}
+assert.equal(
+  realCases[12].sharedLegalPath.sourceSha256,
+  digest("docs/data/cci-legal-mobility-rules.json")
+);
+const tokyoWithoutTec = { ...tokyo };
+delete tokyoWithoutTec.TEC;
+assert.deepEqual(total(tokyoWithoutTec), { center: null, lower: 54, upper: 64 });
 const exitSensitivity = { ...weights, MED: 10, OPT: 15 };
 assert.equal(total(londonCounterfactual).center, 57);
 assert.equal(total(londonCounterfactual, exitSensitivity).center, 59);
@@ -611,5 +643,6 @@ console.log({
     sanJose: { partial: total(sanJose) },
     losAngeles: { partial: total(losAngeles) },
     osakaKyoto: { partial: total(osakaKyoto) },
+    boston: { partial: total(boston) },
   },
 });

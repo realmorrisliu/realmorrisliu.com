@@ -123,10 +123,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 12,
+    "conditionalCaseCount": 13,
     "completeConditionalCaseCount": 5,
-    "partialCaseCount": 7,
-    "unassessedCount": 9019,
+    "partialCaseCount": 8,
+    "unassessedCount": 9018,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -233,7 +233,7 @@
       "provenanceSha256": "8e7e4269e7a6ad2cfc1918b7fd8f64de5bc2fbd497a75d90f9385396bbb1264d"
     },
     "cci-local-2026-london-case.json": {
-      "sha256": "2662a838543a5e2eaba6b76b95cf26e1d4e8d5d2b1620885f2b11580b4e0c10f",
+      "sha256": "ed58128d31002e33ae894139e366a1f4ffa15b07d47adbbd8b2217f869232ab0",
       "provenance": "cci-local-2026-london-case.md",
       "provenanceSha256": "5f9be925cb5f53de2d65e3e245270a5833489bee4ae7b21540f68c99e5f7b169"
     },
@@ -253,9 +253,9 @@
       "provenanceSha256": "14c2b2a2ea13119a9931d365e9eea5fec2ee797a9c34af79c4578b1aada3c7d4"
     },
     "cci-local-2026-tokyo-case.json": {
-      "sha256": "d93116cd610a1ef5235457f0a4da85b736d936a53fbd4b614cffce83b64789dd",
+      "sha256": "4d2985d5c11493cf91b9b9a5504869507801eb1dcbd32ffa137c4ebf1ddf64e1",
       "provenance": "cci-local-2026-tokyo-case.md",
-      "provenanceSha256": "371f7d122d00fa25f4c44f69505a0e3def924e6700329cdc110495aa1851582a"
+      "provenanceSha256": "c25c243796f5e32dbdcbbc7a3d6a1699c1b056e8e1dd93ba9710e027bf5037cc"
     },
     "cci-local-2026-washington-case.json": {
       "sha256": "bd82d9df52280b15bf54594d553849f50a69ff055354aa4b0d479f982f2a6e17",
@@ -286,8 +286,13 @@
       "sha256": "32fb18aea57304ef0af801583e68f77cb23519b05ad911e689d1548dfca5a7a2",
       "provenance": "cci-local-2026-osaka-kyoto-case.md",
       "provenanceSha256": "a075ed4137cf939b94dd6eaa0e1cdf7ff507467355ded5fd63546c45af703b4d"
+    },
+    "cci-local-2026-boston-case.json": {
+      "sha256": "5763d9510b8f89ac36e58515256abcfa3137902e364d9bc91b217309fc044465",
+      "provenance": "cci-local-2026-boston-case.md",
+      "provenanceSha256": "e62d58c2d8fb6dd372d4f8625116037edb05bc67b9851b170b2d7fac8098a6d6"
     }
   },
-  "scriptSha256": "a72bf1232944606ede50424fe2775746d654d4f92242a625de3e456f0ab7894a",
-  "csvSha256": "3b33ec5d8c8ed85310bd211f73ae3099b35c9a0209629e3d8d00802ac85efd32"
+  "scriptSha256": "bcb56805481d581ba0ec0ab78ab026b499376d834ef5e3d40b97114145cdf895",
+  "csvSha256": "80990fd045fc94ff921e89e425240f1f23f96d4decd62f37ceea696f184cbf4d"
 }
