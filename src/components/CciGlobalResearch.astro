@@ -182,6 +182,120 @@ const rows = [
       : `${n(counts.OPT.airport_directory_points_only)} candidates contain airport directory points; ${n(airports.candidatesWithScheduledNonclosedPoints)} have scheduled-service and nonclosed flags. A directory does not establish operations or resident access; outside airports may also serve residents. Separately, ${n(legal.conditional_legal_path_under_citizenship_assumption)} functional areas have reviewed German or French legal conditions under the local-citizenship assumption: conditional residence rights and an onshore application procedure for eight nationalities are distinct. Application is not approved residence or work; employment, age, resources and insurance conditions remain. ${n(legal.no_reviewed_path_not_no_right)} remain unreviewed, which does not mean denial. Residence does not establish citizenship; legal paths do not establish affordability or crisis operation. No complete OPT score follows.`,
   ],
 ] as const;
+const caseNotes: Record<number, string[]> = {
+  [singapore.candidateId]: [
+    zh
+      ? "新加坡 TEC 复核为条件性 80：NRF 多机构实际转化、IMDA 企业／工人采用与居民数字使用、已完成辅助交易共同支持高档。不同分母不合并；技能和融资短板保留，若在缓解后仍构成重要限制，可重审 60。多生产者延续、通常居民广泛可用及空间／时点适用仍须假设，拒绝则 TEC 未定。MOH 明确未追踪所询问的费用相关延迟／放弃治疗数据；这是已确认的测量缺口，不是未满足需求为零或普遍医疗失效。TEC 与 MED 仍依赖必要假设；仅 TEC 未定则总分无中心、数学域为 52—62，两项同时未定则为 43—68。"
+      : "Singapore's TEC is reassessed as a conditional 80: actual multi-institution translation, enterprise/worker adoption, resident digital use and completed assisted transactions jointly support the higher tier. Denominators remain separate. Skills and financing gaps are retained; material constraints after mitigation could support 60. Continuing multi-producer capacity, broad ordinary-resident usability and spatial/time applicability remain assumptions; rejecting them leaves TEC unknown. MOH confirms it does not track the requested cost-related delayed or forgone-care data. This is a measurement gap, not zero unmet need or widespread care failure. TEC and MED still require necessary assumptions: unresolved TEC removes the total's centre, giving a mathematical domain of 52–62; unresolved MED and TEC give 43–68.",
+  ],
+  [london.candidateId]: [
+    zh
+      ? "在伦敦 MED 40、OPT 80 的条件情景下，原权重总分为 57；仅将 MED 的 5 个权重点移至 OPT，就变为 59，仍低于新加坡该权重下的 60；若新加坡采用 TEC 60 的替代判断，总分为 58，该情景才翻转。这是敏感性演算，不是已经取得的新证据，正式权重不变。"
+      : "In the conditional London scenario MED 40 / OPT 80, the original-weight total is 57. Moving five weight points from MED to OPT yields 59, still below Singapore's 60; Singapore's alternative TEC 60 judgment instead yields 58 and allows that scenario to reverse the order. This is a sensitivity exercise, not newly established evidence; official weights remain unchanged.",
+  ],
+  [helsinki.candidateId]: [
+    zh
+      ? "赫尔辛基 TEC 复核为条件性 80，总分 62。两校持续产出、实际技术转移与长期产业吸收，以及首都地区多类居民实际使用支持高档；融资压力和全国高龄使用差异保留，市服务响应与辅助措施不是全群体覆盖证明。空间、延续及普通居民通常可用仍须假设，拒绝 TEC 假设则无中心、数学域 54—64；若重要瓶颈在缓解后仍成立，TEC 60 情景总分为 60。MED 40 有新阻断依据才采用，该情景为 59；小分差不证明优劣或入围。FINGER 人体结果不等于完整干预当前交付，LON 连接假设仍可撤回。"
+      : "Helsinki's TEC is reassessed as conditional 80, giving a total of 62. Sustained output from two universities, actual technology transfers, long-term industry absorption and multiple kinds of capital-region resident use support the higher tier. Financing pressures and national older-age usage gaps remain counterevidence; municipal response and assistance do not prove whole-group reach. Spatial applicability, continuity and ordinary usability remain assumptions. Rejecting TEC assumptions removes the centre, giving 54–64; material constraints after mitigation could support TEC 60 and a total of 60. Only new support for blocked necessary care justifies MED 40, yielding 59. Small gaps prove neither superiority nor qualification. FINGER's human result does not establish current delivery of its complete intervention; the LON pathway assumption remains reversible.",
+  ],
+  [zurich.candidateId]: [
+    zh
+      ? "苏黎世条件性总分为 58。DO-HEALTH 的主要临床终点与后续生物时钟分析分开判读，并保留跌倒分析的可能益处；拒绝路径代表性假设则 LON 未定、无总分中心。铁路、航空和迁居资格支持退出路径，但移动紧急呼叫备电要求到 2031 年才落实，不能计作当前 OPT 80。历史心外科质量反证也不自动变成 2026 当前失效率。新加坡／赫尔辛基／东京的条件性 TEC 80 不证明其他维度高档或跨研究者一致性。"
+      : "Zurich's conditional total is 58. DO-HEALTH's primary clinical outcomes are distinguished from later clock analysis, while possible benefit in the fall analysis is retained. Rejecting pathway representativeness leaves LON unresolved and removes the total's centre. Rail, aviation and residence rights support exit channels, but mobile emergency-call backup requirements apply from 2031; they do not establish current OPT 80. Historical cardiac-surgery failures are not 2026 failure rates. Singapore's, Helsinki's and Tokyo's conditional TEC 80 judgments establish neither higher tiers elsewhere nor inter-reviewer consistency.",
+    zh
+      ? "苏黎世 GSS 补入 2026 年温特图尔站区袭击的三名伤者、实际警务与救援，以及随后公布的极端主义判断。两份通报对应同一事件；站前地址与周边 2 公里落在冻结功能区内，但它不是精确案发点，定位延续及全区适用仍是假设。GSS 保持条件性 60；仅在新依据支持 80 时总分才为 61。撤回 GSS 假设则无中心、数学域 49—64，与 LON 一起撤回为 45—70。单次事件不自动降档，一般犯罪记录也不等于死亡人数。"
+      : "Zurich's GSS review now includes three people injured in the 2026 Winterthur station-area attack, police and rescue action, and the later extremism assessment. Both notices concern one event. A station-front address and its surrounding 2 km lie within the frozen FUA, but this is not the exact attack location; location continuity and whole-FUA applicability remain assumptions. GSS stays conditionally 60. Only new support for 80 would raise the total to 61. Withdrawing GSS removes the centre and gives a mathematical domain of 49–64; withdrawing LON too gives 45–70. One event does not automatically lower the score, and general offence counts are not deaths.",
+  ],
+  [gaza.candidateId]: [
+    zh
+      ? "加沙功能区由全候选历史信号确定调查优先级，再核验截止日前 WHO 与 OCHA 当前证据。PCS 条件性 40，GSS、RES、MED 各 20；ISR、LON、TEC、OPT 未定，无总分。正在运行的医院、援助和转运与严重约束一并判读；没有测速样本不记低分。固定四项判断后的数学域为 14—59，撤回 MED 假设则为 11—71，均不是可靠排除界限。地带范围的资料不能冒充加沙市实测；功能区适配仍未完成。"
+      : "Gaza's research priority follows a historical signal in the full candidate universe, then current WHO and OCHA evidence published before the cutoff. PCS is conditionally 40; GSS, RES and MED are 20. ISR, LON, TEC and OPT remain unresolved, with no total. Operating hospitals, aid and evacuations are retained alongside serious constraints; absent network samples receive no low score. Fixing the four judgments gives a mathematical domain of 14–59; withdrawing the MED assumption gives 11–71. Neither is a reliable exclusion bound. Strip-level evidence is not a Gaza municipality measurement; FUA adaptation remains unresolved.",
+  ],
+  [tokyo.candidateId]: [
+    zh
+      ? "东京 TEC 复核为条件性 80，其余七维 60，条件总分 62。两机构持续产出、实际许可与产品化、多用途居民使用、行政办理改善及已运行辅助共同支持高档；合作下降、设备／卡及代理办理限制保留，不因网络调查降低高龄配额或未用 AI 自动扣分。行政东京不等于完整功能区，代表性和通常居民必要使用可行仍是假设；若缓解后瓶颈仍重要可重审 TEC 60，拒绝 TEC 假设则无中心、域 54—64。GSS 实际影响依据不变，撤回 GSS／MED 为 53—68，OPT／RES／LON 为 56—66，均无中心；不证明全球入围。"
+      : "Tokyo's TEC is reassessed as conditional 80, with seven other dimensions at 60 and a total of 62. Sustained output from two institutions, actual licensing and products, multi-purpose resident use, improved administrative processing and operating assistance jointly support the higher tier. Falling collaboration counts and device/card/proxy constraints remain. Survey quotas reducing older-age representation or AI non-use do not automatically lower capability. Administrative Tokyo is not the whole FUA; representativeness and feasible ordinary necessary use remain assumptions. Material barriers after mitigation could support TEC 60; rejecting TEC assumptions removes the centre, giving 54–64. GSS impact evidence is unchanged. Withdrawing GSS or MED gives 53–68; withdrawing OPT, RES or LON gives 56–66. None proves global qualification.",
+  ],
+  [washington.candidateId]: [
+    zh
+      ? "华盛顿 GSS 补齐为条件性 60，其他七维不变：RES 为 40，其余均为 60，条件中心 58。当前实际袭击与路人伤害、面向白宫的组织计划截获、地方协调及活动重办，与保护学习／资源缺口一并判读。国家威胁与历史保护事件不是本地攻击率，指控不是定罪，计划不是已发生伤亡。普通生活／关键通道通常可用、范围和延续仍是可撤回推定，群体伤害不能被平均抹去；拒绝 GSS 假设则无中心、域 49—64，新依据支持 40／80 才为中心 55／61。其余居民获得、负担、临床安全和边界假设仍在；完整条件中心不授予全球入围。"
+      : "Washington's GSS is now a conditional 60; seven other judgments are unchanged. RES is 40 and the others are 60, giving a conditional centre of 58. Current attacks and a bystander injury, an intercepted plot aimed at the White House, local coordination and event resumption are assessed with protective-learning and resource gaps. National threats and historical protective incidents are not local attack rates; allegations are not convictions and a plot is not executed harm. Ordinary life and essential corridors remaining normally usable, scope and continuity are reversible inferences; targeted-community harm is not averaged away. Rejecting GSS assumptions removes the centre, giving 49–64. New support for GSS 40 or 80 would give centres of 55 or 61. Other access, affordability, clinical-safety and boundary assumptions remain; a complete conditional centre grants no global qualification.",
+  ],
+  [newYork.candidateId]: [
+    zh
+      ? "纽约新增 PCS／GSS 条件性 60、RES 条件性 40，其他五项 60 不变，形成条件性中心 58。实际雨雪维护／响应和跨州防洪闸运行与热、洪水、寒潮伤害并列；投弹／宗教场所受害、历史团伙后果及当年处置／恢复与通道复盘支持有限安全影响，旧伤不因 2026 起诉变成当年死亡。资源低档基于分收入带的实际食品需求预算不足，保留 2026 已获能源折扣和供给恢复；SPM 不等 FPL／AMI 或当地精确中位收入，重叠调查不算独立验证，能源模型不当援助后实测。画像、核心区对全功能区代表性、瓶颈持续及缓解程度仍是假设；拒绝任一必要假设就撤回对应维度和总分中心。撤回 PCS／GSS／ISR／MED 为 49—64，RES 为 54—64，LON／TEC／OPT 为 52—62；六个近似点不证明全部地域或居民覆盖。中心 58 及算术位置均不证明入围。"
+      : "New York adds conditional 60 judgments for PCS/GSS and 40 for RES; its other five 60 judgments are unchanged, giving a conditional centre of 58. Actual rain/snow maintenance and response and cross-state gate operations are reviewed alongside heat, flood and cold harm. IED/synagogue danger, historical gang consequences and current response/restoration and corridor reviews support limited security impact; 2026 indictments do not turn old injuries into current casualties. RES 40 rests on actual food-need budget shortfalls across income bands, retaining actual 2026 energy discounts and supply restoration. SPM is not FPL/AMI or exact local median income; overlapping studies are not independent confirmation and energy models are not post-aid measurements. Resident, core-city/FUA representativeness, persistent constraints and mitigation remain assumptions; rejecting a necessary assumption withdraws its dimension and the total's centre. Withdrawing PCS/GSS/ISR/MED gives 49–64, RES gives 54–64, and LON/TEC/OPT gives 52–62. Six approximate points do not establish complete areas or resident coverage. Neither the centre of 58 nor its arithmetic position proves qualification.",
+  ],
+  [paris.candidateId]: [
+    zh
+      ? "巴黎 ISR、MED、TEC、OPT 条件性 60，LON 条件性 40；PCS、GSS、RES 未定，无总分中心。实际服务、许可与运行支持有限能力，历史认证和旧模型不变成当前全区结果。长寿低档只指已审疾病路径的采用／支付缺口，并保留临床意义和安全争议；审慎监管不直接扣分，不推断无私费、试验或其他路径。拒绝路径、净受益适用性或代表性假设时，LON 撤回为未知。数学域 34—74；撤回 LON 为 30—80，均不证明入围或排除。"
+      : "Paris has conditional 60 judgments for ISR, MED, TEC and OPT, and 40 for LON. PCS, GSS and RES remain unknown, without a total centre. Actual services, licensing and operations support limited capability; historical certification and older models are not current whole-area outcomes. LON 40 concerns the reviewed disease pathway's adoption/payment gap, retaining clinical-significance and safety disputes. Regulatory caution is not itself penalised; private care, trials and other pathways are not assumed absent. Rejecting pathway relevance, net-benefit applicability or representativeness restores unknown LON. The mathematical domain is 34–74; withdrawing LON gives 30–80. Neither proves qualification or exclusion.",
+  ],
+  [sanJose.candidateId]: [
+    zh
+      ? "源名 San Jose 的功能区有 ISR／MED／TEC／OPT 四项条件性 60，PCS／GSS／RES／LON 未定，无总分中心。旧金山与圣何塞近似参考点均落在同一冻结候选；这不验证完整市域或治疗地点，也不产生两个名额。实际医院服务修复、许可及交通，与数字外借终止一并判读；旧统计图不冒充当前扩散。准备开药、带过时文字的可获得说明及外地患者研究尚不足以证明当前本地长寿交付，零公开非设施理赔信号也不证明无服务。四项数学域 30—80；撤回 MED／ISR 为 21—86，TEC／OPT 为 24—84。普通居民获得、负担、持续及全区触达仍是假设；这些域不证明入围或排除。"
+      : "The source-named San Jose FUA has conditional 60 judgments for ISR, MED, TEC and OPT; PCS, GSS, RES and LON remain unknown, with no total centre. Approximate San Francisco and San Jose reference points fall in the same frozen candidate; this verifies neither complete municipal footprints nor treatment locations and creates no separate slots. Actual hospital restoration, licensing and transport are reviewed alongside discontinued digital lending; older charts are not current diffusion. Planned prescribing, availability wording with obsolete information and nonlocal patient studies do not establish current local longevity delivery. Zero published nonfacility claims signals do not establish absent service. The mathematical domain is 30–80; withdrawing MED or ISR gives 21–86, and TEC or OPT gives 24–84. Ordinary access, affordability, continuity and whole-area reach remain assumptions; these domains prove neither qualification nor exclusion.",
+  ],
+  [losAngeles.candidateId]: [
+    zh
+      ? "洛杉矶形成 PCS 条件性 40，ISR／MED／LON／TEC／OPT 条件性 60，GSS／RES 未定；无总分中心，数学域 42—67。旧灾害失效与已完成的恢复、告警和培训对读，PCS 40 仍须接受保护瓶颈延续的假设。实际现场试验和区域理赔支持有限临床路径推定；拟议十人试点与预期商业供应不算已治疗，登记地址不归属给 UCLA 或 Cedars。当前监测、居民负担、延续和全区适用仍须假设，拒绝即撤回。四个近似参考点不验证完整边界或治疗地点。"
+      : "Los Angeles has conditional PCS 40 and ISR/MED/LON/TEC/OPT 60, with GSS/RES unresolved: no total centre and a mathematical domain of 42–67. Historical disaster failures are read alongside completed restoration, alerts and training; PCS 40 still assumes a persistent protection bottleneck. Actual on-site trials and regional claims support only a limited clinical-pathway inference. A proposed ten-person pilot and expected commercial availability are not treated patients; registered addresses are not attributed to UCLA or Cedars. Current monitoring, resident affordability, continuity and area-wide applicability remain assumptions; rejecting them withdraws judgments. Four approximate reference points establish neither complete boundaries nor treatment sites.",
+  ],
+  [osakaKyoto.candidateId]: [
+    zh
+      ? "源名 Osaka [Kyoto] 是一个功能区，GSS 补为条件性 60，现七维 60、MED 未定；无总分中心，数学域 51—66。实际组织暴力受害／拦阻、世博警备结果、当前抗争管制和战略快照支持有限影响与缓解，仍须接受通常生活／通道、范围和延续假设；检举数不是死伤数，人员短板及针对性伤害保留。拒绝 GSS 假设回到 42—72。京都院方新闻声明 2026-09-25 刊登质量表，不认证截止前同字节；其他医院好过程不平均到全区，也不解释京都低时点。实际误摘和结果未跟进伤害、已做培训／规则与拟整改并列，低值解释、整改效果及普通居民替代可及仍未知，MED 不补 60／40。原退院窗不是全部手术发生窗，两病例与 iPSC 路径不证明普遍疗效／交付；七个近似点不验证完整地域或治疗点。"
+      : "Osaka [Kyoto] is one candidate area. GSS is now a conditional 60, giving seven 60 judgments with MED unresolved: no total centre and a mathematical domain of 51–66. Actual organised-violence harm/interception, Expo policing results, current gang-conflict controls and strategic snapshots support limited impact and mitigation, requiring ordinary-life/corridor, scope and continuity assumptions. Clearance counts are not casualties; staffing constraints and targeted harm remain. Rejecting GSS assumptions restores 42–72. Kyoto's official news claims the indicators were posted on 25 September 2026, without authenticating pre-cutoff bytes. Other providers' good processes are neither pooled into a FUA rate nor used to explain Kyoto's low timing value. Actual wrong-site resection and missed-result follow-up harms remain alongside completed training/rules and planned remedies. Low-value interpretation, remedy effects and ordinary timely alternatives remain unresolved; MED receives neither a default 60 nor 40. Discharge dates are not all procedure dates; two cases and iPSC pathways establish neither general efficacy nor delivery. Seven approximate points do not establish complete boundaries or treatment sites.",
+  ],
+  [boston.candidateId]: [
+    zh
+      ? "波士顿功能区新增 PCS／ISR／LON／TEC／OPT 五项条件性 60，GSS／RES／MED 未定；无中心、数学域 36—76。实际流程改进、科研许可、临床采用与接驳支持有限能力，居民数字障碍、招聘压力及治疗风险保留。区域水合格不能覆盖高风险含铅管住户的检测反证，换管缓解也不等于全区风险已解除；单病临床采用不填常规医疗。正文称 10 月 9 日的数字交付页，原元数据 10 月 11 日晚于截止，未计入评分。空间、延续、普通居民通常可得／可负担与缓解后瓶颈重要性仍须假设；五个近似点不验证完整边界或实际治疗地点。"
+      : "Boston adds conditional 60 judgments for PCS, ISR, LON, TEC and OPT; GSS, RES and MED remain unknown, without a centre and with a mathematical domain of 36–76. Actual workflow improvements, licensing, clinical adoption and ground access support scoped capability; digital barriers, staffing pressures and treatment risks remain. Regional water compliance does not erase targeted high-risk lead-pipe household findings, and replacements do not prove area-wide resolution. Disease-specific adoption does not fill routine medicine. A digital-delivery page dated 9 October in its body has 11 October publication metadata, after the cutoff, and is excluded. Spatial applicability, continuity, ordinary access/affordability and material constraints after mitigation remain assumptions; five approximate points verify neither whole boundaries nor treatment sites.",
+  ],
+  [seoul.candidateId]: [
+    zh
+      ? "首尔 PCS／ISR／TEC／OPT 条件性 60，LON 条件性 40；GSS／RES／MED 未定，无总分中心、数学域 34—74。真实保护、福利衔接、研究转移、数字辅助和交通支持有限能力。两院已治疗与安全监测是重要正向证据；候补、容量下降、等待延长、转诊受限及非报销费用／安全劳动的组合支持长寿居民链的明显约束。40 仍依赖疾病路径代表性、费用重要性、2025→2026 延续和范围适用，拒绝则未知；新证据证明费用可承担且主要瓶颈缓解，再审 60，域 36—76。撤回 LON 为 30—80，均不证明入围或排除。自主循环恢复不当出院生存，单药断点不降低全部医疗。九月机场表截止前公开未核清，未用于评分；七个近似点不验证完整地域或治疗地点。"
+      : "Seoul has conditional 60 judgments for PCS, ISR, TEC and OPT, and 40 for LON. GSS, RES and MED remain unknown, without a total centre and with a mathematical domain of 34–74. Delivered protection, welfare connections, research transfer, digital assistance and transport support scoped capability. Actual treatment and safety monitoring at two providers are important positive evidence; waitlisting, reduced start capacity, longer waits, limited transfers and reported nonreimbursed costs and safety labour together support a material resident-access discontinuity. LON 40 still requires pathway-relevance, cost-materiality, 2025-to-2026 continuity and scope assumptions; rejection restores unknown. New evidence of affordable costs and substantive bottleneck mitigation would support reviewing 60, giving 36–76. Withdrawing LON gives 30–80; neither establishes qualification or exclusion. Return of spontaneous circulation is not discharge survival, and a single-drug bottleneck does not downgrade general medicine. September airport statistics have unverified pre-cutoff publication and are unused; seven approximate points verify neither whole boundaries nor treatment sites.",
+  ],
+  [lisbon.candidateId]: [
+    zh
+      ? "里斯本 ISR／TEC／OPT 条件性 60、MED 条件性 40；PCS／GSS／RES／LON 未定，无中心、数学域 27—77。医疗低档依据多机构实际首诊超时、等待库存与家庭医生缺口，与已发生接诊、转移及下沉服务一起判读；已治疗者与等待者分母不混用。质量编码未闭与原表／文字冲突保留，不直接当稳定死亡结局。LON 有首批给药正向声明，但产品、支付、监测和普通居民费用未连通；截止后更新的支付查询不回填，更不由未知取低档。供水储备保住多数用户，同时保留局部限制和年度中断；摘要不等于所有住户零中断。停车数字支付的 74% 是收入份额，不是居民率；谈判许可不算已执行。判断依赖范围、延续与缓解后仍重要，拒绝则未知。撤回 MED 为 21—86，新依据支持 MED 60 才为 30—80，均不证明入围或排除。"
+      : "Lisbon has conditional 60 judgments for ISR, TEC and OPT, and 40 for MED. PCS, GSS, RES and LON remain unknown, without a centre and with a mathematical domain of 27–77. MED combines actual late first consultations at multiple providers, waiting stocks and family-doctor gaps with delivered care, transfers and primary-care mitigation; completed and waiting cohorts have different denominators. Unclosed quality coding and table/prose conflicts remain, without being treated as stable mortality outcomes. An actual first-treatment statement supports LON capability, but product, payments, monitoring and ordinary resident costs are not connected. A payment query updated after the cutoff is not backfilled, and unknowns do not receive low scores. Water reserves served most customers, with local restrictions and annual interruptions retained; summaries do not prove uninterrupted service to every household. Digital parking payments account for 74% of revenue, not residents, and negotiated licences are not executed licences. Judgments require scope, continuity and material constraints after mitigation; rejection restores unknown. Withdrawing MED gives 21–86; new evidence supporting MED 60 would give 30–80. Neither establishes qualification or exclusion.",
+  ],
+  [chicago.candidateId]: [
+    zh
+      ? "芝加哥功能区 PCS／RES 条件性 40，ISR／LON／TEC／OPT 条件性 60；GSS／MED 未定，无中心、数学域 37—67。跨州范围保留 Gary 等地实际长断电与资源损失，也保留已经完成的恢复和援助；启动监管调查不等于责任已认定。水务通知缺口与补发整改共同判读，数字旧数重刊与客流方法重述不当新实绩。LON 依据人体／监管和实际当地采用，仍依赖监测、医保负担与延续假设；不因此给整维 MED 补分。必要假设拒绝则未知，现有部分域不证明入围或排除。"
+      : "Chicago has conditional 40 judgments for PCS and RES, and 60 for ISR, LON, TEC and OPT. GSS and MED remain unresolved, without a centre and with a mathematical domain of 37–67. The cross-state FUA retains actual prolonged outages and resource losses around Gary alongside completed restoration and relief. A regulatory investigation is not a liability finding. Water-notification failures and correction are read together; reprinted digital figures and restated transit counts are not new measurements or growth. LON combines human/regulatory evidence and actual local adoption, with reversible monitoring, insurance affordability and continuity assumptions. It does not fill MED. Rejecting necessary assumptions restores unknown; the partial domain establishes neither qualification nor exclusion.",
+  ],
+  [prague.candidateId]: [
+    zh
+      ? "布拉格功能区 ISR／LON／OPT 条件性 60、TEC 条件性 80；PCS／GSS／RES／MED 未定，无中心、数学域 29—84。多主体实际科研／产业部署、广泛数字使用与已完成日常服务支持同一技术高档锚点；全部大学产出和应用用户不当本区成果或去重居民，范围／使用者／延续假设拒绝则未知，已核实的重要扩散瓶颈可审 60。克拉德诺参考点落入另一功能区 387，不继承布拉格分数。实际停电恢复和应急备电与交通／热水中断共同保留；给药、产品分发和合资格居民获保分开，当前安全与负担仍是假设。LON 不填 MED；其部分域不支持入围或排除。"
+      : "Prague has conditional 60 judgments for ISR, LON and OPT, and 80 for TEC. PCS, GSS, RES and MED remain unresolved, with no centre and a mathematical domain of 29–84. Multiple productive institutions, deployed industry products, broad digital use and completed everyday services support the shared high TEC anchor. University-wide outputs and app users are not all local products or unique residents; rejecting necessary scope, user or continuity assumptions restores unknown. Verified material diffusion barriers could support 60. Kladno's reference lies in FUA 387 and inherits no Prague score. Actual restoration and emergency backup are read alongside transport and hot-water disruption. Administrations, distributed products and eligible insured residents remain distinct, with reversible current safety and affordability assumptions. LON does not fill MED; the partial domain establishes neither qualification nor exclusion.",
+  ],
+};
+const caseReviewLinks: Record<number, { href: string; label: string }> = {
+  [washington.candidateId]: {
+    href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-washington-security-review.md",
+    label: zh
+      ? "华盛顿安全原件与相邻档位复核"
+      : "Washington security sources and adjacent-anchor review",
+  },
+  [seoul.candidateId]: {
+    href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-seoul-clinical-review.md",
+    label: zh ? "临床证据与改档条件" : "Clinical evidence and conditions for revision",
+  },
+  [prague.candidateId]: {
+    href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-prague-clinical-review.md",
+    label: zh ? "布拉格临床复核" : "Prague clinical review",
+  },
+  [chicago.candidateId]: {
+    href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-chicago-clinical-review.md",
+    label: zh ? "医疗质量、资格与临床路径复核" : "Quality, eligibility and clinical-pathway review",
+  },
+  [lisbon.candidateId]: {
+    href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-lisbon-clinical-review.md",
+    label: zh ? "医疗等待、质量与临床路径复核" : "Waiting, quality and clinical-pathway review",
+  },
+};
 ---
 
 <section id="global-research" class="cci-section" aria-labelledby="global-research-title">
@@ -203,66 +317,13 @@ const rows = [
           : `${n(coverage.candidateCount)} functional urban areas are registered; ${n(coverage.scoreStatusCounts.not_computed_under_global_protocol)} still lack complete assessments under a common global protocol. Counts below describe partial evidence links, not qualified cities or completion rates.`
       }
     </p>
-    <p>
-      {
-        zh
-          ? `UCDB R2024A 有 ${n(boundaries.centreOverlapCounts.no_overlap)} 个中心与旧功能区无交集；WUP 2025 的 ${n(wup.urbanCentres)} 个中心中有 ${n(wup.centreOverlapCounts.no_overlap)} 个无交集，其中 ${n(wup.wupCentresOutsideFuaAndUcdb)} 个也与 UCDB 无交集。两套来源的数量不能直接相加，边界迁移仍未解决。未收录、未匹配或资料缺失均不代表表现较差。`
-          : `${n(boundaries.centreOverlapCounts.no_overlap)} UCDB R2024A centres do not overlap the older functional areas. Of ${n(wup.urbanCentres)} WUP 2025 centres, ${n(wup.centreOverlapCounts.no_overlap)} have no such overlap, including ${n(wup.wupCentresOutsideFuaAndUcdb)} that also do not overlap UCDB. Counts from the two sources cannot be added together; boundary migration remains unresolved. Omission, unmatched boundaries and missing data are not negative assessments.`
-      }
-    </p>
-    <p>
-      {
-        zh
-          ? `旧候选范围之外的 ${n(coverage.outsideFrameReview.recordCount)} 条未匹配中心记录已逐条保留，按跨来源交集组成 ${n(coverage.outsideFrameReview.reviewGroupCount)} 个边界复核组，其中 ${n(coverage.outsideFrameReview.groupsWithIndirectFuaLink)} 组存在间接旧 FUA 联系。这些是记录与复核组数量，不是去重城市数；间接联系不证明居民已被覆盖，也不继承分数。其八维与总分均未定，当前名次演算仍只限于旧 ${n(coverage.candidateCount)} 个功能区。范围缺口已接入资格检查，尚不能发布全球 Top 32。`
-          : `All ${n(coverage.outsideFrameReview.recordCount)} unmatched centre records outside the old frame are retained in ${n(coverage.outsideFrameReview.reviewGroupCount)} boundary-review groups based on cross-source overlap; ${n(coverage.outsideFrameReview.groupsWithIndirectFuaLink)} groups have indirect links to old FUAs. These are record and review-group counts, not deduplicated city counts. Indirect links establish neither resident coverage nor inherited scores. All eight dimensions and totals remain unresolved; position arithmetic still covers only the older ${n(coverage.candidateCount)} functional areas. The scope gap is now included in eligibility checks; a global Top 32 cannot yet be published.`
-      }
-      {" "}
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-unmatched-centre-review.md"
-        >{zh ? "查看未匹配中心逐条登记" : "Review every unmatched centre record"}</a
-      >
-    </p>
-    <p>
-      {
-        zh
-          ? "后续分别评价当地普通居民与跨国迁居者，沿用八维权重，各自审查入围名单，不合成单一榜单。跨国视角的基准人物参数仍待明确；当前发布未应用这两种视角。"
-          : "Future assessments will distinguish ordinary local residents from international movers, retaining the eight weights and reviewing each shortlist separately. The mover profile remains unspecified; neither perspective has been applied to the current release."
-      }
-    </p>
   </div>
-  <div id="publication-scope">
-    <h3>{zh ? "出榜条件与名称" : "Publication conditions and scope"}</h3>
-    <p>
-      {
-        zh
-          ? `先按同一规则评分，再验证入围边界；不必等所有数据完美，但需要解释入围者为何排在其他候选之前。当前只有 ${n(screening.completeConditionalCaseCount)} 份完整条件评分，尚不满足任何前 32 发布条件。`
-          : `Apply the same scoring rules, then test the shortlist boundary. Perfect data are not required, but inclusion must be justified against competing candidates. Only ${n(screening.completeConditionalCaseCount)} complete conditional assessments are currently available; none of the Top 32 publication conditions is met.`
-      }
-    </p>
-    <ol>
-      <li>
-        {
-          zh
-            ? "至少 32 城完成统一评价，公开关键假设和敏感性：可以发布“已评估城市中的 CCI 前 32”，明确已评估范围。"
-            : "With at least 32 consistently assessed cities and disclosed assumptions and sensitivity, publish “CCI Top 32 among assessed cities”, identifying the assessed scope."
-        }
-      </li>
-      <li>
-        {
-          zh
-            ? "整个声明的候选范围均已评价，或有充分依据排除未深入评估者：可以发布“该候选范围内的 CCI 研究前 32”。仍可能入围的未知候选必须保留。"
-            : "When the entire declared candidate scope is assessed, or sufficient evidence excludes candidates not assessed in depth, publish “CCI research Top 32 within the declared scope”. Unresolved candidates that could qualify must be retained."
-        }
-      </li>
-      <li>
-        {
-          zh
-            ? "新旧城市覆盖问题也已解决，遗漏候选不会改变入围结论：才可以发布“全球 CCI Top 32”，附模型假设、敏感性及争议候选。细小分差不表示确定优劣。"
-            : "Only after old and new city coverage is resolved and omitted candidates cannot change inclusion, publish “Global CCI Top 32”, with model assumptions, sensitivity and disputed candidates. Small score gaps do not establish certain superiority."
-        }
-      </li>
-    </ol>
-  </div>
+  <nav class="research-nav" aria-label={zh ? "研究进展导航" : "Research progress navigation"}>
+    <a href="#local-calibration">{zh ? "评分案例" : "Scorecards"}</a>
+    <a href="#case-reviews">{zh ? "判读依据" : "Case evidence"}</a>
+    <a href="#research-boundaries">{zh ? "候选边界" : "Candidate boundaries"}</a>
+    <a href="#publication-scope">{zh ? "出榜条件" : "Publication scope"}</a>
+  </nav>
   <div id="local-calibration">
     <h3>{zh ? "当地居民评分校准" : "Local-resident scoring calibration"}</h3>
     <p>
@@ -272,10 +333,18 @@ const rows = [
           : `These cases assess local citizens who usually reside in the city, at median local income and with usual healthcare coverage, in 2026. The evidence cutoff is 10 October 2026. All ${n(cases.length)} reviews cover eight dimensions and 31 subpillars: ${n(screening.completeConditionalCaseCount)} with complete conditional centres and ${n(screening.partialCaseCount)} with only partial judgments. Explicit assumptions do not establish complete measurements. “—” means unresolved, with no zero imputation or total centre. Subsequent checks record actual retrieval dates.`
       }
     </p>
+    <p id="research-table-hint" class="research-table-hint">
+      {
+        zh
+          ? "表格可横向滚动；点击城市名称查看对应依据。"
+          : "Scroll the table horizontally; select a city name to find its evidence."
+      }
+    </p>
     <div
-      class="cci-table-scroll"
+      class="cci-table-scroll research-table"
       tabindex="0"
       aria-label={zh ? "条件性评分案例" : "Conditional scoring cases"}
+      aria-describedby="research-table-hint"
     >
       <table>
         <caption
@@ -287,328 +356,190 @@ const rows = [
         >
         <thead>
           <tr>
-            <th scope="col">{zh ? "维度／原权重" : "Dimension / original weight"}</th>
+            <th scope="col">{zh ? "城市／功能区" : "City / functional area"}</th>
             {
-              cases.map(city => (
-                <th scope="col">{zh ? (caseNamesZh[city.candidateId] ?? city.name) : city.name}</th>
+              DIMENSIONS.map(dimension => (
+                <th scope="col">
+                  <abbr title={cciCopy[currentLang].dimensions[dimension.id].name}>
+                    {dimension.id}
+                  </abbr>
+                  <small>{dimension.weight}%</small>
+                </th>
               ))
             }
+            <th scope="col">{zh ? "条件总分" : "Conditional total"}</th>
           </tr>
         </thead>
         <tbody>
           {
-            DIMENSIONS.map(dimension => (
+            cases.map(city => (
               <tr>
                 <th scope="row">
-                  {dimension.id} · {cciCopy[currentLang].dimensions[dimension.id].name} ·{" "}
-                  {dimension.weight}%
+                  <a href={`#research-case-${city.candidateId}`}>
+                    {zh ? (caseNamesZh[city.candidateId] ?? city.name) : city.name}
+                  </a>
                 </th>
-                {cases.map(city => (
+                {DIMENSIONS.map(dimension => (
                   <td>{city.dimensions.find(d => d.id === dimension.id)?.score ?? "—"}</td>
                 ))}
+                <td class="research-total">{city.expectedConditionalTotal ?? "—"}</td>
               </tr>
             ))
           }
-          <tr>
-            <th scope="row">{zh ? "条件性总分" : "Conditional total"}</th>
-            {cases.map(city => <td>{city.expectedConditionalTotal ?? "—"}</td>)}
-          </tr>
         </tbody>
       </table>
     </div>
-    <p>
-      {
-        zh
-          ? "新加坡条件性总分现为 60，伦敦为 58；2 分差不证明确定优劣。医疗等待不能仅因超出行政目标就自动取 40；科研强不能代替居民扩散；长期迁居权不能覆盖交通、资金及通信的全部退出条件。长寿路径的代表性假设最需挑战：若不接受该假设，LON 应保持未定，总分中心也应为空。"
-          : "Singapore now has a conditional total of 60 and London 58; this two-point gap does not establish superiority. Missing an administrative waiting target does not automatically imply MED 40; strong research does not establish resident diffusion, and residence rights do not cover every transport, financial or communication condition. Longevity pathway representativeness is the weakest assumption: rejecting it leaves LON unresolved and removes the total's central estimate."
-      }
-    </p>
-    <p>
-      {
-        zh
-          ? "新加坡 TEC 复核为条件性 80：NRF 多机构实际转化、IMDA 企业／工人采用与居民数字使用、已完成辅助交易共同支持高档。不同分母不合并；技能和融资短板保留，若在缓解后仍构成重要限制，可重审 60。多生产者延续、通常居民广泛可用及空间／时点适用仍须假设，拒绝则 TEC 未定。MOH 明确未追踪所询问的费用相关延迟／放弃治疗数据；这是已确认的测量缺口，不是未满足需求为零或普遍医疗失效。TEC 与 MED 仍依赖必要假设；仅 TEC 未定则总分无中心、数学域为 52—62，两项同时未定则为 43—68。"
-          : "Singapore's TEC is reassessed as a conditional 80: actual multi-institution translation, enterprise/worker adoption, resident digital use and completed assisted transactions jointly support the higher tier. Denominators remain separate. Skills and financing gaps are retained; material constraints after mitigation could support 60. Continuing multi-producer capacity, broad ordinary-resident usability and spatial/time applicability remain assumptions; rejecting them leaves TEC unknown. MOH confirms it does not track the requested cost-related delayed or forgone-care data. This is a measurement gap, not zero unmet need or widespread care failure. TEC and MED still require necessary assumptions: unresolved TEC removes the total's centre, giving a mathematical domain of 52–62; unresolved MED and TEC give 43–68."
-      }
-    </p>
-    <p>
-      {
-        zh
-          ? "苏黎世条件性总分为 58。DO-HEALTH 的主要临床终点与后续生物时钟分析分开判读，并保留跌倒分析的可能益处；拒绝路径代表性假设则 LON 未定、无总分中心。铁路、航空和迁居资格支持退出路径，但移动紧急呼叫备电要求到 2031 年才落实，不能计作当前 OPT 80。历史心外科质量反证也不自动变成 2026 当前失效率。新加坡／赫尔辛基／东京的条件性 TEC 80 不证明其他维度高档或跨研究者一致性。"
-          : "Zurich's conditional total is 58. DO-HEALTH's primary clinical outcomes are distinguished from later clock analysis, while possible benefit in the fall analysis is retained. Rejecting pathway representativeness leaves LON unresolved and removes the total's centre. Rail, aviation and residence rights support exit channels, but mobile emergency-call backup requirements apply from 2031; they do not establish current OPT 80. Historical cardiac-surgery failures are not 2026 failure rates. Singapore's, Helsinki's and Tokyo's conditional TEC 80 judgments establish neither higher tiers elsewhere nor inter-reviewer consistency."
-      }
-    </p>
-    <p>
-      {
-        zh
-          ? "苏黎世 GSS 补入 2026 年温特图尔站区袭击的三名伤者、实际警务与救援，以及随后公布的极端主义判断。两份通报对应同一事件；站前地址与周边 2 公里落在冻结功能区内，但它不是精确案发点，定位延续及全区适用仍是假设。GSS 保持条件性 60；仅在新依据支持 80 时总分才为 61。撤回 GSS 假设则无中心、数学域 49—64，与 LON 一起撤回为 45—70。单次事件不自动降档，一般犯罪记录也不等于死亡人数。"
-          : "Zurich's GSS review now includes three people injured in the 2026 Winterthur station-area attack, police and rescue action, and the later extremism assessment. Both notices concern one event. A station-front address and its surrounding 2 km lie within the frozen FUA, but this is not the exact attack location; location continuity and whole-FUA applicability remain assumptions. GSS stays conditionally 60. Only new support for 80 would raise the total to 61. Withdrawing GSS removes the centre and gives a mathematical domain of 49–64; withdrawing LON too gives 45–70. One event does not automatically lower the score, and general offence counts are not deaths."
-      }
-    </p>
-    <p>
-      {
-        zh
-          ? "赫尔辛基 TEC 复核为条件性 80，总分 62。两校持续产出、实际技术转移与长期产业吸收，以及首都地区多类居民实际使用支持高档；融资压力和全国高龄使用差异保留，市服务响应与辅助措施不是全群体覆盖证明。空间、延续及普通居民通常可用仍须假设，拒绝 TEC 假设则无中心、数学域 54—64；若重要瓶颈在缓解后仍成立，TEC 60 情景总分为 60。MED 40 有新阻断依据才采用，该情景为 59；小分差不证明优劣或入围。FINGER 人体结果不等于完整干预当前交付，LON 连接假设仍可撤回。"
-          : "Helsinki's TEC is reassessed as conditional 80, giving a total of 62. Sustained output from two universities, actual technology transfers, long-term industry absorption and multiple kinds of capital-region resident use support the higher tier. Financing pressures and national older-age usage gaps remain counterevidence; municipal response and assistance do not prove whole-group reach. Spatial applicability, continuity and ordinary usability remain assumptions. Rejecting TEC assumptions removes the centre, giving 54–64; material constraints after mitigation could support TEC 60 and a total of 60. Only new support for blocked necessary care justifies MED 40, yielding 59. Small gaps prove neither superiority nor qualification. FINGER's human result does not establish current delivery of its complete intervention; the LON pathway assumption remains reversible."
-      }
-    </p>
-    <p>
-      {
-        zh
-          ? "在伦敦 MED 40、OPT 80 的条件情景下，原权重总分为 57；仅将 MED 的 5 个权重点移至 OPT，就变为 59，仍低于新加坡该权重下的 60；若新加坡采用 TEC 60 的替代判断，总分为 58，该情景才翻转。这是敏感性演算，不是已经取得的新证据，正式权重不变。"
-          : "In the conditional London scenario MED 40 / OPT 80, the original-weight total is 57. Moving five weight points from MED to OPT yields 59, still below Singapore's 60; Singapore's alternative TEC 60 judgment instead yields 58 and allows that scenario to reverse the order. This is a sensitivity exercise, not newly established evidence; official weights remain unchanged."
-      }
-    </p>
-    <p>
-      {
-        zh
-          ? "洛杉矶形成 PCS 条件性 40，ISR／MED／LON／TEC／OPT 条件性 60，GSS／RES 未定；无总分中心，数学域 42—67。旧灾害失效与已完成的恢复、告警和培训对读，PCS 40 仍须接受保护瓶颈延续的假设。实际现场试验和区域理赔支持有限临床路径推定；拟议十人试点与预期商业供应不算已治疗，登记地址不归属给 UCLA 或 Cedars。当前监测、居民负担、延续和全区适用仍须假设，拒绝即撤回。四个近似参考点不验证完整边界或治疗地点。"
-          : "Los Angeles has conditional PCS 40 and ISR/MED/LON/TEC/OPT 60, with GSS/RES unresolved: no total centre and a mathematical domain of 42–67. Historical disaster failures are read alongside completed restoration, alerts and training; PCS 40 still assumes a persistent protection bottleneck. Actual on-site trials and regional claims support only a limited clinical-pathway inference. A proposed ten-person pilot and expected commercial availability are not treated patients; registered addresses are not attributed to UCLA or Cedars. Current monitoring, resident affordability, continuity and area-wide applicability remain assumptions; rejecting them withdraws judgments. Four approximate reference points establish neither complete boundaries nor treatment sites."
-      }
-    </p>
-    <p>
-      {
-        zh
-          ? "源名 Osaka [Kyoto] 是一个功能区，GSS 补为条件性 60，现七维 60、MED 未定；无总分中心，数学域 51—66。实际组织暴力受害／拦阻、世博警备结果、当前抗争管制和战略快照支持有限影响与缓解，仍须接受通常生活／通道、范围和延续假设；检举数不是死伤数，人员短板及针对性伤害保留。拒绝 GSS 假设回到 42—72。京都院方新闻声明 2026-09-25 刊登质量表，不认证截止前同字节；其他医院好过程不平均到全区，也不解释京都低时点。实际误摘和结果未跟进伤害、已做培训／规则与拟整改并列，低值解释、整改效果及普通居民替代可及仍未知，MED 不补 60／40。原退院窗不是全部手术发生窗，两病例与 iPSC 路径不证明普遍疗效／交付；七个近似点不验证完整地域或治疗点。"
-          : "Osaka [Kyoto] is one candidate area. GSS is now a conditional 60, giving seven 60 judgments with MED unresolved: no total centre and a mathematical domain of 51–66. Actual organised-violence harm/interception, Expo policing results, current gang-conflict controls and strategic snapshots support limited impact and mitigation, requiring ordinary-life/corridor, scope and continuity assumptions. Clearance counts are not casualties; staffing constraints and targeted harm remain. Rejecting GSS assumptions restores 42–72. Kyoto's official news claims the indicators were posted on 25 September 2026, without authenticating pre-cutoff bytes. Other providers' good processes are neither pooled into a FUA rate nor used to explain Kyoto's low timing value. Actual wrong-site resection and missed-result follow-up harms remain alongside completed training/rules and planned remedies. Low-value interpretation, remedy effects and ordinary timely alternatives remain unresolved; MED receives neither a default 60 nor 40. Discharge dates are not all procedure dates; two cases and iPSC pathways establish neither general efficacy nor delivery. Seven approximate points do not establish complete boundaries or treatment sites."
-      }
-    </p>
-    <p>
-      {
-        zh
-          ? "查看支持、反证与假设："
-          : "Review supporting evidence, counterevidence and assumptions: "
-      }
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-singapore-case.md"
-        >{zh ? "新加坡案例" : "Singapore case"}</a
-      >
-      {" · "}
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-london-case.md"
-        >{zh ? "伦敦案例" : "London case"}</a
-      >
-      {" · "}
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-helsinki-case.md"
-        >{zh ? "赫尔辛基案例" : "Helsinki case"}</a
-      >
-      {" · "}
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-zurich-case.md"
-        >{zh ? "苏黎世案例" : "Zurich case"}</a
-      >
-      {" · "}
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-gaza-case.md"
-        >{zh ? "加沙部分维度案例" : "Gaza partial case"}</a
-      >
-      {" · "}
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-tokyo-case.md"
-        >{zh ? "东京条件性案例" : "Tokyo conditional case"}</a
-      >
-      {" · "}
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-washington-case.md"
-        >{zh ? "华盛顿条件性案例" : "Washington conditional case"}</a
-      >
-      {" · "}
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-new-york-case.md"
-        >{zh ? "纽约部分维度案例" : "New York partial case"}</a
-      > · <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-paris-case.md"
-        >{zh ? "巴黎部分维度案例" : "Paris partial case"}</a
-      > · <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-san-jose-case.md"
-        >{zh ? "San Jose 部分维度案例" : "San Jose partial case"}</a
-      >
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-los-angeles-case.md"
-        >{zh ? "洛杉矶部分维度案例" : "Los Angeles partial case"}</a
-      >
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-osaka-kyoto-case.md"
-        >{zh ? "大阪—京都部分维度案例" : "Osaka–Kyoto partial case"}</a
-      >
-    </p>
-    <p>
-      {
-        zh
-          ? "加沙功能区由全候选历史信号确定调查优先级，再核验截止日前 WHO 与 OCHA 当前证据。PCS 条件性 40，GSS、RES、MED 各 20；ISR、LON、TEC、OPT 未定，无总分。正在运行的医院、援助和转运与严重约束一并判读；没有测速样本不记低分。固定四项判断后的数学域为 14—59，撤回 MED 假设则为 11—71，均不是可靠排除界限。地带范围的资料不能冒充加沙市实测；功能区适配仍未完成。"
-          : "Gaza's research priority follows a historical signal in the full candidate universe, then current WHO and OCHA evidence published before the cutoff. PCS is conditionally 40; GSS, RES and MED are 20. ISR, LON, TEC and OPT remain unresolved, with no total. Operating hospitals, aid and evacuations are retained alongside serious constraints; absent network samples receive no low score. Fixing the four judgments gives a mathematical domain of 14–59; withdrawing the MED assumption gives 11–71. Neither is a reliable exclusion bound. Strip-level evidence is not a Gaza municipality measurement; FUA adaptation remains unresolved."
-      }
-    </p>
-    <p>
-      {
-        zh
-          ? "东京 TEC 复核为条件性 80，其余七维 60，条件总分 62。两机构持续产出、实际许可与产品化、多用途居民使用、行政办理改善及已运行辅助共同支持高档；合作下降、设备／卡及代理办理限制保留，不因网络调查降低高龄配额或未用 AI 自动扣分。行政东京不等于完整功能区，代表性和通常居民必要使用可行仍是假设；若缓解后瓶颈仍重要可重审 TEC 60，拒绝 TEC 假设则无中心、域 54—64。GSS 实际影响依据不变，撤回 GSS／MED 为 53—68，OPT／RES／LON 为 56—66，均无中心；不证明全球入围。"
-          : "Tokyo's TEC is reassessed as conditional 80, with seven other dimensions at 60 and a total of 62. Sustained output from two institutions, actual licensing and products, multi-purpose resident use, improved administrative processing and operating assistance jointly support the higher tier. Falling collaboration counts and device/card/proxy constraints remain. Survey quotas reducing older-age representation or AI non-use do not automatically lower capability. Administrative Tokyo is not the whole FUA; representativeness and feasible ordinary necessary use remain assumptions. Material barriers after mitigation could support TEC 60; rejecting TEC assumptions removes the centre, giving 54–64. GSS impact evidence is unchanged. Withdrawing GSS or MED gives 53–68; withdrawing OPT, RES or LON gives 56–66. None proves global qualification."
-      }
-    </p>
-    <p>
-      {
-        zh
-          ? "华盛顿 GSS 补齐为条件性 60，其他七维不变：RES 为 40，其余均为 60，条件中心 58。当前实际袭击与路人伤害、面向白宫的组织计划截获、地方协调及活动重办，与保护学习／资源缺口一并判读。国家威胁与历史保护事件不是本地攻击率，指控不是定罪，计划不是已发生伤亡。普通生活／关键通道通常可用、范围和延续仍是可撤回推定，群体伤害不能被平均抹去；拒绝 GSS 假设则无中心、域 49—64，新依据支持 40／80 才为中心 55／61。其余居民获得、负担、临床安全和边界假设仍在；完整条件中心不授予全球入围。"
-          : "Washington's GSS is now a conditional 60; seven other judgments are unchanged. RES is 40 and the others are 60, giving a conditional centre of 58. Current attacks and a bystander injury, an intercepted plot aimed at the White House, local coordination and event resumption are assessed with protective-learning and resource gaps. National threats and historical protective incidents are not local attack rates; allegations are not convictions and a plot is not executed harm. Ordinary life and essential corridors remaining normally usable, scope and continuity are reversible inferences; targeted-community harm is not averaged away. Rejecting GSS assumptions removes the centre, giving 49–64. New support for GSS 40 or 80 would give centres of 55 or 61. Other access, affordability, clinical-safety and boundary assumptions remain; a complete conditional centre grants no global qualification."
-      }
-    </p>
-    <p class="text-muted-foreground text-sm">
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-washington-security-review.md"
-      >
+    <details id="case-reviews" class="research-fold">
+      <summary>{zh ? "逐城判读依据与反证" : "Case judgments and counterevidence"}</summary>
+      <div class="research-case-list">
+        {
+          cases.map(city => (
+            <details class="research-case">
+              <summary>
+                <span>{zh ? (caseNamesZh[city.candidateId] ?? city.name) : city.name}</span>
+                <span class="research-case-status">
+                  {city.expectedConditionalTotal === null
+                    ? zh
+                      ? "部分维度判断"
+                      : "Partial assessment"
+                    : zh
+                      ? "完整条件评分"
+                      : "Complete conditional assessment"}
+                </span>
+              </summary>
+              <div id={`research-case-${city.candidateId}`} class="research-case-body">
+                {caseNotes[city.candidateId].map(note => (
+                  <p>{note}</p>
+                ))}
+                <div class="research-links">
+                  <a
+                    href={`https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/${city.evidenceReview}`}
+                  >
+                    {zh ? "完整案例与原件" : "Full case and sources"}
+                  </a>
+                  {caseReviewLinks[city.candidateId] && (
+                    <a href={caseReviewLinks[city.candidateId].href}>
+                      {caseReviewLinks[city.candidateId].label}
+                    </a>
+                  )}
+                </div>
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </details>
+    <details id="research-assumptions" class="research-fold">
+      <summary>{zh ? "共同评分假设与入围审查" : "Shared assumptions and shortlist review"}</summary>
+      <div class="research-reading">
+        <p>
+          {
+            zh
+              ? "新加坡条件性总分现为 60，伦敦为 58；2 分差不证明确定优劣。医疗等待不能仅因超出行政目标就自动取 40；科研强不能代替居民扩散；长期迁居权不能覆盖交通、资金及通信的全部退出条件。长寿路径的代表性假设最需挑战：若不接受该假设，LON 应保持未定，总分中心也应为空。"
+              : "Singapore now has a conditional total of 60 and London 58; this two-point gap does not establish superiority. Missing an administrative waiting target does not automatically imply MED 40; strong research does not establish resident diffusion, and residence rights do not cover every transport, financial or communication condition. Longevity pathway representativeness is the weakest assumption: rejecting it leaves LON unresolved and removes the total's central estimate."
+          }
+        </p>
+        <p>
+          {
+            zh
+              ? `同一规则审阅了 2026 年一至八月的初步组织暴力：${n(currentViolence.candidatesWithClearPreciseEvents)} 个候选有保留的 Clear 编码点，${n(currentViolence.candidatesWithPendingPreciseEvents)} 个有待核查编码点，两组可重叠，均不是完整安全影响或 GSS 分数。跨月重复、后版修订、粗位置、时点冲突及异常值分别保留。纽约一条记录引用的原文描述涉嫌 2024 年双重谋杀与 2026 年起诉，已隔离而未计为当年新增死亡。修改时间和发布周期仅支持截止日前可用的假设，独立历史存档尚未核验。无保留归属不证明安全；上一轮十案例的档位未被此材料改变，洛杉矶 GSS 也仍未定；后续须补当地完整影响、区域／战略暴露和实际缓解。`
+              : `A consistent review covers preliminary organised violence for January–August 2026: ${n(currentViolence.candidatesWithClearPreciseEvents)} candidates have retained Clear coded points and ${n(currentViolence.candidatesWithPendingPreciseEvents)} have pending coded points; groups can overlap, and neither establishes complete safety impacts or GSS scores. Monthly overlaps, later revisions, coarse locations, temporal conflicts and anomalous values remain separate. One New York record cites a source describing an alleged 2024 double murder and a 2026 indictment; it is quarantined rather than counted as new deaths. Modification times and the release schedule support only an assumption of pre-cutoff availability; an independent historical archive is unverified. An absence of retained assignments does not establish safety or absent violence. The preceding ten case judgments were unchanged by this review; Los Angeles GSS also remains unresolved; complete local impacts, regional and strategic exposure, and actual mitigation still need evidence.`
+          }
+          {" "}<a
+            href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-ucdp-candidate-2026-review.md"
+            >{zh ? "当年事件与共同判档检验" : "Current-event and shared-anchor review"}</a
+          >
+        </p>
+        <p>
+          {
+            zh
+              ? `已对现有全量矩阵检视提前排除是否有依据：${n(screening.retainedCount)} 个候选全部保留，有依据的排除为 ${n(screening.supportedExclusionCount)}。其中 ${n(screening.completeConditionalCaseCount)} 个有完整条件性中心、${n(screening.partialCaseCount)} 个仅有部分维度判断，${n(screening.unassessedCount)} 个尚无此类八维审阅。筛查只检查现有证据能否排除候选，不等于完成全量评分；局部底表和条件性分数均不能作为可靠排除界限。下一步补证须覆盖仍可能改变入围结论的竞争者。`
+              : `An exclusion screen of the assembled matrix retains all ${n(screening.retainedCount)} candidates, with ${n(screening.supportedExclusionCount)} supported exclusions. Reviews include ${n(screening.completeConditionalCaseCount)} with complete conditional centres and ${n(screening.partialCaseCount)} with partial judgments; ${n(screening.unassessedCount)} candidates lack such eight-dimension reviews. This checks whether current evidence supports exclusion, not whether every city has been fully scored. Partial sources and conditional scores establish no reliable exclusion bounds. Further assessment must cover competitors that could change the shortlist.`
+          }
+        </p>
+        <p>
+          {
+            zh
+              ? `全候选入围可判定性演算已覆盖 ${n(rankAudit.candidateCount)} 个冻结功能区、${n(Object.keys(rankAudit.scenarios).length)} 组情景。即使暂时固定已有条件性判断，赫尔辛基的算术位置仍可为 ${n(helsinkiPosition.bestPosition)}—${n(helsinkiPosition.worstPosition)}；其余竞争者仍未知，不能把少数案例的比较当作入围证明。逐维撤回必要假设后，总分中心为空。未知项的 0—100 是数学域端点，不是评分、概率或可靠城市界限；较新未匹配中心亦未被排除。`
+              : `A shortlist-identifiability calculation covers all ${n(rankAudit.candidateCount)} frozen areas across ${n(Object.keys(rankAudit.scenarios).length)} scenarios. Even temporarily fixing existing conditional judgments leaves Helsinki's arithmetic position between ${n(helsinkiPosition.bestPosition)} and ${n(helsinkiPosition.worstPosition)}. Unassessed competitors remain unknown; comparisons among a few cases cannot prove membership. Withdrawing a dimension's necessary assumptions removes the total's centre. The 0–100 endpoints for unknowns are mathematical domains, not scores, probabilities or reliable city bounds; newer unmatched centres are also not excluded.`
+          }
+          {" "}
+          <a
+            href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-rank-audit.md"
+            >{zh ? "查看演算与逐行结果" : "Review the calculation and every candidate row"}</a
+          >
+        </p>
+      </div>
+    </details>
+  </div>
+  <details id="research-boundaries" class="research-fold">
+    <summary>{zh ? "候选边界与评价对象" : "Candidate boundaries and resident perspectives"}</summary
+    >
+    <div class="research-reading">
+      <p>
         {
           zh
-            ? "华盛顿安全原件与相邻档位复核"
-            : "Washington security sources and adjacent-anchor review"
+            ? `UCDB R2024A 有 ${n(boundaries.centreOverlapCounts.no_overlap)} 个中心与旧功能区无交集；WUP 2025 的 ${n(wup.urbanCentres)} 个中心中有 ${n(wup.centreOverlapCounts.no_overlap)} 个无交集，其中 ${n(wup.wupCentresOutsideFuaAndUcdb)} 个也与 UCDB 无交集。两套来源的数量不能直接相加，边界迁移仍未解决。未收录、未匹配或资料缺失均不代表表现较差。`
+            : `${n(boundaries.centreOverlapCounts.no_overlap)} UCDB R2024A centres do not overlap the older functional areas. Of ${n(wup.urbanCentres)} WUP 2025 centres, ${n(wup.centreOverlapCounts.no_overlap)} have no such overlap, including ${n(wup.wupCentresOutsideFuaAndUcdb)} that also do not overlap UCDB. Counts from the two sources cannot be added together; boundary migration remains unresolved. Omission, unmatched boundaries and missing data are not negative assessments.`
         }
-      </a>
-    </p>
-    <p>
-      {
-        zh
-          ? "纽约新增 PCS／GSS 条件性 60、RES 条件性 40，其他五项 60 不变，形成条件性中心 58。实际雨雪维护／响应和跨州防洪闸运行与热、洪水、寒潮伤害并列；投弹／宗教场所受害、历史团伙后果及当年处置／恢复与通道复盘支持有限安全影响，旧伤不因 2026 起诉变成当年死亡。资源低档基于分收入带的实际食品需求预算不足，保留 2026 已获能源折扣和供给恢复；SPM 不等 FPL／AMI 或当地精确中位收入，重叠调查不算独立验证，能源模型不当援助后实测。画像、核心区对全功能区代表性、瓶颈持续及缓解程度仍是假设；拒绝任一必要假设就撤回对应维度和总分中心。撤回 PCS／GSS／ISR／MED 为 49—64，RES 为 54—64，LON／TEC／OPT 为 52—62；六个近似点不证明全部地域或居民覆盖。中心 58 及算术位置均不证明入围。"
-          : "New York adds conditional 60 judgments for PCS/GSS and 40 for RES; its other five 60 judgments are unchanged, giving a conditional centre of 58. Actual rain/snow maintenance and response and cross-state gate operations are reviewed alongside heat, flood and cold harm. IED/synagogue danger, historical gang consequences and current response/restoration and corridor reviews support limited security impact; 2026 indictments do not turn old injuries into current casualties. RES 40 rests on actual food-need budget shortfalls across income bands, retaining actual 2026 energy discounts and supply restoration. SPM is not FPL/AMI or exact local median income; overlapping studies are not independent confirmation and energy models are not post-aid measurements. Resident, core-city/FUA representativeness, persistent constraints and mitigation remain assumptions; rejecting a necessary assumption withdraws its dimension and the total's centre. Withdrawing PCS/GSS/ISR/MED gives 49–64, RES gives 54–64, and LON/TEC/OPT gives 52–62. Six approximate points do not establish complete areas or resident coverage. Neither the centre of 58 nor its arithmetic position proves qualification."
-      }
-    </p>
-    <p>
-      {
-        zh
-          ? "巴黎 ISR、MED、TEC、OPT 条件性 60，LON 条件性 40；PCS、GSS、RES 未定，无总分中心。实际服务、许可与运行支持有限能力，历史认证和旧模型不变成当前全区结果。长寿低档只指已审疾病路径的采用／支付缺口，并保留临床意义和安全争议；审慎监管不直接扣分，不推断无私费、试验或其他路径。拒绝路径、净受益适用性或代表性假设时，LON 撤回为未知。数学域 34—74；撤回 LON 为 30—80，均不证明入围或排除。"
-          : "Paris has conditional 60 judgments for ISR, MED, TEC and OPT, and 40 for LON. PCS, GSS and RES remain unknown, without a total centre. Actual services, licensing and operations support limited capability; historical certification and older models are not current whole-area outcomes. LON 40 concerns the reviewed disease pathway's adoption/payment gap, retaining clinical-significance and safety disputes. Regulatory caution is not itself penalised; private care, trials and other pathways are not assumed absent. Rejecting pathway relevance, net-benefit applicability or representativeness restores unknown LON. The mathematical domain is 34–74; withdrawing LON gives 30–80. Neither proves qualification or exclusion."
-      }
-    </p>
-    <p>
-      {
-        zh
-          ? `同一规则审阅了 2026 年一至八月的初步组织暴力：${n(currentViolence.candidatesWithClearPreciseEvents)} 个候选有保留的 Clear 编码点，${n(currentViolence.candidatesWithPendingPreciseEvents)} 个有待核查编码点，两组可重叠，均不是完整安全影响或 GSS 分数。跨月重复、后版修订、粗位置、时点冲突及异常值分别保留。纽约一条记录引用的原文描述涉嫌 2024 年双重谋杀与 2026 年起诉，已隔离而未计为当年新增死亡。修改时间和发布周期仅支持截止日前可用的假设，独立历史存档尚未核验。无保留归属不证明安全；上一轮十案例的档位未被此材料改变，洛杉矶 GSS 也仍未定；后续须补当地完整影响、区域／战略暴露和实际缓解。`
-          : `A consistent review covers preliminary organised violence for January–August 2026: ${n(currentViolence.candidatesWithClearPreciseEvents)} candidates have retained Clear coded points and ${n(currentViolence.candidatesWithPendingPreciseEvents)} have pending coded points; groups can overlap, and neither establishes complete safety impacts or GSS scores. Monthly overlaps, later revisions, coarse locations, temporal conflicts and anomalous values remain separate. One New York record cites a source describing an alleged 2024 double murder and a 2026 indictment; it is quarantined rather than counted as new deaths. Modification times and the release schedule support only an assumption of pre-cutoff availability; an independent historical archive is unverified. An absence of retained assignments does not establish safety or absent violence. The preceding ten case judgments were unchanged by this review; Los Angeles GSS also remains unresolved; complete local impacts, regional and strategic exposure, and actual mitigation still need evidence.`
-      }
-      {" "}<a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-ucdp-candidate-2026-review.md"
-        >{zh ? "当年事件与共同判档检验" : "Current-event and shared-anchor review"}</a
-      >
-    </p>
-    <p>
-      {
-        zh
-          ? `已对现有全量矩阵检视提前排除是否有依据：${n(screening.retainedCount)} 个候选全部保留，有依据的排除为 ${n(screening.supportedExclusionCount)}。其中 ${n(screening.completeConditionalCaseCount)} 个有完整条件性中心、${n(screening.partialCaseCount)} 个仅有部分维度判断，${n(screening.unassessedCount)} 个尚无此类八维审阅。筛查只检查现有证据能否排除候选，不等于完成全量评分；局部底表和条件性分数均不能作为可靠排除界限。下一步补证须覆盖仍可能改变入围结论的竞争者。`
-          : `An exclusion screen of the assembled matrix retains all ${n(screening.retainedCount)} candidates, with ${n(screening.supportedExclusionCount)} supported exclusions. Reviews include ${n(screening.completeConditionalCaseCount)} with complete conditional centres and ${n(screening.partialCaseCount)} with partial judgments; ${n(screening.unassessedCount)} candidates lack such eight-dimension reviews. This checks whether current evidence supports exclusion, not whether every city has been fully scored. Partial sources and conditional scores establish no reliable exclusion bounds. Further assessment must cover competitors that could change the shortlist.`
-      }
-    </p>
-    <p>
-      {
-        zh
-          ? "源名 San Jose 的功能区有 ISR／MED／TEC／OPT 四项条件性 60，PCS／GSS／RES／LON 未定，无总分中心。旧金山与圣何塞近似参考点均落在同一冻结候选；这不验证完整市域或治疗地点，也不产生两个名额。实际医院服务修复、许可及交通，与数字外借终止一并判读；旧统计图不冒充当前扩散。准备开药、带过时文字的可获得说明及外地患者研究尚不足以证明当前本地长寿交付，零公开非设施理赔信号也不证明无服务。四项数学域 30—80；撤回 MED／ISR 为 21—86，TEC／OPT 为 24—84。普通居民获得、负担、持续及全区触达仍是假设；这些域不证明入围或排除。"
-          : "The source-named San Jose FUA has conditional 60 judgments for ISR, MED, TEC and OPT; PCS, GSS, RES and LON remain unknown, with no total centre. Approximate San Francisco and San Jose reference points fall in the same frozen candidate; this verifies neither complete municipal footprints nor treatment locations and creates no separate slots. Actual hospital restoration, licensing and transport are reviewed alongside discontinued digital lending; older charts are not current diffusion. Planned prescribing, availability wording with obsolete information and nonlocal patient studies do not establish current local longevity delivery. Zero published nonfacility claims signals do not establish absent service. The mathematical domain is 30–80; withdrawing MED or ISR gives 21–86, and TEC or OPT gives 24–84. Ordinary access, affordability, continuity and whole-area reach remain assumptions; these domains prove neither qualification nor exclusion."
-      }
-    </p>
-    <p>
-      {
-        zh
-          ? "波士顿功能区新增 PCS／ISR／LON／TEC／OPT 五项条件性 60，GSS／RES／MED 未定；无中心、数学域 36—76。实际流程改进、科研许可、临床采用与接驳支持有限能力，居民数字障碍、招聘压力及治疗风险保留。区域水合格不能覆盖高风险含铅管住户的检测反证，换管缓解也不等于全区风险已解除；单病临床采用不填常规医疗。正文称 10 月 9 日的数字交付页，原元数据 10 月 11 日晚于截止，未计入评分。空间、延续、普通居民通常可得／可负担与缓解后瓶颈重要性仍须假设；五个近似点不验证完整边界或实际治疗地点。"
-          : "Boston adds conditional 60 judgments for PCS, ISR, LON, TEC and OPT; GSS, RES and MED remain unknown, without a centre and with a mathematical domain of 36–76. Actual workflow improvements, licensing, clinical adoption and ground access support scoped capability; digital barriers, staffing pressures and treatment risks remain. Regional water compliance does not erase targeted high-risk lead-pipe household findings, and replacements do not prove area-wide resolution. Disease-specific adoption does not fill routine medicine. A digital-delivery page dated 9 October in its body has 11 October publication metadata, after the cutoff, and is excluded. Spatial applicability, continuity, ordinary access/affordability and material constraints after mitigation remain assumptions; five approximate points verify neither whole boundaries nor treatment sites."
-      }
-      {" "}
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-boston-case.md"
-        >{zh ? "波士顿案例与原件" : "Boston case and sources"}</a
-      >
-    </p>
-    <p>
-      {
-        zh
-          ? "首尔 PCS／ISR／TEC／OPT 条件性 60，LON 条件性 40；GSS／RES／MED 未定，无总分中心、数学域 34—74。真实保护、福利衔接、研究转移、数字辅助和交通支持有限能力。两院已治疗与安全监测是重要正向证据；候补、容量下降、等待延长、转诊受限及非报销费用／安全劳动的组合支持长寿居民链的明显约束。40 仍依赖疾病路径代表性、费用重要性、2025→2026 延续和范围适用，拒绝则未知；新证据证明费用可承担且主要瓶颈缓解，再审 60，域 36—76。撤回 LON 为 30—80，均不证明入围或排除。自主循环恢复不当出院生存，单药断点不降低全部医疗。九月机场表截止前公开未核清，未用于评分；七个近似点不验证完整地域或治疗地点。"
-          : "Seoul has conditional 60 judgments for PCS, ISR, TEC and OPT, and 40 for LON. GSS, RES and MED remain unknown, without a total centre and with a mathematical domain of 34–74. Delivered protection, welfare connections, research transfer, digital assistance and transport support scoped capability. Actual treatment and safety monitoring at two providers are important positive evidence; waitlisting, reduced start capacity, longer waits, limited transfers and reported nonreimbursed costs and safety labour together support a material resident-access discontinuity. LON 40 still requires pathway-relevance, cost-materiality, 2025-to-2026 continuity and scope assumptions; rejection restores unknown. New evidence of affordable costs and substantive bottleneck mitigation would support reviewing 60, giving 36–76. Withdrawing LON gives 30–80; neither establishes qualification or exclusion. Return of spontaneous circulation is not discharge survival, and a single-drug bottleneck does not downgrade general medicine. September airport statistics have unverified pre-cutoff publication and are unused; seven approximate points verify neither whole boundaries nor treatment sites."
-      }
-    </p>
-    <p class="text-muted-foreground text-sm">
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-seoul-case.md"
-      >
-        {zh ? "首尔评分案例与原件" : "Seoul scoring case and sources"}
-      </a>
-      ·
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-seoul-clinical-review.md"
-      >
-        {zh ? "临床证据与改档条件" : "Clinical evidence and conditions for revision"}
-      </a>
-    </p>
-    <p>
-      {
-        zh
-          ? "布拉格功能区 ISR／LON／OPT 条件性 60、TEC 条件性 80；PCS／GSS／RES／MED 未定，无中心、数学域 29—84。多主体实际科研／产业部署、广泛数字使用与已完成日常服务支持同一技术高档锚点；全部大学产出和应用用户不当本区成果或去重居民，范围／使用者／延续假设拒绝则未知，已核实的重要扩散瓶颈可审 60。克拉德诺参考点落入另一功能区 387，不继承布拉格分数。实际停电恢复和应急备电与交通／热水中断共同保留；给药、产品分发和合资格居民获保分开，当前安全与负担仍是假设。LON 不填 MED；其部分域不支持入围或排除。"
-          : "Prague has conditional 60 judgments for ISR, LON and OPT, and 80 for TEC. PCS, GSS, RES and MED remain unresolved, with no centre and a mathematical domain of 29–84. Multiple productive institutions, deployed industry products, broad digital use and completed everyday services support the shared high TEC anchor. University-wide outputs and app users are not all local products or unique residents; rejecting necessary scope, user or continuity assumptions restores unknown. Verified material diffusion barriers could support 60. Kladno's reference lies in FUA 387 and inherits no Prague score. Actual restoration and emergency backup are read alongside transport and hot-water disruption. Administrations, distributed products and eligible insured residents remain distinct, with reversible current safety and affordability assumptions. LON does not fill MED; the partial domain establishes neither qualification nor exclusion."
-      }
-    </p>
-    <p class="text-muted-foreground text-sm">
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-prague-case.md"
-      >
-        {zh ? "布拉格评分案例与原件" : "Prague scoring case and sources"}
-      </a>
-      {" · "}
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-prague-clinical-review.md"
-      >
-        {zh ? "布拉格临床复核" : "Prague clinical review"}
-      </a>
-    </p>
-    <p>
-      {
-        zh
-          ? "芝加哥功能区 PCS／RES 条件性 40，ISR／LON／TEC／OPT 条件性 60；GSS／MED 未定，无中心、数学域 37—67。跨州范围保留 Gary 等地实际长断电与资源损失，也保留已经完成的恢复和援助；启动监管调查不等于责任已认定。水务通知缺口与补发整改共同判读，数字旧数重刊与客流方法重述不当新实绩。LON 依据人体／监管和实际当地采用，仍依赖监测、医保负担与延续假设；不因此给整维 MED 补分。必要假设拒绝则未知，现有部分域不证明入围或排除。"
-          : "Chicago has conditional 40 judgments for PCS and RES, and 60 for ISR, LON, TEC and OPT. GSS and MED remain unresolved, without a centre and with a mathematical domain of 37–67. The cross-state FUA retains actual prolonged outages and resource losses around Gary alongside completed restoration and relief. A regulatory investigation is not a liability finding. Water-notification failures and correction are read together; reprinted digital figures and restated transit counts are not new measurements or growth. LON combines human/regulatory evidence and actual local adoption, with reversible monitoring, insurance affordability and continuity assumptions. It does not fill MED. Rejecting necessary assumptions restores unknown; the partial domain establishes neither qualification nor exclusion."
-      }
-    </p>
-    <p class="text-muted-foreground text-sm">
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-chicago-case.md"
-      >
-        {zh ? "芝加哥评分案例与原件" : "Chicago scoring case and sources"}
-      </a>
-      ·
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-chicago-clinical-review.md"
-      >
-        {zh ? "医疗质量、资格与临床路径复核" : "Quality, eligibility and clinical-pathway review"}
-      </a>
-    </p>
-    <p>
-      {
-        zh
-          ? "里斯本 ISR／TEC／OPT 条件性 60、MED 条件性 40；PCS／GSS／RES／LON 未定，无中心、数学域 27—77。医疗低档依据多机构实际首诊超时、等待库存与家庭医生缺口，与已发生接诊、转移及下沉服务一起判读；已治疗者与等待者分母不混用。质量编码未闭与原表／文字冲突保留，不直接当稳定死亡结局。LON 有首批给药正向声明，但产品、支付、监测和普通居民费用未连通；截止后更新的支付查询不回填，更不由未知取低档。供水储备保住多数用户，同时保留局部限制和年度中断；摘要不等于所有住户零中断。停车数字支付的 74% 是收入份额，不是居民率；谈判许可不算已执行。判断依赖范围、延续与缓解后仍重要，拒绝则未知。撤回 MED 为 21—86，新依据支持 MED 60 才为 30—80，均不证明入围或排除。"
-          : "Lisbon has conditional 60 judgments for ISR, TEC and OPT, and 40 for MED. PCS, GSS, RES and LON remain unknown, without a centre and with a mathematical domain of 27–77. MED combines actual late first consultations at multiple providers, waiting stocks and family-doctor gaps with delivered care, transfers and primary-care mitigation; completed and waiting cohorts have different denominators. Unclosed quality coding and table/prose conflicts remain, without being treated as stable mortality outcomes. An actual first-treatment statement supports LON capability, but product, payments, monitoring and ordinary resident costs are not connected. A payment query updated after the cutoff is not backfilled, and unknowns do not receive low scores. Water reserves served most customers, with local restrictions and annual interruptions retained; summaries do not prove uninterrupted service to every household. Digital parking payments account for 74% of revenue, not residents, and negotiated licences are not executed licences. Judgments require scope, continuity and material constraints after mitigation; rejection restores unknown. Withdrawing MED gives 21–86; new evidence supporting MED 60 would give 30–80. Neither establishes qualification or exclusion."
-      }
-    </p>
-    <p class="text-muted-foreground text-sm">
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-lisbon-case.md"
-      >
-        {zh ? "里斯本评分案例与原件" : "Lisbon scoring case and sources"}
-      </a>
-      ·
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-lisbon-clinical-review.md"
-      >
-        {zh ? "医疗等待、质量与临床路径复核" : "Waiting, quality and clinical-pathway review"}
-      </a>
-    </p>
-    <p>
-      {
-        zh
-          ? `全候选入围可判定性演算已覆盖 ${n(rankAudit.candidateCount)} 个冻结功能区、${n(Object.keys(rankAudit.scenarios).length)} 组情景。即使暂时固定已有条件性判断，赫尔辛基的算术位置仍可为 ${n(helsinkiPosition.bestPosition)}—${n(helsinkiPosition.worstPosition)}；其余竞争者仍未知，不能把少数案例的比较当作入围证明。逐维撤回必要假设后，总分中心为空。未知项的 0—100 是数学域端点，不是评分、概率或可靠城市界限；较新未匹配中心亦未被排除。`
-          : `A shortlist-identifiability calculation covers all ${n(rankAudit.candidateCount)} frozen areas across ${n(Object.keys(rankAudit.scenarios).length)} scenarios. Even temporarily fixing existing conditional judgments leaves Helsinki's arithmetic position between ${n(helsinkiPosition.bestPosition)} and ${n(helsinkiPosition.worstPosition)}. Unassessed competitors remain unknown; comparisons among a few cases cannot prove membership. Withdrawing a dimension's necessary assumptions removes the total's centre. The 0–100 endpoints for unknowns are mathematical domains, not scores, probabilities or reliable city bounds; newer unmatched centres are also not excluded.`
-      }
-      {" "}
-      <a
-        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-rank-audit.md"
-        >{zh ? "查看演算与逐行结果" : "Review the calculation and every candidate row"}</a
-      >
-    </p>
-  </div>
-  <details class="cci-reasons">
+      </p>
+      <p>
+        {
+          zh
+            ? `旧候选范围之外的 ${n(coverage.outsideFrameReview.recordCount)} 条未匹配中心记录已逐条保留，按跨来源交集组成 ${n(coverage.outsideFrameReview.reviewGroupCount)} 个边界复核组，其中 ${n(coverage.outsideFrameReview.groupsWithIndirectFuaLink)} 组存在间接旧 FUA 联系。这些是记录与复核组数量，不是去重城市数；间接联系不证明居民已被覆盖，也不继承分数。其八维与总分均未定，当前名次演算仍只限于旧 ${n(coverage.candidateCount)} 个功能区。范围缺口已接入资格检查，尚不能发布全球 Top 32。`
+            : `All ${n(coverage.outsideFrameReview.recordCount)} unmatched centre records outside the old frame are retained in ${n(coverage.outsideFrameReview.reviewGroupCount)} boundary-review groups based on cross-source overlap; ${n(coverage.outsideFrameReview.groupsWithIndirectFuaLink)} groups have indirect links to old FUAs. These are record and review-group counts, not deduplicated city counts. Indirect links establish neither resident coverage nor inherited scores. All eight dimensions and totals remain unresolved; position arithmetic still covers only the older ${n(coverage.candidateCount)} functional areas. The scope gap is now included in eligibility checks; a global Top 32 cannot yet be published.`
+        }
+        {" "}
+        <a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-unmatched-centre-review.md"
+          >{zh ? "查看未匹配中心逐条登记" : "Review every unmatched centre record"}</a
+        >
+      </p>
+      <p>
+        {
+          zh
+            ? "后续分别评价当地普通居民与跨国迁居者，沿用八维权重，各自审查入围名单，不合成单一榜单。跨国视角的基准人物参数仍待明确；当前发布未应用这两种视角。"
+            : "Future assessments will distinguish ordinary local residents from international movers, retaining the eight weights and reviewing each shortlist separately. The mover profile remains unspecified; neither perspective has been applied to the current release."
+        }
+      </p>
+    </div>
+  </details>
+  <details id="publication-scope" class="research-fold">
+    <summary>{zh ? "出榜条件与名称" : "Publication conditions and scope"}</summary>
+    <div class="research-reading">
+      <p>
+        {
+          zh
+            ? `先按同一规则评分，再验证入围边界；不必等所有数据完美，但需要解释入围者为何排在其他候选之前。当前只有 ${n(screening.completeConditionalCaseCount)} 份完整条件评分，尚不满足任何前 32 发布条件。`
+            : `Apply the same scoring rules, then test the shortlist boundary. Perfect data are not required, but inclusion must be justified against competing candidates. Only ${n(screening.completeConditionalCaseCount)} complete conditional assessments are currently available; none of the Top 32 publication conditions is met.`
+        }
+      </p>
+      <ol>
+        <li>
+          {
+            zh
+              ? "至少 32 城完成统一评价，公开关键假设和敏感性：可以发布“已评估城市中的 CCI 前 32”，明确已评估范围。"
+              : "With at least 32 consistently assessed cities and disclosed assumptions and sensitivity, publish “CCI Top 32 among assessed cities”, identifying the assessed scope."
+          }
+        </li>
+        <li>
+          {
+            zh
+              ? "整个声明的候选范围均已评价，或有充分依据排除未深入评估者：可以发布“该候选范围内的 CCI 研究前 32”。仍可能入围的未知候选必须保留。"
+              : "When the entire declared candidate scope is assessed, or sufficient evidence excludes candidates not assessed in depth, publish “CCI research Top 32 within the declared scope”. Unresolved candidates that could qualify must be retained."
+          }
+        </li>
+        <li>
+          {
+            zh
+              ? "新旧城市覆盖问题也已解决，遗漏候选不会改变入围结论：才可以发布“全球 CCI Top 32”，附模型假设、敏感性及争议候选。细小分差不表示确定优劣。"
+              : "Only after old and new city coverage is resolved and omitted candidates cannot change inclusion, publish “Global CCI Top 32”, with model assumptions, sensitivity and disputed candidates. Small score gaps do not establish certain superiority."
+          }
+        </li>
+      </ol>
+    </div>
+  </details>
+  <details class="cci-reasons research-fold">
     <summary
       >{
         zh ? "查看八维证据与剩余缺口" : "Evidence and remaining gaps across eight dimensions"
@@ -650,12 +581,145 @@ const rows = [
 </section>
 
 <style>
+  #global-research {
+    --research-measure: 72ch;
+  }
+  :lang(zh) #global-research {
+    --research-measure: 38em;
+  }
+  #global-research p,
+  .research-reading,
+  dd {
+    max-width: var(--research-measure);
+  }
+  #global-research p {
+    margin-bottom: 1rem;
+  }
+  h3 {
+    margin: 2rem 0 1rem;
+    font-family: var(--font-serif);
+    font-size: var(--cci-type-title);
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  .research-nav,
+  .research-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    font-size: var(--cci-type-label);
+  }
+  .research-nav {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--cci-rule-light);
+  }
+  .research-table {
+    margin-top: 0.5rem;
+  }
+  .research-table:focus-visible {
+    outline: 2px solid var(--cci-action);
+    outline-offset: 4px;
+  }
+  .research-table table {
+    min-width: 48rem;
+    table-layout: fixed;
+  }
+  caption {
+    padding-bottom: 0.75rem;
+    text-align: left;
+    color: var(--cci-muted);
+  }
+  .research-table :is(th, td) {
+    padding: 0.75rem 0.5rem;
+    text-align: right;
+  }
+  .research-table tr > :first-child {
+    position: sticky;
+    z-index: 1;
+    left: 0;
+    width: 12rem;
+    background: #ffffff;
+    text-align: left;
+    white-space: normal;
+  }
+  .research-table tr > :last-child {
+    width: 7rem;
+  }
+  .research-table tbody th {
+    font-weight: 400;
+  }
+  .research-table small {
+    display: block;
+    color: var(--cci-muted);
+    font-weight: 400;
+  }
+  .research-total {
+    border-inline-start: 1px solid var(--cci-rule-light);
+    font-weight: 600;
+  }
+  .research-table-hint {
+    margin-top: 0.75rem;
+    color: var(--cci-muted);
+    font-size: var(--cci-type-label);
+  }
+  .research-fold {
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--cci-rule);
+    scroll-margin-top: 1.5rem;
+  }
+  .research-fold > summary {
+    padding: 1rem 0;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .research-reading {
+    padding: 0.5rem 0 1rem;
+  }
+  ol {
+    display: grid;
+    gap: 1rem;
+    padding-inline-start: 1.5rem;
+    list-style: decimal;
+  }
+  .research-case-list {
+    padding-bottom: 1rem;
+  }
+  .research-case {
+    border-top: 1px solid var(--cci-rule-light);
+    scroll-margin-top: 1.5rem;
+  }
+  .research-case > summary {
+    padding: 1rem 0;
+    cursor: pointer;
+  }
+  .research-case-status {
+    margin-inline-start: 1rem;
+    color: var(--cci-muted);
+    font-size: var(--cci-type-label);
+  }
+  .research-case-body {
+    padding: 0.5rem 0 1.5rem 1rem;
+    scroll-margin-top: 6rem;
+  }
   dl {
     display: grid;
-    gap: 1.25rem;
+    gap: 1.5rem;
+    margin: 0.5rem 0 1.5rem;
   }
   dd {
-    margin: 0.4rem 0 0;
+    margin: 0.5rem 0 0;
     color: var(--cci-muted);
+  }
+  @media (max-width: 640px) {
+    .research-table table {
+      min-width: 44rem;
+    }
+    .research-table tr > :first-child {
+      width: 10rem;
+    }
+    .research-case-status {
+      display: block;
+      margin-inline-start: 1rem;
+    }
   }
 </style>
