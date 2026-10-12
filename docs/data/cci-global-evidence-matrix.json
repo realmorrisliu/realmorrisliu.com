@@ -15,6 +15,21 @@
     "withoutWup2025CentreOverlap": 997
   },
   "boundaryMeaning": "Centre intersections describe geometric coverage only. UCDB and WUP are separate sources; their IDs and counts cannot be merged directly. Zero intersections do not exclude a candidate or imply a score.",
+  "boundaryPopulationCoverage": {
+    "manifest": "cci-wup-2025-population-coverage.json",
+    "status": "native_projected_population_coverage_not_candidate_migration_or_scores",
+    "targetEpoch": 2025,
+    "centreCount": 12140,
+    "frozenFuaCount": 9031,
+    "centresWithKnownPopulation": 12140,
+    "centresWithKnownOutsidePopulation": 4936,
+    "centresWithoutOldFuaOverlap": 2280,
+    "centresWithPartialKnownPopulationCoverage": 2656,
+    "centresWithOutsideAreaButNoSampledOutsidePopulation": 59,
+    "centresWithUnknownPopulationCells": 0,
+    "method": "Native population cell centres inside 1000m-densified WUP2025 polygons; whole-cell values partitioned by the union of every positive-area intersecting old FUA. Covered and uncovered known cells conserve each centre total. No uniform density, raster reprojection or cross-centre population sum.",
+    "limitations": "Projected residential population, not census, citizenship, income or insured residents. Coarse whole-cell allocation and transformed boundary approximation affect small/coastal areas. Unknown population is counted as cells and excluded from the known-only share, not imputed zero. Geometry-review/outside-raster records remain unresolved. No commuting identity, whole-FUA resident coverage, cross-centre deduplicated global population, migration, scores, exclusion or global ranking eligibility follows."
+  },
   "dimensionStatusCounts": {
     "PCS": {
       "partial_seismic_hazard_model": 9023,
@@ -223,6 +238,16 @@
       "provenance": "cci-wup-2025-crosswalk.json",
       "provenanceSha256": "14fffd62e6c3053cd1cf8a00f49e2cd86c5c76f8f0e00dfe4e884f27027be565"
     },
+    "cci-wup-2025-population-coverage.csv": {
+      "sha256": "371439c9149a2fa255e81908e9c9b459103e45e14ffa2916a6ca6d65a3ebf33e",
+      "provenance": "cci-wup-2025-population-coverage.json",
+      "provenanceSha256": "cbbcd713855909f2c200bf0d0bd3b1835c5734c46563a1bcb10a9813fed92227"
+    },
+    "cci-wup-2025-centre-coverage.csv": {
+      "sha256": "b737c8336838119fd03f0a1a4b695354ded5f943dceb2d83fd6b3db78b50f8a0",
+      "provenance": "cci-wup-2025-crosswalk.json",
+      "provenanceSha256": "14fffd62e6c3053cd1cf8a00f49e2cd86c5c76f8f0e00dfe4e884f27027be565"
+    },
     "cci-ourairports-efua-coverage.csv": {
       "sha256": "498fa0e4371aab23e0564c66295e4b8c1b08a5b25aebf7ee616f44fa1468ebb8",
       "provenance": "cci-ourairports-fua-audit.json",
@@ -349,6 +374,6 @@
       "provenanceSha256": "e5e20d8857d16da21ba711f6b0194b9fffc01d69052f4a200b5960f07a59ad55"
     }
   },
-  "scriptSha256": "86d1812d1e59aa40c32ab7999b10e16de970e16b87523ebfde93221e68b55304",
+  "scriptSha256": "78aad26e79117b7e92fb41d27e2097e1566e7b78d5377a03348b609642527282",
   "csvSha256": "0663940dd83acb15dbeacfc18c29305588dfa0d4ddea6a6b13d683d386c973b8"
 }

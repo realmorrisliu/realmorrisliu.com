@@ -47,3 +47,9 @@
 | `cci-functional-wizard-config.js` | `ceaa756dbe75e091aa9b129c7814cc16507cdd25373d615a7644df9db84f4512` |
 | `cci-functional-wup-method.pdf`   | `9549a292d8cb706e9f52b909e74af6a64983b7e4249f45a1affeb0bec369d0ae` |
 | `cci-functional-oecd-lau.csv`     | `1775a19b343289f37fbf98528228c7a530267c88f289f69ca4c96f08df4c63e5` |
+
+## 2026-10-12 人口覆盖计算与 OECD 下载实况
+
+[全量人口覆盖计算](cci-wup-population-coverage.md)已完成 12,140 个 WUP 2025 中心原生网格核查：4,936 个中心有模型人口落在旧 FUA 全集之外，含 2,280 个无交集中心及 2,656 个部分覆盖中心。另 59 个虽有区外面积却无抽样区外正人口，不能推成无人居住。模型投影、整格分配、未知处理与全量 SHA 单列，不将几何交集当作居民覆盖，也不改变候选单位或评分。
+
+本日继续读取官方定义页所链同一 OECD FUA ZIP；本地 Python 请求及普通浏览器 UA 的 curl 均返回 HTTP 403，没有有效 ZIP；web 读取也未返回可解析的 ZIP 内容。因此仍未核验其几何、版本、范围或人口覆盖，不把访问失败当来源不存在、城市能力差或信息透明度缺陷。已有市镇 CSV 的身份盘点仍有效，不冒充空间对照。

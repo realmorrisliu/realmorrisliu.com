@@ -227,6 +227,48 @@ def main():
     water = read("cci-water-efua-context.csv", "cci-water-context.json", "outputs", True)
     network = read("cci-ookla-efua-sampled-measurements.csv", "cci-ookla-efua-sampled-measurements.json", "csvSha256")
     wup = read("cci-wup-2025-fua-coverage.csv", "cci-wup-2025-crosswalk.json", "outputs", True)
+    population_rows = read('cci-wup-2025-population-coverage.csv', 'cci-wup-2025-population-coverage.json', 'csvSha256')
+    population = json.loads((folder / 'cci-wup-2025-population-coverage.json').read_text())
+    population_source = json.loads((folder / 'cci-healthcare-population-source.json').read_text())
+    wup_source = json.loads((folder / 'cci-wup-2025-crosswalk.json').read_text())
+    for field, path in {
+        'scriptSha256': 'scripts/cci_wup_population_coverage.py',
+        'crosswalkHelperSha256': 'scripts/cci_global_crosswalk.py',
+        'wupHelperSha256': 'scripts/cci_wup_crosswalk.py',
+        'wupCrosswalkSha256': 'docs/data/cci-wup-2025-crosswalk.json',
+        'populationSourceSha256': 'docs/data/cci-healthcare-population-source.json',
+    }.items():
+        if population[field] != hashlib.sha256((ROOT / path).read_bytes()).hexdigest():
+            raise ValueError('Stale population coverage provenance')
+    centre_inventory = read('cci-wup-2025-centre-coverage.csv', 'cci-wup-2025-crosswalk.json', 'outputs', True)
+    if (population['status'] != 'native_projected_population_coverage_not_candidate_migration_or_scores'
+            or population['targetEpoch'] != 2025 or population['frozenFuaCount'] != len(candidates)
+            or population['populationSha256'] != population_source['sha256']
+            or population['wupArchiveSha256'] != wup_source['archiveSha256']
+            or population['fuaSha256'] != json.loads((folder / 'cci-global-candidates-r2019a.provenance.json').read_text())['geoPackageSha256']
+            or len(population_rows) != population['centreCount']
+            or len({r['wup_2025_id'] for r in population_rows}) != len(population_rows)
+            or {r['wup_2025_id'] for r in population_rows} != {r['wup_2025_id'] for r in centre_inventory}):
+        raise ValueError('Population coverage scope mismatch')
+    for row in population_rows:
+        if not row['known_projected_population']:
+            continue
+        observed, within, uncovered = [float(row[k]) for k in ('known_projected_population', 'known_population_inside_old_frame', 'known_population_outside_old_frame')]
+        if (not all(math.isfinite(v) and v >= 0 for v in (observed, within, uncovered))
+                or not math.isclose(observed, within + uncovered, rel_tol=1e-12, abs_tol=1e-6)
+                or (observed > 0 and not math.isclose(float(row['old_frame_share_among_known_population']), within / observed))):
+            raise ValueError('Population coverage partition mismatch')
+    population_counts = {
+        'statusCounts': dict(Counter(r['status'] for r in population_rows)),
+        'centresWithKnownPopulation': sum(bool(r['known_projected_population']) and float(r['known_projected_population']) > 0 for r in population_rows),
+        'centresWithKnownOutsidePopulation': sum(bool(r['known_population_outside_old_frame']) and float(r['known_population_outside_old_frame']) > 0 for r in population_rows),
+        'centresWithUnknownPopulationCells': sum(bool(r['unknown_population_cells']) and int(r['unknown_population_cells']) > 0 for r in population_rows),
+        'centresWithoutOldFuaOverlap': sum(int(r['intersecting_efuas']) == 0 for r in population_rows),
+        'centresWithPartialKnownPopulationCoverage': sum(bool(r['old_frame_share_among_known_population']) and 0 < float(r['old_frame_share_among_known_population']) < 1 for r in population_rows),
+        'centresWithOutsideAreaButNoSampledOutsidePopulation': sum(float(r['old_frame_area_share']) < 1 - 1e-9 and r['known_population_outside_old_frame'] != '' and float(r['known_population_outside_old_frame']) == 0 for r in population_rows),
+    }
+    if any(population[key] != value for key, value in population_counts.items()):
+        raise ValueError('Population coverage counts disagree with every centre row')
     airports = read("cci-ourairports-efua-coverage.csv", "cci-ourairports-fua-audit.json", "outputs", True)
     claims = read("cci-cms-lecanemab-efua-coverage.csv", "cci-cms-lecanemab-fua-audit.json", "outputs", True)
     current_violence = read("cci-ucdp-candidate-2026-efua.csv", "cci-ucdp-candidate-2026.json", "files", True)
@@ -293,6 +335,10 @@ def main():
         "boundaryCoverageCounts": {"withoutUcdbCentreOverlap": sum(int(r["ucdb_intersecting_centres"]) == 0 for r in rows),
                                    "withoutWup2025CentreOverlap": sum(r["wup_2025_intersecting_centres"] == 0 for r in rows)},
         "boundaryMeaning": "Centre intersections describe geometric coverage only. UCDB and WUP are separate sources; their IDs and counts cannot be merged directly. Zero intersections do not exclude a candidate or imply a score.",
+        "boundaryPopulationCoverage": {
+            "manifest": "cci-wup-2025-population-coverage.json",
+            **{key: population[key] for key in ('status', 'targetEpoch', 'centreCount', 'frozenFuaCount', 'centresWithKnownPopulation', 'centresWithKnownOutsidePopulation', 'centresWithoutOldFuaOverlap', 'centresWithPartialKnownPopulationCoverage', 'centresWithOutsideAreaButNoSampledOutsidePopulation', 'centresWithUnknownPopulationCells', 'method', 'limitations')},
+        },
         "dimensionStatusCounts": {d: dict(Counter(r[d] for r in rows)) for d in DIMENSIONS},
         "scoreStatusCounts": dict(Counter(r["cci_score_status"] for r in rows)),
         'researchDirectorySignals': {key: research_source[key] for key in ('status', 'snapshotDate', 'publicationYear', 'evidenceCutoff', 'candidateCount', 'candidatesWithAssociation', 'recordCandidateAssociations', 'distinctRecordsWithAssociation', 'limitations')},

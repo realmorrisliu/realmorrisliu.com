@@ -167,6 +167,30 @@ const recordPresence = JSON.parse(
     "utf8"
   )
 );
+const populationCoverage = JSON.parse(
+  readFileSync(
+    new URL("../docs/data/cci-wup-2025-population-coverage.json", import.meta.url),
+    "utf8"
+  )
+);
+assert.equal(populationCoverage.centreCount, 12140);
+assert.equal(populationCoverage.frozenFuaCount, coverage.candidateCount);
+assert.equal(populationCoverage.centresWithKnownOutsidePopulation, 4936);
+assert.equal(
+  populationCoverage.centresWithoutOldFuaOverlap +
+    populationCoverage.centresWithPartialKnownPopulationCoverage,
+  4936
+);
+assert.equal(populationCoverage.centresWithOutsideAreaButNoSampledOutsidePopulation, 59);
+assert.equal(populationCoverage.statusCounts.partial_projected_population_coverage, 12140);
+assert.equal(
+  digest("docs/data/cci-wup-2025-population-coverage.csv"),
+  populationCoverage.csvSha256
+);
+assert.equal(digest("scripts/cci_wup_population_coverage.py"), populationCoverage.scriptSha256);
+for (const [key, value] of Object.entries(coverage.boundaryPopulationCoverage)) {
+  if (key !== "manifest") assert.deepEqual(value, populationCoverage[key]);
+}
 assert.equal(
   recordPresence.status,
   "complete_2025_directory_record_associations_not_output_or_scores"

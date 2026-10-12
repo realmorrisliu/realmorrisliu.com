@@ -606,6 +606,18 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
             : "Future assessments will distinguish ordinary local residents from international movers, retaining the eight weights and reviewing each shortlist separately. The mover profile remains unspecified; neither perspective has been applied to the current release."
         }
       </p>
+      <p>
+        {
+          zh
+            ? `人口覆盖核查已遍历全部 ${n(coverage.boundaryPopulationCoverage.centreCount)} 个 WUP 2025 中心：${n(coverage.boundaryPopulationCoverage.centresWithKnownOutsidePopulation)} 个有抽样模型人口落在旧功能区全集之外，其中 ${n(coverage.boundaryPopulationCoverage.centresWithPartialKnownPopulationCoverage)} 个同时有区内和区外人口。“有交集”不能证明居民已全覆盖。这是投影人口与整格抽样，不是新增城市数、实际服务覆盖率或评分；边界迁移仍待核。`
+            : `Population coverage was checked across all ${n(coverage.boundaryPopulationCoverage.centreCount)} WUP 2025 centres. ${n(coverage.boundaryPopulationCoverage.centresWithKnownOutsidePopulation)} have sampled projected population outside the union of older functional areas, including ${n(coverage.boundaryPopulationCoverage.centresWithPartialKnownPopulationCoverage)} with population both inside and outside. An intersection does not establish complete resident coverage. These are projections sampled by whole cells, not new city counts, measured service coverage or scores; boundary migration remains unresolved.`
+        }
+        {" "}
+        <a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-wup-population-coverage.md"
+          >{zh ? "查看全量人口覆盖计算" : "Review the full population coverage calculation"}</a
+        >
+      </p>
     </div>
   </details>
   <details id="publication-scope" class="research-fold">
