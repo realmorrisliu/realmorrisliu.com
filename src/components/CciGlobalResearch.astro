@@ -19,6 +19,7 @@ import washington from "../../docs/data/cci-local-2026-washington-case.json";
 import newYork from "../../docs/data/cci-local-2026-new-york-case.json";
 import paris from "../../docs/data/cci-local-2026-paris-case.json";
 import sanJose from "../../docs/data/cci-local-2026-san-jose-case.json";
+import losAngeles from "../../docs/data/cci-local-2026-los-angeles-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -43,6 +44,7 @@ const cases = [
   newYork,
   paris,
   sanJose,
+  losAngeles,
 ];
 const screening = coverage.local2026Screening;
 if (
@@ -291,6 +293,13 @@ const rows = [
     <p>
       {
         zh
+          ? "洛杉矶形成 PCS 条件性 40，ISR／MED／LON／TEC／OPT 条件性 60，GSS／RES 未定；无总分中心，数学域 42—67。旧灾害失效与已完成的恢复、告警和培训对读，PCS 40 仍须接受保护瓶颈延续的假设。实际现场试验和区域理赔支持有限临床路径推定；拟议十人试点与预期商业供应不算已治疗，登记地址不归属给 UCLA 或 Cedars。当前监测、居民负担、延续和全区适用仍须假设，拒绝即撤回。四个近似参考点不验证完整边界或治疗地点。"
+          : "Los Angeles has conditional PCS 40 and ISR/MED/LON/TEC/OPT 60, with GSS/RES unresolved: no total centre and a mathematical domain of 42–67. Historical disaster failures are read alongside completed restoration, alerts and training; PCS 40 still assumes a persistent protection bottleneck. Actual on-site trials and regional claims support only a limited clinical-pathway inference. A proposed ten-person pilot and expected commercial availability are not treated patients; registered addresses are not attributed to UCLA or Cedars. Current monitoring, resident affordability, continuity and area-wide applicability remain assumptions; rejecting them withdraws judgments. Four approximate reference points establish neither complete boundaries nor treatment sites."
+      }
+    </p>
+    <p>
+      {
+        zh
           ? "查看支持、反证与假设："
           : "Review supporting evidence, counterevidence and assumptions: "
       }
@@ -339,6 +348,10 @@ const rows = [
         href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-san-jose-case.md"
         >{zh ? "San Jose 部分维度案例" : "San Jose partial case"}</a
       >
+      <a
+        href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-los-angeles-case.md"
+        >{zh ? "洛杉矶部分维度案例" : "Los Angeles partial case"}</a
+      >
     </p>
     <p>
       {
@@ -385,8 +398,8 @@ const rows = [
     <p>
       {
         zh
-          ? `同一规则审阅了 2026 年一至八月的初步组织暴力：${n(currentViolence.candidatesWithClearPreciseEvents)} 个候选有保留的 Clear 编码点，${n(currentViolence.candidatesWithPendingPreciseEvents)} 个有待核查编码点，两组可重叠，均不是完整安全影响或 GSS 分数。跨月重复、后版修订、粗位置、时点冲突及异常值分别保留。纽约一条记录引用的原文描述涉嫌 2024 年双重谋杀与 2026 年起诉，已隔离而未计为当年新增死亡。修改时间和发布周期仅支持截止日前可用的假设，独立历史存档尚未核验。无保留归属不证明安全，十案例档位未变；后续须补当地完整影响、区域／战略暴露和实际缓解。`
-          : `A consistent review covers preliminary organised violence for January–August 2026: ${n(currentViolence.candidatesWithClearPreciseEvents)} candidates have retained Clear coded points and ${n(currentViolence.candidatesWithPendingPreciseEvents)} have pending coded points; groups can overlap, and neither establishes complete safety impacts or GSS scores. Monthly overlaps, later revisions, coarse locations, temporal conflicts and anomalous values remain separate. One New York record cites a source describing an alleged 2024 double murder and a 2026 indictment; it is quarantined rather than counted as new deaths. Modification times and the release schedule support only an assumption of pre-cutoff availability; an independent historical archive is unverified. An absence of retained assignments does not establish safety or absent violence. Ten case judgments remain unchanged; complete local impacts, regional and strategic exposure, and actual mitigation still need evidence.`
+          ? `同一规则审阅了 2026 年一至八月的初步组织暴力：${n(currentViolence.candidatesWithClearPreciseEvents)} 个候选有保留的 Clear 编码点，${n(currentViolence.candidatesWithPendingPreciseEvents)} 个有待核查编码点，两组可重叠，均不是完整安全影响或 GSS 分数。跨月重复、后版修订、粗位置、时点冲突及异常值分别保留。纽约一条记录引用的原文描述涉嫌 2024 年双重谋杀与 2026 年起诉，已隔离而未计为当年新增死亡。修改时间和发布周期仅支持截止日前可用的假设，独立历史存档尚未核验。无保留归属不证明安全；上一轮十案例的档位未被此材料改变，洛杉矶 GSS 也仍未定；后续须补当地完整影响、区域／战略暴露和实际缓解。`
+          : `A consistent review covers preliminary organised violence for January–August 2026: ${n(currentViolence.candidatesWithClearPreciseEvents)} candidates have retained Clear coded points and ${n(currentViolence.candidatesWithPendingPreciseEvents)} have pending coded points; groups can overlap, and neither establishes complete safety impacts or GSS scores. Monthly overlaps, later revisions, coarse locations, temporal conflicts and anomalous values remain separate. One New York record cites a source describing an alleged 2024 double murder and a 2026 indictment; it is quarantined rather than counted as new deaths. Modification times and the release schedule support only an assumption of pre-cutoff availability; an independent historical archive is unverified. An absence of retained assignments does not establish safety or absent violence. The preceding ten case judgments were unchanged by this review; Los Angeles GSS also remains unresolved; complete local impacts, regional and strategic exposure, and actual mitigation still need evidence.`
       }
       {" "}<a
         href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-ucdp-candidate-2026-review.md"

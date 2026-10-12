@@ -62,6 +62,7 @@ const realCases = [
   "new-york",
   "paris",
   "san-jose",
+  "los-angeles",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -104,8 +105,19 @@ const realScores = realCases.map(realCase => {
   assert.equal(total(scores).center, realCase.expectedConditionalTotal);
   return scores;
 });
-const [singapore, london, helsinki, zurich, gaza, tokyo, washington, newYork, paris, sanJose] =
-  realScores;
+const [
+  singapore,
+  london,
+  helsinki,
+  zurich,
+  gaza,
+  tokyo,
+  washington,
+  newYork,
+  paris,
+  sanJose,
+  losAngeles,
+] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
 );
@@ -410,6 +422,50 @@ assert.equal(
   digest("docs/data/cci-legal-mobility-rules.json")
 );
 assert.equal(total({ ...london, OPT: 80 }).center, 60);
+assert.deepEqual(total(losAngeles), { center: null, lower: 42, upper: 67 });
+for (const dimension of ["GSS", "RES"] as const) {
+  assert.equal(losAngeles[dimension], undefined);
+}
+for (const [dimension, lower, upper] of [
+  ["PCS", 36, 76],
+  ["ISR", 33, 73],
+  ["MED", 33, 73],
+  ["LON", 36, 71],
+  ["TEC", 36, 71],
+  ["OPT", 36, 71],
+] as const) {
+  const withdrawn = { ...losAngeles };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...losAngeles, PCS: 60 }), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total({ ...losAngeles, LON: 40 }), { center: null, lower: 40, upper: 65 });
+assert.equal(total({ ...losAngeles, GSS: 60, RES: 60 }).center, 57);
+const losAngelesPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (c: { efua_id: string }) => c.efua_id === "1642"
+);
+assert(losAngelesPosition);
+assert.equal(losAngelesPosition.center, null);
+assert.equal(losAngelesPosition.bestPosition, 1);
+assert.equal(losAngelesPosition.worstPosition, rankAudit.candidateCount);
+assert.equal(
+  realCases[10].referenceBoundaryCheck.fuaSha256,
+  realCases[7].clinicBoundaryCheck.fuaSha256
+);
+assert.equal(realCases[10].referenceBoundaryCheck.referencePoints.length, 4);
+for (const point of realCases[10].referenceBoundaryCheck.referencePoints) {
+  assert.deepEqual(point.fuaMatches, [1642]);
+}
+assert.equal(realCases[10].claimSignals.exactRegisteredNpiRecords, 6);
+assert.equal(realCases[10].claimSignals.nonExactPossibleNpiRecords, 0);
+assert.equal(
+  realCases[10].claimSignals.coverageManifestSha256,
+  digest("docs/data/cci-cms-lecanemab-fua-audit.json")
+);
+assert.equal(
+  realCases[10].sharedLegalPath.sourceSha256,
+  digest("docs/data/cci-legal-mobility-rules.json")
+);
 const londonCounterfactual = { ...london, MED: 40, OPT: 80 };
 const exitSensitivity = { ...weights, MED: 10, OPT: 15 };
 assert.equal(total(londonCounterfactual).center, 57);
@@ -468,5 +524,6 @@ console.log({
     },
     paris: { partial: total(paris) },
     sanJose: { partial: total(sanJose) },
+    losAngeles: { partial: total(losAngeles) },
   },
 });

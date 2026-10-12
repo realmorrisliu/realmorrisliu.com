@@ -1,0 +1,347 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "retrievedOn": "2026-10-12",
+  "candidateId": 1642,
+  "name": "Los Angeles",
+  "evidenceReview": "cci-local-2026-los-angeles-case.md",
+  "expectedConditionalTotal": null,
+  "limitations": "Eight dimensions and 31 subpillars reviewed, not fully measured. PCS conditionally40; ISR/MED/LON/TEC/OPT conditionally60; GSS/RES unknown. County, municipal, operator, institutional and frozen FUA scopes differ. Ordinary-resident, continuity, persistent physical-bottleneck and clinical-delivery/monitoring assumptions are withdrawable. No ranking, exclusion bound, healthy-person lifespan gain or inherited score.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 40,
+      "rationale": "Major observed wildfire losses and protection failures coexist with restored water/power and implemented evacuation changes. August2026 reporting retains staffing/technology and coordination work; heat/flood/seismic models and warnings are context, not household protection outcomes.",
+      "assumption": "The observed physical exposure/protection gap remains an important ordinary-resident bottleneck through the cutoff and across the relevant FUA population, despite completed restoration and mitigation; it is not inferred solely from historical losses or unfinished recommendations. Reject persistence, importance, resident reach or geographic applicability to restore unknown.",
+      "conditionalAlternatives": [20, 60],
+      "subpillars": {
+        "heat_humidity": "context",
+        "flood_sea_level": "context",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "No retained January-August preliminary event assignment is not zero risk. Metro ordinary-crime trends and safety tools do not establish annual organised-violence, regional-spillover or strategic-impact profiles for the full FUA.",
+      "assumption": "No justified whole-dimension anchor: current complete impacts, exposure and actual mitigation remain needed. Do not substitute general crime, absent records or national background.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "County recovery review records both effective real-time delivery and coordination/access deficiencies. August2026 implementation distinguishes actually used alert job aids, delivered training and changed authority from draft plans, funded vacancies and future governance. Public medical/digital delivery supports execution, without treating publication or budget as outcomes.",
+      "assumption": "Major institutions usually operate for the target resident and observed execution/mitigation persists across the area; reviewed recovery gaps do not establish a broader unmitigated whole-dimension bottleneck. Reject reach, continuity, adequacy or representativeness to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "Dated LADWP reporting confirms restored pressure, safe drinking water and power to standing structures, separately from destroyed homes, later improvements and expired relief periods. Operator restoration does not measure current median-resident food/energy affordability or independent supply across the FUA.",
+      "assumption": "No whole-dimension anchor: neither past utility loss nor restoration settles current essential-resource burden, food adequacy or independent backup. Important constraints and usual affordability require supported resident applicability.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "partial",
+        "food": "unresolved",
+        "energy": "partial",
+        "supply_chain": "context"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "August2026 public-system dashboard reports actual routine/specialist/ED care, scheduling, patient flow and quality measures with distinct periods and definitions. Patient experience is not treatment outcome; appointment timing follows eConsult deadlines, and quality values refer to April2026 rather than August. Specialty translation supports scoped capability, not blanket quality or population coverage.",
+      "assumption": "Ordinary citizens under usual coverage generally obtain clinically adequate necessary routine/specialist care, can afford the required costs and benefit from persisting accessible pathways across the FUA. Restore unknown if quality, access, costs, continuity or spatial reach is rejected.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "Credible human/regulatory evidence, actual UCLA trial delivery and six registered 2024 lecanemab claims signals support limited translation alongside implemented case-review processes. The proposed ten-patient pilot is not ten completed treatments; regional NPI records are not Cedars infusions, and UCLA trial participants are not local residents. Accelerated Kresladi approval does not establish commercial delivery or confirmed long-term benefit.",
+      "assumption": "Accept limited disease-pathway representativeness, actual regional clinical-delivery inference, current appropriate safety monitoring including updated MRI requirements, and ordinary eligible residents usually obtaining and affording a suitable existing pathway. Trial and commercial pathways remain distinct; no assumption makes announced gene-therapy availability completed delivery. Reject any necessary assumption to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "unresolved"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Official 2025-labelled TDG receipts/agreements support scoped research-industry connections; the exact operating period is not established. Delivered municipal Wi-Fi and limited engagement/card registrations support partial diffusion; targets, expenditure and external ranks are not resident benefit or whole-area adoption.",
+      "assumption": "Observed connections and usable digital capability persist and generally support limited diffusion for the ordinary resident across the area; specific programme/period and spatial limits do not erase the capability. Reject continuity, access or representativeness to restore unknown. Institutional output and narrow uptake do not justify80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Actual Metro and airport operation, opened transit centre/current shuttle instructions and common conditional US-citizen residence/account terms support usable channels. Wildfire bus cancellations and ongoing connection constraints remain; planned APM operation, agency radios and digital outreach are not completed resident backup.",
+      "assumption": "An ordinary resident generally obtains and affords applicable travel, approved qualifying residence and compliant approved account/transfer services with usable communications through the cutoff across the FUA. Reject eligibility, cost, continuity, reach or accessible alternatives to restore unknown; no independent crisis redundancy or successful relocation is claimed.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "researchPriority": {
+    "basis": "directory_associations_after_existing_ten_cases_not_performance",
+    "associatedDirectoryRecords": 1483,
+    "source": "cci-openalex-institution-fua.csv",
+    "sourceSha256": "b59735ba074e3e1b8e05f1d08bd672ef1d1ec219303cd9a788c93fc2a5e798ed"
+  },
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "referencePoints": [
+      {
+        "label": "Los Angeles approximate city reference",
+        "longitude": -118.24,
+        "latitude": 34.05,
+        "fuaMatches": [1642]
+      },
+      {
+        "label": "Pacific Palisades approximate community reference",
+        "longitude": -118.53,
+        "latitude": 34.05,
+        "fuaMatches": [1642]
+      },
+      {
+        "label": "Altadena approximate community reference",
+        "longitude": -118.13,
+        "latitude": 34.19,
+        "fuaMatches": [1642]
+      },
+      {
+        "label": "UCLA approximate campus reference",
+        "longitude": -118.445,
+        "latitude": 34.066,
+        "fuaMatches": [1642]
+      }
+    ],
+    "meaning": "Approximate reference points only, not municipal/county footprints, fire perimeters, affected-household mapping or treatment coordinates. No extra slots or inherited scores.",
+    "method": "Existing checksum-validated complete GHS-FUA load; always_xy EPSG:4326 to ESRI:54009 point intersection."
+  },
+  "claimSignals": {
+    "coverageManifest": "cci-cms-lecanemab-fua-audit.json",
+    "coverageManifestSha256": "20b249db15a31295fe74a287e0bccd27b2b9e1e8b49611fe51a6f82de008a3d6",
+    "exactRegisteredNpiRecords": 6,
+    "nonExactPossibleNpiRecords": 0,
+    "meaning": "Six exact current geocoded registered-address signals from published2024 nonfacility records; not treatment sites, unique resident counts or Cedars/UCLA attribution. No sums across providers; 1mg drug units are not infusions. Actual regional delivery inference and 2026 continuity require assumptions."
+  },
+  "sharedLegalPath": {
+    "source": "cci-legal-mobility-rules.json",
+    "sourceSha256": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
+    "rule": "section41_citizen_onshore_application_germany",
+    "meaning": "Conditional US-citizen onshore application procedure only; qualification/resources/insurance/approval remain necessary, no automatic residence or work entitlement."
+  },
+  "sourceSnapshots": [
+    {
+      "url": "https://lacounty.gov/2026/09/11/la-county-releases-second-after-action-review-covering-recovery-and-repopulation-operations-following-2025-wildfires/",
+      "publishedOn": "2026-09-11",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Primary dated release: report observes January7-March31,2025, not 2026 recovery outcomes. Summary/findings reviewed, full14.7MB original unavailable; no error-response hash or claim of full-report read."
+    },
+    {
+      "url": "https://file.lacounty.gov/SDSInter/lac/1217421_LACountyAARofRecoveryandRepopulationEfforts-ExecutiveSummary.pdf",
+      "publishedOn": "2026-09-11",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Three-page primary summary reviewed with six-page findings/recommendations; both successful delivery and coordination/access failures retained. Published report announcement, not verified identical-byte cutoff archive. Direct download non-PDF/redirect response excluded."
+    },
+    {
+      "url": "https://file.lacounty.gov/SDSInter/bos/bc/1214307_AARBoardMemoSecondReportBack_finalsigned_.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "41-page August3,2026 document: actual changes/uses/training, proposed staffing/governance and tracker sections reviewed via primary web text. Ongoing includes established recurring programmes, not universally unfinished; funded positions are not filled positions. Exact publication/archive and table visuals unverified; no fabricated counts or raw-download hash."
+    },
+    {
+      "url": "https://www.ladwp.com/sites/default/files/2026-01/Palisades%20Fire%20-%20One%20Year%20Anniversary%20Summary%20ADA.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 10612943,
+      "sha256": "79e8bee401a9e4327d9e517ae098ad4bf7514463d4a20b36da85ea596e1b282a",
+      "scope": "January2026 one-year update fully extracted; actual restoration versus destroyed/standing structures, expired relief and future upgrades reviewed. Pressure restored January16,2025; safe water/power to standing structures by March, SantaYnez back in service June. Operator scope differs from FUA; exact publication/archive unverified."
+    },
+    {
+      "url": "https://file.lacounty.gov/SDSInter/dhs/1218651_LAHS_D_A-BoardMotionDashboard-August2026.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "11-page primary dashboard text reviewed: visits through August2026, experience through Q2, quality actual April2026 vsCY2026 targets. All flow times described as medians, not equal to median-income resident experience. Public aggregate source, no patient-level records. Charts not visually verified, no numeric chart extraction, no original hash; exact first-publication/archive unverified."
+    },
+    {
+      "url": "https://tdg.ucla.edu/sites/default/files/2025-12/TDG_Innovation_Magazine_Winter2025_final3.pdf",
+      "publishedOn": "2025-12-12",
+      "retrievedOn": "2026-10-12",
+      "bytes": 5068029,
+      "sha256": "1498328cfd8954a0e0b4235358626046553e515d56ab028bb04427a3ee9dd7ed",
+      "scope": "16 PDF pages extracted, actual transfer and planned/experimental examples reviewed; p3 (printed4-5) visually checked. 36 exclusive agreements =14 options+22 licences, not1592 material transfers;64.64m licensing income not47.80m research-industry awards. Data labelled2025, exact accounting period unverified; no FY/calendar assumption or external-ranking score. Dated official index links final3; byte-version cutoff archive unverified."
+    },
+    {
+      "url": "https://cao.lacity.gov/content/pdf/The%20City%20of%20Los%20Angeles_Annual%20Recovery%20Plan_July2025_vFINAL.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 25936400,
+      "sha256": "13b8b4eda937c074738295031853cdd40ed4cf3887d7684e843a03526f0789c8",
+      "scope": "July2025 plan fully extracted; digital outcomes/anticipated sections reviewed around PDF145-147 (printed128-130). 1300+engaged households,124 new cards and232 survey responses are distinct, limited/self-selected metrics; spending and future50000 target are not realised benefit. Crenshaw Wi-Fi operational, not whole-FUA uptake; exact first-publication/archive unverified."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11368232/",
+      "publishedOn": "2024-08-30",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Original DOI10.1212/CPJ.0000000000200361 primary body read: proposed ten-patient/five-prescriber pilot, implemented review/coordination, future postpilot work. Not ten treated patients or2026 local MRI compliance. XML download500 excluded; primary HTML text supports scoped implementation, no original byte snapshot claimed."
+    },
+    {
+      "url": "https://www.cedars-sinai.org/newsroom/a-blueprint-for-managing-complex-therapies/",
+      "publishedOn": "2024-10-01",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Dated primary institution notice describes implemented process, not infusion counts or current safety-update adoption. Old prospective wording is not a measured commercial cohort; trial/approval and care coordination kept distinct."
+    },
+    {
+      "url": "https://www.uclahealth.org/news/release/fda-approves-gene-therapy-severe-leukocyte-adhesion",
+      "publishedOn": "2026-03-27",
+      "retrievedOn": "2026-10-12",
+      "bytes": 114455,
+      "sha256": "b898f9b7c92ef2ed23689aa4936e05be066a39eff249ef3a7281e160c5c5bb42",
+      "scope": "Six UCLA-treated trial participants distinguished from all nine international patients and from local residents. Historical trial delivery/annual follow-up differs from expected commercial availability. Paediatric disease/donor restrictions and need for longer follow-up retained; not healthy-person lifespan."
+    },
+    {
+      "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapy-severe-leukocyte-adhesion-deficiency-type-i",
+      "publishedOn": "2026-03-26",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Accelerated Kresladi approval is based on CD18/CD11a expression and requires confirmatory benefit evidence; conditional paediatric indication, not traditional approval or verified local commercial delivery."
+    },
+    {
+      "url": "https://www.uclahealth.org/news/release/large-disparities-adoption-alzheimers-infusion-therapy-raise",
+      "publishedOn": "2025-05-15",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "National Medicare FFS study July2023-March2024; UCLA author affiliation does not locate patients. Higher socioeconomic proxy means no PartD low-income subsidy/dual eligibility, not local median income. Cost, serious risks and observed adoption disparities retained as background, not LA resident rate or absence of local access."
+    },
+    {
+      "url": "https://www.metro.net/about/media-relations/now-boarding-metros-lax-metro-transit-center-station-officially-opens-connecting-communities-bringing-faster-easier-travel-for-angelenos-visitors/",
+      "publishedOn": "2025-06-06",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Actual opening distinct from still-future APM; no forecast counted as operating. Transit-centre connections and shuttle do not prove independent crisis alternatives or universal affordable access."
+    },
+    {
+      "url": "https://www.metro.net/destinations/lax/",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Current provider route/fare guide: operating C/K/bus-shuttle and FlyAway alternatives. Undated/current wording requires cutoff continuity; no claim of completed APM or completed resident journey."
+    },
+    {
+      "url": "https://www.metro.net/about/media-relations/metro-launches-new-safety-website-data-tool-improving-awareness-of-public-safety-efforts-results/",
+      "publishedOn": "2026-03-16",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Dated operational safety hub and2025 actual305m boardings; not unique residents. Ordinary-crime measures not complete organised-violence/strategic GSS; disclosure itself not quality."
+    },
+    {
+      "url": "https://www.metro.net/about/media-relations/la-metro-kicks-off-2025-with-continued-ridership-growth/",
+      "publishedOn": "2025-02-27",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Actual operations alongside wildfire cancellation/rerouting and partial restoration. Historical bus134 interruption is not assumed still-current cutoff failure; broader continuity/alternative access remain assumptions."
+    },
+    {
+      "url": "https://www.lawa.org/sites/lawa/files/2025-12/LAX%20-%202025%20Annual%20Continuing%20Disclosure%20Report.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Primary FY2025 actual passenger-operation text read, not2012 design-day forecast orcalendar2025. No unique resident counts, affordable fares or independently backed-up routes inferred. Exact first-publication/archive and original download unverified."
+    },
+    {
+      "url": "https://www.cms.gov/newsroom/press-releases/statement-broader-medicare-coverage-leqembi-available-following-fda-traditional-approval",
+      "publishedOn": "2023-07-06",
+      "retrievedOn": "2026-10-12",
+      "bytes": 55743,
+      "sha256": "4f62e357fbb58b44ae6f7eb238cb3e2a728dc2841245e7127e2bf0e97065c0bf",
+      "scope": "Medicare, disease and registry conditions, not universal citizen eligibility"
+    },
+    {
+      "url": "https://www.fda.gov/news-events/press-announcements/fda-converts-novel-alzheimers-disease-treatment-traditional-approval",
+      "publishedOn": "2023-07-06",
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Primary page read through web tool; direct-download hash unavailable, not represented as a downloaded snapshot; national trial and approval, not local delivery"
+    },
+    {
+      "url": "https://www.chase.com/content/dam/chase-ux/documents/personal/checking/ABSF-en.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": 488107,
+      "sha256": "69836d755532c957e9dab7bd49f8bea6f68b5eb01671bc5b58d803226b2626d1",
+      "scope": "Effective June 14 2026 personal-account edition, PDF pp.1-3,13,15 reviewed. Total Checking terms and international-wire fees with account approval, exchange spreads and intermediary costs; Secure Checking excludes outgoing wires. File metadata is not publication/cutoff archive. Neither every account nor every local citizen has this channel; no completed resident transfer, asset liquidation, approvals or crisis continuity inferred."
+    },
+    {
+      "url": "https://www.fda.gov/drugs/drug-safety-communications/fda-recommend-additional-earlier-mri-monitoring-patients-alzheimers-disease-taking-leqembi-lecanemab",
+      "publishedOn": "2025-08-28",
+      "retrievedOn": "2026-10-12",
+      "bytes": 48310,
+      "sha256": "a51f461d934676b41a73288137b715d620449d8c37f7a6a0933b22512b71416d",
+      "scope": "August 28, 2025 safety communication adds MRI before the third infusion and retains serious/fatal ARIA risk. National safety evidence, not local harm incidence or proof the clinic adopted the update."
+    },
+    {
+      "url": "https://www.fda.gov/media/191722/download",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-12",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Primary Kresladi indication/approval section read: paediatric ITGB2 and donor restrictions, accelerated surrogate-based approval contingent on confirmatory clinical benefit. Not current commercial delivery or healthy-person longevity; exact label first-publication/archive unverified."
+    }
+  ]
+}
