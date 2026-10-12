@@ -28,6 +28,7 @@ import lisbon from "../../docs/data/cci-local-2026-lisbon-case.json";
 import chicago from "../../docs/data/cci-local-2026-chicago-case.json";
 import prague from "../../docs/data/cci-local-2026-prague-case.json";
 import beijing from "../../docs/data/cci-local-2026-beijing-case.json";
+import shanghai from "../../docs/data/cci-local-2026-shanghai-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -60,6 +61,7 @@ const cases = [
   chicago,
   prague,
   beijing,
+  shanghai,
 ];
 const caseNamesZh: Record<number, string> = {
   [singapore.candidateId]: "新加坡",
@@ -80,6 +82,7 @@ const caseNamesZh: Record<number, string> = {
   [chicago.candidateId]: "芝加哥功能区",
   [prague.candidateId]: "布拉格功能区",
   [beijing.candidateId]: "北京功能区",
+  [shanghai.candidateId]: "上海功能区",
 };
 const screening = coverage.local2026Screening;
 if (
@@ -181,8 +184,8 @@ const rows = [
   [
     "OPT",
     zh
-      ? `${n(counts.OPT.airport_directory_points_only)} 个候选内有机场目录坐标点，其中 ${n(airports.candidatesWithScheduledNonclosedPoints)} 个有定期服务且非关闭标记；目录不证明实际运营或居民可用，区外机场亦可能提供服务。另有 ${n(legal.conditional_legal_path_under_citizenship_assumption)} 个功能区在本国公民假设下有已审查的德国或法国法律条件，包括附条件居留权和八国公民赴德国境内申请程序；申请不是已获居留或工作权，就业、年龄、资源及医保要求仍保留；${n(legal.no_reviewed_path_not_no_right)} 个资格待查，不等于无权迁移。居住不证明国籍，合法路径不证明负担得起或危机可用；仍未形成完整 OPT 分数。`
-      : `${n(counts.OPT.airport_directory_points_only)} candidates contain airport directory points; ${n(airports.candidatesWithScheduledNonclosedPoints)} have scheduled-service and nonclosed flags. A directory does not establish operations or resident access; outside airports may also serve residents. Separately, ${n(legal.conditional_legal_path_under_citizenship_assumption)} functional areas have reviewed German or French legal conditions under the local-citizenship assumption: conditional residence rights and an onshore application procedure for eight nationalities are distinct. Application is not approved residence or work; employment, age, resources and insurance conditions remain. ${n(legal.no_reviewed_path_not_no_right)} remain unreviewed, which does not mean denial. Residence does not establish citizenship; legal paths do not establish affordability or crisis operation. No complete OPT score follows.`,
+      ? `${n(counts.OPT.airport_directory_points_only)} 个候选内有机场目录坐标点，其中 ${n(airports.candidatesWithScheduledNonclosedPoints)} 个有定期服务且非关闭标记；目录不证明实际运营或居民可用，区外机场亦可能提供服务。另有 ${n(legal.conditional_legal_path_under_citizenship_assumption)} 个功能区在本国公民假设下有已审查的德国或法国法律条件，包括附条件居留权、八国公民赴德国境内申请程序，以及中国公民合资格工作居留的通常入境前签证路径；申请不是已获居留或工作权，就业、年龄、资源及医保要求仍保留；${n(legal.no_reviewed_path_not_no_right)} 个资格待查，不等于无权迁移。居住不证明国籍，合法路径不证明负担得起或危机可用；仍未形成完整 OPT 分数。`
+      : `${n(counts.OPT.airport_directory_points_only)} candidates contain airport directory points; ${n(airports.candidatesWithScheduledNonclosedPoints)} have scheduled-service and nonclosed flags. A directory does not establish operations or resident access; outside airports may also serve residents. Separately, ${n(legal.conditional_legal_path_under_citizenship_assumption)} functional areas have reviewed German or French legal conditions under the local-citizenship assumption: conditional residence rights, an onshore application procedure for eight nationalities, and the normally pre-entry national-visa route for eligible Chinese skilled workers are distinct. Application is not approved residence or work; employment, age, resources and insurance conditions remain. ${n(legal.no_reviewed_path_not_no_right)} remain unreviewed, which does not mean denial. Residence does not establish citizenship; legal paths do not establish affordability or crisis operation. No complete OPT score follows.`,
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
@@ -282,8 +285,22 @@ const caseNotes: Record<number, string[]> = {
       ? "密云／怀柔和太师屯参考点不属本区，外围死伤不填本地损失率。医疗过程短板和旧治疗经济延迟仍保留；原论文为 42 给药／29 半年、ARIA 3/42、调整后组间认知差异未显著，后续新闻队列不混用。自愿普惠险不等于通常基本医保，单次报销报道不证明中位居民完整负担。拒绝任何必要范围、居民、持续性或重要性假设即撤回该维与总分中心，不证明全球入围。"
       : "Miyun, Huairou and Taishitun reference points are outside this FUA; peripheral casualties are not local loss rates. Clinical-process gaps and earlier economic treatment delays remain. The original paper has 42 treated, 29 six-month patients, 3 ARIA cases and no significant adjusted between-group cognitive result; later news cohorts stay separate. Voluntary supplementary cover is not usual basic insurance, and one reimbursement report does not establish complete median-resident costs. Rejecting any necessary scope, resident, continuity or materiality assumption withdraws that dimension and the total centre. Global qualification remains unproven.",
   ],
+  [shanghai.candidateId]: [
+    zh
+      ? "上海功能区五维条件性 60、LON／OPT 40、TEC 80，条件中心 58。多机构实际转化、网办使用及完成助老支持技术高档；真实内涝／供水故障、护理质控缺陷与实际保护、常规服务和恢复共同判读。崇明和昆山参考点属其他候选，市域总量不填本区居民率；目录关联仅用于全量研究顺序。"
+      : "Shanghai has five conditional 60 judgments, LON and OPT 40, and TEC 80, giving a conditional centre of 58. Multiple producers, actual digital use and completed assistance support the high TEC anchor. Flooding, water-system failure and nursing-process gaps are read alongside operating protection, routine care and recovery. Chongming and Kunshan references belong to other candidates; municipal totals are not local resident rates. Directory associations determine research sequence only.",
+    zh
+      ? "LON 40 保留真实给药、监护和日间减负，也保留经济／交通退出与当前住院责任不自动覆盖不足 24 小时路径的错位；有实际可承担门诊或医学合理住院支付支持，可审 60。407 人是七院队列，ARIA 为 39/321、症状 4/321，15 人混合主观退出不全是经济原因；无对照认知变化不证明疗效或延寿。任何必要居民、范围、延续或残余重要性假设拒绝即撤回该维与中心，不证明全球入围。"
+      : "LON 40 retains real treatment, monitoring and reduced day-care burden alongside economic/transport withdrawals and the mismatch between the observed under-24-hour pathway and current inpatient cover. Supported affordable outpatient or clinically appropriate covered inpatient alternatives could justify 60. The 407 patients span seven hospitals; ARIA is 39/321 and symptomatic ARIA 4/321. Fifteen mixed subjective withdrawals are not all financial. Uncontrolled cognitive changes prove neither efficacy nor longer life. Rejecting a necessary resident, scope, continuity or residual-materiality assumption withdraws that dimension and the centre; global qualification remains unproven.",
+  ],
 };
 const caseReviewLinks: Record<number, { href: string; label: string }> = {
+  [shanghai.candidateId]: {
+    href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-shanghai-technology-longevity-exit-review.md",
+    label: zh
+      ? "上海临床、技术与退出通道复核"
+      : "Shanghai clinical, technology and exit-path review",
+  },
   [beijing.candidateId]: {
     href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-beijing-technology-longevity-exit-review.md",
     label: zh

@@ -1,0 +1,775 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "candidateId": 10097,
+  "name": "Shanghai",
+  "evidenceReview": "cci-local-2026-shanghai-case.md",
+  "expectedConditionalTotal": 58,
+  "retrievedOn": "2026-10-12",
+  "limitations": "All8 dimensions and31 subpillars reviewed, not fully measured. Five conditional60 judgments, TEC80 andLON/OPT40 give58 under original weights. Each judgment needs explicit resident, locality, continuity and materiality assumptions; rejecting any necessary assumption restores unknown and removes the centre. Administrative Shanghai, Chongming, study hospitals, multicentre cohorts and cloud-city labels are distinct from eFUA10097. A voluntary inpatient insurance responsibility is not usual basic coverage or reimbursement of a documented day-infusion pathway. No healthy-person longevity claim, ranking, reliable exclusion bounds or zero imputation.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Actual2025 typhoon pump/gate operation and completed construction-risk remediation, delivered geological works and2026 scoped cooling-site inspections support protection. August2026 severe waterlogging, next-night drainage, transport interruptions and a garage-flooded household water system retain actual failures alongside deployed pumps, water supplies and recovery. Municipal totals and peripheral island losses are not localFUA losses; monitoring is not residential retrofitting.",
+      "assumption": "Accept reviewed core-area protection usually usable for target residents across10097 and continuing through cutoff. Remaining thermal/building/drainage/common-failure weaknesses after actual mitigation have not become an important persistent unmitigated constraint on ordinary life or necessary corridors. This is reversible, not a complete loss-rate measurement; extreme weather does not excuse observed failures. Reject locality/resident/continuity/materiality assumptions to restore unknown; important remaining protection constraints could support40, stronger actual protection/backup80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": 60,
+      "rationale": "A primary prosecutor/court interview documents a fixed three-person repair group using coercive threats in2021-23 and2025 judgments, plus governance and victim-reporting barriers. Older offences are not2026 new attacks or a victim rate; arrests are not convictions. ActualTaiwan-region military exercises are regional context, not Shanghai port blockade. September2026 scoped air-defence exercises support response, not wartime shelter effectiveness or attack probability.",
+      "assumption": "Accept reviewed ordinary-service/transport execution and actual enforcement as limited evidence of comparatively limited current organized-violence impact with usable mitigation across10097, while strategic-port/finance/transport concentration and regional threats remain. Extent, ordinary-resident reach and continuity are assumptions, not safety inferred from zeroUCDP matches. Reject necessary limited-impact/locality/resident/continuity assumptions to restore unknown; important continuing organized/regional/strategic constraints could support40, broader low-impact and effective-response evidence80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Actual2025 water-hotline handling, delivered risk/governance changes, multi-operator flood response, targeted cooling/evacuation cooperation and scoped2026 restoration establish execution. Primary reports admit policies hard to find/understand/use, uneven handling quality, case-load pressure and street-level authority/capability mismatches. Handling totals and performance scores are not independent resident trust or complete resolution; plans and partial recovery are not fully delivered backup.",
+      "assumption": "Accept core execution being usually reachable by target local citizens across10097 and reviewed mitigation/coordination continuing through cutoff without an important broader unmitigated institutional bottleneck. Known information-service defects are real contextual limitations, not failures of researcher access; municipal reporting and targeted participation have limited representativeness. Reject reach/locality/continuity/bottleneck assumptions to restore unknown; important residual service/recovery/right-realization constraints could support40 without requiring majority harm, stronger results/reach/backup80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "Actual2025 water/energy delivery, scoped water-quality monitoring,2025 urban-grid reliability and typhoon food deliveries support provision. Qingcaosha raw-water salinity events, outside supply/logistics and planned interconnections retain common-channel constraints; raw salt concentrations are not tap-water concentrations. Municipal quantities/household connections are not uniqueFUA residents, city mean per-capita income is not household median, and an actual2023 tenant electricity surcharge differs from provider tariffs.",
+      "assumption": "Accept supplier/market operation and limited municipal evidence as relevant to ordinary10097 residents and continuing through cutoff, with usually affordable necessary water/food/energy at local median income. Existing storage/dispatch mitigate salinity/external-supply constraints sufficiently for usual essential access. Planned2027/2028 interconnections are not existing alternatives; historical individual tariff harm is not a2026 population rate. Reject affordability/reach/continuity/materiality assumptions to restore unknown; actual important unmet needs/common-channel bottlenecks could support40, affordable and effective common-shock alternatives80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "Actual2025 community delivery and scoped maternal/neonatal rescue outcomes, existing multidisciplinary/community nursing and current basic-insurance rules support care. Original2026 publication reports2024 inspections of59 anonymous tertiary hospitals,32/59 irregular assessments and27/59 inadequateVTE prevention, not patient event rates or completed remediation. A primary old single-centre stroke study retains pandemic delays and conflicting588 versus558 totals. A scoped cancer reimbursement alongside severe self-pay costs is neither a complete net bill nor median-resident affordability.",
+      "assumption": "Accept lawful continuous usual basic insurance/approved alternative registration and applicable provider/catalogue/clinical conditions for the target resident; long-term Chinese citizenship is not Shanghai hukou or automatic coverage. Actual multiprovider necessary care, usually adequate quality and timely affordable alternatives remain reversible inferences despite retained nursing/process/payment weaknesses. Do not presume remediation complete or multiply gross averages by payment rates. Reject qualification/usual-quality/affordability/alternative/locality/continuity assumptions to restore unknown; important unrelieved clinical/wait/payment bottlenecks could support40 without majority harm, broader outcomes and effective pressure backup80.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 40,
+      "rationale": "Credible shared early-Alzheimer human/regulatory pathway connects to actualHuashan/multicentre clinical use and a primaryTongren day-infusion observation. The national407-starting/405-followed cohort has39/321ARIA,4/321symptomaticARIA and15 mixed subjective withdrawals including economic/transport reasons, not all local or all financial. Its uncontrolled182 six-month subset has112MMSE/72CDR/46ADL assessments with no significantFDR-adjusted change, not proved efficacy. Current2026 supplementary policy excludes under24-hour admissions from inpatient responsibility and its50-drug special catalogue lacks these antibodies; it cannot be presumed to pay the observed day pathway.",
+      "assumption": "Accept the documented day-treatment/payment mismatch and observed economic/transport constraints as an important resident-access break for clinically eligible median-income ordinary citizens across10097, relevant to limitedLON readiness and continuing after available mitigation through cutoff. National study withdrawals are not exactShanghai or median-resident counts, and other insurance/assistance paths are not proved absent. Locality, relevance, appropriate monitoring, target affordability and residual materiality remain reversible assumptions; rejecting one restores unknown. Actual sufficiently affordable outpatient or clinically appropriate covered inpatient alternatives could support60; multiple mature accessible paths80. Approval, available infusions or a voluntary inpatient benefit do not prove ordinary access; no healthy-person lifespan benefit.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 80,
+      "rationale": "Multiple university/industry transfers, operating digital infrastructure, deployed services and completed resident assistance support sustained production and diffusion. Institutional/global totals and connections are not all local products or unique residents; current financing/skill/activation barriers remain. OpenAlex associations are only a research-sequencing signal and anomalous printed statistical fields are not silently repaired or used to rank.",
+      "assumption": "Accept actual multiproducer capabilities and broad service use/assistance as reasonably representative of10097 main knowledge/industry activity and ordinary-resident diffusion, continuing through cutoff. After delivered mitigation, remaining funding/skill/group barriers do not form an important overall diffusion break. Reject locality/user/continuity/materiality assumptions to restore unknown; justified important residual barriers could support60. No instant substitution or independent pressure test is required at everyTEC node; cross-border restrictions are considered inOPT instead of mechanically deducted twice.",
+      "conditionalAlternatives": [60],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 40,
+      "rationale": "Operating transport and the shared qualified Chinese-citizen German skilled-work national-visa path provide actual channels. Genuine current-account transfers and conditional emigrant property transfer mitigate capital-purpose/settlement-order restrictions; USD50000 is not an all-transfer ceiling. OriginalShanghai-labelled cloud measurements retain selective cross-borderTLS restrictions alongside measured unblocked same-region paths; they are not domestic-all-Internet shutdowns or resident outage rates. Applications, institutional wires and directory points are not approvals or universal relocation ability.",
+      "assumption": "Accept capital-purpose/settlement-order and actual cross-border restrictions as important to ordinary citizens initial-relocation assets and essential connections despite strong transport, lawful current payments and eventual compliant transfer. Qualification/employer/insurance/visa requirements are not assumed met. Cloud-city location/household relevance, temporal continuity and residual materiality need explicit assumptions; rejecting necessary applicability restores unknown. Actual adequately mitigated ordinary migration/assets/communication could support60, stronger usable alternatives80. This is not a national-governance proxy, reliable exclusion bound or claim residents cannot leave.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "context",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "researchPriority": {
+    "basis": "all9031_record_associations_first_unreviewed_not_performance",
+    "source": "cci-openalex-efua-record-presence.csv",
+    "sourceSha256": "cb777baaa3ec09fe78a2c07ac8a260d0fb8ad4b8b95996eea0a5367f0e11f013",
+    "field": "article__xpac_false__retracted_false",
+    "recordAssociations": 94276,
+    "rule": "All9031 candidates sorted by descending qualifying core nonretracted article-ID directory associations, then numeric efua_id; skip18 registered reviews only for research sequencing. No output/quality score, eligibility or exclusion."
+  },
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "referencePoints": [
+      {
+        "label": "Shanghai central approximate reference",
+        "longitude": 121.4737,
+        "latitude": 31.2304,
+        "fuaMatches": [10097]
+      },
+      {
+        "label": "Pudong airport approximate reference",
+        "longitude": 121.8083,
+        "latitude": 31.1443,
+        "fuaMatches": [10097]
+      },
+      {
+        "label": "Hongqiao airport approximate reference",
+        "longitude": 121.3363,
+        "latitude": 31.1981,
+        "fuaMatches": [10097]
+      },
+      {
+        "label": "Fudan Handan campus approximate reference",
+        "longitude": 121.5032,
+        "latitude": 31.2984,
+        "fuaMatches": [10097]
+      },
+      {
+        "label": "SJTU Minhang campus approximate reference",
+        "longitude": 121.4374,
+        "latitude": 31.0256,
+        "fuaMatches": [10097]
+      },
+      {
+        "label": "Huashan central campus approximate reference",
+        "longitude": 121.44,
+        "latitude": 31.216,
+        "fuaMatches": [10097]
+      },
+      {
+        "label": "Ruijin central campus approximate reference",
+        "longitude": 121.471,
+        "latitude": 31.209,
+        "fuaMatches": [10097]
+      },
+      {
+        "label": "Chongming urban approximate reference",
+        "longitude": 121.398,
+        "latitude": 31.623,
+        "fuaMatches": [10126]
+      },
+      {
+        "label": "Kunshan urban approximate reference",
+        "longitude": 120.981,
+        "latitude": 31.385,
+        "fuaMatches": [9963]
+      },
+      {
+        "label": "Jiading urban approximate reference",
+        "longitude": 121.264,
+        "latitude": 31.374,
+        "fuaMatches": [10097]
+      },
+      {
+        "label": "Jinshan urban approximate reference",
+        "longitude": 121.342,
+        "latitude": 30.742,
+        "fuaMatches": [10097]
+      },
+      {
+        "label": "Songjiang urban approximate reference",
+        "longitude": 121.227,
+        "latitude": 31.03,
+        "fuaMatches": [10097]
+      },
+      {
+        "label": "Tongren Xianxia campus approximate reference",
+        "longitude": 121.382,
+        "latitude": 31.212,
+        "fuaMatches": [10097]
+      }
+    ],
+    "method": "Checksum-validated full9031 GHS-FUA load; EPSG4326 to ESRI54009 always_xy point intersection.",
+    "meaning": "Analyst approximate references only, not exact event/treatment sites, whole institutions/municipal footprints or resident coverage."
+  },
+  "sharedLegalPath": {
+    "source": "cci-legal-mobility-rules.json",
+    "sourceSha256": "d599af8b34ea7d149e074e1f471c9e0371d936ae76b81b1563bd125ed21c0e6a",
+    "rule": "chinese_citizen_skilled_work_national_visa_germany",
+    "meaning": "Normally pre-entry national-visa and qualifying skilled-work residence purpose, distinct from section41(1) onshore application convenience. No automatic ordinary-resident qualification, approval, affordability or OPT score."
+  },
+  "clinicalChecks": {
+    "nursingInspectedHospitals": 59,
+    "nursingAssessmentProblemHospitals": 32,
+    "nursingVteProblemHospitals": 27,
+    "nursingCountsArePatientHarmRates": false,
+    "lonStartedCohort": 407,
+    "lonFollowedCohort": 405,
+    "lonAriaObservedDenominator": 321,
+    "lonAriaCases": 39,
+    "lonSymptomaticAriaCases": 4,
+    "lonSixMonthTreatmentCohort": 182,
+    "lonMixedSubjectiveWithdrawals": 15,
+    "allMixedWithdrawalsAreEconomic": false,
+    "multicentreCohortIsAllShanghai": false,
+    "cognitiveSubsetMmse": 112,
+    "cognitiveSubsetCdr": 72,
+    "cognitiveSubsetAdl": 46,
+    "localStudyHasUntreatedControl": false,
+    "supplementaryInpatientCoverProvesDayInfusionReimbursement": false,
+    "completeMedianPatientBillMeasured": false
+  },
+  "focusedReviews": [
+    {
+      "path": "docs/cci-shanghai-protection-institutions-review.md",
+      "sha256": "b69c64892ee13d62e24d5c74648e350b631750ef6c6eded8a0e2c3bcc1d5978b"
+    },
+    {
+      "path": "docs/cci-shanghai-resources-medicine-review.md",
+      "sha256": "adf7630036f7d716767e19dda9a81ccb468a71b79843c1072b87a0e4162f1b7f"
+    },
+    {
+      "path": "docs/cci-shanghai-technology-longevity-exit-review.md",
+      "sha256": "affb31f8495ac68f136877d550915a281a5350149372f5d65b57b03293d12cad"
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "url": "https://swj.sh.gov.cn/shsslglc-xwzx/20251014/25f9d3227ac7464282a69ae36742e15f.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 9136,
+      "sha256": "190f567f758e9824cd2cb9df84fa59affe1a4687688bba04301ff169ff19e9b5",
+      "publicationObservationContext": "市水务局水利管理部门；正文2025-08-01、URL10/14；7/28—31",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://swj.sh.gov.cn/shsdfbzssglc-xwzx/20251028/d78075377b8d4fb9ac13930727e0cd57.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 13946,
+      "sha256": "4638921961d152fb002c3aaee856b21ef4bde63906baa8ac55b488fa5326aae3",
+      "publicationObservationContext": "市堤防泵闸运行中心；正文2025-07-31、URL10/28；当期台风",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/nw15343/20260807/f926922dc06c4ebb9f79c9b143a2d0bb.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 12056,
+      "sha256": "a50f17f4d62480e20134c367b5ae0e823ff15f95edb5269415fcdcb03b48c711",
+      "publicationObservationContext": "杨浦区政府；正文2026-08-06、URL8/7；实查8/5晚",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/nw17239/20260720/a2284a091f564dc8b9057ec7dae88205.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 13947,
+      "sha256": "0af01a106964350749f9cd867cfd65e20aa1681388899b64e609476699a3e80b",
+      "publicationObservationContext": "杨浦区政府；2026-07-20；当季开放声明",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://hd.ghzyj.sh.gov.cn/dzkc/dzhjbg/202606/P020260611617941681855.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 4839375,
+      "sha256": "7720baf95e1f0412603c406fb22a0a758bcf1e424f01e6eeec85894a8980e2cc",
+      "publicationObservationContext": "市规划资源局；题名2026-04、URL6/11；2025全年",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/202617zfwj/20260908/8f56e2eb6e0d46448d9fcf491e1d037e.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 48114,
+      "sha256": "3ac433f74ebbfd3bcf7d300df73d12ee7889ecb73eba9d3518bb6fb5c943fee8",
+      "publicationObservationContext": "市政府；签署2026-07-24、网页9/8；2025基线／2030目标",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://swj.sh.gov.cn/shsswjxzfuzx-xwzx/20260326/d2de24845a904b0b863f75bc8186a87c.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 5925,
+      "sha256": "563b14cf726e8e3703f80073d8f722c4aa0a0f74aa7b7f78f41addfd15a6f921",
+      "publicationObservationContext": "市水务局；2026-03-26；2025年度",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.sh.jcy.gov.cn/jdjc/jwgk/gzbg/jcgzbg/132723.jhtml",
+      "retrievedOn": "2026-10-12",
+      "bytes": 99988,
+      "sha256": "2585af0b2cf2c9affb21d4b51162abd8951b995e45d0d7e89fbc5b336afe1d13",
+      "publicationObservationContext": "嘉定区检察院；2026-03-09；2025主要工作",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/nw15343/20260921/44e99550f2e04c34a886217f4555c0ea.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 14626,
+      "sha256": "7c4a54b403daa7f838b32c41ba9e894f58ee8715691d8947065cbd613f4d7cb6",
+      "publicationObservationContext": "宝山区政府；2026-09-21；9/18学校、9/19居民训练",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/zt/zfxxgkndbg/2025zfxxgknb/2025%E4%B8%8A%E6%B5%B7%E5%B8%82%E4%BF%A1%E6%81%AF%E5%85%AC%E5%BC%80%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 257987,
+      "sha256": "f90c9af8acc6288d306fce2cdf684ebe4a8cee1500f3353b1abc0ea368c31f92",
+      "publicationObservationContext": "市政府信息公开报告；索引2026-03-30；2025全年",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/nw12344/20260330/8bb41f1adcaa4350b5d0c408fd91f95a.html?siteId=1",
+      "retrievedOn": "2026-10-12",
+      "bytes": 143668,
+      "sha256": "ba8bdfe2c1b5ba891218d6c98448d460a88679611a72631440e955683baecd18",
+      "publicationObservationContext": "上述报告索引／正文；2026-03-30；同源不独立计数",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.hshfy.sh.cn/shfy/web/xxnr.jsp?pa=aaWQ9MTAyMDUwMDU2NiZ4aD0xJmxtZG09bG01ODMPdcssz&zd=xwzx",
+      "retrievedOn": "2026-10-12",
+      "bytes": 75698,
+      "sha256": "5f1542d8a9b081373967330dc935fa7c37f50b05faf7a0969221b3eb11f2baa7",
+      "publicationObservationContext": "高院本人报告、官网刊载来源解放日报；讲话2026-02-05、网页2/12；2025全年",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/nw15343/20250731/23f67e1cebc141fa9951253f5c9a5637.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 14086,
+      "sha256": "82c6f5354757f85b56ae65caa0f47567b5acd0883df72050eb4928b17a4d6097",
+      "publicationObservationContext": "金山区政府；2025-07-31；7/30台风",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/nw4411/20240917/8ed3b66c31fd4056bca5739431e56800.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 19271,
+      "sha256": "25d037eda5ae35050d42f051b4f0208f947b886199ba32a5d2a3c6aa3c4f6d64",
+      "publicationObservationContext": "解放日报原采访、政府站刊载；2024-09-17；9/16台风",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://yjglj.sh.gov.cn/xxgk/zfxxgk/zcwj/jyta/20260126/f390206677c346a0b7ea44f393dfd7af.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 95878,
+      "sha256": "a4d597562afcca5ef7c373213d846c34903aa0b23c34f44b173ca598102bf423",
+      "publicationObservationContext": "市应急局；签署2026-01-08、正文发布时间1/12、URL1/26；2025全年",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16429616.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 15455,
+      "sha256": "81c66f150350760b2059af6ba96ad8bad94128b260acf21d5aaee4617a98cdb3",
+      "publicationObservationContext": "国防部原军事发布；2025-12-29；台海区域背景，官方HTTP",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://newspaper.jcrb.com/2025/20251201/20251201_004/news-zgjcb-11082-20251201-m-004-300.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1977074,
+      "sha256": "5cc43368d3669272e740df85e43bc905616362909fa3a7f80c8fadc3aab62a41",
+      "publicationObservationContext": "检察日报本报记者直接采访／庭审；2025-12-01；2021—2023侵害、2025-10判决",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/nw15343/20260813/3b84a6bac22a46e8bd74e6a552750b7a.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 15209,
+      "sha256": "2ad51381bfaf0b0698df91bb469194674b449e4a55b517eaea2769dee4990618",
+      "publicationObservationContext": "浦东区政府；2026-08-13；8/9实际积水及安置",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/nw18454/20260813/e0d28b7566684b2e944ace70477d1e54.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 14475,
+      "sha256": "92e81218797a62fef39311c191f277d5ed50c31cd797e79d36d784bb2847f965",
+      "publicationObservationContext": "市绿化市容局；2026-08-13；8/7—11及后续恢复",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/nw4411/20260811/02f9c0817ba74b64b567b9a1925a8fad.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 19731,
+      "sha256": "63bb9c4e91495b065b8622f423edbca5f95db31c7ad5f990958cc71f966a50ef",
+      "publicationObservationContext": "解放日报原运营者采访、政府站刊载；2026-08-11；8/9—10等本轮风雨",
+      "scope": "Reviewed in cci-shanghai-protection-institutions-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://tjj.sh.gov.cn/tjgb/20260330/e0772941e8e041eaaad2df850b44ef98.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 46257,
+      "sha256": "53208d64119891cc374e6b70ede45f537667bc4152d71da1111609d75641348a",
+      "publicationObservationContext": "市统计局／上海调查总队；2026-03-30／2025",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/gwk/search/content/dfe3bba286d9475ebea1a55f94fe03b4",
+      "retrievedOn": "2026-10-12",
+      "bytes": 55998,
+      "sha256": "02e4410d541c55bdb293ebe28e23bdb95bb2d1975cf12363a3105aa45a0017c2",
+      "publicationObservationContext": "市水务局；2026-07-24／2025 现状及至2030计划",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://hdj.nea.gov.cn/xxgk/fdzdgknr/jgsx/nyfw/202603/t20260317_298065.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 18183,
+      "sha256": "3bdd3726ac230c02c87bfbd170633dd0e939e90bdd927f489abb1531d551dadc",
+      "publicationObservationContext": "国家能源局华东监管局；2026-03-17／2025 城网，源国网上海",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://swj.sh.gov.cn/shshyhjjcybzx-xwzx/20260407/e0212175bba94e9ebe30d9d7977f3ce7.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 79885,
+      "sha256": "f1a986cc38dd207802d3a5785b07260658631c07fb9d9b4facbccaec3bb73f64",
+      "publicationObservationContext": "海洋监测预报中心；正文2026-01-23／2025及12月，路径四月",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shyp.gov.cn/zhengwu/wjw-shys%E2%80%9Csmzws%E2%80%9D/2025/219/816c40f1fa5b5297cd342ecae2e42ae2.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 22099,
+      "sha256": "a5faaea16750321fb0860e1c96388e0ecf3749495da58f8fe740817e481f7fe8",
+      "publicationObservationContext": "杨浦卫健委／CDC；2025-04-15／2025 第一季度",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/nw4411/20250430/7379829d8f224af1960e15bde4aa91e5.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 12447,
+      "sha256": "38b29f6d4aee3f3d2bfd77d7f5d57ce3ffeedfbc9837937284816fe3b58295d4",
+      "publicationObservationContext": "市水务局长直接访谈，政府转载解放日报；2025-04-30／2024四季度起及未来计划",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://sww.sh.gov.cn/swdt/20250731/19a5864a65aa416fa96df1a516d453b1.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 20400,
+      "sha256": "5a74481f84ad8a38bbd874debd09107420d76ea9c43993a155186739e582b969",
+      "publicationObservationContext": "商务委载上海蔬菜集团运营原稿；正文2025-07-30／07-28—30实绩",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/gwk/search/content/1de7be7e5608458eaa4ba880ea435e94",
+      "retrievedOn": "2026-10-12",
+      "bytes": 42784,
+      "sha256": "b2904be6e41a122cd5241caf2370866b8ed0ef4a1f36e47d2466e9db3e642198",
+      "publicationObservationContext": "市发改委；2021-10-22，实施2021-11-01／当时市属价格",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://service.shanghai.gov.cn/zmhd12345/web/detail.aspx?id=SSB20230609737967",
+      "retrievedOn": "2026-10-12",
+      "bytes": 9787,
+      "sha256": "f2b15b548d54101c4ebc984959d7f558d29076a02afe6cb6bae26796cf63b98f",
+      "publicationObservationContext": "12345电力热线运营者办理答复；2023-06-12／06-09个案",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/nw9820/20250118/2b9584521cf0427c9b0a97d8d5c24449.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 26672,
+      "sha256": "89e0a495c01381c6a362bc5ecae80080d6dc5981179f5130dc8723cc5d084e7f",
+      "publicationObservationContext": "市政府新闻办／卫健负责人原问答；2025-01-18／2024及发布时",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/nw9820/20260212/a1fb2201cc34417ea6554962402a5f64.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 42845,
+      "sha256": "3871b80d626934f6d3465a13881bda10518a3cac4a8838acad8a31e3ba1ea948",
+      "publicationObservationContext": "市政府新闻办／卫健负责人原问答；2026-02-12／发布时及计划",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/202602zfwj/20260122/dd5803f7d07b4b53ae92f1c1e64e3595.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 21385,
+      "sha256": "c6b9e81c9633e26a704d991e4855a849a47d780b9ab01591b237bbaa2fb61439",
+      "publicationObservationContext": "市政府沪府规〔2025〕12；2025-12-26，公报页面2026-01-22／2026—30有效",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/gwk/search/content/b34a4573b2df4032bbdc9a97876b3d99",
+      "retrievedOn": "2026-10-12",
+      "bytes": 51721,
+      "sha256": "e5bc7373ee4c287c0cb7b086a5f6eafe27be71092a7f31d1d8de351546db0c06",
+      "publicationObservationContext": "医保局沪医保规〔2025〕12；2025-12-31／2026—30有效",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://shanghai.chinatax.gov.cn/zcfw/zcjd/202511/t478315.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 49949,
+      "sha256": "a83e62dfc907b62c9e2e28839a77254d2b6ed96dc0bc2e8ffa02a1dd9776220b",
+      "publicationObservationContext": "国家税务总局上海税务局；2025-11／2026年度规则",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/newshanghai2018/zfgb/202605/ZFGB2605.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1456519,
+      "sha256": "31a08943a9ed5fb6f6688baf40922fb33f558efcc308ba2cad954c83acffde41",
+      "publicationObservationContext": "市政府公报2026第5期；2026-03-05，原通知2025-11-07／2026年度",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12847417/fullTextXML",
+      "retrievedOn": "2026-10-12",
+      "bytes": 77131,
+      "sha256": "abd14187bfa5332e54243097850591fbbced5b8b2ad33d24636246525df31def",
+      "publicationObservationContext": "原始研究作者／Europe PMC JATS；2026-01-14／2024-09-10—25",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1677639/pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 240134,
+      "sha256": "58081d36c496ddc1789ea1580a604f320981406517f957ae87888bde222b4bc9",
+      "publicationObservationContext": "原始作者／Frontiers出版原PDF；2026-01-14／2024-09-10—25；页3、5目视",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10324355/fullTextXML",
+      "retrievedOn": "2026-10-12",
+      "bytes": 93947,
+      "sha256": "569942d5211b9666aefd7475d2e2299abf508490c3cc4ffd72eb286a393e7cd8",
+      "publicationObservationContext": "市一医院南部研究作者／Europe PMC JATS；2023-03-08在线／2018—19及2020—21",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shhk.gov.cn/slh/038001/20250724/dc809751-84a7-4c36-a8e2-06e2f9ec598d.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 10178,
+      "sha256": "007b99f8b9508a11416c3e8b24f5bcfe5a11fbd07ba22f0926ce2c09aee4de95",
+      "publicationObservationContext": "虹口区政府直接患者及承保方记录；2025-07-24／2024起费用、2025-06赔付",
+      "scope": "Reviewed in cci-shanghai-resources-medicine-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://aitri.sjtu.edu.cn/aitri/doc/05304225-fcf4-4197-8122-110a8abc140d",
+      "retrievedOn": "2026-10-12",
+      "bytes": 44782,
+      "sha256": "1f241fe0815b0e8fe5e3acf4c24983b8ee93837e300b1b9411bec7743b313413",
+      "publicationObservationContext": "2025-12-11；交大产研院原公示；合同及本次收入分列",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://news.sjtu.edu.cn/jdyw/20260404/221195.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 13024,
+      "sha256": "471517e78d44862dc2ff02ab16c2e14b977247023577c28188c5adc4277f68fc",
+      "publicationObservationContext": "2026-04-04；大学原报道；2025遴选与2026新投入分开",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://newsroom.fudan.edu.cn/_s3/2026/0618/c234a149557/page.psp",
+      "retrievedOn": "2026-10-12",
+      "bytes": 64676,
+      "sha256": "c84627de305b3eeeeae89947c77817d47669c2f5541684b41ac12fae8bbcd085",
+      "publicationObservationContext": "2026-06-18；大学原活动及项目记录",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.fudan.edu.cn/2026/0520/c24a149170/page.htm",
+      "retrievedOn": "2026-10-12",
+      "bytes": 92033,
+      "sha256": "5a5b948019cc55ba33ffb80ec936115d78353919625fb17d91a1040c9c0e4f01",
+      "publicationObservationContext": "2026-05-20；大学原采访／产品和金融机制",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shanghai.gov.cn/gwk/search/content/19a0bed0afd64a4cbd8153241ea64b71",
+      "retrievedOn": "2026-10-12",
+      "bytes": 18840,
+      "sha256": "489d753051eb676f17b536011ae63561f5ee396e62c83d42b9b0542dffe39bcb",
+      "publicationObservationContext": "印发2025-07-24／公开2025-11-18；主管答复",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://sdb.sh.gov.cn/fdzdgknr/jytabl/rddbjy/20250613/6d587918e6614513a22e1393453d6955.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 14172,
+      "sha256": "7092118d34dfee29f9e55bd9057cf53d2dec9967a836d50821f3e73e01b91d67",
+      "publicationObservationContext": "正文2025-05-14；数据局原答复；非全居民比例",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shhk.gov.cn/xwzx/002005/20250924/b19da888-8fb2-479b-977e-8477e22e1876.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 14437,
+      "sha256": "f4632e8d8a9b669994ec5ade13c899944754b5e88dee1a1617fe51fd77c80948",
+      "publicationObservationContext": "2025-09-24；街道原交付记录",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://ncnd.huashan.org.cn/cv/kexue/detail/4017.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 13155,
+      "sha256": "cadb51707f291d93a3f23a8b429e46872559a0f61ab4507430d34f37f5ddb31f",
+      "publicationObservationContext": "2025-11-13；实际中心原稿；概括值以全文复核",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13232039/fullTextXML",
+      "retrievedOn": "2026-10-12",
+      "bytes": 132674,
+      "sha256": "e36e0b6324fdd09613f060b22ab0196a9d159482bc68ec9ef7cad910635cfd59",
+      "publicationObservationContext": "在线2025-11-11／纸本2026-06；七院2024-06-26至2025-05-26实际队列",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.shcn.gov.cn/col6991/20240715/1263028.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 12144,
+      "sha256": "86e150a0e192ff9706f01cf8c36ca7498aa04a3601c9fcdf51be213087658b51",
+      "publicationObservationContext": "正文2024-07-12；记者原现场；2024-07-10实际给药",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://life.cpic.com.cn/xrsbx/gkxxpl/hlwbxxx/?inSub=5&subMenu=4",
+      "retrievedOn": "2026-10-12",
+      "bytes": 214045,
+      "sha256": "891705af546cb1fc3408180836c65843b3acd1c44c0460157067d82a85aafb1b",
+      "publicationObservationContext": "当前无单独发布日；承保主体公开指定平台身份，不作历史合同",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://m.cpic.com.cn/c/2026-06-04/1883754.shtml",
+      "retrievedOn": "2026-10-12",
+      "bytes": 30037,
+      "sha256": "a039c91644bbe7e1e92c5c5f85c4853e2b3dc25bfd0b760ec2b626a4e8f7341c",
+      "publicationObservationContext": "URL2026-06-04；承保原说明；2026-07-01至2027-06-30",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://mcdpro.cbit.com.cn/hhb/static-file/cms/tk/site/mcdpro.cbit.com.cn/hhb/static-file/SXYHB/shanghailanmu/1241392547549413376.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 126030,
+      "sha256": "bc941cf575978d9f5bec43fbb02b05337582a8a3cbc3d1f817a6b3b7a1fb7b57",
+      "publicationObservationContext": "题面2026版；含2026-05-19和08-18图版本；当前原说明非截止前字节存档",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://mcdpro.cbit.com.cn/hhb/static-file/cms/tk/source/thinkitcmsresource/image/20260519/1241391435442290688_914_808.png",
+      "retrievedOn": "2026-10-12",
+      "bytes": 218187,
+      "sha256": "4e4e25d313bbd732d10f7ee7a68bb595ecfe427c92d7e3a44d5c76b80959f2fe",
+      "publicationObservationContext": "URL2026-05-19；原保障责任表已目视",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://mcdpro.cbit.com.cn/hhb/static-file/cms/tk/source/thinkitcmsresource/image/20260519/1241391436897714176_1056_7707.png",
+      "retrievedOn": "2026-10-12",
+      "bytes": 2666561,
+      "sha256": "1be8db9c647d48b02484295b4b383865ac7cb4e34554629fda16820210934582",
+      "publicationObservationContext": "URL2026-05-19；原50药表完整分区目视，图非独立于同说明书",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.safe.gov.cn/shanghai/2024/0705/2142.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 66717,
+      "sha256": "970194e0ea571080ca7d610f41a2f7936bd53e8ed5ec606882fdc8f48897d1ae",
+      "publicationObservationContext": "题面2025-12-17；主管资本许可目录",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.safe.gov.cn/shanghai/file/file/20240807/aacf956ee36d4f8081f46dcfe5fc3e71.doc",
+      "retrievedOn": "2026-10-12",
+      "bytes": 52736,
+      "sha256": "6b1d1f2adb359ba432b7debf1bde81d665d6ca03d230eb854b921ac3c4c646d8",
+      "publicationObservationContext": "目录2025-12-17所链／路径2024-08-07；原业务指南援引2024指引",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://gfw.report/publications/sp25/data/paper/paper.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 1025009,
+      "sha256": "5f6c3647feeab362420a40a6f8a7c4c12966a243fcb21d40ae18bc647d2729c1",
+      "publicationObservationContext": "IEEE S&P2025；图3上海子实验2024-07-10；非全年／住宅",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://gfw.report/publications/sp25/en/",
+      "retrievedOn": "2026-10-12",
+      "bytes": 219207,
+      "sha256": "9dd4deedb53d8dfbd351eae269f52c0a733b72c866d133aa2c908eefe36826af",
+      "publicationObservationContext": "研究者同论文原项目；非独立佐证",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.caac.gov.cn/XXGK/XXGK/TJSJ/202602/P020260226360830390937.xlsx",
+      "retrievedOn": "2026-10-12",
+      "bytes": 42924,
+      "sha256": "0f74dc7bbac864ddc64c6e940f5c4b0710a3d1ad61e77eb0dc0085ba61908794",
+      "publicationObservationContext": "2026-02-26；2025实际机场生产；原表共用不重复保存",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://english.nmpa.gov.cn/2024-01/09/c_986552.htm",
+      "retrievedOn": "2026-10-12",
+      "bytes": 10652,
+      "sha256": "0bdf7c259f3776663c68d3e126dcb661c487e795fc369d3a948346ff43e2e81a",
+      "publicationObservationContext": "2024-01-09；NMPA原批准；直接适用中国监管条件",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://ybj.beijing.gov.cn/zwgk/2024zcwj/202512/W020251230586982512630.pdf",
+      "retrievedOn": "2026-10-12",
+      "bytes": 807967,
+      "sha256": "a31e15725cf08b41d7997157e1885ec78299e155ddce86a2e9862325c2af4e22",
+      "publicationObservationContext": "2025商保创新原目录；2026-01-01至2027-12-31；非基本险自动支付",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.safe.gov.cn/shanghai/2019/1213/1198.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 20527,
+      "sha256": "933be3dc461d973af1d80a9366946701b81ee48d9f4bc8d70939fb9074cd4c73",
+      "publicationObservationContext": "2019-12-13；上海分局经常项规则说明；全国人物条件",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.mofcom.gov.cn/zcfb/zgdwjjmywg/art/2020/art_0dd36157a03f494db7571002c7f785b8.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 148041,
+      "sha256": "14171f27d3ce961e344a1daa9fca9742c21b1926180d3bd5502ecf57ded4020b",
+      "publicationObservationContext": "2020规则；2020-12-01政府转载；共用全国法定条件",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/BJNR195010004.html",
+      "retrievedOn": "2026-10-12",
+      "bytes": 979856,
+      "sha256": "035c430b7411f9bd8bb547aa4d6e0c1ade1e52c89089ba55b553977cf5f831a6",
+      "publicationObservationContext": "完整原居留法纳入2026-07-22修订；shared人物条件",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    },
+    {
+      "url": "https://xzfg.moj.gov.cn/mobile/law/detail?LawID=1713",
+      "retrievedOn": "2026-10-12",
+      "bytes": 21997,
+      "sha256": "ab8a58cdb0385529b875fa01c8dfccb213fa55d36c5132d032ef04f12a86d3a1",
+      "publicationObservationContext": "2024-03-10修订；司法部网络行政原法",
+      "scope": "Reviewed in cci-shanghai-technology-longevity-exit-review.md. Original date, cohort, geographic and payer scopes remain separate; raw retrieval is not pre-cutoff archived bytes or completeFUA/median-resident measurement. Shared upstream material and associated original figures are not independent corroboration."
+    }
+  ]
+}

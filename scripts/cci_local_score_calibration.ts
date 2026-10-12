@@ -70,6 +70,7 @@ const realCases = [
   "chicago",
   "prague",
   "beijing",
+  "shanghai",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -131,6 +132,7 @@ const [
   chicago,
   prague,
   beijing,
+  shanghai,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -337,7 +339,7 @@ const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.
 assert(tokyoPosition);
 assert.equal(tokyoPosition.center, 62);
 assert.equal(tokyoPosition.bestPosition, 1);
-assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 7);
+assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 8);
 assert.deepEqual(total(washington), { center: 58, lower: 58, upper: 58 });
 assert.equal(washington.RES, 40);
 assert.equal(washington.OPT, 60);
@@ -837,7 +839,73 @@ const beijingPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
 );
 assert(beijingPosition);
 assert.equal(beijingPosition.bestPosition, 3);
-assert.equal(beijingPosition.worstPosition, rankAudit.candidateCount - 5);
+assert.equal(beijingPosition.worstPosition, rankAudit.candidateCount - 6);
+
+assert.deepEqual(total(shanghai), { center: 58, lower: 58, upper: 58 });
+assert.equal(shanghai.LON, 40);
+assert.equal(shanghai.TEC, 80);
+assert.equal(shanghai.OPT, 40);
+for (const [dimension, lower, upper] of [
+  ["PCS", 49, 64],
+  ["GSS", 49, 64],
+  ["ISR", 49, 64],
+  ["MED", 49, 64],
+  ["RES", 52, 62],
+  ["LON", 54, 64],
+  ["TEC", 50, 60],
+  ["OPT", 54, 64],
+] as const) {
+  const withdrawn = { ...shanghai };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.equal(total({ ...shanghai, LON: 60 }).center, 60);
+assert.equal(total({ ...shanghai, OPT: 60 }).center, 60);
+assert.equal(total({ ...shanghai, TEC: 60 }).center, 56);
+assert.equal(total({ ...shanghai, MED: 40 }).center, 55);
+const shanghaiCase = realCases[18];
+for (const review of shanghaiCase.focusedReviews) {
+  assert.equal(review.sha256, digest(review.path));
+}
+assert.equal(
+  shanghaiCase.researchPriority.sourceSha256,
+  digest(`docs/data/${shanghaiCase.researchPriority.source}`)
+);
+assert.equal(shanghaiCase.researchPriority.recordAssociations, 94276);
+assert.equal(
+  shanghaiCase.sharedLegalPath.sourceSha256,
+  digest("docs/data/cci-legal-mobility-rules.json")
+);
+assert.equal(shanghaiCase.referenceBoundaryCheck.referencePoints.length, 13);
+for (const [label, matches] of [
+  ["Chongming urban approximate reference", [10126]],
+  ["Kunshan urban approximate reference", [9963]],
+  ["Tongren Xianxia campus approximate reference", [10097]],
+] as const) {
+  assert.deepEqual(
+    shanghaiCase.referenceBoundaryCheck.referencePoints.find(
+      (p: { label: string }) => p.label === label
+    ).fuaMatches,
+    matches
+  );
+}
+assert.equal(shanghaiCase.clinicalChecks.lonAriaObservedDenominator, 321);
+assert.equal(shanghaiCase.clinicalChecks.lonAriaCases, 39);
+assert.equal(shanghaiCase.clinicalChecks.lonSymptomaticAriaCases, 4);
+assert.equal(shanghaiCase.clinicalChecks.nursingCountsArePatientHarmRates, false);
+assert.equal(shanghaiCase.clinicalChecks.multicentreCohortIsAllShanghai, false);
+assert.equal(shanghaiCase.clinicalChecks.allMixedWithdrawalsAreEconomic, false);
+assert.equal(
+  shanghaiCase.clinicalChecks.supplementaryInpatientCoverProvesDayInfusionReimbursement,
+  false
+);
+assert.equal(coverage.legalMobility.countryCandidateCounts.CHN, 1539);
+const shanghaiPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (c: { efua_id: string }) => c.efua_id === "10097"
+);
+assert(shanghaiPosition);
+assert.equal(shanghaiPosition.bestPosition, 5);
+assert.equal(shanghaiPosition.worstPosition, rankAudit.candidateCount);
 
 const praguePosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
   (c: { efua_id: string }) => c.efua_id === "535"

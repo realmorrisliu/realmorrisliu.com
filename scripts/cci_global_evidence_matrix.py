@@ -255,7 +255,7 @@ def main():
                                'provenance': review.name,
                                'provenanceSha256': hashlib.sha256(review.read_bytes()).hexdigest()}
     cases = []
-    for city in ('singapore', 'london', 'helsinki', 'zurich', 'gaza', 'tokyo', 'washington', 'new-york', 'paris', 'san-jose', 'los-angeles', 'osaka-kyoto', 'boston', 'seoul', 'lisbon', 'chicago', 'prague', 'beijing'):
+    for city in ('singapore', 'london', 'helsinki', 'zurich', 'gaza', 'tokyo', 'washington', 'new-york', 'paris', 'san-jose', 'los-angeles', 'osaka-kyoto', 'boston', 'seoul', 'lisbon', 'chicago', 'prague', 'beijing', 'shanghai'):
         path = folder / f'cci-local-2026-{city}-case.json'
         case = json.loads(path.read_text())
         review = ROOT / 'docs' / case['evidenceReview']
@@ -302,7 +302,7 @@ def main():
             'statusCounts': dict(Counter(r['legal_mobility_status'] for r in rows)),
             'ruleCandidateCounts': dict(Counter(r['legal_mobility_rule'] for r in rows if r['legal_mobility_rule'])),
             'countryCandidateCounts': dict(sorted(Counter(r['country_iso'] for r in rows if r['legal_mobility_rule']).items())),
-            'meaning': 'Reviewed destination-specific legal conditions under the local citizenship assumption: EU/EEA/Swiss conditional residence rights and section 41 procedural onshore applications are distinct. An application route is not approved residence or work. Unknown is not denial; residence does not establish citizenship. No affordability, job access, crisis operation, whole OPT score or exclusion bound established.',
+            'meaning': 'Reviewed destination-specific legal conditions under the local citizenship assumption: EU/EEA/Swiss conditional residence rights, section 41 procedural onshore applications and Chinese citizens qualifying skilled-work national-visa route are distinct. An application route is not approved residence or work. Unknown is not denial; residence does not establish citizenship. No affordability, job access, crisis operation, whole OPT score or exclusion bound established.',
         },
         "preliminary2026Violence": {
             "manifest": "cci-ucdp-candidate-2026.json",
@@ -333,7 +333,7 @@ def main():
                              "TEC": ["digital_infrastructure: self-selected 2026 Q3 network tests only; boundary sensitivity retained, not population access or complete technology capability",
                                      "knowledge_output: 2025 work-ID presence associated with qualifying frozen institution directory FUAs; types, corpus and retraction flags retained separately; not verified research sites, deduplicated intellectual works, contributions, quality or resident diffusion; zero associations do not imply zero research"],
                              "OPT": ["transport_redundancy: directory airport points and scheduled nonclosed flags only; no resident access, routes, independent alternatives or common failures measured",
-                                     "legal_mobility: reviewed Germany/France conditions under modelled citizenship only; conditional residence rights differ from section 41 onshore applications, which are not approved residence or work; no actual affordability, employment or crisis operation measured"]},
+                                     "legal_mobility: reviewed Germany/France conditions under modelled citizenship only; conditional residence rights differ from section 41 onshore applications and Chinese citizens qualifying skilled-work national-visa route; conditional paths are not approved residence or work; no actual affordability, employment or crisis operation measured"]},
         "sourceJoinKey": "efua_id; source tables and their provenance remain authoritative for values and limitations",
         "inputs": inputs, "scriptSha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "csvSha256": hashlib.sha256(output.read_bytes()).hexdigest(),

@@ -70,13 +70,14 @@
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
     "statusCounts": {
-      "no_reviewed_path_not_no_right": 7981,
-      "conditional_legal_path_under_citizenship_assumption": 1050
+      "no_reviewed_path_not_no_right": 6442,
+      "conditional_legal_path_under_citizenship_assumption": 2589
     },
     "ruleCandidateCounts": {
       "section41_citizen_onshore_application_germany": 540,
       "other_eu_citizen_to_germany": 422,
-      "german_eea_swiss_citizen_to_france": 88
+      "german_eea_swiss_citizen_to_france": 88,
+      "chinese_citizen_skilled_work_national_visa_germany": 1539
     },
     "countryCandidateCounts": {
       "AUS": 20,
@@ -85,6 +86,7 @@
       "BGR": 7,
       "CAN": 35,
       "CHE": 13,
+      "CHN": 1539,
       "CYP": 3,
       "CZE": 12,
       "DEU": 70,
@@ -118,7 +120,7 @@
       "SWE": 11,
       "USA": 260
     },
-    "meaning": "Reviewed destination-specific legal conditions under the local citizenship assumption: EU/EEA/Swiss conditional residence rights and section 41 procedural onshore applications are distinct. An application route is not approved residence or work. Unknown is not denial; residence does not establish citizenship. No affordability, job access, crisis operation, whole OPT score or exclusion bound established."
+    "meaning": "Reviewed destination-specific legal conditions under the local citizenship assumption: EU/EEA/Swiss conditional residence rights, section 41 procedural onshore applications and Chinese citizens qualifying skilled-work national-visa route are distinct. An application route is not approved residence or work. Unknown is not denial; residence does not establish citizenship. No affordability, job access, crisis operation, whole OPT score or exclusion bound established."
   },
   "preliminary2026Violence": {
     "manifest": "cci-ucdp-candidate-2026.json",
@@ -134,10 +136,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 18,
-    "completeConditionalCaseCount": 8,
+    "conditionalCaseCount": 19,
+    "completeConditionalCaseCount": 9,
     "partialCaseCount": 10,
-    "unassessedCount": 9013,
+    "unassessedCount": 9012,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -164,7 +166,7 @@
     ],
     "OPT": [
       "transport_redundancy: directory airport points and scheduled nonclosed flags only; no resident access, routes, independent alternatives or common failures measured",
-      "legal_mobility: reviewed Germany/France conditions under modelled citizenship only; conditional residence rights differ from section 41 onshore applications, which are not approved residence or work; no actual affordability, employment or crisis operation measured"
+      "legal_mobility: reviewed Germany/France conditions under modelled citizenship only; conditional residence rights differ from section 41 onshore applications and Chinese citizens qualifying skilled-work national-visa route; conditional paths are not approved residence or work; no actual affordability, employment or crisis operation measured"
     ]
   },
   "sourceJoinKey": "efua_id; source tables and their provenance remain authoritative for values and limitations",
@@ -240,9 +242,9 @@
       "provenanceSha256": "0a926b6958d38f4f532b6a7e80068001d2a280180fd68d6544262fde52ef192e"
     },
     "cci-legal-mobility-rules.json": {
-      "sha256": "ee54f123913d2445574dcf31ee60bb4d690b1ea3403099a1bb5b7bf825f04413",
+      "sha256": "d599af8b34ea7d149e074e1f471c9e0371d936ae76b81b1563bd125ed21c0e6a",
       "provenance": "cci-legal-mobility.md",
-      "provenanceSha256": "34e41625f9e78832f4139e4a350fd4c48d7fc333ac876838fdaa63254d8e1179"
+      "provenanceSha256": "299ea632899326602b17d557fbea333e62e734459b34d83e4bd94d735f1b2a6b"
     },
     "cci-local-2026-singapore-case.json": {
       "sha256": "6c5412e214060111201410a0a1a12cb9618f2c3dc5aaff725fdfda683b7696e4",
@@ -280,52 +282,52 @@
       "provenanceSha256": "33b2c688150c549b5e08a1d62ce66d8dfbb80d737ff1b43c28b7d9ff5195ff05"
     },
     "cci-local-2026-new-york-case.json": {
-      "sha256": "11c870d1e0dae27928426f1fe2a009dc122048d3900f961c4b2478865db742fc",
+      "sha256": "11b4fe8fb75c9ef590382649df066ff0cf98c256549167b0f04fa1acd206df69",
       "provenance": "cci-local-2026-new-york-case.md",
       "provenanceSha256": "e70f510e3dbc0984d68e506bd770c9e353ab1b9fa564e8b345ef9ecec7f9824c"
     },
     "cci-local-2026-paris-case.json": {
-      "sha256": "8eac352e2db91d78eecddef29c3c8c68aff50cb7a40bcff5a7f0bbfd842a953d",
+      "sha256": "cc7d716983e3326320b3b25a18241506a640ac4227884c42d5057d5facdefd28",
       "provenance": "cci-local-2026-paris-case.md",
       "provenanceSha256": "a619a34639cd6be5ccd801c80d3eced6b419b71e89f832a57f5362eda72bb6cb"
     },
     "cci-local-2026-san-jose-case.json": {
-      "sha256": "a970c7e93dd7277965ce080649888cacca3bbbe3c0f302fbb0871ef245ed4edd",
+      "sha256": "1405fe285b2192c14f289961d059c49c073759fe2043cb03e3f7e8e4aba96dcf",
       "provenance": "cci-local-2026-san-jose-case.md",
       "provenanceSha256": "a41f2ec2b204fa0ca51eafcad62e9826f41b8681a7056f2d3b65a49342dcb1e1"
     },
     "cci-local-2026-los-angeles-case.json": {
-      "sha256": "b33f646907df2410f9a1c511ce2a0cbc40c32f675c75df459450e064ed66b201",
+      "sha256": "7721d2562546835b2eec0892d140f44b6357f306de7d4d4f85f6296b3a527df3",
       "provenance": "cci-local-2026-los-angeles-case.md",
       "provenanceSha256": "f50b1010ccd3e3d5f2439568ba4bb341c7738233a7b7dd05ee0111c387890b36"
     },
     "cci-local-2026-osaka-kyoto-case.json": {
-      "sha256": "e65d3fe8e7233bab5d9ba451336fd10dfbe8ec1fae99984af1ce43d4d59ed250",
+      "sha256": "f0d490a28d01b8b282653d5ac50c618d480fd1aea975202efb4bdc840521f04d",
       "provenance": "cci-local-2026-osaka-kyoto-case.md",
       "provenanceSha256": "e702fa7ffe6204cb40e43cf0decdd1116e018c030826f748fc7659a811c6a5a7"
     },
     "cci-local-2026-boston-case.json": {
-      "sha256": "5763d9510b8f89ac36e58515256abcfa3137902e364d9bc91b217309fc044465",
+      "sha256": "6c36609b908f4f190affa21ae8305526b349c511b8e05d191bbf19657918606a",
       "provenance": "cci-local-2026-boston-case.md",
       "provenanceSha256": "e62d58c2d8fb6dd372d4f8625116037edb05bc67b9851b170b2d7fac8098a6d6"
     },
     "cci-local-2026-seoul-case.json": {
-      "sha256": "45c522709ce6d0c4da8a257fff7e7e2dc4b62276f0ea2fc53502803b0af95ad3",
+      "sha256": "ed7f0c1b6c61b827aadb8d1644179a33a3b21a2c0069319ec47767c449d2a61a",
       "provenance": "cci-local-2026-seoul-case.md",
       "provenanceSha256": "0176f2f322df7f485fcbfd64a1fea619b1e3a4c2e2c836d0d04184f4806414ee"
     },
     "cci-local-2026-lisbon-case.json": {
-      "sha256": "b8f5d1bbd92720731eee4442a065c9460d805c3d1084ade2879913e6fe4f4470",
+      "sha256": "3d51c9a722abb4f9d1e8c04850fe80c55c4643ea4ee7dcfdceebef3dfddf839f",
       "provenance": "cci-local-2026-lisbon-case.md",
       "provenanceSha256": "95f90c78d34ee63b3615fca9538deb31b09db639b0b46875355513841af962e2"
     },
     "cci-local-2026-chicago-case.json": {
-      "sha256": "87188c878bc752de873d8373415c8949a89c0d37587b013323ae7cb104bbe25e",
+      "sha256": "183ff31f2535bf3d088f883c2cd5e73b7e5feeac5e5f416d1a2a83ef256c5c39",
       "provenance": "cci-local-2026-chicago-case.md",
       "provenanceSha256": "041bdc7edfd254deb56677553feedef7808e98bf3f1cce072984f359ef18015f"
     },
     "cci-local-2026-prague-case.json": {
-      "sha256": "5d842f2b4394b480f2db0684a5aa006c5019f1331001e8dca8b592e148d1060d",
+      "sha256": "8d86cdaccdfd3d1f0f02666935dd18622482a60a45daa994f664c37b4657a5a1",
       "provenance": "cci-local-2026-prague-case.md",
       "provenanceSha256": "db553c730a51b2622040ce2d09696dd010fde7a9142e79b752977ecd0347f8d4"
     },
@@ -333,8 +335,13 @@
       "sha256": "66e15dc512297c8e817a879c93a972ca3e8711fd97dccf6afd2825e0333f9ea9",
       "provenance": "cci-local-2026-beijing-case.md",
       "provenanceSha256": "b4203e4822c87c726ff5a4f27b43aaeb709e432dc5b683929305837f54a1bb62"
+    },
+    "cci-local-2026-shanghai-case.json": {
+      "sha256": "bba0e70c9ce4228d5565bbb5d3c368f21e16685a949d00ec4a5d0791f84d10cf",
+      "provenance": "cci-local-2026-shanghai-case.md",
+      "provenanceSha256": "3228483919b4fbbffbca2e0bfd10d3608dd42b94844f0803cd7be4fe8becbd3a"
     }
   },
-  "scriptSha256": "33f3af83ac7486f53e15a87605ee188882f80ccb29639b77ee912e943081eedc",
-  "csvSha256": "f564073bf5ac1b2e31b4052d797e183e5e229a48dfae53633697773df325815a"
+  "scriptSha256": "14548b2aff04e4887db715448d8f6f734b7c17253adf03b1453c0eb0e307d1d6",
+  "csvSha256": "6ce2ac3724985c14557817f2e3352c5149a1e456814ec178053afbd5eff95059"
 }

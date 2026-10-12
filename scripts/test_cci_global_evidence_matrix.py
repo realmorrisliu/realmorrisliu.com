@@ -16,7 +16,10 @@ class EvidenceMatrixTest(unittest.TestCase):
         for country in ('AUS', 'CAN', 'GBR', 'ISR', 'JPN', 'KOR', 'NZL', 'USA'):
             self.assertEqual(rules[country]['id'], 'section41_citizen_onshore_application_germany')
             self.assertEqual(rules[country]['destinationCountryIso'], 'DEU')
-        for country in ('BRA', 'ASM', 'PRI', 'GIB'):
+        self.assertEqual(rules['CHN']['id'], 'chinese_citizen_skilled_work_national_visa_germany')
+        self.assertEqual(rules['CHN']['destinationCountryIso'], 'DEU')
+        self.assertTrue(any('before entry' in c for c in rules['CHN']['conditions']))
+        for country in ('BRA', 'ASM', 'PRI', 'GIB', 'HKG', 'MAC', 'TWN'):
             self.assertNotIn(country, rules)
         for field, value in [('residentPerspective', 'foreign_resident'), ('evidenceCutoff', '2026-10-12')]:
             with self.assertRaisesRegex(ValueError, 'protocol mismatch'):
@@ -94,6 +97,12 @@ class EvidenceMatrixTest(unittest.TestCase):
         self.assertEqual(application['legal_mobility_rule'], 'section41_citizen_onshore_application_germany')
         for field in ('OPT', 'cci_score_status', 'local2026_screening_status'):
             self.assertEqual(application[field], row[field])
+        candidates[0]['country_iso'] = claims[0]['country_iso'] = 'CHN'
+        claims[0]['status'] = 'outside_payer_frame_not_no_adoption'
+        pre_entry = matrix(candidates, history, spatial, violence, health, governance, seismic, water, network, wup, airports, claims, self.legal, current_violence)[0]
+        self.assertEqual(pre_entry['legal_mobility_rule'], 'chinese_citizen_skilled_work_national_visa_germany')
+        for field in ('OPT', 'cci_score_status', 'local2026_screening_status'):
+            self.assertEqual(pre_entry[field], row[field])
         candidates[0]['country_iso'] = claims[0]['country_iso'] = 'AAA'
         claims[0]['status'] = 'outside_payer_frame_not_no_adoption'
         self.assertEqual(row["TEC"], "network_samples_missing")

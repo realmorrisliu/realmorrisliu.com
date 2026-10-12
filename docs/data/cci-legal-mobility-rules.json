@@ -61,7 +61,7 @@
       "url": "https://www.gesetze-im-internet.de/aufenthg_2004/BJNR195010004.html",
       "versionDate": "2026-07-22",
       "versionMeaning": "Official full citation incorporates amendments dated 2026-07-22; the Stand line says 2026-07-21 and notes incorporated July 22 amendments with documentary processing not final. Relevant clauses read; no cutoff-day archive claimed.",
-      "clauses": ["2(3)", "4a", "5", "18(2)-(3)", "18b"],
+      "clauses": ["2(3)", "4a", "5", "6(3)", "18(2)-(3)", "18b"],
       "retrievedBytes": 979856,
       "retrievedSha256": "035c430b7411f9bd8bb547aa4d6e0c1ade1e52c89089ba55b553977cf5f831a6"
     }
@@ -130,6 +130,19 @@
         "A qualifying residence purpose and its substantive conditions remain necessary. General section 5 conditions usually include secured livelihood, adequate health insurance under section 2(3), identity, passport and absence of expulsion grounds; median income at origin does not prove these conditions.",
         "The reviewed academic skilled-worker example under sections 18 and 18b requires a recognised or comparable degree, a specific qualified-job offer, required professional permission and employment-agency approval where applicable. First section 18a/18b permits after age 45 normally require the statutory salary level or adequate retirement provision, subject to stated exceptions. Do not assume the ordinary resident qualifies.",
         "Visa-free entry and filing an application do not by themselves authorise employment under section 4a. No processing time, job availability, resident affordability or crisis operation is established."
+      ]
+    },
+    {
+      "id": "chinese_citizen_skilled_work_national_visa_germany",
+      "originCountryIso": ["CHN"],
+      "destinationCountryIso": "DEU",
+      "sources": ["de_aufenthg", "de_aufenthv"],
+      "status": "conditional_legal_path_under_citizenship_assumption",
+      "conditions": [
+        "For the modelled Chinese citizen without an independently established entry/residence exemption, section6(3) provides a national visa for a longer-term residence purpose, normally issued before entry. China is not among section41(1) onshore-application nationalities; this is not a visa-free or tourist-to-work permission claim. Other lawful individual exemptions and unreviewed routes are not denied.",
+        "The reviewed academic skilled-worker residence purpose under sections18(2)-(3) and18b requires a recognised or comparable degree, a specific qualified-job offer, actual intended employment, professional permission where required and employment-agency approval where applicable. Do not assume ordinary residents meet these conditions.",
+        "General section5 conditions normally include secured livelihood, identity, passport and absence of expulsion grounds; adequate health insurance is included in section2(3). First section18a/18b permits after age45 normally require the statutory salary level or adequate retirement provision, subject to stated exceptions. No annual salary amount or origin-median-income eligibility is inferred.",
+        "Section4a employment permission and title restrictions remain. A legal conditional application/residence purpose is not an issued visa, job, actual approval rate, affordable relocation, transferable assets, transport redundancy or crisis connectivity. Chinese citizenship is an explicit model assumption, not inferred from geographic residence; HKG/MAC/TWN and foreign residents do not inherit CHN here."
       ]
     }
   ]
