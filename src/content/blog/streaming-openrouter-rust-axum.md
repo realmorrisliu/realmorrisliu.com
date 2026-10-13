@@ -148,3 +148,5 @@ The [October 13, 2026 run](https://github.com/realmorrisliu/openrouter-rs/action
 The example binds to loopback and has no gateway authentication. Before exposing it publicly, add authentication, rate and concurrency limits, and a policy for allowed models. If you put it behind a reverse proxy, check that the proxy forwards chunks as they arrive.
 
 The [full source](https://github.com/realmorrisliu/openrouter-rs/blob/6b251fcef56eea6ef1f3d031c5a06e8778865bd4/examples/axum_chat_gateway.rs) includes the handlers and tests. For another way into the SDK, see the [application examples](https://github.com/realmorrisliu/openrouter-rs#application-patterns) or my earlier post on [Rust's builder pattern](/thoughts/rust-builder-pattern-evolution).
+
+For a tool-calling example, see [Typed Tools in a Bounded Rust Agent Loop](/thoughts/typed-tools-openrouter-rust-agent).
