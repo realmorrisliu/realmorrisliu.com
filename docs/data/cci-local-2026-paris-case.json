@@ -5,69 +5,69 @@
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "boundaryVersion": "GHS-FUA R2019A",
   "boundaryReview": "unresolved",
-  "retrievedOn": "2026-10-12",
+  "retrievedOn": "2026-10-13",
   "candidateId": 2702,
   "name": "Paris",
   "evidenceReview": "cci-local-2026-paris-case.md",
-  "expectedConditionalTotal": null,
-  "limitations": "Eight dimensions and 31 subpillars reviewed, not fully measured. ISR/MED/TEC/OPT conditional 60, LON conditional 40; PCS/GSS/RES unknown. Regulatory caution is not itself poor care; LON requires a contested pathway-relevance assumption. Institutional, municipal, regional and national scopes differ from the frozen FUA. No ranking, exclusion bound or healthy-person lifespan gain; reject necessary assumptions to restore unknown.",
+  "expectedConditionalTotal": 60,
+  "limitations": "Eight conditional60 judgments, not fully measured or a global rank. PCS/GSS/RES now use actual delivery and explicit scope/ordinary-resident assumptions. Actual local CAR-T makes the earlier AD-only LON40 pathway-representativeness assumption inadequate; capacity, manufacturing, toxicity, AD restrictions and costs remain. Current product payment continuity, eligible resident access/monitoring and disease-pathway relevance are reversible assumptions. 28partial/2context/1unresolved subpillars; rejecting LON yields54–64 without a centre.",
   "dimensions": [
     {
       "id": "PCS",
-      "score": null,
-      "rationale": "Regional heat-impact estimates and municipal cooling/referral arrangements document hazard and response. Modelled heat-attributable deaths differ from all-cause excess deaths and do not describe 2026 median-income citizens. Home protection, remaining hazards and whole-FUA applicability are not sufficiently established.",
-      "assumption": "No whole-dimension anchor: neither declared cooling sites nor regional deaths establishes adequate target-resident protection or an unmitigated target-resident bottleneck.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Actual June/July 2026 heat follow-up, cooling access, patrols and fan distribution plus a completed October 2025 flood drill support scoped adaptation. The drill’s March 2026 flood, 80,000 evacuees and interruptions are simulated. Actual regional 2025 heat harms persist; unreviewed hazards are not assigned zero.",
+      "assumption": "Observed major-hazard measures are relevant across the FUA and usually effective for the target resident through the cutoff. Unreviewed geophysical/severe-weather exposure does not constitute the dominant unmitigated vulnerability; reject to unknown, not zero.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "heat_humidity": "partial",
-        "flood_sea_level": "unresolved",
+        "flood_sea_level": "partial",
         "geophysical": "context",
         "severe_weather_wildfire": "unresolved"
       }
     },
     {
       "id": "GSS",
-      "score": null,
-      "rationale": "DGSI describes national terrorist threats and disrupted plots, not an annual Paris victim or interruption series. Existing historical events and general crime context do not resolve organised violence, regional spillover and strategic impacts for the current FUA.",
-      "assumption": "National mitigation is relevant context, not proof of low Paris impact or zero unreported incidents. Review actual local impacts and the broader regional/strategic profile before choosing an anchor.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "2025 judicial/PNAT records distinguish national classified attacks and disrupted plots from Paris execution and international cooperation. Actual high threat, local high-intensity violence and state/strategic exposure remain. No national totals, unverified media events or absent UCDP matches are converted into a city rate.",
+      "assumption": "Scoped local execution and national classified monitoring/cooperation reasonably apply to the FUA through the cutoff. Realised organised-violence impact on ordinary life is generally limited despite important continuing regional/strategic threat; reject this impact inference to unknown.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
-        "organized_violence": "context",
+        "organized_violence": "partial",
         "regional_conflict": "context",
-        "strategic_exposure": "context"
+        "strategic_exposure": "partial"
       }
     },
     {
       "id": "ISR",
       "score": 60,
-      "rationale": "Actual municipal contact channels, delivered hospital services and restored capacity support limited execution and adaptation. Received contacts do not prove all requests were resolved; financial pressure and incomplete crisis/group reach remain.",
-      "assumption": "Observed execution persists, ordinary citizens can usually reach major services across the area, and reviewed shortfalls do not constitute a broader unmitigated institutional bottleneck. Reject continuity, reach or representativeness to restore unknown.",
+      "rationale": "Actual municipal contact operation, heat follow-up, flood training and recovered hospital capacity support execution/adaptation. Contacts are not resolved requests; drills are not actual disaster recovery; group and coordination differences persist.",
+      "assumption": "Observed execution persists and ordinary residents generally reach key services across the area. Known coordination/group/recovery shortfalls remain important but do not create a broader unmitigated execution bottleneck.",
       "conditionalAlternatives": [40, 80],
       "subpillars": {
         "governance": "partial",
         "adaptive_capacity": "partial",
         "social_cohesion": "partial",
-        "emergency_recovery": "context"
+        "emergency_recovery": "partial"
       }
     },
     {
       "id": "RES",
-      "score": null,
-      "rationale": "Actual water quality/delivery and wholesale food arrivals support supply. The 2026 INSEE publication models housing-energy vulnerability using older housing/income/energy inputs, not current bills or food affordability. Non-poor households are not the median citizen; operator scopes and crisis dependencies remain incomplete.",
-      "assumption": "Do not offset affordability with tonnes or compliant water. Current essential-resource burden and mitigation must support usual availability/affordability for 60, or an important persistent target-resident bottleneck for 40. A historical model and aggregate groups do not settle that choice.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Actual water/food flow, regional electricity consumption and imported supply are joined with delivered water-cost assistance and current conditional energy-assistance paths. Electricity dependence, affordability and geography remain; historical model inputs and household means are not current median bills.",
+      "assumption": "Observed essential-resource flow and operator/region evidence reasonably represent usual resident supply through the cutoff. Ordinary median-income residents can generally afford essentials; reviewed help and residual costs do not create a clear usual-access bottleneck. Historical modelling is only scoped supporting context.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "water": "partial",
         "food": "partial",
-        "energy": "context",
+        "energy": "partial",
         "supply_chain": "partial"
       }
     },
     {
       "id": "MED",
       "score": 60,
-      "rationale": "Dated hospital delivery, scoped historical certification and the current insurance/payment pathway support care. Certification is 2022-2024, not 2026 adverse-outcome measurement. Referrals, complementary coverage, daily charges and financial pressure limit universal access/affordability claims.",
-      "assumption": "Necessary routine/specialist care remains clinically adequate and usually obtainable/affordable under usual coverage across the FUA. Historical certification, service volume and national reimbursement rules are partial support, not proof for every resident; reject quality, access, affordability or continuity assumptions to restore unknown.",
+      "rationale": "Actual broad routine/specialist care and 460 annual-average reopened beds plus scoped quality processes and current public coverage support usual care. Certification is historical; medicine/testing reductions are processes, not clinical improvements. Financial/staffing, care-path and residual cash burdens remain.",
+      "assumption": "Necessary routine/specialist care is generally clinically adequate, obtainable and affordable under usual qualifying coverage across the FUA. Existing recovery and care organisation persist despite important waiting/group/pressure shortfalls; do not require perfect contemporary adjusted outcomes or bills.",
       "conditionalAlternatives": [40, 80],
       "subpillars": {
         "access": "partial",
@@ -78,10 +78,10 @@
     },
     {
       "id": "LON",
-      "score": 40,
-      "rationale": "Human early-Alzheimer evidence and European authorisations coexist with French early-access refusals and negative reimbursement evaluations. These establish a limited adopted/payment route, not absence of private care, trials or other longevity pathways. Clinical significance and safety are disputed; approval alone is not resident benefit.",
-      "assumption": "The reviewed disease-specific pathway is relevant to limited LON readiness, its ordinary covered adoption gap persists locally through the cutoff, and unreviewed routes do not remove that gap. This is not a penalty for appropriate regulatory caution or an inference of poor medical care. Reject pathway relevance, net-benefit applicability, continuity or representativeness to restore unknown; no healthy-person lifespan gain assumed.",
-      "conditionalAlternatives": [60, 80],
+      "score": 60,
+      "rationale": "Pathway-selection correction: actual local CAR-T treatment, credible disease-specific human evidence, European regulation, French maintained hospital-list evaluation and insurance/monitoring paths challenge the old whole-dimension 40 based only on anti-amyloid payment gaps. Saturation, manufacturing delays, severe toxicity, monitoring and ancillary costs remain. HAS opinion is not a new final ministerial listing and no healthy-person lifespan gain is assumed.",
+      "assumption": "The disease-specific CAR-T path is relevant to limited LON readiness; clinical evidence is not a healthy-ageing benefit claim. Reviewed European authorisation and previously maintained French hospital-list/payment route continue through the cutoff; current adult CIP ministerial/liste-en-sus original was not independently obtained in this bounded review. Ordinary clinically eligible insured residents generally obtain appropriate local treatment and monitoring and can bear ancillary burdens despite saturation/manufacturing delays. Reject product/payment, access/monitoring/cost or spatial persistence to unknown.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "translation": "partial",
         "trial_maturity": "partial",
@@ -92,8 +92,8 @@
     {
       "id": "TEC",
       "score": 60,
-      "rationale": "Scoped research output and actual licensing income support knowledge/industry connections; implemented hospital digital use and older regional usage modelling provide limited diffusion evidence. Partnership announcements, patent counts and statistical predictions do not establish whole-industry or current household adoption.",
-      "assumption": "Observed capacity persists and reasonably represents limited industry connections and usable resident diffusion across the area. Older modelled use and one institutional network are partial support. Reject continuity, diffusion, representativeness or boundary applicability to restore unknown. Multi-producer production and diffusion need substantive review; every-node independent pressure testing is not a TEC tier gate.",
+      "rationale": "Scoped multi-hospital production/transfer income, actual professional digital use and public contact operation support knowledge/industry/diffusion. Private-sector withdrawal, financing/coordination and historically measured digital-group barriers require explicit persistence/importance assumptions after help; unknown stronger evidence alone does not cap the score.",
+      "assumption": "Observed production, licensing, clinical/public digital use reasonably represent limited sustained knowledge/industry/diffusion capacity across the area. Financing/coordination and dated group-access problems remain materially important after existing help. If mitigated sufficiently, assess 80 instead; unknown high-tier evidence does not itself justify 60.",
       "conditionalAlternatives": [40, 80],
       "subpillars": {
         "knowledge_output": "partial",
@@ -105,8 +105,8 @@
     {
       "id": "OPT",
       "score": 60,
-      "rationale": "Actual airport/rail operation and compensation coexist with service shortfalls. Reviewed EU-to-Germany rights, conditional bank transfer terms and operating public contact channels support limited exit paths, not approved accounts, universal relocation or independent crisis backup.",
-      "assumption": "An ordinary French citizen can usually obtain and afford appropriate transport, a qualifying German residence purpose, an approved account/compliant transfer and usable communications across the area; channels persist through the cutoff. Rights, contact counts and advertised banking do not prove actual approval, successful transfers or stress redundancy. Reject these assumptions to restore unknown.",
+      "rationale": "Actual airport/rail service and compensation, qualified French EU-citizen German residence paths and conditional bank/communications operation support usual exit. Weak lines, fees, account/identity conditions and common failures remain; ordinary use is not independent stress backup.",
+      "assumption": "Ordinary French citizens generally obtain/afford usable transport, a qualifying German EU residence purpose, approved compliant transfer accounts and key communications. Observed paths persist and reasonably apply across the FUA; no independent common-failure redundancy is presumed.",
       "conditionalAlternatives": [40, 80],
       "subpillars": {
         "transport_redundancy": "partial",
@@ -258,6 +258,102 @@
       "bytes": null,
       "sha256": null,
       "scope": "Primary page read through web tool; direct-download hash unavailable, not represented as a downloaded snapshot; national trial and approval, not local delivery"
+    },
+    {
+      "url": "https://presse.paris.fr/communiques/vigilance-rouge-canicule-extreme-point-de-situation-au-24-juin-et-dispositifs-mobilises-par-la-ville-de-paris",
+      "publishedOn": "2026-06-24",
+      "retrievedOn": "2026-10-13",
+      "bytes": 34799,
+      "sha256": "b91e6cabd30d6c6c4591d20efc8302e7ff9d22e76f1123b493848c0b8635857f",
+      "scope": "观察2026热浪当期；市级已激活／冷点／登记电话路径，效果／全区覆盖未测。"
+    },
+    {
+      "url": "https://pressev2.paris.fr/communiques/canicule-malgre-la-baisse-des-temperatures-la-ville-de-paris-poursuit-certains-dispositifs-et-appelle-a-maintenir-les-bons-reflexes",
+      "publishedOn": "2026-07-01",
+      "retrievedOn": "2026-10-13",
+      "bytes": 22487,
+      "sha256": "ed15759d5b9a37a377723a08cb00ef186cdb3655947f472ad6654bc2fed17c23",
+      "scope": "当期实际继续巡视／风扇／开放；具体受助分母未知。"
+    },
+    {
+      "url": "https://www.paris.fr/pages/avec-l-exercice-paris-inonde-citoyens-et-professionnels-se-sont-prepares-a-une-crue-majeure-32711",
+      "publishedOn": "2025-10-14",
+      "retrievedOn": "2026-10-13",
+      "bytes": 358153,
+      "sha256": "8a739ae258827025db1e0fe0299b3809e2a8e2e25f6c2ab9c0cedb2d1281522f",
+      "scope": "观察2025-10-13实做演练；2026-03-13情景／80000撤离是模拟。"
+    },
+    {
+      "url": "https://www.tribunal-de-paris.justice.fr/sites/default/files/2026-01/Plaquettes%20activit%C3%A9%202025%20TJP%20-%20PNF%20-%20PNAT%20-%20PNACO.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-13",
+      "bytes": 10252190,
+      "sha256": "e7f2725674d1ab9a1992c7e82c25e9146e0fc8787ba99894843dc83d5067bda3",
+      "scope": "2025司法／全国专门检察观察，各表行政窗不同；路径2026-01，首次独立公开日未核；42页。"
+    },
+    {
+      "url": "https://assets.rte-france.com/prod/public/2025-07/2025-07-25-bilan-electrique-2024-ile-de-france.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-13",
+      "bytes": 294730,
+      "sha256": "9f44af379a523972b76f5ac66532f6169ad6037e178f2ade30f9122d34d2fc10",
+      "scope": "观察2024；路径2025-07-25，独立首发未知；2页。正文／图降幅不一致，地域IDF。"
+    },
+    {
+      "url": "https://cdn.paris.fr/paris/2025/11/28/rpqs-eau-2024-v4-GLFg.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-13",
+      "bytes": 3726309,
+      "sha256": "28e63fc6629867329e4df32223edd8e4c0c7b1a901d4a567769932cbe457c718",
+      "scope": "观察2024；路径2025-11-28，首发未独核；84页，援助及家庭概括不等2026中位账单。"
+    },
+    {
+      "url": "https://www.paris.fr/pages/aides-au-logement-3827",
+      "publishedOn": "2026-09-22",
+      "retrievedOn": "2026-10-13",
+      "bytes": 429899,
+      "sha256": "5f0b7bc173963b3bc012285a1f0d330653d3335856cbd5f7c0757fe905d1aef2",
+      "scope": "整页更新日；当期居民申请条件，不是新增实际发放／完工数；具体条款首次生效未知。"
+    },
+    {
+      "url": "https://www.has-sante.fr/jcms/p_3467532/fr/kymriah-tisagenlecleucel-lymphome-diffus-a-grande-cellules-b-ldgcb",
+      "publishedOn": "2023-10-23",
+      "retrievedOn": "2026-10-13",
+      "bytes": 87646,
+      "sha256": "1084601d32f1f754086871ee5f38fb545fc8b571a6dad5d2ecdc36e65a70aaf3",
+      "scope": "CT意见2023-09-06／三线LDGCB；意见与最终部长决定不同。"
+    },
+    {
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "publishedOn": "2023-10-23",
+      "retrievedOn": "2026-10-13",
+      "bytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "scope": "CT批准2023-09-06，原页上线日；40页，试验2020分析／登记2022提取和原2021冲突均保留。"
+    },
+    {
+      "url": "https://www.has-sante.fr/jcms/pprd_2982962/fr/kymriah-tisagenlecleucel",
+      "publishedOn": "2026-03-31",
+      "retrievedOn": "2026-10-13",
+      "bytes": 140432,
+      "sha256": "821236aec9767f8bfef28aa732e43df4b6d210b919603855344cdef29f75882e",
+      "scope": "索引更新日，内列2021／2023意见不是新2026临床意见；不作新最终支付决定。"
+    },
+    {
+      "url": "https://hopital-saintlouis.aphp.fr/lhematologie-lhopital-saint-louis",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-13",
+      "bytes": 136646,
+      "sha256": "5904a4fd04475c1bfd81028bf12353f4443b9a8f9a8475534db634acd65f0e6c",
+      "scope": "当前主体首发／版本未知；>310治疗窗口／去重未知；实际长期监护组织，截止适配推定。"
+    },
+    {
+      "url": "https://www.aphp.fr/sites/default/files/dp_-_la_prise_en_charge_des_cancers_de_lenfant_a_lap-hp_vdef.pdf",
+      "publishedOn": "2019-09-05",
+      "retrievedOn": "2026-10-13",
+      "bytes": 360421,
+      "sha256": "c79862de3d3ae28d11c67f274b0fc1fdcc20f353189703759859cdea2bd12507",
+      "scope": "正文发布日期／历史当期约50 LAL治疗；7页，非2026商品／支付逐例记录。"
     }
   ],
   "sharedLegalPath": {
@@ -265,5 +361,76 @@
     "sourceSha256": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "rule": "other_eu_citizen_to_germany",
     "meaning": "French local citizenship assumption; conditional EU worker/jobseeker/self-funded residence purposes and safeguards, not unconditional settlement, citizenship or automatic access to all benefits."
+  },
+  "webReadSources": [
+    {
+      "url": "https://cme.aphp.fr/sites/default/files/CMEDoc/cme27janvier2026_mti.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "27-page primary CME deck dated 27 January 2026; first web text valid, later two normal-TLS curl403/334byte error bodies and web/screenshot timeouts. pp9/10 delivered commercial MTI and care organisation; chart not visually verified, unverified489 excluded. Observations2018-2025 and2024 not current annual local patient rates."
+    },
+    {
+      "url": "https://cme.aphp.fr/sites/default/files/CMEDoc/cr_cme10juin2025_approuve.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Approved primary minutes dated10June2025; first web text/index valid, later curl403/334byte errors and timeout. Actual two-centre saturation, especially Saint-Louis, retained. Whole PDF not visually verified; no effective original hash."
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allGeometryCount": 9031,
+    "targetGeometrySha256": "6be76049f842032db55162935c4910cb94a842e3f39c6f7e5abd53dd06c46bcf",
+    "referencePoints": [
+      {
+        "label": "Paris centre",
+        "longitude": 2.3522,
+        "latitude": 48.8566,
+        "fuaMatches": [2702]
+      },
+      {
+        "label": "Saint-Louis hospital approximate reference",
+        "longitude": 2.368,
+        "latitude": 48.874,
+        "fuaMatches": [2702]
+      },
+      {
+        "label": "Robert-Debre hospital approximate reference",
+        "longitude": 2.4026,
+        "latitude": 48.88,
+        "fuaMatches": [2702]
+      }
+    ],
+    "limitations": "Analyst approximate reference points only, not verified clinical event locations, facility footprints, resident coverage or the complete AP-HP network."
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-paris-priority-completion-review.md",
+    "sha256": "fd90d6f84d5cc2e67b5b864e9359dc17e513bd4ddff31b5b2adb56dc259c2c64",
+    "reviewedOn": "2026-10-13",
+    "previousConditionalTotal": null,
+    "previousLonScore": 40,
+    "sensitivity": {
+      "conditionalCentre": 60,
+      "requiresAllDimensionAssumptions": true,
+      "subpillars": {
+        "partial": 28,
+        "context": 2,
+        "unresolved": 1,
+        "complete": 0
+      },
+      "one15PercentDimensionUnknown": [51, 66],
+      "one10PercentDimensionUnknown": [54, 64],
+      "pcsGssResUnknownLon60": [36, 76],
+      "pcsGssResLonUnknown": [30, 80],
+      "one15PercentDimension40Centre": 57,
+      "one10PercentDimension40Centre": 58,
+      "tec80Centre": 62,
+      "oldLon40CentreWithOthers60": 58,
+      "lonUnknownWithOthers60": [54, 64],
+      "lon40Condition": "Actual saturation/delays, payment/ancillary cost or monitoring remains a materially important usual eligible-resident access break after alternatives and coverage. AD denial alone is no longer representative."
+    }
   }
 }

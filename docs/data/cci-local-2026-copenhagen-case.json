@@ -1,0 +1,705 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "retrievedOn": "2026-10-13",
+  "candidateId": 537,
+  "name": "Copenhagen",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "docs/cci-copenhagen-priority-review.md",
+  "evidenceReview": "cci-local-2026-copenhagen-case.md",
+  "priorityCompletionReview": {
+    "path": "docs/cci-copenhagen-priority-review.md",
+    "sha256": "860fc5cc1de24cad54bcfc9237b691b1425e2fbf8b23619078b58e8604bbb6d0",
+    "reviewedOn": "2026-10-13"
+  },
+  "expectedConditionalTotal": 62,
+  "limitations": "Conditional research case only. 31 partial states do not mean fully measured. Conditional centre only when every assumption is accepted. MED/PCS40 materially defensible; reject necessary links to null with original weights. No ranking/Top32 result.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Historical moderated heat and low earthquake exposure plus completed rain-flood works support scoped protection. Current warm-drought pressure, unfinished major tunnels and planned storm-surge gates retain important coastal/common-hazard gaps; future capacity is not operating protection.",
+      "assumption": "Accept principal hazards/local references represent ordinary537 exposure, completed works normally effective, and usual thermal adaptation adequate; essential coastal assets must not face dominating unmitigated exposure. Significant exposure/protection gap40; stronger effective combination80; reject these connections to null.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": 60,
+      "rationale": "Actual local organised violence and cross-border enforcement, recent strategic threat assessment and implemented security responses support normally low daily impact with important regional/hybrid exposure. Airport closure is real; reported drones and Russian responsibility are not established for that event.",
+      "assumption": "Accept normally low daily resident impact, effective observed mitigation and current regional relevance, while retaining all attribution limits. Recurrent important violence/common-route constraint40, stronger low-impact/effective-response combination80; reject impact/scope/continuation to null.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "partial",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Actual municipal complaint remedies, accessible paper/non-digital alternatives and multi-agency fire/IT-fault response support operating institutions. Complaint selection, partial remedies, neighbourhood/group differences, survey denominator conflict and common digital faults retain weaknesses.",
+      "assumption": "Accept usual residents can access ordinary service, remedies and non-digital alternatives, and observed emergency arrangements continue. Significant persistent delivery/cohesion/recovery failures40, broader actual outcomes/backups80; reject reach/recovery/scope to null.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "Actual water quality and interruption records, operating food distribution, heating/electricity delivery and transport links support normally reliable affordable basic supply under the profile assumptions. Drought/groundwater and heat-grid/power/aging common dependencies remain important.",
+      "assumption": "Accept normal end-user safe water, basic food/energy affordability at local median income, actual supply availability and continuation beyond observed institutional periods. Significant supply/cost/common-source constraint40; stronger affordable operating substitutes80; reject household/scope/continuity connection to null.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "Registered actual multi-hospital hip-fracture surgery, measured outcomes/processes, rehabilitation planning, advanced referral and public payment support a limited usually available necessary-care path. Persistent low 24-hour surgical timeliness and acute readmission are material; 30-day elective choice does not mitigate acute delay.",
+      "assumption": "Accept usually appropriate, sufficiently timely affordable necessary care through the operating network and usual registered public coverage. Persistent acute-fracture timeliness/readmission and insufficient usable alternatives can support40 without majority injury; reliable stronger quality/backup combination80. Reject quality/timeliness/payment/scope to null.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "Real local disease-limited CAR-T delivery and a current operating multidisciplinary programme, positive qualified CAR-T adoption and usual public hospital payment support credible translation with constrained maturity/access. AD non-adoption, eligibility, monitoring, capacity and long-term uncertainty remain; no healthy lifespan claim.",
+      "assumption": "Accept actual old disease-qualified local delivery plus the2025 operating programme and current recommended routes continue, and ordinary eligible public patients can obtain necessary funded therapy/monitoring without disabling production/wait/care costs. Do not assume age/disease/PS eligibility. Material residual access/capacity constraint40, stronger multiple actual affordable pathways80; reject local-current-pay-monitor connection to null.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 80,
+      "rationale": "Multiple university/industry producers, actual commercial agreements/startups, operating digital infrastructure and observed uptake support strong sustained multi-node capability. National/company scope, copper transition and age/skill differences remain; contracts and coverage are not universal delivered benefits.",
+      "assumption": "Accept multi-campus/local reference representativeness, continued output/industry use and national/digital service applicability to537 ordinary residents. Mitigated skill/transition barriers must not create a major diffusion break. Important residual diffusion/industry barrier60; reject actual sustained adoption/scope to null.",
+      "conditionalAlternatives": [60],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Actual aviation and road/rail routes, scoped EU citizen migration, bank transfer procedures and operating networks/roaming provide usable alternatives. Shared bridge structure, aviation closure and telephone/payment common faults remain important; legal permission alone does not create a score.",
+      "assumption": "Accept valid Danish citizenship/identity, lawful destination conditions/resources/insurance, usable transport capacity, ordinary authenticated account/funds and matching roaming/equipment; ordinary alternative channels remain practical under known faults. Significant exit/transfer constraint40, stronger normally executable common-fault substitutes80; reject eligibility/resources/scope/continuity to null.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://download.dmi.dk/Research_Projects/klimaatlas/latest/kommune_reports/DMI_Klimaatlas_v2025a_Koebenhavn_rapport.pdf",
+      "bytes": 1765498,
+      "sha256": "42203caaebd5edcbd0b2307826b1f6b8dfac1ca51a933101fca10eb39ea31bae",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "DMI市报告v2025a；1981–2010/2006–2015参考与未来情景分开，未标首发; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S02",
+      "url": "https://eng.klimatilpasning.dk/examples-of-climate-adaptation/the-capital-region-of-denmark/the-enghaveparken-climate-parken-in-copenhagen-now-attracts-both-people-and-stormwater-drainoff",
+      "bytes": 102004,
+      "sha256": "65c18b045dba5ca858b4a7ff017db561dc1be8a0b7b4d689daadb5bfab35a116",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2020-12-22",
+      "scope": "主管气候适应网站；2019-12建成，2020-12-22更新; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S03",
+      "url": "https://www.hofor.dk/baeredygtige-byer/udviklingsprojekter/skybrudssikring/kalvebod-brygge-skybrudstunnel/",
+      "bytes": 306326,
+      "sha256": "da325049b12119a1b2a268ad66bc6dba6510ff6f0cb70b6ccde2dc2531e9ba59",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "HOFOR现行项目；2020起施工、预计2027完成，首发/本版本时间未标; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S04",
+      "url": "https://data.geus.dk/pure-pdf/30674_GEUS-R_2015_24_opt.pdf",
+      "bytes": 2501082,
+      "sha256": "600052970769591c42e672da369217b724c8258dacf845cf77cf0004bca386de",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "GEUS2015/24地震危险报告；历史危险背景，非2026无灾证明; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S05",
+      "url": "https://www.hoformedia.dk/pdf/2026/hofor_aar_2025_08-04-2026-a-wcag.pdf",
+      "bytes": 17857616,
+      "sha256": "8d6ef9e606e3762e717923319fd4e553150eecd81dc272b7b24b78ab07e4f63a",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "HOFOR2025观察；文件名2026-04-08非首发认证，报告内2026状态/未来项目分列; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S06",
+      "url": "https://www.hofor.dk/nyhed/toerke-vi-bruger-meget-mere-vand-end-normalt-hjaelp-os-med-at-spare-saa-der-er-nok-til-alle/",
+      "bytes": 295917,
+      "sha256": "9c2c7c42cd7ce1ae22298ed80f562102f2f6be2498e4819b38f39f031971da3e",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-06-25",
+      "scope": "HOFOR2026-06-25当季压力/节水警告; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S07",
+      "url": "https://www.hofor.dk/wp-content/uploads/2026/07/stor_kontrol_januar_2026.xlsx",
+      "bytes": 133983,
+      "sha256": "9a14117e2ff50b50b24fb04d0d6dfd6251bd46298036c2f8ac63f406e1f02038",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "HOFOR；2026-01-05—28各点采样，URL目录July非采样日; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S08",
+      "url": "https://politi.dk/-/media/mediefiler/kbh/dokumenter/virksomhedsberetninger/vb2025_final_web.pdf",
+      "bytes": 10646554,
+      "sha256": "10b9a6f564c1a94af7f665444bf1a337a4077b156009ee9fdd37151e2dda620f",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "Københavns Politi2025实际案件/执行；当前2026年报，首发未独证; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S09",
+      "url": "https://hbr.dk/wp-content/uploads/2025/04/2025.05.08-bm-pkt.-5-bilag-1-aarsberetning-2024-1.pdf",
+      "bytes": 2234744,
+      "sha256": "a0a0c4ea4f9dd435ab07ea80f690d45e4941299ad07197ceffbe2346d2c3a10d",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "HBR2024观察、2025会议附件；PDF题名/文件2024，搜索旧题名2020不用; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S10",
+      "url": "https://www.fe-ddis.dk/globalassets/fe/dokumenter/2026/trusselsvurderinger/-assessment-of-the-threat-from-russia-.pdf",
+      "bytes": 169677,
+      "sha256": "ec7d11ebcf6ad30a9962bde3f12dec34057b0ae193ea2ceff4c1e5efbd89a66c",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-09-24",
+      "scope": "DDIS2026-09-24当时威胁判断；不是已发生战斗; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S11",
+      "url": "https://politi.dk/rigspolitiet/nyhedsliste/politiet-har-styrket-indsatsen-paa-droneomraadet/2026/06/25",
+      "bytes": 45501,
+      "sha256": "b4aac5fe3952b596f7ee3f32cbe37b116c7c3ccabe9b603674601004dfd7c90d",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-06-25",
+      "scope": "Rigspolitiet2026-06-25；回顾2025-09-22关闭/调查和已加强措施; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S12",
+      "url": "https://www.kk.dk/nyheder/borgerraadgiverens-beretning-2025",
+      "bytes": 65027,
+      "sha256": "a559c6c082b2ce3e2cf7b0624c2f3371b9273a2ddbf6cb79c0b344400139cd24",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "行政市2025申诉结果、2026-05-06委员会审阅；网页首发未标; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S13",
+      "url": "https://www.borger.dk/hjaelp-og-vejledning/hvad-har-du-brug-for-hjaelp-til/digital-post/fritagelse-fra-digital-post",
+      "bytes": 68947,
+      "sha256": "4a3a2f1dcae170a216745291dc8de28a1ac8589d524b0c0e9f4e9d506d823c5d",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "borger现行豁免/纸本办理，页面版本日未标、截止前延续推定; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S14",
+      "url": "https://www.kk.dk/sites/default/files/2026-06/K%C3%B8benhavns%20Kommunes%20Tryghedsunders%C3%B8gelse%202026.pdf",
+      "bytes": 3090391,
+      "sha256": "f5241fe0bc92ca1090a682b10d72789dbe41ee1390ca744dca72c8e4be8f88a6",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "行政市；调查2025-12-02—2026-02-03、文件目录June2026；原响应分母冲突保留; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S15",
+      "url": "https://copenhagenmarkets.dk/da",
+      "bytes": 48806,
+      "sha256": "142d6c7fb9523aeaf9217ecd1eadc4f07b8c47d7ac703e8df2e7db0ac82a354b",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "Copenhagen Markets当前营业/经营者；未标首次发布与观察日; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S16",
+      "url": "https://sallinggroup.com/nyheder/international-vaekst-loefter-salling-group-til-historisk-niveau/14899554",
+      "bytes": 401850,
+      "sha256": "b086019fcfa8a17ddc3c7d978371fd5b168c01c7289562e9e01df763b9a0717f",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-04-27",
+      "scope": "Salling第一方；2025实际集团/全国业务，2026-04-27发布; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S17",
+      "url": "https://www.dst.dk/da/Statistik/udgivelser/NytHtml?cid=52440",
+      "bytes": 460685,
+      "sha256": "80fffcfa95c09868cffb5c929b37aba82c6350d5a4e9151ea1f449bc4c6045ad",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-09-10",
+      "scope": "统计局Aug2026全国指数；2026-09-10公布，非Sep2026迟发数据; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S18",
+      "url": "https://aarsrapport.andel.dk/wp-content/uploads/Andel-Baeredygtighedsrapport-2025-tj8.pdf",
+      "bytes": 5463049,
+      "sha256": "bf48fe09d9830c03e0ea5f6922abdb705f3e0ffc0f1be602ace5bf815f4879ad",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "Andel2025集团供电观察、2021–2025趋势/除外；2026报告首发未独证; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S19",
+      "url": "https://downloads.ctfassets.net/20drd9bf6f7p/eqhINaZlNMywie3FXhks5/1ad8f86a27e05a678c6b26e8854a8bb5/9946_%C3%A2__%C3%83_BK_A%C3%A2__%C3%83_rsrapport_UK2_2026-03-20.pdf",
+      "bytes": 12968117,
+      "sha256": "a925131d0df1f2f71beedc597d74537a99f9d0044983d6195d55f6ce8dab073c",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-03-20",
+      "scope": "Øresund运营商2025；官网列2026-03-20发布; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S20",
+      "url": "https://www.dsb.dk/globalassets/arsrapport/2025/annual-report-2025.pdf",
+      "bytes": 11763302,
+      "sha256": "3b097ae906136227564c2c98a0cee785409fae10c3110c9220a53c74240bc091",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "DSB2025年运行、全国干线/区域与本地国际路线不同范围；2026年报; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S21",
+      "url": "https://www.sundk.dk/media/iswnxpzm/drhofte-aarsrapport-2025_offentliggjort-version.pdf",
+      "bytes": 6578254,
+      "sha256": "1a0b046d3bca6840e4fb7314735a6c18c5ba99d1de4df6b946544f8267809ee0",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-05-27",
+      "scope": "SundK2026-05-27公开版；2024-12-01—2025-11-30，病例/指标窗口分别核; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S22",
+      "url": "https://lifeindenmark.borger.dk/healthcare/health-insurance/healthcare-when-working-in-denmark",
+      "bytes": 80217,
+      "sha256": "51af28c3cf2f6a331cc2fe9c1898c1fd47c3e5b0a05405d77d3c1bf6b3b47d80",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "Udbetaling Danmark/STPS原办理；更新2026-06-11、不是全部居民参保统计; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S23",
+      "url": "https://lifeindenmark.borger.dk/healthcare/health-insurance/health-insurance-card",
+      "bytes": 62353,
+      "sha256": "cc608c06a16403c2247fa64abf2a18b0bef12b2b6643dc3ae6184bcfa8a70caf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "borger现行医保卡/GP办理；日期未标，通常资格/延续假设; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S24",
+      "url": "https://admin.ism.dk/sundhed/patientrettigheder/ret-til-hurtig-udredning-frit-sygehusvalg-og-udvidet-frit-sygehusvalg-",
+      "bytes": 44211,
+      "sha256": "1fadede485b557e7eb2d92493f973ae0d38190cceab7f2486510d1bddad5c608",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "主管部现行权利；明确2025-01-01躯体治疗30日恢复，页面日期未标; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S25",
+      "url": "https://vip.regionh.dk/VIP/Redaktoer/130110.nsf/vLookupUpload/ATTACH-RHAP-DGBE4F/%24FILE/01-05-25_Shared_QM_Program.pdf",
+      "bytes": 663053,
+      "sha256": "a0c634a44d678604710d907f9761296e2d073d6d46e339fab8f46bd7a0a26c27",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "Rigshospitalet程序；April2025 v1，文件01-05-25，2019实际开办与现行单元分列; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S26",
+      "url": "https://om.ku.dk/tal-og-fakta/aarsrapport/Annual_Report_2025.pdf",
+      "bytes": 1971278,
+      "sha256": "9bad8c4466c10bf0ad7011c85e521bc360bc5adb3f087a109ed2ffe3fe14e64d",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "KU2025年报；商业化2025、WoS论文2024/spring2025登记；首发未独证; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S27",
+      "url": "https://medicinraadet.dk/anbefalinger-og-vejledninger/laegemidler-og-indikationsudvidelser/l/lisocabtagene-maraleucel-breyanzi-diffust-storcellet-b-celle-lymfom-dlbcl-3-linje",
+      "bytes": 229453,
+      "sha256": "85680ae69a66b29755a7cbb90d32e6070fe8da8b70ef3b3b8c29d2095cd40e1e",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-03-27",
+      "scope": "Medicinrådet批准2025-03-26、更新Mar27；第三线限定推荐; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S28",
+      "url": "https://medicinraadet.dk/anbefalinger-og-vejledninger/laegemidler-og-indikationsudvidelser/c/ciltacabtagene-autoleucel-carvykti-knoglemarvskraeft-rrmm",
+      "bytes": 232947,
+      "sha256": "9f66662a7d0af7152d9bf55360fb0e8ad4160519307c99c3ddc7072028e29a4c",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-06-25",
+      "scope": "Medicinrådet cilta-cel v1.1批准2026-06-24、更新June25；渐进实施; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S29",
+      "url": "https://filer.medicinraadet.dk/media/uvbddpg0/medicinradets-anbefaling-vedr-lecanemab-til-alzheimers-sygdom-vers-1-0.pdf",
+      "bytes": 297297,
+      "sha256": "905729b85a1df5bd741d84059fc5ee442db24b4ea6a90d8e7aabd7cd0dff5e78",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-12-17",
+      "scope": "Medicinrådet2025-12-17 v1.0批准；ICER非患者账单; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S30",
+      "url": "https://medicinraadet.dk/igangvaerende-vurderinger/laegemidler-og-indikationsudvidelser/donanemab-kisunla-alzheimers-sygdom",
+      "bytes": 222297,
+      "sha256": "b0bdbe728ce6174e3ca3dffff0e956866d7d80616d5ed323721c65dd2000dc12",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-09-21",
+      "scope": "Medicinrådet更新2026-09-21；在审、预计Nov25是未来; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S31",
+      "url": "https://www.dtu.dk/-/media/dtudk/om_dtu/strategier-og-politikker/aarsrapporter/web-dtu_aarsrapport_2025.pdf",
+      "bytes": 4973157,
+      "sha256": "5eb5d0277edf4415e3342cdda5558992f7c2ca52e9eda460939088d458cd1e0b",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-04-21",
+      "scope": "DTU2025实绩；2026-04-21公开，July8勘误只薪酬补充; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S32",
+      "url": "https://tdcnet.com/media/ftyfdjmd/tdc-net-annual-report-2025.pdf",
+      "bytes": 8175594,
+      "sha256": "2ca9a4da20458f8003d6d0c9fb41e0035cc2ea62eb1fb4f014110238e025ea68",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "TDC NET2025集团/全国；测评2025-02-26—03-26与年末覆盖/footprint不同; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S33",
+      "url": "https://www.digmin.dk/digitalisering/nyheder/nyhedsarkiv/2025/mar/danskerne-vinker-farvel-til-kobbernettet-og-faar-hurtigere-internet-",
+      "bytes": 33376,
+      "sha256": "a9911416b0d0a778f7392d55e2c860046fdd01e8f90ec09593403e165d73e26e",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "数字化部2025-03发布，主要观察2024H1、铜网迁移非2026实绩; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S34",
+      "url": "https://www.dst.dk/da/Statistik/udgivelser/NytHtml?cid=51815",
+      "bytes": 484183,
+      "sha256": "d121f7bd006198fd820dbedd994b447109d59888f1cf03e0d4027e62de4b35f7",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "统计局2025居民使用调查、2025发布；人群/年龄选择不移植本区; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S35",
+      "url": "https://www.gesetze-im-internet.de/freiz_gg_eu_2004/BJNR198600004.html",
+      "bytes": 75349,
+      "sha256": "b53478451d8605d7b5b31aeee028542c9d415df2dedfef634e66a0d60433c0fe",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "德国法最新显示2026-07-16；原取回Oct12、本轮Oct13重核SHA/适配; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review.",
+      "reusedFrom": "/private/tmp/cci-global/legal-mobility/germany.html"
+    },
+    {
+      "id": "S36",
+      "url": "https://danskebank.dk/privat/find-hjaelp/betalinger-og-overfoersler/opret-overfoersel-til-en-udenlandsk-konto",
+      "bytes": 303995,
+      "sha256": "57ea4df3272e86853926aa6ed72d510a28640a544ec74d640cb04086c7c08ba2",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "Danske Bank当前个人跨境手续；首发/本版本未标、截止前延续推定; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S37",
+      "url": "https://www.nationalbanken.dk/da/viden-og-nyheder/publikationer-og-taler/rapport/2026/overvaagning-af-den-finansielle-infrastruktur-2025",
+      "bytes": 239206,
+      "sha256": "f55ac285e0248298a0bbdfc6dd3344e7683c66702ceac2c207b34a6fd9b37456",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "中央银行2025实际清算/故障与2026发布回顾，未来跨币种接入另列; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S38",
+      "url": "https://www.telenor.dk/shop/landingpage/mobil/roaming/",
+      "bytes": 403556,
+      "sha256": "c5556a39361878787440916faa24082fe08f8ce93d2349b34a97ec51bde18e0b",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "Telenor现行消费产品；版本/首发未标、非逐居民海外使用记录; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S39",
+      "url": "https://www.hofor.dk/privat/priser-paa-forsyninger-privatkunder/priser-paa-vand-2026/priser-paa-vand-i-koebenhavn-2026-privat/",
+      "bytes": 316705,
+      "sha256": "bb4092d09623373bdb7ce1a32cac39179c83baa42a15e5fb2ad7005d73ae0cdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "HOFOR声称2026-01-01价、仍待批准文案和49.57/49.56冲突保留; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S40",
+      "url": "https://metroselskabet.euwest01.umbraco.io/media/uighokcz/200426-annual-report.pdf",
+      "bytes": 3496322,
+      "sha256": "1ffad7e30d9bfaa3f1f00831c0d94fb5cf5064a756c4892798f650565d7749e8",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "Metroselskabet2025实际旅次/运行、2026年报，futureM5另列; current bytes do not authenticate first-publication/cutoff-day version. Institutional/national scope and necessary spatial/profile assumptions in the review."
+    },
+    {
+      "id": "S31-correction",
+      "url": "https://www.dtu.dk/-/media/dtudk/om_dtu/strategier-og-politikker/aarsrapporter/rettelsesblad-til-dtus-aarsrapport-2025.pdf",
+      "bytes": 149090,
+      "sha256": "c8e6db4c11e5a3e03c51cfb21a4391e00d8469f93963749b780fe9f8c6f33895",
+      "retrievedOn": "2026-10-13",
+      "publishedOn": "2026-07-08",
+      "scope": "DTU2025 salary-disclosure correction; not additional technology output."
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.rigshospitalet.dk/presse-og-nyt/nyheder/nyheder/sider/2021/marts/boern-med-fremskreden-leukaemi-i-car-t-behandling-paa-rigshospitalet.aspx",
+      "publishedOn": "2021-03-11",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Actual4 patients age9–24; historical local delivery, not2026 resident uptake."
+    },
+    {
+      "id": "W02",
+      "url": "https://www.rigshospitalet.dk/afdelinger-og-klinikker/kraeft-og-organsygdomme/blodsygdomme/for-fagfolk/Sider/henvisning-til-car-t.aspx",
+      "publishedOn": "2025-09-23",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Current electronic referral and weekly committee; updated-date claim, not approval rate."
+    },
+    {
+      "id": "W03",
+      "url": "https://www.sst.dk/media/esempdii/regulering-af-car-t-i-specialeplanen.pdf",
+      "publishedOn": "2023-09-21",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "SST actual12 CAR-T throughFeb2023 allRigshospitalet; complex monitoring and two-hour travel during first month. Curl429; no valid local original/PDF visual."
+    },
+    {
+      "id": "W04",
+      "url": "https://www.kk.dk/sites/default/files/agenda/eef2ae6b-2b1f-4285-b704-b2c1f84e9dd1/511818da-1129-488b-80da-fa5314efaf00-bilag-6.pdf",
+      "publishedOn": "2026-02-17",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Municipal storm-surge feasibility/financing/gates gap; not completed protection. Curl404; web-only original text."
+    },
+    {
+      "id": "W05",
+      "url": "https://www.cph.dk/en/about-cph/press/news/2026/03/rising%20passenger%20numbers%20drive%20growth%20at%20copenhagen%20airport",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "March2026 first-party review of2025 routes/trips; no unique residents or independent routes. Curl403."
+    },
+    {
+      "id": "W06",
+      "url": "https://www.regionh.dk/politik/nye-moeder/Sider/Moede-i-sundhedsudvalget-den-1-juni-2026.aspx",
+      "publishedOn": "2026-06-01",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "LUP2025 experience/obstetric pressure administrative review, not clinical outcomes; regional includes external units. Web-index original body, directsecurity challenge."
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "sourceBytes": 9932800,
+    "allGeometryCount": 9031,
+    "targetGeometrySha256": "460a6ed468395064b665167a01d1017cdab94404d687e2600247f39095e266e3",
+    "referencePoints": [
+      {
+        "label": "Copenhagen centre",
+        "longitude": 12.5683,
+        "latitude": 55.6761,
+        "fuaMatches": [537]
+      },
+      {
+        "label": "CPH airport reference",
+        "longitude": 12.6508,
+        "latitude": 55.6181,
+        "fuaMatches": [537]
+      },
+      {
+        "label": "Rigshospitalet Blegdamsvej reference",
+        "longitude": 12.5674,
+        "latitude": 55.6968,
+        "fuaMatches": [537]
+      },
+      {
+        "label": "Bispebjerg hospital reference",
+        "longitude": 12.5437,
+        "latitude": 55.7128,
+        "fuaMatches": [537]
+      },
+      {
+        "label": "Herlev hospital reference",
+        "longitude": 12.4438,
+        "latitude": 55.7314,
+        "fuaMatches": [537]
+      },
+      {
+        "label": "Hvidovre hospital reference",
+        "longitude": 12.453,
+        "latitude": 55.648,
+        "fuaMatches": [537]
+      },
+      {
+        "label": "DTU Lyngby reference",
+        "longitude": 12.521,
+        "latitude": 55.785,
+        "fuaMatches": [537]
+      },
+      {
+        "label": "DTU Risoe reference",
+        "longitude": 12.089,
+        "latitude": 55.694,
+        "fuaMatches": [537]
+      },
+      {
+        "label": "Copenhagen Markets Hoeje Taastrup reference",
+        "longitude": 12.2729,
+        "latitude": 55.6367,
+        "fuaMatches": [537]
+      },
+      {
+        "label": "HOFOR Lejre waterworks reference",
+        "longitude": 11.974,
+        "latitude": 55.599,
+        "fuaMatches": [537]
+      },
+      {
+        "label": "Enghaveparken reference",
+        "longitude": 12.542,
+        "latitude": 55.667,
+        "fuaMatches": [537]
+      },
+      {
+        "label": "Malmo centre external transport reference",
+        "longitude": 13.0007,
+        "latitude": 55.605,
+        "fuaMatches": [481]
+      },
+      {
+        "label": "Bornholm Ronne reference",
+        "longitude": 14.706,
+        "latitude": 55.1,
+        "fuaMatches": []
+      }
+    ],
+    "method": "Checksum-validated full9031; EPSG4326→ESRI54009 always_xy; intersects all geometries.",
+    "meaning": "Analyst approximate points, not official facility footprints, accident locations, service areas or residents coverage.",
+    "rawPath": "/private/tmp/cci-global/copenhagen/boundary-record.json"
+  },
+  "sensitivity": {
+    "med40": 59,
+    "pcs40": 59,
+    "medPcs40": 56,
+    "lon40": 60,
+    "tec60": 60,
+    "opt80": 64,
+    "medNull": {
+      "knownContribution": 53,
+      "range": [53, 68],
+      "centre": null
+    },
+    "lonNull": {
+      "knownContribution": 56,
+      "range": [56, 66],
+      "centre": null
+    },
+    "medLonNull": {
+      "knownContribution": 47,
+      "range": [47, 72],
+      "centre": null
+    }
+  },
+  "profileConditions": "Danish citizen, ordinary registered long-term resident, local median income and usual public coverage; no assumed age/disease/performance-status eligibility."
+}

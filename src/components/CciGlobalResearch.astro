@@ -36,6 +36,7 @@ import wuhan from "../../docs/data/cci-local-2026-wuhan-case.json";
 import xian from "../../docs/data/cci-local-2026-xian-case.json";
 import surabaya from "../../docs/data/cci-local-2026-surabaya-case.json";
 import hangzhou from "../../docs/data/cci-local-2026-hangzhou-case.json";
+import copenhagen from "../../docs/data/cci-local-2026-copenhagen-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -76,9 +77,11 @@ const cases = [
   xian,
   surabaya,
   hangzhou,
+  copenhagen,
 ];
 const caseNamesZh: Record<number, string> = {
   [hangzhou.candidateId]: "杭州功能区",
+  [copenhagen.candidateId]: "哥本哈根功能区",
   [surabaya.candidateId]: "泗水功能区",
   [xian.candidateId]: "西安功能区",
   [wuhan.candidateId]: "武汉功能区",
@@ -311,8 +314,13 @@ const caseNotes: Record<number, string[]> = {
   ],
   [paris.candidateId]: [
     zh
-      ? "巴黎 ISR、MED、TEC、OPT 条件性 60，LON 条件性 40；PCS、GSS、RES 未定，无总分中心。实际服务、许可与运行支持有限能力，历史认证和旧模型不变成当前全区结果。长寿低档只指已审疾病路径的采用／支付缺口，并保留临床意义和安全争议；审慎监管不直接扣分，不推断无私费、试验或其他路径。拒绝路径、净受益适用性或代表性假设时，LON 撤回为未知。数学域 34—74；撤回 LON 为 30—80，均不证明入围或排除。"
-      : "Paris has conditional 60 judgments for ISR, MED, TEC and OPT, and 40 for LON. PCS, GSS and RES remain unknown, without a total centre. Actual services, licensing and operations support limited capability; historical certification and older models are not current whole-area outcomes. LON 40 concerns the reviewed disease pathway's adoption/payment gap, retaining clinical-significance and safety disputes. Regulatory caution is not itself penalised; private care, trials and other pathways are not assumed absent. Rejecting pathway relevance, net-benefit applicability or representativeness restores unknown LON. The mathematical domain is 34–74; withdrawing LON gives 30–80. Neither proves qualification or exclusion.",
+      ? "巴黎八维条件中心60。PCS／GSS／RES补入已执行保护、实际安全处置与供给／援助；这些机构和区域结果仍需普通居民、范围及延续推定。真实CAR-T与支付／监护路径纠正原来仅按抗阿尔茨海默药限制判LON40的代表性问题；实际饱和、制造等待、严重风险、费用与AD限制继续保留。当前具体产品支付延续和合资格居民通常取得／负担是可撤回假设，拒绝LON则域54—64、无中心。28项partial、2项context、1项unresolved不等充分测量。"
+      : "Paris has a conditional centre of 60, with all eight dimensions at 60. Executed protection, actual security response and resource delivery/assistance supplement PCS/GSS/RES; scope, ordinary-resident relevance and continuity remain assumptions. Actual CAR-T and payment/monitoring pathways challenge the earlier AD-only basis for LON 40. Saturation, manufacturing waits, serious risks, costs and AD restrictions remain. Current product payment continuity and usual eligible-resident access/affordability are reversible; withdrawing LON gives 54–64 without a centre. 28 partial, 2 context and 1 unresolved subpillars are not full measurement.",
+  ],
+  [copenhagen.candidateId]: [
+    zh
+      ? "哥本哈根条件中心62：TEC80，其余七维60。实际多机构转化、服务与居民路径支持有限判断；海潮防护未完成、干旱供水压力、热电故障、急性髋骨折手术延迟、CAR-T容量及交通／通信共因均保留。所有31项仅partial。普通居民获得／负担、当前延续及机构／国家到功能区适配均可撤回；MED或PCS改40则中心59，两项均40则56，撤回MED则域53—68、无中心。"
+      : "Copenhagen has a conditional centre of 62: TEC 80 and seven dimensions at 60. Actual multi-institution translation, services and resident pathways support limited judgments. Unfinished coastal protection, drought pressure, heat/power faults, acute hip-fracture surgery delays, CAR-T capacity and shared transport/communications risks remain. All 31 subpillars are partial. Ordinary-resident access/affordability, continuity and institution/national-to-FUA scope are reversible assumptions. MED or PCS 40 gives 59; both 40 give 56; withdrawing MED gives 53–68 without a centre.",
   ],
   [sanJose.candidateId]: [
     zh
@@ -358,7 +366,7 @@ const caseNotes: Record<number, string[]> = {
   [prague.candidateId]: [
     zh
       ? "布拉格八维完整条件中心62：TEC80，其余七维60。新增实际洪水保护／适应项目、安全观察、资源备用与住户负担、医疗安全运行；旧等待、限收、停电共因和费用约束均保留。国家安全观察和行政住户样本不是功能区实测。通常保护、居民获得／负担、有限替代、地域及延续均为可撤回假设；29项partial、1项context、1项unresolved不等充分测量。任一15%维撤回即无中心、域53—68。"
-      : "Prague has a complete conditional centre of62: TEC80 and the other seven dimensions60. Actual flood protection/adaptation, security observations, resource alternatives/household affordability and medical safety operations supplement the evidence. Long waits, intake limits, shared power failures and costs remain. National security observations and administrative household samples are not FUA measurements. Usual protection/access/affordability, limited alternatives, scope and continuation are reversible assumptions;29partial,1context and1unresolved subpillars are not full measurement. Withdrawing any15% dimension removes the centre and gives53–68.",
+      : "Prague has a complete conditional centre of 62: TEC 80 and the other seven dimensions60. Actual flood protection/adaptation, security observations, resource alternatives/household affordability and medical safety operations supplement the evidence. Long waits, intake limits, shared power failures and costs remain. National security observations and administrative household samples are not FUA measurements. Usual protection/access/affordability, limited alternatives, scope and continuation are reversible assumptions;29partial,1context and1unresolved subpillars are not full measurement. Withdrawing any15% dimension removes the centre and gives53–68.",
   ],
   [beijing.candidateId]: [
     zh
