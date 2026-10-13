@@ -1,5 +1,7 @@
 # Malmö 481：八维／31项有界研究复核
 
+**2026-10-13最后未知补证：TEC接受条件60，现八维条件中心60。** 其余七维对象不变，40／80替代为58／62；拒绝新增通常适配／获得／净负担／延续推定则回54—64、无中心。[新增证据与根验收](cci-malmo-technology-priority-review.md)保留实际短板、反证及范围；下列原未知判断为此前快照。
+
 证据截止 **2026-10-10**；新原响应／实际查阅 **2026-10-13**。2026瑞典本国公民、通常长期居住、当地中位收入及通常保障；按[共同rubric](cci-global-scoring-rubric.md)、[31项合同](cci-global-indicator-contract.md)和原权重，与Copenhagen、Tampere、London、Leicester及Loughborough同层明示推定。国家公民法规可共用，地方分数不继承。research技能用于本背景任务，不新增代理或联系机构。
 
 冻结工作宽度40后五主均≤40／十情景齐全的最差60只调度研究，非地域配额、入围或CCI分数。自有CSV行core_worst38/no_heat60，旧stress_worst_rank空；新增根队列排序没有由本代理重算。两轮发现结束后只读既定链接、原表/核心页，现停止扩搜。

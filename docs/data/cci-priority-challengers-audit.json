@@ -1,0 +1,93 @@
+{
+  "status": "bounded_european_priority_diagnostic_not_CCI_or_prediction",
+  "evidenceCutoff": "2026-10-10",
+  "reviewedOn": "2026-10-13",
+  "surveyCities": 83,
+  "mappedUnassessed": 72,
+  "unresolvedIdentities": 1,
+  "selectionDoesNotExcludeCandidates": true,
+  "globalRankingEligible": false,
+  "originals": [
+    {
+      "file": "who-aq2026.xlsx",
+      "url": "https://cdn.who.int/media/docs/default-source/air-pollution-documents/air-quality-and-health/who-ambient-air-quality-database-version-2026-v8.xlsx?download=true&sfvrsn=95d122a4_5",
+      "bytes": 2042679,
+      "sha256": "d4f128df1b4649bc7fe9e03ee32cabb00abc24725de9a1c22398966035e38bbe",
+      "metadata": {
+        "owner": "WHO V8 compiled official sources/EEA",
+        "observed": "2010-2024, selected latest2024 and separateoldGeneve2012",
+        "published": "2026-06-30",
+        "format": "XLSX ZIP with semicolon-split CSV records reconstructed",
+        "limit": "55214observations/8023settlements/127countryareas; monitoring/coverage heterogeneity/NA preserved; WHO forbids pollution city ranking; no other7dimension inference"
+      }
+    },
+    {
+      "file": "qol2023.xlsx",
+      "url": "https://ec.europa.eu/regional_policy/sources/reports/qol2023/quality_of_life_european_cities_2023_aggregated_data.xlsx",
+      "bytes": 815216,
+      "sha256": "49986134cde7cddd1858ad1536558e66698ae86d28252f4d9b911ee63d79c03c",
+      "metadata": {
+        "owner": "EC/DG REGIO, Ipsos commissioned city survey",
+        "observed": "Jan-Apr2023",
+        "published": "original publication2023, exact day not asserted; revised18Sep2024",
+        "format": "XLSX ZIP parsed original XML",
+        "limit": "83 cities, residents15+ any nationality; perceptions not clinical/admin fulfilment outcomes; unweighted count conflicts retained"
+      }
+    },
+    {
+      "file": "questionnaire2023.pdf",
+      "url": "https://ec.europa.eu/regional_policy/sources/reports/qol2023/master_questionnaire_en.pdf",
+      "bytes": 174354,
+      "sha256": "65d198330b0f8a7d8df1157475ace9b2db20faf7ab3ae4468077783a70c461e9",
+      "metadata": {
+        "owner": "EC/DG REGIO master questionnaire",
+        "observed": "2023 questionnaire",
+        "published": null,
+        "format": "PDF",
+        "viewedPages": [1, 5],
+        "limit": "Question meanings/directions, not observed results"
+      }
+    },
+    {
+      "file": "technical2023.pdf",
+      "url": "https://ec.europa.eu/regional_policy/sources/reports/qol2023/technical_report.pdf",
+      "bytes": 766428,
+      "sha256": "dbf217896ae8dc80e471ee5f482979772da8e18d2ff1fbd441da4b4e0fedc6db",
+      "metadata": {
+        "owner": "EC/DG REGIO/Ipsos technical report",
+        "observed": "Jan-Apr2023, manuscriptJune2023",
+        "published": "2023 exact day unknown",
+        "format": "PDF",
+        "viewedPages": [22, 52, 84],
+        "limit": "Aalborg852 vsXLSX853/Luxembourg854 vs855/Geneva869; low response and method-specific denominators not city capability"
+      }
+    },
+    {
+      "file": "evaluation2023.pdf",
+      "url": "https://ec.europa.eu/regional_policy/sources/reports/qol2023/evaluation_report.pdf",
+      "bytes": 1374437,
+      "sha256": "c081514efa1bb99ab21cd55d5d14a51a1039c1e3a6ea787571bdf8d58b374c71",
+      "metadata": {
+        "owner": "EC/DG REGIO/Ipsos evaluation report",
+        "observed": "Jan-Apr2023, manuscriptJune2023",
+        "published": "2023 exact day unknown",
+        "format": "PDF",
+        "viewedPages": [15, 32, 116, 117],
+        "limit": "Sampling/weighting/fielddates verified, medianincome/citizen-specific representativeness not established; municipal list not full oldFUA match"
+      }
+    }
+  ],
+  "derived": {
+    "path": "cci-priority-challengers-survey-2023.csv",
+    "bytes": 38724,
+    "sha256": "64339dc8d519fcef0680aef38d9d71071de69267f76ea21cc3d741f929aad0eb"
+  },
+  "provisionalResearchChoices": [46, 29, 103],
+  "limitations": [
+    "2023 resident perceptions across European83-city sample are not2026 citizen/median-income clinical or administrative fulfilment measures.",
+    "Name-country associations are not survey/FUA boundary equivalence.",
+    "Housing/denominator sensitivity strongly changes work order.",
+    "WHO observations have heterogeneous monitoring coverage and are not used to rank cities.",
+    "Other world regions have not undergone the same multidimensional comparison."
+  ]
+}

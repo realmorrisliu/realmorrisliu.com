@@ -52,6 +52,7 @@ import loughborough from "../../docs/data/cci-local-2026-loughborough-case.json"
 import fazeley from "../../docs/data/cci-local-2026-fazeley-case.json";
 import malmo from "../../docs/data/cci-local-2026-malmo-case.json";
 import santaCruz from "../../docs/data/cci-local-2026-santa-cruz-de-tenerife-case.json";
+import sheffield from "../../docs/data/cci-local-2026-sheffield-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -108,8 +109,10 @@ const cases = [
   fazeley,
   malmo,
   santaCruz,
+  sheffield,
 ];
 const caseNamesZh: Record<number, string> = {
+  [sheffield.candidateId]: "谢菲尔德功能区",
   [malmo.candidateId]: "马尔默功能区",
   [santaCruz.candidateId]: "圣克鲁斯-德特内里费功能区",
   [coventry.candidateId]: "考文垂功能区",
@@ -284,11 +287,11 @@ const caseNotes: Record<number, string[]> = {
   ],
   [wuhan.candidateId]: [
     zh
-      ? "武汉 PCS／GSS／ISR／RES／MED 条件性 60、TEC 条件性 80、OPT 条件性 40；LON 未定，数学域 54—64，无总分中心。实际纳凉、排涝、司法救济、资源、治疗及产业应用与漏检、历史诊疗中断和居民支付条件共同判读。黄陂、新洲、鄂州及黄石中心点属于其他功能区；天河机场点在旧区全集之外，但仍可服务居民。行政名称不能替代实际项目或治疗地点。"
-      : "Wuhan has conditional 60 judgments for PCS, GSS, ISR, RES and MED, 80 for TEC and 40 for OPT. LON remains unresolved: the mathematical domain is 54–64, without a total centre. Actual cooling, drainage, legal remedies, provision, care and industrial use are read with missed inspections, historical care interruption and resident payment conditions. Huangpi, Xinzhou, Ezhou and Huangshi centre references belong to other areas; the Tianhe airport point lies outside the old-area union but can still serve residents. Administrative names do not establish project or treatment locations.",
+      ? "武汉GSS条件60补足地方窗口观察及2026实际防空／通联训练；其余七维不变，域54—64、无中心。2024涉黑涉恶十类警情下降51%没有绝对基数，2025刑事警情下降8.9%不是组织暴力率；2026团伙41拘捕／144万元查扣不当定罪或已返还。"
+      : "Wuhan's conditional GSS60 now includes scoped local observations and actual2026 shelter/communications exercises. The other seven judgments are unchanged:54–64 without a centre. The51% decrease in ten2024 gang-related police-report categories has no absolute baseline; the8.9%2025 criminal-report decrease is not an organised-violence rate.41group arrests and RMB1.44m seized in2026 are not convictions or restitution.",
     zh
-      ? "七份饮水记录只含有限项目；可靠率与户均停电分钟数未核同分母。旧临床窗口不当 2026 全区结果，透析五年存活为删失处理后的估计；MED 的质量延续、通常资格、支付及适当替代推定可撤回。旧医保重公布不代全部新待遇。正式福汉康住院／特药责任已核，未列两药不等人人不可得，同济未标日期的服务声明和全国费用停药队列仍不能闭合当地实施／支付／监护链。全国40名费用停药者属于172名停药者，不是武汉比率；有界补查已停止，等待当地实际方案证据。GFW 原论文没有武汉测点；全国机制仅作明确适用假设，卫星应急语音不证明国际数据连续。"
-      : "Seven water records cover limited tests; power reliability and average outage minutes have no verified common denominator. Older clinical windows are not 2026 whole-area outcomes, and five-year dialysis survival accounts for censoring. MED assumptions about quality continuity, usual eligibility, payment and appropriate alternatives are reversible. Republishing an older insurance rule does not settle every updated benefit. Formal Fuhankang inpatient and listed-drug terms were reviewed; unlisted antibodies do not establish universal inaccessibility, while an undated Tongji service statement and national cost-related discontinuations do not close the local implementation/payment/monitoring chain. The 40 cost-related cases are among 172 discontinuations, not a Wuhan rate. Bounded follow-up has stopped pending discriminating local evidence. The GFW paper has no Wuhan test point: national mechanisms require explicit applicability assumptions, and satellite emergency voice does not establish international data continuity.",
+      ? "June1已实施水箱／通风／封堵及应急照明，居民代表观摩不当全体掩蔽。四市通联不全归8989，近似点／1km缓冲不代官方设施足迹；通常较低影响、地域触达和延续可撤回。撤GSS后域45—70；LON仍未知，不因保60变成完整总分。"
+      : "TheJune1exercise actually included water tanks, ventilation, sealing and emergency lighting; resident observers are not universal shelter access. Four-city communications do not all belong to8989, and approximate points/1km buffers are not official facility footprints. Usually limited impact, local reach and continuity remain withdrawable assumptions. Unknown GSS gives45–70; LON stays unknown, so retaining60 does not create a complete total.",
   ],
   [guangzhou.candidateId]: [
     zh
@@ -300,11 +303,11 @@ const caseNotes: Record<number, string[]> = {
   ],
   [nanjing.candidateId]: [
     zh
-      ? "南京9701现为完整条件中心58：PCS／GSS／ISR／RES／MED各60，LON／OPT40，TEC80。新增常规护理原研究与实际转诊、通常医保实施支持MED60；行政总量与匿名院区仍需有限适用推定。"
-      : "Nanjing9701 now has a complete conditional score of58: PCS/GSS/ISR/RES/MED60, LON/OPT40 and TEC80. Additional routine-care research, actual referrals and usual insurance implementation support MED60; administrative totals and an unnamed campus still require limited applicability inferences.",
+      ? "南京GSS原60撤回未知，其余七维不变，域49—64、无中心；此前完整58是历史快照。真实执法纠错和当前防空保护保留，但程序人数、旧案伤害及局部实演不足以支持当前通常较低剩余组织影响。未知不当低分，也不要求先发生战争或全人口普测。"
+      : "Nanjing's earlier GSS 60 is withdrawn to unknown. The other seven judgments are unchanged:49–64 without a centre; the earlier complete 58 is historical. Actual enforcement corrections and current civil defence remain, but procedural counts, old harms and scoped drills do not establish usually limited current organised-harm effects. Unknown is not a low score; prior war or a population-wide survey is not required.",
     zh
-      ? "SSI及部分用药过程未显著改善，旧死亡数冲突、另一院质量／收费缺陷仍保留，不假定已全整改。通常质量、及时替代、资格／负担、延续及残余障碍解释可撤回；拒绝MED必要假设恢复未知、域49—64。长寿商业责任及住宅火灾恢复尾部仍需审查。"
-      : "SSI and some medication processes did not improve significantly; older mortality-count conflicts and another provider's quality/charging failures remain, without presumed complete repair. Usual quality, timely alternatives, eligibility/affordability, continuation and residual-impact interpretations are withdrawable; rejecting MED assumptions restores unknown and a49–64 domain. Longevity commercial terms and long-term fire recovery remain under review.",
+      ? "全9031重核14个近似点，浦口9679不移入9701。已实施链路排障、地下掩蔽和居民实演不等全面战争抗毁；当前胁迫／恢复及覆盖连接仍未闭。接受更强当前影响推定的GSS60情景为58；重要未缓解约束40情景为55，均不作为未知的默认替代。MED及技术、长寿、退出原判断保持。"
+      : "Fourteen approximate points were rechecked against all 9,031 areas; Pukou9679 is not added to9701. Implemented communications maintenance, underground shelter and resident drills are not universal wartime protection. Current coercion/recovery and coverage links remain unresolved. A newly justified GSS60 scenario gives58; important unmitigated constraints at40 give55, neither a default substitute for unknown. Medical, technology, longevity and exit judgments remain unchanged.",
   ],
   [jakarta.candidateId]: [
     zh
@@ -351,13 +354,21 @@ const caseNotes: Record<number, string[]> = {
       ? "全9,031几何核对区内外参考点；Hull、Sheffield和机场服务不并成本区。国家CAR-T委托不证明本区居民已进入真实给药/监护链；国家威胁与日常运转也不足以补GSS。两轮后保留缺口，必要的代表性、延续、普通负担和触达假设均可撤回。"
       : "Reference points were checked against all 9,031 geometries; Hull, Sheffield and outside-airport services are not local production. National CAR-T commissioning does not establish a delivered local-resident pathway; national threat context and ordinary operations do not settle GSS. After two rounds, gaps remain explicit and applicability, continuity, affordability and reach assumptions can be withdrawn.",
   ],
+  [sheffield.candidateId]: [
+    zh
+      ? "谢菲尔德PCS／RES／TEC／OPT条件60、ISR40，GSS／MED／LON未知，域33—73、无中心。防洪／制造／居民辅助实际运行；成人照护预算适应与住房申诉仍支持重要制度约束。ISR60替代为36—76，拒绝代表性与残余延续则撤未知。"
+      : "Sheffield has conditional60 for PCS/RES/TEC/OPT and40 for ISR; GSS/MED/LON remain unknown:33–73 without a centre. Flood protection, manufacturing and resident assistance operate, while adult-care budget adaptation and housing complaints support material institutional constraints. ISR60 gives36–76; rejecting applicability or continuing residual constraints restores unknown.",
+    zh
+      ? "全9031核19个近似点，Rotherham在4460，机场名不证明现役。KPMG预测不当实际全年超支、contingency不当全部储备；旧CQC整改不推2026好坏，一次20人体验不代全区临床质量。MS一期回输不证明成熟常规公费路径，三个未知不为凑中心填值。"
+      : "Nineteen approximate points were checked against all9,031areas. Rotherham is in4460; an airport name does not prove operation. KPMG forecasts are not actual full-year overspending; contingency is not all reserves. Old CQC improvements prove neither good nor poor2026care, and one20-person visit is not area-wide clinical quality. Phase1MSinfusion does not establish mature routine public access; three unknowns are not filled to produce a centre.",
+  ],
   [malmo.candidateId]: [
     zh
-      ? "马尔默七维条件60、TEC未知；无中心，域54—64。安全在同尺度验收中由未知重判60：地方GVI与真实共享供水保护／未成功攻击记录相连，国家情景仍只作背景。拒绝有限影响、供区适配或延续推定，GSS恢复未知为45—70；MED40替代为51—61。"
-      : "Malmö has seven conditional 60 judgments and unknown TEC: no centre, with a 54–64 domain. Uniform GSS acceptance connects operating local GVI with actual shared-water protection and reported unsuccessful attempts; national scenarios remain background. Rejecting scoped impact, service-area applicability or continuity restores unknown GSS and 45–70; MED 40 gives 51–61.",
+      ? "马尔默补TEC条件60后，八维条件中心60。新增实际渲染研发、生产采用及2025已交付更新，配合居民公共数字工具／恢复渠道；其余七维不变。TEC40／80替代为58／62，拒绝本区、通常获得／负担或延续推定则54—64、无中心。"
+      : "Malmö now has a conditional centre of60 after TEC60. Actual rendering research, production use and a delivered2025update complement resident public digital tools/recovery channels. The other seven judgments are unchanged. TEC40/80 gives58/62; rejecting local applicability, usual affordable access or continuity restores54–64 without a centre.",
     zh
-      ? "全9031核13个近似参考点。枪击含非GVI，爆炸26与受针对群体残余保留，不认所有攻击外国归因。供水主干／末端及1143／628不同检测分母分开，住院费不入门诊上限；当前公费疾病路径依地区转诊推定。科技投资不代产业采用，临床PDF仅可读文本、不称原表已目视。"
-      : "Thirteen approximate references were checked against all 9,031 areas. Shootings include non-GVI cases; 26 explosions and targeted-community constraints remain, without foreign attribution of every attempt. Mains/consumer water and the 1,143/628 testing denominators stay separate; inpatient fees are outside the outpatient cap. Current public disease pathways require regional-referral assumptions. Investment is not industrial adoption; clinical PDFs have readable text without claimed visual table validation.",
+      ? "集团双地600人不全归481，全球游戏用户不当居民采用；免费更新非免费基础游戏。Snowdrop仅集团内许可、Minc13投资未达30目标及部分登录／支持积压保留。GSS仍依有限地方影响与真实共享供水保护推定，撤回GSS则51—66；临床PDF仅可读文本，未称原表目视。"
+      : "The group's600staff across two locations are not all in481; global game users are not resident adoption, and a free update is not a free base game. Internal-only Snowdrop licensing,13Minc investments versus30target and remaining login/support delays remain. GSS retains scoped local-impact/shared-water-protection assumptions; unknown GSS gives51–66. Clinical PDFs remain text-only without claimed visual table checks.",
   ],
   [santaCruz.candidateId]: [
     zh
@@ -438,12 +449,13 @@ const caseNotes: Record<number, string[]> = {
   ],
   [leicester.candidateId]: [
     zh
-      ? "莱斯特七维条件60、RES未知，无中心、域54—64。已实施洪水响应、具体安全处置、医疗结果与通常NHS条件、当地实际CAR-T及支付监护支持有限判断；反复受淹、社区脆弱、急诊／癌症等待和再入院上升仍保留。109／188与报告百分比冲突、VTE两表差异、SHMI不同观察窗及RTT待分诊排除不合并或静默修正。"
-      : "Leicester has seven conditional 60 judgments and unknown RES, without a centre and with a 54–64 domain. Implemented flood response, specific security intervention, clinical results/usual NHS eligibility and actual local CAR-T/payment/monitoring support scoped judgments. Repeated flooding, community vulnerability, emergency/cancer waits and rising readmissions remain. Conflicting flood percentages, VTE tables, differing SHMI windows and RTT triage exclusions are neither merged nor silently repaired.",
+      ? "莱斯特补RES条件60后，八维条件中心60；其他七维不变。新增主供水者身份、2025监管末端观察和2026食品市场实际营业，区别于许可／机场货运线索。RES40／80替代为58／62，拒绝主要供区、通常末端／食品购买／必要净负担或时点推定则54—64、无中心。"
+      : "Leicester now has a conditional centre of60 after RES60; the other seven judgments are unchanged. Main-supplier identity,2025regulatory consumer-tap observations and operating2026food markets replace licensing/airport-cargo leads. RES40/80 gives58/62; rejecting service-area applicability, usual water/food affordability or timing restores54–64 without a centre.",
     zh
-      ? "饮水末端与实际食品供应适配未闭，市场许可／机场货运不填RES。若PCS／GSS／ISR／MED任一有新依据改40，域51—61；另撤回任一15%维则45—70。所有地域、延续、普通取得／負担假设可撤回；区外机场可作居民路径，不记本地机场，未知域不证明入围或排除。"
-      : "Water-at-use and actual food-supply applicability remain unclosed; market licences/airport freight do not fill RES. Reassessing any of PCS/GSS/ISR/MED to 40 with evidence gives 51–61; withdrawing any 15% dimension instead gives 45–70. Scope, continuation and usual access/affordability assumptions are reversible. An outside airport may serve residents without being local production. Unknown domains prove neither qualification nor exclusion.",
+      ? "SVT末端E.coli3／22843是公司采样失败／样本，非居民感染率；452303项测试不当同数量住户。本地14零售点与食品摊支持实际渠道，但施工伤客流、质量失败和区域停电尾部仍在。市域／供区不扩全4925，近似市场点不代交货足迹；CML超目标旧8.9%修为8.4%。"
+      : "SVT consumer-tap E.coli3/22843 is company sample failures/total, not resident infections;452303tests are not households.14local shops and food stalls support operating channels, while construction impacts, quality failures and regional power tails remain. City/service areas are not the whole4925; approximate market points are not delivery footprints. The earlier CML-target excess8.9% is corrected to8.4%.",
   ],
+
   [tampere.candidateId]: [
     zh
       ? "坦佩雷六维条件60，GSS/LON未知，域45–70、无中心。实际供给、基层/专科接诊、研究转化与交通支持有限能力，食品援助缺口、人才/财政压力及航空收缩均保留。GSS在统一验收中撤回：准备和网络处置未闭合具体威胁、居民影响与缓解后残余。"
@@ -552,6 +564,24 @@ const caseNotes: Record<number, string[]> = {
       ? "LON 40 保留真实给药、监护和日间减负，也保留经济／交通退出与当前住院责任不自动覆盖不足 24 小时路径的错位；有实际可承担门诊或医学合理住院支付支持，可审 60。407 人是七院队列，ARIA 为 39/321、症状 4/321，15 人混合主观退出不全是经济原因；无对照认知变化不证明疗效或延寿。任何必要居民、范围、延续或残余重要性假设拒绝即撤回该维与中心，不证明全球入围。"
       : "LON 40 retains real treatment, monitoring and reduced day-care burden alongside economic/transport withdrawals and the mismatch between the observed under-24-hour pathway and current inpatient cover. Supported affordable outpatient or clinically appropriate covered inpatient alternatives could justify 60. The 407 patients span seven hospitals; ARIA is 39/321 and symptomatic ARIA 4/321. Fifteen mixed subjective withdrawals are not all financial. Uncontrolled cognitive changes prove neither efficacy nor longer life. Rejecting a necessary resident, scope, continuity or residual-materiality assumption withdraws that dimension and the centre; global qualification remains unproven.",
   ],
+};
+const caseSupplementLinks: Record<number, { path: string; label: string }> = {
+  9701: {
+    path: "cci-nanjing-gss-comparability-review.md",
+    label: zh ? "安全撤回与恢复条件" : "Safety withdrawal and reassessment",
+  },
+  8989: {
+    path: "cci-wuhan-gss-comparability-review.md",
+    label: zh ? "安全影响与实际保护" : "Safety impact and operating protection",
+  },
+  481: {
+    path: "cci-malmo-technology-priority-review.md",
+    label: zh ? "科技最后未知补证" : "Technology completion evidence",
+  },
+  4925: {
+    path: "cci-leicester-resources-priority-review.md",
+    label: zh ? "资源最后未知补证" : "Resources completion evidence",
+  },
 };
 const caseReviewLinks: Record<number, { href: string; label: string }> = {
   [hangzhou.candidateId]: {
@@ -817,6 +847,13 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
                   >
                     {zh ? "完整案例与原件" : "Full case and sources"}
                   </a>
+                  {caseSupplementLinks[city.candidateId] && (
+                    <a
+                      href={`https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/${caseSupplementLinks[city.candidateId].path}`}
+                    >
+                      {caseSupplementLinks[city.candidateId].label}
+                    </a>
+                  )}
                   {caseReviewLinks[city.candidateId] && (
                     <a href={caseReviewLinks[city.candidateId].href}>
                       {caseReviewLinks[city.candidateId].label}
@@ -986,6 +1023,21 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
         {" · "}<a
           href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-guaranda-priority-review.md"
           >{zh ? "Guaranda核查" : "Guaranda review"}</a
+        >
+      </p>
+      <p>
+        {
+          zh
+            ? "Minsk与Cáceres两入口核查保持未评分：旧权利伤害与当前救济分开，风暴清理与全户恢复分开，机构目录和公费资格不代实际治疗。渠道失败、候诊二次线索与区外旧审计不生成分数；两者不计八维成绩单，也不排除候选。"
+            : "Minsk and Cáceres two-entry reviews remain unscored: old rights harms are separate from current remedies, storm cleanup from household recovery, and directories/public eligibility from delivered care. Channel failures, secondary waiting-list leads and older outside-area audits produce no score. Neither is an eight-dimension case or exclusion."
+        }
+        {" "}<a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-minsk-priority-review.md"
+          >{zh ? "Minsk核查" : "Minsk review"}</a
+        >
+        {" · "}<a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-caceres-priority-review.md"
+          >{zh ? "Cáceres核查" : "Cáceres review"}</a
         >
       </p>
       <p>

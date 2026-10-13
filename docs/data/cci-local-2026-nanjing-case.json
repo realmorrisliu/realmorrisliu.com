@@ -9,8 +9,8 @@
   "candidateId": 9701,
   "name": "Nanjing functional area",
   "evidenceReview": "cci-local-2026-nanjing-case.md",
-  "expectedConditionalTotal": 58,
-  "limitations": "All eight dimensions and31 subpillars reviewed, not fully measured. PCS/GSS/ISR/RES/MED conditional60, LON/OPT40, TEC80 give58 after priority MED review. Existing source/window/clinical-conflict, boundary, ordinary-eligibility/affordability and residual-impact assumptions remain withdrawable. Old focused reviews retain their historical recommendation. No ranking or exclusion qualification; all9031 and newer competitors retained.",
+  "expectedConditionalTotal": null,
+  "limitations": "Root GSS comparability acceptance withdraws prior60: actual enforcement and locally applicable shelter/warning protection retained, but current ordinary organised-harm residual impact and locality bridge not accepted from procedural counts/other old-case corrections alone. Other seven dimensions unchanged;49–64 without centre. No war prerequisite or missing-as-low score.",
   "dimensions": [
     {
       "id": "PCS",
@@ -27,10 +27,10 @@
     },
     {
       "id": "GSS",
-      "score": 60,
-      "rationale": "A primary prosecutor interview records long-running organized cases56+5 with4 serious and12 minor injuries,2024 indictment and2025 hearing. These are cumulative cases, not current victim rates or convictions. Regional military exercises and strategic transport exposure remain separate from actual local attack. Current alarm tests and community response exercises are usable but not wartime adequate coverage.",
-      "assumption": "Accept current ordinary-life/core-route impacts as limited and local enforcement/response as normally usable despite retained organized harm and regional threats. No UCDP matched event does not establish absent violence. Continuing material gang coercion or strategic channel restriction could support40; wider low-impact and effective-alternative evidence80. Reject time/locality/impact/response representativeness to restore unknown.",
-      "conditionalAlternatives": [40, 80],
+      "score": null,
+      "rationale": "真实累计组织伤害/再活动与2024起诉、2025审理保留；2026披露其他南京旧案与保护伞判刑/截至2025清理纠正及实际警务运行有缓解。2025/2026空袭背景警报链路排障、地下掩蔽/线路监测和居民演练是具体已实施适配，不能删成一般设施；但周某案当前通常剩余影响/地方覆盖与关键保护持续取得链不能由程序或其他旧案总量闭合。",
+      "assumption": "主null不因未有当地战争、没有终判或无全人口普测；目前不接受由已干预/核查/实演直接推出2026通常组织暴力影响较低且残余已充分受限。若接受针对性执法与纠错确实抑制再活动、限定9701核心普通生活/通道影响，并接受区域空袭/系统破坏情景下现役保护通常可达持续，条件60可辩护；重要已知未充分缓解的持续胁迫/通道限制才40。最小下一证为有范围的处置后仍/不再胁迫或通常居民/商户影响及对应干预触达，不必全区率、全终判或全部节点压力测试。",
+      "conditionalAlternatives": [],
       "subpillars": {
         "organized_violence": "partial",
         "regional_conflict": "context",
@@ -846,5 +846,414 @@
   "priorityCompletionReview": {
     "path": "docs/cci-nanjing-priority-completion-review.md",
     "sha256": "4f4177e2beb11ec032c76d724fab3447f3dfc5c45a615852b0cf6bcdea8fcb0a"
+  },
+  "knownWeightedSubtotal": 49,
+  "unresolvedScoreRange": [49, 64],
+  "gssComparabilityReview": {
+    "path": "docs/cci-nanjing-gss-comparability-review.md",
+    "sha256": "becaa4e3adc953ce7b2ddd5e804dd7ed6566dcc6acc5b3983f5c7fc88d2b1683",
+    "reviewedOn": "2026-10-13",
+    "baseCaseSha256": "de143b9319f3c0d34647e0d569f03a7d995e8f8396f41ddb2c27b06068004cd4",
+    "scope": "GSSonly_othersevenexactlyunchanged",
+    "scoreJudgements": {
+      "main": "null",
+      "sixty": {
+        "total": 58,
+        "necessaryInference": "targeted criminal interventions/correctedprotections suppress repeatcoercion enough that currentordinary9701 impacts limited; accept risk-specific warning/shelter/system response reachable and continuing despite important strategic threats",
+        "support": "2024 weapon-discovery/2025 proceedings plus2025 actual oversightcorrection and2026 actual warning/shelter implementation provide direction, not currentvictimrate",
+        "rejectedInMain": "ordinary-impact/recurrence and spatialrelevance bridge not closed by these distinctscopes alone"
+      },
+      "unknown": {
+        "total": null,
+        "knownWeightedSubtotal": 49,
+        "range": [49, 64],
+        "reason": "retain known implementation but do not supply missing currentordinaryimpact/relevance inference"
+      },
+      "forty": {
+        "total": 55,
+        "needed": "credible continuing important insufficientlymitigated coercion/strategicchannel restriction with locality and ordinaryimpact; currentoldcumulativeharm alone insufficient",
+        "notCurrentlyEstablished": true
+      }
+    },
+    "sourceManifest": "source-manifest.json",
+    "referenceBoundaryRecord": "boundary-record.json",
+    "discoveryRounds": 2,
+    "discoveryClosed": true
+  },
+  "gssSupplement": {
+    "sourceSnapshots": [
+      {
+        "file": "organized-violence-2025.html",
+        "url": "https://www.spp.gov.cn/zdgz/202507/t20250704_700383.shtml",
+        "http": "200",
+        "error": "",
+        "bytes": 35739,
+        "sha256": "63ad4691c812d5f9e2661b90206ad7eb1d5b5ad4dcee5d7fe8d0aeda1bf92070",
+        "reusedFrom": "/private/tmp/cci-global/nanjing/protection/organized-violence-2025.html",
+        "sourceKind": "reused_original_response",
+        "originalRetrievedOn": "2026-10-12",
+        "reviewedOn": "2026-10-13",
+        "id": "S01",
+        "localPath": "/private/tmp/cci-global/nanjing-gss-comparability/reused-originals/organized-violence-2025.html",
+        "scope": "4July2025直接检察参与者采访；1998起历史，2024调查/起诉，23June2025审理；团伙南京多地非精确9701活动地块。"
+      },
+      {
+        "file": "organized-violence-2025.pdf",
+        "url": "https://newspaper.jcrb.com/2025/20250704/20250704_001/news-zgjcb-10939-20250704-m-001-300.pdf",
+        "http": "200",
+        "error": "",
+        "bytes": 926501,
+        "sha256": "23233be8673eef056ab8c3151dc268c1bfe14340f461fe2501148a6779cea226",
+        "reusedFrom": "/private/tmp/cci-global/nanjing/protection/organized-violence-2025.pdf",
+        "sourceKind": "reused_original_response",
+        "originalRetrievedOn": "2026-10-12",
+        "reviewedOn": "2026-10-13",
+        "id": "S02",
+        "localPath": "/private/tmp/cci-global/nanjing-gss-comparability/reused-originals/organized-violence-2025.pdf",
+        "scope": "检察日报4July2025第1版，案文起页；不是60余起2025新暴力或39定罪。"
+      },
+      {
+        "file": "organized-violence-continuation-2025.pdf",
+        "url": "https://newspaper.jcrb.com/2025/20250704/20250704_004/news-zgjcb-10939-20250704-m-004-300.pdf",
+        "http": "200",
+        "error": "",
+        "bytes": 1224582,
+        "sha256": "e9294a7d43ace43b4b0b39e95eabd23ff9f582f2161dc311fe4fb019555fab33",
+        "reusedFrom": "/private/tmp/cci-global/nanjing/protection/organized-violence-continuation-2025.pdf",
+        "sourceKind": "reused_original_response",
+        "originalRetrievedOn": "2026-10-12",
+        "reviewedOn": "2026-10-13",
+        "id": "S03",
+        "localPath": "/private/tmp/cci-global/nanjing-gss-comparability/reused-originals/organized-violence-continuation-2025.pdf",
+        "scope": "同报第4版续文；56组织+5非组织，4重/12轻为累计后果；重操旧业与2024/2025程序。"
+      },
+      {
+        "file": "defense-2025.html",
+        "url": "https://gdb.nanjing.gov.cn/rfkx/202509/t20250919_5653053.html",
+        "http": "200",
+        "error": "",
+        "bytes": 16515,
+        "sha256": "9ae18850fdc5663f6840e31b61e190a40515fbfcd9d10c96e9efa5fddb2eccce",
+        "reusedFrom": "/private/tmp/cci-global/nanjing/protection/defense-2025.html",
+        "sourceKind": "reused_original_response",
+        "originalRetrievedOn": "2026-10-12",
+        "reviewedOn": "2026-10-13",
+        "id": "S04",
+        "localPath": "/private/tmp/cci-global/nanjing-gss-comparability/reused-originals/defense-2025.html",
+        "scope": "19Sep2025发布/18Sep实演；千余alarm近万broadcast/万余participants，主城区声强检测/40台IoT试点，非全FUA居民覆盖。"
+      },
+      {
+        "file": "regional-military-2025.html",
+        "url": "http://www.mod.gov.cn/gfbw/qwfb/16429616.html",
+        "http": "200",
+        "error": "",
+        "bytes": 15455,
+        "sha256": "81c66f150350760b2059af6ba96ad8bad94128b260acf21d5aaee4617a98cdb3",
+        "reusedFrom": "/private/tmp/cci-global/nanjing/protection/regional-military-2025.html",
+        "sourceKind": "reused_original_response",
+        "originalRetrievedOn": "2026-10-12",
+        "reviewedOn": "2026-10-13",
+        "id": "S05",
+        "localPath": "/private/tmp/cci-global/nanjing-gss-comparability/reused-originals/regional-military-2025.html",
+        "scope": "29Dec2025国防部刊战区原公告，台海/台岛周边科目；非南京现实战损/实际港封。官方HTTP传输风险保留。"
+      },
+      {
+        "file": "weather-response-2025.html",
+        "url": "https://shuiwu.nanjing.gov.cn/mtbd/202508/t20250812_5626899.html",
+        "http": "200",
+        "error": "",
+        "bytes": 19077,
+        "sha256": "cfa95347925e3b41f59db4c3efa29a83ae518c805cb96c76ce16f3013c011e61",
+        "reusedFrom": "/private/tmp/cci-global/nanjing/protection/weather-response-2025.html",
+        "sourceKind": "reused_original_response",
+        "originalRetrievedOn": "2026-10-12",
+        "reviewedOn": "2026-10-13",
+        "id": "S06",
+        "localPath": "/private/tmp/cci-global/nanjing-gss-comparability/reused-originals/weather-response-2025.html",
+        "scope": "12Aug2025水务局刊参与者采访，铁路/metro/在港船共同调度是实际台风应对，不变战略攻击结果。"
+      },
+      {
+        "file": "criminal-supervision2026.html",
+        "url": "https://www.spp.gov.cn/spp/xwfbh/dxal/202602/t20260205_718394.shtml",
+        "retrievedOn": "2026-10-13",
+        "retrievedAt": "2026-10-13T09:34:54.333428+00:00",
+        "reviewedOn": "2026-10-13",
+        "response": "200\ttext/html\thttps://www.spp.gov.cn/spp/xwfbh/dxal/202602/t20260205_718394.shtml",
+        "exit": 0,
+        "error": "",
+        "bytes": 25587,
+        "sha256": "7190f042f3c36aa5376b53e6a1c23564939b43f641bc98f9b19f290d21e8881a",
+        "validOriginal": true,
+        "sourceKind": "new_original_response",
+        "id": "S07",
+        "localPath": "/private/tmp/cci-global/nanjing-gss-comparability/criminal-supervision2026.html",
+        "scope": "5Feb2026最高检典型案五：南京匿名区2016/2018暴力、2020/2023判刑、2023后保护伞判刑，up2025 300余核查/200余清理纠正；非周某同案或受害恢复人数。"
+      },
+      {
+        "file": "xuanwu-defense2025.html",
+        "url": "https://gdb.nanjing.gov.cn/rfkx/202505/t20250516_5564377.html",
+        "retrievedOn": "2026-10-13",
+        "retrievedAt": "2026-10-13T09:34:54.335365+00:00",
+        "reviewedOn": "2026-10-13",
+        "response": "200\ttext/html\thttps://gdb.nanjing.gov.cn/rfkx/202505/t20250516_5564377.html",
+        "exit": 0,
+        "error": "",
+        "bytes": 16166,
+        "sha256": "cfdd344a2487237815506036d5cbac842893936dd552de89b370167f2b8b106d",
+        "validOriginal": true,
+        "sourceKind": "new_original_response",
+        "id": "S08",
+        "localPath": "/private/tmp/cci-global/nanjing-gss-comparability/xuanwu-defense2025.html",
+        "scope": "16May2025/12May玄武检察院+玄武湖街道80余staff警报→地下/红外线路监测；80余非居民全数/容纳容量。"
+      },
+      {
+        "file": "defense-index2026.html",
+        "url": "https://gdb.nanjing.gov.cn/rfkx/",
+        "retrievedOn": "2026-10-13",
+        "retrievedAt": "2026-10-13T09:34:54.337091+00:00",
+        "reviewedOn": "2026-10-13",
+        "response": "200\ttext/html\thttps://gdb.nanjing.gov.cn/rfkx/",
+        "exit": 0,
+        "error": "",
+        "bytes": 19168,
+        "sha256": "fa861a3912da7e6736a23f325eb31d9ac6bcb0be0fe8c07845cda779b6445f6c",
+        "validOriginal": true,
+        "sourceKind": "new_original_response",
+        "id": "S09",
+        "localPath": "/private/tmp/cci-global/nanjing-gss-comparability/defense-index2026.html",
+        "scope": "市国动办当前原索引，仅导航不当实绩；搜索缓存与raw列表次序不同不推伪造。"
+      },
+      {
+        "file": "defense-execution2026.html",
+        "url": "https://gdb.nanjing.gov.cn/rfkx/202609/t20260920_5913840.html",
+        "retrievedOn": "2026-10-13",
+        "retrievedAt": "2026-10-13T09:35:12.907337+00:00",
+        "reviewedOn": "2026-10-13",
+        "response": "200\ttext/html\thttps://gdb.nanjing.gov.cn/rfkx/202609/t20260920_5913840.html",
+        "exit": 0,
+        "error": "",
+        "bytes": 17248,
+        "sha256": "e5667b9a9db99bf8bd7d70a3760bbd6867bd078fa69631affff471aff931ca64",
+        "validOriginal": true,
+        "sourceKind": "new_original_response",
+        "id": "S10",
+        "localPath": "/private/tmp/cci-global/nanjing-gss-comparability/defense-execution2026.html",
+        "scope": "20Sep2026/18Sep真实全网加电测试/主分控链路排障及空袭背景指挥/居民实兵；100%设备鸣响非居民rate。"
+      },
+      {
+        "file": "qixia-defense-maintenance2026.html",
+        "url": "https://gdb.nanjing.gov.cn/rfkx/202609/t20260908_5907208.html",
+        "retrievedOn": "2026-10-13",
+        "retrievedAt": "2026-10-13T09:35:12.909565+00:00",
+        "reviewedOn": "2026-10-13",
+        "response": "200\ttext/html\thttps://gdb.nanjing.gov.cn/rfkx/202609/t20260908_5907208.html",
+        "exit": 0,
+        "error": "",
+        "bytes": 17612,
+        "sha256": "6a10f6c20f5e0c3a4351ae1b253a22b787e1e6d7eb614742a36a742283529f1b",
+        "validOriginal": true,
+        "sourceKind": "new_original_response",
+        "id": "S11",
+        "localPath": "/private/tmp/cci-global/nanjing-gss-comparability/qixia-defense-maintenance2026.html",
+        "scope": "8Sep2026实际调研/部署会及9街道二次部署，账目通知初步定稿；不当已关门整改全部合格。"
+      },
+      {
+        "file": "criminal-execution-context2025.html",
+        "url": "https://fgw.nanjing.gov.cn/njsfzhggwyh/202602/t20260202_5785152.html",
+        "retrievedOn": "2026-10-13",
+        "retrievedAt": "2026-10-13T09:35:37.265171+00:00",
+        "reviewedOn": "2026-10-13",
+        "response": "200\ttext/html\thttps://fgw.nanjing.gov.cn/njsfzhggwyh/202602/t20260202_5785152.html",
+        "exit": 0,
+        "error": "",
+        "bytes": 184180,
+        "sha256": "0dfae1a8280716d3844ba0cc5c14234ae4d896df02203f323a90ee0125989c46",
+        "validOriginal": true,
+        "sourceKind": "new_original_response",
+        "id": "S12",
+        "localPath": "/private/tmp/cci-global/nanjing-gss-comparability/criminal-execution-context2025.html",
+        "scope": "2Feb2026发布计划执行报告，2025市域破案率+8.6pp/诈骗降15.6/10.7%，非组织暴力低率；30stations/2003posts是自报运行。"
+      },
+      {
+        "file": "transport-emergency-network2024.pdf",
+        "url": "https://jtj.nanjing.gov.cn/njsjtysj/202409/P020241218596763721698.pdf",
+        "retrievedOn": "2026-10-13",
+        "retrievedAt": "2026-10-13T09:35:37.265511+00:00",
+        "reviewedOn": "2026-10-13",
+        "response": "200\tapplication/pdf\thttps://jtj.nanjing.gov.cn/njsjtysj/202409/P020241218596763721698.pdf",
+        "exit": 0,
+        "error": "",
+        "bytes": 1043629,
+        "sha256": "14f0f6230f2f93d148bc49162b2ae050c5f1563d74fb5808e91e81e18665afb2",
+        "validOriginal": true,
+        "sourceKind": "new_original_response",
+        "id": "S13",
+        "localPath": "/private/tmp/cci-global/nanjing-gss-comparability/transport-emergency-network2024.pdf",
+        "scope": "实际南京交通信息中心2023部门自评价，URL2024目录/文件名不当2024观察；49普通事件/166队伍/1414装备/126物资及弱口令排查，非组织攻击或全9701比例。"
+      },
+      {
+        "file": "gulou-power-loss-exercise2026.html",
+        "url": "https://gdb.nanjing.gov.cn/njsrmfkbgs/202604/t20260408_5819810.html",
+        "retrievedOn": "2026-10-13",
+        "retrievedAt": "2026-10-13T09:36:18.682833+00:00",
+        "reviewedOn": "2026-10-13",
+        "response": "200\ttext/html\thttps://gdb.nanjing.gov.cn/njsrmfkbgs/202604/t20260408_5819810.html",
+        "exit": 0,
+        "error": "",
+        "bytes": 12971,
+        "sha256": "dd778dae0ad52e2882ba32dfeddbac1cc8d9f7adbd6729248a2b55f72b6a7207",
+        "validOriginal": true,
+        "sourceKind": "new_original_response",
+        "id": "S14",
+        "localPath": "/private/tmp/cci-global/nanjing-gss-comparability/gulou-power-loss-exercise2026.html",
+        "scope": "8Apr2026近日演练变电所全站失电/触电/恢复供电2h，匿名水厂安全；未名设施/地块/独立供电未知，非2h战争后恢复。"
+      },
+      {
+        "file": "baodiyuan-airraid2025.html",
+        "url": "https://gdb.nanjing.gov.cn/njsrmfkbgs/202505/t20250508_5142545.html",
+        "retrievedOn": "2026-10-13",
+        "retrievedAt": "2026-10-13T09:36:18.684513+00:00",
+        "reviewedOn": "2026-10-13",
+        "response": "200\ttext/html\thttps://gdb.nanjing.gov.cn/njsrmfkbgs/202505/t20250508_5142545.html",
+        "exit": 0,
+        "error": "",
+        "bytes": 12652,
+        "sha256": "e67a67a37a1a9f91b90d8f799f6fd50a06cbc3732c8f752921d93659c822f779",
+        "validOriginal": true,
+        "sourceKind": "new_original_response",
+        "id": "S15",
+        "localPath": "/private/tmp/cci-global/nanjing-gss-comparability/baodiyuan-airraid2025.html",
+        "scope": "8May2025宝地园中青大厦儿童实际警报到地下避险1.5min，无人数/具体地块/全区覆盖；地点属核心鼓楼推定。"
+      },
+      {
+        "file": "defense-maintenance-inspection2026.html",
+        "url": "https://gdb.nanjing.gov.cn/njsrmfkbgs/202603/t20260331_5815691.html",
+        "retrievedOn": "2026-10-13",
+        "retrievedAt": "2026-10-13T09:36:18.686005+00:00",
+        "reviewedOn": "2026-10-13",
+        "response": "200\ttext/html\thttps://gdb.nanjing.gov.cn/njsrmfkbgs/202603/t20260331_5815691.html",
+        "exit": 0,
+        "error": "",
+        "bytes": 12874,
+        "sha256": "281e8a9d249dd269fb00ff518cb299b9af0eb23f73943e2e9eccf5456ce6b27f",
+        "validOriginal": true,
+        "sourceKind": "new_original_response",
+        "id": "S16",
+        "localPath": "/private/tmp/cci-global/nanjing-gss-comparability/defense-maintenance-inspection2026.html",
+        "scope": "31Mar2026启动随机结构/专用设施/日常管理抽查，现场+资料；未公布本期结果/数量，不当全部已整改。"
+      }
+    ],
+    "referenceBoundaryCheck": {
+      "source": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+      "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+      "sourceBytes": 9932800,
+      "allGeometryCount": 9031,
+      "record": {
+        "fid": 2204,
+        "eFUA_ID": 9701.0,
+        "UC_num": 2.0,
+        "UC_IDs": "12055;12072",
+        "eFUA_name": "Nanjing",
+        "Commuting": 1.0,
+        "Cntry_ISO": "CHN",
+        "Cntry_name": "China",
+        "FUA_area": 2419.0,
+        "UC_area": 742.0,
+        "FUA_p_2015": 6914261.04841131,
+        "UC_p_2015": 5865535.750104427,
+        "Com_p_2015": 1048725.2983068824
+      },
+      "bounds": [10715000.0, 3839000.0, 10781000.0, 3930000.0],
+      "targetGeometrySha256": "7b793340ec44306bb49f42b71af185b2a4e60b2b4667a879eafd4cb3f1ce3e43",
+      "referencePoints": [
+        {
+          "label": "Nanjing central approximate reference",
+          "longitude": 118.7969,
+          "latitude": 32.0603,
+          "fuaMatches": [9701]
+        },
+        {
+          "label": "Lukou airport approximate reference",
+          "longitude": 118.862,
+          "latitude": 31.742,
+          "fuaMatches": [9701]
+        },
+        {
+          "label": "Pukou urban approximate reference",
+          "longitude": 118.627,
+          "latitude": 32.059,
+          "fuaMatches": [9679]
+        },
+        {
+          "label": "Liuhe urban approximate reference",
+          "longitude": 118.843,
+          "latitude": 32.348,
+          "fuaMatches": [9701]
+        },
+        {
+          "label": "Jiangning urban approximate reference",
+          "longitude": 118.84,
+          "latitude": 31.953,
+          "fuaMatches": [9701]
+        },
+        {
+          "label": "Gulou hospital central approximate reference",
+          "longitude": 118.782,
+          "latitude": 32.062,
+          "fuaMatches": [9701]
+        },
+        {
+          "label": "Jiangsu provincial hospital Guangzhou-road approximate reference",
+          "longitude": 118.77,
+          "latitude": 32.051,
+          "fuaMatches": [9701]
+        },
+        {
+          "label": "Zhongda hospital central approximate reference",
+          "longitude": 118.789,
+          "latitude": 32.081,
+          "fuaMatches": [9701]
+        },
+        {
+          "label": "Nanjing University Xianlin approximate reference",
+          "longitude": 118.964,
+          "latitude": 32.12,
+          "fuaMatches": [9701]
+        },
+        {
+          "label": "Southeast University Jiulonghu approximate reference",
+          "longitude": 118.82,
+          "latitude": 31.881,
+          "fuaMatches": [9701]
+        },
+        {
+          "label": "Lishui urban approximate reference",
+          "longitude": 119.028,
+          "latitude": 31.651,
+          "fuaMatches": [9811]
+        },
+        {
+          "label": "Gaochun urban approximate reference",
+          "longitude": 118.892,
+          "latitude": 31.327,
+          "fuaMatches": [9821]
+        },
+        {
+          "label": "Jurong urban approximate reference",
+          "longitude": 119.168,
+          "latitude": 31.946,
+          "fuaMatches": [9801]
+        },
+        {
+          "label": "Zhenjiang urban approximate reference",
+          "longitude": 119.425,
+          "latitude": 32.187,
+          "fuaMatches": [9805]
+        }
+      ],
+      "method": "full9031; EPSG4326→ESRI54009 always_xy; covers; analyst approximate points not official footprints/catchments/patients",
+      "reviewedOn": "2026-10-13"
+    },
+    "warOrSuccessfulStrategicAttackRequired": false
   }
 }

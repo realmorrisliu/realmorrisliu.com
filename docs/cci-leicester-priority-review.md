@@ -1,5 +1,7 @@
 # Leicester 4925：八维有界条件审阅（2026 本国普通居民）
 
+**2026-10-13最后未知补证：RES接受条件60，现八维条件中心60。** 其余七维对象不变，40／80替代为58／62；拒绝新增通常适配／获得／净负担／延续推定则回54—64、无中心。[新增证据与根验收](cci-leicester-resources-priority-review.md)保留实际短板、反证及范围；下列原未知判断为此前快照。
+
 证据截止 **2026-10-10**，实际查阅 **2026-10-13**。采用[现行共同 rubric](cci-global-scoring-rubric.md)、[完整优先筛查](cci-unassessed-priority-screening.md)，与已发布 [Grimsby](cci-grimsby-priority-review.md)、[Tampere](cci-tampere-priority-review.md)及 [London LON 重审](cci-london-lon-comparability-review.md)同层推定。画像为本国公民、通常长期居住、当地中位收入及通常 NHS；公民身份本身不等于普通居住资格。不默认私人保险、特殊富裕或随意择院能解决急症。研究队列位置、医院旅行模型、低热／PGA、网络快样本不换算评分。
 
 完成两轮定向发现，随后仅核已定位底表／原页。三次连续警察原入口403后停止重取。未修改共享数据／脚本／旧案例，未提交。本稿是八维与31语义完整审阅；**RES 未定，不给完整中心总分**。

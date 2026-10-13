@@ -136,7 +136,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 151,Tabuk,SAU,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 152,Geneina,SDN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 153,Dakar,SEN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-154,Singapore,SGP,62.0,62.0,62.0,1,9018,,0,100,1,9031,unresolved_not_ranking_eligibility
+154,Singapore,SGP,62.0,62.0,62.0,1,9017,,0,100,1,9031,unresolved_not_ranking_eligibility
 155,Honiara,SLB,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 156,Freetown,SLE,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 157,Ahuachapan,SLV,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -273,7 +273,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 308,Río Piedras [San Juan],PRI,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 309,Tǒktaedonggok,PRK,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 310,Lisbon,PRT,,27.0,77.0,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-312,Gaza,PSE,,14.0,59.0,10,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
+312,Gaza,PSE,,14.0,59.0,12,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 313,Al Khor,QAT,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 314,Le Tampon,REU,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 315,Arad,ROU,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -417,7 +417,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 478,Valjevo,SRB,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 479,Tambura,SSD,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 480,Žilina,SVK,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-481,Malmö,SWE,,54.0,64.0,1,9030,,0,100,1,9031,unresolved_not_ranking_eligibility
+481,Malmö,SWE,60.0,60.0,60.0,5,9024,,0,100,1,9031,unresolved_not_ranking_eligibility
 482,Baniyas,SYR,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 483,N'Djamena,TCD,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 484,Sansanné-Mango,TGO,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -467,9 +467,9 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 532,Sibiti,COG,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 533,Pasto,COL,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 534,Matanzas,CUB,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-535,Prague,CZE,62.0,62.0,62.0,1,9018,,0,100,1,9031,unresolved_not_ranking_eligibility
+535,Prague,CZE,62.0,62.0,62.0,1,9017,,0,100,1,9031,unresolved_not_ranking_eligibility
 536,Dortmund,DEU,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-537,Copenhagen,DNK,62.0,62.0,62.0,1,9018,,0,100,1,9031,unresolved_not_ranking_eligibility
+537,Copenhagen,DNK,62.0,62.0,62.0,1,9017,,0,100,1,9031,unresolved_not_ranking_eligibility
 538,Mao,DOM,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 539,Tlemcen,DZA,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 541,Abu Huminus,EGY,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -1284,7 +1284,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 1476,Montero,BOL,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 1477,Manaus,BRA,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 1478,Red Deer,CAN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-1479,Zurich,CHE,60.0,60.0,60.0,5,9023,,0,100,1,9031,unresolved_not_ranking_eligibility
+1479,Zurich,CHE,60.0,60.0,60.0,5,9024,,0,100,1,9031,unresolved_not_ranking_eligibility
 1480,Concepción,CHL,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 1481,Wusu,CHN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 1482,Bonon,CIV,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -2344,7 +2344,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 2699,Shamma,EGY,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 2700,Córdoba,ESP,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 2701,Dangla,ETH,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-2702,Paris,FRA,60.0,60.0,60.0,5,9023,,0,100,1,9031,unresolved_not_ranking_eligibility
+2702,Paris,FRA,60.0,60.0,60.0,5,9024,,0,100,1,9031,unresolved_not_ranking_eligibility
 2704,Asamankese,GHA,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 2705,Cobán,GTM,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 2706,Padang,IDN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -3396,7 +3396,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 3953,Lahijan,IRN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 3954,An Numaniyah,IRQ,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 3955,Udine,ITA,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-3956,Osaka [Kyoto],JPN,60.0,60.0,60.0,5,9023,,0,100,1,9031,unresolved_not_ranking_eligibility
+3956,Osaka [Kyoto],JPN,60.0,60.0,60.0,5,9024,,0,100,1,9031,unresolved_not_ranking_eligibility
 3957,Errachidia,MAR,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 3958,Zacatecas,MEX,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 3959,Pantanaw,MMR,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -3831,7 +3831,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 4457,Vilanova i la Geltrú,ESP,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 4458,Debark,ETH,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 4459,Colmar,FRA,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-4460,Sheffield,GBR,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
+4460,Sheffield,GBR,,33.0,73.0,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 4461,Pringsewu,IDN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 4462,Balesar,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 4463,Shadegan,IRN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -4200,7 +4200,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 4891,Areka,ETH,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 4892,Loughborough,GBR,,42.0,67.0,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 4894,Jakarta,IDN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-4897,Jakarta,IDN,,43.0,53.0,20,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
+4897,Jakarta,IDN,,43.0,53.0,19,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 4898,Jakarta,IDN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 4899,Jakarta,IDN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 4900,Jakarta,IDN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -4223,7 +4223,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 4920,Saravena,COL,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 4922,Khenchela,DZA,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 4924,Shire,ETH,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-4925,Leicester,GBR,,54.0,64.0,1,9030,,0,100,1,9031,unresolved_not_ranking_eligibility
+4925,Leicester,GBR,60.0,60.0,60.0,5,9024,,0,100,1,9031,unresolved_not_ranking_eligibility
 4926,Rangkasbitung,IDN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 4927,Sri Muktsar Sahib,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 4928,Omidieh,IRN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -4391,7 +4391,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 5125,Blackwater,GBR,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 5127,Sayla,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 5128,Babol,IRN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-5129,Tokyo,JPN,62.0,62.0,62.0,1,9018,,0,100,1,9031,unresolved_not_ranking_eligibility
+5129,Tokyo,JPN,62.0,62.0,62.0,1,9017,,0,100,1,9031,unresolved_not_ranking_eligibility
 5132,Rioverde,MEX,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 5133,Ye,MMR,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 5134,Mara-Mawa,NGA,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -4520,7 +4520,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 5284,Tianshui,CHN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 5285,Rubaya,COD,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 5287,Gezaber,ETH,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-5288,London,GBR,60.0,60.0,60.0,5,9023,,0,100,1,9031,unresolved_not_ranking_eligibility
+5288,London,GBR,60.0,60.0,60.0,5,9024,,0,100,1,9031,unresolved_not_ranking_eligibility
 5290,Kotkapura,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 5291,Isfahan,IRN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 5293,Pachuca,MEX,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -5431,7 +5431,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 6395,Bratsk,RUS,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 6398,Jingyan,CHN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 6399,Arerti,ETH,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-6401,Surabaya,IDN,,49.0,59.0,10,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
+6401,Surabaya,IDN,,49.0,59.0,12,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 6402,Bhiloda,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 6403,Bonny,NGA,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 6405,Angarsk,RUS,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -5996,7 +5996,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 7065,Kupang,IDN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 7066,Jind,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 7067,Kpam,NGA,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-7068,Washington D.C.,USA,58.0,58.0,58.0,10,9030,,0,100,1,9031,unresolved_not_ranking_eligibility
+7068,Washington D.C.,USA,58.0,58.0,58.0,12,9030,,0,100,1,9031,unresolved_not_ranking_eligibility
 7069,Manhuaçu,BRA,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 7070,Yiliang,CHN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 7071,Raha,IDN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -6145,7 +6145,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 7241,Asikie,IDN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 7242,Charkhi Dadri,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 7243,Maigatari,NGA,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-7244,New York,USA,58.0,58.0,58.0,10,9030,,0,100,1,9031,unresolved_not_ranking_eligibility
+7244,New York,USA,58.0,58.0,58.0,12,9030,,0,100,1,9031,unresolved_not_ranking_eligibility
 7245,São Mateus,BRA,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 7246,Changning,CHN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 7247,Sentani,IDN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -6558,7 +6558,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 7700,Pingshan,CHN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 7701,Gangapur,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 7703,Kherli,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-7704,Beijing,CHN,60.0,60.0,60.0,5,9023,,0,100,1,9031,unresolved_not_ranking_eligibility
+7704,Beijing,CHN,60.0,60.0,60.0,5,9024,,0,100,1,9031,unresolved_not_ranking_eligibility
 7705,Shirpur,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 7706,Baicheng,CHN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 7707,Yeola,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -8359,7 +8359,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 9698,UNNAMED,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 9699,Yingde,CHN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 9700,Kothagudem,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-9701,Nanjing,CHN,58.0,58.0,58.0,10,9030,,0,100,1,9031,unresolved_not_ranking_eligibility
+9701,Nanjing,CHN,,49.0,64.0,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 9702,Robertsganj,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 9703,Ma'anshan,CHN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 9704,Chakia,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -8672,7 +8672,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 10074,新登镇,CHN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 10076,Anliu,CHN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 10077,Shahpur Paton,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-10078,Hangzhou,CHN,58.0,58.0,58.0,10,9030,,0,100,1,9031,unresolved_not_ranking_eligibility
+10078,Hangzhou,CHN,58.0,58.0,58.0,12,9030,,0,100,1,9031,unresolved_not_ranking_eligibility
 10079,Sunabeda,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 10080,Meizhou,CHN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 10081,Balangir,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
@@ -8690,7 +8690,7 @@ efua_id,source_name,country_iso,conditional_center,conditional_lower,conditional
 10093,Tuni,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 10094,Lvsigang,CHN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 10095,Jharsuguda,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
-10097,Shanghai,CHN,58.0,58.0,58.0,10,9030,,0,100,1,9031,unresolved_not_ranking_eligibility
+10097,Shanghai,CHN,58.0,58.0,58.0,12,9030,,0,100,1,9031,unresolved_not_ranking_eligibility
 10101,Darbhanga,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 10103,Lohardaga,IND,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility
 10104,陆河县,CHN,,0,100,1,9031,,0,100,1,9031,unresolved_not_ranking_eligibility

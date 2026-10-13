@@ -153,10 +153,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 42,
-    "completeConditionalCaseCount": 14,
+    "conditionalCaseCount": 43,
+    "completeConditionalCaseCount": 15,
     "partialCaseCount": 28,
-    "unassessedCount": 8989,
+    "unassessedCount": 8988,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -374,9 +374,9 @@
       "provenanceSha256": "e5e20d8857d16da21ba711f6b0194b9fffc01d69052f4a200b5960f07a59ad55"
     },
     "cci-local-2026-nanjing-case.json": {
-      "sha256": "de143b9319f3c0d34647e0d569f03a7d995e8f8396f41ddb2c27b06068004cd4",
+      "sha256": "78cbbc9e6f7831b78ff7d80260da46a77694ed7bf9c5d50955785a11fc45864f",
       "provenance": "cci-local-2026-nanjing-case.md",
-      "provenanceSha256": "078b8d3183ec0eaace859b3e0eebbf330a64b303a15f857cd8c238eb9fb3b38f"
+      "provenanceSha256": "4ca926a35432f4dd830ebb59084cc5ced5f9afe6f8fea6bea4bffdaffeaac72c"
     },
     "cci-local-2026-guangzhou-case.json": {
       "sha256": "fcd40570aaadc20419f43b118a6db6e08f14e3742c1e5fc38a68cef92fc66f05",
@@ -384,9 +384,9 @@
       "provenanceSha256": "fdcadf46d1e8409d5c5888dd1b6cc7b658930f2ea4eff459dd3587ca1c65a697"
     },
     "cci-local-2026-wuhan-case.json": {
-      "sha256": "e206bc8a18c900f1682c3886f4dc9e9b71f83a9dc0c74cb6082ac0d00e97786f",
+      "sha256": "bcc220e534db0cf80ea7a98ad8cba9dbdd583e607cd3a5d010f93cde5251b5fb",
       "provenance": "cci-local-2026-wuhan-case.md",
-      "provenanceSha256": "cc3987593037440cf49919beab4bd1a7b6cfc392e9a376ee8651943af53487f6"
+      "provenanceSha256": "e448678af6b368d987252f8b2a0464bf04f5c61abea81b0e85b376cb5e9f7b4d"
     },
     "cci-local-2026-xian-case.json": {
       "sha256": "8a4d641119fa5dcb0eeba5806c2582eab7e8dbeacbaff454b00e0588b9c68ed3",
@@ -434,9 +434,9 @@
       "provenanceSha256": "dde5556cc0b7c4e089ef1492dcfaaa063bfd6796c171d93b9ed415c904eb6a83"
     },
     "cci-local-2026-leicester-case.json": {
-      "sha256": "6573a54b83f5b6027f1eeb05a319b019dc54e6431b2b641487757bf7e0b62973",
+      "sha256": "bbab7a6391d628b414609e0091c3019a1724686b4709fabbb5a10d4ecc82c94f",
       "provenance": "cci-leicester-priority-review.md",
-      "provenanceSha256": "cf0f3500047e33a2dc04dcb0776a60dc6aba9ffaed296c9d1e46aba97355494d"
+      "provenanceSha256": "121228531fbf659e121c9c7facd84fcde4912bde412c14e88f201b06b1e3ff5a"
     },
     "cci-local-2026-dublin-case.json": {
       "sha256": "47357b64fec016a1880ea00d2c65324790e258637f3f5e7e77fd72e3f6fea0bb",
@@ -474,16 +474,21 @@
       "provenanceSha256": "426139e862064b2b3dd5d99e33be4c2b85153c08f5258756ca610f2032b1c181"
     },
     "cci-local-2026-malmo-case.json": {
-      "sha256": "af561a58a13ba38e0d3954cda597f6d1684aff1132cb976791b951a7f72fd4ee",
+      "sha256": "c2efa1c281670be81f5ae02512a7a49b44bb9ce9b8bc3e98adcbd0ea09e7b9c4",
       "provenance": "cci-malmo-priority-review.md",
-      "provenanceSha256": "caeed5972c802b53d1a22f354bdcdb88139f621f174c6bfd22301a0efc1d87da"
+      "provenanceSha256": "c235a8eda18fc3812b6df2688a311fbdd117bb220332d364f76ee823575e70af"
     },
     "cci-local-2026-santa-cruz-de-tenerife-case.json": {
       "sha256": "aa4f57d8f29feab1c03c4fba708cb8908d598f721138e4efacbc996270031c4d",
       "provenance": "cci-santa-cruz-de-tenerife-priority-review.md",
       "provenanceSha256": "08577c29925087fd6be4f9e402c76f916fe36d7e40ea6e94c4eb86f84853e706"
+    },
+    "cci-local-2026-sheffield-case.json": {
+      "sha256": "29c4d23df8524da295a00c44297398efa09b7e7874bc0a5863f8b640e173a427",
+      "provenance": "cci-sheffield-priority-review.md",
+      "provenanceSha256": "07fc38520ec47fa7d1b7e55b840607f31365011430973997ccc7ef1be5a0b5a9"
     }
   },
-  "scriptSha256": "7f7ec6fff304fb3b5e794bc90269dd6eac2b1578f8b4df3937166f7cc02500ee",
-  "csvSha256": "b877a38f467cc79a352c9417974d4422c09419e45d120823f30fe94db3344dec"
+  "scriptSha256": "2ec255f97b71e644cd47dd4c1a48bf61f4edc2934777babae2b4c8ea1ee91a32",
+  "csvSha256": "4e6048c92a016f60801fde16c1c98bf2de2d128bc1426f7bddd074abbd55fec2"
 }

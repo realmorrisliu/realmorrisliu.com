@@ -8,10 +8,10 @@
   "boundaryVersion": "GHS-FUA R2019A",
   "boundaryReview": "approximate_reference_points_full9031_checked_not_service_coverage",
   "evidenceReview": "cci-leicester-priority-review.md",
-  "expectedConditionalTotal": null,
-  "knownWeightedSubtotal": 54,
-  "unresolvedScoreRange": [54, 64],
-  "limitations": "8 dimensions/31 statuses reviewed. RES null; seven conditional60, importantPCS/GSS/ISR/MED40 alternatives. No midpoint/zero-fill/redistribution. Spatial/payment/continuity assumptions may withdraw to null; not ranking or high-score proof.",
+  "expectedConditionalTotal": 60,
+  "knownWeightedSubtotal": 60,
+  "unresolvedScoreRange": [60, 60],
+  "limitations": "独立核6原件bytes／SHA及全9031目标／两近似点，目视供水关系PDF物理9，复读监管实际末端表和2026两个食品市场正在营业。接受RES条件60，其他七维对象逐项未改。公司范围不代本地全户实测，供区／末端／通常购买与必要净负担推定可撤回；水质真实失败、工程伤客流与能源目标偏差保留。总60，RES40／80为58／62，拒绝关键适配／延续／负担则54—64、无中心。 Conditional calibration, not global ranking eligibility or a reliable exclusion bound.",
   "retrievedOn": "2026-10-13",
   "dimensions": [
     {
@@ -54,15 +54,15 @@
     },
     {
       "id": "RES",
-      "score": null,
-      "rationale": "区域供电实际恢复／超标与补偿已读，但末端饮水安全／适配本区供应者及实际食品流转未闭；市场摊位规则和机场货运不代这些链。",
-      "assumption": "不因无完美中位账单判低；关键实际供应／适配连接缺失，目前不能辨40/60/80。最小待补为本区饮水监管实际样本／故障缓解及实际食品市场供应运行，随后审查通常必要净负担。",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "New regulator2025SevernTrent observations distinguish works/reservoir/tap testing and actualtap E.coli failures from generalcompliance; municipal2025assessmentidentifies maincitysupplier but not entireFUA/exceptions. Actual2024localgroceryshelf/point-of-saleobservation and2026market/foodhalloperatingwithconstructiondisruption add realisedfoodchannels, beyond oldstallrules/cargo. Existingregionalenergy interruption/restoreperformance and exclusion/targetshortfalls are retained. No companytestcounts, marketstallrentwaiver or regionalaverages become Leicesterresident quality/netcost/backup rates.",
+      "assumption": "Accept ordinary4925residents usually obtain safe domesticmainswater through the identifiedmain supplier, with companyscopedtap observations informative of typical localdelivery and continuingthroughcutoff; municipal/functional/serviceboundary and providerexceptions remain reversible. Accept observed operatingfoodchannels and usualdomesticwater/powerretail arrangements as ordinarily obtainable and necessarynetcost not an importantpersistentconstraint at localmedianincome, without assumingfree supplies, privatereserves, charityeligibility oruniformhouseholdquality. Retaintap/lead/asset failures, localmarketfootfall/traderpressure and regionalenergydisruption. Reject necessary spatial, ordinaryquality/access, continuation oraffordability assumptions to null; verifiedimportantpersistentresidualconstraint could40, stronger localquality/alternativesandburden evidence80.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
-        "water": "unresolved",
-        "food": "unresolved",
+        "water": "partial",
+        "food": "partial",
         "energy": "partial",
-        "supply_chain": "context"
+        "supply_chain": "partial"
       }
     },
     {
@@ -624,7 +624,157 @@
   },
   "priorityCompletionReview": {
     "path": "docs/cci-leicester-priority-review.md",
-    "sha256": "cf0f3500047e33a2dc04dcb0776a60dc6aba9ffaed296c9d1e46aba97355494d",
+    "sha256": "121228531fbf659e121c9c7facd84fcde4912bde412c14e88f201b06b1e3ff5a",
     "reviewedOn": "2026-10-13"
+  },
+  "resourcesPriorityReview": {
+    "path": "docs/cci-leicester-resources-priority-review.md",
+    "sha256": "6d37594d8419ba01cea80ca51374a7aec3ccad9d5f1ad77d297eea0de8f217f8",
+    "baseCaseSha256": "6573a54b83f5b6027f1eeb05a319b019dc54e6431b2b641487757bf7e0b62973",
+    "reviewedOn": "2026-10-13",
+    "scope": "RESonly_othersevenexactlyunchanged",
+    "newDiscriminator": "Regulatoractualcompany/taptestsandmunicipal suppliermapping + realfoodretail/marketoperatingrecords, not oldtradingrules/aircargo or duplicatefailedoperatorhomepage",
+    "totals": [
+      {
+        "resScore": 60,
+        "knownWeightedSubtotal": 60,
+        "unresolvedWeight": 0,
+        "range": [60, 60],
+        "conditionalTotal": 60
+      },
+      {
+        "resScore": 40,
+        "knownWeightedSubtotal": 58,
+        "unresolvedWeight": 0,
+        "range": [58, 58],
+        "conditionalTotal": 58
+      },
+      {
+        "resScore": 80,
+        "knownWeightedSubtotal": 62,
+        "unresolvedWeight": 0,
+        "range": [62, 62],
+        "conditionalTotal": 62
+      },
+      {
+        "resScore": null,
+        "knownWeightedSubtotal": 54,
+        "unresolvedWeight": 0.1,
+        "range": [54, 64],
+        "conditionalTotal": null,
+        "conditionalAlternatives": []
+      }
+    ],
+    "sourceSnapshots": [
+      {
+        "id": "S01",
+        "file": "supplier-scope2025.pdf",
+        "url": "https://www.leicester.gov.uk/sites/default/files/2026-02/exam-116-habitats-regulation-assessment-2025-of-mms-may-2025-final_0.pdf",
+        "bytes": 2411495,
+        "sha256": "5e346e2c5313275322e52f29bdca102455d354c0ca7193bcd813de534e32ae0d",
+        "retrievedAt": "2026-10-13T09:51:26.757017+00:00",
+        "reviewedOn": "2026-10-13",
+        "publishedOnOrVersion": "May2025 modifications；originalFeb2022/reviewSep2022；URLFeb2026非首发",
+        "observationScope": "City2.16/StrategicGrid供水身份；非实际水质，physical9/printed7目视",
+        "sourceKind": "new_original_response_normal_TLS",
+        "httpDiagnostic": "200\tapplication/pdf\thttps://www.leicester.gov.uk/sites/default/files/2026-02/exam-116-habitats-regulation-assessment-2025-of-mms-may-2025-final_0.pdf"
+      },
+      {
+        "id": "S02",
+        "file": "dwi2025-tests.html",
+        "url": "https://www.dwi.gov.uk/what-we-do/annual-report/drinking-water-2025/drinking-water-2025-summary-of-the-chief-inspectors-report-for-drinking-water-in-england/annex-a-number-of-tests-carried-out-by-companies/",
+        "bytes": 80868,
+        "sha256": "0039a7a8b6077ff2ed008a878226d689578b0d87e079a538d666b0e3faa15ea0",
+        "retrievedAt": "2026-10-13",
+        "reviewedOn": "2026-10-13",
+        "publishedOnOrVersion": "所属DrinkingWater2025原摘要July6 2026；附件未独核更新日",
+        "observationScope": "2025Table21 SVT分层compliance tests，括号厂/库/zone数量",
+        "sourceKind": "new_original_response_normal_TLS",
+        "httpDiagnostic": "HTTPcode notcaptured; originalHTMLtitle/tableidentityreviewed"
+      },
+      {
+        "id": "S03",
+        "file": "dwi2025-compliance.html",
+        "url": "https://www.dwi.gov.uk/what-we-do/annual-report/drinking-water-2025/drinking-water-2025-summary-of-the-chief-inspectors-report-for-drinking-water-in-england/annex-b-compliance-with-standards/",
+        "bytes": 108594,
+        "sha256": "121f1d9d2e638e00a43fb19648445b79da0700d05b901e6f585b993df0664109",
+        "retrievedAt": "2026-10-13",
+        "reviewedOn": "2026-10-13",
+        "publishedOnOrVersion": "同2025原年报附件，未独核更新日",
+        "observationScope": "2025Table25 SVT末端E.coli3/22843与Enterococci0/1727；失败/化学反证保留，非城市户率",
+        "sourceKind": "new_original_response_normal_TLS",
+        "httpDiagnostic": "HTTPcode notcaptured; originalHTMLtitle/tableidentityreviewed"
+      },
+      {
+        "id": "S04",
+        "file": "food-retail-observation2024.html",
+        "url": "https://news.leicester.gov.uk/news-articles/2024/june/trading-standards-staff-check-prices-are-clear-in-smaller-shops/",
+        "bytes": 97716,
+        "sha256": "a4224b09db5d848aa1b4a1320fdfab221638a35b33e7e1210fa4bfceffd6b4f5",
+        "retrievedAt": "2026-10-13T09:51:26.754285+00:00",
+        "reviewedOn": "2026-10-13",
+        "publishedOnOrVersion": "2024-06-10",
+        "observationScope": "2023Dec19–2024Jan17 city14店现场货架/POS核价；地区195店数不归city",
+        "sourceKind": "new_original_response_normal_TLS",
+        "httpDiagnostic": "200\ttext/html; charset=utf-8\thttps://news.leicester.gov.uk/news-articles/2024/june/trading-standards-staff-check-prices-are-clear-in-smaller-shops/"
+      },
+      {
+        "id": "S05",
+        "file": "market-produce2024.html",
+        "url": "https://news.leicester.gov.uk/news-articles/2024/october/city-mayor-presents-new-proposal-for-leicester-market/",
+        "bytes": 98342,
+        "sha256": "405e7d78a62af2299949c859bdcd8a685bd4494017f7f0b58b3aba158914d6be",
+        "retrievedAt": "2026-10-13T09:51:26.756789+00:00",
+        "reviewedOn": "2026-10-13",
+        "publishedOnOrVersion": "2024-10-28",
+        "observationScope": "当时已占用摊约2/3卖食物；新48摊/建设与完工是未来计划",
+        "sourceKind": "new_original_response_normal_TLS",
+        "httpDiagnostic": "200\ttext/html; charset=utf-8\thttps://news.leicester.gov.uk/news-articles/2024/october/city-mayor-presents-new-proposal-for-leicester-market/"
+      },
+      {
+        "id": "S06",
+        "file": "market-running2026.html",
+        "url": "https://news.leicester.gov.uk/news-articles/2026/july/rents-waived-for-market-traders-as-works-gather-pace/",
+        "bytes": 95736,
+        "sha256": "fc9282ca0d6f99e2fd09ca2c71276c90b634425b43cb5f6d53804561197a3253",
+        "retrievedAt": "2026-10-13T09:51:26.751733+00:00",
+        "reviewedOn": "2026-10-13",
+        "publishedOnOrVersion": "2026-07-08",
+        "observationScope": "当天市长/商户代表现场工作，outdoor+FoodHall目前营业；施工伤客流/生存，July13租金豁免为宣布安排非已审核发放",
+        "sourceKind": "new_original_response_normal_TLS",
+        "httpDiagnostic": "200\ttext/html; charset=utf-8\thttps://news.leicester.gov.uk/news-articles/2026/july/rents-waived-for-market-traders-as-works-gather-pace/"
+      }
+    ],
+    "referenceBoundaryCheck": {
+      "candidateId": 4925,
+      "name": "Leicester",
+      "allRecords": 9031,
+      "sourceFile": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+      "sourceBytes": 9932800,
+      "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+      "targetGeometrySha256": "9f077343c8b1bd0cbe2fa41fc4f35db2ad4212ad0355c58155001ba88985248c",
+      "bounds": [-102000.0, 6127000.0, -59000.0, 6166000.0],
+      "referencePoints": [
+        {
+          "label": "Leicester Market/Corn Exchange area analyst approximate, not fullmarket footprint",
+          "longitude": -1.132,
+          "latitude": 52.6336,
+          "coordinateAuthority": "analyst_approximate",
+          "pointMatches": [4925],
+          "buffer1kmMatches": [4925],
+          "targetContainsWhole1kmBuffer": true
+        },
+        {
+          "label": "Green Dragon Square area analyst approximate, not actualdelivery coordinates",
+          "longitude": -1.1327,
+          "latitude": 52.6327,
+          "coordinateAuthority": "analyst_approximate",
+          "pointMatches": [4925],
+          "buffer1kmMatches": [4925],
+          "targetContainsWhole1kmBuffer": true
+        }
+      ],
+      "scope": "point/1km buffer only; no administrative/trader/shop/customer footprint or SevernTrententire supplyzone coverage inferred"
+    }
   }
 }
