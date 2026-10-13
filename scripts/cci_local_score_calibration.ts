@@ -1291,6 +1291,16 @@ for (const [dimension, lower, upper] of [
 }
 assert.deepEqual(total({ ...wuhan, ISR: 40 }), { center: null, lower: 51, upper: 61 });
 const wuhanCase = realCases[22];
+assert.equal(
+  wuhanCase.priorityCompletionReview.sha256,
+  digest(wuhanCase.priorityCompletionReview.path)
+);
+for (const [lon, center] of [
+  [40, 58],
+  [60, 60],
+  [80, 62],
+] as const)
+  assert.equal(total({ ...wuhan, LON: lon }).center, center);
 for (const review of wuhanCase.focusedReviews)
   assert.equal(review.sha256, digest(`docs/${review.path}`));
 assert.equal(
@@ -1354,7 +1364,7 @@ assert.equal(
   wuhanCase.mobilityChecks.satelliteEmergencyVoiceProvesInternationalDataContinuity,
   false
 );
-assert.equal(wuhanCase.sourceSnapshots.length, 96);
+assert.equal(wuhanCase.sourceSnapshots.length, 99);
 assert.equal(wuhanCase.webOnlySourceReviews.length, 3);
 assert(
   wuhanCase.webOnlySourceReviews.every(

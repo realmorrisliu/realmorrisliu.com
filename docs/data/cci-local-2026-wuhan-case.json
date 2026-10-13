@@ -79,8 +79,8 @@
     {
       "id": "LON",
       "score": null,
-      "rationale": "Shared disease-specific randomized human evidence, Chinese approval and261-patient national SAIL observations establish scoped scientific/regulatory context, not Wuhan treatment counts. The original2024local-infusion link returned a captcha; secondary reporting/prescription does not become verified hospital administration. Formal2026Fuhankang inpatient and listed-drug terms and human-assisted claims are reviewed, but local actual current mode, ordinary enrollment/net costs and monitoring remain unconnected.",
-      "assumption": "No anchor while credible actual local administration and current normally eligible resident drug-mode/payment/appropriate-monitoring connections are unresolved. Unlisted antibodies do not imply no inpatient benefit or universal impossibility, and researcher channel failure is not negative transparency evidence. A supported usually affordable compliant delivered disease pathway could60; actual important residual access barriers after mitigation40; multiple mature accessible pathways80. Approved early-AD treatment is not healthy-person longevity or approval expanded by medium-AD research.",
+      "rationale": "Shared disease-specific randomized human evidence, Chinese approval and261-patient national SAIL observations establish scoped scientific/regulatory context, not Wuhan treatment counts. The original2024local-infusion link returned a captcha; secondary reporting/prescription does not become verified hospital administration. Formal2026Fuhankang inpatient and listed-drug terms and human-assisted claims are reviewed, but local actual current mode, ordinary enrollment/net costs and monitoring remain unconnected. The 2026-10-13 priority review verified an undated Tongji two-antibody service statement without dated actual infusions, and a national 1042-person cohort with 172 discontinuations, 40 attributed to cost. Neither settles current local treatment/payment/monitoring; national outcomes are not Wuhan rates.",
+      "assumption": "No anchor while credible actual local administration and current normally eligible resident drug-mode/payment/appropriate-monitoring connections are unresolved. Unlisted antibodies do not imply no inpatient benefit or universal impossibility, and researcher channel failure is not negative transparency evidence. A supported usually affordable compliant delivered disease pathway could60; actual important residual access barriers after mitigation40; multiple mature accessible pathways80. Approved early-AD treatment is not healthy-person longevity or approval expanded by medium-AD research. Conditional LON40/60/80 would yield total58/60/62 only after accepting the explicitly documented local implementation, representativeness, continuity and residual-access assumptions. Supplementary insurance pre-existing-condition percentages require actual diagnosis and underwriting applicability, not automatic application to every AD patient.",
       "conditionalAlternatives": [],
       "subpillars": {
         "translation": "partial",
@@ -1090,6 +1090,30 @@
       "sha256": "0f74dc7bbac864ddc64c6e940f5c4b0710a3d1ad61e77eb0dc0085ba61908794",
       "publicationObservationContext": "2026-02-26公布；2025-01-01至12-31，武汉行19／表头直接核",
       "scope": "Reviewed in cci-wuhan-technology-longevity-exit-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, institutional/jurisdictional scope, actual treatment and resident qualification remain distinct. Entry/document/images are not independent corroboration; official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13444352/fullTextXML",
+      "retrievedOn": "2026-10-13",
+      "bytes": 142261,
+      "sha256": "ddf2e8d5165d740bc549212e49e5b3c26625a29dd22bb4cbb38d27bd15b993c0",
+      "publicationObservationContext": "2026-08-06 publication; treatment starts 2024-06-26 to 2025-11-01; national 37-centre cohort, not verified Wuhan outcomes. XML and HTML represent one study.",
+      "scope": "valid_primary_national_context_not_Wuhan_cohort"
+    },
+    {
+      "url": "https://www.tjh.com.cn/channels/193.html",
+      "retrievedOn": "2026-10-13",
+      "bytes": 117183,
+      "sha256": "e8cc75440e02ed1e7333a52916e7e69e1dcaace49f25e85b3186600ef33a0bd2",
+      "publicationObservationContext": "Undated provider service statement; cutoff applicability is conditional.",
+      "scope": "valid_firstparty_undated_service_claim"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13444352/",
+      "retrievedOn": "2026-10-13",
+      "bytes": 254581,
+      "sha256": "221112e4514d436538bc50c6b89f200b9b8a7418720ce7d092fbb2e11315c173",
+      "publicationObservationContext": "2026-08-06 publication; treatment starts 2024-06-26 to 2025-11-01; national 37-centre cohort, not verified Wuhan outcomes. XML and HTML represent one study.",
+      "scope": "valid_primary_national_context_not_Wuhan_cohort"
     }
   ],
   "webOnlySourceReviews": [
@@ -1117,5 +1141,11 @@
       "meaning": "Data bureau2025-09-22 own deployment/activity report, scoped applications not all unique residents or clinical outcomes.",
       "limitation": "Original body read through web; local404/TLS/timeout yields no valid raw identity and no transparency deduction."
     }
-  ]
+  ],
+  "priorityCompletionReview": {
+    "path": "docs/cci-wuhan-priority-completion-review.md",
+    "sha256": "0a8910cded897ae6bf0564b34c69b4b3d6f263b5d2138b46f12662b3c97e4599",
+    "reviewedOn": "2026-10-13",
+    "outcome": "LON unresolved; bounded local-treatment/payment review closed pending new discriminating evidence."
+  }
 }
