@@ -9,7 +9,7 @@ readingTime: 8
 
 A streaming chat endpoint needs to do more than print tokens. It needs to tell the caller when an answer failed, keep the final usage information, and release its upstream connection when the caller leaves.
 
-This tutorial adds `POST /chat/stream` to the [openrouter-rs Axum gateway example](https://github.com/realmorrisliu/openrouter-rs/blob/dde7c59c8bdc2d3d0036de484f341c648dc54cee/examples/axum_chat_gateway.rs). The existing `POST /chat` JSON endpoint still works. Both use one `OpenRouterClient` stored in Axum application state.
+This tutorial adds `POST /chat/stream` to the [openrouter-rs Axum gateway example](https://github.com/realmorrisliu/openrouter-rs/blob/6b251fcef56eea6ef1f3d031c5a06e8778865bd4/examples/axum_chat_gateway.rs). The existing `POST /chat` JSON endpoint still works. Both use one `OpenRouterClient` stored in Axum application state.
 
 The complete example includes tests. The snippets below explain that file; they are not a separate application you need to assemble.
 
@@ -24,7 +24,7 @@ Check out the exact version used by this tutorial:
 ```bash
 git clone https://github.com/realmorrisliu/openrouter-rs.git
 cd openrouter-rs
-git checkout dde7c59c8bdc2d3d0036de484f341c648dc54cee
+git checkout 6b251fcef56eea6ef1f3d031c5a06e8778865bd4
 cargo test --locked --example axum_chat_gateway
 ```
 
@@ -65,19 +65,33 @@ For a browser client, use `fetch` with a POST body and an SSE parser that handle
 The gateway uses the domain-oriented SDK interface:
 
 ```rust
-let request = ChatCompletionRequest::builder()
+let mut builder = ChatCompletionRequest::builder();
+if let Some(reasoning) = payload.reasoning {
+    builder.reasoning(reasoning);
+} else if model == TUTORIAL_MODEL {
+    builder.reasoning_effort(Effort::None);
+}
+let request = builder
     .model(model)
     .messages(messages)
     .max_tokens(payload.max_tokens)
-    .reasoning_effort(Effort::None)
     .build()?;
 ```
 
 That builder belongs inside the handler's error mapping, as shown in the complete example. `client.chat().stream(&request)` enables streaming and returns an asynchronous stream of parsed completion chunks. There is no need to parse OpenRouter's SSE comments yourself.
 
-For this short chat demo, `.reasoning_effort(Effort::None)` sends `reasoning: {"effort":"none"}`. The first live DeepSeek test without it spent all 128 completion tokens on reasoning and returned empty visible content with `finish_reason: "length"`; the smoke check correctly failed. A model change can require a request-policy change, not just a different model string. Hiding reasoning with `exclude: true` would not solve this: it still consumes the token budget. See OpenRouter's [reasoning-token guidance](https://openrouter.ai/docs/guides/best-practices/reasoning-tokens).
+If the caller omits `reasoning` and the effective model is the tutorial’s DeepSeek V4.1 Flash model, `.reasoning_effort(Effort::None)` sends `reasoning: {"effort":"none"}`. The first live DeepSeek test without it spent all 128 completion tokens on reasoning and returned empty visible content with `finish_reason: "length"`; the smoke check correctly failed. A model change can require a request-policy change, not just a different model string. Hiding reasoning with `exclude: true` would not solve this: it still consumes the token budget. See OpenRouter's [reasoning-token guidance](https://openrouter.ai/docs/guides/best-practices/reasoning-tokens).
 
-This example requests non-reasoning chat on both routes. If you adapt it to a model that requires reasoning, change that setting and provide an appropriate token budget, then rerun the live check.
+Both `/chat` and `/chat/stream` accept an optional `reasoning` object using the SDK’s `ReasoningConfig` fields. An explicit configuration takes precedence over the tutorial default. For example, this request enables low-effort reasoning with a larger output budget:
+
+```bash
+curl --no-buffer --fail-with-body --max-time 75 \
+  http://127.0.0.1:3000/chat/stream \
+  -H 'content-type: application/json' \
+  -d '{"prompt":"Write three short sentences about Rust.","max_tokens":2048,"reasoning":{"effort":"low"}}'
+```
+
+Changing `model` in the request, or `OPENROUTER_MODEL` on the server, to another model leaves reasoning unspecified unless the caller supplies it. An explicit `"reasoning": {}` also leaves the provider’s reasoning defaults in control; omission or `null` selects the gateway’s model-specific default. Use a configuration supported by the selected model and provide enough tokens for reasoning plus visible output.
 
 `AppState` holds the reusable client, default model, and request deadline duration. The client uses a shared `reqwest::Client` with a ten-second connection timeout. The example applies a sixty-second total upstream deadline, including opening the stream and reading it.
 
@@ -128,7 +142,7 @@ Errors sent to the caller are deliberately generic. Forwarding raw provider erro
 
 ## Verify the path you will actually use
 
-The six tests in the example exercise the real local HTTP path, with a controlled upstream server:
+The example tests exercise real local HTTP paths and the shared request builder:
 
 1. The caller receives a chunk while the upstream is deliberately paused, proving that the response is not buffered until completion. A final usage chunk is retained.
 2. Upstream HTTP failures are sanitized on both routes.
@@ -136,6 +150,8 @@ The six tests in the example exercise the real local HTTP path, with a controlle
 4. Invalid and oversized input is rejected before an upstream call.
 5. Header and body stalls hit their deadlines.
 6. Dropping the downstream response drops the upstream response body.
+7. Explicit reasoning settings reach both routes unchanged.
+8. Request-model and server-default overrides preserve the selected model’s reasoning policy.
 
 To verify against your own OpenRouter account, stop the running gateway, then run:
 
@@ -144,20 +160,22 @@ cargo build --locked --example axum_chat_gateway
 python3 scripts/smoke_axum_gateway.py
 ```
 
-This needs Python 3, curl, a free port 3000, and the exported API key. The script starts the gateway, runs the documented curl request, and requires multiple JSON chunks, nonempty generated text, one final `done`, no `error`, and a final usage object with nonnegative integer `prompt_tokens`, `completion_tokens`, and `total_tokens`. Cost remains optional. Missing credentials fail the check rather than silently skipping it. It saves the actual SSE transcript and summary under `axum-smoke-artifacts/`.
+This needs Python 3, curl, a free port 3000, and the exported API key. The script starts the gateway and runs both documented curl requests: the default 128-token chat and an explicit low-effort reasoning request with 2,048 tokens. Each requires multiple JSON chunks, nonempty generated text, one final `done`, no `error`, and a final usage object with nonnegative integer `prompt_tokens`, `completion_tokens`, and `total_tokens`. Cost remains optional. Missing credentials fail the check rather than silently skipping it. It saves the actual SSE transcripts and summaries (`stream.txt`/`result.json` and `reasoning-stream.txt`/`reasoning-result.json`) under `axum-smoke-artifacts/`.
 
-On October 13, 2026, the [live verification run](https://github.com/realmorrisliu/openrouter-rs/actions/runs/38343741881) exercised that same curl → Axum → OpenRouter path with `deepseek/deepseek-v4.1-flash`. It received **26 chunks**, generated text, final usage (11 prompt tokens and 53 completion tokens), and one `done`, with no error events. The generation ID was `gen-1791863585-nNPTd421Iq7csghCY3ua`.
+On October 13, 2026, the [live verification run](https://github.com/realmorrisliu/openrouter-rs/actions/runs/38344606219) exercised that same curl → Axum → OpenRouter path with `deepseek/deepseek-v4.1-flash`. It received **22 chunks**, generated text, final usage (11 prompt tokens and 46 completion tokens), and one `done`, with no error events. The generation ID was `gen-1791864231-YgY6GZWpoMqVAFb7J5LZ`.
 
-The returned text began: “1. Rust is a systems programming language that guarantees memory safety without needing a garbage collector.” The reported optional cost was `0.0000404415`. Treat that as a value from this one response, not a pricing quote; preserve missing cost as unknown rather than zero. The run retains the full SSE transcript as a downloadable artifact for 30 days. Model availability, account permissions, latency, and pricing can change.
+The returned text began: “Rust is a systems programming language focused on safety, speed, and concurrency.” The reported optional cost was `0.000035244`. Treat that as a value from this one response, not a pricing quote; preserve missing cost as unknown rather than zero. The run retains the full SSE transcript as a downloadable artifact for 30 days. Model availability, account permissions, latency, and pricing can change.
+
+The same run also verified the explicit `reasoning: {"effort":"low"}` request above: **45 chunks**, nonempty text, final usage (37 prompt tokens and 154 completion tokens), and one `done`, with no error events. Its generation ID was `gen-1791864232-YtGzz54d16JMKwL0G7Gy`.
 
 The [original GPT-4o mini run](https://github.com/realmorrisliu/openrouter-rs/actions/runs/38342367463) remains a separate historical verification; the run above verifies the current DeepSeek example.
 
-The example also compiles and passes its six tests in a separate project using the **published** `openrouter-rs = "=0.19.0"` crate, with Axum 0.8. It does not depend on an unreleased SDK method.
+The example also compiles and passes its eight tests in a separate project using the **published** `openrouter-rs = "=0.19.0"` crate, with Axum 0.8. It does not depend on an unreleased SDK method.
 
 ## Take it into your application
 
 The example stays on loopback and has no gateway authentication. Before exposing it publicly, add your application's authentication, rate/concurrency limits, and a model policy. If you use a reverse proxy, verify that it passes SSE incrementally; this tutorial does not test your proxy configuration.
 
-The core pieces are already here: shared client state, bounded input and generation, a total deadline, incremental forwarding, explicit failure events, and preserving final usage. Start with the [complete tested source](https://github.com/realmorrisliu/openrouter-rs/blob/dde7c59c8bdc2d3d0036de484f341c648dc54cee/examples/axum_chat_gateway.rs), then adapt those limits to your application.
+The core pieces are already here: shared client state, bounded input and generation, a total deadline, incremental forwarding, explicit failure events, and preserving final usage. Start with the [complete tested source](https://github.com/realmorrisliu/openrouter-rs/blob/6b251fcef56eea6ef1f3d031c5a06e8778865bd4/examples/axum_chat_gateway.rs), then adapt those limits to your application.
 
 For other integrations, see the [openrouter-rs application examples](https://github.com/realmorrisliu/openrouter-rs#application-patterns). For background on the request API, I also wrote about [the Rust builder pattern](/thoughts/rust-builder-pattern-evolution).
