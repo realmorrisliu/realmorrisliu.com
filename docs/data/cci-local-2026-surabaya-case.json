@@ -1,0 +1,1023 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "candidateId": 6401,
+  "name": "Surabaya functional area",
+  "retrievedOn": "2026-10-13",
+  "evidenceReview": "cci-local-2026-surabaya-case.md",
+  "expectedConditionalTotal": null,
+  "limitations": "All eight dimensions and 31 subpillars reviewed, not fully measured. Conditional PCS/RES 40 and GSS/ISR/MED/TEC/OPT 60 require explicit core-service to full-6401, ordinary-resident, time-continuation, usual appropriate affordable access and residual-impact assumptions. LON unresolved: 49–59 mathematical domain without a centre or reliable exclusion bound. Missing household retesting does not establish continuous 2024/September contamination; June drainage defects are not measured as still failing in October. Soewandhie queue repair and another hospital radiotherapy access do not prove Soetomo waiting/rounds improved. Directory points, administrative counts and company-wide customers are not full resident coverage. All 9031 candidates and newer competitors remain retained.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 40,
+      "rationale": "Actual pumping, local recession, fire response and housing repair coexist with June 2026 tide backflow, temporarily closed construction channels and damaged retaining walls, plus formal existing-building earthquake vulnerability. Annual average flood improvement and ordinary housing repair are not peak-event protection or seismic acceptance.",
+      "assumption": "Accept scoped physical hazards and protective gaps as materially applicable to 6401 usual residents, with relevant remaining risks still important after actual mitigation through cutoff. This is an explicit continuation/residual-impact inference, not observed October persistence of June construction failures. Effective usually affordable protection making remaining tails minor could 60, strong multi-hazard redundancy 80. Reject geography, continuation, usual reach or residual importance to restore unknown.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": 60,
+      "rationale": "Original 2018 organized attacks and 2025 looting/burning retain harm and investigation limits. Actual enforcement, victim assistance, 2026 port operation and cross-organization rescue support functioning protection and channels. National zero-attack reporting is not local safety; gas explosion was not classified as terrorism.",
+      "assumption": "Accept usually limited direct organized-violence/regional-conflict impact on core ordinary life through cutoff, with scoped response and routes reasonably representative of 6401 and continuing. This is not safety inferred from no matching report. Important persistent coercion, unrelieved damage or route disruption could 40, stronger low-impact and effective protection evidence 80. Reject current impact, locality, reach or continuation to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Actual certificate return, legal aid, targeted assistance, multiple housing-repair actors and real flood/maritime rescue demonstrate functioning channels. Ombudsman first-half 2025 budget freeze, incomplete poverty-class appeals, aid/recovery tails and administrative closure versus actual remedy remain meaningful. Survey satisfaction is not rights restoration.",
+      "assumption": "Accept usually reachable core institutions and delivered mitigation as applicable to 6401 ordinary citizens and continuing, while observed budget/eligibility/recovery failures have not become a broader important persistent unrelieved institutional constraint. This does not establish full correction or offset any harm with volumes. Current important remedy/eligibility/recovery bottlenecks could 40; effective broad correction and alternative organizations 80. Reject locality, continuity, usual reach or residual-impact interpretation to restore unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 40,
+      "rationale": "Finished-water samples satisfy scoped panels, but separate 2024 household sampling found 71/210 E.coli and 96/210 hexavalent-chromium noncompliance; routine 1519 household E.coli tests were all compliant. September 2026 independent raw-water pollution affected customers; actual treatment, free tankers, pipe repair and partial power recovery mitigate without proving whole-household recovery. Water and power shared interruptions remain.",
+      "assumption": "Accept actual household counterevidence and 2026 pollution/common water-power stress as reasonably representative of important 6401 usual necessities, with present safe timely affordable alternatives insufficient to remove material constraints after mitigation. Missing retesting alone does not establish continuing 2024 or September contamination into October. If past defects were materially fixed and usual safe timely affordable substitution relieves current constraints, 60 is defensible, strong independent protection 80. Reject scope, current importance, continuation or inadequate-substitution assumptions to restore unknown; no supported widespread continuing basic collapse for 20.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "Actual cardiac surgery, craniotomy, dialysis and radiotherapy, June 2026 JKN radiotherapy entry, concrete usual coverage/referral paths and real queue repair support necessary care. Soetomo December 2025 waiting and rounds remain below stated targets; other-hospital repair does not prove those metrics corrected. PBI deactivation and income/residency-limited assistance are distinct from all ordinary citizens. Raw mortality/percentage/target-label contradictions are retained.",
+      "assumption": "Use the same conditional standard as Tokyo/Wuhan/Xian: accept scoped actual care and usually active-qualified JKN/referral paths as reasonably representative and continuing for appropriate necessary treatment, with usually bearable copay/noncovered/upfront costs and timely workable alternatives. Unimproved measured process weaknesses are retained; ordinary overall quality/access and residual materiality remain assumptions. Important unrelieved necessary-care/affordability/continuity constraints could 40; broader appropriate care and affordable effective backup 80. Reject locality, continuation, normal eligibility/quality/affordability or residual impact to restore unknown. Do not add perfect median bills, all quality denominators or a current universal stress test as unique prerequisites.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "Original 2017 Soetomo eight-person repeated intraventricular autologous BM-MSC implementation was nonrandomized without concurrent control; table/text/sample and visit-label discrepancies remain. The 2025 speech is not an independent efficacy result. BPOM October 2025 local inspection describes research-based treatment and future CPOB assistance, not demonstrated approval of the same current stroke protocol. Usual eligible-resident mode, net payment and continuing monitoring are unresolved.",
+      "assumption": "No anchor until a credible disease-specific human-result and current same-protocol regulatory/actual-delivery/ordinary-qualification/payment/appropriate-monitoring connection can support a reversible interpretation. Small study, missing perfect bills or research mode alone do not imply 40, illegality or no access; current important unresolved translation/access barriers after available mitigation could 40, a supported appropriate normally affordable delivered pathway 60, multiple mature accessible paths 80. Historic permission, production-quality certification and general JKN care do not presume current specific experimental coverage.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "unresolved"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "ITS actual campus production/sales and UNAIR actual downstream products/industry connections combine with locally used mobile facilities, an actual complaint-user survey and delivered small-business assistance. Commercialization continuity/licensing challenges and high-importance low-performance app speed/reliability/procedure/outcome understanding remain alongside mitigation. Planned 200 BTS, coming-soon water and future marketing targets are not delivered; a small negative gap or missing target alone does not cap scores.",
+      "assumption": "Accept scoped multiple producer/industry connections and actual use/help as reasonably representative of 6401 core production and ordinary diffusion through cutoff, while commercialization and user-service constraints remain important after mitigation. Strong multi-actor capability and actual help making residual bottlenecks minor could 80; important broken production/use links could 40. Reject locality, continuation, usual reach or residual importance to restore unknown. No independent universal node stress test or instantly interchangeable products prerequisite; unknown high-tier facts alone do not establish 60.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Actual Juanda routes and port use, 284 January 2026 weekend passport applications, concrete Indonesian national-visa/material requirements, lawful bank remittance and operating global backbone/retail links provide executable choices. Applications are not issued passports, national-visa processing has cross-city cost/time, FX documentation thresholds are not all-transfer caps, company totals and peak local mobile speeds are not household international continuity.",
+      "assumption": "Accept scoped operating air/sea/legal/asset/network paths as reasonably applicable to 6401 core ordinary purposes and continuing, with target citizens able to satisfy applicable lawful qualifications/materials and usually bear tickets, cross-city administration, bank and usable household connection/alternative costs. Reasonable available alternatives avoid important overall blockage while documented procedural/service weaknesses remain. Current important constraints inadequately relieved could 40; sufficiently supported effective affordable independent alternatives 80. Reject time, geographic adaptation, ordinary lawful material eligibility, affordability or actual network-substitution assumptions to restore unknown; legal or cable existence alone is insufficient.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "context",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "researchPriority": {
+    "basis": "all9031_record_associations_first_unreviewed_not_performance",
+    "source": "cci-openalex-efua-record-presence.csv",
+    "sourceSha256": "cb777baaa3ec09fe78a2c07ac8a260d0fb8ad4b8b95996eea0a5367f0e11f013",
+    "field": "article__xpac_false__retracted_false",
+    "recordAssociations": 53194,
+    "rule": "All 9031 sorted by descending qualifying core nonretracted article-ID directory associations then numeric efua_id; skip 24 registered reviews only to sequence research, not performance, eligibility or exclusion."
+  },
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "referencePoints": [
+      {
+        "label": "Abdul Rachman Saleh Airport",
+        "ident": "WARA",
+        "sourceId": "26785",
+        "longitude": 112.714233,
+        "latitude": -7.929099,
+        "fuaMatches": [6401],
+        "source": "OurAirports frozen2026-10-10",
+        "sourceSha256": "79dd7db7228a12199839aa6acbc2dc1f1e50a4604f14d7f60dceb6983de91906",
+        "scope": "Directory point not entire airport footprint or actual historical flights/resident access."
+      },
+      {
+        "label": "Juanda International Airport",
+        "ident": "WARR",
+        "sourceId": "26789",
+        "longitude": 112.787003,
+        "latitude": -7.37983,
+        "fuaMatches": [6401],
+        "source": "OurAirports frozen2026-10-10",
+        "sourceSha256": "79dd7db7228a12199839aa6acbc2dc1f1e50a4604f14d7f60dceb6983de91906",
+        "scope": "Directory point not entire airport footprint or actual historical flights/resident access."
+      }
+    ]
+  },
+  "sharedLegalPath": {
+    "source": "cci-legal-mobility-rules.json",
+    "sourceSha256": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
+    "rule": "indonesian_citizen_skilled_work_national_visa_germany",
+    "meaning": "Normally pre-entry national visa and qualifying academic skilled-worker purpose, distinct from section41(1) convenience; no automatic ordinary-resident qualification, visa, title, job, affordability or OPT score."
+  },
+  "securityChecks": {
+    "floodMeanMinutes2025": 18.49,
+    "floodMeanCm2025": 10.01,
+    "floodReportedAreaHa2025": 333.5,
+    "floodAreaHa2024": 378.17,
+    "housingRepairsCentral": 185,
+    "housingRepairsCity": 2083,
+    "housingRepairsCsr": 367,
+    "housingRepairsTotal": 2635,
+    "csrDetailedRowsSum": 368,
+    "csrDetailedRowsReconcile": false,
+    "certificateComplaints": 36,
+    "certificateResolved": 13,
+    "certificatePending": 13,
+    "certificateVerification": 7,
+    "certificateCategoriesReconcile": false,
+    "povertyClassAppeals2026": 3283,
+    "appealsAreVerifiedCorrections": false,
+    "ombudsmanBudget2025FirstHalfFrozen": true,
+    "ombudsmanBudgetRestoredFractionOfOriginal": 0.42
+  },
+  "resourceChecks": {
+    "householdSkamrtSamples2024": 210,
+    "householdSkamrtEcoliCompliant": 139,
+    "householdSkamrtEcoliNoncompliant": 71,
+    "householdSkamrtChromiumNoncompliant": 96,
+    "routineHouseholdEcoliSamples": 1519,
+    "routineHouseholdEcoliCompliant": 1519,
+    "mixedEcoliSamples": 1828,
+    "finishedWaterSamples2026": 6,
+    "finishedWaterIsHouseholdRetest": false,
+    "sourceTurbidityTableReconciled": false,
+    "sourceAluminiumTableReconciled": false,
+    "missingRetestProvesContinuousPollution": false
+  },
+  "clinicalChecks": {
+    "soetomoDec2025WaitingPercent": 55.47,
+    "soetomoDec2025TimelyRoundsPercent": 71.27,
+    "otherHospitalRepairProvesSoetomoImproved": false,
+    "pbiDeactivatedRecords2026": 45000,
+    "localLowIncomeAidIsAllMedianFuaCoverage": false,
+    "kemenkesCardiacSurgeries": 84,
+    "kemenkesCraniotomies": 173,
+    "kemenkesDialysisPatients": 665,
+    "kemenkesDialysisProcedures": 3695,
+    "kemenkesRadiotherapyProcedures": 1461,
+    "kemenkesRadiotherapyJknFrom": "2026-06-01",
+    "allReportedRadiotherapyProceduresAreJkn": false,
+    "bdhQualityIndicatorsTotal": 99,
+    "bdhQualityIndicatorsMeetingTarget": 92,
+    "bdhReportedPercent": 95.96,
+    "bdhReportedPercentReconciled": false,
+    "dinkesNdrPerMille": 22.2,
+    "dinkesNdrTargetPerMille": 25,
+    "dinkesNdrLabelReconciled": false,
+    "cashPriceIsUsualJknNetBill": false
+  },
+  "technologyChecks": {
+    "pharmacyDownstreamProducts2025": 7,
+    "pharmacyDownstreamTarget2025": 8,
+    "wargakuActiveComplaintUsers2024to2025": 4745,
+    "wargakuSurveyRespondents2025": 400,
+    "wargakuSurveyKotaDistricts": 31,
+    "wargakuIkm2025": 86.56,
+    "ikmIsRightsCorrectionRate": false,
+    "surveyIsAllFuaResidents": false,
+    "local5gActualBtsMoreThan": 90,
+    "local5gPlannedBtsMoreThan": 200,
+    "plannedBtsAreDelivered": false,
+    "msmesHelped2025": 5250,
+    "msmesTarget2026": 5250,
+    "target2026IsDelivered": false
+  },
+  "longevityChecks": {
+    "originalHumanPatients": 8,
+    "originalStudyRandomized": false,
+    "originalStudyConcurrentControl": false,
+    "historicalDeliveryHospitalNamed": true,
+    "humanPdfIsSimilarityReportWithOriginalScans": true,
+    "sourceSampleTextConflictsReconciled": false,
+    "visitTimeOriginReconciled": false,
+    "bpomLocalObservationOn": "2025-10-22",
+    "bpomLocalPublicationOn": "2025-10-24",
+    "localServiceDescribedAsResearch": true,
+    "futureCpobSupportIsCompletedCertification": false,
+    "currentSpecificProtocolOrdinaryNetCostAndMonitoringVerified": false
+  },
+  "mobilityChecks": {
+    "passportApplicationsOfficeDays": [32, 63],
+    "passportApplicationsMallDays": [125, 64],
+    "passportApplicationsTotal": 284,
+    "applicationsAreIssuedPassports": false,
+    "estimatedWorkingDaysIsVerifiedDelivery": false,
+    "juandaRoutes2025": 36,
+    "juandaDomesticRoutes": 26,
+    "juandaInternationalRoutes": 10,
+    "fxNoUnderlyingUsdThreshold": 10000,
+    "fxThresholdIsAllTransferCap": false,
+    "moraCompanyWideRetailCustomers": 296305,
+    "moraCustomersAreSurabayaResidents": false,
+    "futureB3jsIsCurrentRedundancy": false,
+    "jakartaCgkOutageIsSurabayaObservation": false
+  },
+  "focusedReviews": [
+    {
+      "path": "cci-surabaya-protection-institutions-review.md",
+      "sha256": "9ad338af271f25dded93e1a623e32e66978fed214979ebbebca0c623be313170"
+    },
+    {
+      "path": "cci-surabaya-resources-medicine-review.md",
+      "sha256": "4eb3da0f33b3632aa2a075f07997e08429463c87a72378c0a7e693466ecde234"
+    },
+    {
+      "path": "cci-surabaya-technology-review.md",
+      "sha256": "e004a49ca7cbc9c8089ca480536daf27e491fadd1343cd7ac3eb19c607f2ef57"
+    },
+    {
+      "path": "cci-surabaya-longevity-review.md",
+      "sha256": "4ce312f2d1c8bf8f7db673efd089e43561468210a4720114797b7dea12a7ed14"
+    },
+    {
+      "path": "cci-surabaya-exit-review.md",
+      "sha256": "748b4898de71f49833514233a389a272ccf2b442f93c141fef92e50396bcd80d"
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "url": "https://mediacenter.surabaya.go.id/web/content/1142689?unique=3e38757c9cce7929b902164574e7106be417ad88",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 6204808,
+      "sha256": "7cafe5ebfc2840a12a6c44a89a0d660c5406726e3cf244db81f546ccad93e0b9",
+      "publicationObservationContext": "市信息中心2025/11实际用户调查106页；母体2024/7—2025/7、样本400；实际读取2026/10/13；父已下载原件、本轮精确复制复用，不计第二研究；生效不适用",
+      "scope": "Reviewed in cci-surabaya-protection-institutions-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://ppid.surabaya.go.id/web/content/14138?unique=a14c7a0e15578f704ae6459720ba7f7e1857841b",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 15253182,
+      "sha256": "dee891f3750547f962c6e153477824964fa142954e1403cd0899df077702814c",
+      "publicationObservationContext": "市长LKPJ原责任报告756页；前言署2026/3，PDF修改3/30；发布具体日未另核；观察2025财政年度与2026安排分开；无生效日；读取2026/10/13",
+      "scope": "Reviewed in cci-surabaya-protection-institutions-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://jdih.surabaya.go.id/uploads/peraturan/2024perwali3578119.pdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 25694785,
+      "sha256": "b275df2dcb6f95b2203cb8302dad7b6104b0d3a53c07891968957807af528d2a",
+      "publicationObservationContext": "市长法规119/2024及风险附件143页；成文/公布/生效2024/12/24；观察2023站点、更早地质及2024—2028风险研究；PDF保存2025/1/17不代生效；读取2026/10/13",
+      "scope": "Reviewed in cci-surabaya-protection-institutions-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://ombudsman.go.id/produk/lihat/1082/SUB_LK_5a61b3435fe7d_file_20260618_123155.pdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 1229078,
+      "sha256": "f70829c77a822f61c6be05c8eaaf3983fabf33973d9d6adcbdc1094889456a06",
+      "publicationObservationContext": "Ombudsman东爪哇当事年报35页；封面2025、署2026/2/2，链接文件6/18；具体刊日未核；观察2025投诉/预算；前言残留2024；无生效日；读取2026/10/13",
+      "scope": "Reviewed in cci-surabaya-protection-institutions-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://rsudbdh.surabaya.go.id/tips-tetap-sehat-di-hari-kemerdekaan-ala-pkrs-rsud-bhakti-dharma-husada/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 87491,
+      "sha256": "ffcc751a2370a2eb47bca05fa7c5cdf0e3fb58e2848eab684ad0cbe906421b6e",
+      "publicationObservationContext": "市属BDH医院PKRS主任原指导；发布2026/8/24 16:01，正文仍以8/17活动未来时表述；是公众健康指导、非实际热损害结果；无生效日；读取2026/10/13",
+      "scope": "Reviewed in cci-surabaya-protection-institutions-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://pelindo.co.id/media/844/arus-balik-melalui-pelindo-lancar-h4-tembus-15-juta-penumpang",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 39152,
+      "sha256": "97735b566b0e100a6a0dc905e32db009c733d93d525d372bc3bdc48f78d3f89b",
+      "publicationObservationContext": "Pelindo当事原运行发布；发布/观察2026/3/26，开斋节至H+4累计、起始日未另核；无生效日；读取2026/10/13",
+      "scope": "Reviewed in cci-surabaya-protection-institutions-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://surabaya.basarnas.go.id/berita/tim-sar-gabungan-evakuasi-penyintas-kmp-mutiara-sentosa-ii-ke-darat",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 213454,
+      "sha256": "7aa880140d28c0afdab6abf058dd777dfd007c701522701f629dc9e7552763a5",
+      "publicationObservationContext": "Surabaya Basarnas搜救当事原记录；发布2026/8/3，观察当日上午至持续搜救；非最终船载分母/赔付；无生效日；读取2026/10/13",
+      "scope": "Reviewed in cci-surabaya-protection-institutions-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://setkab.go.id/ledakan-di-3-gereja-di-surabaya-warga-diajak-bersatulawanterorisme/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 58555,
+      "sha256": "94d67f6f74298296b43b9951406df4f027a357023d019a82e14463566fa9d347",
+      "publicationObservationContext": "机构原HTML；发布2018-05-13；观察2018-05-13；生效不适用；原身份详正文；读取2026/10/13",
+      "scope": "Reviewed in cci-surabaya-protection-institutions-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://setkab.go.id/74-orang-ditangkap-pasca-bom-surabaya-kapolri-perlu-komprehensif-bendung-ideologi-terorisme/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 61268,
+      "sha256": "be5f43c6664202d5f40cfc794702687dd8d849bc769fba301b3bb9256bc3de59",
+      "publicationObservationContext": "机构原HTML；发布2018-05-22；观察2018-05-13/21；生效不适用；原身份详正文；读取2026/10/13",
+      "scope": "Reviewed in cci-surabaya-protection-institutions-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://polpp.surabaya.go.id/berita/wali-kota-risma-prihatin-dan-berikan-santunan-kepada-keluarga-korban.html",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 18951,
+      "sha256": "b4c131a2b448212b16c390aa8a830e0192ebd8a866a4a02de4b17a712f55c29e",
+      "publicationObservationContext": "机构原HTML；发布2018-05-14；观察2018-05；生效不适用；原身份详正文；读取2026/10/13",
+      "scope": "Reviewed in cci-surabaya-protection-institutions-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://tribratanews.polri.go.id/blog/nasional-3/polisi-ungkap-ratusan-pelaku-aksi-anarkis-di-jawa-timur-kerugian-capai-rp-256-miliar-92526",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 56861,
+      "sha256": "dccef9ab5e8c80f056c8a14588dabddb5bc23e184e3af3b9dcf70cb362ba274a",
+      "publicationObservationContext": "机构原HTML；发布2025-09-19；观察2025-08-29/09-18；生效不适用；原身份详正文；读取2026/10/13",
+      "scope": "Reviewed in cci-surabaya-protection-institutions-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://tribratanews.polri.go.id/blog/nasional-3/ledakan-ruko-san-antonio-surabaya-polisi-pastikan-tak-ada-bom-106881",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 53286,
+      "sha256": "4ae25526a4bd8eb643ea4ce983fe388aaef33384ccc1c601770852ec3553ce5a",
+      "publicationObservationContext": "机构原HTML；发布2026-10-06；观察2026-10-06；生效不适用；原身份详正文；警方初步调查发布、注明ANTARA，不是终审；读取2026/10/13",
+      "scope": "Reviewed in cci-surabaya-protection-institutions-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.tnial.mil.id/berita/83788/LATMA-CARAT-2025-DI-KOARMADA-II%2C-PERERAT-SINERGI-INDONESIA%E2%80%93AS-LEWAT-PENINGKATAN-PROFESIONALISME-PRAJURIT/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 23675,
+      "sha256": "9ac086eced53c4cf4ab3034b21599025c8c07869f68ca18a8dff2ee4b713f349",
+      "publicationObservationContext": "机构原HTML；发布2025-06-30；观察2025-06-23/26；生效不适用；原身份详正文；读取2026/10/13",
+      "scope": "Reviewed in cci-surabaya-protection-institutions-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://inp.polri.go.id/artikel/densus-88-maintains-zero-terrorist-attack-status-in-2025",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 67831,
+      "sha256": "948939c4743fbea83ccf3763cb4d9cca5ea4b9ee605373b522eb27d2abf7443c",
+      "publicationObservationContext": "机构原HTML；发布2025-12-31；观察2025-12-30；生效不适用；原身份详正文；官方自报警方年终简报、注明ANTARA转刊；读取2026/10/13",
+      "scope": "Reviewed in cci-surabaya-protection-institutions-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.pdam-sby.go.id/read/hasil-pengujian-kualitas-air-2026-1",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 21185,
+      "sha256": "ba7dd3668ec9658c3c558b352d964143a5ad0d83236f23b8cc4f1e4aa53e29ec",
+      "publicationObservationContext": "页面2026合集；观察2026Apr/May；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.pdam-sby.go.id/document/laporan-tahunan",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 22433,
+      "sha256": "9fdfc6e26f19710ba1e67ae8d018b8f52e68a2da2d258ce828c115b5ac92da3e",
+      "publicationObservationContext": "索引日期未核；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.pdam-sby.go.id/index.php/read/respons-cepat-air-keruh-dan-berbusa-perumda-air-minum-surya-sembada-kota-surabaya-lakukan-pemulihan-intensif-di-ipam-karangpilang-dan-jaringan-pipa-distribusi",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 29116,
+      "sha256": "fdb887aa6376d094545c5aa396c49ae20993f9260e2c6ea9bbf25208caeea320",
+      "publicationObservationContext": "观察/正文2026-09-06；发布09-08；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.pdam-sby.go.id/read/respon-cepat-pam-surya-sembada-tangani-kebocoran-pipa-utama-1000mm-di-kawasan-merr",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 27520,
+      "sha256": "7fb0ef2cabd731550329d18e855173c0e6fb0bdb62376a3e0d84defca69cb034",
+      "publicationObservationContext": "修复2026-04-30；发布05-04；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.pdam-sby.go.id/read/tabel-tarif-pelanggan",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 20990,
+      "sha256": "944c283f3ae0c8a8eaeba3894833aad4e168f153856fa4460be08c7a4f0ed2bb",
+      "publicationObservationContext": "生效/页面日期未核；取得10-13；不作家庭负担结论",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.surabaya.go.id/id/berita/24779/pbi-jk-dinonaktifkan-dinkes-jangan-panik-layanan-kesehatan-gratis-bisa-didapat-sesuai-ketentuan-berlaku",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 59278,
+      "sha256": "afda2467a9231d2e57645ae1e5606dedbf913a1dbdadb25f78022f32b0635894",
+      "publicationObservationContext": "生效2026-02-01；发布02-10；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.surabaya.go.id/id/berita/24965/stok-pangan-terjaga-pemkot-surabaya-pastikan-harga-tetap-terkendali-di-april-2026",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 59712,
+      "sha256": "3df0f6a3b6c6e9a398704dc02fdcdc36da4af668f0548f6beb06ed80c7d2439b",
+      "publicationObservationContext": "观察2026Mar；发布04-02；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://rsudbdh.surabaya.go.id/ppid/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 91526,
+      "sha256": "236818d3836872b8a296af5cfad6a585bcb4e4c16f32bf7c37936b47fdb0782e",
+      "publicationObservationContext": "官方身份索引；取得10-13；发布日期未核",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://dinkes.surabaya.go.id/portal_dinkes/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 26802,
+      "sha256": "82768831b13a5a36e31b2c052804b289986bc439c6f3a0f6c7811f1413506482",
+      "publicationObservationContext": "官方身份索引；取得10-13；发布日期未核",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://keslan.kemkes.go.id/inm/index/111200",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 168006,
+      "sha256": "3151f441798808dddcadbf38efcbf98dece00985c2808aa09ac5eeee9930caea",
+      "publicationObservationContext": "观察2023Jul；站更新2026-08-08；取得10-13；旧表不作当前结论",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://keslan.kemkes.go.id/inm/index/34650",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 167871,
+      "sha256": "70d9956a14d967753b4af49b161663492080db9cd474ce375819e7da0755cad4",
+      "publicationObservationContext": "观察2025Feb；站更新2026-08-08；取得10-13；留档不拼序列",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://rsudbdh.surabaya.go.id/wp-content/uploads/2026/09/SPP_217-Tahun-2026-rev.pdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 2716836,
+      "sha256": "b50a6f2395e85f9dfb381805ae0de9df00058bb3ec0368289a114d1136803f7c",
+      "publicationObservationContext": "决定/附件生效2026-01-05；上传路径2026Sep；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://drive.google.com/drive/folders/1Qsy5bHgo2xE6CNJrYAZFftEZrFT6ZW7m?usp=drive_link",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 322983,
+      "sha256": "2e17b01da2e33c2b2e57387c90fe46242acf4d48301cd69112f932b4461a6d91",
+      "publicationObservationContext": "官方PPID linked publicfolder；2024报告modified2025-07-08；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://keslan.kemkes.go.id/inm?tahun=2025&bulan=12&search=Surabaya",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 115049,
+      "sha256": "09f63b09b7bb48080f5c8914b2b2a361e5834287bed9018cc2c9c31b1d59e3c0",
+      "publicationObservationContext": "观察2025Dec；站更新2026-08-08；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.pdam-sby.go.id/uploads/media/zczlrD5iUokRSp8OLQr4yQOBr79W2C0hhs3Bb1sZ.jpeg",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 274424,
+      "sha256": "597068bb4b1445d7cde0aa95e94a845cf3731ad95a7d92fe687ef2a0b271ffea",
+      "publicationObservationContext": "取样2026-04-01；化验Apr1–8/签发Apr8；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.pdam-sby.go.id/uploads/media/paYQrLXfGg1BfskaEK6B5eCVIctFNxauW2pXgdQy.jpeg",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 271996,
+      "sha256": "fc07a6e4170097903bce57c09020b10d3bf0dd95af751c03a2ee0e789e83871f",
+      "publicationObservationContext": "取样2026-04-01；化验Apr1–8/签发Apr8；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.pdam-sby.go.id/uploads/media/2g7LQuGDrOg1ZCW2QYiYqx8ldTcfsh4aEw4OSlZH.jpeg",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 273177,
+      "sha256": "7aac3899141dc01d233fd640fad9ad3439efea7c6e4df3eb2c009a05db28c4f8",
+      "publicationObservationContext": "取样2026-04-01；化验Apr1–8/签发Apr8；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.pdam-sby.go.id/uploads/media/4m03mMdHEnCNafhGZcIIp5R4063Tskt9NuG7QdFi.jpeg",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 319173,
+      "sha256": "ba075e1d8fca3a9d68bb5d73044a8dd0a59daae2ed33fca4b0d0ac3ab7d0d42f",
+      "publicationObservationContext": "取样2026-05-04；化验May4–11/签发May11；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.pdam-sby.go.id/uploads/media/FHoRXtEhrlVuNioUMfrIDTyVvmpXSV6Vy23oXnLX.jpeg",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 320060,
+      "sha256": "c123563ab6763036f5d371fc216e7b1c757d72e7ed4f1478d7ad54ddfca7f3fb",
+      "publicationObservationContext": "取样2026-05-04；化验May4–11/签发May11；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.pdam-sby.go.id/uploads/media/Ulde5nlVGcsnvKd5t4fOEQXlgh335svRyEYXqCBf.jpeg",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 318993,
+      "sha256": "c8100f04d3aa80f70c627423c37ecd80f31b55cd538e0557ef9685cab522366e",
+      "publicationObservationContext": "取样2026-05-04；化验May4–11/签发May11；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://drive.google.com/uc?export=download&id=1dCqnQ6TM2gyNJnQuXoSPhyI8EEffSjxd",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 2966634,
+      "sha256": "b58197b9849ac46ca20d790ffcfcb2319b1800acb03916d5ed49c3fee68104f5",
+      "publicationObservationContext": "观察2024；foldermodified2025-07-08非首公开证明；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://drive.google.com/uc?export=download&id=1gRKT8MH2-oZXfBk3fXBEouthrn9ouLxr",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 7751172,
+      "sha256": "a1a5ffb188283c47eaa8fc977b4942dc114956ad3f6d418ef71cd4a0812992cc",
+      "publicationObservationContext": "观察2024；官方索引added2025-11-06；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://dinkes.surabaya.go.id/portal_dinkes/d/dkk/dokumen?kategori=4&page=1",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 38514,
+      "sha256": "60f6b2e152e02188c7137fc16e8011e3a9cc1eb7ae82aa7ff734318e5cdcf5e4",
+      "publicationObservationContext": "2024报告added2025-11-06；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://rsudbdh.surabaya.go.id/wp-content/uploads/2025/09/RSB-2025-2029-RSUD-BDH-stempel-new-lamp.pdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 2148942,
+      "sha256": "952f85189facde1bc53f0506eaf9a2f373a6dc167f65a19600fc293016b96e17",
+      "publicationObservationContext": "2025–29战略含2024基线；上传路径2025Sep；取得10-13；不当未来实现",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.pdam-sby.go.id/document/read/laporan-tahunan-2024",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 19169,
+      "sha256": "63a927afc8507d7b7af5e40f909f216e228f681bcc822bd3f87bdfbaec76c933",
+      "publicationObservationContext": "年报2024索引；首公开未核；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.pdam-sby.go.id/read/antisipasi-dampak-listrik-padam-perumda-air-minum-surya-sembada-siagakan-genset-tangki-dan-tim-teknis-24-jam-jaga-distribusi-air",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 29874,
+      "sha256": "85f2b8615c24779a2864052535f3ee875da26f37497bc5fc97b07ab877602ef0",
+      "publicationObservationContext": "发布2026-06-23；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://keslan.kemkes.go.id/inm?tahun=2025&bulan=12&search=Soetomo",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 76242,
+      "sha256": "c02a7cc81933fb54d1e98849fc2f6ceb32d05171fda927b2c59f138766ce4fe6",
+      "publicationObservationContext": "观察2025Dec；站更新2026-08-08；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://infopublik.id/kategori/nasional-ekonomi-bisnis/975407/pln-berhasil-minimalisir-pemadaman-bergilir-di-pulau-jawa",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 74894,
+      "sha256": "c669662bb17f176ad3fe3abc3a16e592bced719987bd619ab6206363b97ea3c3",
+      "publicationObservationContext": "故障2026-06-19；修复06-21；发布06-22；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://surabaya.go.id/id/berita/23590/libur-lebaran-2025-rsud-dr-soewandhie-surabaya-tetap-buka-layanan-poli-rawat-jalan-dengan-jadwal-khusus",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 84044,
+      "sha256": "742e2eac8fc71a761cf225fa1f9fd59458b8faa1f515044e89f68e51ba82e7c6",
+      "publicationObservationContext": "发布2025-03-27；未来假期排班；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.pdam-sby.go.id/uploads/document/file/XwisbGSPIlwgOVABjWVWE8JzOwxDIXfI7GyAJBZj.pdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 48749572,
+      "sha256": "c4f0e4b3a9871dc212d751cf2dc843287e5a1077198a7022a4f87f652f40fccd",
+      "publicationObservationContext": "观察2024；首公开未核；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://rskemenkessurabaya.go.id/berita/dari-rs-baru-jadi-pusat-rujukan-2-tahun-lompatan-prestasi-rs-kemenkes-surabaya",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 75771,
+      "sha256": "c1a5cd3aba1cbd7eabd073a4b822e88ba5b3ce664db15ef4ba8a9551bf36a63a",
+      "publicationObservationContext": "发布2026-09-07；服务截至06-30及Aug首例；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.surabaya.go.id/id/berita/23495/gangguan-sistem-bpjs-kesehatan-penyebab-antrean-di-rsud-dr-soewandhie",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 64273,
+      "sha256": "c40a4ff1da1754bc1931f861a387ecc786720a493ac1c38e5b995164828b87c5",
+      "publicationObservationContext": "发生/发布2025-03-03；取得10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://bpjs-kesehatan.go.id/user-manual-mobile-jkn/administrasi%20JKN.html",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "bytes": 29193,
+      "sha256": "bb43f9d70ee6f697e175670fc1700644dd4f38fb24b00aa92a3f85c54a01e3ec",
+      "publicationObservationContext": "国家手册源日期未标；原取回2026-10-12；本轮复用/核SHA/阅读10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://bpjs-kesehatan.go.id/user-manual-mobile-jkn/pelayanan%20jkn.html",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "bytes": 14398,
+      "sha256": "814a2f71d040eefe778615fdd6aa357f791e40987df27068dc62aed93637addd",
+      "publicationObservationContext": "国家手册源日期未标；原取回2026-10-12；本轮复用/核SHA/阅读10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://bpjs-kesehatan.go.id/user-manual-mobile-jkn/iuran%20kepesertaan.html",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "bytes": 19731,
+      "sha256": "26ec9592406e766b731f8b1080488efc4a2b9dd9e17213e84a6eb1987c1605d1",
+      "publicationObservationContext": "国家手册源日期未标；原取回2026-10-12；本轮复用/核SHA/阅读10-13",
+      "scope": "Reviewed in cci-surabaya-resources-medicine-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.its.ac.id/news/its-luncurkan-itspa-wujud-hilirisasi-produk-riset/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 107141,
+      "sha256": "9a69728027f1a4c91db70f98ed6abdfe71ff9f95e00bc762522234ee3607245a",
+      "publicationObservationContext": "发布2025-06-02；展销在2025May末；本次取回10-13",
+      "scope": "Reviewed in cci-surabaya-technology-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.its.ac.id/piuheti/2025/01/02/lewat-stp-its-berupaya-perkuat-hilirisasi-produk-riset/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 80962,
+      "sha256": "d6b00a373afd63be443a917a09637322e47ce2e553a7368f46fbba271bc36897",
+      "publicationObservationContext": "发布2025-01-02；活动12月19日原文未明年；取回10-13",
+      "scope": "Reviewed in cci-surabaya-technology-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://unair.ac.id/assie-iii-hadirkan-inovasi-kolaboratif-dan-peluncuran-toko-ua-sebagai-marketplace-resmi-unair/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 173460,
+      "sha256": "702cf452277714206cc2233f87866602510c2eee10e6120e4e7c732741585fa1",
+      "publicationObservationContext": "发布2025-11-17；活动11-14；取回10-13",
+      "scope": "Reviewed in cci-surabaya-technology-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://ff.unair.ac.id/files/content/1769162722-4-Laporan_Kinerja_2025.pdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 6910112,
+      "sha256": "d96f86f5fc1a3dd5e4c90404678faba95f3bfe2e2d887e545366b4478d7e0f95",
+      "publicationObservationContext": "观察2025；文件上传数字不单独证明首公开日；取回10-13",
+      "scope": "Reviewed in cci-surabaya-technology-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.telkomsel.com/about-us/news/telkomsel-jadikan-ramadan-terbaik-pelanggan-dengan-akselerasikan-kehadiran-lebih-dari",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 144506,
+      "sha256": "3b9d26e71fc930240ca004a3aadc614f67f70a487f8d3dfb9abfb49099127982",
+      "publicationObservationContext": "发布／观察2025-03-21；后续200站为计划；取回10-13",
+      "scope": "Reviewed in cci-surabaya-technology-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.telkomsel.com/paket/hyper5g",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 241684,
+      "sha256": "31643f8ce6d5cc3ad54528247ed4ff4516c4202acebe43801e4af0799a2937c7",
+      "publicationObservationContext": "未署日期的当前条件页；截止日前同字节未核；取回10-13",
+      "scope": "Reviewed in cci-surabaya-technology-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://mediacenter.surabaya.go.id/skm-wargaku",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 29710,
+      "sha256": "edf8053e88235fc75ee51577ca47b5e5fe68ceff60a5c37f87c9f1e1dc9878c5",
+      "publicationObservationContext": "官方索引；2025链接1142689；首公开未核；取回10-13",
+      "scope": "Reviewed in cci-surabaya-technology-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5738743/fullTextXML",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 80149,
+      "sha256": "95237967038bf4682a337385ca037d0226b571390026b9b6de5998524c85d815",
+      "publicationObservationContext": "原论文JATS；2017-12-19，具体治疗日历窗未单列；方法6/12月与表标签分别保留",
+      "scope": "Reviewed in cci-surabaya-longevity-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5738743/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 174542,
+      "sha256": "1853fc28e6331e8d559195247330f689eec5c4ba48d314de6345955e1e0e26a3",
+      "publicationObservationContext": "同论文PMC全文，非独立样本／新观察；2017-12-19",
+      "scope": "Reviewed in cci-surabaya-longevity-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://repository.unair.ac.id/138090/1/7.%20ASRA%20AL%20FAUZI.pdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 4784383,
+      "sha256": "4f117df7a3ada0f8d41c637a565cde13c3df0032513ddcc8e48fb7f18bbf7c58",
+      "publicationObservationContext": "UNAIR大学库演讲本；2025-05-22发表演讲，PDF独立上传日未知；p7/20目视",
+      "scope": "Reviewed in cci-surabaya-longevity-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://repository.unair.ac.id/88270/6/06%20-%20Clinical%20Outcomes%20of%20Repeated%20Intraventricular%20Transplantation%20of%20Autologous%20Bone%20Marrow%20Mesenchymal%20Stem%20Cells%20in%20Chronic%20Haemorrhagic%20Stroke.%20A%20One-Year%20Follow%20Up.pdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 3815566,
+      "sha256": "bd0454dae138a5f78cb94e4a360e6868aeedee94d3cf2dd075cd4b7b4da4c612",
+      "publicationObservationContext": "大学库20页相似性报告嵌入论文扫描；报告提交2018-11-29不是临床发表／治疗日；p4/5/6目视",
+      "scope": "Reviewed in cci-surabaya-longevity-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.pom.go.id/berita/sinergi-bpom-dan-rsud-dr-soetomo-surabaya-untuk-keamanan-obat-dan-peningkatan-standar-internasional",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 56364,
+      "sha256": "bb6559752d8aaa9fecb12e9fe90ef0c7f69331f349df4d19723ce03b599b1c49",
+      "publicationObservationContext": "监管实地观察2025-10-22／发布10-24；当前研究模式／未来CPOB协助",
+      "scope": "Reviewed in cci-surabaya-longevity-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://keslan.kemkes.go.id/selpuncafaskes",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 73690,
+      "sha256": "9bcb9ed72ab6969ea9b702ca358e183e6191a5d326b45ca3a0143bd93ab5fc86",
+      "publicationObservationContext": "卫生主管目录；未单列更新日，10-13快照context，不当截止前各条许可已核",
+      "scope": "Reviewed in cci-surabaya-longevity-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://unair.ac.id/stem-cell-jadi-terapi-alternatif-pada-penderita-stroke/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 170157,
+      "sha256": "044e3367e55252a5e292e48e5d4dad5195e40d6332ada4611c5320a4065f6764",
+      "publicationObservationContext": "父任务2026-10-13取回；2025-05-22演讲／新闻，同一线索不当独立队列",
+      "scope": "Reviewed in cci-surabaya-longevity-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.pom.go.id/siaran-pers/peraturan-bpom-nomor-8-tahun-2025-regulasi-untuk-dorong-pengembangan-produk-terapi-advanced-di-indonesia",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "bytes": 60560,
+      "sha256": "194e44b4afc8c165863983e18a6f5e1ce3d1f3925ef70df65361c795a974585d",
+      "publicationObservationContext": "2026-10-12取回／本轮核SHA；规则2025-03-06制定，04-21通告／04-22刊；国家context",
+      "scope": "Reviewed in cci-surabaya-longevity-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.juanda-airport.com/id/berita/index/dorong-konektivitas-dan-pariwisata-bandara-juanda-tambah-1-rute-interasional-dan-1-rute-domestik-1",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 43958,
+      "sha256": "f3f4bb475685ee1bd8e7bfc5142b45108a021b9f41a23e31f2420f27eb1b6501",
+      "publicationObservationContext": "发布2025-05-30；新航线May29/30；流量至Apr；原取回/复用review2026-10-13",
+      "scope": "Reviewed in cci-surabaya-exit-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://jdih.bi.go.id/api/WebJDIH/DownloadFilePeraturan/12384",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "bytes": 161901,
+      "sha256": "797ccf69c98b5dee47dd46edd74aed398fae5f644b5923f294c4fd999b289b1a",
+      "publicationObservationContext": "制定2026-06-29/生效07-01；原取回10-12、复用review10-13",
+      "scope": "Reviewed in cci-surabaya-exit-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://jakarta.diplo.de/id-id/service-id/visa-einreise/visa-nasional-1687488",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "bytes": 80966,
+      "sha256": "2bc50817481e0c1523835b654156c0e0d664d47d2b023a9c06ed260111bce0e8",
+      "publicationObservationContext": "源发布2025-03-11；原取回2026-10-12、复用review10-13",
+      "scope": "Reviewed in cci-surabaya-exit-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.bca.co.id/id/Individu/layanan/pengiriman-uang/Remittance/Outward-Remittance",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "bytes": 105558,
+      "sha256": "f3656148d3f8916215a5b936b7e767584d20fe16f851b7ec37811942f7e7e425",
+      "publicationObservationContext": "材料条款标生效2026-07-01；整页/价格日期未标；原取回10-12、复用review10-13",
+      "scope": "Reviewed in cci-surabaya-exit-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://www.moratelindo.co.id/download/public-announcement/2026%20-%20Keterbukaan%20Informasi/2026-03-17%20-%20Rancangan%20Penggabungan%20Usaha%20Ringkas.pdf",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "bytes": 3522748,
+      "sha256": "fd09e7915367d0935bd4134226bc4a3153fb5b3bf1d9ff46aa43eb0d0dcf072f",
+      "publicationObservationContext": "披露路径2026-03-17、公司计数观察2025Sep；原取回10-12、复用review10-13",
+      "scope": "Reviewed in cci-surabaya-exit-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    },
+    {
+      "url": "https://juanda.imigrasi.go.id/paspor-simpatik-jadi-magnet-layanan-publik-imigrasi-surabaya-layani-284-pemohon-di-hari-bhakti-imigrasi-ke-76/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 132964,
+      "sha256": "23f343bcd7df2e81a3c838ec89a1a4344c6a1cad428b36d17a0c5232c3a9e440",
+      "publicationObservationContext": "观察2026-01-10/11；发布01-12；新取回2026-10-13",
+      "scope": "Reviewed in cci-surabaya-exit-review.md. Current bytes are not an independent cutoff archive. Observation, publication, legal effect, geographic/service scope and ordinary qualification stay distinct. Same-document HTML/PDF/images/reused files are not independent corroboration. Original PDF/JATS/HTML identity and retrieval diagnostics are separately retained."
+    }
+  ],
+  "webOnlySourceReviews": [
+    {
+      "url": "https://surabaya.go.id/id/berita/25282/surabaya-gerak-cepat-tangani-genangan-di-tengah-hujan-ekstrem-pemkot-optimalkan-pompa-dan-percepatan-drainase",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "市府/水务/市长当事原报告；发布2026/6/23；观察6/22—23、当晨退水；无生效日；读取2026/10/13；`web-retrieval-2.json`",
+      "limitation": "Complete web-tool decoded source text only; retrieval logs are derivatives. Failed HTTP challenges are not original source identity, resident-service failure or transparency evidence."
+    },
+    {
+      "url": "https://surabaya.go.id/id/berita/24814/tangani-banjir-osowilangun-pemkot-surabaya-operasikan-rumah-pompa-24-jam",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "DSDABM当事原报告；发布/观察2026/2/16持续抽排，2/13—20潮位为预测窗；无生效日；读取2026/10/13；`web-retrieval-4.json`",
+      "limitation": "Complete web-tool decoded source text only; retrieval logs are derivatives. Failed HTTP challenges are not original source identity, resident-service failure or transparency evidence."
+    },
+    {
+      "url": "https://surabaya.go.id/id/berita/9462/pmi-surabaya-gelar-kampanye-hari-aksi-panas-di-taman-bungkul-ajak-masyarakat-cegah-heatstroke",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "市府刊PMI当地原活动与当事采访；发布/观察2024/6/2；非2026净保护；无生效日；读取2026/10/13；`web-retrieval-3.json`",
+      "limitation": "Complete web-tool decoded source text only; retrieval logs are derivatives. Failed HTTP challenges are not original source identity, resident-service failure or transparency evidence."
+    },
+    {
+      "url": "https://surabaya.go.id/id/berita/24765/cuaca-ekstrem-melanda-wali-kota-eri-cahyadi-imbau-warga-surabaya-tingkatkan-kewaspadaan",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "市府当事天气/援助原报告；发布2026/2/5；观察2/3倒树/广告牌、此前Manyar援助；未来建议分开；读取2026/10/13；`web-retrieval-3.json`",
+      "limitation": "Complete web-tool decoded source text only; retrieval logs are derivatives. Failed HTTP challenges are not original source identity, resident-service failure or transparency evidence."
+    },
+    {
+      "url": "https://www.surabaya.go.id/id/berita/25650/waspada-kemarau-ekstrem-pemkot-surabaya-gencarkan-edukasi-pencegahan-kebakaran",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "DPKP当事原记录；发布2026/9/16；观察2025及2026至9月中；8月两年分类不同；生效不适用；读取2026/10/13；`web-retrieval-2.json`",
+      "limitation": "Complete web-tool decoded source text only; retrieval logs are derivatives. Failed HTTP challenges are not original source identity, resident-service failure or transparency evidence."
+    },
+    {
+      "url": "https://surabaya.go.id/id/berita/23672/pemkot-surabaya-rampungkan-belasan-kasus-ijazah-ditahan-tanpa-gaduh",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "Disperinaker及取回证书居民原采访；发布2025/4/24；观察4/17—24及既往扣押；4/5天当事体验；读取2026/10/13；`web-retrieval-2.json`",
+      "limitation": "Complete web-tool decoded source text only; retrieval logs are derivatives. Failed HTTP challenges are not original source identity, resident-service failure or transparency evidence."
+    },
+    {
+      "url": "https://surabaya.go.id/id/berita/25597/dinsos-surabaya-tindaklanjuti-3-283-keluhan-desil-lewat-verifikasi-lapangan",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "Dinsos原报告；发布2026/9/5，采访9/4；观察8/24中央数据及至9月初3283异议；未来提议不当已改；读取2026/10/13；`web-retrieval-1.json`",
+      "limitation": "Complete web-tool decoded source text only; retrieval logs are derivatives. Failed HTTP challenges are not original source identity, resident-service failure or transparency evidence."
+    },
+    {
+      "url": "https://www.surabaya.go.id/id/berita/25644/cegah-kecemburuan-sosial-pemkot-surabaya-libatkan-warga-verifikasi-bansos-lewat-muskel",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "Dinsos/市长原参与记录；发布9/14；观察2026/9/11 Wonorejo名单核验；常态月核为安排；读取2026/10/13；`web-retrieval-5.json`",
+      "limitation": "Complete web-tool decoded source text only; retrieval logs are derivatives. Failed HTTP challenges are not original source identity, resident-service failure or transparency evidence."
+    },
+    {
+      "url": "https://www.surabaya.go.id/id/berita/24468/atap-rumah-roboh-akibat-lapuk-pemkot-surabaya-gerak-cepat-evakuasi-dan-salurkan-bantuan",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "Bubutan当事原报告；发布/观察2025/11/14屋顶塌/临住/急援；维修Baznas为提议；生效不适用；读取2026/10/13；`web-retrieval-1.json`",
+      "limitation": "Complete web-tool decoded source text only; retrieval logs are derivatives. Failed HTTP challenges are not original source identity, resident-service failure or transparency evidence."
+    },
+    {
+      "url": "https://www.surabaya.go.id/id/berita/24163/pemkot-surabaya-bantu-tujuh-pedagang-yang-lapaknya-terbakar-saat-aksi-massa-di-tegalsari",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "市府/7经营者原援助与损害采访；发布2025/9/4；观察8/30焚烧及9/4援款；临摊后续不当全已营业；读取2026/10/13；`web-retrieval-5.json`",
+      "limitation": "Complete web-tool decoded source text only; retrieval logs are derivatives. Failed HTTP challenges are not original source identity, resident-service failure or transparency evidence."
+    },
+    {
+      "url": "https://surabaya.go.id/id/berita/24169/pemkot-surabaya-kolaborasi-bersama-stakeholder-lakukan-perbaikan-fasum-pasca-aksi-massa",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "市府当事恢复记录；发布9/8；观察2025/8暴力后部分私人已修、政府预算和警局仍拟修；读取2026/10/13；`web-retrieval-5.json`",
+      "limitation": "Complete web-tool decoded source text only; retrieval logs are derivatives. Failed HTTP challenges are not original source identity, resident-service failure or transparency evidence."
+    },
+    {
+      "url": "https://surabaya.go.id/id/berita/25071/tahap-ii-normalisasi-kalianak-pemkot-surabaya-tertibkan-bangunan-secara-humanis",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "SatpolPP当事清退/援搬记录；发布/观察2026/4/23，原称第二日与周二起之间日历不闭；未用于持续天数；读取2026/10/13；`web-retrieval-4.json`",
+      "limitation": "Complete web-tool decoded source text only; retrieval logs are derivatives. Failed HTTP challenges are not original source identity, resident-service failure or transparency evidence."
+    },
+    {
+      "url": "https://surabaya.go.id/id/berita/24690/wujudkan-umkm-naik-kelas-pemkot-surabaya-fasilitasi-legalitas-gratis-bagi-ribuan-pedagang",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "meaning": "Published 2026-01-19: actual 2025 help to 5250 small businesses, specific received free facilities/WiFi/legal certifications; same 2026 count is a future target.",
+      "limitation": "Complete official web-tool body read; original HTTP returned 403 challenges. Do not hash challenge as source or treat channel failure as resident information environment. Administrative and participant scope is not whole-FUA diffusion."
+    }
+  ]
+}

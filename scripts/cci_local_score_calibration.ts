@@ -76,6 +76,7 @@ const realCases = [
   "guangzhou",
   "wuhan",
   "xian",
+  "surabaya",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -143,6 +144,7 @@ const [
   guangzhou,
   wuhan,
   xian,
+  surabaya,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -373,7 +375,7 @@ const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.
 assert(tokyoPosition);
 assert.equal(tokyoPosition.center, 62);
 assert.equal(tokyoPosition.bestPosition, 1);
-assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 9);
+assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 10);
 assert.deepEqual(total(washington), { center: 58, lower: 58, upper: 58 });
 assert.equal(washington.RES, 40);
 assert.equal(washington.OPT, 60);
@@ -873,7 +875,7 @@ const beijingPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
 );
 assert(beijingPosition);
 assert.equal(beijingPosition.bestPosition, 3);
-assert.equal(beijingPosition.worstPosition, rankAudit.candidateCount - 7);
+assert.equal(beijingPosition.worstPosition, rankAudit.candidateCount - 8);
 
 assert.deepEqual(total(shanghai), { center: 58, lower: 58, upper: 58 });
 assert.equal(shanghai.LON, 40);
@@ -1436,3 +1438,65 @@ const xianPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.f
 assert(xianPosition);
 assert.equal(xianPosition.bestPosition, 1);
 assert.equal(xianPosition.worstPosition, rankAudit.candidateCount - 1);
+
+assert.deepEqual(total(surabaya), { center: null, lower: 49, upper: 59 });
+assert(!Object.hasOwn(surabaya, "LON"));
+for (const [dimension, lower, upper] of [
+  ["PCS", 43, 68],
+  ["GSS", 40, 65],
+  ["ISR", 40, 65],
+  ["RES", 45, 65],
+  ["MED", 40, 65],
+  ["TEC", 43, 63],
+  ["OPT", 43, 63],
+] as const) {
+  const withdrawn = { ...surabaya };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...surabaya, PCS: 60 }), { center: null, lower: 52, upper: 62 });
+assert.deepEqual(total({ ...surabaya, ISR: 40 }), { center: null, lower: 46, upper: 56 });
+assert.deepEqual(total({ ...surabaya, RES: 60 }), { center: null, lower: 51, upper: 61 });
+const surabayaCase = realCases[24];
+for (const review of surabayaCase.focusedReviews)
+  assert.equal(review.sha256, digest(`docs/${review.path}`));
+assert.equal(
+  surabayaCase.researchPriority.sourceSha256,
+  digest(`docs/data/${surabayaCase.researchPriority.source}`)
+);
+assert.equal(
+  surabayaCase.sharedLegalPath.sourceSha256,
+  digest("docs/data/cci-legal-mobility-rules.json")
+);
+assert.equal(surabayaCase.referenceBoundaryCheck.referencePoints.length, 2);
+for (const point of surabayaCase.referenceBoundaryCheck.referencePoints) {
+  assert.deepEqual(point.fuaMatches, [6401]);
+  assert.equal(
+    point.sourceSha256,
+    JSON.parse(readFileSync("docs/data/cci-ourairports-source.json", "utf8")).sha256
+  );
+}
+const surabayaWater = surabayaCase.resourceChecks;
+assert.equal(
+  surabayaWater.householdSkamrtEcoliCompliant + surabayaWater.householdSkamrtEcoliNoncompliant,
+  surabayaWater.householdSkamrtSamples2024
+);
+const surabayaMobility = surabayaCase.mobilityChecks;
+assert.equal(
+  [
+    ...surabayaMobility.passportApplicationsOfficeDays,
+    ...surabayaMobility.passportApplicationsMallDays,
+  ].reduce((sum: number, value: number) => sum + value, 0),
+  surabayaMobility.passportApplicationsTotal
+);
+assert.equal(
+  surabayaMobility.juandaDomesticRoutes + surabayaMobility.juandaInternationalRoutes,
+  surabayaMobility.juandaRoutes2025
+);
+assert.equal(surabayaCase.sourceSnapshots.length, 70);
+const surabayaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (row: { efua_id: string }) => row.efua_id === "6401"
+);
+assert(surabayaPosition);
+assert.equal(surabayaPosition.bestPosition, 5);
+assert.equal(surabayaPosition.worstPosition, rankAudit.candidateCount);

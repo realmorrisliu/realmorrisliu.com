@@ -34,6 +34,7 @@ import nanjing from "../../docs/data/cci-local-2026-nanjing-case.json";
 import guangzhou from "../../docs/data/cci-local-2026-guangzhou-case.json";
 import wuhan from "../../docs/data/cci-local-2026-wuhan-case.json";
 import xian from "../../docs/data/cci-local-2026-xian-case.json";
+import surabaya from "../../docs/data/cci-local-2026-surabaya-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -72,8 +73,10 @@ const cases = [
   guangzhou,
   wuhan,
   xian,
+  surabaya,
 ];
 const caseNamesZh: Record<number, string> = {
+  [surabaya.candidateId]: "泗水功能区",
   [xian.candidateId]: "西安功能区",
   [wuhan.candidateId]: "武汉功能区",
   [guangzhou.candidateId]: "广州功能区",
@@ -204,6 +207,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [surabaya.candidateId]: [
+    zh
+      ? "泗水6401按全候选目录顺序进入研究：PCS／RES条件性40，GSS／ISR／MED／TEC／OPT各60，LON未定。数学域49—59、无中心。Juanda与名关联Malang的机场目录点均落本区，点、Kota总量、医院患者和公司用户均不代全居民覆盖。"
+      : "Surabaya 6401 enters review in the full-directory sequence: conditional PCS/RES 40 and GSS/ISR/MED/TEC/OPT 60, LON unresolved. Its mathematical domain is 49–59 with no centre. Both Juanda and the Malang-labelled airport directory point fall inside; points, municipal totals, hospital patients and company users are not full resident coverage.",
+    zh
+      ? "实际抽排、送水、医疗交付和居民辅助与水潮／到户安全、等待／资格及用户服务短板并读。缺复测不证明旧污染持续，另一院修复不证明所有等待改善；当前剩余重要性与通常获得推定拒绝即撤回。原小样本人体给药与后续研究模式有据，当前同方案通常支付／监护未闭，不强填长寿或总分。"
+      : "Actual pumping, water delivery, necessary care and resident assistance are read with tide/household-water, waiting/eligibility and user-service weaknesses. Missing retests do not prove continuing old pollution, and another hospital's repair does not establish all waiting improvements; rejecting present residual-impact or usual-access assumptions withdraws scores. Original small-sample human delivery and later research mode are supported, but current same-protocol ordinary payment/monitoring is unresolved; no longevity score or total centre is filled.",
+  ],
   [xian.candidateId]: [
     zh
       ? "西安7094按全候选目录顺序进入研究：PCS／GSS／ISR／RES／MED条件性60、TEC80、OPT40，LON未定。数学域54—64、无中心；咸阳／机场与省人民西咸点7004、鄠邑7100不并入，行政总量和参考点不代全居民覆盖。"
@@ -350,6 +361,10 @@ const caseNotes: Record<number, string[]> = {
   ],
 };
 const caseReviewLinks: Record<number, { href: string; label: string }> = {
+  [surabaya.candidateId]: {
+    href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-surabaya-resources-medicine-review.md",
+    label: zh ? "水安全与医疗获得复核" : "Water safety and usual-care review",
+  },
   [xian.candidateId]: {
     href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-xian-medical-quality-review.md",
     label: zh ? "临床质量与通常获得复核" : "Clinical quality and usual-access review",
