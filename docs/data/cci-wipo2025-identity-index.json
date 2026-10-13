@@ -1,0 +1,1405 @@
+{
+  "source": "wipo-clusters2025.pdf AppendixIV Table2 p20-21",
+  "sourceSha256": "dc2841db8ed735c518069cb6df0b8897f7d0c174e5ac9989e0720cf0190075d3",
+  "labels": 100,
+  "exactUniqueIdentityEntries": 79,
+  "unresolvedEntries": 21,
+  "alreadyReviewedExactMatches": 13,
+  "candidateCount": 9031,
+  "existingReviewCount": 44,
+  "entries": [
+    {
+      "wipo_source_order": 1,
+      "label": "Shenzhen–Hong Kong–Guangzhou",
+      "economy_raw": "CN/HK",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 2,
+      "label": "Tokyo–Yokohama",
+      "economy_raw": "JP",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 3,
+      "label": "San Jose–San Francisco",
+      "economy_raw": "US",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 4,
+      "label": "Beijing",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 7704,
+          "sourceName": "Beijing",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": true
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 5,
+      "label": "Seoul",
+      "economy_raw": "KR",
+      "efua_identity_matches": [
+        {
+          "id": 94,
+          "sourceName": "Seoul",
+          "countryIso": "KOR",
+          "hasExistingEightDimensionReview": true
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 6,
+      "label": "Shanghai–Suzhou",
+      "economy_raw": "CN",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 7,
+      "label": "New York City",
+      "economy_raw": "US",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 8,
+      "label": "London",
+      "economy_raw": "GB",
+      "efua_identity_matches": [
+        {
+          "id": 5288,
+          "sourceName": "London",
+          "countryIso": "GBR",
+          "hasExistingEightDimensionReview": true
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 9,
+      "label": "Boston–Cambridge",
+      "economy_raw": "US",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 10,
+      "label": "Los Angeles",
+      "economy_raw": "US",
+      "efua_identity_matches": [
+        {
+          "id": 1642,
+          "sourceName": "Los Angeles",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": true
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 11,
+      "label": "Osaka–Kobe–Kyoto",
+      "economy_raw": "JP",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 12,
+      "label": "Paris",
+      "economy_raw": "FR",
+      "efua_identity_matches": [
+        {
+          "id": 2702,
+          "sourceName": "Paris",
+          "countryIso": "FRA",
+          "hasExistingEightDimensionReview": true
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 13,
+      "label": "Hangzhou",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 10078,
+          "sourceName": "Hangzhou",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": true
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 14,
+      "label": "San Diego",
+      "economy_raw": "US",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 15,
+      "label": "Nanjing",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 9701,
+          "sourceName": "Nanjing",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": true
+        },
+        {
+          "id": 10238,
+          "sourceName": "Nanjing",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 16,
+      "label": "Singapore",
+      "economy_raw": "SG/MY",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 17,
+      "label": "Washington–Baltimore",
+      "economy_raw": "US",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 18,
+      "label": "Wuhan",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 8989,
+          "sourceName": "Wuhan",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": true
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 19,
+      "label": "Tel Aviv–Jerusalem",
+      "economy_raw": "IL",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 20,
+      "label": "Seattle",
+      "economy_raw": "US",
+      "efua_identity_matches": [
+        {
+          "id": 4510,
+          "sourceName": "Seattle",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 21,
+      "label": "Bengaluru",
+      "economy_raw": "IN",
+      "efua_identity_matches": [
+        {
+          "id": 9099,
+          "sourceName": "Bengaluru",
+          "countryIso": "IND",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 22,
+      "label": "Amsterdam–Rotterdam",
+      "economy_raw": "NL",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 23,
+      "label": "Philadelphia",
+      "economy_raw": "US",
+      "efua_identity_matches": [
+        {
+          "id": 7165,
+          "sourceName": "Philadelphia",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 24,
+      "label": "Chengdu",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 5723,
+          "sourceName": "Chengdu",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 25,
+      "label": "Daejeon",
+      "economy_raw": "KR",
+      "efua_identity_matches": [
+        {
+          "id": 1782,
+          "sourceName": "Daejeon",
+          "countryIso": "KOR",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 26,
+      "label": "Delhi",
+      "economy_raw": "IN",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 27,
+      "label": "Munich",
+      "economy_raw": "DE",
+      "efua_identity_matches": [
+        {
+          "id": 4736,
+          "sourceName": "Munich",
+          "countryIso": "DEU",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 28,
+      "label": "Nagoya",
+      "economy_raw": "JP",
+      "efua_identity_matches": [
+        {
+          "id": 4532,
+          "sourceName": "Nagoya",
+          "countryIso": "JPN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 29,
+      "label": "Xi'an",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 7094,
+          "sourceName": "Xi'an",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": true
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 30,
+      "label": "Berlin",
+      "economy_raw": "DE",
+      "efua_identity_matches": [
+        {
+          "id": 4946,
+          "sourceName": "Berlin",
+          "countryIso": "DEU",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 31,
+      "label": "Chicago",
+      "economy_raw": "US",
+      "efua_identity_matches": [
+        {
+          "id": 6654,
+          "sourceName": "Chicago",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": true
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 32,
+      "label": "Stockholm",
+      "economy_raw": "SE",
+      "efua_identity_matches": [
+        {
+          "id": 1445,
+          "sourceName": "Stockholm",
+          "countryIso": "SWE",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 33,
+      "label": "Toronto",
+      "economy_raw": "CA",
+      "efua_identity_matches": [
+        {
+          "id": 2626,
+          "sourceName": "Toronto",
+          "countryIso": "CAN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 34,
+      "label": "Qingdao",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 9309,
+          "sourceName": "Qingdao",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 35,
+      "label": "Denver",
+      "economy_raw": "US",
+      "efua_identity_matches": [
+        {
+          "id": 5332,
+          "sourceName": "Denver",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 36,
+      "label": "Sydney",
+      "economy_raw": "AU",
+      "efua_identity_matches": [
+        {
+          "id": 1830,
+          "sourceName": "Sydney",
+          "countryIso": "AUS",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 37,
+      "label": "Austin",
+      "economy_raw": "US",
+      "efua_identity_matches": [
+        {
+          "id": 5349,
+          "sourceName": "Austin",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 38,
+      "label": "Houston",
+      "economy_raw": "US",
+      "efua_identity_matches": [
+        {
+          "id": 5511,
+          "sourceName": "Houston",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 39,
+      "label": "Hefei",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 9459,
+          "sourceName": "Hefei",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 40,
+      "label": "Zürich",
+      "economy_raw": "CH",
+      "efua_identity_matches": [
+        {
+          "id": 1479,
+          "sourceName": "Zurich",
+          "countryIso": "CHE",
+          "hasExistingEightDimensionReview": true
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 41,
+      "label": "Taipei–Hsinchu",
+      "economy_raw": "TW*",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 42,
+      "label": "Copenhagen",
+      "economy_raw": "DK",
+      "efua_identity_matches": [
+        {
+          "id": 537,
+          "sourceName": "Copenhagen",
+          "countryIso": "DNK",
+          "hasExistingEightDimensionReview": true
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 43,
+      "label": "Cologne",
+      "economy_raw": "DE",
+      "efua_identity_matches": [
+        {
+          "id": 1064,
+          "sourceName": "Cologne",
+          "countryIso": "DEU",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 44,
+      "label": "Changsha",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 9100,
+          "sourceName": "Changsha",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 45,
+      "label": "Barcelona",
+      "economy_raw": "ES",
+      "efua_identity_matches": [
+        {
+          "id": 4523,
+          "sourceName": "Barcelona",
+          "countryIso": "ESP",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 46,
+      "label": "Mumbai",
+      "economy_raw": "IN",
+      "efua_identity_matches": [
+        {
+          "id": 7163,
+          "sourceName": "Mumbai",
+          "countryIso": "IND",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 47,
+      "label": "Madrid",
+      "economy_raw": "ES",
+      "efua_identity_matches": [
+        {
+          "id": 3147,
+          "sourceName": "Madrid",
+          "countryIso": "ESP",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 48,
+      "label": "Moscow",
+      "economy_raw": "RU",
+      "efua_identity_matches": [
+        {
+          "id": 2262,
+          "sourceName": "Moscow",
+          "countryIso": "RUS",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 49,
+      "label": "São Paulo",
+      "economy_raw": "BR",
+      "efua_identity_matches": [
+        {
+          "id": 6567,
+          "sourceName": "São Paulo",
+          "countryIso": "BRA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 50,
+      "label": "Tianjin",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 8055,
+          "sourceName": "Tianjin",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 51,
+      "label": "Minneapolis",
+      "economy_raw": "US",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 52,
+      "label": "Melbourne",
+      "economy_raw": "AU",
+      "efua_identity_matches": [
+        {
+          "id": 1266,
+          "sourceName": "Melbourne",
+          "countryIso": "AUS",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 53,
+      "label": "Raleigh",
+      "economy_raw": "US",
+      "efua_identity_matches": [
+        {
+          "id": 6942,
+          "sourceName": "Raleigh",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 54,
+      "label": "Stuttgart",
+      "economy_raw": "DE",
+      "efua_identity_matches": [
+        {
+          "id": 3580,
+          "sourceName": "Stuttgart",
+          "countryIso": "DEU",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 55,
+      "label": "Brussels–Antwerp",
+      "economy_raw": "BE",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 56,
+      "label": "Milan",
+      "economy_raw": "IT",
+      "efua_identity_matches": [
+        {
+          "id": 1600,
+          "sourceName": "Milan",
+          "countryIso": "ITA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 57,
+      "label": "Chongqing",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 7578,
+          "sourceName": "Chongqing",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 58,
+      "label": "Istanbul",
+      "economy_raw": "TR",
+      "efua_identity_matches": [
+        {
+          "id": 1637,
+          "sourceName": "Istanbul",
+          "countryIso": "TUR",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 59,
+      "label": "Atlanta",
+      "economy_raw": "US",
+      "efua_identity_matches": [
+        {
+          "id": 6451,
+          "sourceName": "Atlanta",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 60,
+      "label": "Helsinki",
+      "economy_raw": "FI",
+      "efua_identity_matches": [
+        {
+          "id": 687,
+          "sourceName": "Helsinki",
+          "countryIso": "FIN",
+          "hasExistingEightDimensionReview": true
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 61,
+      "label": "Dallas",
+      "economy_raw": "US",
+      "efua_identity_matches": [
+        {
+          "id": 5543,
+          "sourceName": "Dallas",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 62,
+      "label": "Montréal",
+      "economy_raw": "CA",
+      "efua_identity_matches": [
+        {
+          "id": 3485,
+          "sourceName": "Montreal",
+          "countryIso": "CAN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 63,
+      "label": "Tehran",
+      "economy_raw": "IR",
+      "efua_identity_matches": [
+        {
+          "id": 4686,
+          "sourceName": "Tehran",
+          "countryIso": "IRN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 64,
+      "label": "Frankfurt am Main",
+      "economy_raw": "DE",
+      "efua_identity_matches": [
+        {
+          "id": 3093,
+          "sourceName": "Frankfurt am Main",
+          "countryIso": "DEU",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 65,
+      "label": "Eindhoven",
+      "economy_raw": "NL",
+      "efua_identity_matches": [
+        {
+          "id": 2254,
+          "sourceName": "Eindhoven",
+          "countryIso": "NLD",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 66,
+      "label": "Vancouver",
+      "economy_raw": "CA",
+      "efua_identity_matches": [
+        {
+          "id": 375,
+          "sourceName": "Vancouver",
+          "countryIso": "CAN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 67,
+      "label": "Miami",
+      "economy_raw": "US",
+      "efua_identity_matches": [
+        {
+          "id": 6442,
+          "sourceName": "Miami",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 68,
+      "label": "Jinan",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 8476,
+          "sourceName": "Jinan",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 69,
+      "label": "Cambridge",
+      "economy_raw": "GB",
+      "efua_identity_matches": [
+        {
+          "id": 5550,
+          "sourceName": "Cambridge",
+          "countryIso": "GBR",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 70,
+      "label": "Harbin",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 8332,
+          "sourceName": "Harbin",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 71,
+      "label": "Dublin",
+      "economy_raw": "IE",
+      "efua_identity_matches": [
+        {
+          "id": 415,
+          "sourceName": "Dublin",
+          "countryIso": "IRL",
+          "hasExistingEightDimensionReview": true
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 72,
+      "label": "Changchun",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 8510,
+          "sourceName": "Changchun",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 73,
+      "label": "Portland",
+      "economy_raw": "US",
+      "efua_identity_matches": [
+        {
+          "id": 4444,
+          "sourceName": "Portland",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": false
+        },
+        {
+          "id": 7377,
+          "sourceName": "Portland",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 74,
+      "label": "Vienna",
+      "economy_raw": "AT",
+      "efua_identity_matches": [
+        {
+          "id": 790,
+          "sourceName": "Vienna",
+          "countryIso": "AUT",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 75,
+      "label": "Shenyang",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 8630,
+          "sourceName": "Shenyang",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 76,
+      "label": "Pittsburgh",
+      "economy_raw": "US",
+      "efua_identity_matches": [
+        {
+          "id": 7020,
+          "sourceName": "Pittsburgh",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 77,
+      "label": "Oxford",
+      "economy_raw": "GB",
+      "efua_identity_matches": [
+        {
+          "id": 4792,
+          "sourceName": "Oxford",
+          "countryIso": "GBR",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 78,
+      "label": "Phoenix",
+      "economy_raw": "US",
+      "efua_identity_matches": [
+        {
+          "id": 4211,
+          "sourceName": "Phoenix",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 79,
+      "label": "Mexico City",
+      "economy_raw": "MX",
+      "efua_identity_matches": [
+        {
+          "id": 5006,
+          "sourceName": "Mexico City",
+          "countryIso": "MEX",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 80,
+      "label": "Zhengzhou",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 8189,
+          "sourceName": "Zhengzhou",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 81,
+      "label": "Xiamen",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 10286,
+          "sourceName": "Xiamen",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 82,
+      "label": "Rome",
+      "economy_raw": "IT",
+      "efua_identity_matches": [
+        {
+          "id": 3881,
+          "sourceName": "Rome",
+          "countryIso": "ITA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 83,
+      "label": "Cairo",
+      "economy_raw": "EG",
+      "efua_identity_matches": [
+        {
+          "id": 3981,
+          "sourceName": "Cairo",
+          "countryIso": "EGY",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 84,
+      "label": "Chennai",
+      "economy_raw": "IN",
+      "efua_identity_matches": [
+        {
+          "id": 9850,
+          "sourceName": "Chennai",
+          "countryIso": "IND",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 85,
+      "label": "Oslo",
+      "economy_raw": "NO",
+      "efua_identity_matches": [
+        {
+          "id": 596,
+          "sourceName": "Oslo",
+          "countryIso": "NOR",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 86,
+      "label": "Kuala Lumpur",
+      "economy_raw": "MY",
+      "efua_identity_matches": [
+        {
+          "id": 1322,
+          "sourceName": "Kuala Lumpur",
+          "countryIso": "MYS",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 87,
+      "label": "Heidelberg–Mannheim",
+      "economy_raw": "DE",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 88,
+      "label": "Dalian",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 8973,
+          "sourceName": "Dalian",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 89,
+      "label": "Warsaw",
+      "economy_raw": "PL",
+      "efua_identity_matches": [
+        {
+          "id": 3222,
+          "sourceName": "Warsaw",
+          "countryIso": "POL",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 90,
+      "label": "Lyon",
+      "economy_raw": "FR",
+      "efua_identity_matches": [
+        {
+          "id": 3718,
+          "sourceName": "Lyon",
+          "countryIso": "FRA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 91,
+      "label": "Hamburg",
+      "economy_raw": "DE",
+      "efua_identity_matches": [
+        {
+          "id": 3793,
+          "sourceName": "Hamburg",
+          "countryIso": "DEU",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 92,
+      "label": "Salt Lake City",
+      "economy_raw": "US",
+      "efua_identity_matches": [
+        {
+          "id": 4881,
+          "sourceName": "Salt Lake City",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 93,
+      "label": "Ningbo",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 10282,
+          "sourceName": "Ningbo",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 94,
+      "label": "Manchester",
+      "economy_raw": "GB",
+      "efua_identity_matches": [
+        {
+          "id": 3304,
+          "sourceName": "Manchester",
+          "countryIso": "GBR",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 95,
+      "label": "Busan",
+      "economy_raw": "KR",
+      "efua_identity_matches": [
+        {
+          "id": 3057,
+          "sourceName": "Busan",
+          "countryIso": "KOR",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 96,
+      "label": "Ann Arbor",
+      "economy_raw": "US",
+      "efua_identity_matches": [
+        {
+          "id": 6929,
+          "sourceName": "Ann Arbor",
+          "countryIso": "USA",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 97,
+      "label": "Göteborg",
+      "economy_raw": "SE",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 98,
+      "label": "Macau–Zhuhai",
+      "economy_raw": "CN",
+      "efua_identity_matches": [],
+      "status": "unresolved_name_or_multicity_multicountry_boundary",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 99,
+      "label": "Ningde",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 10324,
+          "sourceName": "Ningde",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    },
+    {
+      "wipo_source_order": 100,
+      "label": "Zhenjiang",
+      "economy_raw": "CN",
+      "efua_identity_matches": [
+        {
+          "id": 9805,
+          "sourceName": "Zhenjiang",
+          "countryIso": "CHN",
+          "hasExistingEightDimensionReview": false
+        }
+      ],
+      "status": "exact_label_country_identity_only_not_cluster_equivalence",
+      "metricsTransferred": false
+    }
+  ],
+  "meaning": "All100labels traced, no transfer/ranking/coverage-equivalence. Diacritic/punctuation normalization with exact country; no aliases, splitting orcountryquota.",
+  "candidateCsvSha256": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
+  "existingReviewsInputCommit": "d3f9cb006d5b7c0aa6d9877723c5e9a5bce9a7d8",
+  "globalRankingEligible": false,
+  "metricTransfer": false,
+  "observationWindows": {
+    "PCT": [2020, 2024],
+    "originalSCIE": [2019, 2023],
+    "VC": [2019, 2023]
+  },
+  "review": {
+    "path": "docs/cci-global-knowledge-priority-review.md",
+    "sha256": "f0d4f29e3e3247d4c3773116a0045f8f4f82257c0d8427bfbf981ade0f028e5f"
+  }
+}

@@ -1006,5 +1006,14 @@
     "path": "docs/cci-guangzhou-priority-completion-review.md",
     "sha256": "d8b012462fa9c697e9185938235adc0b6799069d7426ace561fc619cee4c0a34",
     "reviewedOn": "2026-10-13"
+  },
+  "lonPriorityReview": {
+    "path": "docs/cci-guangzhou-lon-priority-review.md",
+    "sha256": "e9f3d474ec5617ef830819e08bd404db8143e520b114a9c2ffc8cf5f14f173d6",
+    "inputCaseSha256": "fcd40570aaadc20419f43b118a6db6e08f14e3742c1e5fc38a68cef92fc66f05",
+    "reviewedOn": "2026-10-13",
+    "qualifyingNewEntryFound": false,
+    "deepDiscoveryReopened": false,
+    "dimensionObjectsChanged": false
   }
 }

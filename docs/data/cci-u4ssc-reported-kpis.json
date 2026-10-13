@@ -19,13 +19,21 @@
       "populationDisasterPronePct": 1.21,
       "candidateId": 2453,
       "observationYear": null,
-      "observationYearMeaning": "NOT inferred from verification/publication date. SAIFI/CAIDI collection standard requires12months but actualyearunreported.",
+      "observationYearMeaning": "2022 ITU case p36 states majority KPI analysis for2020-2021; individual KPI observation year/provider remains unverified. Verification/publication dates are not observation years.",
       "identity": "city-submitted figures independently verified only for limited assurance/method conformance",
       "targetResidentCohortVerified": false,
       "sourceDataOriginPerKpi": "not disclosed here; insurance/housing may derive from national data per officialmethod",
       "pdfPagesVisuallyChecked": [14, 15, 21, 22],
       "methodPdfPagesVisuallyChecked": [49, 54, 55, 56, 101, 106, 112],
-      "unknownNotPenalty": true
+      "unknownNotPenalty": true,
+      "analysisPeriodForMajorityKpis": [2020, 2021],
+      "analysisPeriodPerKpiVerified": false,
+      "supplementalReview": {
+        "path": "docs/cci-daegu-priority-review.md",
+        "sha256": "9b17005ac239609b7c2b073e1532077a44001c7bbada20358fd510dc8b4ae86e",
+        "scope": "bounded two-entry source and current water review, not eight-dimension scoring",
+        "currentWaterObservationsTransferredToCci": false
+      }
     },
     {
       "reportCity": "Quito",
@@ -122,6 +130,12 @@
       "url": "https://www.itu.int/en/ITU-T/ssc/united/Documents/U4SSC%20Publications/Verification%20Reports/October%202021/U4SSC_Daegu-Korea_Verification-Report.pdf",
       "bytes": 11625860,
       "sha256": "ad803798fc5bcb0d690ea033f74a0da469c0672afe2d2954b22e8382d098948d"
+    },
+    {
+      "file": "itu-case2022-complete.pdf",
+      "url": "https://u4ssc.itu.int/wp-content/uploads/2022/02/U4SSC_Case-Study-Daegu-Korea-Republic-of-E.pdf",
+      "bytes": 21858111,
+      "sha256": "391d325c61293a68010cff06e769c0514ba6bfe3df18cac0fd73b1540e67774b"
     }
   ],
   "globalRankingEligible": false,

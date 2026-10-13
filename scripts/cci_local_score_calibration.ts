@@ -96,6 +96,7 @@ const realCases = [
   "santa-cruz-de-tenerife",
   "sheffield",
   "aalborg",
+  "geneva",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -183,6 +184,7 @@ const [
   santaCruz,
   sheffield,
   aalborg,
+  geneva,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -350,21 +352,21 @@ const singaporeWithoutMedAndTec = { ...singaporeWithoutTec };
 delete singaporeWithoutMedAndTec.MED;
 assert.deepEqual(total(singaporeWithoutMedAndTec), { center: null, lower: 45, upper: 70 });
 assert.equal(helsinki.TEC, 80);
-assert.deepEqual(total(helsinki), { center: null, lower: 53, upper: 68 });
-assert.equal(helsinki.GSS, undefined);
+assert.deepEqual(total(helsinki), { center: 62, lower: 62, upper: 62 });
+assert.equal(helsinki.GSS, 60);
 assert.equal(realCases[2].securityReview.sha256, digest(realCases[2].securityReview.path));
-assert.deepEqual(total({ ...helsinki, MED: 40 }), { center: null, lower: 50, upper: 65 });
-assert.deepEqual(total({ ...helsinki, LON: 40 }), { center: null, lower: 51, upper: 66 });
-assert.deepEqual(total({ ...helsinki, TEC: 60 }), { center: null, lower: 51, upper: 66 });
+assert.deepEqual(total({ ...helsinki, MED: 40 }), { center: 59, lower: 59, upper: 59 });
+assert.deepEqual(total({ ...helsinki, LON: 40 }), { center: 60, lower: 60, upper: 60 });
+assert.deepEqual(total({ ...helsinki, TEC: 60 }), { center: 60, lower: 60, upper: 60 });
 for (const caseInput of [realCases[1], realCases[2], realCases[5]]) {
   assert.equal(caseInput.technologyReview.sha256, digest(caseInput.technologyReview.path));
 }
 const helsinkiWithoutLon: Partial<Record<DimensionId, number>> = { ...helsinki };
 delete helsinkiWithoutLon.LON;
-assert.deepEqual(total(helsinkiWithoutLon), { center: null, lower: 47, upper: 72 });
+assert.deepEqual(total(helsinkiWithoutLon), { center: null, lower: 56, upper: 66 });
 const helsinkiWithoutTec = { ...helsinki };
 delete helsinkiWithoutTec.TEC;
-assert.deepEqual(total(helsinkiWithoutTec), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total(helsinkiWithoutTec), { center: null, lower: 54, upper: 64 });
 assert.equal(total(zurich).center, 60);
 assert.equal(total({ ...zurich, GSS: 40 }).center, 57);
 assert.equal(total({ ...zurich, GSS: 80 }).center, 63);
@@ -463,7 +465,7 @@ const washingtonPosition = rankAudit.scenarios.fixed_conditional_centers.caseRes
 );
 assert(washingtonPosition);
 assert.equal(washingtonPosition.center, 58);
-assert.equal(washingtonPosition.bestPosition, 12);
+assert.equal(washingtonPosition.bestPosition, 13);
 assert.equal(washingtonPosition.worstPosition, rankAudit.candidateCount - 1);
 assert.equal(total({ ...washington, GSS: 40 }).center, 55);
 assert.equal(total({ ...washington, GSS: 80 }).center, 61);
@@ -519,7 +521,7 @@ const newYorkPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
 );
 assert(newYorkPosition);
 assert.equal(newYorkPosition.center, 58);
-assert.equal(newYorkPosition.bestPosition, 12);
+assert.equal(newYorkPosition.bestPosition, 13);
 assert.equal(newYorkPosition.worstPosition, rankAudit.candidateCount - 1);
 assert.deepEqual(realCases[7].clinicBoundaryCheck.fuaMatches, [7244]);
 assert.equal(realCases[7].referenceBoundaryCheck.referencePoints.length, 6);
@@ -554,7 +556,7 @@ const parisPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.
 );
 assert(parisPosition);
 assert.equal(parisPosition.center, 60);
-assert.equal(parisPosition.bestPosition, 5);
+assert.equal(parisPosition.bestPosition, 6);
 assert.equal(parisPosition.worstPosition, rankAudit.candidateCount - 7);
 assert.equal(
   realCases[8].sharedLegalPath.sourceSha256,
@@ -670,7 +672,7 @@ const osakaKyotoPosition = rankAudit.scenarios.fixed_conditional_centers.caseRes
 );
 assert(osakaKyotoPosition);
 assert.equal(osakaKyotoPosition.center, 60);
-assert.equal(osakaKyotoPosition.bestPosition, 5);
+assert.equal(osakaKyotoPosition.bestPosition, 6);
 assert.equal(osakaKyotoPosition.worstPosition, rankAudit.candidateCount - 7);
 assert.equal(
   realCases[11].referenceBoundaryCheck.fuaSha256,
@@ -921,7 +923,7 @@ const beijingPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
   (c: { efua_id: string }) => c.efua_id === "7704"
 );
 assert(beijingPosition);
-assert.equal(beijingPosition.bestPosition, 5);
+assert.equal(beijingPosition.bestPosition, 6);
 assert.equal(beijingPosition.worstPosition, rankAudit.candidateCount - 7);
 
 assert.deepEqual(total(shanghai), { center: 58, lower: 58, upper: 58 });
@@ -987,7 +989,7 @@ const shanghaiPosition = rankAudit.scenarios.fixed_conditional_centers.caseResul
   (c: { efua_id: string }) => c.efua_id === "10097"
 );
 assert(shanghaiPosition);
-assert.equal(shanghaiPosition.bestPosition, 12);
+assert.equal(shanghaiPosition.bestPosition, 13);
 assert.equal(shanghaiPosition.worstPosition, rankAudit.candidateCount - 1);
 
 assert.deepEqual(total(jakarta), { center: null, lower: 43, upper: 53 });
@@ -1069,8 +1071,8 @@ const jakartaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
   (c: { efua_id: string }) => c.efua_id === "4897"
 );
 assert(jakartaPosition);
-// Nanjing and Xi’an GSS withdrawals remove two fixed lower bounds above Jakarta’s upper53.
-assert.equal(jakartaPosition.bestPosition, 18);
+// Helsinki's restored centre adds one fixed lower bound above Jakarta's upper53.
+assert.equal(jakartaPosition.bestPosition, 19);
 assert.equal(jakartaPosition.worstPosition, rankAudit.candidateCount);
 
 assert.deepEqual(total(nanjing), { center: null, lower: 49, upper: 64 });
@@ -1554,7 +1556,7 @@ const surabayaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResul
   (row: { efua_id: string }) => row.efua_id === "6401"
 );
 assert(surabayaPosition);
-assert.equal(surabayaPosition.bestPosition, 12);
+assert.equal(surabayaPosition.bestPosition, 13);
 assert.equal(surabayaPosition.worstPosition, rankAudit.candidateCount);
 
 assert.deepEqual(total(hangzhou), { center: 58, lower: 58, upper: 58 });
@@ -1842,6 +1844,13 @@ assert.equal(xianCase.gssComparabilityReview.sha256, digest(xianCase.gssComparab
 assert.equal(xianCase.gssSupplement.warOrSuccessfulStrategicAttackRequired, false);
 assert.deepEqual(total({ ...xian, GSS: 60 }), { center: null, lower: 54, upper: 64 });
 
+const bostonCase = realCases.find(c => c.candidateId === 7347);
+assert.equal(bostonCase.gssPriorityReview.sha256, digest(bostonCase.gssPriorityReview.path));
+assert.equal(bostonCase.gssPriorityReview.qualifyingNewEntryFound, false);
+assert.equal(bostonCase.gssPriorityReview.deepDiscoveryReopened, false);
+assert.equal(bostonCase.gssPriorityReview.dimensionObjectsChanged, false);
+assert.deepEqual(total(boston), { center: null, lower: 51, upper: 66 });
+
 const serviceInventory = JSON.parse(
   readFileSync(new URL("../docs/data/cci-u4ssc-source-inventory.json", import.meta.url), "utf8")
 );
@@ -1860,6 +1869,21 @@ assert.equal(
   digest("docs/data/cci-u4ssc-verification-index.json")
 );
 assert.equal(serviceInventory.scriptSha256, digest("scripts/cci_u4ssc_source_inventory.py"));
+assert.equal(
+  serviceInventory.reportedKpiSnapshotSha256,
+  digest("docs/data/cci-u4ssc-reported-kpis.json")
+);
+const reportedKpis = JSON.parse(
+  readFileSync(new URL("../docs/data/cci-u4ssc-reported-kpis.json", import.meta.url), "utf8")
+);
+const daeguKpis = reportedKpis.rows.find(
+  (row: { candidateId: number }) => row.candidateId === 2453
+);
+assert.equal(daeguKpis.observationYear, null);
+assert.deepEqual(daeguKpis.analysisPeriodForMajorityKpis, [2020, 2021]);
+assert.equal(daeguKpis.analysisPeriodPerKpiVerified, false);
+assert.equal(daeguKpis.supplementalReview.currentWaterObservationsTransferredToCci, false);
+assert.equal(daeguKpis.supplementalReview.sha256, digest(daeguKpis.supplementalReview.path));
 
 assert.deepEqual(total(aalborg), { center: null, lower: 42, upper: 67 });
 assert.deepEqual(total({ ...aalborg, MED: 60 }), { center: null, lower: 45, upper: 70 });
@@ -1875,3 +1899,38 @@ assert.equal(
   aalborgCase.dimensions.find((d: { id: string }) => d.id === "GSS").subpillars.regional_conflict,
   "context"
 );
+
+assert.deepEqual(total(geneva), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total({ ...geneva, MED: 40 }), { center: null, lower: 42, upper: 67 });
+const genevaWithoutLon = { ...geneva };
+delete genevaWithoutLon.LON;
+assert.deepEqual(total(genevaWithoutLon), { center: null, lower: 39, upper: 74 });
+const genevaCase = realCases.find(c => c.candidateId === 29);
+assert.equal(
+  genevaCase.priorityCompletionReview.sha256,
+  digest(genevaCase.priorityCompletionReview.path)
+);
+
+const helsinkiWithoutGss = { ...helsinki };
+delete helsinkiWithoutGss.GSS;
+assert.deepEqual(total(helsinkiWithoutGss), { center: null, lower: 53, upper: 68 });
+assert.equal(realCases[2].gssPriorityReview.sha256, digest(realCases[2].gssPriorityReview.path));
+assert.equal(realCases[2].gssPriorityReview.otherSevenDimensionsUnchanged, true);
+assert.equal(realCases[2].gssPriorityReview.warOrSuccessfulStrategicAttackRequired, false);
+assert.equal(total({ ...helsinki, GSS: 40 }).center, 59);
+
+const knowledgeIndex = JSON.parse(
+  readFileSync(new URL("../docs/data/cci-wipo2025-identity-index.json", import.meta.url), "utf8")
+);
+assert.equal(knowledgeIndex.entries.length, 100);
+assert.equal(knowledgeIndex.exactUniqueIdentityEntries + knowledgeIndex.unresolvedEntries, 100);
+assert.equal(knowledgeIndex.metricTransfer, false);
+assert.equal(knowledgeIndex.globalRankingEligible, false);
+assert(
+  knowledgeIndex.entries.every(
+    (entry: { metricsTransferred: boolean }) => !entry.metricsTransferred
+  )
+);
+assert.equal(knowledgeIndex.review.sha256, digest(knowledgeIndex.review.path));
+assert.equal(realCases[21].lonPriorityReview.sha256, digest(realCases[21].lonPriorityReview.path));
+assert.equal(realCases[21].lonPriorityReview.dimensionObjectsChanged, false);

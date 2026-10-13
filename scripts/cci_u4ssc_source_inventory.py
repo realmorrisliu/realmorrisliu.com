@@ -112,6 +112,7 @@ def main():
         "unresolvedEntries": unresolved, "mappedEntries": mapped,
         "originalIndexSha256": index["sourceSha256"],
         "indexSnapshotSha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+        "reportedKpiSnapshotSha256": hashlib.sha256((DATA / "cci-u4ssc-reported-kpis.json").read_bytes()).hexdigest(),
         "candidateCsvSha256": hashlib.sha256(catalog.read_bytes()).hexdigest(),
         "scriptSha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "csvSha256": hashlib.sha256(content).hexdigest(),

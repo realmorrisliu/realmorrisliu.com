@@ -32,7 +32,7 @@
   },
   "crossCityServiceSources": {
     "manifest": "cci-u4ssc-source-inventory.json",
-    "manifestSha256": "ff601a7b7d1738086e8bb72b318e784545d3f0d40b08ab3aac5456e1a76b6b95",
+    "manifestSha256": "03a73c2e060994c7de661788d6ab2b310c5eab97eed25dd21df30e1681b24afe",
     "candidateCount": 9031,
     "indexEntries": 28,
     "uniqueLinks": 60,
@@ -78,6 +78,16 @@
       "no_in_area_airport_point_not_no_access": 5937,
       "airport_directory_points_only": 3094
     }
+  },
+  "knowledgeIdentitySources": {
+    "manifest": "cci-wipo2025-identity-index.json",
+    "manifestSha256": "bded1c911539795edbb904100797d0d4e1c4110dc67091968ee33449b6cdf66f",
+    "labels": 100,
+    "exactUniqueIdentityEntries": 79,
+    "unresolvedEntries": 21,
+    "metricTransfer": false,
+    "globalRankingEligible": false,
+    "scope": "Frozen name-country source references, not cluster-FUA equivalence or scores"
   },
   "scoreStatusCounts": {
     "not_computed_under_global_protocol": 9031
@@ -166,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 44,
-    "completeConditionalCaseCount": 15,
+    "conditionalCaseCount": 45,
+    "completeConditionalCaseCount": 16,
     "partialCaseCount": 29,
-    "unassessedCount": 8987,
+    "unassessedCount": 8986,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -287,9 +297,14 @@
       "provenanceSha256": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e"
     },
     "cci-u4ssc-source-inventory.json": {
-      "sha256": "ff601a7b7d1738086e8bb72b318e784545d3f0d40b08ab3aac5456e1a76b6b95",
+      "sha256": "03a73c2e060994c7de661788d6ab2b310c5eab97eed25dd21df30e1681b24afe",
       "provenance": "cci-global-priority-coverage-review.md",
       "provenanceSha256": "474055bbf9a21fdad941decd94e047c68977d13841a22fca9afd46f5efa5a680"
+    },
+    "cci-wipo2025-identity-index.json": {
+      "sha256": "bded1c911539795edbb904100797d0d4e1c4110dc67091968ee33449b6cdf66f",
+      "provenance": "cci-global-knowledge-priority-review.md",
+      "provenanceSha256": "f0d4f29e3e3247d4c3773116a0045f8f4f82257c0d8427bfbf981ade0f028e5f"
     },
     "cci-local-2026-singapore-case.json": {
       "sha256": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -302,9 +317,9 @@
       "provenanceSha256": "67789080df868bb73438bfc70139a88cb8b25b468ab0741b78db017589f873a8"
     },
     "cci-local-2026-helsinki-case.json": {
-      "sha256": "688df2f3b508f9c3ae00d2cc54906c56f2fac7a814ec165bb69b55b473a78702",
+      "sha256": "b31f85739aafe8b296d2ab04c6e8d81b5b53608ac98d0ec87bde613591db2e8f",
       "provenance": "cci-local-2026-helsinki-case.md",
-      "provenanceSha256": "0ef7f97025ee7ed35cb5e37717c24190101bff272baa726ca663d160ff2a13f6"
+      "provenanceSha256": "f5c067f75707f00f9f3f8c3c45486b9c4bf5fc23d3856e902152a12a547baddb"
     },
     "cci-local-2026-zurich-case.json": {
       "sha256": "45c8f510018e31942a624128aa0ffec71022f6e1981b5d6f0864861000978da9",
@@ -352,7 +367,7 @@
       "provenanceSha256": "8633e1bc4f64aacfb38540c481687376457921c324ca59ae2cf829f33f706f11"
     },
     "cci-local-2026-boston-case.json": {
-      "sha256": "b325f18f0c146d2b9edac6a47e56c9d718bf14ebd27795e44822abb5f8c91953",
+      "sha256": "cd7566eee5062d52fb11f427f38a298296baae8907804e18ee04145b43406676",
       "provenance": "cci-local-2026-boston-case.md",
       "provenanceSha256": "7654c926f4046cdedd730039bccad1e68bbffee743d0d1015640bd7bb4c60a9a"
     },
@@ -397,7 +412,7 @@
       "provenanceSha256": "4ca926a35432f4dd830ebb59084cc5ced5f9afe6f8fea6bea4bffdaffeaac72c"
     },
     "cci-local-2026-guangzhou-case.json": {
-      "sha256": "fcd40570aaadc20419f43b118a6db6e08f14e3742c1e5fc38a68cef92fc66f05",
+      "sha256": "f3d547bd4cc6849d246bc96845c97c328af821e573357cd1a14b4daedb110d59",
       "provenance": "cci-local-2026-guangzhou-case.md",
       "provenanceSha256": "fdcadf46d1e8409d5c5888dd1b6cc7b658930f2ea4eff459dd3587ca1c65a697"
     },
@@ -510,8 +525,13 @@
       "sha256": "eb9aa604ede02df62f44f33589ab47f825d98b9051ee5920fcf9427eb0471eb9",
       "provenance": "cci-aalborg-priority-review.md",
       "provenanceSha256": "e0658b20bbd28f06dfee388abfcb0f933061681f2fd62fd4a9e2fc54705a8919"
+    },
+    "cci-local-2026-geneva-case.json": {
+      "sha256": "bd75fe9e89215eca41ac82bc6902e5a1a1c76fb06a943f4faf4ef45bcff2dabc",
+      "provenance": "cci-geneva-priority-review.md",
+      "provenanceSha256": "b1bcbdcabcaa1003a589a64ae13c503e75778af54fac1b6d782cef3b3c89fadb"
     }
   },
-  "scriptSha256": "55650067e8ebd5e10a666d748a9a70aece8cc78d697d058fb942a7295c0dadd4",
-  "csvSha256": "6a60162032023241cb5bea8c1d0443bd0c58c7716b1d8dde0d304f5929c6b2e9"
+  "scriptSha256": "e2c77cd996b74ce24b840ae733c50dbf562af6b51e273e6fee4cd91f95bdb719",
+  "csvSha256": "e042d3bc7014a11403ca79047e6ffcc3e998731befe73e79f1f74c98e2cc7a22"
 }

@@ -327,5 +327,15 @@
   "priorityCompletionReview": {
     "path": "docs/cci-boston-priority-completion-review.md",
     "sha256": "063812d7e877b3dbfa178ab0e60e13f2ce16cafa9b8efca35e2b00f27f5f6459"
+  },
+  "gssPriorityReview": {
+    "path": "docs/cci-boston-gss-priority-review.md",
+    "sha256": "ca0e08d265ef2d0580f7e8c47124cd0d00902a1c736bb122df10cb89861f476b",
+    "inputCaseSha256": "b325f18f0c146d2b9edac6a47e56c9d718bf14ebd27795e44822abb5f8c91953",
+    "reviewedOn": "2026-10-13",
+    "qualifyingNewEntryFound": false,
+    "deepDiscoveryReopened": false,
+    "dimensionObjectsChanged": false,
+    "reason": "Bounded new-entry checks did not establish a discriminating current local impact and operating-protection/residual chain; retain GSS unknown and release research slot."
   }
 }

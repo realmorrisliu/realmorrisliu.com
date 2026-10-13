@@ -54,6 +54,7 @@ import malmo from "../../docs/data/cci-local-2026-malmo-case.json";
 import santaCruz from "../../docs/data/cci-local-2026-santa-cruz-de-tenerife-case.json";
 import sheffield from "../../docs/data/cci-local-2026-sheffield-case.json";
 import aalborg from "../../docs/data/cci-local-2026-aalborg-case.json";
+import geneva from "../../docs/data/cci-local-2026-geneva-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -112,8 +113,10 @@ const cases = [
   santaCruz,
   sheffield,
   aalborg,
+  geneva,
 ];
 const caseNamesZh: Record<number, string> = {
+  [geneva.candidateId]: "日内瓦功能区",
   [aalborg.candidateId]: "奥尔堡功能区",
   [sheffield.candidateId]: "谢菲尔德功能区",
   [malmo.candidateId]: "马尔默功能区",
@@ -339,8 +342,11 @@ const caseNotes: Record<number, string[]> = {
   ],
   [helsinki.candidateId]: [
     zh
-      ? "赫尔辛基 GSS 原 60 已撤回：国家预测和应急准备未闭合当地现实暴力影响与实际缓解链，与 Tampere 使用同一证据要求。TEC80、其余六维60不变；当前无中心，数学域53—68。未知不表示能力低，也不自动改40。恢复评分需核当地实际影响、已实施缓解、残余约束及地域／时点适用。再撤回LON则域47—72，再撤回TEC则45—70。两校产出、技术转移、产业吸收与居民采用仍支持有假设的TEC高档；融资和高龄使用差异保留。FINGER人体结果仍不等于完整干预当前交付。数学域不证明入围或排除。"
-      : "Helsinki's earlier GSS 60 is withdrawn: national forecasts and preparedness did not establish current local violence impact and actual mitigation, under the same evidence requirement used for Tampere. TEC 80 and six dimensions at 60 are unchanged. There is no centre; the mathematical domain is 53–68. Unknown does not imply weak capability or an automatic 40. Reassessment needs local impact, implemented mitigation, residual constraints and temporal/spatial applicability. Withdrawing LON as well gives 47–72; withdrawing TEC as well gives 45–70. Output, transfers, industry absorption and resident use still support conditional TEC 80, retaining financing and older-age counterevidence. FINGER results do not establish current delivery of its full intervention. These domains prove neither qualification nor exclusion.",
+      ? "赫尔辛基GSS补地方分类观察与共享供水实际保护后取条件60；TEC80、其余六维60不变，条件中心62。2024帮派成员刑事报告下降与实际侦查／判刑连接，不能把普通少年抢劫或问卷3%当组织暴力率。HSY技术监测、已完成安全项目及实际协调支持适配，演练不当攻击阻断率。"
+      : "Helsinki GSS is conditionally 60 after local classified observations and operating shared-water protection. TEC 80 and six dimensions at 60 are unchanged, giving a conditional centre 62. Lower 2024 gang-member criminal reports connect with actual investigations/sentences; ordinary juvenile robberies or a 3% survey measure are not organised-violence rates. HSY monitoring, completed security work and operating coordination support applicability; exercises are not attack-prevention rates.",
+    zh
+      ? "公共场所袭击记录2021—24增逾四分之一、弱势漏答与HSY尚无共同广泛危机视图均保留。重要剩余约束支持GSS40替代／总59；拒绝有限低影响、服务适配、版本或延续推定则53—68、无中心。两校转化及居民采用仍支持条件TEC80，FINGER结果不证明完整干预当前交付；此中心不证明全球入围。"
+      : "Public-place assault records rose by over a quarter in 2021–24; vulnerable nonresponse and HSY's missing joint broad-crisis view remain. Material residual constraints support GSS 40/total 59. Rejecting limited-impact, service-applicability, version or continuity assumptions gives 53–68 without a centre. University transfer and resident use still support conditional TEC 80; FINGER results do not prove current full-intervention delivery. This centre does not prove global qualification.",
   ],
   [zurich.candidateId]: [
     zh
@@ -357,6 +363,14 @@ const caseNotes: Record<number, string[]> = {
     zh
       ? "全9,031几何核对区内外参考点；Hull、Sheffield和机场服务不并成本区。国家CAR-T委托不证明本区居民已进入真实给药/监护链；国家威胁与日常运转也不足以补GSS。两轮后保留缺口，必要的代表性、延续、普通负担和触达假设均可撤回。"
       : "Reference points were checked against all 9,031 geometries; Hull, Sheffield and outside-airport services are not local production. National CAR-T commissioning does not establish a delivered local-resident pathway; national threat context and ordinary operations do not settle GSS. After two rounds, gaps remain explicit and applicability, continuity, affordability and reach assumptions can be withdrawn.",
+  ],
+  [geneva.candidateId]: [
+    zh
+      ? "日内瓦PCS／ISR／MED／LON／TEC／OPT条件60，GSS／RES未知，数学域45—70、无中心。实际防护、公共手术连续照护、临床CAR-T运行、技术许可及数字事务支持有限能力；住房与净费用、组织暴力及关键保护残余仍待辨别。"
+      : "Geneva has conditional 60 for PCS/ISR/MED/LON/TEC/OPT, with GSS/RES unknown: a 45–70 mathematical domain without a centre. Operating protection, public surgical continuity, clinical CAR-T use, technology licensing and digital transactions support scoped capability; housing/net costs and organised-harm/critical-protection residuals remain unresolved.",
+    zh
+      ? "旧功能区含Nyon／Vaud，州补助不自动扩用；新旧租客费用分开。私区压疮结果不代公共患者，RAC的17.8%是成本节省、非再入院率。LON的类别—当前产品—通常保险取得连接可撤回，拒绝后39—74；MED40替代42—67。机场近似点区外不等居民无法使用，未来通信备电不计当前能力。"
+      : "The old FUA includes Nyon/Vaud; cantonal subsidies are not extended automatically, and new/continuing rents stay separate. Private-division pressure-ulcer outcomes are not public-patient results; RAC 17.8% is cost savings, not a readmission rate. Rejecting the LON class/current-product/usual-insurance connection gives 39–74; MED 40 gives 42–67. An airport reference outside the FUA does not imply unusable service; future communications backup is not present capacity.",
   ],
   [aalborg.candidateId]: [
     zh
@@ -578,6 +592,18 @@ const caseNotes: Record<number, string[]> = {
   ],
 };
 const caseSupplementLinks: Record<number, { path: string; label: string }> = {
+  687: {
+    path: "cci-helsinki-gss-priority-review.md",
+    label: zh ? "安全最后未知复判" : "Safety completion review",
+  },
+  9711: {
+    path: "cci-guangzhou-lon-priority-review.md",
+    label: zh ? "长寿补证与停止条件" : "Longevity evidence and stopping conditions",
+  },
+  7347: {
+    path: "cci-boston-gss-priority-review.md",
+    label: zh ? "安全补证与停止条件" : "Safety evidence and stopping conditions",
+  },
   7094: {
     path: "cci-xian-gss-comparability-review.md",
     label: zh ? "安全同尺度撤回与恢复条件" : "Safety withdrawal and reassessment conditions",
@@ -1059,8 +1085,8 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
       <p>
         {
           zh
-            ? "ITU跨城市服务入口保留28报告条目／60语种和网页链接；仅3份英文PDF关键表已读，8候选有名称＋国别来源关联。核验年不代观察年、授权接入不代全部可用，停电时长CAIDI不等全年累计停电；这些入口不生成CCI评分。"
-            : "The ITU service-report registry retains 28 entries and 60 language or viewer links. Selected tables from only three English PDFs were read; eight candidates have name-country source references. Verification year is not observation year, authorised connection is not all usable access, and CAIDI is not annual cumulative outage time. These entries generate no CCI score."
+            ? "ITU服务索引保留28条目／60链接，其中3份英文核验报告已读关键表，8候选有名称＋国别关联。大邱补查确认多数旧KPI分析期2020—2021，并取得2025水质与2026已运行替供；逐项年份、服务范围及医疗取得仍未闭，不生成CCI分数。"
+            : "The ITU index retains 28 entries and 60 links; key tables from three English verification reports were read, with name-country references for eight candidates. A Daegu follow-up identifies a 2020–2021 analysis period for most old KPIs and adds 2025 water tests and operating 2026 substitute supply. Individual years, service scope and usual-care access remain unresolved; no CCI scores are transferred."
         }
         {" "}<a
           href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-global-priority-coverage-review.md"
@@ -1069,6 +1095,21 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
         {" · "}<a
           href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/data/cci-u4ssc-source-inventory.json"
           >{zh ? "全候选来源关联审计" : "Source-reference audit"}</a
+        >
+        {" · "}<a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-daegu-priority-review.md"
+          >{zh ? "大邱年代与当前运行" : "Daegu dates and current operations"}</a
+        >
+      </p>
+      <p>
+        {
+          zh
+            ? "WIPO2025知识原表的100个集群标签全部保留，79个有名称国别对应、21个身份仍未解决。发明、研究与融资活动提供新研究线索，集群边界与旧功能区不同，不能复制指标或直接当CCI名次。下一批检验盐湖城、西雅图和悉尼的八维实际表现。"
+            : "All 100 cluster labels from the WIPO 2025 knowledge table are retained:79 have name-country references and 21 remain unresolved. Invention, research and financing activity supply new research leads. Cluster boundaries differ from the old FUAs; indicators and ranks are not copied into CCI. The next batch tests Salt Lake City, Seattle and Sydney across all eight dimensions."
+        }
+        {" "}<a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-global-knowledge-priority-review.md"
+          >{zh ? "全球知识线索与选题依据" : "Global knowledge signals and research choices"}</a
         >
       </p>
       <p>

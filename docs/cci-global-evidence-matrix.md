@@ -1,5 +1,7 @@
 # CCI 全球八维证据覆盖：统一视图
 
+**2026-10-13 第十三批验收：** [Helsinki687安全](cci-helsinki-gss-priority-review.md)补地方分类观察与共享供水实际保护后GSS条件60、条件中心62；重要尾部及危机协调残余支持40替代59，拒绝影响／适配／延续推定仍53—68，其他七维不变。新增[Geneva29](cci-geneva-priority-review.md)六维条件60、GSS／RES未知，45—70、无中心；私区质量、RAC成本与保险净取得分开。当前**45份审阅、16完整／29部分、8,986未审**。[大邱](cci-daegu-priority-review.md)补2025水质及2026实际替供、确认多数旧KPI分析期2020—2021，未评分；[波士顿](cci-boston-gss-priority-review.md)／[广州LON](cci-guangzhou-lon-priority-review.md)无新增判别链按规则停止、原八维对象不变。[全球知识线索](cci-global-knowledge-priority-review.md)保留WIPO2025全部100标签、79名称国别对应及21未解决；2026数值未采用、无集群指标移入。下一批最多三项并行，检验Salt Lake City4881／Seattle／Sydney的实际八维组合，研究顺序不是排名。全部保留、零排除，无合格第32名门槛；以下为历史快照。
+
 **2026-10-13服务来源关联：** 新增[U4SSC来源登记](cci-global-priority-coverage-review.md)及[全候选复算](data/cci-u4ssc-source-inventory.json)：完整9031行保留，仅8个名称国别关联，不转行政指标／历史原值为功能区测量或CCI分。28索引条目、60语种／viewer链接、3已读英文报告分别计数，未匹配20条目不排除。新增来源审计哈希进入矩阵；原局部证据字段及历史发布不变。最新八维案例计数见总报告，以下为各阶段快照。
 
 **2026-10-13 同尺度与未知探索验收：** 伦敦／苏黎世LON由40改为条件60，实际疾病转化、支付与监护链纠正旧路径代表性，八维中心各60；其余七维不变。新增[Saifai8299有界审阅](cci-saifai-priority-review.md)，八维主未知、无中心，11partial／7context／13unresolved；不因医疗近／网络快填高分。当前**28份审阅、15完整／13部分、9,003未审**，全部保留、零排除、无合格第32名门槛。以下旧计数与分数为阶段快照。

@@ -308,8 +308,20 @@ def main():
     inputs[service_path.name] = {'sha256': hashlib.sha256(service_path.read_bytes()).hexdigest(),
                                 'provenance': 'cci-global-priority-coverage-review.md',
                                 'provenanceSha256': hashlib.sha256((ROOT / 'docs/cci-global-priority-coverage-review.md').read_bytes()).hexdigest()}
+    knowledge_path = folder / 'cci-wipo2025-identity-index.json'
+    knowledge = json.loads(knowledge_path.read_text())
+    if (knowledge['candidateCsvSha256'] != inputs['cci-global-candidates-r2019a.csv']['sha256']
+            or knowledge['candidateCount'] != len(candidates)
+            or len(knowledge['entries']) != knowledge['labels']
+            or knowledge['globalRankingEligible'] or knowledge['metricTransfer']
+            or any(entry['metricsTransferred'] for entry in knowledge['entries'])
+            or knowledge['review']['sha256'] != hashlib.sha256((ROOT / knowledge['review']['path']).read_bytes()).hexdigest()):
+        raise ValueError('Knowledge identity source snapshot mismatch')
+    inputs[knowledge_path.name] = {'sha256': hashlib.sha256(knowledge_path.read_bytes()).hexdigest(),
+                                  'provenance': Path(knowledge['review']['path']).name,
+                                  'provenanceSha256': knowledge['review']['sha256']}
     cases = []
-    for city in ('singapore', 'london', 'helsinki', 'zurich', 'gaza', 'tokyo', 'washington', 'new-york', 'paris', 'san-jose', 'los-angeles', 'osaka-kyoto', 'boston', 'seoul', 'lisbon', 'chicago', 'prague', 'beijing', 'shanghai', 'jakarta', 'nanjing', 'guangzhou', 'wuhan', 'xian', 'surabaya', 'hangzhou', 'copenhagen', 'saifai', 'grimsby', 'tampere', 'cima', 'oulu', 'leicester', 'dublin', 'turku', 'edinburgh', 'jyvaskyla', 'coventry', 'loughborough', 'fazeley', 'malmo', 'santa-cruz-de-tenerife', 'sheffield', 'aalborg'):
+    for city in ('singapore', 'london', 'helsinki', 'zurich', 'gaza', 'tokyo', 'washington', 'new-york', 'paris', 'san-jose', 'los-angeles', 'osaka-kyoto', 'boston', 'seoul', 'lisbon', 'chicago', 'prague', 'beijing', 'shanghai', 'jakarta', 'nanjing', 'guangzhou', 'wuhan', 'xian', 'surabaya', 'hangzhou', 'copenhagen', 'saifai', 'grimsby', 'tampere', 'cima', 'oulu', 'leicester', 'dublin', 'turku', 'edinburgh', 'jyvaskyla', 'coventry', 'loughborough', 'fazeley', 'malmo', 'santa-cruz-de-tenerife', 'sheffield', 'aalborg', 'geneva'):
         path = folder / f'cci-local-2026-{city}-case.json'
         case = json.loads(path.read_text())
         review = ROOT / 'docs' / case['evidenceReview']
@@ -360,6 +372,13 @@ def main():
                                             'globalRankingEligible')},
         },
         "dimensionStatusCounts": {d: dict(Counter(r[d] for r in rows)) for d in DIMENSIONS},
+        "knowledgeIdentitySources": {
+            "manifest": knowledge_path.name,
+            "manifestSha256": hashlib.sha256(knowledge_path.read_bytes()).hexdigest(),
+            **{key: knowledge[key] for key in ('labels', 'exactUniqueIdentityEntries',
+                                              'unresolvedEntries', 'metricTransfer', 'globalRankingEligible')},
+            "scope": "Frozen name-country source references, not cluster-FUA equivalence or scores",
+        },
         "scoreStatusCounts": dict(Counter(r["cci_score_status"] for r in rows)),
         'researchDirectorySignals': {key: research_source[key] for key in ('status', 'snapshotDate', 'publicationYear', 'evidenceCutoff', 'candidateCount', 'candidatesWithAssociation', 'recordCandidateAssociations', 'distinctRecordsWithAssociation', 'limitations')},
         "legalMobility": {
