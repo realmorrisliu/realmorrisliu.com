@@ -8,8 +8,8 @@
   "boundaryVersion": "GHS-FUA R2019A",
   "boundaryReview": "unresolved",
   "evidenceReview": "cci-local-2026-london-case.md",
-  "expectedConditionalTotal": 58,
-  "limitations": "All 31 subpillars are reviewed, not all are measured. Scores require the stated assumptions; unknown evidence remains unknown. This is neither a global ranking nor an exclusion bound. Rejecting a necessary assumption requires reassessment, not automatic retention of its score.",
+  "expectedConditionalTotal": 60,
+  "limitations": "Conditional centre60 after the actual disease-specific CAR-T pathway challenges the earlier limited ageing-pathway basis for LON40. Other seven judgments and their counterevidence are unchanged. Current local delivery, eligibility, payment, affordable practical access and safe monitoring require reversible assumptions. LON40 remains a supported sensitivity alternative; withdrawing LON gives54–64 with no centre. No global ranking or exclusion qualification.",
   "dimensions": [
     {
       "id": "PCS",
@@ -77,14 +77,14 @@
     },
     {
       "id": "LON",
-      "score": 40,
-      "rationale": "Reviewed pathways include planned Phase 1, short biomarker trials, a frailty RCT without primary functional improvement and disease-specific commissioning; reliable benefit and usual access remain disconnected for the general ageing pathways reviewed.",
-      "assumption": "Reviewed pathways reflect current major maturity and unreviewed pathways have not changed the result. This weak representative-pathway assumption must be challenged; rejecting it leaves the whole dimension unresolved.",
-      "conditionalAlternatives": [60, 80],
+      "score": 60,
+      "rationale": "Actual London CAR-T treatment, NICE human-outcome appraisal, ordinarily resident NHS commissioning and local monitoring connect a disease-limited translation pathway. Manufacturing, referral/apheresis capacity, carer/travel requirements and lifelong malignancy monitoring remain substantive constraints. Earlier general-ageing studies do not represent the whole dimension.",
+      "assumption": "Existing local delivery and commissioned NHS pathways persist to the cutoff and usually remain usable by clinically eligible ordinary median-income residents. This does not assume every resident qualifies, all indirect costs are covered, or all referred patients reach infusion. Residual waits, care requirements and safety-information defects are material but do not usually break the reviewed pathway; rejecting a necessary continuity/access assumption restores null.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "translation": "partial",
         "trial_maturity": "partial",
-        "regulatory_adoption": "context",
+        "regulatory_adoption": "partial",
         "resident_access": "partial"
       }
     },
@@ -120,5 +120,169 @@
     "sha256": "74672413dbc3edae3c24c5c686756da6c694a04aee1aff55902ee196082c96e6",
     "reviewedOn": "2026-10-12",
     "status": "conditional_60_constraints_and_mitigation_not_missingness_penalty"
+  },
+  "retrievedOn": "2026-10-13",
+  "lonComparabilityReview": {
+    "path": "docs/cci-london-lon-comparability-review.md",
+    "sha256": "cb35a1a5a8d1b2bc5c1b369a1093990f06c2318c57af1d1bd13815d168acc2d5",
+    "reviewedOn": "2026-10-13",
+    "previousLonScore": 40,
+    "previousConditionalTotal": 58,
+    "otherSevenDimensionsUnchanged": true
+  },
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.stgeorges.nhs.uk/newsitem/first-patients-to-receive-game-changing-cancer-therapy-now-in-remission/",
+      "bytes": 68858,
+      "sha256": "6f96f0e3f361e4f206aadfe9353e53d8ad5e70372d5b6883ad94519ca2732d62",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:24:23.965370+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-05-28",
+      "scope": "7已治疗；多数缓解但未给精确分子，服务South West London及Surrey，不是2026全区治疗率",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S02",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2026/04/cart-service-specification-commissioning-guidance-v1.0-1.pdf",
+      "bytes": 332621,
+      "sha256": "ba97c929f2ca55b7da63a525aa8d0af00f962742e18f91e2b48afabda55da108",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:24:23.969404+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "官方2026/04目录；封面12 November2025 Version3，内列December2025 TA1116，旧计划日期不可当实际实施；England通常居民委托和提供方支付",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S03",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2026/04/cart-services-specification-engagement-report.pdf",
+      "bytes": 241623,
+      "sha256": "488d37bb1e7a6ad034fe859164bf6bf1cee1e5132789d001732a4b408cadbdd7",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:24:23.965747+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "官方2026/04目录；报告封面7 May2025 Version1.0，stakeholder反馈不是2026伦敦等待抽样",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S04",
+      "url": "https://assets.publishing.service.gov.uk/media/66c3596f2e8f04b086cdf3db/UK_DHPC-Final_CAR-T_cell.pdf",
+      "bytes": 621175,
+      "sha256": "f476ad963a99ecf5147337756c35104561ff2eb3e780bd0458656ea8c3d9cad0",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:24:23.965632+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2024-07-25",
+      "scope": "EMA/MHRA同意的药商DHPC；截至April2024全球风险信号及终身监护，不是伦敦发生率",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+      "bytes": 20164,
+      "sha256": "7d37836575b240bd2359d0de728c2e937e73a1cc32906576e086a1af57733e3f",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:25:44.534634+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-03-26",
+      "scope": "NICE正式推荐第1章；适应证/移植适合性/商业安排；总生存证据不确定",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2026/07/2402-commissioning-policy-lonafarnib-hgps.pdf",
+      "bytes": 227513,
+      "sha256": "6058ab23198d712877f7a303a4e1e328471ce3729276422055c433ebc5e5ed51",
+      "retrievedOn": "2026-10-10",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-07-16",
+      "scope": "England HGPS正式疾病限定责任和监护；未核伦敦给药；复用Oct10原件",
+      "sourceKind": "reused_original",
+      "reusedFrom": "/private/tmp/cci-global/lon-resident-access/2402-commissioning-policy-lonafarnib-hgps.pdf"
+    },
+    {
+      "id": "S07",
+      "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+      "bytes": 32656,
+      "sha256": "4efb26910573c7f60a7ab193ee4e3091526d3672ce5dd931413ab74c3fd26976",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:31:14.732347+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "NHS通常居住资格；page reviewed2023-10-24，nextreview2026-10-24，国家规则非本地及时治疗率",
+      "sourceKind": "new_original_response"
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.uclh.nhs.uk/our-services/find-service/cancer-services/blood-cancers-clinical-haematology/blood-diseases-types-and-services/car-t-cell-therapy",
+      "publishedOn": null,
+      "scope": "现行未标日期院方服务正文；2016以来数百累计试验+获批给药，实际两院区和随访；非2026数百新增",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "sourceKind": "web_only_original_body_no_valid_local_response"
+    },
+    {
+      "id": "W02",
+      "url": "https://www.uclh.nhs.uk/patients-and-visitors/patient-information-pages/car-t-cell-therapy",
+      "publishedOn": null,
+      "updatedOn": "2026-03-18",
+      "scope": "实际路径；reviewdue2025-07-31与updated日期冲突；继发癌尚未报告说法已过期，非无风险证明",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "sourceKind": "web_only_original_body_no_valid_local_response"
+    },
+    {
+      "id": "W03",
+      "url": "https://www.uclh.nhs.uk/news/i-can-participate-life-now-how-car-t-cell-therapy-transformed-katies-life-severe-lupus",
+      "publishedOn": "2026-06-12",
+      "scope": "Phase1 CARLYSLE actual9截至Nov2025、低剂量first6中5缓解；2024Nov已输注患者Guildford居民，不计为本区居民或标准公保AD/抗衰",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "sourceKind": "web_only_original_body_no_valid_local_response"
+    }
+  ],
+  "lonReferenceBoundaryCheck": {
+    "sourcePath": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "bytes": 9932800,
+    "recordsRead": 9031,
+    "targetId": 5288,
+    "reviewedOn": "2026-10-13",
+    "method": "all original polygons; EPSG4326 to ESRI54009 always_xy; intersects",
+    "points": [
+      {
+        "name": "St Georges Tooting approximate hospital reference",
+        "lon": -0.1755,
+        "lat": 51.4269,
+        "intersectingIds": [5288],
+        "type": "analyst_approximate_reference_not_footprint"
+      },
+      {
+        "name": "UCLH Macmillan Cancer Centre approximate reference",
+        "lon": -0.1377,
+        "lat": 51.525,
+        "intersectingIds": [5288],
+        "type": "analyst_approximate_reference_not_footprint"
+      },
+      {
+        "name": "UCLH Grafton Way approximate reference",
+        "lon": -0.1355,
+        "lat": 51.525,
+        "intersectingIds": [5288],
+        "type": "analyst_approximate_reference_not_footprint"
+      }
+    ],
+    "limitations": "Approximate reference points, not exact addresses surveyed, footprints, service catchments or patient residence. Surrey and national commissioning are not identical to eFUA5288."
   }
 }

@@ -37,6 +37,7 @@ import xian from "../../docs/data/cci-local-2026-xian-case.json";
 import surabaya from "../../docs/data/cci-local-2026-surabaya-case.json";
 import hangzhou from "../../docs/data/cci-local-2026-hangzhou-case.json";
 import copenhagen from "../../docs/data/cci-local-2026-copenhagen-case.json";
+import saifai from "../../docs/data/cci-local-2026-saifai-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -78,8 +79,10 @@ const cases = [
   surabaya,
   hangzhou,
   copenhagen,
+  saifai,
 ];
 const caseNamesZh: Record<number, string> = {
+  [saifai.candidateId]: "Saifai 功能区",
   [hangzhou.candidateId]: "杭州功能区",
   [copenhagen.candidateId]: "哥本哈根功能区",
   [surabaya.candidateId]: "泗水功能区",
@@ -276,8 +279,11 @@ const caseNotes: Record<number, string[]> = {
   ],
   [london.candidateId]: [
     zh
-      ? "在伦敦 MED 40、OPT 80 的条件情景下，原权重总分为 57；仅将 MED 的 5 个权重点移至 OPT，就变为 59，仍低于新加坡该权重下的 60；若新加坡采用 TEC 60 的替代判断，总分为 58，该情景才翻转。这是敏感性演算，不是已经取得的新证据，正式权重不变。"
-      : "In the conditional London scenario MED 40 / OPT 80, the original-weight total is 57. Moving five weight points from MED to OPT yields 59, still below Singapore's 60; Singapore's alternative TEC 60 judgment instead yields 58 and allows that scenario to reverse the order. This is a sensitivity exercise, not newly established evidence; official weights remain unchanged.",
+      ? "伦敦条件中心60，八维各60。实际当地CAR-T、人体验证、NHS支付与监护纠正旧LON40的路径代表性；制造等待、采集容量、照护／距离条件和过期风险文案仍保留。拒绝当前延续、通常合资格居民实际取得／支付／监护推定时LON撤回未知，域54—64、无中心；其余七维及反证不变。"
+      : "London has a conditional centre of 60, with all eight dimensions at 60. Actual local CAR-T, human evidence and NHS payment/monitoring challenge the earlier LON 40 pathway selection. Manufacturing waits, collection capacity, carer/distance conditions and outdated risk information remain. Rejecting continuity or usual eligible-resident access/payment/monitoring restores unknown LON, giving 54–64 without a centre. Other seven judgments and counterevidence are unchanged.",
+    zh
+      ? "MED40／OPT80替代情景为59；将MED的5个权重点移至OPT后为61，超过新加坡同权重条件60。正式权重不变，此次次序翻转只是敏感性演算，不证明城市优劣。"
+      : "The MED 40 / OPT 80 alternative gives 59; moving five weight points from MED to OPT gives 61, above Singapore's conditional 60 under those weights. Official weights remain unchanged; this sensitivity reversal does not establish city superiority.",
   ],
   [helsinki.candidateId]: [
     zh
@@ -286,11 +292,19 @@ const caseNotes: Record<number, string[]> = {
   ],
   [zurich.candidateId]: [
     zh
-      ? "苏黎世条件性总分为 58。DO-HEALTH 的主要临床终点与后续生物时钟分析分开判读，并保留跌倒分析的可能益处；拒绝路径代表性假设则 LON 未定、无总分中心。铁路、航空和迁居资格支持退出路径，但移动紧急呼叫备电要求到 2031 年才落实，不能计作当前 OPT 80。历史心外科质量反证也不自动变成 2026 当前失效率。新加坡／赫尔辛基／东京的条件性 TEC 80 不证明其他维度高档或跨研究者一致性。"
-      : "Zurich's conditional total is 58. DO-HEALTH's primary clinical outcomes are distinguished from later clock analysis, while possible benefit in the fall analysis is retained. Rejecting pathway representativeness leaves LON unresolved and removes the total's centre. Rail, aviation and residence rights support exit channels, but mobile emergency-call backup requirements apply from 2031; they do not establish current OPT 80. Historical cardiac-surgery failures are not 2026 failure rates. Singapore's, Helsinki's and Tokyo's conditional TEC 80 judgments establish neither higher tiers elsewhere nor inter-reviewer consistency.",
+      ? "苏黎世条件中心60，八维各60。USZ实际CAR-T回输程序、当前保险治疗复合责任与监护支持LON60，纠正仅用DO-HEALTH路径判40的代表性。44次程序不当44名居民；事前批准、费用、制造与护理容量仍限制。普通居民通常合资格、可承担取得／监护及当前地域适配可撤回；LON未知时域54—64、无中心，LON40替代为58。"
+      : "Zurich has a conditional centre of 60, with all eight dimensions at 60. Actual USZ CAR-T procedures, current insured treatment-complex responsibility and monitoring support LON 60, challenging the earlier DO-HEALTH-only basis for 40. The 44 procedures are not 44 residents; prior approval, costs, manufacturing and nursing capacity remain constraints. Usual eligibility, affordable access/monitoring, continuity and spatial applicability are reversible; unknown LON gives 54–64 without a centre, while LON 40 gives 58.",
     zh
-      ? "苏黎世 GSS 补入 2026 年温特图尔站区袭击的三名伤者、实际警务与救援，以及随后公布的极端主义判断。两份通报对应同一事件；站前地址与周边 2 公里落在冻结功能区内，但它不是精确案发点，定位延续及全区适用仍是假设。GSS 保持条件性 60；仅在新依据支持 80 时总分才为 61。撤回 GSS 假设则无中心、数学域 49—64，与 LON 一起撤回为 45—70。单次事件不自动降档，一般犯罪记录也不等于死亡人数。"
-      : "Zurich's GSS review now includes three people injured in the 2026 Winterthur station-area attack, police and rescue action, and the later extremism assessment. Both notices concern one event. A station-front address and its surrounding 2 km lie within the frozen FUA, but this is not the exact attack location; location continuity and whole-FUA applicability remain assumptions. GSS stays conditionally 60. Only new support for 80 would raise the total to 61. Withdrawing GSS removes the centre and gives a mathematical domain of 49–64; withdrawing LON too gives 45–70. One event does not automatically lower the score, and general offence counts are not deaths.",
+      ? "其余七维及历史反证保持：温特图尔站区伤者和应对不重复计，历史心外科质量失效不当2026发生率，2031通信备电不计当前冗余。GSS80替代为63；撤回GSS则域51—66，连同LON撤回为45—70，均非可靠排名界限。"
+      : "The other seven judgments and counterevidence remain: Winterthur injuries and response are not double-counted, historical cardiac-surgery failure is not a 2026 rate, and 2031 communications backup is not current redundancy. GSS 80 would give 63; withdrawing GSS gives 51–66, or 45–70 with LON also unknown. These are not reliable ranking bounds.",
+  ],
+  [saifai.candidateId]: [
+    zh
+      ? "Saifai完成有界八维审阅，主档均未定，无总分；不是低分或排除。冻结功能区仅4平方公里，不能把Etawah全县或Saifai区块整体代入。真实医院护理、首24小时急救支持与地区热应对有依据，但后续必要治疗的通常居民保障、主要危险防护和跨领域服务连接尚未闭合。地下水锰原表冲突保留，不择较坏表机械扣分。"
+      : "Saifai has a bounded eight-dimension review with every main judgment unresolved and no total, not a low score or exclusion. The frozen area is only 4 km², not the whole Etawah district or Saifai block. Actual hospital care, first-24-hour emergency support and regional heat response are evidenced, but ordinary coverage for subsequent necessary treatment, major-hazard protection and cross-service links remain unresolved. Conflicting groundwater manganese tables are retained without choosing the worse value to assign a score.",
+    zh
+      ? "11项partial、7项context、13项unresolved。仅在额外居民保障、通常质量延续及必要转诊假设成立时MED60可作替代，仍无中心、域9—94；八维主未知域0—100不是高分潜力或概率。两轮补查后停止重复搜索，待有辨别力的新证据重开。"
+      : "There are 11 partial, 7 context and 13 unresolved subpillars. MED 60 is only an additional hypothesis about usual coverage, continuing appropriate quality and usable referral; even then the domain is 9–94 without a centre. The main 0–100 unknown domain is neither high-score potential nor a probability. Two targeted rounds are complete; reopen only with discriminating new evidence.",
   ],
   [gaza.candidateId]: [
     zh

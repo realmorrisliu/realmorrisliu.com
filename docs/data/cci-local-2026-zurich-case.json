@@ -8,8 +8,8 @@
   "boundaryVersion": "GHS-FUA R2019A",
   "boundaryReview": "unresolved",
   "evidenceReview": "cci-local-2026-zurich-case.md",
-  "expectedConditionalTotal": 58,
-  "limitations": "All 31 subpillars are reviewed, not all are measured. Scores require the stated assumptions; unknown evidence remains unknown. This is neither a global ranking nor an exclusion bound. Rejecting a necessary assumption requires reassessment, not automatic retention of its score.",
+  "expectedConditionalTotal": 60,
+  "limitations": "Conditional centre60 after the actual disease-specific CAR-T pathway challenges the earlier limited ageing-pathway basis for LON40. Other seven judgments and their counterevidence are unchanged. Current local delivery, eligibility, payment, affordable practical access and safe monitoring require reversible assumptions. LON40 remains a supported sensitivity alternative; withdrawing LON gives54–64 with no centre. No global ranking or exclusion qualification.",
   "dimensions": [
     {
       "id": "PCS",
@@ -77,15 +77,21 @@
     },
     {
       "id": "LON",
-      "score": 40,
-      "rationale": "Local human research is verified, but the reviewed pathway has a gap between primary clinical outcomes and current resident adoption. Clock changes do not establish clinical benefit; a later fall analysis retains possible benefit.",
-      "assumption": "The reviewed pathway is sufficiently representative to support limited translation capability. Rejecting this assumption leaves LON unresolved, rather than assuming other pathways do not exist or retaining 40.",
-      "conditionalAlternatives": [60, 80],
+      "score": 60,
+      "rationale": "Actual USZ2025CAR-T44retransfusion procedures (2024:34), a defined SUED2 E inpatient/outpatient monitoring/referral path, Swissmedic product authorisation and the current1July2026KLV treatment-complex responsibility support limited disease-specific translation. Prior special insurer approval, indication/line and centre conditions remain; current basic cost-share excludes premiums, optional higherdeductibles and uncapped15CHFhospitaldaywithexceptions. National human cohorts and waiting times are not local outcomes. DO-HEALTH primary/clock limitations remain but no longer adequately represent whole LON40. Unchanged resources, complex nursing, manufacturing/approval/ancillary burdens and long-term risk remain material limitations, not assumed complete access.",
+      "assumption": "Observed USZ treatment and the SUED2 E clinical organisation reasonably serve the frozen FUA and persist through the cutoff; annual-report first publication/cutoff bytes and full historical campus/recipient coverage are not independently authenticated. The delivered commercial CAR-T class reasonably connects to credible disease-specific clinical evidence and current Swiss product/indication approval;44retransfusions are procedures, not44unique citizens or a product-specific result. Ordinary clinically eligible insured residents generally obtain required prior special insurer approval and appropriate treatment/monitoring and can bear the remaining deductible, cost-share, premiums, uncapped hospital-day and ancillary/production-wait burdens. The mature disease route is relevant to limited LON readiness. It is not a healthy-person longevity claim; DO-HEALTH clock/clinical limitations no longer independently represent whole-dimension readiness.",
+      "assumptions": [
+        "Observed USZ treatment and the SUED2 E clinical organisation reasonably serve the frozen FUA and persist through the cutoff; annual-report first publication/cutoff bytes and full historical campus/recipient coverage are not independently authenticated.",
+        "The delivered commercial CAR-T class reasonably connects to credible disease-specific clinical evidence and current Swiss product/indication approval;44retransfusions are procedures, not44unique citizens or a product-specific result.",
+        "Ordinary clinically eligible insured residents generally obtain required prior special insurer approval and appropriate treatment/monitoring and can bear the remaining deductible, cost-share, premiums, uncapped hospital-day and ancillary/production-wait burdens.",
+        "The mature disease route is relevant to limited LON readiness. It is not a healthy-person longevity claim; DO-HEALTH clock/clinical limitations no longer independently represent whole-dimension readiness."
+      ],
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "translation": "partial",
         "trial_maturity": "partial",
-        "regulatory_adoption": "unresolved",
-        "resident_access": "unresolved"
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
       }
     },
     {
@@ -182,5 +188,100 @@
         "meaning": "First exact address result Bahnhofplatz 1, not a station or incident coordinate. Undated current geolocation is used only with a persistence assumption."
       }
     ]
-  }
+  },
+  "retrievedOn": "2026-10-13",
+  "lonComparabilityReview": {
+    "path": "docs/cci-zurich-lon-comparability-review.md",
+    "sha256": "218b9198ed54f7c7c6a79cc60cb21b9b83febf06da71c3fc4690fe3132e30a05",
+    "reviewedOn": "2026-10-13",
+    "previousLonScore": 40,
+    "previousConditionalTotal": 58,
+    "otherSevenDimensionsUnchanged": true
+  },
+  "sourceSnapshots": [
+    {
+      "url": "https://www.usz.ch/fachbereich/transplantationszentrum/ueber-uns/alle-jahresberichte/",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-13",
+      "bytes": 81933,
+      "sha256": "d827d3a8e941f3d563f903a3ed598b65e6e271ddffc34611b55e386b1bbdcd27",
+      "scope": "Current owner index links2024/2025 reports; first publication/last update unknown. Index is not a separate treatment count."
+    },
+    {
+      "url": "https://www.bag.admin.ch/de/anhang-1-der-krankenpflege-leistungsverordnung-klv",
+      "publishedOn": "2026-06-24",
+      "retrievedOn": "2026-10-13",
+      "bytes": 878833,
+      "sha256": "e65054ab604c1fa8138b75f9096ad0f4d3f4f5f69e7006f24316b8d6a2bf26de",
+      "scope": "Owner lists full KLV annex effective1July2026, published24June2026. Earlier editions and future changes are separate."
+    },
+    {
+      "url": "https://www.usz.ch/fachbereich/medizinische-onkologie-und-haematologie/angebot/car-t-zelltherapie/",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-13",
+      "bytes": 75742,
+      "sha256": "de8ad3624b262513ab49605c0d486bdb72a1afd875a296cfdef7cf1dae9097a0",
+      "scope": "Current owner clinical pathway: tumourboard/referral, SUED2 E inpatient infusion, individual outpatient follow-up and social/support care. Whole-page first date and historical campus/recipient coverage unknown."
+    },
+    {
+      "url": "https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/authorisations/new-medicines/kymriahtm_zellsuspensionzurinfusiontisagenlecleucelum.html",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-13",
+      "bytes": 44123,
+      "sha256": "0b64866e3a4c2d5e9d5421b49e46d1aa32e6f39a4bb22557f66cbc3002570325",
+      "scope": "Swiss product66778 first authorisation18October2018 and limited DLBCL/B-ALL indications. This initial-authorisation page is not complete current label or insurance approval."
+    },
+    {
+      "url": "https://www.usz.ch/app/uploads/2021/03/jahresbericht_tplz_2024_de.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-13",
+      "bytes": 2110871,
+      "sha256": "92038c088e744751c73515fe9e81c254912b07d94a4a625480b0e12d319df1fa",
+      "scope": "Observation2024, includessome2025 background; URL2021/03 is not observation year;65pages; PDFgenerated2July2025 is not independently verified first publication. p26 actual34procedures/2023count29 and Cilta-cel introduction, not unique resident counts."
+    },
+    {
+      "url": "https://www.usz.ch/app/uploads/2026/09/usz-jahresbericht_tplz_2025_de.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-13",
+      "bytes": 2759626,
+      "sha256": "f33efe3fee8be257b85c65b6fbaf44a233eb519b662c948b5da4145c60ca8b9e",
+      "scope": "Observation2025;60pages. p4/22actual44retransfusion procedures and available approved commercial products; PDF generated9July2026/path2026September, independent first publication/cutoff snapshot unknown. Future31October2026event excluded."
+    },
+    {
+      "url": "https://www.bag.admin.ch/dam/de/sd-web/ImdyprmtRKyP/KLV_Anhang%201_per%201.7.2026.pdf",
+      "publishedOn": "2026-06-24",
+      "retrievedOn": "2026-10-13",
+      "bytes": 1360498,
+      "sha256": "0074799b5d3b408f18e81d6d09a47e9678db83e79d5888a0e99d6d0636119759",
+      "scope": "49pages;full responsibility table effective1July2026 incorporates9June2026decisions. pp27-30treatment complex, diagnosis/line restrictions, JACIE/FACT and prior special insurer approval. Old provisional-expiry text not current rule."
+    },
+    {
+      "url": "https://www.bag.admin.ch/dam/en/sd-web/eW3bxVwcU0qg/BAG_Ratgeber_Obligatorische_KV_e_2025.pdf",
+      "publishedOn": null,
+      "retrievedOn": "2026-10-13",
+      "bytes": 462942,
+      "sha256": "0d032ae3639ac699e977ee59cfe28b6518c135c26ec8367ed73fd333ee6c42be",
+      "scope": "32pages;body rule overviewasof1January2026, publishedFebruary2026/PDFgenerated6March2026. pp15-16deductible/co-pay and uncapped15CHFhospitaldaywithexceptions, premiums/optionalhigherdeductible excluded from1000CHFstandardcostshare.",
+      "publicationMonth": "2026-02"
+    },
+    {
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "publishedOn": "2023-10-23",
+      "retrievedOn": "2026-10-13",
+      "bytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "reused": true,
+      "scope": "Same credible disease-specific human evidence as Paris;CTapproval6September2023. Original tables14/22/24/28/38visually checked in Paris task; non-comparative JULIET populations, national registry selection, date/age-table conflicts and adjusted indirect-comparison limitations retained. French payment opinion is not Swiss payment."
+    },
+    {
+      "url": "https://sukl.gov.cz/wp-content/uploads/2024/07/CAR-T-pripravky-Riziko-sekundarnich-malignit-z-T-lymfocytu.pdf",
+      "publishedOn": "2024-07-18",
+      "retrievedOn": "2026-10-12",
+      "bytes": 141644,
+      "sha256": "d607aef1950a7456bb497d02e9398c36ae844514121b20cd424c988f6d3cd6fb",
+      "reused": true,
+      "scope": "Common CAR-T product secondary T-cell-malignancy/long-term-monitoring risk;global observations toApril2024. Not Swiss local event rate or actual local lifelong follow-up. Original page1previously visually checked."
+    }
+  ],
+  "webReadSources": []
 }

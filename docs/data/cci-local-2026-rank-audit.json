@@ -4,10 +4,10 @@
   "evidenceCutoff": "2026-10-10",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
-  "conditionalCaseCount": 27,
+  "conditionalCaseCount": 28,
   "completeConditionalCaseCount": 15,
-  "partialCaseCount": 12,
-  "unassessedCount": 9004,
+  "partialCaseCount": 13,
+  "unassessedCount": 9003,
   "weights": {
     "PCS": 15,
     "GSS": 15,
@@ -53,7 +53,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 5,
-          "worstPosition": 9021
+          "worstPosition": 9023
         },
         {
           "efua_id": "310",
@@ -70,7 +70,7 @@
           "center": null,
           "lower": 14.0,
           "upper": 59.0,
-          "bestPosition": 9,
+          "bestPosition": 11,
           "worstPosition": 9031
         },
         {
@@ -112,11 +112,11 @@
         {
           "efua_id": "1479",
           "source_name": "Zurich",
-          "center": 58.0,
-          "lower": 58.0,
-          "upper": 58.0,
-          "bestPosition": 9,
-          "worstPosition": 9030
+          "center": 60.0,
+          "lower": 60.0,
+          "upper": 60.0,
+          "bestPosition": 5,
+          "worstPosition": 9023
         },
         {
           "efua_id": "1642",
@@ -134,7 +134,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 5,
-          "worstPosition": 9021
+          "worstPosition": 9023
         },
         {
           "efua_id": "3956",
@@ -143,7 +143,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 5,
-          "worstPosition": 9021
+          "worstPosition": 9023
         },
         {
           "efua_id": "4897",
@@ -166,11 +166,11 @@
         {
           "efua_id": "5288",
           "source_name": "London",
-          "center": 58.0,
-          "lower": 58.0,
-          "upper": 58.0,
-          "bestPosition": 9,
-          "worstPosition": 9030
+          "center": 60.0,
+          "lower": 60.0,
+          "upper": 60.0,
+          "bestPosition": 5,
+          "worstPosition": 9023
         },
         {
           "efua_id": "6401",
@@ -178,7 +178,7 @@
           "center": null,
           "lower": 49.0,
           "upper": 59.0,
-          "bestPosition": 9,
+          "bestPosition": 11,
           "worstPosition": 9031
         },
         {
@@ -196,7 +196,7 @@
           "center": 58.0,
           "lower": 58.0,
           "upper": 58.0,
-          "bestPosition": 9,
+          "bestPosition": 11,
           "worstPosition": 9030
         },
         {
@@ -214,7 +214,7 @@
           "center": 58.0,
           "lower": 58.0,
           "upper": 58.0,
-          "bestPosition": 9,
+          "bestPosition": 11,
           "worstPosition": 9030
         },
         {
@@ -233,7 +233,16 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 5,
-          "worstPosition": 9021
+          "worstPosition": 9023
+        },
+        {
+          "efua_id": "8299",
+          "source_name": "Saifai",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
         },
         {
           "efua_id": "8989",
@@ -250,7 +259,7 @@
           "center": 58.0,
           "lower": 58.0,
           "upper": 58.0,
-          "bestPosition": 9,
+          "bestPosition": 11,
           "worstPosition": 9030
         },
         {
@@ -268,7 +277,7 @@
           "center": 58.0,
           "lower": 58.0,
           "upper": 58.0,
-          "bestPosition": 9,
+          "bestPosition": 11,
           "worstPosition": 9030
         },
         {
@@ -277,7 +286,7 @@
           "center": 58.0,
           "lower": 58.0,
           "upper": 58.0,
-          "bestPosition": 9,
+          "bestPosition": 11,
           "worstPosition": 9030
         }
       ]
@@ -362,8 +371,8 @@
           "efua_id": "1479",
           "source_name": "Zurich",
           "center": null,
-          "lower": 49.0,
-          "upper": 64.0,
+          "lower": 51.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -416,8 +425,8 @@
           "efua_id": "5288",
           "source_name": "London",
           "center": null,
-          "lower": 49.0,
-          "upper": 64.0,
+          "lower": 51.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -481,6 +490,15 @@
           "center": null,
           "lower": 51.0,
           "upper": 66.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "8299",
+          "source_name": "Saifai",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -611,8 +629,8 @@
           "efua_id": "1479",
           "source_name": "Zurich",
           "center": null,
-          "lower": 49.0,
-          "upper": 64.0,
+          "lower": 51.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -665,8 +683,8 @@
           "efua_id": "5288",
           "source_name": "London",
           "center": null,
-          "lower": 49.0,
-          "upper": 64.0,
+          "lower": 51.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -730,6 +748,15 @@
           "center": null,
           "lower": 51.0,
           "upper": 66.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "8299",
+          "source_name": "Saifai",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -860,8 +887,8 @@
           "efua_id": "1479",
           "source_name": "Zurich",
           "center": null,
-          "lower": 49.0,
-          "upper": 64.0,
+          "lower": 51.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -914,8 +941,8 @@
           "efua_id": "5288",
           "source_name": "London",
           "center": null,
-          "lower": 49.0,
-          "upper": 64.0,
+          "lower": 51.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -979,6 +1006,15 @@
           "center": null,
           "lower": 51.0,
           "upper": 66.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "8299",
+          "source_name": "Saifai",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1109,8 +1145,8 @@
           "efua_id": "1479",
           "source_name": "Zurich",
           "center": null,
-          "lower": 52.0,
-          "upper": 62.0,
+          "lower": 54.0,
+          "upper": 64.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1163,8 +1199,8 @@
           "efua_id": "5288",
           "source_name": "London",
           "center": null,
-          "lower": 52.0,
-          "upper": 62.0,
+          "lower": 54.0,
+          "upper": 64.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1228,6 +1264,15 @@
           "center": null,
           "lower": 54.0,
           "upper": 64.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "8299",
+          "source_name": "Saifai",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1358,8 +1403,8 @@
           "efua_id": "1479",
           "source_name": "Zurich",
           "center": null,
-          "lower": 49.0,
-          "upper": 64.0,
+          "lower": 51.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1412,8 +1457,8 @@
           "efua_id": "5288",
           "source_name": "London",
           "center": null,
-          "lower": 49.0,
-          "upper": 64.0,
+          "lower": 51.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1477,6 +1522,15 @@
           "center": null,
           "lower": 51.0,
           "upper": 66.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "8299",
+          "source_name": "Saifai",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1730,6 +1784,15 @@
           "worstPosition": 9030
         },
         {
+          "efua_id": "8299",
+          "source_name": "Saifai",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "8989",
           "source_name": "Wuhan",
           "center": null,
@@ -1856,8 +1919,8 @@
           "efua_id": "1479",
           "source_name": "Zurich",
           "center": null,
-          "lower": 52.0,
-          "upper": 62.0,
+          "lower": 54.0,
+          "upper": 64.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1910,8 +1973,8 @@
           "efua_id": "5288",
           "source_name": "London",
           "center": null,
-          "lower": 52.0,
-          "upper": 62.0,
+          "lower": 54.0,
+          "upper": 64.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1975,6 +2038,15 @@
           "center": null,
           "lower": 52.0,
           "upper": 62.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "8299",
+          "source_name": "Saifai",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -2105,8 +2177,8 @@
           "efua_id": "1479",
           "source_name": "Zurich",
           "center": null,
-          "lower": 52.0,
-          "upper": 62.0,
+          "lower": 54.0,
+          "upper": 64.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -2159,8 +2231,8 @@
           "efua_id": "5288",
           "source_name": "London",
           "center": null,
-          "lower": 52.0,
-          "upper": 62.0,
+          "lower": 54.0,
+          "upper": 64.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -2224,6 +2296,15 @@
           "center": null,
           "lower": 56.0,
           "upper": 66.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "8299",
+          "source_name": "Saifai",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -2477,6 +2558,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "8299",
+          "source_name": "Saifai",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "8989",
           "source_name": "Wuhan",
           "center": null,
@@ -2528,17 +2618,17 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "86db24ee00e32e9949c7a4fd9a0621d269bd024a96aa40d095665017afc128cd",
+    "cci-global-evidence-matrix.csv": "e7e4144f304f6581a33a8f957d8d1c61986cf84585464be38e298ec55910008e",
     "cci-legal-mobility-rules.json": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "cci-legal-mobility.md": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e",
     "cci-local-2026-singapore-case.json": "6c5412e214060111201410a0a1a12cb9618f2c3dc5aaff725fdfda683b7696e4",
     "cci-local-2026-singapore-case.md": "8e7e4269e7a6ad2cfc1918b7fd8f64de5bc2fbd497a75d90f9385396bbb1264d",
-    "cci-local-2026-london-case.json": "ed58128d31002e33ae894139e366a1f4ffa15b07d47adbbd8b2217f869232ab0",
-    "cci-local-2026-london-case.md": "5f9be925cb5f53de2d65e3e245270a5833489bee4ae7b21540f68c99e5f7b169",
+    "cci-local-2026-london-case.json": "421bf6578b7f9cb3ef1a1079e6759b597d0b9247f982e8f83fd74c17ce739958",
+    "cci-local-2026-london-case.md": "8fec1bd8eb8688eec531a81cfc25e2e1f211ead094280bbc43a8fce57b3ccb38",
     "cci-local-2026-helsinki-case.json": "1c57ad44d9f7d8c37cdec70281671ffbe9da23f931a75c8c79c1c50eb85b01be",
     "cci-local-2026-helsinki-case.md": "03c9ce0b380f5e003b5c014a6485ffbbde1f5ceb38bb0b9d60ee1d1bef638ca4",
-    "cci-local-2026-zurich-case.json": "c0f56bba172a1f9d8dab4c6ab078fd0de295aae5a761b785b4bffe9738dfbed8",
-    "cci-local-2026-zurich-case.md": "61c43ca9677ba987bb96f37fbab3c79650a5d5851f4240bad9cc14833f06be7b",
+    "cci-local-2026-zurich-case.json": "45c8f510018e31942a624128aa0ffec71022f6e1981b5d6f0864861000978da9",
+    "cci-local-2026-zurich-case.md": "2ac0dea34f2f5ae2edcf635e0bea2a1bbf41a888fc212d6fe7e9f52075dc5e84",
     "cci-local-2026-gaza-case.json": "cfed62c5791dbc4647273e51199930e1723d922abe5d4cf34bb5b23c02eb46cf",
     "cci-local-2026-gaza-case.md": "14c2b2a2ea13119a9931d365e9eea5fec2ee797a9c34af79c4578b1aada3c7d4",
     "cci-local-2026-tokyo-case.json": "4d2985d5c11493cf91b9b9a5504869507801eb1dcbd32ffa137c4ebf1ddf64e1",
@@ -2585,12 +2675,14 @@
     "cci-local-2026-hangzhou-case.md": "5198b5ce43654f6af79c707a651455a5824c1be7156c4db6b529dac35d049039",
     "cci-local-2026-copenhagen-case.json": "6b92acba08de1d53eda7bc96808069cdfb3b5410f3c022e7f3746c9b77174f20",
     "cci-local-2026-copenhagen-case.md": "bde05782df45304008267b95b292767c9f63decf633fefe47d3f57409c4c7b51",
+    "cci-local-2026-saifai-case.json": "8bb293a33f75dd1b12ecb0cad477dc7462d4c1b1a0cb2d6e03c8814d0b221197",
+    "cci-saifai-priority-review.md": "cca75e6fabffbe53336898cb3932b076b97c4ba2f9846e3f6e1ec9fc1b0b2d29",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "3b5cc6463217ded4601e61153790d14f67a84df4b9bdbf4c87eaa8035fd5b5a9",
+    "cci-global-evidence-matrix.json": "c42f5c93c867c553f9b51952575a6bbb9618d0b6ae7017c0b5a85ef488c6e263",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "5276142364d67657492d89d7937a40c95722c2ee4c467ea7f320ea7a0d7f8f40"
+    "cci-local-2026-scoring-calibration.md": "b8577fb70c82ede3547ac851553dc17434e387d5bcae6e7c40a22177a50ce2f4"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "e9f004772a3409974de8ff76c4f575a3bca94e36fd5ab3a6bfad839dc525af03",
+  "csvSha256": "fe3962a6f1de5e74e71fa23f9818bf35565e979774c3ec640165b1b7f749ade6",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }

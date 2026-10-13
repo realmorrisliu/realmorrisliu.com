@@ -153,10 +153,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 27,
+    "conditionalCaseCount": 28,
     "completeConditionalCaseCount": 15,
-    "partialCaseCount": 12,
-    "unassessedCount": 9004,
+    "partialCaseCount": 13,
+    "unassessedCount": 9003,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -279,9 +279,9 @@
       "provenanceSha256": "8e7e4269e7a6ad2cfc1918b7fd8f64de5bc2fbd497a75d90f9385396bbb1264d"
     },
     "cci-local-2026-london-case.json": {
-      "sha256": "ed58128d31002e33ae894139e366a1f4ffa15b07d47adbbd8b2217f869232ab0",
+      "sha256": "421bf6578b7f9cb3ef1a1079e6759b597d0b9247f982e8f83fd74c17ce739958",
       "provenance": "cci-local-2026-london-case.md",
-      "provenanceSha256": "5f9be925cb5f53de2d65e3e245270a5833489bee4ae7b21540f68c99e5f7b169"
+      "provenanceSha256": "8fec1bd8eb8688eec531a81cfc25e2e1f211ead094280bbc43a8fce57b3ccb38"
     },
     "cci-local-2026-helsinki-case.json": {
       "sha256": "1c57ad44d9f7d8c37cdec70281671ffbe9da23f931a75c8c79c1c50eb85b01be",
@@ -289,9 +289,9 @@
       "provenanceSha256": "03c9ce0b380f5e003b5c014a6485ffbbde1f5ceb38bb0b9d60ee1d1bef638ca4"
     },
     "cci-local-2026-zurich-case.json": {
-      "sha256": "c0f56bba172a1f9d8dab4c6ab078fd0de295aae5a761b785b4bffe9738dfbed8",
+      "sha256": "45c8f510018e31942a624128aa0ffec71022f6e1981b5d6f0864861000978da9",
       "provenance": "cci-local-2026-zurich-case.md",
-      "provenanceSha256": "61c43ca9677ba987bb96f37fbab3c79650a5d5851f4240bad9cc14833f06be7b"
+      "provenanceSha256": "2ac0dea34f2f5ae2edcf635e0bea2a1bbf41a888fc212d6fe7e9f52075dc5e84"
     },
     "cci-local-2026-gaza-case.json": {
       "sha256": "cfed62c5791dbc4647273e51199930e1723d922abe5d4cf34bb5b23c02eb46cf",
@@ -407,8 +407,13 @@
       "sha256": "6b92acba08de1d53eda7bc96808069cdfb3b5410f3c022e7f3746c9b77174f20",
       "provenance": "cci-local-2026-copenhagen-case.md",
       "provenanceSha256": "bde05782df45304008267b95b292767c9f63decf633fefe47d3f57409c4c7b51"
+    },
+    "cci-local-2026-saifai-case.json": {
+      "sha256": "8bb293a33f75dd1b12ecb0cad477dc7462d4c1b1a0cb2d6e03c8814d0b221197",
+      "provenance": "cci-saifai-priority-review.md",
+      "provenanceSha256": "cca75e6fabffbe53336898cb3932b076b97c4ba2f9846e3f6e1ec9fc1b0b2d29"
     }
   },
-  "scriptSha256": "a6b6b8d5e6548ae951f23b8f7713f3eb1d6c37c87a00cee6d09b0e35cd45a2e0",
-  "csvSha256": "86db24ee00e32e9949c7a4fd9a0621d269bd024a96aa40d095665017afc128cd"
+  "scriptSha256": "edb5bdd011baf3489d4e8fe35bb16da4cc7433dd709634cb96ba7bf4c3dd6d5c",
+  "csvSha256": "e7e4144f304f6581a33a8f957d8d1c61986cf84585464be38e298ec55910008e"
 }

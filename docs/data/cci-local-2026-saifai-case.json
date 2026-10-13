@@ -1,0 +1,485 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 8299,
+  "name": "Saifai",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "retrievedOn": "2026-10-13",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-saifai-priority-review.md",
+  "expectedConditionalTotal": null,
+  "limitations": "Bounded eight-dimension review, all main judgments unknown, not low scores or exclusion. Clinical/district observations are not whole-area rates. Free first24h emergency care and eligible PMJAY coverage do not settle ordinary residents subsequent necessary-treatment payment. All candidates retained.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": null,
+      "rationale": "Real regional heat and delivered responses plus flood history and local reference-rock seismic exposure are informative, but principal-hazard exposure/protection has not been connected to the frozen4km2 area.",
+      "assumption": "A60 judgment needs credible local major-hazard protection/low exposure and ordinary reach/continuity;40 needs an important unmitigated hazard. Neither is presently established.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "heat_humidity": "context",
+        "flood_sea_level": "context",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "unresolved"
+      },
+      "subpillarEvidence": {
+        "heat_humidity": "Etawah站2024热浪5日、45.4°C；县内实际控制室、修手泵、ORS等，Saifai触达及室内／劳动保护未闭。",
+        "flood_sea_level": "1998–2020卫星洪水图册的Etawah汇总不是8299淹没；排水／居民恢复未核，海平面直接暴露不由内陆名称独判。",
+        "geophysical": "参考岩石PGA0.08439255g；地下水报告的冲积层及下降水位不测建筑抗震、地面沉降或滑坡失效。",
+        "severe_weather_wildfire": "热应对不能替雷电、强对流、烟霾与野火；一般医院消防招聘不作灾害失败。"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "No assigned UCDP events are not zero organised harm. Local effects, regional spillover and strategic-route impact are unresolved.",
+      "assumption": "Do not infer60 from silence or40 from national reputation; require actual locally applicable impact and mitigation.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      },
+      "subpillarEvidence": {
+        "organized_violence": "UCDP2021–25与2026 clear/pending归属0，不测所有组织伤害；普通犯罪、抗议或病患纠纷不自动计入。",
+        "regional_conflict": "未取得地区冲突到本区居民／资源／交通的实际影响链，不由全国战争语义定档。",
+        "strategic_exposure": "旧库无区内机场点不测目标风险；机场目录、政治人物关联和城市名声均不是实际威胁或缓解。"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": null,
+      "rationale": "Hospital administration, extended service hours and district heat response show scoped execution. They do not establish local cross-service delivery, group remedies or recovery.",
+      "assumption": "Usual service operation may support60 with local delivery/remedy evidence; persistent important constraints can support40. One hospital instruction cannot represent whole-area governance.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "context",
+        "social_cohesion": "unresolved",
+        "emergency_recovery": "partial"
+      },
+      "subpillarEvidence": {
+        "governance": "2026门诊服务时段原令、2025PMJAY实际会纪及责任分派；指令不是已完成患者赔付／资金兑付。",
+        "adaptive_capacity": "2024县级24h热控制室、手泵修理、全469GP讨论；覆盖和延续推定须明确，未证明局地多危害适应充分。",
+        "social_cohesion": "院讯多信仰空间、性别敏感活动、弱势服务可作局部入口；无居民信任／互助或排斥及实际救济结果。",
+        "emergency_recovery": "首24h免费急救存在；不是灾后水电、居住、补偿或家庭恢复的结果。"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "Block-office handpump tables disagree on manganese; declining monitoring wells and heat response do not measure current delivered household water. Food, energy and supply continuity remain unresolved.",
+      "assumption": "Do not select the worse contradictory table to assign40, or the resource Safe category to assign60. Need actual suitable supply and ordinary affordability with remaining constraints.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "context",
+        "food": "context",
+        "energy": "unresolved",
+        "supply_chain": "unresolved"
+      },
+      "subpillarEvidence": {
+        "water": "2021各block office手泵样本、两个监测井与水位下降；Mn摘表3与原汇总0.039冲突，非2026全户水。",
+        "food": "2018–19 SAM住院样本不是本区营养患病率；院方免费餐仅宣布，不能作已交付食品保障。",
+        "energy": "未获得实际居民供电／费用和替代供应；旧地下电缆建设／招标不能代可靠性。",
+        "supply_chain": "AMRIT药房MOU、耗材／药物采购入口和包内支出规则不代已到药、库存与替代供应结果。"
+      }
+    },
+    {
+      "id": "MED",
+      "score": null,
+      "rationale": "Actual routine surgery, emergency first24h support, outpatient and specialist entry exist. PMJAY eligibility and post-initial necessary-treatment affordability for the ordinary median-income resident are not connected; old selected clinical cohorts have limited usual-quality representativeness.",
+      "assumption": "MED60 is an explicit additional hypothesis if usual effective insurance/equivalent public subsidy makes subsequent necessary treatment affordable, observed care reasonably represents continuing appropriate care and referral is usable. These links remain unresolved, so main score is null; old LAMA is not itself current poor quality.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "subpillarEvidence": {
+        "access": "医院点在8299；Oct3原令门诊延时、2025Q4免费首24h急救／VirtualOPD；PMJAY适格及后续支付未闭。",
+        "routine_quality": "150人2023–24择期胆囊手术焦虑试验；100名2018–19 SAM儿童53出院/24DOPR/15LAMA/8死亡，非一般风险调整质量。",
+        "specialist_capacity": "择期腹腔镜护理、儿科SAM、院方2025首次踝关节镜；专科菜单／院讯量不保证普通必要专科及时获得。",
+        "system_continuity": "OPD午餐轮值50%在岗、PMJAY夜间经办关闭但急诊首24h检查免费；未核后续治疗及备援。"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "Other clinical research and ethics-approved trial directories do not establish a suitable healthspan intervention with human outcomes, actual local adoption and resident payment/monitoring.",
+      "assumption": "Need a specific credible pathway; absence of found treatment does not establish40 or0. Same disease-pathway rules as other cities apply.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "unresolved",
+        "trial_maturity": "unresolved",
+        "regulatory_adoption": "unresolved",
+        "resident_access": "unresolved"
+      },
+      "subpillarEvidence": {
+        "translation": "常规手术焦虑干预、SAM和COPD／疫苗登记不自动构成健康寿命转化路径。",
+        "trial_maturity": "2023–24伦理批准6项PhaseIII/IV目录，无在本地实际纳入、完成、结果和健康寿命适配。",
+        "regulatory_adoption": "伦理号不是药品采用批准；未闭具体干预—适应证—监管—本地实施。",
+        "resident_access": "PMJAY普通医疗经办和免费急救不能替目标转化干预的适用者／支付／监护。"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": null,
+      "rationale": "Actual research, funding, selected network samples and a started virtual outpatient service are partial capabilities. Sustained industry application and resident diffusion are not established.",
+      "assumption": "Need a credible knowledge/industry/infrastructure/adoption connection for60; unknown firms are not a proven40 constraint and fast samples do not imply80.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "unresolved",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "subpillarEvidence": {
+        "knowledge_output": "2025原RCT、2022观察研究及2023–24资助／项目原表；出版累计数不是全球比较分。",
+        "industry_density": "MOU和招标不证明本区持续产业实际生产、采用、替代节点；不是已证产业不存在。",
+        "digital_infrastructure": "Q32026固定125次／10瓦片，移动147次／8瓦片，条件下载113.7／191.7Mbps；非普及或可靠性。",
+        "diffusion": "Dec2025院方报告VirtualOPD已启动，AI培训／科研展示亦存在；不能从启动推广泛居民采用和获益。"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": null,
+      "rationale": "A railway actually opened in2016, national application/transfer rules and network samples exist. Current physical alternatives, usually executable migration and shared-failure continuity remain unresolved.",
+      "assumption": "Current usable transport plus ordinary legal, financial and network applicability is needed for60. An outside-area airport or absent directory point is not a proven40 restriction.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "context",
+        "asset_portability": "context",
+        "network_continuity": "unresolved"
+      },
+      "subpillarEvidence": {
+        "transport_redundancy": "Railways2016确已开通并给Saifai halt时刻；不是2026可靠性／当前班次，城外设施也不因出界自动不可用。",
+        "legal_mobility": "Passport Seva原办理流程需文件／预约／视核验类型；不当目的地居留或本地处理成功率。",
+        "asset_portability": "RBI2024更新LRS允许居民个人每财年USD250k许可交易，PAN/FormA2/KYC及限制仍适用；不是可用财富／零税费。",
+        "network_continuity": "fixed/mobile同时有测试不证明独立底层备援，未核中断后连接与资源转移。"
+      }
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "url": "https://www.upums.ac.in/",
+      "retrievedOn": "2026-10-13",
+      "bytes": 175369,
+      "sha256": "6c67b1d32f8342ba456f615efb144373ccd36430d67ec9a1bf0099f147969c76",
+      "scope": "valid_original_HTML_body",
+      "file": "upums-home.html"
+    },
+    {
+      "url": "https://www.upums.ac.in/pmjay",
+      "retrievedOn": "2026-10-13",
+      "bytes": 44498,
+      "sha256": "560141c736b03272fa13eaac6c248df52f9c57346e09e41c5793e97d07dfb873",
+      "scope": "valid_original_HTML_body",
+      "file": "upums-pmjay.html"
+    },
+    {
+      "url": "https://www.upums.ac.in/assets/pdf/HospitalCharges/Rate-list.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 10336666,
+      "sha256": "be8dee555d00ec0f6f9b4f89e57446c42298fe6a3e5f679e45f3d60cc7c6f88f",
+      "scope": "valid_original_PDF",
+      "file": "upums-rate-list.pdf"
+    },
+    {
+      "url": "https://upsdma.up.nic.in/",
+      "retrievedOn": "2026-10-13",
+      "bytes": 65349,
+      "sha256": "58f2f4a9fb5521fd1b592283bf5e6ac1d96b1e4e20113ab13ea107607afcac1b",
+      "scope": "valid_original_HTML_body",
+      "file": "upsdma-home.html"
+    },
+    {
+      "url": "https://upsdma.up.nic.in/2024/HAP2024.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 37960566,
+      "sha256": "a9dfe301a8c9dab4e4c3c55b90ff37937c17ace243ef720d84bbb91c1681b3d9",
+      "scope": "valid_original_PDF",
+      "file": "heat-efforts2024.pdf"
+    },
+    {
+      "url": "https://etawah.nic.in/disaster-management/",
+      "retrievedOn": "2026-10-13",
+      "bytes": 123318,
+      "sha256": "24018a7aa6d8b8908df82d7010e076428e6b3e5a183e37ad3f59f16e133fe7d2",
+      "scope": "valid_original_HTML_body",
+      "file": "etawah-disaster.html"
+    },
+    {
+      "url": "https://cgwb.gov.in/cgwbpnm/publication-detail/891",
+      "retrievedOn": "2026-10-13",
+      "bytes": 15655,
+      "sha256": "6e438798647f2b851d5fd70426bb128222fc00ff4ad3f1802ea6c6e16455ed9f",
+      "scope": "valid_original_HTML_body",
+      "file": "cgwb-etawah-index.html"
+    },
+    {
+      "url": "https://www.pib.gov.in/newsite/erelcontent.aspx?lang=2&reg=48&relid=155931",
+      "retrievedOn": "2026-10-13",
+      "bytes": 128324,
+      "sha256": "a81682fba6d26602860c5174e93760347fd4742b6eba2d3652ee423bd4a62363",
+      "scope": "valid_original_HTML_body",
+      "file": "rail-commission2016.html"
+    },
+    {
+      "url": "https://upsdma.up.nic.in/2024/HATR2024.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 22344244,
+      "sha256": "5d7e2ab7a1cf2f63d7c083af43f5ddfe630d665e2f59c7e658e498025d05ab06",
+      "scope": "valid_original_PDF",
+      "file": "heat-action-taken2024.pdf"
+    },
+    {
+      "url": "https://upsdma.up.nic.in/2024/Heat%20Wave%20Action%20Plan%20A%20Compendium%20of%20District-Wise%20Efforts%202023.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 19836715,
+      "sha256": "3dfb355acf14d52af3c2ccf848c16dd715bcb77aa2633ad70c90cc3980924e99",
+      "scope": "valid_original_PDF",
+      "file": "heat-compendium2023.pdf"
+    },
+    {
+      "url": "https://upsdma.up.nic.in/2024/Flood%20Hazard%20Atlas%20of%20Uttar%20Pradesh.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 19502939,
+      "sha256": "7ab0a50538118d6d0fb22c17ace38b773cca01f7deac9337dcaf7b30bd0985a0",
+      "scope": "valid_original_PDF",
+      "file": "flood-atlas.pdf"
+    },
+    {
+      "url": "https://cgwb.gov.in/cgwbpnm/download/891",
+      "retrievedOn": "2026-10-13",
+      "bytes": 7629226,
+      "sha256": "588fbf163871f7c189bad589e3f71c1fd9907760ae818aba57bb3a6dffb9910a",
+      "scope": "valid_original_PDF",
+      "file": "cgwb-etawah2022.pdf"
+    },
+    {
+      "url": "https://www.upums.ac.in/_next/static/chunks/pages/index-dc0d55988c459045.js",
+      "retrievedOn": "2026-10-13",
+      "bytes": 71851,
+      "sha256": "c045cb382e680f302b61c0a82b3fa0350b2f95ccd664c53ba8fa119bfe297aa5",
+      "scope": "valid_source_metadata_not_service_outcomes",
+      "file": "upums-index.js"
+    },
+    {
+      "url": "https://www.upums.ac.in/_next/static/chunks/pages/_app-a46318cf023916e1.js",
+      "retrievedOn": "2026-10-13",
+      "bytes": 14050,
+      "sha256": "e33994dcbd871996c4866c5cc17ef77734aa1a7601a038689b4983bae883a6ec",
+      "scope": "valid_source_metadata_not_service_outcomes",
+      "file": "upums-app.js"
+    },
+    {
+      "url": "https://upums.ac.in/upload/document/criteria3/3.2.3/66f0730e1787e_3.2.3%20List%20of%20projects.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 1737493,
+      "sha256": "2e645d6a070ed24fdbf602b314f22ad1a5d6e57bba17076094ab354b5ea2f4ad",
+      "scope": "valid_original_PDF",
+      "file": "upums-clinical-projects2024.pdf"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12456855/",
+      "retrievedOn": "2026-10-13",
+      "bytes": 146907,
+      "sha256": "bd7442203a0cbc38be0078b19d4ea4171844bbc04dd3ca4e01247ebbea1d6cde",
+      "scope": "valid_original_HTML_body",
+      "file": "clinical-chole-anxiety2025.html"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9733806/",
+      "retrievedOn": "2026-10-13",
+      "bytes": 146614,
+      "sha256": "07c150f394be6b4fa0c4eed74625cb060e3e13513f99dc753db44565877a1de4",
+      "scope": "valid_original_HTML_body",
+      "file": "clinical-malnutrition2022.html"
+    },
+    {
+      "url": "https://api.upums.ac.in/api/noticestudentstaff/ongoing",
+      "retrievedOn": "2026-10-13",
+      "bytes": 508663,
+      "sha256": "31c39da1048f2c7f3e251029a59398e4b591d782e9049bfb341e7a7e97f7fc2f",
+      "scope": "valid_source_metadata_not_service_outcomes",
+      "file": "upums-notices-current.json"
+    },
+    {
+      "url": "https://api.upums.ac.in/api/achievenments",
+      "retrievedOn": "2026-10-13",
+      "bytes": 156,
+      "sha256": "9eec843f9ac9abaa34a7a55b0384e5683d3972e26c88d8fcdd82c837ead215ee",
+      "scope": "valid_source_metadata_not_service_outcomes",
+      "file": "upums-achievements.json"
+    },
+    {
+      "url": "https://www.upums.ac.in/assets/pdf/White%20And%20Blue%20Simple%20Company%20Newsletter%20(6)_260222_163837%20(1).pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 43717021,
+      "sha256": "ba4f5b0d9a23918c9d67465c525755121125212c7da134040870e8d9496cbc9f",
+      "scope": "valid_original_PDF",
+      "file": "upums-newsletter-corrected.pdf"
+    },
+    {
+      "url": "https://www.rbi.org.in/scripts/notificationuser.aspx?id=10192",
+      "retrievedOn": "2026-10-13",
+      "bytes": 153782,
+      "sha256": "1432f809b09d2a9feacb7a398c771c07813512c335a3093fd01831b33b7e3597",
+      "scope": "valid_original_HTML_body",
+      "file": "rbi-lrs.html"
+    },
+    {
+      "url": "https://api.upums.ac.in/pdfs/doc-1774343379886-856090258.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 273668,
+      "sha256": "187c46daa9c735fe4334dfc393b7c35f300136cfcd9476daac503e20d8d520ba",
+      "scope": "valid_original_PDF",
+      "file": "pmjay-minutes-dec23.pdf"
+    },
+    {
+      "url": "https://api.upums.ac.in/pdfs/doc-1774343418921-323644679.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 326003,
+      "sha256": "266e6825308cc901af0c5dda0f4442cbcf64d5851f1086aa7395a4e902588a61",
+      "scope": "valid_original_PDF",
+      "file": "pmjay-minutes-dec05.pdf"
+    },
+    {
+      "url": "https://api.upums.ac.in/pdfs/doc-1791014381199-14882405.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 387565,
+      "sha256": "a91833b8d771dc45f02a807e96a6265fd6a459dba660be45ccba640d2003d850",
+      "scope": "valid_original_PDF",
+      "file": "upums-opd-order-oct2026.pdf"
+    }
+  ],
+  "failedSourceReads": [
+    {
+      "url": "https://www.upums.ac.in/assets/pdf/White%20And%20Blue%20Simple%20Company%20Newsletter%20%286%29_260222_163837%20%281%29.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 6043,
+      "sha256": "243fa20036fb116feadad661db1b53aa9075d3d4618619157cfc6f72626fc490",
+      "scope": "failed_response_not_body",
+      "file": "upums-newsletter-octdec2025.pdf"
+    },
+    {
+      "url": "https://cag.gov.in/webroot/uploads/download_audit_report/2024/Report-No-08-of-2024-English-067640dd5e65066.24454837.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 236,
+      "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+      "scope": "failed_response_not_body",
+      "file": "cag-up-health2024.pdf"
+    },
+    {
+      "url": "https://www.jjm.up.gov.in/Sitereport/PrintRajyaPeyjalSwachhtaMission?P1=15334",
+      "retrievedOn": "2026-10-13",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "failed_response_not_body",
+      "file": "jjm-saifai-scheme.html"
+    },
+    {
+      "url": "https://morth.nic.in/sites/default/files/RAP%20NH%2092-1A%2029.07.2022.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 41008,
+      "sha256": "6f4d68b290a0e499b70de5f7cb3f5a22fc642db551b34b2d6c7996b46620ed5c",
+      "scope": "HTML_shell_not_requested_PDF",
+      "file": "road-rap2022.pdf"
+    },
+    {
+      "url": "https://cag.gov.in/uploads/download_audit_report/2024/Report-No-08-of-2024-English-067640dd5e65066.24454837.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 236,
+      "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+      "scope": "failed_response_not_body",
+      "file": "cag-up-health2024-valid.pdf"
+    },
+    {
+      "url": "https://nha.gov.in/PM-JAY",
+      "retrievedOn": "2026-10-13",
+      "bytes": 118,
+      "sha256": "58bf2215b395dcac74c009aa98701854e43cbe54a1cd3a95fee6a647ca9910d4",
+      "scope": "failed_response_not_body",
+      "file": "nha-pmjay.html"
+    },
+    {
+      "url": "https://nha.gov.in/img/resources/English_FAQs_related_to_the_benefits_for_senior_citizens.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 118,
+      "sha256": "58bf2215b395dcac74c009aa98701854e43cbe54a1cd3a95fee6a647ca9910d4",
+      "scope": "failed_response_not_body",
+      "file": "nha-senior-faq.pdf"
+    }
+  ],
+  "webReadSources": [
+    {
+      "url": "https://www.passportindia.gov.in/AppOnlineProject/pdf/Steps_to_Submit_an_Application_at_PSK.pdf",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Web-only procedure, not current fee or successful applications",
+      "reviewedOn": "2026-10-13"
+    }
+  ],
+  "fuaIdentity": {
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allCandidateCount": 9031,
+    "fields": {
+      "fid": 4163,
+      "eFUA_ID": 8299.0,
+      "UC_num": 1.0,
+      "UC_IDs": "7485",
+      "eFUA_name": "Saifai",
+      "Commuting": 0.0,
+      "Cntry_ISO": "IND",
+      "Cntry_name": "India",
+      "FUA_area": 4.0,
+      "UC_area": 4.0,
+      "FUA_p_2015": 73562.17578125,
+      "UC_p_2015": 73562.17578125,
+      "Com_p_2015": 0.0
+    },
+    "srs": "ESRI:54009",
+    "projectedBounds": [7369000.0, 3285000.0, 7371000.0, 3287000.0],
+    "representativePointNotCityCentre": [78.96234570986316, 26.959873087938014],
+    "repairs": []
+  },
+  "referenceBoundaryCheck": {
+    "allGeometryCount": 9031,
+    "referencePoints": [
+      {
+        "label": "UPUMS official website embedded map reference",
+        "longitude": 78.9653177,
+        "latitude": 26.9601027,
+        "source": "https://www.upums.ac.in/",
+        "qualification": "directory reference point; not hospital footprint or every treatment site",
+        "covers": [8299]
+      }
+    ],
+    "rootIndependentlyReproduced": true
+  },
+  "additionalHypotheses": {
+    "MED": {
+      "anchor": 60,
+      "notMainScore": true,
+      "conditions": [
+        "Target usual resident has effective PMJAY or equivalent/subsidy that makes post-24h necessary treatment affordable",
+        "Observed selected clinical care reasonably represents usual appropriate care and continues to cutoff",
+        "Necessary specialist referral is usable under the target conditions"
+      ],
+      "rejectConditionsResult": null
+    }
+  },
+  "minimumReopen": [
+    "FUA-specific heat/flood/weather exposure and delivered protection/residual result",
+    "Ordinary target eligibility and post-initial-emergency necessary treatment payment/quality path",
+    "Suitable healthspan intervention human result/local adoption/access chain"
+  ],
+  "boundedReview": {
+    "path": "docs/cci-saifai-priority-review.md",
+    "sha256": "cca75e6fabffbe53336898cb3932b076b97c4ba2f9846e3f6e1ec9fc1b0b2d29",
+    "stop": "two bounded directed rounds; no repetitive same-page search"
+  }
+}
