@@ -153,10 +153,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 28,
+    "conditionalCaseCount": 30,
     "completeConditionalCaseCount": 15,
-    "partialCaseCount": 13,
-    "unassessedCount": 9003,
+    "partialCaseCount": 15,
+    "unassessedCount": 9001,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -274,9 +274,9 @@
       "provenanceSha256": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e"
     },
     "cci-local-2026-singapore-case.json": {
-      "sha256": "6c5412e214060111201410a0a1a12cb9618f2c3dc5aaff725fdfda683b7696e4",
+      "sha256": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
       "provenance": "cci-local-2026-singapore-case.md",
-      "provenanceSha256": "8e7e4269e7a6ad2cfc1918b7fd8f64de5bc2fbd497a75d90f9385396bbb1264d"
+      "provenanceSha256": "c7fa081bf789072af78c66549d6248ea5225b320d8caa600ade4baeaee9fb9b8"
     },
     "cci-local-2026-london-case.json": {
       "sha256": "421bf6578b7f9cb3ef1a1079e6759b597d0b9247f982e8f83fd74c17ce739958",
@@ -412,8 +412,18 @@
       "sha256": "8bb293a33f75dd1b12ecb0cad477dc7462d4c1b1a0cb2d6e03c8814d0b221197",
       "provenance": "cci-saifai-priority-review.md",
       "provenanceSha256": "cca75e6fabffbe53336898cb3932b076b97c4ba2f9846e3f6e1ec9fc1b0b2d29"
+    },
+    "cci-local-2026-grimsby-case.json": {
+      "sha256": "8635c35d0076bc32fd17b4b826fdeec789779ff9a7ba00254a02c02e475dd80f",
+      "provenance": "cci-grimsby-priority-review.md",
+      "provenanceSha256": "ddbe51ab1b7862eaaf7c638d57d245f8b470d53d5b7b979c739791f46def37c7"
+    },
+    "cci-local-2026-tampere-case.json": {
+      "sha256": "f27a0f902c8ae28a46a59691544f906d9ef306d4477b9f2844b620cd4db3ec63",
+      "provenance": "cci-tampere-priority-review.md",
+      "provenanceSha256": "0217c577797d804d8e4225d8d12786acf55f7dbc140953b901b8b7b1ee9e9b80"
     }
   },
-  "scriptSha256": "edb5bdd011baf3489d4e8fe35bb16da4cc7433dd709634cb96ba7bf4c3dd6d5c",
-  "csvSha256": "e7e4144f304f6581a33a8f957d8d1c61986cf84585464be38e298ec55910008e"
+  "scriptSha256": "49353a792757219de16630266d65eb139abb3b00c4775a0e85154117d80c78e4",
+  "csvSha256": "9f955e0d9912bb9ff3c317ecdfcefa84a852ee2d9b165f623f26740859813469"
 }

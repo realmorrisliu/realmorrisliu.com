@@ -1,0 +1,415 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 397,
+  "name": "Tampere",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "docs/cci-tampere-priority-review.md",
+  "evidenceReview": "cci-tampere-priority-review.md",
+  "expectedConditionalTotal": null,
+  "limitations": "Six conditional60 judgments; GSS and LON unknown after uniform review, no centre, arithmetic domain45–70. Preparedness/cyber handling is not a complete threat-impact-mitigation chain. No global ranking, exclusion bound or high-score prediction. Necessary assumptions are withdrawable.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Actual cooling/water places and stormwater/road maintenance support protection; heat-island exposure, heavy rain and winter hazards remain material. Carbon targets are not protection outcomes.",
+      "assumption": "Reviewed cooling and maintenance usually work and reach ordinary residents; city-core evidence reasonably represents FUA397 and persists to cutoff. Unreviewed geophysical scenarios are not treated as absent.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "Implemented preparedness and city self-assessment provide limited local support, but specific strategic threats, resident impacts and mitigation outcomes are not connected. Cyber events have no verified strategic attribution and do not measure organised violence.",
+      "assumption": "Uniform review with Grimsby rejects the proposed ordinary-life inference as too broad. A concrete locally applicable threat, impact and mitigation connection is needed; absence of a complete event rate is not itself disqualifying. No score is asserted.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Completed service/transport changes, actual handling of cyber events and food assistance demonstrate execution; fiscal/staff pressure and unmet assistance persist after mitigation. Plans and exercises do not prove all-crisis recovery.",
+      "assumption": "Observed execution remains representative of major ordinary services in FUA397; known coordination and fiscal constraints remain material but do not generally prevent necessary service. Crisis-specific reach is not measured.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "Actual municipal water service, energy production/storage and food distribution support usual supply; unmet food requests and cost pressure remain important counterevidence. Regional delivery does not measure every household.",
+      "assumption": "Water/energy service and ordinary market food are usually available and affordable for a median-income citizen. Food-aid rationing is serious but is not assumed to represent all median-income residents; service-area and continuity assumptions remain explicit.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "2025 actual primary and specialist access, public clinical staffing and service organization support a usual care pathway; dental/psychiatric waits, staffing and fiscal pressures remain constraints. Hospital product tariffs are not patient bills.",
+      "assumption": "Public care is ordinarily affordable and clinically adequate for an eligible usual resident; 2025 regional access remains applicable to the urban FUA at cutoff. Unmeasured routine outcomes do not independently bar 60, but local charges and remaining waits must not amount to broad unmitigated necessary-care failure.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "unresolved",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "A current Tays Yescarta infusion product tariff is a credible pathway lead, but does not establish actual local infusion, approved use for the specific patient, selection/waiting, public financing or monitoring. Other-city CAR-T delivery and Helsinki FINGER are not local treatment.",
+      "assumption": "No whole-dimension score is asserted. The missing bridge is actual local disease-specific delivery with eligibility, payer/monitoring and waiting constraints, not a perfect median bill or health-person lifespan proof.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "unresolved",
+        "trial_maturity": "context",
+        "regulatory_adoption": "context",
+        "resident_access": "unresolved"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "University transfers/spin-offs, an operational chip pilot/design platform and multiple public/utility deployments establish production and diffusion connections. Actual talent inflow and municipal supplier/staff pressures remain constraints; startup exits from the statistical definition do not prove industry contraction.",
+      "assumption": "Reviewed multi-producer production and installed/used systems represent ordinary industry and residents, and persist to cutoff. Talent and execution constraints remain material after employer services and commercialization assistance; if this materiality inference fails, reconsider 80 or unknown rather than cap at 60 for missing high-tier data.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Actual Riga service, regional bus/tram operation, shared EU worker residence and overseas earnings-pension payment provide channels; airline capacity loss and fare rises constrain them. Municipal cyber handling is not household international communication.",
+      "assumption": "Ordinary median-income residents can usually fund and use travel, destination eligibility and accounts; the reviewed routes persist to cutoff and ordinary communications remain usable. Legal work eligibility is not a job or housing guarantee; transport/common failure and household communication remain open.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "unresolved"
+      }
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.tampere.fi/kaupunki-ja-paatoksenteko/talous/tilinpaatokset",
+      "bytes": 959068,
+      "sha256": "b32802db613bcd58382c987216dec99cece74a05e1deba4334b84d4d7511e584",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前年报入口；不是2026实际服务统计。 地域为具体机构、市或运营区域，非全eFUA397/中位收入分组；当前字节不认证截止当日版本。"
+    },
+    {
+      "id": "S02",
+      "url": "https://www.tampere.fi/sites/default/files/2025-06/Tampere_VLR-seurantaraportti_2025_170625.pdf",
+      "bytes": 6359908,
+      "sha256": "844504be269adc3c5b170a47070f828f06ab6c3fb0ee8b385db7586c4ec46f50",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025报告；气候风险/热岛人数观察2024，排放图2023，居民反馈2025；物理27页/印刷52–53目视。URL目录2025-06不是独立核定首发日。 地域为具体机构、市或运营区域，非全eFUA397/中位收入分组；当前字节不认证截止当日版本。"
+    },
+    {
+      "id": "S03",
+      "url": "https://tampereeninfra.fi/wp-content/uploads/2026/04/Vastuullisuus-ja-vuosikertomus-2025_Optimized.pdf",
+      "bytes": 19567352,
+      "sha256": "793d7e5d74274346103347999299317a00eb26ecc3920c0ea401fa18dd557094",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025运营；URL目录2026-04不当独立核定首发。物理13/19页实际工程与维护，19页目视；4–5页ERP/人员与项目风险。 地域为具体机构、市或运营区域，非全eFUA397/中位收入分组；当前字节不认证截止当日版本。"
+    },
+    {
+      "id": "S04",
+      "url": "https://www.tampereenenergia.fi/tampereen-energia/vastuullisuus/",
+      "bytes": 142985,
+      "sha256": "eec44bf8f1b05c31c49f93a1a13ebed6f912e1872d937db542150d4984bfb559",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前责任报告入口，非2026全年交付。 地域为具体机构、市或运营区域，非全eFUA397/中位收入分组；当前字节不认证截止当日版本。"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.pirha.fi/documents/d/guest/talousarvio-2026-ja-toiminta-ja-taloussuunnitelma-2026-2028",
+      "bytes": 1257011,
+      "sha256": "e6b938aa772fea1d1bcc7410ad16a5cd69c657a28ccd13f78a69666487d8ef7a",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2026预算/2026–28计划；p9历史2025Jan–Sep实际，p23年初人员；p14质量指标为将来目标；部分后续页脚沿用2025，不把页脚变成另一观察年。p9目视。 地域为具体机构、市或运营区域，非全eFUA397/中位收入分组；当前字节不认证截止当日版本。"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.pirha.fi/documents/2739855/4864670/Tuotehinnasto%2B2026_19122025.pdf/31c41e4a-ca5c-c8b8-6081-aa989e2f5172?t=1767334582319&version=2.0",
+      "bytes": 1565324,
+      "sha256": "8cb75aaa5f9104eda8a783981664894ff759d98bbc0f5cc97b451f0c4e9ff410",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "版本文件标19122025，2026价格，下载版本时间不是治疗日/首发日。p36目视医院产品价。 地域为具体机构、市或运营区域，非全eFUA397/中位收入分组；当前字节不认证截止当日版本。"
+    },
+    {
+      "id": "S07",
+      "url": "https://www.tampere.fi/sites/default/files/2026-03/Tilinpaatos-2025--23.3.2026.pdf",
+      "bytes": 3099164,
+      "sha256": "6823b82bde5162bbf6fa765adcf9f2fcb4f5b45019521f65d49c7bd954d37b6c",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025Jan–Dec实际；封面/URL标23.3.2026，不据URL独立认证首发。p23/106/140/153/154目视。 地域为具体机构、市或运营区域，非全eFUA397/中位收入分组；当前字节不认证截止当日版本。"
+    },
+    {
+      "id": "S08",
+      "url": "https://www.tampereenvesi.fi/uutinen/vuosikertomus-ja-vastuullisuusraportti-2024/",
+      "bytes": 416057,
+      "sha256": "6b6eda6f35f7267671885fddbb58f1865cf0eff7ecbf2557d9b1cf0fa518e2cf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-05-28",
+      "scope": "2024公司运营报告入口及约25万供水居民；不是全397质量合格率。 地域为具体机构、市或运营区域，非全eFUA397/中位收入分组；当前字节不认证截止当日版本。"
+    },
+    {
+      "id": "S09",
+      "url": "https://www.tampereenenergia.fi/julkaisut/vastuullisuusraportti-2025/",
+      "bytes": 109379,
+      "sha256": "60ecc6f359aa90252eee2bc8030da0756b36b8e51e2fd55b8f49d4cbe99090b1",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025报告真实PDF链接入口；独立PDF当前curl失败，原件身份只归此HTML。 地域为具体机构、市或运营区域，非全eFUA397/中位收入分组；当前字节不认证截止当日版本。"
+    },
+    {
+      "id": "S10",
+      "url": "https://www.tampere.fi/hyvinvointi-yhteisot-ja-harrastukset/miten-voit-edistaa-hyvinvointiasi/viileita-paikkoja-ja-juomavetta",
+      "bytes": 967880,
+      "sha256": "e0891b150eae6b3c043531b60a4c93d07151c9fa199a10184a6ef76c8d604804",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-08-19",
+      "scope": "网页标更新；现有开放室内凉处/饮水点，绿色地图来自2024热岛研究。 地域为具体机构、市或运营区域，非全eFUA397/中位收入分组；当前字节不认证截止当日版本。"
+    },
+    {
+      "id": "S11",
+      "url": "https://www.tampere.fi/hyvinvointi-yhteisot-ja-harrastukset/ruoka-apu",
+      "bytes": 958544,
+      "sha256": "84c61ac6901bfb1b5b7ac3520807998d55fe101c30824ee3c853e7791b64b8d5",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-06-08",
+      "scope": "网页标更新；2025需求/未领到与拨款，2026Jan捐赠，区域2025–26拨款。 地域为具体机构、市或运营区域，非全eFUA397/中位收入分组；当前字节不认证截止当日版本。"
+    },
+    {
+      "id": "S12",
+      "url": "https://www.tampere.fi/kaupunki-ja-paatoksenteko/organisaatio/turvallisuustyo-kaupungilla-yhdessa-turvallisemman-arjen-puolesta/varautuminen",
+      "bytes": 957468,
+      "sha256": "77f711f1622caebdd83e999184716ab135d094b9cf116f59b3be13b2b4ab7359",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-03-06",
+      "scope": "网页标更新；城市准备渠道和组织，不当大灾恢复实测。 地域为具体机构、市或运营区域，非全eFUA397/中位收入分组；当前字节不认证截止当日版本。"
+    },
+    {
+      "id": "S13",
+      "url": "https://www.tampereenenergia.fi/uutiset/tampereen-energian-operatiivinen-tulos-parani/",
+      "bytes": 126334,
+      "sha256": "891ed0f96cae8d77f775b7a952b3bd0132de64650d13a10ff90b5ef9aa7ab867",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-04-01",
+      "scope": "2025实际能源交付、2025Dec电锅炉/热储存投产、智能表安装；未来2026–27换表另列。 地域为具体机构、市或运营区域，非全eFUA397/中位收入分组；当前字节不认证截止当日版本。"
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.tuni.fi/en/tau/news-and-events/tampere-universitys-2025-financial-statements-growth-funding-and-degree",
+      "publishedOn": "2026-03-31",
+      "observedPeriod": "2025",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "第一轮web正文：15项专利申请/22项发明交给合作企业/3家spin-off。curl406不是有效原件；转移不是销售，全校不是全区。"
+    },
+    {
+      "id": "W02",
+      "url": "https://www.tuni.fi/en/innovations-and-entrepreneurship",
+      "publishedOn": null,
+      "observedPeriod": "未标统一统计年；各新闻日期另列",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "web正文：实际年度转移、每年2–5家spin-off、协助/训练与投资者连接；10–20活跃商业化项目仍是项目。未经截止日前逐字存档。"
+    },
+    {
+      "id": "W03",
+      "url": "https://www.tuni.fi/en/tau/news-and-events/cutting-edge-technology-tampere-university-now-powers-suuntos-products",
+      "publishedOn": "2024-09-18",
+      "observedPeriod": "2024产品连接",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "正文此次后续超时，只保留原大学目录/首次web页标题所示Suunto产品采用线索；不据标题追加许可合同、销售量、Tampere制造地点。"
+    },
+    {
+      "id": "W04",
+      "url": "https://www.tampereenenergia.fi/wp-content/uploads/2026/03/tampereen-energia_vastuullisuusraportti-2025.pdf",
+      "publishedOn": null,
+      "observedPeriod": "2025",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "51页web解析，p5说明集团/部分ESRS/未经外部验证；不使用未目视指标表给居民可靠性或支付结论。curl TLS失败，未得原字节。"
+    }
+  ],
+  "boundaryReviewObject": {
+    "sourcePath": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allGeometryCount": 9031,
+    "targetId": 397,
+    "targetName": "Tampere",
+    "geometryAreaKm2": 1044.0,
+    "geometrySha256": "fb936f9bc5ebd58be1489ee1da2421388d037784e67bbc3296869011e4cf2746",
+    "approximation": "Analyst approximate references, not precise footprints/historical treatment/local resident coverage.",
+    "points": [
+      {
+        "label": "Tampere centre approximate",
+        "lon": 23.7603,
+        "lat": 61.4978,
+        "matches": [397]
+      },
+      {
+        "label": "Tays main campus approximate",
+        "lon": 23.816,
+        "lat": 61.507,
+        "matches": [397]
+      },
+      {
+        "label": "Tampere University city centre approximate",
+        "lon": 23.778,
+        "lat": 61.494,
+        "matches": [397]
+      },
+      {
+        "label": "Tampere University Hervanta approximate",
+        "lon": 23.858,
+        "lat": 61.45,
+        "matches": [397]
+      },
+      {
+        "label": "TAMK main campus approximate",
+        "lon": 23.814,
+        "lat": 61.506,
+        "matches": [397]
+      },
+      {
+        "label": "Tampere-Pirkkala airport approximate",
+        "lon": 23.604,
+        "lat": 61.415,
+        "matches": [397]
+      },
+      {
+        "label": "Nokia centre approximate",
+        "lon": 23.508,
+        "lat": 61.478,
+        "matches": [397]
+      },
+      {
+        "label": "Ylojarvi centre approximate",
+        "lon": 23.597,
+        "lat": 61.558,
+        "matches": [397]
+      },
+      {
+        "label": "Kangasala centre approximate",
+        "lon": 24.066,
+        "lat": 61.464,
+        "matches": [397]
+      },
+      {
+        "label": "Lempaala centre approximate",
+        "lon": 23.748,
+        "lat": 61.314,
+        "matches": [397]
+      },
+      {
+        "label": "Valkeakoski centre approximate",
+        "lon": 24.027,
+        "lat": 61.264,
+        "matches": []
+      },
+      {
+        "label": "Rusko waterworks approximate",
+        "lon": 23.868,
+        "lat": 61.456,
+        "matches": [397]
+      },
+      {
+        "label": "Naistenlahti plant approximate",
+        "lon": 23.777,
+        "lat": 61.51,
+        "matches": [397]
+      },
+      {
+        "label": "Nokia Kolmenkulma approximate",
+        "lon": 23.54,
+        "lat": 61.515,
+        "matches": [397]
+      },
+      {
+        "label": "Helsinki airport external exit reference",
+        "lon": 24.963,
+        "lat": 60.318,
+        "matches": [687]
+      }
+    ],
+    "frozenMetadata": [397.0, "Tampere", "FIN", "3191", 1044.0, 341850.1948519647]
+  },
+  "sensitivity": {
+    "GSS60AndLON60_requiresNewEvidence": 60,
+    "TEC80WithTwoUnknowns": [47, 72],
+    "MED40WithTwoUnknowns": [42, 67]
+  },
+  "reusedNationalRules": {
+    "review": "docs/cci-local-2026-helsinki-case.md",
+    "scope": "EU worker residence; accrued Finnish earnings pension abroad; national security context. Helsinki free local clinics, HUS treatment and PKS adoption are not inherited. National caps do not mean total expenditure ceiling. Prior review links lack original byte identities for these owner pages; do not manufacture snapshots."
+  },
+  "retrievedOn": "2026-10-13",
+  "knownWeightedSubtotal": 45,
+  "unresolvedScoreRange": [45, 70],
+  "priorityCompletionReview": {
+    "path": "docs/cci-tampere-priority-review.md",
+    "sha256": "0217c577797d804d8e4225d8d12786acf55f7dbc140953b901b8b7b1ee9e9b80",
+    "reviewedOn": "2026-10-13",
+    "rootVerifiedOriginalBytes": true,
+    "rootVerifiedAllReferencePoints": true
+  }
+}

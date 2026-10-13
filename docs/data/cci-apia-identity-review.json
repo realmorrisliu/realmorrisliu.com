@@ -1,0 +1,56 @@
+{
+  "source": "ucdb:1",
+  "sourceSha256": "56e60b7cbfc776b23493d5684aa5d0d7d6940fc3dd9a3881fa52599f20fd80fc",
+  "fuaSourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+  "allFuaRecords": 9031,
+  "allUcdbRecords": 11422,
+  "attributes": {
+    "ID_UC_G0": 1,
+    "GC_UCN_MAI_2025": "Apia",
+    "GC_CNT_GAD_2025": "Samoa",
+    "GC_UCA_KM2_2025": 35,
+    "GC_POP_TOT_2025": 60041.65661
+  },
+  "projectedAreaM2": 35000000.0,
+  "projectedBounds": [-16912000.0, -1707000.0, -16902000.0, -1701000.0],
+  "geometrySha256": "f7711b4923349cae0b9ffb5fd32210eef2f5ae9cf456d65e59a70fa54d469519",
+  "representativePointNotCityCentre": [-171.78744560920282, -13.832982926084915],
+  "oldFuaPositiveAreaMatches": [],
+  "reviewStatus": "spatial_identity_not_functional_boundary_or_scores",
+  "reviewedOn": "2026-10-13",
+  "wup2025Check": {
+    "sourceUrl": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_WUP_MTUC_GLOBE_R2025A/V1-1/GHS_WUP_MTUC_GLOBE_R2025A_V1_1_vector.zip",
+    "archiveSha256": "7f927a52a1f4a833c7c65eb6fd0e1bee86f53e329a8453cb6e04c7459c49acfa",
+    "archiveBytes": 36461043,
+    "allRecords": 12140,
+    "positiveAreaMatches": [],
+    "repairedGeometryIds": [
+      91, 377, 400, 601, 1001, 1868, 2626, 4768, 5435, 6030, 9765, 10954, 11700, 12128
+    ]
+  },
+  "censusSource": {
+    "url": "https://www.sbs.gov.ws/documents/census/2021/Census_2021_Final_Report.pdf",
+    "bytes": 2776136,
+    "sha256": "59fd92c6e36f379949915dc2f7d142bd4c54a037497044be6a7befab3de1ddbc",
+    "observationYear": 2021,
+    "pagesVisuallyChecked": [16, 19],
+    "auaPopulation": 35974,
+    "districts": ["Vaimauga 2", "Vaimauga 3", "Vaimauga 4", "Faleata 1"],
+    "scope": "Administrative urban area, not a commuting FUA or the 2025 UCDB geometry"
+  },
+  "environmentReport": {
+    "url": "https://www.mnre.gov.ws/wp-content/uploads/2024/09/Final-Samoa-SOE-2023-v39-digital-1.pdf",
+    "bytes": 31713750,
+    "sha256": "7d8bfb9f2394b19d88a9ed65c57e705c6b4cf5bb3935a911243133172363e3c8",
+    "reportYear": 2023,
+    "independentFirstPublicationDate": null,
+    "pagesVisuallyChecked": [165, 167],
+    "reportedAuaAreaKm2Approx": 150,
+    "boundaryCaption": ["Vaimauga East", "Vaimauga West", "Faleata East", "Faleata West"],
+    "scope": "Planning/environment report map and projected growth, not a new commuting polygon or verified census crosswalk"
+  },
+  "disposition": "retained_unresolved_competitor",
+  "scoresAdded": false,
+  "functionalBoundaryResolved": false,
+  "minimumReopen": "Authoritative boundary vintages and a census-to-planning/UCDB spatial mapping plus actual commuting or resident-service connections; names and growth forecasts are insufficient."
+}

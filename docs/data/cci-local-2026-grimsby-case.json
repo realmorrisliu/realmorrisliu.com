@@ -1,0 +1,608 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 5518,
+  "name": "Grimsby",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "approximate_reference_points_full9031_checked_not_service_coverage",
+  "evidenceReview": "cci-grimsby-priority-review.md",
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 42,
+  "unresolvedScoreRange": [42, 67],
+  "limitations": "8 dimensions/31 statuses reviewed, not all measured. GSS/LON remain null after bounded research; no midpoint, zero-fill or redistribution. Six scores require explicit profile/spatial/continuity assumptions. Not global ranking, exclusion or high-score prediction.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "已建海堤／护石、实际冬季处理和定向热通知支持防护；海潮／地表／污水洪水与家庭降温尾部仍重要。低热或模型地震背景不能决定整维。",
+      "assumption": "已交付防线和冬季响应在cutoff持续有效，普通居民热通知／避险通常可用；未测地质与防线外暴露不另形成更强关键缺口。拒绝此必要代表性判断则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "国家2026Apr30严重威胁及国家关联暴力背景已读，但本区组织暴力现实影响、具体区域／战略缓解未闭；运营活动不代这些链。",
+      "assumption": "不能将全国威胁、地方无搜索命中或港口名直接填整维。须有适配本区威胁／日常影响及实际应对后再辨40/60/80。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "公开年度治理、实际投诉／人员调整、数字帮助和冬季／热响应支持执行；自评、儿童与临时住房容量、项目延迟及群体差异保留。",
+      "assumption": "不同观察窗的执行和地方触达通常延续到2026，局部容量／群体问题虽重要但在已运行补救下不构成整体明显断裂；拒绝则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "context",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "实际水源／供应者、监管与修复、真实食品进口／冷链和区域供电运行支持日常供给；水压力薄裕度、进口依赖、坏天气停电及支付仍有短板。",
+      "assumption": "行政市核心和区域运营数据适配普通本FUA居民，通常末端安全、必要水／食品／能源可获得且净负担可承担；没有把预测工程当已建，也未用平均账单替代中位账单。拒绝则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 40,
+      "rationale": "真实急诊CQC2026检查显示严重及时性、脓毒症过程、培训／感染控制与药品问题；NHS资格／当地化疗、即时整改和临终Good仍是实际能力，残余重要短板支持40。",
+      "assumption": "以本区主要急诊和提供方检查适配通常居民；检查前等待／审核缺口在cutoff未有结果证据足以视为已解除。若接受新有效缓解可60；否定范围／延续或通常支付连接则null。",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "共同NHS/NICE疾病委托与本地普通肿瘤／血液化疗已核，但没有本区或明确本区居民转诊至实际先进给药、净支付和必要监护的连接；不因单药未付／缺合同判40。",
+      "assumption": "不从London／Sheffield实际给药复制为Grimsby居民能力，也不把当地普通化疗整体当转化准备度。最小缺口为本地实际可信转化路径或实际可执行区外转诊连接。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "unresolved",
+        "trial_maturity": "unresolved",
+        "regulatory_adoption": "context",
+        "resident_access": "unresolved"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "实际PORTAL投用／现场机器人AI示范、OMCE研究和商业合作及公共数字帮助支持能力；私人试验网非普遍公网，行业集中和居民设备／技能触达仍重要。",
+      "assumption": "2023–2024已交付示范／研究与现行服务真实延续，本地产业和通常公众数字渠道基本可用，实际扩散残余重要；拒绝本地／持续／普通触达推定则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "在用本地干线时刻表及可接区外航空／轮渡、具体英国公民CTA迁移与特定资产规则支持离开通道；日期／接续／住房资金及通信共同失效重要。",
+      "assumption": "与London同层：普通居民持有效证件／账户和可承担实际接续／迁移所需资源，通常有可执行的区外交通与通信替代；本轮未验证独立跨境通信／现金到账。拒绝这些必要画像／通常可用推定则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "context",
+        "network_continuity": "unresolved"
+      }
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.gov.uk/government/news/humber-defences-project-reaches-new-milestone",
+      "bytes": 69374,
+      "sha256": "878e82ab9765045cbc2d39f31bfdd469b13c2b960ef7f45e7c8fbeaca4d4b141",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:49:22.000816+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2024-12-13",
+      "scope": "EA已交付3km护石及1.5km修复；2400物业，不是FUA人口覆盖",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S02",
+      "url": "https://www.nelincs.gov.uk/assets/uploads/2026/01/Annual-Governance-Statement-2024-2025.pdf",
+      "bytes": 374473,
+      "sha256": "f7582a9f97f89fe2b95610b1e068b3b99ebe65968cfe47e655a415d65309e84c",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:49:22.002921+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "NELC FY2024/25；封面October2025，签署Nov5，URLJan2026；自评、外审与整改分列",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S03",
+      "url": "https://www.cqc.org.uk/location/RJL30/reports",
+      "bytes": 261137,
+      "sha256": "8d858ea48be47ab0393d8bdffb4282c9654b739f778f4be846bbbcba44f92a50",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:49:22.004553+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-07-17",
+      "scope": "DPoW当前与旧检查不同窗；临终Good、急诊requires improvement",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S04",
+      "url": "https://www.cqc.org.uk/provider/RJL/services",
+      "bytes": 211516,
+      "sha256": "55597be4a11e68b9bce4c44a2b9b8f3e7f4ac773055f334f5eb14726c2167e4c",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:49:22.004926+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "NLaG多院提供方；2026-07-28 S29A治理／IPC警告，非本区感染发生率",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S05",
+      "url": "https://grimsbyfishmarket.co.uk/milestone-moment-for-grimsby-fish-market-as-it-turns-30/",
+      "bytes": 169412,
+      "sha256": "380fe7273cea26f5aaf7a94a9d8e8d265286b0ed11d202aaec604c9082153ec1",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:49:22.010612+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-03-31",
+      "scope": "2025实际187000个50kg箱、150000拍卖箱；供应业非家庭膳食／支出",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.nelincs.gov.uk/tips-to-stay-safe-this-week-as-amber-heat-alerts-hit-north-east-lincolnshire/",
+      "bytes": 115649,
+      "sha256": "4685e4afa8fc436a92724a3ab80c1ec5ae77478150e434bcae602f1a89b84792",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:51:18.185691+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-06-22",
+      "scope": "NELC当时热预警及已发送脆弱群体通知；预警非已发生死亡",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S07",
+      "url": "https://www.nelincs.gov.uk/your-council/digital-inclusion/",
+      "bytes": 182416,
+      "sha256": "23861267826a24be57007728a609031e3057d91e08f3c52f1716d978b49bc58d",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:51:18.185983+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前公共WiFi／电脑／帮助；版本未标，不是居民宽带率或海外备援",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S08",
+      "url": "https://www.cqc.org.uk/location/RJL30/reports/LAP-03031/urgent-and-emergency-services",
+      "bytes": 161648,
+      "sha256": "ab7a02dd60e1c03ae21cf150f299e88c84fadf5abc462b2e5220e65ae9d765e6",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:51:18.187340+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-07-17",
+      "scope": "2026-01-20起急诊检查；概览不能代底层安全问题",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S09",
+      "url": "https://www.cqc.org.uk/location/RJL30/reports/LAP-03031/urgent-and-emergency-services/safe",
+      "bytes": 182388,
+      "sha256": "59bde9362952d0e80b2104e3b24b314f31f8a1762acff5a07a287b1f6f0c2728",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:51:18.190579+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-07-17",
+      "scope": "2025Sep–Dec脓毒症审核和当次安全检查；n未列，行动不证明整改结果全达标",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S10",
+      "url": "https://www.cqc.org.uk/location/RJL30/reports/LAP-03031/urgent-and-emergency-services/effective",
+      "bytes": 171197,
+      "sha256": "700f394482b5f67a478e3459ceacd440dbe4187d82707ba581b7164d8bb9eac8",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:51:18.190952+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-07-17",
+      "scope": "现场10记录与前6月审核50–100%不同样本；过程和结局分开",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S11",
+      "url": "https://www.cqc.org.uk/location/RJL30/reports/LAP-03031/urgent-and-emergency-services/responsive",
+      "bytes": 169534,
+      "sha256": "e92a4b6317feafccb928ce837c0b8db70ef69262395b23426e3b39df369f6ee7",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:51:18.192532+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-07-17",
+      "scope": "检查前6月平均分诊56min／交接51min；需入院队列等待，不是全居民率",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S12",
+      "url": "https://ore.catapult.org.uk/products-services/robotics-autonomous-systems",
+      "bytes": 233007,
+      "sha256": "a1d9a53599744f1c474b7f1f2eb718ef6de4cb08a746a3fbdcbf1dd8a184c231",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:51:19.401268+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前机器人服务；Grimsby／Blyth／Levenmouth单元分开，版本未标",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S13",
+      "url": "https://ore.catapult.org.uk/media-centre/press-releases/unique-offshore-wind-living-lab-in-grimsby-is-switched-on-to-launch-new-digital-future",
+      "bytes": 184693,
+      "sha256": "27717f03d897c1c099ed41c61746ca90ce884b1d1fb6eca1756ccad21dfd98dd",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:51:19.431787+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2023-10-12",
+      "scope": "PORTAL实际启用和现场示范；200job／120business／20enterprise为预期",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S14",
+      "url": "https://cms.ore.catapult.org.uk/wp-content/uploads/2024/06/Our-Impact-Report-2024.pdf",
+      "bytes": 5241720,
+      "sha256": "13dddcc26d05b77699ea1f231c900662f64d726afb5875546b946b3016d5da60",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:51:19.447729+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "Impact Report2024；OMCE项目组合与全国中心分开；URLJune2024，精确首发未核",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S15",
+      "url": "https://isg.northernpowergrid.com/wp-content/uploads/2025/07/ISG-Annual-Report-2014-25_FINAL-rs.pdf",
+      "bytes": 1681464,
+      "sha256": "7d63763b1f447a19f9e53c1820a7a3841b2da7c2e923a5d27ba08b5234a31273",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:51:19.453090+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "ISG Apr2024–Mar2025，报告July2025；文件名2014-25不改正文；区域非本FUA停电率",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S16",
+      "url": "https://www.dwi.gov.uk/what-we-do/annual-report/drinking-water-2024/2024-july-december-interim-report/compliance-events-and-audits/",
+      "bytes": 87929,
+      "sha256": "fc6f9ef318a8fa675933917cc19e609d97fc05653fbd90f29ca05c1c058d70f3",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:53:12.269475+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-12-09",
+      "scope": "DWI July–Dec2024监管问题及修复；Etton非已核本区供水设施",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S17",
+      "url": "https://www.dwi.gov.uk/what-we-do/annual-report/drinking-water-2024/2024-july-december-interim-report/appendix-compliance-and-events/",
+      "bytes": 83393,
+      "sha256": "061c7533f7dc75231ee76e9e58946f9ecad5f8c2f14269aaca977038c1dca7c9",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:53:12.271100+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-12-09",
+      "scope": "DWI半年事件表ANH17、全国合规425；非本区样本合格率；两列4冲突保留",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S18",
+      "url": "https://www.nlg.nhs.uk/services/amethyst/",
+      "bytes": 77336,
+      "sha256": "240555b207c7c6e1ed1ee5002d0a7b390529d140523870ca689ff6e1fe5e6148",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:53:12.271365+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2021-09-30",
+      "scope": "院方本地血液／肿瘤／风湿和化疗；更新2022-12-28，当前延续有条件",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S19",
+      "url": "https://www.tpexpress.co.uk/-/media/PDFs/FINAL-May-26-Timetables/May-26-SouthFINAL.pdf",
+      "bytes": 627356,
+      "sha256": "1a13bdcff59b1b1cb61125482f53b02e2c08c2f97ef4b9b385b6dd04194c18c5",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:53:12.274071+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "现行正式时刻表2026-05-17—12-12；日别／脚注，非实到／准点率",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S20",
+      "url": "https://www.nelincs.gov.uk/assets/uploads/2025/09/4.-Highway-Winter-Service-Review-2025-26.pdf",
+      "bytes": 1787399,
+      "sha256": "8925118f83a85750d5dcda08a6a640f9fbfeac3152aaa754de23bf9082b4e953",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:53:13.591238+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-09-24",
+      "scope": "NELC实际冬季Oct2024–Apr2025撒盐60次／路线99.75%3h内；正文日期／年份冲突",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S21",
+      "url": "https://www.nlg.nhs.uk/contact/",
+      "bytes": 97418,
+      "sha256": "4b31d9a6778264ff76cab3979f87d1172c25ab81690d635fdf50c62c1a120421",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:53:13.726545+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "Grimsby Cashiers现行HC5＋资格证明／预约／账户BACS；不等中位居民均免交通费",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S22",
+      "url": "https://www.gov.uk/government/publications/common-travel-area-guidance/common-travel-area-guidance",
+      "bytes": 99582,
+      "sha256": "887d27e34913f9d5c239a651507b3b8c5024975798fff618211b5f2d00d0afc6",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:55:41.678621+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "英／爱公民具体CTA长期居住工作规则；updated2026-01-01，非EU全面权利",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S23",
+      "url": "https://www.gov.uk/transferring-your-pension/transferring-to-an-overseas-pension-scheme",
+      "bytes": 77116,
+      "sha256": "acc30b14955ca0bbd05f5a521d08f4ce319bb94ea4a99ea2fcdade3ad9c2ff91",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:55:41.680123+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前QROPS退休金转移、税费／身份条件；非全部资产或银行实际付款",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S24",
+      "url": "https://www.gov.uk/government/news/uk-national-threat-level-raised-to-severe",
+      "bytes": 66296,
+      "sha256": "905b42109da2539b41d4a125070c271a30e12f7c2999677bbb0c860582c02d15",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:55:41.682154+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-05-01",
+      "scope": "CNC报道2026-04-30国家Severe及国内／国家关联威胁；不是Grimsby实际攻击或cutoff当日测量",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S25",
+      "url": "https://www.nelincs.gov.uk/assets/uploads/2026/09/202609-WaterCycleStudyv2.pdf",
+      "bytes": 3509554,
+      "sha256": "2a3e9ce49a70b8f0742e93bee8b866164e41dce611dcc1f133ac91bbf772504b",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:56:31.022151+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-09-21",
+      "scope": "WHS为NELC编制Finalv2.0；行政市／2785km²WRZ不等612km²FUA；实况与预测分开",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "R01",
+      "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+      "bytes": 32656,
+      "sha256": "4efb26910573c7f60a7ab193ee4e3091526d3672ce5dd931413ab74c3fd26976",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:31:14.732347+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "NHS通常居住资格；page reviewed2023-10-24，nextreview2026-10-24，国家规则非本地及时治疗率; used only UK profile / national adoption, not local actual dosing.",
+      "sourceKind": "reused_original",
+      "reusedFrom": "/private/tmp/cci-global/london/lon-comparability/nhs-ordinary-residence.html"
+    },
+    {
+      "id": "R02",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2026/04/cart-service-specification-commissioning-guidance-v1.0-1.pdf",
+      "bytes": 332621,
+      "sha256": "ba97c929f2ca55b7da63a525aa8d0af00f962742e18f91e2b48afabda55da108",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:24:23.969404+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "官方2026/04目录；封面12 November2025 Version3，内列December2025 TA1116，旧计划日期不可当实际实施；England通常居民委托和提供方支付; used only UK profile / national adoption, not local actual dosing.",
+      "sourceKind": "reused_original",
+      "reusedFrom": "/private/tmp/cci-global/london/lon-comparability/nhs-cart-commissioning2026.pdf"
+    },
+    {
+      "id": "R03",
+      "url": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+      "bytes": 20164,
+      "sha256": "7d37836575b240bd2359d0de728c2e937e73a1cc32906576e086a1af57733e3f",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:25:44.534634+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-03-26",
+      "scope": "NICE正式推荐第1章；适应证/移植适合性/商业安排；总生存证据不确定; used only UK profile / national adoption, not local actual dosing.",
+      "sourceKind": "reused_original",
+      "reusedFrom": "/private/tmp/cci-global/london/lon-comparability/nice-ta1048.html"
+    },
+    {
+      "id": "R04",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2026/07/2402-commissioning-policy-lonafarnib-hgps.pdf",
+      "bytes": 227513,
+      "sha256": "6058ab23198d712877f7a303a4e1e328471ce3729276422055c433ebc5e5ed51",
+      "retrievedOn": "2026-10-10",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-07-16",
+      "scope": "England HGPS正式疾病限定责任和监护；未核伦敦给药；复用Oct10原件; used only UK profile / national adoption, not local actual dosing.",
+      "sourceKind": "reused_original",
+      "reusedFrom": "/private/tmp/cci-global/london/lon-comparability/reused-lonafarnib2026.pdf"
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.poferries.com/en/routes/hull-to-rotterdam?awc=113130_1757999625_46f2f60bccb6b95b965e5556852b8bec&sv1=affiliate&sv_campaign_id=92204",
+      "retrievedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "Original operator search-body only current Hull–Rotterdam booking/routing; direct and reopened403; no actual sailing count or independent redundant route proof."
+    }
+  ],
+  "failedSourceReads": [
+    {
+      "file": "ferry-hull-current.html",
+      "url": "https://www.poferries.com/en/routes/hull-to-rotterdam",
+      "retrievedAt": "2026-10-13T04:53:12.275698+00:00",
+      "exit": 0,
+      "response": "403\ttext/html\thttps://www.poferries.com/en/routes/hull-to-rotterdam",
+      "error": "",
+      "bytes": 179,
+      "sha256": "1f2e1251b1d5fab2f47bbfe3e09b149064e61571f98a5e02c6ace5f86bacb1d5",
+      "validity": "failed_read_not_original_evidence"
+    },
+    {
+      "file": "quality-account2026-draft.pdf",
+      "url": "https://northlincolnshire.moderngov.co.uk/documents/s27706/Quality%20Account%2025-26%20NLaG%20Draft%20v5.pdf",
+      "retrievedAt": "2026-10-13T04:49:22.008517+00:00",
+      "exit": 0,
+      "response": "403\ttext/html; charset=UTF-8\thttps://northlincolnshire.moderngov.co.uk/documents/s27706/Quality%20Account%2025-26%20NLaG%20Draft%20v5.pdf",
+      "error": "",
+      "bytes": 4548,
+      "sha256": "4ccce8ccef170f5371e7a163e2cc08f6121c588b8fd330f579ae7ea1fb3806a6",
+      "validity": "failed_read_not_original_evidence"
+    },
+    {
+      "file": "water-monitoring-index.html",
+      "url": "https://www.anglianwater.co.uk/services/water-supply/monitoring-drinking-water-quality",
+      "retrievedAt": "2026-10-13T04:49:23.028981+00:00",
+      "exit": 0,
+      "response": "403\ttext/html; charset=UTF-8\thttps://www.anglianwater.co.uk/services/water-supply/monitoring-drinking-water-quality",
+      "error": "",
+      "bytes": 5609,
+      "sha256": "b1f31a59f477d09976ed8ccfd591a166f8c83a70d906ee2d20406db584b153ff",
+      "validity": "failed_read_not_original_evidence"
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "source": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "sourceBytes": 9932800,
+    "allGeometryCount": 9031,
+    "record": {
+      "fid": 8462,
+      "eFUA_ID": 5518.0,
+      "UC_num": 1.0,
+      "UC_IDs": "1951",
+      "eFUA_name": "Grimsby",
+      "Commuting": 1.0,
+      "Cntry_ISO": "GBR",
+      "Cntry_name": "UnitedKingdom",
+      "FUA_area": 612.0,
+      "UC_area": 45.0,
+      "FUA_p_2015": 199722.0823327005,
+      "UC_p_2015": 128933.5057296753,
+      "Com_p_2015": 70788.5766030252
+    },
+    "bounds": [-24000.0, 6218000.0, 11000.0, 6249000.0],
+    "targetGeometrySha256": "755ba60470a141a1a58784396f7106172b6447f0a4bb3debc8e0e640d538d827",
+    "referencePoints": [
+      {
+        "label": "Grimsby centre",
+        "longitude": -0.075,
+        "latitude": 53.566,
+        "fuaMatches": [5518]
+      },
+      {
+        "label": "Diana Princess Wales hospital",
+        "longitude": -0.087,
+        "latitude": 53.545,
+        "fuaMatches": [5518]
+      },
+      {
+        "label": "Grimsby Fish Market",
+        "longitude": -0.07,
+        "latitude": 53.579,
+        "fuaMatches": [5518]
+      },
+      {
+        "label": "Stallingborough reference",
+        "longitude": -0.184,
+        "latitude": 53.587,
+        "fuaMatches": [5518]
+      },
+      {
+        "label": "Immingham port reference",
+        "longitude": -0.19,
+        "latitude": 53.63,
+        "fuaMatches": []
+      },
+      {
+        "label": "Humberside Airport EG NJ reference",
+        "longitude": -0.3508,
+        "latitude": 53.5744,
+        "fuaMatches": []
+      },
+      {
+        "label": "Hull Castle Hill Hospital reference",
+        "longitude": -0.452,
+        "latitude": 53.78,
+        "fuaMatches": [5422]
+      },
+      {
+        "label": "Sheffield Royal Hallamshire reference",
+        "longitude": -1.491,
+        "latitude": 53.379,
+        "fuaMatches": [4460]
+      },
+      {
+        "label": "Hull Ferry Terminal reference",
+        "longitude": -0.28,
+        "latitude": 53.741,
+        "fuaMatches": [5422]
+      }
+    ],
+    "method": "full9031; EPSG4326→ESRI54009 always_xy; intersects; analyst approximate points not official footprints/catchments/patients",
+    "reviewedOn": "2026-10-13"
+  },
+  "retrievedOn": "2026-10-13",
+  "priorityCompletionReview": {
+    "path": "docs/cci-grimsby-priority-review.md",
+    "sha256": "ddbe51ab1b7862eaaf7c638d57d245f8b470d53d5b7b979c739791f46def37c7",
+    "reviewedOn": "2026-10-13",
+    "rootVerifiedOriginalBytes": true,
+    "rootVerifiedAllReferencePoints": true
+  }
+}

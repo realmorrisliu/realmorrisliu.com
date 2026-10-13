@@ -38,6 +38,8 @@ import surabaya from "../../docs/data/cci-local-2026-surabaya-case.json";
 import hangzhou from "../../docs/data/cci-local-2026-hangzhou-case.json";
 import copenhagen from "../../docs/data/cci-local-2026-copenhagen-case.json";
 import saifai from "../../docs/data/cci-local-2026-saifai-case.json";
+import grimsby from "../../docs/data/cci-local-2026-grimsby-case.json";
+import tampere from "../../docs/data/cci-local-2026-tampere-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -80,8 +82,12 @@ const cases = [
   hangzhou,
   copenhagen,
   saifai,
+  grimsby,
+  tampere,
 ];
 const caseNamesZh: Record<number, string> = {
+  [grimsby.candidateId]: "格里姆斯比功能区",
+  [tampere.candidateId]: "坦佩雷功能区",
   [saifai.candidateId]: "Saifai 功能区",
   [hangzhou.candidateId]: "杭州功能区",
   [copenhagen.candidateId]: "哥本哈根功能区",
@@ -274,16 +280,19 @@ const caseNotes: Record<number, string[]> = {
   ],
   [singapore.candidateId]: [
     zh
-      ? "新加坡 TEC 复核为条件性 80：NRF 多机构实际转化、IMDA 企业／工人采用与居民数字使用、已完成辅助交易共同支持高档。不同分母不合并；技能和融资短板保留，若在缓解后仍构成重要限制，可重审 60。多生产者延续、通常居民广泛可用及空间／时点适用仍须假设，拒绝则 TEC 未定。MOH 明确未追踪所询问的费用相关延迟／放弃治疗数据；这是已确认的测量缺口，不是未满足需求为零或普遍医疗失效。TEC 与 MED 仍依赖必要假设；仅 TEC 未定则总分无中心、数学域为 52—62，两项同时未定则为 43—68。"
-      : "Singapore's TEC is reassessed as a conditional 80: actual multi-institution translation, enterprise/worker adoption, resident digital use and completed assisted transactions jointly support the higher tier. Denominators remain separate. Skills and financing gaps are retained; material constraints after mitigation could support 60. Continuing multi-producer capacity, broad ordinary-resident usability and spatial/time applicability remain assumptions; rejecting them leaves TEC unknown. MOH confirms it does not track the requested cost-related delayed or forgone-care data. This is a measurement gap, not zero unmet need or widespread care failure. TEC and MED still require necessary assumptions: unresolved TEC removes the total's centre, giving a mathematical domain of 52–62; unresolved MED and TEC give 43–68.",
+      ? "新加坡条件中心62：LON由40改为60，其余七维不变。实际当地CAR-T给药、商业患者及公共支付/监护链纠正原路径代表性。疾病资格、制造掉队、严重风险、资助上限与照护负担保留；拒绝通常合资格居民可完成支付与监护、服务持续或地域假设，则LON未知、域56–66、无中心。这不是健康人延寿证明。"
+      : "Singapore's conditional centre is 62: LON changes from 40 to 60, with the other seven judgments unchanged. Actual local CAR-T delivery, a commercial patient and public payment/monitoring pathways challenge the earlier pathway representation. Disease eligibility, manufacturing attrition, serious risks, funding caps and caregiver burdens remain. Rejecting ordinary eligible-resident access, continuity or spatial assumptions leaves LON unknown and a 56–66 domain without a centre. This does not demonstrate healthy-population life extension.",
+    zh
+      ? "新加坡 TEC 复核为条件性 80：NRF 多机构实际转化、IMDA 企业／工人采用与居民数字使用、已完成辅助交易共同支持高档。不同分母不合并；技能和融资短板保留，若在缓解后仍构成重要限制，可重审 60。多生产者延续、通常居民广泛可用及空间／时点适用仍须假设，拒绝则 TEC 未定。MOH 明确未追踪所询问的费用相关延迟／放弃治疗数据；这是已确认的测量缺口，不是未满足需求为零或普遍医疗失效。TEC 与 MED 仍依赖必要假设；仅 TEC 未定则总分无中心、数学域为 54—64，两项同时未定则为 45—70。"
+      : "Singapore's TEC is reassessed as a conditional 80: actual multi-institution translation, enterprise/worker adoption, resident digital use and completed assisted transactions jointly support the higher tier. Denominators remain separate. Skills and financing gaps are retained; material constraints after mitigation could support 60. Continuing multi-producer capacity, broad ordinary-resident usability and spatial/time applicability remain assumptions; rejecting them leaves TEC unknown. MOH confirms it does not track the requested cost-related delayed or forgone-care data. This is a measurement gap, not zero unmet need or widespread care failure. TEC and MED still require necessary assumptions: unresolved TEC removes the total's centre, giving a mathematical domain of 54–64; unresolved MED and TEC give 45–70.",
   ],
   [london.candidateId]: [
     zh
       ? "伦敦条件中心60，八维各60。实际当地CAR-T、人体验证、NHS支付与监护纠正旧LON40的路径代表性；制造等待、采集容量、照护／距离条件和过期风险文案仍保留。拒绝当前延续、通常合资格居民实际取得／支付／监护推定时LON撤回未知，域54—64、无中心；其余七维及反证不变。"
       : "London has a conditional centre of 60, with all eight dimensions at 60. Actual local CAR-T, human evidence and NHS payment/monitoring challenge the earlier LON 40 pathway selection. Manufacturing waits, collection capacity, carer/distance conditions and outdated risk information remain. Rejecting continuity or usual eligible-resident access/payment/monitoring restores unknown LON, giving 54–64 without a centre. Other seven judgments and counterevidence are unchanged.",
     zh
-      ? "MED40／OPT80替代情景为59；将MED的5个权重点移至OPT后为61，超过新加坡同权重条件60。正式权重不变，此次次序翻转只是敏感性演算，不证明城市优劣。"
-      : "The MED 40 / OPT 80 alternative gives 59; moving five weight points from MED to OPT gives 61, above Singapore's conditional 60 under those weights. Official weights remain unchanged; this sensitivity reversal does not establish city superiority.",
+      ? "MED40／OPT80替代情景为59；将MED的5个权重点移至OPT后为61，新加坡同权重条件62；若另将新加坡TEC改60，则其总分60，次序才翻转。正式权重不变，这只是敏感性演算，不证明城市优劣。"
+      : "The MED 40 / OPT 80 alternative gives 59; moving five weight points from MED to OPT gives 61 against Singapore's conditional 62. Reassessing Singapore TEC to 60 then gives it 60, reversing this scenario's order. Official weights remain unchanged; this sensitivity arithmetic does not establish city superiority.",
   ],
   [helsinki.candidateId]: [
     zh
@@ -297,6 +306,22 @@ const caseNotes: Record<number, string[]> = {
     zh
       ? "其余七维及历史反证保持：温特图尔站区伤者和应对不重复计，历史心外科质量失效不当2026发生率，2031通信备电不计当前冗余。GSS80替代为63；撤回GSS则域51—66，连同LON撤回为45—70，均非可靠排名界限。"
       : "The other seven judgments and counterevidence remain: Winterthur injuries and response are not double-counted, historical cardiac-surgery failure is not a 2026 rate, and 2031 communications backup is not current redundancy. GSS 80 would give 63; withdrawing GSS gives 51–66, or 45–70 with LON also unknown. These are not reliable ranking bounds.",
+  ],
+  [grimsby.candidateId]: [
+    zh
+      ? "格里姆斯比完成八维有界审阅：PCS/ISR/RES/TEC/OPT条件60、MED40，GSS/LON未知，域42–67、无中心。实际海防、供给、产业试验与居民渠道支持能力；最新急诊等待及安全问题在已有改善后仍支持MED的重要约束判断，不能因医疗距离短填高分。"
+      : "Grimsby's bounded review gives conditional 60 for PCS, ISR, RES, TEC and OPT, and 40 for MED. GSS and LON remain unknown: 42–67 without a centre. Operating protection, supply, industrial testing and resident channels support capability; recent emergency waits and safety findings remain material despite improvements. Short travel distance does not imply high medical capability.",
+    zh
+      ? "全9,031几何核对区内外参考点；Hull、Sheffield和机场服务不并成本区。国家CAR-T委托不证明本区居民已进入真实给药/监护链；国家威胁与日常运转也不足以补GSS。两轮后保留缺口，必要的代表性、延续、普通负担和触达假设均可撤回。"
+      : "Reference points were checked against all 9,031 geometries; Hull, Sheffield and outside-airport services are not local production. National CAR-T commissioning does not establish a delivered local-resident pathway; national threat context and ordinary operations do not settle GSS. After two rounds, gaps remain explicit and applicability, continuity, affordability and reach assumptions can be withdrawn.",
+  ],
+  [tampere.candidateId]: [
+    zh
+      ? "坦佩雷六维条件60，GSS/LON未知，域45–70、无中心。实际供给、基层/专科接诊、研究转化与交通支持有限能力，食品援助缺口、人才/财政压力及航空收缩均保留。GSS在统一验收中撤回：准备和网络处置未闭合具体威胁、居民影响与缓解后残余。"
+      : "Tampere has six conditional 60 judgments; GSS and LON remain unknown, giving 45–70 without a centre. Actual supply, routine/specialist access, technology transfer and transport support limited capability, with unmet food assistance, talent/fiscal pressure and reduced aviation retained. Uniform review withdrew GSS: preparedness and cyber handling do not connect specific threats, resident impacts and residual harm after mitigation.",
+    zh
+      ? "Tays的239,900欧CAR-T医院产品价不是患者账单或实际给药人数，LON不据此填分。2025区域等待不是2026全功能区疗效；数字可办服务种类也不是居民交易率。实际地方转化、通常支付/监护及各维地域/延续推定拒绝时，仍应撤回未知。"
+      : "Tays' EUR239,900 CAR-T hospital product tariff is neither a patient bill nor evidence of actual infusion, so it does not fill LON. Regional 2025 waits are not 2026 whole-FUA outcomes; digital service availability is not resident transaction uptake. Rejecting necessary delivery, payment/monitoring, spatial or continuity assumptions requires unknown judgments.",
   ],
   [saifai.candidateId]: [
     zh
@@ -681,8 +706,8 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
         <p>
           {
             zh
-              ? "新加坡条件性总分现为 60，伦敦为 58；2 分差不证明确定优劣。医疗等待不能仅因超出行政目标就自动取 40；科研强不能代替居民扩散；长期迁居权不能覆盖交通、资金及通信的全部退出条件。长寿路径的代表性假设最需挑战：若不接受该假设，LON 应保持未定，总分中心也应为空。"
-              : "Singapore now has a conditional total of 60 and London 58; this two-point gap does not establish superiority. Missing an administrative waiting target does not automatically imply MED 40; strong research does not establish resident diffusion, and residence rights do not cover every transport, financial or communication condition. Longevity pathway representativeness is the weakest assumption: rejecting it leaves LON unresolved and removes the total's central estimate."
+              ? "新加坡条件性总分现为 62，伦敦为 60；2 分差不证明确定优劣。医疗等待不能仅因超出行政目标就自动取 40；科研强不能代替居民扩散；长期迁居权不能覆盖交通、资金及通信的全部退出条件。长寿路径的代表性假设最需挑战：若不接受该假设，LON 应保持未定，总分中心也应为空。"
+              : "Singapore now has a conditional total of 62 and London 60; this two-point gap does not establish superiority. Missing an administrative waiting target does not automatically imply MED 40; strong research does not establish resident diffusion, and residence rights do not cover every transport, financial or communication condition. Longevity pathway representativeness is the weakest assumption: rejecting it leaves LON unresolved and removes the total's central estimate."
           }
         </p>
         <p>
@@ -739,6 +764,17 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
         <a
           href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-unmatched-centre-review.md"
           >{zh ? "查看未匹配中心逐条登记" : "Review every unmatched centre record"}</a
+        >
+      </p>
+      <p>
+        {
+          zh
+            ? "Apia身份探索已核官方普查与规划范围差异，并复现新版中心与旧功能区、WUP2025全集无面积交集。真实通勤/服务范围仍未知，不能按同名继承分数或计为新增完成城市。"
+            : "Apia's identity review verifies differing official census/planning scopes and no positive-area overlap with the older FUA or WUP2025 universes. Actual commuting/service boundaries remain unresolved; names alone cannot transfer scores or create a completed city assessment."
+        }
+        {" "}<a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-apia-identity-review.md"
+          >{zh ? "Apia身份核查" : "Apia identity review"}</a
         >
       </p>
       <p>

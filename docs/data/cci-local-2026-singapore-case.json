@@ -8,8 +8,8 @@
   "boundaryVersion": "GHS-FUA R2019A",
   "boundaryReview": "unresolved",
   "evidenceReview": "cci-local-2026-singapore-case.md",
-  "expectedConditionalTotal": 60,
-  "limitations": "All 31 subpillars are reviewed, not all are measured. Scores require the stated assumptions; unknown evidence remains unknown. This is neither a global ranking nor an exclusion bound. Rejecting a necessary assumption requires reassessment, not automatic retention of its score.",
+  "expectedConditionalTotal": 62,
+  "limitations": "Conditional centre62 after actual disease-specific CAR-T delivery, funded indications and payment/monitoring pathways challenge the previous ageing-pathway representation. Other seven judgments unchanged. Clinical eligibility, continuity, spatial applicability and ordinary residual payment/monitoring remain withdrawable assumptions; LON unknown gives56–66 with no centre. Neither healthy-population life extension nor global ranking eligibility.",
   "dimensions": [
     {
       "id": "PCS",
@@ -77,16 +77,19 @@
     },
     {
       "id": "LON",
-      "score": 40,
-      "rationale": "Reviewed human pathways include short feasibility and individual exploratory studies, leaving a specific gap to reliable ordinary-resident clinical benefit and routine access.",
-      "assumption": "The reviewed pathways reflect current major maturity and unreviewed pathways have not changed the result. This representative-pathway assumption is weak; rejecting it leaves the whole dimension unresolved.",
-      "conditionalAlternatives": [60, 80],
+      "score": 60,
+      "rationale": "Credible disease-specific human CAR-T evidence, historical actual Singapore administration and a commercial patient, locally assessed funded indications and 2025/2026 public payment and monitoring pathways support translation. Eligibility, manufacture/progression, serious and secondary-malignancy risks and capped funding remain important limitations. This is not healthy-population life-extension evidence.",
+      "assumption": "The public disease-specific pathway remains operational and ordinarily usable at cutoff for clinically eligible citizen residents of the FUA: listed indication, subsidised public status, applicable household means band, insurance eligibility, ability to meet residual product/ancillary/caregiver costs or obtain assessed assistance, and feasible referral/monitoring. Neither median wage nor citizenship establishes clinical eligibility or 75% subsidy. No local 2026 annual throughput or typical final bill is measured. Rejecting necessary continuity/access/spatial applicability assumptions leaves the whole LON unresolved.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "translation": "partial",
         "trial_maturity": "partial",
         "regulatory_adoption": "partial",
         "resident_access": "partial"
-      }
+      },
+      "scoreIfNecessaryAssumptionRejected": null,
+      "oldScore": 40,
+      "oldRepresentativePathwayAssumption": "challenged by verified disease-specific commercial and funded pathway; early geroscience alone cannot represent the entire dimension"
     },
     {
       "id": "TEC",
@@ -120,5 +123,197 @@
     "sha256": "34faeef158ec519249c8a993619526fbdae8fa926bcb349923ba5d053b738312",
     "reviewedOn": "2026-10-12",
     "status": "conditional_80_judgment_not_objective_scale_or_global_eligibility"
-  }
+  },
+  "retrievedOn": "2026-10-13",
+  "lonComparabilityReview": {
+    "path": "docs/cci-singapore-lon-comparability-review.md",
+    "sha256": "d42e3895abceecf1774c66a48043383df6bd08328153046f2ec9f3e2a7ea5ab0",
+    "reviewedOn": "2026-10-13",
+    "previousLonScore": 40,
+    "previousConditionalTotal": 60,
+    "otherSevenDimensionsUnchanged": true
+  },
+  "sourceSnapshots": [
+    {
+      "file": "hsa-kymriah-physician.pdf",
+      "url": "https://go.gov.sg/hsa-edu-kymriah-pem-physician",
+      "retrievedAt": "2026-10-13T04:55:18.178224+00:00",
+      "bytes": 388988,
+      "sha256": "c16c053eba5b16efffd4b068525133e05c330d100b116915b64173ed7750469e",
+      "signature": "PDF",
+      "classification": "valid_original",
+      "identity": "Novartis Singapore manufacturer safety material, linked by HSA official directory and HSA approved",
+      "approved": "2025-07-17",
+      "updated": "2026-04-27",
+      "observed": "product safety requirements, not Singapore adverse-event rates",
+      "region": "Singapore qualified centres",
+      "visualPages": [4, 29]
+    },
+    {
+      "file": "hsa-kymriah-patient.pdf",
+      "url": "https://go.gov.sg/hsa-edu-kymriah-pmg",
+      "retrievedAt": "2026-10-13T04:55:18.180337+00:00",
+      "bytes": 102491,
+      "sha256": "91fbe60d7ecfa3e4ab70fb4e8690f69ae21cad370c3fab79db93f356cf1bf209",
+      "signature": "PDF",
+      "classification": "valid_original",
+      "identity": "Novartis Singapore patient material, HSA approved and directory-linked",
+      "approved": "2025-07-17",
+      "updated": "2026-04-27",
+      "observed": "product risks and monitoring instructions, not actual adherence",
+      "region": "Singapore qualified centres",
+      "visualPages": [2, 3]
+    },
+    {
+      "file": "msl-amendments2025.pdf",
+      "url": "https://www.parliament.gov.sg/docs/default-source/default-document-library/s-l-175of2025.pdf?sfvrsn=5b3e5d08_0",
+      "retrievedAt": "2026-10-13T04:50:28.221957+00:00",
+      "bytes": 132806,
+      "sha256": "a1c3e10cd8c638b2a859c91683a22cea51a1d73cd2a61131b60739af8fed1658",
+      "signature": "PDF",
+      "classification": "valid_original",
+      "identity": "Parliament of Singapore, MediShield Life Scheme Amendment No.2 Regulations 2025; Gazette S632; parliamentary S.L.175",
+      "published": "2025-10-03 Gazette; parliamentary cover 2025-10-01",
+      "effective": "2025-10-01",
+      "observed": "statutory payment provisions, not individual net bills",
+      "region": "Singapore citizen subsidised public / non-subsidised / private proration differs",
+      "visualPages": [9, 10, 11, 12],
+      "textExtraction": "font mapping damaged; relied on rendered pages for payment provisions"
+    },
+    {
+      "file": "ncis-inpatient-cart.pdf",
+      "url": "https://www.ncis.com.sg/docs/ncislibraries/brochures-document/a5-brochure-car-t-cell-therapy-inpatient-information_final_.pdf?sfvrsn=ba0064b8_1",
+      "retrievedAt": "2026-10-13T04:50:29.529803+00:00",
+      "bytes": 2760938,
+      "sha256": "fca0a6832d0d39588d3aa68c4cd0a68e272f2e4eb5cf5ddbd58b0e7d126695f1",
+      "signature": "PDF",
+      "classification": "valid_original",
+      "identity": "NCIS patient information",
+      "published": "2025 (printing year; exact first issue date unknown)",
+      "observed": "guidance, no clinical outcome cohort",
+      "region": "NCIS Singapore",
+      "visualPages": [14]
+    },
+    {
+      "file": "sgh-cellular-therapy.html",
+      "url": "https://www.sgh.com.sg/our-specialties/haematology/cellular-therapy",
+      "retrievedAt": "2026-10-13T04:50:29.530070+00:00",
+      "bytes": 469345,
+      "sha256": "5799e1203649a9b4d64189ab6c808287123a01c20ff9f15da14bdd0f0537b2aa",
+      "signature": "HTML_or_other",
+      "classification": "valid_original",
+      "identity": "Singapore General Hospital service page",
+      "published": null,
+      "observed": "undated current institutional service statement, not a cohort",
+      "region": "SGH Outram; FUA access requires stated applicability assumption"
+    },
+    {
+      "file": "sgh-cart-commercial2022.html",
+      "url": "https://www.sgh.com.sg/news/singapore-health/the-face-of-car-t-cell-therapy",
+      "retrievedAt": "2026-10-13T04:50:29.533150+00:00",
+      "bytes": 466655,
+      "sha256": "04312344bac82400d23be4fa6fe1a5718c2767fb4df7b604f086fba9853d9cd5",
+      "signature": "HTML_or_other",
+      "classification": "valid_original",
+      "identity": "Singapore General Hospital, Singapore Health",
+      "published": "2022-08-31",
+      "observed": "first commercial patient; exact administration date unspecified",
+      "region": "SGH; income, nationality, net liability unverified"
+    },
+    {
+      "file": "ncis-cart-current.html",
+      "url": "https://www.ncis.com.sg/our-services/ncis-specialised-programmes/car-t-cell-therapy",
+      "retrievedAt": "2026-10-13T04:50:32.105692+00:00",
+      "bytes": 60197,
+      "sha256": "77a53cfa15b358cf6ff9ef40f3df37d52c9288452e4e6646bf25ed75bbc2219a",
+      "signature": "HTML_or_other",
+      "classification": "valid_original",
+      "identity": "National University Cancer Institute, Singapore",
+      "published": "2024-09-23",
+      "observed": "service workflow, no delivered denominator",
+      "region": "NCIS Singapore; not all FUA patients"
+    },
+    {
+      "file": "singhealth-cart2021.pdf",
+      "url": "https://www.singhealth.com.sg/patient-care/specialties-services/cell-therapy-centre/PublishingImages/newsletters/Defining%20Med%20October%202021%20-%20Cell%20Therapy%20SDDC%20Final.pdf",
+      "retrievedAt": "2026-10-13T04:54:51.355117+00:00",
+      "bytes": 1636572,
+      "sha256": "144866e479d3472ffa1b5e7d0394f934b14b00f77502fbec9ba3e40a9511e75b",
+      "signature": "PDF",
+      "classification": "valid_original",
+      "identity": "SingHealth clinical team, Defining Med October 2021",
+      "published": "2021-10",
+      "observed": "2020 to publication, SGH ten treated patients; no local response denominator",
+      "region": "SGH, Singapore; patient residences/citizenship not enumerated",
+      "visualPages": [7, 8]
+    },
+    {
+      "file": "inherited-has-kymriah2023.pdf",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "bytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "classification": "valid_original_reused_from_paris",
+      "retrievedOn": "2026-10-13",
+      "observation": "JULIET analysis 2020-02-20; 2023 regulatory reassessment; not Singapore outcomes",
+      "published": "2023-09-06 committee / 2023-10-23 web",
+      "identity": "French HAS Transparency Committee official reassessment",
+      "observed": "JULIET phase II analysis 2020-02-20; not local cohort; BELINDA earlier line RCT not interchangeable",
+      "region": "product-specific international/France clinical evidence, not Singapore service outcomes",
+      "visualPages": [14]
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "MOH_LIST",
+      "url": "https://www.moh.gov.sg/managing-expenses/schemes-and-subsidies/cell-tissue-and-gene-therapy/product-list-cell-tissue-gene/",
+      "published": "2025-08-01",
+      "observation": "CTGTP list as of 2025-08-01",
+      "classification": "web_tool_only_original_body",
+      "originalBytes": null,
+      "originalSha256": null,
+      "retrievedOn": "2026-10-13"
+    },
+    {
+      "id": "MOH_SUBSIDY",
+      "url": "https://www.moh.gov.sg/managing-expenses/schemes-and-subsidies/cell-tissue-and-gene-therapy/subs-cell-tissue-gene/",
+      "published": "2024-10-26",
+      "effective": "2024-10-01",
+      "classification": "web_tool_only_original_body",
+      "originalBytes": null,
+      "originalSha256": null,
+      "retrievedOn": "2026-10-13"
+    },
+    {
+      "id": "MOH_BENEFITS",
+      "url": "https://www.moh.gov.sg/managing-expenses/schemes-and-subsidies/medishield-life/medishield-life-benefits/",
+      "published": "2026-06-03",
+      "effective": "2026-06-01",
+      "classification": "web_tool_only_original_body",
+      "originalBytes": null,
+      "originalSha256": null,
+      "retrievedOn": "2026-10-13"
+    },
+    {
+      "id": "ACE_DLBCL",
+      "url": "https://isomer-user-content.by.gov.sg/68/0be2d3ca-8012-469e-831f-1406870af7b4/tisagenlecleucel-for-relapsed-or-refractory-dlbcl-after-two-or-more-lines-of-systemic-therapy-(1-aug-24).pdf",
+      "published": "2024-08-01",
+      "decision": "2024-03",
+      "effective": "2024-08-01",
+      "visualReview": "not completed; screenshots cache miss; quantitative clinical denominator independently checked in reused HAS PDF",
+      "classification": "web_tool_only_original_body",
+      "originalBytes": null,
+      "originalSha256": null,
+      "retrievedOn": "2026-10-13"
+    },
+    {
+      "id": "HSA_INDEX",
+      "url": "https://www.hsa.gov.sg/other-regulations/product-safety-monitoring/educational-materials-for-hcp/",
+      "published": "2026-10-06",
+      "observation": "official approved-material directory, not a treated-patient registry",
+      "classification": "web_tool_only_original_body",
+      "originalBytes": null,
+      "originalSha256": null,
+      "retrievedOn": "2026-10-13"
+    }
+  ]
 }
