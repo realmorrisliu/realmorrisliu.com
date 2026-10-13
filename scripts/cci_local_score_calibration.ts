@@ -82,6 +82,9 @@ const realCases = [
   "saifai",
   "grimsby",
   "tampere",
+  "cima",
+  "oulu",
+  "leicester",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -155,6 +158,9 @@ const [
   saifai,
   grimsby,
   tampere,
+  cima,
+  oulu,
+  leicester,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -1041,7 +1047,7 @@ const jakartaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
   (c: { efua_id: string }) => c.efua_id === "4897"
 );
 assert(jakartaPosition);
-assert.equal(jakartaPosition.bestPosition, 18);
+assert.equal(jakartaPosition.bestPosition, 19);
 assert.equal(jakartaPosition.worstPosition, rankAudit.candidateCount);
 
 assert.deepEqual(total(nanjing), { center: 58, lower: 58, upper: 58 });
@@ -1638,3 +1644,23 @@ for (const id of [5518, 397]) {
     digest(caseInput.priorityCompletionReview.path)
   );
 }
+
+// Priority proxies never fill unresolved scores; actual residuals retain full weights.
+assert.deepEqual(total(cima), { center: null, lower: 0, upper: 100 });
+assert.deepEqual(total(oulu), { center: null, lower: 42, upper: 67 });
+assert.deepEqual(total({ ...oulu, MED: 60 }), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total(leicester), { center: null, lower: 54, upper: 64 });
+assert.deepEqual(total({ ...leicester, MED: 40 }), { center: null, lower: 51, upper: 61 });
+assert.deepEqual(total({ ...leicester, RES: 60 }), { center: 60, lower: 60, upper: 60 });
+for (const id of [3399, 239, 4925]) {
+  const reviewedCase = realCases.find(c => c.candidateId === id);
+  assert(reviewedCase);
+  assert.equal(
+    reviewedCase.priorityCompletionReview.sha256,
+    digest(reviewedCase.priorityCompletionReview.path)
+  );
+}
+assert.equal(Object.keys(cima).length, 0);
+assert.equal(oulu.GSS, undefined);
+assert.equal(oulu.LON, undefined);
+assert.equal(leicester.RES, undefined);

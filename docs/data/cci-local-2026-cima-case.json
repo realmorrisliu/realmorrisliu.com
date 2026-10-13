@@ -1,0 +1,293 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 3399,
+  "name": "Cima",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "full9031_identity_geometry_verified_local_site_and_service_footprints_unresolved",
+  "evidenceReview": "cci-cima-priority-review.md",
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 0,
+  "unresolvedScoreRange": [0, 100],
+  "limitations": "8dimensions/31statuses reviewed, not all measured. All eight scores remainnull after bounded research; not0/40/60, no midpoint or weight redistribution. FavourableM/E and missingN only select exploration, not performance or exclusion. Arithmetic0–100 is uninformative, not a confidence/exclusion bound.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": null,
+      "rationale": "Low model heat/PGA and highland/planning context do not close relevant flood/geophysical/severe-weather exposure and usable protection. Actual town damage/protection/response outcomes were not verified.",
+      "assumption": "Minimum: a geographically applicable local hazard/protection operating result. Do not require unnecessary low-hazard defences or a full annual stress test; no automatic60 from favourable proxies.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "heat_humidity": "context",
+        "flood_sea_level": "context",
+        "geophysical": "context",
+        "severe_weather_wildfire": "unresolved"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "Local official inquiry contains real historical coercion allegations and court acknowledgement; compiled2023/2025 combat records challenge a zero-impact assumption.2026pending is not confirmed. Current ordinary-resident/channel impact and mitigation remain unresolved.",
+      "assumption": "Minimum: local actual security/channel effects and their residual after response, plus precise spatial applicability. Do not infer low risk from unmatched events or carry historical harms forward merely because redress has not been found.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": null,
+      "rationale": "Town administration/older service operation and EHRC public inquiry/court/joint-visit responses exist; local current rights enforcement, group reach, actual adaptive/recovery results remain unclosed.",
+      "assumption": "Minimum: local delivered service/right/remedy or recovery follow-through with actual affected/resolved scope; not national WGI, recommendations or institution existence.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "unresolved",
+        "social_cohesion": "context",
+        "emergency_recovery": "unresolved"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "Official town profile gives historical water/service/economic-link context, and postal provider lists a branch. Parsed water63%/domestic-electric30% lack visual/date/denominator closure and alternatives; no current household essential supply/price/continuity link.",
+      "assumption": "Minimum: actual town water/electric/food service and usable alternatives/ordinary burden; no demand for perfect all-household bills, no old37% automatic deprivation.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "context",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": null,
+      "rationale": "Historical one public health centre and32 personnel are local capacity evidence, not treatment quality. Model proximity does not establish current necessary care/affordable entitlement, appropriate routine outcomes or specialist/referral continuity.",
+      "assumption": "Minimum: actual local necessary care or executable referral, ordinary eligible payment and a credible appropriate-care/continuity result; not every disease or risk-adjusted all-quality denominator.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "unresolved",
+        "specialist_capacity": "unresolved",
+        "system_continuity": "unresolved"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "No verified local or executable resident referral pathway closes human clinical result, actual implementation, regulatory adoption and ordinary payment/monitoring. Neither generic anti-aging nor national lack-of-search establishes40.",
+      "assumption": "Minimum: one credible human pathway plus actual local implementation/referral and usable citizen payment/monitoring; do not require healthy-population longevity proof or copy another city.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "unresolved",
+        "trial_maturity": "unresolved",
+        "regulatory_adoption": "unresolved",
+        "resident_access": "unresolved"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": null,
+      "rationale": "Old registered enterprises andTVET plus national telecom offer/map are limited context. Missing sampledN does not imply no connection. Local production/industry translation and actual ordinary digital uptake/price/reliability remain unresolved.",
+      "assumption": "Minimum: operator-local actual connection/uptake and price/continuity, plus specific local output-to-use link; no source/firm/airport counts or national coverage substitute.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "knowledge_output": "unresolved",
+        "industry_density": "partial",
+        "digital_infrastructure": "context",
+        "diffusion": "unresolved"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": null,
+      "rationale": "Old town road/bus inventory and postal listing are partial channels, not current transport redundancy, legal migration, accessible asset transfer or independent communication.",
+      "assumption": "Minimum: current executable resident exit/transfer/communication path and conditions; no airport/population filter, passport ranking or assumed foreign residency.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "unresolved",
+        "asset_portability": "unresolved",
+        "network_continuity": "unresolved"
+      }
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.ethiomet.gov.et/weather-warnings/",
+      "bytes": 134011,
+      "sha256": "d5e4bce4a8862cf463c602e6119a72e49fd13cfd3301af762f4ac7a863603ba7",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:23:36.918699+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "EMI official warning index, multiple issue dates incl2026May14/Jun8/Jul15; regional heat/flash flood context, no actual Tilili damage/protection denominator. Current no active alerts is not cutoff safety.",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "R01",
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_FUA_UCDB2015_GLOBE_R2019A/V1-0/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.zip",
+      "bytes": 9932800,
+      "sha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+      "retrievedOn": null,
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "URL identifies source package; bytes/SHA identify extracted GPKG, not ZIP. Full9031 identity/geometry audit;2015 model population not2026 resident denominator.",
+      "sourceKind": "reused_original_extracted_gpkg"
+    },
+    {
+      "id": "R02",
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_GLOBE_R2024A/V1-2/GHS_UCDB_GLOBE_R2024A_V1_2.zip",
+      "bytes": 285081600,
+      "sha256": "56e60b7cbfc776b23493d5684aa5d0d7d6940fc3dd9a3881fa52599f20fd80fc",
+      "retrievedOn": "2026-10-10",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "URL identifies ZIP; bytes/SHA identify extracted GPKG. UC2900 nameTilili/ETH and2025 model population; not official town admin boundary.",
+      "sourceKind": "reused_original_extracted_gpkg"
+    },
+    {
+      "id": "R03",
+      "url": "https://ucdp.uu.se/downloads/ged/ged261-csv.zip",
+      "bytes": 39122522,
+      "sha256": "8c941d84954e555ee2e54f40fa04d9203bf1e2f962203d0a9930966c4947c667",
+      "retrievedOn": "2026-10-10",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "Original GED26.1 coded events504014/611530 at town reference point;2023Dec17/2025Jun10 each single upstream source and combatant fatality best1. Compiled registry, not direct witness or ordinary resident harm denominator.",
+      "sourceKind": "reused_original_compiled_event_dataset"
+    },
+    {
+      "id": "R04",
+      "url": "https://ucdp.uu.se/downloads/candidateged/GEDEvent_v26_01_26_06.csv",
+      "bytes": 7800501,
+      "sha256": "68dd3d363b8edf4808bd6bf6f5d0412c3c722ffb1db367aeb8eff48bab80589a",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2026Apr26 event628807 Check vague or biased source, low0/best0/high1. Pending stays pending; not confirmed civilian death or current violence rate. HTTPmodified2026Jul20 is not first-publication proof.",
+      "sourceKind": "reused_original_preliminary_compiled_event_dataset"
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://mui.gov.et/wp-content/uploads/2025/12/Tilili-Urban-Profile-2018-Final.pdf",
+      "publishedOn": null,
+      "scope": "MUI official town profile, 14 pages. Cover October2018 calendar unspecified; plan data2013E.C.; population2023G.C. versus references2023E.C. conflict. No successful PDF visual review; parsed entries only, not current FUA rates.",
+      "bytes": null,
+      "sha256": null,
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "web_tool_only_original_body_not_downloaded_bytes"
+    },
+    {
+      "id": "W02",
+      "url": "https://nai.uu.se/download/18.39fca04516faedec8b248c7a/1580827647314/ORTCI05.pdf",
+      "publishedOn": "2005 (author copyright; exact online first publication unknown)",
+      "scope": "Nordic Africa Institute library original place-name compilation; Cima see Tilili, not performance evidence.",
+      "bytes": null,
+      "sha256": null,
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "web_tool_only_original_body_not_downloaded_bytes"
+    },
+    {
+      "id": "W03",
+      "url": "https://ehrc.org/wp-content/uploads/2024/03/240321-Report-A-National-Iquiry-into-persons-derived-of-Liberty-For-release.pdf",
+      "publishedOn": null,
+      "scope": "EHRC direct national inquiry, official URL2024/03. Observation Apr2018–Apr2023; hearings Jul2022–Apr2023. Tilili-specific testimony/court response, exact detention parcel and resident denominator unresolved; not2026 damage/repair result.",
+      "bytes": null,
+      "sha256": null,
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "web_tool_only_original_body_not_downloaded_bytes"
+    },
+    {
+      "id": "W04",
+      "url": "https://ethio.post/branch/%E1%89%B2%E1%88%8A%E1%88%8A-%E1%89%85%E1%88%AD%E1%8A%95%E1%8C%AB%E1%8D%8D-%E1%89%96-%E1%89%A4%E1%89%B5-tilili-branch-post-office/",
+      "publishedOn": null,
+      "scope": "Ethiopost own Tilili branch/service/contact listing; undated, coordinates not found; not throughput or universal resident access.",
+      "bytes": null,
+      "sha256": null,
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "web_tool_only_original_body_not_downloaded_bytes"
+    }
+  ],
+  "failedSourceReads": [
+    {
+      "file": "tilili-urban-profile.pdf",
+      "url": "https://mui.gov.et/wp-content/uploads/2025/12/Tilili-Urban-Profile-2018-Final.pdf",
+      "retrievedAt": "2026-10-13T05:23:31.470581+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "000\nhttps://mui.gov.et/wp-content/uploads/2025/12/Tilili-Urban-Profile-2018-Final.pdf",
+      "exit": 35,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "signature": "HTML_or_other",
+      "stderr": "  0 --:--:--  0:00:06 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to mui.gov.et:443 \n",
+      "classification": "failed_tls_no_source_body"
+    },
+    {
+      "file": "nai-cima-alias.pdf",
+      "url": "https://nai.uu.se/download/18.39fca04516faedec8b248c7a/1580827647314/ORTCI05.pdf",
+      "retrievedAt": "2026-10-13T05:23:31.472456+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "000\nhttps://nai.uu.se/download/18.39fca04516faedec8b248c7a/1580827647314/ORTCI05.pdf",
+      "exit": 35,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "signature": "HTML_or_other",
+      "stderr": "   0 --:--:--  0:00:05 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to nai.uu.se:443 \n",
+      "classification": "failed_tls_no_source_body"
+    },
+    {
+      "file": "ethio-coverage.html",
+      "url": "https://www.ethiotelecom.et/4gcoverage/",
+      "retrievedAt": "2026-10-13T05:23:31.474492+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "000\nhttps://www.ethiotelecom.et/4gcoverage/",
+      "exit": 35,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "signature": "HTML_or_other",
+      "stderr": ":--  0:00:05 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to www.ethiotelecom.et:443 \n",
+      "classification": "failed_tls_no_source_body"
+    },
+    {
+      "file": "ethio-tariffs.html",
+      "url": "https://www.ethiotelecom.et/getting-started/",
+      "retrievedAt": "2026-10-13T05:23:31.476481+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "000\nhttps://www.ethiotelecom.et/getting-started/",
+      "exit": 35,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "signature": "HTML_or_other",
+      "stderr": ":--  0:00:05 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to www.ethiotelecom.et:443 \n",
+      "classification": "failed_tls_no_source_body"
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "path": "/private/tmp/cci-global/cima/boundary-record.json",
+    "sha256": "b562ce3f16ce7ca707d72a561a1799c53ee3b12de7138591cad7c4cd6cf19d59",
+    "countryIso": "ETH",
+    "fullRecordCount": 9031,
+    "geometryWkbSha256": "3d0a5f62d3e633f725d6a5b1619fce42f8276369227fd92d1d0d14373e0ae0bb",
+    "meaning": "representative point not city/hospital/incident parcel; UC2900Tilili name+positive overlap supports alias, not full admin/service identity"
+  },
+  "retrievedOn": "2026-10-13",
+  "priorityCompletionReview": {
+    "path": "docs/cci-cima-priority-review.md",
+    "sha256": "28011bbc6f776c9edd1919e0e97ae37a6705c7d03788de42fc77acbb9174857f",
+    "reviewedOn": "2026-10-13",
+    "status": "bounded_unknown_exploration_not_exclusion"
+  }
+}

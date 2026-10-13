@@ -1,0 +1,511 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 239,
+  "name": "Oulu",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "docs/cci-oulu-priority-review.md",
+  "evidenceReview": "cci-oulu-priority-review.md",
+  "expectedConditionalTotal": null,
+  "limitations": "Bounded two-round review: PCS/ISR/RES/TEC/OPT conditional60; MED conditional40; GSS/LON unresolved. All31 subpillars reviewed, not all measured.75% scored weight contributes42; missing25% gives42–67 conditional arithmetic range, not an exclusion bound or forecast. Necessary spatial, continuity, burden and residual-importance assumptions remain retractable.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Actual stormwater construction and maintained walking/cycling routes support protection; cold/ice, rain and source-water effects remain material. Low heat/seismic screening values are context, not current complete protection.",
+      "assumption": "Reviewed urban maintenance and stormwater measures usually protect ordinary residents and apply reasonably to FUA239 at cutoff. Unreviewed coastal, geophysical and heat scenarios are not assumed absent; rejecting this protection/representativeness inference restores unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "National Finnish threat context, institutional cyber response and preparedness do not establish the local organized-violence/strategic-impact and mitigation bridge. Individual stabbing leads are not assumed organized violence or proof of city-wide safety.",
+      "assumption": "No whole-dimension score is asserted; real local threat, resident/channel consequences and actual mitigation plus applicability assumptions are the minimum missing bridge, not a perfect population-wide incident rate.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Completed participatory-budget projects, service changes, digital assistance and food distribution demonstrate execution; fiscal and staffing pressure, delayed interfaces and inaccessible assisted authorization remain constraints.",
+      "assumption": "Actual execution and delivered alternatives reasonably support major usual services and resident reach in FUA239 and persist to cutoff; fiscal/group-access and recovery weaknesses remain material. Rejecting applicability requires reassessment, not automatic retention of60.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "Actual treated-water results, energy production/electric-boiler deployment and food redistribution support normal supply; common river/electricity dependence, backup-water litigation and household cost pressure remain.",
+      "assumption": "Core and related operator delivery generally reaches FUA239 and essential water/energy/food are ordinarily affordable at local median income. Aid counts are not a universal affordability measure; future reserve-water/battery projects are not assumed operational.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 40,
+      "rationale": "Treatment waits improved to46 of9737 over six months by2026Apr30, with new hospital/staff, purchasing and referral mitigation. Resources diverted from need assessment left3183/26.5% over three months inApr2026; audit identifies a continuing necessary-care bottleneck. Public fees do not erase waits.",
+      "assumption": "The regionally documented need-assessment bottleneck reasonably applies to Oulu residents and remains important after available mitigation at cutoff. If actual current alternatives normally provide timely assessment and appropriate necessary care, reconsider60; rejecting this residual/spatial/continuity interpretation leaves MED unknown, not automatically40.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "No verified local human-implementation, compliant current adoption and appropriate usual-resident payer/monitoring bridge was obtained in two targeted rounds. Helsinki FINGER and other-city CAR-T cannot be inherited by institution name or Finnish nationality.",
+      "assumption": "No score is assigned. A local actual disease-specific delivery route with credible human/regulatory support and eligibility, net burden and monitoring would discriminate40/60; unknown is not evidence of a real access failure or absence of capability.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "unresolved",
+        "trial_maturity": "unresolved",
+        "regulatory_adoption": "unresolved",
+        "resident_access": "unresolved"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "University invention/PoC and historical company creation connect with actual municipal, hospital and industrial testing/deployment and52,798 bot interactions; business participation constraints and lack of assisted authorization persist despite delivered digital support. Patents/tests do not equal sales.",
+      "assumption": "Reviewed multi-producer production and actual deployments reasonably represent usual industries and residents at cutoff. SME participation and authentication barriers remain material after hundreds reached by support; if strong capability and mitigation make residuals minor,80 is admissible rather than capped by unmeasured high-tier facts.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Actual regional rail/bus and international airport activity, EU worker-residence rights and accrued earnings-pension abroad provide channels. Cancelled international routes, lower landings, capacity and common failures remain constraints; a planned2026 Riga opening is not actual service.",
+      "assumption": "Ordinary residents can usually reach usable international connections via operating airport/rail links and external Finnish hubs and afford travel/relocation/account use. National flight statistics do not prove local routes; household communication and pension/asset scope remain limited and necessary usability/continuity assumptions are retractable.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "unresolved"
+      }
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.ouka.fi/media/18666/download",
+      "bytes": 8100685,
+      "sha256": "7dc11506756814a87c5c49332fe8541507d3f0825c900025bf3d64f7df01569b",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025运行，附少量2026年初叙述；p469签署2026-03-23/审计2026-05-05，不等首发日。市/市集团/BusinessOulu区不同；p43/106/145已目视。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/city-annual2025.pdf",
+      "effectiveUrl": "https://www.ouka.fi/media/18666/download"
+    },
+    {
+      "id": "S02",
+      "url": "https://www.ouka.fi/oulun-vesi/vuosikertomus",
+      "bytes": 87189,
+      "sha256": "fe86cab1d649ab3ab4aecb5f846fa932badb3484fe3a73aa266d014986f482ad",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "第一方2025年度运营；2026项目进度/法律叙述分列。完整运营范围不是239；质量附件观察窗由本入口明确2025，附件自身不印年度。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/water-annual-index.html",
+      "effectiveUrl": "https://www.ouka.fi/oulun-vesi/vuosikertomus"
+    },
+    {
+      "id": "S03",
+      "url": "https://pohde.fi/wp-content/uploads/2025/07/OMAVALVONTAOHJELMAN-RAPORTTI-V.-2024-19.6.pdf",
+      "bytes": 722203,
+      "sha256": "4fda78e02fe1b2edcb4ba1b4215a1f2a42f8d922438f1e72c366724bd4c69fc4",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "Pohde自监测2024观察；原文件名19.6/URL2025-07不独立认证首发。34页，p7等待及低数据覆盖为历史状态，后续2026结果另读。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/pohde-monitor2024.pdf",
+      "effectiveUrl": "https://pohde.fi/wp-content/uploads/2025/07/OMAVALVONTAOHJELMAN-RAPORTTI-V.-2024-19.6.pdf"
+    },
+    {
+      "id": "S04",
+      "url": "https://www.oulu.fi/en/cooperation/innovation-entrepreneurship-and-technology-transfer",
+      "bytes": 78889,
+      "sha256": "adb677737e3e85a264f849d2ba7f9f8f0e649d6fa090358e3313e5e3b8eb7428",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "大学：2025发明申报69/PoC20；自2000以来83公司/当前69专利家族，不同窗与单位；首发/截止逐字版本未知。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/university-transfer.html",
+      "effectiveUrl": "https://www.oulu.fi/en/cooperation/innovation-entrepreneurship-and-technology-transfer"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.oulu.fi/fi/uutiset/yliopiston-hallitus-hyvaksyi-vuoden-2025-tilinpaatoksen-ja-paatti-tieteidenvalisen-toiminnan",
+      "bytes": 64939,
+      "sha256": "2cc0283350756a7b98a903051951238bdd2ee4e832341e07f169eac9bc921868",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-04-29",
+      "scope": "网页Luotu/Muokattu均2026-04-29；董事会2026-04-28/2025财务、2026改组提议与未来学位计划，利润不当居民支付或产业销售。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/university-accounts2025.html",
+      "effectiveUrl": "https://www.oulu.fi/fi/uutiset/yliopiston-hallitus-hyvaksyi-vuoden-2025-tilinpaatoksen-ja-paatti-tieteidenvalisen-toiminnan"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.ouka.fi/media/14784/download",
+      "bytes": 271430,
+      "sha256": "ea14a047027da5b353070d03f188ba3e34098e4d9b9570694629f4094db5d325",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "年报真实链接标2025。1页表：Oulujoki原水与市核心南/北两组处理水；平均/max/min、单位分列，无样本n/全居民分母，已目视。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/water-surface2025.pdf",
+      "effectiveUrl": "https://www.ouka.fi/media/14784/download"
+    },
+    {
+      "id": "S07",
+      "url": "https://www.ouka.fi/media/14785/download",
+      "bytes": 254394,
+      "sha256": "3394af36eef516e769e5cb94a91ed79d07bc3ccd5d4b177008a92a583e5d02bd",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "年报真实链接标2025。1页五区域地下水均值，无max/min或样本n；Yli-Ii等不能全归239；已目视。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/water-ground2025.pdf",
+      "effectiveUrl": "https://www.ouka.fi/media/14785/download"
+    },
+    {
+      "id": "S08",
+      "url": "https://pohde.fi/wp-content/uploads/2026/05/Arviointikertomus-2025.pdf",
+      "bytes": 8302158,
+      "sha256": "266628ad6063f6e192f6b5a2c9eb0ab7e02a43288a4922a291b4f1fefdd4cb8a",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "118页审计评估2025，含2026-04-30治疗与2026Apr需求评估；p25图、p32安全原表、p33赔偿/投诉原表已目视；区域Pohde非239。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/pohde-evaluation2025.pdf",
+      "effectiveUrl": "https://pohde.fi/wp-content/uploads/2026/05/Arviointikertomus-2025.pdf"
+    },
+    {
+      "id": "S09",
+      "url": "https://pohde.fi/meilla-asiakkaana/asiakasmaksut-ja-laskut/hinnasto/",
+      "bytes": 1118881,
+      "sha256": "418072226e4cf562850122fd54a29f9085546f1afb510b8b0dc94ac405c55f90",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前承办者真实收费入口；正文标1.1.2026金额与2026May局部交通修改；不是保障外所有药/项目责任。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/pohde-fees2026.html",
+      "effectiveUrl": "https://pohde.fi/meilla-asiakkaana/asiakasmaksut-ja-laskut/hinnasto/"
+    },
+    {
+      "id": "S10",
+      "url": "https://www.ouka.fi/ilmastotyo-oulussa/ilmastonmuutokseen-sopeutuminen",
+      "bytes": 76085,
+      "sha256": "f68aa84f4971eb2cd41bca736b07880161004f5e79fef0ffc8a15552200894e6",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "城市气候风险/适配说明，2018SECAP首次评估、2021雨水方案、2023电缆比例，当前描述不当2026新测量。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/climate-adaptation.html",
+      "effectiveUrl": "https://www.ouka.fi/ilmastotyo-oulussa/ilmastonmuutokseen-sopeutuminen"
+    },
+    {
+      "id": "S11",
+      "url": "https://www.ouka.fi/prikkakeskus",
+      "bytes": 54033,
+      "sha256": "a37eef474efce4a12dacfe2a5688a3233c629095823945b13c41a8cb7c63b8b0",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前市入口：2026Jan1接管及实际周配送/机构；50就业者明确2024，其余周计数未标统一年/去重。相关新闻日期不是整个正文首发。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/food-prikka.html",
+      "effectiveUrl": "https://www.ouka.fi/prikkakeskus"
+    },
+    {
+      "id": "S12",
+      "url": "https://www.oulunenergia.fi/en/oulun-energia/about-us/summary-annual-review-and-responsibility2/",
+      "bytes": 119409,
+      "sha256": "d7ceb9932abdd330cb9bceec6370bf89a72c28aaedefef46de5b7c59e77c5400",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "运营商2025年报/CEO真实内部链接入口，本HTML不是整份PDF。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/energy-summary2025.html",
+      "effectiveUrl": "https://www.oulunenergia.fi/en/oulun-energia/about-us/summary-annual-review-and-responsibility2/"
+    },
+    {
+      "id": "S13",
+      "url": "https://pohde.fi/wp-content/uploads/2025/12/Terveydenhuollon-asiakasmaksut-2026-1.pdf",
+      "bytes": 247762,
+      "sha256": "c4fb8196f7657e1a9fcf6ca2c37dcad6bc1893ee4e31ba8467827dcadd1866de",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "6页正式个人收费表，2025Dec16地区决议§324，2026Jan1生效；p1目视，2025/2026分栏。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/pohde-patientfees2026.pdf",
+      "effectiveUrl": "https://pohde.fi/wp-content/uploads/2025/12/Terveydenhuollon-asiakasmaksut-2026-1.pdf"
+    },
+    {
+      "id": "S14",
+      "url": "https://pohde.fi/meilla-asiakkaana/asiakasmaksut-ja-laskut/asiakasmaksukatto/",
+      "bytes": 1019713,
+      "sha256": "e68955437c0ae451580edda014056f72dd7ada0d03b1109a79a7d0e198b4940e",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "承办者2026限定服务815欧限额、居民累积申报、跨账单系统限制和电话/书面渠道；不是全部支出上限。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/pohde-cap2026.html",
+      "effectiveUrl": "https://pohde.fi/meilla-asiakkaana/asiakasmaksut-ja-laskut/asiakasmaksukatto/"
+    },
+    {
+      "id": "S15",
+      "url": "https://www.oulunenergia.fi/link/ce34a52aa5264c339af7720029baab53.aspx",
+      "bytes": 1954427,
+      "sha256": "da5de78a419522230edeef39f3a9091d2428323246c35a63b365bb432fcfb3d0",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "16页英文2025运营摘要，经真实内部链接转有效PDF；p2目视60MW电锅炉已夏2025完成/电池当时施工，p3集团报告边界和未第三方验证。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/energy-summary2025.pdf",
+      "effectiveUrl": "https://www.oulunenergia.fi/globalassets/images/06.-oulun-energia/oulun_energia_in_2025_final.pdf"
+    },
+    {
+      "id": "S16",
+      "url": "https://www.finavia.fi/en/airports/oulu",
+      "bytes": 232484,
+      "sha256": "161e47238b73415f6a09986b8e113675caaae23681aa3e614aed993f7ca16eec",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "运营商当前Oulu机场服务/出入/无障碍入口；冬2026–27新闻未来季不当已发生航班。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/finavia-oulu-current.html",
+      "effectiveUrl": "https://www.finavia.fi/en/airports/oulu"
+    },
+    {
+      "id": "S17",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_en.htm",
+      "bytes": 149227,
+      "sha256": "9f22db2b81b96872ad45677aeabe28be6640d428e804024b8c2e62cac3b39c16",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-08-19",
+      "scope": "EU主管Lastchecked2026Aug19，EU公民指定受雇/自雇/派驻居住与登记/5年条件；FIN画像共用规则，不证明已经就业/有住房。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/eu-workers-residence.html",
+      "effectiveUrl": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_en.htm"
+    },
+    {
+      "id": "S18",
+      "url": "https://www.elo.fi/en/pensions/during-retirement/payment-of-pension-and-payment-dates/payment-of-pension-abroad",
+      "bytes": 169516,
+      "sha256": "f55afab5a9aec4273b0dd797438f8a30a0f1b1d36ec7f65b93a27e2df2e67d4c",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "劳动养老金运营商当前国外付款、税/外账户与年度地址确认，在线需芬兰银行凭证亦有书面申报；只已积累到期养老金，非所有资产/福利或提前现金提取。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/elo-pension-abroad.html",
+      "effectiveUrl": "https://www.elo.fi/en/pensions/during-retirement/payment-of-pension-and-payment-dates/payment-of-pension-abroad"
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.finavia.fi/en/newsroom/2026/finavias-six-month-review-1-january-30-june-2026?navref=liftup",
+      "publishedOn": "2026-09-02",
+      "observedPeriod": "2026Jan–Jun",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "运营商web正文核：芬兰机场集团实际国际运转与俄罗斯空域/燃料/航线容量共同压力；AOS已在全部20机场用，含Oulu的适用推定；集团旅客量不当Oulu本地。curl406仅失败响应，未来2030远程塔台不当现役备援。"
+    }
+  ],
+  "boundaryReviewObject": {
+    "sourcePath": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allGeometryCount": 9031,
+    "targetId": 239,
+    "targetName": "Oulu",
+    "geometryAreaKm2": 607.0,
+    "geometrySha256": "ec906c5e752e9a3817b6dd2594e788214987fbcd1a2e96d16a7279d9d83db87d",
+    "approximation": "Analyst approximate references; not exact footprint, historical treatment, full municipality or service coverage.",
+    "points": [
+      {
+        "label": "Oulu centre",
+        "lon": 25.47,
+        "lat": 65.013,
+        "matches": [239]
+      },
+      {
+        "label": "OYS Kontinkangas",
+        "lon": 25.518,
+        "lat": 65.005,
+        "matches": [239]
+      },
+      {
+        "label": "University Linnanmaa",
+        "lon": 25.469,
+        "lat": 65.058,
+        "matches": [239]
+      },
+      {
+        "label": "University Kontinkangas",
+        "lon": 25.514,
+        "lat": 65.01,
+        "matches": [239]
+      },
+      {
+        "label": "Oulu Airport",
+        "lon": 25.355,
+        "lat": 64.93,
+        "matches": [239]
+      },
+      {
+        "label": "Oulu Oritkari port",
+        "lon": 25.407,
+        "lat": 64.985,
+        "matches": [239]
+      },
+      {
+        "label": "Haukipudas centre",
+        "lon": 25.353,
+        "lat": 65.177,
+        "matches": [239]
+      },
+      {
+        "label": "Kiiminki centre",
+        "lon": 25.775,
+        "lat": 65.131,
+        "matches": [239]
+      },
+      {
+        "label": "Kempele centre",
+        "lon": 25.504,
+        "lat": 64.913,
+        "matches": [239]
+      },
+      {
+        "label": "Muhos centre",
+        "lon": 25.992,
+        "lat": 64.809,
+        "matches": []
+      },
+      {
+        "label": "Ii centre",
+        "lon": 25.373,
+        "lat": 65.322,
+        "matches": []
+      },
+      {
+        "label": "Liminka centre",
+        "lon": 25.416,
+        "lat": 64.812,
+        "matches": []
+      },
+      {
+        "label": "Raahe centre",
+        "lon": 24.48,
+        "lat": 64.687,
+        "matches": []
+      },
+      {
+        "label": "Hailuoto centre",
+        "lon": 24.705,
+        "lat": 65.016,
+        "matches": []
+      },
+      {
+        "label": "Oulunsalo centre",
+        "lon": 25.405,
+        "lat": 64.934,
+        "matches": [239]
+      },
+      {
+        "label": "Yli-Ii centre",
+        "lon": 25.844,
+        "lat": 65.373,
+        "matches": []
+      }
+    ],
+    "attributes": {
+      "fid": 3130,
+      "eFUA_ID": 239.0,
+      "UC_num": 1.0,
+      "UC_IDs": "3185",
+      "eFUA_name": "Oulu",
+      "Commuting": 1.0,
+      "Cntry_ISO": "FIN",
+      "Cntry_name": "Finland",
+      "FUA_area": 607.0,
+      "UC_area": 37.0,
+      "FUA_p_2015": 205214.70652382448,
+      "UC_p_2015": 83504.83489990234,
+      "Com_p_2015": 121709.87162392214
+    }
+  },
+  "sensitivity": {
+    "knownContribution": 42,
+    "scoredWeightPercent": 75,
+    "centre": null,
+    "range": [42, 67],
+    "med60WithGssLonUnknown": {
+      "centre": null,
+      "knownContribution": 45,
+      "range": [45, 70]
+    },
+    "tec80WithGssLonUnknown": {
+      "centre": null,
+      "knownContribution": 44,
+      "range": [44, 69]
+    },
+    "gssLon60": {
+      "centre": 57,
+      "requires": "Both missing substantive bridges newly verified; not current filled scores"
+    },
+    "gssLon60Med60": {
+      "centre": 60,
+      "requires": "Both bridges plus removal/nonmateriality of remaining need-assessment bottleneck"
+    },
+    "medNull": {
+      "centre": null,
+      "knownContribution": 36,
+      "range": [36, 76]
+    },
+    "allNecessaryAssumptionsRejected": {
+      "centre": null,
+      "range": [0, 100]
+    }
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-oulu-priority-review.md",
+    "reviewedOn": "2026-10-13",
+    "status": "bounded_conditional_review_not_ranking_or_exclusion",
+    "sha256": "dde5556cc0b7c4e089ef1492dcfaaa063bfd6796c171d93b9ed415c904eb6a83"
+  }
+}

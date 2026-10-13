@@ -153,10 +153,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 30,
+    "conditionalCaseCount": 33,
     "completeConditionalCaseCount": 14,
-    "partialCaseCount": 16,
-    "unassessedCount": 9001,
+    "partialCaseCount": 19,
+    "unassessedCount": 8998,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -422,8 +422,23 @@
       "sha256": "f27a0f902c8ae28a46a59691544f906d9ef306d4477b9f2844b620cd4db3ec63",
       "provenance": "cci-tampere-priority-review.md",
       "provenanceSha256": "0217c577797d804d8e4225d8d12786acf55f7dbc140953b901b8b7b1ee9e9b80"
+    },
+    "cci-local-2026-cima-case.json": {
+      "sha256": "755f3788a1c3de7d3b39932df148e51ade222be7825fb784bd5d8d204d215496",
+      "provenance": "cci-cima-priority-review.md",
+      "provenanceSha256": "28011bbc6f776c9edd1919e0e97ae37a6705c7d03788de42fc77acbb9174857f"
+    },
+    "cci-local-2026-oulu-case.json": {
+      "sha256": "4d4ce9028c4c66514938ff4f98926984fb21a0038ae19d5bbe127c97e413a75a",
+      "provenance": "cci-oulu-priority-review.md",
+      "provenanceSha256": "dde5556cc0b7c4e089ef1492dcfaaa063bfd6796c171d93b9ed415c904eb6a83"
+    },
+    "cci-local-2026-leicester-case.json": {
+      "sha256": "6573a54b83f5b6027f1eeb05a319b019dc54e6431b2b641487757bf7e0b62973",
+      "provenance": "cci-leicester-priority-review.md",
+      "provenanceSha256": "cf0f3500047e33a2dc04dcb0776a60dc6aba9ffaed296c9d1e46aba97355494d"
     }
   },
-  "scriptSha256": "49353a792757219de16630266d65eb139abb3b00c4775a0e85154117d80c78e4",
-  "csvSha256": "9f955e0d9912bb9ff3c317ecdfcefa84a852ee2d9b165f623f26740859813469"
+  "scriptSha256": "111390efed0521c9a1c06f3520390996fccee2eb7706e0108dbf7df6ddfb145f",
+  "csvSha256": "1edcfc4adb0d66effb66281f14aa29be7627a9d1bcc27268e69abd56d7a7899c"
 }

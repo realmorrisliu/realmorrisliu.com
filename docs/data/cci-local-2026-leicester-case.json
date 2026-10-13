@@ -1,0 +1,630 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 4925,
+  "name": "Leicester",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "approximate_reference_points_full9031_checked_not_service_coverage",
+  "evidenceReview": "cci-leicester-priority-review.md",
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 54,
+  "unresolvedScoreRange": [54, 64],
+  "limitations": "8 dimensions/31 statuses reviewed. RES null; seven conditional60, importantPCS/GSS/ISR/MED40 alternatives. No midpoint/zero-fill/redistribution. Spatial/payment/continuity assumptions may withdraw to null; not ranking or high-score proof.",
+  "retrievedOn": "2026-10-13",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "已完成洪水防线与2025真实蓄洪／撤离形成防护，重复内涝、热期额外死亡与保险差异重要，低模型地震不代整体。",
+      "assumption": "已交付工程／响应延续到cutoff，行政核心与周边功能区通常受相同安排保护；热避险通常可用且未核地质不另形成关键缺口。若残余重复洪水／热防护不足主导可40，拒绝范围／延续则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": 60,
+      "rationale": "本地组织／预谋暴力有真实严重影响；2024当地防乱、CCTV／晚班与2026司法形成具体缓解，2026未破家庭袭击和社区脆弱保留。",
+      "assumption": "本地公共骚乱与预谋暴力链代表通常风险，区域互援实际可用；既得缓解持续且残余虽重要未构成普遍失控。当前危重／信任脆弱若视为明显约束可40；不能把国内组织暴力适配区域／战略风险则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "法定洪水调查／已执行撤离复访、实际警罪监督与数字协助支持执行，受灾贫困差异／保险不足及社区联系失效反证明显。",
+      "assumption": "行政核心实际恢复与反馈通常适配本FUA，补救渠道延续、机构自评非全结果，但通常能执行和纠偏；若不平等／联系失效主导可40，拒绝代表性则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "区域供电实际恢复／超标与补偿已读，但末端饮水安全／适配本区供应者及实际食品流转未闭；市场摊位规则和机场货运不代这些链。",
+      "assumption": "不因无完美中位账单判低；关键实际供应／适配连接缺失，目前不能辨40/60/80。最小待补为本区饮水监管实际样本／故障缓解及实际食品市场供应运行，随后审查通常必要净负担。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "unresolved",
+        "food": "unresolved",
+        "energy": "partial",
+        "supply_chain": "context"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "实际质量报告显示SHMI预期带与C.diff改善、诊断／急诊局部改善，本地专科与NHS通常居民资格可连；RTT低值、再入院、NeverEvents和癌症容量仍重要。",
+      "assumption": "本区三主要医院及提供方多窗数据通常适配居民，公费必要服务可承担、监护延续；未把机构率当居民率或过程当结局。急诊／癌症等待与安全残余若主导可40；若拒绝范围／通常及时支付推定则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "2025当地LRI实际CAR-T、Leicester患者缓解与NICE人体适应证、NHSE明确UHL委托／支付／监护连接，非许可证或床位补分；长期毒性和全国容量反证保留。",
+      "assumption": "合资格普通England居民经MDT／国家panel通常能得到疾病限定CAR-T和必要监护，NHS付款不是全健康人延寿；实际患者并未给中位收入／个人账单／等候全量。等待／制造／监护或个人必要间接费用若明显约束可40，拒绝连接则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "实际MuseumDataService启动、BIOMASS发射与本地研究产业合作／公共数字完成支持能力，财务压力／战略审查、数字排除和触达差异保留。",
+      "assumption": "全球合作中本地贡献及既得平台可持续、普通居民通常有设备／连接或已交付协助；不从研究名气／资助数量推产业密度，若承载／财务压力导致明显断裂可40，拒绝持续／空间／触达推定则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "context",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "现行Leicester干线、区外EMA实际客运、UK公民CTA与条件资产转移支持退出；共享轨道／接续、账户税务／迁居及通信共因仍重要。",
+      "assumption": "与London/Grimsby同层：持有效证件／通常账户，能承担普通接续及迁居必要资源，外区机场可执行可达、通常有跨境通信备援；未验证独立光缆／现金实到账。拒绝这些画像／通常可用推定则null；现实接续或共同中断主导可40。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "context",
+        "network_continuity": "unresolved"
+      }
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.leicester.gov.uk/sites/default/files/2026-01/monday-6-january-2025-section-19-flood-investigation-report.pdf",
+      "bytes": 6650004,
+      "sha256": "3461070b5e8f5f915cbb438789c94176beb04a34e4914d6991ad50d480b471bb",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:23:04.952165+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025-01-06洪水；版本June26 2025，URLJan2026非事件日；行政Leicester居民上报及实际响应",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S02",
+      "url": "https://www.leicester.gov.uk/sites/default/files/2025-12/climate-ready-leicester-plan-2023-28-updated-2025.pdf",
+      "bytes": 1127216,
+      "sha256": "7e4651ebd470d738b62ecf62133cf0a0aadfa98bef217a4fcd2142a5192723dd",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:23:04.952494+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2023–28计划，动作updated2025；2022热期及当前供热与未来任务分开",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S03",
+      "url": "https://www.uhleicester.nhs.uk/news/first-patients-receive-groundbreaking-blood-cancer-treatment-at-uhl/",
+      "bytes": 57289,
+      "sha256": "cad41cc3f317325d2644ed0c334ed4acfecf800b1871b195dc620c6249968655",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:23:04.955704+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-08-12",
+      "scope": "LRI当地实际CAR-T及一名Leicester患者缓解；未给总体分母／给药日期／产品",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S04",
+      "url": "https://www.uhleicester.nhs.uk/services/haematology/",
+      "bytes": 49427,
+      "sha256": "14c39b233f92b3c448b7100f413943eb2c25226c1c9825fa733cf421eb3072dd",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:23:04.957477+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "现行未标版本的LRI血液科与五床BMTU／日间输注／监护；非FUA住户覆盖",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S05",
+      "url": "https://news.leicester.gov.uk/news-articles/2026/april/free-digital-skills-training-returns/",
+      "bytes": 94943,
+      "sha256": "36524ba3a9296b43e8ea53eff00ddf76a1c3adb9c4dfeeb2dbcb11a9b029bfc4",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:25:01.204223+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-04-30",
+      "scope": "自2023超过500课程完成人次／人数口径不详；2026新课程是安排",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.leicester.gov.uk/business-and-licences/business-start-and-growth-leicester/trading-leicester-market",
+      "bytes": 43276,
+      "sha256": "da58cd03f9e846b98775f5fb1fa5f56c077031ba62046c573b54b7adc5e191c0",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:25:01.208628+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "现行未标版本市场临时摊位办理；租金是经营成本，不是食品吞吐或家庭负担",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S07",
+      "url": "https://mediacentre.eastmidlandsairport.com/east-midlands-airport-continued-to-go-from-strength-to-strength-in-its-anniversary-year/",
+      "bytes": 119021,
+      "sha256": "cc0dd2b65add587bf71e257456f992a56479ae7ffb754a679d7b5293cd675b37",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:25:01.210515+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-07-06",
+      "scope": "EMA2025实际400万人次、安检99%≤15min；区外机场，MAG6600万不能当EMA",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S08",
+      "url": "https://www.leicesterinquiry.org/report",
+      "bytes": 118061,
+      "sha256": "dbcde215e87d992133bef7be57d47c76e4cab6fa3f8a2d85ba3632dad48bb5c5",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:25:02.797695+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2026独立调查原发布入口／ISBN；非政府委托身份或官方全部统计",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S09",
+      "url": "https://www.uhleicester.nhs.uk/wp-content/uploads/2026/06/Quality-Account-2025-26-KR-2-JUNE.pdf",
+      "bytes": 13319024,
+      "sha256": "67706de9b9c532f09199575d50c19332c11d9cc62f2e7c8e199420f77f74e095",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:25:40.794219+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "FY2025/26提供方质量，正文与表窗／VTE比例有差异；URLJune2026，精确公开日未知",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S10",
+      "url": "https://www.leicesterinquiry.org/s/Executive-Summary-Leicester.pdf",
+      "bytes": 585883,
+      "sha256": "ba836ff5336a424bdcbe764067559ea6f618d692c192489e433fde69e8b4b928",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:25:40.798043+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2026调查总结；主要解释2022社区暴力及残余信任问题，不是2026新事件",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S11",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2026/04/cart-service-specification-commissioning-guidance-v1.0-1.pdf",
+      "bytes": 332621,
+      "sha256": "ba97c929f2ca55b7da63a525aa8d0af00f962742e18f91e2b48afabda55da108",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:24:23.969404+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "官方2026/04目录；封面12 November2025 Version3，内列December2025 TA1116，旧计划日期不可当实际实施；England通常居民委托和提供方支付",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S12",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2026/04/cart-services-specification-engagement-report.pdf",
+      "bytes": 241623,
+      "sha256": "488d37bb1e7a6ad034fe859164bf6bf1cee1e5132789d001732a4b408cadbdd7",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:24:23.965747+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "官方2026/04目录；报告封面7 May2025 Version1.0，stakeholder反馈不是2026伦敦等待抽样",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S13",
+      "url": "https://assets.publishing.service.gov.uk/media/66c3596f2e8f04b086cdf3db/UK_DHPC-Final_CAR-T_cell.pdf",
+      "bytes": 621175,
+      "sha256": "f476ad963a99ecf5147337756c35104561ff2eb3e780bd0458656ea8c3d9cad0",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:24:23.965632+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2024-07-25",
+      "scope": "EMA/MHRA同意的药商DHPC；截至April2024全球风险信号及终身监护，不是伦敦发生率",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S14",
+      "url": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+      "bytes": 20164,
+      "sha256": "7d37836575b240bd2359d0de728c2e937e73a1cc32906576e086a1af57733e3f",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:25:44.534634+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-03-26",
+      "scope": "NICE正式推荐第1章；适应证/移植适合性/商业安排；总生存证据不确定",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S15",
+      "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+      "bytes": 32656,
+      "sha256": "4efb26910573c7f60a7ab193ee4e3091526d3672ce5dd931413ab74c3fd26976",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:31:14.732347+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "NHS通常居住资格；page reviewed2023-10-24，nextreview2026-10-24，国家规则非本地及时治疗率",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S16",
+      "url": "https://www.gov.uk/government/publications/common-travel-area-guidance/common-travel-area-guidance",
+      "bytes": 99582,
+      "sha256": "887d27e34913f9d5c239a651507b3b8c5024975798fff618211b5f2d00d0afc6",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:55:41.678621+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "英／爱公民具体CTA长期居住工作规则；updated2026-01-01，非EU全面权利",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S17",
+      "url": "https://www.gov.uk/transferring-your-pension/transferring-to-an-overseas-pension-scheme",
+      "bytes": 77116,
+      "sha256": "acc30b14955ca0bbd05f5a521d08f4ce319bb94ea4a99ea2fcdade3ad9c2ff91",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:55:41.680123+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前QROPS退休金转移、税费／身份条件；非全部资产或银行实际付款",
+      "sourceKind": "reused_original_response"
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.leics.police.uk/news/leicestershire/news/2026/october/five-men-sentenced-after-student-accommodation-violent-disorder-left-man-stabbed2/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-10-09",
+      "bytes": null,
+      "sha256": null,
+      "scope": "2022-01-20预谋持械袭击／受害者永久损害，2026Oct9五人判刑；第六人未来庭期，不是2026新袭击"
+    },
+    {
+      "id": "W02",
+      "url": "https://www.leics.police.uk/news/leicestershire/news/2026/october/we-owe-it-to-them-to-locate-the-perpetrators-and-bring-them-to-justice-appeal-from-senior-officer-as-thurnby-assault-investigation-continues/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-10-09",
+      "bytes": null,
+      "sha256": null,
+      "scope": "2026Oct8 Thurnby家庭遭袭，两人仍危重；警察与EMSOU调查／巡逻未解决，不预断动机"
+    },
+    {
+      "id": "W03",
+      "url": "https://www.leics.police.uk/news/leicestershire/news/2021/september/chief-constable-rob-nixon-reflects-one-year-on-from-east-leicester-disorder/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2023-09-15",
+      "bytes": null,
+      "sha256": null,
+      "scope": "URL2021但正文2023反思2022；实际追加CCTV、晚班资源，司法不同状态不混计"
+    },
+    {
+      "id": "W04",
+      "url": "https://democracy.leics.gov.uk/mgAi.aspx?ID=86229",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-09-08",
+      "bytes": null,
+      "sha256": null,
+      "scope": "LLR警罪小组会议；实际互援与能力、社区联系无人回应反证；不是全FUA测量"
+    },
+    {
+      "id": "W05",
+      "url": "https://democracy.leics.gov.uk/documents/s191412/C%20-%20Public%20Order%20Policing%20-%20Final.pdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "作者2025-08-07／会议Sep8；当地2024预防公共骚乱自评、已换车辆、区域互援，未来能力非独立结果审计"
+    },
+    {
+      "id": "W06",
+      "url": "https://le.ac.uk/-/media/uol/docs/about-us/publications/financial-statements/annual-report-and-accounts-24-25.pdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "FY2024/25原96页年报；MuseumDataService已启动、BIOMASS Apr29 2025发射；财务压力与战略审查；不是商业化率"
+    },
+    {
+      "id": "W07",
+      "url": "https://customer.nationalgrid.co.uk/advice-and-guidance/key-performance-targets",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "正文表2024/25，前导称2023/24；EastMidlands CI34.31/CML24.61、HV一小时89.53%；异常事件排除，非Leicester住户率"
+    },
+    {
+      "id": "W08",
+      "url": "https://www.eastmidlandsrailway.co.uk/timetables?crs=BEE",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "17May–12Dec2026长期时刻表及Leicester联通；Oct19未来恢复96%不能算cutoff已恢复"
+    }
+  ],
+  "failedSourceReads": [
+    {
+      "file": "complaints2025.pdf",
+      "url": "https://www.leicester.gov.uk/media/sokpu042/annual-complaints-performance-and-service-improvementg-report-2024-2025.pdf",
+      "retrievedAt": "2026-10-13T05:23:04.955498+00:00",
+      "exit": 0,
+      "response": "404\ttext/html; charset=utf-8\thttps://www.leicester.gov.uk/media/sokpu042/annual-complaints-performance-and-service-improvementg-report-2024-2025.pdf",
+      "error": "",
+      "bytes": 38636,
+      "sha256": "db78eb36a978c04d0855b4f58f824418e78034f201e4429c70e25b360d513919",
+      "validity": "failed_read_not_original_evidence"
+    },
+    {
+      "file": "disorder-panel2025.html",
+      "url": "https://democracy.leics.gov.uk/mgAi.aspx?ID=86229",
+      "retrievedAt": "2026-10-13T05:23:07.428965+00:00",
+      "exit": 28,
+      "response": "000\t\thttps://democracy.leics.gov.uk/mgAi.aspx?ID=86229",
+      "error": "curl: (28) SSL connection timeout\n",
+      "bytes": 0,
+      "sha256": null,
+      "validity": "failed_read_not_original_evidence"
+    },
+    {
+      "file": "emr-timetables-current.html",
+      "url": "https://www.eastmidlandsrailway.co.uk/timetables?crs=BEE",
+      "retrievedAt": "2026-10-13T05:25:02.586752+00:00",
+      "exit": 0,
+      "response": "403\ttext/html; charset=UTF-8\thttps://www.eastmidlandsrailway.co.uk/timetables?crs=BEE",
+      "error": "",
+      "bytes": 9361,
+      "sha256": "9d410bbd18251f291103a8a328f5207807c4045629570fc382598fefcae7ce21",
+      "validity": "failed_read_not_original_evidence"
+    },
+    {
+      "file": "police-learning2023.html",
+      "url": "https://www.leics.police.uk/news/leicestershire/news/2021/september/chief-constable-rob-nixon-reflects-one-year-on-from-east-leicester-disorder/",
+      "retrievedAt": "2026-10-13T05:23:07.371920+00:00",
+      "exit": 0,
+      "response": "403\ttext/html; charset=UTF-8\thttps://www.leics.police.uk/news/leicestershire/news/2021/september/chief-constable-rob-nixon-reflects-one-year-on-from-east-leicester-disorder/",
+      "error": "",
+      "bytes": 5896,
+      "sha256": "eb8b201553a66169fc634f09d1f3e79e5cf1fc791746eaa2347cace16daf96b6",
+      "validity": "failed_read_not_original_evidence"
+    },
+    {
+      "file": "power-em2025.pdf",
+      "url": "https://www.nationalgrid.com/document/562366/download",
+      "retrievedAt": "2026-10-13T05:25:01.206555+00:00",
+      "exit": 0,
+      "response": "403\ttext/html; charset=UTF-8\thttps://www.nationalgrid.com/document/562366/download",
+      "error": "",
+      "bytes": 5450,
+      "sha256": "5987972a6a824ed2262c78237ce8246a577ddef9e524577c47d3466be20b70b6",
+      "validity": "failed_read_not_original_evidence"
+    },
+    {
+      "file": "power-performance2024.html",
+      "url": "https://customer.nationalgrid.co.uk/advice-and-guidance/key-performance-targets",
+      "retrievedAt": "2026-10-13T05:25:01.207087+00:00",
+      "exit": 0,
+      "response": "403\ttext/html; charset=UTF-8\thttps://customer.nationalgrid.co.uk/advice-and-guidance/key-performance-targets",
+      "error": "",
+      "bytes": 5642,
+      "sha256": "ce3c810454459d582edd8b21de051692db8864efdc860148e8a1baf1749d74f7",
+      "validity": "failed_read_not_original_evidence"
+    },
+    {
+      "file": "public-order2025.pdf",
+      "url": "https://democracy.leics.gov.uk/documents/s191412/C%20-%20Public%20Order%20Policing%20-%20Final.pdf",
+      "retrievedAt": "2026-10-13T05:25:40.796202+00:00",
+      "exit": 28,
+      "response": "000\t\thttps://democracy.leics.gov.uk/documents/s191412/C%20-%20Public%20Order%20Policing%20-%20Final.pdf",
+      "error": "curl: (28) SSL connection timeout\n",
+      "bytes": 0,
+      "sha256": null,
+      "validity": "failed_read_not_original_evidence"
+    },
+    {
+      "file": "uni2025.pdf",
+      "url": "https://le.ac.uk/-/media/uol/docs/about-us/publications/financial-statements/annual-report-and-accounts-24-25.pdf",
+      "retrievedAt": "2026-10-13T05:25:01.202210+00:00",
+      "exit": 0,
+      "response": "403\ttext/html; charset=UTF-8\thttps://le.ac.uk/-/media/uol/docs/about-us/publications/financial-statements/annual-report-and-accounts-24-25.pdf",
+      "error": "",
+      "bytes": 4541,
+      "sha256": "5978b8b87b481cd021170b8735267bf7afe44c9ecd81208c68c0f2ef53ae7cf0",
+      "validity": "failed_read_not_original_evidence"
+    },
+    {
+      "file": "violence-attack2026.html",
+      "url": "https://www.leics.police.uk/news/leicestershire/news/2026/october/we-owe-it-to-them-to-locate-the-perpetrators-and-bring-them-to-justice-appeal-from-senior-officer-as-thurnby-assault-investigation-continues/",
+      "retrievedAt": "2026-10-13T05:23:06.682083+00:00",
+      "exit": 0,
+      "response": "403\ttext/html; charset=UTF-8\thttps://www.leics.police.uk/news/leicestershire/news/2026/october/we-owe-it-to-them-to-locate-the-perpetrators-and-bring-them-to-justice-appeal-from-senior-officer-as-thurnby-assault-investigation-continues/",
+      "error": "",
+      "bytes": 6170,
+      "sha256": "55d6cb9dbda690f470f0a262fb23903d59a3ebc4785e987add2dec49cf0fe0e5",
+      "validity": "failed_read_not_original_evidence"
+    },
+    {
+      "file": "violence-conviction2026.html",
+      "url": "https://www.leics.police.uk/news/leicestershire/news/2026/october/five-men-sentenced-after-student-accommodation-violent-disorder-left-man-stabbed2/",
+      "retrievedAt": "2026-10-13T05:23:06.645642+00:00",
+      "exit": 0,
+      "response": "403\ttext/html; charset=UTF-8\thttps://www.leics.police.uk/news/leicestershire/news/2026/october/five-men-sentenced-after-student-accommodation-violent-disorder-left-man-stabbed2/",
+      "error": "",
+      "bytes": 5908,
+      "sha256": "39603ddae70cd62d82e9469a27c58b17ec2b27f96ba32a25edf167df4ae2e629",
+      "validity": "failed_read_not_original_evidence"
+    },
+    {
+      "file": "water-operations-current.html",
+      "url": "https://www.stwater.co.uk/?timeout=true",
+      "retrievedAt": "2026-10-13T05:25:02.770049+00:00",
+      "exit": 0,
+      "response": "403\ttext/html\thttps://www.stwater.co.uk/?timeout=true",
+      "error": "",
+      "bytes": 118,
+      "sha256": "58bf2215b395dcac74c009aa98701854e43cbe54a1cd3a95fee6a647ca9910d4",
+      "validity": "failed_read_not_original_evidence"
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "source": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "sourceBytes": 9932800,
+    "allGeometryCount": 9031,
+    "record": {
+      "fid": 8444,
+      "eFUA_ID": 4925.0,
+      "UC_num": 1.0,
+      "UC_IDs": "1864",
+      "eFUA_name": "Leicester",
+      "Commuting": 1.0,
+      "Cntry_ISO": "GBR",
+      "Cntry_name": "UnitedKingdom",
+      "FUA_area": 844.0,
+      "UC_area": 122.0,
+      "FUA_p_2015": 691528.5735421777,
+      "UC_p_2015": 481229.55741882324,
+      "Com_p_2015": 210299.01612335443
+    },
+    "bounds": [-102000.0, 6127000.0, -59000.0, 6166000.0],
+    "targetGeometrySha256": "9f077343c8b1bd0cbe2fa41fc4f35db2ad4212ad0355c58155001ba88985248c",
+    "referencePoints": [
+      {
+        "label": "Leicester centre",
+        "longitude": -1.133,
+        "latitude": 52.636,
+        "fuaMatches": [4925]
+      },
+      {
+        "label": "Royal Infirmary",
+        "longitude": -1.139,
+        "latitude": 52.624,
+        "fuaMatches": [4925]
+      },
+      {
+        "label": "Glenfield Hospital",
+        "longitude": -1.179,
+        "latitude": 52.656,
+        "fuaMatches": [4925]
+      },
+      {
+        "label": "Leicester General Hospital",
+        "longitude": -1.087,
+        "latitude": 52.629,
+        "fuaMatches": [4925]
+      },
+      {
+        "label": "University Leicester",
+        "longitude": -1.124,
+        "latitude": 52.621,
+        "fuaMatches": [4925]
+      },
+      {
+        "label": "DMU reference",
+        "longitude": -1.14,
+        "latitude": 52.629,
+        "fuaMatches": [4925]
+      },
+      {
+        "label": "East Midlands Airport reference",
+        "longitude": -1.328,
+        "latitude": 52.831,
+        "fuaMatches": []
+      },
+      {
+        "label": "Everards Meadows flood scheme reference",
+        "longitude": -1.182,
+        "latitude": 52.591,
+        "fuaMatches": [4925]
+      },
+      {
+        "label": "Soar flood scheme city reference",
+        "longitude": -1.145,
+        "latitude": 52.646,
+        "fuaMatches": [4925]
+      },
+      {
+        "label": "Thurnby reference",
+        "longitude": -1.058,
+        "latitude": 52.627,
+        "fuaMatches": [4925]
+      },
+      {
+        "label": "Nottingham city external",
+        "longitude": -1.15,
+        "latitude": 52.953,
+        "fuaMatches": [4767]
+      }
+    ],
+    "method": "full9031; EPSG4326→ESRI54009 always_xy; intersects; analyst approximate points not official footprints/catchments/patients",
+    "reviewedOn": "2026-10-13"
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-leicester-priority-review.md",
+    "sha256": "cf0f3500047e33a2dc04dcb0776a60dc6aba9ffaed296c9d1e46aba97355494d",
+    "reviewedOn": "2026-10-13"
+  }
+}

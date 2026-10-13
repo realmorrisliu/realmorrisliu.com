@@ -40,6 +40,9 @@ import copenhagen from "../../docs/data/cci-local-2026-copenhagen-case.json";
 import saifai from "../../docs/data/cci-local-2026-saifai-case.json";
 import grimsby from "../../docs/data/cci-local-2026-grimsby-case.json";
 import tampere from "../../docs/data/cci-local-2026-tampere-case.json";
+import cima from "../../docs/data/cci-local-2026-cima-case.json";
+import oulu from "../../docs/data/cci-local-2026-oulu-case.json";
+import leicester from "../../docs/data/cci-local-2026-leicester-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -84,8 +87,14 @@ const cases = [
   saifai,
   grimsby,
   tampere,
+  cima,
+  oulu,
+  leicester,
 ];
 const caseNamesZh: Record<number, string> = {
+  [cima.candidateId]: "Cima／Tilili 功能区",
+  [oulu.candidateId]: "奥卢功能区",
+  [leicester.candidateId]: "莱斯特功能区",
   [grimsby.candidateId]: "格里姆斯比功能区",
   [tampere.candidateId]: "坦佩雷功能区",
   [saifai.candidateId]: "Saifai 功能区",
@@ -314,6 +323,27 @@ const caseNotes: Record<number, string[]> = {
     zh
       ? "全9,031几何核对区内外参考点；Hull、Sheffield和机场服务不并成本区。国家CAR-T委托不证明本区居民已进入真实给药/监护链；国家威胁与日常运转也不足以补GSS。两轮后保留缺口，必要的代表性、延续、普通负担和触达假设均可撤回。"
       : "Reference points were checked against all 9,031 geometries; Hull, Sheffield and outside-airport services are not local production. National CAR-T commissioning does not establish a delivered local-resident pathway; national threat context and ordinary operations do not settle GSS. After two rounds, gaps remain explicit and applicability, continuity, affordability and reach assumptions can be withdrawn.",
+  ],
+  [cima.candidateId]: [
+    zh
+      ? "Cima 3399的原国别为ETH，较新中心Tilili2900及旧名编目支持身份适配。八维均未定，无中心；0—100仅为无辨别力的数学域。旧供水／医疗服务、历史拘留证词与司法回应、冲突目录记录保留；服务时点、当前居民后果、有效缓解与取得条件尚未闭合。缺网络测速和原件获取失败均不证明当地能力低。"
+      : "Cima 3399 is recorded as ETH; newer Tilili centre 2900 and a historical name compilation support its identity. All eight judgments remain unknown, without a centre; 0–100 is an uninformative mathematical domain. Historical water/health services, detention testimony, judicial responses and compiled conflict records are retained, while service dates, current resident effects, mitigation and access remain unclosed. Missing network samples and failed retrievals do not establish weak local capability.",
+  ],
+  [oulu.candidateId]: [
+    zh
+      ? "奥卢PCS／ISR／RES／TEC／OPT条件60、MED40，GSS／LON未定，无中心、域42—67。治疗队列改善与新院、购买服务及转诊实际缓解保留；需求评估队列仍有重要瓶颈，不能以治疗阶段0.5%覆盖另一队列26.5%。MED40依赖区域残余适配普通居民且延续的假设；若实际替代已充分缓解可重审60，域45—70。拒绝必要假设须撤回未知。"
+      : "Oulu has conditional 60 for PCS/ISR/RES/TEC/OPT and 40 for MED; GSS/LON remain unknown, without a centre and with a 42–67 domain. Improved treatment queues, the new hospital, purchased services and referrals are retained as actual mitigation. A material needs-assessment bottleneck remains:0.5% in the treatment queue cannot replace 26.5% in another queue. MED 40 assumes regional residual constraints apply to ordinary residents and persist. Sufficient actual alternatives could support 60, giving 45–70; rejecting necessary assumptions withdraws the judgment.",
+    zh
+      ? "全9031几何核16个近似参考点，Pohde区域与Oulu行政区均非整个冻结功能区。饮水原水／处理水、已建电锅炉／未来电池、解决年赔偿／伤害发生年分开；GSS不由准备和网络处置补分，LON不由目录／医院收费表补分。"
+      : "Sixteen approximate references were checked against all 9,031 geometries; Pohde and municipal Oulu differ from the frozen area. Raw/treated water, delivered boilers/future batteries and compensation-resolution/injury years remain separate. Preparedness and cyber handling do not fill GSS; directories or hospital tariffs do not fill LON.",
+  ],
+  [leicester.candidateId]: [
+    zh
+      ? "莱斯特七维条件60、RES未知，无中心、域54—64。已实施洪水响应、具体安全处置、医疗结果与通常NHS条件、当地实际CAR-T及支付监护支持有限判断；反复受淹、社区脆弱、急诊／癌症等待和再入院上升仍保留。109／188与报告百分比冲突、VTE两表差异、SHMI不同观察窗及RTT待分诊排除不合并或静默修正。"
+      : "Leicester has seven conditional 60 judgments and unknown RES, without a centre and with a 54–64 domain. Implemented flood response, specific security intervention, clinical results/usual NHS eligibility and actual local CAR-T/payment/monitoring support scoped judgments. Repeated flooding, community vulnerability, emergency/cancer waits and rising readmissions remain. Conflicting flood percentages, VTE tables, differing SHMI windows and RTT triage exclusions are neither merged nor silently repaired.",
+    zh
+      ? "饮水末端与实际食品供应适配未闭，市场许可／机场货运不填RES。若PCS／GSS／ISR／MED任一有新依据改40，域51—61；另撤回任一15%维则45—70。所有地域、延续、普通取得／負担假设可撤回；区外机场可作居民路径，不记本地机场，未知域不证明入围或排除。"
+      : "Water-at-use and actual food-supply applicability remain unclosed; market licences/airport freight do not fill RES. Reassessing any of PCS/GSS/ISR/MED to 40 with evidence gives 51–61; withdrawing any 15% dimension instead gives 45–70. Scope, continuation and usual access/affordability assumptions are reversible. An outside airport may serve residents without being local production. Unknown domains prove neither qualification nor exclusion.",
   ],
   [tampere.candidateId]: [
     zh

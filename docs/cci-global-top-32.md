@@ -1,5 +1,7 @@
 # CCI 全球 Top 32：从全量候选产生排名
 
+**2026-10-13 第六批验收：** [Leicester4925](cci-leicester-priority-review.md)七维条件60、RES未知，无中心、域54—64；[Oulu239](cci-oulu-priority-review.md)PCS／ISR／RES／TEC／OPT60、MED40、GSS／LON未知，无中心、域42—67；[Cima3399／Tilili](cci-cima-priority-review.md)身份及有界八维已核、八维均未知，仍保留。当前**33份审阅、14完整／19部分、8,998未审**。三份均不取得入围或排除资格；真实反证、地域／时点和可撤回假设继续显示。Leicester／Oulu释放槽位接续公开全量筛查中的Dublin415／Turku56；Malé110两入口核查已交接待验收，不计八维案例；其槽位接续wup:11254部分覆盖身份核查。最多三项并行，两轮停止，顺序不代表排名。以下为阶段快照。
+
 **2026-10-13 安全一致性修订：** [赫尔辛基GSS复核](cci-helsinki-security-review.md)撤回原60，国家预测和应急准备不能代替当前当地现实影响与缓解链。其余七维不变，无中心、数学域53—68；当前30份审阅、**14完整／16部分**、9,001未审。新候选Leicester、Oulu与缺测候选Cima正在三个有限槽位研究，尚未验收、不计成果。全部保留、零排除，以下为历史阶段快照。
 
 **2026-10-13第五批统一验收：** [Grimsby5518](cci-grimsby-priority-review.md)形成PCS/ISR/RES/TEC/OPT60、MED40，GSS/LON未知，域42–67；[Tampere397](cci-tampere-priority-review.md)六维60、GSS/LON未知，域45–70，安全维度在跨城验收中撤回，未把网络处置代替完整安全链。两者均无中心。[新加坡LON复核](cci-singapore-lon-comparability-review.md)采用实际疾病路径与公共取得条件后中心62，其余七维不变。当前**30份审阅、15完整/15部分、9,001未审**。另完成[Apia身份核查](cci-apia-identity-review.md)，仍为未解决竞争者，不计入30份。全部保留、零排除、无合格第32名门槛；以下为阶段快照。
