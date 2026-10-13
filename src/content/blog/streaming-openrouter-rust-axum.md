@@ -9,7 +9,7 @@ readingTime: 8
 
 A streaming chat endpoint needs to do more than print tokens. It needs to tell the caller when an answer failed, keep the final usage information, and release its upstream connection when the caller leaves.
 
-This tutorial adds `POST /chat/stream` to the [openrouter-rs Axum gateway example](https://github.com/realmorrisliu/openrouter-rs/blob/85cd49e6264c70096998c551a2b8e4cf7de2558b/examples/axum_chat_gateway.rs). The existing `POST /chat` JSON endpoint still works. Both use one `OpenRouterClient` stored in Axum application state.
+This tutorial adds `POST /chat/stream` to the [openrouter-rs Axum gateway example](https://github.com/realmorrisliu/openrouter-rs/blob/6556ad1d0cd3879f6bc1ca6196a3a593032696cb/examples/axum_chat_gateway.rs). The existing `POST /chat` JSON endpoint still works. Both use one `OpenRouterClient` stored in Axum application state.
 
 The complete example includes tests. The snippets below explain that file; they are not a separate application you need to assemble.
 
@@ -22,7 +22,7 @@ Check out the exact version used by this tutorial:
 ```bash
 git clone https://github.com/realmorrisliu/openrouter-rs.git
 cd openrouter-rs
-git checkout 85cd49e6264c70096998c551a2b8e4cf7de2558b
+git checkout 6556ad1d0cd3879f6bc1ca6196a3a593032696cb
 cargo test --locked --example axum_chat_gateway
 ```
 
@@ -137,11 +137,11 @@ cargo build --locked --example axum_chat_gateway
 python3 scripts/smoke_axum_gateway.py
 ```
 
-This needs Python 3, curl, a free port 3000, and the exported API key. The script starts the gateway, runs the documented curl request, and requires multiple JSON chunks, nonempty generated text, one final `done`, and no `error`. Missing credentials fail the check rather than silently skipping it. It saves the actual SSE transcript and summary under `axum-smoke-artifacts/`.
+This needs Python 3, curl, a free port 3000, and the exported API key. The script starts the gateway, runs the documented curl request, and requires multiple JSON chunks, nonempty generated text, one final `done`, no `error`, and a final usage object with nonnegative integer `prompt_tokens`, `completion_tokens`, and `total_tokens`. Cost remains optional. Missing credentials fail the check rather than silently skipping it. It saves the actual SSE transcript and summary under `axum-smoke-artifacts/`.
 
-On October 13, 2026, the [live verification run](https://github.com/realmorrisliu/openrouter-rs/actions/runs/38341400289) exercised that same curl → Axum → OpenRouter path with `openai/gpt-4o-mini`. It received **40 chunks**, generated text, final usage (14 prompt tokens and 38 completion tokens), and one `done`, with no error events. The generation ID was `gen-1791861793-9dZegucyOdOJz1b91LaC`.
+On October 13, 2026, the [live verification run](https://github.com/realmorrisliu/openrouter-rs/actions/runs/38342367463) exercised that same curl → Axum → OpenRouter path with `openai/gpt-4o-mini`. It received **43 chunks**, generated text, final usage (14 prompt tokens and 41 completion tokens), and one `done`, with no error events. The generation ID was `gen-1791862509-GrF3qf5604VTxZk7bDBY`.
 
-The returned text began: “Rust is a systems programming language focused on safety and performance.” The reported optional cost was `0.000024651`. Treat that as a value from this one response, not a pricing quote; preserve missing cost as unknown rather than zero. The run retains the full SSE transcript as a downloadable artifact for 30 days. Model availability, account permissions, latency, and pricing can change.
+The returned text began: “Rust is a systems programming language focused on safety and performance.” The reported optional cost was `0.000026433`. Treat that as a value from this one response, not a pricing quote; preserve missing cost as unknown rather than zero. The run retains the full SSE transcript as a downloadable artifact for 30 days. Model availability, account permissions, latency, and pricing can change.
 
 The example also compiles and passes its six tests in a separate project using the **published** `openrouter-rs = "=0.19.0"` crate, with Axum 0.8. It does not depend on an unreleased SDK method.
 
@@ -149,6 +149,6 @@ The example also compiles and passes its six tests in a separate project using t
 
 The example stays on loopback and has no gateway authentication. Before exposing it publicly, add your application's authentication, rate/concurrency limits, and a model policy. If you use a reverse proxy, verify that it passes SSE incrementally; this tutorial does not test your proxy configuration.
 
-The core pieces are already here: shared client state, bounded input and generation, a total deadline, incremental forwarding, explicit failure events, and preserving final usage. Start with the [complete tested source](https://github.com/realmorrisliu/openrouter-rs/blob/85cd49e6264c70096998c551a2b8e4cf7de2558b/examples/axum_chat_gateway.rs), then adapt those limits to your application.
+The core pieces are already here: shared client state, bounded input and generation, a total deadline, incremental forwarding, explicit failure events, and preserving final usage. Start with the [complete tested source](https://github.com/realmorrisliu/openrouter-rs/blob/6556ad1d0cd3879f6bc1ca6196a3a593032696cb/examples/axum_chat_gateway.rs), then adapt those limits to your application.
 
 For other integrations, see the [openrouter-rs application examples](https://github.com/realmorrisliu/openrouter-rs#application-patterns). For background on the request API, I also wrote about [the Rust builder pattern](/thoughts/rust-builder-pattern-evolution).
