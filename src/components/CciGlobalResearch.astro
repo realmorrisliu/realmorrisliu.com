@@ -468,6 +468,18 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
             : `Separate from the historical release above. The scope includes ${n(coverage.candidateCount)} functional urban areas; conditional cases and partial evidence links do not establish global ranking eligibility.`
         }
       </p>
+      <p class="research-note">
+        {
+          zh
+            ? "研究按统一线索安排优先级，最多三个任务并行；资料缺失及较新候选另设探索队列，调查顺序不代表排名。"
+            : "Research follows a common evidence-based work queue, with at most three tasks in parallel. Missing-data and newer candidates have separate exploration queues; work order is not a ranking."
+        }
+        <a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-unassessed-priority-screening.md"
+        >
+          {zh ? "优先级规则与复算结果" : "Priority rules and reproducible results"}
+        </a>
+      </p>
     </div>
     <dl class="research-progress" aria-label={zh ? "评分研究进度" : "Scoring research progress"}>
       <div>

@@ -27,6 +27,8 @@ yarn.lock
 .cache/
 
 # Generated files
+# Preserve byte-level manifests from cci_research_priority.py
+docs/data/cci-research-priority/
 *.generated.*
 
 # Binary files
