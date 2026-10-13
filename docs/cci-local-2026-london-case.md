@@ -1,5 +1,11 @@
 # 伦敦：第二份真实八维条件性评分案例
 
+**2026-10-13 GSS同尺度补证：条件60及总中心60保持，依据补足。** 原May1国家公告未独自证明实际缓解；新核[CTP Apr29现场原通报](https://www.counterterrorism.police.uk/news/declaration-of-a-terrorist-incident-in-golders-green-london/)确认两人受伤送院、警员亦遭袭、taser及嫌疑人拘捕；正式terrorist incident与目标群体动机调查分开。[Met Apr28原通报](https://news.met.police.uk/news/ctp-london-investigation-into-kensington-gardens-incident-continues-508749)确认多个组织／社区场所已获专门防护建议和支持。26拘捕跨多调查，不等26定罪；无危险物的Kensington事件、无罪名释放和保释均保留，不将全部归外国组织。
+
+接受限定当前影响、实际处置及国家关联实体／目标场所情景对普通FUA的代表性和延续，受针对群体残余可支持40替代；不证明所有预防有效、全区安全率或必须先发生战略攻击。拒绝GSS必要推定则51—66、无中心；London原60在补证前的薄弱处明确承认，不能倒称首次材料已经充分。详见[40份冻结输入的同尺度审查](cci-gss-comparability-review.md)。
+
+两有效原HTML取回2026-10-13：CTP183039bytes／SHA `ea7e08e87eb1e2c812317a10a436837b81a5b32e1eaaf8891569b3a90297ac7e`；Met33472bytes／SHA `9d1229a31b19d18b891d0d440082eab96ebbe7beb0e3c4743f2f4f236024350e`。全9031核HighfieldAvenue分析者近似点(-0.196,51.577)及1km投影缓冲均5288；不是警方坐标、整案足迹或全居民覆盖。GSS战略子项改partial，区域仍context；其他七维分值不变。以下旧子项计数／原材料为阶段快照。
+
 **2026-10-13 同尺度复核：八维条件中心60。** LON由40改为条件60，其余七维原60及反证不变。实际当地居民CAR-T给药、NICE人体评价、NHS疾病限定委托与监护相连；制造至少4–6周、照护者／距离条件、采集容量及过期风险文案均保留。详见[完整LON复核](cci-london-lon-comparability-review.md)。
 
 这是纠正已审路径的代表性，不是证明一般人群延寿。当前持续、地域与疾病适用、通常居民实际取得／支付／监护须接受明确推定；拒绝LON连接则54—64、无中心，LON40替代总分58、LON80替代62。23partial／7context／1unresolved。主任务核验新增原件字节与关键支付／给药原表；无全球排名资格。

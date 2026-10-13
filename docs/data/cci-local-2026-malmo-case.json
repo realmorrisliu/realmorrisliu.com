@@ -1,0 +1,607 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 481,
+  "name": "Malmö",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "approximate_reference_points_full9031_checked_not_service_coverage",
+  "evidenceReview": "cci-malmo-priority-review.md",
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 54,
+  "unresolvedScoreRange": [54, 64],
+  "limitations": "Root uniform GSS review accepts scoped regional-provider protection and observed local mitigation with explicit applicability/low-impact/continuity assumptions, not a requirement that war or a strategic attack already occurred. Seven conditional60; TEC unknown;54–64 without centre. Provider self-report/unknown attribution and violence constraints retained. Original handoff45–70 is prior snapshot; no ranking/exclusion.",
+  "retrievedOn": "2026-10-13",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Augustenborg现役开放雨水/绿顶、既有绿地与2025风险/关键物业雨洪工作支持适配保护；沿海融资/责任及热脆弱住房仍重要。",
+      "assumption": "接受既有核心适配防护和通常避险/恢复对481代表且延续，不从低旧热/PGA给分；若海潮/重要房屋雨洪或热湿防护缺口主导可40；多危险/独立备援新证才80，拒绝适配/延续则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": 60,
+      "rationale": "2025地方枪击／爆炸与已运行GVI、共享供水运营者实际数字攻击尝试未成功和已加强保护／24小时监测，配合相关国家混合威胁及具体跨海通道情景，支持有限低现实影响与缓解能力；归因、覆盖及受针对群体残余保留。",
+      "assumption": "根同尺度验收允许限定影响和相关情景＋已实施适配保护，不要求已经战争／成功战略攻击。接受运营者限定窗口自报、共享供水保护适配481、通常服务影响较低和截止延续；不将供区全域计数或Säpo评估当城市实测／外国归因。缓解后重要约束主导可40、强低影响覆盖与有效替代可80；拒绝关键推定回null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "实际社会支援、公开年度监测、GVI多机构退出及Oct7–8暴力后多语/现场支持，已实施供水网络改造和运营安全；住房/触达/资源与未成项目保留。",
+      "assumption": "行政核心、MKB及地方跨组织网络合理代表通常FUA居民并持续；年均救助戶不等去重覆盖，计划/预算不当已完成。重要不平等/交付残余主导可40，强压力恢复/独立组织结果新证才80；拒绝代表性/实际有效性则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "2025实际Malmö供水25.8millionm³、主干检测/异常复测、地方真实食品检查与现有电力负荷支持普通供给；区外水源/两旧管、接网压力、食品违规/净负担与未成备用保留。",
+      "assumption": "接受主干/已运行受监管分配通常代表末端安全、现实零售及约400MW现存市域负荷通常代表基本电力可取得，必要净负担通常可承担且2025运行延续。非厂合格单独60；供水/电能/支付或共同依赖重要残余主导可40；拒绝末端/普通能源可得/负担推定恢复null；80须有效独立备援新证。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "真实Malmö接诊/已迁病区及手术、SUS必要治疗与2025队列改善，通常公费收费上限和转介替代可执行；288LexMaria中的实伤、等待/药误及薄弱缓解保留。",
+      "assumption": "合法通常注册居民按RegionSkåne公立/签约路径可承担取得；接受Malmö/Lund实际统一SUS区域治疗网络及局部改进足以支持较强能力，提供方病例非居民率。若等待/错误与低效复发预防主导可40，及时质量冗余新证才80；拒绝通常资格/跨院取得/改善延续则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "SUS自2020实际CAR-T人类常规治疗，2022病程/副作用与2026Lund协调队列/监护工作，通常Skåne临床公费路径形成疾病限定转化链。",
+      "assumption": "普通481合病种/既往失败/身体耐受条件居民经既有SUS区域临床转诊，通常可获所采用疗法及必要监护并承担130/day等净个人及交通/照护间接费用；不默认人人适应证或药品许可即覆盖。制造/等待/重症及个人必要成本若形成重要实得断点可40；拒绝当前区域取得/公费方案连接恢复null，80须多路径冗余新证。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": null,
+      "rationale": "2025Minc预孵化120余参与/13投资及医疗创新/公共数字路径有局部证；大学原年报未取得，本区实际知识产出—产业采用—通常扩散连接未充分辨别。",
+      "assumption": "不由大学/AI企业名单、公司资助或十公司试验当产品已普遍采用，不从快筛网速或区域Lund科研移植高分。最小下一证本区已运行技术产品/生产采用与普通触达，允许有此链后60或强冗余80，现实断点才40；缺失不判低。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "knowledge_output": "context",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "unresolved"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "2025Øresund实际公路/铁路及跨海机场居民服务、现行EU法定迁移与真实Swedbank转账支持退出；单桥共因/账户身份/长期资源与通信尾部保留。",
+      "assumption": "通常有效证件/合法账户及可承担接续迁居资源，真实跨Øresund通道通常执行、居民个人移动通信与普通替代通常可用；CPH/机场外区不当481产出，铁路公路非独立结构。重要中断/支付或通信共因主导可40，强实效独立冗余新证才80；拒绝上述路径/资格/通信推定则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://malmo.se/download/18.7f765e1719e2074a3d61c2d/1780320071944/%C3%85rsredovisning%20Malm%C3%B6%20stad%202025%20-%20reviderad%20version%20inf%C3%B6r%20KS%20260401.pdf",
+      "bytes": 2006209,
+      "sha256": "7ca9bd1fb0a5f673e8b575e2593e14bc1a59177a3d099799cd2d8f343b4a7e44",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:58:59.124899+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-03-26",
+      "scope": "2025行政市年度，preparedMar26 2026v1，revisedbeforeKS260401；非精确首发，p31/35/91已目视。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S02",
+      "url": "https://malmo.se/slutaskjut",
+      "bytes": 130264,
+      "sha256": "6479a2f8fa7a92828a633a57c20367268c56a07475bdd91be3d0802ff6bc1ca8",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:58:59.127255+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-07-01",
+      "scope": "原入口updatedJuly1 2026；全部类型枪击17/爆炸26/死1伤1，非全部GVI相关，2024对比不证明因果。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S03",
+      "url": "https://sydvatten.se/var-verksamhet/vattenkvalitet/",
+      "bytes": 52229,
+      "sha256": "1db6cc917d9441ea16685941e979791729153ad6280cbb6b809c2bbb4a4556d7",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:58:59.129103+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-07-19",
+      "scope": "2015创建/Jul19 2026更新；实际2025两厂表，PFAS新限Jan1 2026针对用户不改采样位置。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S04",
+      "url": "https://sydvatten.se/app/uploads/2026/04/Sydvatten_Hallbarhets_Arsredovisning_2025_lankad.pdf",
+      "bytes": 3475186,
+      "sha256": "07a1a29f4240db68b0515fa0ee66316423e968134dffb261d4765fdbb7f4a146",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:58:59.132393+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025年度、URLApr2026；实际已实施新控制/24hIT监测，reservoir末期/2026验收仍未来于观察窗。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S05",
+      "url": "https://malmo.se/Aktuellt/Artiklar-Malmo-stad/2026-10-08-Stod-efter-den-allvarliga-handelsen-pa-Bellevuegarden.html",
+      "bytes": 89673,
+      "sha256": "40479986b5149e8081f4322e91cc3921e8cda37a6776f739d82930e342326e8e",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:59:01.586646+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-10-08",
+      "scope": "Oct7–8孤立严重犯罪后现地多机构/多语支援，不预断动机。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S06",
+      "url": "https://sydvatten.se//app/uploads/2026/07/Kvalitetsrapport-Sydvatten-2025.pdf",
+      "bytes": 597447,
+      "sha256": "1833cd4f37b3e9b57950ddc43a4d8b7d41e246eb664a3d146971d5242e85b1bf",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T08:01:15.773111+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025全年、URLJul2026；首段2024正文与后表2025冲突，1143main采样非末梢；Malmö25.8millionm³非户账。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S07",
+      "url": "https://malmo.se/Aktuellt/Artiklar-Malmo-stad/2026-02-12-Sa-klarade-foretagen-i-Malmo-livsmedelskontrollerna-2025.html",
+      "bytes": 88664,
+      "sha256": "da669b5562f5690bab5860d2326fc33e8b780514a73f1c150699f659ea7bd69f",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T08:01:15.774588+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-02-12",
+      "scope": "观察2025，3100检查/2150经营单位/85%无需复检/1100举报，多类别实际食品流通，不当人率或成交吨数。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S08",
+      "url": "https://www.1177.se/Skane/sa-fungerar-varden/kostnader-och-ersattningar/patientavgifter-i-skane/",
+      "bytes": 324773,
+      "sha256": "899ad02edff2b21b33d31059e3245ca855654e9ac5d32c77acc1301e4674755a",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T08:01:15.776523+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-01-01",
+      "scope": "当前Skåne2026规则，200outpatient/400ED/1450滚动12mo上限，130/day头30d后65且不入门诊cap；不能覆盖牙/误约/所有药。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S09",
+      "url": "https://www.swedbank.se/privat/betala-och-overfora/betalningar-till-utlandet.html",
+      "bytes": 190393,
+      "sha256": "64a7c7f55208e8273ea05f12577ba6e65cedbb530e58571dda097267eb104573",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T08:01:15.778010+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前未标首发，Swedbank日限个人化/new50kSEK可临时调高/ID或4h等待，EU-EES电子0SEK一般渠道费非所有费用。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S10",
+      "url": "https://www.mkbfastighet.se/webbsidor/ekostaden-augustenborg/",
+      "bytes": 107972,
+      "sha256": "7f37f004ad63745319601be478b5430c3a7090b50cd208bd1e2285b57806267e",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T08:05:46.274454+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前未标首发，MKB既有开放雨水/绿顶和居民实验场；不能认定全481百年雨有效或2014损失减少比例。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S11",
+      "url": "https://polisen.se/aktuellt/handelser/2026/oktober/7/7-oktober-10.03-ovrigt-malmo/",
+      "bytes": 50166,
+      "sha256": "5d09cfb9ff9d94e05aa94cf52f307d96f71ea889e8c6008a5c32d143ca143fa1",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T08:05:46.278185+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-10-07",
+      "scope": "Oct7实际一50余岁妇女死亡/男人逮捕，警方初判isolated；18:30更新不变成gang/terror。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S12",
+      "url": "https://downloads.ctfassets.net/20drd9bf6f7p/eqhINaZlNMywie3FXhks5/1ad8f86a27e05a678c6b26e8854a8bb5/9946_%C3%A2__%C3%83_BK_A%C3%A2__%C3%83_rsrapport_UK2_2026-03-20.pdf",
+      "bytes": 12968117,
+      "sha256": "a925131d0df1f2f71beedc597d74537a99f9d0044983d6195d55f6ce8dab073c",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:03:02.341064+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025桥运营年度、URLMar20 2026，原取回Oct13 04:03保留；道路8m+/铁路15.9m旅次非居民去重，跨国通道非单城。 Table2025rail15.9m为projected并含travelcards，2022起tablecustomer仅active。",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S13",
+      "url": "https://www.gesetze-im-internet.de/freiz_gg_eu_2004/BJNR198600004.html",
+      "bytes": 75349,
+      "sha256": "b53478451d8605d7b5b31aeee028542c9d415df2dedfef634e66a0d60433c0fe",
+      "retrievedOn": "2026-10-12",
+      "retrievedAt": "2026-10-12 (original date; exact time unavailable)",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "共用德国EU公民现行法，原Oct12具体时分未知；SWE公民适配，非Copenhagen身份/分数继承。",
+      "sourceKind": "reused_original_response"
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://vard.skane.se/siteassets/sjukhus/bilder-och-pdfer/skanes-universitetssjukhus/om-oss/skanes-universitetssjukhus-i-korthet-2025.pdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "原32pPDF文本，实际2025SUS多院/外地患者；Malmö病区迁入与队列改善、首接76.1%及长队。raw403，未称核心图表已目视/取原bytes。"
+    },
+    {
+      "id": "W02",
+      "url": "https://vardgivare.skane.se/siteassets/5.-uppfoljning/omraden/patientsakerhet/patientsakerhetsberattelser---fillistning/patientsakerhetsberattelse-skanes-universitetssjukhus.pdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "当前为42p2025安全PDF；封面2026-未填月日，search仍标2024旧版。真实288LexMaria，报告有漏报/双系统重复；raw403，未得pixels，不数字化图。"
+    },
+    {
+      "id": "W03",
+      "url": "https://vard.skane.se/skanes-universitetssjukhus-sus/om-oss/nyheter/cancerpatienter-friskare-med-avancerad-cellbehandling/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2022-12-14",
+      "bytes": null,
+      "sha256": null,
+      "scope": "原医院正文updatedDec14 2022非2023：Jan2020实际首给药及20余后续、年龄40–73/副作用/耐受；未来扩展不当当前全覆盖。"
+    },
+    {
+      "id": "W04",
+      "url": "https://www.skane.se/jobb-och-utbildning/lediga-jobb/id/?assign=dc67733e-800d-4691-9e76-1cad750233dd",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-09-17",
+      "bytes": null,
+      "sha256": null,
+      "scope": "原Region正文Lund实际既有SCT/CAR-T协调团队，岗位招聘不是已补足，质量register/waitlist/国际cell运输/住院支持职责非无限容量。"
+    },
+    {
+      "id": "W05",
+      "url": "https://www.skane.se/halsa-och-vard/regler-och-rattigheter-i-varden/vardgaranti-och-vantetider/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-03-09",
+      "bytes": null,
+      "sha256": null,
+      "scope": "原Region当前0/3/90/90保证和Vårdlots可转介路径，是目标/手续不等全部实绩，更不用于替代急症即时。"
+    },
+    {
+      "id": "W06",
+      "url": "https://sakerhetspolisen.se/om-sakerhetspolisen/publikationer/sakerhetspolisens-lagesbilder/sakerhetspolisen-2025-2026/paverkan-fran-frammande-makt.html",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "全国2025/26真实foreigncyber/威胁评估，尚无物理sabotage可归foreign；非481实际影响。raw247异常，不当有效来源bytes。"
+    },
+    {
+      "id": "W07",
+      "url": "https://www.sakerhetspolisen.se/ovriga-sidor/nyheter/nyheter/2025-10-13-forundersokning-om-grovt-sabotage-nedlagd.html",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Jan26 2025 Sweden-Latvia缆线已查明事故/非故意，Oct13 2025结案；不是Oct13 2026新归因，更非Malmö断网。"
+    },
+    {
+      "id": "W08",
+      "url": "https://www.eon.se/foeretag/elnaet/anslut/kapacitetskompassen",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-07-01",
+      "bytes": null,
+      "sha256": null,
+      "scope": "原站indexedexcerpt约400MW Malmö冷冬topload比较/≥200kW接网排队，当前open仅login提示；非完整市域故障/实际新增备用。"
+    },
+    {
+      "id": "W09",
+      "url": "https://motenmedborgarportal.malmo.se/welcome-sv/namnder-styrelser/stadsbyggnadsnamnden/mote-2026-01-28/agenda/namndbudget-sbn-2026pdf?downloadMode=download",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-01-28",
+      "bytes": null,
+      "sha256": null,
+      "scope": "原预算indexedexcerpt：coastal责任/融资与热/旱规划仍在，不能当防潮堤已建；未取全PDF或pixels。"
+    },
+    {
+      "id": "W10",
+      "url": "https://malmo.se/Uppleva-och-gora/Biblioteken/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "原站indexed/text14libraries和公交library及2025实际program；当前门户不是完成数字全覆盖/每人电脑。"
+    },
+    {
+      "id": "W11",
+      "url": "https://malmo.se/Hamnstaden.html",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "原站indexedexcerptFeb26 2026指出单固定Øresund通道脆弱/metro方案；raw404/open失败，未得完整正文，不把metro当已运作。"
+    },
+    {
+      "id": "W12",
+      "url": "https://www.eon.se/nyheter/avtal-om-reservkraft-till-soedra-sverige",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-10-06",
+      "bytes": null,
+      "sha256": null,
+      "scope": "原索引更新时间，但实际正文未取得/open只有登录提示。仅定位，不据题名认备用已投运/住户可靠性。"
+    },
+    {
+      "url": "https://www.cph.dk/en/about-cph/press/news/2026/03/rising%20passenger%20numbers%20drive%20growth%20at%20copenhagen%20airport",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "复用Copenhagen已读CPH实际航空运营原文；外537服务，仅经既有Øresund通道适配481，原读取日期保留。 March2026 first-party review of2025 routes/trips; no unique residents or independent routes. Curl403.",
+      "id": "W13"
+    }
+  ],
+  "failedSourceReads": [
+    {
+      "file": "cart-actual2023.html",
+      "url": "https://vard.skane.se/skanes-universitetssjukhus-sus/om-oss/nyheter/cancerpatienter-friskare-med-avancerad-cellbehandling/",
+      "bytes": 511,
+      "sha256": "77ffba71a72773ad0d7d6eb8c4fd553dd6132918168237f228d4abe08f1d4edb",
+      "retrievedAt": "2026-10-13T07:58:59.125328+00:00",
+      "reason": "403\ttext/html\thttps://vard.skane.se/skanes-universitetssjukhus-sus/om-oss/nyheter/cancerpatienter-friskare-med-avancerad-cellbehandling/;",
+      "exit": 0
+    },
+    {
+      "file": "energy-current.html",
+      "url": "https://www.eon.se/foeretag/elnaet/anslut/kapacitetskompassen",
+      "bytes": 5495,
+      "sha256": "fbb49845091d00d802a1e21c0c65939cede95446c6fcb189ababaf113cb0d1ae",
+      "retrievedAt": "2026-10-13T08:05:46.276368+00:00",
+      "reason": "403\ttext/html; charset=UTF-8\thttps://www.eon.se/foeretag/elnaet/anslut/kapacitetskompassen;",
+      "exit": 0
+    },
+    {
+      "file": "energy-reserve2025.html",
+      "url": "https://www.eon.se/nyheter/avtal-om-reservkraft-till-soedra-sverige",
+      "bytes": 5513,
+      "sha256": "6ba8d60bbfdd6fd1ac61c0e9ef11745ce05babc7af85b1c4785d130365172130",
+      "retrievedAt": "2026-10-13T08:01:15.781359+00:00",
+      "reason": "403\ttext/html; charset=UTF-8\thttps://www.eon.se/nyheter/avtal-om-reservkraft-till-soedra-sverige;",
+      "exit": 0
+    },
+    {
+      "file": "foreign-threat2026.html",
+      "url": "https://sakerhetspolisen.se/om-sakerhetspolisen/publikationer/sakerhetspolisens-lagesbilder/sakerhetspolisen-2025-2026/paverkan-fran-frammande-makt.html",
+      "bytes": 441,
+      "sha256": "b9ff76773b12903b167fbc8e9f82cb186227674056973f2a1a0d69caed3a1f27",
+      "retrievedAt": "2026-10-13T08:01:17.160886+00:00",
+      "reason": "247\ttext/html; charset=utf-8\thttps://sakerhetspolisen.se/om-sakerhetspolisen/publikationer/sakerhetspolisens-lagesbilder/sakerhetspolisen-2025-2026/paverkan-fran-frammande-makt.html;",
+      "exit": 0
+    },
+    {
+      "file": "harbour-current.html",
+      "url": "https://malmo.se/Hamnstaden.html",
+      "bytes": 98343,
+      "sha256": "a35deca77f481365bbe11166060a0a7d8f19a98b22827b4b8a1aa23449283dfd",
+      "retrievedAt": "2026-10-13T08:01:17.448854+00:00",
+      "reason": "404\ttext/html;charset=UTF-8\thttps://malmo.se/Hamnstaden.html;",
+      "exit": 0
+    },
+    {
+      "file": "hospital-safety2025.pdf",
+      "url": "https://vardgivare.skane.se/siteassets/5.-uppfoljning/omraden/patientsakerhet/patientsakerhetsberattelser---fillistning/patientsakerhetsberattelse-skanes-universitetssjukhus.pdf",
+      "bytes": 574,
+      "sha256": "abde483cca3fb6adf7bd5a17517c3353b9164cd576f9275527c5063400e987af",
+      "retrievedAt": "2026-10-13T08:01:15.772836+00:00",
+      "reason": "403\ttext/html\thttps://vardgivare.skane.se/siteassets/5.-uppfoljning/omraden/patientsakerhet/patientsakerhetsberattelser---fillistning/patientsakerhetsberattelse-skanes-universitetssjukhus.pdf;",
+      "exit": 0
+    },
+    {
+      "file": "hospital2025.pdf",
+      "url": "https://vard.skane.se/siteassets/sjukhus/bilder-och-pdfer/skanes-universitetssjukhus/om-oss/skanes-universitetssjukhus-i-korthet-2025.pdf",
+      "bytes": 538,
+      "sha256": "f7c12697f2caa37b84842fcfc154bee9e65b7af19761a938e1ceae83a43488cc",
+      "retrievedAt": "2026-10-13T07:58:59.125204+00:00",
+      "reason": "403\ttext/html\thttps://vard.skane.se/siteassets/sjukhus/bilder-och-pdfer/skanes-universitetssjukhus/om-oss/skanes-universitetssjukhus-i-korthet-2025.pdf;",
+      "exit": 0
+    },
+    {
+      "file": "sewer-may2026.html",
+      "url": "https://www.vasyd.se/nyheter/storning/avloppsl%C3%A4cka-4-maj-2026",
+      "bytes": 0,
+      "sha256": null,
+      "retrievedAt": "2026-10-13T07:59:01.561752+00:00",
+      "reason": "000\t\thttps://www.vasyd.se/nyheter/storning/avloppsl%C3%A4cka-4-maj-2026;curl: (28) SSL connection timeout\n",
+      "exit": 28
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "source": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "sourceBytes": 9932800,
+    "allGeometryCount": 9031,
+    "record": {
+      "fid": 7964,
+      "eFUA_ID": 481.0,
+      "UC_num": 1.0,
+      "UC_IDs": "2798",
+      "eFUA_name": "Malmö",
+      "Commuting": 1.0,
+      "Cntry_ISO": "SWE",
+      "Cntry_name": "Sweden",
+      "FUA_area": 716.0,
+      "UC_area": 90.0,
+      "FUA_p_2015": 444899.07749146223,
+      "UC_p_2015": 297225.77866744995,
+      "Com_p_2015": 147673.29882401228
+    },
+    "bounds": [902000.0, 6423000.0, 937000.0, 6457000.0],
+    "targetGeometrySha256": "0dd4d4c30991b61cb043c69006ab0908fd7332dc5633a766c617cd110e7503c5",
+    "referencePoints": [
+      {
+        "label": "Malmö centre",
+        "longitude": 13.0038,
+        "latitude": 55.605,
+        "fuaMatches": [481]
+      },
+      {
+        "label": "Malmö SUS hospital",
+        "longitude": 13.0039,
+        "latitude": 55.5861,
+        "fuaMatches": [481]
+      },
+      {
+        "label": "Malmö university",
+        "longitude": 12.9948,
+        "latitude": 55.6095,
+        "fuaMatches": [481]
+      },
+      {
+        "label": "Malmö station",
+        "longitude": 13.0006,
+        "latitude": 55.6091,
+        "fuaMatches": [481]
+      },
+      {
+        "label": "Hyllie station",
+        "longitude": 12.9753,
+        "latitude": 55.563,
+        "fuaMatches": [481]
+      },
+      {
+        "label": "Augustenborg",
+        "longitude": 13.026,
+        "latitude": 55.5788,
+        "fuaMatches": [481]
+      },
+      {
+        "label": "Limhamn",
+        "longitude": 12.946,
+        "latitude": 55.579,
+        "fuaMatches": [481]
+      },
+      {
+        "label": "Lund SUS external",
+        "longitude": 13.1936,
+        "latitude": 55.7122,
+        "fuaMatches": [624]
+      },
+      {
+        "label": "Lund university",
+        "longitude": 13.202,
+        "latitude": 55.705,
+        "fuaMatches": [624]
+      },
+      {
+        "label": "Malmö airport",
+        "longitude": 13.3758,
+        "latitude": 55.5363,
+        "fuaMatches": []
+      },
+      {
+        "label": "CPH external",
+        "longitude": 12.6508,
+        "latitude": 55.618,
+        "fuaMatches": [537]
+      },
+      {
+        "label": "Ringsjöverket Stehag",
+        "longitude": 13.396,
+        "latitude": 55.901,
+        "fuaMatches": []
+      },
+      {
+        "label": "Vomb waterworks",
+        "longitude": 13.536,
+        "latitude": 55.656,
+        "fuaMatches": []
+      }
+    ],
+    "method": "full9031; EPSG4326→ESRI54009 always_xy; intersects; analyst approximate points not official footprints/catchments/patients",
+    "reviewedOn": "2026-10-13"
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-malmo-priority-review.md",
+    "sha256": "caeed5972c802b53d1a22f354bdcdb88139f621f174c6bfd22301a0efc1d87da",
+    "reviewedOn": "2026-10-13",
+    "status": "bounded_conditional_review_not_ranking_or_exclusion"
+  },
+  "gssComparabilityReview": {
+    "path": "docs/cci-gss-comparability-review.md",
+    "sha256": "a3c91a1685f15448730cfcbd7fc7a28d453ffb1c5e4a6cdec07c0e9ab022bba3",
+    "auditPath": "docs/data/cci-gss-comparability-audit.json",
+    "auditSha256": "aa5fcaa530b2f3b8751eaec95ae9a26bc6c80d0eaa6f047a65c382392cd31450",
+    "reviewedOn": "2026-10-13",
+    "scope": "40_frozen_inputs_selected_originals_not_global_validation",
+    "scoreBeforeRootSupplement": null,
+    "scoreAfterRootAcceptance": 60,
+    "warOrSuccessfulStrategicAttackRequired": false
+  }
+}

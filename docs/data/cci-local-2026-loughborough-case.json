@@ -30,8 +30,8 @@
     {
       "id": "GSS",
       "score": null,
-      "rationale": "当地县域毒品组织对少年债务胁迫与2026跨县侦破有证；区域冲突/战略暴露的适配实际居民后果与缓解仍未闭。",
-      "assumption": "县域犯罪和London联络不等区域冲突；国家背景、普通犯罪/轨道日常运行不补60。最小待补为本区适配区域或战略威胁、现实影响及缓解后残余；缺失不判40。",
+      "rationale": "既有地方组织暴力／实际应对保留，但有覆盖的相关区域／战略风险情景、城市或真实共享服务已运行能力及残余影响连接仍未闭；国家预测、普通设施或一般交通扰动不能补整维。",
+      "assumption": "继续null及空替代档，不因缺资料判低，也不要求已发生当地战争／成功战略攻击。若后续有明确范围的影响／风险观察＋相关情景适配＋已实施匹配缓解，可同层判40／60／80；必要地域、覆盖、通常影响及延续推定须公开且可撤回。此次只纠正门槛措辞，没有新增城市能力证据，不自动补60。",
       "conditionalAlternatives": [],
       "subpillars": {
         "organized_violence": "partial",
@@ -661,8 +661,19 @@
   },
   "priorityCompletionReview": {
     "path": "docs/cci-loughborough-priority-review.md",
-    "sha256": "3ecd8695cb206995749e018563bf44148156b85d766cbda9b20cd835a89288e6",
+    "sha256": "4c090e70793fafdfee7a3fcd00bb9a0aff5b3be336c11ff590622c55342d17fc",
     "reviewedOn": "2026-10-13",
     "status": "bounded_conditional_review_not_ranking_or_exclusion"
+  },
+  "gssComparabilityReview": {
+    "path": "docs/cci-gss-comparability-review.md",
+    "sha256": "a3c91a1685f15448730cfcbd7fc7a28d453ffb1c5e4a6cdec07c0e9ab022bba3",
+    "auditPath": "docs/data/cci-gss-comparability-audit.json",
+    "auditSha256": "aa5fcaa530b2f3b8751eaec95ae9a26bc6c80d0eaa6f047a65c382392cd31450",
+    "reviewedOn": "2026-10-13",
+    "scope": "prerequisite_wording_corrected_no_new_city_capability_evidence",
+    "scoreBeforeRootSupplement": null,
+    "scoreAfterRootAcceptance": null,
+    "warOrSuccessfulStrategicAttackRequired": false
   }
 }

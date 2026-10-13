@@ -50,6 +50,8 @@ import jyvaskyla from "../../docs/data/cci-local-2026-jyvaskyla-case.json";
 import coventry from "../../docs/data/cci-local-2026-coventry-case.json";
 import loughborough from "../../docs/data/cci-local-2026-loughborough-case.json";
 import fazeley from "../../docs/data/cci-local-2026-fazeley-case.json";
+import malmo from "../../docs/data/cci-local-2026-malmo-case.json";
+import santaCruz from "../../docs/data/cci-local-2026-santa-cruz-de-tenerife-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -104,8 +106,12 @@ const cases = [
   coventry,
   loughborough,
   fazeley,
+  malmo,
+  santaCruz,
 ];
 const caseNamesZh: Record<number, string> = {
+  [malmo.candidateId]: "马尔默功能区",
+  [santaCruz.candidateId]: "圣克鲁斯-德特内里费功能区",
   [coventry.candidateId]: "考文垂功能区",
   [loughborough.candidateId]: "拉夫堡功能区",
   [fazeley.candidateId]: "Fazeley 功能区",
@@ -321,8 +327,8 @@ const caseNotes: Record<number, string[]> = {
       ? "伦敦条件中心60，八维各60。实际当地CAR-T、人体验证、NHS支付与监护纠正旧LON40的路径代表性；制造等待、采集容量、照护／距离条件和过期风险文案仍保留。拒绝当前延续、通常合资格居民实际取得／支付／监护推定时LON撤回未知，域54—64、无中心；其余七维及反证不变。"
       : "London has a conditional centre of 60, with all eight dimensions at 60. Actual local CAR-T, human evidence and NHS payment/monitoring challenge the earlier LON 40 pathway selection. Manufacturing waits, collection capacity, carer/distance conditions and outdated risk information remain. Rejecting continuity or usual eligible-resident access/payment/monitoring restores unknown LON, giving 54–64 without a centre. Other seven judgments and counterevidence are unchanged.",
     zh
-      ? "MED40／OPT80替代情景为59；将MED的5个权重点移至OPT后为61，新加坡同权重条件62；若另将新加坡TEC改60，则其总分60，次序才翻转。正式权重不变，这只是敏感性演算，不证明城市优劣。"
-      : "The MED 40 / OPT 80 alternative gives 59; moving five weight points from MED to OPT gives 61 against Singapore's conditional 62. Reassessing Singapore TEC to 60 then gives it 60, reversing this scenario's order. Official weights remain unchanged; this sensitivity arithmetic does not establish city superiority.",
+      ? "安全60已补警方现场处置与实际场所防护原件，国家评估不代城市实测；不要求先发生战略攻击。MED40／OPT80替代情景为59；将MED的5个权重点移至OPT后为61，新加坡同权重条件62；若另将新加坡TEC改60，则其总分60，次序才翻转。正式权重不变，这只是敏感性演算，不证明城市优劣。"
+      : "GSS 60 now has original police response and delivered venue-protection evidence; national assessment is not a city measurement and a realised strategic attack is not required. The MED 40 / OPT 80 alternative gives 59; moving five weight points from MED to OPT gives 61 against Singapore's conditional 62. Reassessing Singapore TEC to 60 then gives it 60, reversing this scenario's order. Official weights remain unchanged; this sensitivity arithmetic does not establish city superiority.",
   ],
   [helsinki.candidateId]: [
     zh
@@ -344,6 +350,22 @@ const caseNotes: Record<number, string[]> = {
     zh
       ? "全9,031几何核对区内外参考点；Hull、Sheffield和机场服务不并成本区。国家CAR-T委托不证明本区居民已进入真实给药/监护链；国家威胁与日常运转也不足以补GSS。两轮后保留缺口，必要的代表性、延续、普通负担和触达假设均可撤回。"
       : "Reference points were checked against all 9,031 geometries; Hull, Sheffield and outside-airport services are not local production. National CAR-T commissioning does not establish a delivered local-resident pathway; national threat context and ordinary operations do not settle GSS. After two rounds, gaps remain explicit and applicability, continuity, affordability and reach assumptions can be withdrawn.",
+  ],
+  [malmo.candidateId]: [
+    zh
+      ? "马尔默七维条件60、TEC未知；无中心，域54—64。安全在同尺度验收中由未知重判60：地方GVI与真实共享供水保护／未成功攻击记录相连，国家情景仍只作背景。拒绝有限影响、供区适配或延续推定，GSS恢复未知为45—70；MED40替代为51—61。"
+      : "Malmö has seven conditional 60 judgments and unknown TEC: no centre, with a 54–64 domain. Uniform GSS acceptance connects operating local GVI with actual shared-water protection and reported unsuccessful attempts; national scenarios remain background. Rejecting scoped impact, service-area applicability or continuity restores unknown GSS and 45–70; MED 40 gives 51–61.",
+    zh
+      ? "全9031核13个近似参考点。枪击含非GVI，爆炸26与受针对群体残余保留，不认所有攻击外国归因。供水主干／末端及1143／628不同检测分母分开，住院费不入门诊上限；当前公费疾病路径依地区转诊推定。科技投资不代产业采用，临床PDF仅可读文本、不称原表已目视。"
+      : "Thirteen approximate references were checked against all 9,031 areas. Shootings include non-GVI cases; 26 explosions and targeted-community constraints remain, without foreign attribution of every attempt. Mains/consumer water and the 1,143/628 testing denominators stay separate; inpatient fees are outside the outpatient cap. Current public disease pathways require regional-referral assumptions. Investment is not industrial adoption; clinical PDFs have readable text without claimed visual table validation.",
+  ],
+  [santaCruz.candidateId]: [
+    zh
+      ? "圣克鲁斯-德特内里费ISR／TEC／OPT条件60，其余五维未知；无中心，域21—86。实际公共服务、科研工程／数字采用与海空及法律资金通路支持有限判断。旧防灾缺口不自动延续为当前失效，旧在建备用不证明现在已运行或仍停用；五维不为凑总分补值。"
+      : "Santa Cruz de Tenerife has conditional 60 for ISR/TEC/OPT and five unknown dimensions: no centre, with a 21–86 domain. Operating public services, research/engineering and digital adoption, plus transport/legal/financial paths support scoped judgments. Old protection gaps do not prove current failure; older backup construction proves neither present operation nor continued inactivity. Five dimensions remain unknown.",
+    zh
+      ? "全9031核15个近似参考点；LaLaguna在区内，Teide观测台和南机场不记本地产出。医院投诉结案不等已治疗，本地CAR-T采细胞不证明回输／当前公费监护；科研总量、港客／货量、宽带省／岛比例各保留范围，居民代表性与通常资源推定可撤回。"
+      : "Fifteen approximate references were checked against all 9,031 areas. La Laguna is inside; Teide and the southern airport are not local production. Closed complaints do not prove delivered treatment; local CAR-T cell collection does not establish infusion/current public monitoring. Research totals, port passengers/cargo and provincial/island broadband keep their scopes; resident applicability and usual-resource assumptions are withdrawable.",
   ],
   [coventry.candidateId]: [
     zh
@@ -813,6 +835,21 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
         <p>
           {
             zh
+              ? "安全评分不要求城市先发生战争或攻击。新旧案例按同一标准检视相关情景与实际适配保护，国家风险不代当地实测；本轮40份冻结输入审查仍有旧推定待验证。"
+              : "Safety scoring does not require a city to experience war or an attack first. Existing and new cases use the same review of relevant scenarios and operating, applicable protection; national risk is not a local measurement. The review of 40 frozen inputs retains earlier assumptions that still need validation."
+          }
+          {" "}<a
+            href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-gss-comparability-review.md"
+            >{zh ? "安全同尺度审查" : "Safety comparability review"}</a
+          >
+          {" · "}<a
+            href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/data/cci-gss-comparability-audit.json"
+            >{zh ? "40行审计记录" : "40-row audit record"}</a
+          >
+        </p>
+        <p>
+          {
+            zh
               ? "新加坡条件性总分现为 62，伦敦为 60；2 分差不证明确定优劣。医疗等待不能仅因超出行政目标就自动取 40；科研强不能代替居民扩散；长期迁居权不能覆盖交通、资金及通信的全部退出条件。长寿路径的代表性假设最需挑战：若不接受该假设，LON 应保持未定，总分中心也应为空。"
               : "Singapore now has a conditional total of 62 and London 60; this two-point gap does not establish superiority. Missing an administrative waiting target does not automatically imply MED 40; strong research does not establish resident diffusion, and residence rights do not cover every transport, financial or communication condition. Longevity pathway representativeness is the weakest assumption: rejecting it leaves LON unresolved and removes the total's central estimate."
           }
@@ -934,6 +971,21 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
         {" · "}<a
           href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-enyang-priority-review.md"
           >{zh ? "恩阳核查" : "Enyang review"}</a
+        >
+      </p>
+      <p>
+        {
+          zh
+            ? "San Severo与Guaranda两入口探索分开保留官方索引及有效原件。救助／授权不等已完成保护或治疗，目标达成率不等患者取得率，预约免费不等所有护理免费。通常支付和实际防护仍未闭，两者不计八维成绩单，也不排除候选。"
+            : "San Severo and Guaranda two-entry explorations distinguish official-index leads from valid originals. Relief/authorisation is not completed protection or treatment; target achievement is not patient access, and free booking is not free care. Usual payment and protection remain unclosed; neither is a scored eight-dimension case or exclusion."
+        }
+        {" "}<a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-sansevero-priority-review.md"
+          >{zh ? "San Severo核查" : "San Severo review"}</a
+        >
+        {" · "}<a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-guaranda-priority-review.md"
+          >{zh ? "Guaranda核查" : "Guaranda review"}</a
         >
       </p>
       <p>

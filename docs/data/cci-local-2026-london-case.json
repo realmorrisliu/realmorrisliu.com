@@ -27,13 +27,13 @@
     {
       "id": "GSS",
       "score": 60,
-      "rationale": "Intelligence and response capabilities coexist with a specific local attack and raised national threat; unmatched older conflict records cannot override new evidence.",
-      "assumption": "Ordinary activity and essential channels are not broadly blocked; targeted-community impacts and unreviewed strategic scenarios require further review.",
+      "rationale": "Actual CTP April29 response, injury care and suspect arrest plus Met April28 delivered protective advice/support to local organisations complement the May1 national assessment. Recurring attacks and targeted-community constraints remain; the national level is not a city rate.",
+      "assumption": "Accept scoped ordinarily limited impact, observed local response/protective support and current applicability of state-linked/target-site scenarios. Neither complete prevention nor foreign attribution of each case is inferred. Material remaining community/channel constraint40; stronger low-impact coverage and effective redundancy80; rejecting scope/impact/continuation restores unknown,51–66 without centre.",
       "conditionalAlternatives": [40, 80],
       "subpillars": {
         "organized_violence": "partial",
         "regional_conflict": "context",
-        "strategic_exposure": "context"
+        "strategic_exposure": "partial"
       }
     },
     {
@@ -214,6 +214,26 @@
       "publishedOn": null,
       "scope": "NHS通常居住资格；page reviewed2023-10-24，nextreview2026-10-24，国家规则非本地及时治疗率",
       "sourceKind": "new_original_response"
+    },
+    {
+      "id": "GSS01",
+      "url": "https://www.counterterrorism.police.uk/news/declaration-of-a-terrorist-incident-in-golders-green-london/",
+      "bytes": 183039,
+      "sha256": "ea7e08e87eb1e2c812317a10a436837b81a5b32e1eaaf8891569b3a90297ac7e",
+      "retrievedOn": "2026-10-13",
+      "publishedOn": "2026-04-29",
+      "sourceKind": "new_original_response",
+      "scope": "Actual London police response/protective support; scoped event/timing/attribution and arrest-not-conviction limits retained."
+    },
+    {
+      "id": "GSS02",
+      "url": "https://news.met.police.uk/news/ctp-london-investigation-into-kensington-gardens-incident-continues-508749",
+      "bytes": 33472,
+      "sha256": "9d1229a31b19d18b891d0d440082eab96ebbe7beb0e3c4743f2f4f236024350e",
+      "retrievedOn": "2026-10-13",
+      "publishedOn": "2026-04-28",
+      "sourceKind": "new_original_response",
+      "scope": "Actual London police response/protective support; scoped event/timing/attribution and arrest-not-conviction limits retained."
     }
   ],
   "webReadSources": [
@@ -284,5 +304,62 @@
       }
     ],
     "limitations": "Approximate reference points, not exact addresses surveyed, footprints, service catchments or patient residence. Surrey and national commissioning are not identical to eFUA5288."
+  },
+  "gssImpactReview": {
+    "status": "bounded_uniform_evidence_review_not_global_validation",
+    "reviewedOn": "2026-10-13",
+    "previousScore": 60,
+    "score": 60,
+    "actualResponsePreviouslyUnclosed": true,
+    "rootSupplementOriginals": [
+      {
+        "file": "/private/tmp/cci-global/gss-root/london-ctp-apr29.html",
+        "url": "https://www.counterterrorism.police.uk/news/declaration-of-a-terrorist-incident-in-golders-green-london/",
+        "retrievedOn": "2026-10-13",
+        "response": "200 https://www.counterterrorism.police.uk/news/declaration-of-a-terrorist-incident-in-golders-green-london/",
+        "exit": 0,
+        "diagnostic": "",
+        "bytes": 183039,
+        "sha256": "ea7e08e87eb1e2c812317a10a436837b81a5b32e1eaaf8891569b3a90297ac7e",
+        "validOriginal": true
+      },
+      {
+        "file": "/private/tmp/cci-global/gss-root/london-met-apr28.html",
+        "url": "https://news.met.police.uk/news/ctp-london-investigation-into-kensington-gardens-incident-continues-508749",
+        "retrievedOn": "2026-10-13",
+        "response": "200 https://news.met.police.uk/news/ctp-london-investigation-into-kensington-gardens-incident-continues-508749",
+        "exit": 0,
+        "diagnostic": "",
+        "bytes": 33472,
+        "sha256": "9d1229a31b19d18b891d0d440082eab96ebbe7beb0e3c4743f2f4f236024350e",
+        "validOriginal": true
+      }
+    ],
+    "referenceBoundaryCheck": {
+      "source": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+      "sha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+      "allGeometryCount": 9031,
+      "point": {
+        "label": "Highfield Avenue Barnet analyst approximate reference, not an official incident geocode",
+        "longitude": -0.196,
+        "latitude": 51.577,
+        "fuaMatches": [5288]
+      },
+      "within1000mBuffer": true,
+      "meaning": "source states Highfield Avenue/Barnet; approximate spatial sensitivity, not police precision, full incident footprint or all-FUA coverage"
+    },
+    "warOrSuccessfulStrategicAttackRequired": false,
+    "nationalThreatIsCityRate": false
+  },
+  "gssComparabilityReview": {
+    "path": "docs/cci-gss-comparability-review.md",
+    "sha256": "a3c91a1685f15448730cfcbd7fc7a28d453ffb1c5e4a6cdec07c0e9ab022bba3",
+    "auditPath": "docs/data/cci-gss-comparability-audit.json",
+    "auditSha256": "aa5fcaa530b2f3b8751eaec95ae9a26bc6c80d0eaa6f047a65c382392cd31450",
+    "reviewedOn": "2026-10-13",
+    "scope": "40_frozen_inputs_selected_originals_not_global_validation",
+    "scoreBeforeRootSupplement": 60,
+    "scoreAfterRootAcceptance": 60,
+    "warOrSuccessfulStrategicAttackRequired": false
   }
 }

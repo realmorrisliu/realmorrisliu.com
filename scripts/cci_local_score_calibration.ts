@@ -92,6 +92,8 @@ const realCases = [
   "coventry",
   "loughborough",
   "fazeley",
+  "malmo",
+  "santa-cruz-de-tenerife",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -175,6 +177,8 @@ const [
   coventry,
   loughborough,
   fazeley,
+  malmo,
+  santaCruz,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -1061,7 +1065,8 @@ const jakartaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
   (c: { efua_id: string }) => c.efua_id === "4897"
 );
 assert(jakartaPosition);
-assert.equal(jakartaPosition.bestPosition, 19);
+// Malmö's fixed conditional lower54 is above Jakarta's upper53; this is arithmetic only.
+assert.equal(jakartaPosition.bestPosition, 20);
 assert.equal(jakartaPosition.worstPosition, rankAudit.candidateCount);
 
 assert.deepEqual(total(nanjing), { center: 58, lower: 58, upper: 58 });
@@ -1737,4 +1742,65 @@ for (const id of [4328, 4892, 4193]) {
     digest(reviewedCase.priorityCompletionReview.path)
   );
   assert.equal(reviewedCase.dimensions.find((d: { id: string }) => d.id === "GSS").score, null);
+}
+
+assert.deepEqual(total(malmo), { center: null, lower: 54, upper: 64 });
+const malmoWithoutGss = { ...malmo };
+delete malmoWithoutGss.GSS;
+assert.deepEqual(total(malmoWithoutGss), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total({ ...malmo, MED: 40 }), { center: null, lower: 51, upper: 61 });
+assert.deepEqual(total(santaCruz), { center: null, lower: 21, upper: 86 });
+for (const id of [481, 395]) {
+  const reviewedCase = realCases.find(c => c.candidateId === id);
+  assert(reviewedCase);
+  assert.equal(
+    reviewedCase.priorityCompletionReview.sha256,
+    digest(reviewedCase.priorityCompletionReview.path)
+  );
+}
+for (const id of [5288, 481, 4328, 4892, 4193, 2305]) {
+  const reviewedCase = realCases.find(c => c.candidateId === id);
+  assert.equal(
+    reviewedCase.gssComparabilityReview.sha256,
+    digest(reviewedCase.gssComparabilityReview.path)
+  );
+}
+assert.equal(realCases[1].gssImpactReview.warOrSuccessfulStrategicAttackRequired, false);
+assert.equal(realCases[1].gssImpactReview.nationalThreatIsCityRate, false);
+assert.equal(realCases[1].gssImpactReview.rootSupplementOriginals.length, 2);
+assert.equal(realCases[1].gssImpactReview.referenceBoundaryCheck.allGeometryCount, 9031);
+
+const gssAudit = JSON.parse(
+  readFileSync(new URL("../docs/data/cci-gss-comparability-audit.json", import.meta.url), "utf8")
+);
+assert.equal(gssAudit.frozenInputCount, 40);
+assert.equal(gssAudit.inputBaseCommit, "a039525afa894085059c5d7574e7cee63e1c3a9f");
+assert.equal(gssAudit.originalSourcesAllAdjudicated, false);
+assert.equal(gssAudit.globalRankingEligible, false);
+assert.equal(gssAudit.findings.length, 40);
+assert.equal(
+  new Set(gssAudit.findings.map((c: { candidateId: number }) => c.candidateId)).size,
+  40
+);
+assert.equal(gssAudit.frozenInputFiles.length, 40);
+for (const c of gssAudit.findings) {
+  const frozen = gssAudit.frozenInputFiles.find(
+    (f: { candidateId: number }) => f.candidateId === c.candidateId
+  );
+  assert(frozen && c.minimumRemainingEvidenceOrAssumption && c.reviewDepth);
+  assert.equal(frozen.fileSha256, c.inputFileSha256);
+  assert.equal(frozen.gss.score, c.scoreAtFreeze);
+}
+assert.deepEqual(gssAudit.scoreCountsAtFreeze, { "60": 19, null: 19, "20": 1, "40": 1 });
+for (const id of [5288, 481, 4328, 4892, 4193, 2305]) {
+  const reviewedCase = realCases.find(c => c.candidateId === id);
+  assert.equal(
+    reviewedCase.gssComparabilityReview.auditSha256,
+    digest(reviewedCase.gssComparabilityReview.auditPath)
+  );
+}
+
+for (const id of [5288, 481, 4328, 4892, 4193, 2305]) {
+  const reviewedCase = realCases.find(c => c.candidateId === id);
+  assert.equal(reviewedCase.gssComparabilityReview.warOrSuccessfulStrategicAttackRequired, false);
 }

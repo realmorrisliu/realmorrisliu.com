@@ -153,10 +153,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 40,
+    "conditionalCaseCount": 42,
     "completeConditionalCaseCount": 14,
-    "partialCaseCount": 26,
-    "unassessedCount": 8991,
+    "partialCaseCount": 28,
+    "unassessedCount": 8989,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -279,9 +279,9 @@
       "provenanceSha256": "c7fa081bf789072af78c66549d6248ea5225b320d8caa600ade4baeaee9fb9b8"
     },
     "cci-local-2026-london-case.json": {
-      "sha256": "421bf6578b7f9cb3ef1a1079e6759b597d0b9247f982e8f83fd74c17ce739958",
+      "sha256": "8115fa2b852eb3f10466099d38b630f2db8fe014c920e9d11af93ca67f551fed",
       "provenance": "cci-local-2026-london-case.md",
-      "provenanceSha256": "8fec1bd8eb8688eec531a81cfc25e2e1f211ead094280bbc43a8fce57b3ccb38"
+      "provenanceSha256": "67789080df868bb73438bfc70139a88cb8b25b468ab0741b78db017589f873a8"
     },
     "cci-local-2026-helsinki-case.json": {
       "sha256": "688df2f3b508f9c3ae00d2cc54906c56f2fac7a814ec165bb69b55b473a78702",
@@ -449,9 +449,9 @@
       "provenanceSha256": "40a4657bb79de492c9c54ea8490df994e9d62193c488392e5bc9a8d82e79bd0f"
     },
     "cci-local-2026-edinburgh-case.json": {
-      "sha256": "5abc8fa52865c7859d8b0539493b824ceb855899ce87cefb40fa34c821b73bc9",
+      "sha256": "94075dfc5a49fd63beecf7903e3163b3f2d4a50988d5de16e4bef09d603b3079",
       "provenance": "cci-edinburgh-priority-review.md",
-      "provenanceSha256": "3ed085b5b6fe3af6b5ea2998f5974365bcfcbc81dcd7e04e86f855ce17affc9b"
+      "provenanceSha256": "27d952de3b05b56471c0e53525c5e537d4753561d0674337d202c7ac096ff584"
     },
     "cci-local-2026-jyvaskyla-case.json": {
       "sha256": "49b6e3f6995bd2ca09ce89e3cec52ffecc1ff96f7de40581bce697b20338d846",
@@ -459,21 +459,31 @@
       "provenanceSha256": "1df98f20507154290e6bc4e93513bab9a633c88029d6f984a5505edae2338d30"
     },
     "cci-local-2026-coventry-case.json": {
-      "sha256": "826e80066436da32b435ecd8ca57e849884fbc0f428060b900ec9501ca483cd7",
+      "sha256": "ed58daa50877b12fd96b4766af290fd733361692e14d2039f7575b0820f874d2",
       "provenance": "cci-coventry-priority-review.md",
-      "provenanceSha256": "a33486443f9af484cc70369d8970ae3d6229ecdd4c2c96626b2b0b05f8ee2778"
+      "provenanceSha256": "7e1100b84bf5286a1a31f69c8191e354d483f0c333c9940fcfdb4d2fe9d5c531"
     },
     "cci-local-2026-loughborough-case.json": {
-      "sha256": "5778261f57810597f86e8c7e092cf1e409ce239c93110a6e706eb94f8436a636",
+      "sha256": "124d489f1732dc9452ed350d2cae5750a132b442511d452d83702f2ec6385eec",
       "provenance": "cci-loughborough-priority-review.md",
-      "provenanceSha256": "3ecd8695cb206995749e018563bf44148156b85d766cbda9b20cd835a89288e6"
+      "provenanceSha256": "4c090e70793fafdfee7a3fcd00bb9a0aff5b3be336c11ff590622c55342d17fc"
     },
     "cci-local-2026-fazeley-case.json": {
-      "sha256": "58d3c24035edaeeadcba6062b4803c32ef62ef6586e8d41b6010518db3bfa10d",
+      "sha256": "e736408d5ee7868dac025f63935f08a5b33df84ffed789232f463e0d92c60e50",
       "provenance": "cci-fazeley-priority-review.md",
-      "provenanceSha256": "1ec4a7d464031f6480ffb01c6f01438b5ab11152e6caf085664fdc164f244a90"
+      "provenanceSha256": "426139e862064b2b3dd5d99e33be4c2b85153c08f5258756ca610f2032b1c181"
+    },
+    "cci-local-2026-malmo-case.json": {
+      "sha256": "af561a58a13ba38e0d3954cda597f6d1684aff1132cb976791b951a7f72fd4ee",
+      "provenance": "cci-malmo-priority-review.md",
+      "provenanceSha256": "caeed5972c802b53d1a22f354bdcdb88139f621f174c6bfd22301a0efc1d87da"
+    },
+    "cci-local-2026-santa-cruz-de-tenerife-case.json": {
+      "sha256": "aa4f57d8f29feab1c03c4fba708cb8908d598f721138e4efacbc996270031c4d",
+      "provenance": "cci-santa-cruz-de-tenerife-priority-review.md",
+      "provenanceSha256": "08577c29925087fd6be4f9e402c76f916fe36d7e40ea6e94c4eb86f84853e706"
     }
   },
-  "scriptSha256": "cf562c49eda1fb6db8b170c0ec199349a2fdf0aab4f04e83f4bbef5d564dd255",
-  "csvSha256": "601bd47bce620a608051dde72ae232458dd71c37c3b877646d3ded9b38cbf87f"
+  "scriptSha256": "7f7ec6fff304fb3b5e794bc90269dd6eac2b1578f8b4df3937166f7cc02500ee",
+  "csvSha256": "b877a38f467cc79a352c9417974d4422c09419e45d120823f30fe94db3344dec"
 }

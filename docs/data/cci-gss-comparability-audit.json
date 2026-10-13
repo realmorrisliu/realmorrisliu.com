@@ -1,0 +1,1746 @@
+{
+  "cutoff": "2026-10-10",
+  "reviewedOn": "2026-10-13",
+  "frozenInputCount": 40,
+  "scoreCountsAtFreeze": {
+    "60": 19,
+    "null": 19,
+    "20": 1,
+    "40": 1
+  },
+  "findings": [
+    {
+      "candidateId": 7704,
+      "name": "Beijing",
+      "inputFile": "docs/data/cci-local-2026-beijing-case.json",
+      "inputFileSha256": "66e15dc512297c8e817a879c93a972ca3e8711fd97dccf6afd2825e0333f9ea9",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "60可保留；窄推定需显明",
+      "evidenceAssessment": "2025以来19个暴力黑中介团伙治理与2026实演；首都角色和台海军演只是情景适配，不是北京遭攻击。破案率不能当低发生率。",
+      "minimumRemainingEvidenceOrAssumption": "把已读执法范围与通常现实影响、具体居民防空适配分别写明；非本轮独立原件裁决。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 7347,
+      "name": "Boston",
+      "inputFile": "docs/data/cci-local-2026-boston-case.json",
+      "inputFileSha256": "b325f18f0c146d2b9edac6a47e56c9d718bf14ebd27795e44822abb5f8c91953",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      },
+      "auditDisposition": "null保持；纠正普测措辞",
+      "evidenceAssessment": "历史Marathon／有组织犯罪与FBI机制不能单独证明当前通常影响；历史响应不等当前所有关键节点保护。",
+      "minimumRemainingEvidenceOrAssumption": "一条较近、明确覆盖窗口的地方相关威胁／影响与具体响应，非完整年度普测或必须战争。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 6654,
+      "name": "Chicago",
+      "inputFile": "docs/data/cci-local-2026-chicago-case.json",
+      "inputFileSha256": "052e9c5f97ebae6e257d612e05db147310163073b7cda5c5bcc726db84d2c550",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      },
+      "auditDisposition": "null保持；未完成原件裁决",
+      "evidenceAssessment": "旧JSON三个unresolved；普通暴力背景不足以判组织动员、区域情景和城市适配。",
+      "minimumRemainingEvidenceOrAssumption": "先取得有分类与覆盖限定的地方组织暴力／关键威胁评估和对应已执行缓解。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 3399,
+      "name": "Cima",
+      "inputFile": "docs/data/cci-local-2026-cima-case.json",
+      "inputFileSha256": "755f3788a1c3de7d3b39932df148e51ade222be7825fb784bd5d8d204d215496",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      },
+      "auditDisposition": "null保持；现实伤害优先",
+      "evidenceAssessment": "Amhara区域冲突及较旧Tilili拘押记录有关，但不能把所有州事件归3399或推作2026持续未缓解。",
+      "minimumRemainingEvidenceOrAssumption": "核当地近期居民影响与可用救援／通道；若重要持续伤害成立可40或20，未知非0。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 537,
+      "name": "Copenhagen",
+      "inputFile": "docs/data/cci-local-2026-copenhagen-case.json",
+      "inputFileSha256": "6b92acba08de1d53eda7bc96808069cdfb3b5410f3c022e7f3746c9b77174f20",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "partial",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "条件60可保持；重点原件复核",
+      "evidenceAssessment": "真实Holmbladsgade重伤／跨境VaaS；CPH实际停航和未证实无人机归因分开，国家威胁评估与反无人机已实施能力共同适配。",
+      "minimumRemainingEvidenceOrAssumption": "限定警区／机场依赖、低影响及延续推定；停航、重伤和归因未知不能消掉，40/null保留。",
+      "reviewDepth": "original_focus"
+    },
+    {
+      "candidateId": 4328,
+      "name": "Coventry",
+      "inputFile": "docs/data/cci-local-2026-coventry-case.json",
+      "inputFileSha256": "826e80066436da32b435ecd8ca57e849884fbc0f428060b900ec9501ca483cd7",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "unresolved"
+      },
+      "auditDisposition": "null保持；撤除已发生攻击门槛",
+      "evidenceAssessment": "2026 Guardian部署及2025Authentic枪响／帮派剥削与保障属真实地方链；115部署等为Coventry+Solihull，不是全4328。",
+      "minimumRemainingEvidenceOrAssumption": "具体相关区域／战略情景、覆盖和城市已运行适配仍不足；可以风险评估+实施能力补，不必等袭击。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 415,
+      "name": "Dublin",
+      "inputFile": "docs/data/cci-local-2026-dublin-case.json",
+      "inputFileSha256": "47357b64fec016a1880ea00d2c65324790e258637f3f5e7e77fd72e3f6fea0bb",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "unresolved"
+      },
+      "auditDisposition": "null保持；非战争前提",
+      "evidenceAssessment": "真实枪支／消音器查获和警方动作成立；570和平示威等不是组织袭击或低暴力率。",
+      "minimumRemainingEvidenceOrAssumption": "一条限定当前地方影响及相关战略／区域情景、匹配缓解的原证；不把全国和平当城市低影响。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 2305,
+      "name": "Edinburgh",
+      "inputFile": "docs/data/cci-local-2026-edinburgh-case.json",
+      "inputFileSha256": "5abc8fa52865c7859d8b0539493b824ceb855899ce87cefb40fa34c821b73bc9",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "unresolved"
+      },
+      "auditDisposition": "null保持；理由重写",
+      "evidenceAssessment": "2023/24烟火煽动供应与袭击／司法响应；2026演出轨道公交扰动、Glasgow受伤与Edinburgh和平集会不能冒充本地战争／战略攻击。",
+      "minimumRemainingEvidenceOrAssumption": "所缺是有覆盖的相关情景及城市匹配能力和剩余影响解释，非必须出现外战；targeted harm可40。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 4193,
+      "name": "Fazeley",
+      "inputFile": "docs/data/cci-local-2026-fazeley-case.json",
+      "inputFileSha256": "58d3c24035edaeeadcba6062b4803c32ef62ef6586e8d41b6010518db3bfa10d",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      },
+      "auditDisposition": "null保持；理由重写",
+      "evidenceAssessment": "2024庇护酒店暴乱与实际市响应／Honest Conversations已交付支持局部链，不能概括全FUA现实影响。",
+      "minimumRemainingEvidenceOrAssumption": "需要检视适配情景与地方关键依赖／已实施保护；不要求未来发生战争外溢才可60。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 312,
+      "name": "Gaza functional area",
+      "inputFile": "docs/data/cci-local-2026-gaza-case.json",
+      "inputFileSha256": "cfed62c5791dbc4647273e51199930e1723d922abe5d4cf34bb5b23c02eb46cf",
+      "scoreAtFreeze": 20,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "partial",
+        "strategic_exposure": "context"
+      },
+      "auditDisposition": "20保持；不等同未知",
+      "evidenceAssessment": "当前实际严重平民伤害、迁移与安全失效构成强证；停火并未消除约束，回收遗体与新增当周死亡分开。",
+      "minimumRemainingEvidenceOrAssumption": "维持事件／分母／空间范围及截止连续性；不因未测所有三子项而撤销强现实伤害。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 5518,
+      "name": "Grimsby",
+      "inputFile": "docs/data/cci-local-2026-grimsby-case.json",
+      "inputFileSha256": "8635c35d0076bc32fd17b4b826fdeec789779ff9a7ba00254a02c02e475dd80f",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      },
+      "auditDisposition": "null保持",
+      "evidenceAssessment": "港口存在、全国Severe和网页失败不能证明本区低影响／保护或高风险；地方组织暴力链未闭。",
+      "minimumRemainingEvidenceOrAssumption": "限定地方相关威胁、覆盖窗口及实际适配响应；同机制失败不再重试。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 9711,
+      "name": "Guangzhou functional area",
+      "inputFile": "docs/data/cci-local-2026-guangzhou-case.json",
+      "inputFileSha256": "fcd40570aaadc20419f43b118a6db6e08f14e3742c1e5fc38a68cef92fc66f05",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "60可保留；弱连接待确认",
+      "evidenceAssessment": "历史村域团伙控制、2025终审与Sept2025关键设施保护演练；台海／南海只区域背景。赔偿／残余支配未知。",
+      "minimumRemainingEvidenceOrAssumption": "可撤回的通常影响、具体设施演练覆盖与持续性须并列，不以有判刑=已恢复；本轮未独立原件裁决。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 10078,
+      "name": "Hangzhou functional area",
+      "inputFile": "docs/data/cci-local-2026-hangzhou-case.json",
+      "inputFileSha256": "514f7686e3d9b615385b36fcdd945d6835d2792aa51e9fb64c939424f4418092",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "partial",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "条件60可保持；文本检视",
+      "evidenceAssessment": "实际胁迫司法、2026中东航班受扰再部分恢复与实演形成真实外部冲击／回应；不从March推Oct航班已恢复。",
+      "minimumRemainingEvidenceOrAssumption": "保留机场／航线通常适配和现实影响延续条件；非本轮全原件一致性裁决。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 687,
+      "name": "Helsinki",
+      "inputFile": "docs/data/cci-local-2026-helsinki-case.json",
+      "inputFileSha256": "688df2f3b508f9c3ae00d2cc54906c56f2fac7a814ec165bb69b55b473a78702",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      },
+      "auditDisposition": "null保持；非无攻击故未知",
+      "evidenceAssessment": "国家低直接攻击预测、地方演练与消防/供水交付有能力意义，但当前组织暴力影响及其覆盖仍缺。",
+      "minimumRemainingEvidenceOrAssumption": "国家威胁明确映射本地节点＋既得保护可支持情景部分；仍需限定组织暴力影响资料，非等战争。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 4897,
+      "name": "Jakarta functional area",
+      "inputFile": "docs/data/cci-local-2026-jakarta-case.json",
+      "inputFileSha256": "41d4b6e07f06a92319a3bc23d765235c6271a9652ee1fe463197a73dc481cce2",
+      "scoreAtFreeze": 40,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "40保持",
+      "evidenceAssessment": "2025 DKI770平民伤及全国11死亡分母不同；2026针对性酸袭与追责虽有缓解，政治参与／受害尾部仍重要。",
+      "minimumRemainingEvidenceOrAssumption": "不要求多数居民受害才40；恢复/资格/通常路径与涉案司法阶段保留。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 545,
+      "name": "Jyväskylä",
+      "inputFile": "docs/data/cci-local-2026-jyvaskyla-case.json",
+      "inputFileSha256": "49b6e3f6995bd2ca09ce89e3cec52ffecc1ff96f7de40581bce697b20338d846",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      },
+      "auditDisposition": "null保持",
+      "evidenceAssessment": "民防及区域军用／交通角色提供情景线索，普通治安与全国预测尚不能闭组织暴力影响。",
+      "minimumRemainingEvidenceOrAssumption": "取得当前限定相关影响、具体本地适配；无需未必要的防护设施或攻击试验。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 4925,
+      "name": "Leicester",
+      "inputFile": "docs/data/cci-local-2026-leicester-case.json",
+      "inputFileSha256": "6573a54b83f5b6027f1eeb05a319b019dc54e6431b2b641487757bf7e0b62973",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "条件60可保留；非全面原件裁决",
+      "evidenceAssessment": "2022预谋重伤、2026司法；2024实际防乱资源/区域互援、跨国社媒／意识形态调查与现有社区脆弱。Oct8家庭袭击未破不可预断归因。",
+      "minimumRemainingEvidenceOrAssumption": "60需接受局部记录代表通常影响与区域动员适配；严重残余可40，非仅NHS/国家Severe。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 310,
+      "name": "Lisbon",
+      "inputFile": "docs/data/cci-local-2026-lisbon-case.json",
+      "inputFileSha256": "e7a46c2f4a8f2a6ac38436e82b7af2cd761a9bc8e2072a77c09e4d9daa987803",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      },
+      "auditDisposition": "null保持",
+      "evidenceAssessment": "旧三项unresolved；日常运输／一般城市运行不足以判组织暴力与战略缓解。",
+      "minimumRemainingEvidenceOrAssumption": "最小地方分类威胁／影响覆盖及对应执行证据，未取到不代表安全差。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 5288,
+      "name": "London",
+      "inputFile": "docs/data/cci-local-2026-london-case.json",
+      "inputFileSha256": "421bf6578b7f9cb3ef1a1079e6759b597d0b9247f982e8f83fd74c17ce739958",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      },
+      "auditDisposition": "补证后条件60可保持；重点原件复核",
+      "evidenceAssessment": "旧May1国家评估只确认攻击与建议；新增Apr29现场taser/拘捕/医院、Apr28场所防护和多案调查填上具体缓解，不证明全城预防有效。",
+      "minimumRemainingEvidenceOrAssumption": "保留严重定向伤害、归因调查、保护覆盖/低通常影响/延续推定；若重要持续约束成立40，拒绝适配null。",
+      "reviewDepth": "original_focus"
+    },
+    {
+      "candidateId": 1642,
+      "name": "Los Angeles",
+      "inputFile": "docs/data/cci-local-2026-los-angeles-case.json",
+      "inputFileSha256": "fff2f3a1bcf48357be502dab49b912a35d0eb9410282fd36e186837d18bd8ea0",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      },
+      "auditDisposition": "null保持；纠正全年度门槛",
+      "evidenceAssessment": "地方局部事件与处置有意义但组织／战略覆盖不足；不因缺完整年度受害系列而单独null。",
+      "minimumRemainingEvidenceOrAssumption": "有限而相关的地方影响与情景覆盖/执行证据即可辨别，不要求全人口全威胁普测。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 4892,
+      "name": "Loughborough",
+      "inputFile": "docs/data/cci-local-2026-loughborough-case.json",
+      "inputFileSha256": "5778261f57810597f86e8c7e092cf1e409ce239c93110a6e706eb94f8436a636",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      },
+      "auditDisposition": "null保持；理由重写",
+      "evidenceAssessment": "2022少年胁迫、2026两地县线侦办与定罪是真实链；London犯罪联络不是外战外溢，七县线只一条本地。",
+      "minimumRemainingEvidenceOrAssumption": "相关战略/区域情景与具体居民依赖/保护检视缺口，允许低暴露＋适配能力而非必有袭击。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 9701,
+      "name": "Nanjing functional area",
+      "inputFile": "docs/data/cci-local-2026-nanjing-case.json",
+      "inputFileSha256": "de143b9319f3c0d34647e0d569f03a7d995e8f8396f41ddb2c27b06068004cd4",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "旧60需较弱推定重新确认",
+      "evidenceAssessment": "团伙1998以来暴力且曾打击后再活动；2024起诉/2025审理非终判，全市执行与2025实演不能证明残余支配消失。",
+      "minimumRemainingEvidenceOrAssumption": "优先核当下通常剩余影响及演练适配；已有窄条件可保留，拒绝则null，不因城市完整度保旧60。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 7244,
+      "name": "New York",
+      "inputFile": "docs/data/cci-local-2026-new-york-case.json",
+      "inputFileSha256": "a633d119502385db9391f7cfc46553472940792fae705a522dd0b3746628a03c",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "partial",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "条件60可保持；文本检视",
+      "evidenceAssessment": "2026本地IED处置/局部疏散返回、跨州团伙执法、跨辖活动安保交通协调；受伤与避免爆炸的偶然性保留。",
+      "minimumRemainingEvidenceOrAssumption": "已有实际恢复与情景匹配；地方普通路径/覆盖/延续仍推定，非本轮逐源全面裁决。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 3956,
+      "name": "Osaka [Kyoto]",
+      "inputFile": "docs/data/cci-local-2026-osaka-kyoto-case.json",
+      "inputFileSha256": "b6c1b93e186a8baed1ba426d07d3f82551ac8fc3a765b5d8883c7c5d7c3be419",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "条件60可保持；文本检视",
+      "evidenceAssessment": "2025暴力影响与有武装团伙拦截、Expo有范围无重大事件报告、2026冲突防控与实际响应；导弹无确认机船损害是国家选定快照。",
+      "minimumRemainingEvidenceOrAssumption": "警区与3956、通常影响代表性需条件；不是全国零损害变本区无受扰，非本轮逐源裁决。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 239,
+      "name": "Oulu",
+      "inputFile": "docs/data/cci-local-2026-oulu-case.json",
+      "inputFileSha256": "4d4ce9028c4c66514938ff4f98926984fb21a0038ae19d5bbe127c97e413a75a",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      },
+      "auditDisposition": "null保持",
+      "evidenceAssessment": "区域/战略背景和演练能说明准备；地方相关组织暴力现实影响未知，不从机场军用名称计高低分。",
+      "minimumRemainingEvidenceOrAssumption": "限定观察窗口的相关地方影响与城市能力适配；不需当前战争冲击试验。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 2702,
+      "name": "Paris",
+      "inputFile": "docs/data/cci-local-2026-paris-case.json",
+      "inputFileSha256": "9a510234f482adcc0e4051a6723d388d5585ced6d76a396109b25b97fffc914e",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "条件60可保持；文本检视",
+      "evidenceAssessment": "较近分类PNAT／司法攻击和拦截分开，Paris执行主体及国际合作对应威胁；全国总数非城市率。",
+      "minimumRemainingEvidenceOrAssumption": "低通常影响、节点适配及延续可撤；本轮未全面核读PNAT原表，重要局部约束可40。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 535,
+      "name": "Prague",
+      "inputFile": "docs/data/cci-local-2026-prague-case.json",
+      "inputFileSha256": "cece22610f1245d46d08c4cdd85cfa849fa65f82492a6743dd3b8a5ece4db241",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "条件60可保持；重点PDF复核",
+      "evidenceAssessment": "BIS2025限定国别低恐袭/监测且未证实俄方捷克破坏实施能力；实际当地纵火/车站威胁拦截与外交及援乌相关节点对应。",
+      "minimumRemainingEvidenceOrAssumption": "无确证≠绝无袭击；全国5青年拘捕非Prague5例；有限能力/低影响/地界延续推定可撤。",
+      "reviewDepth": "original_focus"
+    },
+    {
+      "candidateId": 8299,
+      "name": "Saifai",
+      "inputFile": "docs/data/cci-local-2026-saifai-case.json",
+      "inputFileSha256": "8bb293a33f75dd1b12ecb0cad477dc7462d4c1b1a0cb2d6e03c8814d0b221197",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      },
+      "auditDisposition": "null保持",
+      "evidenceAssessment": "三项unresolved；低模型暴露／地方设施没有替代相关暴力和战略情景覆盖。",
+      "minimumRemainingEvidenceOrAssumption": "先得到真实威胁/影响及已实施适配证据，不补60为完整度。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 1255,
+      "name": "San Jose",
+      "inputFile": "docs/data/cci-local-2026-san-jose-case.json",
+      "inputFileSha256": "12353879228b0d431792316c626167e8ba16b06247f28f5da6ca6b735fc4fd57",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      },
+      "auditDisposition": "null保持；纠正完整年表门槛",
+      "evidenceAssessment": "部分地方案例不能涵盖组织/战略链；缺全年度城市伤亡表不是新增硬门槛。",
+      "minimumRemainingEvidenceOrAssumption": "当前有限窗口但有分类/覆盖和地方匹配缓解的证据；国家网络预测与企业存在不独给60。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 94,
+      "name": "Seoul",
+      "inputFile": "docs/data/cci-local-2026-seoul-case.json",
+      "inputFileSha256": "4ed26306d4979a3bc23fb468d374242352d8c37ee0a512f1e07fbf099a436d89",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      },
+      "auditDisposition": "null保持",
+      "evidenceAssessment": "本轮旧JSON三项unresolved；半岛威胁存在不能直接给40/60或用无UCDP事件给80。",
+      "minimumRemainingEvidenceOrAssumption": "核现实影响范围与实际居民适配、区域和战略情景/缓解；威胁本身与已发生伤害分开。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 10097,
+      "name": "Shanghai",
+      "inputFile": "docs/data/cci-local-2026-shanghai-case.json",
+      "inputFileSha256": "6c61e00630aa30dfa29f0937dfc13fc16cf07027cb6fbb56db062ba4bf2a7a95",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "60可保留；窄推定需显明",
+      "evidenceAssessment": "2021–23维修团伙恐吓/2025判决与2026Baoshan实演；选定8受害人和社区演练不是当前全FUA低率或战时结果。",
+      "minimumRemainingEvidenceOrAssumption": "港口/台海情景与具体保护适配、通常残余/覆盖条件不能被普通服务替换；未完成原件一致性裁决。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 154,
+      "name": "Singapore",
+      "inputFile": "docs/data/cci-local-2026-singapore-case.json",
+      "inputFileSha256": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      },
+      "auditDisposition": "条件60可保持；重点现役防范链",
+      "evidenceAssessment": "Apr8 MHA将中东代理/网络威胁映射本地，2023Oct以来6国民受ISA拘留/限制有真实干预；不是6袭击或全岛零暴力。",
+      "minimumRemainingEvidenceOrAssumption": "city-state仍非FUA完整足迹；国家与本地较紧适配可推定，国民群体/保护触达/截止延续可撤。",
+      "reviewDepth": "original_focus"
+    },
+    {
+      "candidateId": 6401,
+      "name": "Surabaya functional area",
+      "inputFile": "docs/data/cci-local-2026-surabaya-case.json",
+      "inputFileSha256": "0330322258b61e8122c42a303d46b0a25d1738bbb5ce84e18a550ef24abd3f6e",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "60可保留；弱连接待确认",
+      "evidenceAssessment": "2018连环恐袭、2025掠夺焚烧与实际援助；CARAT Force Protection实训匹配军港角色。2026海港流量及非恐袭气爆搜救不能单独证明战略缓解。",
+      "minimumRemainingEvidenceOrAssumption": "保留跨省捕74/14调查口径，国家零袭击不变市率；当前通常影响/残余与具体训练适配需明示，未全面原件裁决。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 397,
+      "name": "Tampere",
+      "inputFile": "docs/data/cci-local-2026-tampere-case.json",
+      "inputFileSha256": "f27a0f902c8ae28a46a59691544f906d9ef306d4477b9f2844b620cd4db3ec63",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      },
+      "auditDisposition": "null保持；重点PDF厘清",
+      "evidenceAssessment": "2025市952信息事件/307移交，DDoS无用户影响及俄罗斯混合威胁检视、实际保护/演练有战略价值；952非952组织袭击。",
+      "minimumRemainingEvidenceOrAssumption": "不可因无成功攻击否认战略partial；仍缺组织暴力影响覆盖。不得要求全部网络事件归因才能看运行能力。",
+      "reviewDepth": "original_focus"
+    },
+    {
+      "candidateId": 5129,
+      "name": "Tokyo",
+      "inputFile": "docs/data/cci-local-2026-tokyo-case.json",
+      "inputFileSha256": "4d2985d5c11493cf91b9b9a5504869507801eb1dcbd32ffa137c4ebf1ddf64e1",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "条件60可保持；文本检视",
+      "evidenceAssessment": "2025警方有类别受害统计与执行；2026导弹快照仅无确认机船损害，隐藏武器/帮派冲突和局部威胁保留。",
+      "minimumRemainingEvidenceOrAssumption": "低现实影响/辖区/当前覆盖推定可撤；非本轮核全部警方原表，不拿未匹配事件加分。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 56,
+      "name": "Turku",
+      "inputFile": "docs/data/cci-local-2026-turku-case.json",
+      "inputFileSha256": "744f3027863f7f3befab1744834e8f0b125187c3a70d473cd31d73dc51d0bb02",
+      "scoreAtFreeze": null,
+      "subpillarsAtFreeze": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      },
+      "auditDisposition": "null保持",
+      "evidenceAssessment": "准备/区域军政战略情景与IT治理资料有部分意义；相关组织暴力影响覆盖未知。",
+      "minimumRemainingEvidenceOrAssumption": "城市匹配能力可在未发生攻击时计入；需要有范围现实影响/报道覆盖，不是海港=安全。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 7068,
+      "name": "Washington D.C.",
+      "inputFile": "docs/data/cci-local-2026-washington-case.json",
+      "inputFileSha256": "b44ec895c26cb97937496839c9d46a6bb48b9c5e4139ce0b1d73e4ac5311078c",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "条件60可保持；文本检视",
+      "evidenceAssessment": "2025定向伤害、2026Hilton/Mall、WhiteHouse未遂多人图谋与实际响应/民事活动恢复；旁观者受伤、GAO学习缺陷不能忽略。",
+      "minimumRemainingEvidenceOrAssumption": "首都真实目标/干预链优于泛资本角色；居民影响/延续仍推定，非本轮全面原件裁决。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 8989,
+      "name": "Wuhan functional area",
+      "inputFile": "docs/data/cci-local-2026-wuhan-case.json",
+      "inputFileSha256": "e206bc8a18c900f1682c3886f4dc9e9b71f83a9dc0c74cb6082ac0d00e97786f",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "旧60需较弱推定重新确认",
+      "evidenceAssessment": "2007伤害/2020终判较旧；2025捕132/诉108是程序人数非受害，2025实演是具体能力不是当前低影响。",
+      "minimumRemainingEvidenceOrAssumption": "需当下通常残余影响及内陆相关情景覆盖解释；不能只以旧结案+日常服务，窄推定拒绝则null。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 7094,
+      "name": "Xi'an functional area",
+      "inputFile": "docs/data/cci-local-2026-xian-case.json",
+      "inputFileSha256": "8a4d641119fa5dcb0eeba5806c2582eab7e8dbeacbaff454b00e0588b9c68ed3",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "auditDisposition": "旧60需较弱推定重新确认",
+      "evidenceAssessment": "旧Shuimo团伙地点未核为7094；2025四案42人及追回8443.85万元、81起诉不同口径，班列运行非战略防护。",
+      "minimumRemainingEvidenceOrAssumption": "优先地点/当前剩余影响与实演情景适配；不用更多总量或等当前战争，本轮未完成原件一致性裁决。",
+      "reviewDepth": "json_and_existing_report_text_not_full_original_consistency_adjudication"
+    },
+    {
+      "candidateId": 1479,
+      "name": "Zurich",
+      "inputFile": "docs/data/cci-local-2026-zurich-case.json",
+      "inputFileSha256": "45c8f510018e31942a624128aa0ffec71022f6e1981b5d6f0864861000978da9",
+      "scoreAtFreeze": 60,
+      "subpillarsAtFreeze": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      },
+      "auditDisposition": "条件60可保持；重点正文复核",
+      "evidenceAssessment": "May28 Winterthur3伤/警方拘捕救援，June25 NDB明确同案圣战激进化；Swiss混合威胁/关键设施无已知破坏袭击限定范围。",
+      "minimumRemainingEvidenceOrAssumption": "EU12袭击非CH/Zurich12；车站近似地界条件及低通常影响/响应延续可撤，仍容40。",
+      "reviewDepth": "original_focus"
+    }
+  ],
+  "supplementalCandidates": [
+    {
+      "candidateId": 481,
+      "name": "Malmö",
+      "frozen40Member": false,
+      "auditDisposition": "conditional60_after_specific_shared_water_protection_review",
+      "requiredAssumptions": [
+        "service-area applicability",
+        "bounded self-reported low realised effect",
+        "ordinary resident reach",
+        "continuity",
+        "unknown attribution retained"
+      ],
+      "counterevidence": "2025 city26explosions/17shootings; response not all prevention effective"
+    },
+    {
+      "candidateId": 395,
+      "name": "Santa Cruz de Tenerife",
+      "frozen40Member": false,
+      "auditDisposition": "null_remains_text_review_only",
+      "reason": "354municipal arrests are ordinary enforcement, relevant organised impact/scenario/adaptation still missing; doesnotrequirealreadyrealisedwar"
+    }
+  ],
+  "inputDrift": [
+    {
+      "file": "docs/data/cci-local-2026-london-case.json",
+      "frozenSha256": "421bf6578b7f9cb3ef1a1079e6759b597d0b9247f982e8f83fd74c17ce739958",
+      "liveSha256": "427510567b3851b2b72bd571dbb269d7fc92d4249bc5f99405769b881ed2bff6"
+    },
+    {
+      "file": "docs/cci-local-2026-london-case.md",
+      "frozenSha256": "8fec1bd8eb8688eec531a81cfc25e2e1f211ead094280bbc43a8fce57b3ccb38",
+      "liveSha256": "67789080df868bb73438bfc70139a88cb8b25b468ab0741b78db017589f873a8"
+    }
+  ],
+  "sharedCaseMutations": false,
+  "inputBaseCommit": "a039525afa894085059c5d7574e7cee63e1c3a9f",
+  "workingSnapshotSha256": "a0b00e76e4ec004fe7667192b61796893e053cb905cb2d0e8c9662eb835e9a29",
+  "frozenInputFiles": [
+    {
+      "file": "docs/data/cci-local-2026-beijing-case.json",
+      "fileSha256": "66e15dc512297c8e817a879c93a972ca3e8711fd97dccf6afd2825e0333f9ea9",
+      "candidateId": 7704,
+      "name": "Beijing",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "Actual housing-intermediary groups using violent threats and contemporary enforcement retain organized harm alongside mitigation. Police clearance statistics are not incidence or zero violence. ActualTaiwan-region military exercises provide regional context, not a Beijing attack. September2026 air-defence sirens/community exercises establish scoped response, not wartime shelter effectiveness or attack probability.",
+        "assumption": "Accept reviewed enforcement/ordinary-service delivery as limited evidence of usually functioning life and essential corridors across7704, with comparatively limited current organized-violence impact despite retained regional/strategic threats. Capital strategic exposure, impact extent, resident reach and continuity remain explicit inferences, not inferred safety from zero coded events. Reject necessary applicability/limited-impact assumptions to restore unknown; important continuing threats affecting life or corridors could support40, broader low-impact/effective-response evidence80.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-beijing-case.md",
+      "reviewSha256": "b4203e4822c87c726ff5a4f27b43aaeb709e432dc5b683929305837f54a1bb62"
+    },
+    {
+      "file": "docs/data/cci-local-2026-boston-case.json",
+      "fileSha256": "b325f18f0c146d2b9edac6a47e56c9d718bf14ebd27795e44822abb5f8c91953",
+      "candidateId": 7347,
+      "name": "Boston",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "Original judicial/FBI records establish historical local organized/terrorist harm and current cross-agency mechanisms; regional security institutions are documented. Current overall local/regional/strategic impacts and adaptation remain insufficiently connected; no assigned events, ordinary crime, historical prosecution or project funding alone does not establish low impact.",
+        "assumption": "No justified whole-dimension anchor. Do not substitute ordinary crime, absent records or national context.",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "context"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-boston-case.md",
+      "reviewSha256": "7654c926f4046cdedd730039bccad1e68bbffee743d0d1015640bd7bb4c60a9a"
+    },
+    {
+      "file": "docs/data/cci-local-2026-chicago-case.json",
+      "fileSha256": "052e9c5f97ebae6e257d612e05db147310163073b7cda5c5bcc726db84d2c550",
+      "candidateId": 6654,
+      "name": "Chicago",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "Assigned event absence and ordinary crime cannot establish organised-violence, regional or strategic impact for the whole FUA. No justified whole-dimension anchor.",
+        "assumption": "No zero-risk inference from missing event records, country background, crime totals or prosecution dates.",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "unresolved",
+          "regional_conflict": "unresolved",
+          "strategic_exposure": "unresolved"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-chicago-case.md",
+      "reviewSha256": "041bdc7edfd254deb56677553feedef7808e98bf3f1cce072984f359ef18015f"
+    },
+    {
+      "file": "docs/data/cci-local-2026-cima-case.json",
+      "fileSha256": "755f3788a1c3de7d3b39932df148e51ade222be7825fb784bd5d8d204d215496",
+      "candidateId": 3399,
+      "name": "Cima",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "Local official inquiry contains real historical coercion allegations and court acknowledgement; compiled2023/2025 combat records challenge a zero-impact assumption.2026pending is not confirmed. Current ordinary-resident/channel impact and mitigation remain unresolved.",
+        "assumption": "Minimum: local actual security/channel effects and their residual after response, plus precise spatial applicability. Do not infer low risk from unmatched events or carry historical harms forward merely because redress has not been found.",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "context"
+        }
+      },
+      "reviewPath": "docs/cci-cima-priority-review.md",
+      "reviewSha256": "28011bbc6f776c9edd1919e0e97ae37a6705c7d03788de42fc77acbb9174857f"
+    },
+    {
+      "file": "docs/data/cci-local-2026-copenhagen-case.json",
+      "fileSha256": "6b92acba08de1d53eda7bc96808069cdfb3b5410f3c022e7f3746c9b77174f20",
+      "candidateId": 537,
+      "name": "Copenhagen",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "Actual local organised violence and cross-border enforcement, recent strategic threat assessment and implemented security responses support normally low daily impact with important regional/hybrid exposure. Airport closure is real; reported drones and Russian responsibility are not established for that event.",
+        "assumption": "Accept normally low daily resident impact, effective observed mitigation and current regional relevance, while retaining all attribution limits. Recurrent important violence/common-route constraint40, stronger low-impact/effective-response combination80; reject impact/scope/continuation to null.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "partial",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-copenhagen-case.md",
+      "reviewSha256": "bde05782df45304008267b95b292767c9f63decf633fefe47d3f57409c4c7b51"
+    },
+    {
+      "file": "docs/data/cci-local-2026-coventry-case.json",
+      "fileSha256": "826e80066436da32b435ecd8ca57e849884fbc0f428060b900ec9501ca483cd7",
+      "candidateId": 4328,
+      "name": "Coventry",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "2025本地枪击/帮派剥削与2026混区Guardian实际巡逻/逮捕/武器及保障有证；区域冲突和战略暴露的适配现实影响—缓解未闭。",
+        "assumption": "不从国家Severe、普通财产犯罪、机场/工厂名字或公交一般扰动补60。最低待补是具体区域/战略威胁、通常居民/关键节点后果及缓解后的连接；缺失不判40。",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "unresolved"
+        }
+      },
+      "reviewPath": "docs/cci-coventry-priority-review.md",
+      "reviewSha256": "a33486443f9af484cc70369d8970ae3d6229ecdd4c2c96626b2b0b05f8ee2778"
+    },
+    {
+      "file": "docs/data/cci-local-2026-dublin-case.json",
+      "fileSha256": "47357b64fec016a1880ea00d2c65324790e258637f3f5e7e77fd72e3f6fea0bb",
+      "candidateId": 415,
+      "name": "Dublin",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "当地2025/26组织枪支威胁、扣押／逮捕与抗移民／国际冲突示威已核，但不能从逮捕或未犯罪示威数推通常暴力实际影响及区域／战略缓解整维。",
+        "assumption": "最小缺口为适配本区的真实组织暴力对生活／关键通道影响、区域战略威胁及实施缓解；不能把Severe背景或日常活动填60，也不把调查中全算已定罪。",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "unresolved"
+        }
+      },
+      "reviewPath": "docs/cci-dublin-priority-review.md",
+      "reviewSha256": "4a4a50e4a886b263b2d67a92d1b1931f3c5cb5c862d41eec9c37c5f5f6185985"
+    },
+    {
+      "file": "docs/data/cci-local-2026-edinburgh-case.json",
+      "fileSha256": "5abc8fa52865c7859d8b0539493b824ceb855899ce87cefb40fa34c821b73bc9",
+      "candidateId": 2305,
+      "name": "Edinburgh",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "地方组织暴力与实际处置成立，但区域冲突／外溢和战略威胁实际影响及缓解未闭；Glasgow示威与普通侵轨／公交扰动不能补整维。",
+        "assumption": "根代理一致性验收撤回原60。保留局部实际证据，区域仅context、战略unresolved；未来闭合适配真实区域／战略影响与缓解后再判相邻档。",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "unresolved"
+        }
+      },
+      "reviewPath": "docs/cci-edinburgh-priority-review.md",
+      "reviewSha256": "3ed085b5b6fe3af6b5ea2998f5974365bcfcbc81dcd7e04e86f855ce17affc9b"
+    },
+    {
+      "file": "docs/data/cci-local-2026-fazeley-case.json",
+      "fileSha256": "58d3c24035edaeeadcba6062b4803c32ef62ef6586e8d41b6010518db3bfa10d",
+      "candidateId": 4193,
+      "name": "Fazeley",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "已见寻求庇护酒店真实暴乱及市响应/凝聚项目，但区域冲突外溢与战略威胁实际影响/缓解未闭。",
+        "assumption": "按Edinburgh/Coventry根纠偏，组织暴力局部证据不能以国家和平或普通通道背景补整维60；未来闭真实区域/战略链后重判40/60。",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "unresolved",
+          "strategic_exposure": "unresolved"
+        }
+      },
+      "reviewPath": "docs/cci-fazeley-priority-review.md",
+      "reviewSha256": "1ec4a7d464031f6480ffb01c6f01438b5ab11152e6caf085664fdc164f244a90"
+    },
+    {
+      "file": "docs/data/cci-local-2026-gaza-case.json",
+      "fileSha256": "cfed62c5791dbc4647273e51199930e1723d922abe5d4cf34bb5b23c02eb46cf",
+      "candidateId": 312,
+      "name": "Gaza functional area",
+      "gss": {
+        "id": "GSS",
+        "score": 20,
+        "rationale": "Lower conflict intensity after the ceasefire is retained as mitigation, but current repeated civilian harm and displacement indicate serious protection failure.",
+        "assumption": "Documented major civilian impacts apply to this FUA and persist to the cutoff. Historical event counts are research-priority signals, not current rates; recovered remains and revised totals are not new weekly killings.",
+        "conditionalAlternatives": [40, 60],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "partial",
+          "strategic_exposure": "context"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-gaza-case.md",
+      "reviewSha256": "14c2b2a2ea13119a9931d365e9eea5fec2ee797a9c34af79c4578b1aada3c7d4"
+    },
+    {
+      "file": "docs/data/cci-local-2026-grimsby-case.json",
+      "fileSha256": "8635c35d0076bc32fd17b4b826fdeec789779ff9a7ba00254a02c02e475dd80f",
+      "candidateId": 5518,
+      "name": "Grimsby",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "国家2026Apr30严重威胁及国家关联暴力背景已读，但本区组织暴力现实影响、具体区域／战略缓解未闭；运营活动不代这些链。",
+        "assumption": "不能将全国威胁、地方无搜索命中或港口名直接填整维。须有适配本区威胁／日常影响及实际应对后再辨40/60/80。",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "unresolved",
+          "regional_conflict": "context",
+          "strategic_exposure": "context"
+        }
+      },
+      "reviewPath": "docs/cci-grimsby-priority-review.md",
+      "reviewSha256": "ddbe51ab1b7862eaaf7c638d57d245f8b470d53d5b7b979c739791f46def37c7"
+    },
+    {
+      "file": "docs/data/cci-local-2026-guangzhou-case.json",
+      "fileSha256": "fcd40570aaadc20419f43b118a6db6e08f14e3742c1e5fc38a68cef92fc66f05",
+      "candidateId": 9711,
+      "name": "Guangzhou functional area",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "The court own2025 report records a March20 final judgment against13 defendants for historical long-running village control and organized coercion in Shachongbei. Actual verdict is not all victims restored or current population violence rate. South China Sea patrols and Taiwan Strait exercises remain regional context, not Guangzhou attacks; actual2025 civil-defense exercise participation is not wartime full capacity.",
+        "assumption": "Accept current ordinary-life and core-route impact as relatively limited and enforcement/response normally usable after reviewed action despite retained historical harm and regional threats. Continuing important coercion or regional/strategic channel blockage could support40; broader low impact and effective alternatives80. Reject time/locality/ordinary reach/impact assumptions to restore unknown; no matched event does not establish safety.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-guangzhou-case.md",
+      "reviewSha256": "fdcadf46d1e8409d5c5888dd1b6cc7b658930f2ea4eff459dd3587ca1c65a697"
+    },
+    {
+      "file": "docs/data/cci-local-2026-hangzhou-case.json",
+      "fileSha256": "514f7686e3d9b615385b36fcdd945d6835d2792aa51e9fb64c939424f4418092",
+      "candidateId": 10078,
+      "name": "Hangzhou functional area",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "Original organized coercion and actual criminal-justice response, disrupted then partially restored Middle East flights, and real September warning/evacuation exercises support functioning protection. Historic case victims, prosecutions, airport travellers and drills are not a current whole-FUA low-violence rate or wartime resilience.",
+        "assumption": "Accept scoped direct impact and actual response/routes as representative of usually usable ordinary life and essential channels through cutoff, with meaningful organized/regional/strategic tails. Do not infer October flight status from March. Important continuing coercion or disruption could40; stronger low-impact and effective alternatives80. Reject necessary geographic, ordinary-resident, continuation, qualification/affordability or residual-impact assumptions to restore unknown and remove the total centre.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "partial",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-hangzhou-case.md",
+      "reviewSha256": "5198b5ce43654f6af79c707a651455a5824c1be7156c4db6b529dac35d049039"
+    },
+    {
+      "file": "docs/data/cci-local-2026-helsinki-case.json",
+      "fileSha256": "688df2f3b508f9c3ae00d2cc54906c56f2fac7a814ec165bb69b55b473a78702",
+      "candidateId": 687,
+      "name": "Helsinki",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "The earlier 60 judgment depended on national military forecasts and local preparedness, which do not establish current local organized-violence impact and actual mitigation. The same evidence threshold used for Tampere leaves GSS unresolved.",
+        "assumption": "No score is assigned. Reassessment needs temporally and spatially applicable evidence connecting actual organized-violence or strategic impact with implemented mitigation and remaining ordinary-resident constraints. Incomplete evidence does not establish either low impact or a 40 judgment.",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "unresolved",
+          "regional_conflict": "context",
+          "strategic_exposure": "context"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-helsinki-case.md",
+      "reviewSha256": "0ef7f97025ee7ed35cb5e37717c24190101bff272baa726ca663d160ff2a13f6"
+    },
+    {
+      "file": "docs/data/cci-local-2026-jakarta-case.json",
+      "fileSha256": "41d4b6e07f06a92319a3bc23d765235c6271a9652ee1fe463197a73dc481cce2",
+      "candidateId": 4897,
+      "name": "Jakarta functional area",
+      "gss": {
+        "id": "GSS",
+        "score": 40,
+        "rationale": "Six human-rights institutions actually investigated2025 protests, recording770 DKI civilian injuries and nationwide11 deaths, not11 Jakarta deaths. Documented2026 acid attack, actual police discipline and an appeal account with unverified original judgment are retained. Peaceful protest itself is not organized violence; harm, agency responsibility and legal conclusions remain distinct. Regional diplomacy and capital-transfer conditions are context, not no threat or2026 completed relocation.",
+        "assumption": "Accept documented organized/coercive harms and peaceful public-participation constraints as important current safety limits despite actual investigation, discipline and penalties. Locality, group relevance, temporal continuation and residual impact are reversible assumptions, not population attack rates or zero risk from UCDP. Better evidence of limited current impacts and effective protection/redress could support60, broader reviewed low impacts and alternatives80; reject necessary assumptions to restore unknown. Pending2026 event640555 remains separate, not new independently verified harm.",
+        "conditionalAlternatives": [60, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-jakarta-case.md",
+      "reviewSha256": "e5e20d8857d16da21ba711f6b0194b9fffc01d69052f4a200b5960f07a59ad55"
+    },
+    {
+      "file": "docs/data/cci-local-2026-jyvaskyla-case.json",
+      "fileSha256": "49b6e3f6995bd2ca09ce89e3cec52ffecc1ff96f7de40581bce697b20338d846",
+      "candidateId": 545,
+      "name": "Jyväskylä",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "The2025 city-police-provider-business joint central guard pilot is implemented, but positive reception does not establish organized-violence consequences or strategic threat mitigation. Military training is a real airport role, not evidence of an attack or effective geopolitical protection.",
+        "assumption": "No whole score. Local/regionally applicable threat consequences linked to actual mitigation for residents/essential channels remain missing, not a perfect incident census. Preparedness, guard presence and no UCDP match cannot fill the bridge.",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "unresolved",
+          "regional_conflict": "context",
+          "strategic_exposure": "context"
+        }
+      },
+      "reviewPath": "docs/cci-jyvaskyla-priority-review.md",
+      "reviewSha256": "1df98f20507154290e6bc4e93513bab9a633c88029d6f984a5505edae2338d30"
+    },
+    {
+      "file": "docs/data/cci-local-2026-leicester-case.json",
+      "fileSha256": "6573a54b83f5b6027f1eeb05a319b019dc54e6431b2b641487757bf7e0b62973",
+      "candidateId": 4925,
+      "name": "Leicester",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "本地组织／预谋暴力有真实严重影响；2024当地防乱、CCTV／晚班与2026司法形成具体缓解，2026未破家庭袭击和社区脆弱保留。",
+        "assumption": "本地公共骚乱与预谋暴力链代表通常风险，区域互援实际可用；既得缓解持续且残余虽重要未构成普遍失控。当前危重／信任脆弱若视为明显约束可40；不能把国内组织暴力适配区域／战略风险则null。",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-leicester-priority-review.md",
+      "reviewSha256": "cf0f3500047e33a2dc04dcb0776a60dc6aba9ffaed296c9d1e46aba97355494d"
+    },
+    {
+      "file": "docs/data/cci-local-2026-lisbon-case.json",
+      "fileSha256": "e7a46c2f4a8f2a6ac38436e82b7af2cd761a9bc8e2072a77c09e4d9daa987803",
+      "candidateId": 310,
+      "name": "Lisbon",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "No assigned historical or preliminary events do not establish low organised-violence impact. Local, regional and strategic consequences and mitigation remain insufficient for a whole-dimension anchor.",
+        "assumption": "No zero-risk inference from missing records, ordinary crime or national background.",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "unresolved",
+          "regional_conflict": "unresolved",
+          "strategic_exposure": "unresolved"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-lisbon-case.md",
+      "reviewSha256": "95f90c78d34ee63b3615fca9538deb31b09db639b0b46875355513841af962e2"
+    },
+    {
+      "file": "docs/data/cci-local-2026-london-case.json",
+      "fileSha256": "421bf6578b7f9cb3ef1a1079e6759b597d0b9247f982e8f83fd74c17ce739958",
+      "candidateId": 5288,
+      "name": "London",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "Intelligence and response capabilities coexist with a specific local attack and raised national threat; unmatched older conflict records cannot override new evidence.",
+        "assumption": "Ordinary activity and essential channels are not broadly blocked; targeted-community impacts and unreviewed strategic scenarios require further review.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "context"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-london-case.md",
+      "reviewSha256": "8fec1bd8eb8688eec531a81cfc25e2e1f211ead094280bbc43a8fce57b3ccb38"
+    },
+    {
+      "file": "docs/data/cci-local-2026-los-angeles-case.json",
+      "fileSha256": "fff2f3a1bcf48357be502dab49b912a35d0eb9410282fd36e186837d18bd8ea0",
+      "candidateId": 1642,
+      "name": "Los Angeles",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "No retained January-August preliminary event assignment is not zero risk. Metro ordinary-crime trends and safety tools do not establish annual organised-violence, regional-spillover or strategic-impact profiles for the full FUA.",
+        "assumption": "No justified whole-dimension anchor: current complete impacts, exposure and actual mitigation remain needed. Do not substitute general crime, absent records or national background.",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "unresolved",
+          "strategic_exposure": "unresolved"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-los-angeles-case.md",
+      "reviewSha256": "f50b1010ccd3e3d5f2439568ba4bb341c7738233a7b7dd05ee0111c387890b36"
+    },
+    {
+      "file": "docs/data/cci-local-2026-loughborough-case.json",
+      "fileSha256": "5778261f57810597f86e8c7e092cf1e409ce239c93110a6e706eb94f8436a636",
+      "candidateId": 4892,
+      "name": "Loughborough",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "当地县域毒品组织对少年债务胁迫与2026跨县侦破有证；区域冲突/战略暴露的适配实际居民后果与缓解仍未闭。",
+        "assumption": "县域犯罪和London联络不等区域冲突；国家背景、普通犯罪/轨道日常运行不补60。最小待补为本区适配区域或战略威胁、现实影响及缓解后残余；缺失不判40。",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "unresolved",
+          "strategic_exposure": "unresolved"
+        }
+      },
+      "reviewPath": "docs/cci-loughborough-priority-review.md",
+      "reviewSha256": "3ecd8695cb206995749e018563bf44148156b85d766cbda9b20cd835a89288e6"
+    },
+    {
+      "file": "docs/data/cci-local-2026-nanjing-case.json",
+      "fileSha256": "de143b9319f3c0d34647e0d569f03a7d995e8f8396f41ddb2c27b06068004cd4",
+      "candidateId": 9701,
+      "name": "Nanjing functional area",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "A primary prosecutor interview records long-running organized cases56+5 with4 serious and12 minor injuries,2024 indictment and2025 hearing. These are cumulative cases, not current victim rates or convictions. Regional military exercises and strategic transport exposure remain separate from actual local attack. Current alarm tests and community response exercises are usable but not wartime adequate coverage.",
+        "assumption": "Accept current ordinary-life/core-route impacts as limited and local enforcement/response as normally usable despite retained organized harm and regional threats. No UCDP matched event does not establish absent violence. Continuing material gang coercion or strategic channel restriction could support40; wider low-impact and effective-alternative evidence80. Reject time/locality/impact/response representativeness to restore unknown.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-nanjing-case.md",
+      "reviewSha256": "078b8d3183ec0eaace859b3e0eebbf330a64b303a15f857cd8c238eb9fb3b38f"
+    },
+    {
+      "file": "docs/data/cci-local-2026-new-york-case.json",
+      "fileSha256": "a633d119502385db9391f7cfc46553472940792fae705a522dd0b3746628a03c",
+      "candidateId": 7244,
+      "name": "New York",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "Actual March2026 IED danger and on-site custody/bomb response/limited evacuation then return, August synagogue harm and same-service continuation, historical cross-state gang harm with actual2026 enforcement, and completed NJNY event security/transport coordination support operating mitigation. Alleged historical injuries are not2026 new deaths or convictions; single-person bias attacks are not assigned organizational membership. Targeted harm, repeated threats, chance in avoided blast damage and non-terror rail/road disruptions remain. Existing event623566 date quarantine is unchanged.",
+        "assumption": "Accept reviewed local impacts, response/restoration and cross-state coordination as indicative of usually usable ordinary life/essential corridors across7244 without wider unobserved persistent organized-violence/regional/strategic disruption. Current reach, continuity and full scope are assumptions, not complete victim rates; income/citizenship do not guarantee equal protection and targeted harms are not averaged away. Reject a necessary assumption to restore unknown; verified important continuing bottlenecks after mitigation could support40, stronger city/regional low-impact and effective response evidence80.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "partial",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-new-york-case.md",
+      "reviewSha256": "e70f510e3dbc0984d68e506bd770c9e353ab1b9fa564e8b345ef9ecec7f9824c"
+    },
+    {
+      "file": "docs/data/cci-local-2026-osaka-kyoto-case.json",
+      "fileSha256": "b6c1b93e186a8baed1ba426d07d3f82551ac8fc3a765b5d8883c7c5d7c3be419",
+      "candidateId": 3956,
+      "name": "Osaka [Kyoto]",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "Actual2025 local assault/threat harm and armed-group interception, completed Expo policing with a scoped no-major-incident report, continuing2026 gang-conflict controls and actual police-fire response support operating mitigation with important remaining threats. Recent official missile snapshots report no confirmed aircraft/ship damage at those moments, not no local disruption. Police clearances and murder-recognition counts are not victim/death rates; local staffing and targeted harm remain counterevidence.",
+        "assumption": "Accept the reviewed scoped impacts and actual response as indicative that ordinary life and essential corridors usually remain usable across3956 at cutoff, without wider unobserved persistent organized-violence/regional/strategic disruption. This is a reversible resident/impact/space/time/continuity inference at the same level asTokyo, not a complete low-impact measurement. Preserve targeted harm and continuing conflict; reject any necessary assumption to restore unknown. Verified material remaining resident/corridor constraints could support40; stronger city/regional low-impact and effective response evidence80.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-osaka-kyoto-case.md",
+      "reviewSha256": "8633e1bc4f64aacfb38540c481687376457921c324ca59ae2cf829f33f706f11"
+    },
+    {
+      "file": "docs/data/cci-local-2026-oulu-case.json",
+      "fileSha256": "4d4ce9028c4c66514938ff4f98926984fb21a0038ae19d5bbe127c97e413a75a",
+      "candidateId": 239,
+      "name": "Oulu",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "National Finnish threat context, institutional cyber response and preparedness do not establish the local organized-violence/strategic-impact and mitigation bridge. Individual stabbing leads are not assumed organized violence or proof of city-wide safety.",
+        "assumption": "No whole-dimension score is asserted; real local threat, resident/channel consequences and actual mitigation plus applicability assumptions are the minimum missing bridge, not a perfect population-wide incident rate.",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "unresolved",
+          "regional_conflict": "context",
+          "strategic_exposure": "context"
+        }
+      },
+      "reviewPath": "docs/cci-oulu-priority-review.md",
+      "reviewSha256": "dde5556cc0b7c4e089ef1492dcfaaa063bfd6796c171d93b9ed415c904eb6a83"
+    },
+    {
+      "file": "docs/data/cci-local-2026-paris-case.json",
+      "fileSha256": "9a510234f482adcc0e4051a6723d388d5585ced6d76a396109b25b97fffc914e",
+      "candidateId": 2702,
+      "name": "Paris",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "2025 judicial/PNAT records distinguish national classified attacks and disrupted plots from Paris execution and international cooperation. Actual high threat, local high-intensity violence and state/strategic exposure remain. No national totals, unverified media events or absent UCDP matches are converted into a city rate.",
+        "assumption": "Scoped local execution and national classified monitoring/cooperation reasonably apply to the FUA through the cutoff. Realised organised-violence impact on ordinary life is generally limited despite important continuing regional/strategic threat; reject this impact inference to unknown.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-paris-case.md",
+      "reviewSha256": "7c5231140a898d6421e6c7d42144db45946c72da5947504ee746932989724c76"
+    },
+    {
+      "file": "docs/data/cci-local-2026-prague-case.json",
+      "fileSha256": "cece22610f1245d46d08c4cdd85cfa849fa65f82492a6743dd3b8a5ece4db241",
+      "candidateId": 535,
+      "name": "Prague",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "Local sabotage/threat investigations and responses, BIS2025 observations and cooperation support bounded current-impact interpretation. Low national terrorism threat is not a city rate; Russian sabotage, regional war, diplomatic and transport-node exposure remain.",
+        "assumption": "Accept national mechanisms and specific local nodes as representative of usual535 residents and cutoff conditions, with normally limited realized disruption. Reject to unknown; important current living/channel restrictions40, stronger low-impact and response evidence80.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-prague-case.md",
+      "reviewSha256": "23d9d35fb7332aec31ca30dbbb1ee1d9b53a5dabf03b39c5a8bac1f3f0aa3902"
+    },
+    {
+      "file": "docs/data/cci-local-2026-saifai-case.json",
+      "fileSha256": "8bb293a33f75dd1b12ecb0cad477dc7462d4c1b1a0cb2d6e03c8814d0b221197",
+      "candidateId": 8299,
+      "name": "Saifai",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "No assigned UCDP events are not zero organised harm. Local effects, regional spillover and strategic-route impact are unresolved.",
+        "assumption": "Do not infer60 from silence or40 from national reputation; require actual locally applicable impact and mitigation.",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "unresolved",
+          "regional_conflict": "unresolved",
+          "strategic_exposure": "unresolved"
+        },
+        "subpillarEvidence": {
+          "organized_violence": "UCDP2021–25与2026 clear/pending归属0，不测所有组织伤害；普通犯罪、抗议或病患纠纷不自动计入。",
+          "regional_conflict": "未取得地区冲突到本区居民／资源／交通的实际影响链，不由全国战争语义定档。",
+          "strategic_exposure": "旧库无区内机场点不测目标风险；机场目录、政治人物关联和城市名声均不是实际威胁或缓解。"
+        }
+      },
+      "reviewPath": "docs/cci-saifai-priority-review.md",
+      "reviewSha256": "cca75e6fabffbe53336898cb3932b076b97c4ba2f9846e3f6e1ec9fc1b0b2d29"
+    },
+    {
+      "file": "docs/data/cci-local-2026-san-jose-case.json",
+      "fileSha256": "12353879228b0d431792316c626167e8ba16b06247f28f5da6ca6b735fc4fd57",
+      "candidateId": 1255,
+      "name": "San Jose",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "Historical organised-violence signals and ordinary security context do not establish a current whole-FUA impact profile. No complete annual local victim/interruption series or regional/strategic review is assembled.",
+        "assumption": "Do not infer low overall impact from missing events or general-crime changes. Actual current impacts, mitigation and broader exposures are needed before selecting an anchor.",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "unresolved",
+          "strategic_exposure": "unresolved"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-san-jose-case.md",
+      "reviewSha256": "a41f2ec2b204fa0ca51eafcad62e9826f41b8681a7056f2d3b65a49342dcb1e1"
+    },
+    {
+      "file": "docs/data/cci-local-2026-seoul-case.json",
+      "fileSha256": "4ed26306d4979a3bc23fb468d374242352d8c37ee0a512f1e07fbf099a436d89",
+      "candidateId": 94,
+      "name": "Seoul",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "Zero assigned historical or retained preliminary events do not establish low violence impact. Complete local, regional and strategic consequences and mitigation remain unresolved.",
+        "assumption": "No whole-dimension anchor; no absence-of-record, ordinary-crime or national-background imputation.",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "unresolved",
+          "regional_conflict": "unresolved",
+          "strategic_exposure": "unresolved"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-seoul-case.md",
+      "reviewSha256": "0176f2f322df7f485fcbfd64a1fea619b1e3a4c2e2c836d0d04184f4806414ee"
+    },
+    {
+      "file": "docs/data/cci-local-2026-shanghai-case.json",
+      "fileSha256": "6c61e00630aa30dfa29f0937dfc13fc16cf07027cb6fbb56db062ba4bf2a7a95",
+      "candidateId": 10097,
+      "name": "Shanghai",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "A primary prosecutor/court interview documents a fixed three-person repair group using coercive threats in2021-23 and2025 judgments, plus governance and victim-reporting barriers. Older offences are not2026 new attacks or a victim rate; arrests are not convictions. ActualTaiwan-region military exercises are regional context, not Shanghai port blockade. September2026 scoped air-defence exercises support response, not wartime shelter effectiveness or attack probability.",
+        "assumption": "Accept reviewed ordinary-service/transport execution and actual enforcement as limited evidence of comparatively limited current organized-violence impact with usable mitigation across10097, while strategic-port/finance/transport concentration and regional threats remain. Extent, ordinary-resident reach and continuity are assumptions, not safety inferred from zeroUCDP matches. Reject necessary limited-impact/locality/resident/continuity assumptions to restore unknown; important continuing organized/regional/strategic constraints could support40, broader low-impact and effective-response evidence80.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-shanghai-case.md",
+      "reviewSha256": "3228483919b4fbbffbca2e0bfd10d3608dd42b94844f0803cd7be4fe8becbd3a"
+    },
+    {
+      "file": "docs/data/cci-local-2026-singapore-case.json",
+      "fileSha256": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
+      "candidateId": 154,
+      "name": "Singapore",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "Specific security responses coexist with the authority's spillover and targeting concerns; unmatched conflict records do not establish safety.",
+        "assumption": "The assessed threats have not broadly disrupted ordinary activity and essential channels; unreviewed strategic exposure does not reverse this assessment.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "context"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-singapore-case.md",
+      "reviewSha256": "c7fa081bf789072af78c66549d6248ea5225b320d8caa600ade4baeaee9fb9b8"
+    },
+    {
+      "file": "docs/data/cci-local-2026-surabaya-case.json",
+      "fileSha256": "0330322258b61e8122c42a303d46b0a25d1738bbb5ce84e18a550ef24abd3f6e",
+      "candidateId": 6401,
+      "name": "Surabaya functional area",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "Original 2018 organized attacks and 2025 looting/burning retain harm and investigation limits. Actual enforcement, victim assistance, 2026 port operation and cross-organization rescue support functioning protection and channels. National zero-attack reporting is not local safety; gas explosion was not classified as terrorism.",
+        "assumption": "Accept usually limited direct organized-violence/regional-conflict impact on core ordinary life through cutoff, with scoped response and routes reasonably representative of 6401 and continuing. This is not safety inferred from no matching report. Important persistent coercion, unrelieved damage or route disruption could 40, stronger low-impact and effective protection evidence 80. Reject current impact, locality, reach or continuation to restore unknown.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-surabaya-case.md",
+      "reviewSha256": "1adcf9733663b47fe1dec2ff4b4372b3d6da649495bcb536ad61718ded96b285"
+    },
+    {
+      "file": "docs/data/cci-local-2026-tampere-case.json",
+      "fileSha256": "f27a0f902c8ae28a46a59691544f906d9ef306d4477b9f2844b620cd4db3ec63",
+      "candidateId": 397,
+      "name": "Tampere",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "Implemented preparedness and city self-assessment provide limited local support, but specific strategic threats, resident impacts and mitigation outcomes are not connected. Cyber events have no verified strategic attribution and do not measure organised violence.",
+        "assumption": "Uniform review with Grimsby rejects the proposed ordinary-life inference as too broad. A concrete locally applicable threat, impact and mitigation connection is needed; absence of a complete event rate is not itself disqualifying. No score is asserted.",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "unresolved",
+          "regional_conflict": "context",
+          "strategic_exposure": "context"
+        }
+      },
+      "reviewPath": "docs/cci-tampere-priority-review.md",
+      "reviewSha256": "0217c577797d804d8e4225d8d12786acf55f7dbc140953b901b8b7b1ee9e9b80"
+    },
+    {
+      "file": "docs/data/cci-local-2026-tokyo-case.json",
+      "fileSha256": "4d2985d5c11493cf91b9b9a5504869507801eb1dcbd32ffa137c4ebf1ddf64e1",
+      "candidateId": 5129,
+      "name": "Tokyo",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "Local 2025 police victim counts provide actual violence-impact evidence alongside operating enforcement. Corrected national gunfire and gang-conflict statistics supply narrowly defined background, while reviewed September and October 2026 missile notices report no confirmed aircraft or ship damage at those snapshots. Together they support limited recorded impact and operating mitigation, with organised crime, concealed weapons and regional strategic threats retained as counterevidence; no national zero becomes a Tokyo measurement.",
+        "assumption": "Observed limited violence impact and operating mitigation remain applicable through the cutoff and across the functional area, without broader unobserved resident or corridor disruption. Police jurisdiction, reporting coverage and selected missile snapshots do not establish this full profile; rejecting temporal continuity or boundary applicability leaves GSS unresolved.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-tokyo-case.md",
+      "reviewSha256": "c25c243796f5e32dbdcbbc7a3d6a1699c1b056e8e1dd93ba9710e027bf5037cc"
+    },
+    {
+      "file": "docs/data/cci-local-2026-turku-case.json",
+      "fileSha256": "744f3027863f7f3befab1744834e8f0b125187c3a70d473cd31d73dc51d0bb02",
+      "candidateId": 56,
+      "name": "Turku",
+      "gss": {
+        "id": "GSS",
+        "score": null,
+        "rationale": "National Finnish strategic context and regional preparedness, occupational threat reports or ordinary rescue performance do not establish local organized-violence and geopolitical impact/mitigation. No UCDP match is not zero risk.",
+        "assumption": "No score; the missing bridge is a real local/regionally applicable threat consequence and implemented mitigation linked to resident/channel effects, not a perfect incident census.",
+        "conditionalAlternatives": [],
+        "subpillars": {
+          "organized_violence": "unresolved",
+          "regional_conflict": "context",
+          "strategic_exposure": "context"
+        }
+      },
+      "reviewPath": "docs/cci-turku-priority-review.md",
+      "reviewSha256": "40a4657bb79de492c9c54ea8490df994e9d62193c488392e5bc9a8d82e79bd0f"
+    },
+    {
+      "file": "docs/data/cci-local-2026-washington-case.json",
+      "fileSha256": "b44ec895c26cb97937496839c9d46a6bb48b9c5e4139ce0b1d73e4ac5311078c",
+      "candidateId": 7068,
+      "name": "Washington D.C.",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "Actual2025 targeted harm and2026 Hilton/Mall violence, a disrupted multi-person plot aimed at the White House, actual local coordination and resumed civil-event activity support operating mitigation with important strategic exposure. A Mall bystander was injured; strategic risk is not confined to protectees. GAO policy/learning gaps and local funding pressures remain counterevidence alongside implemented guidance and actual response. National threat and historical protective-event inventories are background, not FUA violence rates.",
+        "assumption": "Accept the reviewed localized impacts, actual interruption/response/resumption and continuing coordination as indicative that ordinary residence and essential corridors are normally usable across7068 at cutoff, without broader persistent strategic/conflict disruption. This is reversible impact/space/time/resident representativeness, not a complete low-impact measurement or inference from zero coded events. Targeted-community harm remains material and is not averaged away.2026-Feb operations and national assessments need cutoff continuity/applicability assumptions. Reject any necessary assumption to restore unknown; verified material persistent resident/corridor constraints after mitigation could support40, stronger low-impact and effective backup evidence80.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-washington-case.md",
+      "reviewSha256": "33b2c688150c549b5e08a1d62ce66d8dfbb80d737ff1b43c28b7d9ff5195ff05"
+    },
+    {
+      "file": "docs/data/cci-local-2026-wuhan-case.json",
+      "fileSha256": "e206bc8a18c900f1682c3886f4dc9e9b71f83a9dc0c74cb6082ac0d00e97786f",
+      "candidateId": 8989,
+      "name": "Wuhan functional area",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "The2020 final organized-coercion case retains cumulative historical harm from2007, not2026new harm. The prosecutor2025 report records132 arrests approved and108 prosecutions, not convictions or independent victims. Actual civil-defense exercise participation and regional military activity remain separate from wartime full capacity or Wuhan attacks; recorded absence does not establish safety.",
+        "assumption": "Accept current usual-life and core-route impacts as relatively limited after reviewed enforcement, with governance and response normally usable despite historical victims, regional threats and common channels. Persistent important coercion, failed restitution or regional/strategic route disruption could40; broader low impact and actual alternatives80. Reject current-impact, scope, ordinary reach or continuity assumptions to restore unknown; old harm is not presumed absent or ongoing.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-wuhan-case.md",
+      "reviewSha256": "cc3987593037440cf49919beab4bd1a7b6cfc392e9a376ee8651943af53487f6"
+    },
+    {
+      "file": "docs/data/cci-local-2026-xian-case.json",
+      "fileSha256": "8a4d641119fa5dcb0eeba5806c2582eab7e8dbeacbaff454b00e0588b9c68ed3",
+      "candidateId": 7094,
+      "name": "Xi'an functional area",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "Historical organized village control and harmed residents remain alongside2025actual judicial/enforcement activity and usually operating goods/resident routes.4concluded organized-crime cases/42persons and8443.85wanyuan recovered are not added to81prosecuted or recast as2026victim rates. The2020case is a first judgment, not verified final restitution. Regional military exercise and local civil-defense participation are not local warfare or tested full wartime backup.",
+        "assumption": "Accept current usually limited ordinary-life and core-route impacts and continuing enforcement/response as reasonably applicable to7094citizens, without inferring safety from no matched event, inland location or missing reports. Important residual organized coercion/remedy failure or regional/strategic route disruption could40; broader low real impacts and effective response80. Reject current-impact, locality, reach or continuation assumptions to restore unknown.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "partial"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-xian-case.md",
+      "reviewSha256": "c26c2759f037e4608354894dd7303c1bd41b1f45235bc7878a5479e1ca6b5717"
+    },
+    {
+      "file": "docs/data/cci-local-2026-zurich-case.json",
+      "fileSha256": "45c8f510018e31942a624128aa0ffec71022f6e1981b5d6f0864861000978da9",
+      "candidateId": 1479,
+      "name": "Zurich",
+      "gss": {
+        "id": "GSS",
+        "score": 60,
+        "rationale": "Actual May 2026 station injuries and police/rescue response support partial local impact and mitigation evidence. The June 2026 national assessment identifies radicalisation and direct hybrid threats; municipal crime offences are not victim counts. These together retain conditional 60, not an automatic 40 or 80.",
+        "assumption": "The reported Winterthur station incident is within the frozen FUA under the documented station-area location assumption; ordinary life is not broadly and persistently blocked across the FUA through the cutoff. Selected response does not establish prevention effectiveness, absence of other attacks, or stress resilience of strategic corridors. Rejecting temporal, spatial or impact representativeness leaves GSS unresolved.",
+        "conditionalAlternatives": [40, 80],
+        "subpillars": {
+          "organized_violence": "partial",
+          "regional_conflict": "context",
+          "strategic_exposure": "context"
+        }
+      },
+      "reviewPath": "docs/cci-local-2026-zurich-case.md",
+      "reviewSha256": "2ac0dea34f2f5ae2edcf635e0bea2a1bbf41a888fc212d6fe7e9f52075dc5e84"
+    }
+  ],
+  "sourceOriginals": [
+    {
+      "id": "A01",
+      "url": "https://www.gov.uk/government/news/uk-national-threat-level-raised-to-severe",
+      "publishedOnOrVersion": "2026-05-01",
+      "observationScope": "全国分类风险/Apr30调级及London攻击；非城市受害率",
+      "originalPath": "/private/tmp/cci-global/grimsby/threat2026.html",
+      "reviewCopyPath": "/private/tmp/cci-global/gss-comparability/reused-originals/A01-threat2026.html",
+      "sourceKind": "reused_valid_original_response",
+      "originalRetrievedAt": "2026-10-13T04:55:41.682154+00:00",
+      "reviewedOn": "2026-10-13",
+      "bytes": 66296,
+      "sha256": "905b42109da2539b41d4a125070c271a30e12f7c2999677bbb0c860582c02d15",
+      "originalMetadata": {
+        "file": "threat2026.html",
+        "url": "https://www.gov.uk/government/news/uk-national-threat-level-raised-to-severe",
+        "retrievedAt": "2026-10-13T04:55:41.682154+00:00",
+        "exit": 0,
+        "response": "200\ttext/html; charset=utf-8\thttps://www.gov.uk/government/news/uk-national-threat-level-raised-to-severe",
+        "error": "",
+        "bytes": 66296,
+        "sha256": "905b42109da2539b41d4a125070c271a30e12f7c2999677bbb0c860582c02d15",
+        "validity": "valid_original_response"
+      }
+    },
+    {
+      "id": "A02",
+      "url": "https://www.counterterrorism.police.uk/news/declaration-of-a-terrorist-incident-in-golders-green-london/",
+      "publishedOnOrVersion": "2026-04-29",
+      "observationScope": "当日11:16 GoldersGreen2伤住院、现场拘捕、terroristincident正式分类",
+      "originalPath": "/private/tmp/cci-global/gss-root/london-ctp-apr29.html",
+      "reviewCopyPath": "/private/tmp/cci-global/gss-comparability/reused-originals/A02-london-ctp-apr29.html",
+      "sourceKind": "reused_valid_original_response",
+      "originalRetrievedAt": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 183039,
+      "sha256": "ea7e08e87eb1e2c812317a10a436837b81a5b32e1eaaf8891569b3a90297ac7e",
+      "originalMetadata": {
+        "file": "/private/tmp/cci-global/gss-root/london-ctp-apr29.html",
+        "url": "https://www.counterterrorism.police.uk/news/declaration-of-a-terrorist-incident-in-golders-green-london/",
+        "retrievedOn": "2026-10-13",
+        "response": "200 https://www.counterterrorism.police.uk/news/declaration-of-a-terrorist-incident-in-golders-green-london/",
+        "exit": 0,
+        "diagnostic": "",
+        "bytes": 183039,
+        "sha256": "ea7e08e87eb1e2c812317a10a436837b81a5b32e1eaaf8891569b3a90297ac7e",
+        "validOriginal": true
+      }
+    },
+    {
+      "id": "A03",
+      "url": "https://news.met.police.uk/news/ctp-london-investigation-into-kensington-gardens-incident-continues-508749",
+      "publishedOnOrVersion": "2026-04-28",
+      "observationScope": "截至Apr28多案调查/实际场所防护，Apr17非危险罐/两嫌疑人状态分开",
+      "originalPath": "/private/tmp/cci-global/gss-root/london-met-apr28.html",
+      "reviewCopyPath": "/private/tmp/cci-global/gss-comparability/reused-originals/A03-london-met-apr28.html",
+      "sourceKind": "reused_valid_original_response",
+      "originalRetrievedAt": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 33472,
+      "sha256": "9d1229a31b19d18b891d0d440082eab96ebbe7beb0e3c4743f2f4f236024350e",
+      "originalMetadata": {
+        "file": "/private/tmp/cci-global/gss-root/london-met-apr28.html",
+        "url": "https://news.met.police.uk/news/ctp-london-investigation-into-kensington-gardens-incident-continues-508749",
+        "retrievedOn": "2026-10-13",
+        "response": "200 https://news.met.police.uk/news/ctp-london-investigation-into-kensington-gardens-incident-continues-508749",
+        "exit": 0,
+        "diagnostic": "",
+        "bytes": 33472,
+        "sha256": "9d1229a31b19d18b891d0d440082eab96ebbe7beb0e3c4743f2f4f236024350e",
+        "validOriginal": true
+      }
+    },
+    {
+      "id": "A04",
+      "url": "https://sydvatten.se/app/uploads/2026/04/Sydvatten_Hallbarhets_Arsredovisning_2025_lankad.pdf",
+      "publishedOnOrVersion": "2026-03签CEO/URL2026-04非首发日",
+      "observationScope": "2025共享源水数字保护及供给；phys3/18目视，17业主服务区≠481",
+      "originalPath": "/private/tmp/cci-global/malmo/water2025.pdf",
+      "reviewCopyPath": "/private/tmp/cci-global/gss-comparability/reused-originals/A04-water2025.pdf",
+      "sourceKind": "reused_valid_original_response",
+      "originalRetrievedAt": "2026-10-13T07:58:59.132393+00:00",
+      "reviewedOn": "2026-10-13",
+      "bytes": 3475186,
+      "sha256": "07a1a29f4240db68b0515fa0ee66316423e968134dffb261d4765fdbb7f4a146",
+      "originalMetadata": {
+        "file": "water2025.pdf",
+        "url": "https://sydvatten.se/app/uploads/2026/04/Sydvatten_Hallbarhets_Arsredovisning_2025_lankad.pdf",
+        "retrievedAt": "2026-10-13T07:58:59.132393+00:00",
+        "exit": 0,
+        "response": "200\tapplication/pdf\thttps://sydvatten.se/app/uploads/2026/04/Sydvatten_Hallbarhets_Arsredovisning_2025_lankad.pdf",
+        "error": "",
+        "bytes": 3475186,
+        "sha256": "07a1a29f4240db68b0515fa0ee66316423e968134dffb261d4765fdbb7f4a146",
+        "validity": "valid_original_response"
+      }
+    },
+    {
+      "id": "A05",
+      "url": "https://malmo.se/slutaskjut",
+      "publishedOnOrVersion": "2026-07-01更新（非已核首发）",
+      "observationScope": "2025Malmö市17枪击含非GVI/26爆炸/原表1死1伤非所有暴力受害；非全481",
+      "originalPath": "/private/tmp/cci-global/malmo/violence2025.html",
+      "reviewCopyPath": "/private/tmp/cci-global/gss-comparability/reused-originals/A05-violence2025.html",
+      "sourceKind": "reused_valid_original_response",
+      "originalRetrievedAt": "2026-10-13T07:58:59.127255+00:00",
+      "reviewedOn": "2026-10-13",
+      "bytes": 130264,
+      "sha256": "6479a2f8fa7a92828a633a57c20367268c56a07475bdd91be3d0802ff6bc1ca8",
+      "originalMetadata": {
+        "file": "violence2025.html",
+        "url": "https://malmo.se/slutaskjut",
+        "retrievedAt": "2026-10-13T07:58:59.127255+00:00",
+        "exit": 0,
+        "response": "200\ttext/html;charset=UTF-8\thttps://malmo.se/slutaskjut",
+        "error": "",
+        "bytes": 130264,
+        "sha256": "6479a2f8fa7a92828a633a57c20367268c56a07475bdd91be3d0802ff6bc1ca8",
+        "validity": "valid_original_response"
+      }
+    },
+    {
+      "id": "A06",
+      "url": "https://politi.dk/-/media/mediefiler/kbh/dokumenter/virksomhedsberetninger/vb2025_final_web.pdf",
+      "publishedOnOrVersion": "报告2025，首发未核",
+      "observationScope": "2025警区实际Holmbladsgade重伤/跨境动员；非全537",
+      "originalPath": "/private/tmp/cci-global/copenhagen/police2025.pdf",
+      "reviewCopyPath": "/private/tmp/cci-global/gss-comparability/reused-originals/A06-police2025.pdf",
+      "sourceKind": "reused_valid_original_response",
+      "originalRetrievedAt": "2026-10-13T03:54:53.514059+00:00",
+      "reviewedOn": "2026-10-13",
+      "bytes": 10646554,
+      "sha256": "10b9a6f564c1a94af7f665444bf1a337a4077b156009ee9fdd37151e2dda620f",
+      "originalMetadata": {
+        "file": "police2025.pdf",
+        "url": "https://politi.dk/-/media/mediefiler/kbh/dokumenter/virksomhedsberetninger/vb2025_final_web.pdf",
+        "retrievedAt": "2026-10-13T03:54:53.514059+00:00",
+        "exit": 0,
+        "response": "200\tapplication/pdf\thttps://politi.dk/-/media/mediefiler/kbh/dokumenter/virksomhedsberetninger/vb2025_final_web.pdf",
+        "error": "",
+        "bytes": 10646554,
+        "sha256": "10b9a6f564c1a94af7f665444bf1a337a4077b156009ee9fdd37151e2dda620f",
+        "validity": "valid-response-content-reviewed"
+      }
+    },
+    {
+      "id": "A07",
+      "url": "https://politi.dk/rigspolitiet/nyhedsliste/politiet-har-styrket-indsatsen-paa-droneomraadet/2026/06/25",
+      "publishedOnOrVersion": "2026-06-25",
+      "observationScope": "2025Sep22机场闭与2026实训装备/归因修正；未证实无人机不抹掉停航",
+      "originalPath": "/private/tmp/cci-global/copenhagen/drone-update2026.html",
+      "reviewCopyPath": "/private/tmp/cci-global/gss-comparability/reused-originals/A07-drone-update2026.html",
+      "sourceKind": "reused_valid_original_response",
+      "originalRetrievedAt": "2026-10-13T03:59:02.827682+00:00",
+      "reviewedOn": "2026-10-13",
+      "bytes": 45501,
+      "sha256": "b4aac5fe3952b596f7ee3f32cbe37b116c7c3ccabe9b603674601004dfd7c90d",
+      "originalMetadata": {
+        "file": "drone-update2026.html",
+        "url": "https://politi.dk/rigspolitiet/nyhedsliste/politiet-har-styrket-indsatsen-paa-droneomraadet/2026/06/25",
+        "retrievedAt": "2026-10-13T03:59:02.827682+00:00",
+        "exit": 0,
+        "response": "200\ttext/html; charset=utf-8\thttps://politi.dk/rigspolitiet/nyhedsliste/politiet-har-styrket-indsatsen-paa-droneomraadet/2026/06/25",
+        "error": "",
+        "bytes": 45501,
+        "sha256": "b4aac5fe3952b596f7ee3f32cbe37b116c7c3ccabe9b603674601004dfd7c90d",
+        "validity": "valid-response-content-reviewed"
+      }
+    },
+    {
+      "id": "A08",
+      "url": "https://www.fe-ddis.dk/globalassets/fe/dokumenter/2026/trusselsvurderinger/-assessment-of-the-threat-from-russia-.pdf",
+      "publishedOnOrVersion": "2026-09-24",
+      "observationScope": "俄罗斯对丹麦/NATO威胁；低有限攻击不等本城无风险",
+      "originalPath": "/private/tmp/cci-global/copenhagen/threat2026.pdf",
+      "reviewCopyPath": "/private/tmp/cci-global/gss-comparability/reused-originals/A08-threat2026.pdf",
+      "sourceKind": "reused_valid_original_response",
+      "originalRetrievedAt": "2026-10-13T03:57:09.849733+00:00",
+      "reviewedOn": "2026-10-13",
+      "bytes": 169677,
+      "sha256": "ec7d11ebcf6ad30a9962bde3f12dec34057b0ae193ea2ceff4c1e5efbd89a66c",
+      "originalMetadata": {
+        "file": "threat2026.pdf",
+        "url": "https://www.fe-ddis.dk/globalassets/fe/dokumenter/2026/trusselsvurderinger/-assessment-of-the-threat-from-russia-.pdf",
+        "retrievedAt": "2026-10-13T03:57:09.849733+00:00",
+        "exit": 0,
+        "response": "200\tapplication/pdf\thttps://www.fe-ddis.dk/globalassets/fe/dokumenter/2026/trusselsvurderinger/-assessment-of-the-threat-from-russia-.pdf",
+        "error": "",
+        "bytes": 169677,
+        "sha256": "ec7d11ebcf6ad30a9962bde3f12dec34057b0ae193ea2ceff4c1e5efbd89a66c",
+        "validity": "valid-response-content-reviewed"
+      }
+    },
+    {
+      "id": "A09",
+      "url": "https://www.bis.cz/public/site/bis.cz/content/vyrocni-zpravy/2025-vz-cj.pdf",
+      "publishedOnOrVersion": "2026-08-27官方索引",
+      "observationScope": "2025国家分类/能力/监测；phys7/14含印刷10–11/24–25目视",
+      "originalPath": "/private/tmp/cci-global/prague/priority-completion/bis-annual2025.pdf",
+      "reviewCopyPath": "/private/tmp/cci-global/gss-comparability/reused-originals/A09-bis-annual2025.pdf",
+      "sourceKind": "reused_valid_original_response",
+      "originalRetrievedAt": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 31328669,
+      "sha256": "bbd78018dae66fa7258e594f8af100adee74b1e2df816fc01702a7d9fbb4a26d",
+      "originalMetadata": {
+        "file": "bis-annual2025.pdf",
+        "url": "https://www.bis.cz/public/site/bis.cz/content/vyrocni-zpravy/2025-vz-cj.pdf",
+        "retrieved": "2026-10-13",
+        "method": "normal TLS curl",
+        "diagnostic": "",
+        "returncode": 0,
+        "http_final": "200 https://www.bis.cz/public/site/bis.cz/content/vyrocni-zpravy/2025-vz-cj.pdf",
+        "bytes": 31328669,
+        "sha256": "bbd78018dae66fa7258e594f8af100adee74b1e2df816fc01702a7d9fbb4a26d"
+      }
+    },
+    {
+      "id": "A10",
+      "url": "https://www.tampere.fi/sites/default/files/2026-03/Tilinpaatos-2025--23.3.2026.pdf",
+      "publishedOnOrVersion": "2026-03-23版",
+      "observationScope": "2025市952/307信息事件及运行，印刷23目视；非组织袭击总数",
+      "originalPath": "/private/tmp/cci-global/tampere/city-annual2025.pdf",
+      "reviewCopyPath": "/private/tmp/cci-global/gss-comparability/reused-originals/A10-city-annual2025.pdf",
+      "sourceKind": "reused_valid_original_response",
+      "originalRetrievedAt": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "bytes": 3099164,
+      "sha256": "6823b82bde5162bbf6fa765adcf9f2fcb4f5b45019521f65d49c7bd954d37b6c",
+      "originalMetadata": {
+        "file": "city-annual2025.pdf",
+        "url": "https://www.tampere.fi/sites/default/files/2026-03/Tilinpaatos-2025--23.3.2026.pdf",
+        "retrievedOn": "2026-10-13",
+        "method": "normal TLS curl parsed original link",
+        "httpFinal": "200 https://www.tampere.fi/sites/default/files/2026-03/Tilinpaatos-2025--23.3.2026.pdf",
+        "returncode": 0,
+        "diagnostic": "",
+        "responseBytes": 3099164,
+        "responseSha256": "6823b82bde5162bbf6fa765adcf9f2fcb4f5b45019521f65d49c7bd954d37b6c",
+        "validOriginal": true,
+        "bytes": 3099164,
+        "sha256": "6823b82bde5162bbf6fa765adcf9f2fcb4f5b45019521f65d49c7bd954d37b6c",
+        "sourceId": "S07"
+      }
+    }
+  ],
+  "globalRankingEligible": false,
+  "originalSourcesAllAdjudicated": false
+}
