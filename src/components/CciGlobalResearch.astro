@@ -482,13 +482,6 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
           : "Scores depend on explicit assumptions, not complete measurements. “—” means unresolved, with no zero imputation or total centre."
       }
     </p>
-    <p id="research-table-hint" class="research-table-hint">
-      {
-        zh
-          ? "在表格内滚动查看全部城市；窄屏可横向滚动。点击城市名称展开依据。"
-          : "Scroll within the table for all cities, or sideways on narrow screens. Select a city name to open its evidence."
-      }
-    </p>
     <div
       class="cci-table-scroll research-table"
       tabindex="0"
@@ -496,13 +489,22 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
       aria-describedby="research-table-hint"
     >
       <table>
-        <caption
-          >{
-            zh
-              ? "条件性成绩单 · 用于校准，不是排名"
-              : "Conditional scorecards · calibration, not a ranking"
-          }</caption
-        >
+        <caption>
+          <strong
+            >{
+              zh
+                ? "条件性成绩单 · 用于校准，不是排名"
+                : "Conditional scorecards · calibration, not a ranking"
+            }</strong
+          >
+          <span id="research-table-hint">
+            {
+              zh
+                ? "表内可上下、横向滚动；点击城市查看依据。"
+                : "Scroll vertically or sideways; select a city for its evidence."
+            }
+          </span>
+        </caption>
         <thead>
           <tr>
             <th scope="col">{zh ? "城市／功能区" : "City / functional area"}</th>
@@ -532,7 +534,14 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
                   </a>
                 </th>
                 {DIMENSIONS.map(dimension => (
-                  <td>{city.dimensions.find(d => d.id === dimension.id)?.score ?? "—"}</td>
+                  <td
+                    class:list={{
+                      "research-unresolved":
+                        city.dimensions.find(d => d.id === dimension.id)?.score == null,
+                    }}
+                  >
+                    {city.dimensions.find(d => d.id === dimension.id)?.score ?? "—"}
+                  </td>
                 ))}
                 <td class="research-total">{city.expectedConditionalTotal ?? "—"}</td>
               </tr>
@@ -804,9 +813,18 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
     color: var(--cci-ink);
   }
   .research-profile {
-    max-width: var(--research-measure);
-    gap: 0;
-    margin: 0 0 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    margin: 0 0 1.5rem;
+    border-bottom: 1px solid var(--cci-rule-light);
+  }
+  .research-profile > div {
+    display: block;
+    padding: 0.5rem 0 1rem;
+    border: 0;
+  }
+  .research-profile dt {
+    margin-bottom: 0.5rem;
   }
   h3 {
     margin: 2rem 0 1rem;
@@ -848,13 +866,27 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
     border-spacing: 0;
   }
   caption {
-    padding-bottom: 0.75rem;
+    padding: 0.5rem 0 1rem;
     text-align: left;
     color: var(--cci-muted);
+    font-size: var(--cci-type-label);
+  }
+  caption strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--cci-ink);
+    font-weight: 500;
   }
   .research-table :is(th, td) {
-    padding: 0.75rem 0.5rem;
+    padding: 0.625rem 0.5rem;
     text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .research-table abbr {
+    text-decoration: none;
+  }
+  .research-unresolved {
+    color: var(--cci-muted);
   }
   .research-table thead th {
     position: sticky;
@@ -904,11 +936,6 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
   .research-total {
     border-inline-start: 1px solid var(--cci-rule-light);
     font-weight: 600;
-  }
-  .research-table-hint {
-    margin-top: 0.75rem;
-    color: var(--cci-muted);
-    font-size: var(--cci-type-label);
   }
   .research-fold {
     margin-top: 1.5rem;
@@ -983,6 +1010,16 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
     }
   }
   @media (max-width: 640px) {
+    .research-profile {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .research-profile > div {
+      display: grid;
+    }
+    .research-profile dt {
+      margin-bottom: 0;
+    }
     .research-progress > div,
     .research-profile > div {
       grid-template-columns: 6.5rem minmax(0, 1fr);
