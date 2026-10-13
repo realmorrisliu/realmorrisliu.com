@@ -87,6 +87,8 @@ const realCases = [
   "leicester",
   "dublin",
   "turku",
+  "edinburgh",
+  "jyvaskyla",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -165,6 +167,8 @@ const [
   leicester,
   dublin,
   turku,
+  edinburgh,
+  jyvaskyla,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -1686,3 +1690,26 @@ for (const id of [415, 56]) {
 }
 assert.equal(dublin.GSS, undefined);
 for (const id of ["GSS", "RES", "LON", "OPT"] as const) assert.equal(turku[id], undefined);
+
+// Local disorder alone does not close regional/strategic GSS; unknown weights remain.
+assert.deepEqual(total(edinburgh), { center: null, lower: 40, upper: 65 });
+assert.deepEqual(total({ ...edinburgh, MED: 40 }), { center: null, lower: 37, upper: 62 });
+assert.deepEqual(total({ ...edinburgh, ISR: 60, RES: 60 }), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total(jyvaskyla), { center: null, lower: 36, upper: 76 });
+assert.deepEqual(total({ ...jyvaskyla, TEC: 80 }), { center: null, lower: 38, upper: 78 });
+for (const id of [2305, 545]) {
+  const reviewedCase = realCases.find(c => c.candidateId === id);
+  assert(reviewedCase);
+  assert.equal(
+    reviewedCase.priorityCompletionReview.sha256,
+    digest(reviewedCase.priorityCompletionReview.path)
+  );
+}
+assert.equal(edinburgh.GSS, undefined);
+assert.equal(edinburgh.LON, undefined);
+const edinburghGss = realCases
+  .find(c => c.candidateId === 2305)
+  .dimensions.find((d: { id: string }) => d.id === "GSS");
+assert.deepEqual(edinburghGss.conditionalAlternatives, []);
+assert.equal(edinburghGss.subpillars.regional_conflict, "context");
+assert.equal(edinburghGss.subpillars.strategic_exposure, "unresolved");

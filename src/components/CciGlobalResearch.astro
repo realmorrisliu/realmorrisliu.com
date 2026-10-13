@@ -45,6 +45,8 @@ import oulu from "../../docs/data/cci-local-2026-oulu-case.json";
 import leicester from "../../docs/data/cci-local-2026-leicester-case.json";
 import dublin from "../../docs/data/cci-local-2026-dublin-case.json";
 import turku from "../../docs/data/cci-local-2026-turku-case.json";
+import edinburgh from "../../docs/data/cci-local-2026-edinburgh-case.json";
+import jyvaskyla from "../../docs/data/cci-local-2026-jyvaskyla-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -94,8 +96,12 @@ const cases = [
   leicester,
   dublin,
   turku,
+  edinburgh,
+  jyvaskyla,
 ];
 const caseNamesZh: Record<number, string> = {
+  [edinburgh.candidateId]: "爱丁堡功能区",
+  [jyvaskyla.candidateId]: "于韦斯屈莱功能区",
   [dublin.candidateId]: "都柏林功能区",
   [turku.candidateId]: "图尔库功能区",
   [cima.candidateId]: "Cima／Tilili 功能区",
@@ -329,6 +335,22 @@ const caseNotes: Record<number, string[]> = {
     zh
       ? "全9,031几何核对区内外参考点；Hull、Sheffield和机场服务不并成本区。国家CAR-T委托不证明本区居民已进入真实给药/监护链；国家威胁与日常运转也不足以补GSS。两轮后保留缺口，必要的代表性、延续、普通负担和触达假设均可撤回。"
       : "Reference points were checked against all 9,031 geometries; Hull, Sheffield and outside-airport services are not local production. National CAR-T commissioning does not establish a delivered local-resident pathway; national threat context and ordinary operations do not settle GSS. After two rounds, gaps remain explicit and applicability, continuity, affordability and reach assumptions can be withdrawn.",
+  ],
+  [edinburgh.candidateId]: [
+    zh
+      ? "爱丁堡PCS／MED／TEC／OPT条件60、ISR／RES40，GSS／LON未知；无中心、条件域40—65。安全60在统一验收中撤回：地方袭击／回应成立，区域冲突与战略连接未闭。实际住房交付和供水整改保留，但住房退出、处理失控及监督不足仍有重要约束；ISR／RES同时改60则域45—70，MED40替代为37—62。"
+      : "Edinburgh has conditional 60 for PCS/MED/TEC/OPT, 40 for ISR/RES and unknown GSS/LON: no centre, with a 40–65 domain. Uniform acceptance withdrew GSS 60: local attacks/responses are evidenced, while regional-conflict and strategic links remain unclosed. Housing delivery and water remediation coexist with material housing-exit, treatment-control and oversight constraints. ISR/RES 60 together give 45–70; MED 40 gives 37–62.",
+    zh
+      ? "全9031核13个近似参考点；Marchbank两表分类冲突、重复供区人口、住房9.8%分母和产科长等编码问题均保留。实际产科过程改善支持有限MED60，不代表全区临床质量认证。胰岛12次移植与NHS委托已核，已知COBE耗材／维护终止后的替代交付未闭；不直接判停服，也不由旧目录填LON。"
+      : "Thirteen approximate references were checked against all 9,031 areas. Conflicting Marchbank classifications, repeated supply-area populations, the housing 9.8% denominator and maternity waiting-time coding remain explicit. Actual maternity improvements support scoped MED 60, without certifying whole-area clinical quality. Twelve islet transplants and NHS commissioning are evidenced; delivery after known COBE consumable/maintenance discontinuation remains unclosed. Neither closure nor LON capability is inferred from an old directory.",
+  ],
+  [jyvaskyla.candidateId]: [
+    zh
+      ? "于韦斯屈莱PCS／ISR／RES／TEC／OPT条件60，GSS／MED／LON未知，无中心、域36—76。已交付水能、维护与执行、真实食品销售及技术使用支持有限判断；特殊餐错误和已修流程、数字使用／融资余障、冬季维护与共同依赖同时保留。TEC80替代域38—78，撤回OPT为30—80；必要代表性、负担或延续假设拒绝须回未知。"
+      : "Jyväskylä has conditional 60 for PCS/ISR/RES/TEC/OPT and unknown GSS/MED/LON: no centre, with a 36–76 domain. Delivered utilities, maintenance/execution, food sales and technology use support scoped judgments. Special-diet errors/corrected processes, adoption/finance barriers, winter maintenance and common dependencies remain. TEC 80 gives 38–78; withdrawing OPT gives 30–80. Rejecting necessary applicability, affordability or continuity restores unknown.",
+    zh
+      ? "全9031核15个近似参考点；Alva2024完整原报与2025运行摘要分开。Nova机构与个人费用不能补通常必要护理链，别城人体转化不能继承；真实地区客运可经区外枢纽服务居民，但不是本地国际备援，测速及来源失败均不决定评分。"
+      : "Fifteen approximate references were checked against all 9,031 areas. Alva's complete 2024 reports and 2025 operating summary remain separate. Nova's institution and personal fees do not fill usual necessary care; human translation elsewhere is not inherited. Operating regional transport may connect residents through outside hubs without being local international redundancy. Network samples and retrieval failures do not assign scores.",
   ],
   [dublin.candidateId]: [
     zh
@@ -849,6 +871,21 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
         {" "}<a
           href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-male-priority-review.md"
           >{zh ? "马累两入口核查" : "Malé two-entry review"}</a
+        >
+      </p>
+      <p>
+        {
+          zh
+            ? "贡富扎与拉古萨两入口核查保留真实医疗／防护和服务障碍线索。旧接触量、议会质询、监测安装均未升级为当前全维成绩；临床原表、通常支付或实际防护仍未闭，不计八维案例、也不排除候选。"
+            : "Qunfudhah and Ragusa two-entry reviews retain actual care/protection and service-obstacle leads. Old contacts, parliamentary questions and monitoring installations do not become current whole-dimension scores. Clinical originals, usual payment or delivered protection remain unclosed; neither review is counted as an eight-dimension case or excludes a candidate."
+        }
+        {" "}<a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-qunfudhah-priority-review.md"
+          >{zh ? "贡富扎核查" : "Qunfudhah review"}</a
+        >
+        {" · "}<a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-ragusa-priority-review.md"
+          >{zh ? "拉古萨核查" : "Ragusa review"}</a
         >
       </p>
       <p>

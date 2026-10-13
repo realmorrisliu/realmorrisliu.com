@@ -1,5 +1,7 @@
 # CCI 第一版当地居民评分：锁定口径与校准演算
 
+**2026-10-13 第八批验收：** [Edinburgh2305](cci-edinburgh-priority-review.md)PCS／MED／TEC／OPT60、ISR／RES40，GSS在一致性审查中撤回、与LON均未知，无中心、域40—65；[Jyväskylä545](cci-jyvaskyla-priority-review.md)PCS／ISR／RES／TEC／OPT60，GSS／MED／LON未知，无中心、域36—76。当前**37份审阅、14完整／23部分、8,994未审**。已验[Qunfudhah2116](cci-qunfudhah-priority-review.md)及[Ragusa4564](cci-ragusa-priority-review.md)两入口，不计八维案例、无排除。原主五场景前20任务已尽，研究工作宽度扩大至40，在冻结全9031表排除已审／已交接者后，以主五均≤40且十情景齐全者的最差十情景序位安排：Coventry4328最差32、Fazeley4193最差39接续；未知双族规则接续Sông Mã499较弱项0.900580383。宽度40仅为调度，不是CCI32阈值；不按人口、地域、资料量或旧名额入围。最多三项并行，两轮停止，以下为阶段快照。
+
 **2026-10-13 第七批验收：** [Dublin415](cci-dublin-priority-review.md)六维条件60、MED40、GSS未知，无中心、条件域48—63；[Turku56](cci-turku-priority-review.md)PCS／ISR／TEC60、MED40，其余四维未知，无中心、域30—75。当前**35份审阅、14完整／21部分、8,996未审**，零排除、无合格第32名门槛。[Malé110两入口](cci-male-priority-review.md)已验收但未完成八维、不计案例数；[wup:11254](cci-wup-11254-identity-review.md)原包／全9031交集与人口重算已验收，外片功能身份仍未解决，不拆城或继承分数。两个较强局部组合槽位接续公开探索中的Edinburgh2305／Jyväskylä545，未知探索接续Saifai后的Qunfudhah2116两入口；最多三项并行、两轮停止，顺序不代表排名。以下为阶段快照。
 
 **2026-10-13 第六批验收：** [Leicester4925](cci-leicester-priority-review.md)七维条件60、RES未知，无中心、域54—64；[Oulu239](cci-oulu-priority-review.md)PCS／ISR／RES／TEC／OPT60、MED40、GSS／LON未知，无中心、域42—67；[Cima3399／Tilili](cci-cima-priority-review.md)身份及有界八维已核、八维均未知，仍保留。当前**33份审阅、14完整／19部分、8,998未审**。三份均不取得入围或排除资格；真实反证、地域／时点和可撤回假设继续显示。Leicester／Oulu释放槽位接续公开全量筛查中的Dublin415／Turku56；Malé110两入口核查已交接待验收，不计八维案例；其槽位接续wup:11254部分覆盖身份核查。最多三项并行，两轮停止，顺序不代表排名。以下为阶段快照。

@@ -1,0 +1,724 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 2305,
+  "name": "Edinburgh",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "approximate_reference_points_full9031_checked_not_service_coverage",
+  "evidenceReview": "cci-edinburgh-priority-review.md",
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 40,
+  "unresolvedScoreRange": [40, 65],
+  "limitations": "Root uniform acceptance withdraws proposed GSS60; regional/strategic chains remain unclosed. GSS/LON unknown, 40–65 without centre. Other seven judgments unchanged; actual mitigation, residuals and reversible applicability assumptions retained. No ranking or exclusion.",
+  "retrievedOn": "2026-10-13",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "已建WaterofLeith/BraidBurn防护及实际洪门维护、区域风暴恢复支持能力；部分防洪工程缺资延期、强风/海岸/表水共因仍重要。低热/PGA旧模型只作背景。",
+      "assumption": "行政核心/适配区域实际防护通常可用并延续；旧模型低热/参考岩石风险方向合理，不保证零险。海潮/未成工程残余主导可40，强多危险保护可80；拒绝地域/有效性延续则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "context",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "地方组织暴力与实际处置成立，但区域冲突／外溢和战略威胁实际影响及缓解未闭；Glasgow示威与普通侵轨／公交扰动不能补整维。",
+      "assumption": "根代理一致性验收撤回原60。保留局部实际证据，区域仅context、战略unresolved；未来闭合适配真实区域／战略影响与缓解后再判相邻档。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "unresolved"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 40,
+      "rationale": "年度真正交付住房/危机补助/咨询与部分改善，但768日安置、6521临住/1078不适当及补助处理变慢显示重要执行/触达约束。",
+      "assumption": "行政市执行对通常FUA居民合理适配；住房/群体困难在1658预防等缓解后仍重要，不要求多数中位居民皆受害。若主要服务与恢复已足够缓解可60；否定代表性/残余则null。",
+      "conditionalAlternatives": [60],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 40,
+      "rationale": "全国末梢真实监测与当地食品配送/能源修复证明运行；Marchbank反复处理失控、2026审计33actions仍考虑执法及风暴六日尾部形成重要供给/共因约束。",
+      "assumption": "通常使用受监管供水、普通食品/能源且必要净负担可承受；Marchbank供区部分适配2305，重复关键失控在缓解后仍重要。若实际计划/替代供给已有效且尾部不主导可60；拒绝负担/范围/延续连接则null。",
+      "conditionalAlternatives": [60],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "NHS Scotland通常公费路径、当地真实专科移植及产科实际接诊/整改支持必要交付；15分钟分诊至83%、正确MEWS响应至75%仍未95%，29h诱导等待/上报文化/长期旗标保留。",
+      "assumption": "GP登记与通常合格NHS居民、按必要转诊可负担取得，产科/移植记录代表有限实绩并合理延续到截止，不当全区风险调整结果。若未解等待/安全残余主导可40；拒绝通常支付/代表性/延续则null。",
+      "conditionalAlternatives": [40],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "疾病限定胰岛细胞路径真实FY24/25已12移植、NHSScotland委托及终身监护；COBE耗材Jun2023停、维护Dec2025截止、May2025 PRISM机器/成本delay，未闭当前生产/居民取得。",
+      "assumption": "不是因缺抗衰/健康人延寿或完美账单未定；最小缺口是已知设备依赖是否经有效替换/库存或其他实际路径缓解。若有效生产/公费随访延续可60；若已证当前取得有重要断点可40，不能从旧预警直接判停服。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "unresolved"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "多年度真实许可/公司、Robotarium实际私网演示和居民公共数字使用支持持续多节点知识/产业/扩散；当前帮助、有限时电脑与融资/群体触达仍重要。",
+      "assumption": "产出窗口/多院校节点适配本区并延续；公共帮助及普通连接通常可用，帮助后设备/技能及早期融资残余重要。若广泛采用和帮助强、残余已小可80；拒绝地域/群体/延续则null，实质断层可40。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "实际机场旅次与既有跨境接续铁路、British公民CTA居留工作、GBP账户真实合法转账手续形成多通道；IT/电力共因、新收款人时效/养老金税保留。",
+      "assumption": "普通British公民持适当证件、合格常规账户/设备，迁移接续/手续/必要连接通常负担可承担；不把EU公民自由迁移或英国普通NHS例法移植。若共因/法律资源实际阻断可40，独立替代可80；否定通常路径则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://dwqr.scot/media/ed4lxeno/public-supplies-annual-report-2025.pdf",
+      "bytes": 2525202,
+      "sha256": "c86d7cabd692730a51d7addc1f7a4315d977d59102b619d78669c0bd565a6aa0",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:18:41.228889+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025公共供水；2026Feb Marchbank技术审计。PDF创建2026Aug27仅元数据，不等首公开。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S02",
+      "url": "https://dwqr.scot/media/ex0psuk4/public-supplies-summary-of-incidents-2025.pdf",
+      "bytes": 183601,
+      "sha256": "988c42757bdcc80d1674e2f9e648e9b57168e822bcff04d031fcf6791a37b2d9",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:18:41.229201+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025事件分层表；Marchbank六月/十二月，区域受影响人口非病例。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S03",
+      "url": "https://dwqr.scot/media/mlmpj55w/performance-tables-2025.pdf",
+      "bytes": 374894,
+      "sha256": "d8e5c234508aadb3c51d66eb5ba32f8c29d7bc5531260645a75e7ac01fdf8ab6",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:18:41.229336+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025全国出厂/储水/末梢参数不同分母。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S04",
+      "url": "https://www.edinburgh.gov.uk/downloads/file/32868/section-38-final-report-2016-2022",
+      "bytes": 3275130,
+      "sha256": "2670aa98bc730a27d459f2dd8d26cab4243ccce17d9918e1f665fc49e9fed755",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:14:34.503902+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2016–22法定进展；WaterofLeith p133完成与缺资延迟并存。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.edinburgh.gov.uk/flooding/emergency-flood-response/4",
+      "bytes": 50523,
+      "sha256": "06c4d4042fee3714349f8f9445abaa1ce1df4af5090b32bdef4f3af5a71d5e43",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:16:09.867119+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前未标首发的已建防洪设施维护/洪门说明，须截止延续。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.edinburgh.gov.uk/downloads/file/32063/public-performance-scorecard-annual-report",
+      "bytes": 2636734,
+      "sha256": "48738eef2d91d90f844c7306612d991e42332eb5a252ac1fb7694bbf76e001fb",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:14:32.378997+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "实际FY2025/26，不是URL旧年度；PDF创建Sep29 2026非公开证明。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S07",
+      "url": "https://www.edinburgh.gov.uk/downloads/file/38217/audited-annual-accounts-2024-25",
+      "bytes": 7370437,
+      "sha256": "3867bf0e554e238047fb64fd934409220b1fe4809576360361c095af761085c9",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:14:32.773060+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "审计FY2024/25及Apr2025住房/财政压力；不当2026全区率。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S08",
+      "url": "https://www.healthcareimprovementscotland.scot/wp-content/uploads/2025/10/Edinburgh-Royal-Infirmary-maternity-services-safe-delivery-of-care-inspection-report-October-2025.pdf",
+      "bytes": 584000,
+      "sha256": "cfd7d12669ce3508284d8013f5468836c802117d43337c782d3ed3f304ba38b5",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:17:00.380958+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-10-29",
+      "scope": "2025Jun23–24 RIE四产科区域不预告检查，Jul22虚拟讨论；单院选择范围。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S09",
+      "url": "https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/05/ERI-Maternity-Safe-Delivery-of-Care-18-week-action-plan.pdf",
+      "bytes": 460420,
+      "sha256": "13db894b267490e9822f3ac2347c4f19e4a2303ad602972ee79dbc365afd7d91",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:17:00.381422+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-04-28",
+      "scope": "签署Version9 Apr28、更新Apr27；实际过程观察至Mar2026，URLMay非临床观察日。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S10",
+      "url": "https://www.gov.scot/news/ensuring-safe-maternity-services/",
+      "bytes": 27231,
+      "sha256": "05276be87fe41517a9c5d5c20ad18ff62108521da033ba5e9660563f2481f628",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:14:29.764193+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-10-29",
+      "scope": "实际升级Level3/任务组；政府26recommendations与HIS26requirements+2recommendations称谓差别。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S11",
+      "url": "https://www.nss.nhs.scot/media/6413/2025-nsd-highlight-report-2024-25.pdf",
+      "bytes": 4275196,
+      "sha256": "23dcdba0aaa08ffe311f30669b52c910dd4a70a3e0ca8152cd9b1b3dd0027ed7",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:14:31.519150+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "NSD FY2024/25 Version2；物理5/印刷7–8，12移植非12去重本区居民，£1158000机构支出。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S12",
+      "url": "https://www.nss.nhs.scot/specialist-healthcare/specialist-services/solid-organ-transplantation/islet-cell-transplantation/",
+      "bytes": 22599,
+      "sha256": "95c0dfb6eeb68f10051f8d9faaecab6022f6f673418e80e1490e96ac5692c03e",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:14:29.771578+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-12-04",
+      "scope": "RIE成人Type1严重低血糖资格目录；发表于COBE维护停前，不能证明2026生产继续。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S13",
+      "url": "https://nhsbtdbe.blob.core.windows.net/umbraco-assets-corp/36584/pag-25-12-islet-transplant-summit-report-dec-2024-final.pdf",
+      "bytes": 214745,
+      "sha256": "8160876b9a6fef7cff06a9e8e15561d3fe5e8480c39f7fe0e6285b893f166fcf",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:14:31.534609+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "Dec2024 summit，2025PAG文号；所有三个英国实验室COBE依赖与替换需验证。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S14",
+      "url": "https://nhsbtdbe.blob.core.windows.net/umbraco-assets-corp/37765/pag-m-25-01-minutes-ratified.pdf",
+      "bytes": 238647,
+      "sha256": "f61ad95666931d753bf0e09b92974423bda4c178c1fb364930a8617076d2d4e9",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:14:31.739937+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "May1 2025 PAG46次会议，ratified版；Edinburgh HTA资格、PRISM机器/成本延期，SIK分类待核。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S15",
+      "url": "https://www.ed.ac.uk/news/2024/university-s-innovation-power-revealed-in-new-repo",
+      "bytes": 32442,
+      "sha256": "47233bcff3baa037a97294b22e371a162c746cb58a4de9ee6f753cb65b1fc2d5",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:30:09.230994+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2024-11-29",
+      "scope": "发布时past12months实际127公司/140专利申请/55许可；不默认精确会计窗。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S16",
+      "url": "https://edinburgh-innovations.ed.ac.uk/news/strong-annual-results-for-spinouts-and-mission-driven-innovation",
+      "bytes": 114377,
+      "sha256": "24db9ef49928867e302ec230268623778b424be606705bfe388665d76de9566c",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:14:34.819656+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-01-19",
+      "scope": "年度商业化£113m/其中spinouts£56m，64新公司；相关2024/25impactreview不自动给所有数字年份。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S17",
+      "url": "https://www.hw.ac.uk/news/2025/the-national-robotarium-set-to-revolutionise-the-farming-sector-with-5g-robotics",
+      "bytes": 283873,
+      "sha256": "c2cde85b7b1d6612516117c692b9cc61d55035dcb8773e8557e9bf33af792a03",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:14:36.745286+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-07-02",
+      "scope": "Riccarton实际5G农业机器人演示；私网/原型不是普通公用5G或全面商用。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S18",
+      "url": "https://www.edinburghcommunityfood.org.uk/",
+      "bytes": 91117,
+      "sha256": "e116e33314dfe0e4b9cb508375441dd6d565e1903f1b5fa5c851a7e399241ade",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:21:39.296515+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前社区零售/配送网页；2024Oct1仓库市场、2020Dec17配送重刊，限Edinburgh不含East/West/Midlothian。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S19",
+      "url": "https://corporate.edinburghairport.com/record-year-for-edinburgh-airport-in-2025",
+      "bytes": 125666,
+      "sha256": "917816fedf86957485c74849c78657e307e09d6b1490780e0e13d78ddd1f3a70",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:14:36.969594+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "观察2025实际16980588旅次、新开航线；2026将新增不当已经执行。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S20",
+      "url": "https://www.edinburghairport.com/it-system-issue-important-information-for-passengers",
+      "bytes": 146128,
+      "sha256": "09bab8b0e43fbb26691709d2e29cb39b5794ed9634870ee7c421f9c3efc11378",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:14:37.623947+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "未标日期航管IT故障恢复；CMS含2024/2025日期且社媒链2024，不能静默指定2025事故。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S21",
+      "url": "https://news.lner.co.uk/news/lner-restores-flying-scotsman-service-to-historic-mid-morning-time-slot",
+      "bytes": 27221,
+      "sha256": "411acb318bad5156d9ff6a28b58a5c48843ca84a5670842680956f076966100b",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:16:09.867230+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-04-24",
+      "scope": "实际既有EDI-London服务及Dec2025新运行图；May18重排公告不是当日实际出发核证。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S22",
+      "url": "https://www.gov.uk/government/publications/common-travel-area-guidance/common-travel-area-guidance",
+      "bytes": 99582,
+      "sha256": "887d27e34913f9d5c239a651507b3b8c5024975798fff618211b5f2d00d0afc6",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:55:41.678621+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-01-01",
+      "scope": "共用英国公民CTA居留/工作资格；不是所有家庭成员或所有目的地。",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S23",
+      "url": "https://www.gov.uk/transferring-your-pension/transferring-to-an-overseas-pension-scheme",
+      "bytes": 77116,
+      "sha256": "acc30b14955ca0bbd05f5a521d08f4ce319bb94ea4a99ea2fcdade3ad9c2ff91",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:55:41.680123+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "共用当前QROPS税务/转移规则；不是普通现金转账上限或所有养老金无税。",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S24",
+      "url": "https://www.bankofireland.com/help-centre/faq/much-can-transfer-365-online/",
+      "bytes": 61582,
+      "sha256": "a12d06cd5b2f2ba7c8d487fe10c3d9e289055f42eb228698c6078f0362897688",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:57:59.991392+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-03-09",
+      "scope": "BOI实际365手续，GBP服务NI/GB；普通账户适配假设，不把ROI InterPay当GB路径。",
+      "sourceKind": "reused_original_response"
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.nhsinform.scot/care-support-and-rights/health-rights/access/accessing-and-using-the-nhs-in-scotland",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "NHSScotland通常多数GP/药房/医院/急诊免费，牙科/眼镜可收费；GP登记和通常转诊。curl403，web原文已读。"
+    },
+    {
+      "id": "W02",
+      "url": "https://www.scotland.police.uk/what-s-happening/news/2023/december/twenty-six-people-charged-in-connection-with-bonfire-night-disorder-in-edinburgh/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "Nov5 2023；26人51charges，另1人2项待报告；Niddrie煽动/供应烟火指控与实际调查；不是已定罪。"
+    },
+    {
+      "id": "W03",
+      "url": "https://www.scotland.police.uk/what-s-happening/news/2024/november/four-more-arrests-following-bonfire-night-disorder-in-edinburgh/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "Nov5 2024 CalderRoad公众/警察/公交受烟火投射，CaptainRoad公序人员受袭；Nov12–13逮捕及总13charged/5搜家/2扣车。"
+    },
+    {
+      "id": "W04",
+      "url": "https://www.scotland.police.uk/what-s-happening/news/2026/september/arrests-following-disorder-in-edinburgh-city-centre/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "Sep12–13 2026 PrincesStreetGardens事件：攻击/破坏/侵轨/公交中断，8逮捕中周六4已起诉、周日4被捕；大多数观众良好。"
+    },
+    {
+      "id": "W05",
+      "url": "https://www.scotland.police.uk/what-s-happening/news/2026/june/arrests-following-demonstrations-across-scotland/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "Jun9 2026 Glasgow3逮捕、2警3公众受伤/种族袭击；Edinburgh扰动但和平且无逮捕。Glasgow不冒充当地；协调及社区工作。"
+    },
+    {
+      "id": "W06",
+      "url": "https://www.spenergynetworks.co.uk/news/pages/power_restored_storm_eowyn.aspx",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-01-30",
+      "bytes": null,
+      "sha256": null,
+      "scope": "Jan24–30实际中央/南Scotland206000客户恢复，多数24h内、尾部6日，700工程师/外部支援、食物车/暖点/酒店；SMS270000非户数。原curl403。"
+    },
+    {
+      "id": "W07",
+      "url": "https://www.edinburgh.gov.uk/using-library/computers-libraries",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "当前免费公共电脑/无线/办公扫描；会员预约通常1小时/天、可追加，有电话；youngpeopleWiFi暂不可用。页面更新窗未知，须截止延续。"
+    },
+    {
+      "id": "W08",
+      "url": "https://www.edinburgh.gov.uk/cost-living/support-digital-skills-devices-data",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "实际公开115电脑及设备/数据/技能帮助渠道；2026将升级非已全部完成，慈善数据资格不是全民免费家庭网络。"
+    },
+    {
+      "id": "W09",
+      "url": "https://www.scottishwater.co.uk/in-your-area/service-updates/eh12-edinburgh-11092026",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "web原运营更新Sep11 2026 11:55 Stage5供水恢复；正文早期阶段已移除，时长/全范围未知；FAQ不是每户已清洗证明。"
+    }
+  ],
+  "failedSourceReads": [
+    {
+      "file": "digital-current.html",
+      "url": "https://www.edinburgh.gov.uk/using-library/computers-libraries",
+      "bytes": 0,
+      "sha256": null,
+      "retrievedAt": "2026-10-13T06:16:04.803154+00:00",
+      "reason": "000\t\thttps://www.edinburgh.gov.uk/using-library/computers-libraries",
+      "exit": 35
+    },
+    {
+      "file": "digital-support-current.html",
+      "url": "https://www.edinburgh.gov.uk/cost-living/support-digital-skills-devices-data",
+      "bytes": 0,
+      "sha256": null,
+      "retrievedAt": "2026-10-13T06:16:04.805022+00:00",
+      "reason": "000\t\thttps://www.edinburgh.gov.uk/cost-living/support-digital-skills-devices-data",
+      "exit": 35
+    },
+    {
+      "file": "islet-pag-index.html",
+      "url": "https://www.odt.nhs.uk/transplantation/tools-policies-and-guidance/advisory-committees/",
+      "bytes": 30435,
+      "sha256": "7a8f1923de8a2bbb5c8ad1f10111d12beb45f8876c845fb63a00ef2f6f5841ac",
+      "retrievedAt": "2026-10-13T06:17:00.381865+00:00",
+      "reason": "404\ttext/html; charset=utf-8\thttps://www.odt.nhs.uk/transplantation/tools-policies-and-guidance/advisory-committees/",
+      "exit": 0
+    },
+    {
+      "file": "nhs-qualification-current.html",
+      "url": "https://www.nhsinform.scot/care-support-and-rights/health-rights/access/accessing-and-using-the-nhs-in-scotland",
+      "bytes": 38,
+      "sha256": "72bd21fb766d2ca6168439d6f0169623bee9f87b7ff574a48be40f5182e55594",
+      "retrievedAt": "2026-10-13T06:14:29.766159+00:00",
+      "reason": "403\ttext/html\thttps://www.nhsinform.scot/care-support-and-rights/health-rights/access/accessing-and-using-the-nhs-in-scotland",
+      "exit": 0
+    },
+    {
+      "file": "police-current2026.html",
+      "url": "https://www.scotland.police.uk/what-s-happening/news/2026/september/arrests-following-disorder-in-edinburgh-city-centre/",
+      "bytes": 0,
+      "sha256": null,
+      "retrievedAt": "2026-10-13T06:16:04.799546+00:00",
+      "reason": "000\t\thttps://www.scotland.police.uk/what-s-happening/news/2026/september/arrests-following-disorder-in-edinburgh-city-centre/",
+      "exit": 35
+    },
+    {
+      "file": "police-regional2026.html",
+      "url": "https://www.scotland.police.uk/what-s-happening/news/2026/june/arrests-following-demonstrations-across-scotland/",
+      "bytes": 0,
+      "sha256": null,
+      "retrievedAt": "2026-10-13T06:16:04.801282+00:00",
+      "reason": "000\t\thttps://www.scotland.police.uk/what-s-happening/news/2026/june/arrests-following-demonstrations-across-scotland/",
+      "exit": 35
+    },
+    {
+      "file": "police-response2024.html",
+      "url": "https://www.scotland.police.uk/what-s-happening/news/2024/november/four-more-arrests-following-bonfire-night-disorder-in-edinburgh/",
+      "bytes": 0,
+      "sha256": null,
+      "retrievedAt": "2026-10-13T06:16:04.799439+00:00",
+      "reason": "000\t\thttps://www.scotland.police.uk/what-s-happening/news/2024/november/four-more-arrests-following-bonfire-night-disorder-in-edinburgh/",
+      "exit": 35
+    },
+    {
+      "file": "police-violence2023.html",
+      "url": "https://www.scotland.police.uk/what-s-happening/news/2023/december/twenty-six-people-charged-in-connection-with-bonfire-night-disorder-in-edinburgh/",
+      "bytes": 0,
+      "sha256": null,
+      "retrievedAt": "2026-10-13T06:16:04.799143+00:00",
+      "reason": "000\t\thttps://www.scotland.police.uk/what-s-happening/news/2023/december/twenty-six-people-charged-in-connection-with-bonfire-night-disorder-in-edinburgh/",
+      "exit": 35
+    },
+    {
+      "file": "sp-restored2025.html",
+      "url": "https://www.spenergynetworks.co.uk/news/pages/power_restored_storm_eowyn.aspx",
+      "bytes": 450,
+      "sha256": "820d36e9ae88ab7d0733ff59dc45021359fd11880835261e6541fe9062e1ed1c",
+      "retrievedAt": "2026-10-13T06:30:09.230748+00:00",
+      "reason": "403\ttext/html\thttps://www.spenergynetworks.co.uk/news/pages/power_restored_storm_eowyn.aspx",
+      "exit": 0
+    },
+    {
+      "file": "sp-vulnerability2025.pdf",
+      "url": "https://www.spenergynetworks.co.uk/userfiles/file/46695_SPEN_202425_AVR_submission_AW_V5.pdf",
+      "bytes": 477,
+      "sha256": "0cd0f6198565a975d5c938cd66f0723032a365f3b992a3be822cdadbc09e2a8d",
+      "retrievedAt": "2026-10-13T06:14:38.071176+00:00",
+      "reason": "403\ttext/html\thttps://www.spenergynetworks.co.uk/userfiles/file/46695_SPEN_202425_AVR_submission_AW_V5.pdf",
+      "exit": 0
+    },
+    {
+      "file": "water-repaired2026.html",
+      "url": "https://www.scottishwater.co.uk/in-your-area/service-updates/eh12-edinburgh-11092026",
+      "bytes": 179,
+      "sha256": "1f2e1251b1d5fab2f47bbfe3e09b149064e61571f98a5e02c6ace5f86bacb1d5",
+      "retrievedAt": "2026-10-13T06:14:29.769411+00:00",
+      "reason": "403\ttext/html\thttps://www.scottishwater.co.uk/in-your-area/service-updates/eh12-edinburgh-11092026",
+      "exit": 0
+    },
+    {
+      "file": "water2025.pdf",
+      "url": "https://www.scottishwater.co.uk/-/media/scottishwater/document-hub/key-publications/annual-reports/scw2799-annual-report-2025_interactive-full-v12-not-signed-ag.pdf",
+      "bytes": 179,
+      "sha256": "1f2e1251b1d5fab2f47bbfe3e09b149064e61571f98a5e02c6ace5f86bacb1d5",
+      "retrievedAt": "2026-10-13T06:14:29.771177+00:00",
+      "reason": "403\ttext/html\thttps://www.scottishwater.co.uk/-/media/scottishwater/document-hub/key-publications/annual-reports/scw2799-annual-report-2025_interactive-full-v12-not-signed-ag.pdf",
+      "exit": 0
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "source": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "sourceBytes": 9932800,
+    "allGeometryCount": 9031,
+    "record": {
+      "fid": 8403,
+      "eFUA_ID": 2305.0,
+      "UC_num": 1.0,
+      "UC_IDs": "1749",
+      "eFUA_name": "Edinburgh",
+      "Commuting": 1.0,
+      "Cntry_ISO": "GBR",
+      "Cntry_name": "UnitedKingdom",
+      "FUA_area": 1448.0,
+      "UC_area": 123.0,
+      "FUA_p_2015": 666232.5977258459,
+      "UC_p_2015": 465555.7451181412,
+      "Com_p_2015": 200676.8526077047
+    },
+    "bounds": [-238000.0, 6450000.0, -185000.0, 6493000.0],
+    "targetGeometrySha256": "5a4b17ec5678750df1258acd4478a09231dd6e0f0b3fbc2f6e49e509a2c56dd4",
+    "referencePoints": [
+      {
+        "label": "Edinburgh centre",
+        "longitude": -3.19,
+        "latitude": 55.953,
+        "fuaMatches": [2305]
+      },
+      {
+        "label": "Royal Infirmary Little France",
+        "longitude": -3.137,
+        "latitude": 55.922,
+        "fuaMatches": [2305]
+      },
+      {
+        "label": "Western General Hospital",
+        "longitude": -3.234,
+        "latitude": 55.963,
+        "fuaMatches": [2305]
+      },
+      {
+        "label": "Royal Hospital Children Young People",
+        "longitude": -3.137,
+        "latitude": 55.921,
+        "fuaMatches": [2305]
+      },
+      {
+        "label": "Edinburgh Airport",
+        "longitude": -3.363,
+        "latitude": 55.95,
+        "fuaMatches": [2305]
+      },
+      {
+        "label": "Leith Port",
+        "longitude": -3.176,
+        "latitude": 55.981,
+        "fuaMatches": [2305]
+      },
+      {
+        "label": "University Edinburgh Old College",
+        "longitude": -3.187,
+        "latitude": 55.947,
+        "fuaMatches": [2305]
+      },
+      {
+        "label": "Heriot Watt Riccarton",
+        "longitude": -3.322,
+        "latitude": 55.911,
+        "fuaMatches": [2305]
+      },
+      {
+        "label": "Edinburgh BioQuarter",
+        "longitude": -3.137,
+        "latitude": 55.923,
+        "fuaMatches": [2305]
+      },
+      {
+        "label": "Musselburgh",
+        "longitude": -3.058,
+        "latitude": 55.942,
+        "fuaMatches": [2305]
+      },
+      {
+        "label": "Dunfermline",
+        "longitude": -3.462,
+        "latitude": 56.071,
+        "fuaMatches": [2160]
+      },
+      {
+        "label": "Forth Queensferry Crossing",
+        "longitude": -3.409,
+        "latitude": 56.003,
+        "fuaMatches": [2160]
+      },
+      {
+        "label": "Glasgow QEUH external",
+        "longitude": -4.342,
+        "latitude": 55.86,
+        "fuaMatches": [955]
+      }
+    ],
+    "method": "full9031; EPSG4326→ESRI54009 always_xy; intersects; analyst approximate points not official footprints/catchments/patients",
+    "reviewedOn": "2026-10-13"
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-edinburgh-priority-review.md",
+    "sha256": "3ed085b5b6fe3af6b5ea2998f5974365bcfcbc81dcd7e04e86f855ce17affc9b",
+    "reviewedOn": "2026-10-13",
+    "status": "bounded_conditional_review_not_ranking_or_exclusion"
+  }
+}

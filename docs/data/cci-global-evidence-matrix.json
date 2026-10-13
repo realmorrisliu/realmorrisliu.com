@@ -153,10 +153,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 35,
+    "conditionalCaseCount": 37,
     "completeConditionalCaseCount": 14,
-    "partialCaseCount": 21,
-    "unassessedCount": 8996,
+    "partialCaseCount": 23,
+    "unassessedCount": 8994,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -447,8 +447,18 @@
       "sha256": "744f3027863f7f3befab1744834e8f0b125187c3a70d473cd31d73dc51d0bb02",
       "provenance": "cci-turku-priority-review.md",
       "provenanceSha256": "40a4657bb79de492c9c54ea8490df994e9d62193c488392e5bc9a8d82e79bd0f"
+    },
+    "cci-local-2026-edinburgh-case.json": {
+      "sha256": "5abc8fa52865c7859d8b0539493b824ceb855899ce87cefb40fa34c821b73bc9",
+      "provenance": "cci-edinburgh-priority-review.md",
+      "provenanceSha256": "3ed085b5b6fe3af6b5ea2998f5974365bcfcbc81dcd7e04e86f855ce17affc9b"
+    },
+    "cci-local-2026-jyvaskyla-case.json": {
+      "sha256": "49b6e3f6995bd2ca09ce89e3cec52ffecc1ff96f7de40581bce697b20338d846",
+      "provenance": "cci-jyvaskyla-priority-review.md",
+      "provenanceSha256": "1df98f20507154290e6bc4e93513bab9a633c88029d6f984a5505edae2338d30"
     }
   },
-  "scriptSha256": "2849bfb33a66bb79b177f18d7dc31b151a3cc0ba8122054e2eb077953f3a4e65",
-  "csvSha256": "cdaa438ebf6b5bff283fa6df523b481ad16b43a2757057d01052eb5a8dd90603"
+  "scriptSha256": "7763985ea7e318445efec42a6e37aadef84661213792bf7a9ac1b63425b0fef5",
+  "csvSha256": "199c95d4771eb372f76c6c770d84d97cc197837dcc74686e705baff68ff7c683"
 }

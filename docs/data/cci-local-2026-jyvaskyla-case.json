@@ -1,0 +1,450 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 545,
+  "name": "Jyväskylä",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "docs/cci-jyvaskyla-priority-review.md",
+  "evidenceReview": "cci-jyvaskyla-priority-review.md",
+  "expectedConditionalTotal": null,
+  "limitations": "Two bounded rounds; PCS/ISR/RES/TEC/OPT conditional60; GSS/MED/LON unresolved.60% scored weight contributes36; unknown40% gives36–76 conditional arithmetic interval, no total centre or exclusion/ranking claim.31 subpillars reviewed, not all measured. Necessary spatial, continuity, ordinary burden and residual-importance assumptions remain retractable.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Actual thermal/water delivery, network renewals and municipal street/woodland maintenance support physical protection; cold-weather exposure, sewer blockage/inflow, reduced stair snow maintenance and unfinished flood work remain. Historical low heat/PGA context is not zero hazard.",
+      "assumption": "Reviewed physical services and urban measures ordinarily protect FUA545 residents and continue at cutoff; wastewater/ice and common dependencies remain important. Modelled/planned2026 drains or heating projects are not assumed completed. Rejecting spatial/continuity/protection inference restores unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "The2025 city-police-provider-business joint central guard pilot is implemented, but positive reception does not establish organized-violence consequences or strategic threat mitigation. Military training is a real airport role, not evidence of an attack or effective geopolitical protection.",
+      "assumption": "No whole score. Local/regionally applicable threat consequences linked to actual mitigation for residents/essential channels remain missing, not a perfect incident census. Preparedness, guard presence and no UCDP match cannot fill the bridge.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Implemented administrative systems, face-to-face employment help,613 trainees, library digital advice and shared local security response show delivery. School bullying improvement, growing discrimination, fiscal constraints, fragmented food responsibilities and special-diet error correction are read together.",
+      "assumption": "Actual municipal/operator execution and delivered alternatives reasonably represent usual institutions serving FUA545; group-access, staffing and recovery limits remain material after mitigation. Neither national WGI nor budget savings proves city resilience.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "Measured2024 water/heat/electricity production and network renewal connect with2025 public food and surplus-food delivery: ResQ in about50 kitchens, surplus lunches at10 schools. Special-diet errors, lower daily school-lunch uptake, wood prices and sewer inflow/blockage persist despite revised processes and alternatives.",
+      "assumption": "Operator and public/commercial food paths reasonably reach ordinary median-income FUA545 residents at cutoff and essential supply is usually affordable. School/surplus routes are limited, not universal welfare. Cost/quality/common-dependency residuals remain important; rejecting representativeness or ordinary burden inference restores unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": null,
+      "rationale": "Nova service directories and current public-fee/cap rules supply institution and financing context. The bounded review did not verify an actual usual-care delivery/quality process and necessary-specialty/continuity alternative bridge; other Finnish cities cannot supply it.",
+      "assumption": "No score. This is not a requirement for current risk-adjusted outcomes, perfect bills or city-wide stress tests. A dated real usual-care operation/appropriateness and available alternatives, read with specific waits/harm/payment, would permit conditional60/40; access-channel failure itself is not a health-system failure.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "unresolved",
+        "specialist_capacity": "context",
+        "system_continuity": "unresolved"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "No verified local credible human disease-conversion route and current compliant implementation/payer-monitoring chain was obtained. University biomedical projects, Nova departments and Finland-wide/other-city trials are not local treatment.",
+      "assumption": "No score or selected ageing-pathway anchor. A credible product/pathway-matched human result, actual local adoption and appropriate usual qualification/payment/monitoring would discriminate limited60/40. Unknown does not demonstrate an important real access break.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "unresolved",
+        "trial_maturity": "unresolved",
+        "regulatory_adoption": "unresolved",
+        "resident_access": "unresolved"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Alva real digital production and sale/adoption connect with municipal deployments and company formation: over10000 portal users2025, services to30-plus municipalities,631624 mobile-ticket trips and real assistance. Company siting decisions fell to5 despite business/incubator support; apps and fibre rollout retain material usability/execution limits.",
+      "assumption": "Reviewed multi-producer production, institutional uptake and resident assistance reasonably represent major local industries and ordinary FUA545 residents. Actual investment/usability constraints remain material after mitigation;80 is admissible if strong capability and delivered alternatives make these residuals minor, not capped by unmeasured high-tier facts.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Actual2025 regional-airport operation in Finavia prose and9.54m Linkki trips provide channels; subsidy continuity and staff/paper help support usual access. EU worker-residence rights and accrued pension abroad are applicable. Domestic/external hubs, price rises and common transport/communication dependence remain.",
+      "assumption": "Ordinary residents can usually reach usable onward international connections and afford travel/relocation/account use, applying real operating channels and national rights at cutoff. Group passenger totals are not local counts; household international communication remains unverified and requires an explicit usual-usability inference. Rejecting this inference restores unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "unresolved"
+      }
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.jyvaskyla.fi/sites/default/files/2026-03/Jyvaskylan-kaupungin-tilinpaatos-2025.pdf",
+      "bytes": 5972577,
+      "sha256": "8ce013fac4c019356795ccbe898dbecd1b697e0358a9429dabd4f259c0c6c234",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025市/市集团实际年报；少量2026状态/未来计划分列。物理与印刷页37/79/155/281/285目视。316页，食品单位附件另有自身页码。 原字节不认证截止逐字版本；观察时点、服务地域与通常负担适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/jyvaskyla/city-annual2025.pdf",
+      "effectiveUrl": "https://www.jyvaskyla.fi/sites/default/files/2026-03/Jyvaskylan-kaupungin-tilinpaatos-2025.pdf"
+    },
+    {
+      "id": "S02",
+      "url": "https://www.jyu.fi/fi/meista/esittely-ja-avainluvut/vuosikertomukset/vuosikertomus-2025",
+      "bytes": 161565,
+      "sha256": "835ca496f1325edd1d4846c71c5a632e5361231a72f53ce2060cb9786ec9a021",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "第一方2025大学年报；真实股权交易与教育/研究，大学合并预期不当已实现产业收益。 原字节不认证截止逐字版本；观察时点、服务地域与通常负担适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/jyvaskyla/university-annual2025.html",
+      "effectiveUrl": "https://www.jyu.fi/fi/meista/esittely-ja-avainluvut/vuosikertomukset/vuosikertomus-2025"
+    },
+    {
+      "id": "S03",
+      "url": "https://www.alva.fi/alvan-vuoden-2025-tilinpaatos-ja-vastuullisuusraportti-julkaistu/",
+      "bytes": 155651,
+      "sha256": "d78274a43eeeea744a6b55da92fd252a82d73d5cee7f36dc281d596479724e68",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-04-09",
+      "scope": "2025运行原摘要：Oma Alva超过1万使用者、30余水务客户城市、Lahti首次门户供货合同；合同不是已完整使用。 原字节不认证截止逐字版本；观察时点、服务地域与通常负担适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/jyvaskyla/alva-news2025.html",
+      "effectiveUrl": "https://www.alva.fi/alvan-vuoden-2025-tilinpaatos-ja-vastuullisuusraportti-julkaistu/"
+    },
+    {
+      "id": "S04",
+      "url": "https://www.alva.fi/wp-content/uploads/2026/04/vuoden-2024-alva-yhtiot-oyn-tilinpaatos.pdf",
+      "bytes": 2285785,
+      "sha256": "e92da8d7f42db464006cdf5c6983f20e94ecebd7a7602b27e7c2bb54ad60fb5c",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2024财报，2025Jan燃料供应商疑似伪造与实际处理另列。p4目视水2.9次/100km/0.06小时居民年和污水10.4堵塞/32.6%雨雪水。URL目录2026Apr非独立首发日。 原字节不认证截止逐字版本；观察时点、服务地域与通常负担适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/jyvaskyla/alva-annual2024.pdf",
+      "effectiveUrl": "https://www.alva.fi/wp-content/uploads/2026/04/vuoden-2024-alva-yhtiot-oyn-tilinpaatos.pdf"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.alva.fi/wp-content/uploads/2026/04/alva-vuosikatsaus-ja-vastuullisuusraportti-2024.pdf",
+      "bytes": 15511434,
+      "sha256": "b300200214112d2be897e20559f4a075f7e370f950cf36fb1ecc8e44075f973a",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2024完整责任报告，p3目视交付热1079GWh/生产水8.5Mm³/输电600GWh；未来2026热泵/锅炉和储热不当现役。 原字节不认证截止逐字版本；观察时点、服务地域与通常负担适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/jyvaskyla/alva-responsibility2024.pdf",
+      "effectiveUrl": "https://www.alva.fi/wp-content/uploads/2026/04/alva-vuosikatsaus-ja-vastuullisuusraportti-2024.pdf"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.jyu.fi/fi/meista/esittely-ja-avainluvut/vuosikertomukset/vuosikertomus-2025/yliopiston-vuosi-2025-numeroina",
+      "bytes": 150595,
+      "sha256": "6d15f27cee31e2f099f3ec7f1995cf1c937678f9eba431432d0ac5de445812d4",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025大学指标入口，正文部分数字为图片图表；本轮不猜未目视图表数，不以出版/榜单计TEC。 原字节不认证截止逐字版本；观察时点、服务地域与通常负担适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/jyvaskyla/university-numbers2025.html",
+      "effectiveUrl": "https://www.jyu.fi/fi/meista/esittely-ja-avainluvut/vuosikertomukset/vuosikertomus-2025/yliopiston-vuosi-2025-numeroina"
+    },
+    {
+      "id": "S07",
+      "url": "https://www.jyu.fi/fi/meista/esittely-ja-avainluvut/vuosikertomukset/vuosikertomus-2025/vuoden-2025-kohokohdat-yksikoissa",
+      "bytes": 92099,
+      "sha256": "48cec53b2f1c6f6bcda0a349156adf38d7f4e1b9f47a129ec2ed364ad348ab4a",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025院系实际工作摘要；USAMedX合作心脏除颤器项目不是产品上市/人体临床，也不补LON。 原字节不认证截止逐字版本；观察时点、服务地域与通常负担适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/jyvaskyla/university-units2025.html",
+      "effectiveUrl": "https://www.jyu.fi/fi/meista/esittely-ja-avainluvut/vuosikertomukset/vuosikertomus-2025/vuoden-2025-kohokohdat-yksikoissa"
+    },
+    {
+      "id": "S08",
+      "url": "https://www.jyvaskyla.fi/varhaiskasvatus-ja-koulutus/ruokapalvelu/palvelut/kouluruokailu",
+      "bytes": 79157,
+      "sha256": "6345f69ed79a8df00aedc6ac9fd9f3e0206537f8a03201e082de190175cf9b45",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前市学校食物交付与支付说明，2026–27学年活动未来部分分列；点心现金/应用可用，不证明全家庭食品负担。 原字节不认证截止逐字版本；观察时点、服务地域与通常负担适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/jyvaskyla/schoolfood-current.html",
+      "effectiveUrl": "https://www.jyvaskyla.fi/varhaiskasvatus-ja-koulutus/ruokapalvelu/palvelut/kouluruokailu"
+    },
+    {
+      "id": "N01",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_en.htm",
+      "bytes": 149227,
+      "sha256": "9f22db2b81b96872ad45677aeabe28be6640d428e804024b8c2e62cac3b39c16",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-08-19",
+      "scope": "复用FIN公民适用国家/欧盟原规则，不继承Oulu服务；EU主管Lastchecked2026Aug19，EU公民指定受雇/自雇/派驻居住与登记/5年条件；FIN画像共用规则，不证明已经就业/有住房。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/eu-workers-residence.html",
+      "effectiveUrl": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_en.htm"
+    },
+    {
+      "id": "N02",
+      "url": "https://www.elo.fi/en/pensions/during-retirement/payment-of-pension-and-payment-dates/payment-of-pension-abroad",
+      "bytes": 169516,
+      "sha256": "f55afab5a9aec4273b0dd797438f8a30a0f1b1d36ec7f65b93a27e2df2e67d4c",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "复用FIN公民适用国家/欧盟原规则，不继承Oulu服务；劳动养老金运营商当前国外付款、税/外账户与年度地址确认，在线需芬兰银行凭证亦有书面申报；只已积累到期养老金，非所有资产/福利或提前现金提取。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/elo-pension-abroad.html",
+      "effectiveUrl": "https://www.elo.fi/en/pensions/during-retirement/payment-of-pension-and-payment-dates/payment-of-pension-abroad"
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.hyvaks.fi/asiakkaana/asiakasmaksut",
+      "publishedOn": null,
+      "observedPeriod": "当前入口/2026规则；详见scope",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "2026现行个人收费入口，第一轮/第二轮search正文已读；与院际产品成本价区分。curl同TLS失败，不冒充完整个人费用PDF原件。"
+    },
+    {
+      "id": "W02",
+      "url": "https://www.hyvaks.fi/asiakkaana/asiakasmaksut/maksukatto",
+      "publishedOn": null,
+      "observedPeriod": "当前入口/2026规则；详见scope",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "2026限定cap815EUR、超cap成人短期住院26.80/日、居民自行累计/申请；正文web核，非全部支出最大额。"
+    },
+    {
+      "id": "W03",
+      "url": "https://www.finavia.fi/sites/default/files/documents/Finavia_2025_Annual_Report_0.pdf?navref=paragraph",
+      "publishedOn": null,
+      "observedPeriod": "2025",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "原2025报告web解析：Jyväskylä等七补贴机场多数微增、七场合计199100不是本地人数；未得本轮有效原PDF/未目视表，只用明确正文范围。"
+    },
+    {
+      "id": "W04",
+      "url": "https://www.finavia.fi/en/airports/jyvaskyla",
+      "publishedOn": null,
+      "observedPeriod": "当前入口/2026规则；详见scope",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "当前第一方旅客机场与军事训练占较大交通份额；不是全交通为定期旅客航班。2026–27冬季链接为未来季，未作实际运行。curl原取回失败。"
+    },
+    {
+      "id": "W05",
+      "url": "https://www.hyvaks.fi/asiointi/sairaala-novan-yksikot",
+      "publishedOn": null,
+      "observedPeriod": "当前入口/2026规则；详见scope",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "搜索核具体Nova服务目录及2026Jun15桥维修就医交通提示，仅机构/接近context，不证明实际常规质量/本地CAR-T回输。"
+    }
+  ],
+  "boundaryReviewObject": {
+    "sourcePath": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allGeometryCount": 9031,
+    "targetId": 545,
+    "targetName": "Jyväskylä",
+    "geometryAreaKm2": 401.0,
+    "geometrySha256": "7e6ed474d66af3b9d676c5987698976487b43c44fa977625015311781d6410e6",
+    "approximation": "Analyst approximate reference points only; not whole administrative area, provider footprint, historic treatment or service coverage.",
+    "points": [
+      {
+        "label": "City centre",
+        "lon": 25.747,
+        "lat": 62.241,
+        "matches": [545]
+      },
+      {
+        "label": "Hospital Nova",
+        "lon": 25.708,
+        "lat": 62.227,
+        "matches": [545]
+      },
+      {
+        "label": "University Seminaarinmaki",
+        "lon": 25.731,
+        "lat": 62.235,
+        "matches": [545]
+      },
+      {
+        "label": "University Mattilanniemi",
+        "lon": 25.739,
+        "lat": 62.229,
+        "matches": [545]
+      },
+      {
+        "label": "University Ylistonrinne",
+        "lon": 25.741,
+        "lat": 62.225,
+        "matches": [545]
+      },
+      {
+        "label": "Jamk Rajakatu",
+        "lon": 25.747,
+        "lat": 62.255,
+        "matches": [545]
+      },
+      {
+        "label": "Airport Tikkakoski",
+        "lon": 25.678,
+        "lat": 62.4,
+        "matches": [545]
+      },
+      {
+        "label": "Jyvaskyla railway station",
+        "lon": 25.754,
+        "lat": 62.239,
+        "matches": [545]
+      },
+      {
+        "label": "Alva Rauhalahti plant",
+        "lon": 25.793,
+        "lat": 62.232,
+        "matches": [545]
+      },
+      {
+        "label": "Alva Keljonlahti plant",
+        "lon": 25.722,
+        "lat": 62.196,
+        "matches": [545]
+      },
+      {
+        "label": "Vaajakoski",
+        "lon": 25.869,
+        "lat": 62.246,
+        "matches": [545]
+      },
+      {
+        "label": "Muurame",
+        "lon": 25.673,
+        "lat": 62.13,
+        "matches": [545]
+      },
+      {
+        "label": "Laukaa",
+        "lon": 25.951,
+        "lat": 62.413,
+        "matches": [545]
+      },
+      {
+        "label": "Aanekoski",
+        "lon": 25.734,
+        "lat": 62.604,
+        "matches": []
+      },
+      {
+        "label": "Jamsa",
+        "lon": 25.19,
+        "lat": 61.864,
+        "matches": []
+      }
+    ],
+    "attributes": {
+      "fid": 3132,
+      "eFUA_ID": 545.0,
+      "UC_num": 1.0,
+      "UC_IDs": "3242",
+      "eFUA_name": "Jyväskylä",
+      "Commuting": 1.0,
+      "Cntry_ISO": "FIN",
+      "Cntry_name": "Finland",
+      "FUA_area": 401.0,
+      "UC_area": 20.0,
+      "FUA_p_2015": 149254.9152596593,
+      "UC_p_2015": 62990.23046875,
+      "Com_p_2015": 86264.68479090929
+    }
+  },
+  "sensitivity": {
+    "knownContribution": 36,
+    "scoredWeightPercent": 60,
+    "centre": null,
+    "range": [36, 76],
+    "pcs40": {
+      "centre": null,
+      "knownContribution": 33,
+      "range": [33, 73]
+    },
+    "res40": {
+      "centre": null,
+      "knownContribution": 34,
+      "range": [34, 74]
+    },
+    "tec80": {
+      "centre": null,
+      "knownContribution": 38,
+      "range": [38, 78]
+    },
+    "optNull": {
+      "centre": null,
+      "knownContribution": 30,
+      "range": [30, 80]
+    },
+    "allThreeUnknown60": {
+      "centre": 60,
+      "requires": "New substantive GSS/MED/LON bridges accepted; not current filled scores"
+    },
+    "allNecessaryAssumptionsRejected": {
+      "centre": null,
+      "range": [0, 100]
+    }
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-jyvaskyla-priority-review.md",
+    "sha256": "1df98f20507154290e6bc4e93513bab9a633c88029d6f984a5505edae2338d30",
+    "reviewedOn": "2026-10-13",
+    "status": "bounded_conditional_review_not_ranking_or_exclusion"
+  }
+}
