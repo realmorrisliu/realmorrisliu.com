@@ -21,7 +21,11 @@
 
 **本批接续：** 两项最后未知已验收为条件60，释放补证槽位；[有界盲点审查](cci-global-priority-challenger-review.md)提出Aalborg46下一完整调查试点，Geneva29／Luxembourg103为替代。这是欧洲调查中的不同能力线索，尚非全球八维潜力次序；全球其余地区继续保留。下一批仍最多三项并行，不能用更多同类代理替代实际判断。
 
+**本批接续：** Aalborg实际案例已验收，未因服务感受有利强补完整中心；西安按同尺度撤回安全弱推定。下一入口为Daegu2453，先做年代／原提供者／服务边界有界核查；Geneva29仍是欧洲服务与负担线索的替代完整案例。U4SSC只提供多国部分资料，不能据参与核验或旧原值宣布全球高分潜力。最多三研究任务，主任务统一验收。
+
 依据为当前[评分案例](cci-local-2026-scoring-calibration.md)、[全候选演算](data/cci-local-2026-rank-audit.json)、[Malmö报告](cci-malmo-priority-review.md)、[Leicester报告](cci-leicester-priority-review.md)及[冻结探索模型的限制](cci-unassessed-priority-screening.md)。下文保留各批历史安排与验收记录。
+
+**2026-10-13 第十二批验收：** 新增[Aalborg46](cci-aalborg-priority-review.md)PCS／RES未知，GSS／ISR／LON／TEC／OPT条件60、MED40，域42—67、无中心；MED60替代45—70，临床过程／结局／缺记录与通常取得推定分开。[西安GSS](cci-xian-gss-comparability-review.md)原60撤回未知，其他七维不变，域45—70，保护实绩仍保留。当前**44份审阅、15完整／29部分、8,987未审**。[多国服务入口](cci-global-priority-coverage-review.md)核ITU28条目／60链接，恰3英文PDF关键表已读；[全9031来源关联](data/cci-u4ssc-source-inventory.json)8候选名称国别匹配、20索引条目未匹配而保留，不转指标或分数。逐KPI年代、原采集范围及2026通常居民适配未闭，不是当前全球面板；全部候选保留、零排除，无合格第32名门槛。以下旧计数及评分为阶段快照。
 
 **2026-10-13 第十一批验收：** [Malmö科技](cci-malmo-technology-priority-review.md)／[Leicester资源](cci-leicester-resources-priority-review.md)补最后未知后均形成八维条件中心60；其余七维各自未改，必要推定拒绝即回54—64、无中心。[南京安全](cci-nanjing-gss-comparability-review.md)撤原GSS60为未知，原中心58撤回至49—64；真实防空和执法保护保留。[武汉安全](cci-wuhan-gss-comparability-review.md)补当前地方观察和匹配训练后保持条件60，域54—64。新增[Sheffield4460](cci-sheffield-priority-review.md)PCS／RES／TEC／OPT60、ISR40，另三维未知，域33—73。当前**43份审阅、15完整／28部分、8,988未审**；[Minsk799](cci-minsk-priority-review.md)／[Cáceres1766](cci-caceres-priority-review.md)仅两入口、未评分不计八维。全部候选保留、零排除，无合格第32名门槛；下列为历史阶段快照。
 

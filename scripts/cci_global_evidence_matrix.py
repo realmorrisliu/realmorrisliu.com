@@ -296,8 +296,20 @@ def main():
     inputs[legal_path.name] = {'sha256': hashlib.sha256(legal_path.read_bytes()).hexdigest(),
                                'provenance': review.name,
                                'provenanceSha256': hashlib.sha256(review.read_bytes()).hexdigest()}
+    service_path = folder / 'cci-u4ssc-source-inventory.json'
+    service = json.loads(service_path.read_text())
+    if (service['candidateCount'] != len(candidates)
+            or service['candidateCsvSha256'] != inputs['cci-global-candidates-r2019a.csv']['sha256']
+            or service['globalRankingEligible'] or service['indicatorTransfer'] or service['scoreTransfer']
+            or service['scriptSha256'] != hashlib.sha256((ROOT / 'scripts/cci_u4ssc_source_inventory.py').read_bytes()).hexdigest()
+            or service['csvSha256'] != hashlib.sha256((folder / 'cci-u4ssc-candidate-source-refs.csv').read_bytes()).hexdigest()
+            or service['indexSnapshotSha256'] != hashlib.sha256((folder / 'cci-u4ssc-verification-index.json').read_bytes()).hexdigest()):
+        raise ValueError('Cross-city service source inventory mismatch')
+    inputs[service_path.name] = {'sha256': hashlib.sha256(service_path.read_bytes()).hexdigest(),
+                                'provenance': 'cci-global-priority-coverage-review.md',
+                                'provenanceSha256': hashlib.sha256((ROOT / 'docs/cci-global-priority-coverage-review.md').read_bytes()).hexdigest()}
     cases = []
-    for city in ('singapore', 'london', 'helsinki', 'zurich', 'gaza', 'tokyo', 'washington', 'new-york', 'paris', 'san-jose', 'los-angeles', 'osaka-kyoto', 'boston', 'seoul', 'lisbon', 'chicago', 'prague', 'beijing', 'shanghai', 'jakarta', 'nanjing', 'guangzhou', 'wuhan', 'xian', 'surabaya', 'hangzhou', 'copenhagen', 'saifai', 'grimsby', 'tampere', 'cima', 'oulu', 'leicester', 'dublin', 'turku', 'edinburgh', 'jyvaskyla', 'coventry', 'loughborough', 'fazeley', 'malmo', 'santa-cruz-de-tenerife', 'sheffield'):
+    for city in ('singapore', 'london', 'helsinki', 'zurich', 'gaza', 'tokyo', 'washington', 'new-york', 'paris', 'san-jose', 'los-angeles', 'osaka-kyoto', 'boston', 'seoul', 'lisbon', 'chicago', 'prague', 'beijing', 'shanghai', 'jakarta', 'nanjing', 'guangzhou', 'wuhan', 'xian', 'surabaya', 'hangzhou', 'copenhagen', 'saifai', 'grimsby', 'tampere', 'cima', 'oulu', 'leicester', 'dublin', 'turku', 'edinburgh', 'jyvaskyla', 'coventry', 'loughborough', 'fazeley', 'malmo', 'santa-cruz-de-tenerife', 'sheffield', 'aalborg'):
         path = folder / f'cci-local-2026-{city}-case.json'
         case = json.loads(path.read_text())
         review = ROOT / 'docs' / case['evidenceReview']
@@ -338,6 +350,14 @@ def main():
         "boundaryPopulationCoverage": {
             "manifest": "cci-wup-2025-population-coverage.json",
             **{key: population[key] for key in ('status', 'targetEpoch', 'centreCount', 'frozenFuaCount', 'centresWithKnownPopulation', 'centresWithKnownOutsidePopulation', 'centresWithoutOldFuaOverlap', 'centresWithPartialKnownPopulationCoverage', 'centresWithOutsideAreaButNoSampledOutsidePopulation', 'centresWithUnknownPopulationCells', 'method', 'limitations')},
+        },
+        "crossCityServiceSources": {
+            "manifest": service_path.name,
+            "manifestSha256": hashlib.sha256(service_path.read_bytes()).hexdigest(),
+            **{key: service[key] for key in ('candidateCount', 'indexEntries', 'uniqueLinks',
+                                            'identityMappedEntries', 'candidatesWithIdentityRefs',
+                                            'readReportCount', 'indicatorTransfer', 'scoreTransfer',
+                                            'globalRankingEligible')},
         },
         "dimensionStatusCounts": {d: dict(Counter(r[d] for r in rows)) for d in DIMENSIONS},
         "scoreStatusCounts": dict(Counter(r["cci_score_status"] for r in rows)),

@@ -53,6 +53,7 @@ import fazeley from "../../docs/data/cci-local-2026-fazeley-case.json";
 import malmo from "../../docs/data/cci-local-2026-malmo-case.json";
 import santaCruz from "../../docs/data/cci-local-2026-santa-cruz-de-tenerife-case.json";
 import sheffield from "../../docs/data/cci-local-2026-sheffield-case.json";
+import aalborg from "../../docs/data/cci-local-2026-aalborg-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -110,8 +111,10 @@ const cases = [
   malmo,
   santaCruz,
   sheffield,
+  aalborg,
 ];
 const caseNamesZh: Record<number, string> = {
+  [aalborg.candidateId]: "奥尔堡功能区",
   [sheffield.candidateId]: "谢菲尔德功能区",
   [malmo.candidateId]: "马尔默功能区",
   [santaCruz.candidateId]: "圣克鲁斯-德特内里费功能区",
@@ -279,12 +282,13 @@ const caseNotes: Record<number, string[]> = {
   ],
   [xian.candidateId]: [
     zh
-      ? "西安7094按全候选目录顺序进入研究：PCS／GSS／ISR／RES／MED条件性60、TEC80、OPT40，LON未定。数学域54—64、无中心；咸阳／机场与省人民西咸点7004、鄠邑7100不并入，行政总量和参考点不代全居民覆盖。"
-      : "Xi'an 7094 enters review in the full-directory research sequence: conditional PCS/GSS/ISR/RES/MED 60, TEC 80, OPT 40, LON unresolved. Its mathematical domain is 54–64 with no centre. Xianyang/airport/provincial-hospital Xixian references 7004 and Huyi 7100 remain separate; municipal totals and points are not full resident coverage.",
+      ? "西安GSS原60撤回未知，其余七维不变，域45—70、无中心；LON仍未知。实际司法／追缴和2026断网断路断电实训保留，但一般刑案下降、旧案伤害及程序人数不足支持当前通常较低剩余组织侵害推定。未知不自动低分，亦不要求先有战争／全人口率。"
+      : "Xi’an's earlier GSS 60 is withdrawn to unknown; the other seven judgments are unchanged: 45–70 without a centre, with LON still unknown. Actual justice/recovery of assets and 2026 communications/power/road-disruption exercises remain, but unclassified crime declines, old harms and procedural totals do not support usually limited current organised-harm effects. Unknown is not a low score, and prior war/population-wide rates are not required.",
     zh
-      ? "实际排涝、市场流转与院感改进／专科／当前医保路径共同支持判断；纳排、旧护理责任、事故仅赔付协议和份额冲突保留。MED采用东京／武汉同推定层级，通常获得／负担／延续拒绝则撤回。原2024输注不能补2026净负担／监护，GFW无西安测点；不以未知生成总分或排除竞争者。"
-      : "Actual flood response, market circulation and infection improvement/specialist/current insurance paths support the judgments, retaining selection limits, historical care failures, compensation agreements without verified payment and conflicting market shares. MED uses the same assumption level as Tokyo/Wuhan and is withdrawn if usual access/affordability/continuation assumptions fail. Original 2024 infusion does not resolve 2026 net costs/monitoring; GFW has no Xi'an point. Unknowns produce neither a total centre nor exclusions.",
+      ? "法院4案42人与检察81起诉不相加当123受害人；8443.85万元追缴非已全部返还。全9031重核12近似点，水磨村／基地足迹仍未核；这不是因一个缺坐标撤回。战略已实施保护为partial，恢复GSS60需新的限定当前影响连接，旧54—64仅历史情景。"
+      : "Four court cases/42 people and 81 prosecutions are not 123 victims; RMB 84.4385 million recovered is not full restitution. Twelve approximate references were rechecked against all 9,031 areas, with village/base footprints unverified; withdrawal is not caused by one missing coordinate. Implemented strategic protection remains partial. Reinstating GSS 60 needs a bounded current-impact connection; the earlier 54–64 is historical.",
   ],
+
   [wuhan.candidateId]: [
     zh
       ? "武汉GSS条件60补足地方窗口观察及2026实际防空／通联训练；其余七维不变，域54—64、无中心。2024涉黑涉恶十类警情下降51%没有绝对基数，2025刑事警情下降8.9%不是组织暴力率；2026团伙41拘捕／144万元查扣不当定罪或已返还。"
@@ -353,6 +357,14 @@ const caseNotes: Record<number, string[]> = {
     zh
       ? "全9,031几何核对区内外参考点；Hull、Sheffield和机场服务不并成本区。国家CAR-T委托不证明本区居民已进入真实给药/监护链；国家威胁与日常运转也不足以补GSS。两轮后保留缺口，必要的代表性、延续、普通负担和触达假设均可撤回。"
       : "Reference points were checked against all 9,031 geometries; Hull, Sheffield and outside-airport services are not local production. National CAR-T commissioning does not establish a delivered local-resident pathway; national threat context and ordinary operations do not settle GSS. After two rounds, gaps remain explicit and applicability, continuity, affordability and reach assumptions can be withdrawn.",
+  ],
+  [aalborg.candidateId]: [
+    zh
+      ? "奥尔堡PCS／RES未知，GSS／ISR／LON／TEC／OPT条件60、MED条件40，域42—67、无中心。2023服务满意度只提供研究线索；实际急症时效下降与公费取得、专科及复苏正向结果并读。MED60替代为45—70，拒绝LON实际类别／当前产品与取得连接则36—71。"
+      : "Aalborg has unknown PCS/RES, conditional 60 for GSS/ISR/LON/TEC/OPT and MED 40: 42–67 without a centre. The 2023 service-satisfaction survey is only a research lead. Actual time-sensitive care delays are read alongside public access, specialist treatment and positive resuscitation outcomes. MED 60 gives 45–70; withdrawing LON's actual-category/current-product and access connection gives 36–71.",
+    zh
+      ? "髋骨折24h手术314／559，早活动432／544；缺记录及医学延迟不全等实际失治，30日死亡OR0.91区间0.57—1.45未显著超额也不证明无害。首CAR-T回输品牌未说明，不移用另一产品模型寿命；帮派未解散、无人机停航／供能共因保留，未来2027泵不当前化。"
+      : "Hip-fracture surgery within 24 hours is 314/559, early mobilisation 432/544. Missing records or medically appropriate delays are not all failed care. The 30-day mortality OR 0.91 with interval 0.57–1.45 shows no significant excess, without proving no harm. The first CAR-T infusion brand is unspecified; another product's modelled survival is not transferred. Unresolved gangs, drone-related airport closure and shared energy dependencies remain; a planned 2027 pump is not present capacity.",
   ],
   [sheffield.candidateId]: [
     zh
@@ -566,6 +578,10 @@ const caseNotes: Record<number, string[]> = {
   ],
 };
 const caseSupplementLinks: Record<number, { path: string; label: string }> = {
+  7094: {
+    path: "cci-xian-gss-comparability-review.md",
+    label: zh ? "安全同尺度撤回与恢复条件" : "Safety withdrawal and reassessment conditions",
+  },
   9701: {
     path: "cci-nanjing-gss-comparability-review.md",
     label: zh ? "安全撤回与恢复条件" : "Safety withdrawal and reassessment",
@@ -1038,6 +1054,21 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
         {" · "}<a
           href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-caceres-priority-review.md"
           >{zh ? "Cáceres核查" : "Cáceres review"}</a
+        >
+      </p>
+      <p>
+        {
+          zh
+            ? "ITU跨城市服务入口保留28报告条目／60语种和网页链接；仅3份英文PDF关键表已读，8候选有名称＋国别来源关联。核验年不代观察年、授权接入不代全部可用，停电时长CAIDI不等全年累计停电；这些入口不生成CCI评分。"
+            : "The ITU service-report registry retains 28 entries and 60 language or viewer links. Selected tables from only three English PDFs were read; eight candidates have name-country source references. Verification year is not observation year, authorised connection is not all usable access, and CAIDI is not annual cumulative outage time. These entries generate no CCI score."
+        }
+        {" "}<a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-global-priority-coverage-review.md"
+          >{zh ? "多国服务入口与限制" : "Multicountry service sources and limits"}</a
+        >
+        {" · "}<a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/data/cci-u4ssc-source-inventory.json"
+          >{zh ? "全候选来源关联审计" : "Source-reference audit"}</a
         >
       </p>
       <p>

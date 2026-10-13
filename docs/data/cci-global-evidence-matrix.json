@@ -30,6 +30,19 @@
     "method": "Native population cell centres inside 1000m-densified WUP2025 polygons; whole-cell values partitioned by the union of every positive-area intersecting old FUA. Covered and uncovered known cells conserve each centre total. No uniform density, raster reprojection or cross-centre population sum.",
     "limitations": "Projected residential population, not census, citizenship, income or insured residents. Coarse whole-cell allocation and transformed boundary approximation affect small/coastal areas. Unknown population is counted as cells and excluded from the known-only share, not imputed zero. Geometry-review/outside-raster records remain unresolved. No commuting identity, whole-FUA resident coverage, cross-centre deduplicated global population, migration, scores, exclusion or global ranking eligibility follows."
   },
+  "crossCityServiceSources": {
+    "manifest": "cci-u4ssc-source-inventory.json",
+    "manifestSha256": "ff601a7b7d1738086e8bb72b318e784545d3f0d40b08ab3aac5456e1a76b6b95",
+    "candidateCount": 9031,
+    "indexEntries": 28,
+    "uniqueLinks": 60,
+    "identityMappedEntries": 8,
+    "candidatesWithIdentityRefs": 8,
+    "readReportCount": 3,
+    "indicatorTransfer": false,
+    "scoreTransfer": false,
+    "globalRankingEligible": false
+  },
   "dimensionStatusCounts": {
     "PCS": {
       "partial_seismic_hazard_model": 9023,
@@ -153,10 +166,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 43,
+    "conditionalCaseCount": 44,
     "completeConditionalCaseCount": 15,
-    "partialCaseCount": 28,
-    "unassessedCount": 8988,
+    "partialCaseCount": 29,
+    "unassessedCount": 8987,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -272,6 +285,11 @@
       "sha256": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
       "provenance": "cci-legal-mobility.md",
       "provenanceSha256": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e"
+    },
+    "cci-u4ssc-source-inventory.json": {
+      "sha256": "ff601a7b7d1738086e8bb72b318e784545d3f0d40b08ab3aac5456e1a76b6b95",
+      "provenance": "cci-global-priority-coverage-review.md",
+      "provenanceSha256": "474055bbf9a21fdad941decd94e047c68977d13841a22fca9afd46f5efa5a680"
     },
     "cci-local-2026-singapore-case.json": {
       "sha256": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -389,9 +407,9 @@
       "provenanceSha256": "e448678af6b368d987252f8b2a0464bf04f5c61abea81b0e85b376cb5e9f7b4d"
     },
     "cci-local-2026-xian-case.json": {
-      "sha256": "8a4d641119fa5dcb0eeba5806c2582eab7e8dbeacbaff454b00e0588b9c68ed3",
+      "sha256": "f66a703540cac064770120b55d3d8aa115950c7fa249249d42bbbfd200cd74b0",
       "provenance": "cci-local-2026-xian-case.md",
-      "provenanceSha256": "c26c2759f037e4608354894dd7303c1bd41b1f45235bc7878a5479e1ca6b5717"
+      "provenanceSha256": "81c237333cfbd4b42aaf4deb0293e2e27d9dbc93b9e8d491ff54629d0be7d94b"
     },
     "cci-local-2026-surabaya-case.json": {
       "sha256": "0330322258b61e8122c42a303d46b0a25d1738bbb5ce84e18a550ef24abd3f6e",
@@ -487,8 +505,13 @@
       "sha256": "29c4d23df8524da295a00c44297398efa09b7e7874bc0a5863f8b640e173a427",
       "provenance": "cci-sheffield-priority-review.md",
       "provenanceSha256": "07fc38520ec47fa7d1b7e55b840607f31365011430973997ccc7ef1be5a0b5a9"
+    },
+    "cci-local-2026-aalborg-case.json": {
+      "sha256": "eb9aa604ede02df62f44f33589ab47f825d98b9051ee5920fcf9427eb0471eb9",
+      "provenance": "cci-aalborg-priority-review.md",
+      "provenanceSha256": "e0658b20bbd28f06dfee388abfcb0f933061681f2fd62fd4a9e2fc54705a8919"
     }
   },
-  "scriptSha256": "2ec255f97b71e644cd47dd4c1a48bf61f4edc2934777babae2b4c8ea1ee91a32",
-  "csvSha256": "4e6048c92a016f60801fde16c1c98bf2de2d128bc1426f7bddd074abbd55fec2"
+  "scriptSha256": "55650067e8ebd5e10a666d748a9a70aece8cc78d697d058fb942a7295c0dadd4",
+  "csvSha256": "6a60162032023241cb5bea8c1d0443bd0c58c7716b1d8dde0d304f5929c6b2e9"
 }

@@ -95,6 +95,7 @@ const realCases = [
   "malmo",
   "santa-cruz-de-tenerife",
   "sheffield",
+  "aalborg",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -181,6 +182,7 @@ const [
   malmo,
   santaCruz,
   sheffield,
+  aalborg,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -1067,8 +1069,8 @@ const jakartaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
   (c: { efua_id: string }) => c.efua_id === "4897"
 );
 assert(jakartaPosition);
-// Nanjing's withdrawn GSS removes one fixed lower bound above Jakarta's upper53.
-assert.equal(jakartaPosition.bestPosition, 19);
+// Nanjing and Xi’an GSS withdrawals remove two fixed lower bounds above Jakarta’s upper53.
+assert.equal(jakartaPosition.bestPosition, 18);
 assert.equal(jakartaPosition.worstPosition, rankAudit.candidateCount);
 
 assert.deepEqual(total(nanjing), { center: null, lower: 49, upper: 64 });
@@ -1421,22 +1423,22 @@ assert(wuhanPosition);
 assert.equal(wuhanPosition.bestPosition, 1);
 assert.equal(wuhanPosition.worstPosition, rankAudit.candidateCount - 1);
 
-assert.deepEqual(total(xian), { center: null, lower: 54, upper: 64 });
+assert.deepEqual(total(xian), { center: null, lower: 45, upper: 70 });
 assert(!Object.hasOwn(xian, "LON"));
 for (const [dimension, lower, upper] of [
-  ["PCS", 45, 70],
+  ["PCS", 36, 76],
   ["GSS", 45, 70],
-  ["ISR", 45, 70],
-  ["RES", 48, 68],
-  ["MED", 45, 70],
-  ["TEC", 46, 66],
-  ["OPT", 50, 70],
+  ["ISR", 36, 76],
+  ["RES", 39, 74],
+  ["MED", 36, 76],
+  ["TEC", 37, 72],
+  ["OPT", 41, 76],
 ] as const) {
   const withdrawn = { ...xian };
   delete withdrawn[dimension];
   assert.deepEqual(total(withdrawn), { center: null, lower, upper });
 }
-assert.deepEqual(total({ ...xian, ISR: 40 }), { center: null, lower: 51, upper: 61 });
+assert.deepEqual(total({ ...xian, ISR: 40 }), { center: null, lower: 42, upper: 67 });
 const xianCase = realCases[23];
 for (const review of xianCase.focusedReviews)
   assert.equal(review.sha256, digest(`docs/${review.path}`));
@@ -1491,7 +1493,7 @@ const xianPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.f
 );
 assert(xianPosition);
 assert.equal(xianPosition.bestPosition, 1);
-assert.equal(xianPosition.worstPosition, rankAudit.candidateCount - 1);
+assert.equal(xianPosition.worstPosition, rankAudit.candidateCount);
 
 assert.deepEqual(total(surabaya), { center: null, lower: 49, upper: 59 });
 assert(!Object.hasOwn(surabaya, "LON"));
@@ -1835,3 +1837,41 @@ const challengerAudit = JSON.parse(
 assert.equal(challengerAudit.globalRankingEligible, false);
 assert.equal(challengerAudit.surveyCities, 83);
 assert.equal(challengerAudit.derived.sha256, digest(`docs/data/${challengerAudit.derived.path}`));
+
+assert.equal(xianCase.gssComparabilityReview.sha256, digest(xianCase.gssComparabilityReview.path));
+assert.equal(xianCase.gssSupplement.warOrSuccessfulStrategicAttackRequired, false);
+assert.deepEqual(total({ ...xian, GSS: 60 }), { center: null, lower: 54, upper: 64 });
+
+const serviceInventory = JSON.parse(
+  readFileSync(new URL("../docs/data/cci-u4ssc-source-inventory.json", import.meta.url), "utf8")
+);
+assert.equal(serviceInventory.candidateCount, 9031);
+assert.equal(
+  serviceInventory.mappedEntries.length + serviceInventory.unresolvedEntries.length,
+  serviceInventory.indexEntries
+);
+assert.equal(serviceInventory.readReportCount, 3);
+assert.equal(serviceInventory.indicatorTransfer, false);
+assert.equal(serviceInventory.scoreTransfer, false);
+assert.equal(serviceInventory.globalRankingEligible, false);
+assert.equal(serviceInventory.csvSha256, digest("docs/data/cci-u4ssc-candidate-source-refs.csv"));
+assert.equal(
+  serviceInventory.indexSnapshotSha256,
+  digest("docs/data/cci-u4ssc-verification-index.json")
+);
+assert.equal(serviceInventory.scriptSha256, digest("scripts/cci_u4ssc_source_inventory.py"));
+
+assert.deepEqual(total(aalborg), { center: null, lower: 42, upper: 67 });
+assert.deepEqual(total({ ...aalborg, MED: 60 }), { center: null, lower: 45, upper: 70 });
+const aalborgWithoutLon = { ...aalborg };
+delete aalborgWithoutLon.LON;
+assert.deepEqual(total(aalborgWithoutLon), { center: null, lower: 36, upper: 71 });
+const aalborgCase = realCases.find(c => c.candidateId === 46);
+assert.equal(
+  aalborgCase.priorityCompletionReview.sha256,
+  digest(aalborgCase.priorityCompletionReview.path)
+);
+assert.equal(
+  aalborgCase.dimensions.find((d: { id: string }) => d.id === "GSS").subpillars.regional_conflict,
+  "context"
+);

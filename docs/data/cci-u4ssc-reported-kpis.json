@@ -1,0 +1,129 @@
+{
+  "status": "archival_partial_reported_kpis_not_cci_or_current_comparable_panel",
+  "rows": [
+    {
+      "reportCity": "Daegu",
+      "countryIso": "KOR",
+      "verifiedMonth": "2021-08",
+      "publishedMonth": "2021-10",
+      "file": "daegu2021.pdf",
+      "potableHouseholdsPct": 99.97,
+      "waterSupplyLossPct": 3.94,
+      "saifiInterruptionsPerCustomerPerYear": 0.06,
+      "caidiMinutesPerCustomerInterruption": 30.66,
+      "authorizedElectricityHouseholdsPct": 88.3,
+      "ehrInhabitantsPct": 96.64,
+      "healthCoverageInhabitantsPct": 96.72,
+      "housingExpenditureIncomePct": 19.1,
+      "resiliencePlansReported": "NO",
+      "populationDisasterPronePct": 1.21,
+      "candidateId": 2453,
+      "observationYear": null,
+      "observationYearMeaning": "NOT inferred from verification/publication date. SAIFI/CAIDI collection standard requires12months but actualyearunreported.",
+      "identity": "city-submitted figures independently verified only for limited assurance/method conformance",
+      "targetResidentCohortVerified": false,
+      "sourceDataOriginPerKpi": "not disclosed here; insurance/housing may derive from national data per officialmethod",
+      "pdfPagesVisuallyChecked": [14, 15, 21, 22],
+      "methodPdfPagesVisuallyChecked": [49, 54, 55, 56, 101, 106, 112],
+      "unknownNotPenalty": true
+    },
+    {
+      "reportCity": "Quito",
+      "countryIso": "ECU",
+      "verifiedMonth": "2025-03",
+      "publishedMonth": "2025-04",
+      "file": "quito2025.pdf",
+      "potableHouseholdsPct": 98.35,
+      "waterSupplyLossPct": 29.12,
+      "saifiInterruptionsPerCustomerPerYear": 2.36,
+      "caidiMinutesPerCustomerInterruption": 2.51,
+      "authorizedElectricityHouseholdsPct": 85.43,
+      "ehrInhabitantsPct": 19.62,
+      "healthCoverageInhabitantsPct": 100,
+      "housingExpenditureIncomePct": 22.89,
+      "resiliencePlansReported": "YES",
+      "populationDisasterPronePct": 14.01,
+      "candidateId": 2569,
+      "observationYear": null,
+      "observationYearMeaning": "NOT inferred from verification/publication date. SAIFI/CAIDI collection standard requires12months but actualyearunreported.",
+      "identity": "city-submitted figures independently verified only for limited assurance/method conformance",
+      "targetResidentCohortVerified": false,
+      "sourceDataOriginPerKpi": "not disclosed here; insurance/housing may derive from national data per officialmethod",
+      "pdfPagesVisuallyChecked": [14, 15, 21, 22],
+      "methodPdfPagesVisuallyChecked": [49, 54, 55, 56, 101, 106, 112],
+      "unknownNotPenalty": true
+    },
+    {
+      "reportCity": "Mashhad",
+      "countryIso": "IRN",
+      "verifiedMonth": "2021-05",
+      "publishedMonth": "2021-08",
+      "file": "mashhad2021.pdf",
+      "potableHouseholdsPct": 100,
+      "waterSupplyLossPct": 21.76,
+      "saifiInterruptionsPerCustomerPerYear": 0.8,
+      "caidiMinutesPerCustomerInterruption": 70.87,
+      "authorizedElectricityHouseholdsPct": 100,
+      "ehrInhabitantsPct": null,
+      "healthCoverageInhabitantsPct": 69.86,
+      "housingExpenditureIncomePct": 24.41,
+      "resiliencePlansReported": "NO",
+      "populationDisasterPronePct": 12.23,
+      "candidateId": 6030,
+      "observationYear": null,
+      "observationYearMeaning": "NOT inferred from verification/publication date. SAIFI/CAIDI collection standard requires12months but actualyearunreported.",
+      "identity": "city-submitted figures independently verified only for limited assurance/method conformance",
+      "targetResidentCohortVerified": false,
+      "sourceDataOriginPerKpi": "not disclosed here; insurance/housing may derive from national data per officialmethod",
+      "pdfPagesVisuallyChecked": [14, 15, 21, 22],
+      "methodPdfPagesVisuallyChecked": [49, 54, 55, 56, 101, 106, 112],
+      "unknownNotPenalty": true
+    }
+  ],
+  "originals": [
+    {
+      "file": "methodology-index.html",
+      "url": "https://u4ssc.itu.int/u4ssc-methodology/",
+      "bytes": 54663,
+      "sha256": "475d086afcf48eace084dd13146216eb578970058b5dc17a143d03cde9e16d24"
+    },
+    {
+      "file": "worldbank-catalog2026.html",
+      "url": "https://reproducibility.worldbank.org/catalog/484",
+      "bytes": 147532,
+      "sha256": "ffc430ff7d679289c00215cea28494e8e4496395df89456715e56a5c0a8fc638"
+    },
+    {
+      "file": "mashhad2021.pdf",
+      "url": "https://www.itu.int/en/ITU-T/ssc/united/Documents/U4SSC%20Publications/Verification%20Reports/August%202021/U4SSC_Mashhad-Iran_Verification-Report.pdf?csf=1&e=LYe4ib",
+      "bytes": 11103443,
+      "sha256": "7c05b796e001b58fb04637076ac82a6127a58f95a3d71ee663e7ab750f4eb46c"
+    },
+    {
+      "file": "methodology2017.pdf",
+      "url": "https://www.itu.int/en/publications/Documents/tsb/2017-U4SSC-Collection-Methodology/files/downloads/17-00474_Collection-Methodology-for-Key-Performance-Indicators-for-Smart-Sustainable-Cities.pdf",
+      "bytes": 18632444,
+      "sha256": "845eeee143c268b2eb150b48af6f5f8674c979ce417934d610d50743fcac2e98"
+    },
+    {
+      "file": "verification-index.html",
+      "url": "https://u4ssc.itu.int/verification-reports/",
+      "bytes": 127006,
+      "sha256": "d3d503f86c14b32ee36d720a826f87d28fd3bfd87e9663e4e69f3a2b28cfa64f"
+    },
+    {
+      "file": "quito2025.pdf",
+      "url": "https://u4ssc.itu.int/wp-content/uploads/2025/04/2500529_U4SSC-Verification-Report-Quito-Ecuador.pdf",
+      "bytes": 16325736,
+      "sha256": "40a3f76f316b59be4d670c8ffaf07b57a1fe7986d4bed6508c1fc0b4ff3ee09f"
+    },
+    {
+      "file": "daegu2021.pdf",
+      "url": "https://www.itu.int/en/ITU-T/ssc/united/Documents/U4SSC%20Publications/Verification%20Reports/October%202021/U4SSC_Daegu-Korea_Verification-Report.pdf",
+      "bytes": 11625860,
+      "sha256": "ad803798fc5bcb0d690ea033f74a0da469c0672afe2d2954b22e8382d098948d"
+    }
+  ],
+  "globalRankingEligible": false,
+  "scope": "Archival reported indicators; dates, sources and administrative/FUA/resident-cohort alignment unresolved. Official2017 definitions guide interpretation, not certification of each city actual calculation."
+}
