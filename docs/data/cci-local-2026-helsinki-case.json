@@ -8,7 +8,7 @@
   "boundaryVersion": "GHS-FUA R2019A",
   "boundaryReview": "unresolved",
   "evidenceReview": "cci-local-2026-helsinki-case.md",
-  "expectedConditionalTotal": 62,
+  "expectedConditionalTotal": null,
   "limitations": "All 31 subpillars are reviewed, not all are measured. Scores require the stated assumptions; unknown evidence remains unknown. This is neither a global ranking nor an exclusion bound. Rejecting a necessary assumption requires reassessment, not automatic retention of its score.",
   "dimensions": [
     {
@@ -26,10 +26,10 @@
     },
     {
       "id": "GSS",
-      "score": 60,
-      "rationale": "National intelligence assessment and local preparedness support mitigation while regional and strategic risks persist; older unmatched events do not establish low current local violence.",
-      "assumption": "Ordinary life is not broadly and persistently blocked; national forecasts do not measure city-level violence and unreviewed strategic scenarios remain open.",
-      "conditionalAlternatives": [40, 80],
+      "score": null,
+      "rationale": "The earlier 60 judgment depended on national military forecasts and local preparedness, which do not establish current local organized-violence impact and actual mitigation. The same evidence threshold used for Tampere leaves GSS unresolved.",
+      "assumption": "No score is assigned. Reassessment needs temporally and spatially applicable evidence connecting actual organized-violence or strategic impact with implemented mitigation and remaining ordinary-resident constraints. Incomplete evidence does not establish either low impact or a 40 judgment.",
+      "conditionalAlternatives": [],
       "subpillars": {
         "organized_violence": "unresolved",
         "regional_conflict": "context",
@@ -120,5 +120,11 @@
     "sha256": "7122838c194b0f8c8d57e1c30b6efb478e4eae5fc68c9f4bf8651f72fbb7c589",
     "reviewedOn": "2026-10-12",
     "status": "conditional_80_judgment_not_objective_scale_or_global_eligibility"
+  },
+  "securityReview": {
+    "path": "docs/cci-helsinki-security-review.md",
+    "sha256": "3c237ec6b4dbedff08a6a544891f721ee827fa211408dc91f0b6fdaafa318aab",
+    "reviewedOn": "2026-10-13",
+    "status": "withdrawn_unsupported_60_not_evidence_of_low_capability"
   }
 }
