@@ -1,0 +1,681 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 4193,
+  "name": "Fazeley",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "approximate_reference_points_full9031_checked_not_service_coverage",
+  "evidenceReview": "cci-fazeley-priority-review.md",
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 27.0,
+  "unresolvedScoreRange": [27.0, 77.0],
+  "limitations": "Existing two rounds resumed. All 31 semantic keys recorded but RES/MED/TEC and GSS chains remain insufficient for full review. No full centre or ranking; ordinary geography/qualification/net costs/time continuation assumptions reversible.",
+  "retrievedOn": "2026-10-13",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 40,
+      "rationale": "历史表说明Castle/Mercian既有河防，同时多区表水/河洪残余、2024/25高河位与2026改进仍early-stage。旧低热/PGA不闭全危险。",
+      "assumption": "接受2019表既有防护延续与Tamworth核心代表性；多区未缓解暴露对居住/关键通道仍重要。若既有防护实际充分有效且剩余局部可60，拒绝地域/延续/残余重要性连接则null。",
+      "conditionalAlternatives": [60],
+      "subpillars": {
+        "heat_humidity": "context",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "context"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "已见寻求庇护酒店真实暴乱及市响应/凝聚项目，但区域冲突外溢与战略威胁实际影响/缓解未闭。",
+      "assumption": "按Edinburgh/Coventry根纠偏，组织暴力局部证据不能以国家和平或普通通道背景补整维60；未来闭真实区域/战略链后重判40/60。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "年度实际电话/面谈/维修和回应酒店暴乱、Honest Conversations已交付支持执行；社会住房自报不合规及财政压力/触达残余保留。",
+      "assumption": "接受行政核心执行/社区应对对普通FUA居民代表性及延续；未把预算分配当结果。若住房/凝聚残余在帮助后仍主导可40，若实际恢复和广泛触达更强可80；拒绝地域/版本连接则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "实际食品银行交付和三日限领/不配送成立；水务只有无效挑战页，能源恢复/通常供给、关键供应替代未闭。",
+      "assumption": "没有因网页失败/未获全户账单判低档；普通食品可负担性可推定但不足填满资源链。补已有供区适配实际水/能源运行与缓解后才判60/40。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "unresolved",
+        "food": "partial",
+        "energy": "unresolved",
+        "supply_chain": "context"
+      }
+    },
+    {
+      "id": "MED",
+      "score": null,
+      "rationale": "NHS通常资格、SirRobertPeel旧实际接诊及CQC2021 IPC流程/问题、外区QE专科真实交付成立；2021未重评级且2015/2019社区RI不能证明2026质量恢复/连续性。",
+      "assumption": "允许通常NHS净负担和必要转诊推定，不要求全区质量普测；但现有旧检查与2026单项专科不能闭广泛常规质量/连续性，旧RI也不能直接当当前整维40。最小缺口是当前对应服务质量/连续性或可信延续整改连接。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "QE区外真实Tamworth Nov2022患者、同中心Mar2026常规NHS obe-cel给药、NICE正式人体审查/适应证/供资、CAR-T委托资格与长期监护形成疾病转化链。",
+      "assumption": "适用26+复发/难治B-cell precursor ALL、临床适合和MDT/国家panel转诊；接受同中心真实旧Tamworth患者与当前NHS服务可继续为合资格普通当地居民获得、通常交通住宿净负担可承担及截止延续。制造4–6周/未回输偏差与适应证限度重要；若当前制造/接诊/负担真正形成断点可40，拒绝通常取得连接则null；不称健康人延寿。",
+      "conditionalAlternatives": [40],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": null,
+      "rationale": "Quiss在Tamworth服务及Hamlins/BatesWells/Attwaters应用摘要和市实际数字服务交付支持局部产业/扩散；持续可核知识产出与多节点连接未闭。",
+      "assumption": "外地客户不能变全区采用率；网站提供培训/云服务不是已全部交付，100+员工及CSAT无分母不作产业密度。自选Ookla仅数字context，不因缺论文/未有AI直接判40；补持续实际知识/产业输出及普通扩散适配后再判40/60/80。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "knowledge_output": "unresolved",
+        "industry_density": "partial",
+        "digital_infrastructure": "context",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "本地实际铁路站/公交出租接续、British公民CTA居留工作与GBP实际转账/养老金规则提供多类通常出口；无站WiFi、故障电梯、银行时效与税条件保留。",
+      "assumption": "接受普通持证/常规合法账户设备/交通迁移预算通常可承担，既有地面接续及通常网络服务延续；不是把外区BHX点当本区设施/实际航空接续或高速当断网备援。若共因/资源/手续实质妨碍可40，实际独立替代且残余小可80；拒绝通常网络/预算/时点连接则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "context"
+      }
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "file": "city-performance.html",
+      "url": "https://www.tamworth.gov.uk/council/how-council-run/how-council-performing",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://www.tamworth.gov.uk/council/how-council-run/how-council-performing",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 40269,
+      "responseSha256": "4a32d43212dce52267941dbb795d9a1969c836ca53d4798caa353520fa70bee3",
+      "validOriginal": true,
+      "bytes": 40269,
+      "sha256": "4a32d43212dce52267941dbb795d9a1969c836ca53d4798caa353520fa70bee3",
+      "id": "S01",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "reused_previous_two_round_original"
+    },
+    {
+      "file": "city-achievements2025.pdf",
+      "url": "https://www.tamworth.gov.uk/sites/default/files/misc_docs/Tamworth-Borough-Council-Achievements-Report-2024-25.pdf",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://www.tamworth.gov.uk/sites/default/files/misc_docs/Tamworth-Borough-Council-Achievements-Report-2024-25.pdf",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 629018,
+      "responseSha256": "0169c175ef38637f2cff5847704a1ceddfb0c17201a62a1da245d0f7c2926707",
+      "validOriginal": true,
+      "bytes": 629018,
+      "sha256": "0169c175ef38637f2cff5847704a1ceddfb0c17201a62a1da245d0f7c2926707",
+      "id": "S02",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "reused_previous_two_round_original"
+    },
+    {
+      "file": "flood-investigations.html",
+      "url": "https://community.tamworth.gov.uk/flood-investigations",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://community.tamworth.gov.uk/flood-investigations",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 29436,
+      "responseSha256": "dc73fc5323052c7e894a88bb3262c9ce2557cc33bca840357f57984e3ac01d56",
+      "validOriginal": true,
+      "bytes": 29436,
+      "sha256": "dc73fc5323052c7e894a88bb3262c9ce2557cc33bca840357f57984e3ac01d56",
+      "id": "S03",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "reused_previous_two_round_original"
+    },
+    {
+      "file": "flooding-current.html",
+      "url": "https://www.tamworth.gov.uk/environment/natural-environment/flooding",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://www.tamworth.gov.uk/environment/natural-environment/flooding",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 31624,
+      "responseSha256": "997394eeaafb521f53e8fc78cfe26ba13ae1d43f6dea832b66caad49ec867d06",
+      "validOriginal": true,
+      "bytes": 31624,
+      "sha256": "997394eeaafb521f53e8fc78cfe26ba13ae1d43f6dea832b66caad49ec867d06",
+      "id": "S04",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "reused_previous_two_round_original"
+    },
+    {
+      "file": "foodbank-current.html",
+      "url": "https://tamworth.foodbank.org.uk/",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://tamworth.foodbank.org.uk/",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 51260,
+      "responseSha256": "baf610538a39b75689b403674eb80a3f3b02c508de5b61790c615d6932c2da4d",
+      "validOriginal": true,
+      "bytes": 51260,
+      "sha256": "baf610538a39b75689b403674eb80a3f3b02c508de5b61790c615d6932c2da4d",
+      "id": "S05",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "reused_previous_two_round_original"
+    },
+    {
+      "file": "quiss-current.html",
+      "url": "https://www.quiss.co.uk/",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://www.quiss.co.uk/",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 166359,
+      "responseSha256": "da85814a3da6e9e21d1595b32ca66078ecfaef59708403ecd9141f507adee270",
+      "validOriginal": true,
+      "bytes": 166359,
+      "sha256": "da85814a3da6e9e21d1595b32ca66078ecfaef59708403ecd9141f507adee270",
+      "id": "S06",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "reused_previous_two_round_original"
+    },
+    {
+      "file": "nice-ta1116.html",
+      "url": "https://www.nice.org.uk/guidance/ta1116",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://www.nice.org.uk/guidance/ta1116",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 18953,
+      "responseSha256": "3720ea97cdfc4ed8777d92c0c0503daa93bddaab44b7874fcd4b62479ddf12ef",
+      "validOriginal": true,
+      "bytes": 18953,
+      "sha256": "3720ea97cdfc4ed8777d92c0c0503daa93bddaab44b7874fcd4b62479ddf12ef",
+      "id": "S07",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "reused_previous_two_round_original"
+    },
+    {
+      "file": "nice-ta1116.pdf",
+      "url": "https://www.nice.org.uk/guidance/ta1116/resources/obecabtagene-autoleucel-for-treating-relapsed-or-refractory-bcell-precursor-acute-lymphoblastic-leukaemia-pdf-2973530453903557",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://www.nice.org.uk/guidance/ta1116/resources/obecabtagene-autoleucel-for-treating-relapsed-or-refractory-bcell-precursor-acute-lymphoblastic-leukaemia-pdf-2973530453903557",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 258153,
+      "responseSha256": "4321f953f22110170d3b68ae8040f89aa74900915e7e5c7755d7fa0a53838f63",
+      "validOriginal": true,
+      "bytes": 258153,
+      "sha256": "4321f953f22110170d3b68ae8040f89aa74900915e7e5c7755d7fa0a53838f63",
+      "id": "S08",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "reused_previous_two_round_original"
+    },
+    {
+      "file": "nice-ta1116-evidence.html",
+      "url": "https://www.nice.org.uk/guidance/ta1116/evidence",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://www.nice.org.uk/guidance/ta1116/evidence",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 14758,
+      "responseSha256": "bd1f1eef71c071e070d3f0b3bea848282f0efaa1601a4c30014920147e434be3",
+      "validOriginal": true,
+      "bytes": 14758,
+      "sha256": "bd1f1eef71c071e070d3f0b3bea848282f0efaa1601a4c30014920147e434be3",
+      "id": "S09",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "reused_previous_two_round_original"
+    },
+    {
+      "file": "quiss-cases.html",
+      "url": "https://www.quiss.co.uk/case-studies/",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://www.quiss.co.uk/case-studies/",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 125159,
+      "responseSha256": "7a5cc0d2d8cf8a01fadae13c218dcdd16064cd3c72888d53cc220b44fb7ac2a6",
+      "validOriginal": true,
+      "bytes": 125159,
+      "sha256": "7a5cc0d2d8cf8a01fadae13c218dcdd16064cd3c72888d53cc220b44fb7ac2a6",
+      "id": "S10",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "reused_previous_two_round_original"
+    },
+    {
+      "file": "foodbank-help.html",
+      "url": "https://tamworth.foodbank.org.uk/get-help/how-to-get-help/",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://tamworth.foodbank.org.uk/get-help/how-to-get-help/",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 50929,
+      "responseSha256": "51fcb84acebdffe483e553e30437af12b558c2cdb8a83fa2711f5fb18bc974af",
+      "validOriginal": true,
+      "bytes": 50929,
+      "sha256": "51fcb84acebdffe483e553e30437af12b558c2cdb8a83fa2711f5fb18bc974af",
+      "id": "S11",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "reused_previous_two_round_original"
+    },
+    {
+      "file": "nice-ta1116-final-evidence.pdf",
+      "url": "https://www.nice.org.uk/guidance/ta1116/evidence/final-draft-guidance-committee-papers-pdf-15543596702",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://www.nice.org.uk/guidance/ta1116/evidence/final-draft-guidance-committee-papers-pdf-15543596702",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 3328636,
+      "responseSha256": "cf0d4e7f808921cf72739c6817dcfa17865eafc59e4ad61ff07cc99ac85dbd09",
+      "validOriginal": true,
+      "bytes": 3328636,
+      "sha256": "cf0d4e7f808921cf72739c6817dcfa17865eafc59e4ad61ff07cc99ac85dbd09",
+      "id": "S12",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "reused_previous_two_round_original"
+    },
+    {
+      "file": "cqc-provider.html",
+      "url": "https://www.cqc.org.uk/provider/RTG?referer=widget3",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://www.cqc.org.uk/provider/RTG?referer=widget3",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 168260,
+      "responseSha256": "bcf3302bc49e8492f315e96683ed6f30737d423f2c351f4cda6ffa55d388ae64",
+      "validOriginal": true,
+      "bytes": 168260,
+      "sha256": "bcf3302bc49e8492f315e96683ed6f30737d423f2c351f4cda6ffa55d388ae64",
+      "id": "S13",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "reused_previous_two_round_original"
+    },
+    {
+      "file": "flood-defences2019.pdf",
+      "url": "https://www.sstaffs.gov.uk/sites/default/files/2024-07/appendix_d5_summary_of_flood_risk_in_tamworth_borough.pdf",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://www.sstaffs.gov.uk/sites/default/files/2024-07/appendix_d5_summary_of_flood_risk_in_tamworth_borough.pdf",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 158349,
+      "responseSha256": "c5fc28f5651e58d681ccb5f422c673aea3821105237ca1d8d5442fc239b27c5b",
+      "validOriginal": true,
+      "bytes": 158349,
+      "sha256": "c5fc28f5651e58d681ccb5f422c673aea3821105237ca1d8d5442fc239b27c5b",
+      "id": "S14",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "reused_previous_two_round_original"
+    },
+    {
+      "file": "rail-current.html",
+      "url": "https://www.nationalrail.co.uk/stations/tamworth/",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://www.nationalrail.co.uk/stations/tamworth/",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 326760,
+      "responseSha256": "0d0c01fe882bb3ecd658abb1e9565b0b6f8f0b36a5b4e15b8dda14ede3f3a8e6",
+      "validOriginal": true,
+      "bytes": 326760,
+      "sha256": "0d0c01fe882bb3ecd658abb1e9565b0b6f8f0b36a5b4e15b8dda14ede3f3a8e6",
+      "id": "S15",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "reused_previous_two_round_original"
+    },
+    {
+      "file": "cqc-inspection2021.pdf",
+      "url": "https://api.cqc.org.uk/public/v1/reports/c884b735-a135-456f-8c2d-8e0621a4a2a8?20210616065514",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://api.cqc.org.uk/public/v1/reports/c884b735-a135-456f-8c2d-8e0621a4a2a8?20210616065514",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 255876,
+      "responseSha256": "6882ef79065915647b9dfa5466867831491ba3eee1d3bda6c6537691d141b50d",
+      "validOriginal": true,
+      "bytes": 255876,
+      "sha256": "6882ef79065915647b9dfa5466867831491ba3eee1d3bda6c6537691d141b50d",
+      "id": "S16",
+      "reviewedOn": "2026-10-13",
+      "sourceKind": "reused_previous_two_round_original"
+    },
+    {
+      "id": "S17",
+      "file": "shared-nhs-ordinary-residence.html",
+      "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+      "bytes": 32656,
+      "sha256": "4efb26910573c7f60a7ab193ee4e3091526d3672ce5dd931413ab74c3fd26976",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:31:14.732347+00:00",
+      "reviewedOn": "2026-10-13",
+      "validOriginal": true,
+      "sourceKind": "reused_original_response",
+      "reusedFrom": "/private/tmp/cci-global/coventry/shared-nhs-ordinary-residence.html"
+    },
+    {
+      "id": "S18",
+      "file": "shared-cta2026.html",
+      "url": "https://www.gov.uk/government/publications/common-travel-area-guidance/common-travel-area-guidance",
+      "bytes": 99582,
+      "sha256": "887d27e34913f9d5c239a651507b3b8c5024975798fff618211b5f2d00d0afc6",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:55:41.678621+00:00",
+      "reviewedOn": "2026-10-13",
+      "validOriginal": true,
+      "sourceKind": "reused_original_response",
+      "reusedFrom": "/private/tmp/cci-global/coventry/shared-cta2026.html"
+    },
+    {
+      "id": "S19",
+      "file": "shared-bank-transfer-current.html",
+      "url": "https://www.bankofireland.com/help-centre/faq/much-can-transfer-365-online/",
+      "bytes": 61582,
+      "sha256": "a12d06cd5b2f2ba7c8d487fe10c3d9e289055f42eb228698c6078f0362897688",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:57:59.991392+00:00",
+      "reviewedOn": "2026-10-13",
+      "validOriginal": true,
+      "sourceKind": "reused_original_response",
+      "reusedFrom": "/private/tmp/cci-global/coventry/shared-bank-transfer-current.html"
+    },
+    {
+      "id": "S20",
+      "file": "shared-pension-transfer.html",
+      "url": "https://www.gov.uk/transferring-your-pension/transferring-to-an-overseas-pension-scheme",
+      "bytes": 77116,
+      "sha256": "acc30b14955ca0bbd05f5a521d08f4ce319bb94ea4a99ea2fcdade3ad9c2ff91",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:55:41.680123+00:00",
+      "reviewedOn": "2026-10-13",
+      "validOriginal": true,
+      "sourceKind": "reused_original_response",
+      "reusedFrom": "/private/tmp/cci-global/coventry/shared-pension-transfer.html"
+    },
+    {
+      "id": "S21",
+      "file": "shared-cart-commissioning2026.pdf",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2026/04/cart-service-specification-commissioning-guidance-v1.0-1.pdf",
+      "bytes": 332621,
+      "sha256": "ba97c929f2ca55b7da63a525aa8d0af00f962742e18f91e2b48afabda55da108",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:24:23.969404+00:00",
+      "reviewedOn": "2026-10-13",
+      "validOriginal": true,
+      "sourceKind": "reused_original_response",
+      "reusedFrom": "/private/tmp/cci-global/coventry/shared-cart-commissioning2026.pdf"
+    },
+    {
+      "id": "S22",
+      "file": "uhb-obecel-restored2026.html",
+      "url": "https://www.uhb.nhs.uk/news-and-events/news/first-patient-in-birmingham-treated-with-newly-approved-therapy-for-aggressive-blood-cancer/?source=research-news",
+      "bytes": 48852,
+      "sha256": "c158d2c4d1954edf8843d0f2c954ced31158cf228b38a00a0974400df611c059",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-03-23",
+      "validOriginal": true,
+      "sourceKind": "restored_known_original_href"
+    }
+  ],
+  "webReadSources": [],
+  "failedSourceReads": [
+    {
+      "file": "water-apr2025.pdf",
+      "url": "https://www.south-staffs-water.co.uk/media/fc3bwn4l/annual-performance-report-2024-25.pdf",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://www.south-staffs-water.co.uk/media/fc3bwn4l/annual-performance-report-2024-25.pdf",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 916,
+      "responseSha256": "41bbd169752c71e94c80c04ebf77cb0f6534c0bf801a621959b32923dceba904",
+      "validOriginal": false
+    },
+    {
+      "file": "uhdb-reports.html",
+      "url": "https://www.uhdb.nhs.uk/trust-reports",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "000 https://www.uhdb.nhs.uk/trust-reports",
+      "returncode": 56,
+      "diagnostic": "curl: (56) LibreSSL SSL_read: LibreSSL/3.3.6: error:06FFF064:digital envelope routines:CRYPTO_internal:bad decrypt, errno 0\n",
+      "responseBytes": 0,
+      "responseSha256": null,
+      "validOriginal": false
+    },
+    {
+      "file": "uhdb-service-scope.html",
+      "url": "https://www.uhdb.nhs.uk/our-purpose-vision-and-values",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "000 https://www.uhdb.nhs.uk/our-purpose-vision-and-values",
+      "returncode": 56,
+      "diagnostic": "curl: (56) LibreSSL SSL_read: LibreSSL/3.3.6: error:06FFF064:digital envelope routines:CRYPTO_internal:bad decrypt, errno 0\n",
+      "responseBytes": 0,
+      "responseSha256": null,
+      "validOriginal": false
+    },
+    {
+      "file": "city-q4-2026.pdf",
+      "url": "https://tamworth.moderngov.co.uk/documents/s44451/Appendix%201%20-%20Quarter%204%20202526%20Performance%20Report.pdf",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "403 https://tamworth.moderngov.co.uk/documents/s44451/Appendix%201%20-%20Quarter%204%20202526%20Performance%20Report.pdf",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 5738,
+      "responseSha256": "171e08f731c3fd7709441edd0f0cdf385dd502fb40765ba7f10b8354d76d9953",
+      "validOriginal": false
+    },
+    {
+      "file": "uhb-obecel-actual2026.html",
+      "url": "https://www.research.uhb.nhs.uk/first-patient-in-birmingham-treated-with-newly-approved-therapy-for-aggressive-blood-cancer/",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "302 https://www.research.uhb.nhs.uk/404",
+      "returncode": 47,
+      "diagnostic": "curl: (47) Maximum (50) redirects followed\n",
+      "responseBytes": 0,
+      "responseSha256": null,
+      "validOriginal": false
+    },
+    {
+      "file": "local-hospital-current.html",
+      "url": "https://www.uhdb.nhs.uk/about-sir-robert-peel-community-hospital",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "000 https://www.uhdb.nhs.uk/about-sir-robert-peel-community-hospital",
+      "returncode": 56,
+      "diagnostic": "curl: (56) LibreSSL SSL_read: LibreSSL/3.3.6: error:06FFF064:digital envelope routines:CRYPTO_internal:bad decrypt, errno 0\n",
+      "responseBytes": 0,
+      "responseSha256": null,
+      "validOriginal": false
+    },
+    {
+      "file": "water-publications.html",
+      "url": "https://south-staffs-water.co.uk/publications/publication-categories?category=Annual",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl located primary URL",
+      "httpFinal": "200 https://south-staffs-water.co.uk/publications/publication-categories?category=Annual",
+      "returncode": 0,
+      "diagnostic": "HTTP200 915-byte JavaScript challenge shell, not publication body",
+      "responseBytes": 915,
+      "responseSha256": "bfba6864a4d4422ed0643a9b929ef954920f7df17d910a7ab2193746fb297f34",
+      "validOriginal": false
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "source": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "sourceBytes": 9932800,
+    "allGeometryCount": 9031,
+    "record": {
+      "fid": 8430,
+      "eFUA_ID": 4193.0,
+      "UC_num": 1.0,
+      "UC_IDs": "1828",
+      "eFUA_name": "Fazeley",
+      "Commuting": 1.0,
+      "Cntry_ISO": "GBR",
+      "Cntry_name": "UnitedKingdom",
+      "FUA_area": 241.0,
+      "UC_area": 24.0,
+      "FUA_p_2015": 126023.81789800525,
+      "UC_p_2015": 73406.34873962402,
+      "Com_p_2015": 52617.469158381224
+    },
+    "targetGeometrySha256": "f8efd82fc4b5e2db8d85336bc876268383f8e04312561e8f30435c970264b003",
+    "referencePoints": [
+      {
+        "label": "Fazeley centre",
+        "lon": -1.697,
+        "lat": 52.614,
+        "matches": [4193]
+      },
+      {
+        "label": "Tamworth centre",
+        "lon": -1.696,
+        "lat": 52.634,
+        "matches": [4193]
+      },
+      {
+        "label": "Sir Robert Peel Hospital",
+        "lon": -1.715,
+        "lat": 52.613,
+        "matches": [4193]
+      },
+      {
+        "label": "Samuel Johnson Hospital Lichfield",
+        "lon": -1.829,
+        "lat": 52.687,
+        "matches": [3799]
+      },
+      {
+        "label": "Queen Hospital Burton",
+        "lon": -1.661,
+        "lat": 52.817,
+        "matches": [4261]
+      },
+      {
+        "label": "Birmingham Airport",
+        "lon": -1.752,
+        "lat": 52.453,
+        "matches": [3799]
+      },
+      {
+        "label": "Tamworth railway station",
+        "lon": -1.686,
+        "lat": 52.637,
+        "matches": [4193]
+      },
+      {
+        "label": "Drayton Manor",
+        "lon": -1.712,
+        "lat": 52.61,
+        "matches": [4193]
+      },
+      {
+        "label": "Kingsbury",
+        "lon": -1.679,
+        "lat": 52.56,
+        "matches": [4193]
+      },
+      {
+        "label": "Hams Hall",
+        "lon": -1.706,
+        "lat": 52.51,
+        "matches": [3799]
+      },
+      {
+        "label": "Quiss Tamworth approximate",
+        "lon": -1.709,
+        "lat": 52.647,
+        "matches": [4193]
+      },
+      {
+        "label": "Saint Gobain Tamworth approximate",
+        "lon": -1.651,
+        "lat": 52.613,
+        "matches": [4193]
+      },
+      {
+        "label": "Sutton Coldfield",
+        "lon": -1.825,
+        "lat": 52.563,
+        "matches": [3799]
+      },
+      {
+        "label": "Good Hope Hospital",
+        "lon": -1.806,
+        "lat": 52.565,
+        "matches": [3799]
+      },
+      {
+        "label": "Queen Elizabeth Birmingham",
+        "lon": -1.937,
+        "lat": 52.451,
+        "matches": [3799]
+      }
+    ],
+    "method": "full9031; EPSG4326→ESRI54009 always_xy; covers; analyst approximate points not footprints/catchments/patients",
+    "reviewedOn": "2026-10-13"
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-fazeley-priority-review.md",
+    "sha256": "1ec4a7d464031f6480ffb01c6f01438b5ab11152e6caf085664fdc164f244a90",
+    "reviewedOn": "2026-10-13",
+    "status": "bounded_conditional_review_not_ranking_or_exclusion"
+  }
+}

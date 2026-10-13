@@ -153,10 +153,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 37,
+    "conditionalCaseCount": 40,
     "completeConditionalCaseCount": 14,
-    "partialCaseCount": 23,
-    "unassessedCount": 8994,
+    "partialCaseCount": 26,
+    "unassessedCount": 8991,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -457,8 +457,23 @@
       "sha256": "49b6e3f6995bd2ca09ce89e3cec52ffecc1ff96f7de40581bce697b20338d846",
       "provenance": "cci-jyvaskyla-priority-review.md",
       "provenanceSha256": "1df98f20507154290e6bc4e93513bab9a633c88029d6f984a5505edae2338d30"
+    },
+    "cci-local-2026-coventry-case.json": {
+      "sha256": "826e80066436da32b435ecd8ca57e849884fbc0f428060b900ec9501ca483cd7",
+      "provenance": "cci-coventry-priority-review.md",
+      "provenanceSha256": "a33486443f9af484cc70369d8970ae3d6229ecdd4c2c96626b2b0b05f8ee2778"
+    },
+    "cci-local-2026-loughborough-case.json": {
+      "sha256": "5778261f57810597f86e8c7e092cf1e409ce239c93110a6e706eb94f8436a636",
+      "provenance": "cci-loughborough-priority-review.md",
+      "provenanceSha256": "3ecd8695cb206995749e018563bf44148156b85d766cbda9b20cd835a89288e6"
+    },
+    "cci-local-2026-fazeley-case.json": {
+      "sha256": "58d3c24035edaeeadcba6062b4803c32ef62ef6586e8d41b6010518db3bfa10d",
+      "provenance": "cci-fazeley-priority-review.md",
+      "provenanceSha256": "1ec4a7d464031f6480ffb01c6f01438b5ab11152e6caf085664fdc164f244a90"
     }
   },
-  "scriptSha256": "7763985ea7e318445efec42a6e37aadef84661213792bf7a9ac1b63425b0fef5",
-  "csvSha256": "199c95d4771eb372f76c6c770d84d97cc197837dcc74686e705baff68ff7c683"
+  "scriptSha256": "cf562c49eda1fb6db8b170c0ec199349a2fdf0aab4f04e83f4bbef5d564dd255",
+  "csvSha256": "601bd47bce620a608051dde72ae232458dd71c37c3b877646d3ded9b38cbf87f"
 }

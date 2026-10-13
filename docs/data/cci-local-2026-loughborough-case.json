@@ -1,0 +1,668 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 4892,
+  "name": "Loughborough",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "approximate_reference_points_full9031_checked_not_service_coverage",
+  "evidenceReview": "cci-loughborough-priority-review.md",
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 42.0,
+  "unresolvedScoreRange": [42.0, 67.0],
+  "limitations": "8/31 reviewed; PCS40/GSSnull/ISR60/RESnull/MED60/LON60/TEC60/OPT60. ExternalICB/UHL/airport resident pathways conditional; GSS regional/strategic and RES actualterminalwater remain unresolved. No midpoint/renormalisation; two discovery rounds stopped. LPT51 vs71day scope and unclosedwarningnotice, IPCtimescale/20incidents and UHLmetricconflicts preserved.",
+  "retrievedOn": "2026-10-13",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 40,
+      "rationale": "反复2024/2025内部物业洪水及预测/防护缺口有地方原证；资金、警报与locker缓解部分已运行但不证明全部受灾社区完成。",
+      "assumption": "接受地方真实洪水、尚未证明解除的家庭/关键通道缺口及2026资金针对性合理适配4892；旧低热/PGA只背景。若已实施保护足以显著降低残余可60；强多危险/独立备援须新证才80；拒绝地点或延续则null。",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "heat_humidity": "context",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "当地县域毒品组织对少年债务胁迫与2026跨县侦破有证；区域冲突/战略暴露的适配实际居民后果与缓解仍未闭。",
+      "assumption": "县域犯罪和London联络不等区域冲突；国家背景、普通犯罪/轨道日常运行不补60。最小待补为本区适配区域或战略威胁、现实影响及缓解后残余；缺失不判40。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "已运行地方洪水资金/申请、实际社区与多机构恢复、食物救助及NHS服务改造支持交付；预测迟误、未成项目与群体触达差异保留。",
+      "assumption": "接受Charnwood核心及当地组织/LLR护理网络对通常FUA居民的可撤回代表性与延续；专项经费非人人已获且较早食品观察不当2026全量。恢复/触达残余主导可40，强跨组织结果/备援新证可80；拒绝适配/执行有效性则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "2024本地食品及救助真实流转、EastMidlands2024/25电网运行和恢复可读；SnellsNook正式供水许可未连接当期实际末端水质/现有风险处理。",
+      "assumption": "不从供水特许、低震、医院水系统或机场货运推出通常安全饮水；也不由缺完美家庭账单或食品救助推出40。最小下一证是本区供水实际质量/监管风险与已成处理，可再判断普通供给净负担/依赖。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "unresolved",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "本地24h非危重UTC、实际临时18床/社区护理/感染日审与区外ICB必要急诊/癌症转诊有运行链；实际感染、门诊等待和区域急诊/手术流转短板不由NHS免账单抹除。",
+      "assumption": "通常合法定居画像按NHS资格，接受ICB/GP→实际UHL服务为普通居民可执行外区路径，既有局部改进足以支持较强能力且重要残余。若实质等待/安全或交通/照护断点主导可40；强及时质量/独立持续性新证才80；拒绝通常资格、路径或改进延续则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "LRI2025实际CAR-T输注、2026NHSE已列UHL委托与完整制造/监护付款，合并当期区域ICB及UHL实际临床转诊；疾病限定人体转化不由学校名气或许可单独评分。",
+      "assumption": "接受通常合NICE/MDT/panel条件的4892居民经既有LLR/临床转诊可取得UHL治疗与NHS必要监护，并通常可承担往返/照护/机会成本；不是默认人人适应证或免费健康人延寿。制造、等待、重症监护/间接成本若形成重要实际取得约束可40；拒绝区域路径/通常净负担连接恢复null；80须多路径与冗余新证。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "RECOVER在校园商业实验室实际生产并由全球警方购买使用，社区护理Isla实际扩散和当地公共电脑/培训路径；2026五spinout仅展示，不当成熟药物/产业全区密度。",
+      "assumption": "接受明确本地贡献/实际商业与居民数字路径通常持续可用；馆舍整修替代资料未取，不能当截止日全时开馆或失效。校园集中、早期融资/设备及数字排除仍重要；若阻断取得可40，多行业产业采用/普通触达与独立冗余新证可80，拒绝适配延续则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "现行铁路与Loughborough直达EMA日夜Skylink、机场2025实际客运，British公民CTA与条件真实银行转账支持退出；共享道路/轨道/机场、账户税务和通信共因保留。",
+      "assumption": "通常有效证件/合法账户/可承担接续迁居必要资源，外区机场真实公交接续可执行、普通居民通常有个人移动通信与可用替代。法律不证明实际就业，当前公共WiFi不证明国际独立路由；若共同中断/支付/通信残余主导可40，新证强冗余才80；拒绝上述画像/通常可用推定则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.leicspart.nhs.uk/wp-content/uploads/2025/11/Quality-and-Safety-IPC-report-Apr-Oct-25-v1.5-9Oct25.pdf",
+      "bytes": 355816,
+      "sha256": "d92c2e5acd1640f4ffe45bcc4d09d8fcb29fdaa7cc6b570e2580461262098dfb",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:26:39.172660+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "委员会Oct2025；文件名9Oct/URLNov不是首发证明。正文Apr–Sep2025，header Apr2024–Sep2025，章节/图Apr–Oct2025；月明细Apr–Sep共20。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S02",
+      "url": "https://leicesterleicestershireandrutland.icb.nhs.uk/your-health/find-the-right-service/urgent-care-services/loughborough-urgent-treatment-centre/",
+      "bytes": 163404,
+      "sha256": "9903159f6545422ee5c6e333cb9b94eb1a75af87bc7ab0d9633bad545dbbea55",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:26:39.184112+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前未标首发；LoughboroughUTC24/7非危重，Xray限日间，walk-in可能候诊/转去。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S03",
+      "url": "https://blog.lboro.ac.uk/vice-chancellor/2026/06/30/from-the-vice-chancellor-june-2026/",
+      "bytes": 111215,
+      "sha256": "854c8ca44511c78b00fec0f31e8c35c8d36451b33da291c1ed74a860f5046a40",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:26:39.188123+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-06-30",
+      "scope": "June30 2026真实LVIN启动及五spinout展示；ForgingAhead目标非当前患者/产业普遍采用。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S04",
+      "url": "https://leicesterleicestershireandrutlandhwp.uk/wp-content/uploads/2026/04/Right-Care-Right-Place-16pp-A5-Brochure-Online-version-April-2026.pdf",
+      "bytes": 1779351,
+      "sha256": "186713019f8b29ba66299d4e404af74bc4609b9c1bf9d4e7fb7d8b69721e9f00",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:26:39.196305+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "Apr2026版本，发布精确日未核；LLR普通居民实际分层接诊说明，4892UTC及外区LRI急诊并列。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.eastmidlandsairport.com/getting-to-and-from/by-bus/",
+      "bytes": 640803,
+      "sha256": "a090b8dd7c8c58834f9a793d0ed7938a5ad1e51fa4b03472a20453b34b71c514",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:28:55.538410+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前未标发布日期；SkylinkDerby/Leicester/Loughborough15min日/小时夜，部分Shepshed线路04–19。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.lboro.ac.uk/research/spotlights/recover/",
+      "bytes": 91604,
+      "sha256": "9fe4fec9c92a68bee6fdcb1d1521727a781f6908fed31d4cecc0db2ac24a0cc1",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:32:36.861254+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前未标发布；RECOVER2018上市以来实际采购/使用，Lough校园FosterFreeman商业实验室。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S07",
+      "url": "https://loughborougharea.foodbank.org.uk/2025/01/06/2024/",
+      "bytes": 53237,
+      "sha256": "ccd5e6a2709852889dd0ab87e7c39b7027d581f4d5203e35c8101d77cc808877",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:32:36.861348+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-01-06",
+      "scope": "实际2024，18.5tonnes食品+生活必需品，6628支持人计数未说明去重；非2026全FUA率。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S08",
+      "url": "https://www.charnwood.gov.uk/pages/flooding",
+      "bytes": 26444,
+      "sha256": "5fa54a13374eafbc1514d15367abf1d5575b4baeafa8479fa50c436a0d7baa1d",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:32:36.861545+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-01-07",
+      "scope": "原页面lastupdateJan7 2026；web缓存Jan13 2025；动态Nov2食品垃圾banner不当截止已实施。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S09",
+      "url": "https://www.uhleicester.nhs.uk/services/cancer-care/",
+      "bytes": 60210,
+      "sha256": "e23c57b4d26a8685c4bc9598f7cc19c9d2360a86a5b6ae7d04acdf924b6b50b2",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:32:36.863033+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前未标首发；GP/专科MDT、LLR癌症服务及62/31day目标，明确未总能达标。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S10",
+      "url": "https://www.leicspart.nhs.uk/wp-content/uploads/2026/06/LPT-Quality-Account-2025_26-FINAL260626.pdf",
+      "bytes": 7902301,
+      "sha256": "521c5aff9ce510edf1fdb77bdbb1c2cd60bc04031101e9add951ae0a7de50cd7",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:34:10.111517+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "FY2025/26，文件FINAL260626/URLJune2026非精确首发证明；51days visitedteamfirstassessment，March末仍等复检结果。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S11",
+      "url": "https://www.leicspart.nhs.uk/wp-content/uploads/2026/07/LPT-Annual-Report-2025-26.pdf",
+      "bytes": 5338867,
+      "sha256": "3d1449ef9ce33a4a312aa928d81645209a043713bbbee999685a44cab5e9188c",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:34:10.111989+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "FY2025/26，URLJuly2026非精确首发；Dec2025–Mar2026Lough临时18床；全门诊133→71days，与质量51分母不同。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S12",
+      "url": "https://www.charnwood.gov.uk/pages/flood_lockers",
+      "bytes": 25198,
+      "sha256": "536d54c505b6005d6642f00960480fd18453c701d4c39f0f9de55b55c95636f2",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:42:01.858028+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-04-28",
+      "scope": "更新Apr28 2026；fundingavailableOct2025，£150k/至少Lough£30k，上限£10k每申请；3村已受益不是全Lough完成。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S13",
+      "url": "https://www.uhleicester.nhs.uk/wp-content/uploads/2026/06/Quality-Account-2025-26-KR-2-JUNE.pdf",
+      "bytes": 13319024,
+      "sha256": "67706de9b9c532f09199575d50c19332c11d9cc62f2e7c8e199420f77f74e095",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:25:40.794219+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "复用UHL FY2025/26临床表；提供方跨区，不将三院病例变4892居民率；SHMI与VTE口径冲突保留。",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S14",
+      "url": "https://www.uhleicester.nhs.uk/news/first-patients-receive-groundbreaking-blood-cancer-treatment-at-uhl/",
+      "bytes": 57289,
+      "sha256": "cad41cc3f317325d2644ed0c334ed4acfecf800b1871b195dc620c6249968655",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:23:04.955704+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-08-12",
+      "scope": "LRI实际2025首批输注，命名23岁患者来自Leicester不是Lough；single remission非全人风险调整结局。",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S15",
+      "url": "https://mediacentre.eastmidlandsairport.com/east-midlands-airport-continued-to-go-from-strength-to-strength-in-its-anniversary-year/",
+      "bytes": 119021,
+      "sha256": "cc0dd2b65add587bf71e257456f992a56479ae7ffb754a679d7b5293cd675b37",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:25:01.210515+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-07-06",
+      "scope": "观察2025EMA约4m旅次，MAG66m为三机场总量；仅通过真实Lough公交适配外区服务。",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S16",
+      "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+      "bytes": 32656,
+      "sha256": "4efb26910573c7f60a7ab193ee4e3091526d3672ce5dd931413ab74c3fd26976",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:31:14.732347+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "全国通常合法定居资格；网页reviewOct24 2023/nextOct24 2026不当新生效或国籍自动资格。",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S17",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2026/04/cart-service-specification-commissioning-guidance-v1.0-1.pdf",
+      "bytes": 332621,
+      "sha256": "ba97c929f2ca55b7da63a525aa8d0af00f962742e18f91e2b48afabda55da108",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:24:23.969404+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "封面Nov12 2025v3、URLApr2026/bodyDec25TA；p15委托UHL，payer分期/监护不是患者£66949账单。",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S18",
+      "url": "https://www.gov.uk/government/publications/common-travel-area-guidance/common-travel-area-guidance",
+      "bytes": 99582,
+      "sha256": "887d27e34913f9d5c239a651507b3b8c5024975798fff618211b5f2d00d0afc6",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:55:41.678621+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-01-01",
+      "scope": "UK公民CTA长期work/residence身份例外条件；不是全部EU通行工作权。",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S19",
+      "url": "https://www.gov.uk/transferring-your-pension/transferring-to-an-overseas-pension-scheme",
+      "bytes": 77116,
+      "sha256": "acc30b14955ca0bbd05f5a521d08f4ce319bb94ea4a99ea2fcdade3ad9c2ff91",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:55:41.680123+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前未标首发QROPS条件/海外转出税，不是居民现金总上限。",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S20",
+      "url": "https://www.bankofireland.com/help-centre/faq/much-can-transfer-365-online/",
+      "bytes": 61582,
+      "sha256": "a12d06cd5b2f2ba7c8d487fe10c3d9e289055f42eb228698c6078f0362897688",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:57:59.991392+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-03-09",
+      "scope": "BOI实际GBP365£20k/day境内外，新payee£1k最多48h；非所有居民账户或ROIInterPay默认GB路径。",
+      "sourceKind": "reused_original_response"
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://charnwood.moderngov.co.uk/documents/s20176/Appendix%20A%20-%20Quarter%202%20Performance%20Report%202025-26.pdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "原站indexedexcerpt only；Q2FY25/26实际multiagencycommunitydropin/协调，foodwaste车辆交付延误及Aug26目标不是实施。"
+    },
+    {
+      "id": "W02",
+      "url": "https://charnwood.moderngov.co.uk/documents/b4366/Agenda%20Supplement%20-%20Item%2010%20-%20Questions%20on%20Notice%2019th-Jan-2026%2018.30%20Council.pdf?T=9",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-01-19",
+      "bytes": null,
+      "sha256": null,
+      "scope": "原站indexedexcerpt only；2026会议问答资金有给部分Parish，调查/后续计划未全部完成。"
+    },
+    {
+      "id": "W03",
+      "url": "https://charnwood.moderngov.co.uk/documents/g1028/Public%20reports%20pack%2006th-Jun-2025%2014.00%20Cabinet.pdf?T=10",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-06-06",
+      "bytes": null,
+      "sha256": null,
+      "scope": "原站indexedexcerpt only；Jan2025六个/十个gauges最高，EastLough/Syston受灾/EA4h前未预测风险；不是全FUA比率。"
+    },
+    {
+      "id": "W04",
+      "url": "https://charnwood.moderngov.co.uk/documents/g1078/Public%2Breports%2Bpack%2B24th-Feb-2025%2B18.30%2BCouncil.pdf%3FT%3D10",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-02-24",
+      "bytes": null,
+      "sha256": null,
+      "scope": "原站indexedexcerpt only；Jan2024/25反复Lough住宅企业洪灾、官员探访/指引；未取全报告。"
+    },
+    {
+      "id": "W05",
+      "url": "https://www.ofwat.gov.uk/wp-content/uploads/2025/11/November_25_Snells-Nook-Lane-Loughborough.pdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-11-10",
+      "bytes": null,
+      "sha256": null,
+      "scope": "原PDF全文web可读5页；有效Nov11 2025，Oct2–30consultation无意见，特定开发点原STW区许可不等饮水实际测量/全部FUA。地图未得可见像素。"
+    },
+    {
+      "id": "W06",
+      "url": "https://www.leics.police.uk/news/leicestershire/news/2026/march/dedicated-team-secure-conviction-of-drug-dealer--and-praise-the-victims-for-their-bravery2/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-03-06",
+      "bytes": null,
+      "sha256": null,
+      "scope": "原Police全文；actualJan8–9 2022少年胁迫，trialNov25/sentenceMar26；London→Loughcrime不等区域战争。"
+    },
+    {
+      "id": "W07",
+      "url": "https://www.northants.police.uk/news/northants/news/in-court/2026/june/seven-members-of-organised-crime-group-convicted-following-major-county-lines-investigation/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-06-23",
+      "bytes": null,
+      "sha256": null,
+      "scope": "原Police全文；2.5yOperationTerrain，七条线其中Lough一条、另OpHush两条，跨县非全部4892事件。"
+    },
+    {
+      "id": "W08",
+      "url": "https://www.leicestershire.gov.uk/leisure-and-community/libraries/find-a-library/loughborough-library",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "原Council全文；公共PC/WiFi/induction及staffed/smart时段。Apr2026整修alternativePDF仅索引定位，raw403/web403未读，不能断言全当前开馆。"
+    },
+    {
+      "id": "W09",
+      "url": "https://customer.nationalgrid.co.uk/advice-and-guidance/key-performance-targets",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "复用Leicester/Coventry同页原表web读取；EastMidFY24/25 CI34.31/CML24.61min/HV1h89.53%；header2023/24混用，异常严重天气排除。"
+    },
+    {
+      "id": "W10",
+      "url": "https://www.eastmidlandsrailway.co.uk/timetables?crs=BEE",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "复用Leicester原运营表web；17May–12Dec2026LoughboroughMidlandMainline路径，Oct19恢复96%为截止后计划。"
+    }
+  ],
+  "failedSourceReads": [
+    {
+      "file": "charnwood-q22025.pdf",
+      "url": "https://charnwood.moderngov.co.uk/documents/s20176/Appendix%20A%20-%20Quarter%202%20Performance%20Report%202025-26.pdf",
+      "bytes": 4548,
+      "sha256": "dad2e5b0d8d5a510d09b166e38fe2c41a5a7222f35c38899e769f375712e1168",
+      "retrievedAt": "2026-10-13T07:26:39.182903+00:00",
+      "reason": "403\ttext/html; charset=UTF-8\thttps://charnwood.moderngov.co.uk/documents/s20176/Appendix%20A%20-%20Quarter%202%20Performance%20Report%202025-26.pdf; ",
+      "exit": 0
+    },
+    {
+      "file": "flood-cabinet2025.pdf",
+      "url": "https://charnwood.moderngov.co.uk/documents/g1028/Public%20reports%20pack%2006th-Jun-2025%2014.00%20Cabinet.pdf?T=10",
+      "bytes": 4548,
+      "sha256": "65a8f38fe9ada5b92becf76f0dcf73bb0a3df411b049df537f6d15acc0d0070b",
+      "retrievedAt": "2026-10-13T07:28:55.529672+00:00",
+      "reason": "403\ttext/html; charset=UTF-8\thttps://charnwood.moderngov.co.uk/documents/g1028/Public%20reports%20pack%2006th-Jun-2025%2014.00%20Cabinet.pdf?T=10; ",
+      "exit": 0
+    },
+    {
+      "file": "flood-jan2026.pdf",
+      "url": "https://charnwood.moderngov.co.uk/documents/b4366/Agenda%20Supplement%20-%20Item%2010%20-%20Questions%20on%20Notice%2019th-Jan-2026%2018.30%20Council.pdf?T=9",
+      "bytes": 4548,
+      "sha256": "0c53ee28938fc7da506e99f25f70d93fb8af3bb6aa521a4551b7fe35f353dd1d",
+      "retrievedAt": "2026-10-13T07:28:55.529046+00:00",
+      "reason": "403\ttext/html; charset=UTF-8\thttps://charnwood.moderngov.co.uk/documents/b4366/Agenda%20Supplement%20-%20Item%2010%20-%20Questions%20on%20Notice%2019th-Jan-2026%2018.30%20Council.pdf?T=9; ",
+      "exit": 0
+    },
+    {
+      "file": "library-alternatives2026.pdf",
+      "url": "https://www.leicestershire.gov.uk/sites/default/files/Loughborough-alternative-services.pdf",
+      "bytes": 462,
+      "sha256": "a89b48157ccacda4b37da3a893a1a42f2b1158c3fb433a3fd6b4bcd9c5499998",
+      "retrievedAt": "2026-10-13T07:42:01.858385+00:00",
+      "reason": "403\ttext/html\thttps://www.leicestershire.gov.uk/sites/default/files/Loughborough-alternative-services.pdf; ",
+      "exit": 0
+    },
+    {
+      "file": "library-current.html",
+      "url": "https://www.leicestershire.gov.uk/leisure-and-community/libraries/find-a-library/loughborough-library",
+      "bytes": 480,
+      "sha256": "d4cdc2bc0cea66cd20ece8691c01dcd9f4ef09f725a642fefe503dea332f77f4",
+      "retrievedAt": "2026-10-13T07:32:36.860988+00:00",
+      "reason": "403\ttext/html\thttps://www.leicestershire.gov.uk/leisure-and-community/libraries/find-a-library/loughborough-library; ",
+      "exit": 0
+    },
+    {
+      "file": "lpt-annual2025.pdf",
+      "url": "https://www.leicspart.nhs.uk/wp-content/uploads/2025/07/LPT-Annual-Report-2024-25.pdf",
+      "bytes": 92476,
+      "sha256": "0586eccdcbfdda46047863bd1bc72ffc1ee1e4f9d4ac249f4d52f9615f5c58af",
+      "retrievedAt": "2026-10-13T07:26:39.173501+00:00",
+      "reason": "404\ttext/html; charset=UTF-8\thttps://www.leicspart.nhs.uk/wp-content/uploads/2025/07/LPT-Annual-Report-2024-25.pdf; ",
+      "exit": 0
+    },
+    {
+      "file": "police-area2026.html",
+      "url": "https://www.leics.police.uk/area/your-area/leicestershire/charnwood/loughborough-central/news/top-reported-crimes-in-this-area",
+      "bytes": 5821,
+      "sha256": "8f00f58848a8b9ac22d19325de1afc557a768c19f2460e75c0cbb9e501c95849",
+      "retrievedAt": "2026-10-13T07:26:40.417979+00:00",
+      "reason": "403\ttext/html; charset=UTF-8\thttps://www.leics.police.uk/area/your-area/leicestershire/charnwood/loughborough-central/news/top-reported-crimes-in-this-area; ",
+      "exit": 0
+    },
+    {
+      "file": "police-countyline2026.html",
+      "url": "https://www.leics.police.uk/news/leicestershire/news/2026/march/dedicated-team-secure-conviction-of-drug-dealer--and-praise-the-victims-for-their-bravery2/",
+      "bytes": 5929,
+      "sha256": "6828fc2c8dcfb246939fed79bee6d103e596542f73b869117dd0da6480ca59d6",
+      "retrievedAt": "2026-10-13T07:28:55.534723+00:00",
+      "reason": "403\ttext/html; charset=UTF-8\thttps://www.leics.police.uk/news/leicestershire/news/2026/march/dedicated-team-secure-conviction-of-drug-dealer--and-praise-the-victims-for-their-bravery2/; ",
+      "exit": 0
+    },
+    {
+      "file": "police-crosscounty2026.html",
+      "url": "https://www.northants.police.uk/news/northants/news/in-court/2026/june/seven-members-of-organised-crime-group-convicted-following-major-county-lines-investigation/",
+      "bytes": 5966,
+      "sha256": "fd4c1fd88fed94d445befd0c8f40e002b52b21d3bec4441d9ab9a7984ee40e6c",
+      "retrievedAt": "2026-10-13T07:28:55.536603+00:00",
+      "reason": "403\ttext/html; charset=UTF-8\thttps://www.northants.police.uk/news/northants/news/in-court/2026/june/seven-members-of-organised-crime-group-convicted-following-major-county-lines-investigation/; ",
+      "exit": 0
+    },
+    {
+      "file": "water-esp2025.pdf",
+      "url": "https://www.ofwat.gov.uk/wp-content/uploads/2025/11/November_25_Snells-Nook-Lane-Loughborough.pdf",
+      "bytes": 479555,
+      "sha256": "4694cddef293faef601f857072974ff8f0af2f124ba1694db17090782f303767",
+      "retrievedAt": "2026-10-13T07:28:55.533099+00:00",
+      "reason": "403\ttext/html; charset=UTF-8\thttps://www.ofwat.gov.uk/wp-content/uploads/2025/11/November_25_Snells-Nook-Lane-Loughborough.pdf; ",
+      "exit": 0
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "source": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "sourceBytes": 9932800,
+    "allGeometryCount": 9031,
+    "record": {
+      "fid": 8443,
+      "eFUA_ID": 4892.0,
+      "UC_num": 1.0,
+      "UC_IDs": "1862",
+      "eFUA_name": "Loughborough",
+      "Commuting": 1.0,
+      "Cntry_ISO": "GBR",
+      "Cntry_name": "UnitedKingdom",
+      "FUA_area": 252.0,
+      "UC_area": 15.0,
+      "FUA_p_2015": 158262.41917601228,
+      "UC_p_2015": 54861.59020996094,
+      "Com_p_2015": 103400.82896605134
+    },
+    "bounds": [-104000.0, 6150000.0, -77000.0, 6168000.0],
+    "targetGeometrySha256": "290b0cc74464d9d343779069ab30f66e67eac8f57b91a2af54af8bcc5f0a0bcf",
+    "referencePoints": [
+      {
+        "label": "Loughborough centre",
+        "longitude": -1.2073,
+        "latitude": 52.7723,
+        "fuaMatches": [4892]
+      },
+      {
+        "label": "Loughborough University",
+        "longitude": -1.2325,
+        "latitude": 52.7653,
+        "fuaMatches": [4892]
+      },
+      {
+        "label": "Loughborough Hospital Epinal Way",
+        "longitude": -1.2265,
+        "latitude": 52.7789,
+        "fuaMatches": [4892]
+      },
+      {
+        "label": "Loughborough station",
+        "longitude": -1.1954,
+        "latitude": 52.7784,
+        "fuaMatches": [4892]
+      },
+      {
+        "label": "Shepshed centre",
+        "longitude": -1.29,
+        "latitude": 52.7675,
+        "fuaMatches": [4892]
+      },
+      {
+        "label": "Quorn centre",
+        "longitude": -1.17,
+        "latitude": 52.744,
+        "fuaMatches": [4892]
+      },
+      {
+        "label": "Mountsorrel centre",
+        "longitude": -1.1476,
+        "latitude": 52.7251,
+        "fuaMatches": [4925]
+      },
+      {
+        "label": "Coalville centre",
+        "longitude": -1.3707,
+        "latitude": 52.7256,
+        "fuaMatches": [4892]
+      },
+      {
+        "label": "Leicester Royal Infirmary external",
+        "longitude": -1.1335,
+        "latitude": 52.6265,
+        "fuaMatches": [4925]
+      },
+      {
+        "label": "Glenfield Hospital external",
+        "longitude": -1.1805,
+        "latitude": 52.6544,
+        "fuaMatches": [4925]
+      },
+      {
+        "label": "Leicester General Hospital external",
+        "longitude": -1.0826,
+        "latitude": 52.6307,
+        "fuaMatches": [4925]
+      },
+      {
+        "label": "Nottingham QMC external",
+        "longitude": -1.184,
+        "latitude": 52.9434,
+        "fuaMatches": [4767]
+      },
+      {
+        "label": "East Midlands Airport",
+        "longitude": -1.3281,
+        "latitude": 52.8311,
+        "fuaMatches": []
+      }
+    ],
+    "method": "full9031; EPSG4326→ESRI54009 always_xy; intersects; analyst approximate points not official footprints/catchments/patients",
+    "reviewedOn": "2026-10-13"
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-loughborough-priority-review.md",
+    "sha256": "3ecd8695cb206995749e018563bf44148156b85d766cbda9b20cd835a89288e6",
+    "reviewedOn": "2026-10-13",
+    "status": "bounded_conditional_review_not_ranking_or_exclusion"
+  }
+}

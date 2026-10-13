@@ -89,6 +89,9 @@ const realCases = [
   "turku",
   "edinburgh",
   "jyvaskyla",
+  "coventry",
+  "loughborough",
+  "fazeley",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -169,6 +172,9 @@ const [
   turku,
   edinburgh,
   jyvaskyla,
+  coventry,
+  loughborough,
+  fazeley,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -1713,3 +1719,22 @@ const edinburghGss = realCases
 assert.deepEqual(edinburghGss.conditionalAlternatives, []);
 assert.equal(edinburghGss.subpillars.regional_conflict, "context");
 assert.equal(edinburghGss.subpillars.strategic_exposure, "unresolved");
+
+// Similar domains can contain different capability judgments; unknown weights are retained.
+assert.deepEqual(total(coventry), { center: null, lower: 42, upper: 67 });
+assert.deepEqual(total({ ...coventry, MED: 60 }), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total(loughborough), { center: null, lower: 42, upper: 67 });
+const loughboroughWithoutLon = { ...loughborough };
+delete loughboroughWithoutLon.LON;
+assert.deepEqual(total(loughboroughWithoutLon), { center: null, lower: 36, upper: 71 });
+assert.deepEqual(total(fazeley), { center: null, lower: 27, upper: 77 });
+assert.deepEqual(total({ ...fazeley, LON: 40 }), { center: null, lower: 25, upper: 75 });
+for (const id of [4328, 4892, 4193]) {
+  const reviewedCase = realCases.find(c => c.candidateId === id);
+  assert(reviewedCase);
+  assert.equal(
+    reviewedCase.priorityCompletionReview.sha256,
+    digest(reviewedCase.priorityCompletionReview.path)
+  );
+  assert.equal(reviewedCase.dimensions.find((d: { id: string }) => d.id === "GSS").score, null);
+}

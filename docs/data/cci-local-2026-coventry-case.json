@@ -1,0 +1,697 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 4328,
+  "name": "Coventry",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "approximate_reference_points_full9031_checked_not_service_coverage",
+  "evidenceReview": "cci-coventry-priority-review.md",
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 42,
+  "unresolvedScoreRange": [42, 67],
+  "limitations": "8/31 reviewed, GSS/LONnull; PCS/ISR/RES/TEC/OPTconditional60, MED40with60alternative. No completecentre/midpoint/renormalisation. Corefive<=40queue only allocation, notCCI threshold. Scope/profile/payment/continuity withdrawable; clinical Aug90%/7of50 and foodfooter15vsweb14 conflicts preserved.",
+  "retrievedOn": "2026-10-13",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "已成EarlsdonSuDS/道路及保温改造、地方/区域实际运营支持适配保护；低旧热/PGA只背景，城热岛/表水/强天气及未成项目仍重要。",
+      "assumption": "接受核心既得工程/普通避险及区域恢复通常有效且对FUA适配延续，低代理不证明全区无险。暴露与保护缺口主导可40，可信多危险防护/低暴露强可80；拒绝连接则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "context",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "2025本地枪击/帮派剥削与2026混区Guardian实际巡逻/逮捕/武器及保障有证；区域冲突和战略暴露的适配现实影响—缓解未闭。",
+      "assumption": "不从国家Severe、普通财产犯罪、机场/工厂名字或公交一般扰动补60。最低待补是具体区域/战略威胁、通常居民/关键节点后果及缓解后的连接；缺失不判40。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "unresolved"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "年度实际13398支持户、福利/住房预防/数字帮助与财务/儿童服务改善支持制度交付；1161预防未目标、节省73%及群体/住房/延误反证保留。",
+      "assumption": "行政核心与地方网络合理代表通常FUA居民并持续；群体触达/财政约束在缓解后仍重要。残余若明显阻断服务可40，强多组织交付恢复可80；拒绝代表性/有效性则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "真实食品/能源支持和WestMidlands恢复表现显示普通供给运行；Coventry/Nuneaton水监管藻/lead/PFAS风险与现有处理条件、未来改进及食品限领/能源贫困同读。",
+      "assumption": "通常受监管水/零售食品/能源可以取得且必要净负担通常可承受，现有处理/监测方向适配并延续；不把风险notice当当年安全样本或全部超标。水/配给/能源残余主导可40，否定通常末端安全/支付/范围推定则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 40,
+      "rationale": "必要本地内外科/急诊和2026妇科改善真实，但ED12h等待/床位流转、脓毒症与预警/出院连续性失守有具体临床记录，不能由总体Good或公费抹除。",
+      "assumption": "普通合法通常居住按NHS路径可负担获得；主要急诊/常规单元的实质约束合理代表通常FUA居民，旧观察经2025发布到截止延续、2026妇科非全部关闭。若已实施缓解/现实替代足以减残余可60；拒绝适配/延续则null。",
+      "conditionalAlternatives": [60],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "旧UHCW自体干细胞路径线索、一般NHS委托与真实科研不等当前本地人体转化取得；未闭近期实际实施与普通合资格患者付款/监护连接。",
+      "assumption": "允许成熟疾病限定/自体cell路径，无须健康人延寿或新型geneedited形式；不能只医院规模/许可给60或基本医保未核就40。若实际当地/居民真实外区取得及通常支付监护闭合可60，重要断点有证可40；两轮停止。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "context",
+        "regulatory_adoption": "context",
+        "resident_access": "unresolved"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Warwick/WMG/CoventryUniversity和园区实际制造工具/企业支持、17家庭技术节费与数字服务真实采用形成多节点能力；16%调查至少一项无信心与帮助后技能/设备等残余保留。",
+      "assumption": "异年/混地区域数及具体本地案例适配并延续，真实帮助对普通居民通常可用，技能设备/早期采用残余仍重要。若广泛采用/帮助有效使残余较小可80；不因缺更大许可量封顶；拒绝空间/延续则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "实际本地铁路旅次/外部BHX真实航线及X1/rail接续、British CTA和GBP合法银行手续支持通道；共同机场/电网节点、工程改道、税/新收款人48h保留。",
+      "assumption": "通常持证/合法普通账户设备、常规接续与必要迁移负担可承担，连接与规则延续；外区机场是可用服务不变成本地设施。共同失效/时效若明显阻碍可40，独立替代强可80；拒绝通常资源/网络连接则null。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.coventry.gov.uk/downloads/file/46064/one-coventry-plan-annual-performance-report-202425",
+      "bytes": 20738499,
+      "sha256": "8e39cc5166093eb2d424e53b713d23d659b86307d7782ded8de3b9060b1ac5fc",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:57:00.070637+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "观察April2024–March2025；PDF创建Nov17 2025非首公开证明；行政Coventry不是全4328。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S02",
+      "url": "https://www.coventry.gov.uk/roads-highways-pavements/earlsdon-liveable-neighbourhood-1",
+      "bytes": 46529,
+      "sha256": "b0e2737afe1d33f1e33c79562165becc7e564f539f8ab15b363f6cd23c74c34b",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:00:01.570320+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "实际July1 2025更新及2024分项已成SuDS/道路；当前未标首发，完成与植栽计划分开。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S03",
+      "url": "https://www.dwi.gov.uk/water-companies/improvement-programmes/severn-trent-water-improvement-programmes/svt-2023-00011/",
+      "bytes": 67453,
+      "sha256": "094ba8ecfc4f3042b65d271d7991bf4b26175ff15c05132f6977d414b51f4e34",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:00:00.651543+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2024-01-31",
+      "scope": "DWI SVT2023-00011 v1，Coventry/Nuneaton；实际2023Nov9风险报告，2026–2030改进期限不是已投运。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S04",
+      "url": "https://www.dwi.gov.uk/water-companies/improvement-programmes/severn-trent-water-improvement-programmes/svt-2023-00012/",
+      "bytes": 68906,
+      "sha256": "cd6189e1bca407cc52ef0af3e65649a88e843fb59c051a4f42f8a246dd86bdd7",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:00:00.651891+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2024-01-31",
+      "scope": "DWI Homesford lead v1，Coventry/Nuneaton与多个外区；报告风险/受监管现有处理，非当前全居民超标。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.dwi.gov.uk/water-companies/improvement-programmes/severn-trent-water-improvement-programmes/svt-2023-00014/",
+      "bytes": 76616,
+      "sha256": "62e3bc1a52d50b0ef92fe08714aed4846b412bbe843cb45123474e37163ac49e",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:00:00.652081+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2024-11-01",
+      "scope": "DWI PFAS undertaking v2：July3 2024给承诺，Annex供水份额/人口与16,6434原HTML疑值；非暴露病人。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S06",
+      "url": "https://coventry.foodbank.org.uk/your-impact-in-2025/",
+      "bytes": 52761,
+      "sha256": "48fa8552887d456593669057e7d571220a7322d49d162c5fa943ad104cd75b03",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:00:00.654663+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025impact视频入口未下载媒体；原响应当前15centres/3parcels6months/September26限服务；web缓存14centres冲突。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S07",
+      "url": "https://www.cqc.org.uk/location/RKB01/inspection-summary",
+      "bytes": 215992,
+      "sha256": "12bf68f31e96c50d5c64820902763f1cc0195a3e63db5ab6e16115fc101c3ed0",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:02:21.328263+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-07-28",
+      "scope": "汇集不同年代/服务；最新gynaecology，旧ED/医疗2025发布，aggregateGood不能当全院无问题。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S08",
+      "url": "https://www.cqc.org.uk/location/RKB01/reports/LAP-01960/urgent-and-emergency-services",
+      "bytes": 166554,
+      "sha256": "e8d48e25ee886c7da122e0d0b351f90efbdd83cc78cfe7929228c7528293c1e3",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:03:50.233169+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-08-15",
+      "scope": "LAP01960 adult/childrenED两次检查，重点等待/压力；具体2024窗口/抽样见原文。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S09",
+      "url": "https://www.cqc.org.uk/location/RKB01/reports/LAP-01960/urgent-and-emergency-services/safe",
+      "bytes": 201483,
+      "sha256": "e8233466f24c0f03ce48537c442c565e0cb1e1e6a031965d09c78f25ecff755c",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:04:43.273478+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-08-15",
+      "scope": "急诊真实sepsis/NEWS2/ECG/safeguarding与实施缓解；每月50/90%/7人冲突保留。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S10",
+      "url": "https://www.cqc.org.uk/location/RKB01/reports/LAP-01960/urgent-and-emergency-services/responsive",
+      "bytes": 177425,
+      "sha256": "f911387ac03086357316c825ffd1bbd73c2e859e610ad758f055575a085a7f47",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:04:43.275025+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-08-15",
+      "scope": "July–Sep2024等待；ED与wholeurgentdirectorate不同分母；少数现场个案不是居民率。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S11",
+      "url": "https://www.cqc.org.uk/location/RKB01/reports/LAP-01960/medical-care-including-older-people-s-care",
+      "bytes": 164691,
+      "sha256": "5c94b49c25f0c8ddc873a9fca0fa142c798d8978dd05275f965c563bcacb17a0",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:03:50.233444+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-08-15",
+      "scope": "Sep25–26 2024查15wards，16记录/15患者/41staff，药学另5 records可重叠。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S12",
+      "url": "https://www.cqc.org.uk/location/RKB01/reports/LAP-01960/medical-care-including-older-people-s-care/safe",
+      "bytes": 201788,
+      "sha256": "38c1e4b88cf34ab5ccf23204cd605d63f23787ace0228137e20e28b160a6afb2",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:04:43.276534+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2025-08-15",
+      "scope": "常规医疗真实sepsis48/75/76%、NEWS>96%、IPC97.7及配药/出院问题；过程不当死亡率。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S13",
+      "url": "https://www.cqc.org.uk/location/RKB01/reports/LAP-02128/overall",
+      "bytes": 162737,
+      "sha256": "3db5eced89e00b24e0a7bedbad6397b5b88b0e0041636b0dc608480e55f1e9a4",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T07:04:43.276841+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-07-28",
+      "scope": "LAP02128/overall最新妇科良好与1trainingbreach，不能闭合旧ED问题；摘要Oct15 2025更新与Jul28 2026publication不同。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S14",
+      "url": "https://www.warwicksciencepark.co.uk/wp-content/uploads/2026/04/UWSP_impact_report_2024-25.pdf",
+      "bytes": 7313441,
+      "sha256": "ed3eec9b489c8c4b7ac2459a4fc14ce83b1d194e1dabb2e45d4d87db224f4060",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:57:00.070929+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "FY2024/25原报告，URLApril2026不当观察日；园区多个本地/外区centres不全4328，实际支持/financing/培训。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S15",
+      "url": "https://www.coventry.ac.uk/news/2026/project-made/",
+      "bytes": 62099,
+      "sha256": "041606eabea137698e0081c5546b337da14e35628f40f4566a207b3067e43ab8",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T06:57:01.478171+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-05-27",
+      "scope": "AME university-within-factory实际模式；£44bn/50kjobs/£1.6bn至2035为设想非本地已产出。",
+      "sourceKind": "new_original_response"
+    },
+    {
+      "id": "S16",
+      "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+      "bytes": 32656,
+      "sha256": "4efb26910573c7f60a7ab193ee4e3091526d3672ce5dd931413ab74c3fd26976",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:31:14.732347+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "NHS England通常居住资格，reviewedOct24 2023/nextreviewOct24 2026；与国籍/税/GP登记不同。",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S17",
+      "url": "https://www.gov.uk/government/publications/common-travel-area-guidance/common-travel-area-guidance",
+      "bytes": 99582,
+      "sha256": "887d27e34913f9d5c239a651507b3b8c5024975798fff618211b5f2d00d0afc6",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:55:41.678621+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-01-01",
+      "scope": "共用British公民CTA，Jan1 2026是更新，不是权利始于该日；亲属/限制和资源条件保留。",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S18",
+      "url": "https://www.gov.uk/transferring-your-pension/transferring-to-an-overseas-pension-scheme",
+      "bytes": 77116,
+      "sha256": "acc30b14955ca0bbd05f5a521d08f4ce319bb94ea4a99ea2fcdade3ad9c2ff91",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:55:41.680123+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "共用QROPS/养老金税务，不等现金转账额度/全资产不可携。",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S19",
+      "url": "https://www.bankofireland.com/help-centre/faq/much-can-transfer-365-online/",
+      "bytes": 61582,
+      "sha256": "a12d06cd5b2f2ba7c8d487fe10c3d9e289055f42eb228698c6078f0362897688",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T05:57:59.991392+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-03-09",
+      "scope": "BOI真实GBP365/NI-GB telegraphic路径，新收款人48h；非英国法总上限或全民已有该账户。",
+      "sourceKind": "reused_original_response"
+    },
+    {
+      "id": "S20",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2026/04/cart-service-specification-commissioning-guidance-v1.0-1.pdf",
+      "bytes": 332621,
+      "sha256": "ba97c929f2ca55b7da63a525aa8d0af00f962742e18f91e2b48afabda55da108",
+      "retrievedOn": "2026-10-13",
+      "retrievedAt": "2026-10-13T04:24:23.969404+00:00",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "共用NHS England正式委托，URL2026Apr/封面Nov12 2025v3含Dec2025TA；仅制度/监护context，不证明Coventry已输注。",
+      "sourceKind": "reused_original_response"
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.westmidlands.police.uk/news/west-midlands/news/news/2026/august/guardian-taskforce-achieve-excellent-results-across-coventry-and-solihull/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-08-15",
+      "bytes": null,
+      "sha256": null,
+      "scope": "原Police正文：Jan–Jun2026 Coventry+Solihull115deployments/87arrests/68weapons/439stopsearch，FarGosford刀抢真实；混区非4328率。"
+    },
+    {
+      "id": "W02",
+      "url": "https://www.westmidlands.police.uk/police-forces/west-midlands-police/areas/campaigns/campaigns/operation-authentic---keeping-you-safe-in-the-city-centre-and-across-the-wider-coventry-area/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "原Police正文：2025枪响后Section34/巡逻/帮派脆弱人保障；不证明区域冲突/战略后果。"
+    },
+    {
+      "id": "W03",
+      "url": "https://customer.nationalgrid.co.uk/advice-and-guidance/key-performance-targets",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "原运营正文FY24/25 WestMidlandsCI46.31/CML34.18/HV1h89.33%；排除exceptionalsevere，header2023/24与表24/25不同。"
+    },
+    {
+      "id": "W04",
+      "url": "https://www.birminghamairport.co.uk/latest-news/birmingham-airport-ends-record-2025-with-busiest-december-ever/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-01-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "原运营观察2025旅次13654108/90516flights、实际新路线；BHX3799可外部接续但非4328本机场。"
+    },
+    {
+      "id": "W05",
+      "url": "https://www.birminghamairport.co.uk/transport-links/by-train/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "原运营当前AirRail免费03:30–00:30、国际站接续Coventry/London等；正文CrossCountry组含Euston viaNorthampton，不擅纠正/作为精确运营商时刻表。"
+    },
+    {
+      "id": "W06",
+      "url": "https://www.birminghamairport.co.uk/transport-links/by-bus-or-coach/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "原运营当前X1 Coventry–BHX–Birmingham、现场现金/非接触，coach接续；HS2路工通知与共同节点保留。"
+    },
+    {
+      "id": "W07",
+      "url": "https://warwick.ac.uk/fac/sci/wmg/news-and-events/industry-success-stories/success-story-assetbank/",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "原大学web正文SIMPLE部署3制造组织、TopOriental在Coventry工厂ERP已采用；案例日期混合/未标，£50k月出口为条件预期。"
+    },
+    {
+      "id": "W08",
+      "url": "https://warwick.ac.uk/services/finance/resources/accounts/annual-report-24_25_v24singlepages.pdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "原PDF文本web可读，FY截至Jul31 2025，innovation5年区域累积；raw429，web截图未返回可见pixels，本轮未宣称目视该PDF/未取原bytesSHA。"
+    },
+    {
+      "id": "W09",
+      "url": "https://www.uhcw.nhs.uk/download/clientfiles/files/Generic%20Recruitment%20Pack%2013_01_20%281%29.pdf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "bytes": null,
+      "sha256": null,
+      "scope": "2020招聘包仅原站indexed excerpt：Level3 performsautologousstemcell路径，非近期实际患者/支付/效果；全文403，不当有效PDF。"
+    }
+  ],
+  "failedSourceReads": [
+    {
+      "file": "airport-bhx-bus-current.html",
+      "url": "https://www.birminghamairport.co.uk/transport-links/by-bus-or-coach/",
+      "bytes": 5503,
+      "sha256": "b57fb7a7cd8d5d3005ada95fc0310a09da59b9b73642ea873878b197f53d8e00",
+      "retrievedAt": "2026-10-13T07:02:21.334699+00:00",
+      "reason": "403\ttext/html; charset=UTF-8\thttps://www.birminghamairport.co.uk/transport-links/by-bus-or-coach/",
+      "exit": 0
+    },
+    {
+      "file": "airport-bhx-train-current.html",
+      "url": "https://www.birminghamairport.co.uk/transport-links/by-train/",
+      "bytes": 5482,
+      "sha256": "caff2709126bc563ec1c9456e51de955ad0b7d89a7a7767fd33ac5af8c0c0466",
+      "retrievedAt": "2026-10-13T07:02:21.333142+00:00",
+      "reason": "403\ttext/html; charset=UTF-8\thttps://www.birminghamairport.co.uk/transport-links/by-train/",
+      "exit": 0
+    },
+    {
+      "file": "airport-bhx2025.html",
+      "url": "https://www.birminghamairport.co.uk/latest-news/birmingham-airport-ends-record-2025-with-busiest-december-ever/",
+      "bytes": 5696,
+      "sha256": "5ab8cba92d465e2652b3b9eb3b031d0eac5b5fbc72102d4e99b04a5c859763ce",
+      "retrievedAt": "2026-10-13T07:00:01.770153+00:00",
+      "reason": "403\ttext/html; charset=UTF-8\thttps://www.birminghamairport.co.uk/latest-news/birmingham-airport-ends-record-2025-with-busiest-december-ever/",
+      "exit": 0
+    },
+    {
+      "file": "climate-cabinet2026.html",
+      "url": "https://edemocracy.coventry.gov.uk/ieListDocuments.aspx?CId=124&MeetingId=13485",
+      "bytes": 0,
+      "sha256": null,
+      "retrievedAt": "2026-10-13T07:00:03.060419+00:00",
+      "reason": "000\t\thttps://edemocracy.coventry.gov.uk/ieListDocuments.aspx?CId=124&MeetingId=13485",
+      "exit": 28
+    },
+    {
+      "file": "cqc-gyn2026.html",
+      "url": "https://www.cqc.org.uk/location/RKB01/reports/LAP-03583",
+      "bytes": 136333,
+      "sha256": "539fe3addf450fe5f10141ef15838bc5040136f066f8653cf058fbf293ab55b2",
+      "retrievedAt": "2026-10-13T07:03:50.233555+00:00",
+      "reason": "analyst_incorrect_locator_LAP03583; not service disappearance; actualobservedLAP02128 valid",
+      "exit": 0
+    },
+    {
+      "file": "energy-performance2025.html",
+      "url": "https://customer.nationalgrid.co.uk/advice-and-guidance/key-performance-targets",
+      "bytes": 5642,
+      "sha256": "97821ae968a3ba204011114509b11c4969091d8293cc70456dd636964ecd1309",
+      "retrievedAt": "2026-10-13T07:00:00.649817+00:00",
+      "reason": "403\ttext/html; charset=UTF-8\thttps://customer.nationalgrid.co.uk/advice-and-guidance/key-performance-targets",
+      "exit": 0
+    },
+    {
+      "file": "energy-westmidlands2025.pdf",
+      "url": "https://www.nationalgrid.com/document/562361/download",
+      "bytes": 5450,
+      "sha256": "e0e2cc926a142ce283db01851b9e60875563088202b810e8007f2d7ed1bf4947",
+      "retrievedAt": "2026-10-13T07:00:00.650056+00:00",
+      "reason": "403\ttext/html; charset=UTF-8\thttps://www.nationalgrid.com/document/562361/download",
+      "exit": 0
+    },
+    {
+      "file": "police-authentic2025.html",
+      "url": "https://www.westmidlands.police.uk/police-forces/west-midlands-police/areas/campaigns/campaigns/operation-authentic---keeping-you-safe-in-the-city-centre-and-across-the-wider-coventry-area/",
+      "bytes": 6081,
+      "sha256": "8ca064a97af303941ab50d5e0d1578eb7b5a505000ae8102dce9198a46cbd95a",
+      "retrievedAt": "2026-10-13T06:57:00.075727+00:00",
+      "reason": "403\ttext/html; charset=UTF-8\thttps://www.westmidlands.police.uk/police-forces/west-midlands-police/areas/campaigns/campaigns/operation-authentic---keeping-you-safe-in-the-city-centre-and-across-the-wider-coventry-area/",
+      "exit": 0
+    },
+    {
+      "file": "police-taskforce2026.html",
+      "url": "https://www.westmidlands.police.uk/news/west-midlands/news/news/2026/august/guardian-taskforce-achieve-excellent-results-across-coventry-and-solihull/",
+      "bytes": 5900,
+      "sha256": "52a36ce94aa991e1d5d2b812298ad9bc586500771cc8512fe9c3475c0877b3a2",
+      "retrievedAt": "2026-10-13T06:57:00.073766+00:00",
+      "reason": "403\ttext/html; charset=UTF-8\thttps://www.westmidlands.police.uk/news/west-midlands/news/news/2026/august/guardian-taskforce-achieve-excellent-results-across-coventry-and-solihull/",
+      "exit": 0
+    },
+    {
+      "file": "uhcw-haematology2020.pdf",
+      "url": "https://www.uhcw.nhs.uk/download/clientfiles/files/Generic%20Recruitment%20Pack%2013_01_20%281%29.pdf",
+      "bytes": 919,
+      "sha256": "d2ecfeb09c88b67600050d6a0db347f65efb06277fec9fa18d33021fc3431fd1",
+      "retrievedAt": "2026-10-13T07:02:21.331659+00:00",
+      "reason": "403\ttext/html\thttps://www.uhcw.nhs.uk/download/clientfiles/files/Generic%20Recruitment%20Pack%2013_01_20%281%29.pdf",
+      "exit": 0
+    },
+    {
+      "file": "uhcw-quality2025.pdf",
+      "url": "https://www.uhcw.nhs.uk/download/clientfiles/files/UHCW%20Final%20Quality%20Account%20PV%202024-25%20AW.pdf",
+      "bytes": 919,
+      "sha256": "59d5b19b9b665701dd6b4c20dafac4a8159c4547b425d53b1087db8fe9a9f7be",
+      "retrievedAt": "2026-10-13T06:57:00.070375+00:00",
+      "reason": "403\ttext/html\thttps://www.uhcw.nhs.uk/download/clientfiles/files/UHCW%20Final%20Quality%20Account%20PV%202024-25%20AW.pdf",
+      "exit": 0
+    },
+    {
+      "file": "warwick-accounts2025.pdf",
+      "url": "https://warwick.ac.uk/services/finance/resources/accounts/annual-report-24_25_v24singlepages.pdf",
+      "bytes": 17,
+      "sha256": "3850dfdbf4489250268b5f0740240a9f4445e7c5c29e1d03aa0c5446808d7507",
+      "retrievedAt": "2026-10-13T06:57:00.070733+00:00",
+      "reason": "429\t\thttps://warwick.ac.uk/services/finance/resources/accounts/annual-report-24_25_v24singlepages.pdf",
+      "exit": 0
+    },
+    {
+      "file": "wmg-actual-current.html",
+      "url": "https://warwick.ac.uk/fac/sci/wmg/news-and-events/industry-success-stories/success-story-assetbank/",
+      "bytes": 17,
+      "sha256": "3850dfdbf4489250268b5f0740240a9f4445e7c5c29e1d03aa0c5446808d7507",
+      "retrievedAt": "2026-10-13T06:57:01.475393+00:00",
+      "reason": "429\t\thttps://warwick.ac.uk/fac/sci/wmg/news-and-events/industry-success-stories/success-story-assetbank/",
+      "exit": 0
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "source": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "sourceBytes": 9932800,
+    "allGeometryCount": 9031,
+    "record": {
+      "fid": 8434,
+      "eFUA_ID": 4328.0,
+      "UC_num": 1.0,
+      "UC_IDs": "1834",
+      "eFUA_name": "Coventry",
+      "Commuting": 1.0,
+      "Cntry_ISO": "GBR",
+      "Cntry_name": "UnitedKingdom",
+      "FUA_area": 556.0,
+      "UC_area": 126.0,
+      "FUA_p_2015": 583972.0325065553,
+      "UC_p_2015": 428130.63862228394,
+      "Com_p_2015": 155841.39388427138
+    },
+    "bounds": [-123000.0, 6110000.0, -97000.0, 6146000.0],
+    "targetGeometrySha256": "68d9c58c5a016a5c5ff4fdfcd2b3b0c0fcf2430b9952eec711cda562fdf921f0",
+    "referencePoints": [
+      {
+        "label": "Coventry centre",
+        "longitude": -1.5106,
+        "latitude": 52.4081,
+        "fuaMatches": [4328]
+      },
+      {
+        "label": "UHCW Walsgrave",
+        "longitude": -1.4415,
+        "latitude": 52.4217,
+        "fuaMatches": [4328]
+      },
+      {
+        "label": "Hospital St Cross Rugby",
+        "longitude": -1.263,
+        "latitude": 52.3642,
+        "fuaMatches": [4817]
+      },
+      {
+        "label": "University Warwick Gibbet Hill",
+        "longitude": -1.5618,
+        "latitude": 52.3679,
+        "fuaMatches": [4328]
+      },
+      {
+        "label": "Warwick Manufacturing Group",
+        "longitude": -1.5585,
+        "latitude": 52.3853,
+        "fuaMatches": [4328]
+      },
+      {
+        "label": "Coventry University",
+        "longitude": -1.5059,
+        "latitude": 52.4078,
+        "fuaMatches": [4328]
+      },
+      {
+        "label": "Coventry airport",
+        "longitude": -1.4797,
+        "latitude": 52.3697,
+        "fuaMatches": [4328]
+      },
+      {
+        "label": "Birmingham airport external",
+        "longitude": -1.7481,
+        "latitude": 52.4524,
+        "fuaMatches": [3799]
+      },
+      {
+        "label": "George Eliot Hospital Nuneaton",
+        "longitude": -1.4787,
+        "latitude": 52.5148,
+        "fuaMatches": [4328]
+      },
+      {
+        "label": "Royal Leamington Spa",
+        "longitude": -1.536,
+        "latitude": 52.2858,
+        "fuaMatches": [4294]
+      },
+      {
+        "label": "Rugby centre",
+        "longitude": -1.261,
+        "latitude": 52.372,
+        "fuaMatches": [4817]
+      },
+      {
+        "label": "Birmingham Queen Elizabeth external",
+        "longitude": -1.943,
+        "latitude": 52.45,
+        "fuaMatches": [3799]
+      },
+      {
+        "label": "Coventry central market",
+        "longitude": -1.514,
+        "latitude": 52.408,
+        "fuaMatches": [4328]
+      },
+      {
+        "label": "Allesley flood reference",
+        "longitude": -1.5566,
+        "latitude": 52.4282,
+        "fuaMatches": [4328]
+      },
+      {
+        "label": "Sowe Potters Green reference",
+        "longitude": -1.452,
+        "latitude": 52.447,
+        "fuaMatches": [4328]
+      }
+    ],
+    "method": "full9031; EPSG4326→ESRI54009 always_xy; intersects; analyst approximate points not official footprints/catchments/patients",
+    "reviewedOn": "2026-10-13"
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-coventry-priority-review.md",
+    "sha256": "a33486443f9af484cc70369d8970ae3d6229ecdd4c2c96626b2b0b05f8ee2778",
+    "reviewedOn": "2026-10-13",
+    "status": "bounded_conditional_review_not_ranking_or_exclusion"
+  }
+}

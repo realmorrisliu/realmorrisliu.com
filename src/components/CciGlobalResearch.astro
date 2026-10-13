@@ -47,6 +47,9 @@ import dublin from "../../docs/data/cci-local-2026-dublin-case.json";
 import turku from "../../docs/data/cci-local-2026-turku-case.json";
 import edinburgh from "../../docs/data/cci-local-2026-edinburgh-case.json";
 import jyvaskyla from "../../docs/data/cci-local-2026-jyvaskyla-case.json";
+import coventry from "../../docs/data/cci-local-2026-coventry-case.json";
+import loughborough from "../../docs/data/cci-local-2026-loughborough-case.json";
+import fazeley from "../../docs/data/cci-local-2026-fazeley-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -98,8 +101,14 @@ const cases = [
   turku,
   edinburgh,
   jyvaskyla,
+  coventry,
+  loughborough,
+  fazeley,
 ];
 const caseNamesZh: Record<number, string> = {
+  [coventry.candidateId]: "考文垂功能区",
+  [loughborough.candidateId]: "拉夫堡功能区",
+  [fazeley.candidateId]: "Fazeley 功能区",
   [edinburgh.candidateId]: "爱丁堡功能区",
   [jyvaskyla.candidateId]: "于韦斯屈莱功能区",
   [dublin.candidateId]: "都柏林功能区",
@@ -335,6 +344,30 @@ const caseNotes: Record<number, string[]> = {
     zh
       ? "全9,031几何核对区内外参考点；Hull、Sheffield和机场服务不并成本区。国家CAR-T委托不证明本区居民已进入真实给药/监护链；国家威胁与日常运转也不足以补GSS。两轮后保留缺口，必要的代表性、延续、普通负担和触达假设均可撤回。"
       : "Reference points were checked against all 9,031 geometries; Hull, Sheffield and outside-airport services are not local production. National CAR-T commissioning does not establish a delivered local-resident pathway; national threat context and ordinary operations do not settle GSS. After two rounds, gaps remain explicit and applicability, continuity, affordability and reach assumptions can be withdrawn.",
+  ],
+  [coventry.candidateId]: [
+    zh
+      ? "考文垂PCS／ISR／RES／TEC／OPT条件60、MED40，GSS／LON未知；无中心，条件域42—67。真实服务、科技应用与交通路径和急诊失控／缓解并读；MED60替代给45—70。供水常态及通常净负担为较弱推定，拒绝须回未知。"
+      : "Coventry has conditional 60 for PCS/ISR/RES/TEC/OPT, MED 40 and unknown GSS/LON: no centre, with a 42–67 domain. Operating services, technology adoption and transport coexist with actual emergency-care failures and mitigation. MED 60 gives 45–70. Usual water-at-use and net affordability are weaker assumptions; rejecting them restores unknown.",
+    zh
+      ? "全9031核15个近似参考点。急诊超过12小时的全部到诊／等床人群分母分开，旧抽样记录人数冲突保留，2026妇科改善不代表全部急诊问题已闭。地方暴力不补区域／战略安全，旧人体招募与现行委托目录不代当前当地实施。"
+      : "Fifteen approximate references were checked against all 9,031 areas. All-attendance and awaiting-bed denominators for 12-hour waits remain separate, as does an old sample-count conflict. Later gynaecology improvements do not close every emergency-care failure. Local violence does not fill regional/strategic safety; old human recruitment and current commissioning do not prove current local delivery.",
+  ],
+  [loughborough.candidateId]: [
+    zh
+      ? "拉夫堡PCS40、ISR／MED／LON／TEC／OPT条件60，GSS／RES未知；无中心，域42—67。已实施洪水应对仍有残余，常规护理及真实地区专科转诊支持有限判断。若不接受地区疾病转化路径对当地通常居民可取得的推定，撤回LON后为36—71；MED40替代为39—64。"
+      : "Loughborough has PCS 40, conditional 60 for ISR/MED/LON/TEC/OPT and unknown GSS/RES: no centre, with a 42–67 domain. Delivered flood responses retain residual constraints; usual care and operating regional specialist referrals support scoped judgments. Rejecting usual resident access to regional human translation withdraws LON, giving 36–71; MED 40 gives 39–64.",
+    zh
+      ? "全9031核13个近似参考点；51日首次评估与71日全部门诊等待不混分母。24小时UTC仅处理非危重，区外LRI真实CAR-T病例不改记当地患者。取水许可不代运行；公交经区外机场是实际接续，不证明所有线路24小时或独立灾害备援。"
+      : "Thirteen approximate references were checked against all 9,031 areas. The 51-day first-assessment and 71-day all-outpatient waits retain different denominators. The 24-hour UTC handles non-life-threatening care; actual CAR-T at outside LRI is not a local patient record. An abstraction licence does not establish operation. Airport buses establish a working connection without proving all routes run 24 hours or provide independent disaster redundancy.",
+  ],
+  [fazeley.candidateId]: [
+    zh
+      ? "Fazeley PCS40、ISR／LON／OPT条件60，GSS／RES／MED／TEC未知；无中心，域27—77。真实Tamworth旧人体治疗与同中心当前NHS采用支持有限疾病转化／居民取得推定；不是健康人延寿或当地全医疗质量。LON40替代为25—75，拒绝取得／净负担推定须回未知。"
+      : "Fazeley has PCS 40, conditional 60 for ISR/LON/OPT and unknown GSS/RES/MED/TEC: no centre, with a 27–77 domain. An actual earlier Tamworth human treatment and current NHS adoption at the same centre support scoped disease translation and resident access. This proves neither healthy-person longevity nor whole local care quality. LON 40 gives 25–75; rejecting access/net-affordability assumptions restores unknown.",
+    zh
+      ? "全9031核15个近似参考点；旧防护与当前高河位、住房合规反证及真实暴乱回应并读。制造／回输选择偏差、价格和采用日期冲突保留，供资不等患者账单。水务挑战页和旧检查不能填当前水／医疗，局部IT活动不补持续知识链；31键清单不等充分测量。"
+      : "Fifteen approximate references were checked against all 9,031 areas. Older protection and current high river levels coexist with housing-compliance concerns and actual disorder responses. Manufacturing/infusion selection bias and price/adoption-date conflicts remain; provider funding is not a patient bill. Water challenge pages and old inspections do not fill current utilities/care; local IT activity does not close sustained knowledge output. A 31-key checklist is not full measurement.",
   ],
   [edinburgh.candidateId]: [
     zh
@@ -592,8 +625,8 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
       <p class="research-note">
         {
           zh
-            ? "研究按统一线索安排优先级，最多三个任务并行；资料缺失及较新候选另设探索队列，调查顺序不代表排名。"
-            : "Research follows a common evidence-based work queue, with at most three tasks in parallel. Missing-data and newer candidates have separate exploration queues; work order is not a ranking."
+            ? "优先验证多种筛查情景下都靠前的候选：两个名额评估竞争案例，一个核查缺测或较新候选，最多三个任务并行。每城两轮定向补查后交接，未知保留；研究顺序不代表CCI名次。"
+            : "Candidates that stay near the front across screening scenarios receive priority: two slots assess competitors and one explores missing-data or newer candidates, with at most three tasks in parallel. Each city hands off after two targeted rounds, retaining unknowns; work order is not a CCI ranking."
         }
         <a
           href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-unassessed-priority-screening.md"
@@ -886,6 +919,21 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
         {" · "}<a
           href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-ragusa-priority-review.md"
           >{zh ? "拉古萨核查" : "Ragusa review"}</a
+        >
+      </p>
+      <p>
+        {
+          zh
+            ? "Sông Mã与恩阳两入口核查保留实际洪水、恢复、医疗及服务障碍。行政区总量不代小型核心表现，医保比例和临床时间的分母分开；当前普通居民取得与防护仍未闭，不计八维案例、不评分或排除。"
+            : "Sông Mã and Enyang two-entry reviews retain actual flooding, recovery, care and service barriers. Administrative totals do not measure small urban cores; insurance ratios and clinical timings keep their own denominators. Current usual resident access and protection remain unclosed; these are not scored eight-dimension cases or exclusions."
+        }
+        {" "}<a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-songma-priority-review.md"
+          >{zh ? "Sông Mã核查" : "Sông Mã review"}</a
+        >
+        {" · "}<a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-enyang-priority-review.md"
+          >{zh ? "恩阳核查" : "Enyang review"}</a
         >
       </p>
       <p>
