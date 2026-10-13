@@ -153,10 +153,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 33,
+    "conditionalCaseCount": 35,
     "completeConditionalCaseCount": 14,
-    "partialCaseCount": 19,
-    "unassessedCount": 8998,
+    "partialCaseCount": 21,
+    "unassessedCount": 8996,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -437,8 +437,18 @@
       "sha256": "6573a54b83f5b6027f1eeb05a319b019dc54e6431b2b641487757bf7e0b62973",
       "provenance": "cci-leicester-priority-review.md",
       "provenanceSha256": "cf0f3500047e33a2dc04dcb0776a60dc6aba9ffaed296c9d1e46aba97355494d"
+    },
+    "cci-local-2026-dublin-case.json": {
+      "sha256": "47357b64fec016a1880ea00d2c65324790e258637f3f5e7e77fd72e3f6fea0bb",
+      "provenance": "cci-dublin-priority-review.md",
+      "provenanceSha256": "4a4a50e4a886b263b2d67a92d1b1931f3c5cb5c862d41eec9c37c5f5f6185985"
+    },
+    "cci-local-2026-turku-case.json": {
+      "sha256": "744f3027863f7f3befab1744834e8f0b125187c3a70d473cd31d73dc51d0bb02",
+      "provenance": "cci-turku-priority-review.md",
+      "provenanceSha256": "40a4657bb79de492c9c54ea8490df994e9d62193c488392e5bc9a8d82e79bd0f"
     }
   },
-  "scriptSha256": "111390efed0521c9a1c06f3520390996fccee2eb7706e0108dbf7df6ddfb145f",
-  "csvSha256": "1edcfc4adb0d66effb66281f14aa29be7627a9d1bcc27268e69abd56d7a7899c"
+  "scriptSha256": "2849bfb33a66bb79b177f18d7dc31b151a3cc0ba8122054e2eb077953f3a4e65",
+  "csvSha256": "cdaa438ebf6b5bff283fa6df523b481ad16b43a2757057d01052eb5a8dd90603"
 }

@@ -1,5 +1,7 @@
 # CCI 研究优先级与有限并行
 
+**2026-10-13 第七批验收：** [Dublin415](cci-dublin-priority-review.md)六维条件60、MED40、GSS未知，无中心、条件域48—63；[Turku56](cci-turku-priority-review.md)PCS／ISR／TEC60、MED40，其余四维未知，无中心、域30—75。当前**35份审阅、14完整／21部分、8,996未审**，零排除、无合格第32名门槛。[Malé110两入口](cci-male-priority-review.md)已验收但未完成八维、不计案例数；[wup:11254](cci-wup-11254-identity-review.md)原包／全9031交集与人口重算已验收，外片功能身份仍未解决，不拆城或继承分数。两个较强局部组合槽位接续公开探索中的Edinburgh2305／Jyväskylä545，未知探索接续Saifai后的Qunfudhah2116两入口；最多三项并行、两轮停止，顺序不代表排名。以下为阶段快照。
+
 **2026-10-13 第六批验收：** [Leicester4925](cci-leicester-priority-review.md)七维条件60、RES未知，无中心、域54—64；[Oulu239](cci-oulu-priority-review.md)PCS／ISR／RES／TEC／OPT60、MED40、GSS／LON未知，无中心、域42—67；[Cima3399／Tilili](cci-cima-priority-review.md)身份及有界八维已核、八维均未知，仍保留。当前**33份审阅、14完整／19部分、8,998未审**。三份均不取得入围或排除资格；真实反证、地域／时点和可撤回假设继续显示。Leicester／Oulu释放槽位接续公开全量筛查中的Dublin415／Turku56；Malé110两入口核查已交接待验收，不计八维案例；其槽位接续wup:11254部分覆盖身份核查。最多三项并行，两轮停止，顺序不代表排名。以下为阶段快照。
 
 **2026-10-13 安全一致性修订：** [赫尔辛基GSS复核](cci-helsinki-security-review.md)撤回原60，国家预测和应急准备不能代替当前当地现实影响与缓解链。其余七维不变，无中心、数学域53—68；当前30份审阅、**14完整／16部分**、9,001未审。新候选Leicester、Oulu与缺测候选Cima正在三个有限槽位研究，尚未验收、不计成果。全部保留、零排除，以下为历史阶段快照。

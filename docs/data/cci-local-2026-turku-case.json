@@ -1,0 +1,527 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 56,
+  "name": "Turku",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "docs/cci-turku-priority-review.md",
+  "evidenceReview": "cci-turku-priority-review.md",
+  "expectedConditionalTotal": null,
+  "limitations": "Two bounded research rounds; PCS/ISR/TEC conditional60, MED conditional40; GSS/RES/LON/OPT unresolved.31 subpillars inspected, not all measured.55% scored weight contributes30; unknown45% yields30–75 conditional arithmetic range, no total centre or exclusion/rank claim. Spatial, cutoff-continuity, ordinary burden and residual-importance assumptions are retractable.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Actual sewer separation, reliable heat/cooling/electricity delivery and regional fire/ambulance response support physical protection; early2026 heavy snow delayed response and local risk-grid gaps remain. Low historical heat/seismic proxies are context, not zero risk.",
+      "assumption": "Reviewed physical services and completed works reasonably protect usual residents in FUA56 and persist at cutoff; their limited heat/coastal/geophysical coverage is not assumed complete. Remaining weather/common-dependency effects stay material. Rejecting this applicability/protection inference restores unknown.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "National Finnish strategic context and regional preparedness, occupational threat reports or ordinary rescue performance do not establish local organized-violence and geopolitical impact/mitigation. No UCDP match is not zero risk.",
+      "assumption": "No score; the missing bridge is a real local/regionally applicable threat consequence and implemented mitigation linked to resident/channel effects, not a perfect incident census.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Regional public institutions implemented team/clinic and mobile-urgent-care changes in Turku, family reunification and home rehabilitation; actual audits and emergency response support execution. Information-transfer, technical assignment, staffing and service-chain problems persist.",
+      "assumption": "Regional governance and delivered municipal/operator services reasonably represent usual essential institutions for FUA56 residents. Existing group-access and recovery limits remain important after mitigation; neither national WGI nor budget balance establishes local resilience.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "Actual2025 water distribution, pipe renewal, heat/cooling/electricity delivery and interruption results support water/energy. Hospital catering and planned food research do not establish ordinary household food supply, net burden and practical alternatives.",
+      "assumption": "No whole-dimension score. Ordinary food purchase/distribution and access or a grounded applicability link is missing; no perfect household invoice is required. Food unknown is not observed shortage or poverty and cannot produce40.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "partial",
+        "food": "unresolved",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 40,
+      "rationale": "Public fees and expanded actual surgery/mobile urgent care provide paths;2025 over-six-month specialty wait fell20.2% to7.5% and surgery overdues1819 to758. The2025 report explicitly says early2026 acute elderly care-chain congestion persisted despite implemented improvements; transfers, ED and chronic follow-up displacement remain substantive limits.",
+      "assumption": "The documented necessary-care chain bottleneck reasonably affects ordinary Turku residents and remains important after alternatives at cutoff. If usual timely appropriate alternatives render the residual nonmaterial,60 is admissible; rejecting spatial/continuity/residual-importance inference restores unknown, not automatic40.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "Current TYKS CAR-T instructions explicitly describe locally supervised infusion and CRS/neurological management, stronger than a tariff. Named approved product and matching original human-efficacy chain, actual implementation identity at cutoff and public treatment approval are not verified;2021 transplants are not CAR-T counts.",
+      "assumption": "No score. A product-matched credible human/compliance bridge and dated actual local adoption plus appropriate usual public payment/monitoring would discriminate limited60/40. Counts and perfect median bills are not mandatory, but institution and general fees cannot fill product/implementation gaps.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "unresolved",
+        "regulatory_adoption": "unresolved",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "2024 university sales/licensing87 and spin-offs4 connect with multiple real energy/water and healthcare deployments:23115 smart meters replaced2025, actual electric heat production and44% outpatient remote contacts. Technical doctor-assignment68%, congested chat and defective water-meter links persist despite functioning alternatives and free scheduled warranty repair.",
+      "assumption": "Reviewed production and actual uptake reasonably represent major local industries and ordinary residents. The documented technical/service barriers remain important after actual mitigation; if strong capability and delivered assistance make them minor,80 is admissible rather than capped by missing high-tier measurements.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": null,
+      "rationale": "Geometry verifies airport and two ports, not actual passenger routes or current exit availability. EU worker residence and accrued pension abroad provide limited legal/financial paths. Local operating transport and household international communication/account alternatives are not verified in the bounded review.",
+      "assumption": "No score; a dated real passenger exit channel and ordinary usability/alternative, plus an applicable key communication/account route would permit conditional assessment. Airport existence or fast Ookla samples do not replace these substantive links.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "transport_redundancy": "unresolved",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "unresolved"
+      }
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.turunvesihuolto.fi/uutiset/",
+      "bytes": 90741,
+      "sha256": "d820a02a48e4baef7c2529b808ddcd7147a0d07696ae6bbf8f11e8fa9b0d67d2",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前运营商新闻目录；正文日期逐条区分，不以版权2026代观察窗。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/turku/water-news-index.html",
+      "effectiveUrl": "https://www.turunvesihuolto.fi/uutiset/"
+    },
+    {
+      "id": "S02",
+      "url": "https://www.turkuenergia.fi/uutiset-ja-artikkelit/vuoden-2025-vuosikertomus-ja-vastuullisuusraportti-on-julkaistu",
+      "bytes": 103920,
+      "sha256": "b19a58c93cbbd113c51cca8b024c04876820aecd0931ec946c4185b9a8b48dc2",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-04-16",
+      "scope": "2025运营年；第一方发布报告摘要，2026后续建设为计划。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/turku/energy-news2025.html",
+      "effectiveUrl": "https://www.turkuenergia.fi/uutiset-ja-artikkelit/vuoden-2025-vuosikertomus-ja-vastuullisuusraportti-on-julkaistu"
+    },
+    {
+      "id": "S03",
+      "url": "https://vsk2025.turkuenergia.fi/en/business-review/",
+      "bytes": 88284,
+      "sha256": "8ca0a6156984916d798aae14706877a7588e8e9e708fb4505dd2f737ced1e9d7",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025运营商业务回顾，供能/平均中断/实际智能表；公司服务区不等全56。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/turku/energy-business2025.html",
+      "effectiveUrl": "https://vsk2025.turkuenergia.fi/en/business-review/"
+    },
+    {
+      "id": "S04",
+      "url": "https://www.utu.fi/fi/business-collaboration/innovations-and-technology-transfer",
+      "bytes": 51558,
+      "sha256": "7d65de80b599c1c5821f46e2faa44f1314e6ea22b45aa0100d4380f4d0c4a429",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前技术转移组织与商业化途径；机构存在不是真实许可成果，实绩另看PDF。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/turku/university-tto.html",
+      "effectiveUrl": "https://www.utu.fi/fi/business-collaboration/innovations-and-technology-transfer"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.tyks.fi/hoidot-ja-tutkimukset/car-t-hoito",
+      "bytes": 508644,
+      "sha256": "f5583f5f63e55ea030b7d752946af9c4a56009cd05c391a84e6c2f7d5cf29343",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前第一方CAR-T治疗路径、回输与住院监护、CRS/神经毒性；无产品名称、首次实施日期/人数/原人体结果。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/turku/tyks-car-t.html",
+      "effectiveUrl": "https://www.tyks.fi/hoidot-ja-tutkimukset/car-t-hoito"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.tyks.fi/tietoa-tyksista/tyksin-organisaatio/huippuosaamisyksikot/kantasolusiirtoyksikko/tietoa-potilaille",
+      "bytes": 513695,
+      "sha256": "9b4e3df9bf0fdd61942c30e14960e3024042cc9324c83fa4b4d009cafe996521",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前本地allo/auto转诊与供者/监护途径，未标正文首发；既有不同移植适应症不泛称健康人延寿。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/turku/tyks-stem-patients.html",
+      "effectiveUrl": "https://www.tyks.fi/tietoa-tyksista/tyksin-organisaatio/huippuosaamisyksikot/kantasolusiirtoyksikko/tietoa-potilaille"
+    },
+    {
+      "id": "S07",
+      "url": "https://www.varha.fi/fi/tietoa-meista/asiakkaana-hyvinvointialueella/asiakasmaksut-ja-asiakaslaskutus/asiakasmaksut",
+      "bytes": 239986,
+      "sha256": "9d217946db69e0fa3d072499bd5a15edc0ff8bda7584b0a11cd285f9f045ed68",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "现行正式个人收费入口；2026May1实施，链接真实IMS原PDF。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/turku/varha-fees-index.html",
+      "effectiveUrl": "https://www.varha.fi/fi/tietoa-meista/asiakkaana-hyvinvointialueella/asiakasmaksut-ja-asiakaslaskutus/asiakasmaksut"
+    },
+    {
+      "id": "S08",
+      "url": "https://www.turunvesihuolto.fi/uutiset/vuoden-2025-tilinpaatos-ja-vuosikertomus-julkaistu/",
+      "bytes": 81116,
+      "sha256": "ff7874d65640c04ade788481ae07808c48d844a578e9543da0d38fbed21f28cf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-06-04",
+      "scope": "2025水务运营，2026Apr27董事会接受；平均中断及管网更新限定供水区。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/turku/water-annual-news2025.html",
+      "effectiveUrl": "https://www.turunvesihuolto.fi/uutiset/vuoden-2025-tilinpaatos-ja-vuosikertomus-julkaistu/"
+    },
+    {
+      "id": "S09",
+      "url": "https://www.tyks.fi/tietoa-tyksista/tyksin-organisaatio/huippuosaamisyksikot/kantasolusiirtoyksikko/kantasolusiirtoyksikon-toiminta-lukuina",
+      "bytes": 510558,
+      "sha256": "1f2f98b32256a2133396c4b7b2e7e8f269ba7280745931f2644fe8ab9669c8cd",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "实际2021年102移植=64allo+38auto；不是CAR-T回输数，也不是2026患者人数/疗效。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/turku/tyks-stem-activity.html",
+      "effectiveUrl": "https://www.tyks.fi/tietoa-tyksista/tyksin-organisaatio/huippuosaamisyksikot/kantasolusiirtoyksikko/kantasolusiirtoyksikon-toiminta-lukuina"
+    },
+    {
+      "id": "S10",
+      "url": "https://www.tyks.fi/tietoa-tyksista/talous-ja-toimintaluvut/hoitoonpaasy",
+      "bytes": 509275,
+      "sha256": "5a37dd31da626231184efdfb1542d20b512ade96cdc1ee34afd159351981dd62",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "当前等待入口仅链接Aug2024区域表，未拿版权2026当2026实绩。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/turku/tyks-waiting.html",
+      "effectiveUrl": "https://www.tyks.fi/tietoa-tyksista/talous-ja-toimintaluvut/hoitoonpaasy"
+    },
+    {
+      "id": "S11",
+      "url": "https://v-shva.ims.fi/spring/public/eb9275ec-9a34-4f79-8a66-d68a5bab8d16/fi",
+      "bytes": 272588,
+      "sha256": "297aac63172e9aa3ae8d4d078245a7e60ffde95a51b7647ae4ab94bee746466a",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "35页正式个人收费：2026Apr29§35通过、May1生效；p10/13/16目视，815仅指定服务上限，26.80日费等例外保留。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。 PDF元数据CreationDate为2026Oct13取回当日，可能即时生成，不等规则首发/生效；正文May1版本延续至截止仍是明确推定。",
+      "localPath": "/private/tmp/cci-global/turku/varha-patientfees-current.pdf",
+      "effectiveUrl": "https://v-shva.ims.fi/spring/public/eb9275ec-9a34-4f79-8a66-d68a5bab8d16/fi"
+    },
+    {
+      "id": "S12",
+      "url": "https://www.varha.fi/fi/tietoa-meista/talous",
+      "bytes": 132091,
+      "sha256": "6a7c3b07e523a900943004abc242ba8e620721f113f59d918bd5a3d8304dba3b",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "地区财政入口，索引不是年度实绩，2025正式原件另列。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/turku/varha-finance-index.html",
+      "effectiveUrl": "https://www.varha.fi/fi/tietoa-meista/talous"
+    },
+    {
+      "id": "S13",
+      "url": "https://www.tyks.fi/tietoa-tyksista/tyksin-organisaatio/huippuosaamisyksikot/kantasolusiirtoyksikko",
+      "bytes": 510558,
+      "sha256": "64df55d326ec50efa9f86d0534c3af5f69c1879349cdd18bfbe55cbdcd111678",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "入口实际重定向至2021移植活动页；与另件相同主题，无额外当前CAR-T实施证据。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/turku/tyks-stem-unit.html",
+      "effectiveUrl": "https://www.tyks.fi/tietoa-tyksista/tyksin-organisaatio/huippuosaamisyksikot/kantasolusiirtoyksikko/kantasolusiirtoyksikon-toiminta-lukuina"
+    },
+    {
+      "id": "S14",
+      "url": "https://www.tyks.fi/sites/default/files/2024-10/varha_elokuu2024.pdf",
+      "bytes": 986066,
+      "sha256": "26c1028614fb52827f7a2c75a45043c892461cfbd387ef14c6bda6b1110452f4",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "12页实际2024Aug31区域等待截面；文字层核历史范围，本轮不以未目视原表具体数值决定2026档位，2025年报取代旧截面。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/turku/tyks-wait-2024aug.pdf",
+      "effectiveUrl": "https://www.tyks.fi/sites/default/files/2024-10/varha_elokuu2024.pdf"
+    },
+    {
+      "id": "S15",
+      "url": "https://www.utu.fi/sites/default/files/public%3A/media/file/utu-sustainability-and-responsibility-2025.pdf",
+      "bytes": 12932674,
+      "sha256": "878dfe5f688bb2a605e3a5d3da07cf1adf668effcd44069d663bd23a3d08a02c",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "2025命名的20页责任报告，p13目视TTO表观察2023/2024，2024许可销售87、spin-off4；不是2025数据。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/turku/university-sustain2025-h1.pdf",
+      "effectiveUrl": "https://www.utu.fi/sites/default/files/public%3A/media/file/utu-sustainability-and-responsibility-2025.pdf"
+    },
+    {
+      "id": "S16",
+      "url": "https://v-shva.ims.fi/spring/public/02f27964-ac36-43d2-aa27-6aae6d40e55a/fi",
+      "bytes": 4112961,
+      "sha256": "85d33c787d8ba1ba3fc81c845c93189198d148da6afe82eaac5b856d0bbbb8db",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "153页2025实际区域年报，封面2026Mar23；2026初叙述另记。物理49/62/69/71/73/90目视。Varha范围大于56。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/turku/varha-annual2025.pdf",
+      "effectiveUrl": "https://v-shva.ims.fi/spring/public/02f27964-ac36-43d2-aa27-6aae6d40e55a/fi"
+    },
+    {
+      "id": "S17",
+      "url": "https://www.turunvesihuolto.fi/vesimittari/takuutyona-tehtavat-vesimittarivaihdot-syys-lokakuussa/",
+      "bytes": 79752,
+      "sha256": "a0f1eeefd4cc83f202914e1e3103b8c92958afa961fd4d1ba8557120bb31c160",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-07-20",
+      "scope": "确认B-Meters Hydrodigit弱信号/电池问题；2026Aug–Oct免费维修安排不是已全部完成。 当前字节不认证2026Oct10逐字版本；截止前运行延续/通常居民适用推定见MD。",
+      "localPath": "/private/tmp/cci-global/turku/water-meter-warranty.html",
+      "effectiveUrl": "https://www.turunvesihuolto.fi/vesimittari/takuutyona-tehtavat-vesimittarivaihdot-syys-lokakuussa/"
+    },
+    {
+      "id": "N01",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_en.htm",
+      "bytes": 149227,
+      "sha256": "9f22db2b81b96872ad45677aeabe28be6640d428e804024b8c2e62cac3b39c16",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": "2026-08-19",
+      "scope": "复用FIN公民国家/欧盟适用规则；EU主管Lastchecked2026Aug19，EU公民指定受雇/自雇/派驻居住与登记/5年条件；FIN画像共用规则，不证明已经就业/有住房。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/eu-workers-residence.html",
+      "effectiveUrl": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_en.htm"
+    },
+    {
+      "id": "N02",
+      "url": "https://www.elo.fi/en/pensions/during-retirement/payment-of-pension-and-payment-dates/payment-of-pension-abroad",
+      "bytes": 169516,
+      "sha256": "f55afab5a9aec4273b0dd797438f8a30a0f1b1d36ec7f65b93a27e2df2e67d4c",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publishedOn": null,
+      "scope": "复用FIN公民国家/欧盟适用规则；劳动养老金运营商当前国外付款、税/外账户与年度地址确认，在线需芬兰银行凭证亦有书面申报；只已积累到期养老金，非所有资产/福利或提前现金提取。 当前原字节不认证截止当日逐字版本，必要地域/延续/通常居民适配推定见MD。",
+      "localPath": "/private/tmp/cci-global/oulu/elo-pension-abroad.html",
+      "effectiveUrl": "https://www.elo.fi/en/pensions/during-retirement/payment-of-pension-and-payment-dates/payment-of-pension-abroad"
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.turku.fi/ilmasto-ja-luontokaupunki/varaudu-ilmastonmuutoksen-vaikutuksiin",
+      "publishedOn": null,
+      "observedPeriod": "当前城市气候准备说明；具体热地图观察窗本轮未独立认证",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "首轮web读取气候/热地图及居民准备说明；仅context，不证明执行或保护效果。curl406响应无有效原件，未目视地图。"
+    }
+  ],
+  "boundaryReviewObject": {
+    "sourcePath": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allGeometryCount": 9031,
+    "targetId": 56,
+    "targetName": "Turku",
+    "geometryAreaKm2": 729.0,
+    "geometrySha256": "b72e9577ef9947878ffa7bace4103edc2bcdac080156a29207518d21b558282c",
+    "approximation": "Analyst approximate references, not exact footprints, historical treatment, municipality or service coverage.",
+    "points": [
+      {
+        "label": "Turku centre",
+        "lon": 22.266,
+        "lat": 60.451,
+        "matches": [56]
+      },
+      {
+        "label": "TYKS T hospital approximate",
+        "lon": 22.298,
+        "lat": 60.456,
+        "matches": [56]
+      },
+      {
+        "label": "TYKS Lighthouse hospital approximate",
+        "lon": 22.299,
+        "lat": 60.457,
+        "matches": [56]
+      },
+      {
+        "label": "University Turku main",
+        "lon": 22.284,
+        "lat": 60.455,
+        "matches": [56]
+      },
+      {
+        "label": "Abo Akademi centre campus",
+        "lon": 22.278,
+        "lat": 60.45,
+        "matches": [56]
+      },
+      {
+        "label": "Turku Airport",
+        "lon": 22.262,
+        "lat": 60.514,
+        "matches": [56]
+      },
+      {
+        "label": "Turku passenger port",
+        "lon": 22.226,
+        "lat": 60.435,
+        "matches": [56]
+      },
+      {
+        "label": "Naantali Finnlines port",
+        "lon": 22.048,
+        "lat": 60.468,
+        "matches": [56]
+      },
+      {
+        "label": "Raisio centre",
+        "lon": 22.168,
+        "lat": 60.486,
+        "matches": [56]
+      },
+      {
+        "label": "Kaarina centre",
+        "lon": 22.371,
+        "lat": 60.407,
+        "matches": [56]
+      },
+      {
+        "label": "Lieto centre",
+        "lon": 22.457,
+        "lat": 60.505,
+        "matches": [56]
+      },
+      {
+        "label": "Paimio centre",
+        "lon": 22.687,
+        "lat": 60.456,
+        "matches": []
+      },
+      {
+        "label": "Parainen centre",
+        "lon": 22.301,
+        "lat": 60.301,
+        "matches": []
+      },
+      {
+        "label": "Salo centre",
+        "lon": 23.129,
+        "lat": 60.385,
+        "matches": []
+      },
+      {
+        "label": "Uusikaupunki centre",
+        "lon": 21.408,
+        "lat": 60.801,
+        "matches": []
+      },
+      {
+        "label": "Oripaa centre",
+        "lon": 22.686,
+        "lat": 60.853,
+        "matches": []
+      },
+      {
+        "label": "Kakolanmaki wastewater plant",
+        "lon": 22.244,
+        "lat": 60.448,
+        "matches": [56]
+      },
+      {
+        "label": "Turku Region Water Virttaankangas approximate",
+        "lon": 22.58,
+        "lat": 60.945,
+        "matches": []
+      }
+    ],
+    "attributes": {
+      "fid": 3129,
+      "eFUA_ID": 56.0,
+      "UC_num": 1.0,
+      "UC_IDs": "3146",
+      "eFUA_name": "Turku",
+      "Commuting": 1.0,
+      "Cntry_ISO": "FIN",
+      "Cntry_name": "Finland",
+      "FUA_area": 729.0,
+      "UC_area": 34.0,
+      "FUA_p_2015": 293765.52785634995,
+      "UC_p_2015": 112491.97128295898,
+      "Com_p_2015": 181273.55657339096
+    }
+  },
+  "sensitivity": {
+    "knownContribution": 30.0,
+    "scoredWeightPercent": 55,
+    "centre": null,
+    "range": [30.0, 75.0],
+    "med60": {
+      "centre": null,
+      "knownContribution": 33.0,
+      "range": [33.0, 78.0]
+    },
+    "tec80": {
+      "centre": null,
+      "knownContribution": 32.0,
+      "range": [32.0, 77.0]
+    },
+    "medNull": {
+      "centre": null,
+      "knownContribution": 24.0,
+      "range": [24.0, 84.0]
+    },
+    "allNecessaryAssumptionsRejected": {
+      "centre": null,
+      "range": [0, 100]
+    }
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-turku-priority-review.md",
+    "sha256": "40a4657bb79de492c9c54ea8490df994e9d62193c488392e5bc9a8d82e79bd0f",
+    "reviewedOn": "2026-10-13",
+    "status": "bounded_conditional_review_not_ranking_or_exclusion"
+  }
+}

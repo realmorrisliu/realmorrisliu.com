@@ -85,6 +85,8 @@ const realCases = [
   "cima",
   "oulu",
   "leicester",
+  "dublin",
+  "turku",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -161,6 +163,8 @@ const [
   cima,
   oulu,
   leicester,
+  dublin,
+  turku,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -1664,3 +1668,21 @@ assert.equal(Object.keys(cima).length, 0);
 assert.equal(oulu.GSS, undefined);
 assert.equal(oulu.LON, undefined);
 assert.equal(leicester.RES, undefined);
+
+// Unknown dimensions retain original weights after bounded priority reviews.
+assert.deepEqual(total(dublin), { center: null, lower: 48, upper: 63 });
+assert.deepEqual(total({ ...dublin, MED: 60 }), { center: null, lower: 51, upper: 66 });
+assert.deepEqual(total({ ...dublin, TEC: 80 }), { center: null, lower: 50, upper: 65 });
+assert.deepEqual(total(turku), { center: null, lower: 30, upper: 75 });
+assert.deepEqual(total({ ...turku, MED: 60 }), { center: null, lower: 33, upper: 78 });
+assert.deepEqual(total({ ...turku, TEC: 80 }), { center: null, lower: 32, upper: 77 });
+for (const id of [415, 56]) {
+  const reviewedCase = realCases.find(c => c.candidateId === id);
+  assert(reviewedCase);
+  assert.equal(
+    reviewedCase.priorityCompletionReview.sha256,
+    digest(reviewedCase.priorityCompletionReview.path)
+  );
+}
+assert.equal(dublin.GSS, undefined);
+for (const id of ["GSS", "RES", "LON", "OPT"] as const) assert.equal(turku[id], undefined);

@@ -43,6 +43,8 @@ import tampere from "../../docs/data/cci-local-2026-tampere-case.json";
 import cima from "../../docs/data/cci-local-2026-cima-case.json";
 import oulu from "../../docs/data/cci-local-2026-oulu-case.json";
 import leicester from "../../docs/data/cci-local-2026-leicester-case.json";
+import dublin from "../../docs/data/cci-local-2026-dublin-case.json";
+import turku from "../../docs/data/cci-local-2026-turku-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -90,8 +92,12 @@ const cases = [
   cima,
   oulu,
   leicester,
+  dublin,
+  turku,
 ];
 const caseNamesZh: Record<number, string> = {
+  [dublin.candidateId]: "都柏林功能区",
+  [turku.candidateId]: "图尔库功能区",
   [cima.candidateId]: "Cima／Tilili 功能区",
   [oulu.candidateId]: "奥卢功能区",
   [leicester.candidateId]: "莱斯特功能区",
@@ -323,6 +329,22 @@ const caseNotes: Record<number, string[]> = {
     zh
       ? "全9,031几何核对区内外参考点；Hull、Sheffield和机场服务不并成本区。国家CAR-T委托不证明本区居民已进入真实给药/监护链；国家威胁与日常运转也不足以补GSS。两轮后保留缺口，必要的代表性、延续、普通负担和触达假设均可撤回。"
       : "Reference points were checked against all 9,031 geometries; Hull, Sheffield and outside-airport services are not local production. National CAR-T commissioning does not establish a delivered local-resident pathway; national threat context and ordinary operations do not settle GSS. After two rounds, gaps remain explicit and applicability, continuity, affordability and reach assumptions can be withdrawn.",
+  ],
+  [dublin.candidateId]: [
+    zh
+      ? "都柏林六维条件60、MED40、GSS未知，无中心、条件域48—63。已运行防洪、真实供给与修复、多机构技术产出、当地CAR-T及公费规则、实际客运和携资支持有限判断；住房容量、急诊等待与安全问题、岛际接续失效及通信共因仍保留。MED若有依据改60则域51—66，TEC80替代为50—65；必要适配拒绝则对应维度恢复未知。"
+      : "Dublin has six conditional 60 judgments, MED 40 and unknown GSS: no centre and a conditional 48–63 domain. Operating flood defences, supply/repairs, multi-institution output, local CAR-T/public payment rules, passenger transport and fund transfers support scoped judgments. Housing capacity, emergency waits/safety, island-route failures and common telecom dependencies remain. MED 60 gives 51–66; TEC 80 gives 50–65. Rejecting necessary applicability restores the affected dimension to unknown.",
+    zh
+      ? "全9031核14个近似参考点；公供通知人口、全国风暴、大学年度窗均不变成本区全居民率。31次实际输注未分常规／试验或逐例付款，46人采集／53单位及7／31重症不同分母；HSE公费规范排除试验。EPA日期与HIQA舍入冲突保留，较强局部代理只安排研究。"
+      : "Fourteen approximate references were checked against all 9,031 areas. Water notices, national storms and university reporting windows do not become whole-area resident rates. The 31 delivered infusions are not separated by routine/trial use or payer; 46 collections/53 units and 7/31 ICU cases have different denominators. HSE payment rules exclude trials. EPA date and HIQA rounding conflicts remain; stronger local proxies only schedule research.",
+  ],
+  [turku.candidateId]: [
+    zh
+      ? "图尔库PCS／ISR／TEC条件60、MED40，GSS／RES／LON／OPT未知；无中心、条件域30—75。已交付排水、冷热电、救援、公共服务和实际技术采用支持有限能力，2026初老人护理链在既得改进后仍有重要瓶颈。MED60替代域33—78，TEC80为32—77；必要代表性或延续拒绝须撤回未知。"
+      : "Turku has conditional 60 for PCS/ISR/TEC, MED 40 and unknown GSS/RES/LON/OPT: no centre, with a conditional 30–75 domain. Delivered drainage, heating/cooling/electricity, rescue, public services and technology adoption support scoped capability. Early-2026 elderly care chains still have material bottlenecks despite improvements. MED 60 gives 33–78 and TEC 80 gives 32–77; rejecting necessary applicability or continuity restores unknown.",
+    zh
+      ? "全9031核18个近似参考点；区域年报与行政市不是整个功能区。水能实绩不补通常食品取得；现行CAR-T流程比目录强，但产品／人体及截止前当地实际实施身份未闭。机场／港口点不等实际可用退出，国家法规不单独填OPT，来源失败不扣城市分。"
+      : "Eighteen approximate references were checked against all 9,031 areas; regional reports and municipal boundaries differ from the frozen area. Water/energy results do not fill usual food access. The current CAR-T pathway is stronger than a directory, but product/human-evidence and delivered local-treatment identities remain unclosed. Airport/port points do not establish usable exit; national rules alone do not fill OPT. Retrieval failures do not lower city scores.",
   ],
   [cima.candidateId]: [
     zh
@@ -805,6 +827,28 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
         {" "}<a
           href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-apia-identity-review.md"
           >{zh ? "Apia身份核查" : "Apia identity review"}</a
+        >
+      </p>
+      <p>
+        {
+          zh
+            ? "wup:11254 的新版南京附近中心已重算：与旧浦口／南京相交，区外9km²、约1.71万投影人口。跨江交通和医疗联系已核，外片真实居民日常目的地仍未知；不按同ID对照UCDB、不拆城或继承分数。"
+            : "The newer centre wup:11254 near Nanjing overlaps older Pukou/Nanjing, with 9 km² and about 17,100 projected residents outside the old frame. Operating cross-river transport and clinical links are evidenced, while outside residents' usual destinations remain unknown. No cross-product ID matching, city split or score transfer is made."
+        }
+        {" "}<a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-wup-11254-identity-review.md"
+          >{zh ? "新版部分覆盖身份复核" : "Partial-coverage identity review"}</a
+        >
+      </p>
+      <p>
+        {
+          zh
+            ? "马累两入口核查已确认本地透析与公民支付／境外转诊实际运行、岛屿灾害及救助；医疗模型缺测不等于无医疗。临床取得和实际防护仍待补，未完成八维／31项，不计入已审案例数。"
+            : "Malé's two-entry review evidences operating dialysis, citizen payment/overseas referrals and island hazards/relief. Missing healthcare-model coverage does not mean no care. Clinical access and delivered protection remain unresolved; this is not an eight-dimension/31-item assessment and is not counted as a reviewed case."
+        }
+        {" "}<a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-male-priority-review.md"
+          >{zh ? "马累两入口核查" : "Malé two-entry review"}</a
         >
       </p>
       <p>

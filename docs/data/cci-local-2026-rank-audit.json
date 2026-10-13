@@ -4,10 +4,10 @@
   "evidenceCutoff": "2026-10-10",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
-  "conditionalCaseCount": 33,
+  "conditionalCaseCount": 35,
   "completeConditionalCaseCount": 14,
-  "partialCaseCount": 19,
-  "unassessedCount": 8998,
+  "partialCaseCount": 21,
+  "unassessedCount": 8996,
   "weights": {
     "PCS": 15,
     "GSS": 15,
@@ -37,6 +37,15 @@
       "omittedDimensions": [],
       "nonexcludedCount": 9031,
       "caseResults": [
+        {
+          "efua_id": "56",
+          "source_name": "Turku",
+          "center": null,
+          "lower": 30.0,
+          "upper": 75.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
         {
           "efua_id": "94",
           "source_name": "Seoul",
@@ -88,6 +97,15 @@
           "center": null,
           "lower": 45.0,
           "upper": 70.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "415",
+          "source_name": "Dublin",
+          "center": null,
+          "lower": 48.0,
+          "upper": 63.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -341,6 +359,15 @@
       "nonexcludedCount": 9031,
       "caseResults": [
         {
+          "efua_id": "56",
+          "source_name": "Turku",
+          "center": null,
+          "lower": 21.0,
+          "upper": 81.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "94",
           "source_name": "Seoul",
           "center": null,
@@ -391,6 +418,15 @@
           "center": null,
           "lower": 36.0,
           "upper": 76.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "415",
+          "source_name": "Dublin",
+          "center": null,
+          "lower": 39.0,
+          "upper": 69.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -644,6 +680,15 @@
       "nonexcludedCount": 9031,
       "caseResults": [
         {
+          "efua_id": "56",
+          "source_name": "Turku",
+          "center": null,
+          "lower": 30.0,
+          "upper": 75.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "94",
           "source_name": "Seoul",
           "center": null,
@@ -694,6 +739,15 @@
           "center": null,
           "lower": 45.0,
           "upper": 70.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "415",
+          "source_name": "Dublin",
+          "center": null,
+          "lower": 48.0,
+          "upper": 63.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -947,6 +1001,15 @@
       "nonexcludedCount": 9031,
       "caseResults": [
         {
+          "efua_id": "56",
+          "source_name": "Turku",
+          "center": null,
+          "lower": 21.0,
+          "upper": 81.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "94",
           "source_name": "Seoul",
           "center": null,
@@ -997,6 +1060,15 @@
           "center": null,
           "lower": 36.0,
           "upper": 76.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "415",
+          "source_name": "Dublin",
+          "center": null,
+          "lower": 39.0,
+          "upper": 69.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1250,6 +1322,15 @@
       "nonexcludedCount": 9031,
       "caseResults": [
         {
+          "efua_id": "56",
+          "source_name": "Turku",
+          "center": null,
+          "lower": 30.0,
+          "upper": 75.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "94",
           "source_name": "Seoul",
           "center": null,
@@ -1300,6 +1381,15 @@
           "center": null,
           "lower": 39.0,
           "upper": 74.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "415",
+          "source_name": "Dublin",
+          "center": null,
+          "lower": 42.0,
+          "upper": 67.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1553,6 +1643,15 @@
       "nonexcludedCount": 9031,
       "caseResults": [
         {
+          "efua_id": "56",
+          "source_name": "Turku",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "94",
           "source_name": "Seoul",
           "center": null,
@@ -1603,6 +1702,15 @@
           "center": null,
           "lower": 36.0,
           "upper": 76.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "415",
+          "source_name": "Dublin",
+          "center": null,
+          "lower": 42.0,
+          "upper": 72.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1856,6 +1964,15 @@
       "nonexcludedCount": 9031,
       "caseResults": [
         {
+          "efua_id": "56",
+          "source_name": "Turku",
+          "center": null,
+          "lower": 30.0,
+          "upper": 75.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "94",
           "source_name": "Seoul",
           "center": null,
@@ -1906,6 +2023,15 @@
           "center": null,
           "lower": 45.0,
           "upper": 70.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "415",
+          "source_name": "Dublin",
+          "center": null,
+          "lower": 42.0,
+          "upper": 67.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -2159,6 +2285,15 @@
       "nonexcludedCount": 9031,
       "caseResults": [
         {
+          "efua_id": "56",
+          "source_name": "Turku",
+          "center": null,
+          "lower": 24.0,
+          "upper": 79.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "94",
           "source_name": "Seoul",
           "center": null,
@@ -2209,6 +2344,15 @@
           "center": null,
           "lower": 39.0,
           "upper": 74.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "415",
+          "source_name": "Dublin",
+          "center": null,
+          "lower": 42.0,
+          "upper": 67.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -2462,6 +2606,15 @@
       "nonexcludedCount": 9031,
       "caseResults": [
         {
+          "efua_id": "56",
+          "source_name": "Turku",
+          "center": null,
+          "lower": 30.0,
+          "upper": 75.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "94",
           "source_name": "Seoul",
           "center": null,
@@ -2512,6 +2665,15 @@
           "center": null,
           "lower": 39.0,
           "upper": 74.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "415",
+          "source_name": "Dublin",
+          "center": null,
+          "lower": 42.0,
+          "upper": 67.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -2765,6 +2927,15 @@
       "nonexcludedCount": 9031,
       "caseResults": [
         {
+          "efua_id": "56",
+          "source_name": "Turku",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "94",
           "source_name": "Seoul",
           "center": null,
@@ -2812,6 +2983,15 @@
         {
           "efua_id": "397",
           "source_name": "Tampere",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "415",
+          "source_name": "Dublin",
           "center": null,
           "lower": 0,
           "upper": 100,
@@ -3068,7 +3248,7 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "1edcfc4adb0d66effb66281f14aa29be7627a9d1bcc27268e69abd56d7a7899c",
+    "cci-global-evidence-matrix.csv": "cdaa438ebf6b5bff283fa6df523b481ad16b43a2757057d01052eb5a8dd90603",
     "cci-legal-mobility-rules.json": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "cci-legal-mobility.md": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e",
     "cci-local-2026-singapore-case.json": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -3137,12 +3317,16 @@
     "cci-oulu-priority-review.md": "dde5556cc0b7c4e089ef1492dcfaaa063bfd6796c171d93b9ed415c904eb6a83",
     "cci-local-2026-leicester-case.json": "6573a54b83f5b6027f1eeb05a319b019dc54e6431b2b641487757bf7e0b62973",
     "cci-leicester-priority-review.md": "cf0f3500047e33a2dc04dcb0776a60dc6aba9ffaed296c9d1e46aba97355494d",
+    "cci-local-2026-dublin-case.json": "47357b64fec016a1880ea00d2c65324790e258637f3f5e7e77fd72e3f6fea0bb",
+    "cci-dublin-priority-review.md": "4a4a50e4a886b263b2d67a92d1b1931f3c5cb5c862d41eec9c37c5f5f6185985",
+    "cci-local-2026-turku-case.json": "744f3027863f7f3befab1744834e8f0b125187c3a70d473cd31d73dc51d0bb02",
+    "cci-turku-priority-review.md": "40a4657bb79de492c9c54ea8490df994e9d62193c488392e5bc9a8d82e79bd0f",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "64d950cd4a1b36ec5e3eedf3934e069305a26d85aa7effc0de374b1801ac9835",
+    "cci-global-evidence-matrix.json": "d02b39b73417a37920c3ee016714bc3b7b5f003eed87a819b39326c2c06eda20",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "65dc783ad526485b28781c9023b14adb8f17d60454c233975a5e6a51fe7991c1"
+    "cci-local-2026-scoring-calibration.md": "6b0b704e56bc050622a2868b163de957a4f0bd6a28987194617b08a9a3a7720b"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "4017710d0dac99597e607d7cf3f66647d4cfbcdad09a4a2d98bba8ca6655074f",
+  "csvSha256": "cbe84084923e14df669d340db1bb6922a3ace2652af60b4d3b6eec4e5543c073",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }
