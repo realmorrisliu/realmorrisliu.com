@@ -35,6 +35,7 @@ import guangzhou from "../../docs/data/cci-local-2026-guangzhou-case.json";
 import wuhan from "../../docs/data/cci-local-2026-wuhan-case.json";
 import xian from "../../docs/data/cci-local-2026-xian-case.json";
 import surabaya from "../../docs/data/cci-local-2026-surabaya-case.json";
+import hangzhou from "../../docs/data/cci-local-2026-hangzhou-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -74,8 +75,10 @@ const cases = [
   wuhan,
   xian,
   surabaya,
+  hangzhou,
 ];
 const caseNamesZh: Record<number, string> = {
+  [hangzhou.candidateId]: "杭州功能区",
   [surabaya.candidateId]: "泗水功能区",
   [xian.candidateId]: "西安功能区",
   [wuhan.candidateId]: "武汉功能区",
@@ -207,6 +210,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [hangzhou.candidateId]: [
+    zh
+      ? "杭州10078形成完整条件评分58：PCS／GSS／ISR／RES／MED各60，LON／OPT40，TEC80。实际防护、服务与生产采用有据，市级统计、混合院区和办件数量不代全区居民覆盖。"
+      : "Hangzhou 10078 has a complete conditional score of58: PCS/GSS/ISR/RES/MED60, LON/OPT40 and TEC80. Actual protection, services and productive adoption are supported; administrative totals, mixed campuses and transactions are not full resident coverage.",
+    zh
+      ? "长寿40来自实际给药、2026适合者因费放弃及基本支付边界，并保留门特与院内药替代。具体给药院区、通常画像代表性、延续和剩余障碍重要性仍需推定；拒绝则LON未知、总分中心撤回，域54—64。尚未核定商业合同，不因缺资料扣分。"
+      : "LON40 combines actual reported administration, eligible patients foregoing treatment due to cost in2026 and basic-payment limits, with special-outpatient and in-hospital alternatives retained. Treatment campus, ordinary-profile representativeness, continuation and residual importance remain assumptions; rejecting them restores unknown LON and removes the total centre, leaving a54–64 mathematical domain. Commercial contract terms are unverified; missing evidence is not penalized.",
+  ],
   [surabaya.candidateId]: [
     zh
       ? "泗水6401按全候选目录顺序进入研究：PCS／RES条件性40，GSS／ISR／MED／TEC／OPT各60，LON未定。数学域49—59、无中心。Juanda与名关联Malang的机场目录点均落本区，点、Kota总量、医院患者和公司用户均不代全居民覆盖。"
@@ -241,11 +252,11 @@ const caseNotes: Record<number, string[]> = {
   ],
   [nanjing.candidateId]: [
     zh
-      ? "南京 PCS／GSS／ISR／RES 条件性 60，LON／OPT 条件性 40，TEC 条件性 80；MED 未定，数学域 49—64，无总分中心。实际纳凉、泵闸、社区与资源交付同住宅火灾失效、供水短板一起判读。浦口、溧水、高淳等行政名称不自动归入本功能区；全部目录关联仅安排研究顺序，不授予入围名额。"
-      : "Nanjing has conditional 60 judgments for PCS, GSS, ISR and RES, 40 for LON and OPT, and 80 for TEC. MED remains unresolved: the mathematical domain is 49–64, without a total centre. Actual cooling, drainage, community and resource delivery are read alongside residential-fire failures and water-service gaps. Administrative names such as Pukou, Lishui and Gaochun do not establish membership in this FUA; directory associations only sequence research, granting no shortlist place.",
+      ? "南京9701现为完整条件中心58：PCS／GSS／ISR／RES／MED各60，LON／OPT40，TEC80。新增常规护理原研究与实际转诊、通常医保实施支持MED60；行政总量与匿名院区仍需有限适用推定。"
+      : "Nanjing9701 now has a complete conditional score of58: PCS/GSS/ISR/RES/MED60, LON/OPT40 and TEC80. Additional routine-care research, actual referrals and usual insurance implementation support MED60; administrative totals and an unnamed campus still require limited applicability inferences.",
     zh
-      ? "72 份合格水样含 10 出厂、52 末梢、10 二次供水，不是全区家庭水质率；供电户均和旧临床队列不代当前居民结果。MED 的质量解释、通常参保路径及及时可承担替代仍在审阅。长寿实际给药与费用放弃、部分商保缓解并存，正式六期入口未取得两药完整支付责任；未知不记覆盖或排除。必要假设拒绝即撤回相应维度，火灾住户长期恢复与家庭通信适用仍需核。"
-      : "The 72 compliant water samples include 10 plant, 52 terminal and 10 secondary-supply samples, not a full-area household rate. Average utility outages and older clinical cohorts do not establish current resident outcomes. MED quality interpretation, usual-insurance paths and timely affordable alternatives remain under review. Actual longevity treatment, cost-related foregoing and partial supplementary-insurance relief coexist; the official sixth-period entry did not provide complete payment terms for the two antibodies. Unknown coverage is neither inclusion nor exclusion. Rejecting necessary assumptions withdraws the corresponding judgment; fire-victim long-term recovery and household communications applicability remain unresolved.",
+      ? "SSI及部分用药过程未显著改善，旧死亡数冲突、另一院质量／收费缺陷仍保留，不假定已全整改。通常质量、及时替代、资格／负担、延续及残余障碍解释可撤回；拒绝MED必要假设恢复未知、域49—64。长寿商业责任及住宅火灾恢复尾部仍需审查。"
+      : "SSI and some medication processes did not improve significantly; older mortality-count conflicts and another provider's quality/charging failures remain, without presumed complete repair. Usual quality, timely alternatives, eligibility/affordability, continuation and residual-impact interpretations are withdrawable; rejecting MED assumptions restores unknown and a49–64 domain. Longevity commercial terms and long-term fire recovery remain under review.",
   ],
   [jakarta.candidateId]: [
     zh
@@ -315,13 +326,19 @@ const caseNotes: Record<number, string[]> = {
   ],
   [osakaKyoto.candidateId]: [
     zh
-      ? "源名 Osaka [Kyoto] 是一个功能区，GSS 补为条件性 60，现七维 60、MED 未定；无总分中心，数学域 51—66。实际组织暴力受害／拦阻、世博警备结果、当前抗争管制和战略快照支持有限影响与缓解，仍须接受通常生活／通道、范围和延续假设；检举数不是死伤数，人员短板及针对性伤害保留。拒绝 GSS 假设回到 42—72。京都院方新闻声明 2026-09-25 刊登质量表，不认证截止前同字节；其他医院好过程不平均到全区，也不解释京都低时点。实际误摘和结果未跟进伤害、已做培训／规则与拟整改并列，低值解释、整改效果及普通居民替代可及仍未知，MED 不补 60／40。原退院窗不是全部手术发生窗，两病例与 iPSC 路径不证明普遍疗效／交付；七个近似点不验证完整地域或治疗点。"
-      : "Osaka [Kyoto] is one candidate area. GSS is now a conditional 60, giving seven 60 judgments with MED unresolved: no total centre and a mathematical domain of 51–66. Actual organised-violence harm/interception, Expo policing results, current gang-conflict controls and strategic snapshots support limited impact and mitigation, requiring ordinary-life/corridor, scope and continuity assumptions. Clearance counts are not casualties; staffing constraints and targeted harm remain. Rejecting GSS assumptions restores 42–72. Kyoto's official news claims the indicators were posted on 25 September 2026, without authenticating pre-cutoff bytes. Other providers' good processes are neither pooled into a FUA rate nor used to explain Kyoto's low timing value. Actual wrong-site resection and missed-result follow-up harms remain alongside completed training/rules and planned remedies. Low-value interpretation, remedy effects and ordinary timely alternatives remain unresolved; MED receives neither a default 60 nor 40. Discharge dates are not all procedure dates; two cases and iPSC pathways establish neither general efficacy nor delivery. Seven approximate points do not establish complete boundaries or treatment sites.",
+      ? "大阪—京都3956现为八维各条件性60、中心60。新增区域实际搬送、多院必要治疗和通常支付连接支持MED60；已搬送者不是全部求医人群，府县统计也不是完整功能区测量。"
+      : "Osaka–Kyoto3956 now has eight conditional60 judgments and a total of60. Additional actual regional transport, multi-provider necessary care and ordinary-payment connections support MED60; transported cases are not all people needing care, and prefectural totals are not full-FUA measurements.",
+    zh
+      ? "京都低时点值、严重手术与交接伤害仍未解决，不假设已整改或无害。通常质量、及时可承担治疗、网络缓解及范围／延续均为可撤回推定；拒绝MED必要条件恢复未知、域51—66。不能给本区额外设置解释每项异常的入档门槛，也不能平均别院高值抵消伤害。"
+      : "Kyoto's low timing value and serious surgical/handoff harms remain unresolved, without presumed repair or harmlessness. Usual quality, timely affordable treatment, network mitigation, scope and continuation are withdrawable inferences; rejecting MED conditions restores unknown and a51–66 domain. Explaining every anomaly is not an additional threshold unique to this area; other hospitals' high values do not offset harm.",
   ],
   [boston.candidateId]: [
     zh
-      ? "波士顿功能区新增 PCS／ISR／LON／TEC／OPT 五项条件性 60，GSS／RES／MED 未定；无中心、数学域 36—76。实际流程改进、科研许可、临床采用与接驳支持有限能力，居民数字障碍、招聘压力及治疗风险保留。区域水合格不能覆盖高风险含铅管住户的检测反证，换管缓解也不等于全区风险已解除；单病临床采用不填常规医疗。正文称 10 月 9 日的数字交付页，原元数据 10 月 11 日晚于截止，未计入评分。空间、延续、普通居民通常可得／可负担与缓解后瓶颈重要性仍须假设；五个近似点不验证完整边界或实际治疗地点。"
-      : "Boston adds conditional 60 judgments for PCS, ISR, LON, TEC and OPT; GSS, RES and MED remain unknown, without a centre and with a mathematical domain of 36–76. Actual workflow improvements, licensing, clinical adoption and ground access support scoped capability; digital barriers, staffing pressures and treatment risks remain. Regional water compliance does not erase targeted high-risk lead-pipe household findings, and replacements do not prove area-wide resolution. Disease-specific adoption does not fill routine medicine. A digital-delivery page dated 9 October in its body has 11 October publication metadata, after the cutoff, and is excluded. Spatial applicability, continuity, ordinary access/affordability and material constraints after mitigation remain assumptions; five approximate points verify neither whole boundaries nor treatment sites.",
+      ? "波士顿7347现有七维条件60，GSS未定；数学域51—66、无中心。实际食品／能源供给与帮助、多病种质量比较、关院后邻院接诊和新增救护支持RES／MED60；食品、取暖、就医费用及容量压力保留。"
+      : "Boston7347 now has seven conditional60 judgments with GSS unresolved: a51–66 mathematical domain and no centre. Actual food/energy supply and assistance, multi-condition quality comparisons, neighboring care and added ambulance capacity after closure support RES/MED60; food, heating, care-cost and capacity pressures remain.",
+    zh
+      ? "州／县调查不代本区中位居民率，BMC表中百分比属全国比较列，食品报告和运输变化的原值冲突保留。通常质量、及时负担、地域／延续及缓解后残余解释可撤回。安全虽有历史影响和当前合作机制，整维现实影响仍未闭，不因无事件匹配填60。"
+      : "State/county surveys are not FUA median-resident rates; BMC table percentages belong to the national comparison column, and conflicting food-report/transport values remain. Usual quality, timely affordable access, geography/continuation and residual-impact interpretations are withdrawable. Historical security impacts and current cooperation mechanisms do not yet close the overall present-impact gap; absent event matches do not fill GSS60.",
   ],
   [seoul.candidateId]: [
     zh
@@ -361,6 +378,10 @@ const caseNotes: Record<number, string[]> = {
   ],
 };
 const caseReviewLinks: Record<number, { href: string; label: string }> = {
+  [hangzhou.candidateId]: {
+    href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-local-2026-hangzhou-case.md",
+    label: zh ? "杭州八维评分与关键假设" : "Hangzhou assessment and key assumptions",
+  },
   [surabaya.candidateId]: {
     href: "https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-surabaya-resources-medicine-review.md",
     label: zh ? "水安全与医疗获得复核" : "Water safety and usual-care review",
@@ -475,6 +496,13 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
       </div>
     </dl>
   </div>
+  <p class="research-note">
+    {
+      zh
+        ? "研究优先补齐已有多维能力依据的竞争案例，最多三个城市任务并行；后续持续安排未评估竞争者审阅。顺序不由论文数量或未知项的理论最高分决定，也不产生入围名额。"
+        : "Research prioritizes completing competitive cases with evidence across multiple dimensions, with at most three city tasks in parallel and continued review of unassessed competitors. Paper counts and the theoretical maximum of unknowns do not determine the order or reserve shortlist places."
+    }
+  </p>
   <nav class="research-nav" aria-label={zh ? "研究进展导航" : "Research progress navigation"}>
     <a href="#local-calibration">{zh ? "评分案例" : "Scorecards"}</a>
     <a href="#case-reviews">{zh ? "判读依据" : "Case evidence"}</a>

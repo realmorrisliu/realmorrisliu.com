@@ -9,71 +9,71 @@
   "boundaryReview": "unresolved",
   "evidenceReview": "cci-local-2026-boston-case.md",
   "expectedConditionalTotal": null,
-  "retrievedOn": "2026-10-12",
-  "limitations": "Eight dimensions and31subpillars reviewed, not fully measured. Five conditional60 judgments; GSS/RES/MED unknown. Scoped institutional, municipal and operator results require reversible resident/FUA/time assumptions. Missingness not penalised; no ranking, exclusion bound, imputation, healthy-person longevity benefit or inherited historic score.",
+  "retrievedOn": "2026-10-13",
+  "limitations": "Eight dimensions/31 subpillars reviewed, not fully measured. Seven conditional60 judgments after RES/MED priority review; GSS remains unknown,51–66 mathematical domain without centre. Original fiscal/clinical/source-window/quality and spatial/ordinary-eligibility/payment assumptions remain. GSS60 is only a separately stated sensitivity, not a filled score. All9031 and newer competitors retained; no global ranking eligibility.",
   "dimensions": [
     {
       "id": "PCS",
       "score": 60,
-      "rationale": "Implemented coastal facilities and usable heat-cooling entrances support major protection; effect and whole-area reach remain unmeasured. Plans are not completed works.",
+      "rationale": "Implemented coastal facilities and usable heat-cooling entrances support major protection; effect and whole-area reach remain unmeasured. Plans are not completed works. Priority review adds actual regional cold-spell bulk-power operation as limited weather-continuity evidence, not all-household protection or independent backup.",
       "assumption": "Reviewed protection usually works, persists and reasonably applies to the ordinary resident and FUA; unreviewed hazards do not represent broader unmitigated failure. Reject necessary effectiveness, reach or representativeness assumptions to restore unknown.",
       "conditionalAlternatives": [40, 80],
       "subpillars": {
         "heat_humidity": "partial",
         "flood_sea_level": "partial",
         "geophysical": "context",
-        "severe_weather_wildfire": "unresolved"
+        "severe_weather_wildfire": "partial"
       }
     },
     {
       "id": "GSS",
       "score": null,
-      "rationale": "No historical or retained preliminary point assignments do not establish low organised-violence impact. Complete regional and strategic consequences remain unresolved.",
+      "rationale": "Original judicial/FBI records establish historical local organized/terrorist harm and current cross-agency mechanisms; regional security institutions are documented. Current overall local/regional/strategic impacts and adaptation remain insufficiently connected; no assigned events, ordinary crime, historical prosecution or project funding alone does not establish low impact.",
       "assumption": "No justified whole-dimension anchor. Do not substitute ordinary crime, absent records or national context.",
       "conditionalAlternatives": [],
       "subpillars": {
-        "organized_violence": "unresolved",
-        "regional_conflict": "unresolved",
-        "strategic_exposure": "unresolved"
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "context"
       }
     },
     {
       "id": "ISR",
       "score": 60,
-      "rationale": "Actual records-service closure improvements, implemented workflows, completed projects and delivered digital assistance support execution. Police exclusions, fees, group gaps and unmeasured crisis recovery remain limitations.",
+      "rationale": "Actual records-service closure improvements, implemented workflows, completed projects and delivered digital assistance support execution. Police exclusions, fees, group gaps and unmeasured crisis recovery remain limitations. Priority review adds delivered24-hour ambulance capacity and actual cross-provider adaptation after Carney closure; transport and care gaps persist.",
       "assumption": "Major institutions usually work for ordinary residents; scoped execution/mitigation reasonably represents the FUA and persists. Reports with unverified first publication require a withdrawable pre-cutoff availability assumption. Reject continuity, representativeness or adequacy to restore unknown.",
       "conditionalAlternatives": [40, 80],
       "subpillars": {
         "governance": "partial",
         "adaptive_capacity": "partial",
         "social_cohesion": "partial",
-        "emergency_recovery": "unresolved"
+        "emergency_recovery": "partial"
       }
     },
     {
       "id": "RES",
-      "score": null,
-      "rationale": "Regional water delivery coexists with targeted high-risk Boston household lead results and actual inspections/replacements. Four of 33 selected samples over the action level are not a whole-population harm rate. Other resources and affordability remain unresolved.",
-      "assumption": "No whole-dimension anchor: neither regional compliance nor one targeted exposure result settles food, energy, supply-chain and ordinary-resident burdens. Unverified first-publication eligibility remains conditional.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Actual treated water/pipe replacement, food warehousing/distribution and cold-spell bulk-power operations support usual necessities. High-risk lead samples, weighted regional food/heating hardship and incomplete relief remain; neither county/state surveys nor aid throughput represent all7347 median-income citizens. Report text/figure percentage conflicts are retained.",
+      "assumption": "Accept limited local/provider and regional operating evidence as reasonably representative of normally accessible affordable necessities for7347 ordinary citizens, continuing through cutoff; actual assistance mitigates without eliminating hardship and remaining burdens are judged not to dominate usual necessary supply. More material unrelieved food/water/energy/affordability constraints could40; effective affordable multiple-source/shared-shock mitigation80. Reject geography, historical publication/continuation, target-profile affordability or residual-impact inference to restore unknown. Do not require perfect household bills or interpret missing evidence as deprivation.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "water": "partial",
-        "food": "unresolved",
-        "energy": "unresolved",
-        "supply_chain": "context"
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
       }
     },
     {
       "id": "MED",
-      "score": null,
-      "rationale": "Real specialist anti-amyloid care and MRI safety observations support a narrow pathway. They do not establish ordinary routine quality, necessary-care affordability, whole-area access or pressure continuity.",
-      "assumption": "No justified whole-dimension anchor. Do not fill general medicine from specialist adoption, hospital reputation or research capacity.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "BMC risk-adjusted comparison categories for multiple necessary conditions, original statewide insurance/access survey, neighboring-provider admissions and delivered24-hour ambulance capacity after Carney closure support operating necessary care. Displayed mortality percentages are national comparisons, not BMC local rates. Closure-related travel/pressure, PCP and affordability gaps remain; transport-time summary and subgroup increases are not forced to agree.",
+      "assumption": "Accept scoped care quality/comparison, actual referral/emergency adaptation and usual active qualified insurance as reasonably representative of ordinarily appropriate timely affordable necessary care through cutoff, with workable alternatives and bearable uncovered/upfront costs. Statewide reported cost-related unmet care is not the FUA median-profile rate, but remains serious counterevidence; judge residual access/continuity/payment problems not a dominant persistent inadequately mitigated necessary-treatment constraint. If they do form an important bottleneck,40; stronger appropriate results and effective affordable backup80. Reject spatial/profile applicability, time/availability, usual quality/eligibility/timeliness/payment or residual-impact assumptions to restore unknown; no perfect bill or universal stress-test prerequisite.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "access": "partial",
-        "routine_quality": "unresolved",
+        "routine_quality": "partial",
         "specialist_capacity": "partial",
-        "system_continuity": "unresolved"
+        "system_continuity": "partial"
       }
     },
     {
@@ -231,6 +231,78 @@
       "bytes": 210261,
       "sha256": "8e887b6b1c9f8b52222955e82ae6dddb395e8c08a94ab413b6c4583a9dd9f481",
       "scope": "Massport/SITA first-party release: actual opening and2025shuttle trips, pilot and future expansion distinguished."
+    },
+    {
+      "url": "https://www.chiamass.gov/assets/docs/r/survey/MHIS-2025/2025-MHIS-Report.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 2105258,
+      "sha256": "e63c4bf92251efd8eb1e7429b740a4cdb64dbffaf8ada58e33626ff1bc61f5d7",
+      "publicationObservationContext": "原CHIA报告；2025Jan–Apr调查／Dec出版；州居民与家庭",
+      "scope": "Original source response, not independent evidence across formats. See priority review for observational period, regional/target-profile applicability, survey methods, provider comparison columns and actual versus planned assistance."
+    },
+    {
+      "url": "https://www.gbfb.org/wp-content/uploads/2025/06/GBFB_Food-Access-Report_2025_final.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 2288385,
+      "sha256": "119a686fd2773ab94352829cc82fc6a8ff4d6689e7778d783226fe767f8a2414",
+      "publicationObservationContext": "2025第五报告；2024Nov–2025Mar采样、问过去12月／结果标2024；路径2025Jun、确切首发未独核",
+      "scope": "Original source response, not independent evidence across formats. See priority review for observational period, regional/target-profile applicability, survey methods, provider comparison columns and actual versus planned assistance."
+    },
+    {
+      "url": "https://annualreport.gbfb.org/fy25",
+      "retrievedOn": "2026-10-13",
+      "bytes": 62955,
+      "sha256": "ffa065351b298efd2389180f41829e1cc35a26e3801e524f459047f2a8b2efe2",
+      "publicationObservationContext": "FY25原运营年报；财年与190市镇范围，首发／截止字节未知",
+      "scope": "Original source response, not independent evidence across formats. See priority review for observational period, regional/target-profile applicability, survey methods, provider comparison columns and actual versus planned assistance."
+    },
+    {
+      "url": "https://www.bmc.org/vi/node/144982",
+      "retrievedOn": "2026-10-13",
+      "bytes": 81218,
+      "sha256": "c828e2b1c60f0345e09c3967da59ca1f704dae8577df48eedc7cb36175e3bfb1",
+      "publicationObservationContext": "当前机构原表，未标更新时间；死亡／再入院2020Jul–2023Jun、感染2023Apr–2024Mar",
+      "scope": "Original source response, not independent evidence across formats. See priority review for observational period, regional/target-profile applicability, survey methods, provider comparison columns and actual versus planned assistance."
+    },
+    {
+      "url": "https://isonewswire.com/2026/01/23/iso-ne-issues-cold-weather-watch-ahead-of-winter-storm/",
+      "retrievedOn": "2026-10-13",
+      "bytes": 63366,
+      "sha256": "58175192272fc1260f5726cf9d2aefd4d302c07664f658253f27d98e53b93096",
+      "publicationObservationContext": "2026Jan23发表／更新Jan27；真实Jan25bulk峰值与临时许可",
+      "scope": "Original source response, not independent evidence across formats. See priority review for observational period, regional/target-profile applicability, survey methods, provider comparison columns and actual versus planned assistance."
+    },
+    {
+      "url": "https://www.boston.gov/sites/default/files/file/2025/04/Dorchester%20Working%20Group%20Report%204.22.2025.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 1586625,
+      "sha256": "de4dc982ddc48f07720be665c261cf53500522a4c69e5deedd51ff2b7027860f",
+      "publicationObservationContext": "2025Apr22；关院2024Aug31、EMS2024Sep1–2025Mar16及邻院不同月",
+      "scope": "Original source response, not independent evidence across formats. See priority review for observational period, regional/target-profile applicability, survey methods, provider comparison columns and actual versus planned assistance."
+    },
+    {
+      "url": "https://foodaccessreport.gbfb.org/",
+      "retrievedOn": "2026-10-13",
+      "bytes": 33781,
+      "sha256": "71eeac45fdb9d0c2644a8566231ab27924bbf73927ca6a5f2ff66953d567f6e6",
+      "publicationObservationContext": "2026第六报告，观察2025，确切首发／截止字节未知",
+      "scope": "Original source response, not independent evidence across formats. See priority review for observational period, regional/target-profile applicability, survey methods, provider comparison columns and actual versus planned assistance."
+    },
+    {
+      "url": "https://foodaccessreport.gbfb.org/methodology",
+      "retrievedOn": "2026-10-13",
+      "bytes": 32695,
+      "sha256": "29180e86963237e3d18ea018748fffa9c31166fde21ac1fa49655f8215e9a7e8",
+      "publicationObservationContext": "同2026报告原方法，匿名在线／过抽加权，非全民行政普查",
+      "scope": "Original source response, not independent evidence across formats. See priority review for observational period, regional/target-profile applicability, survey methods, provider comparison columns and actual versus planned assistance."
+    },
+    {
+      "url": "https://foodaccessreport.gbfb.org/the-state-of-food-insecurity",
+      "retrievedOn": "2026-10-13",
+      "bytes": 37695,
+      "sha256": "eff7723e5720aa92f47f65c5b4be2c7912d1affe1930b8086cb0c0455f8fe1e5",
+      "publicationObservationContext": "同2026报告原解释；家庭、援助及量表改版分别核",
+      "scope": "Original source response, not independent evidence across formats. See priority review for observational period, regional/target-profile applicability, survey methods, provider comparison columns and actual versus planned assistance."
     }
   ],
   "excludedEvidence": [
@@ -251,5 +323,9 @@
     "includedPatients": 318,
     "ariaPatients": 98,
     "scope": "Valid primary abstract only; no full article/site/exclusion audit or population failure rate. Downloaded challenge HTML rejected as original."
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-boston-priority-completion-review.md",
+    "sha256": "063812d7e877b3dbfa178ab0e60e13f2ce16cafa9b8efca35e2b00f27f5f6459"
   }
 }

@@ -5,12 +5,12 @@
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "boundaryVersion": "GHS-FUA R2019A",
   "boundaryReview": "unresolved",
-  "retrievedOn": "2026-10-12",
+  "retrievedOn": "2026-10-13",
   "candidateId": 9701,
   "name": "Nanjing functional area",
   "evidenceReview": "cci-local-2026-nanjing-case.md",
-  "expectedConditionalTotal": null,
-  "limitations": "Eight dimensions and31 subpillars reviewed at a conditional/partial level, not fully measured. PCS/GSS/ISR/RES60, LON/OPT40, TEC80 andMED unresolved give mathematical domain49-64, without a total centre or reliable exclusion bound. MED current quality interpretation and ordinary necessary-care/payer/alternative linkage remain under review; specialists and historical cohorts do not fill the score. Locality, continuity, usual-citizen qualification, affordability and residual materiality remain reversible. Administrative, institutional, cloud and multicentre totals are not whole-FUA or median-resident measures; missing is not zero, negative transparency evidence or a ranking exclusion.",
+  "expectedConditionalTotal": 58,
+  "limitations": "All eight dimensions and31 subpillars reviewed, not fully measured. PCS/GSS/ISR/RES/MED conditional60, LON/OPT40, TEC80 give58 after priority MED review. Existing source/window/clinical-conflict, boundary, ordinary-eligibility/affordability and residual-impact assumptions remain withdrawable. Old focused reviews retain their historical recommendation. No ranking or exclusion qualification; all9031 and newer competitors retained.",
   "dimensions": [
     {
       "id": "PCS",
@@ -65,10 +65,10 @@
     },
     {
       "id": "MED",
-      "score": null,
-      "rationale": "Actual2025 hospital/community admissions and surgery,2024 regional referrals and two hospital remedial processes establish delivery. Gulou2018-2024 thrombus214-person retrospective care and2013-2021 aortic1295-person surgery establish scoped actual treatment, not current full-area quality or causal therapy effects. Aortic table77/645AKI deaths conflicts with正文71; fully adjusted thrombus-dissolution association is nonsignificant. TCM2025 acknowledges quality-control and acute/complex-care weaknesses with implemented management/training; claims of improvement, plans and service volumes are not proof all failures resolved. Current usual insurance has registration/payment/provider/clinical conditions; specific outpatient-disease inpatient relief does not cover every treatment or prove net household affordability.",
-      "assumption": "No anchor selected while substantive current quality interpretation, usable timely alternatives and ordinary legally insured necessary-care access/payment/continuity across9701 remain under review. This is an incomplete discriminating clinical/resident chain, not a requirement for a perfect population denominator or a penalty from missing originals. A defensible usually adequate and affordable multi-provider path could support60; material unrelieved care/quality/wait/payment bottlenecks40, wider clinical results and pressure backup80. Historical high-risk case mix or data conflicts alone do not choose a tier. Other dimensions do not fill MED.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Actual perioperative/infection-management implementation with reported process/outcome changes, necessary specialist care, real referrals and usual qualified insurance/payment operations support an executable care pathway. The2025 study observed2022–2024 at an unnamed author-affiliated hospital; unchanged SSI, nonsignificant treatment-course/route changes, missing subgroup denominators, older selected cohorts and another hospital quality/charging failures remain. Published2026 volumes and actual payer totals are not FUA resident quality or net bills.",
+      "assumption": "Accept limited author-affiliated/core-provider evidence as reasonably representative across9701, continuing to cutoff, with normally active lawful eligibility, appropriate timely necessary treatment and affordable usual net/upfront/noncovered costs plus workable alternatives. Actual processes/referral and payer implementation mitigate without proving every provider repaired; judge residual quality, access and payment weaknesses not an important persistent inadequately relieved necessary-treatment bottleneck. More material residual constraints could40; stronger quality/timely affordable continuity and backup80. Reject locality, continuity, eligibility, usual quality/timely alternative/affordability or residual-materiality inference to restore MED unknown and49–64 domain without centre. No unique perfect median bill, every-provider outcome or current all-area stress-test prerequisite.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "access": "partial",
         "routine_quality": "partial",
@@ -253,7 +253,7 @@
     "aorticAkiTextDeaths": 71,
     "aorticAkiDeathCountsConflictUnresolved": true,
     "historicalCohortsAre2026FuaQuality": false,
-    "currentWholeMedAnchorEstablished": false
+    "currentWholeMedAnchorEstablished": true
   },
   "securityChecks": {
     "mingshangFireDate": "2024-02-23",
@@ -734,6 +734,30 @@
       "sha256": "8bfe09032a7d1cbbd11db61c834b40f1d7be8233a5b7e7970914c08975c37436",
       "publicationObservationContext": "Published2025-06-06,2024 inspection and2025 implemented management; future enrollment and plans not delivered.",
       "scope": "Parent review in cci-local-2026-nanjing-case.md; clinical, institution and administrative scopes remain separate from current9701 ordinary residents. Current bytes not cutoff-day archive."
+    },
+    {
+      "url": "https://wsgl.cbpt.cnki.net/portal/journal/portal/client/paper/492367d709f7b5e92a38a1b6c411409a",
+      "retrievedOn": "2026-10-13",
+      "bytes": 102084,
+      "sha256": "227446e67a051b4acf01d525a210317a9d18153796aad79bed78331d9fe2575b",
+      "publicationObservationContext": "原作者出版页，2025-04-20；2022-07—2024-06；10-13取回",
+      "scope": "See priority review: dated observations, unnamed provider/campus assumptions, sampling and payer denominators; current bytes are not a cutoff archive."
+    },
+    {
+      "url": "https://wsgl.cbpt.cnki.net/portal/journal/portal//client/paper/preview?cache=false&filePath=files%2Fwsgl%2Fhtmlfulltext%2Fpdf%2F2025%2F02%2F%E5%9B%B4%E6%89%8B%E6%9C%AF%E6%9C%9F%E5%92%8C%E6%84%9F%E6%9F%93%E6%80%A7%E7%96%BE%E7%97%85%E6%8A%97%E8%8F%8C%E8%8D%AF%E7%89%A9%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E7%9A%84%E4%BF%A1%E6%81%AF%E5%8C%96%E5%AE%9E%E8%B7%B5%E4%B8%8E%E8%AF%84%E4%BB%B7.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 2785706,
+      "sha256": "066d31692801214cfcfcbb64c84440edd48f5b9c8a7260fad4d3c423fe80f5fa",
+      "publicationObservationContext": "同研究原PDF，七页；第6页已目视；10-13取回",
+      "scope": "See priority review: dated observations, unnamed provider/campus assumptions, sampling and payer denominators; current bytes are not a cutoff archive."
+    },
+    {
+      "url": "https://ybj.nanjing.gov.cn/gkml/202610/t20261010_5923457.html",
+      "retrievedOn": "2026-10-13",
+      "bytes": 21576,
+      "sha256": "292786b4ff90b9c1b2d69a2b099a4cdfb40b4aa1879c5340ed2d2c30664ff2fb",
+      "publicationObservationContext": "主管原表2026-10-10；观察2026Jan–Aug；10-13取回",
+      "scope": "See priority review: dated observations, unnamed provider/campus assumptions, sampling and payer denominators; current bytes are not a cutoff archive."
     }
   ],
   "webOnlySourceReviews": [
@@ -818,5 +842,9 @@
     "fuaMatches": [9701],
     "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
     "method": "EPSG4326 to ESRI54009 always_xy intersection; assumes published coordinate CRS is WGS84; source did not declare coordinate datum"
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-nanjing-priority-completion-review.md",
+    "sha256": "4f4177e2beb11ec032c76d724fab3447f3dfc5c45a615852b0cf6bcdea8fcb0a"
   }
 }

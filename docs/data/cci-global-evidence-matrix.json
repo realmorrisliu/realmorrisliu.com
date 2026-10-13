@@ -153,10 +153,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 25,
-    "completeConditionalCaseCount": 9,
-    "partialCaseCount": 16,
-    "unassessedCount": 9006,
+    "conditionalCaseCount": 26,
+    "completeConditionalCaseCount": 12,
+    "partialCaseCount": 14,
+    "unassessedCount": 9005,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -329,14 +329,14 @@
       "provenanceSha256": "f50b1010ccd3e3d5f2439568ba4bb341c7738233a7b7dd05ee0111c387890b36"
     },
     "cci-local-2026-osaka-kyoto-case.json": {
-      "sha256": "f11398c87a057cd8ac17ffcbee2c8778a81fc629ac20568930f649bca3b83f7d",
+      "sha256": "b6c1b93e186a8baed1ba426d07d3f82551ac8fc3a765b5d8883c7c5d7c3be419",
       "provenance": "cci-local-2026-osaka-kyoto-case.md",
-      "provenanceSha256": "e702fa7ffe6204cb40e43cf0decdd1116e018c030826f748fc7659a811c6a5a7"
+      "provenanceSha256": "8633e1bc4f64aacfb38540c481687376457921c324ca59ae2cf829f33f706f11"
     },
     "cci-local-2026-boston-case.json": {
-      "sha256": "a54c03376f81316fa792ce0576563dadf61ab367e5be9d54cc97e066b44bf505",
+      "sha256": "b325f18f0c146d2b9edac6a47e56c9d718bf14ebd27795e44822abb5f8c91953",
       "provenance": "cci-local-2026-boston-case.md",
-      "provenanceSha256": "e62d58c2d8fb6dd372d4f8625116037edb05bc67b9851b170b2d7fac8098a6d6"
+      "provenanceSha256": "7654c926f4046cdedd730039bccad1e68bbffee743d0d1015640bd7bb4c60a9a"
     },
     "cci-local-2026-seoul-case.json": {
       "sha256": "4ed26306d4979a3bc23fb468d374242352d8c37ee0a512f1e07fbf099a436d89",
@@ -374,9 +374,9 @@
       "provenanceSha256": "e5e20d8857d16da21ba711f6b0194b9fffc01d69052f4a200b5960f07a59ad55"
     },
     "cci-local-2026-nanjing-case.json": {
-      "sha256": "d9d0e9d6cf8ddd2443749827f679f229bfb244f98e848f17f055b21338398283",
+      "sha256": "de143b9319f3c0d34647e0d569f03a7d995e8f8396f41ddb2c27b06068004cd4",
       "provenance": "cci-local-2026-nanjing-case.md",
-      "provenanceSha256": "ace7261971a10415021254d9b006612c90038211b127a0c43e7c222f8e83cddf"
+      "provenanceSha256": "078b8d3183ec0eaace859b3e0eebbf330a64b303a15f857cd8c238eb9fb3b38f"
     },
     "cci-local-2026-guangzhou-case.json": {
       "sha256": "616deaedec4095d2365441d0a6617eb9462be010e19d5b8b18ce7019bc83f335",
@@ -397,8 +397,13 @@
       "sha256": "0330322258b61e8122c42a303d46b0a25d1738bbb5ce84e18a550ef24abd3f6e",
       "provenance": "cci-local-2026-surabaya-case.md",
       "provenanceSha256": "1adcf9733663b47fe1dec2ff4b4372b3d6da649495bcb536ad61718ded96b285"
+    },
+    "cci-local-2026-hangzhou-case.json": {
+      "sha256": "514f7686e3d9b615385b36fcdd945d6835d2792aa51e9fb64c939424f4418092",
+      "provenance": "cci-local-2026-hangzhou-case.md",
+      "provenanceSha256": "5198b5ce43654f6af79c707a651455a5824c1be7156c4db6b529dac35d049039"
     }
   },
-  "scriptSha256": "b4a92d3317adf831a547a491b52804814b9d8ad2d08a35f46f1bec6e9598d9b9",
-  "csvSha256": "56a24cef65db1b9c8dff811e673d0dbef77c21706ad5f81c0d00ee1ac7232089"
+  "scriptSha256": "69898f094b9c67b01f32fcb83d99df67b3205f9e89401e73e10d83d5af81d5e0",
+  "csvSha256": "25cf575f5e9c3fffd10d0822b38ff1bc870020b096db9877b01764fa7ae260c0"
 }

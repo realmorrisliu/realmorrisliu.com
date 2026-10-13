@@ -8,9 +8,9 @@
   "candidateId": 3956,
   "name": "Osaka [Kyoto]",
   "evidenceReview": "cci-local-2026-osaka-kyoto-case.md",
-  "expectedConditionalTotal": null,
-  "retrievedOn": "2026-10-12",
-  "limitations": "Eight dimensions/31 subpillars reviewed, not fully measured. Seven conditional60 judgments; MED unknown. FUA, municipal/prefectural/operator/institution scopes differ. Assumptions are withdrawable; no ranking/exclusion bound, inherited score, default imputation, population clinical benefit or ordinary commercial iPSC delivery.",
+  "expectedConditionalTotal": 60,
+  "retrievedOn": "2026-10-13",
+  "limitations": "Eight dimensions/31 subpillars reviewed, not fully measured. Eight conditional60 judgments after priority MED reassessment; earlier focused notes retain their historical unknown recommendation. FUA/prefectural/provider scopes differ. Kyoto low timing and serious harms are unresolved, not assumed harmless or repaired. Current appropriate timely affordable ordinary care and multi-provider mitigation are withdrawable inferences; no ranking/exclusion bound or ordinary commercial iPSC claim.",
   "dimensions": [
     {
       "id": "PCS",
@@ -65,10 +65,10 @@
     },
     {
       "id": "MED",
-      "score": null,
-      "rationale": "Actual emergency/specialist delivery and cost protection now have additional provider quality processes, readmission and referral records. High process ratios from Toyonaka and Osaka City are not pooled into a FUA rate or used to explain Kyoto86/1604=5.36%. Kyoto reports actual wrong-site brain resection and two missed-result follow-up harms; completed responsibility/training steps differ from planned alerts and unverified recurrence prevention. Official news claims25September posting, without authenticating pre-cutoff current indicator bytes. Kyoto extraction, low-value cause/clinical impacts and ordinary timely alternatives remain unresolved; no cross-metric causal link or whole-area failure rate is established.",
-      "assumption": "No chosen anchor pending substantive quality interpretation, current mitigation effects and ordinary timely usable alternatives/access/cost/continuity across the FUA. Other providers and national caps do not show the target resident can transfer promptly or afford all necessary care; known serious harm is retained without defaulting the whole area to40 or60. Mere source absence is not low-quality evidence.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Multiple providers actual routine-care processes, necessary specialist treatment, admissions/referrals and2024 official regional completed emergency transports support an operating necessary-care network, read with real full-bed/repeated-inquiry/delay pressure and serious Kyoto treatment/handoff harms. Other hospitals do not explain Kyoto qi13, certify its safety or prove completed remedies; observed cohorts and prefectures are not full-FUA treatment/quality rates.",
+      "assumption": "Accept scoped multi-provider care and actual referral/transport operations as reasonably representative of normally appropriate timely necessary treatment for3956 ordinary citizens through cutoff, with usual active qualified insurance and bearable uncovered/upfront costs. Present safety/handoff and capacity weaknesses remain material shortfalls but are judged not to produce an important persistent inadequately mitigated constraint on usual necessary treatment. This does not presume Kyoto anomalies harmless, all remedies complete, every transfer timely or all untreated persons observed. Stronger residual-treatment constraint interpretation could40; stronger appropriate quality/access and effective affordable backup80. Reject geography, pre-cutoff availability, continuation, usual quality/timeliness/qualification/payment or residual-impact assumptions to restore MED unknown and total domain51–66, without centre. No unique requirement to explain every anomaly or verify every accident repair before conditional60.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "access": "partial",
         "routine_quality": "partial",
@@ -467,6 +467,34 @@
       "bytes": 245257,
       "sha256": "caa9216103c1cb8b516ffab946eadac695cc88d465330a96b781e2710cc10d40",
       "scope": "Current dynamic news feed claims the FY2025 indicator posting date2026-09-25, not the historic authenticity of current indicator values or the initial publication date of the whole feed."
+    },
+    {
+      "url": "https://www.fdma.go.jp/singi_kento/kento/items/post-174/03/sankou1.pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 590784,
+      "sha256": "bfda6e32acc386cc43f06d7ec60ba48b0a29d728f3a40bf9500dfe167b9eb468",
+      "scope": "2024 自然年；官网列2026-03-09会议参考；非实施规则，当前历史字节未独证; see priority completion review for time/FUA/cohort/payment limits."
+    },
+    {
+      "url": "https://www.fdma.go.jp/singi_kento/kento/post-174.html",
+      "retrievedOn": "2026-10-13",
+      "bytes": 55170,
+      "sha256": "ac179081ce5a1a46fbad15bbba643ab92d155fbfc960bdbefcbb4e2096581e52",
+      "scope": "2026-03-09会议及附件身份；网页更新时间未标; see priority completion review for time/FUA/cohort/payment limits."
+    },
+    {
+      "url": "https://www.osaka-med.jrc.or.jp/department/s32.html",
+      "retrievedOn": "2026-10-13",
+      "bytes": 34288,
+      "sha256": "c6015913daa5089bbe16eb82d0733aacb3fff93b7217ffd7d4d3919875b763ef",
+      "scope": "实绩令和7年度；首次公开／费用施行日未标；截止前及延续推定; see priority completion review for time/FUA/cohort/payment limits."
+    },
+    {
+      "url": "https://www.med.kindai.ac.jp/about/statistics_achievements/data_critical_care.html",
+      "retrievedOn": "2026-10-13",
+      "bytes": 61532,
+      "sha256": "e67915274e6f3996ba66d2b324581a3f55399d91a477bc47a60c0ebe387edff2",
+      "scope": "应需令和7年，妊产妇另为年度；首公开未标，当前地址非全年病例地点; see priority completion review for time/FUA/cohort/payment limits."
     }
   ],
   "securityReview": {
@@ -476,5 +504,9 @@
   "medicalReassessment": {
     "path": "docs/cci-osaka-kyoto-med-reassessment.md",
     "sha256": "16d606601939c42ef25c6dd1d6c9e4e5f45a509a6fcb67d27290ad0c7bcae6a9"
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-osaka-kyoto-priority-completion-review.md",
+    "sha256": "bba0155921c12bbdf4bddaef493ccbba92e248cf5b1b601da8cf42671f11d73c"
   }
 }

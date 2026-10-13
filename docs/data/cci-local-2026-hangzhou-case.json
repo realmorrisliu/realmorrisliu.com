@@ -1,0 +1,902 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "sharedLegalPath": {
+    "source": "cci-legal-mobility-rules.json",
+    "sourceSha256": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
+    "rule": "chinese_citizen_skilled_work_national_visa_germany",
+    "meaning": "Normally pre-entry national-visa and qualifying skilled-work residence purpose, distinct from section41(1) onshore application convenience. No automatic ordinary-resident qualification, approval, affordability or OPT score."
+  },
+  "candidateId": 10078,
+  "name": "Hangzhou functional area",
+  "retrievedOn": "2026-10-13",
+  "evidenceReview": "cci-local-2026-hangzhou-case.md",
+  "expectedConditionalTotal": 58,
+  "limitations": "Eight dimensions and31 subpillars reviewed, not fully measured. Conditional local/core-service, ordinary-resident, time-continuation, usual qualification/affordability and residual-impact assumptions are withdrawable. Whole administrative areas, institution brands, mixed-campus cohorts and transaction counts are not FUA coverage. LON40 relies on actual reported cost-related abandonment plus current basic-fund exclusion of drug body, read with special-outpatient and in-hospital procurement alternatives; missing commercial contracts alone never establishes low performance. All9031 and newer competitors remain retained; no global ranking eligibility.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Actual typhoon evacuation, drainage, seasonal cooling use, slope inspection/repair and rescue coexist with backflow, local blocked exits and imperfect slope/building protection. Seasonal shelters and actual rescue are not year-round redundancy or whole-area seismic acceptance.",
+      "assumption": "Accept scoped protection and actual mitigation as usually effective and reasonably representative across10078 through cutoff, while hazard/building/drainage tails remain. Important unrelieved risk could40; effective broad affordable protection and alternatives80. Reject necessary geographic, ordinary-resident, continuation, qualification/affordability or residual-impact assumptions to restore unknown and remove the total centre.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": 60,
+      "rationale": "Original organized coercion and actual criminal-justice response, disrupted then partially restored Middle East flights, and real September warning/evacuation exercises support functioning protection. Historic case victims, prosecutions, airport travellers and drills are not a current whole-FUA low-violence rate or wartime resilience.",
+      "assumption": "Accept scoped direct impact and actual response/routes as representative of usually usable ordinary life and essential channels through cutoff, with meaningful organized/regional/strategic tails. Do not infer October flight status from March. Important continuing coercion or disruption could40; stronger low-impact and effective alternatives80. Reject necessary geographic, ordinary-resident, continuation, qualification/affordability or residual-impact assumptions to restore unknown and remove the total centre.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "partial",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Actual wage recovery, legal aid, compensation after prolonged disputes, disability services and emergency transfers show usable institutional paths. Eighteen of22 disability inspection issues were reported rectified in March; four ongoing then are not proven still unresolved in October. Administrative closure is not full household recovery.",
+      "assumption": "Accept normally reachable core services, delivered remedies and improvement as reasonably representative and continuing, while observed eligibility/group/recovery weaknesses have not become a broader important persistent unrelieved constraint. Important remaining rights/service barriers could40; broadly effective remedies and backup80. Reject necessary geographic, ordinary-resident, continuation, qualification/affordability or residual-impact assumptions to restore unknown and remove the total centre.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "Fifteen sampled household taps and570 tested item-results, current plant/network monthly averages, actual food trade, historic average power interruption and specific backup/restoration support usual necessities. Shared intakes, local outages, sampling limits and planned water cutovers remain; compliant means are not universal household safety or observed restoration.",
+      "assumption": "Accept scoped tap/network, trade and power evidence as representative of normally available affordable necessities continuing through cutoff, with remaining shared-source/outage limits not an important persistent deprivation after mitigation. Important inadequately relieved supply/affordability failures could40; stronger affordable effective alternatives80. Reject necessary geographic, ordinary-resident, continuation, qualification/affordability or residual-impact assumptions to restore unknown and remove the total centre.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "Actual routine operating-room process/safety reporting, continuing dialysis, emergency specialist treatment and effective2026 ordinary insurance/referral/payment rules support necessary care. The2024 single-site process study is not2026 patient outcome measurement; mixed Zhejiang/Xinjiang dialysis participants and one rescue do not establish citywide quality. Eligibility, upfront/noncovered costs and care continuity remain conditional.",
+      "assumption": "At the same inference level as Tokyo/Wuhan/Xian, accept actual care, observed process improvements and usual active eligibility/payment paths as representative of normally appropriate timely necessary care, with bearable noncovered/upfront costs and workable alternatives through cutoff. Important inadequately mitigated care/quality/payment barriers could40; stronger outcomes and effective affordable backup80. No unique perfect median bill or universal stress-test requirement. Reject necessary geographic, ordinary-resident, continuation, qualification/affordability or residual-impact assumptions to restore unknown and remove the total centre.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 40,
+      "rationale": "Controlled disease-specific human evidence and Chinese approvals connect to reported actual local donanemab/lecanemab administration. July2026 original interviews record eligible patients foregoing treatment due to cost, alongside actual in-hospital drug alternatives. The national commercial directory excludes drug-body basic-fund payment, while local AD special-outpatient directory items have genuine mitigation. Commercial contract responsibility and all monitoring costs are not verified; no healthspan or healthy-person longevity claim.",
+      "assumption": "Accept the reported treatment site as10078, July availability/cost constraints continuing through cutoff, and eligible cost-related abandonment as representative of the ordinary median-income/usual-basic-insurance profile after special-outpatient and in-hospital alternatives. These are explicit geographic, temporal and residual-materiality inferences, not measured local net bills or confirmed commercial denial. Usually affordable appropriate delivery/monitoring could60; broader mature accessible translation80. Reject any necessary inference to restore unknown. Reject necessary geographic, ordinary-resident, continuation, qualification/affordability or residual-impact assumptions to restore unknown and remove the total centre.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "context",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 80,
+      "rationale": "Actual institute/enterprise production and industrial applications, incubated-company financing/output, free member licensing, completed property/transport digital transactions and delivered assistance support multiple producing/adopting actors. University platforms are not independent universities, external customer factories are not all local, and mixed counts are not resident diffusion rates. Financing, research-industry mismatch and elderly digital difficulties remain after actual help.",
+      "assumption": "Accept reviewed local platforms, independent enterprises and actual public/industry use as representative of continuing multi-actor capability and ordinary diffusion, with implemented help making remaining finance/skill/matching barriers non-dominant. If residual barriers remain important after help,60 is defensible; lack of perfect coverage alone does not cap80. Reject necessary geographic, ordinary-resident, continuation, qualification/affordability or residual-impact assumptions to restore unknown and remove the total centre.",
+      "conditionalAlternatives": [60],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 40,
+      "rationale": "Actual Xiaoshan traffic and railway transfers combine with a conditional national-visa route, lawful current-account transfers and Zhejiang emigration-asset procedures. Purpose and prior-residence/document requirements, plus nationally demonstrated cross-border network restrictions without a Hangzhou test point, remain material. Airport-directory points are not independent passenger backups; the airport summer article has unresolved event-date conflicts and does not prove2026 stress performance.",
+      "assumption": "Accept shared national rules/restriction mechanisms and dated Zhejiang procedures as continuing and applicable to ordinary10078 citizens through cutoff; actual transport and lawful alternatives do not remove important ordinary asset-purpose/sequence and cross-border-connection limits. Available affordable legal financial/network alternatives adequately relieving these constraints could60, effective independent options80. No local restriction rate inferred from national experiments. Reject necessary geographic, ordinary-resident, continuation, qualification/affordability or residual-impact assumptions to restore unknown and remove the total centre.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "context",
+        "asset_portability": "partial",
+        "network_continuity": "context"
+      }
+    }
+  ],
+  "researchPriority": {
+    "policy": "cci-research-priority.md",
+    "meaning": "In-flight review started under the previous directory sequence and completed during the transition to bounded city-level priority research. No performance or inclusion privilege from record counts."
+  },
+  "referenceBoundaryCheck": {
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "referencePoints": [
+      {
+        "label": "Hangzhou Jianqiao Airport",
+        "ident": "CN-0153",
+        "sourceId": "44231",
+        "longitude": 120.240997,
+        "latitude": 30.3353,
+        "fuaMatches": [10078],
+        "source": "OurAirports frozen 2026-10-10",
+        "sourceSha256": "79dd7db7228a12199839aa6acbc2dc1f1e50a4604f14d7f60dceb6983de91906",
+        "scope": "Directory point, not full airport footprint, current actual flights or resident access. Municipality is served-place label not physical boundary.",
+        "sourceMunicipality": "Hangzhou"
+      },
+      {
+        "label": "Jiaxing Nanhu Airport",
+        "ident": "CN-0154",
+        "sourceId": "44232",
+        "longitude": 120.663056,
+        "latitude": 30.698056,
+        "fuaMatches": [10118],
+        "source": "OurAirports frozen 2026-10-10",
+        "sourceSha256": "79dd7db7228a12199839aa6acbc2dc1f1e50a4604f14d7f60dceb6983de91906",
+        "scope": "Directory point, not full airport footprint, current actual flights or resident access. Municipality is served-place label not physical boundary.",
+        "sourceMunicipality": "Xiuzhou, Hangzhou"
+      },
+      {
+        "label": "Jiande Qiandaohu General Airport",
+        "ident": "CN-0253",
+        "sourceId": "350949",
+        "longitude": 119.180829,
+        "latitude": 29.360905,
+        "fuaMatches": [],
+        "source": "OurAirports frozen 2026-10-10",
+        "sourceSha256": "79dd7db7228a12199839aa6acbc2dc1f1e50a4604f14d7f60dceb6983de91906",
+        "scope": "Directory point, not full airport footprint, current actual flights or resident access. Municipality is served-place label not physical boundary.",
+        "sourceMunicipality": "Hangzhou"
+      },
+      {
+        "label": "Jiande Hospital Heliport",
+        "ident": "CN-0473",
+        "sourceId": "597730",
+        "longitude": 119.198245,
+        "latitude": 29.345012,
+        "fuaMatches": [],
+        "source": "OurAirports frozen 2026-10-10",
+        "sourceSha256": "79dd7db7228a12199839aa6acbc2dc1f1e50a4604f14d7f60dceb6983de91906",
+        "scope": "Directory point, not full airport footprint, current actual flights or resident access. Municipality is served-place label not physical boundary.",
+        "sourceMunicipality": "Hangzhou"
+      },
+      {
+        "label": "Hangzhou Xiaoshan International Airport",
+        "ident": "ZSHC",
+        "sourceId": "27218",
+        "longitude": 120.428865,
+        "latitude": 30.23609,
+        "fuaMatches": [10078],
+        "source": "OurAirports frozen 2026-10-10",
+        "sourceSha256": "79dd7db7228a12199839aa6acbc2dc1f1e50a4604f14d7f60dceb6983de91906",
+        "scope": "Directory point, not full airport footprint, current actual flights or resident access. Municipality is served-place label not physical boundary.",
+        "sourceMunicipality": "Hangzhou"
+      }
+    ]
+  },
+  "boundaryGeometryCheck": {
+    "candidateId": 10078,
+    "sourceName": "Hangzhou",
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "verifiedAllCandidateCount": 9031,
+    "sourceSrs": "ESRI:54009",
+    "projectedBounds": [10962000.0, 3621000.0, 11071000.0, 3717000.0],
+    "geometryRepresentativePoint": {
+      "longitude": 120.31085440747118,
+      "latitude": 30.219186917848265
+    },
+    "limitation": "Mathematical interior point in frozen commuting geometry, not a city centre, administrative/medical site or current resident/service coverage. Entire administrative units and institution footprints require separate review."
+  },
+  "clinicalChecks": {
+    "operatingRoomStudyObservationYear": 2024,
+    "operatingRoomStudyPublishedOn": "2026-05-26",
+    "equipmentUnits": 347,
+    "staffUnits": 156,
+    "operatingRooms": 28,
+    "unitsArePatients": false,
+    "safetyEventsPerThousandBefore": 3.2,
+    "safetyEventsPerThousandAfter": 1.8,
+    "safetyEventRawDenominatorsAvailable": false,
+    "dialysisMixedSiteParticipants": 231,
+    "dialysisAllParticipantsAreLocal": false,
+    "emergencyCaseMovedOutOfCriticalCareAfterDays": 9,
+    "emergencyCaseKnownDischarged": false,
+    "adSpecialOutpatientArticle": 46,
+    "adDirectoryItemsNoDeductible": true,
+    "allAdDrugsOrMonitoringAutomaticallyCovered": false,
+    "basicFundPaysCommercialDirectoryDrugBody": false,
+    "commercialCarrierContractVerified": false,
+    "localLecanemabUsersReportedJuly": 4,
+    "reportedEligibleCostRelatedAbandonment": true,
+    "actualInfusionCampusVerified": false
+  },
+  "resourceChecks": {
+    "tapWaterSamples2025": 15,
+    "tapWaterItemsPerSample": 38,
+    "tapWaterTestItemResults": 570,
+    "networkWater2026IsMonthlyMean": true,
+    "networkMonthlyMeanProvesAllSamplesCompliant": false,
+    "totalVersusFreeChlorineConflictResolved": false,
+    "plannedWaterRestorationIsActual": false,
+    "powerAverageObservationYear": 2024,
+    "powerAverageMinutes": 6.01
+  },
+  "technologyChecks": {
+    "incubatedEnterprises": 28,
+    "platformReportBodyDate": "2025-11-29",
+    "platformReportUrlDate": "2026-01-26",
+    "propertyMobileSecondhandTransactions": 251,
+    "propertyHomeVisits": 192,
+    "countsAreDistinctResidents": false,
+    "globalEfficiencyCounterfactualIsRealizedLocalSaving": false
+  },
+  "focusedReviews": [
+    {
+      "path": "cci-hangzhou-protection-institutions-review.md",
+      "sha256": "0e70e3f30e93396eaeefc257d90a6987b5791c759f7234e1457054efb7110039"
+    },
+    {
+      "path": "cci-hangzhou-resources-medicine-review.md",
+      "sha256": "60647ef92477a9e00d59a94ee88b5106c6ea6ef0c60516ccee92c056eca8b336"
+    },
+    {
+      "path": "cci-hangzhou-technology-longevity-exit-review.md",
+      "sha256": "f855a987907eb85ae5c870dc6bb8cd8439178776603c32ef74e0754483111ae2"
+    },
+    {
+      "path": "cci-hangzhou-longevity-payment-review.md",
+      "sha256": "7587db9ad344bd996652de334116caf5a2ff7571f83c2a3f0b449c0972b8f64f"
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "url": "https://zfgb.hangzhou.gov.cn/148/102220263/t103220263024/530188.shtml",
+      "bytes": 124756,
+      "sha256": "e0965411899bd5f62d95c7ffe788c32dc00a431cd1b47f36c3c9bab4e8ad65bd",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "市长会议原正式报告；2026/1/21作报告、公报2/3 15:13发布；回顾2025／2026安排分开；无生效日；读取10/13",
+      "review": "cci-hangzhou-protection-institutions-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://zfgb.hangzhou.gov.cn/11/109220263/t101220263094/530709.shtml",
+      "bytes": 44561,
+      "sha256": "05d1dcaeca47fa51ce107b37847f9e5f0c3ba18f8458283c044ff3041fbb674f",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "市司法局正式规则；8/28成文、9/3发布、10/1生效；截至10/10已生效，不证明此前全部按本版处理；读取10/13",
+      "review": "cci-hangzhou-protection-institutions-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://zfgb.hangzhou.gov.cn/9/107220263/t127220263074/530623.shtml",
+      "bytes": 32692,
+      "sha256": "13521ccf5e4deda298df01339458a66baff07dd3f614358f17004b281f9c3528",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "市政府令正式规定；7/17审议、7/23成文、7/27 20:08公报发布、9/1生效；法律义务非实绩；读取10/13",
+      "review": "cci-hangzhou-protection-institutions-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.hzlz.gov.cn/articles/29375.html",
+      "bytes": 15125,
+      "sha256": "3ed14f6d395e1d8cc79f821fda7341a9a003ab19f4217601c7d8168650f2925a",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "市委巡察办刊市残联当事整改；署2026/3/30、3/31发布；原巡察2025/3/20—6/10、9/1反馈；整改至通报时；无生效日；读取10/13",
+      "review": "cci-hangzhou-protection-institutions-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.sdcourt.gov.cn/wfhtqfy/443068/443024/6304009/index.html",
+      "bytes": 15723,
+      "sha256": "c8c50b53f28d5f6156b5f40afcb435c576c91a2100d7d4496d4b4e0434f0cf36",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "法治日报记者王春及萧山法院通讯员原稿，法院官方站刊；发布2020-08-19；观察2008-2020；生效不适用；读取10/13",
+      "review": "cci-hangzhou-protection-institutions-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://static.sse.com.cn/bond/bridge2/disclosure/announcement/c/202603/f46726_20260309_O16B.pdf",
+      "bytes": 7659439,
+      "sha256": "87d512f570dbf8ad8a035e3a4708cbf72f1278c87a63f6efa4b9ae7cc605280d",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "官方原发布／公告或发行人PDF；身份详正文；发布未独立核；观察2023–2025 historical discussion/2025 forecasts; 2026 prospects；生效不适用；签署2026-03-09；读取10/13",
+      "review": "cci-hangzhou-protection-institutions-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://tidenews.com.cn/news.html?id=3391346",
+      "bytes": 50027,
+      "sha256": "ec4a79088123fb83dbdb3fe44b7d946a8717ed1d72e0bd3de62db434fbc585c7",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "潮新闻记者现场与杭州机场采访原稿，非机构声明；正文HTML日期19:07+08，检索页11:07差异不擅改；发布2026-03-11；观察2026-03-08/11；生效不适用；读取10/13",
+      "review": "cci-hangzhou-protection-institutions-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.hzsc.com.cn/content/content_9929298.html",
+      "bytes": 13722,
+      "sha256": "170905fd616e448a2a96b608645bf9dd47fb1ca61e032d1110f71e6279a48034",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "官方原发布／公告或发行人PDF；身份详正文；发布2026-09-14；观察2026-09-10; planned 09-18；生效不适用；读取10/13",
+      "review": "cci-hangzhou-protection-institutions-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://zfgb.hangzhou.gov.cn/11/109220263/t129220263094/530779.shtml",
+      "bytes": 20830,
+      "sha256": "f5267c958d5f2c443b6408fb909493aa2c17715b96d2ab04a1ebe262eb39fd77",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "官方原发布／公告或发行人PDF；身份详正文；发布2026-09-30；观察2026-09-22；生效2026-11-01；读取10/13",
+      "review": "cci-hangzhou-protection-institutions-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://mdaily.hangzhou.com.cn/mrsb/2026/01/23/article_detail_3_20260123A051.html",
+      "bytes": 13529,
+      "sha256": "44995296ece6b57c72b40f52894c8d0633172640d8d95ace3656df94525a7229",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "每日商报记者黄家欢人大会议原报道，人大网页同文可web读但下载403；发布2026-01-23；观察2025；生效不适用；读取10/13",
+      "review": "cci-hangzhou-protection-institutions-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://hzdaily.hangzhou.com.cn/hzrb/2026/09/19/article_detail_1_20260919A018.html",
+      "bytes": 6015,
+      "sha256": "d9d2402a78b060e393a02785d52a0144b3c85952253b4d478730bea33b97bf21",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "杭州日报记者与国动办通讯员实际演练原报道；发布2026-09-19；观察2026-09-18；生效不适用；读取10/13",
+      "review": "cci-hangzhou-protection-institutions-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "http://www.mod.gov.cn/gfbw/qwfb/16429616.html",
+      "bytes": 15455,
+      "sha256": "81c66f150350760b2059af6ba96ad8bad94128b260acf21d5aaee4617a98cdb3",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "官方原发布／公告或发行人PDF；身份详正文；发布2025-12-29；观察2025-12-29；生效不适用；读取10/13",
+      "review": "cci-hangzhou-protection-institutions-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.hangzhou.gov.cn/art/2025/4/30/art_1228974669_59112266.html",
+      "bytes": 57134,
+      "sha256": "ad81dea8b74e9155e7ab9625690d95aa9eef86f4a5abf63591949ebba8d7c8ba",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "观察2025Apr；发布04-30",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.hangzhou.gov.cn/art/2024/4/24/art_1228974592_59096198.html",
+      "bytes": 65099,
+      "sha256": "84a94fbb1a05f42c09fc5aa9eb34b40b76dab9077351dbcf8135cab4f469d447",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "观察2024Mar；发布04-24",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.srrsh.com/uploads/20250901/202509010836592598.pdf",
+      "bytes": 1010067,
+      "sha256": "c513fe63baeb4c054708d1fe575601af4dbfa4672d00fdee66abbb42d6ca15b9",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "2024财政决算；路径2025-09-01；项目自评不当临床质量",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.srrsh-english.com/driveForward/18",
+      "bytes": 42504,
+      "sha256": "0534bc50606b57bf976f9774b433e1e8c3887650ece349eb1f55f7ceafabd614",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "页称截至2024-12-31；未标发布；不以认证／规模评分",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13247684/fullTextXML",
+      "bytes": 164191,
+      "sha256": "b31386bfbb533592b3a0f8f4a79daa79761fd13539f4b013668d81497aed3184",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "发表2026-05-26；观察2024Jan–Dec；PMC13247684",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://zfgb.hangzhou.gov.cn/upload/default/bigfile/2025/11/21/20251121_e1a9ac413727d2d2263005d9af715523.pdf",
+      "bytes": 164251,
+      "sha256": "8614477fa495eca6ac96d9891fd29fbb3c180ab73430269df970f5209d34b6b6",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "制定2025-11-18／路径11-21；生效2026-01-01",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.zghlgl.com/CN/abstract/abstract8782.shtml",
+      "bytes": 109263,
+      "sha256": "286cf0b0169de598387e0777542987cf035c4b59d25275e265f0845363a5c53c",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "观察2025Mar–Apr；发表2026-03-15；混浙江／新疆",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://hzdaily.hangzhou.com.cn/hzrb/2025/10/21/article_detail_1_20251021A0814.html",
+      "bytes": 12040,
+      "sha256": "4ad1c998238e04b6b716d72ab6689898dd5aca98c9d732b6e4b1104d013ded69",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "制定2025-10-20／刊载10-21；办理2026续保",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.cpnn.com.cn/qiye/dianwangPD2023/202501/t20250122_1768638.html",
+      "bytes": 29793,
+      "sha256": "cca128f8fbcca2658ad1001b690ef3f53cc546ea6c1f3ed8fdd2c4345383e3ee",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "页2025-01-23／URL22；会议01-21；观察2024；2025省目标分开",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.hzwgc.com/assets/index.4a636b6f.js",
+      "bytes": 2130577,
+      "sha256": "e10f73bc42b6a0cf55832adcb043a5330eb0f3058c0cf96372f486192c4e6acd",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "源日期未标；公开API调用身份，不是监测结果",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://zfgb.hangzhou.gov.cn/upload/default/bigfile/2025/10/15/20251015_ec3d3e35772bc2a066570411d334c03f.pdf",
+      "bytes": 372352,
+      "sha256": "a5affc4022d74775360d25f0752e9d6667e7d04a3f603f8568b708d8cc056ef0",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "制定2025-09-30；路径10-15；生效2026-01-01",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2026.1830302/pdf",
+      "bytes": 2754410,
+      "sha256": "79f28a8807739fee9270d6ddb0c326941e26ceeebee0f765ad9f54dbd87de432",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "发表2026-05-26；观察2024Jan–Dec",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.jksb.com.cn/index.php?a=show&catid=788&id=255863&m=wap",
+      "bytes": 15311,
+      "sha256": "907e5bc2960755dea5300520f0e1199c19ccd41ffb3638096cf4bf2f41ef2106",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "发生2026-06-10；转刊06-27；医院供稿，院区未明确",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.hzwgc.com/api/hzsw-offical/content/doc/list?logotype=water-quality&pageNo=1&pageSize=3",
+      "bytes": 890,
+      "sha256": "daa496f87cfa71af343e0c8f8c79b43731ff0cce4c200514bed860abc4d50031",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "当前索引；Aug记录publish2026-09-10",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.hzwgc.com/api/hzsw-offical/content/stopWater/list?logotype=water-cut-of&pageNo=1&pageSize=5",
+      "bytes": 3591,
+      "sha256": "e3cc0a625d574865a339925e9572f7ed3e1286983a365311438496531488f1aa",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "2026May/Jun原通知；预定施工时窗，不是恢复结果",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.hzwgc.com/api/hzsw-offical/content/page?logotype=water-quality&sourceId=943",
+      "bytes": 258,
+      "sha256": "cd974796b8bf6b2a558ba2e6dc0fbdce3125bf7ac2675cae359e19fa4cfee7ac",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "ID943相邻页导航；不是水质表",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.hzwgc.com/api/hzsw-offical/content/one?sourceId=943",
+      "bytes": 915,
+      "sha256": "3988ded165ff58313f2bb758a3821a709612569146e51ec7668291501ae22b61",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "观察2026Aug；publishDate09-10；原图存储路径09-14",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.hzwgc.com/api/base-service/download?url=185523228688371712/hzsw/2026/09/14/0db6234a9aec4168872958bc652d1ce3.png",
+      "bytes": 99574,
+      "sha256": "2330689f8be48df4f75dd90a947fea7475c858c8e714e8bd3f1b86d17cf469c3",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "观察2026Aug；六厂及供区管网月均；图路径09-14",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.hzwgc.com/api/base-service/download?url=185523228688371712/hzsw/2026/09/14/9c7f3aa5cba64f5bbd13b7b66936932f.png",
+      "bytes": 202981,
+      "sha256": "0c9a2942f9b670f27e9b9b981ce7faf7be1fddb6d8cf4956d71e40e7049827d9",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "观察2026Aug；六厂出厂全分析；图路径09-14",
+      "review": "cci-hangzhou-resources-medicine-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://iam.zju.edu.cn/2026/0623/c58053a3181427/page.htm",
+      "bytes": 67317,
+      "sha256": "8bec115ce5298b56e1692482110419b74fa08b64c109946b889aae9b03750666",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "发表2026-06-23；活动06-13—14，厂场部署窗未单列",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://pmic.zju.edu.cn/zh/2026/06/%E5%96%9C%E6%8A%A5%E8%81%94%E7%9B%9F%E4%B8%93%E5%88%A9%E8%8E%B7%E6%B5%99%E6%B1%9F%E7%9C%81%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E5%A5%96%E4%BA%8C%E7%AD%89%E5%A5%96%EF%BC%81/",
+      "bytes": 75387,
+      "sha256": "0b531c7a9349ec7c6aec820aea0c86e02a729a6970bf5a74350f4f3af83a694f",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "发表2026-06-24；已许可／应用具体日未单列",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://hzbcds.zju.edu.cn/2026/0126/c85669a3131446/page.htm",
+      "bytes": 54860,
+      "sha256": "f9cc4ba6d85c77e34deb41122eb040527bb4001127fd8e397fce6691b0bb5080",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "正文2025-11-29；URL2026-01-26，累计融资／产值窗未单列",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://zjca.miit.gov.cn/xwdt/gzdt/jgdt/art/2025/art_5a714bee6eb44ae1bc6e9fbfc3a3cd26.html",
+      "bytes": 11350,
+      "sha256": "02e939739a6a2239502c523eb1bdf663d834e7e91b2cf0551f4b0093d5f1e670",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "发表2025-06-07；省级已实施，非杭州率",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://zjnews.zjol.com.cn/yc/qmt/202504/t20250417_30944028.shtml",
+      "bytes": 19662,
+      "sha256": "dee820f77c074da198a0587ba75894d791d1dee95ab27af2c0c1a5fb37a0d774",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "发表2025-04-17；4月16日采访，给药近日／院区未知",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://hzbb.hangzhou.gov.cn/col/col1229857599/art/2026/art_a44aca2fe6f24d74bd813645ef837d56.html",
+      "bytes": 50487,
+      "sha256": "0b274973d8e0b5ed3c16054425e44f9daefb7ea944d60817a7eed3941c6a6069",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "2025观察；2026-02-11公布，市级范围",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://credit.hangzhou.gov.cn/art/2025/3/28/art_1229634862_39073.html",
+      "bytes": 14308,
+      "sha256": "4e7da4e9a85e640c6a7af7b6fc2da9c6a5c967df75c11292fe015345f2430bfa",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "2025-03-28发布；累计窗未单列、部分AA限定",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.safe.gov.cn/zhejiang/file/file/20230320/092987cd37624f7da6c617dbedcd5aa7.pdf?n=%E4%B8%AA%E4%BA%BA%E7%A7%BB%E6%B0%91%E8%B4%A2%E4%BA%A7%E8%BD%AC%E7%A7%BB%E6%9D%90%E6%96%99%E6%B8%85%E5%8D%95",
+      "bytes": 119487,
+      "sha256": "001abe8f4be856fb41f8a60fa682f4aa33691dd46a81f775fe7094bbb03814e0",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "路径2023-03-20；独立发表／生效及2026挂载未知",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10352931/",
+      "bytes": 278166,
+      "sha256": "430e7e506f26092400b3f9941001a521b4e7517bbae500968adb90aaa7534890",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "2023-07-17发表；2020—2023观察，全球RCT",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://pharm.ncmi.cn/xwzx/202412/t20241225_425739.html",
+      "bytes": 13970,
+      "sha256": "90befe6629f8f501e9651c1e0e9000c06ecd8327dbf71eb7e0311c36ac69b531",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "正文2024-12-20／路径12-25；NMPA公告转载，近日批准",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.nhsa.gov.cn/attach/Ypsn2025/YPSW202500115/YPSW202500115.pdf",
+      "bytes": 2189352,
+      "sha256": "c4dc2b90425dab26f359788dc13e80b7df7e4569ad4731a48b4658c20062bf35",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "2025-07-18申报；企业公示，非目录决定",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/56dd/10352931/a8dd3bafee54/jama-e2313239-g001.jpg",
+      "bytes": 980360,
+      "sha256": "e2c622fd2e9b1eb9e951ca1864d6cbe25dd4792f4c9d30e20d3ff9819bea6531",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "同RCT原Figure1；纳排／完成分母已目视",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/56dd/10352931/203c8a3dfe59/jama-e2313239-g002.jpg",
+      "bytes": 803431,
+      "sha256": "c96745ff0ee532243715a650096f2db342447907fa3d3d70b71560c21ee79d8e",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "同RCT原Figure2；量表各时点分母／趋势已目视",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.hzairport.com/mobile/media/detail/id/6411.html",
+      "bytes": 9486,
+      "sha256": "cc4600ab3033c286fa92e5b14158ddc86a8418c6f33d313e41637e0613276c93",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "发表2026-09-02；暑运自述，台风段真实事件窗未闭",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.hangzhou.gov.cn/art/2025/5/27/art_812269_59113356.html",
+      "bytes": 11150,
+      "sha256": "56a88c8b5c6ccc108d861bbc563a33cdd3c1fd1d81646796eb0708f89cd636bf",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "2025-05-27发布；05-26现场采访，官站转载报纸原创",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://english.nmpa.gov.cn/2024-01/09/c_986552.htm",
+      "bytes": 10652,
+      "sha256": "0bdf7c259f3776663c68d3e126dcb661c487e795fc369d3a948346ff43e2e81a",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "2024-01-09中国批准公告；非付款",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.pmda.go.jp/files/000265887.pdf",
+      "bytes": 799642,
+      "sha256": "5683f7f163ba47d09384be3bf5e6dfa9f8549885af79b4c4b8e969449d8c7cca",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "2023-12-19；1795随机、认知终点，非中国支付",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.nhsa.gov.cn/art/2025/12/7/art_53_18971.html",
+      "bytes": 24497,
+      "sha256": "3074f31f74f9fc03766ec01852c015cbda83a0c29213f9c82fa85dd27f9ae1d7",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "2025-12-05成文、12-07公布，2026-01-01执行",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.nhsa.gov.cn/module/download/downfile.jsp?classid=0&filename=da298734646c4a4ca1b5ca612ee23fb1.pdf",
+      "bytes": 267102,
+      "sha256": "92cb08ff6dad4fe463e5367af593133212a90142345ebf2f45221f89575d44a9",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "18／19两药，目录期2026-01-01—2027-12-31，不代商业合同",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://zjnews.zjol.com.cn/wyly/202607/t20260729_31814595.shtml",
+      "bytes": 23347,
+      "sha256": "c66feac725f16da86b54aeac3b70706f1691825007c2fa996848ff2d0f15f575",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "2026-07-29；原记者走访／医生采访，非正式合同，缓存名secondary不升级为院方原表",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.caac.gov.cn/XXGK/XXGK/TJSJ/202602/P020260226360830390937.xlsx",
+      "bytes": 42924,
+      "sha256": "0f74dc7bbac864ddc64c6e940f5c4b0710a3d1ad61e77eb0dc0085ba61908794",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "2025观察、2026-02-26公布；本轮XML核杭州行",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://gfw.report/publications/sp25/data/paper/paper.pdf",
+      "bytes": 1025009,
+      "sha256": "5f6c3647feeab362420a40a6f8a7c4c12966a243fcb21d40ae18bc647d2729c1",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "2025发表／2024实验，无杭州点；机制context",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.safe.gov.cn/shanghai/2019/1213/1198.html",
+      "bytes": 20527,
+      "sha256": "933be3dc461d973af1d80a9366946701b81ee48d9f4bc8d70939fb9074cd4c73",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "2019-12-13；用途／额度规则，2026延续适用推定",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.mofcom.gov.cn/zcfb/zgdwjjmywg/art/2020/art_0dd36157a03f494db7571002c7f785b8.html",
+      "bytes": 148041,
+      "sha256": "14171f27d3ce961e344a1daa9fca9742c21b1926180d3bd5502ecf57ded4020b",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "2020-08-28规则／12-01转载，浙江材料独立核，不套他省",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/BJNR195010004.html",
+      "bytes": 979856,
+      "sha256": "035c430b7411f9bd8bb547aa4d6e0c1ade1e52c89089ba55b553977cf5f831a6",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "已核2026-07-22版本，共用CHN国家签证规则",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    },
+    {
+      "url": "https://www.gesetze-im-internet.de/aufenthv/BJNR294510004.html",
+      "bytes": 438245,
+      "sha256": "88be848b6960d1a6f4ee61f3f0cde930f9cb5a1c3fe188bf6f937f6872e62938",
+      "retrievedOn": "2026-10-12",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "同版本；入境前批准／后续工作分别判",
+      "review": "cci-hangzhou-technology-longevity-exit-review.md",
+      "scope": "Original response identity, not independent corroboration across PDF/HTML/XML/images. Current bytes do not establish identical cutoff bytes. Institutional, administrative, cohort, resident, time and geographic limits remain as explained in the focused review."
+    }
+  ],
+  "excludedEvidence": [
+    {
+      "url": "https://www.10100.com/article/88059977",
+      "bytes": 273105,
+      "sha256": "28d8e7589476c7a45134eafaad2c6b48064ed5ab61238af0d90df5d06da820dd",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "第三方镜像，自述共保体；源首发未核；取回10-13",
+      "review": "cci-hangzhou-longevity-payment-review.md",
+      "limitation": "Third-party mirror or image used only to locate a formal source; not verified carrier terms, benefit entitlement or scoring evidence."
+    },
+    {
+      "url": "https://www.10100.com/article/88059985",
+      "bytes": 274766,
+      "sha256": "230c4f6af1e8cd78a61690b16e7c1eec2e87ba576c56ee3914be361287524daa",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "第三方镜像，非carrier现行责任；源首发未核；取回10-13",
+      "review": "cci-hangzhou-longevity-payment-review.md",
+      "limitation": "Third-party mirror or image used only to locate a formal source; not verified carrier terms, benefit entitlement or scoring evidence."
+    },
+    {
+      "url": "https://www.10100.com/article/87961903",
+      "bytes": 255026,
+      "sha256": "e2f52c3c3aca16ccdd2f7c21d4f114fc0b3c09bef61285089354f67fe51236fc",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "第三方镜像，非carrier核赔决定；源首发未核；取回10-13",
+      "review": "cci-hangzhou-longevity-payment-review.md",
+      "limitation": "Third-party mirror or image used only to locate a formal source; not verified carrier terms, benefit entitlement or scoring evidence."
+    },
+    {
+      "url": "https://cdn.10100.com/content/20260201/29894c25-5817-4c99-882e-c3975f6a8ad5.png",
+      "bytes": 17234,
+      "sha256": "087dba185ad9d1f217117817a9338a095490a1e19704a832366ce1ac5a09337e",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "镜像公众号QR，仅入口线索；图路径2026-02-01非首发证明；取回10-13",
+      "review": "cci-hangzhou-longevity-payment-review.md",
+      "limitation": "Third-party mirror or image used only to locate a formal source; not verified carrier terms, benefit entitlement or scoring evidence."
+    },
+    {
+      "url": "https://cdn.10100.com/content/20260201/78db144e-1d71-4f0c-ab1e-d2bb6e7fa0e2.png",
+      "bytes": 95706,
+      "sha256": "360f29536b5fef570ac5595fe630e63f47a9d4b1bf4d7f1263c8b8539a9574f8",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "镜像图实际装饰箭头，文件名初判保留，不当承保入口；取回10-13",
+      "review": "cci-hangzhou-longevity-payment-review.md",
+      "limitation": "Third-party mirror or image used only to locate a formal source; not verified carrier terms, benefit entitlement or scoring evidence."
+    },
+    {
+      "url": "https://cdn.10100.com/content/20260201/0ad1dd65-4046-4a67-adc3-8e9d59197e87.png",
+      "bytes": 32618,
+      "sha256": "f2b4dfc816126444b5211b8547b14a11431cac2eb820add8f5cc2773f85b42c8",
+      "retrievedOn": "2026-10-13",
+      "reviewedOn": "2026-10-13",
+      "publicationObservationContext": "镜像图实际上海保交所标识，不当承保入口；取回10-13",
+      "review": "cci-hangzhou-longevity-payment-review.md",
+      "limitation": "Third-party mirror or image used only to locate a formal source; not verified carrier terms, benefit entitlement or scoring evidence."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # 波士顿：科研转化、实际交付与居民约束共同判读
 
-截止 2026-10-10，查阅 2026-10-12。沿用[共同口径及权重](cci-local-2026-scoring-calibration.md)：2026 年美国公民、通常长期居住、当地中位收入及通常医保。**PCS／ISR／LON／TEC／OPT 条件性 60，GSS／RES／MED 未定；无总分中心，数学域 36—76。** 全部 31 项有审阅状态，不等于充分测量；研究判断的必要假设拒绝后恢复未知，不填零或中点。
+截止2026-10-10，最新复核2026-10-13。沿用[共同口径及权重](cci-local-2026-scoring-calibration.md)：2026年美国公民、通常长期居住、当地中位收入及通常医保。**PCS／ISR／RES／MED／LON／TEC／OPT各条件60，GSS未定；数学域51—66，无总分中心。** [优先补审](cci-boston-priority-completion-review.md)以实际资源供给／帮助、多病常规质量与关院后真实适应补强RES／MED判断。31项审阅不等充分测量，必要假设拒绝则相应维度恢复未知。
 
 ## 候选与地域
 
@@ -15,22 +15,22 @@
 | PCS／15%   | 60       | 已建海岸设施与可用降温入口支持主要保护，其他危险及全区效果未完整测量。须接受措施通常有效且适配居民／功能区；若重要保护失效经缓解仍成立，重审 40，拒绝必要推定则未定                                              |
 | GSS／15%   | 未定     | 无归属历史／初步事件不是低风险；完整组织暴力影响、区域外溢、战略暴露与缓解未足以选档                                                                                                                             |
 | ISR／15%   | 60       | 实际记录服务提速、流程改变、建成项目与数字辅助支持执行；警务排除、费用、群体障碍及灾后恢复未知保留。须接受主要制度通常运行及有限材料代表性，拒绝则未定                                                           |
-| RES／10%   | 未定     | 实际水供应与高风险住户铅超行动值、已完成换管共同判读；不是全户暴露。食物、能源、供应链及目标居民负担未形成整维判断，不由一项达标或异常补 60／40                                                                  |
-| MED／15%   | 未定     | 实际专科用药及 MRI 安全观察支持有限服务，不代替通常必要治疗质量／可及／负担及压力连续性；科研与医院名气不填医疗分                                                                                                |
+| RES／10%   | 条件60   | 实际水／换管、食品配送和寒潮电网运行与铅高风险、食品／取暖负担同读；通常取得／可承担、缓解后残余及地域延续推定可撤回                                                                                             |
+| MED／15%   | 条件60   | 多病种常规质量比较、实际邻院接诊和增配救护、通常医保／获得调查支持必要路径；关院、费用与初级护理短板保留                                                                                                         |
 | LON／10%   | 60       | 可信人体／监管路径、院方实际抗淀粉样蛋白治疗与安全记录支持有限转化；不是健康人延寿。须接受地域交付推定、疾病路径代表性、当前适当监测及普通合资格居民通常可得／可承担，拒绝则未定                                 |
 | TEC／10%   | 60       | MIT 实际许可及创业与地方接入、设备和技能事实共同判断；招聘压力和居民障碍有真实反证，已实现辅助也保留。须接受瓶颈在缓解后仍重要及全区／目标居民适用；若强大多主体产出、广泛采用及缓解支持 80 可重审，不由未知封顶 |
 | OPT／10%   | 60       | 实际航空接驳与公共通信，加共用附条件居留申请／转账路径支持通常通道。须接受普通居民通常具资格、可承担并使用交通、账户与通信；试点不算全航司冗余，拒绝则未定                                                       |
 
-| 维度 | 31 项状态                                                                                                       | 判读限制                                         |
-| ---- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| PCS  | heat_humidity：partial；flood_sea_level：partial；geophysical：context；severe_weather_wildfire：unresolved     | 入口／局部建成不证明全部危险的居民保护效果       |
-| GSS  | organized_violence：unresolved；regional_conflict：unresolved；strategic_exposure：unresolved                   | 无记录、国家背景及普通犯罪不能替代完整影响       |
-| ISR  | governance：partial；adaptive_capacity：partial；social_cohesion：partial；emergency_recovery：unresolved       | 特定流程结果不是全制度或真实灾后恢复测量         |
-| RES  | water：partial；food：unresolved；energy：unresolved；supply_chain：context                                     | 水务和运输背景不覆盖全部基本资源                 |
-| MED  | access：partial；routine_quality：unresolved；specialist_capacity：partial；system_continuity：unresolved       | 单病用药／安全资料不推广为常规质量               |
-| LON  | translation：partial；trial_maturity：partial；regulatory_adoption：partial；resident_access：partial           | 限定疾病路径、风险与支付条件保留                 |
-| TEC  | knowledge_output：partial；industry_density：partial；digital_infrastructure：partial；diffusion：partial       | 机构许可不是全区密度，样本和定向辅助不是全居民率 |
-| OPT  | transport_redundancy：partial；legal_mobility：partial；asset_portability：partial；network_continuity：partial | 多类入口存在但危机独立性及居民条件未完整核验     |
+| 维度 | 31 项状态                                                                                                       | 判读限制                                                         |
+| ---- | --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| PCS  | heat_humidity：partial；flood_sea_level：partial；geophysical：context；severe_weather_wildfire：partial        | 入口／局部建成不证明全部危险的居民保护效果                       |
+| GSS  | organized_violence：partial；regional_conflict／strategic_exposure：context                                     | 历史真实影响与当前跨机构机制已有原依据，当前整维影响／适配仍未知 |
+| ISR  | governance：partial；adaptive_capacity：partial；social_cohesion：partial；emergency_recovery：partial          | 特定流程结果不是全制度或真实灾后恢复测量                         |
+| RES  | water／food／energy／supply_chain：partial                                                                      | 区域供给、实际帮助与目标居民适用假设分开                         |
+| MED  | access／routine_quality／specialist_capacity／system_continuity：partial                                        | 实际常规质量与必要治疗、关院后交付和负担连接，不代全区测量       |
+| LON  | translation：partial；trial_maturity：partial；regulatory_adoption：partial；resident_access：partial           | 限定疾病路径、风险与支付条件保留                                 |
+| TEC  | knowledge_output：partial；industry_density：partial；digital_infrastructure：partial；diffusion：partial       | 机构许可不是全区密度，样本和定向辅助不是全居民率                 |
+| OPT  | transport_redundancy：partial；legal_mobility：partial；asset_portability：partial；network_continuity：partial | 多类入口存在但危机独立性及居民条件未完整核验                     |
 
 ## PCS／ISR：实际保护、执行结果及尚未验证的效果
 
@@ -42,7 +42,7 @@
 
 ## RES：区域水合格不能覆盖高风险住户反证
 
-[MWRA 2025 原结果及其中 BWSC Boston 信函](https://www.mwra.com/your-water-system/drinking-water-quality/annual-water-quality-test-results-main/2025full)将区域处理水与入户管材分开。Boston 2025 秋季已知含铅服务管的高风险样本中，铅第 90 百分位 **22.5ppb**，高于行动值 15ppb，**4／33** 样本超出；不是全城家庭率或临床伤害率。主管同时报告 2025 近 1,001 次检查、约 448 条公私服务管替换，免费替换项目真实存在；2032 目标不是已全部替换。不能忽略缓解，也不能从这些数值判断截止日全区余下住户暴露与必要水支出。报告首次公开日及历史字节未独立核验，2025 观察值不当 2026 当前率。其他资源与全区负担未定，RES 不由供水总体达标补 60，也不由单个高风险样本定 40。
+[MWRA 2025 原结果及其中 BWSC Boston 信函](https://www.mwra.com/your-water-system/drinking-water-quality/annual-water-quality-test-results-main/2025full)将区域处理水与入户管材分开。Boston 2025 秋季已知含铅服务管的高风险样本中，铅第 90 百分位 **22.5ppb**，高于行动值 15ppb，**4／33** 样本超出；不是全城家庭率或临床伤害率。主管同时报告 2025 近 1,001 次检查、约 448 条公私服务管替换，免费替换项目真实存在；2032 目标不是已全部替换。不能忽略缓解，也不能从这些数值判断截止日全区余下住户暴露与必要水支出。报告首次公开日及历史字节未独立核验，2025 观察值不当 2026 当前率。优先补审另补食品原调查／配送和寒潮真实电网运行，并保留负担与调查方法限制；由整组供给和实际缓解支持条件60，不由供水单项补档。
 
 ## MED／LON：实际采用、安全及一般居民可及性分开
 
@@ -68,10 +68,10 @@ TEC 暂取条件性 60：实际产业连接与数字使用支持能力，招聘�
 
 美国公民共用[德国 §41 境内申请条件](cci-legal-mobility.md)及[已核 Chase 2026 转账条款](cci-local-2026-new-york-case.md)：申请不是工作／永久居留获批，账户、目的、合规资金与费用仍附条件。没有复制纽约本地故障或分数。普通居民通常能取得、承担并使用适当通道的必要推定支持 OPT 60；真实资金／通信／审批阻断可重审 40，独立备援有实际依据才审 80。
 
-## 复算、优先补证及发布资格
+## 当前复算与剩余未知
 
-五项给定贡献 `9 + 9 + 6 + 6 + 6 = 36`；其余三维权重 40%，原权重域 **36—76、无中心**。撤回 PCS／ISR 各为 27—82，LON／TEC／OPT 各为 30—80。TEC 80 仅在新支持下才为 38—78，LON 40 需自身断点依据才为 34—74。未知不重归一化；这些数学域不是可信城市界限，不能用于排除任何候选。
+七维各60的原权重贡献51，GSS15%未知，数学域51—66，无中心。撤回PCS／ISR／MED任一为42—72；撤回RES／LON／TEC／OPT任一为45—70。RES改40为49—64，MED改40为48—63，TEC改80为53—68。只有另有依据接受GSS60整维推定才为完整中心60，本轮没有填入。
 
-下一项优先核验入户铅风险的当前暴露／缓解和全区资源负担、通常必要治疗质量／支付／连续性，以及完整安全影响；再审科技瓶颈的缓解后重要性。不是继续查大学／医院数量补满未知。接入后十三份八维审阅、五完整／八部分，9,018 个尚无此类审阅，全部 9,031 保留、零排除；尚无合格第 32 名门槛及全球 Top 32。
+[本轮完整证据](cci-boston-priority-completion-review.md)保留BMC表中百分比属于全国比较列、Carney概要和细分运输变化不一致、食品报告正文／图值冲突与州／县不等目标FUA。MED／RES接受通常适当服务和负担、有限地域／画像／延续及实际缓解后的剩余重要性推定；40为有实质依据的替代，不以未见完美账单留空或扣分。
 
-有效原件的 URL、字节及 SHA 保存于[案例 JSON](data/cci-local-2026-boston-case.json)，临时目录 `/private/tmp/cci-global/boston/` 可用于当前重验。哈希只证明当前版本，不证明截止日历史字节；未证实首次公开日的记录／水务报告须接受明确可撤回的截止前可用假设。不发送资料请求，不把取不到正文或未知状态当居民障碍。
+GSS已有历史本地组织／恐怖暴力与当前跨机构机制，但当前外溢／战略影响及适配仍未形成整维连接。完成有限补查后保留未知，不靠增加历史案件数量或无匹配事件推安全。当前全量进度见[总报告](cci-global-top-32.md)，全部候选保留，零排除，无合格第32名门槛。
