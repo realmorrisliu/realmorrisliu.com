@@ -9,32 +9,32 @@
   "candidateId": 535,
   "name": "Prague",
   "evidenceReview": "cci-local-2026-prague-case.md",
-  "expectedConditionalTotal": null,
-  "limitations": "Conditional research judgments, not measurements or ranking. Institution/operator/municipal areas and user/patient cohorts differ from the full FUA. Resident eligibility, affordability, current continuity and pre-cutoff availability assumptions remain reversible. Unknowns do not penalise capability or transparency.",
+  "expectedConditionalTotal": 62,
+  "limitations": "Conditional research judgments, not measurements or ranking. Institution/operator/municipal areas and user/patient cohorts differ from the full FUA. Resident eligibility, affordability, current continuity and pre-cutoff availability assumptions remain reversible. Unknowns do not penalise capability or transparency. Full conditional62 requires all eight named assumptions;29partial/1context/1unresolved subpillars are not full measurements. Rejecting new PCS/GSS/RES/MED assumptions together restores29-84 without centre.",
   "dimensions": [
     {
       "id": "PCS",
-      "score": null,
-      "rationale": "Current cooling-map delivery and water/flood evidence support scoped mitigation, but exposure, protection effectiveness and geophysical/severe-weather applicability do not justify a whole-dimension anchor. A mapped drinking fountain is not an evaluated cooling outcome.",
-      "assumption": "No score from a climate plan, map launch, partial hazards or a web retrieval failure.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Actual flood-protection deployment, delivered local adaptation projects and usable cooling guidance support scoped protection, retaining heat/flood/wet-soil tree hazards, unfinished projects and unresolved geological vulnerability.",
+      "assumption": "Accept coverage of the principal hazards and usual residents, normally effective protection and continuation; unreviewed geophysical/other hazards must not dominate residual unmitigated vulnerability. Reject to unknown; important protection failures40, stronger multi-hazard protection80.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "heat_humidity": "partial",
         "flood_sea_level": "partial",
         "geophysical": "unresolved",
-        "severe_weather_wildfire": "unresolved"
+        "severe_weather_wildfire": "partial"
       }
     },
     {
       "id": "GSS",
-      "score": null,
-      "rationale": "The June2025 main-station threat was investigated and resolved with international cooperation, not an executed bombing. This does not connect organised violence, regional conflict and strategic exposure sufficiently for a whole-dimension anchor.",
-      "assumption": "No zero-risk inference from assigned-event absence, ordinary crime, arrest or nationality; preserve threat and actual mitigation without extrapolating all-city impact.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Local sabotage/threat investigations and responses, BIS2025 observations and cooperation support bounded current-impact interpretation. Low national terrorism threat is not a city rate; Russian sabotage, regional war, diplomatic and transport-node exposure remain.",
+      "assumption": "Accept national mechanisms and specific local nodes as representative of usual535 residents and cutoff conditions, with normally limited realized disruption. Reject to unknown; important current living/channel restrictions40, stronger low-impact and response evidence80.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "organized_violence": "partial",
-        "regional_conflict": "unresolved",
-        "strategic_exposure": "unresolved"
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
       }
     },
     {
@@ -52,28 +52,28 @@
     },
     {
       "id": "RES",
-      "score": null,
-      "rationale": "Actual water supply, multiple water inputs, measured losses and electricity restoration coexist with correlated hot-water equipment damage. Food, supply-chain alternatives and ordinary net essential costs are not connected enough to choose40 or60; provider recovery does not prove independent household fallback.",
-      "assumption": "Do not infer affordability from tariffs, poverty from aid programmes, or complete resilience from five-hour electric restoration; food and supply-chain gaps remain unresolved.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Actual water delivery and outage alternatives, food distribution/help, energy restoration and administrative-Prague household affordability evidence support ordinary provision. Shared-grid disruption, parameters not residents, food/heating deprivation and eligibility limits remain.",
+      "assumption": "Accept operator/municipal scope and household observations as limited representatives, usual affordable access and effective relevant help/alternatives continuing to cutoff. Reject to unknown; important residual basic-resource constraints40, stronger multi-source/common-cause resilience80.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "water": "partial",
-        "food": "unresolved",
+        "food": "partial",
         "energy": "partial",
-        "supply_chain": "unresolved"
+        "supply_chain": "partial"
       }
     },
     {
       "id": "MED",
-      "score": null,
-      "rationale": "VFN2026 reported approximate waits, actual oncology delivery and insured-care routes coexist with long waits and Motol cognitive-intake restrictions plus alternative referral/clinic paths. Routine quality and pressure continuity are not connected to the ordinary resident sufficiently to distinguish40 and60.",
-      "assumption": "Threshold-selected average waiting listings are not complete completed/pending patient cohorts; one specialty intake restriction is not all-medicine failure. Single-disease actual CAR-T administration does not fill routine quality, access or continuity.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Delivered broad routine/necessary specialist care, public-insurance paths, urgency prioritization, operational expansion and actual safety management jointly support usual appropriate care. Long waits and cognitive-clinic restrictions remain; audit/report counts are not measured clinical effectiveness.",
+      "assumption": "Accept usual quality inferred from operating professional care and safety processes, normally eligible affordable access, limited timely alternatives and scope/continuation. No additional perfect current risk-adjusted outcomes or all-hospital stress-test requirement. Reject to unknown; important necessary-care bottlenecks remaining after alternatives40, stronger quality and continuity80.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "access": "partial",
-        "routine_quality": "unresolved",
+        "routine_quality": "partial",
         "specialist_capacity": "partial",
-        "system_continuity": "unresolved"
+        "system_continuity": "partial"
       }
     },
     {
@@ -422,6 +422,62 @@
       "retrievedOn": "2026-10-12",
       "publishedOn": null,
       "scope": "Valid clinical original; observation/date/version applicability and safety/payment limits retained in clinical review. Current bytes do not authenticate historical cutoff publication."
+    },
+    {
+      "url": "https://www.vfn.cz/wp-content/uploads/2025/07/VFN-vyrocni-zprava-2024.pdf",
+      "bytes": 2254512,
+      "sha256": "47311eed1e8030cff042757fc5b8814da943d1f26dd69888f26fc88a6e6f7bf0",
+      "retrievedOn": "2026-10-13",
+      "scope": "Original response verified in cci-prague-priority-completion-review.md. National, administrative city and provider scopes are not FUA measurements; actual observation/publication dates and cutoff applicability are kept separate. Current bytes do not authenticate a historical version."
+    },
+    {
+      "url": "https://adaptacepraha.cz/wp-content/uploads/2026/02/Vyrocni_zprava_2025.pdf",
+      "bytes": 6001851,
+      "sha256": "afaa406365dd7ecd30cee94666804b8258ce766eb01be74df1bfe610caf93eb1",
+      "retrievedOn": "2026-10-13",
+      "scope": "Original response verified in cci-prague-priority-completion-review.md. National, administrative city and provider scopes are not FUA measurements; actual observation/publication dates and cutoff applicability are kept separate. Current bytes do not authenticate a historical version."
+    },
+    {
+      "url": "https://csu.gov.cz/docs/107839/2a7effd9-826a-a916-69d7-4e22ea583c4f/Zivotni_podminky_2025_Praha_fin%C3%A1l.pdf?version=1.0",
+      "bytes": 332558,
+      "sha256": "a85f90d0a9b1802576f85eef8cc5dd338794ad4ec80fa9d9864f55a00a2fc128",
+      "retrievedOn": "2026-10-13",
+      "scope": "Original response verified in cci-prague-priority-completion-review.md. National, administrative city and provider scopes are not FUA measurements; actual observation/publication dates and cutoff applicability are kept separate. Current bytes do not authenticate a historical version."
+    },
+    {
+      "url": "https://www.potravinovebanky.cz/uploads/dms/pdf/6a2004ae277ef699586774.pdf",
+      "bytes": 3581100,
+      "sha256": "b41f4af0756d99474a304b4d929a5e8203b55a5d5edf666f53096b028478995e",
+      "retrievedOn": "2026-10-13",
+      "scope": "Original response verified in cci-prague-priority-completion-review.md. National, administrative city and provider scopes are not FUA measurements; actual observation/publication dates and cutoff applicability are kept separate. Current bytes do not authenticate a historical version."
+    },
+    {
+      "url": "https://www.bis.cz/public/site/bis.cz/content/vyrocni-zpravy/2024-vz-cj.pdf",
+      "bytes": 29596315,
+      "sha256": "054f565dd15dabf855f5bd334d2920fbd8c2a6a0fce0a296607980ee328e3171",
+      "retrievedOn": "2026-10-13",
+      "scope": "Original response verified in cci-prague-priority-completion-review.md. National, administrative city and provider scopes are not FUA measurements; actual observation/publication dates and cutoff applicability are kept separate. Current bytes do not authenticate a historical version."
+    },
+    {
+      "url": "https://www.bis.cz/public/site/bis.cz/content/vyrocni-zpravy/2025-vz-cj.pdf",
+      "bytes": 31328669,
+      "sha256": "bbd78018dae66fa7258e594f8af100adee74b1e2df816fc01702a7d9fbb4a26d",
+      "retrievedOn": "2026-10-13",
+      "scope": "Original response verified in cci-prague-priority-completion-review.md. National, administrative city and provider scopes are not FUA measurements; actual observation/publication dates and cutoff applicability are kept separate. Current bytes do not authenticate a historical version."
+    },
+    {
+      "url": "https://potravinovabankapraha.cz/",
+      "bytes": 197980,
+      "sha256": "b2a5d6c79034c7f75e59f8ddae2579fd0626a90e1f8d377510838acc15eee65c",
+      "retrievedOn": "2026-10-13",
+      "scope": "Original response verified in cci-prague-priority-completion-review.md. National, administrative city and provider scopes are not FUA measurements; actual observation/publication dates and cutoff applicability are kept separate. Current bytes do not authenticate a historical version."
+    },
+    {
+      "url": "https://www.potravinovebanky.cz/kontakty",
+      "bytes": 134874,
+      "sha256": "4816edd69f9eeb1aef94f246e86e764398d9f3814125a4343595f00605c2a833",
+      "retrievedOn": "2026-10-13",
+      "scope": "Original response verified in cci-prague-priority-completion-review.md. National, administrative city and provider scopes are not FUA measurements; actual observation/publication dates and cutoff applicability are kept separate. Current bytes do not authenticate a historical version."
     }
   ],
   "webReadSources": [
@@ -440,6 +496,18 @@
       "bytes": null,
       "sha256": null,
       "scope": "Current cooling-map launch, not measured resident cooling or completed future public-building integration."
+    },
+    {
+      "url": "https://bezpecnost.praha.eu/planovane-akce/aktualita-a-planovane-akce_18_9_2024-0",
+      "retrievedOn": "2026-10-13",
+      "bytes": null,
+      "sha256": null,
+      "scope": "2024-09-18 actual flood deployment and wet-soil/tree hazards read via web; local2121-byte JS shell is not the original substantive body."
     }
-  ]
+  ],
+  "priorityCompletionReview": {
+    "path": "docs/cci-prague-priority-completion-review.md",
+    "sha256": "260d4f70a7ea58892d9ca6c5bddd991f0e759ea808841baa2540e1d8f7530dd8",
+    "reviewedOn": "2026-10-13"
+  }
 }

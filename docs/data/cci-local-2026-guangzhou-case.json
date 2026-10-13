@@ -10,7 +10,7 @@
   "name": "Guangzhou functional area",
   "evidenceReview": "cci-local-2026-guangzhou-case.md",
   "expectedConditionalTotal": null,
-  "limitations": "Eight dimensions and31 subpillars reviewed at conditional/partial levels, not fully measured. PCS/GSS/ISR/RES60, TEC80, OPT40; MED andLON unresolved give mathematical domain45-70 without a total centre, reliable exclusion bound or shortlist proof. The frozen9711 includes part of Foshan, not all Guangzhou or Foshan jurisdictions; healthcare payer boundaries persist inside the same functional area. Locality, continuity, usual legal qualification/coverage, affordability and residual materiality assumptions are reversible. Missing is not zero or negative transparency evidence; full9031 and outside-frame competitors remain.",
+  "limitations": "Eight dimensions and31 subpillars reviewed at conditional/partial levels, not fully measured. PCS/GSS/ISR/RES/MED60, TEC80, OPT40; LON unresolved gives mathematical domain54-64 without a total centre, reliable exclusion bound or shortlist proof. The frozen9711 includes part of Foshan, not all Guangzhou or Foshan jurisdictions; healthcare payer boundaries persist inside the same functional area. Locality, continuity, usual legal qualification/coverage, affordability and residual materiality assumptions are reversible. Missing is not zero or negative transparency evidence; full9031 and outside-frame competitors remain. MED60 accepted after the2026-10-13 review; withdrawal restores MED/LON unknown domain45-70. The score is conditional on named locality, quality-continuity, usual insurance/affordability and residual-access assumptions.",
   "dimensions": [
     {
       "id": "PCS",
@@ -65,10 +65,10 @@
     },
     {
       "id": "MED",
-      "score": null,
-      "rationale": "Current Guangzhou employee benefits and2026Foshan qualifications, inpatient/extra-city rules establish specific legal paths; actual hospital pricing changes, earlier admitted-insured cost/readmission records and multicentre stroke delivery/quality-process data remain distinct.2017-2020DIP admissions and2014-2015PROMISE are not2026current-resident outcomes; primary tables/text disagreements and selected populations are retained. Guangzhou rules do not apply automatically to Foshan members of the same FUA.",
-      "assumption": "No anchor selected while actual current quality interpretation, usable timely multi-provider necessary-care alternatives and usual-citizen insurance/access/net-burden/continuity links remain under review. This is an unfinished discriminating clinical/resident chain, not a requirement for a perfect median bill or population denominator. A defensible usually adequate timely affordable path could support60; actual important unrelieved clinical/wait/payment constraints40; wider current outcomes and pressure backup80. Historical case mix, volumes, specialist papers or missing originals alone do not choose an anchor.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Actual single-hospital infection-control implementation and improved patient/device-day outcomes through2024 supplement existing delivered necessary specialist care, current Guangzhou/Foshan payer paths and actual processing. Old DIP costs, stroke text/table conflicts, cross-insurance qualifications and continuity limitations remain. This is conditional usual-care adequacy, not a current whole-FUA adjusted outcome measurement.",
+      "assumption": "Accept limited provider/campus and resident representativeness, continuation to cutoff, effective usual insurance branch with clinically appropriate directory/referral conditions, generally affordable timely necessary care and alternatives, and no important unmitigated residual treatment bottleneck. Guangzhou employee rules do not cover every resident; Foshan cross-city conditions remain. Reject a necessary assumption to restore MED unknown; important residual quality/payment/waiting constraints can40; stronger delivered quality and affordable continuity can80.",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
         "access": "partial",
         "routine_quality": "partial",
@@ -966,6 +966,22 @@
       "sha256": "b29a470af5409b98f4fc2b8b4e06298f758c6c0da7596683824afb757681b63c",
       "publicationObservationContext": "Official S5 source;2026 current policy/qualification dates and conditions separately recorded in review.",
       "scope": "Reviewed in cci-guangzhou-foshan-insurance-review.md. Current bytes are not a cutoff-day archive; publication, observation, legal effectiveness, local treatment, institutional/jurisdictional scope and resident eligibility remain distinct. Same upstream entry/document/image is not independent corroboration. Official HTTP retains limited transport assurance."
+    },
+    {
+      "url": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1599682/pdf",
+      "retrievedOn": "2026-10-13",
+      "bytes": 767141,
+      "sha256": "ed0c4bfc2ff6f611df3449080a9953c38994aa1e8ac2dd90d5974d6a1645e087",
+      "publicationObservationContext": "Published2025-06-16; actual2015-2024 single-hospital observations; intervention from end2019; p3/4 tables and figure visually reviewed.",
+      "scope": "Provider setting Guangzhou; exact campus/residence and usual resident representativeness remain conditional. Per1000 patient/device days, not percentages or 2026 whole-area outcomes; pre/post design does not establish causality."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13444352/fullTextXML",
+      "retrievedOn": "2026-10-13",
+      "bytes": 142261,
+      "sha256": "ddf2e8d5165d740bc549212e49e5b3c26625a29dd22bb4cbb38d27bd15b993c0",
+      "publicationObservationContext": "2026-08-06 publication; treatment starts 2024-06-26 to 2025-11-01; national 37-centre cohort, not verified Wuhan outcomes. XML and HTML represent one study.",
+      "scope": "valid_primary_national_context_not_Wuhan_cohort"
     }
   ],
   "webOnlySourceReviews": [
@@ -985,5 +1001,10 @@
       "meaning": "Published2025-01-05, actual limited product/use observations distinct from future collaboration.",
       "limitation": "Original institution page body reviewed via web, local TLS retrieval failed; no failure response substituted and no transparency deduction."
     }
-  ]
+  ],
+  "priorityCompletionReview": {
+    "path": "docs/cci-guangzhou-priority-completion-review.md",
+    "sha256": "d8b012462fa9c697e9185938235adc0b6799069d7426ace561fc619cee4c0a34",
+    "reviewedOn": "2026-10-13"
+  }
 }
