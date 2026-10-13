@@ -367,3 +367,5 @@ The next time you're staring at a constructor with more than a handful of parame
 ---
 
 _Building something with complex APIs in Rust? Check out [openrouter-rs](https://github.com/realmorrisliu/openrouter-rs) to see these patterns in action, or read about [building Sealbox](/thoughts/why-i-built-sealbox) for more thoughts on API design philosophy._
+
+For a runnable example using the current domain-oriented API, see [Stream OpenRouter Chat with Rust and Axum](/thoughts/streaming-openrouter-rust-axum).
