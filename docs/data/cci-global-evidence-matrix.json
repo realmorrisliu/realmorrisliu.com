@@ -153,10 +153,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 23,
+    "conditionalCaseCount": 24,
     "completeConditionalCaseCount": 9,
-    "partialCaseCount": 14,
-    "unassessedCount": 9008,
+    "partialCaseCount": 15,
+    "unassessedCount": 9007,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -387,8 +387,13 @@
       "sha256": "cbf90b137bafd83cb48e469473e41d515f67b0d02e2c385a990da80ff0e50ac8",
       "provenance": "cci-local-2026-wuhan-case.md",
       "provenanceSha256": "70d112577028d241cbf65d1aa3d193be0c2c0532f3222b88d188ce074d129fad"
+    },
+    "cci-local-2026-xian-case.json": {
+      "sha256": "8a4d641119fa5dcb0eeba5806c2582eab7e8dbeacbaff454b00e0588b9c68ed3",
+      "provenance": "cci-local-2026-xian-case.md",
+      "provenanceSha256": "c26c2759f037e4608354894dd7303c1bd41b1f45235bc7878a5479e1ca6b5717"
     }
   },
-  "scriptSha256": "df1767b6d93c503838052e164c2857659d267fbc733ec144b31a75d0d2d8d9f8",
-  "csvSha256": "62951c524d13499468a785359e8e20578213e4f609500019d619e65efd903145"
+  "scriptSha256": "fa0f5c67950a6bc938cfa23106b1a2fb88ed8b6e41eec1c0870aff8101418f71",
+  "csvSha256": "75fe11044efc0010d04fcabd3c96f2c1e046f31c3cf28d96a8ba54ef335ce5fc"
 }

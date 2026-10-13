@@ -75,6 +75,7 @@ const realCases = [
   "nanjing",
   "guangzhou",
   "wuhan",
+  "xian",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -141,6 +142,7 @@ const [
   nanjing,
   guangzhou,
   wuhan,
+  xian,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -1018,7 +1020,7 @@ const jakartaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
   (c: { efua_id: string }) => c.efua_id === "4897"
 );
 assert(jakartaPosition);
-assert.equal(jakartaPosition.bestPosition, 11);
+assert.equal(jakartaPosition.bestPosition, 12);
 assert.equal(jakartaPosition.worstPosition, rankAudit.candidateCount);
 
 assert.deepEqual(total(nanjing), { center: null, lower: 49, upper: 64 });
@@ -1362,3 +1364,75 @@ const wuhanPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.
 assert(wuhanPosition);
 assert.equal(wuhanPosition.bestPosition, 1);
 assert.equal(wuhanPosition.worstPosition, rankAudit.candidateCount - 1);
+
+assert.deepEqual(total(xian), { center: null, lower: 54, upper: 64 });
+assert(!Object.hasOwn(xian, "LON"));
+for (const [dimension, lower, upper] of [
+  ["PCS", 45, 70],
+  ["GSS", 45, 70],
+  ["ISR", 45, 70],
+  ["RES", 48, 68],
+  ["MED", 45, 70],
+  ["TEC", 46, 66],
+  ["OPT", 50, 70],
+] as const) {
+  const withdrawn = { ...xian };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...xian, ISR: 40 }), { center: null, lower: 51, upper: 61 });
+const xianCase = realCases[23];
+for (const review of xianCase.focusedReviews)
+  assert.equal(review.sha256, digest(`docs/${review.path}`));
+assert.equal(
+  xianCase.researchPriority.sourceSha256,
+  digest(`docs/data/${xianCase.researchPriority.source}`)
+);
+assert.equal(xianCase.researchPriority.recordAssociations, 54031);
+assert.equal(
+  xianCase.sharedLegalPath.sourceSha256,
+  digest("docs/data/cci-legal-mobility-rules.json")
+);
+assert.equal(xianCase.referenceBoundaryCheck.referencePoints.length, 12);
+assert.equal(
+  xianCase.resourceChecks.centralizedPlants * 2 + xianCase.resourceChecks.secondaryTerminalRecords,
+  xianCase.resourceChecks.januaryWaterRecords
+);
+assert.equal(
+  xianCase.securityChecks.roadDefectsRepaired + xianCase.securityChecks.roadDefectsUnrepaired,
+  xianCase.securityChecks.roadDefects
+);
+assert.equal(xianCase.securityChecks.compensationAgreementIsPaidCompensation, false);
+const xianClinical = xianCase.clinicalChecks;
+assert.equal(
+  xianClinical.nurseExcludedCategoryCounts.reduce((sum: number, value: number) => sum + value, 0),
+  xianClinical.nurseExcluded
+);
+assert.equal(
+  xianClinical.nursePrePatients + xianClinical.nursePostPatients + xianClinical.nurseExcluded,
+  xianClinical.nurseScreened
+);
+assert.equal(
+  xianClinical.strokeExcludedCategoryCounts.reduce((sum: number, value: number) => sum + value, 0),
+  xianClinical.strokeExcluded
+);
+assert.equal(
+  xianClinical.strokeAnalysed + xianClinical.strokeExcluded,
+  xianClinical.strokeScreened
+);
+assert.equal(xianClinical.strokeMatchedIsExactOneToTwo, false);
+assert.equal(xianClinical.nominalPercentIsFullBillCoverage, false);
+assert.equal(xianClinical.strokeSelectedZeroDeathsProvesAllInterventionsSafe, false);
+assert.equal(xianClinical.drillIsActualDisasterRecovery, false);
+assert.equal(xianClinical.localHistoricalInfusionOriginalVerified, true);
+assert.equal(xianClinical.historicalInfusionCampusExplicitInBody, false);
+assert.equal(xianClinical.huiqinbao2026FormalDrugAndMonitoringResponsibilityVerified, false);
+assert.equal(xianCase.mobilityChecks.gfwPaperHasXianMeasurementPoint, false);
+assert.equal(xianCase.mobilityChecks.capitalGuideExplicitlyRequiresHukouCancellation, false);
+assert.equal(xianCase.sourceSnapshots.length, 86);
+const xianPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (row: { efua_id: string }) => row.efua_id === "7094"
+);
+assert(xianPosition);
+assert.equal(xianPosition.bestPosition, 1);
+assert.equal(xianPosition.worstPosition, rankAudit.candidateCount - 1);
