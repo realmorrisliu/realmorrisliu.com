@@ -1,0 +1,1168 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 1445,
+  "name": "Stockholm",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-14",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "Swedish citizen ordinary long-term resident/local median income/usual publiccoverage/no fixedage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-stockholm-score-completion-review.md",
+  "publishedInputCommit": "57611d5aeeb0887d15db9ebce4fa0204e0f1f610",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": null,
+      "rationale": "Actual protection/operations read, but post-protection ordinary residual across heat/flood/geotechnical/extreme-weather scope cannot reasonably choose40vs60; missing wildfire-specific evidence is not lowperformance.",
+      "assumption": "Actual protection/operations read, but post-protection ordinary residual across heat/flood/geotechnical/extreme-weather scope cannot reasonably choose40vs60; missing wildfire-specific evidence is not lowperformance.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "PCS",
+          "subpillar": "heat_humidity",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S08 pp11/99; S01 p17",
+          "finding": "Actual shading/trees and heat-related filters taken offline with operating/conservation response. Heat morbidity/FUA remainder not classified.",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "flood_sea_level",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S08 pp99/100; S11 pp76/77/81; S01 p17",
+          "finding": "Rain/flood identified; city heavy-rain action plans10% vs33%goal, airports model/evaluation not completed area protection; stormwater operational treatment not proven all-resident flood shield.",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "geophysical",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S08 p99",
+          "finding": "Geotechnical risks linked flood included in city risk analysis; no measured natural geological losses/residual protection. Reviewed only that risk scope, not all tectonic processes.",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "severe_weather_wildfire",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S11 pp76/77/81/88; S08 pp11/113",
+          "finding": "Airport storm/extreme-weather scenario and actual operational continuity reviewed; local storm/wildfire resident impact/protection unresolved, wildfire-specific source not obtained.",
+          "score": null
+        }
+      ],
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "Actual organised-network violence and interventions read. Strategic/regional residual impact on ordinary resident cannot be inferred from airportreadiness/absenceofwar, and Sapo failedbody/searchsnippets excluded; cannot choose40vs60.",
+      "assumption": "Actual organised-network violence and interventions read. Strategic/regional residual impact on ordinary resident cannot be inferred from airportreadiness/absenceofwar, and Sapo failedbody/searchsnippets excluded; cannot choose40vs60.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "partial",
+        "strategic_exposure": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "GSS",
+          "subpillar": "organized_violence",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S09; S08 pp11/113",
+          "finding": "69confirmed county shootings2025 vs164in2020; Jan2026short preliminary explosions notannual. Actual network-linked interruptions/young recruitment remain; no all-shootings attribution.",
+          "score": null
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "regional_conflict",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S11 p28; S08 p113",
+          "finding": "Actual airport military employee placement/cooperation/shelter and city deadlyviolence readiness, not successful defence or measured conflict damage. FailedSapo body excluded.",
+          "score": null
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "strategic_exposure",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S11 p28; S08 pp11/13/113",
+          "finding": "Actual personaldata theft and central crisis response; attribution notforeignstate. AirportNATO transit readiness adds strategic function, does not quantify ordinary residual security.",
+          "score": null
+        }
+      ],
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Real corrective rights/governance/adaptive operations and social deliveries after interventions coexist with confidence37%, districtgap, breach and compensation stillprocessing; conditional60 rather than80.40 discussed if remaining institutional/remedy barrier dominates ordinary experience.",
+      "assumption": "Court-remedy implementation agreement/provider sanctions/crisis response and participatory delivery substantively extend to ordinary citizens; city/core utility and county institutions reasonably represent relevant FUA access; continuation2026; damages not all settled. Reject=>null.",
+      "conditionalAlternatives": [40],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "ISR",
+          "subpillar": "governance",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S08 pp13/113/116/117",
+          "finding": "Court wage-right remedy and union/localgov implementation agreement; publicprovider licences/contracts actively sanctioned, seven real participatory budgets; not proof every compensation paid.",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "adaptive_capacity",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S01 p17; S08 pp13/113; S13 pp20/21",
+          "finding": "Actual heat water operations/retest, crisis activation and data/process barriers after deployed help.",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "social_cohesion",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S08 pp85/109/116/117; S10",
+          "finding": "City confidence37%, district27–45%; emergency-family hotels102→72;29000youthactivities estimated. Samples/serviceusers not universal survey.",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "emergency_recovery",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S08 pp13/113; S01 p17",
+          "finding": "Centralcrisis response to theft, municipal takeover/provider sanctions and actualwaterretest; shelter works reported not realwar recovery.",
+          "score": null
+        }
+      ],
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "Actual water/food/energy/supply/aid read. Recipient/institutionalcosts/backorders and help do not establish targetmedian household net affordability direction; cannot reasonably choose40/60 without requiringperfectledger.",
+      "assumption": "Actual water/food/energy/supply/aid read. Recipient/institutionalcosts/backorders and help do not establish targetmedian household net affordability direction; cannot reasonably choose40/60 without requiringperfectledger.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "RES",
+          "subpillar": "water",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S01 pp8/17",
+          "finding": "99.8%samples,110thousandconsumerhours provisional,3violations cleared;utilitycost2820/person not resident charge; netmedian burden not adjudicated.",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "food",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S08 pp48/97/100/113; S07 p32; S10 pp4/15",
+          "finding": "Institutionalmeals actual+3.7%/kg,10848backorders,stock/foodforeigndependency and aid not median household food affordability.",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "energy",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S01 pp25/26; S08 pp48/97/98/99; S07 p28",
+          "finding": "Running utilityenergy/biogas and districtheat emissions/reserves; futureelectricityriskanalysis not bill/outsidedemand-security proof.",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "supply_chain",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S08 pp48/100/113; S07 p32",
+          "finding": "Actual municipalfoodbackorders/reserves/contract follow-up and regional externaldependency; procurement relief not comprehensive household net supply.",
+          "score": null
+        }
+      ],
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "Familypractice96%3days,realED/specialtydelivery and qualityimprovement/ordinarypayer bridge support60; firstvisit56%30days andVRI4.2 plusheterogeneityprevent80, adjacent40 if meaningful necessary waits persist broadly after improvedorders.",
+      "assumption": "Actual county familypractice/ED/specialty quality/production plus ordinary publicfee pathway provides usually attainable necessarycare for targetmedian eligible local residents despite serious uneven waits; county→FUA/2025→2026 finite and unadjusted rates acknowledged. Reject=>null.",
+      "conditionalAlternatives": [40],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "MED",
+          "subpillar": "access",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S07 p22; S03",
+          "finding": "96%familypractice medicalassessment3d; waiting78%≤90d treatment56%≤30d firstvisit. Usuallyeligiblefees/cap limited age/service window, not allpopulationdenominator.",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "routine_quality",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S07 pp24/25",
+          "finding": "VRI4.4→4.2% goal≤4.0; suicide-risk assessment newpsychoutpatients85%; unadjusted/measurementcohortnotrebuilt; actual hygieneadvice/training.",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "specialist_capacity",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S07 pp22/24/82; S04/S20",
+          "finding": "Providerproduction/orders increased;EDinitial51minutes/total255; specialtyactualdelivery notfame. Siteheterogeneity preserved.",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "system_continuity",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S07 pp24/25/82; S08 pp13/113",
+          "finding": "Continuedlarge realservicevolumes/providercontinuity afterresponse; missing discharge-days2025 not0; outpatientdrugcap2900→3800 separate.",
+          "score": null
+        }
+      ],
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "Actualroutinecelltherapy/2MMinfusions plus formaldisease-specific regionrecommendation/humanRCT andreferralaftercare support60 under finitepayer/monitorbridge; limitedfollowup/resourceselectivity/expansionfundingprevent80;40 ifordinaryeligibleaccessremains important delayed/unfunded, notbecauseonly2initialpatients.",
+      "assumption": "Disease-eligible resident with usual publiccare can ordinarily enter existing referral/certified inpatient/adultaftercare and region-funded requisition-drug pathway; humanmaturity documented by NTsummary not independently reconstructed; routine monitoring/payer and2026 continuation finite. MMbrand identity not required/asserted. Morepatientsfunding notguaranteed. Reject=>null.",
+      "conditionalAlternatives": [40],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "LON",
+          "subpillar": "translation",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S04/S20; S14 p12",
+          "finding": "2019routineBcell therapy and2MMrealinfusions2025;thirdplanned; productidentityunknown; agesfortransplantnotCAR-Tallages.",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "trial_maturity",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S21 pp2/3",
+          "finding": "FormalNTprimary summary of phaseIII419participants, median34mo/max45mo; trialrawdataset/EPARnotindependentlyread; long-term survival/remaininglifespanuncertain.",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "regulatory_adoption",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S21 pp1/2/3; S14 p12",
+          "finding": "NTmay-use disease-specific regional recommendation anddiscountagreement, authorityreports2022approval; notmandatoryallpatients/patientschargedHTAprice.",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "resident_access",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S04/S20/S22/S03; S21",
+          "finding": "Eligibility/referral/inpatientdelivery/adultaftercare andcellpersistencefollow-up actual; routineusualhospitalpayer/monitorsbridge finite, moreMMfundingstillnotsecured.",
+          "score": null
+        }
+      ],
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Researchactualoutputs/newcompanies,industrydoctoraltranslation and runningcommunications/AIservicecontrol support60 via substantive diffusion; datasharinglimited/rolesmissing despitebuiltplatform prevents80;40 ifbenefitrepresentativeness notsubstantive, nullifbridge cannotreasonablyselected.",
+      "assumption": "Actual research-to-company/industrial collaboration and city deployed communications/schoolAI give meaningful resident/service diffusion under finite institutional→FUA and usualaccess continuation; observed data-sharing/scaling barriers rule against80, patent/firm count alone insufficient. Reject=>null.",
+      "conditionalAlternatives": [40],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "TEC",
+          "subpillar": "knowledge_output",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S15 pp38/43",
+          "finding": "4383peer-reviewedarticles2024; definitive2025lags;2025ideas/patents/companiesactual, institutionwhole.",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "industry_density",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S15 pp38/43; S13 pp17/18",
+          "finding": "Realindustrydoctoralgraduates/workingcollaboration/40newcompanies; notlocalindustryemploymentdensity census or survival.",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "digital_infrastructure",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S13 pp6/14/17/18",
+          "finding": "RunningStokabmultioperatorfibre/municipalLoRaWAN/platform andschoolAIcontrol; notwholeFUAhouseholdpricecensus.",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "diffusion",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S13 pp17/20/21; S07 p30",
+          "finding": "Actualschool-propertyAI deployedlargepart, sensors/serviceexamples; limitedshareddata/use, uncleararchitecture/roles andregionalhealthdatacapacity remain;5Gcarepilotnotroutineallhospitals.",
+          "score": null
+        }
+      ],
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Operatingmodes,explicitNordicrecipientqualification,account/transfer/authentication androaming rules together allow60 via usualobtaining/netcost bridge; airportconcentration/foreignshared networks/FUP/IDvisits prevent80;40 if ordinary exit cost/approval burden materially dominates.",
+      "assumption": "Ordinary median resident can usually obtain passport/registration/retailaccount approval and pay ordinarytravel/ID/connectivity costs, with legallyqualified Finnish receiving path and existingbank/telialinks; no perfectall-node independence; FUA+currentpageOct10continuity finite. Reject=>null.",
+      "conditionalAlternatives": [40],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "OPT",
+          "subpillar": "transport_redundancy",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S11 pp28/29; S07 p28",
+          "finding": "OperatingArlanda24239589/138intl routes,Bromma25191/0intl,regionaltrain/metro/bus/boats actual; airconcentration andsharedinfrastructure, no allborderalternativeprices.",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "legal_mobility",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S23/S25/S26",
+          "finding": "ActualSwedishNordicreciprocalright;Finlandarrival/intend≥1year/personallyregisterID; free2–4weekregisterindication notapprovalguarantee.",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "asset_portability",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S12/S17/S18",
+          "finding": "Actualinternationaltransferenable/IBAN/AML;receivingNordeaSwedishresident/fullservices,EEAbasicrights; bankapproval/ID and credentialresetconditions,notallassetsliquid.",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "network_continuity",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S19/S12/S17/S18",
+          "finding": "TeliaEUroaming temporary/FUP16weeks+receivedSMSfree, actualbankID/netbankroutes; maritimeexcluded, sharedforeignnetwork/phoneauthfailure remains.",
+          "score": null
+        }
+      ],
+      "scoreStatus": "conditional_root_adopted"
+    }
+  ],
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 36.0,
+  "unresolvedScoreRange": [36.0, 76.0],
+  "globalRankingEligible": false,
+  "limitations": [
+    "All conditionals require root acceptance; unknowns alternatives empty.",
+    "Partial31 semantic review is not full31measurement, resolved8scores, or Top32proof.",
+    "Some current pages exactOct10 bytes unknown; dated reports pre-cutoff content still finiteversionassumption.",
+    "No political/income/age shortcut; nationalfacts only scoped.",
+    "Root bounded whole-dimension scope review is not complete31 measurement; explicitly unstarted or not-fully-reviewed subcomponents remain.",
+    "Known scores are finite revocable resident/temporal/scope judgments; unknowns no midpoint, probability or supported exclusion."
+  ],
+  "sourceSnapshots": [
+    {
+      "sourceId": "S01",
+      "path": "/private/tmp/cci-global/stockholm/stockholm-water2025.pdf",
+      "url": "https://www.stockholmvattenochavfall.se/globalassets/pdfer/rapporter/svoa/ars_och_hallbarhetsredovisning.pdf",
+      "bytes": 3683092,
+      "sha256": "8112720b8c9933b387700b1ebc078fcd5404fba29b36c6b0fffd68f5b77554ce",
+      "published": "2026-06-22 official index; exact first PDF issue unknown",
+      "observationWindow": "2025 annual; interruptions provisional",
+      "scope": "Stockholm/Huddinge utility and regional customers",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S02",
+      "path": "/private/tmp/cci-global/stockholm/stockholm-water-index.html",
+      "url": "https://www.stockholmvattenochavfall.se/om-oss/om-bolaget/arsredovisning-och-hallbarhet/",
+      "bytes": 155461,
+      "sha256": "794bcd2f2efc0d493de47b7a91f0d11f203adfabf58430899fe0375fffe71c7b",
+      "published": "2026-06-22",
+      "observationWindow": "2025 report publication context",
+      "scope": "provider index",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S03",
+      "path": "/private/tmp/cci-global/stockholm/stockholm-fees.html",
+      "url": "https://vard.regionstockholm.se/patientavgifter/",
+      "bytes": 189378,
+      "sha256": "21b8c47486b34fb9bba6f72537636e823bccb916d4fc1ffac4c8502d95d32115",
+      "published": "current page; exact first publication unknown",
+      "observationWindow": "retrieved 2026-10-14",
+      "scope": "Region Stockholm usual eligible patient fees",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S04",
+      "path": "/private/tmp/cci-global/stockholm/stockholm-cart2025.html",
+      "url": "https://www.karolinska.se/om-oss/centrala-nyheter/2025/11/car-t-behandling-mot-multipelt-myelom--ett-lagarbete-pa-sjukhuset/",
+      "bytes": 108429,
+      "sha256": "b491b0b6635499edad1c6c53a338636fefd6b832065ebde83e156c85ae91b3b5",
+      "published": "2025-11-17; revised 2026-03-11",
+      "observationWindow": "June/late August 2025 and article date",
+      "scope": "Karolinska multi-campus service, national referral",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S05",
+      "path": "/private/tmp/cci-global/stockholm/stockholm-finance-index.html",
+      "url": "https://www.regionstockholm.se/om-region-stockholm/ekonomi-och-budget/finansiella-rapporter/",
+      "bytes": 231839,
+      "sha256": "167b3036fcd1eeabd4613db7b526ebf59162b5593ba65f91b50dabd8994710d5",
+      "published": "current index; exact first issue unknown",
+      "observationWindow": "2025 annual index",
+      "scope": "Region Stockholm",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S06",
+      "path": "/private/tmp/cci-global/stockholm/stockholm-region-current-index.html",
+      "url": "https://www.regionstockholm.se/dokument/organisation-och-styrning/rapport/2026/arsredovisning-2025/",
+      "bytes": 190354,
+      "sha256": "568899cfd6f6c4e55c9230823b92131c876db2e98cd6a12a7f8a812050522f3d",
+      "published": "2026 current official index; exact first issue unknown",
+      "observationWindow": "2025 annual index",
+      "scope": "Region Stockholm",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S07",
+      "path": "/private/tmp/cci-global/stockholm/stockholm-region2025-current.pdf",
+      "url": "https://www.regionstockholm.se/49ae8f/contentassets/c4853f1d3efe4d4ebac340a1d7fa56b3/arsredovisning-2025-for-region-stockholm2.pdf",
+      "bytes": 2249849,
+      "sha256": "75d63c2b42b8faea83557899123a518ebf9cadfbebb63cc5ad29bf78d67202c6",
+      "published": "2026 official annual; exact first issue unknown",
+      "observationWindow": "2025 annual",
+      "scope": "Stockholm county healthcare/transport, not FUA cohort",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S08",
+      "path": "/private/tmp/cci-global/stockholm/stockholm-city2025.pdf",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/sa-anvands-dina-skattepengar/arsredovisningar/the-city-of-stockholms-annual-report-2025.pdf",
+      "bytes": 15280051,
+      "sha256": "6a4197666f3637f9c374c9040ae1a88a48f47948cdb34f329f5e90a928da7a9c",
+      "published": "2026 annual version; exact first issue unknown",
+      "observationWindow": "2025 plus material events up to preparation in2026",
+      "scope": "Stockholm municipality/group, not all FUA",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S09",
+      "path": "/private/tmp/cci-global/stockholm/stockholm-police2026.html",
+      "url": "https://polisen.se/aktuellt/nyheter/stockholm/2026/februari/kraftig-minskning-av-skjutningar-i-stockholms-lan/",
+      "bytes": 51163,
+      "sha256": "fc4e7d305ece963911f1a954cffdd41bbc5a4b9b98828def061faaaf9f6b193a",
+      "published": "2026-02-03 09:59",
+      "observationWindow": "2025 annual; Jan2026 comparisons",
+      "scope": "Stockholm county and police-region statement",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S10",
+      "path": "/private/tmp/cci-global/stockholm/stockholm-assistance2025.pdf",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/statistik/ekonomiskt-bistand/2025/ekonomiskt-bistand-2025.pdf",
+      "bytes": 6220504,
+      "sha256": "d6a5544b2db122dbbd316e00827b77aac116e587b8c645a72289ae259d1f58ce",
+      "published": "2026 report; exact first issue unknown",
+      "observationWindow": "2025 annual",
+      "scope": "City benefit recipients/households/districts",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S11",
+      "path": "/private/tmp/cci-global/stockholm/swedavia2025.pdf",
+      "url": "https://www.swedavia.com/globalassets/ahr/2025/swedavias_annual-and-sustainability-report-2025.pdf",
+      "bytes": 17530271,
+      "sha256": "95c7ad31487d729c99c3d42f3a5344ae1eb506ad1cf3524f6a3d16f1dbfce0d3",
+      "published": "2026 annual; exact first issue unknown",
+      "observationWindow": "2025 annual with forward-looking climate scenarios",
+      "scope": "Ten airports; Arlanda/Bromma separately",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S12",
+      "path": "/private/tmp/cci-global/stockholm/swedbank-support.html",
+      "url": "https://www.swedbank.se/privat/kundservice-privat.html",
+      "bytes": 175281,
+      "sha256": "29eb2aa2061d6af0ff3a0a2f5e3ad1dbdf2f09d675765d531e7577985f4e0753",
+      "published": "current FAQ; exact first issue unknown",
+      "observationWindow": "retrieved2026-10-14",
+      "scope": "Swedish retail account holder",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S13",
+      "path": "/private/tmp/cci-global/stockholm/stockholm-smart2017-2025.pdf",
+      "url": "https://start.stockholm/globalassets/start/om-stockholms-stad/utredningar-statistik-och-fakta/utredningar-och-rapporter/verksamhetsutveckling-innovation-och-digitalisering/stockholm-mot-en-smart-och-innovativ-stad.pdf",
+      "bytes": 784006,
+      "sha256": "630fe4b39429158c3ccf55750b5e5c7cb15e4b404be941105783ae6771682078",
+      "published": "2026-05-13",
+      "observationWindow": "2017–2025 evaluation; some meetings through spring2026",
+      "scope": "City services/Stokab/SISAB, not resident census",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S14",
+      "path": "/private/tmp/cci-global/stockholm/stockholm-drugs2025.pdf",
+      "url": "https://janusinfo.se/download/18.7d54587a19d9a5193393d45f/1777016234802/%C3%85rsber%C3%A4ttelse%20l%C3%A4kemedel%202025.pdf",
+      "bytes": 906702,
+      "sha256": "f3d91d73a0ae10432cd071acdd64351c025742aa9d58fd492253bb4d5f8f35b2",
+      "published": "2026 annual; exact first issue unknown",
+      "observationWindow": "2025 annual; July1_2025 prescription cap change;2026 forecast separate",
+      "scope": "Region medication procurement/use",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S15",
+      "path": "/private/tmp/cci-global/stockholm/kth2025.pdf",
+      "url": "https://www.kth.se/polopoly_fs/1.962325.1780567346%21/KTH-AR-SWE-25.pdf",
+      "bytes": 1636569,
+      "sha256": "12614ae81e4c40ce6a8e118d70eb654e06d9e4c281f7007a942657a634c40a3e",
+      "published": "announcement discovery metadata2026-02-20 not separately frozen; current corrected June4 edition via index",
+      "observationWindow": "2025 annual; final bibliometry2024/citations≤2023",
+      "scope": "KTH whole institution; research moved Sodertalje→campus summer2025",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S16",
+      "path": "/private/tmp/cci-global/stockholm/nt-recommendations.html",
+      "url": "https://samverkanlakemedel.se/lakemedel---ordnat-inforande/nt-radets-rekommendationer",
+      "bytes": 94191,
+      "sha256": "1ee06d4ecd6c378c4ad4f4b5e9c839bcfafe4958694975d017975270371ecf32",
+      "published": "current table with dated recommendations",
+      "observationWindow": "recommendation2025-06-19",
+      "scope": "Swedish regional coordinated adoption",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S17",
+      "path": "/private/tmp/cci-global/stockholm/nordea-abroad.html",
+      "url": "https://www.nordea.fi/en/personal/bank-with-us/how-to-bank-with-us/living-abroad.html",
+      "bytes": 249526,
+      "sha256": "0d489e4cf60690d3709fd7964f6b90790dffcd0363bc0a6d436b340b79c797c9",
+      "published": "current page; exact first issue unknown",
+      "observationWindow": "retrieved2026-10-14",
+      "scope": "Finnish bank services for residents Sweden/Denmark/Norway/Finland, EEA basic-account scope",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S18",
+      "path": "/private/tmp/cci-global/stockholm/nordea-access.html",
+      "url": "https://www.nordea.fi/en/personal/our-services/online-mobile-services/access-codes/",
+      "bytes": 264915,
+      "sha256": "2a252c4bea49ce883446ff05d95f504f0c5349519f9cd155fcb7e10e871372ab",
+      "published": "current page; exact first issue unknown",
+      "observationWindow": "retrieved2026-10-14",
+      "scope": "Finnish retail account/ID credentials",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S19",
+      "path": "/private/tmp/cci-global/stockholm/telia-roaming.html",
+      "url": "https://www.telia.se/roaming?sok-privat=landsnummer",
+      "bytes": 132558,
+      "sha256": "9c466f4716632c63dfd8b0900c1c3fde238444d9d08801251ec0e83369fb07e7",
+      "published": "current consumer page; exact first issue unknown",
+      "observationWindow": "retrieved2026-10-14",
+      "scope": "Swedish subscription abroad",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S20",
+      "path": "/private/tmp/cci-global/stockholm/karolinska-cast.html",
+      "url": "https://www.karolinska.se/vard/tema/tema-cancer/cellterapi-allogen-stamcellstransplantation/cellterapi-och-allogen-stamcellstransplantation/",
+      "bytes": 105303,
+      "sha256": "18afa092b9d0eee6d4f7103d4655189b3f55404d934cbb797d3afa7807bfde70",
+      "published": "updated2026-07-29",
+      "observationWindow": "routine services and current clinical referral",
+      "scope": "CAST Huddinge with national/international patients",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S21",
+      "path": "/private/tmp/cci-global/stockholm/carvykti-recommendation2025.pdf",
+      "url": "https://samverkanlakemedel.se/download/18.25c4a46e1976278fa4d3e0e/1750320332778/Carvykti%20vid%20MM%202L%202025-06-19.pdf",
+      "bytes": 168879,
+      "sha256": "32eba6273db0dcca25910cfcf7e7120a313674f258ee2823863d3cb72577b761",
+      "published": "2025-06-19",
+      "observationWindow": "CARTITUDE4 n419 median34mo/max45mo; formal regional recommendation",
+      "scope": "eligible adult relapsed/refractory MM, not healthy residents or all cancers",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S22",
+      "path": "/private/tmp/cci-global/stockholm/karolinska-cart-followup.html",
+      "url": "https://www.karolinska.se/pta/klinisk-immunologitransfusionsmedicin/car-t-cell/",
+      "bytes": 104710,
+      "sha256": "80cfcbcf16921a1b99341f00ba0020a5c7e5ea15215c573b4d28cdc9fec01267",
+      "published": "revised2026-05-11",
+      "observationWindow": "current lab follow-up protocol",
+      "scope": "Huddinge lab, CD19/BCMA products",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S23",
+      "path": "/private/tmp/cci-global/stockholm/migrationsverket-nordic.html",
+      "url": "https://www.migrationsverket.se/du-vill-ansoka/medborgare-i-eu-ees-eller-norden/nordisk-medborgare.html",
+      "bytes": 133011,
+      "sha256": "6195cd5c5687fe6b9181f7baf009280e31964b3a3413b15198b6b7bcf2efacef",
+      "published": "current page; exact first issue unknown",
+      "observationWindow": "retrieved2026-10-14",
+      "scope": "Nordic reciprocal right plus Swedish inbound administrative rule",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S24",
+      "path": "/private/tmp/cci-global/stockholm/kth-index.html",
+      "url": "https://www.kth.se/om/fakta/kth-s-arsredovisningar-1.803591",
+      "bytes": 39875,
+      "sha256": "85fb7948f6f8af69a996b011f6d2089df3950757b99a14c435c663f84a013bc2",
+      "published": "updated2026-09-07; correction June4",
+      "observationWindow": "2025 edition context",
+      "scope": "institution index",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S25",
+      "path": "/private/tmp/cci-global/stockholm/dvv-register-sv.html",
+      "url": "https://dvv.fi/sv/registrering-av-utlanningar",
+      "bytes": 280583,
+      "sha256": "c6306471c0b830042642ceaf7ac2046cd27654aba163ff86ce39f302f84b50d2",
+      "published": "current page; exact first issue unknown",
+      "observationWindow": "retrieved2026-10-14",
+      "scope": "Finnish receiving authority foreign registration",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "sourceId": "S26",
+      "path": "/private/tmp/cci-global/stockholm/dvv-nordic.html",
+      "url": "https://dvv.fi/sv/hemkommun/norden",
+      "bytes": 196401,
+      "sha256": "d69d8eb86f62d0736d18722304c102afe0e3b4828c41962c64f8fbae4422f5ee",
+      "published": "current page; exact first issue unknown",
+      "observationWindow": "retrieved2026-10-14",
+      "scope": "Nordic citizens moving Finland",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": null,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    }
+  ],
+  "webReadSources": [],
+  "failedSourceSnapshots": [
+    {
+      "file": "migri-nordic.html",
+      "url": "https://migri.fi/en/i-am-a-nordic-citizen",
+      "round": 2,
+      "path": "/private/tmp/cci-global/stockholm/migri-nordic.html",
+      "retrievedOn": "2026-10-14",
+      "httpStatus": "403",
+      "requestExitCode": 0,
+      "error": "",
+      "responseBytes": 5439,
+      "responseSha256": "b818b8aef88bb73b41936870e0449db18de6683e8f4fd8ae1066e257ff420aa3",
+      "validOriginal": false,
+      "bytes": null,
+      "sha256": null,
+      "sourceId": "F01",
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false
+    },
+    {
+      "file": "sapo2025-2026.html",
+      "url": "https://sakerhetspolisen.se/om-sakerhetspolisen/publikationer/sakerhetspolisens-lagesbilder/sakerhetspolisen-2025-2026/paverkan-fran-frammande-makt.html",
+      "round": 2,
+      "path": "/private/tmp/cci-global/stockholm/sapo2025-2026.html",
+      "retrievedOn": "2026-10-14",
+      "httpStatus": "247",
+      "requestExitCode": 0,
+      "error": "",
+      "responseBytes": 441,
+      "responseSha256": "e47168c62a6018c148e28c3b07b30657abff0ce7755ad565d5f1448c13aed9b9",
+      "validOriginal": false,
+      "bytes": null,
+      "sha256": null,
+      "sourceId": "F02",
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false
+    },
+    {
+      "file": "sapo-press2026.html",
+      "url": "https://www2.sakerhetspolisen.se/ovriga-sidor/other-languages/english-engelska/press-room/news/news/2026-03-18-the-threat-against-sweden-is-constantly-changing.html",
+      "path": "/private/tmp/cci-global/stockholm/sapo-press2026.html",
+      "retrievedOn": "2026-10-14",
+      "httpStatus": "000",
+      "requestExitCode": 60,
+      "error": "curl: (60) SSL: no alternative certificate subject name matches target host name 'www2.sakerhetspolisen.se'\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\n",
+      "responseBytes": 0,
+      "responseSha256": null,
+      "validOriginal": false,
+      "bytes": null,
+      "sha256": null,
+      "sourceId": "F03",
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "candidateId": 1445,
+    "source": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allGeometryCount": 9031,
+    "targetGeometrySha256": "54d75334ce7a8403f6df30103856037a25e240f4abe0aaa1f32ac4f5be57d0fd",
+    "referencePoints": [
+      {
+        "label": "Stockholmcentreapprox",
+        "longitude": 18.0686,
+        "latitude": 59.3293,
+        "fuaMatches": [1445]
+      },
+      {
+        "label": "KarolinskaSolnacampusreferenceapprox",
+        "longitude": 18.03,
+        "latitude": 59.349,
+        "fuaMatches": [1445]
+      },
+      {
+        "label": "Norsborgwaterworksneighbourreferenceapprox",
+        "longitude": 17.797,
+        "latitude": 59.252,
+        "fuaMatches": [1445]
+      },
+      {
+        "label": "KarolinskaHuddingeapprox",
+        "longitude": 17.938,
+        "latitude": 59.221,
+        "fuaMatches": [1445]
+      },
+      {
+        "label": "KTHcampusapprox",
+        "longitude": 18.071,
+        "latitude": 59.349,
+        "fuaMatches": [1445]
+      },
+      {
+        "label": "Arlandaairportapprox",
+        "longitude": 17.918,
+        "latitude": 59.65,
+        "fuaMatches": [1445]
+      },
+      {
+        "label": "Brommaairportapprox",
+        "longitude": 17.941,
+        "latitude": 59.354,
+        "fuaMatches": [1445]
+      },
+      {
+        "label": "Lovowaterworksapprox",
+        "longitude": 17.858,
+        "latitude": 59.344,
+        "fuaMatches": [1445]
+      }
+    ],
+    "scope": "Analyst approximate reference points, not catchment/service extent, actual incident coordinates, independent gateways or resident denominators. Shared lawful access requires separate finite adaptation; 2015 population is not 2026 denominator."
+  },
+  "scopeCompletionReview": {
+    "dimensionCount": 8,
+    "subpillarCount": 31,
+    "allDimensionSemanticsConsideredWithinBoundedReview": true,
+    "allSubpillarsHaveOutcomeMeasurements": false,
+    "allSubpillarsFullyReviewed": false,
+    "eightDimensionScoresComplete": false,
+    "coverageTable": {
+      "candidateId": 1445,
+      "dimensionsReviewed": 8,
+      "semanticKeys": 31,
+      "unreviewedKeys": [],
+      "reviewedPartialKeys": 31,
+      "fullyMeasuredKeys": 0,
+      "coverage": [
+        {
+          "dimension": "PCS",
+          "subpillar": "heat_humidity",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S08 pp11/99; S01 p17",
+          "finding": "Actual shading/trees and heat-related filters taken offline with operating/conservation response. Heat morbidity/FUA remainder not classified.",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "flood_sea_level",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S08 pp99/100; S11 pp76/77/81; S01 p17",
+          "finding": "Rain/flood identified; city heavy-rain action plans10% vs33%goal, airports model/evaluation not completed area protection; stormwater operational treatment not proven all-resident flood shield.",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "geophysical",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S08 p99",
+          "finding": "Geotechnical risks linked flood included in city risk analysis; no measured natural geological losses/residual protection. Reviewed only that risk scope, not all tectonic processes.",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "severe_weather_wildfire",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S11 pp76/77/81/88; S08 pp11/113",
+          "finding": "Airport storm/extreme-weather scenario and actual operational continuity reviewed; local storm/wildfire resident impact/protection unresolved, wildfire-specific source not obtained.",
+          "score": null
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "organized_violence",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S09; S08 pp11/113",
+          "finding": "69confirmed county shootings2025 vs164in2020; Jan2026short preliminary explosions notannual. Actual network-linked interruptions/young recruitment remain; no all-shootings attribution.",
+          "score": null
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "regional_conflict",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S11 p28; S08 p113",
+          "finding": "Actual airport military employee placement/cooperation/shelter and city deadlyviolence readiness, not successful defence or measured conflict damage. FailedSapo body excluded.",
+          "score": null
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "strategic_exposure",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S11 p28; S08 pp11/13/113",
+          "finding": "Actual personaldata theft and central crisis response; attribution notforeignstate. AirportNATO transit readiness adds strategic function, does not quantify ordinary residual security.",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "governance",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S08 pp13/113/116/117",
+          "finding": "Court wage-right remedy and union/localgov implementation agreement; publicprovider licences/contracts actively sanctioned, seven real participatory budgets; not proof every compensation paid.",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "adaptive_capacity",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S01 p17; S08 pp13/113; S13 pp20/21",
+          "finding": "Actual heat water operations/retest, crisis activation and data/process barriers after deployed help.",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "social_cohesion",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S08 pp85/109/116/117; S10",
+          "finding": "City confidence37%, district27–45%; emergency-family hotels102→72;29000youthactivities estimated. Samples/serviceusers not universal survey.",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "emergency_recovery",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S08 pp13/113; S01 p17",
+          "finding": "Centralcrisis response to theft, municipal takeover/provider sanctions and actualwaterretest; shelter works reported not realwar recovery.",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "water",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S01 pp8/17",
+          "finding": "99.8%samples,110thousandconsumerhours provisional,3violations cleared;utilitycost2820/person not resident charge; netmedian burden not adjudicated.",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "food",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S08 pp48/97/100/113; S07 p32; S10 pp4/15",
+          "finding": "Institutionalmeals actual+3.7%/kg,10848backorders,stock/foodforeigndependency and aid not median household food affordability.",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "energy",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S01 pp25/26; S08 pp48/97/98/99; S07 p28",
+          "finding": "Running utilityenergy/biogas and districtheat emissions/reserves; futureelectricityriskanalysis not bill/outsidedemand-security proof.",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "supply_chain",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S08 pp48/100/113; S07 p32",
+          "finding": "Actual municipalfoodbackorders/reserves/contract follow-up and regional externaldependency; procurement relief not comprehensive household net supply.",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "access",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S07 p22; S03",
+          "finding": "96%familypractice medicalassessment3d; waiting78%≤90d treatment56%≤30d firstvisit. Usuallyeligiblefees/cap limited age/service window, not allpopulationdenominator.",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "routine_quality",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S07 pp24/25",
+          "finding": "VRI4.4→4.2% goal≤4.0; suicide-risk assessment newpsychoutpatients85%; unadjusted/measurementcohortnotrebuilt; actual hygieneadvice/training.",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "specialist_capacity",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S07 pp22/24/82; S04/S20",
+          "finding": "Providerproduction/orders increased;EDinitial51minutes/total255; specialtyactualdelivery notfame. Siteheterogeneity preserved.",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "system_continuity",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S07 pp24/25/82; S08 pp13/113",
+          "finding": "Continuedlarge realservicevolumes/providercontinuity afterresponse; missing discharge-days2025 not0; outpatientdrugcap2900→3800 separate.",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "translation",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S04/S20; S14 p12",
+          "finding": "2019routineBcell therapy and2MMrealinfusions2025;thirdplanned; productidentityunknown; agesfortransplantnotCAR-Tallages.",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "trial_maturity",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S21 pp2/3",
+          "finding": "FormalNTprimary summary of phaseIII419participants, median34mo/max45mo; trialrawdataset/EPARnotindependentlyread; long-term survival/remaininglifespanuncertain.",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "regulatory_adoption",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S21 pp1/2/3; S14 p12",
+          "finding": "NTmay-use disease-specific regional recommendation anddiscountagreement, authorityreports2022approval; notmandatoryallpatients/patientschargedHTAprice.",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "resident_access",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S04/S20/S22/S03; S21",
+          "finding": "Eligibility/referral/inpatientdelivery/adultaftercare andcellpersistencefollow-up actual; routineusualhospitalpayer/monitorsbridge finite, moreMMfundingstillnotsecured.",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "knowledge_output",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S15 pp38/43",
+          "finding": "4383peer-reviewedarticles2024; definitive2025lags;2025ideas/patents/companiesactual, institutionwhole.",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "industry_density",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S15 pp38/43; S13 pp17/18",
+          "finding": "Realindustrydoctoralgraduates/workingcollaboration/40newcompanies; notlocalindustryemploymentdensity census or survival.",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "digital_infrastructure",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S13 pp6/14/17/18",
+          "finding": "RunningStokabmultioperatorfibre/municipalLoRaWAN/platform andschoolAIcontrol; notwholeFUAhouseholdpricecensus.",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "diffusion",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S13 pp17/20/21; S07 p30",
+          "finding": "Actualschool-propertyAI deployedlargepart, sensors/serviceexamples; limitedshareddata/use, uncleararchitecture/roles andregionalhealthdatacapacity remain;5Gcarepilotnotroutineallhospitals.",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "transport_redundancy",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S11 pp28/29; S07 p28",
+          "finding": "OperatingArlanda24239589/138intl routes,Bromma25191/0intl,regionaltrain/metro/bus/boats actual; airconcentration andsharedinfrastructure, no allborderalternativeprices.",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "legal_mobility",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S23/S25/S26",
+          "finding": "ActualSwedishNordicreciprocalright;Finlandarrival/intend≥1year/personallyregisterID; free2–4weekregisterindication notapprovalguarantee.",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "asset_portability",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S12/S17/S18",
+          "finding": "Actualinternationaltransferenable/IBAN/AML;receivingNordeaSwedishresident/fullservices,EEAbasicrights; bankapproval/ID and credentialresetconditions,notallassetsliquid.",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "network_continuity",
+          "status": "reviewed_partial",
+          "reviewedEvidence": "S19/S12/S17/S18",
+          "finding": "TeliaEUroaming temporary/FUP16weeks+receivedSMSfree, actualbankID/netbankroutes; maritimeexcluded, sharedforeignnetwork/phoneauthfailure remains.",
+          "score": null
+        }
+      ],
+      "limitations": "All8 dimensions genuinely considered using source content. Partial does not assert full named hazard/industry-density/population coverage; wildfire-specific measure not obtained. No key counts are a scoring claim."
+    },
+    "dimensionCoveragePreserved": true
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-stockholm-score-completion-review.md",
+    "sha256": "725b70f66eb524a23c97b07b080e0f24066f0d071de974086e5d680f29833708",
+    "reviewedOn": "2026-10-14",
+    "sourceManifestSha256": "9aca4de33b11a90fcbd7cfb3300997a844900d8003f7e59f41381f66355d2e12",
+    "handoffSha256": "214d98bffd92de72225a8dc7b98dfbba693468ebb70a039c731b9b104cc17bc9",
+    "rootVerifiedFull9031AndOriginals": true,
+    "validOriginalCount": 26,
+    "webSourcesSeparatelyRecorded": true,
+    "stageArtifacts": [
+      {
+        "path": "/private/tmp/cci-global/stockholm/candidate-handoff.json",
+        "bytes": 35924,
+        "sha256": "214d98bffd92de72225a8dc7b98dfbba693468ebb70a039c731b9b104cc17bc9"
+      },
+      {
+        "path": "/private/tmp/cci-global/stockholm/source-manifest.json",
+        "bytes": 49200,
+        "sha256": "8400f24b27c02a02ffe199d9569fbc037122fadda1098f653df53113713c5ebf"
+      },
+      {
+        "path": "/private/tmp/cci-global/stockholm/handoff-manifest.json",
+        "bytes": 11176,
+        "sha256": "197a675e984ea74560e640f5fcafef02a0dda208d4a6522314b8f94973761812"
+      },
+      {
+        "path": "/private/tmp/cci-global/stockholm/boundary-record.json",
+        "bytes": 37825,
+        "sha256": "0809b8a92ebf921b14eea209b84375b8155ed9bfe321640ef3ed609a6639fe88"
+      }
+    ]
+  },
+  "clinicalScopeReview": {
+    "dischargeTransfer2025Comparable": false,
+    "unknownTransferValueFilledWithZero": false,
+    "localTwoMyelomaPatientsProductIdentified": false,
+    "futureThirdPatientCountedAsTreated": false,
+    "htaCostIsPatientBill": false,
+    "hospitalYearsAgeLimitTransferredToAllCarT": false
+  }
+}

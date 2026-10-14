@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 56,
+    "conditionalCaseCount": 59,
     "completeConditionalCaseCount": 16,
-    "partialCaseCount": 40,
-    "unassessedCount": 8975,
+    "partialCaseCount": 43,
+    "unassessedCount": 8972,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -585,8 +585,23 @@
       "sha256": "db5eaa9911283d58b5295d249f7d68362b8b55ec22cef6816753f404d4edf5a0",
       "provenance": "cci-frankfurt-score-completion-review.md",
       "provenanceSha256": "2e2e73f0002e1e62097ea84d733c39a2cd9dc21797d2c5b7bd527bc8a7988de1"
+    },
+    "cci-local-2026-stockholm-case.json": {
+      "sha256": "2cc4ffb9eb49478014d2cb1d337058d51893cd726f957721dcafdfc0b15d540d",
+      "provenance": "cci-stockholm-score-completion-review.md",
+      "provenanceSha256": "725b70f66eb524a23c97b07b080e0f24066f0d071de974086e5d680f29833708"
+    },
+    "cci-local-2026-hong-kong-case.json": {
+      "sha256": "3aa1adff6fe610656a7c1a688a3f8364cdda160d9c40b919c85bf5bc8afb1b08",
+      "provenance": "cci-hong-kong-score-completion-review.md",
+      "provenanceSha256": "9c448d1b47ec77ca8a73fe7179baa4187f15c2787f05d026d4f5516303d403b2"
+    },
+    "cci-local-2026-amsterdam-case.json": {
+      "sha256": "ceec7ec8ca1b468969a6f7887a1425463f8adc582208433a723b9a7206c0aacd",
+      "provenance": "cci-amsterdam-score-completion-review.md",
+      "provenanceSha256": "4c808a3e401ead420850365c5171c06e2c4b3b917059e276559a4d98d058a618"
     }
   },
-  "scriptSha256": "7fbfdd1d7b9b45b46f10723c18874dfe4a4f8166348659a6430f853637f598af",
-  "csvSha256": "3ac10713aa82d5c442f2411bdba61ad0a8aa7434a814538b34fe2ce5c0cc53b7"
+  "scriptSha256": "2190ec118ffdd9d3e6a0c3855809e3812b42f5506edc67af019a4864457de9d0",
+  "csvSha256": "2d251279c9f0940379a77a1f106cdf3e36b4a18e87c8fd497cccf4fe1011fac1"
 }

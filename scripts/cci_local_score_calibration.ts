@@ -108,6 +108,9 @@ const realCases = [
   "groningen",
   "taipei",
   "frankfurt",
+  "stockholm",
+  "hong-kong",
+  "amsterdam",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -207,6 +210,9 @@ const [
   groningen,
   taipei,
   frankfurt,
+  stockholm,
+  hongKong,
+  amsterdam,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2171,3 +2177,62 @@ assert.deepEqual(frankfurtCase.medicalScopeReview.selectedQualityValues, [1.47, 
 assert.equal(frankfurtCase.resourceScopeReview.visibleTextLayerConflictRetained, true);
 assert.equal(frankfurtCase.resourceScopeReview.voltageLevelsAdded, false);
 assert.equal(frankfurtCase.resourceScopeReview.lowVoltageUpstreamKwh, 1299209723);
+
+for (const [id, expectedRange, count] of [
+  [1445, [36, 76], 26],
+  [73, [15, 85], 35],
+  [1427, [27, 82], 25],
+] as const) {
+  const c = realCases.find(c => c.candidateId === id);
+  assert.equal(c.priorityCompletionReview.sha256, digest(c.priorityCompletionReview.path));
+  assert.equal(c.scopeCompletionReview.allSubpillarsFullyReviewed, false);
+  assert.equal(c.scopeCompletionReview.allSubpillarsHaveOutcomeMeasurements, false);
+  assert.equal(c.scopeCompletionReview.eightDimensionScoresComplete, false);
+  assert.equal(c.priorityCompletionReview.validOriginalCount, count);
+  assert.equal(c.sourceSnapshots.length, count);
+  assert(
+    c.sourceSnapshots.every(
+      (r: { validOriginal: boolean; bytes: number; sha256: string }) =>
+        r.validOriginal && r.bytes > 0 && r.sha256.length === 64
+    )
+  );
+  assert.deepEqual(c.unresolvedScoreRange, expectedRange);
+  assert.equal(c.expectedConditionalTotal, null);
+  assert.equal(c.globalRankingEligible, false);
+  for (const r of [...c.webReadSources, ...c.failedSourceSnapshots]) {
+    assert.equal(r.originalBytes, null);
+    assert.equal(r.originalSha256, null);
+  }
+}
+for (const [scores, dimension, lower, upper] of [
+  [stockholm, "MED", 27, 82],
+  [stockholm, "LON", 30, 80],
+  [hongKong, "MED", 9, 94],
+  [hongKong, "ISR", 6, 91],
+  [amsterdam, "ISR", 18, 88],
+  [amsterdam, "LON", 21, 86],
+] as const) {
+  const withdrawn = { ...scores };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...hongKong, MED: 60 }), { center: null, lower: 18, upper: 88 });
+const stockholmCase = realCases.find(c => c.candidateId === 1445);
+assert.equal(stockholmCase.clinicalScopeReview.localTwoMyelomaPatientsProductIdentified, false);
+assert.equal(stockholmCase.clinicalScopeReview.futureThirdPatientCountedAsTreated, false);
+assert.equal(stockholmCase.clinicalScopeReview.unknownTransferValueFilledWithZero, false);
+const hongKongCase = realCases.find(c => c.candidateId === 73);
+assert.equal(hongKongCase.clinicalScopeReview.medJudgmentAfterActualPriorityAndFeeRelief, true);
+assert.equal(hongKongCase.clinicalScopeReview.prioritized133CountedAsInfused, false);
+assert.equal(
+  hongKongCase.clinicalScopeReview.approved103DrugApplicationsCountedAsTisaInfusions,
+  false
+);
+assert.equal(hongKongCase.sourceStopReview.deviationRetained, true);
+assert.equal(hongKongCase.sourceStopReview.failedSourcesPenalizedCity, false);
+const amsterdamCase = realCases.find(c => c.candidateId === 1427);
+assert.equal(amsterdamCase.clinicalScopeReview.hsmrIsMortalityPercent, false);
+assert.deepEqual(amsterdamCase.clinicalScopeReview.hsmr95ConfidenceInterval, [100, 113]);
+assert.equal(amsterdamCase.resourceScopeReview.waterVolumeUnitAndArithmeticConflictRetained, true);
+assert.equal(amsterdamCase.resourceScopeReview.volumeChangePercentAdopted, false);
+assert.equal(amsterdamCase.resourceScopeReview.demoLoremTemplateAdopted, false);

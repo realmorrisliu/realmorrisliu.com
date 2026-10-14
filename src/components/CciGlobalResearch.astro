@@ -66,6 +66,9 @@ import brisbane from "../../docs/data/cci-local-2026-brisbane-case.json";
 import groningen from "../../docs/data/cci-local-2026-groningen-case.json";
 import taipei from "../../docs/data/cci-local-2026-taipei-case.json";
 import frankfurt from "../../docs/data/cci-local-2026-frankfurt-case.json";
+import stockholm from "../../docs/data/cci-local-2026-stockholm-case.json";
+import hongKong from "../../docs/data/cci-local-2026-hong-kong-case.json";
+import amsterdam from "../../docs/data/cci-local-2026-amsterdam-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -136,8 +139,14 @@ const cases = [
   groningen,
   taipei,
   frankfurt,
+  stockholm,
+  hongKong,
+  amsterdam,
 ];
 const caseNamesZh: Record<number, string> = {
+  [stockholm.candidateId]: "斯德哥尔摩功能区",
+  [hongKong.candidateId]: "香港功能区",
+  [amsterdam.candidateId]: "阿姆斯特丹功能区",
   [taipei.candidateId]: "台北功能区",
   [frankfurt.candidateId]: "法兰克福功能区",
   [brisbane.candidateId]: "布里斯班功能区",
@@ -300,6 +309,30 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [stockholm.candidateId]: [
+    zh
+      ? "斯德哥尔摩ISR／MED／LON／TEC／OPT条件60，PCS／GSS／RES未知，数学域36—76、无中心。实际制度纠偏、公共必要护理、本地常规人体交付、技术采用与有限合法退出支持可撤判断；31项范围记录不是充分测量。"
+      : "Stockholm has conditional ISR/MED/LON/TEC/OPT60, with PCS/GSS/RES unknown: a36–76 mathematical domain without a centre. Actual remedies, necessary public care, local routine human delivery, technology use and finite lawful exit support revocable judgments.31 scope records are not complete measurements.",
+    zh
+      ? "两例真实骨髓瘤治疗不称已识别Carvykti，第三例计划不计给药，评估成本不是患者账单。等待人群、不可比交接缺数与地区差异保留；撤MED27—82、撤LON30—80。北欧登记、银行及消费连接须通常资金／资格／合法接续，不保证永久原账户或无限漫游。"
+      : "Two actual myeloma treatments are not identified as Carvykti; a planned third is not infused, and appraisal cost is not the patient bill. Waiting populations, incomparable transfer data and regional differences remain. Withdrawing MED gives27–82 or LON30–80. Nordic registration, banking and consumer connectivity require usual resources, eligibility and lawful continuation, without guaranteed permanent accounts or unlimited roaming.",
+  ],
+  [hongKong.candidateId]: [
+    zh
+      ? "香港ISR条件60、MED条件40，其余六维未知，数学域15—85、无中心。必要服务长尾等待与实际急重症优先、容量及费用减免共同判断；68个月是已治疗关节置换90分位，不是每位居民等待。MED60替代18—88，撤MED9—94。"
+      : "Hong Kong has conditional ISR60/MED40 and six unknown dimensions: a15–85 mathematical domain without a centre. Long waits for necessary services are considered alongside actual urgent priority, capacity and fee relief.68 months is a90th percentile among treated joint-replacement patients, not every resident's wait. MED60 gives18–88; withdrawing MED gives9–94.",
+    zh
+      ? "HKID／永久居民／国籍／护照资格分开；PWH和大埔邻里点属696，共享服务须另作通常适配。133获优先不当给药、103超昂贵药批准不当Tisa例数，HA内部质量不称独立临床审计。热湿、地质及食品部分尚未完整审阅；403和资料少不扣分。"
+      : "HKID, permanent residence, nationality and passport eligibility differ. PWH and an approximate Tai Po neighbourhood point lie in696; shared access needs separate adaptation.133 prioritized people are not infusions,103 ultra-expensive-drug approvals are not Tisa cases, and internal HA quality is not independent clinical audit. Heat, geology and food remain incompletely reviewed;403 failures and sparse evidence do not lower scores.",
+  ],
+  [amsterdam.candidateId]: [
+    zh
+      ? "阿姆斯特丹ISR／LON／TEC／OPT条件60，PCS／GSS／RES／MED未知，数学域27—82、无中心。真实执行、常规限定病种治疗／付款监护、临床和公共数字采用与有限退出支持判断；未来自身免疫研究不当常规交付。"
+      : "Amsterdam has conditional ISR/LON/TEC/OPT60, with PCS/GSS/RES/MED unknown: a27–82 mathematical domain without a centre. Actual execution, routine indicated treatment/payment/monitoring, clinical and public digital use, and finite exit support the judgments. Future autoimmune research is not routine delivery.",
+    zh
+      ? "HSMR106、区间100—113是风险调整指数，不是死亡百分比。供水WKI与用户加权中断分开，体积单位／算术冲突保留；地下水方法改变不称风险三倍。普通ING／KPN收费、设备和迁居接续可撤，未核完整独立跨国地面行程；撤ISR18—88、撤LON21—86。"
+      : "HSMR106 with interval100–113 is a risk-adjusted index, not mortality percent. Water quality and user-weighted interruptions differ; volume-unit/arithmetic conflicts remain. A groundwater method change is not tripled risk. Ordinary ING/KPN costs, devices and post-emigration arrangements are revocable; a complete independent international ground itinerary is unverified. Withdrawing ISR gives18–88 or LON21–86.",
+  ],
   [taipei.candidateId]: [
     zh
       ? "台北PCS／ISR／MED／LON／TEC条件60，GSS／RES／OPT未知，数学域39—74、无中心。首阶段水务与病种链加接续审阅，实际保护、执行、必要护理及技术产用支持有限判断；食品／能源已部分查阅，通常净取得仍未定。"
@@ -882,7 +915,9 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
       <div>
         <dt>{zh ? "已审阅案例" : "Cases reviewed"}</dt>
         <dd>
-          {n(cases.length)}{zh ? " 份 · 八维及 31 个子支柱" : " · Eight dimensions, 31 subpillars"}
+          {n(cases.length)}{
+            zh ? " 份有界审阅 · 31 项覆盖记录" : " bounded reviews · 31 scope records"
+          }
         </dd>
       </div>
       <div>

@@ -1,0 +1,1541 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 1427,
+  "name": "Amsterdam",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-14",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "2026 ordinary Dutch citizen, longterm resident, local medianincome, usualinsurance, nofixedage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-amsterdam-score-completion-review.md",
+  "publishedInputCommit": "57611d5aeeb0887d15db9ebce4fa0204e0f1f610",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": null,
+      "rationale": "实际降雨、地下水与高温压力已有局部适应工程；66个Rainproof瓶颈及161个地下水风险街区仍存，不能由项目数或机场局部暴雨能力推出全市净保护足够。",
+      "assumption": "已实施工程有作用可以支持条件60，重要未缓解居民危害可40；现有作用与余障的居民/FUA桥仍不足以择档，不以危险图或未查野火填低分。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "unresolved"
+      },
+      "actualReview": {
+        "heat_humidity": {
+          "status": "partial",
+          "actualReviewed": "2025heatwaterpeak/implementedgreeningand12climateadaptationprojects;humanheatresidualnotmeasured",
+          "sourceFiles": ["amsterdam-water2025.html", "city2025.pdf"],
+          "exhaustiveReviewed": false
+        },
+        "flood_sea_level": {
+          "status": "partial",
+          "actualReviewed": "Rainproof66residualbottlenecks/161groundwaterneighbourhoods withmethodchange,12projects;airport1/100rainstudynotallcitysea-floodprotection",
+          "sourceFiles": ["city2025.pdf", "schiphol2025.pdf"],
+          "exhaustiveReviewed": false
+        },
+        "geophysical": {
+          "status": "partial",
+          "actualReviewed": "groundwatervulnerability/oldhousingmaintenanceremainderread;seismic/subsidence/foundationfailureassessmentstillnotconducted",
+          "sourceFiles": ["city2025.pdf"],
+          "exhaustiveReviewed": false
+        },
+        "severe_weather_wildfire": {
+          "status": "unresolved",
+          "actualReviewed": "Airportactualclimaterisk/rainstudiesread;cityforeststudyreported;wind/wildfirelocalnetprotectionnotconducted",
+          "sourceFiles": ["city2025.pdf", "schiphol2025.pdf"],
+          "exhaustiveReviewed": false
+        }
+      },
+      "discussionBranchesNotAdopted": [
+        {
+          "score": 40,
+          "condition": "Important net residual barriers direction established, not merely missing information"
+        },
+        {
+          "score": 60,
+          "condition": "Implemented protection/supply/care ordinarily sufficient after actual residual; source-to-target bridge accepted"
+        }
+      ],
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "真实毒品金融渗透与港区治理、外部战争引发的社区紧张及机场战略风险均进入审阅；有实际执法与社区/机场应对，不能由普通犯罪指数下降推组织暴力/战争暴露低。",
+      "assumption": "组织/区域/战略三链均有部分原证，但普通居民净实际影响方向未闭合。控制、对话和没有重大新机场中断不是风险已解除；40/60只讨论不采用。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "partial",
+        "strategic_exposure": "partial"
+      },
+      "actualReview": {
+        "organized_violence": {
+          "status": "partial",
+          "actualReviewed": "drug-financialcorruption/portundermining/125controls/78closuresactual;197tableheaderaddressesvsprosealertsretained;notviolentattackrate",
+          "sourceFiles": ["city2025.pdf"],
+          "exhaustiveReviewed": false
+        },
+        "regional_conflict": {
+          "status": "partial",
+          "actualReviewed": "IsraelPalestineaffectedcommunitiesdialogue/Ukraineopvangactual;notAmsterdamwarfront/netharmestimate",
+          "sourceFiles": ["city2025.pdf"],
+          "exhaustiveReviewed": false
+        },
+        "strategic_exposure": {
+          "status": "partial",
+          "actualReviewed": "Airportgeo/terroractualrisk-and-mitigationreport;2025nomajornewgeodirectdisruptionnotallcitylowrisk",
+          "sourceFiles": ["schiphol2025.pdf", "city2025.pdf"],
+          "exhaustiveReviewed": false
+        }
+      },
+      "discussionBranchesNotAdopted": [
+        {
+          "score": 40,
+          "condition": "Important net residual barriers direction established, not merely missing information"
+        },
+        {
+          "score": 60,
+          "condition": "Implemented protection/supply/care ordinarily sufficient after actual residual; source-to-target bridge accepted"
+        }
+      ],
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "实际行政办理、依法给付、投诉接续、多数和平示威与应急调用显示通常制度可用；已开展跨部门危机恢复和信息流程修订。",
+      "assumption": "有限通常有效桥：2025实际办理/社会参与/应急使用及已实施接续工作通常持续到截止，并适配FUA普通本国中位居民，重要投诉逾期、渠道问题和社区差异尚未主导必要制度失效；不由未发布消防准备率证明好。拒绝时间/服务代表性或通常有效性→null；重大残余失效40、独立更强普遍绩效80。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "actualReview": {
+        "governance": {
+          "status": "partial",
+          "actualReviewed": "actual81.5%benefitapplications3weeks/99.8%lawful/73.6%complaintdeadline;ordinaryrightsservicebridge",
+          "sourceFiles": ["city2025.pdf"],
+          "exhaustiveReviewed": false
+        },
+        "adaptive_capacity": {
+          "status": "partial",
+          "actualReviewed": "actualinstitutionalmeasures/cyberprocess/implementedclinicaldischargeandadmissiondata;futureplansnotresults",
+          "sourceFiles": ["city2025.pdf", "umc-care2025.html"],
+          "exhaustiveReviewed": false
+        },
+        "social_cohesion": {
+          "status": "partial",
+          "actualReviewed": "3309demonstrationsmostlypeaceful/dialogueactual;discrimination/insecurefeelings/neighbourhoodinequalityremain",
+          "sourceFiles": ["city2025.pdf"],
+          "exhaustiveReviewed": false
+        },
+        "emergency_recovery": {
+          "status": "partial",
+          "actualReviewed": "10355cityfireevents11GRIPactual/crisisaftercare2025revision;2025readinessnotavailable/incidentcountnotresponseeffectiveness",
+          "sourceFiles": ["city2025.pdf"],
+          "exhaustiveReviewed": false
+        }
+      },
+      "discussionBranchesNotAdopted": [],
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "真实水务交付、已运行热电/配电新增和节能付款救助与食品再分配均可核；电网容量仍非常有限、食品若干指标未能量测，普通中位居民救济后净取得方向仍不能合理择40/60。",
+      "assumption": "75bnL扩产许可、607户供热项目开工、太阳能/设施目标不等交付。救助对象贫困/低收入不能直接推中位人物不足，也不能以救助存在或缺负担调查证明通常可负担；RES主null，60讨论未采用。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      },
+      "actualReview": {
+        "water": {
+          "status": "partial",
+          "actualReviewed": "2025actual1.4mservice plus municipal WKI0.01/OLM2m45s userweightedaverage/93.8millionm3narrative andsourceinternalunit-arithmeticconflicts;license75bnfuture;fullanalyte/abnormalityandhouseholdnettariffnotreviewed",
+          "sourceFiles": ["amsterdam-water2025.html", "city2025.pdf"],
+          "exhaustiveReviewed": false
+        },
+        "food": {
+          "status": "partial",
+          "actualReviewed": "actualfoodredistributioninitiatives/2025firstmonitor;PMindicatorsnotactualdietadequacy;supply/medianpricesstillnotreviewed",
+          "sourceFiles": ["city2025.pdf"],
+          "exhaustiveReviewed": false
+        },
+        "energy": {
+          "status": "partial",
+          "actualReviewed": "AEB/WPWactualdelivery/69MSRnew367existing/limitedconnections/savingsandpaymenthelpactual;after-helpmediannetburdeninsufficient",
+          "sourceFiles": ["city2025.pdf"],
+          "exhaustiveReviewed": false
+        },
+        "supply_chain": {
+          "status": "partial",
+          "actualReviewed": "actualglobalairportcargoandconsumer-supplylines;congestion/slotconstraint;notnetordinaryfoodenergyaccess",
+          "sourceFiles": ["schiphol2025.pdf", "city2025.pdf"],
+          "exhaustiveReviewed": false
+        }
+      },
+      "discussionBranchesNotAdopted": [
+        {
+          "score": 40,
+          "condition": "Important net residual barriers direction established, not merely missing information"
+        },
+        {
+          "score": 60,
+          "condition": "Implemented protection/supply/care ordinarily sufficient after actual residual; source-to-target bridge accepted"
+        }
+      ],
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "MED",
+      "score": null,
+      "rationale": "实际护理接续和积压改善已实施；HSMR2024、等待与付款规则真实，但调整死亡指标/体验/认证均不足替代必要治疗的通常质量及及时取得判断。",
+      "assumption": "手术等待名单下降30%未给原始分母，>2年等待人数虽大减仍有余障。4/7周为规范，不是实际完成。缓解后通常足够可条件60，必要治疗重大等待余障可40；不需过半居民受损才40，也不凭缺2026普测判低；目前无法可靠择档→null。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "actualReview": {
+        "access": {
+          "status": "partial",
+          "actualReviewed": "OTwaitinglist30%reduction/long>2yearremainder/Hospitalpre-admission12of18;4/7weeksnormnotactual",
+          "sourceFiles": ["umc-care2025.html", "umc-wait.html"],
+          "exhaustiveReviewed": false
+        },
+        "routine_quality": {
+          "status": "partial",
+          "actualReviewed": "HSMR2024actual106100–113+methodlimitations;actualincident-improvementmodule/JCInotpatientclinicalsuccess",
+          "sourceFiles": ["umc-hsmr.pdf", "umc-hsmr-index.html", "umc-care2025.html"],
+          "exhaustiveReviewed": false
+        },
+        "specialist_capacity": {
+          "status": "partial",
+          "actualReviewed": "actualcomplexoncology/clinicaldepartments;>55kexperienceand8.7notoutcomes;patientspecificappropriatenessnotuniversal",
+          "sourceFiles": [
+            "umc-cart2021.html",
+            "amsterdam-cart-trial2025.html",
+            "umc-care2025.html"
+          ],
+          "exhaustiveReviewed": false
+        },
+        "system_continuity": {
+          "status": "partial",
+          "actualReviewed": "actualallclinicaladmissionsummary/dischargecoordination/insurancecontracts+deductibles;ordinarytimelyqualitytradeoffunresolved",
+          "sourceFiles": ["umc-care2025.html", "amsterdam-payment.html", "umc-contracts2026.html"],
+          "exhaustiveReviewed": false
+        }
+      },
+      "discussionBranchesNotAdopted": [
+        {
+          "score": 40,
+          "condition": "Important net residual barriers direction established, not merely missing information"
+        },
+        {
+          "score": 60,
+          "condition": "Implemented protection/supply/care ordinarily sufficient after actual residual; source-to-target bridge accepted"
+        }
+      ],
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "成熟人体肿瘤CAR-T的当地实施链可独立成立：历史约45例已治、2025两中心多年肿瘤治疗说明、EMA成熟人体及安全监护要求、ZIN明确认可病种和当地通常保险取得规则。",
+      "assumption": "同尺度有限已实施/认可治疗桥：2021本地回输及安全应对＋2025连续肿瘤使用适配通常保险认可的部分成熟CAR-T病种；合资格患者通常能经本地临床监护、合同保险/必要转诊及通常自付资源完成取得。实际本地品牌/同队列支付与全过程监护未逐例匹配，旧认可目录到2026和当前合同截止适配可撤；拒绝成熟产品/认可病种/常规监护/支付任一关键连接→null。重要取得约束40，更广成熟可取得链80；不是普通居民人人适用或已实现普遍长寿。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "actualReview": {
+        "translation": {
+          "status": "partial",
+          "actualReviewed": "historical~45actuallocalCAR-Tinfusions+2025oncologylongstanding;Amsterdamacademicmanufacturepreparing;LUMCfirstSLEnotlocal",
+          "sourceFiles": ["umc-cart2021.html", "amsterdam-cart-trial2025.html"],
+          "exhaustiveReviewed": false
+        },
+        "trial_maturity": {
+          "status": "partial",
+          "actualReviewed": "EMAactualhumanZUMA-1ITT111/mITT101longfollowupmatureoncologyclass;notlocalcohort,autoimmune6yrfuture",
+          "sourceFiles": ["ema-product2026.pdf", "amsterdam-cart-trial2025.html"],
+          "exhaustiveReviewed": false
+        },
+        "regulatory_adoption": {
+          "status": "partial",
+          "actualReviewed": "EMAYescartaapprovedclass/ZIN2025specificreimbursedindicationsvsadvice/study separated;2026continuityconditional",
+          "sourceFiles": ["ema-yescarta-index.html", "zin-car2025.html"],
+          "exhaustiveReviewed": false
+        },
+        "resident_access": {
+          "status": "partial",
+          "actualReviewed": "localinfusion/safetycapacity+ordinarycontract/deuctible+ZINrecognizedhospitalCAR-Tbridge;exactlocalbrandcohortandpayersharednotfullymatched",
+          "sourceFiles": [
+            "umc-cart2021.html",
+            "amsterdam-payment.html",
+            "umc-contracts2026.html",
+            "zin-car2025.html",
+            "ema-product2026.pdf"
+          ],
+          "exhaustiveReviewed": false
+        }
+      },
+      "discussionBranchesNotAdopted": [],
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "实际临床数字项目、跨院资料交换/在院病历/家庭监护和公共WiFi/设备培训形成研发到日常应用连接；企业转化有真实组织与项目，但在研产品/CE进度不当商用成功。",
+      "assumption": "有限已实施应用桥：实际医疗/公共数字基础设施、居民设备和培训取得、已运临床应用与企业知识转化足以代表通常本地技术能力及扩散到普通居民，而非仅机构目录/科研数量；工业密度与非医疗领域覆盖部分，455k用户是医院患者不是FUA居民。拒绝通常当地可用/领域代表性→null；重大扩散障碍40，更多强独立产业产用证据80。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "actualReview": {
+        "knowledge_output": {
+          "status": "partial",
+          "actualReviewed": "actuallocalresearch-to-clinical/digitalimplementation;noGPCI/WIPOcountconversion",
+          "sourceFiles": ["umc-cart2021.html", "umc-digital2025.html"],
+          "exhaustiveReviewed": false
+        },
+        "industry_density": {
+          "status": "partial",
+          "actualReviewed": "formed/developedspinouts/PPP;CEtowardapprovalanddrugsdevelopingnotcurrentcommercialsuccess;citywideindustrialdensitynotfullymeasured",
+          "sourceFiles": ["umc-valor2025.html"],
+          "exhaustiveReviewed": false
+        },
+        "digital_infrastructure": {
+          "status": "partial",
+          "actualReviewed": "actual167publicRoam/2750laptops/120completedclinicalprojects;455kpatientsnotFUAresidents",
+          "sourceFiles": ["city2025.pdf", "umc-digital2025.html"],
+          "exhaustiveReviewed": false
+        },
+        "diffusion": {
+          "status": "partial",
+          "actualReviewed": "actualpublicWiFi12%everuse/clinicalhomeservices/portalusersandadmissiontools;median-residentgeneralapplicabilityfinite",
+          "sourceFiles": ["city2025.pdf", "umc-digital2025.html", "umc-care2025.html"],
+          "exhaustiveReviewed": false
+        }
+      },
+      "discussionBranchesNotAdopted": [],
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "实际2025国际机场网络、荷兰消费者银行欧元区支付服务和KPN境外通信/补值，接欧盟公民有条件居留、跨境欧元付款和公平使用规则，组成可具体执行的通常退出链。",
+      "assumption": "有限资源/接续桥：普通中位居民通常有足够合法可用余额、合资格消费者账户/有效卡、可完成强鉴权的设备及活跃SIM/补值，能负担通常票价/办理并接近实际Schiphol国际网络；在符合目的地居留/工作或资源保险条件时可获得必要境外接续。€4账户＋标准欧元区付款/现金和EU规则不是全资产无税即时汇出；ING世界转账正文未取到不纳入已证事实。单机场的多个航司不是独立机场；长期迁居后的账户/通信维持须按真实地址和公平使用办理，未保证。拒绝实际取得/资源资格/连续性/合法目的地任一关键桥→null；重要退出约束40，独立多通道更强80。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      },
+      "actualReview": {
+        "transport_redundancy": {
+          "status": "partial",
+          "actualReviewed": "2025Schipholactual300incl13cargo-only/68.8m/internationalpassengerdestinations;singleairportmultipleairlinesnotindependentnodes;completeground/crossborderroutestillnotreviewed",
+          "sourceFiles": ["schiphol2025.pdf"],
+          "exhaustiveReviewed": false
+        },
+        "legal_mobility": {
+          "status": "partial",
+          "actualReviewed": "DutchEUcitizenwork/selfemployment/residenceruleconditional;notjob/housing/approvalguarantee",
+          "sourceFiles": ["eu-workers.html"],
+          "exhaustiveReviewed": false
+        },
+        "asset_portability": {
+          "status": "partial",
+          "actualReviewed": "actualDutchINGGo€4account/card/standardpayments/euroareausageplusEUfee/authrules;fullworldtransfertermsrawfailednotknown;ordinarybalance/KYC/authfinite",
+          "sourceFiles": ["ing-packages2026.pdf", "eu-assets-transfers.html"],
+          "exhaustiveReviewed": false
+        },
+        "network_continuity": {
+          "status": "partial",
+          "actualReviewed": "DutchconsumerKPNprepaidEU/nonEU/sms/topupabroadactual+EUfairuse;ordinaryactiveSIM/device/auth/creditsrequired;notpermanentfreeforeignresidence",
+          "sourceFiles": ["kpn-prepaid.html", "kpn-topup.html", "eu-network-roaming.html"],
+          "exhaustiveReviewed": false
+        }
+      },
+      "discussionBranchesNotAdopted": [],
+      "scoreStatus": "conditional_root_adopted"
+    }
+  ],
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 27.0,
+  "unresolvedScoreRange": [27.0, 82.0],
+  "globalRankingEligible": false,
+  "limitations": [
+    "No global ranking/probability/Top32 qualification",
+    "All31keys are boundedpartial/unresolved, not full universal outcomes",
+    "Actual unstarted earthquake/foundation, wind/wildfire, food median prices/fullquality and longtermretention recorded",
+    "Finite usual capability/residentaccess assumptions not proof everyindividual;source-to-FUA representative bridgewithdrawable",
+    "Sources not certifiedcutoffhistoricalbytes;explicit temporal bridge refusal to null",
+    "No sourcequantity/knowledgeindextransfer/noGroningen scoreinheritance",
+    "Root bounded whole-dimension scope review is not complete31 measurement; explicitly unstarted or not-fully-reviewed subcomponents remain.",
+    "Known scores are finite revocable resident/temporal/scope judgments; unknowns no midpoint, probability or supported exclusion."
+  ],
+  "sourceSnapshots": [
+    {
+      "file": "city2025.pdf",
+      "path": "/private/tmp/cci-global/amsterdam/city2025.pdf",
+      "url": "https://assets.amsterdam.nl/publish/pages/1081968/ga_bda-jv25_v6_tg-a_1.pdf",
+      "retrievedOn": "2026-10-14",
+      "round": 1,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "error": "",
+      "bytes": 22956277,
+      "sha256": "1c34a1ccdf80dfaa39fb064739cf44f1295bd65fb8ceedbe9c2efc103d798523",
+      "responseFileExists": true,
+      "validOriginal": true,
+      "publicationOrObservation": "2025 actual;PDF creation22Apr2026/mod23Apr2026;HTTP LastModified23Apr2026",
+      "scope": "Municipality Amsterdam; city benefit applications/complaints,108 police-regionneighbourhood index,notFUAresidentdenominator;p97actualWKI/OLMuserweightedaverage/volume narrative93.8million vs tableunits/arithmeticconflicts no change-rate transfer",
+      "evidenceRole": "PCS GSS ISR RES TEC",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 22956277,
+      "originalSha256": "1c34a1ccdf80dfaa39fb064739cf44f1295bd65fb8ceedbe9c2efc103d798523",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "umc-annual-index.html",
+      "path": "/private/tmp/cci-global/amsterdam/umc-annual-index.html",
+      "url": "https://amsterdamumc.org/nl/organisatie/jaarverslagen",
+      "retrievedOn": "2026-10-14",
+      "round": 1,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "error": "",
+      "bytes": 77084,
+      "sha256": "3e14527f36fddbc81351e1eb269a8f71e5010bda0a7f32fdf01ee3143e730e4c",
+      "responseFileExists": true,
+      "validOriginal": true,
+      "publicationOrObservation": "Current index of 2025/2024; linked2025 body published26Jun2026",
+      "scope": "Institution version/entry only",
+      "evidenceRole": "entry",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForProposedScore": false,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 77084,
+      "originalSha256": "3e14527f36fddbc81351e1eb269a8f71e5010bda0a7f32fdf01ee3143e730e4c",
+      "evidenceConsidered": false,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "umc-hsmr-index.html",
+      "path": "/private/tmp/cci-global/amsterdam/umc-hsmr-index.html",
+      "url": "https://amsterdamumc.org/nl/organisatie/hsmr-sterftecijfers",
+      "retrievedOn": "2026-10-14",
+      "round": 2,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "error": "",
+      "bytes": 48598,
+      "sha256": "878863d5f34b0d589975fa338eff36201fb2ba675110a6acfa9dca6807af824c",
+      "responseFileExists": true,
+      "validOriginal": true,
+      "publicationOrObservation": "Current undated methodological note; referenced HSMR2024",
+      "scope": "Adjustedhospitalmortality imperfectcomplexcase adjustment; nothospitalqualityrank",
+      "evidenceRole": "MED",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForProposedScore": false,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 48598,
+      "originalSha256": "878863d5f34b0d589975fa338eff36201fb2ba675110a6acfa9dca6807af824c",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "umc-wait.html",
+      "path": "/private/tmp/cci-global/amsterdam/umc-wait.html",
+      "url": "https://www.amsterdamumc.nl/nl/rechten-plichten/wachttijdbemiddeling",
+      "retrievedOn": "2026-10-14",
+      "round": 2,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "error": "",
+      "bytes": 56796,
+      "sha256": "308cc5eb5c952f2a75af63837935caa0929c439bc099e9b6ad5900019d6de9d1",
+      "responseFileExists": true,
+      "validOriginal": true,
+      "publicationOrObservation": "Current undated body,cutoff exactversionunknown",
+      "scope": "Current treatmentwaiting/insurer mediation;4/7weeksagreedlimitsnotactualwaits",
+      "evidenceRole": "MED",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForProposedScore": false,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 56796,
+      "originalSha256": "308cc5eb5c952f2a75af63837935caa0929c439bc099e9b6ad5900019d6de9d1",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "kpn-prepaid.html",
+      "path": "/private/tmp/cci-global/amsterdam/kpn-prepaid.html",
+      "url": "https://www.kpn.com/prepaid/buitenland?navMethod=header",
+      "retrievedOn": "2026-10-14",
+      "round": 2,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "error": "",
+      "bytes": 241133,
+      "sha256": "d96b9d7b1fefc5457b6d63c8f4d98a80ba5a2afe1a26b4a7e540101c9d213593",
+      "responseFileExists": true,
+      "validOriginal": true,
+      "publicationOrObservation": "Current undated consumer service,exactcutoffbytesunverified",
+      "scope": "DutchconsumerprepaidEUdomesticrates/nonEUfees,smsreceivedfree;fairuseandordinarydevice/creditinference",
+      "evidenceRole": "OPT",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 241133,
+      "originalSha256": "d96b9d7b1fefc5457b6d63c8f4d98a80ba5a2afe1a26b4a7e540101c9d213593",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "schiphol2025.pdf",
+      "path": "/private/tmp/cci-global/amsterdam/schiphol2025.pdf",
+      "url": "https://downloads.ctfassets.net/biom0eqyyi6b/24nHSbvoDBB7IVZn8KjNvQ/034b7b7e592b589688510dcf4ceaf781/Schiphol_Group_Annual_Report_2025.pdf",
+      "retrievedOn": "2026-10-14",
+      "round": "follow_located_round1",
+      "httpStatus": "200",
+      "exitCode": 0,
+      "error": "",
+      "bytes": 30673706,
+      "sha256": "eb585792fcbfd190b29a1a4589ce9779bcb3b14d4e8cbfb1b89d3a30aad15646",
+      "responseFileExists": true,
+      "validOriginal": true,
+      "publicationOrObservation": "2025 actual;PDF creation13Feb2026/HTTP LastModified13Feb2026",
+      "scope": "Schipholairport actual300destinationsincluding13cargo-only;68.8mtravellersnotresidents;group risksections notwholeFUA",
+      "evidenceRole": "OPT RES GSS PCS",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 30673706,
+      "originalSha256": "eb585792fcbfd190b29a1a4589ce9779bcb3b14d4e8cbfb1b89d3a30aad15646",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "umc2025-index.html",
+      "path": "/private/tmp/cci-global/amsterdam/umc2025-index.html",
+      "url": "https://www.amsterdamumcjaarverslag.nl/2025-en",
+      "retrievedOn": "2026-10-14",
+      "round": "follow_located_round1",
+      "httpStatus": "200",
+      "exitCode": 0,
+      "error": "",
+      "bytes": 164082,
+      "sha256": "ef7191bb4386648aae5e3e190e31387e9f90ede840b29e278104cd815ce6d5be",
+      "responseFileExists": true,
+      "validOriginal": true,
+      "publicationOrObservation": "2025annualreportlinkedfromprovider,June2026bodyversion",
+      "scope": "Annualentry/nav,notactualoutcomebodyalone",
+      "evidenceRole": "entry",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForProposedScore": false,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 164082,
+      "originalSha256": "ef7191bb4386648aae5e3e190e31387e9f90ede840b29e278104cd815ce6d5be",
+      "evidenceConsidered": false,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "umc-care2025.html",
+      "path": "/private/tmp/cci-global/amsterdam/umc-care2025.html",
+      "url": "https://www.amsterdamumcjaarverslag.nl/2025-en/patient-care",
+      "retrievedOn": "2026-10-14",
+      "round": "follow_located",
+      "httpStatus": "200",
+      "exitCode": 0,
+      "error": "",
+      "bytes": 217934,
+      "sha256": "1553790abe21d95e94149ea5e87cd06fbbe6392eddb50ab8257c97d8c4bb0da0",
+      "responseFileExists": true,
+      "validOriginal": true,
+      "publicationOrObservation": "2025actual;JSON-LDdatePublished26Jun2026;maxembeddeddate_modified13Jul2026;historicalbytesunverified",
+      "scope": "Actualpatientexperiences>55knotclinicalsuccess;OTwaitinglist30%reductiondenominatorundisclosed/>2yearresidual;admission-summaryallclinicaldept;12/18pre-admission specialties",
+      "evidenceRole": "MED",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForProposedScore": false,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 217934,
+      "originalSha256": "1553790abe21d95e94149ea5e87cd06fbbe6392eddb50ab8257c97d8c4bb0da0",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "umc-digital2025.html",
+      "path": "/private/tmp/cci-global/amsterdam/umc-digital2025.html",
+      "url": "https://www.amsterdamumcjaarverslag.nl/2025-en/digitisation",
+      "retrievedOn": "2026-10-14",
+      "round": "follow_located",
+      "httpStatus": "200",
+      "exitCode": 0,
+      "error": "",
+      "bytes": 144293,
+      "sha256": "aa30fb6f269fdc2784d73102ce7cce51483e5efb9316e6496447b0574d9bc265",
+      "responseFileExists": true,
+      "validOriginal": true,
+      "publicationOrObservation": "2025actual;JSON-LDdatePublished26Jun2026/maxembedded13Jul2026",
+      "scope": ">120completedEvAprojects;455kportalpatientsnotFUAresidents;homemonitoring/pathwayactualpilotvsfutureharmonisation",
+      "evidenceRole": "TEC MED",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 144293,
+      "originalSha256": "aa30fb6f269fdc2784d73102ce7cce51483e5efb9316e6496447b0574d9bc265",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "umc-hsmr.pdf",
+      "path": "/private/tmp/cci-global/amsterdam/umc-hsmr.pdf",
+      "url": "https://amsterdamumc.org/download-1/hsmr-amsterdam-umc",
+      "retrievedOn": "2026-10-14",
+      "round": "follow_located",
+      "httpStatus": "200",
+      "exitCode": 0,
+      "error": "",
+      "bytes": 201977,
+      "sha256": "c9e1ce12a9c7c39d42dfa12da6747d5f61f1cd3730ef4efc8fed58542f6791d4",
+      "responseFileExists": true,
+      "validOriginal": true,
+      "publicationOrObservation": "2024total/2022–2024diseasegroups;PDFcreated1Sep2025",
+      "scope": "2024HSMR106interval100–113; noadmissioncounts/expectedmortalitydenominatorsinthetable;limitsfrommethodpage;notmortality6%/poorallpatients",
+      "evidenceRole": "MED",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForProposedScore": false,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 201977,
+      "originalSha256": "c9e1ce12a9c7c39d42dfa12da6747d5f61f1cd3730ef4efc8fed58542f6791d4",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "kpn-topup.html",
+      "path": "/private/tmp/cci-global/amsterdam/kpn-topup.html",
+      "url": "https://www.kpn.com/prepaid/opwaarderen",
+      "retrievedOn": "2026-10-14",
+      "round": "follow_located",
+      "httpStatus": "200",
+      "exitCode": 0,
+      "error": "",
+      "bytes": 225097,
+      "sha256": "8102773a8ce98f6ad87124fdb6888aa8933711a6c9bf773725f5955144e24bb6",
+      "responseFileExists": true,
+      "validOriginal": true,
+      "publicationOrObservation": "Current undated consumer service,exactcutoffbytesunverified",
+      "scope": "Actualonline/voucher/app topup;abroadvoucherbycall requiresboughtbeforedeparture;Wero currentlabelnothistoriclaunchproof",
+      "evidenceRole": "OPT",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 225097,
+      "originalSha256": "8102773a8ce98f6ad87124fdb6888aa8933711a6c9bf773725f5955144e24bb6",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "umc-contracts2026.html",
+      "path": "/private/tmp/cci-global/amsterdam/umc-contracts2026.html",
+      "url": "https://www.amsterdamumc.nl/nl/rechten-plichten/locatie-amc/gecontracteerde-zorgverzekeraars.htm",
+      "retrievedOn": "2026-10-14",
+      "round": "follow_located_payment",
+      "httpStatus": "200",
+      "exitCode": 0,
+      "error": "",
+      "bytes": 66735,
+      "sha256": "abdfc6ab898a82032aad359c93184c0e2c122879c6e6340822c3f575cfcc7dd3",
+      "responseFileExists": true,
+      "validOriginal": true,
+      "publicationOrObservation": "Current2025/2026tables;undated and Per10November wording ambiguousyear;notindependentlyprecutofftablecertified",
+      "scope": "Named10insurergroupscontractcurrent;deductible/eigenbijdrage/actualpolicycheck;2025→2026recognizedordinarycontractcontinuityrevocable",
+      "evidenceRole": "MED LON",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 66735,
+      "originalSha256": "abdfc6ab898a82032aad359c93184c0e2c122879c6e6340822c3f575cfcc7dd3",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "umc-valor2025.html",
+      "path": "/private/tmp/cci-global/amsterdam/umc-valor2025.html",
+      "url": "https://www.amsterdamumcjaarverslag.nl/2025-en/valorisation",
+      "retrievedOn": "2026-10-14",
+      "round": "follow_located",
+      "httpStatus": "200",
+      "exitCode": 0,
+      "error": "",
+      "bytes": 182586,
+      "sha256": "31f8da2f933862b01f5ce44c744ed9ae613c271696473dcad5e9dc1a27ce319d",
+      "responseFileExists": true,
+      "validOriginal": true,
+      "publicationOrObservation": "2025actual;JSON-LDpublished26Jun2026/maxembedded13Jul2026",
+      "scope": "Spinouts formed/developed;FlowSuretowardCEnotcertified,otherdrugsdeveloping/PPPgrantsnotcommercialdelivery",
+      "evidenceRole": "TEC context",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 182586,
+      "originalSha256": "31f8da2f933862b01f5ce44c744ed9ae613c271696473dcad5e9dc1a27ce319d",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "umc-cart2021.html",
+      "path": "/private/tmp/cci-global/amsterdam/umc-cart2021.html",
+      "url": "https://www.amsterdamumc.org/nl/vandaag/je-eigen-afweercellen-als-medicijn",
+      "retrievedOn": "2026-10-14",
+      "round": 1,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "error": "",
+      "bytes": 59257,
+      "sha256": "121c63a5576b10944d846e8c10ada13579d5e82134091d546295480571a45be3",
+      "responseFileExists": true,
+      "validOriginal": true,
+      "publicationOrObservation": "Published4Jun2021;modified9Jun2023;actualhistorical~45lymphomapatients;not2026cohort",
+      "scope": "Localleukaferesis→commercialmanufacture→infusionandclinicaltoxicitymanagement;someoutside-trialALL/aggressivelymphoma;historic6weeks/€450knotcurrentresidentbill",
+      "evidenceRole": "LON",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 59257,
+      "originalSha256": "121c63a5576b10944d846e8c10ada13579d5e82134091d546295480571a45be3",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "umc-core2025.html",
+      "path": "/private/tmp/cci-global/amsterdam/umc-core2025.html",
+      "url": "https://www.amsterdamumcjaarverslag.nl/2025-en/core-activities",
+      "retrievedOn": "2026-10-14",
+      "round": "follow_located",
+      "httpStatus": "200",
+      "exitCode": 0,
+      "error": "",
+      "bytes": 189509,
+      "sha256": "9598d6a984e766a09796ae3e123b4aaa651e53f47ac2ee605870433001f66010",
+      "responseFileExists": true,
+      "validOriginal": true,
+      "publicationOrObservation": "2025;JSON-LDpublished26Jun2026/maxembedded13Jul2026",
+      "scope": "Corecarecomplex/specialisttaskdescription;notindependentoutcomes",
+      "evidenceRole": "MED context",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForProposedScore": false,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 189509,
+      "originalSha256": "9598d6a984e766a09796ae3e123b4aaa651e53f47ac2ee605870433001f66010",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "ing-packages2026.pdf",
+      "path": "/private/tmp/cci-global/amsterdam/ing-packages2026.pdf",
+      "url": "https://d21buns5ku92am.cloudfront.net/69197/pdf/campaigns/503-ing-introduceert-nieuwe-pakketten-voor-particuliere-klanten-in-nederland.pdf",
+      "retrievedOn": "2026-10-14",
+      "round": "follow_primary_cloudfront_link_new_mechanism",
+      "httpStatus": "200",
+      "exitCode": 0,
+      "error": "",
+      "bytes": 482343,
+      "sha256": "bbed8b1d61a24871343652598c7284c2bc15d8a3cf832569e105b850db08adbb",
+      "responseFileExists": true,
+      "validOriginal": true,
+      "publicationOrObservation": "10Jun2026actuallaunch;providerpressreleasePDF",
+      "scope": "DutchconsumerINGGo€4monthly/currentaccount/card/standardpayments/euroareacash;app switchingnottransactionauthproof;eSIMlater2026futureexcluded",
+      "evidenceRole": "OPT",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 482343,
+      "originalSha256": "bbed8b1d61a24871343652598c7284c2bc15d8a3cf832569e105b850db08adbb",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "amsterdam-water2025.html",
+      "path": "/private/tmp/cci-global/next-priority-batch-19/amsterdam-water2025.html",
+      "url": "https://www.waternet.nl/blog/jaaroverzicht-2025-waternet/",
+      "httpStatus": "200",
+      "requestExitCode": 0,
+      "error": "",
+      "responseFileExists": true,
+      "responseBytes": 90000,
+      "responseSha256": "5b780b18209a9478c72bd440b1423a901e578e2c269b44f1835de8de3f2423fc",
+      "originalBytes": 90000,
+      "originalSha256": "5b780b18209a9478c72bd440b1423a901e578e2c269b44f1835de8de3f2423fc",
+      "validOriginal": true,
+      "retrievedOn": "2026-10-14",
+      "sourceId": "B19S10",
+      "bytes": 90000,
+      "sha256": "5b780b18209a9478c72bd440b1423a901e578e2c269b44f1835de8de3f2423fc",
+      "publishedOrObservation": "2026-01-15",
+      "populationAndScope": "Amsterdam/nearby1.4mperson serviceunitnotFUAallresidents",
+      "use": "Actual2025wateroperation;75bLexpansionpermitNOTnewproductionsupply",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForQueue": true,
+      "sourceKind": "valid_original_reuse",
+      "reusedManifest": "/private/tmp/cci-global/next-priority-batch-19/source-manifest.json",
+      "reusedManifestSha256": "8d9031172d47169f0aab3dda95b363b648a2f9f479a8b4d8539c9554ec57f05d",
+      "publicationOrObservation": "15Jan2026;2025actual",
+      "scope": "Waternet1.4mserviceAmsterdamandsurroundings;70bnLannualdunespurificationvs75bnlicensefuture;1Jul2025heatpeak14mLby8AM;607heatretrofitbegunnotfinished",
+      "evidenceRole": "RES PCS",
+      "usedForProposedScore": false,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "amsterdam-cart-trial2025.html",
+      "path": "/private/tmp/cci-global/next-priority-batch-19/amsterdam-cart-trial2025.html",
+      "url": "https://www.amsterdamumc.org/nl/vandaag/146-miljoen-voor-onderzoek-naar-car-t-celtherapie-voor-ernstige-auto-immuunziekten",
+      "httpStatus": "200",
+      "requestExitCode": 0,
+      "error": "",
+      "responseFileExists": true,
+      "responseBytes": 54283,
+      "responseSha256": "de2c094b6445522ac852b694dc6f47ee1c20971cc80a5ad9295639e022f7a5c1",
+      "originalBytes": 54283,
+      "originalSha256": "de2c094b6445522ac852b694dc6f47ee1c20971cc80a5ad9295639e022f7a5c1",
+      "validOriginal": true,
+      "retrievedOn": "2026-10-14",
+      "sourceId": "B19S11",
+      "bytes": 54283,
+      "sha256": "de2c094b6445522ac852b694dc6f47ee1c20971cc80a5ad9295639e022f7a5c1",
+      "publishedOrObservation": "2025-07-01",
+      "populationAndScope": "AmsterdamUMC/LUMC6yearautoimmunetrialplanned",
+      "use": "Grant/trialnotapprovedroutine/deliveredtherapy;retainedthirdentry",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForQueue": true,
+      "sourceKind": "valid_original_reuse",
+      "reusedManifest": "/private/tmp/cci-global/next-priority-batch-19/source-manifest.json",
+      "reusedManifestSha256": "8d9031172d47169f0aab3dda95b363b648a2f9f479a8b4d8539c9554ec57f05d",
+      "publicationOrObservation": "1Jul2025;6yearautoimmunestudyfuture;actualexistingoncologyexperience",
+      "scope": "BothcentreslongstandingoncologyCAR-T;LUMCfirstSLEnotAmsterdam;Amsterdamacademicproductionpreparingnotrunning;€14.6mresearchnotroutineinsuredautoimmune",
+      "evidenceRole": "LON TEC context",
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "amsterdam-payment.html",
+      "path": "/private/tmp/cci-global/next-priority-batch-19/amsterdam-payment.html",
+      "url": "https://www.amsterdamumc.nl/nl/patienteninformatie/informatie-over-rechten-en-plichten-kosten-en-betaling-van-uw-behandeling-1",
+      "httpStatus": "200",
+      "requestExitCode": 0,
+      "error": "",
+      "responseFileExists": true,
+      "responseBytes": 69370,
+      "responseSha256": "c26299c56d3cd3e6786a3133bf39029452e81c3f7c29e49c9e097c24db30012a",
+      "originalBytes": 69370,
+      "originalSha256": "c26299c56d3cd3e6786a3133bf39029452e81c3f7c29e49c9e097c24db30012a",
+      "validOriginal": true,
+      "retrievedOn": "2026-10-14",
+      "sourceId": "B19S12",
+      "bytes": 69370,
+      "sha256": "c26299c56d3cd3e6786a3133bf39029452e81c3f7c29e49c9e097c24db30012a",
+      "publishedOrObservation": "2025-12-10version3",
+      "populationAndScope": "AmsterdamUMC usualinsurancecontract/check/notallpatientscoverage",
+      "use": "Actualordinarypaymentqualificationcounterevidence;notblanketfreecare",
+      "exactHistoricalCutoffBytesVerified": false,
+      "usedForQueue": true,
+      "sourceKind": "valid_original_reuse",
+      "reusedManifest": "/private/tmp/cci-global/next-priority-batch-19/source-manifest.json",
+      "reusedManifestSha256": "8d9031172d47169f0aab3dda95b363b648a2f9f479a8b4d8539c9554ec57f05d",
+      "publicationOrObservation": "Currentundatedpatientpolicy;exactcutoffversionunknown",
+      "scope": "Insurancecontract/referral/policyanddeductible;uninsuredselfarrange;notfreeanyprocedure",
+      "evidenceRole": "MED LON",
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "zin-car2025.html",
+      "path": "/private/tmp/cci-global/groningen/zin-car2025.html",
+      "url": "https://www.zorginstituutnederland.nl/documenten/2025/02/24/vergoeding-car-t-behandelingen-bij-kanker",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "bytes": 229251,
+      "sha256": "4e3c1efad31b28e374da5b430a7ba6d19ee843580cabe71d7ff63fb6d09a8cde",
+      "validOriginal": true,
+      "retrievedAt": "2026-10-14T01:59:53.272685+00:00",
+      "sourceKind": "valid_original_reuse",
+      "publicationOrObservation": "24Feb2025explicitlastupdate;notactivelymaintained",
+      "scope": "SpecificYescarta/Breyanzi/Kymriahindications reimbursedvspositiveadvice/nonreimbursed;studyfundingseparate;2026continuityrevocable",
+      "evidenceRole": "LON MED",
+      "exactHistoricalCutoffBytesVerified": false,
+      "reusedManifest": "/private/tmp/cci-global/groningen/source-manifest.json",
+      "reusedManifestSha256": "d2dbcbac385b161c259280fcfcf54a0052560cd2e066efda3c1ed83baddba999",
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 229251,
+      "originalSha256": "4e3c1efad31b28e374da5b430a7ba6d19ee843580cabe71d7ff63fb6d09a8cde",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "ema-yescarta-index.html",
+      "path": "/private/tmp/cci-global/tampere-lon/ema-yescarta-index.html",
+      "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/yescarta",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "bytes": 226537,
+      "sha256": "bdb092e02a86917a3b5bae943b3569f159622a17e16526414b9800a9251cb71b",
+      "validOriginal": true,
+      "retrievedAt": "2026-10-14T01:00:01.876212+00:00",
+      "sourceKind": "valid_original_reuse",
+      "reusedFromPath": "/private/tmp/cci-global/tampere-lon/ema-yescarta-index.html",
+      "observationWindow": "Current approval/product/evidence context",
+      "publicationOrVersion": "index updated2026-06-08",
+      "scope": "EUmaturehumanapprovedproductcontext;notlocalbrandcohortorDutchpayerspecific",
+      "evidenceRole": "LON",
+      "independentCutoffVersionVerified": true,
+      "currentPageUseRequiresRevocableContinuity": false,
+      "publicationOrObservation": "Indexupdate8Jun2026",
+      "exactHistoricalCutoffBytesVerified": false,
+      "reusedManifest": "/private/tmp/cci-global/groningen/source-manifest.json",
+      "reusedManifestSha256": "d2dbcbac385b161c259280fcfcf54a0052560cd2e066efda3c1ed83baddba999",
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 226537,
+      "originalSha256": "bdb092e02a86917a3b5bae943b3569f159622a17e16526414b9800a9251cb71b",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "ema-product2026.pdf",
+      "path": "/private/tmp/cci-global/tampere-lon/ema-product2026.pdf",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/yescarta-epar-product-information_en.pdf",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "bytes": 505945,
+      "sha256": "7364b8713752a41eb6e8333150b68c1c6ab4a679e9b42caeedeacec6f055396e",
+      "validOriginal": true,
+      "retrievedAt": "2026-10-14T01:00:57.718641+00:00",
+      "sourceKind": "valid_original_reuse",
+      "reusedFromPath": "/private/tmp/cci-global/tampere-lon/ema-product2026.pdf",
+      "observationWindow": "Current specific indications/human outcomes/safety/monitoring",
+      "publicationOrVersion": "index version2026-06-08",
+      "scope": "EUqualifiedcentre/CRSrescue/dailyfirst7daysmonitoring+nearcentre≥2weeks;ZUMA-1humanITT111/mITT101notlocalcohort",
+      "evidenceRole": "LON",
+      "independentCutoffVersionVerified": true,
+      "currentPageUseRequiresRevocableContinuity": false,
+      "publicationOrObservation": "Indexversion8Jun2026;historicalbytesunverified",
+      "exactHistoricalCutoffBytesVerified": false,
+      "reusedManifest": "/private/tmp/cci-global/groningen/source-manifest.json",
+      "reusedManifestSha256": "d2dbcbac385b161c259280fcfcf54a0052560cd2e066efda3c1ed83baddba999",
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 505945,
+      "originalSha256": "7364b8713752a41eb6e8333150b68c1c6ab4a679e9b42caeedeacec6f055396e",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "eu-workers.html",
+      "path": "/private/tmp/cci-global/vienna/eu-workers.html",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_en.htm",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "bytes": 149227,
+      "sha256": "9f22db2b81b96872ad45677aeabe28be6640d428e804024b8c2e62cac3b39c16",
+      "validOriginal": true,
+      "retrievedAt": "2026-10-14T01:23:05.874160+00:00",
+      "sourceKind": "valid_original_reuse",
+      "observationWindow": "EU citizen employed/self-employed conditional residence",
+      "publicationOrVersion": "current retrieval; exact update not independently established",
+      "scope": "DutchEUcitizenemployed/selfemployedconditionalresidence/registration;resourcesinsuranceforothergrounds;notjoborapprovalguarantee",
+      "evidenceRole": "OPT",
+      "independentCutoffVersionVerified": false,
+      "currentPageUseRequiresRevocableContinuity": true,
+      "reusedFromPath": "/private/tmp/cci-global/vienna/eu-workers.html",
+      "publicationOrObservation": "CurrentEUofficialresidencerules;undatedexactupdateunverified",
+      "exactHistoricalCutoffBytesVerified": false,
+      "reusedManifest": "/private/tmp/cci-global/groningen/source-manifest.json",
+      "reusedManifestSha256": "d2dbcbac385b161c259280fcfcf54a0052560cd2e066efda3c1ed83baddba999",
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 149227,
+      "originalSha256": "9f22db2b81b96872ad45677aeabe28be6640d428e804024b8c2e62cac3b39c16",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "eu-assets-transfers.html",
+      "path": "/private/tmp/cci-global/vienna/eu-assets-transfers.html",
+      "url": "https://europa.eu/youreurope/citizens/consumers/financial-products-and-services/payments-transfers-cheques/index_en.htm",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "bytes": 155296,
+      "sha256": "701f561f8f7e73cd610a9d44ad4cedac9ed3a3de7390a9f9184995a62b7e8f6d",
+      "validOriginal": true,
+      "retrievedAt": "2026-10-14T01:24:27.746442+00:00",
+      "sourceKind": "valid_original_reuse",
+      "observationWindow": "Current EU euro transfer/payment/strong authentication rules",
+      "publicationOrVersion": "last checked2026-04-28",
+      "scope": "Eurocross-borderpayments/domestic-likefees/strongauthentication;notallwealthwithouttax/review/instant liquidation",
+      "evidenceRole": "OPT",
+      "independentCutoffVersionVerified": true,
+      "currentPageUseRequiresRevocableContinuity": false,
+      "reusedFromPath": "/private/tmp/cci-global/vienna/eu-assets-transfers.html",
+      "publicationOrObservation": "Officiallastchecked28Apr2026",
+      "exactHistoricalCutoffBytesVerified": false,
+      "reusedManifest": "/private/tmp/cci-global/groningen/source-manifest.json",
+      "reusedManifestSha256": "d2dbcbac385b161c259280fcfcf54a0052560cd2e066efda3c1ed83baddba999",
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 155296,
+      "originalSha256": "701f561f8f7e73cd610a9d44ad4cedac9ed3a3de7390a9f9184995a62b7e8f6d",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    },
+    {
+      "file": "eu-network-roaming.html",
+      "path": "/private/tmp/cci-global/vienna/eu-network-roaming.html",
+      "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/mobile-roaming-costs/index_en.htm",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "bytes": 155071,
+      "sha256": "e2e15e5e0521db23b3d99d06fa691c557b5ebdb63b09aa5ccb50f58af9a8f0d4",
+      "validOriginal": true,
+      "retrievedAt": "2026-10-14T01:24:27.856193+00:00",
+      "sourceKind": "valid_original_reuse",
+      "observationWindow": "Occasional travel/fairuse terrestrial network rules",
+      "publicationOrVersion": "last checked2026-01-07",
+      "scope": "OccasionaltravelfairuseterrestrialEUroamingnotpermanentforeignfreecontract/outagebackup",
+      "evidenceRole": "OPT",
+      "independentCutoffVersionVerified": true,
+      "currentPageUseRequiresRevocableContinuity": false,
+      "reusedFromPath": "/private/tmp/cci-global/vienna/eu-network-roaming.html",
+      "publicationOrObservation": "Officiallastchecked7Jan2026",
+      "exactHistoricalCutoffBytesVerified": false,
+      "reusedManifest": "/private/tmp/cci-global/groningen/source-manifest.json",
+      "reusedManifestSha256": "d2dbcbac385b161c259280fcfcf54a0052560cd2e066efda3c1ed83baddba999",
+      "usedForProposedScore": true,
+      "observedResidentDenominator": "not a uniform FUA Dutch median-income resident panel; explicit source scope above",
+      "originalBytes": 155071,
+      "originalSha256": "e2e15e5e0521db23b3d99d06fa691c557b5ebdb63b09aa5ccb50f58af9a8f0d4",
+      "evidenceConsidered": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Root reviewed actual component, explicit finite adopted bridge, counterevidence or unresolved context as specified in root completion report; not direct score conversion or quantity bonus."
+    }
+  ],
+  "webReadSources": [
+    {
+      "url": "https://www.amsterdam.nl/bestuur-organisatie/begroting/jaarverslag-2025/",
+      "status": "primary_index_body_read_raw403",
+      "use": "link provenance only; independentlyobtainedcityPDFused",
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false
+    },
+    {
+      "url": "https://www.schiphol.nl/en/schiphol-group/annual-reports/",
+      "status": "primary_index_body_read_raw403",
+      "use": "link provenance only; independentlyobtainedairportPDFused",
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "file": "schiphol-annual-index.html",
+      "path": "/private/tmp/cci-global/amsterdam/schiphol-annual-index.html",
+      "url": "https://www.schiphol.nl/en/schiphol-group/annual-reports/",
+      "retrievedOn": "2026-10-14",
+      "round": 1,
+      "httpStatus": "403",
+      "exitCode": 0,
+      "error": "",
+      "responseFileExists": true,
+      "validOriginal": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false,
+      "responseRole": "failure_diagnostic_not_original",
+      "responseBytes": 158459,
+      "responseSha256": "d676fb9f285f67836ed723b74f4c7eb0311e0d3f333ea1ba50738a52efd5880a"
+    },
+    {
+      "file": "ing-transfer.html",
+      "path": "/private/tmp/cci-global/amsterdam/ing-transfer.html",
+      "url": "https://www.ing.nl/nl/particulier/betalen/geld-overmaken/wereldbetaling",
+      "retrievedOn": "2026-10-14",
+      "round": 2,
+      "httpStatus": "000",
+      "exitCode": 92,
+      "error": "curl: (92) HTTP/2 stream 1 was not closed cleanly: INTERNAL_ERROR (err 2)\n",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "responseFileExists": false,
+      "validOriginal": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false,
+      "responseRole": "failure_diagnostic_not_original",
+      "responseBytes": 0,
+      "responseSha256": null
+    },
+    {
+      "file": "ing-fees2026.html",
+      "path": "/private/tmp/cci-global/amsterdam/ing-fees2026.html",
+      "url": "https://nieuws.ing.nl/nl-NL/254860-ing-wijzigt-tarieven-voor-particuliere-betaalpakketten-per-januari-2026/",
+      "retrievedOn": "2026-10-14",
+      "round": 2,
+      "httpStatus": "000",
+      "exitCode": 28,
+      "error": "curl: (28) Operation timed out after 45002 milliseconds with 0 bytes received\n",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "responseFileExists": false,
+      "validOriginal": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false,
+      "responseRole": "failure_diagnostic_not_original",
+      "responseBytes": 0,
+      "responseSha256": null
+    },
+    {
+      "file": "ing-newpackages2026.html",
+      "path": "/private/tmp/cci-global/amsterdam/ing-newpackages2026.html",
+      "url": "https://nieuws.ing.nl/nl-NL/266767-ing-introduceert-nieuwe-pakketten-voor-particuliere-klanten-in-nederland/",
+      "retrievedOn": "2026-10-14",
+      "round": 2,
+      "httpStatus": "000",
+      "exitCode": 28,
+      "error": "curl: (28) Operation timed out after 45006 milliseconds with 0 bytes received\n",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "responseFileExists": false,
+      "validOriginal": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false,
+      "responseRole": "failure_diagnostic_not_original",
+      "responseBytes": 0,
+      "responseSha256": null
+    },
+    {
+      "file": "umc-cart-monitor.pdf",
+      "path": "/private/tmp/cci-global/amsterdam/umc-cart-monitor.pdf",
+      "url": "https://www.amsterdamumc.nl/web/zenyapdfservlet?file=ccaf8ffd-d7f5-4f4b-b1d5-8f7f52394c4c&title=Leefregels+na+CAR-T+behandeling",
+      "retrievedOn": "2026-10-14",
+      "round": 2,
+      "httpStatus": "400",
+      "exitCode": 0,
+      "error": "",
+      "responseFileExists": true,
+      "validOriginal": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false,
+      "responseRole": "failure_diagnostic_not_original",
+      "responseBytes": 0,
+      "responseSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "city2025-index.html",
+      "path": "/private/tmp/cci-global/amsterdam/city2025-index.html",
+      "url": "https://www.amsterdam.nl/bestuur-organisatie/begroting/jaarverslag-2025/",
+      "retrievedOn": "2026-10-14",
+      "round": 1,
+      "httpStatus": "403",
+      "exitCode": 0,
+      "error": "",
+      "responseFileExists": true,
+      "validOriginal": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false,
+      "responseRole": "failure_diagnostic_not_original",
+      "responseBytes": 657732,
+      "responseSha256": "8d9a84969b54903879212724f62114e8ed0b50b38b567ad6111a36cd056cb138"
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "candidateId": 1427,
+    "source": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allGeometryCount": 9031,
+    "targetGeometrySha256": "73647da0ced2b85c2d80147a0c9a45f3dbe56e402c92fd1b18b69b29f87e218f",
+    "referencePoints": [
+      {
+        "label": "AMC Meibergdreef9 analystapproximate",
+        "longitude": 4.9574,
+        "latitude": 52.2944,
+        "coordinateKind": "hospitalpoint_notpatientcatchment",
+        "fuaMatches": [1427]
+      },
+      {
+        "label": "VUmc DeBoelelaan1117 analystapproximate",
+        "longitude": 4.8593,
+        "latitude": 52.3351,
+        "coordinateKind": "hospitalpoint_notpatientcatchment",
+        "fuaMatches": [1427]
+      },
+      {
+        "label": "Schiphol terminal analystapproximate",
+        "longitude": 4.7639,
+        "latitude": 52.3086,
+        "coordinateKind": "airportpoint_notindependentairlinegateways",
+        "fuaMatches": [1427]
+      },
+      {
+        "label": "Waternet Amsterdam office analystapproximate",
+        "longitude": 4.9108,
+        "latitude": 52.3375,
+        "coordinateKind": "office_notwaterserviceextent",
+        "fuaMatches": [1427]
+      },
+      {
+        "label": "Amsterdam cityhall analystapproximate",
+        "longitude": 4.9015,
+        "latitude": 52.3676,
+        "coordinateKind": "governmentpoint_notmunicipalityequalsFUA",
+        "fuaMatches": [1427]
+      }
+    ],
+    "scope": "Analyst approximate reference points, not catchment/service extent, actual incident coordinates, independent gateways or resident denominators. Shared lawful access requires separate finite adaptation; 2015 population is not 2026 denominator."
+  },
+  "scopeCompletionReview": {
+    "dimensionCount": 8,
+    "subpillarCount": 31,
+    "allDimensionSemanticsConsideredWithinBoundedReview": true,
+    "allSubpillarsHaveOutcomeMeasurements": false,
+    "allSubpillarsFullyReviewed": false,
+    "eightDimensionScoresComplete": false,
+    "coverageTable": {
+      "dimensions": {
+        "PCS": {
+          "heat_humidity": {
+            "status": "partial",
+            "actualReviewed": "2025heatwaterpeak/implementedgreeningand12climateadaptationprojects;humanheatresidualnotmeasured",
+            "sourceFiles": ["amsterdam-water2025.html", "city2025.pdf"],
+            "exhaustiveReviewed": false
+          },
+          "flood_sea_level": {
+            "status": "partial",
+            "actualReviewed": "Rainproof66residualbottlenecks/161groundwaterneighbourhoods withmethodchange,12projects;airport1/100rainstudynotallcitysea-floodprotection",
+            "sourceFiles": ["city2025.pdf", "schiphol2025.pdf"],
+            "exhaustiveReviewed": false
+          },
+          "geophysical": {
+            "status": "partial",
+            "actualReviewed": "groundwatervulnerability/oldhousingmaintenanceremainderread;seismic/subsidence/foundationfailureassessmentstillnotconducted",
+            "sourceFiles": ["city2025.pdf"],
+            "exhaustiveReviewed": false
+          },
+          "severe_weather_wildfire": {
+            "status": "unresolved",
+            "actualReviewed": "Airportactualclimaterisk/rainstudiesread;cityforeststudyreported;wind/wildfirelocalnetprotectionnotconducted",
+            "sourceFiles": ["city2025.pdf", "schiphol2025.pdf"],
+            "exhaustiveReviewed": false
+          }
+        },
+        "GSS": {
+          "organized_violence": {
+            "status": "partial",
+            "actualReviewed": "drug-financialcorruption/portundermining/125controls/78closuresactual;197tableheaderaddressesvsprosealertsretained;notviolentattackrate",
+            "sourceFiles": ["city2025.pdf"],
+            "exhaustiveReviewed": false
+          },
+          "regional_conflict": {
+            "status": "partial",
+            "actualReviewed": "IsraelPalestineaffectedcommunitiesdialogue/Ukraineopvangactual;notAmsterdamwarfront/netharmestimate",
+            "sourceFiles": ["city2025.pdf"],
+            "exhaustiveReviewed": false
+          },
+          "strategic_exposure": {
+            "status": "partial",
+            "actualReviewed": "Airportgeo/terroractualrisk-and-mitigationreport;2025nomajornewgeodirectdisruptionnotallcitylowrisk",
+            "sourceFiles": ["schiphol2025.pdf", "city2025.pdf"],
+            "exhaustiveReviewed": false
+          }
+        },
+        "ISR": {
+          "governance": {
+            "status": "partial",
+            "actualReviewed": "actual81.5%benefitapplications3weeks/99.8%lawful/73.6%complaintdeadline;ordinaryrightsservicebridge",
+            "sourceFiles": ["city2025.pdf"],
+            "exhaustiveReviewed": false
+          },
+          "adaptive_capacity": {
+            "status": "partial",
+            "actualReviewed": "actualinstitutionalmeasures/cyberprocess/implementedclinicaldischargeandadmissiondata;futureplansnotresults",
+            "sourceFiles": ["city2025.pdf", "umc-care2025.html"],
+            "exhaustiveReviewed": false
+          },
+          "social_cohesion": {
+            "status": "partial",
+            "actualReviewed": "3309demonstrationsmostlypeaceful/dialogueactual;discrimination/insecurefeelings/neighbourhoodinequalityremain",
+            "sourceFiles": ["city2025.pdf"],
+            "exhaustiveReviewed": false
+          },
+          "emergency_recovery": {
+            "status": "partial",
+            "actualReviewed": "10355cityfireevents11GRIPactual/crisisaftercare2025revision;2025readinessnotavailable/incidentcountnotresponseeffectiveness",
+            "sourceFiles": ["city2025.pdf"],
+            "exhaustiveReviewed": false
+          }
+        },
+        "RES": {
+          "water": {
+            "status": "partial",
+            "actualReviewed": "2025actual1.4mservice plus municipal WKI0.01/OLM2m45s userweightedaverage/93.8millionm3narrative andsourceinternalunit-arithmeticconflicts;license75bnfuture;fullanalyte/abnormalityandhouseholdnettariffnotreviewed",
+            "sourceFiles": ["amsterdam-water2025.html", "city2025.pdf"],
+            "exhaustiveReviewed": false
+          },
+          "food": {
+            "status": "partial",
+            "actualReviewed": "actualfoodredistributioninitiatives/2025firstmonitor;PMindicatorsnotactualdietadequacy;supply/medianpricesstillnotreviewed",
+            "sourceFiles": ["city2025.pdf"],
+            "exhaustiveReviewed": false
+          },
+          "energy": {
+            "status": "partial",
+            "actualReviewed": "AEB/WPWactualdelivery/69MSRnew367existing/limitedconnections/savingsandpaymenthelpactual;after-helpmediannetburdeninsufficient",
+            "sourceFiles": ["city2025.pdf"],
+            "exhaustiveReviewed": false
+          },
+          "supply_chain": {
+            "status": "partial",
+            "actualReviewed": "actualglobalairportcargoandconsumer-supplylines;congestion/slotconstraint;notnetordinaryfoodenergyaccess",
+            "sourceFiles": ["schiphol2025.pdf", "city2025.pdf"],
+            "exhaustiveReviewed": false
+          }
+        },
+        "MED": {
+          "access": {
+            "status": "partial",
+            "actualReviewed": "OTwaitinglist30%reduction/long>2yearremainder/Hospitalpre-admission12of18;4/7weeksnormnotactual",
+            "sourceFiles": ["umc-care2025.html", "umc-wait.html"],
+            "exhaustiveReviewed": false
+          },
+          "routine_quality": {
+            "status": "partial",
+            "actualReviewed": "HSMR2024actual106100–113+methodlimitations;actualincident-improvementmodule/JCInotpatientclinicalsuccess",
+            "sourceFiles": ["umc-hsmr.pdf", "umc-hsmr-index.html", "umc-care2025.html"],
+            "exhaustiveReviewed": false
+          },
+          "specialist_capacity": {
+            "status": "partial",
+            "actualReviewed": "actualcomplexoncology/clinicaldepartments;>55kexperienceand8.7notoutcomes;patientspecificappropriatenessnotuniversal",
+            "sourceFiles": [
+              "umc-cart2021.html",
+              "amsterdam-cart-trial2025.html",
+              "umc-care2025.html"
+            ],
+            "exhaustiveReviewed": false
+          },
+          "system_continuity": {
+            "status": "partial",
+            "actualReviewed": "actualallclinicaladmissionsummary/dischargecoordination/insurancecontracts+deductibles;ordinarytimelyqualitytradeoffunresolved",
+            "sourceFiles": [
+              "umc-care2025.html",
+              "amsterdam-payment.html",
+              "umc-contracts2026.html"
+            ],
+            "exhaustiveReviewed": false
+          }
+        },
+        "LON": {
+          "translation": {
+            "status": "partial",
+            "actualReviewed": "historical~45actuallocalCAR-Tinfusions+2025oncologylongstanding;Amsterdamacademicmanufacturepreparing;LUMCfirstSLEnotlocal",
+            "sourceFiles": ["umc-cart2021.html", "amsterdam-cart-trial2025.html"],
+            "exhaustiveReviewed": false
+          },
+          "trial_maturity": {
+            "status": "partial",
+            "actualReviewed": "EMAactualhumanZUMA-1ITT111/mITT101longfollowupmatureoncologyclass;notlocalcohort,autoimmune6yrfuture",
+            "sourceFiles": ["ema-product2026.pdf", "amsterdam-cart-trial2025.html"],
+            "exhaustiveReviewed": false
+          },
+          "regulatory_adoption": {
+            "status": "partial",
+            "actualReviewed": "EMAYescartaapprovedclass/ZIN2025specificreimbursedindicationsvsadvice/study separated;2026continuityconditional",
+            "sourceFiles": ["ema-yescarta-index.html", "zin-car2025.html"],
+            "exhaustiveReviewed": false
+          },
+          "resident_access": {
+            "status": "partial",
+            "actualReviewed": "localinfusion/safetycapacity+ordinarycontract/deuctible+ZINrecognizedhospitalCAR-Tbridge;exactlocalbrandcohortandpayersharednotfullymatched",
+            "sourceFiles": [
+              "umc-cart2021.html",
+              "amsterdam-payment.html",
+              "umc-contracts2026.html",
+              "zin-car2025.html",
+              "ema-product2026.pdf"
+            ],
+            "exhaustiveReviewed": false
+          }
+        },
+        "TEC": {
+          "knowledge_output": {
+            "status": "partial",
+            "actualReviewed": "actuallocalresearch-to-clinical/digitalimplementation;noGPCI/WIPOcountconversion",
+            "sourceFiles": ["umc-cart2021.html", "umc-digital2025.html"],
+            "exhaustiveReviewed": false
+          },
+          "industry_density": {
+            "status": "partial",
+            "actualReviewed": "formed/developedspinouts/PPP;CEtowardapprovalanddrugsdevelopingnotcurrentcommercialsuccess;citywideindustrialdensitynotfullymeasured",
+            "sourceFiles": ["umc-valor2025.html"],
+            "exhaustiveReviewed": false
+          },
+          "digital_infrastructure": {
+            "status": "partial",
+            "actualReviewed": "actual167publicRoam/2750laptops/120completedclinicalprojects;455kpatientsnotFUAresidents",
+            "sourceFiles": ["city2025.pdf", "umc-digital2025.html"],
+            "exhaustiveReviewed": false
+          },
+          "diffusion": {
+            "status": "partial",
+            "actualReviewed": "actualpublicWiFi12%everuse/clinicalhomeservices/portalusersandadmissiontools;median-residentgeneralapplicabilityfinite",
+            "sourceFiles": ["city2025.pdf", "umc-digital2025.html", "umc-care2025.html"],
+            "exhaustiveReviewed": false
+          }
+        },
+        "OPT": {
+          "transport_redundancy": {
+            "status": "partial",
+            "actualReviewed": "2025Schipholactual300incl13cargo-only/68.8m/internationalpassengerdestinations;singleairportmultipleairlinesnotindependentnodes;completeground/crossborderroutestillnotreviewed",
+            "sourceFiles": ["schiphol2025.pdf"],
+            "exhaustiveReviewed": false
+          },
+          "legal_mobility": {
+            "status": "partial",
+            "actualReviewed": "DutchEUcitizenwork/selfemployment/residenceruleconditional;notjob/housing/approvalguarantee",
+            "sourceFiles": ["eu-workers.html"],
+            "exhaustiveReviewed": false
+          },
+          "asset_portability": {
+            "status": "partial",
+            "actualReviewed": "actualDutchINGGo€4account/card/standardpayments/euroareausageplusEUfee/authrules;fullworldtransfertermsrawfailednotknown;ordinarybalance/KYC/authfinite",
+            "sourceFiles": ["ing-packages2026.pdf", "eu-assets-transfers.html"],
+            "exhaustiveReviewed": false
+          },
+          "network_continuity": {
+            "status": "partial",
+            "actualReviewed": "DutchconsumerKPNprepaidEU/nonEU/sms/topupabroadactual+EUfairuse;ordinaryactiveSIM/device/auth/creditsrequired;notpermanentfreeforeignresidence",
+            "sourceFiles": ["kpn-prepaid.html", "kpn-topup.html", "eu-network-roaming.html"],
+            "exhaustiveReviewed": false
+          }
+        }
+      },
+      "dimensionsWithActualReview": 8,
+      "semanticKeys": 31,
+      "all31FullyEvidenceClosed": false,
+      "unstartedRemainders": [
+        "citywideearthquake/subsidence/foundationnetprotection",
+        "localwindwildfireeffectiveprotection",
+        "foodnormalcapacityandmedianpricenettoacquire",
+        "fullwaterqualityabnormality/tariffhouseholdconnection",
+        "independentground/borderrouteandlongtermaccountretention"
+      ],
+      "method": "Each field records actual pages/body read and remaining unstarted parts;templatepresence not full semantic closure"
+    },
+    "dimensionCoveragePreserved": true
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-amsterdam-score-completion-review.md",
+    "sha256": "4c808a3e401ead420850365c5171c06e2c4b3b917059e276559a4d98d058a618",
+    "reviewedOn": "2026-10-14",
+    "sourceManifestSha256": "fe3dcec6c23f557a63a618d7ad3489183e33b8b8d90ad9212306cfc71d91ce32",
+    "handoffSha256": "a6fc0cd4e41a178cf0bf2310f0438672790bac88d03763a0a9d818f8ed727d35",
+    "rootVerifiedFull9031AndOriginals": true,
+    "validOriginalCount": 25,
+    "webSourcesSeparatelyRecorded": true,
+    "stageArtifacts": [
+      {
+        "path": "/private/tmp/cci-global/amsterdam/candidate-handoff.json",
+        "bytes": 66293,
+        "sha256": "a6fc0cd4e41a178cf0bf2310f0438672790bac88d03763a0a9d818f8ed727d35"
+      },
+      {
+        "path": "/private/tmp/cci-global/amsterdam/source-manifest.json",
+        "bytes": 44888,
+        "sha256": "12f3eab45cbfa457d8233413e714571ca0341bde572db415cb6f4db317d40903"
+      },
+      {
+        "path": "/private/tmp/cci-global/amsterdam/handoff-manifest.json",
+        "bytes": 1782,
+        "sha256": "debf9374f1e026c2072929f134a5776d0270b5e1a4222153a5888eb3d81eae20"
+      },
+      {
+        "path": "/private/tmp/cci-global/amsterdam/boundary-record.json",
+        "bytes": 1872,
+        "sha256": "4a62c6fbc8f42794351c88cd41dfc4783c061ecf6efaf51e1a0b65a85016aa66"
+      }
+    ]
+  },
+  "clinicalScopeReview": {
+    "hsmr2024": 106,
+    "hsmr95ConfidenceInterval": [100, 113],
+    "hsmrIsMortalityPercent": false,
+    "emaITT": 111,
+    "emaModifiedITT": 101,
+    "outsideCitySleFirstCaseTransferred": false,
+    "futureAutoimmuneResearchCountedAsRoutineDelivery": false
+  },
+  "resourceScopeReview": {
+    "waterQualityIndex": 0.01,
+    "olmUserWeightedMinutes": 2.75,
+    "olmIsEachHouseholdMaximum": false,
+    "waterVolumeUnitAndArithmeticConflictRetained": true,
+    "volumeChangePercentAdopted": false,
+    "demoLoremTemplateAdopted": false
+  }
+}
