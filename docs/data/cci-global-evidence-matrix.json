@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 45,
+    "conditionalCaseCount": 48,
     "completeConditionalCaseCount": 16,
-    "partialCaseCount": 29,
-    "unassessedCount": 8986,
+    "partialCaseCount": 32,
+    "unassessedCount": 8983,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -530,8 +530,23 @@
       "sha256": "bd75fe9e89215eca41ac82bc6902e5a1a1c76fb06a943f4faf4ef45bcff2dabc",
       "provenance": "cci-geneva-priority-review.md",
       "provenanceSha256": "b1bcbdcabcaa1003a589a64ae13c503e75778af54fac1b6d782cef3b3c89fadb"
+    },
+    "cci-local-2026-seattle-case.json": {
+      "sha256": "557dbaefd9b08f2cb6f76e4dd2e690ee01eab6efe961efd2be2e5fcee8619c8f",
+      "provenance": "cci-seattle-priority-review.md",
+      "provenanceSha256": "78b607a02c7cd67d8f4ce40db6f40965cca0364b523b27d8be35627dac4634dc"
+    },
+    "cci-local-2026-salt-lake-city-case.json": {
+      "sha256": "64790c9cb58e46892318f2839378c15571859e67e745162fc7ee2c77441c7ef5",
+      "provenance": "cci-salt-lake-city-priority-review.md",
+      "provenanceSha256": "35d797f6d2a283e9459afbece722648860392beea909a2d4fa91118266d5af01"
+    },
+    "cci-local-2026-sydney-case.json": {
+      "sha256": "11218cc9ea3d8c93447cee20464b302ba98c90ab556c3cfb036e2ba6a59f13a6",
+      "provenance": "cci-sydney-priority-review.md",
+      "provenanceSha256": "c611f6cae64367868e0a11f9334be496f19d6208e708af3346bc6d8c1b47cc17"
     }
   },
-  "scriptSha256": "e2c77cd996b74ce24b840ae733c50dbf562af6b51e273e6fee4cd91f95bdb719",
-  "csvSha256": "e042d3bc7014a11403ca79047e6ffcc3e998731befe73e79f1f74c98e2cc7a22"
+  "scriptSha256": "37e5eea9caa4a0a20ea01e7912effee3cb954fbe14c3849b9ebd7564dc522969",
+  "csvSha256": "69897fddb1ddd6ff0f71bbd1ab34fe3e50ac2c0f1ccbefd190aa89f79992b1ac"
 }

@@ -1,0 +1,487 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "candidateId": 4881,
+  "name": "Salt Lake City functional area",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "unresolved",
+  "evidenceReview": "cci-salt-lake-city-priority-review.md",
+  "expectedConditionalTotal": null,
+  "limitations": "Eight dimensions and31subpillar keys reviewed,notallmeasured. Fourconditionaltierjudgments/fourunresolved,no totalcenter,no redistributedweights,noCCIranking/exclusion. Corecity/utility/clinic/clustergeographiesdifferentoldFUA. KSLCdirectorypointoutsidealloldFUAdoesnotmeanunusableairport. Historicprivatefloodlossnotassumedongoing,cutoff/representativeness/usualresidentcontinuityassumptionsrevocable;rawfailuresnotabilitypenalties.",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 40,
+      "rationale": "Actual RosePark flooding and localheat/smoke/seismic exposure coexistwith operatingresponse, but closure and tenyear queue for vulnerablebrickhousing retrofit indicate materialprotectionconstraints. Notalloldprivate floodloss isstillunrecovered. The closed aid programme is limited to eligible low-income owners of pre-1975 brick homes, not all residents.",
+      "assumption": "Corecity/basin hazards anddocumentedprotectionconstraint materiallyapplytoordinaryresident/FUA andpersisttocutoff. UndatedOct13retrofitpagecontinuitytoOct10 andhousingrepresentativeness accepted;self-fundedmitigationnotassumedabsent. Rejectassumptions=>unresolved. Significance for the median-income ordinary resident is a separate revocable inference; the low-income aid queue alone does not establish area-wide inadequate protection.",
+      "conditionalAlternatives": [60],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "Ganglinkedinterdictionandfirearmsoperationsareobserved, but organizedharm/currentregionalspillover/strategicexposureandmatchedmitigationnotclosed.Ordinarycrimechart/OICIeventarenotwholeorganizedviolencerates.",
+      "assumption": "No whole tierassumed;noUCDPmatching/nationalbackgrounddoesnotestablishlowimpact. Notrequiringwar orsuccessfulattack beforejudgment.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "context"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Operatingoutreach/crisisreferrals/shelter/clean-up andREPCexecutedtraining/recommendationssupportfunctioninginstitutions; pausedpriorities/capacityshortfallandpoliceinjurywithpendingindependentinvestigationpreserved.",
+      "assumption": "Documentedcorecity/services represent usualresidentFUAfunctioningandcontinuetocutoff; group/residuallimitationsstillimportant butnotwholefailure. Statuscompletionnotallresidentoutcome;rejectscope/continuity/usualexecution=>unresolved.",
+      "conditionalAlternatives": [40],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "Regulatedactualmulti-sourcewater, reportedactualelectricityconsumption, implementedfoodmicrogrants/sharingandurbanfoodproduction supportordinarysupply;price/accessinequalityandsharedsourcesremainimportant.",
+      "assumption": "Ordinarymarket/energyaccessandmedianincomeusualaffordability,coreutility/sharedFUAserviceandtimecontinuity accepted. No fullhouseholdbill/caloricmeasure/stressrequirement;rejectnecessaryusualsupply/payment/scope=>unresolved;actualpersistentimportantnetburdenmay40.",
+      "conditionalAlternatives": [40],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": null,
+      "rationale": "Actualdiagnosticworkup andservice/insurance/financialaid pathsobserved, but no sufficientlylinkedordinarynecessarycareappropriatecompletion/quality/usualobtainability.Payments/systemcarevolume notoutcomes.",
+      "assumption": "No tierassumed.Needonelocalordinarynecessarytreatmentquality/completion/typicalpaymentorimportantwaitlink, notperfectallbills/allquality/currentallpressure. Oct13realtimewait excluded.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "unresolved",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "Qualitativememoryclinicstudyconfirms selectedUtahdiagnostics, notall10infused; twoalreadytreatednormalMoCAcases unallocatedsite.Nationalapproval/paymentbackgroundandzerosuppressedclaimsarenotlocalusualdelivery/monitoring.",
+      "assumption": "No tierassumed.Zero2024J0174exactregisteredaddresssignalnotnoadoption.Crediblehumanresults/localactualimplementation/usualqualifiedpayment/necessarymonitoringconnectionnotclosed.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "context",
+        "regulatory_adoption": "context",
+        "resident_access": "unresolved"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": null,
+      "rationale": "ThreeWIPOclusteroutputchannels andinstitutionresearch/localEVanddigitaluseprovideparts butnotascoredconnectionfromactualcommercializationtomaterialordinarydiffusionandbottlenecks.",
+      "assumption": "No tierassumed.Not80unknowntherefore60;notTLO403therefore40. Needactualproduct/commercialization/adoption/scopeconnection,notadditionalpapersorallresidentsadoptingAI/EV.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Actualsharedairport/multiplecarriers/TRAX2.50USD/roadaccess/WiFiandfixedmobiletests plusUSnationalconditionalmigration/transfer paths supportusablechannels. Delta70percent/sharednodeandapproval/feesconstrainredundancy.",
+      "assumption": "Usualresidentcan obtainappropriatepassport/account/legitimatefunds/purposeandqualifiedreceivingstatus,affordtransportandaccesscommunications;currentchannelscontinueandservethisFUA despiteairportpointoutside. Rejectnormaleligibility/payment/use/scope=>unresolved;noapprovedwork/residencetransferguarantee.",
+      "conditionalAlternatives": [40],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "context",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "retrievedOn": "2026-10-13",
+  "knownWeightedSubtotal": 27,
+  "unresolvedScoreRange": [27, 77],
+  "sourceSnapshots": [
+    {
+      "file": "utah-finance2024.pdf",
+      "url": "https://financialservices.utah.edu/wp-content/uploads/sites/37/2025/01/2024-Financial-Report.pdf",
+      "retrievedAt": "2026-10-13T11:54:04.294973+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://financialservices.utah.edu/wp-content/uploads/sites/37/2025/01/2024-Financial-Report.pdf",
+      "bytes": 3471699,
+      "sha256": "1ec02009ba5dab63dded5e73b77986e8f111c8010277d53fe5598d931977e909",
+      "signature": "PDF",
+      "path": "/private/tmp/cci-global/salt-lake-city/utah-finance2024.pdf",
+      "validOriginal": true
+    },
+    {
+      "file": "flood2025.html",
+      "url": "https://www.slc.gov/blog/2025/10/20/salt-lake-city-declares-state-of-emergency-to-help-westside-residents-after-flooding/",
+      "retrievedAt": "2026-10-13T11:54:31.003132+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://www.slc.gov/blog/2025/10/20/salt-lake-city-declares-state-of-emergency-to-help-westside-residents-after-flooding/",
+      "bytes": 47369,
+      "sha256": "65a7c311b21fc6ce644dc5b73748b6b813d2c1e4b7ed5a1b3fe7f14a9b1280c4",
+      "signature": "HTML_or_other",
+      "path": "/private/tmp/cci-global/salt-lake-city/flood2025.html",
+      "validOriginal": true
+    },
+    {
+      "file": "rosepark-current.html",
+      "url": "https://www.slc.gov/em/rose-park-neighborhood-flooding/",
+      "retrievedAt": "2026-10-13T12:00:53.120307+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://www.slc.gov/em/rose-park-neighborhood-flooding/",
+      "bytes": 95419,
+      "sha256": "b6508f4e61473fa4cbd66d06cbd7f2b30f075569bf0c987f7fee83883eb93ade",
+      "signature": "HTML_or_other",
+      "path": "/private/tmp/cci-global/salt-lake-city/rosepark-current.html",
+      "validOriginal": true
+    },
+    {
+      "file": "airport-services-main.html",
+      "url": "https://slcairport.com/airport-services/",
+      "retrievedAt": "2026-10-13T12:00:53.124778+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://slcairport.com/airport-services/",
+      "bytes": 49711,
+      "sha256": "daa200830d33dc939dca5430a30ca6b267bf97a8cc54c5316142baeb238084be",
+      "signature": "HTML_or_other",
+      "path": "/private/tmp/cci-global/salt-lake-city/airport-services-main.html",
+      "validOriginal": true
+    },
+    {
+      "file": "water2026.pdf",
+      "url": "https://www.slc.gov/utilities/wp-content/uploads/sites/22/2026/06/2026-04_Water-Quality-Report-2026-digital-FNL.pdf",
+      "retrievedAt": "2026-10-13T11:49:22.778407+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://www.slc.gov/utilities/wp-content/uploads/sites/22/2026/06/2026-04_Water-Quality-Report-2026-digital-FNL.pdf",
+      "bytes": 3854080,
+      "sha256": "3c11115ec43b09aa4bb1f1293ce08da9dc9135d10cf9f899c68c6762b63f5e39",
+      "signature": "PDF",
+      "path": "/private/tmp/cci-global/salt-lake-city/water2026.pdf",
+      "validOriginal": true
+    },
+    {
+      "file": "climate2026.pdf",
+      "url": "https://www.slc.gov/sustainability/wp-content/uploads/sites/20/2026/05/Final-Climate-Forward-SLC-Existing-Conditions-Report.pdf",
+      "retrievedAt": "2026-10-13T11:49:22.778784+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://www.slc.gov/sustainability/wp-content/uploads/sites/20/2026/05/Final-Climate-Forward-SLC-Existing-Conditions-Report.pdf",
+      "bytes": 7557865,
+      "sha256": "d506124abc6275cc6f0f22b7a2f72e709e9a421ce2fe0bfe7c0ba77cadc17e87",
+      "signature": "PDF",
+      "path": "/private/tmp/cci-global/salt-lake-city/climate2026.pdf",
+      "validOriginal": true
+    },
+    {
+      "file": "repc2024.pdf",
+      "url": "https://www.slc.gov/boards/wp-content/uploads/sites/33/2025/08/REP-C-Annual-Report-2024.pdf",
+      "retrievedAt": "2026-10-13T11:49:22.780534+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://www.slc.gov/boards/wp-content/uploads/sites/33/2025/08/REP-C-Annual-Report-2024.pdf",
+      "bytes": 351998,
+      "sha256": "991cb4e5f9700184f4f008001815c15dc14dcc25fb08462d8caf98a97245ab34",
+      "signature": "PDF",
+      "path": "/private/tmp/cci-global/salt-lake-city/repc2024.pdf",
+      "validOriginal": true
+    },
+    {
+      "file": "safety2026.pdf",
+      "url": "http://www.slc.gov/wp-content/uploads/2026/08/08-03-2026-Public-Safety-Plan-Report.pdf",
+      "retrievedAt": "2026-10-13T11:49:22.783682+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttp://www.slc.gov/wp-content/uploads/2026/08/08-03-2026-Public-Safety-Plan-Report.pdf",
+      "bytes": 447385,
+      "sha256": "13687c56ec44a7302266fa10cd0a9b48a56108564b9436ca3cff18067571ba97",
+      "signature": "PDF",
+      "path": "/private/tmp/cci-global/salt-lake-city/safety2026.pdf",
+      "validOriginal": true
+    },
+    {
+      "file": "safety-progress2025.pdf",
+      "url": "http://www.slc.gov/wp-content/uploads/2025/07/PSP-Six-Month-Update.pdf",
+      "retrievedAt": "2026-10-13T11:49:24.418167+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttp://www.slc.gov/wp-content/uploads/2025/07/PSP-Six-Month-Update.pdf",
+      "bytes": 8425526,
+      "sha256": "5af33cbfd24cfe67034070abaa3d333810aed687b685a48d1a0c41f9e46498fb",
+      "signature": "PDF",
+      "path": "/private/tmp/cci-global/salt-lake-city/safety-progress2025.pdf",
+      "validOriginal": true
+    },
+    {
+      "file": "hospital-financial-assistance.html",
+      "url": "https://healthcare.utah.edu/bill/financial-assistance",
+      "retrievedAt": "2026-10-13T11:49:25.158762+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://healthcare.utah.edu/bill/financial-assistance",
+      "bytes": 82162,
+      "sha256": "38e8f7fc86dd43bd8c2a78a8aea2286f115bfad4a9a6fd0e18380693508901b0",
+      "signature": "HTML_or_other",
+      "path": "/private/tmp/cci-global/salt-lake-city/hospital-financial-assistance.html",
+      "validOriginal": true
+    },
+    {
+      "file": "water-rates2026.html",
+      "url": "https://www.slc.gov/utilities/fy26-budget-information/",
+      "retrievedAt": "2026-10-13T11:49:25.547327+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://www.slc.gov/utilities/fy26-budget-information/",
+      "bytes": 75214,
+      "sha256": "cbfb8ed2f3a86ba4203d552bb10b6790943f944cd07d3c7f976be8cda6075975",
+      "signature": "HTML_or_other",
+      "path": "/private/tmp/cci-global/salt-lake-city/water-rates2026.html",
+      "validOriginal": true
+    },
+    {
+      "file": "airport-public-transport.html",
+      "url": "https://slcairport.com/parking-and-transportation/public-transportation/",
+      "retrievedAt": "2026-10-13T11:58:13.845425+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://slcairport.com/parking-and-transportation/public-transportation/",
+      "bytes": 24459,
+      "sha256": "2fee4db3060dafb3fd5f4191cbc533e17482b96ef8eed5dbd16ada69ea5c2fab",
+      "signature": "HTML_or_other",
+      "path": "/private/tmp/cci-global/salt-lake-city/airport-public-transport.html",
+      "validOriginal": true
+    },
+    {
+      "file": "utah-hospital.html",
+      "url": "https://healthcare.utah.edu/locations/hospital",
+      "retrievedAt": "2026-10-13T11:46:43.718966+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://healthcare.utah.edu/locations/hospital",
+      "bytes": 90646,
+      "sha256": "baeac0729f852e9b0654622ad8f1fa001c5c552f13b0b0fe36bc1e7cf57caaac",
+      "signature": "HTML_or_other",
+      "path": "/private/tmp/cci-global/salt-lake-city/utah-hospital.html",
+      "validOriginal": true
+    },
+    {
+      "file": "fix-home.html",
+      "url": "https://www.slc.gov/housingstability/fix-your-home/",
+      "retrievedAt": "2026-10-13T11:48:11.356377+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://www.slc.gov/housingstability/fix-your-home/",
+      "bytes": 65983,
+      "sha256": "02050b214ed483a352f3b43516097ae2fb8bad5132d9ccc74630c36cf95f86a6",
+      "signature": "HTML_or_other",
+      "path": "/private/tmp/cci-global/salt-lake-city/fix-home.html",
+      "validOriginal": true
+    },
+    {
+      "file": "fix-bricks.html",
+      "url": "https://www.slc.gov/housingstability/fix-the-bricks-application/",
+      "retrievedAt": "2026-10-13T11:48:11.356791+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://www.slc.gov/housingstability/fix-the-bricks-application/",
+      "bytes": 63382,
+      "sha256": "f257c5fcdc63eb593a98a705dcac045f6809479f6d01d001840abce823ec1593",
+      "signature": "HTML_or_other",
+      "path": "/private/tmp/cci-global/salt-lake-city/fix-bricks.html",
+      "validOriginal": true
+    },
+    {
+      "file": "airport-fastfacts.html",
+      "url": "https://slcairport.com/about-the-airport/airport-overview/fast-facts/",
+      "retrievedAt": "2026-10-13T11:48:11.356916+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://slcairport.com/about-the-airport/airport-overview/fast-facts/",
+      "bytes": 27957,
+      "sha256": "dfe2c179303067029d33b3db87954d619fa4318ee4cdb7e983239caa3a85c62f",
+      "signature": "HTML_or_other",
+      "path": "/private/tmp/cci-global/salt-lake-city/airport-fastfacts.html",
+      "validOriginal": true
+    },
+    {
+      "file": "hospital-billing.html",
+      "url": "https://healthcare.utah.edu/bill/",
+      "retrievedAt": "2026-10-13T11:48:12.912732+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://healthcare.utah.edu/bill",
+      "bytes": 96369,
+      "sha256": "040734fb4f03785c646effb82eee9a5f150e954a1c5bfb5cca25309d65005cfa",
+      "signature": "HTML_or_other",
+      "path": "/private/tmp/cci-global/salt-lake-city/hospital-billing.html",
+      "validOriginal": true
+    },
+    {
+      "file": "hospital-insurance.html",
+      "url": "https://healthcare.utah.edu/bill/insurance-information",
+      "retrievedAt": "2026-10-13T11:48:12.914830+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://healthcare.utah.edu/bill/insurance-information",
+      "bytes": 81945,
+      "sha256": "ffc0cd64d7b95cdf54e58567fa173db1794dc2a55352cc79f11d6d98ee5fc9e0",
+      "signature": "HTML_or_other",
+      "path": "/private/tmp/cci-global/salt-lake-city/hospital-insurance.html",
+      "validOriginal": true
+    },
+    {
+      "file": "police-oici2026.html",
+      "url": "https://police.slc.gov/2026/09/18/slcpd-releases-body-worn-camera-footage-from-august-31-2026-oici/",
+      "retrievedAt": "2026-10-13T11:48:13.526486+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://police.slc.gov/2026/09/18/slcpd-releases-body-worn-camera-footage-from-august-31-2026-oici/",
+      "bytes": 264236,
+      "sha256": "daa3ddbde2cb1448c9b45683d84aef0e3027015dec1dac61aa635e66554a1a1e",
+      "signature": "HTML_or_other",
+      "path": "/private/tmp/cci-global/salt-lake-city/police-oici2026.html",
+      "validOriginal": true
+    },
+    {
+      "file": "hospital-fa-policy.pdf",
+      "url": "https://healthcare.utah.edu/sites/g/files/zrelqx136/files/media/documents/2023/financial-assistance-policyv2-english.pdf",
+      "retrievedAt": "2026-10-13T11:57:09.516128+00:00",
+      "retrievedOn": "2026-10-13",
+      "response": "200\nhttps://healthcare.utah.edu/sites/g/files/zrelqx136/files/media/documents/2023/financial-assistance-policyv2-english.pdf",
+      "bytes": 258193,
+      "sha256": "a48280ef19870094afaee3e24760ec8ef68bd5b047e9905cf8c7bdf32b37d465",
+      "signature": "PDF",
+      "path": "/private/tmp/cci-global/salt-lake-city/hospital-fa-policy.pdf",
+      "validOriginal": true
+    },
+    {
+      "file": "wipo-clusters2025.pdf",
+      "url": "https://www.wipo.int/documents/d/global-innovation-index/docs-en-2025-gii-2025-clusters-top100-ranking.pdf",
+      "bytes": 6439758,
+      "sha256": "dc2841db8ed735c518069cb6df0b8897f7d0c174e5ac9989e0720cf0190075d3",
+      "retrievedOn": "2026-10-13 recheck;priororiginalread date retainedinparentreview",
+      "path": "/private/tmp/cci-global/salt-lake-city/wipo-clusters2025.pdf",
+      "validOriginal": true
+    },
+    {
+      "file": "clinical-patient-decision.html",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12407175/",
+      "bytes": 206643,
+      "sha256": "9177a53c9b14af27cc041c7ad4c0ded67b13c9e2dede41bf84d2b2e3938691ab",
+      "retrievedOn": "2026-10-13 recheck;priororiginalread date retainedinparentreview",
+      "path": "/private/tmp/cci-global/salt-lake-city/clinical-patient-decision.html",
+      "validOriginal": true
+    },
+    {
+      "file": "chase-fees2026.pdf",
+      "url": "https://www.chase.com/content/dam/chase-ux/documents/personal/checking/ABSF-en.pdf",
+      "bytes": 488107,
+      "sha256": "69836d755532c957e9dab7bd49f8bea6f68b5eb01671bc5b58d803226b2626d1",
+      "retrievedOn": "2026-10-13 recheck;priororiginalread date retainedinparentreview",
+      "path": "/private/tmp/cci-global/salt-lake-city/chase-fees2026.pdf",
+      "validOriginal": true
+    },
+    {
+      "file": "aufenthv-full.html",
+      "url": "https://www.gesetze-im-internet.de/aufenthv/BJNR294510004.html",
+      "bytes": 438245,
+      "sha256": "88be848b6960d1a6f4ee61f3f0cde930f9cb5a1c3fe188bf6f937f6872e62938",
+      "retrievedOn": "2026-10-13 recheck;priororiginalread date retainedinparentreview",
+      "path": "/private/tmp/cci-global/salt-lake-city/aufenthv-full.html",
+      "validOriginal": true
+    },
+    {
+      "file": "aufenthg-full.html",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/BJNR195010004.html",
+      "bytes": 979856,
+      "sha256": "035c430b7411f9bd8bb547aa4d6e0c1ade1e52c89089ba55b553977cf5f831a6",
+      "retrievedOn": "2026-10-13 recheck;priororiginalread date retainedinparentreview",
+      "path": "/private/tmp/cci-global/salt-lake-city/aufenthg-full.html",
+      "validOriginal": true
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "fullRecordCount": 9031,
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "points": [
+      {
+        "label": "SaltLakeCitydowntown",
+        "longitude": -111.891,
+        "latitude": 40.7608,
+        "kind": "analystapprox",
+        "coveredIds": [4881],
+        "independentlyRecomputedCoveredIds": [4881]
+      },
+      {
+        "label": "UniversityUtahHospitalreference",
+        "longitude": -111.8367,
+        "latitude": 40.7715,
+        "kind": "analystapprox_notstudyclinicverified",
+        "coveredIds": [4881],
+        "independentlyRecomputedCoveredIds": [4881]
+      },
+      {
+        "label": "RosePark2000W800Nreference",
+        "longitude": -111.947,
+        "latitude": 40.7879,
+        "kind": "analystapprox_noteventpolygon",
+        "coveredIds": [4881],
+        "independentlyRecomputedCoveredIds": [4881]
+      },
+      {
+        "label": "KSLCdirectory3887",
+        "longitude": -111.979866,
+        "latitude": 40.78886,
+        "kind": "OurAirportsdirectorypoint",
+        "coveredIds": [],
+        "independentlyRecomputedCoveredIds": []
+      }
+    ],
+    "limitation": "Onlyapproximatepoints/directorypoint; notfootprints/servicearea/patientresidence oractualhospitalclinicalevent"
+  },
+  "boundaryRecord": {
+    "sourcePath": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "fullRecordCount": 9031,
+    "srs": "ESRI:54009",
+    "record": {
+      "fid": 8541,
+      "eFUA_ID": 4881.0,
+      "UC_num": 1.0,
+      "UC_IDs": "193",
+      "eFUA_name": "Salt Lake City",
+      "Commuting": 1.0,
+      "Cntry_ISO": "USA",
+      "Cntry_name": "UnitedStates",
+      "FUA_area": 1738.0,
+      "UC_area": 529.0,
+      "FUA_p_2015": 1166374.455704764,
+      "UC_p_2015": 972714.6252958775,
+      "Com_p_2015": 193659.83040888654
+    },
+    "bounds": [-9501000.0, 4840000.0, -9405000.0, 4880000.0],
+    "geometryWkbSha256": "fdf62cc82c3698eac49686eb805229e05f0fec30d53bbd5b13249d4ab9fe8102",
+    "meaning": "Identity only; WIPO cluster and clinic/participant servicefootprintsnotresolved; no score inheritance",
+    "recheckedOn": "2026-10-13"
+  },
+  "sensitivity": {
+    "RESWithdrawn": [21, 81],
+    "PCS60": [30, 80],
+    "allJudgmentsWithdrawn": [0, 100]
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-salt-lake-city-priority-review.md",
+    "reviewedOn": "2026-10-14",
+    "sha256": "35d797f6d2a283e9459afbece722648860392beea909a2d4fa91118266d5af01",
+    "handoffSha256": "7400b32e9b0d95956ac229a53f1c77b79d782956cf1112dfb9f7ed1581c6c77a",
+    "sourceManifestSha256": "aa7c55715d27c705f1caee9e1d6c521c58db24fb4422f6e8aee64bfb6b172419",
+    "acceptanceSha256": "2bbff64f4047f3ce12041a7be0669173f2af0081a294c06d81bc5d02e0355e20",
+    "scope": "bounded8/31 review, full9031 identity and scoped reference points; not all measured or ranking eligibility"
+  }
+}

@@ -321,7 +321,7 @@ def main():
                                   'provenance': Path(knowledge['review']['path']).name,
                                   'provenanceSha256': knowledge['review']['sha256']}
     cases = []
-    for city in ('singapore', 'london', 'helsinki', 'zurich', 'gaza', 'tokyo', 'washington', 'new-york', 'paris', 'san-jose', 'los-angeles', 'osaka-kyoto', 'boston', 'seoul', 'lisbon', 'chicago', 'prague', 'beijing', 'shanghai', 'jakarta', 'nanjing', 'guangzhou', 'wuhan', 'xian', 'surabaya', 'hangzhou', 'copenhagen', 'saifai', 'grimsby', 'tampere', 'cima', 'oulu', 'leicester', 'dublin', 'turku', 'edinburgh', 'jyvaskyla', 'coventry', 'loughborough', 'fazeley', 'malmo', 'santa-cruz-de-tenerife', 'sheffield', 'aalborg', 'geneva'):
+    for city in ('singapore', 'london', 'helsinki', 'zurich', 'gaza', 'tokyo', 'washington', 'new-york', 'paris', 'san-jose', 'los-angeles', 'osaka-kyoto', 'boston', 'seoul', 'lisbon', 'chicago', 'prague', 'beijing', 'shanghai', 'jakarta', 'nanjing', 'guangzhou', 'wuhan', 'xian', 'surabaya', 'hangzhou', 'copenhagen', 'saifai', 'grimsby', 'tampere', 'cima', 'oulu', 'leicester', 'dublin', 'turku', 'edinburgh', 'jyvaskyla', 'coventry', 'loughborough', 'fazeley', 'malmo', 'santa-cruz-de-tenerife', 'sheffield', 'aalborg', 'geneva', 'seattle', 'salt-lake-city', 'sydney'):
         path = folder / f'cci-local-2026-{city}-case.json'
         case = json.loads(path.read_text())
         review = ROOT / 'docs' / case['evidenceReview']

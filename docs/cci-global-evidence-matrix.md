@@ -1,5 +1,7 @@
 # CCI 全球八维证据覆盖：统一视图
 
+**2026-10-14 第十四批验收：** 新增[西雅图4510](cci-seattle-priority-review.md)、[盐湖城4881](cci-salt-lake-city-priority-review.md)、[悉尼1830](cci-sydney-priority-review.md)有界八维／31项审阅，分别为37—67、27—77、48—63，均无中心；未知不能补低分或作排除。当前**48份审阅、16完整／32部分、8,983未审**。[医疗同尺度审核](cci-med-priority-comparability-review.md)纠正西雅图额外年龄门槛，主MED仍未知、条件60情景46—61；其余既有八维对象不变。悉尼2025—26病种交付支付延续至截止须明确可撤推定，未核2026—27付款；盐湖城低收入砖房资助限制不直接推全居民保护不足。最多三研究任务，主任务统一验收，逐批汇报；优先级仅调度。全部候选保留、零排除，无合格第32名门槛，以下为历史快照。
+
 **2026-10-13 第十三批验收：** [Helsinki687安全](cci-helsinki-gss-priority-review.md)补地方分类观察与共享供水实际保护后GSS条件60、条件中心62；重要尾部及危机协调残余支持40替代59，拒绝影响／适配／延续推定仍53—68，其他七维不变。新增[Geneva29](cci-geneva-priority-review.md)六维条件60、GSS／RES未知，45—70、无中心；私区质量、RAC成本与保险净取得分开。当前**45份审阅、16完整／29部分、8,986未审**。[大邱](cci-daegu-priority-review.md)补2025水质及2026实际替供、确认多数旧KPI分析期2020—2021，未评分；[波士顿](cci-boston-gss-priority-review.md)／[广州LON](cci-guangzhou-lon-priority-review.md)无新增判别链按规则停止、原八维对象不变。[全球知识线索](cci-global-knowledge-priority-review.md)保留WIPO2025全部100标签、79名称国别对应及21未解决；2026数值未采用、无集群指标移入。下一批最多三项并行，检验Salt Lake City4881／Seattle／Sydney的实际八维组合，研究顺序不是排名。全部保留、零排除，无合格第32名门槛；以下为历史快照。
 
 **2026-10-13服务来源关联：** 新增[U4SSC来源登记](cci-global-priority-coverage-review.md)及[全候选复算](data/cci-u4ssc-source-inventory.json)：完整9031行保留，仅8个名称国别关联，不转行政指标／历史原值为功能区测量或CCI分。28索引条目、60语种／viewer链接、3已读英文报告分别计数，未匹配20条目不排除。新增来源审计哈希进入矩阵；原局部证据字段及历史发布不变。最新八维案例计数见总报告，以下为各阶段快照。

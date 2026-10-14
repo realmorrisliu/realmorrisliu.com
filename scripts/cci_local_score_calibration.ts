@@ -97,6 +97,9 @@ const realCases = [
   "sheffield",
   "aalborg",
   "geneva",
+  "seattle",
+  "salt-lake-city",
+  "sydney",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -185,6 +188,9 @@ const [
   sheffield,
   aalborg,
   geneva,
+  seattle,
+  saltLakeCity,
+  sydney,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -1934,3 +1940,37 @@ assert(
 assert.equal(knowledgeIndex.review.sha256, digest(knowledgeIndex.review.path));
 assert.equal(realCases[21].lonPriorityReview.sha256, digest(realCases[21].lonPriorityReview.path));
 assert.equal(realCases[21].lonPriorityReview.dimensionObjectsChanged, false);
+
+assert.deepEqual(total(seattle), { center: null, lower: 37, upper: 67 });
+assert.deepEqual(total({ ...seattle, RES: 60 }), { center: null, lower: 39, upper: 69 });
+assert.deepEqual(total({ ...seattle, PCS: 60 }), { center: null, lower: 40, upper: 70 });
+const seattleWithoutLon = { ...seattle };
+delete seattleWithoutLon.LON;
+assert.deepEqual(total(seattleWithoutLon), { center: null, lower: 31, upper: 71 });
+const seattleCase = realCases.find(c => c.candidateId === 4510);
+assert.equal(
+  seattleCase.priorityCompletionReview.sha256,
+  digest(seattleCase.priorityCompletionReview.path)
+);
+
+assert.deepEqual(total({ ...seattle, MED: 60 }), { center: null, lower: 46, upper: 61 });
+assert.equal(
+  seattleCase.medComparabilityReview.sha256,
+  digest(seattleCase.medComparabilityReview.path)
+);
+assert.equal(seattleCase.medComparabilityReview.ageRestrictionRemoved, true);
+assert.equal(seattleCase.medComparabilityReview.scoreChanged, false);
+
+assert.deepEqual(total(saltLakeCity), { center: null, lower: 27, upper: 77 });
+const saltLakeCityWithoutRes = { ...saltLakeCity };
+delete saltLakeCityWithoutRes.RES;
+assert.deepEqual(total(saltLakeCityWithoutRes), { center: null, lower: 21, upper: 81 });
+assert.deepEqual(total(sydney), { center: null, lower: 48, upper: 63 });
+assert.equal(total({ ...sydney, GSS: 60 }).center, 57);
+const sydneyWithoutLon = { ...sydney };
+delete sydneyWithoutLon.LON;
+assert.deepEqual(total(sydneyWithoutLon), { center: null, lower: 42, upper: 67 });
+for (const id of [4881, 1830]) {
+  const c = realCases.find(c => c.candidateId === id);
+  assert.equal(c.priorityCompletionReview.sha256, digest(c.priorityCompletionReview.path));
+}

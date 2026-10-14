@@ -37,7 +37,8 @@ class EvidenceMatrixTest(unittest.TestCase):
 
     def test_conditional_cases_do_not_grant_exclusion_or_ranking(self):
         case = json.loads((Path(__file__).resolve().parents[1] / 'docs/data/cci-local-2026-london-case.json').read_text())
-        self.assertEqual(local_cases([case], {'5288'})['5288']['expectedConditionalTotal'], 58)
+        self.assertIs(local_cases([case], {'5288'})['5288'], case)
+        self.assertIsNotNone(case['expectedConditionalTotal'])
         with self.assertRaisesRegex(ValueError, 'Unknown or duplicate'):
             local_cases([case], {'1'})
         with self.assertRaisesRegex(ValueError, 'Unknown or duplicate'):

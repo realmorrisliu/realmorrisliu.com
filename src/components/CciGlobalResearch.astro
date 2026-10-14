@@ -55,6 +55,9 @@ import santaCruz from "../../docs/data/cci-local-2026-santa-cruz-de-tenerife-cas
 import sheffield from "../../docs/data/cci-local-2026-sheffield-case.json";
 import aalborg from "../../docs/data/cci-local-2026-aalborg-case.json";
 import geneva from "../../docs/data/cci-local-2026-geneva-case.json";
+import seattle from "../../docs/data/cci-local-2026-seattle-case.json";
+import saltLakeCity from "../../docs/data/cci-local-2026-salt-lake-city-case.json";
+import sydney from "../../docs/data/cci-local-2026-sydney-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -114,8 +117,14 @@ const cases = [
   sheffield,
   aalborg,
   geneva,
+  seattle,
+  saltLakeCity,
+  sydney,
 ];
 const caseNamesZh: Record<number, string> = {
+  [seattle.candidateId]: "西雅图功能区",
+  [saltLakeCity.candidateId]: "盐湖城功能区",
+  [sydney.candidateId]: "悉尼功能区",
   [geneva.candidateId]: "日内瓦功能区",
   [aalborg.candidateId]: "奥尔堡功能区",
   [sheffield.candidateId]: "谢菲尔德功能区",
@@ -364,6 +373,30 @@ const caseNotes: Record<number, string[]> = {
       ? "全9,031几何核对区内外参考点；Hull、Sheffield和机场服务不并成本区。国家CAR-T委托不证明本区居民已进入真实给药/监护链；国家威胁与日常运转也不足以补GSS。两轮后保留缺口，必要的代表性、延续、普通负担和触达假设均可撤回。"
       : "Reference points were checked against all 9,031 geometries; Hull, Sheffield and outside-airport services are not local production. National CAR-T commissioning does not establish a delivered local-resident pathway; national threat context and ordinary operations do not settle GSS. After two rounds, gaps remain explicit and applicability, continuity, affordability and reach assumptions can be withdrawn.",
   ],
+  [saltLakeCity.candidateId]: [
+    zh
+      ? "盐湖城PCS条件40、ISR／RES／OPT条件60，GSS／MED／LON／TEC未知，数学域27—77、无中心。实际服务、供水／食品供应和共享交通支持有限能力；知识三通道及诊断接触仍未闭合通常治疗或产用扩散。"
+      : "Salt Lake City has conditional PCS 40 and ISR/RES/OPT 60; GSS/MED/LON/TEC remain unknown: 27–77 without a centre. Operating services, water/food supply and shared transport support scoped capability; knowledge output and diagnostic contact do not complete usual treatment or commercialisation/diffusion connections.",
+    zh
+      ? "旧砖房资助关闭／十年等待仅限合资格低收入住户，其对通常居民保护的重要性须另接受；RES通常供给与净负担推定拒绝后21—81。机场目录点在旧边界外，但实际接驳可作共享服务。资料失败不扣分，未知不排除入围。"
+      : "The closed retrofit-aid programme and ten-year queue concern eligible low-income households; significance for usual protection requires a separate assumption. Withdrawing usual supply/affordability restores RES unknown and 21–81. The airport reference lies outside the frozen area, while operating connections support shared use. Failed acquisition receives no penalty; unknowns do not exclude inclusion.",
+  ],
+  [sydney.candidateId]: [
+    zh
+      ? "悉尼PCS条件40，ISR／RES／MED／LON／TEC／OPT条件60，GSS未知，数学域48—63、无中心。极热／洪水重要保护缺口与实际服务、治疗、转化和数字使用并读；真实定向袭击、既有保护及未完成新部署分开。"
+      : "Sydney has conditional PCS 40 and ISR/RES/MED/LON/TEC/OPT 60, with GSS unknown: 48–63 without a centre. Important heat/flood protection gaps are read alongside operating services, treatment, translation and digital use. Targeted harm, existing protection and planned deployment are distinguished.",
+    zh
+      ? "精神住院再入／随访是病程指标，不是全区常规质量。CAR-T实际给药与指定病种公共路线作有限连接；2025—26协议截至2026-06-30，延续至证据截止、通常支付与监护均为可撤推定，拒绝LON后42—67。GSS60情景57未采用。"
+      : "Psychiatric readmission/follow-up measures describe selected episodes, not all-area routine quality. Actual CAR-T treatment connects conditionally with named public disease pathways. The 2025–26 agreement ends on 30 June 2026; continuation to the cutoff, usual payment and monitoring are revocable assumptions. Withdrawing LON gives 42–67. The GSS 60 scenario of 57 is not adopted.",
+  ],
+  [seattle.candidateId]: [
+    zh
+      ? "西雅图PCS／RES条件40，ISR／LON／TEC／OPT60，GSS／MED未知，数学域37—67、无中心。实际抗震加固仍有存量缺口，供电纪要记录多个社区可靠性问题；实际水源、食品援助、系统恢复和临床运行的正向依据也保留。知识三通道不自动转成CCI高分。"
+      : "Seattle has conditional PCS/RES 40 and ISR/LON/TEC/OPT 60, with GSS/MED unknown: 37–67 without a centre. Seismic retrofits leave a material stock gap; utility minutes describe reliability issues in multiple communities. Water sources, food assistance, system recovery and operating clinical care remain positive evidence. Three knowledge channels do not automatically yield high CCI scores.",
+    zh
+      ? "2024加固数量不是2026精确余额，系统几乎每日停电不等每户每日停电；2026方案目标不当已恢复。儿童质量不直接移全区通常护理，画像不指定年龄，CAR-T手册与运行到产品／普通保险净取得连接可撤回，拒绝LON后31—71。RES60替代39—69、PCS60替代40—70；接受通常护理／净取得／连续性连接时MED60为46—61，均非可靠排除界限。"
+      : "The 2024 retrofit count is not an exact 2026 balance; near-daily system outages are not daily outages in every home, and improvement targets are not completed recovery. Pediatric outcomes do not directly describe usual care across the area; the resident profile specifies no age. Rejecting the clinical-operation/current-product/usual-insurance connection withdraws LON and gives 31–71. RES 60 gives 39–69; PCS 60 gives 40–70. Accepting the usual-care/net-access/continuity connection gives MED 60 and 46–61. These are not reliable exclusion bounds.",
+  ],
   [geneva.candidateId]: [
     zh
       ? "日内瓦PCS／ISR／MED／LON／TEC／OPT条件60，GSS／RES未知，数学域45—70、无中心。实际防护、公共手术连续照护、临床CAR-T运行、技术许可及数字事务支持有限能力；住房与净费用、组织暴力及关键保护残余仍待辨别。"
@@ -592,6 +625,10 @@ const caseNotes: Record<number, string[]> = {
   ],
 };
 const caseSupplementLinks: Record<number, { path: string; label: string }> = {
+  4510: {
+    path: "cci-med-priority-comparability-review.md",
+    label: zh ? "医疗同尺度与年龄门槛纠偏" : "Medical comparability and age-gate correction",
+  },
   687: {
     path: "cci-helsinki-gss-priority-review.md",
     label: zh ? "安全最后未知复判" : "Safety completion review",
@@ -697,7 +734,7 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
       {zh ? "全球 Top 32 研究进展" : "Global Top 32 research progress"}
     </h2>
     <p class="research-date">
-      {zh ? "研究更新" : "Research update"} · <time datetime="2026-10-13">2026-10-13</time>
+      {zh ? "研究更新" : "Research update"} · <time datetime="2026-10-14">2026-10-14</time>
     </p>
   </div>
   <div class="research-overview">
@@ -719,14 +756,18 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
       <p class="research-note">
         {
           zh
-            ? "优先验证多种筛查情景下都靠前的候选：两个名额评估竞争案例，一个核查缺测或较新候选，最多三个任务并行。每城两轮定向补查后交接，未知保留；研究顺序不代表CCI名次。"
-            : "Candidates that stay near the front across screening scenarios receive priority: two slots assess competitors and one explores missing-data or newer candidates, with at most three tasks in parallel. Each city hands off after two targeted rounds, retaining unknowns; work order is not a CCI ranking."
+            ? "优先评估已有多维能力依据、补证可能改变判断的候选，最多三个研究任务并行，主任务统一验收口径。每批公布分数、未知项和敏感性；两轮定向补查后交接，未知保留。研究优先级不预设CCI名次，持续核查未评估竞争者。"
+            : "Prioritise candidates with substantive evidence across dimensions where further review could change a judgment. At most three research tasks run concurrently, with central review against the same scoring rules. Each batch reports scores, unknowns and sensitivity; hand off after two targeted rounds. Priority does not predetermine CCI rank, and unassessed competitors remain under review."
         }
         <a
-          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-unassessed-priority-screening.md"
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-research-priority.md"
         >
-          {zh ? "优先级规则与复算结果" : "Priority rules and reproducible results"}
+          {zh ? "研究优先级与批次结果" : "Research priority and batch results"}
         </a>
+        {" · "}<a
+          href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-unassessed-priority-screening.md"
+          >{zh ? "冻结筛查演算" : "Frozen screening calculations"}</a
+        >
       </p>
     </div>
     <dl class="research-progress" aria-label={zh ? "评分研究进度" : "Scoring research progress"}>
@@ -1104,8 +1145,8 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
       <p>
         {
           zh
-            ? "WIPO2025知识原表的100个集群标签全部保留，79个有名称国别对应、21个身份仍未解决。发明、研究与融资活动提供新研究线索，集群边界与旧功能区不同，不能复制指标或直接当CCI名次。下一批检验盐湖城、西雅图和悉尼的八维实际表现。"
-            : "All 100 cluster labels from the WIPO 2025 knowledge table are retained:79 have name-country references and 21 remain unresolved. Invention, research and financing activity supply new research leads. Cluster boundaries differ from the old FUAs; indicators and ranks are not copied into CCI. The next batch tests Salt Lake City, Seattle and Sydney across all eight dimensions."
+            ? "WIPO2025知识原表的100个集群标签全部保留，79个有名称国别对应、21个身份仍未解决。发明、研究与融资活动提供新研究线索，集群边界与旧功能区不同，不能复制指标或直接当CCI名次。盐湖城、西雅图和悉尼已完成有界八维审阅，未知项继续保留；下一批按多维依据和可改变判断的补证安排。"
+            : "All 100 cluster labels from the WIPO 2025 knowledge table are retained:79 have name-country references and 21 remain unresolved. Invention, research and financing activity supply new research leads. Cluster boundaries differ from the old FUAs; indicators and ranks are not copied into CCI. Salt Lake City, Seattle and Sydney have completed bounded eight-dimension reviews, retaining unknowns. The next batch prioritises multidimensional evidence and review that can change a judgment."
         }
         {" "}<a
           href="https://github.com/realmorrisliu/realmorrisliu.com/blob/main/docs/cci-global-knowledge-priority-review.md"
