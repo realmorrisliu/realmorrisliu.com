@@ -550,5 +550,17 @@
       "path": "/private/tmp/cci-global/tampere-lon/pirha-tariffs2026.pdf",
       "usedForScore": true
     }
-  ]
+  ],
+  "resComparabilityReview": {
+    "path": "docs/cci-res-priority-comparability-review.md",
+    "sha256": "b1eb9e8160c1cb788ac2a0e660619f50f17f255772271a623f1ee5b407f19391",
+    "reviewedOn": "2026-10-14",
+    "fixedInputsSha256": "9708e6273b3af37bb941a6efc8dd3271539a36adb818a91521666f8643ec27b5",
+    "sourceManifestSha256": "bdde9eef01dce6e96f4b33860197a74ddead704d24d55cd8e62fa4d116e635cd",
+    "rootOtherSevenUnchanged": true,
+    "rootAcceptanceOtherSevenSha256": "172579ca1b73ff7c129382f9cf7a3f36627881c9d0af1ba4d3063e3baa44f416",
+    "scoreChanged": false,
+    "fixedSnapshotDoesNotBackfillConcurrentOpt": true,
+    "handoffSha256": "568773729a8b885c5cefb1968a22af3b9fc601d4aee07389efa961a8727a2f37"
+  }
 }

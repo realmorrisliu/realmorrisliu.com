@@ -1,5 +1,7 @@
 # CCI 全球八维证据覆盖：统一视图
 
+**2026-10-14 第十六批验收：** 新增[温哥华375](cci-vancouver-priority-review.md)和[维也纳790](cci-vienna-priority-review.md)八维／31项审阅，两者当前均六维条件60、数学域45—70、无中心；温哥华RES／MED未知，维也纳GSS／RES未知。[加拿大退出链](cci-canada-opt-priority-review.md)使多伦多OPT独立条件60，其他七维不变，当前42—72。随后[资源同尺度审核](cci-res-priority-comparability-review.md)采用温哥华／墨尔本／盐湖城主RES未知，40／60只列讨论；墨尔本当前45—70、盐湖城21—81，各自其他七维保持。真实负担、已运行帮助、年份／收入／范围一起判断，不按不同定义百分比大小排分，也不以市场存在或资料少证明通常可负担。当前**52份审阅、16完整／36部分、8,979未审**。已启动[Brisbane2355／Groningen3116](cci-next-priority-batch-17-review.md)下一批完整研究，最多三任务；旧失败机制不循环。全部新旧候选保留、零排除、无合格第32名门槛。以下为历史快照。
+
 **2026-10-14 第十五批验收：** [Tampere397长寿](cci-tampere-lon-priority-review.md)补真实RS2回输／随访、人体证据及公共收费后LON条件60，其他七维不变，GSS仍未知，51—66无中心；关键推定拒绝回45—70。新增[Melbourne1266](cci-melbourne-priority-review.md)RES40、六维60、GSS未知，49—64；[Toronto2626](cci-toronto-priority-review.md)五维60、GSS／MED／OPT未知，36—76，均无中心。当前**50份审阅、16完整／34部分、8,981未审**。内城复合食品48%不当全FUA断粮率，旧急诊留院／待床指标与实际卸载改善分开；资金检索摘要不评分。三槽接续温哥华、维也纳完整调查及加拿大退出链专题；[选题入口](cci-next-priority-batch-16-review.md)只决定研究顺序，不预填概率或分数。全部候选保留、零排除、无合格第32名门槛，以下为历史快照。
 
 **2026-10-14 第十四批验收：** 新增[西雅图4510](cci-seattle-priority-review.md)、[盐湖城4881](cci-salt-lake-city-priority-review.md)、[悉尼1830](cci-sydney-priority-review.md)有界八维／31项审阅，分别为37—67、27—77、48—63，均无中心；未知不能补低分或作排除。当前**48份审阅、16完整／32部分、8,983未审**。[医疗同尺度审核](cci-med-priority-comparability-review.md)纠正西雅图额外年龄门槛，主MED仍未知、条件60情景46—61；其余既有八维对象不变。悉尼2025—26病种交付支付延续至截止须明确可撤推定，未核2026—27付款；盐湖城低收入砖房资助限制不直接推全居民保护不足。最多三研究任务，主任务统一验收，逐批汇报；优先级仅调度。全部候选保留、零排除，无合格第32名门槛，以下为历史快照。

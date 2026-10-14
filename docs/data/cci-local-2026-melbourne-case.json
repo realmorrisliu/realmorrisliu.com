@@ -10,8 +10,8 @@
   "boundaryReview": "Full9031geometry/SHA/WKB/9approximatepointschecked;PointCookGCCSAreferenceoutsidetargetcatalogue,8othersuniquely1266. LGA/provider/stateareasnotallFUA.",
   "evidenceReview": "cci-melbourne-priority-review.md",
   "expectedConditionalTotal": null,
-  "knownWeightedSubtotal": 49,
-  "unresolvedScoreRange": [49, 64],
+  "knownWeightedSubtotal": 45.0,
+  "unresolvedScoreRange": [45.0, 70.0],
   "globalRankingEligible": false,
   "limitations": [
     "Nohistoricalcutoffbytes;RMHfirstpublicationdayunknown",
@@ -61,10 +61,10 @@
     },
     {
       "id": "RES",
-      "score": 40,
-      "rationale": "A City of Melbourne survey reports 48% composite food insecurity, including worry, reduced meals, running out of food or using relief. Providers report increasing need linked to living costs, poverty and housing pressure. Foodbank markets delivered 10,000 kg to 1,510 people; other markets, gardens and the grocer mitigate without demonstrating that ordinary residual affordability is resolved. Actual bulk-water operation and electricity use counter a claim of general supply collapse.",
-      "assumption": "Accept the selected inner-city food evidence as indicating material continuing resource-access constraints for ordinary 1266 residents after actual relief, not 48% of all FUA median-income citizens hungry. Sample and response details, citizenship and income composition are unverified; geography, ordinary-income relevance and continuing net affordability are necessary withdrawable inferences. Usually adequate affordable supply and mitigation can support 60; stronger independent safeguards can support 80. Reject these connections to null. Worry alone, missing household bills or absent SAIDI do not mechanically prove 40.",
-      "conditionalAlternatives": [60, 80],
+      "score": null,
+      "rationale": "Actual water/electricity operation and food relief coexist with the inner-city 48% composite, continuing high levels and provider-reported cost and housing pressure. The composite includes worry, reduced meals, running out and relief use; 10,000 kg delivered to 1,510 people is actual mitigation, not its success rate. Current residual pressure is substantive, but its ordinary median-income/FUA significance versus usual adequate access is not resolved.",
+      "assumption": "A conditional 40 discussion needs material remaining ordinary net-access constraints supported by persistent cost-linked demand after actual mitigation; 60 needs reasoned usual affordable availability and an account of why the observed burdens do not dominate the target profile. Missing income/scope or unproved relief success alone chooses neither tier; no full household census requirement.",
+      "conditionalAlternatives": [],
       "subpillars": {
         "water": "partial",
         "food": "partial",
@@ -465,5 +465,28 @@
     "handoffSha256": "e0461654dbd321770aefaa7aafd26bf2d470e325b8d76c3667bd737db3f883dc",
     "sourceManifestSha256": "8217a549b1191f5da98457565462cfbb11bb497cc35f5fe0942b805b17c53e29",
     "scope": "bounded8/31 and scoped actual ordinary resident judgments, not complete measurement or global ranking eligibility"
+  },
+  "resDiscussionScenarios": {
+    "notAdopted": true,
+    "RES40": {
+      "reason": "40可明确接受2024/25持续生活/住房成本压力在已有市场和救济后，仍构成普通中位人物重要净取得障碍；依赖提供者持续需求与行为项，不依赖48这个数或救济成功证据缺失。",
+      "range": [49.0, 64.0]
+    },
+    "RES60": {
+      "reason": "60可接受内城样本中更困难群体/担心/救济使用主要推动复合指标，普通中位通常市场与可用救济足够；须解释持续提供者需求的适用范围，不能把10000kg当解决率。",
+      "range": [51.0, 66.0]
+    }
+  },
+  "resComparabilityReview": {
+    "path": "docs/cci-res-priority-comparability-review.md",
+    "sha256": "b1eb9e8160c1cb788ac2a0e660619f50f17f255772271a623f1ee5b407f19391",
+    "reviewedOn": "2026-10-14",
+    "fixedInputsSha256": "9708e6273b3af37bb941a6efc8dd3271539a36adb818a91521666f8643ec27b5",
+    "sourceManifestSha256": "bdde9eef01dce6e96f4b33860197a74ddead704d24d55cd8e62fa4d116e635cd",
+    "rootOtherSevenUnchanged": true,
+    "rootAcceptanceOtherSevenSha256": "8f5f8e7caf695a2fc710b15e883ae2508d3918d0d45611f4049c0d072806c90d",
+    "scoreChanged": true,
+    "fixedSnapshotDoesNotBackfillConcurrentOpt": true,
+    "handoffSha256": "568773729a8b885c5cefb1968a22af3b9fc601d4aee07389efa961a8727a2f37"
   }
 }

@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 50,
+    "conditionalCaseCount": 52,
     "completeConditionalCaseCount": 16,
-    "partialCaseCount": 34,
-    "unassessedCount": 8981,
+    "partialCaseCount": 36,
+    "unassessedCount": 8979,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -437,7 +437,7 @@
       "provenanceSha256": "5198b5ce43654f6af79c707a651455a5824c1be7156c4db6b529dac35d049039"
     },
     "cci-local-2026-copenhagen-case.json": {
-      "sha256": "6b92acba08de1d53eda7bc96808069cdfb3b5410f3c022e7f3746c9b77174f20",
+      "sha256": "3b95534db8bc415fcf4ecc26e82445e4e96c3551ae883a79a0a67b9819bd4283",
       "provenance": "cci-local-2026-copenhagen-case.md",
       "provenanceSha256": "bde05782df45304008267b95b292767c9f63decf633fefe47d3f57409c4c7b51"
     },
@@ -452,7 +452,7 @@
       "provenanceSha256": "ddbe51ab1b7862eaaf7c638d57d245f8b470d53d5b7b979c739791f46def37c7"
     },
     "cci-local-2026-tampere-case.json": {
-      "sha256": "f537a9c64e552f1d8939eb14fbd7d2213cb24ba9d04698fb62c3a7469d324d22",
+      "sha256": "2e2163d414d7b5d29596b62add9447b87174786936e298cf537902e3c6e0cfb2",
       "provenance": "cci-tampere-priority-review.md",
       "provenanceSha256": "0217c577797d804d8e4225d8d12786acf55f7dbc140953b901b8b7b1ee9e9b80"
     },
@@ -537,7 +537,7 @@
       "provenanceSha256": "78b607a02c7cd67d8f4ce40db6f40965cca0364b523b27d8be35627dac4634dc"
     },
     "cci-local-2026-salt-lake-city-case.json": {
-      "sha256": "64790c9cb58e46892318f2839378c15571859e67e745162fc7ee2c77441c7ef5",
+      "sha256": "f37032aa3dd86410fb1bc3c96fce8c52a0928c6920e77a94a608fbbcd52befe9",
       "provenance": "cci-salt-lake-city-priority-review.md",
       "provenanceSha256": "35d797f6d2a283e9459afbece722648860392beea909a2d4fa91118266d5af01"
     },
@@ -547,16 +547,26 @@
       "provenanceSha256": "c611f6cae64367868e0a11f9334be496f19d6208e708af3346bc6d8c1b47cc17"
     },
     "cci-local-2026-melbourne-case.json": {
-      "sha256": "2d3119e7285e657aff58718a8a2749c9ae3835563100a6306a002aeb8f5c2a17",
+      "sha256": "6b702aab6033182002de9eb2d89f6452a83be40a948eae5a167da3c84f646ae5",
       "provenance": "cci-melbourne-priority-review.md",
       "provenanceSha256": "8e6eb5608257d86564cc1e3e39e4321aaa215dc563d18f0e1ec7938d7f22f7f4"
     },
     "cci-local-2026-toronto-case.json": {
-      "sha256": "a0eb5168aed73d0f3f5ae8ba6b0cccb46d01da47516e7d8c76b43b033eb6a016",
+      "sha256": "3ac18a949f882f7131576c6cbfaf8ff93af7a7769132ac1c1e940f15c461d3b0",
       "provenance": "cci-toronto-priority-review.md",
       "provenanceSha256": "3cd7b2ac11cd150da2d0cf4b493372e7b9851d8ed5b7390dd65fe9b7bd2eb7e4"
+    },
+    "cci-local-2026-vancouver-case.json": {
+      "sha256": "6245ab8006672f94f2d1c408c213e7b848ba044016bbea20e5f186690148e503",
+      "provenance": "cci-vancouver-priority-review.md",
+      "provenanceSha256": "ebb8fd274451cec88ee77599620876ce1cf46de69dc92a309f6f0bcf72bad98a"
+    },
+    "cci-local-2026-vienna-case.json": {
+      "sha256": "d50232c6673b718416ffb3695141dd4e92b08b602b9396a8ae459126fedb715c",
+      "provenance": "cci-vienna-priority-review.md",
+      "provenanceSha256": "52c601c42fd43dee493403c5ddc2e365bf8c9dee6c5f8e847dfebe3d52e0eb9b"
     }
   },
-  "scriptSha256": "e4a508c0fed02502dcf19047d6ff9365fc97e9c966fc2a1bc385139e654d1ef4",
-  "csvSha256": "b258f7dbe3b8da0c63bcdba57c64bcdc3ae6d9333544b569ecb6ad46a7f92127"
+  "scriptSha256": "7d263a7ad01fa2bec3766e64b8cb6d49e639469df94c58663568a8a2ef2b2a15",
+  "csvSha256": "277bce374778495466f5d22314e1ee039ae703e4c45003c562a6a2276993315f"
 }

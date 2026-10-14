@@ -60,6 +60,8 @@ import saltLakeCity from "../../docs/data/cci-local-2026-salt-lake-city-case.jso
 import sydney from "../../docs/data/cci-local-2026-sydney-case.json";
 import melbourne from "../../docs/data/cci-local-2026-melbourne-case.json";
 import toronto from "../../docs/data/cci-local-2026-toronto-case.json";
+import vancouver from "../../docs/data/cci-local-2026-vancouver-case.json";
+import vienna from "../../docs/data/cci-local-2026-vienna-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -124,8 +126,12 @@ const cases = [
   sydney,
   melbourne,
   toronto,
+  vancouver,
+  vienna,
 ];
 const caseNamesZh: Record<number, string> = {
+  [vancouver.candidateId]: "温哥华功能区",
+  [vienna.candidateId]: "维也纳功能区",
   [seattle.candidateId]: "西雅图功能区",
   [saltLakeCity.candidateId]: "盐湖城功能区",
   [sydney.candidateId]: "悉尼功能区",
@@ -379,29 +385,45 @@ const caseNotes: Record<number, string[]> = {
       ? "全9,031几何核对区内外参考点；Hull、Sheffield和机场服务不并成本区。国家CAR-T委托不证明本区居民已进入真实给药/监护链；国家威胁与日常运转也不足以补GSS。两轮后保留缺口，必要的代表性、延续、普通负担和触达假设均可撤回。"
       : "Reference points were checked against all 9,031 geometries; Hull, Sheffield and outside-airport services are not local production. National CAR-T commissioning does not establish a delivered local-resident pathway; national threat context and ordinary operations do not settle GSS. After two rounds, gaps remain explicit and applicability, continuity, affordability and reach assumptions can be withdrawn.",
   ],
+  [vancouver.candidateId]: [
+    zh
+      ? "温哥华六维条件60，RES／MED未知，数学域45—70、无中心。实际供水／防护、临床给药、技术采用和YVR退出支持有限能力；必要医疗的通常质量、时效与接续仍未闭合。"
+      : "Vancouver has six conditional 60 judgments, with RES and MED unknown: a mathematical domain of 45–70 without a centre. Operating water/protection, clinical treatment, technology use and YVR exit paths support scoped capability; ordinary necessary-care quality, timeliness and continuity remain unresolved.",
+    zh
+      ? "17%为2023卫生服务区全收入成人食品不安全，不是2026全FUA中位居民率；与实际供给／缓解同读，仍不足选择主RES40或60，讨论域分别49—64／51—66。真实暴力处置和护栏部署不等已证阻断效果；加拿大账户／通信另核地方适配、不继承多伦多得分，撤OPT为39—74。"
+      : "The 17% food-insecurity figure describes all-income adults in a health service area in 2023, not the 2026 median-income FUA profile. Read alongside actual supply/mitigation, it does not settle RES 40 versus 60; discussion domains are 49–64 and 51–66. Violence response and barrier deployment do not prove prevention. Canadian account/communication facts are adapted independently, without Toronto's score; withdrawing OPT gives 39–74.",
+  ],
+  [vienna.candidateId]: [
+    zh
+      ? "维也纳PCS／ISR／MED／LON／TEC／OPT条件60，GSS／RES未知，数学域45—70、无中心。真实洪灾恢复、必要手术与安全运行、细胞治疗和能源产用支持有限判断；全国组织犯罪、旧平均消费及服务感受不直接填地方得分。"
+      : "Vienna has conditional PCS/ISR/MED/LON/TEC/OPT 60, with GSS and RES unknown: a mathematical domain of 45–70 without a centre. Actual flood recovery, necessary surgery/safety operations, cell treatment and energy production/use support scoped judgments; national organised crime, old mean consumption and service perceptions do not fill local scores.",
+    zh
+      ? "等待表仅含已手术者，未独核当前仍待人群与本地临床结局。AKH2021的35例为26试验／9常规，不当2026新病例；旧常规路径延续、通常公费净取得与持续监护为可撤推定。撤MED为36—76、撤LON为39—74、同撤30—80；均不证明入围或排除。"
+      : "The wait table includes completed operations only; current waiting patients and local clinical outcomes were not independently verified. AKH's 35 cases in 2021 comprise 26 trial and nine routine cases, not new 2026 cases. Routine-pathway continuation, usual public net access and ongoing monitoring are revocable assumptions. Withdrawing MED gives 36–76, LON 39–74, or both 30–80; none establishes qualification or exclusion.",
+  ],
   [toronto.candidateId]: [
     zh
-      ? "多伦多PCS／ISR／RES／LON／TEC条件60，GSS／MED／OPT未知，数学域36—76、无中心。实际供水、电网恢复、临床给药及许可／技术使用支持有限能力；普通必要护理等待、关键保护和加拿大资产／境外通信仍未闭。"
-      : "Toronto has conditional PCS/ISR/RES/LON/TEC 60; GSS/MED/OPT remain unknown: 36–76 without a centre. Actual water/electricity recovery, clinical treatment and licensing/technology use support scoped capability; usual-care waiting, critical protection and Canadian assets/international communication remain unresolved.",
+      ? "多伦多OPT补加拿大合资格账户、合法初始转移、境外通信及鉴权后取条件60；PCS／ISR／RES／LON／TEC60不变，GSS／MED未知，数学域42—72、无中心。实际供水、电网恢复、临床给药及许可／技术使用支持有限能力，普通必要护理等待和关键保护仍未闭。"
+      : "Toronto's OPT becomes conditional 60 after review of eligible Canadian accounts, lawful initial transfers, international communication and authentication. PCS/ISR/RES/LON/TEC remain 60; GSS/MED are unknown: 42–72 without a centre. Water/electricity recovery, clinical treatment and licensing/use support scoped capability; usual-care waiting and critical protection remain unresolved.",
     zh
-      ? "旧ED留院90分位44.9／50.3小时与待床29.3／35.7小时不是平均或开始治疗等待，卸载改善不消除所有瓶颈。2023完成74患者、2025 CAR-T82未注明单位；LON通常受认可院内治疗／OHIP净取得及监护推定拒绝后30—80，省资金检索摘要不评分。MED40／60讨论情景42—67／45—70未采用。"
-      : "Historical 90th-percentile ED stays of 44.9/50.3 hours and bed waits of 29.3/35.7 hours are not averages or time to starting care; improved unloading does not eliminate every bottleneck. Treatment was completed by 74 patients in 2023; the 2025 CAR-T 82 label has no unit. Rejecting recognized hospital treatment/OHIP net access or monitoring withdraws LON and gives 30–80. The funding search excerpt is not scoring evidence. MED 40/60 discussion scenarios of 42–67/45–70 are not adopted.",
+      ? "CIBC居民资格不默认移居后仍满足，RBC新旧额度／收费及WiFi紧急服务版本差异保留；OPT关键推定拒绝回36—76。旧留ED／待床指标与卸载改善分开，省资金检索摘要不评分；LON净取得／监护连接拒绝后36—76。MED40／60讨论情景48—63／51—66未采用。"
+      : "CIBC resident eligibility is not presumed to continue after emigration. RBC limit/fee and WiFi emergency-service version differences remain; withdrawing OPT gives 36–76. Historical ED/bed waits differ from unloading improvements, and the funding search excerpt is not scoring evidence. Withdrawing LON net access/monitoring also gives 36–76. MED 40/60 discussion scenarios of 48–63/51–66 are not adopted.",
   ],
   [melbourne.candidateId]: [
     zh
-      ? "墨尔本PCS／ISR／MED／LON／TEC／OPT条件60，RES40，GSS未知，数学域49—64、无中心。实际必要治疗、具名公共病种交付、技术及热保护运行支持能力；食品净取得、手术超期和精神急诊短板仍保留。"
-      : "Melbourne has conditional PCS/ISR/MED/LON/TEC/OPT 60, RES 40 and GSS unknown: 49–64 without a centre. Actual necessary treatment, named public disease delivery, technology and operating heat protection support capability; food affordability, overdue surgery and psychiatric emergency-care shortcomings remain.",
+      ? "墨尔本PCS／ISR／MED／LON／TEC／OPT条件60，RES及GSS未知，数学域45—70、无中心。资源主40在同尺度检视后撤回：连续两年食品复合指标高位及实际成本／住房压力需求，与已交付救济共同保留；中位收入与全FUA的剩余净负担程度尚未裁定。"
+      : "Melbourne has conditional PCS/ISR/MED/LON/TEC/OPT 60, with RES and GSS unknown: a mathematical domain of 45–70 without a centre. RES 40 was withdrawn after the comparability review. Persistently high composite food insecurity and actual cost/housing-related demand remain alongside delivered relief; their residual net burden for the median-income FUA profile is unresolved.",
     zh
-      ? "48%是内城过去一年担忧／减餐／断粮／救济的复合自报，不是全FUA中位收入公民断粮率；代表性及持续净负担推定拒绝后RES未知、45—70。MED40替代46—61；LON成熟人体运行、监护与通常公共净取得连接拒绝后43—68，未独核当地队列或TGA文件。"
-      : "The 48% figure is an inner-city composite self-report of worry, reduced meals, running out of food or relief use, not an all-FUA median-income hunger rate. Rejecting representativeness/continuing affordability restores RES unknown and 45–70. MED 40 gives 46–61; rejecting mature human delivery, monitoring or usual public net access withdraws LON and gives 43–68. No independent local cohort or TGA document was verified.",
+      ? "48%包含担忧／减餐／断粮／救济使用，不当全FUA中位收入公民断粮率；10,000kg／1,510人不当净负担解决率。RES40／60讨论域49—64／51—66，均未采用。MED40替代42—67；LON成熟人体路径、监护及通常公共净取得推定拒绝后39—74，未独核当地队列或TGA文件。"
+      : "The 48% composite includes worry, reduced meals, running out and relief use; it is not median-income hunger across the FUA. The 10,000 kg/1,510 recipients are not a net-burden resolution rate. Unadopted RES 40/60 discussion domains are 49–64/51–66. MED 40 gives 42–67; rejecting LON's mature-human pathway, monitoring or usual public net-access assumptions gives 39–74. No independent local cohort or TGA document was verified.",
   ],
   [saltLakeCity.candidateId]: [
     zh
-      ? "盐湖城PCS条件40、ISR／RES／OPT条件60，GSS／MED／LON／TEC未知，数学域27—77、无中心。实际服务、供水／食品供应和共享交通支持有限能力；知识三通道及诊断接触仍未闭合通常治疗或产用扩散。"
-      : "Salt Lake City has conditional PCS 40 and ISR/RES/OPT 60; GSS/MED/LON/TEC remain unknown: 27–77 without a centre. Operating services, water/food supply and shared transport support scoped capability; knowledge output and diagnostic contact do not complete usual treatment or commercialisation/diffusion connections.",
+      ? "盐湖城PCS条件40、ISR／OPT条件60，其余五维未知，数学域21—81、无中心。RES原60撤回：2022市调查约三分之一食品不安全，29%曾为其他家用减／放弃食品，41%难获偏好尤其健康食品；2026重刊不变观察年，不能概括为轻微价格障碍。"
+      : "Salt Lake City has conditional PCS 40 and ISR/OPT 60; the other five dimensions are unknown, giving a mathematical domain of 21–81 without a centre. RES 60 was withdrawn: the 2022 city survey describes about one third as food insecure, 29% reducing/forgoing food for other household expenses and 41% struggling to access preferred, especially healthy, food. Republication in 2026 does not change the observation year or make these minor price barriers.",
     zh
-      ? "旧砖房资助关闭／十年等待仅限合资格低收入住户，其对通常居民保护的重要性须另接受；RES通常供给与净负担推定拒绝后21—81。机场目录点在旧边界外，但实际接驳可作共享服务。资料失败不扣分，未知不排除入围。"
-      : "The closed retrofit-aid programme and ten-year queue concern eligible low-income households; significance for usual protection requires a separate assumption. Withdrawing usual supply/affordability restores RES unknown and 21–81. The airport reference lies outside the frozen area, while operating connections support shared use. Failed acquisition receives no penalty; unknowns do not exclude inclusion.",
+      ? "真实水电供给、2025种植／分享与费用取舍反证同读；资助者70%以上分享不等全居民充足或负担已消失。当前中位/FUA净取得未能选择RES主40／60，讨论域25—75／27—77，不由未知扣分。机场原目录点不落旧FUA不等不能使用；研究优先、诊断接触不补治疗或产用分数。"
+      : "Actual utilities and 2025 production/sharing are read alongside financial tradeoffs. Over 70% of grant recipients sharing produce does not establish adequate food for all residents or resolved costs. Current median-income/FUA net access does not settle RES 40/60; discussion domains are 25–75/27–77, without penalising unknowns. An airport point outside the old FUA does not imply unusable access; research priority or diagnostic contact does not fill treatment or production/use scores.",
   ],
   [sydney.candidateId]: [
     zh
@@ -647,6 +669,22 @@ const caseNotes: Record<number, string[]> = {
   ],
 };
 const caseSupplementLinks: Record<number, { path: string; label: string }> = {
+  375: {
+    path: "cci-res-priority-comparability-review.md",
+    label: zh ? "资源同尺度与主档撤回" : "Resource comparability and tier withdrawal",
+  },
+  1266: {
+    path: "cci-res-priority-comparability-review.md",
+    label: zh ? "资源同尺度与主档撤回" : "Resource comparability and tier withdrawal",
+  },
+  4881: {
+    path: "cci-res-priority-comparability-review.md",
+    label: zh ? "资源同尺度与主档撤回" : "Resource comparability and tier withdrawal",
+  },
+  2626: {
+    path: "cci-canada-opt-priority-review.md",
+    label: zh ? "加拿大退出链补证与共享界限" : "Canadian exit paths and shared-fact limits",
+  },
   397: {
     path: "cci-tampere-lon-priority-review.md",
     label: zh ? "长寿实际路径与净取得补证" : "Longevity delivery and net-access review",

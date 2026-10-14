@@ -51,10 +51,10 @@
     },
     {
       "id": "RES",
-      "score": 60,
-      "rationale": "Regulatedactualmulti-sourcewater, reportedactualelectricityconsumption, implementedfoodmicrogrants/sharingandurbanfoodproduction supportordinarysupply;price/accessinequalityandsharedsourcesremainimportant.",
-      "assumption": "Ordinarymarket/energyaccessandmedianincomeusualaffordability,coreutility/sharedFUAserviceandtimecontinuity accepted. No fullhouseholdbill/caloricmeasure/stressrequirement;rejectnecessaryusualsupply/payment/scope=>unresolved;actualpersistentimportantnetburdenmay40.",
-      "conditionalAlternatives": [40],
+      "score": null,
+      "rationale": "Actual regulated multi-source water, electricity use and operating food grants/sharing support supply. The 2022 city survey, republished in the 2026 report, describes about one in three residents as food insecure, 29% reducing or forgoing food to pay other household expenses at least once, and 41% unable to access preferred, especially healthy, food. These are distinct indicators, not a 2026 FUA median-income rate. The earlier generic price/access description understated this evidence; current material net constraints versus usually adequate access remain unresolved.",
+      "assumption": "Neither grant-recipient sharing nor market operation proves that financial tradeoffs disappeared. A 40 or 60 discussion must separately justify income/geography/current continuity and remaining ordinary net access alongside actual mitigation. Do not automatically carry 2022 percentages into 2026, treat preferred-food limits as starvation, require a perfect cohort/bill, or use unknown as low capability.",
+      "conditionalAlternatives": [],
       "subpillars": {
         "water": "partial",
         "food": "partial",
@@ -116,8 +116,8 @@
     }
   ],
   "retrievedOn": "2026-10-13",
-  "knownWeightedSubtotal": 27,
-  "unresolvedScoreRange": [27, 77],
+  "knownWeightedSubtotal": 21.0,
+  "unresolvedScoreRange": [21.0, 81.0],
   "sourceSnapshots": [
     {
       "file": "utah-finance2024.pdf",
@@ -483,5 +483,28 @@
     "sourceManifestSha256": "aa7c55715d27c705f1caee9e1d6c521c58db24fb4422f6e8aee64bfb6b172419",
     "acceptanceSha256": "2bbff64f4047f3ce12041a7be0669173f2af0081a294c06d81bc5d02e0355e20",
     "scope": "bounded8/31 review, full9031 identity and scoped reference points; not all measured or ranking eligibility"
+  },
+  "resDiscussionScenarios": {
+    "notAdopted": true,
+    "RES40": {
+      "reason": "40可接受2022观察包含普通中位人物有意义的真实财务取舍，且既有资助/分享覆盖不足以消除其截止日重要余障；不能将2022比例直接延续为2026比例。",
+      "range": [25.0, 75.0]
+    },
+    "RES60": {
+      "reason": "60可接受真实水/电/食品市场和已运行项目支持当前中位通常取得，较旧调查的高风险群体/时点/地区不主导目标净取得；必须论证这一路径，70%资助受益者分享本身不够。",
+      "range": [27.0, 77.0]
+    }
+  },
+  "resComparabilityReview": {
+    "path": "docs/cci-res-priority-comparability-review.md",
+    "sha256": "b1eb9e8160c1cb788ac2a0e660619f50f17f255772271a623f1ee5b407f19391",
+    "reviewedOn": "2026-10-14",
+    "fixedInputsSha256": "9708e6273b3af37bb941a6efc8dd3271539a36adb818a91521666f8643ec27b5",
+    "sourceManifestSha256": "bdde9eef01dce6e96f4b33860197a74ddead704d24d55cd8e62fa4d116e635cd",
+    "rootOtherSevenUnchanged": true,
+    "rootAcceptanceOtherSevenSha256": "7e1e1ffe4303d4d52c91656f7394515b77e81fd90879a9782fa68004d2e476b4",
+    "scoreChanged": true,
+    "fixedSnapshotDoesNotBackfillConcurrentOpt": true,
+    "handoffSha256": "568773729a8b885c5cefb1968a22af3b9fc601d4aee07389efa961a8727a2f37"
   }
 }

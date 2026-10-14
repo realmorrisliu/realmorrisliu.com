@@ -102,6 +102,8 @@ const realCases = [
   "sydney",
   "melbourne",
   "toronto",
+  "vancouver",
+  "vienna",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -195,6 +197,8 @@ const [
   sydney,
   melbourne,
   toronto,
+  vancouver,
+  vienna,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -1965,7 +1969,9 @@ assert.equal(
 assert.equal(seattleCase.medComparabilityReview.ageRestrictionRemoved, true);
 assert.equal(seattleCase.medComparabilityReview.scoreChanged, false);
 
-assert.deepEqual(total(saltLakeCity), { center: null, lower: 27, upper: 77 });
+assert.deepEqual(total(saltLakeCity), { center: null, lower: 21, upper: 81 });
+assert.deepEqual(total({ ...saltLakeCity, RES: 40 }), { center: null, lower: 25, upper: 75 });
+assert.deepEqual(total({ ...saltLakeCity, RES: 60 }), { center: null, lower: 27, upper: 77 });
 const saltLakeCityWithoutRes = { ...saltLakeCity };
 delete saltLakeCityWithoutRes.RES;
 assert.deepEqual(total(saltLakeCityWithoutRes), { center: null, lower: 21, upper: 81 });
@@ -1987,28 +1993,63 @@ assert.equal(tampereCase.lonPriorityReview.sha256, digest(tampereCase.lonPriorit
 assert.equal(tampereCase.lonPriorityReview.otherSevenDimensionsUnchanged, true);
 assert.equal(tampereCase.lonPriorityReview.gssNotReopened, true);
 
-assert.deepEqual(total(melbourne), { center: null, lower: 49, upper: 64 });
-assert.deepEqual(total({ ...melbourne, MED: 40 }), { center: null, lower: 46, upper: 61 });
+assert.deepEqual(total(melbourne), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total({ ...melbourne, RES: 40 }), { center: null, lower: 49, upper: 64 });
+assert.deepEqual(total({ ...melbourne, RES: 60 }), { center: null, lower: 51, upper: 66 });
+assert.deepEqual(total({ ...melbourne, MED: 40 }), { center: null, lower: 42, upper: 67 });
 const melbourneWithoutRes = { ...melbourne };
 delete melbourneWithoutRes.RES;
 assert.deepEqual(total(melbourneWithoutRes), { center: null, lower: 45, upper: 70 });
 const melbourneWithoutLon = { ...melbourne };
 delete melbourneWithoutLon.LON;
-assert.deepEqual(total(melbourneWithoutLon), { center: null, lower: 43, upper: 68 });
+assert.deepEqual(total(melbourneWithoutLon), { center: null, lower: 39, upper: 74 });
 const melbourneCase = realCases.find(c => c.candidateId === 1266);
 assert.equal(
   melbourneCase.priorityCompletionReview.sha256,
   digest(melbourneCase.priorityCompletionReview.path)
 );
 
-assert.deepEqual(total(toronto), { center: null, lower: 36, upper: 76 });
-assert.deepEqual(total({ ...toronto, MED: 40 }), { center: null, lower: 42, upper: 67 });
-assert.deepEqual(total({ ...toronto, MED: 60 }), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total(toronto), { center: null, lower: 42, upper: 72 });
+assert.deepEqual(total({ ...toronto, MED: 40 }), { center: null, lower: 48, upper: 63 });
+assert.deepEqual(total({ ...toronto, MED: 60 }), { center: null, lower: 51, upper: 66 });
 const torontoWithoutLon = { ...toronto };
 delete torontoWithoutLon.LON;
-assert.deepEqual(total(torontoWithoutLon), { center: null, lower: 30, upper: 80 });
+assert.deepEqual(total(torontoWithoutLon), { center: null, lower: 36, upper: 76 });
 const torontoCase = realCases.find(c => c.candidateId === 2626);
 assert.equal(
   torontoCase.priorityCompletionReview.sha256,
   digest(torontoCase.priorityCompletionReview.path)
 );
+
+const torontoWithoutOpt = { ...toronto };
+delete torontoWithoutOpt.OPT;
+assert.deepEqual(total(torontoWithoutOpt), { center: null, lower: 36, upper: 76 });
+assert.equal(torontoCase.optPriorityReview.sha256, digest(torontoCase.optPriorityReview.path));
+assert.equal(torontoCase.optPriorityReview.otherSevenWholeObjectsUnchanged, true);
+
+assert.deepEqual(total(vancouver), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total({ ...vancouver, RES: 40 }), { center: null, lower: 49, upper: 64 });
+assert.deepEqual(total({ ...vancouver, RES: 60 }), { center: null, lower: 51, upper: 66 });
+assert.deepEqual(total(vienna), { center: null, lower: 45, upper: 70 });
+const viennaWithoutMed = { ...vienna };
+delete viennaWithoutMed.MED;
+assert.deepEqual(total(viennaWithoutMed), { center: null, lower: 36, upper: 76 });
+const viennaWithoutLon = { ...vienna };
+delete viennaWithoutLon.LON;
+assert.deepEqual(total(viennaWithoutLon), { center: null, lower: 39, upper: 74 });
+for (const id of [375, 790]) {
+  const c = realCases.find(c => c.candidateId === id);
+  assert.equal(c.priorityCompletionReview.sha256, digest(c.priorityCompletionReview.path));
+  assert.equal(c.priorityCompletionReview.rootVerifiedFull9031AndOriginals, true);
+  assert.equal(c.globalRankingEligible, false);
+}
+
+for (const id of [375, 1266, 2626, 397, 4881, 537]) {
+  const c = realCases.find(c => c.candidateId === id);
+  assert.equal(c.resComparabilityReview.sha256, digest(c.resComparabilityReview.path));
+  assert.equal(c.resComparabilityReview.rootOtherSevenUnchanged, true);
+  if ([375, 1266, 4881].includes(id)) {
+    assert.equal(c.dimensions.find((d: { id: string }) => d.id === "RES").score, null);
+    assert.equal(c.resDiscussionScenarios.notAdopted, true);
+  }
+}
