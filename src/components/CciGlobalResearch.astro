@@ -64,6 +64,8 @@ import vancouver from "../../docs/data/cci-local-2026-vancouver-case.json";
 import vienna from "../../docs/data/cci-local-2026-vienna-case.json";
 import brisbane from "../../docs/data/cci-local-2026-brisbane-case.json";
 import groningen from "../../docs/data/cci-local-2026-groningen-case.json";
+import taipei from "../../docs/data/cci-local-2026-taipei-case.json";
+import frankfurt from "../../docs/data/cci-local-2026-frankfurt-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -132,8 +134,12 @@ const cases = [
   vienna,
   brisbane,
   groningen,
+  taipei,
+  frankfurt,
 ];
 const caseNamesZh: Record<number, string> = {
+  [taipei.candidateId]: "台北功能区",
+  [frankfurt.candidateId]: "法兰克福功能区",
   [brisbane.candidateId]: "布里斯班功能区",
   [groningen.candidateId]: "格罗宁根功能区",
   [vancouver.candidateId]: "温哥华功能区",
@@ -294,6 +300,22 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [taipei.candidateId]: [
+    zh
+      ? "台北PCS／ISR／MED／LON／TEC条件60，GSS／RES／OPT未知，数学域39—74、无中心。首阶段水务与病种链加接续审阅，实际保护、执行、必要护理及技术产用支持有限判断；食品／能源已部分查阅，通常净取得仍未定。"
+      : "Taipei has conditional PCS/ISR/MED/LON/TEC 60, with GSS/RES/OPT unknown: a 39–74 mathematical domain without a centre. Scoped utility and disease research is combined with actual protection, execution, necessary care and technology use. Food/energy were partly reviewed, while ordinary net access remains unresolved.",
+    zh
+      ? "健保物理3臺北列与65／118全国定义分开，未作风险调整；医疗区域、水务434km²和冻结2463km²功能区不同。2023自制回输、商业收案与Oct1正式病种付款分开，通常审批／监护／净负担可撤；撤MED30—80、撤LON33—78。日本CoE须先取得，结汇上限和漫游产品不等有效长期退出。"
+      : "The Taipei column on NHI page3 is separate from nationwide definitions on65/118, without completed risk adjustment. The medical region,434km²water area and2463km²FUA differ. Self-made2023infusion, commercial intake and Oct1 disease payment remain distinct; ordinary approval, monitoring and affordability are revocable. Withdrawing MED gives30–80 or LON33–78. Japanese CoE must first be obtained; remittance limits and roaming offers are not an effective long-term exit.",
+  ],
+  [frankfurt.candidateId]: [
+    zh
+      ? "法兰克福ISR／MED／LON／TEC／OPT条件60，PCS／GSS／RES未知，数学域36—76、无中心。局部执行、必要护理／监护、技术采用及实际航空与普通资金通信支持有限判断；新纵火／爆炸的处置后余障和资源净取得仍未择档。"
+      : "Frankfurt has conditional ISR/MED/LON/TEC/OPT 60, with PCS/GSS/RES unknown: a 36–76 mathematical domain without a centre. Scoped execution, necessary care/monitoring, technology use, operating flights and ordinary payment/connectivity support limited judgments. Residual arson/explosion effects and net resource access remain unresolved.",
+    zh
+      ? "风险调整质量值1.47／2.21不是死亡百分比，宽区间与特定手术范围保留。电网PDF可见表与文本层冲突分列，不跨电压相加；真实Tafel援助也有需求增、捐赠减。德国个人账户／境外通信的资格、资金、设备共因和迁居后续安排可撤，未核独立跨国陆路全程；撤OPT30—80、撤MED27—82。"
+      : "Risk-adjusted quality values1.47/2.21 are not death percentages; wide intervals and selected procedures remain. Conflicting visible/text-layer grid values are recorded without adding voltage levels. Actual Tafel help retains rising need and falling donations. German account/connectivity eligibility, funds, common device failures and post-emigration arrangements are revocable; a complete independent international ground itinerary is unverified. Withdrawing OPT gives30–80 or MED27–82.",
+  ],
   [hangzhou.candidateId]: [
     zh
       ? "杭州10078形成完整条件评分58：PCS／GSS／ISR／RES／MED各60，LON／OPT40，TEC80。实际防护、服务与生产采用有据，市级统计、混合院区和办件数量不代全区居民覆盖。"

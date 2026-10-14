@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 54,
+    "conditionalCaseCount": 56,
     "completeConditionalCaseCount": 16,
-    "partialCaseCount": 38,
-    "unassessedCount": 8977,
+    "partialCaseCount": 40,
+    "unassessedCount": 8975,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -575,8 +575,18 @@
       "sha256": "dc4e5e0003deda81accda00cd54d3805513b83a05aa5829f4e20f58f8768e8d7",
       "provenance": "cci-groningen-priority-review.md",
       "provenanceSha256": "88fe33cbb842354dfe3fd063336784b1f535f1709cf9ed4bbe3a2167891e74cf"
+    },
+    "cci-local-2026-taipei-case.json": {
+      "sha256": "a9a98c5618afcd320e10b224c44fd49e075ef85236dbead3d4ba9da3e225af55",
+      "provenance": "cci-taipei-score-completion-review.md",
+      "provenanceSha256": "e6b067ff0115744fdaf2c78620da83e40ea0bd02acac6ac97a1dba10cd56cf05"
+    },
+    "cci-local-2026-frankfurt-case.json": {
+      "sha256": "db5eaa9911283d58b5295d249f7d68362b8b55ec22cef6816753f404d4edf5a0",
+      "provenance": "cci-frankfurt-score-completion-review.md",
+      "provenanceSha256": "2e2e73f0002e1e62097ea84d733c39a2cd9dc21797d2c5b7bd527bc8a7988de1"
     }
   },
-  "scriptSha256": "d7580c2a1d922db223e937641101d76cd46876391d9dee7bfb7005e598c5d05b",
-  "csvSha256": "a86b0af780efc7474264b453745c33adf279416b412eaa9387b2750147a2558a"
+  "scriptSha256": "7fbfdd1d7b9b45b46f10723c18874dfe4a4f8166348659a6430f853637f598af",
+  "csvSha256": "3ac10713aa82d5c442f2411bdba61ad0a8aa7434a814538b34fe2ce5c0cc53b7"
 }

@@ -106,6 +106,8 @@ const realCases = [
   "vienna",
   "brisbane",
   "groningen",
+  "taipei",
+  "frankfurt",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -203,6 +205,8 @@ const [
   vienna,
   brisbane,
   groningen,
+  taipei,
+  frankfurt,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2129,3 +2133,41 @@ assert(
 );
 assert.equal(gpciClues.scoresCreated, 0);
 assert.equal(gpciClues.exclusionsCreated, 0);
+
+assert.deepEqual(total(taipei), { center: null, lower: 39, upper: 74 });
+assert.deepEqual(total(frankfurt), { center: null, lower: 36, upper: 76 });
+for (const [scores, dimension, lower, upper] of [
+  [taipei, "MED", 30, 80],
+  [taipei, "LON", 33, 78],
+  [frankfurt, "MED", 27, 82],
+  [frankfurt, "OPT", 30, 80],
+] as const) {
+  const withdrawn = { ...scores };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+for (const id of [1141, 3093]) {
+  const c = realCases.find(c => c.candidateId === id);
+  assert.equal(c.priorityCompletionReview.sha256, digest(c.priorityCompletionReview.path));
+  assert.equal(c.scopeCompletionReview.allDimensionSemanticsActuallyConsidered, true);
+  assert.equal(c.scopeCompletionReview.allSubpillarsHaveOutcomeMeasurements, false);
+  assert.equal(c.scopeCompletionReview.subpillarCount, 31);
+  assert.equal(c.priorityCompletionReview.validOriginalCount, c.sourceSnapshots.length);
+  assert(c.sourceSnapshots.every((r: { validOriginal: boolean }) => r.validOriginal));
+  for (const r of [...c.webReadSources, ...c.failedSourceSnapshots]) {
+    assert.equal(r.originalBytes, null);
+    assert.equal(r.originalSha256, null);
+  }
+  assert.equal(c.globalRankingEligible, false);
+}
+const taipeiCase = realCases.find(c => c.candidateId === 1141);
+assert.equal(taipeiCase.medicalScopeReview.nationwideRatesTransferredToTaipei, false);
+assert.equal(taipeiCase.medicalScopeReview.riskAdjustmentCompleted, false);
+assert.equal(taipeiCase.medicalScopeReview.taipei14DayReadmissionPercent, 4.85);
+assert.equal(taipeiCase.medicalScopeReview.taipeiAmiMortalityPercent, 2.33);
+const frankfurtCase = realCases.find(c => c.candidateId === 3093);
+assert.equal(frankfurtCase.medicalScopeReview.riskAdjustedQualityValuesAreMortalityPercent, false);
+assert.deepEqual(frankfurtCase.medicalScopeReview.selectedQualityValues, [1.47, 2.21]);
+assert.equal(frankfurtCase.resourceScopeReview.visibleTextLayerConflictRetained, true);
+assert.equal(frankfurtCase.resourceScopeReview.voltageLevelsAdded, false);
+assert.equal(frankfurtCase.resourceScopeReview.lowVoltageUpstreamKwh, 1299209723);
