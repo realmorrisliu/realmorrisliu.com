@@ -62,6 +62,8 @@ import melbourne from "../../docs/data/cci-local-2026-melbourne-case.json";
 import toronto from "../../docs/data/cci-local-2026-toronto-case.json";
 import vancouver from "../../docs/data/cci-local-2026-vancouver-case.json";
 import vienna from "../../docs/data/cci-local-2026-vienna-case.json";
+import brisbane from "../../docs/data/cci-local-2026-brisbane-case.json";
+import groningen from "../../docs/data/cci-local-2026-groningen-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -128,8 +130,12 @@ const cases = [
   toronto,
   vancouver,
   vienna,
+  brisbane,
+  groningen,
 ];
 const caseNamesZh: Record<number, string> = {
+  [brisbane.candidateId]: "布里斯班功能区",
+  [groningen.candidateId]: "格罗宁根功能区",
   [vancouver.candidateId]: "温哥华功能区",
   [vienna.candidateId]: "维也纳功能区",
   [seattle.candidateId]: "西雅图功能区",
@@ -384,6 +390,22 @@ const caseNotes: Record<number, string[]> = {
     zh
       ? "全9,031几何核对区内外参考点；Hull、Sheffield和机场服务不并成本区。国家CAR-T委托不证明本区居民已进入真实给药/监护链；国家威胁与日常运转也不足以补GSS。两轮后保留缺口，必要的代表性、延续、普通负担和触达假设均可撤回。"
       : "Reference points were checked against all 9,031 geometries; Hull, Sheffield and outside-airport services are not local production. National CAR-T commissioning does not establish a delivered local-resident pathway; national threat context and ordinary operations do not settle GSS. After two rounds, gaps remain explicit and applicability, continuity, affordability and reach assumptions can be withdrawn.",
+  ],
+  [brisbane.candidateId]: [
+    zh
+      ? "布里斯班PCS／ISR／TEC／OPT条件60、MED40，GSS／RES／LON未知，数学域36—71、无中心。实际防洪、恢复、质量纠正、必要治疗和技术采用支持能力；医疗改善后仍有重要必要时效约束。"
+      : "Brisbane has conditional PCS/ISR/TEC/OPT 60 and MED 40, with GSS/RES/LON unknown: a mathematical domain of 36–71 without a centre. Operating flood protection, recovery, quality correction, necessary care and technology use support capability; important necessary-care delays remain after actual improvements.",
+    zh
+      ? "仍待与已就诊专科患者、急诊滞留与开始治疗分别，不把不同观察窗当2026全FUA实测。MED60讨论为39—74，撤MED为30—80。机场近似点在旧框外，另核真实共享服务；设施保持开放不等航班不中断。正式当地疾病支付／通常监护未闭，不由常规开展主张强补LON。"
+      : "Waiting and seen specialist patients, ED stays and treatment starts are separate; different observation windows are not 2026 FUA measurements. MED 60 gives 39–74 in discussion; withdrawing MED gives 30–80. The approximate airport point is outside the frozen frame, with shared service independently considered; an open aerodrome does not mean uninterrupted flights. Local formal disease payment/usual monitoring remain unresolved, so standard-care claims do not fill LON.",
+  ],
+  [groningen.candidateId]: [
+    zh
+      ? "格罗宁根ISR／MED／LON／TEC／OPT条件60，PCS／GSS／RES未知，数学域36—76、无中心。真实地方交付、专科恢复、有限病种转化及能源产用支持判断；加固欠账、安全影响与通常资源净取得仍未择一。"
+      : "Groningen has conditional ISR/MED/LON/TEC/OPT 60, with PCS/GSS/RES unknown: a mathematical domain of 36–76 without a centre. Actual local delivery, specialist recovery, limited disease translation and energy production/use support judgments; retrofit gaps, safety effects and usual net resource access remain unresolved.",
+    zh
+      ? "2026监管确认专科恢复仍保留人员脆弱；内部安全结果不是全院风险调整实测。2025未持续更新的已报销产品表、正建议与院内试验分别；普通付款监护／类别适配可撤。撤MED27—82、撤LON30—80、同撤21—86。Bremen未来线路不当已用，国内运行接续真实境外网络的有限推定拒绝即撤OPT。"
+      : "The 2026 regulator-confirmed specialist restart retains staffing fragility; internal safety findings are not hospital-wide risk-adjusted measurements. The non-maintained 2025 reimbursement list, positive advice and in-house trials are separate; usual payment/monitoring and category applicability are revocable. Withdrawing MED gives 27–82, LON 30–80, or both 21–86. Future Bremen services are not operating; rejecting the limited connection from actual domestic routes to foreign networks withdraws OPT.",
   ],
   [vancouver.candidateId]: [
     zh

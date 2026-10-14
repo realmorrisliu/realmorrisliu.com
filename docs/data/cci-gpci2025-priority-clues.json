@@ -1,0 +1,2092 @@
+{
+  "source": "gpci2025-summary.pdf",
+  "physicalTablePage": 13,
+  "rowCount": 48,
+  "matchedAgainstFull9031": true,
+  "records": [
+    {
+      "label": "New York",
+      "functionClues": {
+        "economy": {
+          "sourceRank": 1,
+          "sourceFunctionScore": 358.8,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 1,
+          "sourceFunctionScore": 213.8,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 3,
+          "sourceFunctionScore": 222.6,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 4,
+          "sourceFunctionScore": 251.7,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 39,
+          "sourceFunctionScore": 138.8,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 44,
+          "sourceFunctionScore": 290.9,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "USA",
+      "exactCountryNameMatches": [7244],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "London",
+      "functionClues": {
+        "culturalInteraction": {
+          "sourceRank": 1,
+          "sourceFunctionScore": 343.1,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 1,
+          "sourceFunctionScore": 255.5,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 2,
+          "sourceFunctionScore": 313.0,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 2,
+          "sourceFunctionScore": 186.4,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 13,
+          "sourceFunctionScore": 356.3,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 18,
+          "sourceFunctionScore": 187.9,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "GBR",
+      "exactCountryNameMatches": [5288],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Tokyo",
+      "functionClues": {
+        "livability": {
+          "sourceRank": 1,
+          "sourceFunctionScore": 392.9,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 2,
+          "sourceFunctionScore": 299.6,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 3,
+          "sourceFunctionScore": 155.3,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 6,
+          "sourceFunctionScore": 213.9,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 7,
+          "sourceFunctionScore": 209.3,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 12,
+          "sourceFunctionScore": 264.2,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "JPN",
+      "exactCountryNameMatches": [5129],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Copenhagen",
+      "functionClues": {
+        "environment": {
+          "sourceRank": 1,
+          "sourceFunctionScore": 243.6,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 8,
+          "sourceFunctionScore": 362.9,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 9,
+          "sourceFunctionScore": 269.2,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 22,
+          "sourceFunctionScore": 55.9,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 24,
+          "sourceFunctionScore": 145.8,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 34,
+          "sourceFunctionScore": 82.9,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "DNK",
+      "exactCountryNameMatches": [537],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Paris",
+      "functionClues": {
+        "livability": {
+          "sourceRank": 2,
+          "sourceFunctionScore": 391.7,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 2,
+          "sourceFunctionScore": 225.1,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 3,
+          "sourceFunctionScore": 288.0,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 10,
+          "sourceFunctionScore": 107.8,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 15,
+          "sourceFunctionScore": 249.9,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 20,
+          "sourceFunctionScore": 182.1,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "FRA",
+      "exactCountryNameMatches": [2702],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Taipei",
+      "functionClues": {
+        "environment": {
+          "sourceRank": 2,
+          "sourceFunctionScore": 241.3,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 19,
+          "sourceFunctionScore": 153.0,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 25,
+          "sourceFunctionScore": 51.8,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 26,
+          "sourceFunctionScore": 217.6,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 26,
+          "sourceFunctionScore": 334.6,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 40,
+          "sourceFunctionScore": 73.5,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "TWN",
+      "exactCountryNameMatches": [],
+      "identityStatus": "unresolved_not_dropped",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Zurich",
+      "functionClues": {
+        "economy": {
+          "sourceRank": 3,
+          "sourceFunctionScore": 301.4,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 12,
+          "sourceFunctionScore": 199.5,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 21,
+          "sourceFunctionScore": 344.2,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 29,
+          "sourceFunctionScore": 45.5,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 30,
+          "sourceFunctionScore": 135.2,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 45,
+          "sourceFunctionScore": 49.9,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "CHE",
+      "exactCountryNameMatches": [1479],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Frankfurt",
+      "functionClues": {
+        "livability": {
+          "sourceRank": 3,
+          "sourceFunctionScore": 380.2,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 7,
+          "sourceFunctionScore": 198.3,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 14,
+          "sourceFunctionScore": 193.8,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 28,
+          "sourceFunctionScore": 209.5,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 39,
+          "sourceFunctionScore": 29.2,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 39,
+          "sourceFunctionScore": 74.7,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "DEU",
+      "exactCountryNameMatches": [],
+      "identityStatus": "unresolved_not_dropped",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Vienna",
+      "functionClues": {
+        "environment": {
+          "sourceRank": 3,
+          "sourceFunctionScore": 231.2,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 9,
+          "sourceFunctionScore": 361.8,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 15,
+          "sourceFunctionScore": 161.0,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 19,
+          "sourceFunctionScore": 140.8,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 30,
+          "sourceFunctionScore": 196.7,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 30,
+          "sourceFunctionScore": 43.1,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "AUT",
+      "exactCountryNameMatches": [790],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Singapore",
+      "functionClues": {
+        "economy": {
+          "sourceRank": 4,
+          "sourceFunctionScore": 298.6,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 8,
+          "sourceFunctionScore": 195.5,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 9,
+          "sourceFunctionScore": 172.5,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 12,
+          "sourceFunctionScore": 103.8,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 13,
+          "sourceFunctionScore": 197.5,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 31,
+          "sourceFunctionScore": 325.2,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "SGP",
+      "exactCountryNameMatches": [154],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Los Angeles",
+      "functionClues": {
+        "researchDevelopment": {
+          "sourceRank": 4,
+          "sourceFunctionScore": 152.2,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 24,
+          "sourceFunctionScore": 234.2,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 27,
+          "sourceFunctionScore": 106.5,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 29,
+          "sourceFunctionScore": 137.0,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 37,
+          "sourceFunctionScore": 144.5,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 41,
+          "sourceFunctionScore": 295.9,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "USA",
+      "exactCountryNameMatches": [1642],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Berlin",
+      "functionClues": {
+        "livability": {
+          "sourceRank": 4,
+          "sourceFunctionScore": 375.8,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 8,
+          "sourceFunctionScore": 174.1,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 15,
+          "sourceFunctionScore": 193.5,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 17,
+          "sourceFunctionScore": 75.8,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 23,
+          "sourceFunctionScore": 147.2,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 29,
+          "sourceFunctionScore": 203.5,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "DEU",
+      "exactCountryNameMatches": [4946],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Stockholm",
+      "functionClues": {
+        "environment": {
+          "sourceRank": 4,
+          "sourceFunctionScore": 224.4,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 14,
+          "sourceFunctionScore": 354.9,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 19,
+          "sourceFunctionScore": 247.0,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 22,
+          "sourceFunctionScore": 148.9,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 24,
+          "sourceFunctionScore": 52.6,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 33,
+          "sourceFunctionScore": 83.4,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "SWE",
+      "exactCountryNameMatches": [1445],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Shanghai",
+      "functionClues": {
+        "accessibility": {
+          "sourceRank": 4,
+          "sourceFunctionScore": 222.5,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 11,
+          "sourceFunctionScore": 103.9,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 15,
+          "sourceFunctionScore": 153.8,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 20,
+          "sourceFunctionScore": 243.1,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 23,
+          "sourceFunctionScore": 341.9,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 42,
+          "sourceFunctionScore": 129.3,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "CHN",
+      "exactCountryNameMatches": [10097],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Dublin",
+      "functionClues": {
+        "economy": {
+          "sourceRank": 5,
+          "sourceFunctionScore": 295.6,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 23,
+          "sourceFunctionScore": 174.4,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 27,
+          "sourceFunctionScore": 333.7,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 35,
+          "sourceFunctionScore": 35.7,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 36,
+          "sourceFunctionScore": 123.9,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 41,
+          "sourceFunctionScore": 72.8,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "IRL",
+      "exactCountryNameMatches": [415],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Seoul",
+      "functionClues": {
+        "researchDevelopment": {
+          "sourceRank": 5,
+          "sourceFunctionScore": 146.2,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 11,
+          "sourceFunctionScore": 203.3,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 11,
+          "sourceFunctionScore": 179.8,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 12,
+          "sourceFunctionScore": 168.9,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 16,
+          "sourceFunctionScore": 249.7,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 25,
+          "sourceFunctionScore": 340.3,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "KOR",
+      "exactCountryNameMatches": [94],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Dubai",
+      "functionClues": {
+        "culturalInteraction": {
+          "sourceRank": 5,
+          "sourceFunctionScore": 225.4,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 5,
+          "sourceFunctionScore": 216.0,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 10,
+          "sourceFunctionScore": 268.0,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 32,
+          "sourceFunctionScore": 37.6,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 32,
+          "sourceFunctionScore": 325.1,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 46,
+          "sourceFunctionScore": 114.6,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "ARE",
+      "exactCountryNameMatches": [357],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Madrid",
+      "functionClues": {
+        "livability": {
+          "sourceRank": 5,
+          "sourceFunctionScore": 373.0,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 5,
+          "sourceFunctionScore": 217.7,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 11,
+          "sourceFunctionScore": 169.0,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 13,
+          "sourceFunctionScore": 164.4,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 32,
+          "sourceFunctionScore": 193.0,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 37,
+          "sourceFunctionScore": 33.0,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "ESP",
+      "exactCountryNameMatches": [3147],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Beijing",
+      "functionClues": {
+        "economy": {
+          "sourceRank": 6,
+          "sourceFunctionScore": 283.0,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 10,
+          "sourceFunctionScore": 171.2,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 13,
+          "sourceFunctionScore": 102.1,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 17,
+          "sourceFunctionScore": 352.9,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 31,
+          "sourceFunctionScore": 131.9,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 47,
+          "sourceFunctionScore": 112.5,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "CHN",
+      "exactCountryNameMatches": [7704],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Boston",
+      "functionClues": {
+        "researchDevelopment": {
+          "sourceRank": 6,
+          "sourceFunctionScore": 142.8,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 18,
+          "sourceFunctionScore": 248.7,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 28,
+          "sourceFunctionScore": 139.7,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 30,
+          "sourceFunctionScore": 162.4,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 38,
+          "sourceFunctionScore": 307.5,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 46,
+          "sourceFunctionScore": 47.6,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "USA",
+      "exactCountryNameMatches": [7347],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Istanbul",
+      "functionClues": {
+        "culturalInteraction": {
+          "sourceRank": 6,
+          "sourceFunctionScore": 182.3,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 10,
+          "sourceFunctionScore": 186.1,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 25,
+          "sourceFunctionScore": 170.3,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 28,
+          "sourceFunctionScore": 47.3,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 41,
+          "sourceFunctionScore": 148.7,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 42,
+          "sourceFunctionScore": 293.7,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "TUR",
+      "exactCountryNameMatches": [1637],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Osaka",
+      "functionClues": {
+        "livability": {
+          "sourceRank": 6,
+          "sourceFunctionScore": 372.8,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 13,
+          "sourceFunctionScore": 161.8,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 18,
+          "sourceFunctionScore": 73.2,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 25,
+          "sourceFunctionScore": 143.9,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 32,
+          "sourceFunctionScore": 161.0,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 33,
+          "sourceFunctionScore": 190.3,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "JPN",
+      "exactCountryNameMatches": [],
+      "identityStatus": "unresolved_not_dropped",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Sydney",
+      "functionClues": {
+        "environment": {
+          "sourceRank": 6,
+          "sourceFunctionScore": 216.4,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 14,
+          "sourceFunctionScore": 84.4,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 17,
+          "sourceFunctionScore": 249.0,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 22,
+          "sourceFunctionScore": 344.1,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 23,
+          "sourceFunctionScore": 125.9,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 32,
+          "sourceFunctionScore": 128.6,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "AUS",
+      "exactCountryNameMatches": [1830],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Geneva",
+      "functionClues": {
+        "economy": {
+          "sourceRank": 7,
+          "sourceFunctionScore": 280.9,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 9,
+          "sourceFunctionScore": 205.6,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 23,
+          "sourceFunctionScore": 54.5,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 36,
+          "sourceFunctionScore": 317.1,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 42,
+          "sourceFunctionScore": 109.7,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 48,
+          "sourceFunctionScore": 29.1,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "CHE",
+      "exactCountryNameMatches": [29],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "San Francisco",
+      "functionClues": {
+        "researchDevelopment": {
+          "sourceRank": 7,
+          "sourceFunctionScore": 124.8,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 8,
+          "sourceFunctionScore": 280.3,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 32,
+          "sourceFunctionScore": 84.6,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 34,
+          "sourceFunctionScore": 158.3,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 37,
+          "sourceFunctionScore": 123.2,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 39,
+          "sourceFunctionScore": 307.2,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "USA",
+      "exactCountryNameMatches": [],
+      "identityStatus": "unresolved_not_dropped",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Moscow",
+      "functionClues": {
+        "culturalInteraction": {
+          "sourceRank": 7,
+          "sourceFunctionScore": 181.6,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 26,
+          "sourceFunctionScore": 48.7,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 28,
+          "sourceFunctionScore": 333.3,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 33,
+          "sourceFunctionScore": 128.2,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 36,
+          "sourceFunctionScore": 145.6,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 42,
+          "sourceFunctionScore": 138.5,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "RUS",
+      "exactCountryNameMatches": [2262],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Barcelona",
+      "functionClues": {
+        "livability": {
+          "sourceRank": 7,
+          "sourceFunctionScore": 372.8,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 16,
+          "sourceFunctionScore": 159.2,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 18,
+          "sourceFunctionScore": 141.9,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 22,
+          "sourceFunctionScore": 177.9,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 34,
+          "sourceFunctionScore": 35.8,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 35,
+          "sourceFunctionScore": 186.2,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "ESP",
+      "exactCountryNameMatches": [4523],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Hong Kong",
+      "functionClues": {
+        "researchDevelopment": {
+          "sourceRank": 8,
+          "sourceFunctionScore": 115.3,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 12,
+          "sourceFunctionScore": 175.2,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 26,
+          "sourceFunctionScore": 107.3,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 27,
+          "sourceFunctionScore": 212.6,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 31,
+          "sourceFunctionScore": 161.8,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 40,
+          "sourceFunctionScore": 302.0,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "HKG",
+      "exactCountryNameMatches": [73],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Melbourne",
+      "functionClues": {
+        "environment": {
+          "sourceRank": 8,
+          "sourceFunctionScore": 206.8,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 12,
+          "sourceFunctionScore": 358.4,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 16,
+          "sourceFunctionScore": 80.2,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 22,
+          "sourceFunctionScore": 234.8,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 22,
+          "sourceFunctionScore": 128.9,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 26,
+          "sourceFunctionScore": 142.0,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "AUS",
+      "exactCountryNameMatches": [1266],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Chicago",
+      "functionClues": {
+        "researchDevelopment": {
+          "sourceRank": 9,
+          "sourceFunctionScore": 114.6,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 14,
+          "sourceFunctionScore": 164.1,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 21,
+          "sourceFunctionScore": 235.1,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 29,
+          "sourceFunctionScore": 100.4,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 41,
+          "sourceFunctionScore": 130.8,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 43,
+          "sourceFunctionScore": 293.4,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "USA",
+      "exactCountryNameMatches": [6654],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Amsterdam",
+      "functionClues": {
+        "accessibility": {
+          "sourceRank": 9,
+          "sourceFunctionScore": 195.2,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 13,
+          "sourceFunctionScore": 263.6,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 16,
+          "sourceFunctionScore": 353.4,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 17,
+          "sourceFunctionScore": 190.2,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 21,
+          "sourceFunctionScore": 57.9,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 21,
+          "sourceFunctionScore": 136.6,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "NLD",
+      "exactCountryNameMatches": [1427],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Helsinki",
+      "functionClues": {
+        "livability": {
+          "sourceRank": 10,
+          "sourceFunctionScore": 359.1,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 10,
+          "sourceFunctionScore": 205.4,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 23,
+          "sourceFunctionScore": 234.4,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 33,
+          "sourceFunctionScore": 36.0,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 35,
+          "sourceFunctionScore": 124.5,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 47,
+          "sourceFunctionScore": 39.5,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "FIN",
+      "exactCountryNameMatches": [687],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Washington, DC",
+      "functionClues": {
+        "economy": {
+          "sourceRank": 11,
+          "sourceFunctionScore": 264.7,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 15,
+          "sourceFunctionScore": 80.7,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 38,
+          "sourceFunctionScore": 140.4,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 38,
+          "sourceFunctionScore": 119.6,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 42,
+          "sourceFunctionScore": 65.8,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 46,
+          "sourceFunctionScore": 270.5,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "USA",
+      "exactCountryNameMatches": [7068],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Brussels",
+      "functionClues": {
+        "livability": {
+          "sourceRank": 11,
+          "sourceFunctionScore": 358.8,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 20,
+          "sourceFunctionScore": 60.9,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 21,
+          "sourceFunctionScore": 149.0,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 25,
+          "sourceFunctionScore": 115.2,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 27,
+          "sourceFunctionScore": 166.7,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 31,
+          "sourceFunctionScore": 196.2,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "BEL",
+      "exactCountryNameMatches": [1269],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Toronto",
+      "functionClues": {
+        "economy": {
+          "sourceRank": 14,
+          "sourceFunctionScore": 251.6,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 19,
+          "sourceFunctionScore": 62.1,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 20,
+          "sourceFunctionScore": 349.5,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 24,
+          "sourceFunctionScore": 174.1,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 27,
+          "sourceFunctionScore": 140.2,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 31,
+          "sourceFunctionScore": 86.1,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "CAN",
+      "exactCountryNameMatches": [2626],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Mexico City",
+      "functionClues": {
+        "culturalInteraction": {
+          "sourceRank": 14,
+          "sourceFunctionScore": 154.9,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 28,
+          "sourceFunctionScore": 166.5,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 43,
+          "sourceFunctionScore": 16.8,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 46,
+          "sourceFunctionScore": 102.9,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 47,
+          "sourceFunctionScore": 101.6,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 47,
+          "sourceFunctionScore": 261.6,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "MEX",
+      "exactCountryNameMatches": [5006],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Kuala Lumpur",
+      "functionClues": {
+        "livability": {
+          "sourceRank": 15,
+          "sourceFunctionScore": 354.7,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 20,
+          "sourceFunctionScore": 151.4,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 30,
+          "sourceFunctionScore": 98.6,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 33,
+          "sourceFunctionScore": 160.7,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 37,
+          "sourceFunctionScore": 176.8,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 42,
+          "sourceFunctionScore": 17.4,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "MYS",
+      "exactCountryNameMatches": [1322],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Bangkok",
+      "functionClues": {
+        "culturalInteraction": {
+          "sourceRank": 16,
+          "sourceFunctionScore": 147.4,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 18,
+          "sourceFunctionScore": 158.3,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 30,
+          "sourceFunctionScore": 328.1,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 39,
+          "sourceFunctionScore": 165.6,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 40,
+          "sourceFunctionScore": 134.5,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 41,
+          "sourceFunctionScore": 20.2,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "THA",
+      "exactCountryNameMatches": [1894],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Sao Paulo",
+      "functionClues": {
+        "environment": {
+          "sourceRank": 16,
+          "sourceFunctionScore": 191.9,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 20,
+          "sourceFunctionScore": 139.4,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 34,
+          "sourceFunctionScore": 321.8,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 40,
+          "sourceFunctionScore": 26.2,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 44,
+          "sourceFunctionScore": 128.5,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 45,
+          "sourceFunctionScore": 104.4,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "BRA",
+      "exactCountryNameMatches": [6567],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Buenos Aires",
+      "functionClues": {
+        "culturalInteraction": {
+          "sourceRank": 17,
+          "sourceFunctionScore": 146.1,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 26,
+          "sourceFunctionScore": 168.0,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 37,
+          "sourceFunctionScore": 317.1,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 43,
+          "sourceFunctionScore": 136.9,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 45,
+          "sourceFunctionScore": 13.0,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 48,
+          "sourceFunctionScore": 80.7,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "ARG",
+      "exactCountryNameMatches": [4215],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Milan",
+      "functionClues": {
+        "accessibility": {
+          "sourceRank": 17,
+          "sourceFunctionScore": 158.8,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 18,
+          "sourceFunctionScore": 350.4,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 24,
+          "sourceFunctionScore": 116.2,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 29,
+          "sourceFunctionScore": 166.2,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 36,
+          "sourceFunctionScore": 184.3,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 38,
+          "sourceFunctionScore": 31.2,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "ITA",
+      "exactCountryNameMatches": [1600],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Fukuoka",
+      "functionClues": {
+        "livability": {
+          "sourceRank": 19,
+          "sourceFunctionScore": 350.2,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 21,
+          "sourceFunctionScore": 180.6,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 31,
+          "sourceFunctionScore": 39.2,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 38,
+          "sourceFunctionScore": 170.4,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 40,
+          "sourceFunctionScore": 117.9,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 43,
+          "sourceFunctionScore": 55.3,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "JPN",
+      "exactCountryNameMatches": [708],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Vancouver",
+      "functionClues": {
+        "environment": {
+          "sourceRank": 19,
+          "sourceFunctionScore": 185.5,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 24,
+          "sourceFunctionScore": 341.4,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 25,
+          "sourceFunctionScore": 226.4,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 27,
+          "sourceFunctionScore": 47.9,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 39,
+          "sourceFunctionScore": 118.6,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 44,
+          "sourceFunctionScore": 54.5,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "CAN",
+      "exactCountryNameMatches": [375],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": true,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Cairo",
+      "functionClues": {
+        "culturalInteraction": {
+          "sourceRank": 28,
+          "sourceFunctionScore": 102.6,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 29,
+          "sourceFunctionScore": 328.6,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 34,
+          "sourceFunctionScore": 127.6,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 44,
+          "sourceFunctionScore": 16.0,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 48,
+          "sourceFunctionScore": 86.4,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 48,
+          "sourceFunctionScore": 86.0,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "EGY",
+      "exactCountryNameMatches": [3981],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Tel Aviv",
+      "functionClues": {
+        "livability": {
+          "sourceRank": 33,
+          "sourceFunctionScore": 325.0,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 34,
+          "sourceFunctionScore": 187.4,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 35,
+          "sourceFunctionScore": 146.9,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 36,
+          "sourceFunctionScore": 33.9,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 37,
+          "sourceFunctionScore": 80.5,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 43,
+          "sourceFunctionScore": 107.2,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "ISR",
+      "exactCountryNameMatches": [419],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Johannesburg",
+      "functionClues": {
+        "culturalInteraction": {
+          "sourceRank": 35,
+          "sourceFunctionScore": 82.5,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 41,
+          "sourceFunctionScore": 112.7,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 43,
+          "sourceFunctionScore": 120.9,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 45,
+          "sourceFunctionScore": 113.5,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 48,
+          "sourceFunctionScore": 3.9,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 48,
+          "sourceFunctionScore": 225.1,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "ZAF",
+      "exactCountryNameMatches": [3337],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Jakarta",
+      "functionClues": {
+        "livability": {
+          "sourceRank": 35,
+          "sourceFunctionScore": 320.6,
+          "notCCI": true
+        },
+        "culturalInteraction": {
+          "sourceRank": 36,
+          "sourceFunctionScore": 82.5,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 40,
+          "sourceFunctionScore": 157.2,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 44,
+          "sourceFunctionScore": 120.6,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 44,
+          "sourceFunctionScore": 105.0,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 46,
+          "sourceFunctionScore": 11.7,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "IDN",
+      "exactCountryNameMatches": [4894, 4897, 4898, 4899, 4900],
+      "identityStatus": "unresolved_not_dropped",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    },
+    {
+      "label": "Mumbai",
+      "functionClues": {
+        "culturalInteraction": {
+          "sourceRank": 38,
+          "sourceFunctionScore": 79.7,
+          "notCCI": true
+        },
+        "livability": {
+          "sourceRank": 45,
+          "sourceFunctionScore": 272.1,
+          "notCCI": true
+        },
+        "environment": {
+          "sourceRank": 45,
+          "sourceFunctionScore": 117.8,
+          "notCCI": true
+        },
+        "economy": {
+          "sourceRank": 46,
+          "sourceFunctionScore": 104.6,
+          "notCCI": true
+        },
+        "researchDevelopment": {
+          "sourceRank": 47,
+          "sourceFunctionScore": 9.7,
+          "notCCI": true
+        },
+        "accessibility": {
+          "sourceRank": 47,
+          "sourceFunctionScore": 98.4,
+          "notCCI": true
+        }
+      },
+      "metricTransfer": false,
+      "retained": true,
+      "countryIso": "IND",
+      "exactCountryNameMatches": [7163],
+      "identityStatus": "unique_country_name",
+      "assessedAtFixedHead": false,
+      "cityBoundaryTransferred": false,
+      "residentPerformanceTransferred": false
+    }
+  ],
+  "limits": "Only48selectedmajorcities,notrandomorworlduniverse;allunmatchedandoutsideframecandidatesretained;noCCIscore/probability/exclusion",
+  "status": "global_cross_city_priority_clues_not_cci_scores",
+  "fixedInputCommit": "30739dfd55ac4988bb6522fd7e1ee9e2dfe97f08",
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-14",
+  "originalSource": {
+    "url": "https://www.mori-m-foundation.or.jp/pdf/GPCI2025_summary.pdf",
+    "bytes": 3506322,
+    "sha256": "048371e2a79bd518b5ca1e87787cc92139fcd207db601a8971b43e75128e1e73",
+    "publishedOn": "2025-12-17",
+    "historicalCutoffBytesObtained": false
+  },
+  "review": {
+    "path": "docs/cci-next-priority-batch-18-review.md",
+    "sha256": "1c25723aabf4f6a61d3a33ee2238348aa9c7c526c8557d3cf24e8f719cd71afa"
+  },
+  "originalDerivedHandoffSha256": "d0187431b73cefef063dc9d8d9c1bed7ece545255476c99af80dc884a9f2bf0f",
+  "scoresCreated": 0,
+  "exclusionsCreated": 0,
+  "globalRankingEligible": false
+}

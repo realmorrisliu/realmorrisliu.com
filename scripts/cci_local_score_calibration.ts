@@ -104,6 +104,8 @@ const realCases = [
   "toronto",
   "vancouver",
   "vienna",
+  "brisbane",
+  "groningen",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -199,6 +201,8 @@ const [
   toronto,
   vancouver,
   vienna,
+  brisbane,
+  groningen,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2053,3 +2057,75 @@ for (const id of [375, 1266, 2626, 397, 4881, 537]) {
     assert.equal(c.resDiscussionScenarios.notAdopted, true);
   }
 }
+
+assert.deepEqual(total(brisbane), { center: null, lower: 36, upper: 71 });
+assert.deepEqual(total({ ...brisbane, MED: 60 }), { center: null, lower: 39, upper: 74 });
+const brisbaneWithoutMed = { ...brisbane };
+delete brisbaneWithoutMed.MED;
+assert.deepEqual(total(brisbaneWithoutMed), { center: null, lower: 30, upper: 80 });
+assert.deepEqual(total(groningen), { center: null, lower: 36, upper: 76 });
+const groningenWithoutMed = { ...groningen };
+delete groningenWithoutMed.MED;
+assert.deepEqual(total(groningenWithoutMed), { center: null, lower: 27, upper: 82 });
+const groningenWithoutMedLon = { ...groningenWithoutMed };
+delete groningenWithoutMedLon.LON;
+assert.deepEqual(total(groningenWithoutMedLon), { center: null, lower: 21, upper: 86 });
+for (const id of [2355, 3116]) {
+  const c = realCases.find(c => c.candidateId === id);
+  assert.equal(c.priorityCompletionReview.sha256, digest(c.priorityCompletionReview.path));
+  assert.equal(c.priorityCompletionReview.validOriginalCount, c.sourceSnapshots.length);
+  assert(c.sourceSnapshots.every((r: { validOriginal: boolean }) => r.validOriginal));
+  assert(
+    c.webReadSources.every(
+      (r: { originalBytes: number | null; originalSha256: string | null }) =>
+        r.originalBytes === null && r.originalSha256 === null
+    )
+  );
+  assert.equal(c.globalRankingEligible, false);
+}
+const gpciClues = JSON.parse(
+  readFileSync(new URL("../docs/data/cci-gpci2025-priority-clues.json", import.meta.url), "utf8")
+);
+assert.equal(gpciClues.status, "global_cross_city_priority_clues_not_cci_scores");
+assert.equal(gpciClues.records.length, 48);
+assert.equal(
+  gpciClues.records.filter(
+    (r: { identityStatus: string }) => r.identityStatus === "unique_country_name"
+  ).length,
+  43
+);
+assert.equal(gpciClues.review.sha256, digest(gpciClues.review.path));
+for (const key of [
+  "economy",
+  "researchDevelopment",
+  "culturalInteraction",
+  "livability",
+  "environment",
+  "accessibility",
+]) {
+  assert.deepEqual(
+    gpciClues.records
+      .map(
+        (r: { functionClues: Record<string, { sourceRank: number }> }) =>
+          r.functionClues[key].sourceRank
+      )
+      .sort((a: number, b: number) => a - b),
+    Array.from({ length: 48 }, (_, i) => i + 1)
+  );
+}
+assert(
+  gpciClues.records.every(
+    (r: {
+      metricTransfer: boolean;
+      retained: boolean;
+      cityBoundaryTransferred: boolean;
+      residentPerformanceTransferred: boolean;
+    }) =>
+      !r.metricTransfer &&
+      r.retained &&
+      !r.cityBoundaryTransferred &&
+      !r.residentPerformanceTransferred
+  )
+);
+assert.equal(gpciClues.scoresCreated, 0);
+assert.equal(gpciClues.exclusionsCreated, 0);

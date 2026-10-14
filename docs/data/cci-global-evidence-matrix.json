@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 52,
+    "conditionalCaseCount": 54,
     "completeConditionalCaseCount": 16,
-    "partialCaseCount": 36,
-    "unassessedCount": 8979,
+    "partialCaseCount": 38,
+    "unassessedCount": 8977,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -565,8 +565,18 @@
       "sha256": "d50232c6673b718416ffb3695141dd4e92b08b602b9396a8ae459126fedb715c",
       "provenance": "cci-vienna-priority-review.md",
       "provenanceSha256": "52c601c42fd43dee493403c5ddc2e365bf8c9dee6c5f8e847dfebe3d52e0eb9b"
+    },
+    "cci-local-2026-brisbane-case.json": {
+      "sha256": "5ff00bed512fd7e129cfff6b3a43e95b9a4835b7f51c6cc74368da3ce64946be",
+      "provenance": "cci-brisbane-priority-review.md",
+      "provenanceSha256": "8d1a7977fd5d81eae9970ba0fb01a00c1bdbbc4341acf0d3f9cb25a528c297e3"
+    },
+    "cci-local-2026-groningen-case.json": {
+      "sha256": "dc4e5e0003deda81accda00cd54d3805513b83a05aa5829f4e20f58f8768e8d7",
+      "provenance": "cci-groningen-priority-review.md",
+      "provenanceSha256": "88fe33cbb842354dfe3fd063336784b1f535f1709cf9ed4bbe3a2167891e74cf"
     }
   },
-  "scriptSha256": "7d263a7ad01fa2bec3766e64b8cb6d49e639469df94c58663568a8a2ef2b2a15",
-  "csvSha256": "277bce374778495466f5d22314e1ee039ae703e4c45003c562a6a2276993315f"
+  "scriptSha256": "d7580c2a1d922db223e937641101d76cd46876391d9dee7bfb7005e598c5d05b",
+  "csvSha256": "a86b0af780efc7474264b453745c33adf279416b412eaa9387b2750147a2558a"
 }
