@@ -69,6 +69,8 @@ import frankfurt from "../../docs/data/cci-local-2026-frankfurt-case.json";
 import stockholm from "../../docs/data/cci-local-2026-stockholm-case.json";
 import hongKong from "../../docs/data/cci-local-2026-hong-kong-case.json";
 import amsterdam from "../../docs/data/cci-local-2026-amsterdam-case.json";
+import madrid from "../../docs/data/cci-local-2026-madrid-case.json";
+import berlin from "../../docs/data/cci-local-2026-berlin-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -142,8 +144,12 @@ const cases = [
   stockholm,
   hongKong,
   amsterdam,
+  madrid,
+  berlin,
 ];
 const caseNamesZh: Record<number, string> = {
+  [madrid.candidateId]: "马德里功能区",
+  [berlin.candidateId]: "柏林功能区",
   [stockholm.candidateId]: "斯德哥尔摩功能区",
   [hongKong.candidateId]: "香港功能区",
   [amsterdam.candidateId]: "阿姆斯特丹功能区",
@@ -309,6 +315,22 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [madrid.candidateId]: [
+    zh
+      ? "马德里ISR／TEC／OPT条件60，其余五维未知，数学域21—86、无中心。实际纠偏、技术产用与单机场／消费者通信／直接适用欧元规则支持有限判断；暴雨、地质与战略等部分尚未实质开展，不称31项全部实审。"
+      : "Madrid has conditional ISR/TEC/OPT60 and five unknown dimensions: a21–86 mathematical domain without a centre. Actual remedies, technology use and single-airport/consumer-connectivity/directly applicable euro rules support finite judgments. Rain, geology and strategic components remain incompletely studied;31 scope records are not full reviews.",
+    zh
+      ? "医疗现待／已就诊、2023死亡／2022再入院分开，首诊公式冲突保留，Oct13健康卡不作截止证据。384混合跨区先进治疗不当本地CAR-T；欧元账户／预算／合法接续可撤，不加同国旧案没有的具体银行硬门槛。未核独立铁路地面多模式；撤OPT15—90、改40为19—84。"
+      : "Waiting/completed care and2023mortality/2022readmission differ; the first-visit arithmetic conflict remains, and the Oct13 health-card page is not cutoff evidence.384 mixed cross-region advanced treatments are not local CAR-T. Usual euro accounts, budget and lawful continuation are revocable without an extra bank-contract gate absent from older Spanish cases. Independent ground/rail modes are unverified; withdrawing OPT gives15–90 or OPT40 gives19–84.",
+  ],
+  [berlin.candidateId]: [
+    zh
+      ? "柏林PCS／ISR／MED／LON／TEC／OPT条件60，GSS／RES未知，数学域45—70、无中心。真实救援／预置、纠偏、必要护理／限定成熟疾病路径及普通产用退出支持可撤判断；组织化停电与防护后的影响、资源中位净取得仍未择档。"
+      : "Berlin has conditional PCS/ISR/MED/LON/TEC/OPT60, with GSS/RES unknown: a45–70 mathematical domain without a centre. Actual rescue/prepositioning, remedies, necessary care/limited mature-disease access and ordinary technology/exit support revocable judgments. Organized outages after protection and median net resource access remain unresolved.",
+    zh
+      ? "独立急症误判反证保留，内部质量／抽样非全院调整结局。RA六人实验与成熟病种、公保及监护分开；科普常规描述非本地回输队列，运行／通常付款桥可撤。BVG实际／计划、罢工剔除与准点样本分开，不复制法兰克福。撤MED36—76、撤LON39—74；模型PGA0不是保护证明。"
+      : "Independent urgent-misdiagnosis counterevidence remains; internal quality/sampling is not a whole-hospital adjusted endpoint. RA6 experimental treatment differs from mature-disease payment/monitoring; the routine-care tutorial is not a local infusion cohort, and operating/ordinary-payer bridges are revocable. BVG actual/planned trips, strike exclusions and punctuality samples differ, without copied Frankfurt scores. Withdrawing MED gives36–76 or LON39–74; model PGA0 is not protection proof.",
+  ],
   [stockholm.candidateId]: [
     zh
       ? "斯德哥尔摩ISR／MED／LON／TEC／OPT条件60，PCS／GSS／RES未知，数学域36—76、无中心。实际制度纠偏、公共必要护理、本地常规人体交付、技术采用与有限合法退出支持可撤判断；31项范围记录不是充分测量。"

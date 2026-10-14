@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 59,
+    "conditionalCaseCount": 61,
     "completeConditionalCaseCount": 16,
-    "partialCaseCount": 43,
-    "unassessedCount": 8972,
+    "partialCaseCount": 45,
+    "unassessedCount": 8970,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -600,8 +600,18 @@
       "sha256": "ceec7ec8ca1b468969a6f7887a1425463f8adc582208433a723b9a7206c0aacd",
       "provenance": "cci-amsterdam-score-completion-review.md",
       "provenanceSha256": "4c808a3e401ead420850365c5171c06e2c4b3b917059e276559a4d98d058a618"
+    },
+    "cci-local-2026-madrid-case.json": {
+      "sha256": "3dcb279c99fb8286edc720d45919fecb444a543ad8940e7e13a57b280758b796",
+      "provenance": "cci-madrid-score-completion-review.md",
+      "provenanceSha256": "f5de02b118e833e7f0ae53522d2b383011ab539401d825c52ff778569b951cdd"
+    },
+    "cci-local-2026-berlin-case.json": {
+      "sha256": "1c7f792f2ec7b46115c6212676febd2af7746c048dfbd90d0a6baa3a79ababbc",
+      "provenance": "cci-berlin-score-completion-review.md",
+      "provenanceSha256": "84533e9c14fc46cd8fc7babf04b66eb43c0ba95c62e198a40e72f7f814c05085"
     }
   },
-  "scriptSha256": "2190ec118ffdd9d3e6a0c3855809e3812b42f5506edc67af019a4864457de9d0",
-  "csvSha256": "2d251279c9f0940379a77a1f106cdf3e36b4a18e87c8fd497cccf4fe1011fac1"
+  "scriptSha256": "d08877d92f801ef34dcd965c1607632982c2cfda7ab3ad4cc6f45ff034665ae9",
+  "csvSha256": "a0797128d350740d9b41d469c49929766d9e5fe09259635a1e75a63ca4950bf3"
 }

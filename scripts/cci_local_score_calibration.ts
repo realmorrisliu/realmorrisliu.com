@@ -111,6 +111,8 @@ const realCases = [
   "stockholm",
   "hong-kong",
   "amsterdam",
+  "madrid",
+  "berlin",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -213,6 +215,8 @@ const [
   stockholm,
   hongKong,
   amsterdam,
+  madrid,
+  berlin,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2236,3 +2240,36 @@ assert.deepEqual(amsterdamCase.clinicalScopeReview.hsmr95ConfidenceInterval, [10
 assert.equal(amsterdamCase.resourceScopeReview.waterVolumeUnitAndArithmeticConflictRetained, true);
 assert.equal(amsterdamCase.resourceScopeReview.volumeChangePercentAdopted, false);
 assert.equal(amsterdamCase.resourceScopeReview.demoLoremTemplateAdopted, false);
+
+for (const [id, expectedRange, count] of [
+  [3147, [21, 86], 33],
+  [4946, [45, 70], 37],
+] as const) {
+  const c = realCases.find(c => c.candidateId === id);
+  assert.equal(c.priorityCompletionReview.sha256, digest(c.priorityCompletionReview.path));
+  assert.equal(c.scopeCompletionReview.allSubpillarsHaveOutcomeMeasurements, false);
+  assert.equal(c.scopeCompletionReview.allSubpillarsFullyReviewed, false);
+  assert.equal(c.priorityCompletionReview.validOriginalCount, count);
+  assert.equal(c.sourceSnapshots.length, count);
+  assert.deepEqual(c.unresolvedScoreRange, expectedRange);
+  assert.equal(c.expectedConditionalTotal, null);
+  assert.equal(c.globalRankingEligible, false);
+  for (const r of [
+    ...c.webReadSources,
+    ...c.failedSourceSnapshots,
+    ...c.inheritedFailedSourceSnapshotsNotRetried,
+  ]) {
+    assert.equal(r.originalBytes, null);
+    assert.equal(r.originalSha256, null);
+  }
+}
+const madridWithoutOpt = { ...madrid };
+delete madridWithoutOpt.OPT;
+assert.deepEqual(total(madridWithoutOpt), { center: null, lower: 15, upper: 90 });
+const berlinWithoutLon = { ...berlin };
+delete berlinWithoutLon.LON;
+assert.deepEqual(total(berlinWithoutLon), { center: null, lower: 39, upper: 74 });
+assert.equal(
+  realCases.find(c => c.candidateId === 3147).rootScopeReview.mortalityTablePhysical120Year,
+  2023
+);
