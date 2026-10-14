@@ -100,6 +100,8 @@ const realCases = [
   "seattle",
   "salt-lake-city",
   "sydney",
+  "melbourne",
+  "toronto",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -191,6 +193,8 @@ const [
   seattle,
   saltLakeCity,
   sydney,
+  melbourne,
+  toronto,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -1652,13 +1656,13 @@ assert.equal(saifaiPosition.worstPosition, rankAudit.candidateCount);
 
 // New priority reviews preserve unresolved dimensions and original weights.
 assert.deepEqual(total(grimsby), { center: null, lower: 42, upper: 67 });
-assert.deepEqual(total(tampere), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total(tampere), { center: null, lower: 51, upper: 66 });
 assert.equal(grimsby.GSS, undefined);
 assert.equal(tampere.GSS, undefined);
 assert.equal(grimsby.LON, undefined);
-assert.equal(tampere.LON, undefined);
+assert.equal(tampere.LON, 60);
 assert.deepEqual(total({ ...grimsby, MED: 60 }), { center: null, lower: 45, upper: 70 });
-assert.deepEqual(total({ ...tampere, TEC: 80 }), { center: null, lower: 47, upper: 72 });
+assert.deepEqual(total({ ...tampere, TEC: 80 }), { center: null, lower: 53, upper: 68 });
 for (const id of [5518, 397]) {
   const caseInput = realCases.find(c => c.candidateId === id);
   assert(caseInput);
@@ -1974,3 +1978,37 @@ for (const id of [4881, 1830]) {
   const c = realCases.find(c => c.candidateId === id);
   assert.equal(c.priorityCompletionReview.sha256, digest(c.priorityCompletionReview.path));
 }
+
+const tampereWithoutLon = { ...tampere };
+delete tampereWithoutLon.LON;
+assert.deepEqual(total(tampereWithoutLon), { center: null, lower: 45, upper: 70 });
+const tampereCase = realCases.find(c => c.candidateId === 397);
+assert.equal(tampereCase.lonPriorityReview.sha256, digest(tampereCase.lonPriorityReview.path));
+assert.equal(tampereCase.lonPriorityReview.otherSevenDimensionsUnchanged, true);
+assert.equal(tampereCase.lonPriorityReview.gssNotReopened, true);
+
+assert.deepEqual(total(melbourne), { center: null, lower: 49, upper: 64 });
+assert.deepEqual(total({ ...melbourne, MED: 40 }), { center: null, lower: 46, upper: 61 });
+const melbourneWithoutRes = { ...melbourne };
+delete melbourneWithoutRes.RES;
+assert.deepEqual(total(melbourneWithoutRes), { center: null, lower: 45, upper: 70 });
+const melbourneWithoutLon = { ...melbourne };
+delete melbourneWithoutLon.LON;
+assert.deepEqual(total(melbourneWithoutLon), { center: null, lower: 43, upper: 68 });
+const melbourneCase = realCases.find(c => c.candidateId === 1266);
+assert.equal(
+  melbourneCase.priorityCompletionReview.sha256,
+  digest(melbourneCase.priorityCompletionReview.path)
+);
+
+assert.deepEqual(total(toronto), { center: null, lower: 36, upper: 76 });
+assert.deepEqual(total({ ...toronto, MED: 40 }), { center: null, lower: 42, upper: 67 });
+assert.deepEqual(total({ ...toronto, MED: 60 }), { center: null, lower: 45, upper: 70 });
+const torontoWithoutLon = { ...toronto };
+delete torontoWithoutLon.LON;
+assert.deepEqual(total(torontoWithoutLon), { center: null, lower: 30, upper: 80 });
+const torontoCase = realCases.find(c => c.candidateId === 2626);
+assert.equal(
+  torontoCase.priorityCompletionReview.sha256,
+  digest(torontoCase.priorityCompletionReview.path)
+);

@@ -9,7 +9,7 @@
   "boundaryReview": "docs/cci-tampere-priority-review.md",
   "evidenceReview": "cci-tampere-priority-review.md",
   "expectedConditionalTotal": null,
-  "limitations": "Six conditional60 judgments; GSS and LON unknown after uniform review, no centre, arithmetic domain45–70. Preparedness/cyber handling is not a complete threat-impact-mitigation chain. No global ranking, exclusion bound or high-score prediction. Necessary assumptions are withdrawable.",
+  "limitations": "Six conditional60 judgments; GSS and LON unknown after uniform review, no centre, arithmetic domain45–70. Preparedness/cyber handling is not a complete threat-impact-mitigation chain. No global ranking, exclusion bound or high-score prediction. Necessary assumptions are withdrawable. LON revised2026-10-14 from actual RS2 clinical pathway/current product-human evidence and formal public charges; net access and continuing lifelong monitoring inferred explicitly. GSS unknown; other7 unchanged. Kela Oct13 currentbody excluded.",
   "dimensions": [
     {
       "id": "PCS",
@@ -77,15 +77,15 @@
     },
     {
       "id": "LON",
-      "score": null,
-      "rationale": "A current Tays Yescarta infusion product tariff is a credible pathway lead, but does not establish actual local infusion, approved use for the specific patient, selection/waiting, public financing or monitoring. Other-city CAR-T delivery and Helsinki FINGER are not local treatment.",
-      "assumption": "No whole-dimension score is asserted. The missing bridge is actual local disease-specific delivery with eligibility, payer/monitoring and waiting constraints, not a perfect median bill or health-person lifespan proof.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Tays2026-06-23临床路径明确本地评估/采集/RS2回输及住院/随访，当前Yescarta产品与可信疾病人体结果、Pirha正式2026公共服务收费支持有限疾病转化；不是只靠机构产品价/未来立项或独立给药人数。",
+      "assumption": "接受临床运行措辞代表真实通常提供并延续至截止、一般CAR-T病种流程与合资格当前Yescarta的有限类别—产品连接；普通公保临床合资格居民可进入认可治疗/适当持续监护，规定公共收费与28日距Tays≤2h/照护住宿/三月禁驾通常可承担。未核同队列付款/等待或每例品牌、所有FUA住家通达；EMA要求终身监测而Tays明确第一年，持续监护仍为必要推定。KelaOct13截止后正文排除，不用它证明截点资格；拒绝运行/人体适配/产品/公共付款净取得或持续监护关键连接即null。明显未缓解获得断点40，多条可信成熟实际净取得80。",
+      "conditionalAlternatives": [40, 80],
       "subpillars": {
-        "translation": "unresolved",
-        "trial_maturity": "context",
-        "regulatory_adoption": "context",
-        "resident_access": "unresolved"
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
       }
     },
     {
@@ -403,13 +403,152 @@
     "scope": "EU worker residence; accrued Finnish earnings pension abroad; national security context. Helsinki free local clinics, HUS treatment and PKS adoption are not inherited. National caps do not mean total expenditure ceiling. Prior review links lack original byte identities for these owner pages; do not manufacture snapshots."
   },
   "retrievedOn": "2026-10-13",
-  "knownWeightedSubtotal": 45,
-  "unresolvedScoreRange": [45, 70],
+  "knownWeightedSubtotal": 51,
+  "unresolvedScoreRange": [51, 66],
   "priorityCompletionReview": {
     "path": "docs/cci-tampere-priority-review.md",
     "sha256": "0217c577797d804d8e4225d8d12786acf55f7dbc140953b901b8b7b1ee9e9b80",
     "reviewedOn": "2026-10-13",
     "rootVerifiedOriginalBytes": true,
     "rootVerifiedAllReferencePoints": true
-  }
+  },
+  "lonPriorityReview": {
+    "path": "docs/cci-tampere-lon-priority-review.md",
+    "sha256": "bc05bc694b39a37dad570f5d3a3b41931a609343987b4d40d571f531204150e5",
+    "reviewedOn": "2026-10-14",
+    "handoffSha256": "c29503318ce1523ff811610bc78646a11f6325cc6e6e2bc5f809ee6d1d979a74",
+    "sourceManifestSha256": "5cbb49db9eb5a2359fa1c97e2d00c8be3fcf9c53108983ad939062771cf46118",
+    "otherSevenDimensionsUnchanged": true,
+    "otherSevenSha256": "e71047da6712a26713e6dacf42194f6d7ab80c904c620c143b2496af17dabbc4",
+    "gssNotReopened": true,
+    "scope": "LON_only_bounded_comparable_conditional_review"
+  },
+  "lonPrioritySourceSnapshots": [
+    {
+      "file": "fees-index2026.html",
+      "path": "/private/tmp/cci-global/tampere-lon/fees-index2026.html",
+      "url": "https://pirha.fi/asiakkaalle/asiakasmaksut",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "bytes": 1226577,
+      "sha256": "31ea6a906f3a97399d98b1462b9504f9b70a989c793642d6755111f0a7e71a84",
+      "validOriginal": true,
+      "retrievedAt": "2026-10-14T01:00:03.598933+00:00",
+      "sourceKind": "new_original",
+      "usedForScore": true
+    },
+    {
+      "file": "cap2026.html",
+      "path": "/private/tmp/cci-global/tampere-lon/cap2026.html",
+      "url": "https://pirha.fi/asiakkaalle/asiakasmaksut/maksukatto",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "bytes": 1193418,
+      "sha256": "1392729bc8d2b6531f7a749804ea1e06707d179224a8216934dee2bc712ee524",
+      "validOriginal": true,
+      "retrievedAt": "2026-10-14T01:00:03.608818+00:00",
+      "sourceKind": "new_original",
+      "usedForScore": true
+    },
+    {
+      "file": "ema-yescarta-index.html",
+      "path": "/private/tmp/cci-global/tampere-lon/ema-yescarta-index.html",
+      "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/yescarta",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "bytes": 226537,
+      "sha256": "bdb092e02a86917a3b5bae943b3569f159622a17e16526414b9800a9251cb71b",
+      "validOriginal": true,
+      "retrievedAt": "2026-10-14T01:00:01.876212+00:00",
+      "sourceKind": "new_original",
+      "usedForScore": true
+    },
+    {
+      "file": "ema-overview2022.pdf",
+      "path": "/private/tmp/cci-global/tampere-lon/ema-overview2022.pdf",
+      "url": "https://www.ema.europa.eu/en/documents/overview/yescarta-epar-medicine-overview_en.pdf",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "bytes": 152337,
+      "sha256": "71be4ebc49ef7c0eb6613dfd367698acafdb93b97f72d8a35bfb54e37a859ff6",
+      "validOriginal": true,
+      "retrievedAt": "2026-10-14T01:00:57.149323+00:00",
+      "sourceKind": "new_original",
+      "usedForScore": true
+    },
+    {
+      "file": "ema-product2026.pdf",
+      "path": "/private/tmp/cci-global/tampere-lon/ema-product2026.pdf",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/yescarta-epar-product-information_en.pdf",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "bytes": 505945,
+      "sha256": "7364b8713752a41eb6e8333150b68c1c6ab4a679e9b42caeedeacec6f055396e",
+      "validOriginal": true,
+      "retrievedAt": "2026-10-14T01:00:57.718641+00:00",
+      "sourceKind": "new_original",
+      "usedForScore": true
+    },
+    {
+      "file": "fees-current-linked.pdf",
+      "path": "/private/tmp/cci-global/tampere-lon/fees-current-linked.pdf",
+      "url": "https://pirha.fi/documents/2739855/2937967/Sosiaali-+ja+terveydenhuollon+asiakasmaksut.pdf/692b22fd-ec4f-e050-4ee4-ed89b3831a40?t=1769149966113&doAsUserId=7WJXJiOHDfAB8AW7FfzU0w%3D%3D%2Ftoimipisteet%2Ftoimipistehakemisto%2Fhormoni-ja-lapsettomuuspoliklinikka-tays-kesk",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "bytes": 304609,
+      "sha256": "1bfe35c7fb8cede0f6adad0ea0aa6232aeedf3a1a88b110b6112e84dd9b73089",
+      "validOriginal": true,
+      "retrievedAt": "2026-10-14T01:00:57.559927+00:00",
+      "sourceKind": "new_original",
+      "usedForScore": true
+    },
+    {
+      "file": "kela-entitlement.html",
+      "path": "/private/tmp/cci-global/tampere-lon/kela-entitlement.html",
+      "url": "https://www.kela.fi/medical-care-entitlement-finland",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "bytes": 447271,
+      "sha256": "60b8696774ab38d1ba6e548e57c11f31700a445352416bac783774c8cf573f51",
+      "validOriginal": true,
+      "retrievedAt": "2026-10-14T01:01:00.481295+00:00",
+      "sourceKind": "new_original",
+      "usedForScore": false,
+      "cutoffDecision": "Excluded current body; actual footerLastmodified2026-10-13, no historical version verified"
+    },
+    {
+      "file": "tampere-car-path.html",
+      "path": "/private/tmp/cci-global/tampere-lon/tampere-car-path.html",
+      "url": "https://pirha.fi/asiakkaalle/hoito-ja-palvelupolut/syopapotilaan-car-t-soluhoidon-polku",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "bytes": 1207663,
+      "sha256": "5595f4b2895428eaff57d5a100ad1e7432cd783c374d3f6681415f2fdd572247",
+      "validOriginal": true,
+      "retrievedAt": "2026-10-14T00:54:11.024179+00:00",
+      "sourceKind": "valid_original_reuse",
+      "reusedFromPath": "/private/tmp/cci-global/next-priority-batch/tampere-car-path.html",
+      "usedForScore": true,
+      "sourceObservation": "Tays clinical-path page updated2026-06-23; no independently verified infusion count"
+    },
+    {
+      "file": "pirha-tariffs2026.pdf",
+      "url": "https://www.pirha.fi/documents/2739855/4864670/Tuotehinnasto%2B2026_19122025.pdf/31c41e4a-ca5c-c8b8-6081-aa989e2f5172?t=1767334582319&version=2.0",
+      "retrievedOn": "2026-10-13",
+      "method": "normal TLS curl",
+      "httpFinal": "200 https://www.pirha.fi/documents/2739855/4864670/Tuotehinnasto%2B2026_19122025.pdf/31c41e4a-ca5c-c8b8-6081-aa989e2f5172?t=1767334582319&version=2.0",
+      "returncode": 0,
+      "diagnostic": "",
+      "responseBytes": 1565324,
+      "responseSha256": "8cb75aaa5f9104eda8a783981664894ff759d98bbc0f5cc97b451f0c4e9ff410",
+      "validOriginal": true,
+      "bytes": 1565324,
+      "sha256": "8cb75aaa5f9104eda8a783981664894ff759d98bbc0f5cc97b451f0c4e9ff410",
+      "sourceId": "S06",
+      "sourceKind": "valid_original_reuse",
+      "reusedFromPath": "/private/tmp/cci-global/tampere/pirha-tariffs2026.pdf",
+      "path": "/private/tmp/cci-global/tampere-lon/pirha-tariffs2026.pdf",
+      "usedForScore": true
+    }
+  ]
 }

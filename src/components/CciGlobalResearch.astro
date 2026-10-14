@@ -58,6 +58,8 @@ import geneva from "../../docs/data/cci-local-2026-geneva-case.json";
 import seattle from "../../docs/data/cci-local-2026-seattle-case.json";
 import saltLakeCity from "../../docs/data/cci-local-2026-salt-lake-city-case.json";
 import sydney from "../../docs/data/cci-local-2026-sydney-case.json";
+import melbourne from "../../docs/data/cci-local-2026-melbourne-case.json";
+import toronto from "../../docs/data/cci-local-2026-toronto-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -120,11 +122,15 @@ const cases = [
   seattle,
   saltLakeCity,
   sydney,
+  melbourne,
+  toronto,
 ];
 const caseNamesZh: Record<number, string> = {
   [seattle.candidateId]: "西雅图功能区",
   [saltLakeCity.candidateId]: "盐湖城功能区",
   [sydney.candidateId]: "悉尼功能区",
+  [melbourne.candidateId]: "墨尔本功能区",
+  [toronto.candidateId]: "多伦多功能区",
   [geneva.candidateId]: "日内瓦功能区",
   [aalborg.candidateId]: "奥尔堡功能区",
   [sheffield.candidateId]: "谢菲尔德功能区",
@@ -373,6 +379,22 @@ const caseNotes: Record<number, string[]> = {
       ? "全9,031几何核对区内外参考点；Hull、Sheffield和机场服务不并成本区。国家CAR-T委托不证明本区居民已进入真实给药/监护链；国家威胁与日常运转也不足以补GSS。两轮后保留缺口，必要的代表性、延续、普通负担和触达假设均可撤回。"
       : "Reference points were checked against all 9,031 geometries; Hull, Sheffield and outside-airport services are not local production. National CAR-T commissioning does not establish a delivered local-resident pathway; national threat context and ordinary operations do not settle GSS. After two rounds, gaps remain explicit and applicability, continuity, affordability and reach assumptions can be withdrawn.",
   ],
+  [toronto.candidateId]: [
+    zh
+      ? "多伦多PCS／ISR／RES／LON／TEC条件60，GSS／MED／OPT未知，数学域36—76、无中心。实际供水、电网恢复、临床给药及许可／技术使用支持有限能力；普通必要护理等待、关键保护和加拿大资产／境外通信仍未闭。"
+      : "Toronto has conditional PCS/ISR/RES/LON/TEC 60; GSS/MED/OPT remain unknown: 36–76 without a centre. Actual water/electricity recovery, clinical treatment and licensing/technology use support scoped capability; usual-care waiting, critical protection and Canadian assets/international communication remain unresolved.",
+    zh
+      ? "旧ED留院90分位44.9／50.3小时与待床29.3／35.7小时不是平均或开始治疗等待，卸载改善不消除所有瓶颈。2023完成74患者、2025 CAR-T82未注明单位；LON通常受认可院内治疗／OHIP净取得及监护推定拒绝后30—80，省资金检索摘要不评分。MED40／60讨论情景42—67／45—70未采用。"
+      : "Historical 90th-percentile ED stays of 44.9/50.3 hours and bed waits of 29.3/35.7 hours are not averages or time to starting care; improved unloading does not eliminate every bottleneck. Treatment was completed by 74 patients in 2023; the 2025 CAR-T 82 label has no unit. Rejecting recognized hospital treatment/OHIP net access or monitoring withdraws LON and gives 30–80. The funding search excerpt is not scoring evidence. MED 40/60 discussion scenarios of 42–67/45–70 are not adopted.",
+  ],
+  [melbourne.candidateId]: [
+    zh
+      ? "墨尔本PCS／ISR／MED／LON／TEC／OPT条件60，RES40，GSS未知，数学域49—64、无中心。实际必要治疗、具名公共病种交付、技术及热保护运行支持能力；食品净取得、手术超期和精神急诊短板仍保留。"
+      : "Melbourne has conditional PCS/ISR/MED/LON/TEC/OPT 60, RES 40 and GSS unknown: 49–64 without a centre. Actual necessary treatment, named public disease delivery, technology and operating heat protection support capability; food affordability, overdue surgery and psychiatric emergency-care shortcomings remain.",
+    zh
+      ? "48%是内城过去一年担忧／减餐／断粮／救济的复合自报，不是全FUA中位收入公民断粮率；代表性及持续净负担推定拒绝后RES未知、45—70。MED40替代46—61；LON成熟人体运行、监护与通常公共净取得连接拒绝后43—68，未独核当地队列或TGA文件。"
+      : "The 48% figure is an inner-city composite self-report of worry, reduced meals, running out of food or relief use, not an all-FUA median-income hunger rate. Rejecting representativeness/continuing affordability restores RES unknown and 45–70. MED 40 gives 46–61; rejecting mature human delivery, monitoring or usual public net access withdraws LON and gives 43–68. No independent local cohort or TGA document was verified.",
+  ],
   [saltLakeCity.candidateId]: [
     zh
       ? "盐湖城PCS条件40、ISR／RES／OPT条件60，GSS／MED／LON／TEC未知，数学域27—77、无中心。实际服务、供水／食品供应和共享交通支持有限能力；知识三通道及诊断接触仍未闭合通常治疗或产用扩散。"
@@ -517,11 +539,11 @@ const caseNotes: Record<number, string[]> = {
 
   [tampere.candidateId]: [
     zh
-      ? "坦佩雷六维条件60，GSS/LON未知，域45–70、无中心。实际供给、基层/专科接诊、研究转化与交通支持有限能力，食品援助缺口、人才/财政压力及航空收缩均保留。GSS在统一验收中撤回：准备和网络处置未闭合具体威胁、居民影响与缓解后残余。"
-      : "Tampere has six conditional 60 judgments; GSS and LON remain unknown, giving 45–70 without a centre. Actual supply, routine/specialist access, technology transfer and transport support limited capability, with unmet food assistance, talent/fiscal pressure and reduced aviation retained. Uniform review withdrew GSS: preparedness and cyber handling do not connect specific threats, resident impacts and residual harm after mitigation.",
+      ? "坦佩雷LON补真实Tays评估、采集、RS2回输／住院和随访、疾病人体结果及正式公共收费后取条件60；其余六个60不变，GSS仍未知，数学域51—66、无中心。商品价不当居民自付，临床运行与合资格具体产品／公共净取得为可撤连接。"
+      : "Tampere's LON becomes conditional 60 after review of the operating Tays assessment, collection, RS2 infusion/inpatient care and follow-up pathway, disease-specific human evidence and formal public charges. Six other 60 judgments remain unchanged; GSS stays unknown: 51–66 without a centre. Product prices are not resident payments; operation/current-product/public net-access connections are revocable.",
     zh
-      ? "Tays的239,900欧CAR-T医院产品价不是患者账单或实际给药人数，LON不据此填分。2025区域等待不是2026全功能区疗效；数字可办服务种类也不是居民交易率。实际地方转化、通常支付/监护及各维地域/延续推定拒绝时，仍应撤回未知。"
-      : "Tays' EUR239,900 CAR-T hospital product tariff is neither a patient bill nor evidence of actual infusion, so it does not fill LON. Regional 2025 waits are not 2026 whole-FUA outcomes; digital service availability is not resident transaction uptake. Rejecting necessary delivery, payment/monitoring, spatial or continuity assumptions requires unknown judgments.",
+      ? "28日近院、照护住宿、三月禁驾及通常负担仍重要；815欧仅限规定公共费用，超额住院仍有日费。第一年随访不证明终身监测合规，Kela截止后正文排除。拒绝LON关键推定回45—70；LON40／80替代49—64／53—68，均非可靠排除界限。"
+      : "Nearby accommodation for 28 days, caregiver/support costs and a three-month driving restriction remain important. The €815 cap covers specified public charges; inpatient day fees remain after it. First-year follow-up does not establish lifelong monitoring compliance, and post-cutoff Kela text is excluded. Withdrawing LON gives 45–70; LON 40/80 gives 49–64/53–68. These are not reliable exclusion bounds.",
   ],
   [saifai.candidateId]: [
     zh
@@ -625,6 +647,10 @@ const caseNotes: Record<number, string[]> = {
   ],
 };
 const caseSupplementLinks: Record<number, { path: string; label: string }> = {
+  397: {
+    path: "cci-tampere-lon-priority-review.md",
+    label: zh ? "长寿实际路径与净取得补证" : "Longevity delivery and net-access review",
+  },
   4510: {
     path: "cci-med-priority-comparability-review.md",
     label: zh ? "医疗同尺度与年龄门槛纠偏" : "Medical comparability and age-gate correction",

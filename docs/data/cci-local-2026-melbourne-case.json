@@ -1,0 +1,469 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 1266,
+  "name": "Melbourne",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-14",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "boundaryReview": "Full9031geometry/SHA/WKB/9approximatepointschecked;PointCookGCCSAreferenceoutsidetargetcatalogue,8othersuniquely1266. LGA/provider/stateareasnotallFUA.",
+  "evidenceReview": "cci-melbourne-priority-review.md",
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 49,
+  "unresolvedScoreRange": [49, 64],
+  "globalRankingEligible": false,
+  "limitations": [
+    "Nohistoricalcutoffbytes;RMHfirstpublicationdayunknown",
+    "Local/state/provider/WIPOscopeinferencesnotpopulationmeasurements",
+    "Food48%compoundselfreportnotwholeFUAmedian-citizenhungryrate",
+    "Specificpayer-deliveryhumanroute adoptedconditionally;no verifiedpatientcohort/productmonitoradherence;rejectLONtonull",
+    "Noqualified32ndthresholdorno supportedexclusions"
+  ],
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Actual heat refuges opened during the 2–4 February 2025 heatwave; HeatSens informed the response. Drains, stormwater sensing, parks and shade provide scoped flood and heat protection. Observed 2025 heat, ageing drains and fire risks remain important. Grants, future projects and universal cool-home aims are not completed protection.",
+      "assumption": "Accept the limited municipal and provider evidence as representing usually usable protection against the main relevant hazards for ordinary 1266 residents, with reasonable geographic and temporal continuity through 2026-10-10. Significant exposure still inadequately mitigated can support 40; stronger effective independent protection can support 80. Reject scope, usual housing/cooling, current applicability or the remaining-risk judgment to null. Local geophysical evidence is unresolved, not proof of low risk. No perfect household or every-hazard measurement requirement.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "The 2023–24 Victoria Police report documents organised tobacco arsons, Lunar arrests, and actual Park responses to local protests and prejudice-related incidents. These establish scoped threats and protection, but do not close the 2026 residual impact, regional influence and strategic protection connection. Failed 2026 police entries and search summaries are not adopted as current results.",
+      "assumption": "No whole-dimension score. A conditional 60 may be reviewed if implemented protection is accepted as continuing and representative of usually limited remaining effects; 40 needs a current important inadequately mitigated organised or targeted constraint, not historical arsons alone; 80 needs stronger impact and effective response evidence. Reject the necessary current connection to keep null, with alternatives empty. This does not require war, a successful strategic attack, full population rates or every-node tests.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Implemented municipal food, digital and heat support, 20 Resilience Champions, and the hospital Digital Coordination Centre, flexible beds and virtual follow-up connect adaptation and scoped inclusion. Real recovery from the July 2026 network fault also matters. Uneven coverage, food and housing stress, and unresolved crisis outcomes remain.",
+      "assumption": "Accept finite municipal and necessary public-service implementation as representative of ordinarily usable accountable and adaptive services, with reasonable reach and continuing coordination in 2026. Important uncompensated exclusion or coordination constraints can support 40; stronger implemented recovery and effective backup can support 80. Reject representativeness, usual net access or continuity to null. Programme attendance is not whole-population cohesion or proof that every crisis recovery succeeds.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 40,
+      "rationale": "A City of Melbourne survey reports 48% composite food insecurity, including worry, reduced meals, running out of food or using relief. Providers report increasing need linked to living costs, poverty and housing pressure. Foodbank markets delivered 10,000 kg to 1,510 people; other markets, gardens and the grocer mitigate without demonstrating that ordinary residual affordability is resolved. Actual bulk-water operation and electricity use counter a claim of general supply collapse.",
+      "assumption": "Accept the selected inner-city food evidence as indicating material continuing resource-access constraints for ordinary 1266 residents after actual relief, not 48% of all FUA median-income citizens hungry. Sample and response details, citizenship and income composition are unverified; geography, ordinary-income relevance and continuing net affordability are necessary withdrawable inferences. Usually adequate affordable supply and mitigation can support 60; stronger independent safeguards can support 80. Reject these connections to null. Worry alone, missing household bills or absent SAIDI do not mechanically prove 40.",
+      "conditionalAlternatives": [60, 80],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "RMH actually delivered 9,946 planned surgeries; urgency-category-1 patients reached 100% within 30 days. Mental-health 7-day follow-up was 95.11% and 28-day readmission 11.5%. Counterevidence includes all planned-surgery clinical timing 81.62%, overdue waitlist 38.38%, mental-health ED short stays 53%, transfer to a mental-health bed within 8 hours 45%, seclusion 6.78 per 1,000 occupied bed days and 59 ED stays over 24 hours. Fourteen new mental-health beds, coordination and virtual follow-up provide real mitigation. Eligible ordinary public-patient payment is a separate conditional connection.",
+      "assumption": "Accept the RMH report as an applicable pre-cutoff version and its 2024–25 clinical cohorts and implemented mitigation as reasonably representing usually adequate, timely and bearable necessary care for enrolled eligible ordinary residents, with continuing referrals and follow-up. Preserve significant waiting and mental-health shortcomings; 60 requires accepting that important residual constraints do not amount to persistent inadequately mitigated necessary-care barriers. Such barriers can support 40 without a population-majority requirement; stronger effective affordable backups and outcomes can support 80. Reject quality, timing, net payment, geography or continuity to null. No fixed age, perfect bills or all-disease survey gate.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "The Victorian primary page updated 17 July 2026 names currently funded human CAR-T products, indications and delivery at Peter Mac and Alfred from 1 July 2026, plus other specific specialised therapies. This links particular adopted treatment and public funding, beyond institution names or a new budget. A treated cohort, direct patient outcomes and product-specific monitoring adherence were not verified; Peter Mac search summaries are not scoring evidence.",
+      "assumption": "Accept the health department’s explicitly current, product-specific payment and delivery wording as evidence of a continuing operating mature human translation pathway for clinically eligible ordinary citizens. Infer appropriate specialist safety monitoring, referral, normally funded public treatment and bearable support costs from that named clinical pathway and usual eligible public-patient rules, not Medicare alone. Reject actual delivery or human maturity, pre-cutoff version, eligibility, net funding, monitoring or representative continuity to null. Actual important delivery, payment or monitoring bottlenecks can support 40; stronger usable effective translation and access can support 80. The Victorian payer page is not an independent read of TGA registration or a human outcome cohort. No claim of broad healthy-person lifespan benefit.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "WIPO channels provide scoped activity context, with no FUA metric transfer. The university primary enterprise page reports 13 new startups, 172 disclosures and 3,042 active partner contracts; portfolio capital is not product delivery. Actual municipal digital help included 231 workshops with 1,274 participants and 56 support sessions reaching 982 people, free library Wi-Fi and in-use hospital coordination. The July 2026 common network fault and limited support reach remain.",
+      "assumption": "Accept the local institution-to-industry connection and municipal and provider digital implementation as limited representative evidence of ordinarily usable diffusion for 1266 residents, with current service continuity. Network and support gaps remain important; they are not automatically dominant persistent inadequacy. Stronger effective independent infrastructure and diffusion can support 80; important unmitigated industry or digital barriers can support 40. Reject scope, ordinary access or continuity to null. Startup counts are not licensed products, WIPO rank does not set the score, and no full market share or every-node measurement is required.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "FY25 Melbourne passenger movements were 12.0 million international and 24.2 million domestic; APAC’s 37.6 million includes 1.4 million at Launceston. Operating terminals and road access connect usable exit. The July 2026 network restoration matters alongside the common-core failure. Australian-citizen NZ residence and CBA international payments supply concrete conditional legal and asset paths; they are not free, unrestricted migration or guaranteed payment.",
+      "assumption": "Accept ordinarily obtainable passport and character/entry qualification, appropriate travel and relocation funds, compliant payment accounts, devices, authentication and suitable overseas communication for the median resident. A shared major hub, construction delays and network/platform dependencies remain. Future airport rail, runway and baggage expansion are not completed independent redundancy. Important unmitigated exit barriers can support 40; stronger usable independent alternatives can support 80. Reject the legal, financial, transport or network scope and usual-availability connection to null.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "file": "melbourne-city2025.pdf",
+      "path": "/private/tmp/cci-global/melbourne/melbourne-city2025.pdf",
+      "url": "https://mvga-prod-files.s3.ap-southeast-4.amazonaws.com/public/2025-10/OCT25%20CCL%20AGENDA%20ITEM%206.2.pdf",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "bytes": 18207234,
+      "sha256": "0d39ba0791a94700f148b44c44ae745831d156bb702dfa48f3b2a3c78d398462",
+      "validOriginal": true,
+      "retrievedAt": "2026-10-14T00:53:30.817326+00:00",
+      "kind": "same_source_original_reuse",
+      "reusedOriginalPath": "/private/tmp/cci-global/next-priority-batch/melbourne-city2025.pdf",
+      "id": "S01",
+      "publishedOn": "Council agenda2025-10-28",
+      "observed": "2024-07 to2025-06;selectedsurvey past12months",
+      "scope": "CityofMelbourneLGA and programmes,not all1266"
+    },
+    {
+      "file": "melbourne-rmh2025.pdf",
+      "path": "/private/tmp/cci-global/melbourne/melbourne-rmh2025.pdf",
+      "url": "https://www.thermh.org.au/files/documents/Corporate/rmh-annual-report-2024-2025.pdf",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "bytes": 3285085,
+      "sha256": "677a245e430a1e572b014c2feec66976792257a183390c1bebe7283d6ac865db",
+      "validOriginal": true,
+      "retrievedAt": "2026-10-14T00:53:27.410663+00:00",
+      "kind": "same_source_original_reuse",
+      "reusedOriginalPath": "/private/tmp/cci-global/next-priority-batch/melbourne-rmh2025.pdf",
+      "id": "S02",
+      "publishedOn": "2024-25 annual report;precisefirstpublicdayunknown",
+      "observed": "2024-07 to2025-06;institutionKPIcohorts",
+      "scope": "RMHlocalclinicalservice,patientsnotall1266citizens"
+    },
+    {
+      "file": "water-quality2025.pdf",
+      "path": "/private/tmp/cci-global/melbourne/water-quality2025.pdf",
+      "url": "https://www.melbournewater.com.au/media/eyJtZWRpYSI6IjI5Nzk2In0%253D/downloads",
+      "retrievedAt": "2026-10-14T01:00:34.351161+00:00",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "responseBytes": 888875,
+      "responseSha256": "cded4d5dee6c1a1a709308e1d5ffe87faf9d3625a052d496c154f250fbecc276",
+      "bytes": 888875,
+      "sha256": "cded4d5dee6c1a1a709308e1d5ffe87faf9d3625a052d496c154f250fbecc276",
+      "validOriginal": true,
+      "requestError": "",
+      "id": "S03",
+      "publishedOn": "officialindexupdated2025-10-15;individualPDFfirstdaynotexplicit",
+      "observed": "2024-07 to2025-06",
+      "scope": "MelbourneWaterbulkproviderareaandretailofftakes;notallhouseholdtapsorall1266"
+    },
+    {
+      "file": "climate2025.pdf",
+      "path": "/private/tmp/cci-global/melbourne/climate2025.pdf",
+      "url": "https://mvga-prod-files.s3.ap-southeast-4.amazonaws.com/public/2026-04/sustainability-climate-action-report-march-26.pdf",
+      "retrievedAt": "2026-10-14T01:00:34.351523+00:00",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "responseBytes": 7911767,
+      "responseSha256": "62b4faaa9245620e480fb25ae143bfbaa3d1f976d33bb000bb32fdd3bf1c219c",
+      "bytes": 7911767,
+      "sha256": "62b4faaa9245620e480fb25ae143bfbaa3d1f976d33bb000bb32fdd3bf1c219c",
+      "validOriginal": true,
+      "requestError": "",
+      "id": "S04",
+      "publishedOn": "March2026version/pathApril2026;exactfirstpublicdayunverified",
+      "observed": "2024-25activities;somehistorical2024pilots",
+      "scope": "CityofMelbourneinnerLGA/M9plannedcollaboration,notall1266"
+    },
+    {
+      "file": "specialised-therapies2026.html",
+      "path": "/private/tmp/cci-global/melbourne/specialised-therapies2026.html",
+      "url": "https://www.health.vic.gov.au/highly-specialised-therapies-program",
+      "retrievedAt": "2026-10-14T01:00:37.646379+00:00",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "responseBytes": 434440,
+      "responseSha256": "8e8b38f70174fbb26afda58a8e7d04c097b7df7131f24a699405fe01ce960413",
+      "bytes": 434440,
+      "sha256": "8e8b38f70174fbb26afda58a8e7d04c097b7df7131f24a699405fe01ce960413",
+      "validOriginal": true,
+      "requestError": "",
+      "id": "S05",
+      "publishedOn": "Updated2026-07-17",
+      "observed": "As2026-07-01 funded disease/product/site pathways",
+      "scope": "Victoriadesignatedpublichospitals;PeterMac/Alfredreferencepoints1266;ordinarypatienteligibilityconditional"
+    },
+    {
+      "file": "airport2025.pdf",
+      "path": "/private/tmp/cci-global/melbourne/airport2025.pdf",
+      "url": "https://www.melbourneairport.com.au/_assets/be08d7b0-97a1-02f9-2be6-a0c139c3c337/83816f8c-ae99-45ef-ac84-b1bd9a2b440b/APAC_Annual_Report_2025_FINAL.pdf",
+      "retrievedAt": "2026-10-14T01:00:37.752385+00:00",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "responseBytes": 6388638,
+      "responseSha256": "5519c57b720b7f6f71f1231be49629451789cb140b7f1f0fcfecc154d2b6133c",
+      "bytes": 6388638,
+      "sha256": "5519c57b720b7f6f71f1231be49629451789cb140b7f1f0fcfecc154d2b6133c",
+      "validOriginal": true,
+      "requestError": "",
+      "id": "S06",
+      "publishedOn": "FY25annualreport;precisefirstpublicdayunknown",
+      "observed": "FY2024-25",
+      "scope": "APACbothMelbourneandLaunceston;Melbourne-specific countsseparated"
+    },
+    {
+      "file": "police2024.pdf",
+      "path": "/private/tmp/cci-global/melbourne/police2024.pdf",
+      "url": "https://www.police.vic.gov.au/sites/default/files/2024-10/Victoria-Police-Annual-Report-2023-24-Accessible.pdf",
+      "retrievedAt": "2026-10-14T01:00:39.523424+00:00",
+      "requestExitCode": 0,
+      "httpStatus": "200",
+      "responseBytes": 5360224,
+      "responseSha256": "a9b23d64c18aa31c0cfd5359e3e511182b94f0bb44898199a91dd37278585a45",
+      "bytes": 5360224,
+      "sha256": "a9b23d64c18aa31c0cfd5359e3e511182b94f0bb44898199a91dd37278585a45",
+      "validOriginal": true,
+      "requestError": "",
+      "id": "S07",
+      "publishedOn": "2023-24annualreport/URL2024-10;firstpublicdaynotexplicit",
+      "observed": "as2024-06-30;Lunar/ParksinceOctober2023",
+      "scope": "Victoriastate;ParkcentralMelbourneexamples;not2026FUAcrimeorincidencerate"
+    },
+    {
+      "id": "S08",
+      "file": "wipo2025.reused.pdf",
+      "url": "https://www.wipo.int/documents/d/global-innovation-index/docs-en-2025-gii-2025-clusters-top100-ranking.pdf",
+      "path": "/private/tmp/cci-global/melbourne/wipo2025.reused.pdf",
+      "bytes": 6439758,
+      "sha256": "dc2841db8ed735c518069cb6df0b8897f7d0c174e5ac9989e0720cf0190075d3",
+      "retrievedAt": "2026-10-13T11:25:02.946336+00:00",
+      "publishedOn": "2025edition;not2026release",
+      "observed": "PCT2020-24;SCIE/VC2019-23",
+      "scope": "WIPOclusterMelbourne notGHS1266;identity/activitycontextonly noquantitytransfer",
+      "kind": "same_source_original_reuse",
+      "validity": "valid_original_PDF_table20_pixels_reviewed",
+      "reusedOriginalPath": "/private/tmp/cci-global/sydney/wipo2025.reused.pdf",
+      "reusedReviewedOn": "2026-10-13",
+      "validOriginal": true
+    },
+    {
+      "id": "S09",
+      "file": "telstra-outage2026.pdf",
+      "url": "https://www.telstra.com.au/content/dam/tcom/dynamic-media-projects/luke-campbell/TAP-Findings-for-Telstra-Outage.pdf",
+      "retrievedAt": "2026-10-13T11:51:12.953698+00:00",
+      "exit": 0,
+      "response": "200\tapplication/pdf\thttps://www.telstra.com.au/content/dam/tcom/dynamic-media-projects/luke-campbell/TAP-Findings-for-Telstra-Outage.pdf",
+      "error": "",
+      "bytes": 517255,
+      "sha256": "18f289145a1f359aa213a6eb501c88fd86d876af77a12551a75e6ffe2856284a",
+      "validity": "valid_original_response_body_reviewed",
+      "path": "/private/tmp/cci-global/melbourne/telstra-outage2026.pdf",
+      "publishedOn": "2026-08-24",
+      "observed": "2026-07-08 to07-11 outage/recovery",
+      "scope": "SharedMelbourne/Sydneytelstranetworkaffectedsubscribers;notallcitizensorhostileattack",
+      "kind": "same_source_original_reuse",
+      "reusedOriginalPath": "/private/tmp/cci-global/sydney/telstra-outage2026.pdf",
+      "validOriginal": true
+    },
+    {
+      "id": "S10",
+      "file": "bank-transfer2025.pdf",
+      "url": "https://www.commbank.com.au/content/dam/commbank/personal/apply-online/download-printed-forms/international-payments-information-guide.pdf",
+      "retrievedAt": "2026-10-13T11:51:13.930655+00:00",
+      "exit": 0,
+      "response": "200\tapplication/pdf\thttps://www.commbank.com.au/content/dam/commbank/personal/apply-online/download-printed-forms/international-payments-information-guide.pdf",
+      "error": "",
+      "bytes": 192658,
+      "sha256": "cc6601e09e40e7adebab6b069b1e45ffb1597fe003e069e9901b324205b5f48e",
+      "validity": "valid_original_response_body_reviewed",
+      "path": "/private/tmp/cci-global/melbourne/bank-transfer2025.pdf",
+      "publishedOn": "Cover2026-09-11,notold2025indexdate",
+      "observed": "currentusualinternationalpaymentprocedures",
+      "scope": "AustralianCBAeligibleaccounts;notallmedianresidentsownthisaccount",
+      "kind": "same_source_original_reuse",
+      "reusedOriginalPath": "/private/tmp/cci-global/sydney/bank-transfer2025.pdf",
+      "validOriginal": true
+    },
+    {
+      "id": "S11",
+      "file": "nz-resident.html",
+      "url": "https://www.immigration.govt.nz/visas/australian-resident-visa/",
+      "retrievedAt": "2026-10-13T11:55:01.149539+00:00",
+      "exit": 0,
+      "response": "200\ttext/html; charset=utf-8\thttps://www.immigration.govt.nz/visas/australian-resident-visa/",
+      "error": "",
+      "bytes": 683065,
+      "sha256": "45802cc3cd63a85d99996deb877562cee6397e4c9ac5d37f5a3c3d26669282bd",
+      "validity": "valid_original_response_body_reviewed",
+      "path": "/private/tmp/cci-global/melbourne/nz-resident.html",
+      "publishedOn": "currentpagefirstdayunverified",
+      "observed": "currentAustralianresidentvisa rules",
+      "scope": "Australianusualcitizenswithpassport/character/entryproof;notunconditionalmigration",
+      "kind": "same_source_original_reuse",
+      "reusedOriginalPath": "/private/tmp/cci-global/sydney/nz-resident.html",
+      "validOriginal": true
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.bom.gov.au/climate/current/annual/vic/melbourne.shtml",
+      "publishedOn": "2026-02-05",
+      "observed": "Calendar2025stationobservations",
+      "scope": "GreaterMelbourneGCCSAandnearby sitesnotGHS1266;OlympicPark39.8C27Jan2025;PointCook42.3CpointoutsidereferenceFUA",
+      "originalBytes": null,
+      "originalSha256": null,
+      "retrievedOn": "2026-10-14",
+      "kind": "primary_web_body_read_normalTLSoriginal403",
+      "readEvidence": "webbodylines115-222 read;notsearchsnippet"
+    },
+    {
+      "id": "W02",
+      "url": "https://research.unimelb.edu.au/commercialisation/community/melbourne-enterprise-review-2025",
+      "publishedOn": "2026-06-24 firstpublished",
+      "observed": "2025aggregateinstitution/affiliatedfundportfolio",
+      "scope": "3042activecontracts172inventiondisclosures13newstartups18portfolioadditions;$350m+fundportfoliocapitalnotalllocallycommercialisedproductsorFUAresidents",
+      "originalBytes": null,
+      "originalSha256": null,
+      "retrievedOn": "2026-10-14",
+      "kind": "primary_web_body_read_normalTLSoriginal403",
+      "readEvidence": "webbodylines0-105 reread;downloadlinkfailednotpretendPDF"
+    },
+    {
+      "id": "W03",
+      "url": "https://www.servicesaustralia.gov.au/medical-costs?context=60092",
+      "publishedOn": "Lastupdated 2026-09-14",
+      "observed": "Currentusualvalid Medicare/publicpatientpath",
+      "scope": "Publichospital/emergency/surgerycovered;nonbulk-billedgaps andambulanceexcluded;GP 100%Schedule!=actualdoctorfees;nationalruleonlynotSydneyMEDscoretransfer",
+      "retrievedOn": "2026-10-13",
+      "kind": "same_primary_web_text_reuse_not_valid_original_bytes",
+      "originalBytes": null,
+      "originalSha256": null,
+      "derivedReadLog": "/private/tmp/cci-global/sydney/round2-follow.web-read.json",
+      "reusedOn": "2026-10-14"
+    },
+    {
+      "id": "W04",
+      "url": "https://www.servicesaustralia.gov.au/enrolling-medicare?context=60092",
+      "publishedOn": "Lastupdated 2026-07-31",
+      "observed": "Australian citizensidentityandresidencyproof,enrolment",
+      "scope": "Citizen/usuallyresidentnotautomaticvalidcard; assume usualenrolment;nationalruleonlynotSydneyMEDscoretransfer",
+      "retrievedOn": "2026-10-13",
+      "kind": "same_primary_web_text_reuse_not_valid_original_bytes",
+      "originalBytes": null,
+      "originalSha256": null,
+      "derivedReadLog": "/private/tmp/cci-global/sydney/round2a.web-read.json",
+      "reusedOn": "2026-10-14"
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "candidateId": 1266,
+    "source": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allGeometryCount": 9031,
+    "targetGeometrySha256": "aec89447f9e018b015d7235297e6edf5f7223fbaca59cebd009b5caadaccc241",
+    "identity": {
+      "fid": 240,
+      "eFUA_ID": 1266.0,
+      "UC_num": 2.0,
+      "UC_IDs": "13020;13023",
+      "eFUA_name": "Melbourne",
+      "Commuting": 1.0,
+      "Cntry_ISO": "AUS",
+      "Cntry_name": "Australia",
+      "FUA_area": 8348.0,
+      "UC_area": 1692.0,
+      "FUA_p_2015": 4474593.500473405,
+      "UC_p_2015": 3655352.2995024547,
+      "Com_p_2015": 819241.2009709505
+    },
+    "bounds": [12474000.0, -4613000.0, 12624000.0, -4474000.0],
+    "referencePoints": [
+      {
+        "label": "Melbourne CBD approximate",
+        "longitude": 144.9631,
+        "latitude": -37.8136,
+        "fuaMatches": [1266]
+      },
+      {
+        "label": "RMH Parkville approximate",
+        "longitude": 144.9565,
+        "latitude": -37.7989,
+        "fuaMatches": [1266]
+      },
+      {
+        "label": "Peter Mac Parkville approximate",
+        "longitude": 144.9581,
+        "latitude": -37.7999,
+        "fuaMatches": [1266]
+      },
+      {
+        "label": "Alfred Hospital approximate",
+        "longitude": 144.981,
+        "latitude": -37.8457,
+        "fuaMatches": [1266]
+      },
+      {
+        "label": "Melbourne Airport approximate",
+        "longitude": 144.8433,
+        "latitude": -37.669,
+        "fuaMatches": [1266]
+      },
+      {
+        "label": "Olympic Park climate reference approximate",
+        "longitude": 144.981,
+        "latitude": -37.8255,
+        "fuaMatches": [1266]
+      },
+      {
+        "label": "Point Cook RAAF climate reference approximate",
+        "longitude": 144.752,
+        "latitude": -37.927,
+        "fuaMatches": []
+      },
+      {
+        "label": "Moorabbin Airport climate reference approximate",
+        "longitude": 145.102,
+        "latitude": -37.976,
+        "fuaMatches": [1266]
+      },
+      {
+        "label": "Kallista town reference not plant approximate",
+        "longitude": 145.366,
+        "latitude": -37.884,
+        "fuaMatches": [1266]
+      }
+    ],
+    "scope": "Analyst approximate reference points, not official clinical,incident,sensor or treatment-plant footprints. CityofMelbourne,GreaterMelbourneGCCSA,providerarea,Victoria,andWIPOcluster are not whole1266. External services may still serve target residents under explicit assumption."
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-melbourne-priority-review.md",
+    "sha256": "8e6eb5608257d86564cc1e3e39e4321aaa215dc563d18f0e1ec7938d7f22f7f4",
+    "reviewedOn": "2026-10-14",
+    "handoffSha256": "e0461654dbd321770aefaa7aafd26bf2d470e325b8d76c3667bd737db3f883dc",
+    "sourceManifestSha256": "8217a549b1191f5da98457565462cfbb11bb497cc35f5fe0942b805b17c53e29",
+    "scope": "bounded8/31 and scoped actual ordinary resident judgments, not complete measurement or global ranking eligibility"
+  }
+}

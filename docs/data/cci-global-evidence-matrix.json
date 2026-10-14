@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 48,
+    "conditionalCaseCount": 50,
     "completeConditionalCaseCount": 16,
-    "partialCaseCount": 32,
-    "unassessedCount": 8983,
+    "partialCaseCount": 34,
+    "unassessedCount": 8981,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -452,7 +452,7 @@
       "provenanceSha256": "ddbe51ab1b7862eaaf7c638d57d245f8b470d53d5b7b979c739791f46def37c7"
     },
     "cci-local-2026-tampere-case.json": {
-      "sha256": "f27a0f902c8ae28a46a59691544f906d9ef306d4477b9f2844b620cd4db3ec63",
+      "sha256": "f537a9c64e552f1d8939eb14fbd7d2213cb24ba9d04698fb62c3a7469d324d22",
       "provenance": "cci-tampere-priority-review.md",
       "provenanceSha256": "0217c577797d804d8e4225d8d12786acf55f7dbc140953b901b8b7b1ee9e9b80"
     },
@@ -545,8 +545,18 @@
       "sha256": "11218cc9ea3d8c93447cee20464b302ba98c90ab556c3cfb036e2ba6a59f13a6",
       "provenance": "cci-sydney-priority-review.md",
       "provenanceSha256": "c611f6cae64367868e0a11f9334be496f19d6208e708af3346bc6d8c1b47cc17"
+    },
+    "cci-local-2026-melbourne-case.json": {
+      "sha256": "2d3119e7285e657aff58718a8a2749c9ae3835563100a6306a002aeb8f5c2a17",
+      "provenance": "cci-melbourne-priority-review.md",
+      "provenanceSha256": "8e6eb5608257d86564cc1e3e39e4321aaa215dc563d18f0e1ec7938d7f22f7f4"
+    },
+    "cci-local-2026-toronto-case.json": {
+      "sha256": "a0eb5168aed73d0f3f5ae8ba6b0cccb46d01da47516e7d8c76b43b033eb6a016",
+      "provenance": "cci-toronto-priority-review.md",
+      "provenanceSha256": "3cd7b2ac11cd150da2d0cf4b493372e7b9851d8ed5b7390dd65fe9b7bd2eb7e4"
     }
   },
-  "scriptSha256": "37e5eea9caa4a0a20ea01e7912effee3cb954fbe14c3849b9ebd7564dc522969",
-  "csvSha256": "69897fddb1ddd6ff0f71bbd1ab34fe3e50ac2c0f1ccbefd190aa89f79992b1ac"
+  "scriptSha256": "e4a508c0fed02502dcf19047d6ff9365fc97e9c966fc2a1bc385139e654d1ef4",
+  "csvSha256": "b258f7dbe3b8da0c63bcdba57c64bcdc3ae6d9333544b569ecb6ad46a7f92127"
 }
