@@ -90,6 +90,7 @@ import oxford from "../../docs/data/cci-local-2026-oxford-case.json";
 import cambridge from "../../docs/data/cci-local-2026-cambridge-case.json";
 import pittsburgh from "../../docs/data/cci-local-2026-pittsburgh-case.json";
 import eindhoven from "../../docs/data/cci-local-2026-eindhoven-case.json";
+import luxembourg from "../../docs/data/cci-local-2026-luxembourg-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -184,8 +185,10 @@ const cases = [
   cambridge,
   pittsburgh,
   eindhoven,
+  luxembourg,
 ];
 const caseNamesZh: Record<number, string> = {
+  [luxembourg.candidateId]: "卢森堡功能区",
   [eindhoven.candidateId]: "埃因霍温功能区",
   [pittsburgh.candidateId]: "匹兹堡功能区",
   [cambridge.candidateId]: "剑桥功能区（英国）",
@@ -372,6 +375,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [luxembourg.candidateId]: [
+    zh
+      ? "卢森堡防护条件40，制度／医疗／疾病转化／技术条件60，安全／资源／退出未知；原权重小计36、数学域36—71，无完整总分。已交付水务、交通、必要医疗及技术产用，与河洪泥流、住房、等待及资金设备余障一起判断，城市声誉不换分。"
+      : "Luxembourg has conditional 40 for PCS and 60 for ISR, MED, LON and TEC; GSS, RES and OPT remain unknown. The original-weight subtotal is 36 and the arithmetic domain 36–71, without a complete total. Delivered water, transport, necessary care and technology use are assessed alongside flood/mudflow, housing, waiting, funding and equipment constraints. Reputation is not a score.",
+    zh
+      ? "疾病转化依据成熟造血重建与本地23例自体移植、通常付款和监护；8例CAR-T中的6例有利反应不当成熟长期结局，整改批准不当完成。19原件与18页关键PDF原表已独核；S15跳转链未记录的限制保留，关键地域／支付／延续假设拒绝则相应维度回未知，全球入围未证明。"
+      : "LON rests on mature haematopoietic reconstitution, 23 actual local autografts, usual payment and monitoring. Six favourable responses among eight CAR-T recipients are not mature long-term outcomes; proposed upgrades are not completed work. Nineteen originals and eighteen key PDF pages were independently checked. The missing S15 redirect chain remains disclosed. Rejecting necessary scope, payment or continuity assumptions restores the dimension to unknown; global qualification is unproven.",
+  ],
   [eindhoven.candidateId]: [
     zh
       ? "埃因霍温PCS条件40，其余六维条件60，RES未知；原权重小计51、数学域51—61，无完整总分。实际排水修复、必要诊疗、社会服务和技术产用，与反复损害、择期等待、资金及应急能力余障共同判断，产业声誉不直接换分。"

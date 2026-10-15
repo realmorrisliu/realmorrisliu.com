@@ -132,6 +132,7 @@ const realCases = [
   "cambridge",
   "pittsburgh",
   "eindhoven",
+  "luxembourg",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -255,6 +256,7 @@ const [
   cambridge,
   pittsburgh,
   eindhoven,
+  luxembourg,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -3081,3 +3083,52 @@ const eindhovenPosition = rankAudit.scenarios.fixed_conditional_centers.caseResu
 );
 assert.equal(eindhovenPosition.bestPosition, 6);
 assert.equal(eindhovenPosition.worstPosition, rankAudit.candidateCount);
+
+const luxembourgCase = realCases.find(c => c.candidateId === 103);
+assert.equal(
+  luxembourgCase.priorityCompletionReview.sha256,
+  digest(luxembourgCase.priorityCompletionReview.path)
+);
+assert.equal(
+  luxembourgCase.priorityCompletionReview.researchReportSha256,
+  digest(luxembourgCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(luxembourg), { center: null, lower: 36, upper: 71 });
+assert.equal(luxembourgCase.sourceSnapshots.length, 19);
+assert.equal(luxembourgCase.rootScopeReview.rootPdfPageCount, 18);
+for (const key of [
+  "source15ExactHTTPRouteCountAuthenticated",
+  "cnsConsolidationIndependentlyAuthenticatedGazette",
+  "copaymentCapIncludesAllPrivateExpenses",
+  "prnPainAssessmentIsMortalityOutcome",
+  "departmentHospitalisationLabelsReencodedAsBedDays",
+  "carT8ResponsesAreMatureProductSpecificSurvival",
+  "cellTherapyUpgradeCompleted",
+  "leuven463OutcomesAreLuxembourgCohort",
+  "renewable119PercentIsCitySelfSufficiency",
+  "nineWaterIndicatorsAreHouseholdUnsafeRate",
+  "tecProofOfConceptIsLocalMassProduction",
+  "euRightsAloneProveLongtermExit",
+  "score40RequiresDominanceOrMajorityOrShutdown",
+])
+  assert.equal(luxembourgCase.rootScopeReview[key], false);
+for (const [id, lower, upper] of [
+  ["PCS", 30, 80],
+  ["ISR", 27, 77],
+  ["MED", 27, 77],
+  ["LON", 30, 75],
+  ["TEC", 30, 75],
+] as const) {
+  const withdrawn = { ...luxembourg };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+for (const [id, value, lower, upper] of [
+  ["PCS", 60, 39, 74],
+  ["ISR", 40, 33, 68],
+  ["MED", 40, 33, 68],
+  ["LON", 40, 34, 69],
+  ["TEC", 40, 34, 69],
+  ["TEC", 80, 38, 73],
+] as const)
+  assert.deepEqual(total({ ...luxembourg, [id]: value }), { center: null, lower, upper });

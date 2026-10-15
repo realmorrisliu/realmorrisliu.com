@@ -1,0 +1,1518 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 103,
+  "name": "Luxembourg",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-15",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "2026ordinaryLuxembourgcitizen/usual longtermlocalresident/localmedianincome/usualeffectivecoverage; nofixedage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-luxembourg-score-completion-review.md",
+  "publishedInputCommit": "deaa9feee6ee20ad7ba03f09546a0ebfb356b6b4",
+  "researchFrozenInputCommit": "c3844ad2b5378211b9534b01eac9c7c6a46b45c8",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "weight": 15,
+      "score": 40,
+      "conditionalAlternatives": [60],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "heat_humidity": "context",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "partial"
+      },
+      "rationale": "已完成局部河道再自然化、医院洪水/断电实演，但城市报告仍列河洪/暴雨/泥流实际威胁和重要未完成防护；帮助后仍有明显局地安全约束，有限40。不是以研究缺项或少数事件自动扣分。",
+      "assumption": "接受市镇关键河谷/医院风险对FUA能力有重要作用及2024已识别防护缺口至截止仍重要；不称1147/2116为2026实际受害或全FUA率。若新增措施已将主要危险合理缓解可60，拒绝重要性/地域/时点桥则未知。",
+      "scoreStatus": "conditional_root_accepted",
+      "coverageReview": [
+        {
+          "dimension": "PCS",
+          "subpillar": "heat_humidity",
+          "status": "context",
+          "sourceIds": ["S03"],
+          "fullyMeasured": false,
+          "note": "Climate/greening and2024warm/wetcontext; nohumidity/indoorhealthoutcome; nozerohazardinference."
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "flood_sea_level",
+          "status": "partial",
+          "sourceIds": ["S03"],
+          "fullyMeasured": false,
+          "note": "Actual2021damagesdescribed,2024riskassessment/phase1renaturation/remainingflashflood&erosionstudies; municipalitynotentireFUA; sealevelnotstarted."
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "geophysical",
+          "status": "not_started",
+          "sourceIds": [],
+          "fullyMeasured": false,
+          "note": "Noqualifiedearthquake/landslide/buildingresilienceevidence; notzerorisk."
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "severe_weather_wildfire",
+          "status": "partial",
+          "sourceIds": ["S03", "S01"],
+          "fullyMeasured": false,
+          "note": "Heavy-rain/mudflowproblem andlimitedhospitalflood/powerexercise; wildfire/hailwindnotfullyreviewed."
+        }
+      ],
+      "sourceIds": ["S01", "S03"]
+    },
+    {
+      "id": "GSS",
+      "weight": 15,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "rationale": "真实恐袭演练与关键医院保护已核；但现有资料未连到有范围的实际组织暴力/邻区外溢影响及城市其他关键通道。局部备灾不能单独判60，未知也不等40。",
+      "assumption": "60需有限窗口低实际影响与匹配保护的可解释地域判断；40需威胁在帮助后仍形成明显生活/通道约束的正证。无须先发生战争或逐节点攻击测试；本轮没有此桥，保留null。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "GSS",
+          "subpillar": "organized_violence",
+          "status": "partial",
+          "sourceIds": ["S01"],
+          "fullyMeasured": false,
+          "note": "Locallyactualterror-scenarioexercise notactualattack/lowimpactmeasurement; rarergun/knifewounds inhospitalstatementnotorganizedcrimerate."
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "regional_conflict",
+          "status": "context",
+          "sourceIds": ["S01"],
+          "fullyMeasured": false,
+          "note": "France/Belgiumattack-derivedscenario andgeopoliticalconcern; noactualLuxcorridor/spilloverimpactassessment."
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "strategic_exposure",
+          "status": "partial",
+          "sourceIds": ["S01", "S10"],
+          "fullyMeasured": false,
+          "note": "CHLcriticalinfrastructuredesignation/realdrills; NRBCfuture andiodineactualstocks; cannotcoverfinancial/communicationscriticalrisk orGSSthreatincidence."
+        }
+      ],
+      "sourceIds": ["S01", "S10"]
+    },
+    {
+      "id": "ISR",
+      "weight": 15,
+      "score": 60,
+      "conditionalAlternatives": [40],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "rationale": "实际水务、交通和医疗付款/数字加线下入口运行，多组织危机实演识别并反馈缺点，支持普通居民可用服务的有限60。住房供给失配、帮助资格/食物余量及材料通信缺口重要，不被服务量抵消。",
+      "assumption": "接受关键共享服务和市镇/机构实交付对普通长期居民的有限代表性并延续至截止；帮助有实际低价食品/免费交通/通常CNS付款作用，故不能仅由计划存在加分。若住房/触达/交付缺口被有据判断为明显服务约束可40，不要求障碍主导；拒绝有限代表性则未知。 主60依据已交付关键共享服务对通常长期居民的有限支持，不假定住房市场已纠偏或个人新租／买必成功；住房困难扩及稳定收入者是可支持40的实质反证，不要求障碍主导或多数受害。",
+      "scoreStatus": "conditional_root_accepted",
+      "coverageReview": [
+        {
+          "dimension": "ISR",
+          "subpillar": "governance",
+          "status": "partial",
+          "sourceIds": ["S02", "S08", "S09"],
+          "fullyMeasured": false,
+          "note": "Actualserviceprocedures/CNSreimbursement/RIB/eDeliveryofflinefallback; nocrossadministrationcompletionrate."
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "adaptive_capacity",
+          "status": "partial",
+          "sourceIds": ["S03", "S06"],
+          "fullyMeasured": false,
+          "note": "Actualwater-tower/38%smartmeters/tramextensions vsfutureworks; notwholeFUA."
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "social_cohesion",
+          "status": "partial",
+          "sourceIds": ["S11", "S13"],
+          "fullyMeasured": false,
+          "note": "Actualneeds-assessedfoodhelp withlimitedenrolment; housinginequalityauthors2025context/censusnotmedian2026."
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "emergency_recovery",
+          "status": "partial",
+          "sourceIds": ["S01", "S10"],
+          "fullyMeasured": false,
+          "note": "Actualmultiagencyhospitaldrillandiodinedistribution, identifiedgaps; not allactualdisasterrecoveryoutcomes."
+        }
+      ],
+      "sourceIds": ["S01", "S02", "S03", "S06", "S08", "S09", "S10", "S11", "S13"]
+    },
+    {
+      "id": "RES",
+      "weight": 10,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "context"
+      },
+      "rationale": "实际供水双来源、测试/水塔、能源节约生产、低价食品与能源帮助均核；但可得水/食/能在目标中位居民预算中的净方向未定。帮助限资格和余量，4%可再生生产比不等全部进口依赖；未证崩溃不补60。",
+      "assumption": "60可基于有限但有据的通常够用且净可取得桥，不必全户账单；40可基于帮助后重要净负担/来源共同失效约束，不必多数受害。此处既无资格外中位家庭实际负担方向，也不把未证救助成功当失败，主null。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "RES",
+          "subpillar": "water",
+          "status": "partial",
+          "sourceIds": ["S03"],
+          "fullyMeasured": false,
+          "note": "Actualspring/SEBESmixture/2024testing andKirchbergwatertower; indicatornonconformities/buildinginstallations; billburdennotdetermined."
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "food",
+          "status": "partial",
+          "sourceIds": ["S11"],
+          "fullyMeasured": false,
+          "note": "OperatingcollectionMon–Sat/needsassessedcard/€2; suppliesconstraint/nofullnutrition ormedianmarketbasket."
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "energy",
+          "status": "partial",
+          "sourceIds": ["S03", "S08"],
+          "fullyMeasured": false,
+          "note": "Realheat/renewableproduction/LEDsaving vsdependency andmeans-tested2026support; eligibilitynotactualpaid/netmedianburden."
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "supply_chain",
+          "status": "context",
+          "sourceIds": ["S03", "S06"],
+          "fullyMeasured": false,
+          "note": "Waterdualorigin/network/transport actual; not independentenergyfoodreserve routes/commonshocktest."
+        }
+      ],
+      "sourceIds": ["S03", "S06", "S08", "S11"]
+    },
+    {
+      "id": "MED",
+      "weight": 15,
+      "score": 60,
+      "conditionalAlternatives": [40],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "rationale": "多病种必要治疗/专科和接续实际交付，过程质量有范围证据；通常CNS直接医院付款、受限共付及补偿减轻净费用，有限60。心理急诊等待、需境外协调的紧迫生育保存、设备/人力资金不足和药物短缺均是重要余障。",
+      "assumption": "接受2024服务与2025制度路径到2026截止延续、普通有效保障可使用标准病房和合资格目录、重要专科监护可维持；付款并非所有费用2.5%封顶，医生先垫及私人费用保留。正证为实交付/过程质量及净付款，不是未见全面失败；若重要等待/质量/接续短板在缓解后仍构成明显约束可40，拒必要桥则未知。 PRN样本与活动量不是风险调整临床结局；主档还需接受必要服务、监护和净付款合束通常有效的判断，拒绝即未知。",
+      "scoreStatus": "conditional_root_accepted",
+      "coverageReview": [
+        {
+          "dimension": "MED",
+          "subpillar": "access",
+          "status": "partial",
+          "sourceIds": ["S01", "S02", "S07", "S09", "S04"],
+          "fullyMeasured": false,
+          "note": "Broadactualnecessarytreatment +CNSordinarynetpayment; nofixedage, copayconditionsandadvancecash; youthacutepsychiatricwaitcontextS04."
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "routine_quality",
+          "status": "partial",
+          "sourceIds": ["S01"],
+          "fullyMeasured": false,
+          "note": "ActualpainassessmentPRNsample93.76%,guidelinecareplans/fallassessment andcoordination; notriskadjustedmortality; noaveraging."
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "specialist_capacity",
+          "status": "partial",
+          "sourceIds": ["S01", "S04"],
+          "fullyMeasured": false,
+          "note": "Actualsurgery/dialysis/chemo/neuro/hematology andreferrals; countsnotFUAresidentrates; waiting/foreignoncofertilitylimits."
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "system_continuity",
+          "status": "partial",
+          "sourceIds": ["S01", "S04", "S12"],
+          "fullyMeasured": false,
+          "note": "Actualcasecoordination/multidisciplinary/monitoring/drills; equipment/logisticsfunding andIgshortage matter; futureupgradesnotcomplete."
+        }
+      ],
+      "sourceIds": ["S01", "S02", "S04", "S07", "S09", "S12"]
+    },
+    {
+      "id": "LON",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "rationale": "有限60主要立在疾病造血细胞重建/自体移植成熟人体路径与CHL实际23例采用、国家转诊/通常付款和严密监护；CAR-T8例6反应仅补充本地执行，不当成熟OS或健康人延寿。设施与计价不足、Ig短缺和严格适应证明显限制普及。",
+      "assumption": "外部自体移植n463描述性长期人体经验仅支持同类疾病重建成熟度，不移植比利时效果/支付或产品。接受本地标准适应证、合资格付款及监护在余障下通常可取得且有限延续；实际治疗发生不证明整改已完成，若安全/资源缺口导致明显转化取得断点可40，拒该平台/作用桥则未知。",
+      "scoreStatus": "conditional_root_accepted",
+      "coverageReview": [
+        {
+          "dimension": "LON",
+          "subpillar": "translation",
+          "status": "partial",
+          "sourceIds": ["S04", "R04"],
+          "fullyMeasured": false,
+          "note": "Maturediseasehematopoieticreconstruction/local23autografts; CAR-Tactual8/6response supplementarynolongtermclaim; healthyagingunknown."
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "trial_maturity",
+          "status": "partial",
+          "sourceIds": ["R04", "S01"],
+          "fullyMeasured": false,
+          "note": "External2016–24firstautologousn463KMdescriptive notRCTorLuxeffect; unspecifiedlocalCAR-Tbrand/windowprecludesproductmatureOStransfer."
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "regulatory_adoption",
+          "status": "partial",
+          "sourceIds": ["S04", "S12"],
+          "fullyMeasured": false,
+          "note": "Formalnationalservice/standardASCT/product-specificaccreditationactual; J&J/MMpreparationfuture notadoption."
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "resident_access",
+          "status": "partial",
+          "sourceIds": ["S02", "S04", "S07", "S12"],
+          "fullyMeasured": false,
+          "note": "Usualcoveredhospitalpayment/realnationalreferrals +1–2weeksmonitoring; clinicalfitness/indication andfunding/staff/equipmentresidual; nofreeallcareclaim."
+        }
+      ],
+      "sourceIds": ["R04", "S01", "S02", "S04", "S07", "S12"]
+    },
+    {
+      "id": "TEC",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40, 80],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "rationale": "科研/付费许可持续产出、检测平台与CFL实际启动、污水RSV技术及居民共享水表/公共数字取得形成真实产用链，有限60；不由专利或机构声誉换分。大量智能城市/6G/材料仍试验或未来，扩散强度与群体接入未证明广泛冗余。",
+      "assumption": "接受Belval节点及实际合作/城市技术扩散对FUA的有限作用；全国国际输出不全归当地居民，Amiens工厂方法不当本地完成改造。剩余产业扩散/项目阶段限制使60可解释，80需更广实际采用/多节点持续能力；拒代表性/延续则未知。",
+      "scoreStatus": "conditional_root_accepted",
+      "coverageReview": [
+        {
+          "dimension": "TEC",
+          "subpillar": "knowledge_output",
+          "status": "partial",
+          "sourceIds": ["S05"],
+          "fullyMeasured": false,
+          "note": "2025actual13patentsfiled/21paidlicenses/186top10journalarticles; noFUAattributiondenominatororWIPOscore."
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "industry_density",
+          "status": "partial",
+          "sourceIds": ["S05"],
+          "fullyMeasured": false,
+          "note": "RealCEBItestingplatform/paidlicenses/CFLlaunch; GRADELproof-of-concept/Goodyear22projects andAmiensmethodnotallfactorydeployment; noindustrycensus."
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "digital_infrastructure",
+          "status": "partial",
+          "sourceIds": ["S03", "S09"],
+          "fullyMeasured": false,
+          "note": "Actual38%waterLoRameters/operatingMyGuichet-RIB/reimbursementchannel; HotCitymonitoringnotbroadbandcoverage, nohouseholdaccessrate."
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "diffusion",
+          "status": "partial",
+          "sourceIds": ["S03", "S05", "S09"],
+          "fullyMeasured": false,
+          "note": "Actualmunicipalmeters/MicrObsRSV/healthservices/CFLlaunch; smarttower/6Gfuture andlackbroadoutcomeusecounts retained."
+        }
+      ],
+      "sourceIds": ["S03", "S05", "S09"],
+      "alternativeRationales": "40：有限许可、测试平台和公共采用仍可能存在显著产业／群体扩散断层。80：若实际多节点持续产用足以缓解阶段与接入余障，可审80，不因缺全城普查封顶。拒代表性与延续则未知。"
+    },
+    {
+      "id": "OPT",
+      "weight": 10,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      },
+      "rationale": "机场/铁路换乘与国内免费交通已运行；EU条件迁居、欧元支付和临时漫游原件可用。此组合尚未有据确定普通画像长期离开后的住居/收入条件及通信接续的净可用方向，保留未知。",
+      "assumption": "不要求每个目的地逐笔交易、品牌手机或固定成人；若接受通常预算下可启动并延续一条EU合法长居/资源和通信路径，可有限60。40须有帮助后重要实际通道约束正证；这里只缺实质个人长期桥，不由未测备援自动40。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "OPT",
+          "subpillar": "transport_redundancy",
+          "status": "partial",
+          "sourceIds": ["S06", "S14"],
+          "fullyMeasured": false,
+          "note": "Actualtramairport/Gare/Howaldinterchange/domesticfree2ndclass; crossborderpricesnotfree, independentexitcapacitynotfullyestablished."
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "legal_mobility",
+          "status": "partial",
+          "sourceIds": ["R01"],
+          "fullyMeasured": false,
+          "note": "EUworker/self-employedconditionalresidence andregistration; lawful5yearspermanent; actualjob/resourcesnotassumed, notallnationalities."
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "asset_portability",
+          "status": "partial",
+          "sourceIds": ["R02", "S09"],
+          "fullyMeasured": false,
+          "note": "ActualordinaryRIB/CNSpaymentpath +EUeuro/IBANrules; notallassets/crossborderaccountretention/withdrawalstress guarantee."
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "network_continuity",
+          "status": "partial",
+          "sourceIds": ["R03", "S09"],
+          "fullyMeasured": false,
+          "note": "Ordinarydigitalaccess/temporaryEUfairuseroaming; notpermanentlongresidence/foreignplanfundingorindependentbackup."
+        }
+      ],
+      "sourceIds": ["R01", "R02", "R03", "S06", "S09", "S14"]
+    }
+  ],
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 36.0,
+  "unresolvedScoreRange": [36.0, 71.0],
+  "globalRankingEligible": false,
+  "limitations": [
+    "Bounded8D31review not31fullmeasurements; null/[]notmidpoint/renormalization/ranking/probability/exclusion. All9031andnew/unmatchedretained.",
+    "National/city/institution/FUA/foreigncohortdistinct; census2011/2021and2015populationnot2026denominator.",
+    "CurrentOct15bytes notauthenticatedidenticalOct10; observation/version/HTTPtime distinct.",
+    "EC/WHOoldbytesmissing remaincontextonly; no globalreopening.",
+    "Source15redirectchainnotlogged, exactactualHTTProutecountunknown; allnewsourceinitialsubmissions15 andnomorenetwork.",
+    "根验收优先：19原件与18PDF关键页独核，非全部PDF通读；TEC40／80替代，住房／设备缺口可支持低档，S15跳转链缺失不认证实际18路径上限。31项未完整测量，地质not_started展示为unresolved，未知仍null／[]，原80案整文件不变。"
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.chl.lu/sites/default/files/2025-10/rapport-annuel-chl-2024.pdf",
+      "path": "chl2024.pdf",
+      "scope": "CHL2024 activity/quality; institutional not all FUA",
+      "requestAtUTC": "2026-10-15T14:46:25.606273+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 7636712,
+      "sha256": "c761afa6ac997d2c19427ea6b6ddafe2e718e62e4fafe1d7ecd34c434c48fe17",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.chl.lu/sites/default/files/2025-10/rapport-annuel-chl-2024.pdf",
+      "validOriginal": true,
+      "localPath": "originals/chl2024.pdf",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "CHL2024 actual activity; PDFcreated22Sep2025/uploadpathOct2025; not2026outcomes. Physical32 totals distinct from misleading per-pole hospitalisation labels; do not combine.",
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "actualPhysicalPages": 55,
+      "pdfMetadata": {
+        "format": "PDF 1.5",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "Adobe InDesign 20.4 (Macintosh)",
+        "producer": "Adobe PDF Library 17.0",
+        "creationDate": "D:20250922090931+02'00'",
+        "modDate": "D:20250922091011+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S02",
+      "url": "https://cns.public.lu/fr/assure/remboursements/prestations-remboursees/hospitalisation-cure-reeducation.html",
+      "path": "cns-hospital.html",
+      "scope": "Ordinary CNS hospital payment current page; verify dates",
+      "requestAtUTC": "2026-10-15T14:46:31.005314+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 206987,
+      "sha256": "f8de51c9522b872d6fffaecf7dcc9894c41505ec3304092a6b3868cb2488ffe6",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "resolvedUrl": "https://cns.public.lu/fr/assure/remboursements/prestations-remboursees/hospitalisation-cure-reeducation.html",
+      "validOriginal": true,
+      "localPath": "originals/cns-hospital.html",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "PageLastModified20May2026; currentcapturedOct15, no identicalOct10bytes authentication. Adult/minorfeeconditions are treatmentrules not fixedresidentage.",
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S03",
+      "url": "https://www.vdl.lu/sites/default/files/media/ni/document/VDL_2024_Grand-Rapport-Environnemental.pdf",
+      "path": "vdl-environment2024.pdf",
+      "scope": "Municipal environmental delivery2024 publishedFeb2026; not allFUA",
+      "requestAtUTC": "2026-10-15T14:46:33.660437+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 7681071,
+      "sha256": "20bb29f4a2dd6ad6b5deea469f708fefb174ff92ee4d02f43ebbde4aa96baa17",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.vdl.lu/sites/default/files/media/ni/document/VDL_2024_Grand-Rapport-Environnemental.pdf",
+      "validOriginal": true,
+      "localPath": "originals/vdl-environment2024.pdf",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Observed2024; printedpublicationFeb2026, PDFmod23Mar2026; plans include2026/2030/2031 not completed; municipalnotFUA.",
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "actualPhysicalPages": 160,
+      "pdfMetadata": {
+        "format": "PDF 1.5",
+        "title": "Rapport environnemental et plan d'actions 2024",
+        "author": "Ville de Luxembourg",
+        "subject": "",
+        "keywords": "",
+        "creator": "Adobe InDesign 21.2 (Macintosh)",
+        "producer": "Adobe PDF Library 18.0",
+        "creationDate": "D:20260203145525+01'00'",
+        "modDate": "D:20260323112452+01'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S04",
+      "url": "https://santesecu.public.lu/dam-assets/fr/publications/c/cph-2025/cph-compte-rendu-de-la-cph-du-25-avril-2025-sign.pdf",
+      "path": "hospital-board2025.pdf",
+      "scope": "25Apr2025 official hospital commission minutes, actual2024CHL transplant/CAR-T delivery",
+      "requestAtUTC": "2026-10-15T14:47:08.906409+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 752093,
+      "sha256": "660523d430d0dd5b23d9aed91471d39adf8b094475ea86598864dc431226e9b3",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://santesecu.public.lu/dam-assets/fr/publications/c/cph-2025/cph-compte-rendu-de-la-cph-du-25-avril-2025-sign.pdf",
+      "validOriginal": true,
+      "localPath": "originals/hospital-board2025.pdf",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Meeting25Apr2025 title, documentheader23May2025; actual2024treatments vs projected2025–28; favourableopiniontobewritten not completedwork.",
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "actualPhysicalPages": 15,
+      "pdfMetadata": {
+        "format": "PDF 1.5",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "OmniPage CSDK 19",
+        "producer": "OmniPageCSDK19",
+        "creationDate": "D:20250611132726+02'00'",
+        "modDate": "D:20250611134729+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S05",
+      "url": "https://annual-report2025.list.lu/fileadmin/user_upload/LIST_Annual_Report_2025.pdf",
+      "path": "list2025.pdf",
+      "scope": "2025 actual industrial/municipal technology use; institute not entireFUA",
+      "requestAtUTC": "2026-10-15T14:47:12.047849+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 3780816,
+      "sha256": "1018ea2e1315fe12002ead0d90890d7af11b3c12c8ff7a393d8b7fc020e38c56",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://annual-report2025.list.lu/fileadmin/user_upload/LIST_Annual_Report_2025.pdf",
+      "validOriginal": true,
+      "localPath": "originals/list2025.pdf",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Observed2025; foreword28May2026; institutional/national/internationalprojects notFUAresidentoutcomes; prototype/pilot/production distinct.",
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "actualPhysicalPages": 60,
+      "pdfMetadata": {
+        "format": "PDF 1.5",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "Adobe InDesign 21.4 (Macintosh)",
+        "producer": "Adobe PDF Library 18.0",
+        "creationDate": "D:20260624102321+02'00'",
+        "modDate": "D:20260624102400+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S06",
+      "url": "https://www.luxtram.lu/la-ligne/mise-en-service-du-premier-troncon/",
+      "path": "luxtram-line.html",
+      "scope": "Actual commissioned tram line/airport linkage with time and fares checked",
+      "requestAtUTC": "2026-10-15T14:47:20.086974+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 95342,
+      "sha256": "938fc5a19f983eb3034fac5b49efba62c3b7776d0845e0ec4b01b112059bbc6f",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.luxtram.lu/la-ligne/mise-en-service-du-premier-troncon/",
+      "validOriginal": true,
+      "localPath": "originals/luxtram-line.html",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Actualcommissionedline:2Mar2025airportextension; currentundatedoperatorpage withdatedhistory; futureotherextensionnotadopted.",
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S07",
+      "url": "https://cns.public.lu/dam-assets/legislations/statuts/statuts/cns-statuts-01032026.pdf",
+      "path": "cns-statutes-mar2026.pdf",
+      "scope": "Explicit1Mar2026 ordinary benefit qualification/copayment/authorization",
+      "requestAtUTC": "2026-10-15T14:47:44.915428+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 1655426,
+      "sha256": "6b3ede0207f105d2b4ce7227eebb1c46075e3a24a6164a65c8ed6ce0339bc023",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://cns.public.lu/dam-assets/legislations/statuts/statuts/cns-statuts-01032026.pdf",
+      "validOriginal": true,
+      "localPath": "originals/cns-statutes-mar2026.pdf",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Consolidatedvalid1Mar2026; coverexpressly documentaryconsolidation withoutlegalvalue; usedasofficial explanation not authenticatedLegiluxgazette.",
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "actualPhysicalPages": 214,
+      "pdfMetadata": {
+        "format": "PDF 1.7",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "",
+        "producer": "Foxit PDF Editor Printer Version 13.2.2.15981",
+        "creationDate": "D:20260302110322+01'00'",
+        "modDate": "D:20260302110410+01'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S08",
+      "url": "https://www.vdl.lu/fr/vivre/aides-et-services/aider-les-personnes-en-difficultes/allocation-de-solidarite-et-prime-denergie",
+      "path": "city-solidarity2026.html",
+      "scope": "2026 city assistance rules; eligibility not actual payment or median automatically",
+      "requestAtUTC": "2026-10-15T14:47:47.909802+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 226709,
+      "sha256": "8169b7236a9840651da893847e33bb3569c9ac36756215528348b928bbc016e6",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.vdl.lu/fr/vivre/aides-et-services/aider-les-personnes-en-difficultes/allocation-de-solidarite-et-prime-denergie",
+      "validOriginal": true,
+      "localPath": "originals/city-solidarity2026.html",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "2025+solidarityrules and2026energyallowance; currentpageapplicationdeadline23Feb2027; not actualpaidbenefit ormedianqualification.",
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S09",
+      "url": "https://guichet.public.lu/fr/citoyens/sante/remboursement-frais-medicaux/prestations-sante-resident/prise-en-charge-resident.html",
+      "path": "resident-health-payment.html",
+      "scope": "Ordinary insurance/provider/netpayment/co-paycap/eDelivery; page lastmodified2018",
+      "requestAtUTC": "2026-10-15T14:47:52.110110+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 263543,
+      "sha256": "68aef0fee230cb7dc46a047c95a1acb262eb0dfb37319b6efe1bb0cb39fad51a",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "resolvedUrl": "https://guichet.public.lu/fr/citoyens/sante/remboursement-frais-medicaux/prestations-sante-resident/prise-en-charge-resident.html",
+      "validOriginal": true,
+      "localPath": "originals/resident-health-payment.html",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "LastModified30Apr2018 despitecurrentMyGuichetcontent; actual2018/currentversiondistinction; commonpaymentrules corroboratedS02/S07; no2026transactionoutcomes.",
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S10",
+      "url": "https://www.vdl.lu/fr/vivre/aides-et-services/securite",
+      "path": "city-nuclear-protection.html",
+      "scope": "Actual municipal iodine distribution/storage; nuclear-specific not allGSS",
+      "requestAtUTC": "2026-10-15T14:49:13.242752+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 190288,
+      "sha256": "865ac4bf4cff016ec3bd95ce1b80946b9d991a3b37b11790384f182012a905bc",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.vdl.lu/fr/vivre/aides-et-services/securite",
+      "validOriginal": true,
+      "localPath": "originals/city-nuclear-protection.html",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Currentundatedmunicipalpage; continuousiodinedistribution/actualschoolstocks stated, incidentdistributionplan future; notnuclearincidentrate.",
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S11",
+      "url": "https://www.vdl.lu/fr/vivre/aides-et-services/aider-les-personnes-en-difficultes/epiceries-sociales",
+      "path": "city-food-help.html",
+      "scope": "Operationalfoodhelp withneedsassessmentcard andlimitedsupply; notmedianautomatic",
+      "requestAtUTC": "2026-10-15T14:49:17.656099+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 209168,
+      "sha256": "a4000df778bb08630090b57fec4f191e49fa72242bc58742d26baabb7cd908b1",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.vdl.lu/fr/vivre/aides-et-services/aider-les-personnes-en-difficultes/epiceries-sociales",
+      "validOriginal": true,
+      "localPath": "originals/city-food-help.html",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Currentundatedoperationalfoodhelp page with2010–12history; needsassessment+card+€2 andsupplyconstrainedenrolment; notuniversalnutrition.",
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S12",
+      "url": "https://www.chl.lu/sites/default/files/2025-03/ml0495f-digital_0001.pdf",
+      "path": "cart-care2025.pdf",
+      "scope": "Local clinical team actualworkflow/monitoring/constraints March2025; clinicianarticle notmatureoutcome",
+      "requestAtUTC": "2026-10-15T14:49:22.038188+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 445948,
+      "sha256": "d2ad59bd2c77d344f5ee216d102413918d9908d1d513c1be737c0c5ba08a3da3",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.chl.lu/sites/default/files/2025-03/ml0495f-digital_0001.pdf",
+      "validOriginal": true,
+      "localPath": "originals/cart-care2025.pdf",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "MEDINLUX43/2025 article, uploadMar2025; namedCHLcliniciansfirsthandprocess/actual8treated2024; no matureproduct-specificcohort orallstaffindependentoutcomes.",
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "actualPhysicalPages": 3,
+      "pdfMetadata": {
+        "format": "PDF 1.4",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "Adobe InDesign 19.1 (Windows)",
+        "producer": "Adobe PDF Library 17.0",
+        "creationDate": "D:20250304074441Z",
+        "modDate": "D:20250304074444Z",
+        "trapped": "",
+        "encryption": null
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S13",
+      "url": "https://www.vdl.lu/sites/default/files/media/ni/document/Rapport%205_OBSVDL_version%20finale.pdf",
+      "path": "social-observatory2025.pdf",
+      "scope": "July2025municipalreport with2011/2021census; historicalstructure/housingnotcurrentmedianburden",
+      "requestAtUTC": "2026-10-15T14:50:32.025675+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 7520398,
+      "sha256": "10d3f6d6dde4cf44c8261f2054396808e5af0ee83662bcbd836057a40e4653d2",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.vdl.lu/sites/default/files/media/ni/document/Rapport%205_OBSVDL_version%20finale.pdf",
+      "validOriginal": true,
+      "localPath": "originals/social-observatory2025.pdf",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "PublishedJul2025; census2011/2021structure; housingchaptercontextcurrent2025interpretation distinct; no2026medianburdenmeasurement.",
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "actualPhysicalPages": 227,
+      "pdfMetadata": {
+        "format": "PDF 1.5",
+        "title": "",
+        "author": "inconnu",
+        "subject": "",
+        "keywords": "",
+        "creator": "Microsoft® Word 2016",
+        "producer": "Microsoft® Word 2016",
+        "creationDate": "D:20250728161832+02'00'",
+        "modDate": "D:20250728161858+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S14",
+      "url": "https://www.luxtram.lu/tarifs/",
+      "path": "luxtram-fares.html",
+      "scope": "Actualordinaryfreetramfarepath, notforeignrail/flightfare",
+      "requestAtUTC": "2026-10-15T14:50:42.440760+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 90288,
+      "sha256": "249cc2b6c5fd39b1031986b3e9d9268ce736dce762d148eabc567e612789cc7f",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.luxtram.lu/tarifs/",
+      "validOriginal": true,
+      "localPath": "originals/luxtram-fares.html",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Undatedoperatorpage announcingfreepublictransportsince1Mar2020; domestic2ndclass only; crossborder discountednotfreealltravel.",
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S15",
+      "url": "https://www.infocrise.lu",
+      "path": "infocrise.html",
+      "scope": "Officialcitylinkednationalcrisisprotection/navonlyuntilactualread",
+      "requestAtUTC": "2026-10-15T14:50:44.532963+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 80486,
+      "sha256": "85cb3004f52c23437ea3eef35c6f0d99a51b4c3c77f4d823f126cfeeabee84f9",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "resolvedUrl": "https://infocrise.public.lu/fr.html",
+      "validOriginal": true,
+      "localPath": "originals/infocrise.html",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "CurrentInfocriseindex; storiesOct2/Oct9_2026 actualnavigation andscheduledtest notproofofcompletedOct5delivery.",
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "rootBytesReverified": true,
+      "usedForScore": false
+    },
+    {
+      "id": "R01",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_es.htm",
+      "path": "eu-workers.html",
+      "localPath": "originals/eu-workers.html",
+      "scope": "EU worker residence conditional rights; lastchecked19Aug2026",
+      "method": "Verifieddurablecopy_zeroHTTP",
+      "validOriginal": true,
+      "originalBytes": 153770,
+      "sha256": "1555b5f65525917eee8fab3fef570e9a27b5d26dab38779b5bd26659b2bfb34f",
+      "originLocalPath": "/Users/morris/.local/share/cci-research/2026-10-10/leuven/originals/eu-workers.html",
+      "localReverifiedAtUTC": "2026-10-15T14:53:25.598206+00:00",
+      "originalHTTPRetrievalAt": "See origin manifest; not recreated",
+      "originalHTTPHeaders": "Not recertified from rehash",
+      "cutoffOriginalBytesAuthenticated": false,
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "preservedOriginManifest": "/Users/morris/.local/share/cci-research/2026-10-10/leuven/source-manifest.json",
+      "preservedOriginSourceRecord": {
+        "id": "R07",
+        "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_es.htm",
+        "localPath": "originals/eu-workers.html",
+        "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/eu-workers.html",
+        "originalBytes": 153770,
+        "sha256": "1555b5f65525917eee8fab3fef570e9a27b5d26dab38779b5bd26659b2bfb34f",
+        "sourceKind": "VerifiedactualdurableEUworkerlegalrule independentlyBelgianadapted",
+        "validOriginal": true,
+        "cutoffOriginalBytesAuthenticated": false,
+        "observationAndVersion": "EU page lastchecked19August2026; original bytes inherited, HTTP retrieval timestamp unavailable here",
+        "geographicAndPopulationScope": "EU national worker/selfemployed qualified residence; not automatically already employed",
+        "historicalCutoffBytesCertified": false,
+        "cutoffAdaptation": "Current acquired bytes do not certify identical bytes on2026-10-10; dated pre-cutoff event/version accepted only with explicit continuation assumption in report; undated current text is weaker context."
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "R02",
+      "url": "https://europa.eu/youreurope/citizens/consumers/financial-products-and-services/payments-transfers-cheques/index_en.htm",
+      "path": "eu-payments.html",
+      "localPath": "originals/eu-payments.html",
+      "scope": "EU euro payment/card/IBAN rights; lastchecked28Apr2026",
+      "method": "Verifieddurablecopy_zeroHTTP",
+      "validOriginal": true,
+      "originalBytes": 155296,
+      "sha256": "0a457237f62980c579bc7dba314552421cb5b0fa826dc830b0e35bb42d458ee8",
+      "originLocalPath": "/Users/morris/.local/share/cci-research/2026-10-10/munich/eu-payments.html",
+      "localReverifiedAtUTC": "2026-10-15T14:53:25.599455+00:00",
+      "originalHTTPRetrievalAt": "See origin manifest; not recreated",
+      "originalHTTPHeaders": "Not recertified from rehash",
+      "cutoffOriginalBytesAuthenticated": false,
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "R03",
+      "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/mobile-roaming-costs/index_en.htm",
+      "path": "eu-roaming.html",
+      "localPath": "originals/eu-roaming.html",
+      "scope": "TemporaryEU roaming/fairuse; lastchecked7Jan2026; notpermanentforeignresidence",
+      "method": "Verifieddurablecopy_zeroHTTP",
+      "validOriginal": true,
+      "originalBytes": 155071,
+      "sha256": "e2e15e5e0521db23b3d99d06fa691c557b5ebdb63b09aa5ccb50f58af9a8f0d4",
+      "originLocalPath": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/eu-roaming.html",
+      "localReverifiedAtUTC": "2026-10-15T14:53:25.600361+00:00",
+      "originalHTTPRetrievalAt": "See origin manifest; not recreated",
+      "originalHTTPHeaders": "Not recertified from rehash",
+      "cutoffOriginalBytesAuthenticated": false,
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "preservedOriginManifest": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/source-manifest.json",
+      "preservedOriginSourceRecord": {
+        "id": "S13",
+        "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/mobile-roaming-costs/index_en.htm",
+        "path": "eu-roaming.html",
+        "scope": "CommonEUordinaryroaminglimits andfairuse notpermanentresidence",
+        "retrievedOn": "2026-10-15",
+        "originalBytes": 155071,
+        "sha256": "e2e15e5e0521db23b3d99d06fa691c557b5ebdb63b09aa5ccb50f58af9a8f0d4",
+        "status": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "resolvedUrl": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/mobile-roaming-costs/index_en.htm",
+        "validOriginal": true,
+        "cutoffOriginalBytesAuthenticated": false,
+        "localPath": "originals/eu-roaming.html",
+        "sourceKind": "ActualnewOct15snapshot nothistoricalcutoffbytescertification"
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "R04",
+      "url": "https://www.uzleuven.be/nl/media/600a8621-93f2-47a9-887c-01d563e9b672/Jaarverslag%20transplantatie%202024%2012%20stamceltransplantaties.pdf",
+      "path": "leuven-stemcell2024.pdf",
+      "localPath": "originals/leuven-stemcell2024.pdf",
+      "scope": "Externalmaturehumanhematopoieticreconstruction; notLux cohort/payer orcausaleffect",
+      "method": "Verifieddurablecopy_zeroHTTP",
+      "validOriginal": true,
+      "originalBytes": 2911972,
+      "sha256": "786c63a4bcb07f542a411e00f95432619c456f472cc267874fd80d92695aeac3",
+      "originLocalPath": "/Users/morris/.local/share/cci-research/2026-10-10/leuven/originals/stemcell2024.pdf",
+      "localReverifiedAtUTC": "2026-10-15T14:53:25.603309+00:00",
+      "originalHTTPRetrievalAt": "See origin manifest; not recreated",
+      "originalHTTPHeaders": "Not recertified from rehash",
+      "cutoffOriginalBytesAuthenticated": false,
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "httpHeaderScope": "ContentType/status/finalURL only for newnormal; Date/LastModified/intermediateHTTPredirects not logged; do not infer from rehash",
+      "actualPhysicalPages": 15,
+      "pdfMetadata": {
+        "format": "PDF 1.6",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "Adobe InDesign 20.4 (Macintosh)",
+        "producer": "Adobe PDF Library 17.0",
+        "creationDate": "D:20250708195311+02'00'",
+        "modDate": "D:20251010093548+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "preservedOriginManifest": "/Users/morris/.local/share/cci-research/2026-10-10/leuven/source-manifest.json",
+      "preservedOriginSourceRecord": {
+        "id": "S07",
+        "url": "https://www.uzleuven.be/nl/media/600a8621-93f2-47a9-887c-01d563e9b672/Jaarverslag%20transplantatie%202024%2012%20stamceltransplantaties.pdf",
+        "path": "stemcell2024.pdf",
+        "scope": "Located actual2024stemcell/CART delivery andlimits",
+        "requestAtUTC": "2026-10-15T10:44:09.678924+00:00",
+        "method": "urllib_normal_TLS_once_no_retry",
+        "originalBytes": 2911972,
+        "sha256": "786c63a4bcb07f542a411e00f95432619c456f472cc267874fd80d92695aeac3",
+        "cutoffOriginalBytesAuthenticated": false,
+        "status": 200,
+        "contentType": "application/pdf",
+        "resolvedUrl": "https://www.uzleuven.be/nl/media/600a8621-93f2-47a9-887c-01d563e9b672/Jaarverslag%20transplantatie%202024%2012%20stamceltransplantaties.pdf",
+        "validOriginal": true,
+        "localPath": "originals/stemcell2024.pdf",
+        "observationAndVersion": "2024 operations; first-transplant KM2016–24; JACIE2011/15/19 historical",
+        "geographicAndPopulationScope": "Selected UZ marrow/stem-cell recipients including referrals and children, not local resident denominator",
+        "historicalCutoffBytesCertified": false,
+        "cutoffAdaptation": "Current acquired bytes do not certify identical bytes on2026-10-10; dated pre-cutoff event/version accepted only with explicit continuation assumption in report; undated current text is weaker context."
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    }
+  ],
+  "failedSourceSnapshots": [],
+  "referenceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allCandidatesChecked": 9031,
+    "repairCount": 136,
+    "records": [
+      {
+        "fid": 6017,
+        "eFUA_ID": 103.0,
+        "UC_num": 1.0,
+        "UC_IDs": "2253",
+        "eFUA_name": "Luxembourg",
+        "Commuting": 1.0,
+        "Cntry_ISO": "LUX",
+        "Cntry_name": "Luxembourg",
+        "FUA_area": 1055.0,
+        "UC_area": 42.0,
+        "FUA_p_2015": 442453.2131124772,
+        "UC_p_2015": 119160.47943115234,
+        "Com_p_2015": 323292.73368132487
+      }
+    ],
+    "points": [
+      {
+        "label": "Luxembourg centre reference",
+        "longitude": 6.1296,
+        "latitude": 49.6116,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 103,
+            "name": "Luxembourg"
+          }
+        ]
+      },
+      {
+        "label": "CHL hospital reference",
+        "longitude": 6.1006,
+        "latitude": 49.6184,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 103,
+            "name": "Luxembourg"
+          }
+        ]
+      },
+      {
+        "label": "Belvalresearch reference",
+        "longitude": 5.9492,
+        "latitude": 49.5042,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 103,
+            "name": "Luxembourg"
+          }
+        ]
+      },
+      {
+        "label": "Luxairport reference",
+        "longitude": 6.2114,
+        "latitude": 49.6233,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 103,
+            "name": "Luxembourg"
+          }
+        ]
+      }
+    ],
+    "targetWkbSha256": "2b6a479b524567ec3ff529dd9e9ef123ee196352940ca13119e2c07b7a730672",
+    "meaning": "Approximate reference points do not establish provider service coverage, citywide outcomes or residence; Hospital referrals/water service/city/FUA differ; airport point not proof of journey access."
+  },
+  "sensitivity": {
+    "PCSWithdrawn": [30, 80],
+    "ISRWithdrawn": [27, 77],
+    "MEDWithdrawn": [27, 77],
+    "LONWithdrawn": [30, 75],
+    "TECWithdrawn": [30, 75],
+    "PCS60": [39, 74],
+    "ISR40": [33, 68],
+    "MED40": [33, 68],
+    "LON40": [34, 69],
+    "TEC40": [34, 69],
+    "TEC80": [38, 73],
+    "allJudgmentsWithdrawn": [0, 100]
+  },
+  "unknownWeight": 35,
+  "coverageReview": [
+    {
+      "dimension": "PCS",
+      "subpillar": "heat_humidity",
+      "status": "context",
+      "sourceIds": ["S03"],
+      "fullyMeasured": false,
+      "note": "Climate/greening and2024warm/wetcontext; nohumidity/indoorhealthoutcome; nozerohazardinference."
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "flood_sea_level",
+      "status": "partial",
+      "sourceIds": ["S03"],
+      "fullyMeasured": false,
+      "note": "Actual2021damagesdescribed,2024riskassessment/phase1renaturation/remainingflashflood&erosionstudies; municipalitynotentireFUA; sealevelnotstarted."
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "geophysical",
+      "status": "not_started",
+      "sourceIds": [],
+      "fullyMeasured": false,
+      "note": "Noqualifiedearthquake/landslide/buildingresilienceevidence; notzerorisk."
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "severe_weather_wildfire",
+      "status": "partial",
+      "sourceIds": ["S03", "S01"],
+      "fullyMeasured": false,
+      "note": "Heavy-rain/mudflowproblem andlimitedhospitalflood/powerexercise; wildfire/hailwindnotfullyreviewed."
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "organized_violence",
+      "status": "partial",
+      "sourceIds": ["S01"],
+      "fullyMeasured": false,
+      "note": "Locallyactualterror-scenarioexercise notactualattack/lowimpactmeasurement; rarergun/knifewounds inhospitalstatementnotorganizedcrimerate."
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "regional_conflict",
+      "status": "context",
+      "sourceIds": ["S01"],
+      "fullyMeasured": false,
+      "note": "France/Belgiumattack-derivedscenario andgeopoliticalconcern; noactualLuxcorridor/spilloverimpactassessment."
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "strategic_exposure",
+      "status": "partial",
+      "sourceIds": ["S01", "S10"],
+      "fullyMeasured": false,
+      "note": "CHLcriticalinfrastructuredesignation/realdrills; NRBCfuture andiodineactualstocks; cannotcoverfinancial/communicationscriticalrisk orGSSthreatincidence."
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "governance",
+      "status": "partial",
+      "sourceIds": ["S02", "S08", "S09"],
+      "fullyMeasured": false,
+      "note": "Actualserviceprocedures/CNSreimbursement/RIB/eDeliveryofflinefallback; nocrossadministrationcompletionrate."
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "adaptive_capacity",
+      "status": "partial",
+      "sourceIds": ["S03", "S06"],
+      "fullyMeasured": false,
+      "note": "Actualwater-tower/38%smartmeters/tramextensions vsfutureworks; notwholeFUA."
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "social_cohesion",
+      "status": "partial",
+      "sourceIds": ["S11", "S13"],
+      "fullyMeasured": false,
+      "note": "Actualneeds-assessedfoodhelp withlimitedenrolment; housinginequalityauthors2025context/censusnotmedian2026."
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "emergency_recovery",
+      "status": "partial",
+      "sourceIds": ["S01", "S10"],
+      "fullyMeasured": false,
+      "note": "Actualmultiagencyhospitaldrillandiodinedistribution, identifiedgaps; not allactualdisasterrecoveryoutcomes."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "water",
+      "status": "partial",
+      "sourceIds": ["S03"],
+      "fullyMeasured": false,
+      "note": "Actualspring/SEBESmixture/2024testing andKirchbergwatertower; indicatornonconformities/buildinginstallations; billburdennotdetermined."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "food",
+      "status": "partial",
+      "sourceIds": ["S11"],
+      "fullyMeasured": false,
+      "note": "OperatingcollectionMon–Sat/needsassessedcard/€2; suppliesconstraint/nofullnutrition ormedianmarketbasket."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "energy",
+      "status": "partial",
+      "sourceIds": ["S03", "S08"],
+      "fullyMeasured": false,
+      "note": "Realheat/renewableproduction/LEDsaving vsdependency andmeans-tested2026support; eligibilitynotactualpaid/netmedianburden."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "supply_chain",
+      "status": "context",
+      "sourceIds": ["S03", "S06"],
+      "fullyMeasured": false,
+      "note": "Waterdualorigin/network/transport actual; not independentenergyfoodreserve routes/commonshocktest."
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "access",
+      "status": "partial",
+      "sourceIds": ["S01", "S02", "S07", "S09", "S04"],
+      "fullyMeasured": false,
+      "note": "Broadactualnecessarytreatment +CNSordinarynetpayment; nofixedage, copayconditionsandadvancecash; youthacutepsychiatricwaitcontextS04."
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "routine_quality",
+      "status": "partial",
+      "sourceIds": ["S01"],
+      "fullyMeasured": false,
+      "note": "ActualpainassessmentPRNsample93.76%,guidelinecareplans/fallassessment andcoordination; notriskadjustedmortality; noaveraging."
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "specialist_capacity",
+      "status": "partial",
+      "sourceIds": ["S01", "S04"],
+      "fullyMeasured": false,
+      "note": "Actualsurgery/dialysis/chemo/neuro/hematology andreferrals; countsnotFUAresidentrates; waiting/foreignoncofertilitylimits."
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "system_continuity",
+      "status": "partial",
+      "sourceIds": ["S01", "S04", "S12"],
+      "fullyMeasured": false,
+      "note": "Actualcasecoordination/multidisciplinary/monitoring/drills; equipment/logisticsfunding andIgshortage matter; futureupgradesnotcomplete."
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "translation",
+      "status": "partial",
+      "sourceIds": ["S04", "R04"],
+      "fullyMeasured": false,
+      "note": "Maturediseasehematopoieticreconstruction/local23autografts; CAR-Tactual8/6response supplementarynolongtermclaim; healthyagingunknown."
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "trial_maturity",
+      "status": "partial",
+      "sourceIds": ["R04", "S01"],
+      "fullyMeasured": false,
+      "note": "External2016–24firstautologousn463KMdescriptive notRCTorLuxeffect; unspecifiedlocalCAR-Tbrand/windowprecludesproductmatureOStransfer."
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "regulatory_adoption",
+      "status": "partial",
+      "sourceIds": ["S04", "S12"],
+      "fullyMeasured": false,
+      "note": "Formalnationalservice/standardASCT/product-specificaccreditationactual; J&J/MMpreparationfuture notadoption."
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "resident_access",
+      "status": "partial",
+      "sourceIds": ["S02", "S04", "S07", "S12"],
+      "fullyMeasured": false,
+      "note": "Usualcoveredhospitalpayment/realnationalreferrals +1–2weeksmonitoring; clinicalfitness/indication andfunding/staff/equipmentresidual; nofreeallcareclaim."
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "knowledge_output",
+      "status": "partial",
+      "sourceIds": ["S05"],
+      "fullyMeasured": false,
+      "note": "2025actual13patentsfiled/21paidlicenses/186top10journalarticles; noFUAattributiondenominatororWIPOscore."
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "industry_density",
+      "status": "partial",
+      "sourceIds": ["S05"],
+      "fullyMeasured": false,
+      "note": "RealCEBItestingplatform/paidlicenses/CFLlaunch; GRADELproof-of-concept/Goodyear22projects andAmiensmethodnotallfactorydeployment; noindustrycensus."
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "digital_infrastructure",
+      "status": "partial",
+      "sourceIds": ["S03", "S09"],
+      "fullyMeasured": false,
+      "note": "Actual38%waterLoRameters/operatingMyGuichet-RIB/reimbursementchannel; HotCitymonitoringnotbroadbandcoverage, nohouseholdaccessrate."
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "diffusion",
+      "status": "partial",
+      "sourceIds": ["S03", "S05", "S09"],
+      "fullyMeasured": false,
+      "note": "Actualmunicipalmeters/MicrObsRSV/healthservices/CFLlaunch; smarttower/6Gfuture andlackbroadoutcomeusecounts retained."
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "transport_redundancy",
+      "status": "partial",
+      "sourceIds": ["S06", "S14"],
+      "fullyMeasured": false,
+      "note": "Actualtramairport/Gare/Howaldinterchange/domesticfree2ndclass; crossborderpricesnotfree, independentexitcapacitynotfullyestablished."
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "legal_mobility",
+      "status": "partial",
+      "sourceIds": ["R01"],
+      "fullyMeasured": false,
+      "note": "EUworker/self-employedconditionalresidence andregistration; lawful5yearspermanent; actualjob/resourcesnotassumed, notallnationalities."
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "asset_portability",
+      "status": "partial",
+      "sourceIds": ["R02", "S09"],
+      "fullyMeasured": false,
+      "note": "ActualordinaryRIB/CNSpaymentpath +EUeuro/IBANrules; notallassets/crossborderaccountretention/withdrawalstress guarantee."
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "network_continuity",
+      "status": "partial",
+      "sourceIds": ["R03", "S09"],
+      "fullyMeasured": false,
+      "note": "Ordinarydigitalaccess/temporaryEUfairuseroaming; notpermanentlongresidence/foreignplanfundingorindependentbackup."
+    }
+  ],
+  "sourceAndStopLedger": {
+    "normalInitialSourceSubmissions": 15,
+    "normalValidOriginals": 15,
+    "normalFailures": 0,
+    "reusedVerifiedDurableOriginals": 4,
+    "validOriginalsTotal": 19,
+    "newDiscoveryRounds": [
+      {
+        "queries": [
+          "site.chl.lu rapport annuel 2025 qualité délais patients",
+          "site.cns.public.lu 2026 remboursement hospitalisation tiers payant participation",
+          "site.vdl.lu rapport annuel 2025 eau inondation aide",
+          "site.sebes.lu rapport annuel 2025 qualité eau"
+        ]
+      },
+      {
+        "queries": [
+          "site.chl.lu greffe cellules souches autologue 2025 CAR T",
+          "site.luxtram.lu rapport annuel 2025 fréquentation",
+          "site.list.lu annual report 2025 innovation industry deployed",
+          "site.vdl.lu 2025 office social allocation vie chère énergie inondations"
+        ]
+      }
+    ],
+    "extraQueries": 0,
+    "networkClosed": true,
+    "normalBatchSizes": [3, 3, 3, 3, 3],
+    "actualHTTPRouteLimitation": "S15automaticredirect www.infocrise.lu -> infocrise.public.lu/fr.html. Atleast16normalHTTPlegs; intermediatechainnotlogged, exactcountand18routecapcannotbeproved. Stoppedwith3initialsubmissionmargin; no rerequesttorepair.",
+    "explicitBatchAssertions": true,
+    "maxSourceRequestPixelBatch": 3,
+    "webFailures": [
+      {
+        "provider": "CHL",
+        "url": "https://www.chl.lu/de/node/34227",
+        "mechanism": "webopen",
+        "error": "403once",
+        "count": 1,
+        "action": "Notretriedindex; separatepreviouslylocated2024PDFandclinicalarticle retrievednormally; successdoesnoterasefailure"
+      },
+      {
+        "provider": "VdL",
+        "url": "https://www.vdl.lu/fr/plan-du-site",
+        "mechanism": "webclick",
+        "error": "400Timeoutonce",
+        "count": 1,
+        "action": "Notretriedsitemap; otherpreviouslylocatedoriginals retrievednormally; successdoesnoterasefailure"
+      }
+    ],
+    "inheritedStops": [
+      "EC83/WHOtwo globaldiscoveryrounds closed; oldjournalunavailable/countersunknownnotzero, zeronewglobalrequests. MissingoldoriginalSHA notrecertified.",
+      "NHS England/UCLH/ING andotheroldstoppedmechanisms retainstops; no requests thiscase.",
+      "VerifiedEU/UZ durablecopies do notreset origin failurecounters orauthenticateoldHTTPtime."
+    ],
+    "failureMeaning": "Researcher acquisition failure never penalizescityability/transparency; no sourcecountscoring",
+    "webOnlyFactsUsedForScoring": [],
+    "webOnlyScope": "Navigation/cyber/nuclearplan/scheduledOct5test only contextual, transcripts explicit. Scoredfacts fromvalidraw orverifieddurablebytes."
+  },
+  "rootScopeReview": {
+    "rootPdfPageCount": 18,
+    "rootPdfPixelsViewed": [
+      {
+        "sourceId": "S01",
+        "physicalPage": 19
+      },
+      {
+        "sourceId": "S01",
+        "physicalPage": 32
+      },
+      {
+        "sourceId": "S01",
+        "physicalPage": 40
+      },
+      {
+        "sourceId": "S03",
+        "physicalPage": 36
+      },
+      {
+        "sourceId": "S03",
+        "physicalPage": 50
+      },
+      {
+        "sourceId": "S03",
+        "physicalPage": 11
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 9
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 10
+      },
+      {
+        "sourceId": "S07",
+        "physicalPage": 71
+      },
+      {
+        "sourceId": "S12",
+        "physicalPage": 2
+      },
+      {
+        "sourceId": "S12",
+        "physicalPage": 3
+      },
+      {
+        "sourceId": "R04",
+        "physicalPage": 13
+      },
+      {
+        "sourceId": "S05",
+        "physicalPage": 30
+      },
+      {
+        "sourceId": "S05",
+        "physicalPage": 34
+      },
+      {
+        "sourceId": "S13",
+        "physicalPage": 120
+      },
+      {
+        "sourceId": "R04",
+        "physicalPage": 3
+      },
+      {
+        "sourceId": "S07",
+        "physicalPage": 1
+      },
+      {
+        "sourceId": "S01",
+        "physicalPage": 20
+      }
+    ],
+    "all80PreviousCaseBytesUnchanged": true,
+    "all9031IndependentlyLoaded": true,
+    "fuaWkbSha256": "2b6a479b524567ec3ff529dd9e9ef123ee196352940ca13119e2c07b7a730672",
+    "rootNewNetworkRequests": 0,
+    "source15ExactHTTPRouteCountAuthenticated": false,
+    "cnsConsolidationIndependentlyAuthenticatedGazette": false,
+    "copaymentCapIncludesAllPrivateExpenses": false,
+    "prnPainAssessmentIsMortalityOutcome": false,
+    "departmentHospitalisationLabelsReencodedAsBedDays": false,
+    "carT8ResponsesAreMatureProductSpecificSurvival": false,
+    "cellTherapyUpgradeCompleted": false,
+    "leuven463OutcomesAreLuxembourgCohort": false,
+    "renewable119PercentIsCitySelfSufficiency": false,
+    "nineWaterIndicatorsAreHouseholdUnsafeRate": false,
+    "tecProofOfConceptIsLocalMassProduction": false,
+    "euRightsAloneProveLongtermExit": false,
+    "score40RequiresDominanceOrMajorityOrShutdown": false,
+    "unknownsFilledWithMidpoint": false
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-luxembourg-score-completion-review.md",
+    "sha256": "77514f720699b5676456671f01307ca1b30c21aec36c01ad35a5c94f94097911",
+    "researchReport": "docs/cci-luxembourg-priority-review.md",
+    "researchReportSha256": "59365ce79a8d198576ea0328f8c95cf5962c9484246daaf8b0a2e44e7b4c6b19",
+    "researchFrozenReportSha256": "ce4057cc6ff2f7837b7483a1d7145171887a9461ee2909eaef8be8898dbea546",
+    "frozenManifestSha256": "7d6199838fc8a0c4b65fb707ececd290b38b28a53404bfd7012c7903e2d87bbd",
+    "frozenFilesVerified": 103,
+    "validOriginalCount": 19,
+    "newValidOriginalCount": 15,
+    "reusedOriginalCount": 4,
+    "rootNewNetworkRequests": 0
+  },
+  "reportBytes": 14258,
+  "reportSha256": "77514f720699b5676456671f01307ca1b30c21aec36c01ad35a5c94f94097911"
+}
