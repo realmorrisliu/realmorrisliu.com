@@ -2243,7 +2243,7 @@ assert.equal(frankfurtCase.resourceScopeReview.lowVoltageUpstreamKwh, 1299209723
 for (const [id, expectedRange, count] of [
   [1445, [36, 76], 26],
   [73, [15, 85], 35],
-  [1427, [27, 82], 25],
+  [1427, [21, 86], 25],
 ] as const) {
   const c = realCases.find(c => c.candidateId === id);
   assert.equal(c.priorityCompletionReview.sha256, digest(c.priorityCompletionReview.path));
@@ -2271,8 +2271,8 @@ for (const [scores, dimension, lower, upper] of [
   [stockholm, "LON", 30, 80],
   [hongKong, "MED", 9, 94],
   [hongKong, "ISR", 6, 91],
-  [amsterdam, "ISR", 18, 88],
-  [amsterdam, "LON", 21, 86],
+  [amsterdam, "ISR", 12, 92],
+  [amsterdam, "TEC", 15, 90],
 ] as const) {
   const withdrawn = { ...scores };
   delete withdrawn[dimension];
@@ -2298,6 +2298,11 @@ assert.deepEqual(amsterdamCase.clinicalScopeReview.hsmr95ConfidenceInterval, [10
 assert.equal(amsterdamCase.resourceScopeReview.waterVolumeUnitAndArithmeticConflictRetained, true);
 assert.equal(amsterdamCase.resourceScopeReview.volumeChangePercentAdopted, false);
 assert.equal(amsterdamCase.resourceScopeReview.demoLoremTemplateAdopted, false);
+assert.equal(amsterdamCase.payerReassessment.sha256, digest(amsterdamCase.payerReassessment.path));
+assert.deepEqual(total(amsterdam), { center: null, lower: 21, upper: 86 });
+assert.equal(amsterdam.LON, undefined);
+assert.deepEqual(total({ ...amsterdam, LON: 60 }), { center: null, lower: 27, upper: 82 });
+assert.deepEqual(total({ ...amsterdam, LON: 40 }), { center: null, lower: 25, upper: 80 });
 
 for (const [id, expectedRange, count, addedSources, expectedCenter] of [
   [3147, [21, 86], 33, 0, null],

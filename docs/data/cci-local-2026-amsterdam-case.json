@@ -251,10 +251,10 @@
     },
     {
       "id": "LON",
-      "score": 60,
-      "rationale": "成熟人体肿瘤CAR-T的当地实施链可独立成立：历史约45例已治、2025两中心多年肿瘤治疗说明、EMA成熟人体及安全监护要求、ZIN明确认可病种和当地通常保险取得规则。",
-      "assumption": "同尺度有限已实施/认可治疗桥：2021本地回输及安全应对＋2025连续肿瘤使用适配通常保险认可的部分成熟CAR-T病种；合资格患者通常能经本地临床监护、合同保险/必要转诊及通常自付资源完成取得。实际本地品牌/同队列支付与全过程监护未逐例匹配，旧认可目录到2026和当前合同截止适配可撤；拒绝成熟产品/认可病种/常规监护/支付任一关键连接→null。重要取得约束40，更广成熟可取得链80；不是普通居民人人适用或已实现普遍长寿。",
-      "conditionalAlternatives": [40, 80],
+      "score": null,
+      "rationale": "实际疾病CAR-T、成熟人体与当地实施/接续保留为正证；UMC付款原件明确预算保单例外，普通净付款及监护连接未被接受，撤回条件60、保留未知。",
+      "assumption": "复核同URL、10Dec2025 v3的新保留原字节，不称新政策或旧字节恢复。多数护理支付、有效转诊和部分预先保证是正证；预算保单均未签约、合同保险也非全服务自动支付。旧合同保险/通常自付措辞未提供可接受的通常覆盖或真实可行授权替代及净照护连接；预算账先投保司后向患者收拒付差额，不等所有人全额预付。未知不因来源少、旧tmp缺失或301未跟随产生。",
+      "conditionalAlternatives": [],
       "subpillars": {
         "translation": "partial",
         "trial_maturity": "partial",
@@ -282,19 +282,35 @@
         },
         "resident_access": {
           "status": "partial",
-          "actualReviewed": "localinfusion/safetycapacity+ordinarycontract/deuctible+ZINrecognizedhospitalCAR-Tbridge;exactlocalbrandcohortandpayersharednotfullymatched",
+          "actualReviewed": "Payer57 verified retained S15 body: actual ordinary insured/referral payment support plus budget-policy noncontracting and residual patient billing. No accepted usual net-payment/monitoring or realized authorization alternative; actual clinical delivery retained, not newly authenticated all old clinical originals.",
           "sourceFiles": [
             "umc-cart2021.html",
             "amsterdam-payment.html",
             "umc-contracts2026.html",
             "zin-car2025.html",
-            "ema-product2026.pdf"
+            "ema-product2026.pdf",
+            "umc-patient-payment.html"
           ],
-          "exhaustiveReviewed": false
+          "exhaustiveReviewed": false,
+          "previousAdoptedClaimPreservedInPayerReview": true
         }
       },
-      "discussionBranchesNotAdopted": [],
-      "scoreStatus": "conditional_root_adopted"
+      "discussionBranchesNotAdopted": [
+        {
+          "score": 60,
+          "reason": "Usual net access and monitoring bridge not accepted after explicit budget-policy exception."
+        },
+        {
+          "score": 40,
+          "reason": "Important actual residual burden for ordinary profile not established sufficiently to select this tier."
+        },
+        {
+          "score": 80,
+          "reason": "Broader mature translation and usable adoption not established."
+        }
+      ],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "alternativeRationales": "有据有限通常覆盖或真实可行授权替代及可承担制造等待/毒性监护/交通照护，可条件60，域27—82；已有帮助后实际重要取得约束可40，域25—80，不需多数/主导/停摆。80看更广可信审慎实际采用，不要求健康人延寿/零风险。当前不强选；无需全保单/逐剂账单/固定成人。"
     },
     {
       "id": "TEC",
@@ -380,10 +396,11 @@
     }
   ],
   "expectedConditionalTotal": null,
-  "knownWeightedSubtotal": 27.0,
-  "unresolvedScoreRange": [27.0, 82.0],
+  "knownWeightedSubtotal": 21,
+  "unresolvedScoreRange": [21, 86],
   "globalRankingEligible": false,
   "limitations": [
+    "2026-10-16付款复核撤回LON60至未知，当前21—86；旧实际治疗/成熟性正证保留。非新政策、能力下降量或缺资料扣分；同提供者Almere标准一致。",
     "No global ranking/probability/Top32 qualification",
     "All31keys are boundedpartial/unresolved, not full universal outcomes",
     "Actual unstarted earthquake/foundation, wind/wildfire, food median prices/fullquality and longtermretention recorded",
@@ -1411,15 +1428,17 @@
           },
           "resident_access": {
             "status": "partial",
-            "actualReviewed": "localinfusion/safetycapacity+ordinarycontract/deuctible+ZINrecognizedhospitalCAR-Tbridge;exactlocalbrandcohortandpayersharednotfullymatched",
+            "actualReviewed": "Payer57 verified retained S15 body: actual ordinary insured/referral payment support plus budget-policy noncontracting and residual patient billing. No accepted usual net-payment/monitoring or realized authorization alternative; actual clinical delivery retained, not newly authenticated all old clinical originals.",
             "sourceFiles": [
               "umc-cart2021.html",
               "amsterdam-payment.html",
               "umc-contracts2026.html",
               "zin-car2025.html",
-              "ema-product2026.pdf"
+              "ema-product2026.pdf",
+              "umc-patient-payment.html"
             ],
-            "exhaustiveReviewed": false
+            "exhaustiveReviewed": false,
+            "previousAdoptedClaimPreservedInPayerReview": true
           }
         },
         "TEC": {
@@ -1491,7 +1510,7 @@
   },
   "priorityCompletionReview": {
     "path": "docs/cci-amsterdam-score-completion-review.md",
-    "sha256": "4c808a3e401ead420850365c5171c06e2c4b3b917059e276559a4d98d058a618",
+    "sha256": "87c59aa630ae6a3f4f205337ced7fcbbc4d7cbf1c1b75e7b65e98c98b6f3e6c3",
     "reviewedOn": "2026-10-14",
     "sourceManifestSha256": "fe3dcec6c23f557a63a618d7ad3489183e33b8b8d90ad9212306cfc71d91ce32",
     "handoffSha256": "a6fc0cd4e41a178cf0bf2310f0438672790bac88d03763a0a9d818f8ed727d35",
@@ -1519,7 +1538,9 @@
         "bytes": 1872,
         "sha256": "4a62c6fbc8f42794351c88cd41dfc4783c061ecf6efaf51e1a0b65a85016aa66"
       }
-    ]
+    ],
+    "historicalOriginalAcceptancePreservedAsOf": "2026-10-14",
+    "payerReassessmentSeparate": "docs/cci-amsterdam-payer-review.md"
   },
   "clinicalScopeReview": {
     "hsmr2024": 106,
@@ -1537,5 +1558,157 @@
     "waterVolumeUnitAndArithmeticConflictRetained": true,
     "volumeChangePercentAdopted": false,
     "demoLoremTemplateAdopted": false
+  },
+  "unknownWeight": 65,
+  "payerReassessment": {
+    "path": "docs/cci-amsterdam-payer-review.md",
+    "sha256": "ac9266c1f033a9484aba8563d2843644a1ceec9a6ef70d945b810711f36ba89d",
+    "reviewedOn": "2026-10-16",
+    "inputCommit": "2bd3087986bfd4165e3794f54364279118426818",
+    "previousDimension": {
+      "id": "LON",
+      "score": 60,
+      "rationale": "成熟人体肿瘤CAR-T的当地实施链可独立成立：历史约45例已治、2025两中心多年肿瘤治疗说明、EMA成熟人体及安全监护要求、ZIN明确认可病种和当地通常保险取得规则。",
+      "assumption": "同尺度有限已实施/认可治疗桥：2021本地回输及安全应对＋2025连续肿瘤使用适配通常保险认可的部分成熟CAR-T病种；合资格患者通常能经本地临床监护、合同保险/必要转诊及通常自付资源完成取得。实际本地品牌/同队列支付与全过程监护未逐例匹配，旧认可目录到2026和当前合同截止适配可撤；拒绝成熟产品/认可病种/常规监护/支付任一关键连接→null。重要取得约束40，更广成熟可取得链80；不是普通居民人人适用或已实现普遍长寿。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "actualReview": {
+        "translation": {
+          "status": "partial",
+          "actualReviewed": "historical~45actuallocalCAR-Tinfusions+2025oncologylongstanding;Amsterdamacademicmanufacturepreparing;LUMCfirstSLEnotlocal",
+          "sourceFiles": ["umc-cart2021.html", "amsterdam-cart-trial2025.html"],
+          "exhaustiveReviewed": false
+        },
+        "trial_maturity": {
+          "status": "partial",
+          "actualReviewed": "EMAactualhumanZUMA-1ITT111/mITT101longfollowupmatureoncologyclass;notlocalcohort,autoimmune6yrfuture",
+          "sourceFiles": ["ema-product2026.pdf", "amsterdam-cart-trial2025.html"],
+          "exhaustiveReviewed": false
+        },
+        "regulatory_adoption": {
+          "status": "partial",
+          "actualReviewed": "EMAYescartaapprovedclass/ZIN2025specificreimbursedindicationsvsadvice/study separated;2026continuityconditional",
+          "sourceFiles": ["ema-yescarta-index.html", "zin-car2025.html"],
+          "exhaustiveReviewed": false
+        },
+        "resident_access": {
+          "status": "partial",
+          "actualReviewed": "localinfusion/safetycapacity+ordinarycontract/deuctible+ZINrecognizedhospitalCAR-Tbridge;exactlocalbrandcohortandpayersharednotfullymatched",
+          "sourceFiles": [
+            "umc-cart2021.html",
+            "amsterdam-payment.html",
+            "umc-contracts2026.html",
+            "zin-car2025.html",
+            "ema-product2026.pdf"
+          ],
+          "exhaustiveReviewed": false
+        }
+      },
+      "discussionBranchesNotAdopted": [],
+      "scoreStatus": "conditional_root_adopted"
+    },
+    "sourceSnapshot": {
+      "id": "PAYER57",
+      "url": "https://www.amsterdamumc.nl/nl/patienteninformatie/informatie-over-rechten-en-plichten-kosten-en-betaling-van-uw-behandeling-1",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/amsterdam-payer-root57/umc-patient-payment.html",
+      "bytes": 69370,
+      "sha256": "c5f986ed7a77536fbd4c8cc10d2fb22044306c28aab1efbeec91d3195bd04f22",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/almere-full56/originals/umc-patient-payment.html",
+      "originalRequestAtUTC": "2026-10-15T20:29:57.789967+00:00",
+      "bodyVersion": "10 December 2025, version 3",
+      "rootBytesVerified": true,
+      "rootMainBodyRead": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "newNetworkRequests": 0,
+      "oldSourceSha256": "c26299c56d3cd3e6786a3133bf39029452e81c3f7c29e49c9e097c24db30012a",
+      "oldSourceBytesRecovered": false,
+      "sameVersionAndLengthDoNotProveSameHistoricalBytes": true
+    },
+    "oldClinicalSourceSnapshotsUnchanged": true,
+    "old25OriginalsReauthenticated": false,
+    "newPdfPages": 0,
+    "newNetworkRequests": 0,
+    "rootRawOriginalsVerified": 1,
+    "crossReportSha256": "aca34ee94671efdac4f52dd12c21bd7c3340e26e42e31b4a433a6d83178f30b6",
+    "crossManifestSha256": "03a0f71bc189600d7d3322eba36daffb71b77b93ce149169c95b294a5538081a",
+    "crossPayloadsVerified": 17,
+    "ordinaryNetAccessBridgeAccepted": false,
+    "budgetPolicyExceptionNewlyImplemented": false,
+    "allPoliciesOrPerDoseInvoicesRequired": false,
+    "noImportantBurdenProvedFromUnknownPolicyPrevalence": true,
+    "otherSevenDimensionsUnchanged": true,
+    "originalOther89CasesByteUnchanged": true,
+    "sameSharedProviderCriteriaAsAlmere": true,
+    "crossSourceRecords": [
+      {
+        "id": "S12",
+        "url": "https://www.amsterdamumc.org/nl/vandaag/samen-met-flevoziekenhuis-leveren-we-al-15-jaar-de-juiste-zorg-op-de-juiste-plek",
+        "path": "umc-flevo-alliance2024.html",
+        "originalBytes": 51442,
+        "sha256": "ed17fa3dc00e2f31efc2e36a500dcae14e9f87ee6cb703e2692ca8f27a45ab09",
+        "requestAtUTC": "2026-10-15T20:29:40.609954+00:00",
+        "scope": "actualtwohospitalreferral/care/sitejointwork notsameFUAorCARTproductpayment",
+        "method": "normalTLS_noRetry_explicitRedirects",
+        "actualOriginalPath": "/Users/morris/.local/share/cci-research/2026-10-10/almere-full56/originals/umc-flevo-alliance2024.html",
+        "snapshotPath": "originals/umc-flevo-alliance2024.html",
+        "cutoffHistoricalBytesAuthenticated": false
+      },
+      {
+        "id": "S13",
+        "url": "https://www.zorginstituutnederland.nl/documenten/2025/02/24/vergoeding-car-t-behandelingen-bij-kanker",
+        "path": "zin-cart-coverage2025.html",
+        "originalBytes": 229251,
+        "sha256": "c4d2bf1545ab2583bc8c3dda9337efe04661e109ba67542a1e2ead0d130472f8",
+        "requestAtUTC": "2026-10-15T20:29:53.215156+00:00",
+        "scope": "priorlocatedsuccessfulactualpayeroriginal oldtmplost notauthrestoration; products/diseases reimbursedvsadvice/research",
+        "method": "normalTLS_noRetry_explicitRedirects",
+        "actualOriginalPath": "/Users/morris/.local/share/cci-research/2026-10-10/almere-full56/originals/zin-cart-coverage2025.html",
+        "snapshotPath": "originals/zin-cart-coverage2025.html",
+        "cutoffHistoricalBytesAuthenticated": false
+      },
+      {
+        "id": "S14",
+        "url": "https://www.amsterdamumc.org/nl/vandaag/je-eigen-afweercellen-als-medicijn",
+        "path": "umc-cart2021.html",
+        "originalBytes": 59257,
+        "sha256": "dd8d8848a007b862bf41342af0cb9bfa02e3f099e469de383e42730c9c6651c3",
+        "requestAtUTC": "2026-10-15T20:29:55.629759+00:00",
+        "scope": "realhistoric45adultlymphomaoutside-trialpath+manufacturemonitoring/risks, notAlmerecohort",
+        "method": "normalTLS_noRetry_explicitRedirects",
+        "actualOriginalPath": "/Users/morris/.local/share/cci-research/2026-10-10/almere-full56/originals/umc-cart2021.html",
+        "snapshotPath": "originals/umc-cart2021.html",
+        "cutoffHistoricalBytesAuthenticated": false
+      },
+      {
+        "id": "S15",
+        "url": "https://www.amsterdamumc.nl/nl/patienteninformatie/informatie-over-rechten-en-plichten-kosten-en-betaling-van-uw-behandeling-1",
+        "path": "umc-patient-payment.html",
+        "originalBytes": 69370,
+        "sha256": "c5f986ed7a77536fbd4c8cc10d2fb22044306c28aab1efbeec91d3195bd04f22",
+        "requestAtUTC": "2026-10-15T20:29:57.789967+00:00",
+        "scope": "actualordinaryinsurance/referral/deductible/conditions notfreeeveryproduct orforeignvisitor",
+        "method": "normalTLS_noRetry_explicitRedirects",
+        "actualOriginalPath": "/Users/morris/.local/share/cci-research/2026-10-10/almere-full56/originals/umc-patient-payment.html",
+        "snapshotPath": "originals/umc-patient-payment.html",
+        "cutoffHistoricalBytesAuthenticated": false
+      }
+    ]
+  },
+  "sensitivity": {
+    "LON60OnlyIfUsualNetAccessAccepted": [27, 82],
+    "LON40OnlyIfImportantActualConstraintAccepted": [25, 80],
+    "ISRWithdrawn": [12, 92],
+    "TECWithdrawn": [15, 90],
+    "OPTWithdrawn": [15, 90],
+    "ISR40": [18, 83],
+    "TEC40": [19, 84],
+    "OPT40": [19, 84],
+    "allJudgmentsWithdrawn": [0, 100]
   }
 }
