@@ -116,6 +116,7 @@ const realCases = [
   "montreal",
   "fukuoka",
   "milan",
+  "barcelona",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -223,6 +224,7 @@ const [
   montreal,
   fukuoka,
   milan,
+  barcelona,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2334,4 +2336,27 @@ for (const dimension of ["LON", "TEC"] as const) {
   const withdrawn = { ...milan };
   delete withdrawn[dimension];
   assert.deepEqual(total(withdrawn), { center: null, lower: 6, upper: 96 });
+}
+
+const barcelonaCase = realCases.find(c => c.candidateId === 4523);
+assert.equal(
+  barcelonaCase.priorityCompletionReview.sha256,
+  digest(barcelonaCase.priorityCompletionReview.path)
+);
+assert.equal(barcelonaCase.rootScopeReview.sparseMergedWaitXmlIndependentlyParsed, true);
+assert.equal(barcelonaCase.rootScopeReview.exactClinicRows, 12);
+assert.equal(barcelonaCase.rootScopeReview.questionnairesNotUniquePatients, true);
+assert.equal(barcelonaCase.rootScopeReview.printedGrowth64_59ConflictRetained, true);
+assert.equal(barcelonaCase.rootScopeReview.sadCemeteryResponseCountedAsResolved, false);
+assert.deepEqual(total(barcelona), { center: null, lower: 30, upper: 80 });
+assert.deepEqual(total({ ...barcelona, MED: 40 }), { center: null, lower: 27, upper: 77 });
+for (const [dimension, lower, upper] of [
+  ["ISR", 21, 86],
+  ["MED", 21, 86],
+  ["LON", 24, 84],
+  ["TEC", 24, 84],
+] as const) {
+  const withdrawn = { ...barcelona };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
 }

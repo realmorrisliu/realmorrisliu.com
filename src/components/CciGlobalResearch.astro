@@ -74,6 +74,7 @@ import berlin from "../../docs/data/cci-local-2026-berlin-case.json";
 import montreal from "../../docs/data/cci-local-2026-montreal-case.json";
 import fukuoka from "../../docs/data/cci-local-2026-fukuoka-case.json";
 import milan from "../../docs/data/cci-local-2026-milan-case.json";
+import barcelona from "../../docs/data/cci-local-2026-barcelona-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -152,8 +153,10 @@ const cases = [
   montreal,
   fukuoka,
   milan,
+  barcelona,
 ];
 const caseNamesZh: Record<number, string> = {
+  [barcelona.candidateId]: "巴塞罗那功能区",
   [milan.candidateId]: "米兰功能区",
   [montreal.candidateId]: "蒙特利尔功能区",
   [fukuoka.candidateId]: "福冈功能区",
@@ -324,6 +327,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [barcelona.candidateId]: [
+    zh
+      ? "巴塞罗那 ISR／MED／LON／TEC 条件性60，另外四维未知，数学域30—80、无中心。实际行政纠错与应急响应、常规医疗观察和已实施改进、成熟疾病治疗及技术采用支持有限判断；等待、儿童照护断点和共源停电仍保留。"
+      : "Barcelona has conditional ISR/MED/LON/TEC60 and four unknown dimensions: a 30–80 mathematical domain without a centre. Actual administrative corrections and emergency response, routine-care observations and implemented improvements, mature-disease treatment and technology adoption support limited judgments. Waits, child-care interruptions and common power failures remain.",
+    zh
+      ? "普通净负担、核心机构代表性与延续可撤；具体产品支付是LON弱连接。问卷不当独立患者，打印增幅与膝健康轨迹冲突公开；等待表严格匹配本院，待诊与年内完成不算成功率。撤MED／ISR各21—86，撤LON／TEC各24—84；MED40替代27—77，均不证明全球入围。"
+      : "Ordinary net costs, core-provider representativeness and continuity are revocable assumptions; specific product payment is a weak LON link. Questionnaires are not unique patients; printed growth and knee-health trajectory conflicts remain explicit. Exact-hospital waits keep pending and year-to-date visits separate. Withdrawing MED/ISR gives21–86, LON/TEC24–84; MED40 gives27–77. None proves global qualification.",
+  ],
   [milan.candidateId]: [
     zh
       ? "米兰LON／TEC条件60，另六维未知，数学域12—92、无中心。有限成熟血液癌的人体证据、本地SSN给药与监护，以及已完成技术转化和临床数字使用支持可撤判断；医疗整体等待／补救和其余维度仍有实质不足。"

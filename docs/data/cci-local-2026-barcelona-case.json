@@ -1,0 +1,1102 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 4523,
+  "name": "Barcelona",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-15",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "2026 ordinary Spanish national, usual long-term local resident, median local income/usual coverage, no fixed age",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-barcelona-score-completion-review.md",
+  "publishedInputCommit": "6c594d14254e094c4e97dd96209e3263ff4f51f2",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": null,
+      "rationale": "Heat opening/reach announcement and water/sewer fragments leave hazard-wide actual protection unresolved.",
+      "assumption": "Announced heat network/reach and actual water operation do not close the full major-hazard direction; geology/severe weather not started; no failure penalty.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "context",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "unresolved"
+      },
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "Actual disruption of a prepared attack and regional police classifications do not establish the complete ordinary local security direction.",
+      "assumption": "Actual preventive action and regional classified crime are partial; ordinary organized/regional/strategic effects remain unresolved, accusations not guilt.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "context"
+      },
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "Concrete independent administrative reversals, actual assistance and blackout recovery coexist with unresolved child-care and pumping barriers; finite ordinary-execution60.",
+      "assumption": "Revocable ordinary access/core-FUA/time-continuity bridge from real administrative corrections, social help and blackout response; refunded procedure not paid-all, specific child-care and pumping failures remain.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "Actual help and residual water debts, older food/heat deprivation and supply operation do not settle current ordinary combined net access.",
+      "assumption": "Real water/energy help and residual debt/older deprivation retained; no current ordinary median combined net water-food-energy direction; bill example not annualized, group rates not median.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      },
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "Actual public coverage, routine patient-reported observations, specialist treatment and implemented improvements coexist with long waits/child-care continuity failures; finite usual care60, assumptions explicit.",
+      "assumption": "Revocable ordinary coverage/referral/net cost, selected routine-care quality/core-provider representativeness and to-cutoff continuity; actual wait and child-care/blackout failures retained. Questionnaires not unique matched patients or adjusted causal outcome. MED40 remains defensible if post-mitigation constraints dominate; reject necessary bridge=>null, no whole-hospital adjusted endpoint gate.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "Mature disease-class human evidence and actual local academic CAR-T routine use/followup support limited readiness60 with revocable ordinary payment/monitoring bridges, not healthy antiaging.",
+      "assumption": "Finite mature ARI disease-class/human/local actual routine adoption and monitoring plus ordinary coverage/eligibility/resources/net support/temporal bridge; specific current product-payment decision and all personal net costs not directly closed, weakest revocable link. Research funding not all routine payment, no foreign payer transfer/fixed adult/per-dose invoice gate; reject=>null.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Actual knowledge-to-clinical production, active firms and real clinical/utility digital adoption support finite diffusion60, not universal resident coverage.",
+      "assumption": "Revocable local/core-FUA/time/usual-device-resource-diffusion bridge from actual clinical manufacturing/adoption, active spinouts and ordinary digital use; contracts not unique residents, research count not rank, coverage/common-power gaps remain.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "OPT",
+      "score": null,
+      "rationale": "Domestic operation, legal mobility, payments and fair-use roaming are components; ordinary international operating exit and longterm continuity remain insufficient.",
+      "assumption": "Actual local transport/EU legal and payment/ordinary roaming components not full normal international exit and durable new-address continuity; no added bank-receipt gate.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      },
+      "scoreStatus": "reviewed_insufficient_direction"
+    }
+  ],
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 30,
+  "unresolvedScoreRange": [30, 80],
+  "globalRankingEligible": false,
+  "limitations": [
+    "Four conditional60 dimensions use explicit revocable ordinary-access/core-area/time bridges; actual mitigation and residual burdens coexist.",
+    "MED selected routine-care observations are questionnaires, not full matched or adjusted outcome; MED40 alternative27–77, rejecting MED21–86.",
+    "LON specific current product-payment decision and all net support costs not directly closed; reject bridge24–84, no foreign payment/healthy antiaging.",
+    "31 bounded scope records include3 notstarted/2context, not complete measurements.",
+    "Current recovered bytes not exact historical-cutoff snapshots;2raw failures/web-only separated, no capability penalty.",
+    "All old/new candidates retained, no global32 threshold or supported exclusions."
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "water",
+      "url": "https://aiguesdebarcelona.cat/documents/42802/481302/MEMORIA%2BSOSTENIBILITAT%2B2025__CAT_2026-06-16.pdf/c4b9bf34-af3c-eb25-0d44-5f654ff57850?t=1781606807078",
+      "file": "water.pdf",
+      "status": 200,
+      "finalUrl": "https://aiguesdebarcelona.cat/documents/42802/481302/MEMORIA%2BSOSTENIBILITAT%2B2025__CAT_2026-06-16.pdf/c4b9bf34-af3c-eb25-0d44-5f654ff57850?t=1781606807078",
+      "contentType": "application/pdf",
+      "bytes": 31047849,
+      "sha256": "1e75cb0e65775fdc536d2389b39a2c3e2b876fef573820a3ac324fc7f0555d3d",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:49:26.625606+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/water.pdf",
+      "originalBytes": 31047849,
+      "originalSha256": "1e75cb0e65775fdc536d2389b39a2c3e2b876fef573820a3ac324fc7f0555d3d",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "help",
+      "url": "https://www.aiguesdebarcelona.cat/ca/web/ab-corporativa/transparencia/serveis-ciutadania/bonificacions",
+      "file": "help.html",
+      "status": 200,
+      "finalUrl": "https://www.aiguesdebarcelona.cat/ca/web/ab-corporativa/transparencia/serveis-ciutadania/bonificacions",
+      "contentType": "text/html;charset=UTF-8",
+      "bytes": 163103,
+      "sha256": "b7122640c518379c08a1a3d721617c1c2ba5cf4b6a2fe694a7840eae2d26bf57",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:49:18.281864+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/help.html",
+      "originalBytes": 163103,
+      "originalSha256": "b7122640c518379c08a1a3d721617c1c2ba5cf4b6a2fe694a7840eae2d26bf57",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "ari-practice",
+      "url": "https://www.clinicbarcelona.org/noticias/el-clinic-idibaps-pionero-en-terapias-car-t-para-el-cancer-con-mas-de-500-pacientes-tratados",
+      "file": "ari-practice.html",
+      "status": 200,
+      "finalUrl": "https://www.clinicbarcelona.org/noticias/el-clinic-idibaps-pionero-en-terapias-car-t-para-el-cancer-con-mas-de-500-pacientes-tratados",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 220982,
+      "sha256": "6e2b0079d500395c113719dfee89661110c272c7f278f3af503780d77c7450fd",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:49:32.920286+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/ari-practice.html",
+      "originalBytes": 220982,
+      "originalSha256": "6e2b0079d500395c113719dfee89661110c272c7f278f3af503780d77c7450fd",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "ari-results",
+      "url": "https://www.clinicbarcelona.org/noticias/el-car-t-ari-0001-muestra-altas-tasas-de-respuesta-en-pacientes-adultos-con-leucemia-linfoblastica-aguda",
+      "file": "ari-results.html",
+      "status": 200,
+      "finalUrl": "https://www.clinicbarcelona.org/noticias/el-car-t-ari-0001-muestra-altas-tasas-de-respuesta-en-pacientes-adultos-con-leucemia-linfoblastica-aguda",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 223955,
+      "sha256": "f1fe9b779bb5369e8f7178a4d07a861125e87c5332defcd515663068f34c0ad6",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:49:32.919998+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/ari-results.html",
+      "originalBytes": 223955,
+      "originalSha256": "f1fe9b779bb5369e8f7178a4d07a861125e87c5332defcd515663068f34c0ad6",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "clinic2025",
+      "url": "https://www.clinicbarcelona.org/uploads/media/default/0023/74/163ed11ebe6851296e9224b0e900d3b3d24ac7dc.pdf",
+      "file": "clinic2025.pdf",
+      "status": 200,
+      "finalUrl": "https://www.clinicbarcelona.org/uploads/media/default/0023/74/163ed11ebe6851296e9224b0e900d3b3d24ac7dc.pdf",
+      "contentType": "application/pdf",
+      "bytes": 25472601,
+      "sha256": "6c4304dbac5414004a1a62e3c3e9e87578f552dba3290c46135f1de3686c0821",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:50:04.548670+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/clinic2025.pdf",
+      "originalBytes": 25472601,
+      "originalSha256": "6c4304dbac5414004a1a62e3c3e9e87578f552dba3290c46135f1de3686c0821",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "heat",
+      "url": "https://ajuntament.barcelona.cat/personesgrans/es/noticias/barcelona-pone-en-marcha-los-refugios-climaticos-de-verano-con-un-refuerzo-en-los-barrios-mas-vulnerables-1523798",
+      "file": "heat.html",
+      "status": 200,
+      "finalUrl": "https://ajuntament.barcelona.cat/personesgrans/es/noticias/barcelona-pone-en-marcha-los-refugios-climaticos-de-verano-con-un-refuerzo-en-los-barrios-mas-vulnerables-1523798",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 79678,
+      "sha256": "7a8630d7c4f1986b2da96ece4ad5d36d90c365fed703a237a459044138f74420",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:49:30.395940+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/heat.html",
+      "originalBytes": 79678,
+      "originalSha256": "7a8630d7c4f1986b2da96ece4ad5d36d90c365fed703a237a459044138f74420",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "blackout-response",
+      "url": "https://ajuntament.barcelona.cat/comerc/en/actuality/news/activada-lalerta-del-pla-de-proteccio-civil-municipal-per-un-tall-de-subministraments-1508348",
+      "file": "blackout-response.html",
+      "status": 200,
+      "finalUrl": "https://ajuntament.barcelona.cat/comerc/en/actuality/news/activada-lalerta-del-pla-de-proteccio-civil-municipal-per-un-tall-de-subministraments-1508348",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 64747,
+      "sha256": "cceaf5f6d6144b06aa2479a28064a6144d97a50a2ffc66179e301e839b659421",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:49:35.715745+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/blackout-response.html",
+      "originalBytes": 64747,
+      "originalSha256": "cceaf5f6d6144b06aa2479a28064a6144d97a50a2ffc66179e301e839b659421",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "vlr",
+      "url": "https://ajuntament.barcelona.cat/agenda2030/sites/default/files/2025-07/VLR_2024_2025_Agenda_2030_Barcelona-CA_0.pdf",
+      "file": "vlr.pdf",
+      "status": 200,
+      "finalUrl": "https://ajuntament.barcelona.cat/agenda2030/sites/default/files/2025-07/VLR_2024_2025_Agenda_2030_Barcelona-CA_0.pdf",
+      "contentType": "application/pdf",
+      "bytes": 20251132,
+      "sha256": "bb8259e0a4461c3c244466e96492190108625d8bf7811084395b6e418781f13a",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:49:42.735225+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/vlr.pdf",
+      "originalBytes": 20251132,
+      "originalSha256": "bb8259e0a4461c3c244466e96492190108625d8bf7811084395b6e418781f13a",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "tmb",
+      "url": "https://transparencia.tmb.cat/documents/525003/1436181/Dades%2Bb%C3%A0siques%2Bviatgers%2Bbus%2Bmetro%2B2026_CA_EN.pdf/1a89fbd6-773c-2da5-6d98-dd96d6db9556?t=1778593672485",
+      "file": "tmb.pdf",
+      "status": 200,
+      "finalUrl": "https://transparencia.tmb.cat/documents/525003/1436181/Dades%2Bb%C3%A0siques%2Bviatgers%2Bbus%2Bmetro%2B2026_CA_EN.pdf/1a89fbd6-773c-2da5-6d98-dd96d6db9556?t=1778593672485",
+      "contentType": "application/pdf",
+      "bytes": 871613,
+      "sha256": "e6b16fe4eafd094e2c3eb185d37ed714254b7cc3a7d5641518e783862338d6bd",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:49:37.802222+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/tmb.pdf",
+      "originalBytes": 871613,
+      "originalSha256": "e6b16fe4eafd094e2c3eb185d37ed714254b7cc3a7d5641518e783862338d6bd",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "wait",
+      "url": "https://catsalut.gencat.cat/ca/coneix-catsalut/acces-sistema-salut/llistes-espera/consultes-externes-especialitats/consulta/",
+      "file": "wait.html",
+      "status": 200,
+      "finalUrl": "https://catsalut.gencat.cat/ca/coneix-catsalut/acces-sistema-salut/llistes-espera/consultes-externes-especialitats/consulta/",
+      "contentType": "text/html;charset=UTF-8",
+      "bytes": 366452,
+      "sha256": "31212e1cc92ca402217dd93b3479a741708d868458f23c2d2c45ee6652fcf1cf",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:49:38.641604+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/wait.html",
+      "originalBytes": 366452,
+      "originalSha256": "31212e1cc92ca402217dd93b3479a741708d868458f23c2d2c45ee6652fcf1cf",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "coverage",
+      "url": "https://catsalut.gencat.cat/ca/coneix-catsalut/acces-sistema-salut/qui-te-acces-al-sistema-sanitari-public/",
+      "file": "coverage.html",
+      "status": 200,
+      "finalUrl": "https://catsalut.gencat.cat/ca/coneix-catsalut/acces-sistema-salut/qui-te-acces-al-sistema-sanitari-public/",
+      "contentType": "text/html;charset=UTF-8",
+      "bytes": 372572,
+      "sha256": "5c183864d8328f5f98d87a5440cf52c7db9b9358f409d87f4f124e8e6dc99de4",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:49:39.924832+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/coverage.html",
+      "originalBytes": 372572,
+      "originalSha256": "5c183864d8328f5f98d87a5440cf52c7db9b9358f409d87f4f124e8e6dc99de4",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "ombuds-index",
+      "url": "https://www.sindicaturabarcelona.cat/en/informes-i-resolucions/__trashed/",
+      "file": "ombuds-index.html",
+      "status": 200,
+      "finalUrl": "https://www.sindicaturabarcelona.cat/en/informes-i-resolucions/__trashed/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 86901,
+      "sha256": "0ca492207426e915cde7096c0915e33ac20d53e8c326b717b4c1da684598b382",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:49:42.033682+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": false,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/ombuds-index.html",
+      "originalBytes": 86901,
+      "originalSha256": "0ca492207426e915cde7096c0915e33ac20d53e8c326b717b4c1da684598b382",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "eu-payment",
+      "url": "https://europa.eu/youreurope/citizens/consumers/financial-products-and-services/payments-transfers-cheques/index_es.htm",
+      "file": "eu-payment.html",
+      "status": 200,
+      "finalUrl": "https://europa.eu/youreurope/citizens/consumers/financial-products-and-services/payments-transfers-cheques/index_es.htm",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 159629,
+      "sha256": "a91ae9859cbd142a1a6fb18cc091fba5a8d4f9018ebf192785ef39b2b578b9e2",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:49:42.445058+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/eu-payment.html",
+      "originalBytes": 159629,
+      "originalSha256": "a91ae9859cbd142a1a6fb18cc091fba5a8d4f9018ebf192785ef39b2b578b9e2",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "movistar",
+      "url": "https://www.movistar.es/tarifas-moviles/roaming/",
+      "file": "movistar.html",
+      "status": 200,
+      "finalUrl": "https://www.movistar.es/tarifas-moviles/roaming/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 421362,
+      "sha256": "43224455e042cf586d37ef26df895cf27224a5a911ef654a782280efe619e213",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:49:45.371096+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/movistar.html",
+      "originalBytes": 421362,
+      "originalSha256": "43224455e042cf586d37ef26df895cf27224a5a911ef654a782280efe619e213",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "ombuds2025",
+      "url": "https://www.sindicaturabarcelona.cat/wp-content/uploads/Informe-Anual-2025.pdf",
+      "file": "ombuds2025.pdf",
+      "status": 200,
+      "finalUrl": "https://www.sindicaturabarcelona.cat/wp-content/uploads/Informe-Anual-2025.pdf",
+      "contentType": "application/pdf",
+      "bytes": 46846312,
+      "sha256": "ed09ce4a52b97669d3dc01636cb9adbdd292889e2dd072e68e9fc12d0d056ae3",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:50:59.095820+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/ombuds2025.pdf",
+      "originalBytes": 46846312,
+      "originalSha256": "ed09ce4a52b97669d3dc01636cb9adbdd292889e2dd072e68e9fc12d0d056ae3",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "ari-authorisation",
+      "url": "https://www.clinicbarcelona.org/noticias/la-aemps-autoriza-el-car-t-ari-0001-del-hospital-clinic-para-pacientes-con-leucemia-linfoblastica-aguda",
+      "file": "ari-authorisation.html",
+      "status": 200,
+      "finalUrl": "https://www.clinicbarcelona.org/noticias/la-aemps-autoriza-el-car-t-ari-0001-del-hospital-clinic-para-pacientes-con-leucemia-linfoblastica-aguda",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 224630,
+      "sha256": "9c1351727c6679059de86348da099239eab337eaff1908598814093822fc87b3",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:50:49.621334+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/ari-authorisation.html",
+      "originalBytes": 224630,
+      "originalSha256": "9c1351727c6679059de86348da099239eab337eaff1908598814093822fc87b3",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "cart-guide",
+      "url": "https://www.clinicbarcelona.org/asistencia/pruebas-y-procedimientos/inmunoterapia/que-es-la-terapia-cart",
+      "file": "cart-guide.html",
+      "status": 200,
+      "finalUrl": "https://www.clinicbarcelona.org/asistencia/pruebas-y-procedimientos/inmunoterapia/que-es-la-terapia-cart",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 350324,
+      "sha256": "91ad3a4361a27dd3500a4531b12bc644d775f0b8bad21c3d798a406cc95dd219",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:50:50.503487+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/cart-guide.html",
+      "originalBytes": 350324,
+      "originalSha256": "91ad3a4361a27dd3500a4531b12bc644d775f0b8bad21c3d798a406cc95dd219",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "eu-workers",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_es.htm",
+      "file": "eu-workers.html",
+      "status": 200,
+      "finalUrl": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_es.htm",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 153770,
+      "sha256": "1555b5f65525917eee8fab3fef570e9a27b5d26dab38779b5bd26659b2bfb34f",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:50:45.238355+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/eu-workers.html",
+      "originalBytes": 153770,
+      "originalSha256": "1555b5f65525917eee8fab3fef570e9a27b5d26dab38779b5bd26659b2bfb34f",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "wait-js",
+      "url": "https://catsalut.gencat.cat/.content/administratiu/js/llistes_espera/llistesEspera_funcions.js",
+      "file": "wait-js.js",
+      "status": 200,
+      "finalUrl": "https://catsalut.gencat.cat/web/.content/administratiu/js/llistes_espera/llistesEspera_funcions.js",
+      "contentType": "application/javascript",
+      "bytes": 67189,
+      "sha256": "431b74792cced553084712788dcf5c66bf158a319702b330f35a2b6e7f9ac75f",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:52:11.266946+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": false,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/wait-js.js",
+      "originalBytes": 67189,
+      "originalSha256": "431b74792cced553084712788dcf5c66bf158a319702b330f35a2b6e7f9ac75f",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "cart-local",
+      "url": "https://www.clinicbarcelona.org/asistencia/pruebas-y-procedimientos/inmunoterapia/tratamiento-en-el-clinic",
+      "file": "cart-local.html",
+      "status": 200,
+      "finalUrl": "https://www.clinicbarcelona.org/asistencia/pruebas-y-procedimientos/inmunoterapia/tratamiento-en-el-clinic",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 348404,
+      "sha256": "8e5ac7779179cc5295fc9713f9163580a3f55cfc95fd1b3e6da343831727b31d",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:52:12.443088+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/cart-local.html",
+      "originalBytes": 348404,
+      "originalSha256": "8e5ac7779179cc5295fc9713f9163580a3f55cfc95fd1b3e6da343831727b31d",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "cart-after",
+      "url": "https://www.clinicbarcelona.org/asistencia/pruebas-y-procedimientos/inmunoterapia/que-pasa-despues-de-tratarme-con-cart",
+      "file": "cart-after.html",
+      "status": 200,
+      "finalUrl": "https://www.clinicbarcelona.org/asistencia/pruebas-y-procedimientos/inmunoterapia/que-pasa-despues-de-tratarme-con-cart",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 348942,
+      "sha256": "9c4477ef23556f6a25574bb2e8a4580c8203377320f14a0c51999eff05123d65",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:52:11.163969+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/cart-after.html",
+      "originalBytes": 348942,
+      "originalSha256": "9c4477ef23556f6a25574bb2e8a4580c8203377320f14a0c51999eff05123d65",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "cart-during",
+      "url": "https://www.clinicbarcelona.org/asistencia/pruebas-y-procedimientos/inmunoterapia/antes-y-durante-la-administracion-de-cart",
+      "file": "cart-during.html",
+      "status": 200,
+      "finalUrl": "https://www.clinicbarcelona.org/asistencia/pruebas-y-procedimientos/inmunoterapia/antes-y-durante-la-administracion-de-cart",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 343706,
+      "sha256": "313fbe7e5d210203f902d094711a72e5f23f32e6b4c9064a3c5ec11ba916c5a4",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:52:12.547914+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/cart-during.html",
+      "originalBytes": 343706,
+      "originalSha256": "313fbe7e5d210203f902d094711a72e5f23f32e6b4c9064a3c5ec11ba916c5a4",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "police2025",
+      "url": "https://mossos.gencat.cat/web/.content/home/01_els_mossos_desquadra/indicadors_i_qualitat/estadistica/Balanc-de-seguretat-2025.pdf",
+      "file": "police2025.pdf",
+      "status": 200,
+      "finalUrl": "https://mossos.gencat.cat/web/.content/home/01_els_mossos_desquadra/indicadors_i_qualitat/estadistica/Balanc-de-seguretat-2025.pdf",
+      "contentType": "application/pdf",
+      "bytes": 1973810,
+      "sha256": "64885d94b00bfba8d066b1f3d49b1c218a6f2a445442884fbd4021d8106d5e30",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:52:14.425394+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/police2025.pdf",
+      "originalBytes": 1973810,
+      "originalSha256": "64885d94b00bfba8d066b1f3d49b1c218a6f2a445442884fbd4021d8106d5e30",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    },
+    {
+      "id": "wait-aug2026",
+      "url": "https://catsalut.gencat.cat/.content/xml/llistes-espera/externes-2026-08.xml",
+      "file": "wait-aug2026.xml",
+      "status": 200,
+      "finalUrl": "https://catsalut.gencat.cat/web/.content/xml/llistes-espera/externes-2026-08.xml",
+      "contentType": "application/xml",
+      "bytes": 499602,
+      "sha256": "a812c2dd8e3bdaaba896dbce5a3d2f1c49202c20ec9756e5f77e65c6d6fce077",
+      "valid": true,
+      "retrievedAt": "2026-10-15T06:53:29.455920+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": true,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/wait-aug2026.xml",
+      "originalBytes": 499602,
+      "originalSha256": "a812c2dd8e3bdaaba896dbce5a3d2f1c49202c20ec9756e5f77e65c6d6fce077",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence in root report; navigation/current bytes not positive historical-cutoff certification."
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "id": "blackout",
+      "url": "https://www.barcelona.cat/internationalwelcome/en/news/restabliment-de-la-xarxa-electrica-a-barcelona-informacio-actualitzada-1508633",
+      "file": "blackout.html",
+      "valid": false,
+      "bytes": null,
+      "sha256": null,
+      "error": "HTTP Error 404: Not Found",
+      "retrievedAt": "2026-10-15T06:49:34.529217+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": false,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "originalBytes": null,
+      "originalSha256": null
+    },
+    {
+      "id": "terror",
+      "url": "https://govern.cat/gov/notes-premsa/687722/desarticulada-organitzacio-terrorista-que-fomentava-comissio-accions-violentes-traves-canals-xifrats",
+      "file": "terror.html",
+      "valid": false,
+      "bytes": null,
+      "sha256": null,
+      "error": "HTTP Error 403: Forbidden",
+      "retrievedAt": "2026-10-15T06:49:34.098182+00:00",
+      "requestCount": 1,
+      "historicalExactBytesAtCutoffProven": false,
+      "newRecoveryNotVerifiedOldReuse": true,
+      "usedForJudgment": false,
+      "scoringUseNote": "bounded evidence and counterevidence; no source-count score",
+      "originalBytes": null,
+      "originalSha256": null
+    }
+  ],
+  "inheritedFailedSourceSnapshotsNotRetried": [],
+  "webReadSources": [
+    {
+      "id": "blackout-web",
+      "url": "https://www.barcelona.cat/internationalwelcome/en/news/restabliment-de-la-xarxa-electrica-a-barcelona-informacio-actualitzada-1508633",
+      "originalBytes": null,
+      "originalSha256": null,
+      "rawStatus": "404",
+      "webBodyRead": true,
+      "date": "2025-04-29",
+      "facts": "Municipal restore report;789 fire callouts/137 lift/298 reduced-mobility assistance;250+ accommodated;Collserola pumping not guaranteed. Raw failure not data absence."
+    },
+    {
+      "id": "terror-web",
+      "url": "https://govern.cat/gov/notes-premsa/687722/desarticulada-organitzacio-terrorista-que-fomentava-comissio-accions-violentes-traves-canals-xifrats",
+      "originalBytes": null,
+      "originalSha256": null,
+      "rawStatus": "403",
+      "webBodyRead": true,
+      "date": "2025-03-07",
+      "facts": "11 arrests including10 Barcelona/metropolitan1Italy;target selection before attack;150 police;4 remanded. Not guilt/all-local crime rate."
+    },
+    {
+      "url": "https://www.clinicbarcelona.org/noticias/el-clinic-idibaps-pionero-en-terapias-car-t-para-el-cancer-con-mas-de-500-pacientes-tratados",
+      "retrievedOn": "2026-10-15",
+      "kind": "primary_web_body_root_crosscheck",
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false,
+      "scope": "Corroborates located saved primary; not extra original or historical byte certification."
+    },
+    {
+      "url": "https://www.clinicbarcelona.org/noticias/el-car-t-ari-0001-muestra-altas-tasas-de-respuesta-en-pacientes-adultos-con-leucemia-linfoblastica-aguda",
+      "retrievedOn": "2026-10-15",
+      "kind": "primary_web_body_root_crosscheck",
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false,
+      "scope": "Corroborates located saved primary; not extra original or historical byte certification."
+    },
+    {
+      "url": "https://catsalut.gencat.cat/ca/coneix-catsalut/acces-sistema-salut/qui-te-acces-al-sistema-sanitari-public/",
+      "retrievedOn": "2026-10-15",
+      "kind": "primary_web_body_root_crosscheck",
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false,
+      "scope": "Corroborates located saved primary; not extra original or historical byte certification."
+    }
+  ],
+  "webFailureDiagnostics": [
+    {
+      "mechanism": "clinic2025 PDF web",
+      "error": "25,472,601B over web size; raw success"
+    },
+    {
+      "mechanism": "ombuds2025 PDF web",
+      "error": "46,846,312B over web size; raw success"
+    },
+    {
+      "mechanism": "VLR web PDF",
+      "error": "400OK;raw success"
+    },
+    {
+      "mechanism": "heat web",
+      "error": "restricted URL;raw success"
+    },
+    {
+      "mechanism": "full Lancet article web",
+      "error": "internal error;no full paper bytes or claims of full reading"
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "candidateId": 4523,
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allGeometryCount": 9031,
+    "targetGeometrySha256": "cf1a417cbc7d488b266460de5c3d385c19bd603c52ed2568138409dd706b9b0c",
+    "referencePoints": [
+      {
+        "label": "Barcelona centre",
+        "longitude": 2.1734,
+        "latitude": 41.3851,
+        "fuaMatches": [4523]
+      },
+      {
+        "label": "Hospital Clinic Villarroel",
+        "longitude": 2.1516,
+        "latitude": 41.3893,
+        "fuaMatches": [4523]
+      },
+      {
+        "label": "Sant Joan de Deu",
+        "longitude": 2.1012,
+        "latitude": 41.3837,
+        "fuaMatches": [4523]
+      },
+      {
+        "label": "Sant Adria",
+        "longitude": 2.2207,
+        "latitude": 41.4305,
+        "fuaMatches": [4523]
+      },
+      {
+        "label": "Badalona centre",
+        "longitude": 2.245,
+        "latitude": 41.4501,
+        "fuaMatches": [4523]
+      },
+      {
+        "label": "Airport El Prat",
+        "longitude": 2.0785,
+        "latitude": 41.2974,
+        "fuaMatches": [4523]
+      }
+    ],
+    "scope": "Six approximate anchors do not establish service catchments, patient residence or all-FUA provider/household coverage."
+  },
+  "scopeCompletionReview": {
+    "dimensionCount": 8,
+    "subpillarCount": 31,
+    "allDimensionSemanticsConsideredWithinBoundedReview": true,
+    "allSubpillarsHaveOutcomeMeasurements": false,
+    "allSubpillarsFullyReviewed": false,
+    "eightDimensionScoresComplete": false,
+    "coverageTable": [
+      {
+        "number": 1,
+        "name": "PCS热湿",
+        "status": "partial",
+        "finding": "2025热避难网络宣布部署／群体覆盖，未核全年使用与效果"
+      },
+      {
+        "number": 2,
+        "name": "PCS洪水海平面",
+        "status": "context",
+        "finding": "污水翻修2020与水务运行，不代当前洪水海平面保护"
+      },
+      {
+        "number": 3,
+        "name": "PCS地质",
+        "status": "not_started",
+        "finding": "未取得本轮针对地质暴露／保护原件"
+      },
+      {
+        "number": 4,
+        "name": "PCS强天气野火",
+        "status": "not_started",
+        "finding": "水务备用不代全危险，未实查野火／风暴"
+      },
+      {
+        "number": 5,
+        "name": "GSS组织暴力",
+        "status": "partial",
+        "finding": "2025实际预防行动／区域分类刑案，不当本FUA低风险率"
+      },
+      {
+        "number": 6,
+        "name": "GSS区域冲突",
+        "status": "not_started",
+        "finding": "未展开本地／区域外溢对应实效链"
+      },
+      {
+        "number": 7,
+        "name": "GSS战略暴露",
+        "status": "context",
+        "finding": "跨地协同与共源停电；没有实际战略攻击匹配归因"
+      },
+      {
+        "number": 8,
+        "name": "ISR治理",
+        "status": "partial",
+        "finding": "独立申诉具体处罚撤回／退款程序，回复主张接受率非全投诉成功"
+      },
+      {
+        "number": 9,
+        "name": "ISR适应",
+        "status": "partial",
+        "finding": "实际程序纠偏、医院电话及就诊改善、能源咨询"
+      },
+      {
+        "number": 10,
+        "name": "ISR社会凝聚",
+        "status": "partial",
+        "finding": "弱势帮助及孩子／家庭／登记个案，群体剩余障碍保留"
+      },
+      {
+        "number": 11,
+        "name": "ISR应急恢复",
+        "status": "partial",
+        "finding": "2025真实停电跨机构救援、食宿及恢复，山地泵水未恢复"
+      },
+      {
+        "number": 12,
+        "name": "RES水",
+        "status": "partial",
+        "finding": "多源／运营／帮助／帮助后债务，未整个FUA中位净负担"
+      },
+      {
+        "number": 13,
+        "name": "RES食品",
+        "status": "partial",
+        "finding": "2022—23蛋白负担与54学校项目，未2026中位合束"
+      },
+      {
+        "number": 14,
+        "name": "RES能源",
+        "status": "partial",
+        "finding": "实际切断取消／冬季温度不足／2025停电；费用净适配不足"
+      },
+      {
+        "number": 15,
+        "name": "RES供应链",
+        "status": "partial",
+        "finding": "水源共电和燃料／替代车辆实用；其他主要物资持续库存未知"
+      },
+      {
+        "number": 16,
+        "name": "MED可及",
+        "status": "partial",
+        "finding": "TSI／通常公共保障／2026本院等待，特定服务全免不推定"
+      },
+      {
+        "number": 17,
+        "name": "MED常规质量",
+        "status": "partial",
+        "finding": "EQ-5D真实问卷／普通关节护理变化，失访／调整／同人分母未知"
+      },
+      {
+        "number": 18,
+        "name": "MED专科",
+        "status": "partial",
+        "finding": "本地移植／心脏等实际手术、血液治疗；非疗效百分比"
+      },
+      {
+        "number": 19,
+        "name": "MED连续性",
+        "status": "partial",
+        "finding": "电话／门诊已实行改善与15月心理失效后预案、停电取消非急护理"
+      },
+      {
+        "number": 20,
+        "name": "LON转化",
+        "status": "partial",
+        "finding": "学术ARI本地制造与真实常规采用，外院来源不能全归居民"
+      },
+      {
+        "number": 21,
+        "name": "LON试验成熟",
+        "status": "partial",
+        "finding": "九院32人II期／原团队报告，完整论文未得、毒性保留"
+      },
+      {
+        "number": 22,
+        "name": "LON监管采用",
+        "status": "partial",
+        "finding": "AEMPS医院豁免／2025提供者现运行，不同旧表版本分开"
+      },
+      {
+        "number": 23,
+        "name": "LON居民可及",
+        "status": "partial",
+        "finding": "当地公共保障与真实监护通常桥；逐产品付款决定／净照护费用未全闭"
+      },
+      {
+        "number": 24,
+        "name": "TEC知识",
+        "status": "partial",
+        "finding": "实际论文与共同学术上游，不作全球产出排名"
+      },
+      {
+        "number": 25,
+        "name": "TEC产业",
+        "status": "partial",
+        "finding": "17仍活跃衍生企业与真实临床／水处理产用，非全城密度"
+      },
+      {
+        "number": 26,
+        "name": "TEC数字",
+        "status": "partial",
+        "finding": "2025真实客户合同web／远程临床，未完整家庭网络／冗余"
+      },
+      {
+        "number": 27,
+        "name": "TEC扩散",
+        "status": "partial",
+        "finding": "真实普通客户／医院改善场景，非全居民无差异"
+      },
+      {
+        "number": 28,
+        "name": "OPT交通",
+        "status": "partial",
+        "finding": "真实公交／地铁与停电替代；缺本轮正常国际离开经营实绩"
+      },
+      {
+        "number": 29,
+        "name": "OPT合法迁移",
+        "status": "partial",
+        "finding": "EU实际法律资格／登记条件，不把就业／资源自动赋予画像"
+      },
+      {
+        "number": 30,
+        "name": "OPT资产",
+        "status": "partial",
+        "finding": "西班牙EU付款通常适用，非全部资产无限可转与所有银行永留"
+      },
+      {
+        "number": 31,
+        "name": "OPT网络连续",
+        "status": "partial",
+        "finding": "普通漫游激活／合理使用；共电与新地址长期接续不足"
+      }
+    ],
+    "statusCounts": {
+      "partial": 26,
+      "context": 2,
+      "not_started": 3
+    }
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-barcelona-score-completion-review.md",
+    "sha256": "c292c5ba9fd324855f4f0fb15bc38b37b73caa2e851fdbfacf9dd51c6921e639",
+    "reviewedOn": "2026-10-15",
+    "validOriginalCount": 24,
+    "sourceManifestSha256": "33ce889ff5c06bd04d3f649afe25204449216fa5d31e1eee1e05f0b5567ed6d6",
+    "handoffSha256": "71c24fb8a9c127101b4a14017d8c99e0ad91246270a0b812fafbc36e21c50a0d",
+    "rootVerifiedFull9031AndOriginals": true,
+    "stageArtifacts": [
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/report.md",
+        "bytes": 29407,
+        "sha256": "818b11cc645226e9f3bc7589c7a8cf736bfefbe2f58c2fb11844cca1acc71548"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/source-manifest.json",
+        "bytes": 22902,
+        "sha256": "6e9c2898603efc8922a82d6e30ffc380cf48b477f38df589aeb78a103ac345dc"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/candidate-handoff.json",
+        "bytes": 46792,
+        "sha256": "71c24fb8a9c127101b4a14017d8c99e0ad91246270a0b812fafbc36e21c50a0d"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/handoff-manifest.json",
+        "bytes": 21026,
+        "sha256": "ef2deb407f1c39f91bd9aadb839cd80ee64b0f816552aa8ac104d54dbbe775e3"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/geometry-check.json",
+        "bytes": 37059,
+        "sha256": "631b46093cf09ed6fd2af8d8ef38a76dd2fe65bdd807ff050621a50e17d8fd9d"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/root/independent-check.json",
+        "bytes": 277,
+        "sha256": "cdb6c96df2dc218623eb5a385ea77ce228b6eb768822fc3ba0666dc447cd828e"
+      }
+    ]
+  },
+  "rootScopeReview": {
+    "sparseMergedWaitXmlIndependentlyParsed": true,
+    "exactClinicRows": 12,
+    "waitPendingAndYearToDateCompletedAreDifferentCohorts": true,
+    "kneeHealthTrajectory": [58.0, 73.6, 68.4],
+    "questionnairesNotUniquePatients": true,
+    "printedGrowth64_59ConflictRetained": true,
+    "sadCemeteryResponseCountedAsResolved": false,
+    "fullLancetPaperObtained": false,
+    "foreignPayerTransferred": false,
+    "fixedAdultPortrait": false,
+    "rootPixelsActuallyViewed": ["clinic2025-p29", "clinic2025-p30", "ombuds2025-p48"]
+  }
+}
