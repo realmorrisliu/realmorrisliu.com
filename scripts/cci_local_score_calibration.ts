@@ -133,6 +133,7 @@ const realCases = [
   "pittsburgh",
   "eindhoven",
   "luxembourg",
+  "stuttgart",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -257,6 +258,7 @@ const [
   pittsburgh,
   eindhoven,
   luxembourg,
+  stuttgart,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -489,7 +491,7 @@ const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.
 assert(tokyoPosition);
 assert.equal(tokyoPosition.center, 62);
 assert.equal(tokyoPosition.bestPosition, 1);
-assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 17);
+assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 18);
 assert.deepEqual(total(washington), { center: 58, lower: 58, upper: 58 });
 assert.equal(washington.RES, 40);
 assert.equal(washington.OPT, 60);
@@ -1223,7 +1225,7 @@ const praguePosition = rankAudit.scenarios.fixed_conditional_centers.caseResults
 );
 assert(praguePosition);
 assert.equal(praguePosition.bestPosition, 1);
-assert.equal(praguePosition.worstPosition, rankAudit.candidateCount - 17);
+assert.equal(praguePosition.worstPosition, rankAudit.candidateCount - 18);
 const tokyoWithoutTec = { ...tokyo };
 delete tokyoWithoutTec.TEC;
 assert.deepEqual(total(tokyoWithoutTec), { center: null, lower: 54, upper: 64 });
@@ -3132,3 +3134,63 @@ for (const [id, value, lower, upper] of [
   ["TEC", 80, 38, 73],
 ] as const)
   assert.deepEqual(total({ ...luxembourg, [id]: value }), { center: null, lower, upper });
+
+const stuttgartCase = realCases.find(c => c.candidateId === 3580);
+assert.equal(
+  stuttgartCase.priorityCompletionReview.sha256,
+  digest(stuttgartCase.priorityCompletionReview.path)
+);
+assert.equal(
+  stuttgartCase.priorityCompletionReview.researchReportSha256,
+  digest(stuttgartCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(stuttgart), { center: null, lower: 51, upper: 61 });
+assert.equal(stuttgartCase.sourceSnapshots.length, 22);
+assert.equal(stuttgartCase.failedSourceSnapshots.length, 3);
+assert.equal(stuttgartCase.rootScopeReview.rootPdfPageCount, 19);
+for (const key of [
+  "freeAllogeneicConsultationTransferredToAutologous",
+  "missingTrialNumbersAutomaticallyScore40",
+  "external463OutcomesAreStuttgartCohort",
+  "fiveCartProductsIndividuallyNamedAndOutcomesVerified",
+  "allIQMRowsFullyRiskAdjusted",
+  "allDepartmentCasesAreDifferentFuaResidents",
+  "allClimateMeasuresCompleted",
+  "generator72HoursAllNodesTested",
+  "sewage49PercentIsResidentEnergySelfSufficiency",
+  "emergency26And41AllActivatedInActualDisaster",
+  "normal2026SafetyImprovementErasesAllOrganizedViolence",
+  "score40RequiresDominanceOrMajorityOrShutdown",
+])
+  assert.equal(stuttgartCase.rootScopeReview[key], false);
+for (const [id, lower, upper] of [
+  ["PCS", 42, 67],
+  ["GSS", 45, 70],
+  ["ISR", 42, 67],
+  ["MED", 42, 67],
+  ["LON", 45, 65],
+  ["TEC", 45, 65],
+  ["OPT", 45, 65],
+] as const) {
+  const withdrawn = { ...stuttgart };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+for (const [id, value, lower, upper] of [
+  ["GSS", 60, 54, 64],
+  ["PCS", 40, 48, 58],
+  ["ISR", 40, 48, 58],
+  ["MED", 40, 48, 58],
+  ["LON", 40, 49, 59],
+  ["TEC", 40, 49, 59],
+  ["OPT", 40, 49, 59],
+  ["ISR", 80, 54, 64],
+  ["TEC", 80, 53, 63],
+  ["OPT", 80, 53, 63],
+] as const)
+  assert.deepEqual(total({ ...stuttgart, [id]: value }), { center: null, lower, upper });
+const stuttgartPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (c: { efua_id: string }) => c.efua_id === "3580"
+);
+assert.equal(stuttgartPosition.bestPosition, 6);
+assert.equal(stuttgartPosition.worstPosition, rankAudit.candidateCount);

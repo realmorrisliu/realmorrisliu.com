@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 81,
+    "conditionalCaseCount": 82,
     "completeConditionalCaseCount": 18,
-    "partialCaseCount": 63,
-    "unassessedCount": 8950,
+    "partialCaseCount": 64,
+    "unassessedCount": 8949,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -710,8 +710,13 @@
       "sha256": "fc632745310e8fbb054e42864fd6b19dcc194e1d1703a5fd20be95b6019e659f",
       "provenance": "cci-luxembourg-score-completion-review.md",
       "provenanceSha256": "77514f720699b5676456671f01307ca1b30c21aec36c01ad35a5c94f94097911"
+    },
+    "cci-local-2026-stuttgart-case.json": {
+      "sha256": "af433b6b4d364b8dd79900a4da1a9a43f6515882c2686c895cce0f2f6bac3ba8",
+      "provenance": "cci-stuttgart-score-completion-review.md",
+      "provenanceSha256": "d8e83cd5eac0cd6373eb704fa05eab0a3fa05ad4d27e487d3909b7f40c939106"
     }
   },
-  "scriptSha256": "0c2672263d4bbbb5929dbfa26b52c993961bc772e8622e46f9aba10266267809",
-  "csvSha256": "b0187852fb585f46f06d99dbea98f77cd94f1f2d278ef313d43ad2a285f6b2ff"
+  "scriptSha256": "09f171b2c11f57dc6df288960d95b74fe7d2c856fef2227b10293b8839f58f54",
+  "csvSha256": "b5ba8ccdd31a07d3f536dba8945dfdbce67b261830607a516d2f82c0704591e3"
 }
