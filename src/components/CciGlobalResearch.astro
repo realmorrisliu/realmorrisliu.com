@@ -94,6 +94,7 @@ import luxembourg from "../../docs/data/cci-local-2026-luxembourg-case.json";
 import stuttgart from "../../docs/data/cci-local-2026-stuttgart-case.json";
 import daejeon from "../../docs/data/cci-local-2026-daejeon-case.json";
 import manchester from "../../docs/data/cci-local-2026-manchester-case.json";
+import houston from "../../docs/data/cci-local-2026-houston-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -192,8 +193,10 @@ const cases = [
   stuttgart,
   daejeon,
   manchester,
+  houston,
 ];
 const caseNamesZh: Record<number, string> = {
+  [houston.candidateId]: "休斯敦功能区",
   [manchester.candidateId]: "曼彻斯特功能区",
   [daejeon.candidateId]: "大田功能区",
   [stuttgart.candidateId]: "斯图加特功能区",
@@ -384,6 +387,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [houston.candidateId]: [
+    zh
+      ? "休斯敦防护／制度／资源条件40，医疗／技术条件60，安全／专项转化／退出未知；原权重贡献31、数学域31—66，无完整总分。实际救援、港口恢复、食品帮助、诊疗接续与技术产用，同风暴共同失效及执行余障一起判断。"
+      : "Houston has conditional 40 for PCS, ISR and RES, and 60 for MED and TEC; GSS, LON and OPT remain unknown. Its original-weight contribution is 31 and arithmetic domain 31–66, without a complete total. Delivered rescue, port recovery, food support, care continuity and technology use are assessed alongside storm-related common failures and institutional constraints.",
+    zh
+      ? "通常有保险不等Harris在网，医疗依赖普通网络代表性与家庭净费用／必要监护可承担的可撤假设；技术依赖实际应用知识转化。30%机构成本下降不是患者节省，61.39%行动完成不是案件解决，3000参会者不等食品获益人。原84案不变，全球入围未证明。"
+      : "Usual insurance does not automatically mean Harris in-network coverage. MED depends on revocable assumptions about representative ordinary networks and affordable net household costs and necessary monitoring; TEC depends on actual applied-knowledge translation. A 30% institutional cost reduction is not a patient saving, 61.39% action completion is not case resolution, and 3,000 attendees are not food beneficiaries. The previous 84 cases are unchanged; global qualification is unproven.",
+  ],
   [manchester.candidateId]: [
     zh
       ? "曼彻斯特防护与医疗条件40，制度／疾病转化／技术条件60，安全／资源／退出未知；原权重小计33、数学域33—68，无完整总分。真实救援、NHS诊疗／接续、居民帮助和技术采用，与洪灾水电中断、治疗等待及净照护余障共同判断。"

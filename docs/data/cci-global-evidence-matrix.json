@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 84,
+    "conditionalCaseCount": 85,
     "completeConditionalCaseCount": 18,
-    "partialCaseCount": 66,
-    "unassessedCount": 8947,
+    "partialCaseCount": 67,
+    "unassessedCount": 8946,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -725,8 +725,13 @@
       "sha256": "47944de466bd0ed43d180d4bc0a851a168215c365597895996c32e283e75eb10",
       "provenance": "cci-manchester-score-completion-review.md",
       "provenanceSha256": "2362251c2656aaacfe5d5a1b9f582db80cfb4009f272d3f9ba902e627e99c25c"
+    },
+    "cci-local-2026-houston-case.json": {
+      "sha256": "7f174d96631c3fc40747a374b96b2c051149e9e8861406f48056e2dc2d11f29a",
+      "provenance": "cci-houston-score-completion-review.md",
+      "provenanceSha256": "80e653525d8d7a7a35d529aec376b1f8c784b060fbf9f7a66f6c0b5b5a8b6a19"
     }
   },
-  "scriptSha256": "0874917f9f033c43256b0e195eeca8a3773a002412c0541c6e57c2b77b94c63b",
-  "csvSha256": "a95b42bd0b714acb237d90c67d858f02575841f54c03db15b344e42b0e28d8ae"
+  "scriptSha256": "a728ba23974af7535f4f517f0b3605af5ff0ee005474b6bcff515ea083d6c0ed",
+  "csvSha256": "6c878b44f147e6d6a85f2a8e6bd522e94aba7b3195b2a75f34f0934daf38529b"
 }

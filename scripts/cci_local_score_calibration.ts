@@ -136,6 +136,7 @@ const realCases = [
   "stuttgart",
   "daejeon",
   "manchester",
+  "houston",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -263,6 +264,7 @@ const [
   stuttgart,
   daejeon,
   manchester,
+  houston,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -3311,3 +3313,72 @@ const manchesterPosition = rankAudit.scenarios.fixed_conditional_centers.caseRes
 );
 assert.equal(manchesterPosition.bestPosition, 1);
 assert.equal(manchesterPosition.worstPosition, rankAudit.candidateCount);
+
+const houstonCase = realCases.find(c => c.candidateId === 5511);
+assert.equal(
+  houstonCase.priorityCompletionReview.sha256,
+  digest(houstonCase.priorityCompletionReview.path)
+);
+assert.equal(
+  houstonCase.priorityCompletionReview.researchReportSha256,
+  digest(houstonCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(houston, { PCS: 40, ISR: 40, RES: 40, MED: 60, TEC: 60 });
+assert.deepEqual(total(houston), { center: null, lower: 31, upper: 66 });
+assert.equal(houstonCase.coverageReview.length, 31);
+assert.equal(houstonCase.sourceSnapshots.length, 16);
+assert.equal(houstonCase.failedSourceSnapshots.length, 6);
+assert.equal(houstonCase.webReadSources.length, 11);
+assert.equal(houstonCase.rootScopeReview.rootPdfPageCount, 14);
+assert.equal(houstonCase.rootScopeReview.rootOriginalPngCount, 2);
+for (const key of [
+  "cityCountyGreaterHoustonAndPortServiceAreaEqualFua",
+  "quality2026PathMakes2026Observation",
+  "cmsMedicareQualityRepresentsAllAgesDirectly",
+  "nullSmallSamplesAreZeroDeaths",
+  "hospitalCosts30PercentMeansHouseholdSaving30Percent",
+  "usualInsuranceAutomaticallyHarrisInNetwork",
+  "medianIncomeAutomatically150PercentFplEligible",
+  "expeditedAssistanceMeansFastAppointment",
+  "foodFair3000Means3000FoodBeneficiaries",
+  "food1600AndTraining700Are2024Only",
+  "generator49SitesAlreadyOperational",
+  "action61Point39MeansCasesResolved",
+  "hpdCover2022SilentlyRepaired",
+  "grantMillionAnomalySilentlyRepaired",
+  "researchRequirementEqualsDeliveredResearch",
+  "plannedMaritimeInnovationCentreAlreadyOperating",
+  "twoPortTerminalsAreIndependentInnovationEcosystems",
+  "airportNetworkingProvesPersonalInternationalConnectivity",
+  "germany41MeansAutomaticLongResidence",
+  "qprFinancialTableValuesAdopted",
+  "webPdfQprSlOrFapAppendixPixelsViewed",
+  "w04W05SavedTextEqualsUntruncatedOriginalReturn",
+  "sourceFailurePenalizesCapability",
+  "unknownsFilledWithMidpoint",
+])
+  assert.equal(houstonCase.rootScopeReview[key], false);
+for (const [id, lower, upper] of [
+  ["PCS", 25, 75],
+  ["ISR", 25, 75],
+  ["RES", 27, 72],
+  ["MED", 22, 72],
+  ["TEC", 25, 70],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...houston };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+for (const [id, value, lower, upper] of [
+  ["PCS", 60, 34, 69],
+  ["ISR", 60, 34, 69],
+  ["RES", 60, 33, 68],
+  ["MED", 40, 28, 63],
+  ["TEC", 40, 29, 64],
+] as const)
+  assert.deepEqual(total({ ...houston, [id]: value }), { center: null, lower, upper });
+const houstonPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (c: { efua_id: string }) => c.efua_id === "5511"
+);
+assert.equal(houstonPosition.bestPosition, 1);
+assert.equal(houstonPosition.worstPosition, rankAudit.candidateCount);
