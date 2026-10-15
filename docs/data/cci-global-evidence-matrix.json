@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 93,
+    "conditionalCaseCount": 94,
     "completeConditionalCaseCount": 19,
-    "partialCaseCount": 74,
-    "unassessedCount": 8938,
+    "partialCaseCount": 75,
+    "unassessedCount": 8937,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -770,8 +770,13 @@
       "sha256": "6c43926521d8a6527d3fbe257ce153da5841aec249ba6d7a34b74ef38422e96a",
       "provenance": "cci-rostock-score-completion-review.md",
       "provenanceSha256": "128c6128c7be4f29de81a94254baac57f7328e8918c975cb5baeade2f29e1b10"
+    },
+    "cci-local-2026-middlesbrough-case.json": {
+      "sha256": "d4907d0af9a5e4de21c7934ffdf50f907acab637a249dca49ddeb48bbd3407c3",
+      "provenance": "cci-middlesbrough-score-completion-review.md",
+      "provenanceSha256": "19cfa4df8cc1c1282b1d655dcaef6349817fc8cbcf9c832ed5428517f6e6a328"
     }
   },
-  "scriptSha256": "ce3396e5b835db94d73ac51ce2b5e32bbadd99e6403d16361b07b604a168059a",
-  "csvSha256": "391176e34cf9b761e0a686247137f4aadb863e16fbcf95bb361082a85554732a"
+  "scriptSha256": "c8a7447d65f539ab7aaecfbcb8c25d7049848e4a82012a49e5119c42a40ea28e",
+  "csvSha256": "f9643490c6f913e026a670e5dd63b01bc96ec013022fc8d5f3b99a6d3873b18e"
 }

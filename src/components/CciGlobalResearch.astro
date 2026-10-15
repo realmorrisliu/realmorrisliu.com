@@ -103,6 +103,7 @@ import almere from "../../docs/data/cci-local-2026-almere-case.json";
 import portsmouth from "../../docs/data/cci-local-2026-portsmouth-case.json";
 import birmingham from "../../docs/data/cci-local-2026-birmingham-case.json";
 import rostock from "../../docs/data/cci-local-2026-rostock-case.json";
+import middlesbrough from "../../docs/data/cci-local-2026-middlesbrough-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -210,8 +211,10 @@ const cases = [
   portsmouth,
   birmingham,
   rostock,
+  middlesbrough,
 ];
 const caseNamesZh: Record<number, string> = {
+  [middlesbrough.candidateId]: "米德尔斯堡功能区",
   [rostock.candidateId]: "罗斯托克功能区",
   [birmingham.candidateId]: "伯明翰功能区",
   [portsmouth.candidateId]: "朴茨茅斯功能区",
@@ -411,6 +414,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [middlesbrough.candidateId]: [
+    zh
+      ? "米德尔斯堡安全／医疗条件40，制度／技术／退出条件60，防护／资源／专项转化未知。原权重贡献33、数学域33—68，无完整总分；真实帮助与重要余障并存，地域、年代和通常取得假设可撤。"
+      : "Middlesbrough has conditional GSS/MED 40 and ISR/TEC/OPT 60; PCS/RES/LON remain unknown. The original-weight contribution is 33 and arithmetic domain 33–68, without a complete total. Actual help coexists with important residual constraints; geographic, time and usual-access assumptions remain revocable.",
+    zh
+      ? "安全访谈的普通代表及2026持续推定较弱，不冒2026再暴乱；医疗栅格亲核、正文方向冲突保留。15Oct发布的新年报超截止，aftercare不当初始移植，机场在外区但有真实接驳。原93案保持。"
+      : "The safety interviews provide a weaker bridge to ordinary residents and persistence into 2026, without claiming new 2026 riots. The care table was visually checked and conflicting prose retained. The new report published on 15 October is outside cutoff; aftercare is not initial transplantation. The airport is outside the FUA but has actual connections. The previous 93 cases are unchanged.",
+  ],
   [rostock.candidateId]: [
     zh
       ? "罗斯托克制度／医疗／专项转化／退出条件60，防护／安全／资源／技术未知。原权重贡献30、数学域30—80，无完整总分。实际协作、诊疗与疾病重建、普通客运和取得路径支持有限判断，地域／延续及支付／照护等假设可撤。"

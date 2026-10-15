@@ -145,6 +145,7 @@ const realCases = [
   "portsmouth",
   "birmingham",
   "rostock",
+  "middlesbrough",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -281,6 +282,7 @@ const [
   portsmouth,
   birmingham,
   rostock,
+  middlesbrough,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -3729,3 +3731,45 @@ assert.equal(
   2
 );
 assert.equal(rostockCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
+
+const middlesbroughCase = realCases.find(c => c.candidateId === 4740);
+assert.equal(
+  middlesbroughCase.priorityCompletionReview.sha256,
+  digest(middlesbroughCase.priorityCompletionReview.path)
+);
+assert.equal(
+  middlesbroughCase.priorityCompletionReview.researchReportSha256,
+  digest(middlesbroughCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(middlesbrough), { center: null, lower: 33, upper: 68 });
+assert.equal(middlesbroughCase.unknownWeight, 35);
+assert.deepEqual(
+  middlesbroughCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["PCS", "RES", "LON"]
+);
+for (const [id, lower, upper] of [
+  ["GSS", 27, 77],
+  ["ISR", 24, 74],
+  ["MED", 27, 77],
+  ["TEC", 27, 72],
+  ["OPT", 27, 72],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...middlesbrough };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...middlesbrough, MED: 60 }), { center: null, lower: 36, upper: 71 });
+assert.equal(middlesbroughCase.sourceSnapshots.length, 26);
+assert(middlesbroughCase.sourceSnapshots.every((s: { validOriginal: boolean }) => s.validOriginal));
+assert.equal(
+  middlesbroughCase.sourceSnapshots.find((s: { id: string }) => s.id === "S05").scoreEligible,
+  false
+);
+assert.equal(
+  middlesbroughCase.failedSourceSnapshots.filter((s: { status: number }) => s.status === 403)
+    .length,
+  2
+);
+assert.equal(middlesbroughCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
