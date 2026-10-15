@@ -77,6 +77,7 @@ import milan from "../../docs/data/cci-local-2026-milan-case.json";
 import barcelona from "../../docs/data/cci-local-2026-barcelona-case.json";
 import basel from "../../docs/data/cci-local-2026-basel-case.json";
 import munich from "../../docs/data/cci-local-2026-munich-case.json";
+import oslo from "../../docs/data/cci-local-2026-oslo-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -158,8 +159,10 @@ const cases = [
   barcelona,
   basel,
   munich,
+  oslo,
 ];
 const caseNamesZh: Record<number, string> = {
+  [oslo.candidateId]: "奥斯陆功能区",
   [munich.candidateId]: "慕尼黑功能区",
   [basel.candidateId]: "巴塞尔功能区（瑞士）",
   [barcelona.candidateId]: "巴塞罗那功能区",
@@ -333,6 +336,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [oslo.candidateId]: [
+    zh
+      ? "奥斯陆 PCS／ISR／MED／LON／TEC／OPT 条件60，GSS／RES未知，数学域45—70、无中心。现有自然危险保护、真实救助与部分纠偏、医疗等待改善、成熟疾病治疗及数字服务支持有限判断；2028备用供水尚未完成，受检经济建议服务违法和必要护理长等待仍保留。"
+      : "Oslo has conditional PCS/ISR/MED/LON/TEC/OPT scores of 60, with GSS/RES unknown: a 45–70 mathematical domain without a centre. Existing hazard protection, actual aid and specific corrections, shorter clinical waits, mature-disease treatment and digital services support limited judgments. The 2028 backup water supply is unfinished; unlawful inspected advice services and long necessary-care waits remain.",
+    zh
+      ? "实际路径、普通付款／净监护和地域／截止延续均可撤，国外人体结果与付款不移本地。3278NOK不是全部医疗费封顶，12／15是服务地区而非居民覆盖；挪威BankID外国号码鉴权与瑞典BankID不同。撤PCS／ISR／MED为36—76，撤LON／TEC／OPT为39—74，不证明全球入围。"
+      : "Actual use, ordinary payment/net monitoring, geography and cutoff continuity remain revocable; foreign outcomes and payment do not transfer locally. NOK 3,278 is not an all-cost medical cap, and 12 of 15 describes service districts, not resident coverage. Norwegian BankID with a foreign number differs from Swedish BankID. Withdrawing PCS/ISR/MED gives 36–76, or LON/TEC/OPT 39–74; global qualification remains unproven.",
+  ],
   [munich.candidateId]: [
     zh
       ? "慕尼黑GSS／ISR／LON／TEC／OPT条件60，PCS／RES／MED未知，数学域36—76、无中心。实际安全处置、保护与应急交付、当地成熟疾病治疗及数字服务支持有限判断；医疗质量有较好和较差结果，结合节省及实际缓解后，通常必要护理40／60仍未裁清。"

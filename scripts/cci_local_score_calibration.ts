@@ -119,6 +119,7 @@ const realCases = [
   "barcelona",
   "basel",
   "munich",
+  "oslo",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -229,6 +230,7 @@ const [
   barcelona,
   basel,
   munich,
+  oslo,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2440,4 +2442,49 @@ for (const [dimension, lower, upper] of [
   const withdrawn = { ...munich };
   delete withdrawn[dimension];
   assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+
+const osloCase = realCases.find(c => c.candidateId === 596);
+assert.equal(
+  osloCase.priorityCompletionReview.sha256,
+  digest(osloCase.priorityCompletionReview.path)
+);
+assert.equal(
+  osloCase.priorityCompletionReview.researchReportSha256,
+  digest(osloCase.priorityCompletionReview.researchReport)
+);
+assert.equal(osloCase.sourceSnapshots.length, 26);
+assert.equal(osloCase.failedSourceSnapshots.length, 3);
+assert.equal(osloCase.webReadSources.length, 4);
+assert.equal(osloCase.sourceSnapshots.filter((s: { reused: boolean }) => s.reused).length, 7);
+assert.equal(osloCase.scopeCompletionReview.allSubpillarsFullyReviewed, false);
+assert.deepEqual(osloCase.scopeCompletionReview.statusCounts, {
+  reviewed_context: 3,
+  reviewed_partial: 25,
+  reviewed_not_fully: 3,
+});
+assert.equal(osloCase.rootScopeReview.futureWaterBackupCountedAsCompleted, false);
+assert.equal(osloCase.rootScopeReview.allInspectedNavEconomicAdviceServicesUnlawful, true);
+assert.equal(osloCase.rootScopeReview.copayCap3278CoversAllMedicalCosts, false);
+assert.equal(osloCase.rootScopeReview.eventSeriousShare2_3IsAdmissionHarmRisk, false);
+assert.equal(osloCase.rootScopeReview.dho12Of15IsResidentCoverage, false);
+assert.equal(osloCase.rootScopeReview.foreignFrenchPaymentTransferredToNorway, false);
+assert.equal(osloCase.rootScopeReview.swedishAndNorwegianBankIdSame, false);
+assert.equal(osloCase.rootScopeReview.dnb160IsOrdinaryTransferFee, false);
+assert.equal(osloCase.rootScopeReview.heating50OreIsTotalNetUnitPrice, false);
+assert.deepEqual(total(oslo), { center: null, lower: 45, upper: 70 });
+for (const dimension of ["PCS", "ISR", "MED", "LON", "TEC", "OPT"] as const) {
+  const withdrawn = { ...oslo };
+  delete withdrawn[dimension];
+  const is15 = weights[dimension] === 15;
+  assert.deepEqual(total(withdrawn), {
+    center: null,
+    lower: is15 ? 36 : 39,
+    upper: is15 ? 76 : 74,
+  });
+  assert.deepEqual(total({ ...oslo, [dimension]: 40 }), {
+    center: null,
+    lower: is15 ? 42 : 43,
+    upper: is15 ? 67 : 68,
+  });
 }

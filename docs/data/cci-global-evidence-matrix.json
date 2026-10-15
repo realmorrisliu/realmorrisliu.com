@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 67,
+    "conditionalCaseCount": 68,
     "completeConditionalCaseCount": 16,
-    "partialCaseCount": 51,
-    "unassessedCount": 8964,
+    "partialCaseCount": 52,
+    "unassessedCount": 8963,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -640,8 +640,13 @@
       "sha256": "24698cd2b424da2a8c4b53c114c582e5a94d8027f3ce68e051a85cf8183cdeeb",
       "provenance": "cci-munich-score-completion-review.md",
       "provenanceSha256": "0adaed40337305a8db1119215aa911a1c614275cdf3926a0601f3fb0766aed31"
+    },
+    "cci-local-2026-oslo-case.json": {
+      "sha256": "3266184f7c9ee1c667747841e18c1834fec64ae19a61e2cec50d408c58a1be2e",
+      "provenance": "cci-oslo-score-completion-review.md",
+      "provenanceSha256": "b5e0bc6dcaca11ee828db2abac78f9064b98678a578620794b00df7c6ecc7974"
     }
   },
-  "scriptSha256": "45ece8645af94d5768854af341a7548e49ff99545317a509e9e260ae11c32ea1",
-  "csvSha256": "e7a279bd8ef5463d765efe6f6fb7fc6ac9a7b22e0464b13aff0706e834e63ea4"
+  "scriptSha256": "f0d593f084505c062c34608f15f581a4d79aff93ffc6dd0de0b99cb422989d79",
+  "csvSha256": "db29cb1b2256e5057d8600c645a52be1838737fa7f1d5bb5d3bf6b4d1dc1c02d"
 }

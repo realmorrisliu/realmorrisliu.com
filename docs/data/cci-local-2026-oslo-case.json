@@ -1,0 +1,1504 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 596,
+  "name": "Oslo",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-15",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "ordinary Norwegian citizen usually long-term residing locally, local median income and usual public coverage, no fixed age",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-oslo-score-completion-review.md",
+  "publishedInputCommit": "09e1984b5650ea9a0d74c7225bdb7cfe42982f24",
+  "researchFrozenInputCommit": "6c594d14254e094c4e97dd96209e3263ff4f51f2",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "scoreStatus": "conditional_root_adopted",
+      "rationale": "已实际运行的水务监测/短期煮沸应对、局部输水和蓄水强化及滑坡/极端天气协同，有限支持通常自然危险可管理；非无暴露。",
+      "assumption": "这些现有保护对普通通常暴露有实质作用，并合理适配更广FUA及延续至2026；未完成2028备用不计已完成，热湿/全部尾部未充分测量。拒绝本质适配即null。",
+      "counterevidence": "单源剩余脆弱、2024煮沸130000人、人员器材及旧消防船缺口均保留；重要剩余保护瓶颈可支持40，不要求多数人或每天发生失效；无法裁清通常影响则未知。",
+      "sourceIds": ["R03", "R04", "S07", "S15"],
+      "conditionalAlternatives": [40],
+      "rejectionOutcome": null,
+      "coverageReview": [
+        {
+          "dimension": "PCS",
+          "subpillar": "heat_humidity",
+          "status": "reviewed_context",
+          "finding": "R03物理10仅一般自然风险/热描述；没有本轮本地湿球或实测热保护效果，不称充分审阅",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "flood_sea_level",
+          "status": "reviewed_partial",
+          "finding": "R03物理10/12-16洪水/风暴潮情景；R04实际输水/蓄水强化和煮沸处置，情景非实际损失率",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "geophysical",
+          "status": "reviewed_partial",
+          "finding": "R03物理12地震/快黏土情景与18 Carl Berner滑坡处置回顾；无全区地质防护普测",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "severe_weather_wildfire",
+          "status": "reviewed_partial",
+          "finding": "R03森林火灾情景，S07物理21实际年度联合训练/装备缺口；演练不当成功扑救率",
+          "score": null
+        }
+      ],
+      "subpillars": {
+        "heat_humidity": "context",
+        "flood_sea_level": "partial",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "真实关键供水剩余脆弱、首都战略/恐袭情景和实际部分响应技术均已审；当前当地有组织暴力及保护后通常影响不足以合理择40/60。",
+      "assumption": "未知不扣分；全国案件/信任/预防成果不移成本地，地方原件第三失败后停止，不用取得失败作能力判断。",
+      "counterevidence": "2025全国政策/监控共享不等首都净防护；2026撤离计划仍在推进。",
+      "sourceIds": ["R03", "R04", "S07", "S17"],
+      "conditionalAlternatives": [],
+      "rejectionOutcome": null,
+      "coverageReview": [
+        {
+          "dimension": "GSS",
+          "subpillar": "organized_violence",
+          "status": "reviewed_not_fully",
+          "finding": "R03物理11/12有恐袭/骚乱情景及8历史动员；S17物理20本地无人机试行、27反恐共同行动背景，地方2025刑情原件不可读，不能继承全国30次阻止暴力",
+          "score": null
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "regional_conflict",
+          "status": "reviewed_context",
+          "finding": "S17物理19/20全国安全政治/海上情报背景与S07首都大型事件准备，非本地战争损伤或已无风险",
+          "score": null
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "strategic_exposure",
+          "status": "reviewed_partial",
+          "finding": "R04现实单源弱点及已强化安全合作；S17物理27 Oslo大撤离计划继续2026，未来不是完成保护",
+          "score": null
+        }
+      ],
+      "subpillars": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "scoreStatus": "conditional_root_adopted",
+      "rationale": "大量实际必要帮助、独立申诉改判及已变化的服务操作，有限支持普通制度通常可用；不从法律名称或救助支出量直接评分。",
+      "assumption": "普通公民能使用实际救助/申诉/接续，并非仅少数展示，地方核心操作合理代表相关FUA及2026延续；真实余障仍显著。拒绝桥即null。",
+      "counterevidence": "全部受检Nav机构的经济建议违法、数字排斥、近年申诉等待和部分必要帮助未到位保留，40是重要替代，非完整无摩擦80。",
+      "sourceIds": ["R01", "R03", "S02", "S07", "S10"],
+      "conditionalAlternatives": [40],
+      "rejectionOutcome": null,
+      "coverageReview": [
+        {
+          "dimension": "ISR",
+          "subpillar": "governance",
+          "status": "reviewed_partial",
+          "finding": "S02物理13-14实际文件要求变更/低补助申诉均获支持，同时受检经济建议机构违法；不把申诉数当成功率",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "adaptive_capacity",
+          "status": "reviewed_partial",
+          "finding": "R01真实支付/服务；S10物理34数字居家随访扩12/15区，未来资助平台另列",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "social_cohesion",
+          "status": "reviewed_partial",
+          "finding": "S02物理10/12数字与群体触达障碍；R01家庭救助按资格而非中位居民全获助",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "emergency_recovery",
+          "status": "reviewed_partial",
+          "finding": "R03实际疫情/滑坡协同回顾；S07高风险住户实际措施与联合训练/人员器材不足并列",
+          "score": null
+        }
+      ],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "实际水食能供给、已付帮助和已实行能源净价模式均已审；当前证据不能把选定获助者/某热供模式合理推为中位全束40或60。",
+      "assumption": "不得要求完美逐户全人口账单，但需要有据的通常净取得方向；本轮实际帮助与余障仍不能完成这一推定。",
+      "counterevidence": "供水单源余障、食物/住房/能源实际救助仍长期需要；单位热价不等典型合计账单或断供概率。",
+      "sourceIds": ["R01", "R04", "S02", "S06", "S08", "S18", "S19"],
+      "conditionalAlternatives": [],
+      "rejectionOutcome": null,
+      "coverageReview": [
+        {
+          "dimension": "RES",
+          "subpillar": "water",
+          "status": "reviewed_partial",
+          "finding": "R04物理2/22实际供给、短煮沸/新管和蓄水及未解决备用；不是全FUA统一水费或全部失供",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "food",
+          "status": "reviewed_partial",
+          "finding": "R01实际25亿NOK中约三分之一生活品/食品服装卫生；S02文件门槛实际可能阻断帮助，不当普通居民食品短缺率",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "energy",
+          "status": "reviewed_partial",
+          "finding": "S08物理28自2025-10已可选支持；S19 Sept2026净价例子97.95 vs149.39 øre/kWh，非中位家庭全部用能账单",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "supply_chain",
+          "status": "reviewed_not_fully",
+          "finding": "水务单源/能源供应和药物交付问题有观察，食品所有物流共同源/通常储备未充分展开，不用存在供应商代全链",
+          "score": null
+        }
+      ],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "unresolved"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "scoreStatus": "conditional_root_adopted",
+      "rationale": "实际必要护理交付/等待改善、质量报告及纠错，配合2026公共住院免共付/认可共付上限，有限支持通常居民可用的必要医疗。",
+      "assumption": "2025实际质量过程/临床交付及真实缓解代表通常可用护理而非广泛通常失效；普通合资格公共路径和接续在2026继续。非只靠医院名望/满意度/病例量。拒绝质量/净付款/地域桥即null。",
+      "counterevidence": "儿童精神科仍未达标、预约延迟/再入院与独立长期拒助/牙科10月等待保留；40替代如果认定这些必要障碍通常更重要；没有全院风险调整死亡率不单独构成新硬门槛。",
+      "sourceIds": ["S01", "S02", "S13", "S14", "S16", "R02"],
+      "conditionalAlternatives": [40],
+      "rejectionOutcome": null,
+      "coverageReview": [
+        {
+          "dimension": "MED",
+          "subpillar": "access",
+          "status": "reviewed_partial",
+          "finding": "S01物理11真实等待改善；S13临床不同人群细分/预约89%按期，S02实际必要服务等待，非仅未来预算",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "routine_quality",
+          "status": "reviewed_partial",
+          "finding": "S01物理13实际事件/改善/赔偿，非报告事件占入院风险；S02独立反证和沟通纠错，非投诉量直接评分",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "specialist_capacity",
+          "status": "reviewed_partial",
+          "finding": "S01临床必要交付与R02已实行淋巴瘤路径；高成本实际付款非全适应证或全居民都获CAR-T",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "system_continuity",
+          "status": "reviewed_partial",
+          "finding": "S13跨层级接续、再入院增/药物交付问题；S16公共住院免共付/2026上限及自费例外，非私营全包",
+          "score": null
+        }
+      ],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "scoreStatus": "conditional_root_adopted",
+      "rationale": "成熟疾病类人体长期证据、当地已实行淋巴瘤CAR-T和住址医院药款、运行的细胞/公共住院接续，构成可撤的通常成熟病种路径桥。",
+      "assumption": "R07成熟CD19淋巴瘤类有代表性，OUS预算描述为真实已实行标准淋巴瘤路径，其临床选择、通常公共付款及必要监护/接续实际可用且2026延续；未独立核具体本地每品牌2026名单，不把法国付款移挪威。拒绝任一实质桥即null。",
+      "counterevidence": "R06自身免疫技术研究非成熟常规；R07单臂选择/未回输/毒性及近院监护负担重要；未核本地队列或逐剂票据不冒称已有，也不将其新立硬门槛。",
+      "sourceIds": ["R02", "R06", "R07", "S09", "S16", "S13"],
+      "conditionalAlternatives": [40],
+      "rejectionOutcome": null,
+      "coverageReview": [
+        {
+          "dimension": "LON",
+          "subpillar": "translation",
+          "status": "reviewed_partial",
+          "finding": "R02物理16已实行本区/北区淋巴瘤治疗和住址医院药款；S09本地细胞生产运行不把所有制品当已回输",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "trial_maturity",
+          "status": "reviewed_partial",
+          "finding": "R07物理14成熟淋巴瘤长期人体及38监护/毒性；国外成熟证据不当本地队列，R06实验新病种分开",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "regulatory_adoption",
+          "status": "reviewed_not_fully",
+          "finding": "已有公共实施/付款描述而非逐品牌本地许可名单；成熟疾病类适配为可撤推定，不复制法国认可/支付",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "resident_access",
+          "status": "reviewed_partial",
+          "finding": "R02住址医院药款+S16普通公共住院/认可随访共付规则，S13接续；专门CAR-T净监护/住宿有限桥可撤",
+          "score": null
+        }
+      ],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "unresolved",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "scoreStatus": "conditional_root_adopted",
+      "rationale": "本地实际研究转化、临床/水能技术运行和普通数字居家服务采用，有限支持实质产用扩散60，非机构/论文数量或排名加分。",
+      "assumption": "已实施应用对普通生活有实质扩散，合理代表FUA相关操作并2026继续；不将一次试行或未来工程当普及。拒绝扩散/适配桥即null。",
+      "counterevidence": "数字排斥/核心技术实现缺陷、AI只验证未部署及产业密度未独立完测，40替代，80不足。",
+      "sourceIds": ["R04", "R06", "S01", "S02", "S09", "S10", "S13", "S17"],
+      "conditionalAlternatives": [40],
+      "rejectionOutcome": null,
+      "coverageReview": [
+        {
+          "dimension": "TEC",
+          "subpillar": "knowledge_output",
+          "status": "reviewed_partial",
+          "finding": "R07疾病人体知识、S09本地转化操作与S01/13实际研究，发表/雇员数量仅上下文不等质量",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "industry_density",
+          "status": "reviewed_context",
+          "finding": "S09制造/研究和S08部分实际能源技术，仅局部产用，非全FUA企业密度/销售存活率",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "digital_infrastructure",
+          "status": "reviewed_partial",
+          "finding": "S10物理34真实DHO12/15区/已用药盒和监护；S13真实多媒体试点与物流缺陷，不是全城宽带普测",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "diffusion",
+          "status": "reviewed_partial",
+          "finding": "已实际普通护理数字扩散、S17物理20当地无人机试行，S02数字障碍；未部署AI/未来2026广扩不当已用",
+          "score": null
+        }
+      ],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "context",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "scoreStatus": "conditional_root_adopted",
+      "rationale": "实际当地运输与Gardermoen边境运行、挪威公民北欧居留、DNB个人转款/收款及BankID外国SIM/备用链，支持限定普通可用退出60。",
+      "assumption": "普通挪威公民有通常合资格银行/证件/资金与可负担初始旅行，核心地方运输可达出境节点，目的地瑞典办理合法登记/银行KYC、外国号码注册及可用网络；当前条款合理10-10延续。非永久旧账户保证/所有目的地或危机独立国际陆路普测。拒绝实质交通/资金/网络/连续性桥即null。",
+      "counterevidence": "FX/对端费、身份银行依赖、单设备/注册手机号/24h新号码等待和共同电网网络风险、长期迁居账户另需更新，40替代。",
+      "sourceIds": ["S04", "S10", "S11", "S12", "S17", "S20", "S21", "W01", "W02", "W03", "W04"],
+      "conditionalAlternatives": [40],
+      "rejectionOutcome": null,
+      "coverageReview": [
+        {
+          "dimension": "OPT",
+          "subpillar": "transport_redundancy",
+          "status": "reviewed_partial",
+          "finding": "S10真实当地公交和道路改善/S17物理28 Gardermoen2025实际边境运行；非全部国际路线冗余，机场/中心/医院在596独立核",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "legal_mobility",
+          "status": "reviewed_partial",
+          "finding": "W01/02/03北欧公民瑞典无需居留许可，超过一年登记/亲自身份核；非挪威长期外籍享同权",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "asset_portability",
+          "status": "reviewed_partial",
+          "finding": "S04/S12 DNB个人转出/转入/SEPA/SEK与FX/费用条件；W04瑞典基本账户身份核/投诉权，法定权利非保证立即开通",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "network_continuity",
+          "status": "reviewed_partial",
+          "finding": "S11/20/21实际BankID双方法、外国SIM含瑞典、手机号需银行注册及失设备恢复；普通外国网络/费用适配为有限推定，不移挪威无限漫游",
+          "score": null
+        }
+      ],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 45,
+  "unresolvedScoreRange": [45, 70],
+  "globalRankingEligible": false,
+  "limitations": [
+    "Six conditional60 judgments require revocable ordinary-impact, local eligibility/means/monitoring, FUA scope and cutoff bridges. No ability score from source count, missingness or reputation.",
+    "PCS protection/residual materiality, ISR correction representativeness and LON mature class/payment/net monitoring are especially contestable;40 alternatives and withdrawal remain.",
+    "GSS/RES unresolved after actual partial protection, delivery and assistance considered; no whole-population perfect-data gate.",
+    "Future2027/2028/2029 plans and unimplemented AI not counted as completed benefits. Norwegian and Swedish BankID differ; lawful account continuation is not permanent old-product guarantee.",
+    "25partial/3context/3notfullyreviewed scope records are not31 fully measured outcomes.",
+    "26 raw originals19new/7verified reuse;3raw failures/4web-only bodies separate. Current retrieved bytes not authenticated cutoff snapshots.",
+    "All67 prior cases byte-identical; all old/new competitors retained, zero supported exclusions or qualified32 threshold."
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "R01",
+      "url": "https://www.oslo.kommune.no/get-file/1951300/5f3fc88b3aa7287178d0b3e49dfca8c6a9d741e880b766a7430f28041a3f88aa",
+      "requestOrdinal": 1,
+      "filename": "oslo-welfare-2025.pdf",
+      "verifiedAt": "2026-10-15",
+      "validOriginal": true,
+      "bytes": 1432485,
+      "sha256": "fb3f5e6f6fcccf144223ed99c1c1c6ed5fafdcb343b1a3447f3374124c9c3db1",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.oslo.kommune.no/get-file/1951300/5f3fc88b3aa7287178d0b3e49dfca8c6a9d741e880b766a7430f28041a3f88aa",
+      "usedForPriorityFacts": true,
+      "usedForScore": true,
+      "file": "oslo-welfare-2025.pdf",
+      "reused": true,
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-24/oslo-welfare-2025.pdf",
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/oslo-welfare-2025.pdf",
+      "originalBytes": 1432485,
+      "originalSha256": "fb3f5e6f6fcccf144223ed99c1c1c6ed5fafdcb343b1a3447f3374124c9c3db1",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "R02",
+      "url": "https://www.oslo-universitetssykehus.no/4aea18/contentassets/ee0d4a5350ce4c7b891a83ada70650ce/styresaker/styremoter-2025/2025-12-17/styresak-2025-081-01-budsjett-2026---budsjettdokument-drift-og-investering.pdf",
+      "requestOrdinal": 1,
+      "filename": "ous-budget-2026.pdf",
+      "verifiedAt": "2026-10-15",
+      "validOriginal": true,
+      "bytes": 1116655,
+      "sha256": "0a9217e4da2f2f93011dbb5aa54c3cffb3cea09301bdb27b76a46a761ca4d3bb",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.oslo-universitetssykehus.no/4aea18/contentassets/ee0d4a5350ce4c7b891a83ada70650ce/styresaker/styremoter-2025/2025-12-17/styresak-2025-081-01-budsjett-2026---budsjettdokument-drift-og-investering.pdf",
+      "usedForPriorityFacts": true,
+      "usedForScore": true,
+      "file": "ous-budget-2026.pdf",
+      "reused": true,
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-24/ous-budget-2026.pdf",
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/ous-budget-2026.pdf",
+      "originalBytes": 1116655,
+      "originalSha256": "0a9217e4da2f2f93011dbb5aa54c3cffb3cea09301bdb27b76a46a761ca4d3bb",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "R03",
+      "url": "https://www.oslo.kommune.no/get-file/1230123/4404b011e6574f100ff61e60669a0b87b7b636fb5858ba8b28ed32f296a36061",
+      "requestOrdinal": 1,
+      "filename": "oslo-risk-2025.pdf",
+      "verifiedAt": "2026-10-15",
+      "validOriginal": true,
+      "bytes": 801841,
+      "sha256": "8ce63071dac6c35bdd1b9e4df07a88f03fb473382905c3784fc006c1e9807a01",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.oslo.kommune.no/get-file/1230123/4404b011e6574f100ff61e60669a0b87b7b636fb5858ba8b28ed32f296a36061",
+      "usedForPriorityFacts": true,
+      "usedForScore": true,
+      "file": "oslo-risk-2025.pdf",
+      "reused": true,
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-24/oslo-risk-2025.pdf",
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/oslo-risk-2025.pdf",
+      "originalBytes": 801841,
+      "originalSha256": "8ce63071dac6c35bdd1b9e4df07a88f03fb473382905c3784fc006c1e9807a01",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "R04",
+      "url": "https://www.oslo.kommune.no/get-file/466296/1832ee1e3803c41781b862ecee23d890e9f5d94bbe1817dc339d70323115671e/",
+      "requestOrdinal": 1,
+      "filename": "oslo-water-2024.pdf",
+      "verifiedAt": "2026-10-15",
+      "validOriginal": true,
+      "bytes": 53964877,
+      "sha256": "9fe0cd39be56d04af4655a276c44f75d84c406bee8453dace98019fda5065e96",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.oslo.kommune.no/get-file/466296/1832ee1e3803c41781b862ecee23d890e9f5d94bbe1817dc339d70323115671e/",
+      "usedForPriorityFacts": true,
+      "usedForScore": true,
+      "file": "oslo-water-2024.pdf",
+      "reused": true,
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-24/oslo-water-2024.pdf",
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/oslo-water-2024.pdf",
+      "originalBytes": 53964877,
+      "originalSha256": "9fe0cd39be56d04af4655a276c44f75d84c406bee8453dace98019fda5065e96",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "R05",
+      "url": "https://aktuelt.oslo.kommune.no/vann-er-liv",
+      "requestOrdinal": 1,
+      "filename": "oslo-water-operation-2023.html",
+      "verifiedAt": "2026-10-15",
+      "validOriginal": true,
+      "bytes": 31187,
+      "sha256": "35373b39592efe874fc1fbb2a3e482f060c4dad2f63fbc00d2023da5c575e1bd",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://aktuelt.oslo.kommune.no/vann-er-liv",
+      "usedForPriorityFacts": true,
+      "usedForScore": false,
+      "file": "oslo-water-operation-2023.html",
+      "reused": true,
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-24/oslo-water-operation-2023.html",
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/oslo-water-operation-2023.html",
+      "originalBytes": 31187,
+      "originalSha256": "35373b39592efe874fc1fbb2a3e482f060c4dad2f63fbc00d2023da5c575e1bd",
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "R06",
+      "url": "https://www.oslo-universitetssykehus.no/avdelinger/klinikk-for-laboratoriemedisin/avdeling-for-immunologi-og-transfusjonsmedisin/seksjon-for-ex-vivo-cellelaboratorium/car-t-celler/",
+      "requestOrdinal": 1,
+      "filename": "oslo-cell-study-2026.html",
+      "verifiedAt": "2026-10-15",
+      "validOriginal": true,
+      "bytes": 34372,
+      "sha256": "c7fac230b6b6bfcd9f67a66b83a7d1d73871c9d6f0fadaa579361c50113567d8",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://www.oslo-universitetssykehus.no/avdelinger/klinikk-for-laboratoriemedisin/avdeling-for-immunologi-og-transfusjonsmedisin/seksjon-for-ex-vivo-cellelaboratorium/car-t-celler/",
+      "usedForPriorityFacts": true,
+      "usedForScore": true,
+      "file": "oslo-cell-study-2026.html",
+      "reused": true,
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-24/oslo-cell-study-2026.html",
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/oslo-cell-study-2026.html",
+      "originalBytes": 34372,
+      "originalSha256": "c7fac230b6b6bfcd9f67a66b83a7d1d73871c9d6f0fadaa579361c50113567d8",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S01",
+      "url": "https://www.oslo-universitetssykehus.no/49aebf/contentassets/9057b03955204d4c9ee0d2d1b54fd804/arsberetning-og-arsregnskap-2025.pdf",
+      "file": "ous-annual-2025.pdf",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 869895,
+      "sha256": "1a4fe819d625edab9b390ddcd5c2badfd5ec798789d432f745f08d4c9933be73",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.oslo-universitetssykehus.no/49aebf/contentassets/9057b03955204d4c9ee0d2d1b54fd804/arsberetning-og-arsregnskap-2025.pdf",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/ous-annual-2025.pdf",
+      "originalBytes": 869895,
+      "originalSha256": "1a4fe819d625edab9b390ddcd5c2badfd5ec798789d432f745f08d4c9933be73",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S02",
+      "url": "https://www.oslo.kommune.no/get-file/1712627/059bbd0ac45f653b473003291836988190a7d3ee39713cd77d90d58bc59c64b2",
+      "file": "oslo-ombud-2025.pdf",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 961994,
+      "sha256": "3b04177af0a9d36d9c7bb80d3accfdee62cc31af6f21b3b3d150276b2f28b485",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.oslo.kommune.no/get-file/1712627/059bbd0ac45f653b473003291836988190a7d3ee39713cd77d90d58bc59c64b2",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/oslo-ombud-2025.pdf",
+      "originalBytes": 961994,
+      "originalSha256": "3b04177af0a9d36d9c7bb80d3accfdee62cc31af6f21b3b3d150276b2f28b485",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S04",
+      "url": "https://www.dnb.no/hjelp-og-veiledning",
+      "file": "dnb-help.html",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 665188,
+      "sha256": "379e7833d17a16cb0144afd5fc7c2caeaa18d8edd812789539ac6d8c603fc7dd",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://www.dnb.no/hjelp-og-veiledning",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/dnb-help.html",
+      "originalBytes": 665188,
+      "originalSha256": "379e7833d17a16cb0144afd5fc7c2caeaa18d8edd812789539ac6d8c603fc7dd",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S06",
+      "url": "https://www.hafslund.no/no/produkter-og-tjenester/fjernvarme/priser-fjernvarme",
+      "file": "hafslund-heating-price.html",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 91088,
+      "sha256": "e6cda29c647ab2a8b202edada6df37aa9349a480e10aa6887fdc2ea47649cd03",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "text/html",
+      "finalUrl": "https://www.hafslund.no/no/produkter-og-tjenester/fjernvarme/priser-fjernvarme",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/hafslund-heating-price.html",
+      "originalBytes": 91088,
+      "originalSha256": "e6cda29c647ab2a8b202edada6df37aa9349a480e10aa6887fdc2ea47649cd03",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S07",
+      "url": "https://www.oslo.kommune.no/get-file/465840/b1985973d7edd240716ee68a29bb6b44f28063eedb9e0dce1baec9b37dfe7aad",
+      "file": "oslo-fire-2024.pdf",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 5937096,
+      "sha256": "81e88e0d41d6c325d509ec7bf3961c77452c1d480527f4bfab6db759bc080dd0",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.oslo.kommune.no/get-file/465840/b1985973d7edd240716ee68a29bb6b44f28063eedb9e0dce1baec9b37dfe7aad",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/oslo-fire-2024.pdf",
+      "originalBytes": 5937096,
+      "originalSha256": "81e88e0d41d6c325d509ec7bf3961c77452c1d480527f4bfab6db759bc080dd0",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S08",
+      "url": "https://cdn.sanity.io/files/b0ujrg14/production/c4d2f9ede98bfba52c8fe72011f866eb34b6b134.pdf",
+      "file": "hafslund-2025.pdf",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 97769300,
+      "sha256": "5c7d12692beb9461da82d16fcbcdabf1e149a022aa8634551be6c5df84d181ee",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://cdn.sanity.io/files/b0ujrg14/production/c4d2f9ede98bfba52c8fe72011f866eb34b6b134.pdf",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/hafslund-2025.pdf",
+      "originalBytes": 97769300,
+      "originalSha256": "5c7d12692beb9461da82d16fcbcdabf1e149a022aa8634551be6c5df84d181ee",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S09",
+      "url": "https://www.oslo-universitetssykehus.no/avdelinger/kreftklinikken/avdeling-for-kreftbehandling/seksjon-for-celleterapi/",
+      "file": "ous-cell-service.html",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 38149,
+      "sha256": "03b9dac4af9b8c4d2c71c3b8c1b9f4951b11be95731b9249def6863463692cd2",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://www.oslo-universitetssykehus.no/avdelinger/kreftklinikken/avdeling-for-kreftbehandling/seksjon-for-celleterapi/",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/ous-cell-service.html",
+      "originalBytes": 38149,
+      "originalSha256": "03b9dac4af9b8c4d2c71c3b8c1b9f4951b11be95731b9249def6863463692cd2",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "R07",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "file": "shared-kymriah-has2023.pdf",
+      "reused": true,
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/recovery-batch21/fukuoka/shared-kymriah-has2023.pdf",
+      "validOriginal": true,
+      "bytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "accessDate": "2026-10-15",
+      "usage": "human maturity and toxicity only; France payment NOT Norway coverage; precise product local not certified",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/shared-kymriah-has2023.pdf",
+      "originalBytes": 741078,
+      "originalSha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S10",
+      "url": "https://www.oslo.kommune.no/get-file/1722054/4f50015e5bb7971541923c7739143af2c12f36b7c3b96574ca3269e6f2919764",
+      "file": "oslo-summary-2025.pdf",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 5193115,
+      "sha256": "428fb825bcab0822266945015860f839c5860f7a4dc1e183c3b354af3e432cfb",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.oslo.kommune.no/get-file/1722054/4f50015e5bb7971541923c7739143af2c12f36b7c3b96574ca3269e6f2919764",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/oslo-summary-2025.pdf",
+      "originalBytes": 5193115,
+      "originalSha256": "428fb825bcab0822266945015860f839c5860f7a4dc1e183c3b354af3e432cfb",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S11",
+      "url": "https://www.dnb.no/dagligbank/bankid/app",
+      "file": "dnb-bankid-app.html",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 419234,
+      "sha256": "e4701ad14e0b4ee881c76d260dfe092db5a2ebdc03def1e85498dfc229d3f7b5",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://www.dnb.no/dagligbank/bankid/app",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/dnb-bankid-app.html",
+      "originalBytes": 419234,
+      "originalSha256": "e4701ad14e0b4ee881c76d260dfe092db5a2ebdc03def1e85498dfc229d3f7b5",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S12",
+      "url": "https://www.dnb.no/dagligbank/priser",
+      "file": "dnb-prices.html",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 323054,
+      "sha256": "49ab349bb27138f3204f904b8e6c63267316f4853f4a13ee2e88251d4b42d044",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://www.dnb.no/dagligbank/priser",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/dnb-prices.html",
+      "originalBytes": 323054,
+      "originalSha256": "49ab349bb27138f3204f904b8e6c63267316f4853f4a13ee2e88251d4b42d044",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S13",
+      "url": "https://www.oslo-universitetssykehus.no/om-oss/arlig-melding-2025/",
+      "file": "ous-annual-message-2025.html",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 298771,
+      "sha256": "1e07769a7d0049545e8fa455ed86277ffa4c3ea7c6aa8a5bd32e28dcf5c921dc",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://www.oslo-universitetssykehus.no/om-oss/arlig-melding-2025/",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/ous-annual-message-2025.html",
+      "originalBytes": 298771,
+      "originalSha256": "1e07769a7d0049545e8fa455ed86277ffa4c3ea7c6aa8a5bd32e28dcf5c921dc",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S14",
+      "url": "https://www.helsenorge.no/betaling-for-helsetjenester/frikort-for-helsetjenester/",
+      "file": "helsenorge-frikort.html",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 59003,
+      "sha256": "7f072c30fe8eb99febd9469ddbbfd787035939f0ee77c3846769eb478a071279",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://www.helsenorge.no/betaling-for-helsetjenester/frikort-for-helsetjenester/",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/helsenorge-frikort.html",
+      "originalBytes": 59003,
+      "originalSha256": "7f072c30fe8eb99febd9469ddbbfd787035939f0ee77c3846769eb478a071279",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S15",
+      "url": "https://www.oslo.kommune.no/etater-foretak-og-ombud/brann-og-redningsetaten/",
+      "file": "oslo-fire-current.html",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 52283,
+      "sha256": "4f5e44382b84cf4453075e3ecd1193de6437a9959c3c9dba9c6a697a0818eb1d",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://www.oslo.kommune.no/etater-foretak-og-ombud/brann-og-redningsetaten/",
+      "usedForScore": false,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/oslo-fire-current.html",
+      "originalBytes": 52283,
+      "originalSha256": "4f5e44382b84cf4453075e3ecd1193de6437a9959c3c9dba9c6a697a0818eb1d",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Current fire service navigation/continuation context only; new logistics centre first operation date not verified before cutoff."
+    },
+    {
+      "id": "S16",
+      "url": "https://www.helsenorge.no/betaling-for-helsetjenester/betaling-pa-sykehus-og-poliklinikk/",
+      "file": "helsenorge-hospital-payment.html",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 42105,
+      "sha256": "7bb729de9f6b50f5b5475f1b8d9fc71e838f884b9baf1e10ec539e844ff3e2bf",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://www.helsenorge.no/betaling-for-helsetjenester/betaling-pa-sykehus-og-poliklinikk/",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/helsenorge-hospital-payment.html",
+      "originalBytes": 42105,
+      "originalSha256": "7bb729de9f6b50f5b5475f1b8d9fc71e838f884b9baf1e10ec539e844ff3e2bf",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S17",
+      "url": "https://www.politiet.no/globalassets/dokumenter-strategier-og-horinger/pod/arsrapport-2025/politiets-arsrapport-2025.pdf",
+      "file": "norway-police-2025.pdf",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 3067445,
+      "sha256": "476f96c8132caaf967285c7112f649e0833b75f8be7770372ca926da45f4b0d4",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.politiet.no/globalassets/dokumenter-strategier-og-horinger/pod/arsrapport-2025/politiets-arsrapport-2025.pdf",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/norway-police-2025.pdf",
+      "originalBytes": 3067445,
+      "originalSha256": "476f96c8132caaf967285c7112f649e0833b75f8be7770372ca926da45f4b0d4",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S18",
+      "url": "https://www.hafslund.no/no/produkter-og-tjenester/fjernvarme/norgespris",
+      "file": "hafslund-norgespris.html",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 530410,
+      "sha256": "1fe54fb82affb9b84237e3c5023b72482a1af9360d7168a9cb2c001e4324f697",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "text/html",
+      "finalUrl": "https://www.hafslund.no/no/produkter-og-tjenester/fjernvarme/norgespris",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/hafslund-norgespris.html",
+      "originalBytes": 530410,
+      "originalSha256": "1fe54fb82affb9b84237e3c5023b72482a1af9360d7168a9cb2c001e4324f697",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S19",
+      "url": "https://www.hafslund.no/no/produkter-og-tjenester/fjernvarme/priser-fjernvarme/prismodell-for-fjernvarme-i-eneboliger-og-rekkehus",
+      "file": "hafslund-household-net-price.html",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 99504,
+      "sha256": "134af9402875820e84efe008ed461c257916f5528c7ca4d06dbc83d661da3d06",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "text/html",
+      "finalUrl": "https://www.hafslund.no/no/produkter-og-tjenester/fjernvarme/priser-fjernvarme/prismodell-for-fjernvarme-i-eneboliger-og-rekkehus",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/hafslund-household-net-price.html",
+      "originalBytes": 99504,
+      "originalSha256": "134af9402875820e84efe008ed461c257916f5528c7ca4d06dbc83d661da3d06",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S20",
+      "url": "https://bankid.no/faq/bankid-app",
+      "file": "bankid-official-faq.html",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 421120,
+      "sha256": "f9ba1a31ba87493d536786a5e56d44d5a597a8efb975d40b24604fddcca19fb4",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://bankid.no/faq/bankid-app",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/bankid-official-faq.html",
+      "originalBytes": 421120,
+      "originalSha256": "f9ba1a31ba87493d536786a5e56d44d5a597a8efb975d40b24604fddcca19fb4",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    },
+    {
+      "id": "S21",
+      "url": "https://bankid.no/app-med-utenlandsk-nummer",
+      "file": "bankid-foreign-number.html",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": true,
+      "bytes": 185223,
+      "sha256": "3ffa9be75f174b2d1819e309da3db9605bae059da2a203d72b26eed940a30486",
+      "accessDate": "2026-10-15",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://bankid.no/app-med-utenlandsk-nummer",
+      "usedForScore": true,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/bankid-foreign-number.html",
+      "originalBytes": 185223,
+      "originalSha256": "3ffa9be75f174b2d1819e309da3db9605bae059da2a203d72b26eed940a30486",
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Bounded actual operation, formal rule or counterevidence as scoped in root review; plans, foreign payment and raw failures do not become local completed benefits."
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "id": "S03",
+      "url": "https://api.politiet.no/nyhetspublisering/public/filer/dokument/dec851b5-5bb5-494e-8dc3-bde97be431b4",
+      "file": "oslo-police-2025.pdf",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": false,
+      "bytes": null,
+      "sha256": null,
+      "accessDate": "2026-10-15",
+      "failure": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1127)>",
+      "usedForScore": false,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "originalBytes": null,
+      "originalSha256": null
+    },
+    {
+      "id": "S05",
+      "url": "https://www.norden.org/da/info-norden/guide-flytte-til-sverige",
+      "file": "nordic-move-sweden.html",
+      "requestOrdinal": 1,
+      "reused": false,
+      "validOriginal": false,
+      "bytes": null,
+      "sha256": null,
+      "accessDate": "2026-10-15",
+      "failure": "HTTP Error 403: Forbidden",
+      "usedForScore": false,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "originalBytes": null,
+      "originalSha256": null
+    },
+    {
+      "id": "S03-final",
+      "url": "https://api.politiet.no/nyhetspublisering/public/filer/dokument/dec851b5-5bb5-494e-8dc3-bde97be431b4",
+      "file": "oslo-police-2025-curl.pdf",
+      "requestOrdinal": 3,
+      "previousAttempts": "raw SSL EOF; web InternalError",
+      "reused": false,
+      "validOriginal": false,
+      "bytes": null,
+      "sha256": null,
+      "curlExit": 35,
+      "failure": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to api.politiet.no:443 \n",
+      "accessDate": "2026-10-15",
+      "usedForScore": false,
+      "usedForScoreMeaning": "supports or counters conditional suggestion, not root adopted",
+      "historicalCutoffBytesCertified": false,
+      "originalBytes": null,
+      "originalSha256": null
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.norden.org/da/info-norden/guide-flytte-til-sverige",
+      "reviewedFacts": "Nordic citizen movement, registration >year and financial/social conditions; not permanent home account assurance",
+      "webReference": "turn2175view0",
+      "validWebBody": true,
+      "validOriginal": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "historicalCutoffBytesCertified": false,
+      "usedForScore": true,
+      "usedForScoreMeaning": "Limited OPT rule support subject to eligibility, actual-use and cutoff bridges; no saved raw original."
+    },
+    {
+      "id": "W02",
+      "url": "https://www.norden.org/da/info-norden/folkeregistrering-i-sverige",
+      "reviewedFacts": "Nordic registration/personal identity controls and home register change",
+      "webReference": "turn2176view2",
+      "validWebBody": true,
+      "validOriginal": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "historicalCutoffBytesCertified": false,
+      "usedForScore": true,
+      "usedForScoreMeaning": "Limited OPT rule support subject to eligibility, actual-use and cutoff bridges; no saved raw original."
+    },
+    {
+      "id": "W03",
+      "url": "https://www.norden.org/da/info-norden/arbejdstilladelse-og-opholdstilladelse-i-sverige",
+      "reviewedFacts": "Nordic own-citizen freedom/no residence permit; unrelated confusing EU tourist clause excluded",
+      "webReference": "turn2179view2",
+      "validWebBody": true,
+      "validOriginal": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "historicalCutoffBytesCertified": false,
+      "usedForScore": true,
+      "usedForScoreMeaning": "Limited OPT rule support subject to eligibility, actual-use and cutoff bridges; no saved raw original."
+    },
+    {
+      "id": "W04",
+      "url": "https://www.norden.org/da/info-norden/bank-i-sverige",
+      "reviewedFacts": "Lawful EEA resident basic payment account right subject identity checks, charges/complaint and transfer constraints; not guaranteed immediate issuance",
+      "webReference": "turn2180view0",
+      "validWebBody": true,
+      "validOriginal": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "historicalCutoffBytesCertified": false,
+      "usedForScore": true,
+      "usedForScoreMeaning": "Limited OPT rule support subject to eligibility, actual-use and cutoff bridges; no saved raw original."
+    }
+  ],
+  "rootWebCrosschecks": [
+    {
+      "url": "https://www.norden.org/da/info-norden/guide-flytte-til-sverige",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": null,
+      "originalSha256": null,
+      "scope": "Root direct web corroboration, not a saved raw original or authenticated cutoff bytes."
+    },
+    {
+      "url": "https://www.norden.org/da/info-norden/bank-i-sverige",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": null,
+      "originalSha256": null,
+      "scope": "Root direct web corroboration, not a saved raw original or authenticated cutoff bytes."
+    },
+    {
+      "url": "https://www.helsenorge.no/betaling-for-helsetjenester/betaling-pa-sykehus-og-poliklinikk/",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": null,
+      "originalSha256": null,
+      "scope": "Root direct web corroboration, not a saved raw original or authenticated cutoff bytes."
+    }
+  ],
+  "webFailureDiagnostics": [
+    {
+      "url": "https://api.politiet.no/nyhetspublisering/public/filer/dokument/dec851b5-5bb5-494e-8dc3-bde97be431b4",
+      "failure": "web InternalError, between raw attempts, third mechanism failure STOP",
+      "originalBytes": null,
+      "originalSha256": null
+    },
+    {
+      "url": "https://cdn.sanity.io/files/b0ujrg14/production/c4d2f9ede98bfba52c8fe72011f866eb34b6b134.pdf",
+      "failure": "web PDF content length too large, raw valid separately",
+      "originalBytes": null,
+      "originalSha256": null
+    },
+    {
+      "url": "https://eur04.safelinks.protection.outlook.com/ (exact link in official municipal report index)",
+      "failure": "web SafeLinks400, decoded original PDF obtained separately",
+      "originalBytes": null,
+      "originalSha256": null
+    }
+  ],
+  "navigationOnly": [
+    {
+      "url": "https://oslokommune.framsikt.net/2025/bre/mr-202512-brann-_og_redningsetaten",
+      "observation": "web only iframe/body shell, no 2025 fire report facts adopted",
+      "originalBytes": null,
+      "originalSha256": null
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "candidateId": 596,
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allGeometryCount": 9031,
+    "targetGeometrySha256": "5ba19a5320072ab870d2c950788ae84379dc61f7519fd0b6a930fe55af05957c",
+    "referencePoints": [
+      {
+        "label": "centre",
+        "longitude": 10.7522,
+        "latitude": 59.9139,
+        "approximate": true,
+        "fuaMatches": [596]
+      },
+      {
+        "label": "Rikshospitalet",
+        "longitude": 10.7166,
+        "latitude": 59.9495,
+        "approximate": true,
+        "fuaMatches": [596]
+      },
+      {
+        "label": "Radiumhospitalet",
+        "longitude": 10.6634,
+        "latitude": 59.9314,
+        "approximate": true,
+        "fuaMatches": [596]
+      },
+      {
+        "label": "Oset",
+        "longitude": 10.7863,
+        "latitude": 59.9656,
+        "approximate": true,
+        "fuaMatches": [596]
+      },
+      {
+        "label": "Gardermoen",
+        "longitude": 11.1004,
+        "latitude": 60.1939,
+        "approximate": true,
+        "fuaMatches": [596]
+      }
+    ],
+    "scope": "Approximate analyst points, not provider catchments, exact incidents or all FUA patient/resident denominators. Geography applicability independently revocable."
+  },
+  "scopeCompletionReview": {
+    "dimensionCount": 8,
+    "subpillarCount": 31,
+    "allDimensionSemanticsConsideredWithinBoundedReview": true,
+    "allSubpillarsHaveOutcomeMeasurements": false,
+    "allSubpillarsFullyReviewed": false,
+    "eightDimensionScoresComplete": false,
+    "coverageTable": [
+      {
+        "dimension": "PCS",
+        "subpillar": "heat_humidity",
+        "status": "reviewed_context",
+        "finding": "R03物理10仅一般自然风险/热描述；没有本轮本地湿球或实测热保护效果，不称充分审阅",
+        "score": null
+      },
+      {
+        "dimension": "PCS",
+        "subpillar": "flood_sea_level",
+        "status": "reviewed_partial",
+        "finding": "R03物理10/12-16洪水/风暴潮情景；R04实际输水/蓄水强化和煮沸处置，情景非实际损失率",
+        "score": null
+      },
+      {
+        "dimension": "PCS",
+        "subpillar": "geophysical",
+        "status": "reviewed_partial",
+        "finding": "R03物理12地震/快黏土情景与18 Carl Berner滑坡处置回顾；无全区地质防护普测",
+        "score": null
+      },
+      {
+        "dimension": "PCS",
+        "subpillar": "severe_weather_wildfire",
+        "status": "reviewed_partial",
+        "finding": "R03森林火灾情景，S07物理21实际年度联合训练/装备缺口；演练不当成功扑救率",
+        "score": null
+      },
+      {
+        "dimension": "GSS",
+        "subpillar": "organized_violence",
+        "status": "reviewed_not_fully",
+        "finding": "R03物理11/12有恐袭/骚乱情景及8历史动员；S17物理20本地无人机试行、27反恐共同行动背景，地方2025刑情原件不可读，不能继承全国30次阻止暴力",
+        "score": null
+      },
+      {
+        "dimension": "GSS",
+        "subpillar": "regional_conflict",
+        "status": "reviewed_context",
+        "finding": "S17物理19/20全国安全政治/海上情报背景与S07首都大型事件准备，非本地战争损伤或已无风险",
+        "score": null
+      },
+      {
+        "dimension": "GSS",
+        "subpillar": "strategic_exposure",
+        "status": "reviewed_partial",
+        "finding": "R04现实单源弱点及已强化安全合作；S17物理27 Oslo大撤离计划继续2026，未来不是完成保护",
+        "score": null
+      },
+      {
+        "dimension": "ISR",
+        "subpillar": "governance",
+        "status": "reviewed_partial",
+        "finding": "S02物理13-14实际文件要求变更/低补助申诉均获支持，同时受检经济建议机构违法；不把申诉数当成功率",
+        "score": null
+      },
+      {
+        "dimension": "ISR",
+        "subpillar": "adaptive_capacity",
+        "status": "reviewed_partial",
+        "finding": "R01真实支付/服务；S10物理34数字居家随访扩12/15区，未来资助平台另列",
+        "score": null
+      },
+      {
+        "dimension": "ISR",
+        "subpillar": "social_cohesion",
+        "status": "reviewed_partial",
+        "finding": "S02物理10/12数字与群体触达障碍；R01家庭救助按资格而非中位居民全获助",
+        "score": null
+      },
+      {
+        "dimension": "ISR",
+        "subpillar": "emergency_recovery",
+        "status": "reviewed_partial",
+        "finding": "R03实际疫情/滑坡协同回顾；S07高风险住户实际措施与联合训练/人员器材不足并列",
+        "score": null
+      },
+      {
+        "dimension": "RES",
+        "subpillar": "water",
+        "status": "reviewed_partial",
+        "finding": "R04物理2/22实际供给、短煮沸/新管和蓄水及未解决备用；不是全FUA统一水费或全部失供",
+        "score": null
+      },
+      {
+        "dimension": "RES",
+        "subpillar": "food",
+        "status": "reviewed_partial",
+        "finding": "R01实际25亿NOK中约三分之一生活品/食品服装卫生；S02文件门槛实际可能阻断帮助，不当普通居民食品短缺率",
+        "score": null
+      },
+      {
+        "dimension": "RES",
+        "subpillar": "energy",
+        "status": "reviewed_partial",
+        "finding": "S08物理28自2025-10已可选支持；S19 Sept2026净价例子97.95 vs149.39 øre/kWh，非中位家庭全部用能账单",
+        "score": null
+      },
+      {
+        "dimension": "RES",
+        "subpillar": "supply_chain",
+        "status": "reviewed_not_fully",
+        "finding": "水务单源/能源供应和药物交付问题有观察，食品所有物流共同源/通常储备未充分展开，不用存在供应商代全链",
+        "score": null
+      },
+      {
+        "dimension": "MED",
+        "subpillar": "access",
+        "status": "reviewed_partial",
+        "finding": "S01物理11真实等待改善；S13临床不同人群细分/预约89%按期，S02实际必要服务等待，非仅未来预算",
+        "score": null
+      },
+      {
+        "dimension": "MED",
+        "subpillar": "routine_quality",
+        "status": "reviewed_partial",
+        "finding": "S01物理13实际事件/改善/赔偿，非报告事件占入院风险；S02独立反证和沟通纠错，非投诉量直接评分",
+        "score": null
+      },
+      {
+        "dimension": "MED",
+        "subpillar": "specialist_capacity",
+        "status": "reviewed_partial",
+        "finding": "S01临床必要交付与R02已实行淋巴瘤路径；高成本实际付款非全适应证或全居民都获CAR-T",
+        "score": null
+      },
+      {
+        "dimension": "MED",
+        "subpillar": "system_continuity",
+        "status": "reviewed_partial",
+        "finding": "S13跨层级接续、再入院增/药物交付问题；S16公共住院免共付/2026上限及自费例外，非私营全包",
+        "score": null
+      },
+      {
+        "dimension": "LON",
+        "subpillar": "translation",
+        "status": "reviewed_partial",
+        "finding": "R02物理16已实行本区/北区淋巴瘤治疗和住址医院药款；S09本地细胞生产运行不把所有制品当已回输",
+        "score": null
+      },
+      {
+        "dimension": "LON",
+        "subpillar": "trial_maturity",
+        "status": "reviewed_partial",
+        "finding": "R07物理14成熟淋巴瘤长期人体及38监护/毒性；国外成熟证据不当本地队列，R06实验新病种分开",
+        "score": null
+      },
+      {
+        "dimension": "LON",
+        "subpillar": "regulatory_adoption",
+        "status": "reviewed_not_fully",
+        "finding": "已有公共实施/付款描述而非逐品牌本地许可名单；成熟疾病类适配为可撤推定，不复制法国认可/支付",
+        "score": null
+      },
+      {
+        "dimension": "LON",
+        "subpillar": "resident_access",
+        "status": "reviewed_partial",
+        "finding": "R02住址医院药款+S16普通公共住院/认可随访共付规则，S13接续；专门CAR-T净监护/住宿有限桥可撤",
+        "score": null
+      },
+      {
+        "dimension": "TEC",
+        "subpillar": "knowledge_output",
+        "status": "reviewed_partial",
+        "finding": "R07疾病人体知识、S09本地转化操作与S01/13实际研究，发表/雇员数量仅上下文不等质量",
+        "score": null
+      },
+      {
+        "dimension": "TEC",
+        "subpillar": "industry_density",
+        "status": "reviewed_context",
+        "finding": "S09制造/研究和S08部分实际能源技术，仅局部产用，非全FUA企业密度/销售存活率",
+        "score": null
+      },
+      {
+        "dimension": "TEC",
+        "subpillar": "digital_infrastructure",
+        "status": "reviewed_partial",
+        "finding": "S10物理34真实DHO12/15区/已用药盒和监护；S13真实多媒体试点与物流缺陷，不是全城宽带普测",
+        "score": null
+      },
+      {
+        "dimension": "TEC",
+        "subpillar": "diffusion",
+        "status": "reviewed_partial",
+        "finding": "已实际普通护理数字扩散、S17物理20当地无人机试行，S02数字障碍；未部署AI/未来2026广扩不当已用",
+        "score": null
+      },
+      {
+        "dimension": "OPT",
+        "subpillar": "transport_redundancy",
+        "status": "reviewed_partial",
+        "finding": "S10真实当地公交和道路改善/S17物理28 Gardermoen2025实际边境运行；非全部国际路线冗余，机场/中心/医院在596独立核",
+        "score": null
+      },
+      {
+        "dimension": "OPT",
+        "subpillar": "legal_mobility",
+        "status": "reviewed_partial",
+        "finding": "W01/02/03北欧公民瑞典无需居留许可，超过一年登记/亲自身份核；非挪威长期外籍享同权",
+        "score": null
+      },
+      {
+        "dimension": "OPT",
+        "subpillar": "asset_portability",
+        "status": "reviewed_partial",
+        "finding": "S04/S12 DNB个人转出/转入/SEPA/SEK与FX/费用条件；W04瑞典基本账户身份核/投诉权，法定权利非保证立即开通",
+        "score": null
+      },
+      {
+        "dimension": "OPT",
+        "subpillar": "network_continuity",
+        "status": "reviewed_partial",
+        "finding": "S11/20/21实际BankID双方法、外国SIM含瑞典、手机号需银行注册及失设备恢复；普通外国网络/费用适配为有限推定，不移挪威无限漫游",
+        "score": null
+      }
+    ],
+    "statusCounts": {
+      "reviewed_context": 3,
+      "reviewed_partial": 25,
+      "reviewed_not_fully": 3
+    }
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-oslo-score-completion-review.md",
+    "sha256": "b5e0bc6dcaca11ee828db2abac78f9064b98678a578620794b00df7c6ecc7974",
+    "reviewedOn": "2026-10-15",
+    "validOriginalCount": 26,
+    "sourceManifestSha256": "e2f163a279789fedd7f223ac4e3241ef94875aa6c82d9a8c1d74dcf1c9bd054e",
+    "handoffSha256": "b4e6683bb9446811a5b99dc812495c5ee1f43df07c2442e531365952199f8c86",
+    "rootVerifiedFull9031AndOriginals": true,
+    "stageArtifacts": [
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/report.md",
+        "bytes": 16932,
+        "sha256": "77ecda303f7115ee51a550d926264fd9a0ab1cee29bc0cf566353a545f3a5bb5"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/source-manifest.json",
+        "bytes": 26249,
+        "sha256": "536d6b70b5581f45b4f90a2fd7938d3badba340ae96a0a82aeba8bd7485adabe"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/candidate-handoff.json",
+        "bytes": 18250,
+        "sha256": "b4e6683bb9446811a5b99dc812495c5ee1f43df07c2442e531365952199f8c86"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/handoff-manifest.json",
+        "bytes": 19448,
+        "sha256": "360c6ffe1c8f36883804be7953633c18f7ef832fc61c2b579e9d9c096ad088cf"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/boundary-check.json",
+        "bytes": 1408,
+        "sha256": "823afa057d39e09b94f22276eee97708731db5cb54e3c91171e44e52053c3acc"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/oslo/root/independent-check.json",
+        "bytes": 933,
+        "sha256": "8547704cd1de9d7b3651f82e38a243a9067b28ba36309132eb962c98b1685e9d"
+      }
+    ],
+    "researchReport": "docs/cci-oslo-priority-review.md",
+    "researchReportSha256": "07e31db54cbf6b70b1c519fde61db255f8213237efef6450fc3013eb76d45863"
+  },
+  "rootScopeReview": {
+    "waterBackupCompletionYear": 2028,
+    "futureWaterBackupCountedAsCompleted": false,
+    "allInspectedNavEconomicAdviceServicesUnlawful": true,
+    "navSpecificDocumentationAndLowAwardCorrectionsRetained": true,
+    "copayCap3278CoversAllMedicalCosts": false,
+    "eventSeriousShare2_3IsAdmissionHarmRisk": false,
+    "compensation41Of473IsAllPatientRisk": false,
+    "dho12Of15IsResidentCoverage": false,
+    "fourAiImagingSolutionsDeployedByEnd2025": false,
+    "carT2025ActualRegionalAndPayerDescription": true,
+    "foreignFrenchPaymentTransferredToNorway": false,
+    "localEveryProduct2026ListVerified": false,
+    "swedishAndNorwegianBankIdSame": false,
+    "dnb160IsOrdinaryTransferFee": false,
+    "heating50OreIsTotalNetUnitPrice": false,
+    "fixedAdultPortrait": false,
+    "rootPdfPixelsViewed": [
+      "oslo-water-2024.pdf:2",
+      "oslo-ombud-2025.pdf:13",
+      "oslo-ombud-2025.pdf:14",
+      "ous-annual-2025.pdf:11",
+      "ous-annual-2025.pdf:13",
+      "oslo-summary-2025.pdf:34",
+      "ous-budget-2026.pdf:16",
+      "shared-kymriah-has2023.pdf:14",
+      "shared-kymriah-has2023.pdf:38"
+    ]
+  },
+  "sensitivity": {
+    "withdraw15pctKnown": [36, 76],
+    "withdraw10pctKnown": [39, 74],
+    "known15pctTo40": [42, 67],
+    "known10pctTo40": [43, 68],
+    "allBridgesRejected": [0, 100]
+  }
+}
