@@ -138,6 +138,7 @@ const realCases = [
   "manchester",
   "houston",
   "san-diego",
+  "austin",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -267,6 +268,7 @@ const [
   manchester,
   houston,
   sanDiego,
+  austin,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -3459,3 +3461,44 @@ const sanDiegoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResul
 );
 assert.equal(sanDiegoPosition.bestPosition, 1);
 assert.equal(sanDiegoPosition.worstPosition, rankAudit.candidateCount);
+
+const austinCase = realCases.find(c => c.candidateId === 5349);
+assert.equal(
+  austinCase.priorityCompletionReview.sha256,
+  digest(austinCase.priorityCompletionReview.path)
+);
+assert.equal(
+  austinCase.priorityCompletionReview.researchReportSha256,
+  digest(austinCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(austin, { PCS: 60, ISR: 60, MED: 60, TEC: 60 });
+assert.deepEqual(total(austin), { center: null, lower: 33, upper: 78 });
+assert.equal(austinCase.unknownWeight, 45);
+assert.equal(austinCase.coverageReview.length, 31);
+assert.equal(austinCase.sourceSnapshots.length, 20);
+assert.equal(austinCase.priorityCompletionReview.failedConcreteOriginalCount, 3);
+assert.equal(austinCase.priorityCompletionReview.budgetIncompleteRouteCount, 1);
+assert.equal(austinCase.rootScopeReview.rootPdfPageCount, 19);
+assert.equal(austinCase.countryIso, "USA");
+for (const [id, lower, upper] of [
+  ["PCS", 24, 84],
+  ["ISR", 24, 84],
+  ["MED", 24, 84],
+  ["TEC", 27, 82],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...austin };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+for (const [id, lower, upper] of [
+  ["PCS", 30, 75],
+  ["ISR", 30, 75],
+  ["MED", 30, 75],
+  ["TEC", 31, 76],
+] as const)
+  assert.deepEqual(total({ ...austin, [id]: 40 }), { center: null, lower, upper });
+const austinPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (c: { efua_id: string }) => c.efua_id === "5349"
+);
+assert.equal(austinPosition.bestPosition, 1);
+assert.equal(austinPosition.worstPosition, rankAudit.candidateCount);

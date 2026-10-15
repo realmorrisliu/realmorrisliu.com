@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 86,
+    "conditionalCaseCount": 87,
     "completeConditionalCaseCount": 19,
-    "partialCaseCount": 67,
-    "unassessedCount": 8945,
+    "partialCaseCount": 68,
+    "unassessedCount": 8944,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -735,8 +735,13 @@
       "sha256": "d897cf3afa5faf1cbe1232c23b9f9ae53ba75c13120b5a3678654c21fc775e2e",
       "provenance": "cci-san-diego-score-completion-review.md",
       "provenanceSha256": "2dfb5223ca4cb81c0b72b1855a7f9559bdf3d42b0363286030e5920bc74a656e"
+    },
+    "cci-local-2026-austin-case.json": {
+      "sha256": "b0fa06e195e626d6c9e4e5229dae64d4da0c7c67b982ec35441e7515d61f6546",
+      "provenance": "cci-austin-score-completion-review.md",
+      "provenanceSha256": "65958c0c7f4e72c8c0b2b487e0a1c10ac31b7d2e2af9b3400a66ee1d6d186a8f"
     }
   },
-  "scriptSha256": "26660167fe2657500d6bae36ca071a10fb3dc1e9a86a24813d2e5d1c122bd54a",
-  "csvSha256": "c12099a25d64ccc4e3d8a0d6d5a49283fb07f22501cb09bb24532c2dec52438d"
+  "scriptSha256": "7678e8ddd423af218260c33f22f846b6a3d924a586ab48823797f251499d7fa2",
+  "csvSha256": "cf765461166d42636440de1e3ade1047931ce8f18db1debaee0819a3287f1ebf"
 }

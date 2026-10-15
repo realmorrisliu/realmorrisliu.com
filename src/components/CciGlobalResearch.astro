@@ -96,6 +96,7 @@ import daejeon from "../../docs/data/cci-local-2026-daejeon-case.json";
 import manchester from "../../docs/data/cci-local-2026-manchester-case.json";
 import houston from "../../docs/data/cci-local-2026-houston-case.json";
 import sanDiego from "../../docs/data/cci-local-2026-san-diego-case.json";
+import austin from "../../docs/data/cci-local-2026-austin-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -196,8 +197,10 @@ const cases = [
   manchester,
   houston,
   sanDiego,
+  austin,
 ];
 const caseNamesZh: Record<number, string> = {
+  [austin.candidateId]: "奥斯汀功能区",
   [sanDiego.candidateId]: "圣迭戈相关美国功能区",
   [houston.candidateId]: "休斯敦功能区",
   [manchester.candidateId]: "曼彻斯特功能区",
@@ -390,6 +393,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [austin.candidateId]: [
+    zh
+      ? "奥斯汀防护／制度／医疗／技术条件60，安全／资源／专项转化／退出未知；原权重贡献33、数学域33—78，无完整总分。实际防洪、2025风暴恢复、必要诊疗与知识及数字公共服务产用，同数日停电、信息触达和照护缺口一起判断。"
+      : "Austin has conditional 60 for PCS, ISR, MED and TEC; GSS, RES, LON and OPT remain unknown. Its original-weight contribution is 33 and arithmetic domain 33–78, without a complete total. Delivered flood protection, 2025 storm recovery, necessary care, knowledge translation and digital public services are assessed alongside outages, information and care gaps.",
+    zh
+      ? "医疗依赖普通现实网络、保险后净费用与家庭照护可承担的可撤判断；旧合同不当2026续约证，及时性、抑郁缓解和缩减转介保留40替代。历史理赔地址不认证当前专项给药，未来外地扩产不搬回奥斯汀。原86案不变，全球入围未证明。"
+      : "MED depends on revocable judgments about ordinary available networks, affordable net costs and family care. Historical contracts do not prove 2026 renewal; timeliness, depression outcomes and reduced referrals support a 40 alternative. Claims addresses do not certify current local treatment, and future facilities elsewhere are not Austin output. The previous 86 cases are unchanged; global qualification is unproven.",
+  ],
   [sanDiego.candidateId]: [
     zh
       ? "圣迭戈相关美国功能区防护／制度条件40，医疗／专项转化／技术条件60，安全／资源／退出未知；原权重贡献33、数学域33—68，无完整总分。洪灾救助与恢复余障、现行临床治疗和实际技术产用一起判断。"
