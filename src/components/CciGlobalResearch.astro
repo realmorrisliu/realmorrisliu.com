@@ -83,6 +83,7 @@ import brussels from "../../docs/data/cci-local-2026-brussels-case.json";
 import hamburg from "../../docs/data/cci-local-2026-hamburg-case.json";
 import lyon from "../../docs/data/cci-local-2026-lyon-case.json";
 import leuven from "../../docs/data/cci-local-2026-leuven-case.json";
+import nagoya from "../../docs/data/cci-local-2026-nagoya-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -170,8 +171,10 @@ const cases = [
   hamburg,
   lyon,
   leuven,
+  nagoya,
 ];
 const caseNamesZh: Record<number, string> = {
+  [nagoya.candidateId]: "名古屋功能区",
   [leuven.candidateId]: "鲁汶功能区",
   [lyon.candidateId]: "里昂功能区",
   [hamburg.candidateId]: "汉堡功能区",
@@ -351,6 +354,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [nagoya.candidateId]: [
+    zh
+      ? "名古屋的制度、医疗、技术和退出能力取条件60；物理安全、地缘安全、资源和长寿转化仍未知。已知加权小计30，数学范围30—80，无完整总分。实际暴雨响应、必要诊疗、现行保障付款和有限产业应用支持判断，积压、转诊与费用障碍仍保留。"
+      : "Nagoya has conditional scores of 60 for ISR, MED, TEC and OPT; PCS, GSS, RES and LON remain unknown. The known weighted subtotal is 30, with an arithmetic domain of 30–80 and no total estimate. Actual storm response, necessary care, current insured payment and limited industry links support the judgments; backlogs, referral and cost barriers remain.",
+    zh
+      ? "截止后住宅损害数和2027年费用表未回填。造血治疗次数不证明成熟长寿干预；软件功能声称也不等当地患者已采用。退出判断补核了境外收费通信，但仍依赖普通预算、实际资格及出境前账户准备；拒绝任一维的必要假设，该维即恢复未知。"
+      : "Post-cutoff housing losses and the 2027 fee table are excluded from current judgments. Transplant counts do not establish mature longevity interventions; a software feature claim does not establish local patient uptake. OPT includes checked paid overseas communications but still depends on ordinary resources, actual eligibility and pre-departure account preparation. Rejecting a necessary assumption restores that dimension to unknown.",
+  ],
   [leuven.candidateId]: [
     zh
       ? "鲁汶的制度、医疗、长寿转化准备、技术和退出能力暂定为条件60；物理安全、地缘安全和资源仍未知。已知加权小计36，未知部分使数学范围为36—76，无完整总分。实际服务、诊疗与付款、产业应用和迁移路径支持有限判断；等待、照护接续和费用限制仍保留。"

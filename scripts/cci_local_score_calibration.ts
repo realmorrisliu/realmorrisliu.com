@@ -125,6 +125,7 @@ const realCases = [
   "hamburg",
   "lyon",
   "leuven",
+  "nagoya",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -241,6 +242,7 @@ const [
   hamburg,
   lyon,
   leuven,
+  nagoya,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2756,3 +2758,37 @@ for (const dimension of ["ISR", "MED", "LON", "TEC", "OPT"] as const) {
 assert.equal(leuvenCase.rootScopeReview.transmet73And9CertifiedAsWholeRandomizedSet, false);
 assert.equal(leuvenCase.rootScopeReview.stemCellCohortProvesHealthyLifeExtension, false);
 assert.equal(leuvenCase.rootScopeReview.sourceGvhdWordingAdoptedAsBeneficialMechanism, false);
+
+const nagoyaCase = realCases.find(c => c.candidateId === 4532);
+assert.equal(
+  nagoyaCase.priorityCompletionReview.sha256,
+  digest(nagoyaCase.priorityCompletionReview.path)
+);
+assert.equal(
+  nagoyaCase.priorityCompletionReview.researchReportSha256,
+  digest(nagoyaCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(nagoya), { center: null, lower: 30, upper: 80 });
+for (const dimension of ["ISR", "MED", "TEC", "OPT"] as const) {
+  const withdrawn = { ...nagoya };
+  delete withdrawn[dimension];
+  const is15 = weights[dimension] === 15;
+  assert.deepEqual(total(withdrawn), {
+    center: null,
+    lower: is15 ? 21 : 24,
+    upper: is15 ? 86 : 84,
+  });
+}
+assert.equal(nagoyaCase.rootScopeReview.currentPriceUses2015LocalTable, false);
+assert.equal(nagoyaCase.rootScopeReview.future2027PaymentTableUsedAsCurrent, false);
+assert.equal(nagoyaCase.rootScopeReview.rainOct14Housing690UsedAtCutoff, false);
+assert.equal(nagoyaCase.rootScopeReview.tecImplementationClaimIsIndependentLocalUptakeAudit, false);
+assert.equal(nagoyaCase.rootScopeReview.domesticRoamingAloneProvesOverseasContinuity, false);
+assert.equal(
+  nagoyaCase.sourceSnapshots.find((s: { id: string }) => s.id === "S14").usedForScore,
+  false
+);
+assert.equal(
+  nagoyaCase.sourceSnapshots.find((s: { id: string }) => s.id === "N03").usedForScore,
+  true
+);

@@ -4,10 +4,10 @@
   "evidenceCutoff": "2026-10-10",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
-  "conditionalCaseCount": 73,
+  "conditionalCaseCount": 74,
   "completeConditionalCaseCount": 18,
-  "partialCaseCount": 55,
-  "unassessedCount": 8958,
+  "partialCaseCount": 56,
+  "unassessedCount": 8957,
   "weights": {
     "PCS": 15,
     "GSS": 15,
@@ -490,6 +490,15 @@
         {
           "efua_id": "4523",
           "source_name": "Barcelona",
+          "center": null,
+          "lower": 30.0,
+          "upper": 80.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "4532",
+          "source_name": "Nagoya",
           "center": null,
           "lower": 30.0,
           "upper": 80.0,
@@ -1160,6 +1169,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "4532",
+          "source_name": "Nagoya",
+          "center": null,
+          "lower": 30.0,
+          "upper": 80.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "4736",
           "source_name": "Munich",
           "center": null,
@@ -1816,6 +1834,15 @@
         {
           "efua_id": "4523",
           "source_name": "Barcelona",
+          "center": null,
+          "lower": 30.0,
+          "upper": 80.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "4532",
+          "source_name": "Nagoya",
           "center": null,
           "lower": 30.0,
           "upper": 80.0,
@@ -2486,6 +2513,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "4532",
+          "source_name": "Nagoya",
+          "center": null,
+          "lower": 21.0,
+          "upper": 86.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "4736",
           "source_name": "Munich",
           "center": null,
@@ -3142,6 +3178,15 @@
         {
           "efua_id": "4523",
           "source_name": "Barcelona",
+          "center": null,
+          "lower": 30.0,
+          "upper": 80.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "4532",
+          "source_name": "Nagoya",
           "center": null,
           "lower": 30.0,
           "upper": 80.0,
@@ -3812,6 +3857,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "4532",
+          "source_name": "Nagoya",
+          "center": null,
+          "lower": 21.0,
+          "upper": 86.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "4736",
           "source_name": "Munich",
           "center": null,
@@ -4475,6 +4529,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "4532",
+          "source_name": "Nagoya",
+          "center": null,
+          "lower": 30.0,
+          "upper": 80.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "4736",
           "source_name": "Munich",
           "center": null,
@@ -5131,6 +5194,15 @@
         {
           "efua_id": "4523",
           "source_name": "Barcelona",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "4532",
+          "source_name": "Nagoya",
           "center": null,
           "lower": 24.0,
           "upper": 84.0,
@@ -5801,6 +5873,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "4532",
+          "source_name": "Nagoya",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "4736",
           "source_name": "Munich",
           "center": null,
@@ -6464,6 +6545,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "4532",
+          "source_name": "Nagoya",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "4736",
           "source_name": "Munich",
           "center": null,
@@ -6668,7 +6758,7 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "d3d7828d925fa70b32d18fae109689b91ab513cdf45df33ab5fadd9352a86e99",
+    "cci-global-evidence-matrix.csv": "74a013796e196c3b58608a2ad8b315b05ef7b8b5974d1c8f540ebeb3ec19a1c4",
     "cci-legal-mobility-rules.json": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "cci-legal-mobility.md": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e",
     "cci-local-2026-singapore-case.json": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -6817,12 +6907,14 @@
     "cci-lyon-score-completion-review.md": "7c57a6f38a017728bf846b14fba9c6886c27e89058b3cdc4cd80251b11093bc0",
     "cci-local-2026-leuven-case.json": "f1c37ae7cea366281b41ed3485d9e82cfdb864bfe172cc9536d582078c3c24ab",
     "cci-leuven-score-completion-review.md": "dfe7516ceb6c1779b3d9487f4bd0c1d0920541b6fbf8cf689e1e02e1608adf3d",
+    "cci-local-2026-nagoya-case.json": "3f7e10461a92cdf0be7a933ac3e2855e1ad6cb47037280250b53c54fd173d8be",
+    "cci-nagoya-score-completion-review.md": "78e5af5784387f89ae01947ebb28443584ed8c474a90ff16eafed085458c2065",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "f477205905303c519c9abf7dad4a9489441538946d9f023b56af92ed9a78a880",
+    "cci-global-evidence-matrix.json": "9d0d74ecc084d682f02825c1a8b5b59e5d4590e53197eb8e57b6fc9573d047d5",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "78eb84516930d429ff49e5c8015010c6a6eb3e5ad1dcf9b366161bf0893cb709"
+    "cci-local-2026-scoring-calibration.md": "44c232d1b065d893fd827047e4e04e8f85ab8dfa4d19b8f5d7e53a64ec296a3e"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "dde629862820fd4326ddcc155b82293675baf197c2d4c00384ba5c75772d080b",
+  "csvSha256": "ac76fc14e03445b11f2a9002f325d17e4d8442475dfd38cd0f9551a77040d9b8",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }

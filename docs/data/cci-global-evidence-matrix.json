@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 73,
+    "conditionalCaseCount": 74,
     "completeConditionalCaseCount": 18,
-    "partialCaseCount": 55,
-    "unassessedCount": 8958,
+    "partialCaseCount": 56,
+    "unassessedCount": 8957,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -670,8 +670,13 @@
       "sha256": "f1c37ae7cea366281b41ed3485d9e82cfdb864bfe172cc9536d582078c3c24ab",
       "provenance": "cci-leuven-score-completion-review.md",
       "provenanceSha256": "dfe7516ceb6c1779b3d9487f4bd0c1d0920541b6fbf8cf689e1e02e1608adf3d"
+    },
+    "cci-local-2026-nagoya-case.json": {
+      "sha256": "3f7e10461a92cdf0be7a933ac3e2855e1ad6cb47037280250b53c54fd173d8be",
+      "provenance": "cci-nagoya-score-completion-review.md",
+      "provenanceSha256": "78e5af5784387f89ae01947ebb28443584ed8c474a90ff16eafed085458c2065"
     }
   },
-  "scriptSha256": "d92df9cf4ede855179cb7783b89800800393e83553ca0035ff31a1ccdd495ea5",
-  "csvSha256": "d3d7828d925fa70b32d18fae109689b91ab513cdf45df33ab5fadd9352a86e99"
+  "scriptSha256": "01943f77eaa969ba62aaa02b32b9fca8b05ab677265c96fa7b26f3429c227817",
+  "csvSha256": "74a013796e196c3b58608a2ad8b315b05ef7b8b5974d1c8f540ebeb3ec19a1c4"
 }
