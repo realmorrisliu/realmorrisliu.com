@@ -1,0 +1,1933 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 3304,
+  "name": "Manchester",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-16",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "2026ordinaryBritishcitizen/usual longterm localresident/localmedianincome/usualeffectivecoverage; nofixedage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-manchester-score-completion-review.md",
+  "publishedInputCommit": "a570b55a9087bd867f28b8171899be50ca797052",
+  "researchFrozenInputCommit": "e5b8f2709ceebda85950cfa4c551f59f36a03b7b",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "weight": 15,
+      "score": 40,
+      "conditionalAlternatives": [60],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "heat_humidity": "context",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "partial"
+      },
+      "rationale": "实际洪水使可适配3304的Didsbury/Stockport建筑断水断电、危险水流并须撤离；舟艇/山地救援和未报告严重伤亡是重要保护，但没有使这些地点在事件中仍可安全居住，连同真实野火响应形成仍有明显局地约束的有限40。不是以灾害出现一次或少数受害自动整维扣分。",
+      "assumption": "接受这些关键居住/通道局地危害对普通长期居民选择空间具有重要作用且未见已完成针对性工程消除该约束的有限延续；不要求受害过半。若认为已运行保护已将主要相关危险合理缓解、剩余仅特定情形可60；拒绝地域重要性/延续桥撤未知。",
+      "scoreStatus": "conditional_root_adopted",
+      "coverageReview": [
+        {
+          "dimension": "PCS",
+          "subpillar": "heat_humidity",
+          "status": "context",
+          "sourceIds": ["S07"],
+          "fullyMeasured": false,
+          "note": "FRS identifies warmer/drier summers; no humidity/indoorhealthmodel, not nohazard."
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "flood_sea_level",
+          "status": "partial",
+          "sourceIds": ["S07", "S04"],
+          "fullyMeasured": false,
+          "note": "Jan2025Didsbury/Stockport actual unsafe floodwater/power-watercuts/evacuation despite effectiveboat/mountainrescue; approximatepointscopefits3304, notWiganregionaltotal."
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "geophysical",
+          "status": "not_started",
+          "sourceIds": [],
+          "fullyMeasured": false,
+          "note": "Noverified earthquakes/landslide/buildingscope; notzero."
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "severe_weather_wildfire",
+          "status": "partial",
+          "sourceIds": ["S07"],
+          "fullyMeasured": false,
+          "note": "ActualMarch2025moorlandfires andspecialistvehicles/liveburnresponse; 10km²event spansWestYorkshire/GMnotall3304; noFUAresidentexposurerate."
+        }
+      ],
+      "sourceIds": ["S04", "S07"]
+    },
+    {
+      "id": "GSS",
+      "weight": 15,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "insufficient_direction_not_fullmeasurement",
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "rationale": "真实Arena后整改/每周联合训练说明保护能力已变化，不能保留2017失效为当前事实；但本轮仍未形成现实暴力影响较低及区域/战略普通影响方向。主未知，不以没有当前攻击记录或有演练补60。",
+      "assumption": "40需有范围的重要未缓解组织/外溢战略约束，60允许有限较低现实影响与适配保护判断，不需每节点成功攻击或全区零风险普测。现有整改事实保留，不冒全警消整改独立认证。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "GSS",
+          "subpillar": "organized_violence",
+          "status": "partial",
+          "sourceIds": ["S07"],
+          "fullyMeasured": false,
+          "note": "2017Arenamajorattack/2022coordinationfailures +2024/25 implementedtraining/weeklyjointpractice; agencyselfreport not currentlowimpactcoverage."
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "regional_conflict",
+          "status": "context",
+          "sourceIds": ["S07"],
+          "fullyMeasured": false,
+          "note": "Geopolitical/largeincidentpreparationcontext only, not actualregionalconflictimpact/airspace continuity inspected."
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "strategic_exposure",
+          "status": "partial",
+          "sourceIds": ["S07"],
+          "fullyMeasured": false,
+          "note": "High-impactlow-probabilityscenario and realresponderscoordinationreform; notproofallstrategicnodes/ordinaryimpactlow."
+        }
+      ],
+      "sourceIds": ["S07"]
+    },
+    {
+      "id": "ISR",
+      "weight": 15,
+      "score": 60,
+      "conditionalAlternatives": [40],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "rationale": "洪灾实际协调救援、从Arena暴露失效到已实施联合训练，加上真实食物/供暖/设备社区帮助、水务反馈及必要医疗接续，支持主要制度与服务能运作的有限60。帮助资格、临床等待和未完成供水备援仍有重要短板；实际交付不等全部需求解决。",
+      "assumption": "接受不同市镇/机构的真实执行对本FUA主要共享服务及普通长期居民的有限代表性，并延续到截止。普通居民并非依赖66+补助才有服务：水务修复/急救/通常NHS及公共端数字反馈普遍相关；弱势帮助证明触达但不当中位自动资格。若帮助后仍重要的群体/服务障碍被判足以明显约束执行可40；拒绝代表性/延续桥撤未知。",
+      "scoreStatus": "conditional_root_adopted",
+      "coverageReview": [
+        {
+          "dimension": "ISR",
+          "subpillar": "governance",
+          "status": "partial",
+          "sourceIds": ["W01", "S01", "S07", "S17"],
+          "fullyMeasured": false,
+          "note": "Actualaid payments/procedures, clinicalauditfeedback/electronicchecks, emergencycoordination; noentirecouncilcompletionrate."
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "adaptive_capacity",
+          "status": "partial",
+          "sourceIds": ["S04", "S07", "S08"],
+          "fullyMeasured": false,
+          "note": "Actualwater sensors/repair, floodboats/rescue, wildfirespecialistequipment, hospitaldischargeambulance; futureHARP/fullriskpilotnotcompleted."
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "social_cohesion",
+          "status": "partial",
+          "sourceIds": ["W01", "S17"],
+          "fullyMeasured": false,
+          "note": "Delivereddevice/SIM/food/communitygrants, means/ageconditions andincomehelpclaimburden retained; not allmedianeligible."
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "emergency_recovery",
+          "status": "partial",
+          "sourceIds": ["S07", "S08"],
+          "fullyMeasured": false,
+          "note": "Actualover100regionalincidentsrescueresponse no reportedseriousinjuriesforthatfloodperiod; someunsafeproperties/powerlossstillforcedevacuation, not everyhouseholdfullyrecovered."
+        }
+      ],
+      "sourceIds": ["S01", "S04", "S07", "S08", "S17", "W01"]
+    },
+    {
+      "id": "RES",
+      "weight": 10,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "insufficient_direction_not_fullmeasurement",
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      },
+      "rationale": "实际供水与降贫、食品和燃料帮助已经交付，但助后通常中位居民的食品/能源净预算方向未定；2023任国籍居民账单感受是重要反证背景，不能直接当2026中位公民贫困率。现有正反仍不能解释全维通常够用或明显受限，未知。",
+      "assumption": "不需完整家庭发票/全城无中断。有范围的普通预算与食物能源通常取得、帮助后残余重要性可裁60或40；水务平均中断或年龄限制单独均不自动决定整维。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "RES",
+          "subpillar": "water",
+          "status": "partial",
+          "sourceIds": ["S04"],
+          "fullyMeasured": false,
+          "note": "Operatorregion14m17saverageinterruptiontwoevents vs5mintarget, alternativevehicles/repairs; 84726lifted3%waterpoverty operatorclaim, noFUAorunique5yearsum."
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "food",
+          "status": "partial",
+          "sourceIds": ["W01"],
+          "fullyMeasured": false,
+          "note": "46000schoolholidaymeals/1mGBPfoodbanksupplies since2022/155000extrafoodsupport actualdelivery; subgroup/timewindow notusualmedianhouseholdfoodbudget."
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "energy",
+          "status": "partial",
+          "sourceIds": ["W01", "S07"],
+          "fullyMeasured": false,
+          "note": "1632age-qualifiedwinterpayments263000GBP withrecipientunitdifferences, powercutsinactualflood; no ordinary energybill/meansnetdirection."
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "supply_chain",
+          "status": "partial",
+          "sourceIds": ["S04", "S07"],
+          "fullyMeasured": false,
+          "note": "Aqueductconcentration andHARPpreferredbiddernotcompleted; realalternativewatersupply/rescue butnotindependentfood/energybackupforwholeFUA."
+        }
+      ],
+      "sourceIds": ["S04", "S07", "W01"]
+    },
+    {
+      "id": "MED",
+      "weight": 15,
+      "score": 40,
+      "conditionalAlternatives": [60],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "rationale": "通常NHS付款、真实常规/专科与临床接续确有保护；MFT仍只有55.29%符合62天紧急GP癌症首治、50.43%未治疗等候者符合18周（各原窗），加实际位置相关糖尿病路径差异/VTE评估缺口，缓解后仍有明显必要治疗及时性约束，有限40。没有把SHMI106无CI称显著超死或把报告事件率当居民伤害率。",
+      "assumption": "接受MFT重要服务与Christie专科/接续对本FUA普通必要治疗有有限代表性，并从2024/25到截止作可撤延续；不称全医院全人群失败。60替代要求有理由认为当前改善/临床分流使这些已知等待障碍通常可管理，不能只由免费或手术量抵消；拒绝代表性/延续桥撤未知。",
+      "scoreStatus": "conditional_root_adopted",
+      "coverageReview": [
+        {
+          "dimension": "MED",
+          "subpillar": "access",
+          "status": "partial",
+          "sourceIds": ["S01", "S08", "R01", "R02", "S17"],
+          "fullyMeasured": false,
+          "note": "Actualtreatment/waits, NHSordinarilyresidentusuallyfreehospital; prescriptions/dentaleye/travelnotallfree, helpmeans-qualified."
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "routine_quality",
+          "status": "partial",
+          "sourceIds": ["S01"],
+          "fullyMeasured": false,
+          "note": "SHMI106Oct23–Sep24noCI, age-specificreadmission6.6/5.0%notpooled, VTEassessment74.34%notprophylaxistreatmentcoverage, safetyincidentreportingdifferentdenominator."
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "specialist_capacity",
+          "status": "partial",
+          "sourceIds": ["S08", "S02"],
+          "fullyMeasured": false,
+          "note": "3891specialistoperations/ICUactual2024/25 andstandardCAR-T running, notFUAresidentsorallnecessaryspecialtiesguaranteed."
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "system_continuity",
+          "status": "partial",
+          "sourceIds": ["S08", "S01"],
+          "fullyMeasured": false,
+          "note": "ActualSaturdaydischarge/weekday10–20ambulance/trustedassessors, still postcode diabetespath variation andelectivewaits notresolvedbyfuturepilot."
+        }
+      ],
+      "sourceIds": ["R01", "R02", "S01", "S02", "S08", "S17"]
+    },
+    {
+      "id": "LON",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "rationale": "限定血液恶性肿瘤细胞重编程转化：TheChristie真实标准CAR-T自2019、2024/25仍增长及本地采集/监护，与HAS成熟人体疾病结果、NICE合资格采用和普通NHS形成有限60。不是所有抗癌治疗、健康延寿或把tisa人体结果当未命名本地产品/liso疗效。制造等待/毒性/司机陪护及非全额交通帮助仍重要。",
+      "assumption": "同Oxford尺度有限推定已运行本地标准血癌CAR-T至少一条与成熟疾病证据相符的通常NHS适应证；不认证某患者品牌/线次。2020guide仍被当前官方链接且2024/25服务运行，接受核心筛查监护流程有限延续；合资格普通居民通常能取得必要照护/驾驶或可达住宿并承担合理额外交通是明示可撤桥，不默认人人有免费家属/酒店。临床监护、可选本地检查、通常住院付款和公共交通缓解负担，仍不保证全部转诊到给药。拒桥撤未知；若司机/照护/等待帮助后仍为重要净约束可40，无需障碍主导。",
+      "scoreStatus": "conditional_root_adopted",
+      "coverageReview": [
+        {
+          "dimension": "LON",
+          "subpillar": "translation",
+          "status": "partial",
+          "sourceIds": ["S02", "S08", "S13"],
+          "fullyMeasured": false,
+          "note": "Realcellcollection/reprogramming/reinfusion standardcare +trials for bloodmalignancy; regenerative/diseaseplatformwithinreviewedscope, notallcancerorhealthylifespan."
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "trial_maturity",
+          "status": "partial",
+          "sourceIds": ["R07", "R06"],
+          "fullyMeasured": false,
+          "note": "HAS tisa JULIETIIlongfollowup/registry, ITTm99 vsITT167/actual115distinct; NICE liso comparativeprogressionbenefit withOSuncertain, notsameproductresult."
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "regulatory_adoption",
+          "status": "partial",
+          "sourceIds": ["S02", "S08", "R06"],
+          "fullyMeasured": false,
+          "note": "Localstandardcare since2019still2024/25actualgrowth; UKqualifiedliso recommendation notlocalbrandconfirmation; finiteatleastone disease-matchedlicensedpathassumption explicit."
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "resident_access",
+          "status": "partial",
+          "sourceIds": ["S13", "S17", "R01", "R02", "S15"],
+          "fullyMeasured": false,
+          "note": "Specialistclinic/referral/eligibility/manufacture4weeks/2–4weekinpatient/caregiverdriver/hourdistance/3visitsweek/24hhotline; old2020guidecontinuityrevocable, travelhelpnotmedianautomatic/taxi excluded."
+        }
+      ],
+      "sourceIds": ["R01", "R02", "R06", "R07", "S02", "S08", "S13", "S15", "S17"]
+    },
+    {
+      "id": "TEC",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40, 80],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "rationale": "已形成持续许可/创业及真实公共服务产用：FY25/26实际11新企业/65m投资，水务传感系统/HIVE/两台NHS手术机器人使用、已交付设备和SIM帮助。大学及机构主导的范围、很多新产品仍处开发走向商业规模、数字触达差异仍重要，有限60。2019旧统计不作新实绩，外榜/公司数/估值不换分。",
+      "assumption": "接受本地大学/部分共享运营商/医院的实际产用与市镇居民数字帮助构成FUA有限产业扩散，时间延续到截止；不把机构portfolio当本地全部生产。若早期商业化与家庭触达在帮助后仍是明显断层可40；若有据认为多节点采用与居民帮助已充分缓解这些限制可80。不由未知项自动封顶，拒绝范围/延续桥撤未知。",
+      "scoreStatus": "conditional_root_adopted",
+      "coverageReview": [
+        {
+          "dimension": "TEC",
+          "subpillar": "knowledge_output",
+          "status": "partial",
+          "sourceIds": ["S10", "S16"],
+          "fullyMeasured": false,
+          "note": "Actual114trackedspinouts2011–Jan2025with8definitionadditions; FY25/26new11 and65minvestment, notranktoscore."
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "industry_density",
+          "status": "partial",
+          "sourceIds": ["S16", "S10"],
+          "fullyMeasured": false,
+          "note": "82portfoliofirms/500mvaluation notlocaljobs/GVA/revenue, differentuniverse114trackednotdecline; manyproductsstilldeveloping."
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "digital_infrastructure",
+          "status": "partial",
+          "sourceIds": ["S01", "S04", "W01"],
+          "fullyMeasured": false,
+          "note": "ActualHIVEchecklist/utilityDNMsensors andrealdevice/SIMhelp, notuniversalbroadband/private2FApressuremeasurement."
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "diffusion",
+          "status": "partial",
+          "sourceIds": ["S04", "S08", "W01", "S16"],
+          "fullyMeasured": false,
+          "note": "Utilitysensors/clinicalrobots andhouseholddevice/SIMassistance actuallyused/delivered; earlyspinoutproductdevelopmentnotallmarketdelivery, institutional/regionboundaries remain."
+        }
+      ],
+      "sourceIds": ["S01", "S04", "S08", "S10", "S16", "W01"]
+    },
+    {
+      "id": "OPT",
+      "weight": 10,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "insufficient_direction_not_fullmeasurement",
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "unresolved",
+        "network_continuity": "partial"
+      },
+      "rationale": "个人O2欧洲连接在长期漫游警告后仍可付费继续、德国有附条件长居申请路径和本地机场接驳；机场原页仅导航，实体向外独立运力/普通资金可携与长期许可资源连接仍未形成。未证明受限也不以英国公民/机场名补60，主未知。",
+      "assumption": "无需全部目的地/每笔汇款，允许具体普通可负担的目的地长期资格及交通资金通信有限桥。63天后收费不是断网禁令，German§41不是已获居留/工作；实质尚未核连接留待40/60裁决。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "OPT",
+          "subpillar": "transport_redundancy",
+          "status": "partial",
+          "sourceIds": ["S15", "S18"],
+          "fullyMeasured": false,
+          "note": "Hospitalpracticalbus43airportlink/rail/tram directions; airporthomepageonlynavigationnotactualflightfare/frequency/independentroutesunderpressure."
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "legal_mobility",
+          "status": "partial",
+          "sourceIds": ["R03", "R04", "R05"],
+          "fullyMeasured": false,
+          "note": "UKnationalGermany§41then90dayapply; subsistence/passport/employmentconditions, notautomaticlongstayorassumedallacademics."
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "asset_portability",
+          "status": "not_started",
+          "sourceIds": [],
+          "fullyMeasured": false,
+          "note": "NoverifiedordinaryUKpersonaltransfer/foreignaccountretentionchain; notdenied/banned."
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "network_continuity",
+          "status": "partial",
+          "sourceIds": ["S09", "S11"],
+          "fullyMeasured": false,
+          "note": "PersonalEuropevoice/textanddata upto25GB, >63day/4moafterwarningpricedcontinuation; notfreepermanentroamingnorallproviders/accountauthentication continuity."
+        }
+      ],
+      "sourceIds": ["R03", "R04", "R05", "S09", "S11", "S15", "S18"]
+    }
+  ],
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 33.0,
+  "unresolvedScoreRange": [33.0, 68.0],
+  "globalRankingEligible": false,
+  "limitations": [
+    "No complete score/rank/probability/globalTop32 threshold/candidate exclusion. All9031 andnew/unmatched competitors retained.",
+    "None31fully measured. 2023any-nationality15+ citysurvey perception not2026medianBriton wholeFUA measurement.",
+    "Currentbytes capturedafterOct10 do notauthenticatecutoffbytes/availability; originalobservation/nominalversion/metadata separately retained.",
+    "GMFRSarea !=oldFUA: WiganpointLiverpool2374; crosscountyfireextent notentire3304; provider/patient/firm/residentunits notinterchangeable.",
+    "NHSfreeordinaryhospital notalltaxi/prescription/dentaleye/caregiverfree, meanincome notautomaticbenefiteligibility.",
+    "LON class/scope/ordinarynetcare/timebridges explicit and revocable; tisa/liso/localunnamedproduct/analysissets remain separate.",
+    "根独核112冻结payload／23有效原件／19实际PDF页，W01原会话工具块逐字相等而网站raw仍null；全9031与Wigan反例核明。仅原件响应元数据必要headers在本JSON，完整保存映射在冻结研究目录。一次本地渲染4页超自定3页如实留痕，未重做，实际目视批≤3。原83案整文件不变。"
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://mft.nhs.uk/app/uploads/2025/07/Quality-Accounts-2024-25.pdf",
+      "path": "mft-quality2025.pdf",
+      "scope": "MFT2024/25 actual clinical activity/quality/waiting not wholeFUA",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 841814,
+      "sha256": "4c2e47f018192d387a75a1508d5a8b675339761cafde61da195d71cfb7658709",
+      "localPath": "originals/mft-quality2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:25:47.871600+00:00",
+      "routeIndexes": [0],
+      "resolvedUrl": "https://mft.nhs.uk/app/uploads/2025/07/Quality-Accounts-2024-25.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 16:25:49 GMT",
+        "Last-Modified": "Thu, 10 Jul 2025 13:04:14 GMT",
+        "ETag": "\"cd856-63992d48d54eb\"",
+        "Content-Length": "841814",
+        "Content-Type": "application/pdf"
+      },
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 31,
+      "pdfMetadata": {
+        "format": "PDF 1.7",
+        "title": "Quality Account 2024 / 2025",
+        "author": "Ebah Dympna (R0A) Manchester University NHS FT",
+        "subject": "",
+        "keywords": "",
+        "creator": "Microsoft® Word for Microsoft 365",
+        "producer": "Microsoft® Word for Microsoft 365",
+        "creationDate": "D:20250710140410+01'00'",
+        "modDate": "D:20250710140410+01'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "observationAndVersion": "QualityAccount2024/25, PDFcreated10Jul2025; table21–22windows differ Oct2023–Sep2024/Apr2024–Feb2025/Feb2025/Apr2024–Mar2025. Comparator nationalaverage often2021/22/Dec2022/Jan2023, not concurrent2025control; SHMI106 no CI; diagnostics14.2% table direction unresolved.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true,
+      "publishedHeadersAreSelectedMetadata": true
+    },
+    {
+      "id": "S02",
+      "url": "https://www.christie.nhs.uk/your-treatment-and-care/treatments/immunotherapy/car-t-chimeric-antigen-receptors-cell-therapy",
+      "path": "christie-cart.html",
+      "scope": "actual local CAR-T standard of care sinceApril2019; current page no actual result denominator",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 122287,
+      "sha256": "a7ecbf7b0e84ccd8aeefda9f357793ce628b5cc0e61863e2319be82172fff3f9",
+      "localPath": "originals/christie-cart.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:25:50.594362+00:00",
+      "routeIndexes": [1],
+      "resolvedUrl": "https://www.christie.nhs.uk/your-treatment-and-care/treatments/immunotherapy/car-t-chimeric-antigen-receptors-cell-therapy",
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 16:25:51 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Current local service page: actual treatment sinceApril2019, standard care plustrials; not counts or localnamedproducts/outcomes.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true,
+      "publishedHeadersAreSelectedMetadata": true
+    },
+    {
+      "id": "S04",
+      "url": "https://www.unitedutilities.com/globalassets/documents/pdf/apr-customer-summary-2024-25",
+      "path": "water-customer2025.pdf",
+      "scope": "regulated water actual2024/25 service and affordability/Manchester supplies not wholeFUA households",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 19617549,
+      "sha256": "567862d54ac3cd0e4a45615bf099c468bb1ac7b1daae3ccfc8a692c6ccb133ab",
+      "localPath": "originals/water-customer2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:27:07.939252+00:00",
+      "routeIndexes": [3],
+      "resolvedUrl": "https://www.unitedutilities.com/globalassets/documents/pdf/apr-customer-summary-2024-25",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 16:27:10 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "19617549",
+        "ETag": "\"1DBF5623E657C00\"",
+        "Last-Modified": "Tue, 15 Jul 2025 08:27:04 GMT"
+      },
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 16,
+      "pdfMetadata": {
+        "format": "PDF 1.7",
+        "title": "Customer summary 2024-25",
+        "author": "",
+        "subject": "",
+        "keywords": "APR; UUW; United Utilities; Annual Performance Report; Customer summary 2024/25",
+        "creator": "Adobe InDesign 20.4 (Windows)",
+        "producer": "Adobe PDF Library 17.0",
+        "creationDate": "D:20250714130309+01'00'",
+        "modDate": "D:20250714140301+01'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "observationAndVersion": "Customer2024/25, July2025PDF; UUregulatedregion not allManchesterFUA. Interruption14m17s mean notmaxallhouseholds, alternativevehicles real; HARPbusinesscase/preferredbidderJan2025 not completedtunnels; affordability84,726outof>3%waterpoverty regulatorymetric, not uniqueFUAresidents.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true,
+      "publishedHeadersAreSelectedMetadata": true
+    },
+    {
+      "id": "S05",
+      "url": "https://documents.manchester.ac.uk/display.aspx?DocID=41435",
+      "path": "university-facts.pdf",
+      "scope": "university current facts; actual underlying activity windows to verify",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 2469995,
+      "sha256": "5f9febfa97c66c8980c3a4aa150b787fcac5cf360e692f928e72e9d40e896893",
+      "localPath": "originals/university-facts.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:27:14.141029+00:00",
+      "routeIndexes": [4],
+      "resolvedUrl": "https://documents.manchester.ac.uk/display.aspx?DocID=41435",
+      "contentType": "application/pdf",
+      "headers": {
+        "Content-Type": "application/pdf",
+        "Date": "Thu, 15 Oct 2026 16:27:16 GMT",
+        "Content-Length": "2469995"
+      },
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 21,
+      "pdfMetadata": {
+        "format": "PDF 1.5",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "Adobe InDesign CC 13.1 (Macintosh)",
+        "producer": "Adobe PDF Library 15.0",
+        "creationDate": "D:20190107105313Z",
+        "modDate": "D:20190115091549Z",
+        "trapped": "",
+        "encryption": null
+      },
+      "observationAndVersion": "CRITICALCORRECTION: searchlabel suggested recent, PDFcreatedJan2019/footer01.19 and2017/18income/2018ranking. 746mcommercialimpact since2004 historical, not2025 result. Contextonly.",
+      "sourceRole": "historical_context_only",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "publishedHeadersAreSelectedMetadata": true
+    },
+    {
+      "id": "S07",
+      "url": "https://test.manchesterfire.gov.uk/media/ubbnibc4/27913_gmfrs-annual-delivery-report-v16_accessible.pdf",
+      "path": "fire-delivery2025.pdf",
+      "scope": "actual2024/25 fire service delivery incl floods and security, regionalnotFUA; webtool29MBsizelimit not providerHTTPfailure",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 29588487,
+      "sha256": "1b33cbc9f44ac755fd3e735cdabdafd5eb8a3cb6726626a66627e438942fb806",
+      "localPath": "originals/fire-delivery2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:28:05.923818+00:00",
+      "routeIndexes": [6],
+      "resolvedUrl": "https://test.manchesterfire.gov.uk/media/ubbnibc4/27913_gmfrs-annual-delivery-report-v16_accessible.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 16:28:07 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "29588487",
+        "last-modified": "Thu, 06 Nov 2025 12:08:22 GMT",
+        "etag": "\"1dc4f160a098307\""
+      },
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 33,
+      "pdfMetadata": {
+        "format": "PDF 1.7",
+        "title": "Annual Delivery Report 2024 - 25",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "Adobe InDesign 20.2 (Macintosh)",
+        "producer": "Adobe PDF Library 17.0",
+        "creationDate": "D:20251106100525Z",
+        "modDate": "D:20251106110241Z",
+        "trapped": "",
+        "encryption": null
+      },
+      "observationAndVersion": "FY2024/25observations; PDFcreated6Nov2025. Dualprintedpages33physical; each agency selfreport not external all-agency recommendation closure. GMFRS includes Wigan outside3304; generalregionaltotals not city counts.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true,
+      "publishedHeadersAreSelectedMetadata": true
+    },
+    {
+      "id": "S08",
+      "url": "https://www.christie.nhs.uk/media/jgpko43t/the-christie-ft-annual-report-and-accounts-2024-25-final-for-publishing.pdf",
+      "path": "christie-annual2025.pdf",
+      "scope": "actual specialist2024/25 delivery/quality/localcelltherapy connection, not all residents",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 6624198,
+      "sha256": "a83890a46c551fe09413b5e6b1f9c87d977fc8ce76c88fa604096884f1f1e913",
+      "localPath": "originals/christie-annual2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:28:14.416161+00:00",
+      "routeIndexes": [7],
+      "resolvedUrl": "https://www.christie.nhs.uk/media/jgpko43t/the-christie-ft-annual-report-and-accounts-2024-25-final-for-publishing.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 16:28:15 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "6624198",
+        "ETag": "\"1dcc7f2910e0446\"",
+        "Last-Modified": "Thu, 09 Apr 2026 07:29:15 GMT"
+      },
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 145,
+      "pdfMetadata": {
+        "format": "PDF 1.7",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "Adobe Acrobat Pro 2020 20.5.30774",
+        "producer": "Adobe Acrobat Pro 2020 20.5.30774",
+        "creationDate": "D:20250616082331+01'00'",
+        "modDate": "D:20250728083048+01'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "observationAndVersion": "ChristieFY2024/25annualreport, local/regional/national tertiaryservice mix. Physical17haematology actualstandardCAR-T growth but nonamedproduct/denominator/localefficacy; physical18operations3891notuniquepatients;20actualdischargebridge/ambulance.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true,
+      "publishedHeadersAreSelectedMetadata": true
+    },
+    {
+      "id": "S09",
+      "url": "https://www.o2.co.uk/eu-roaming",
+      "path": "o2-europe-roaming.html",
+      "scope": "ordinarypersonalphone abroad data/calls/text service, fairuse/longstay needed",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 500558,
+      "sha256": "5235d12659d1a3eaef83ace94990c0d98d756163e154b8e87fd8975bfc1d2bad",
+      "localPath": "originals/o2-europe-roaming.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:28:17.420797+00:00",
+      "routeIndexes": [8],
+      "resolvedUrl": "https://www.o2.co.uk/eu-roaming",
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 16:28:21 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "500558",
+        "etag": "\"85axb58fraq6g\""
+      },
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Current personal O2 Europe service, min(UKallowance,25GB) data/voice/text, Germanyincluded; HTMLcurrentcapture not certifiedcutoffbytes; tablet/longstay restrictions separate.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "publishedHeadersAreSelectedMetadata": true
+    },
+    {
+      "id": "S10",
+      "url": "https://www.manchester.ac.uk/about/news/university-of-manchester-ranks-in-top-5-universities-for-spinout-generation/",
+      "path": "spinouts2025.html",
+      "scope": "2025 actual spinout connection and thirdparty ranking identity, ranking not CCI score; older factsPDF S05 createdJan2019",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 82372,
+      "sha256": "8fa60f25cb00f5f60bc61d4268cfb4a4dcd121c07a5978fc0eec03a3fda9d7c2",
+      "localPath": "originals/spinouts2025.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:29:56.894600+00:00",
+      "routeIndexes": [9],
+      "resolvedUrl": "https://www.manchester.ac.uk/about/news/university-of-manchester-ranks-in-top-5-universities-for-spinout-generation/",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Date": "Thu, 15 Oct 2026 16:29:58 GMT"
+      },
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "15Apr2025article: 2011–Jan2025 tracked114spinouts, eight additions due revisedHESAdefinition; ranking and32.6%notCCI nor purelynewfirms; sectorcounts nationwide notManchester.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true,
+      "publishedHeadersAreSelectedMetadata": true
+    },
+    {
+      "id": "S11",
+      "url": "https://www.o2.co.uk/termsandconditions/mobile/roamfairuse",
+      "path": "o2-fairuse.html",
+      "scope": "actual observed S09href ordinary roaming longstay restrictions",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 443963,
+      "sha256": "1986097cb8097e097d898c73a03be77fcecfdd833b091a151673436dd723ecfe",
+      "localPath": "originals/o2-fairuse.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:29:58.952408+00:00",
+      "routeIndexes": [10],
+      "resolvedUrl": "https://www.o2.co.uk/termsandconditions/mobile/roamfairuse",
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 16:30:02 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "443963",
+        "etag": "\"n22tl6rqhl9ihz\""
+      },
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Current O2fairuse, comparator block explicitlySep2026; >63daysabroadper4months fairusage textnotice/surcharges3.50GBPperGB/3.3pminute/1ptext; not ban onkeepingconnection or allproviders.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "publishedHeadersAreSelectedMetadata": true
+    },
+    {
+      "id": "S12",
+      "url": "https://www.christie.nhs.uk/your-treatment-and-care/patient-information/patient-booklets",
+      "path": "christie-booklets-index.html",
+      "scope": "actual S02nav for celltherapy ordinary caregiver/payment/access original guidance locator",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 450807,
+      "sha256": "2fc9690825e0bd652a12f81e30201094ca3b02a91cda2ae35d176860aa106acc",
+      "localPath": "originals/christie-booklets-index.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:30:03.368130+00:00",
+      "routeIndexes": [11],
+      "resolvedUrl": "https://www.christie.nhs.uk/your-treatment-and-care/patient-information/patient-booklets",
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 16:30:04 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Current patientbooklet index, realguidancehref retained; menu existence not treatment outcome.",
+      "sourceRole": "navigation_or_locator_only",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "publishedHeadersAreSelectedMetadata": true
+    },
+    {
+      "id": "S13",
+      "url": "https://www.christie.nhs.uk/media/v1ah25aa/1304-what-is-car-t-cell-therapy-htu-oct-2020.pdf",
+      "path": "christie-cart-guide.pdf",
+      "scope": "S12 actual patientPDFhref namedOct2020; inspect original version and supervision/fees/product not presume current",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 95287,
+      "sha256": "7edf9da7265ee0d03947cbdf7b5d1ecd5b70e95cbd426162126c1af5d96b93af",
+      "localPath": "originals/christie-cart-guide.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:30:50.659720+00:00",
+      "routeIndexes": [12],
+      "resolvedUrl": "https://www.christie.nhs.uk/media/v1ah25aa/1304-what-is-car-t-cell-therapy-htu-oct-2020.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 16:30:51 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "95287",
+        "ETag": "\"1dcc7f35c138db7\"",
+        "Last-Modified": "Thu, 09 Apr 2026 07:34:55 GMT"
+      },
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 6,
+      "pdfMetadata": {
+        "format": "PDF 1.6",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "Adobe InDesign 15.0 (Macintosh)",
+        "producer": "Adobe PDF Library 15.0",
+        "creationDate": "D:20210125125739Z",
+        "modDate": "D:20210125152825Z",
+        "trapped": "",
+        "encryption": null
+      },
+      "observationAndVersion": "Version2Oct2020/reviewdueOct2023, PDFcreatedJan2021; currentindexstilllinks it, not proofreviewcompleted. 4weekmanufacturing/2–4weekinpatient/30daymonitoring/3visitsweek/caregiverdriver/hourdistance conditions need limitedcontinuitybridge, not newlymeasured2026 or allresidents.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true,
+      "publishedHeadersAreSelectedMetadata": true
+    },
+    {
+      "id": "S14",
+      "url": "https://www.uominnovationfactory.com/",
+      "path": "innovation-factory.html",
+      "scope": "S10 actual observed licensing/spinout provider link; actual transfer projects not generic ranking",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 91200,
+      "sha256": "6b0c54de93cd19bab2389343bd085628e4756879772c8d9e9bf2aab9ef802d0f",
+      "localPath": "originals/innovation-factory.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:30:52.510548+00:00",
+      "routeIndexes": [13],
+      "resolvedUrl": "https://www.uominnovationfactory.com/",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 16:30:53 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "last-modified": "Thu, 15 Oct 2026 16:30:53 GMT"
+      },
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Current InnovationFactory locator, headline2025/26result; substantive details S16, no titlealone countasdelivery.",
+      "sourceRole": "navigation_or_locator_only",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "publishedHeadersAreSelectedMetadata": true
+    },
+    {
+      "id": "S15",
+      "url": "https://www.christie.nhs.uk/visiting-the-christie/directions-and-transport/arriving-by-public-transport",
+      "path": "christie-transport.html",
+      "scope": "Actual observed S02nav ordinary local transport and outward airport/train links if present; not airport density",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 124946,
+      "sha256": "5c16f719586dc6f1da99ccde27c8c1328e478410a10df2fd913cf852a5c7add9",
+      "localPath": "originals/christie-transport.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:30:54.470671+00:00",
+      "routeIndexes": [14],
+      "resolvedUrl": "https://www.christie.nhs.uk/visiting-the-christie/directions-and-transport/arriving-by-public-transport",
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 16:30:55 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Current hospital transport practical routes: buses/tram/rail and43airportlink; datedTimetable currency not authenticated. Hospitals trip notwholeoutwardpressurecapacity.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true,
+      "publishedHeadersAreSelectedMetadata": true
+    },
+    {
+      "id": "R01",
+      "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+      "path": "R01-S08-nhs-ordinary-residence.html",
+      "scope": "Common NHSordinary residence/charges, independently localadapt; no clinical outcome transfer",
+      "method": "durable verified copy no HTTP",
+      "validOriginal": true,
+      "originalBytes": 32662,
+      "sha256": "42c4cf404fdfc984257c5ea70f222b8c786e5d0d4d95c0e99f0b7eab682ed0ec",
+      "localPath": "originals/R01-S08-nhs-ordinary-residence.html",
+      "originalResponseMetadata": {
+        "id": "S08",
+        "file": "S08-nhs-ordinary-residence.html",
+        "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+        "host": "www.nhs.uk",
+        "mechanism": "normal_https_tls_urllib",
+        "requestAtUTC": "2026-10-15T13:21:51.121239+00:00",
+        "cutoffHistoricalBytesAuthenticated": false,
+        "priorKnownSameHostFailures": 0,
+        "redirectsFollowed": 0,
+        "retries": 0,
+        "httpStatus": 200,
+        "finalUrl": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+        "headers": {
+          "Content-Type": "text/html; charset=utf-8",
+          "Date": "Thu, 15 Oct 2026 13:21:52 GMT",
+          "Content-Length": "32662"
+        },
+        "completeBodyRead": true,
+        "bytes": 32662,
+        "sha256": "42c4cf404fdfc984257c5ea70f222b8c786e5d0d4d95c0e99f0b7eab682ed0ec",
+        "validOriginal": true,
+        "substantiveBodyMustBeSeparatelyReviewed": true,
+        "elapsedSeconds": 1.947
+      },
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T13:21:51.121239+00:00",
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Common NHSordinary residence/charges, independently localadapt; no clinical outcome transfer",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true
+    },
+    {
+      "id": "R02",
+      "url": "https://www.nhs.uk/nhs-services/help-with-health-costs/when-you-need-to-pay-towards-nhs-care/",
+      "path": "R02-S12-nhs-charges.html",
+      "scope": "Common NHSordinary residence/charges, independently localadapt; no clinical outcome transfer",
+      "method": "durable verified copy no HTTP",
+      "validOriginal": true,
+      "originalBytes": 28145,
+      "sha256": "81b0a7b5cdeb5d401dc9835500553a5b646f8a3b89407af9404b577a3e7dcc0a",
+      "localPath": "originals/R02-S12-nhs-charges.html",
+      "originalResponseMetadata": {
+        "id": "S12",
+        "file": "S12-nhs-charges.html",
+        "url": "https://www.nhs.uk/nhs-services/help-with-health-costs/when-you-need-to-pay-towards-nhs-care/",
+        "host": "www.nhs.uk",
+        "mechanism": "normal_https_tls_urllib",
+        "requestAtUTC": "2026-10-15T13:28:48.801106+00:00",
+        "cutoffHistoricalBytesAuthenticated": false,
+        "priorKnownSameHostFailures": 0,
+        "redirectsFollowed": 0,
+        "retries": 0,
+        "httpStatus": 200,
+        "finalUrl": "https://www.nhs.uk/nhs-services/help-with-health-costs/when-you-need-to-pay-towards-nhs-care/",
+        "headers": {
+          "Content-Type": "text/html; charset=utf-8",
+          "Date": "Thu, 15 Oct 2026 13:28:49 GMT",
+          "Content-Length": "28145"
+        },
+        "completeBodyRead": true,
+        "bytes": 28145,
+        "sha256": "81b0a7b5cdeb5d401dc9835500553a5b646f8a3b89407af9404b577a3e7dcc0a",
+        "validOriginal": true,
+        "substantiveBodyMustBeSeparatelyReviewed": true,
+        "elapsedSeconds": 1.525
+      },
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T13:28:48.801106+00:00",
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Common NHSordinary residence/charges, independently localadapt; no clinical outcome transfer",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true
+    },
+    {
+      "id": "S16",
+      "url": "https://www.uominnovationfactory.com/news/driving-growth-11-new-spinout-companies-from-the-university-of-manchester/",
+      "path": "spinouts-actual-results.html",
+      "scope": "S14 actual href11newspinouts current results; verify date/cutoff and actual operations not headlineonly",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 91783,
+      "sha256": "097f09cb847e9713d01fa77f888053adb215df1421946ee04a241593501724fd",
+      "localPath": "originals/spinouts-actual-results.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:32:30.298281+00:00",
+      "routeIndexes": [15],
+      "resolvedUrl": "https://www.uominnovationfactory.com/news/driving-growth-11-new-spinout-companies-from-the-university-of-manchester/",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 16:32:31 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "last-modified": "Thu, 15 Oct 2026 16:32:31 GMT"
+      },
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "10Sep2026postFY25/26actual11newspinouts/65mexternalinvestment/82portfoliofirms valued500m/300researchers supported. Investmentnotrevenue, valuationsnotresidentincome, describedproductdevelopmentnotallcommercialsales. 114trackedS10 vs82portfolioS16 not same universe nor decline.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true,
+      "publishedHeadersAreSelectedMetadata": true
+    },
+    {
+      "id": "S17",
+      "url": "https://www.christie.nhs.uk/visiting-the-christie/directions-and-transport/help-with-travel-and-costs",
+      "path": "christie-cost-help.html",
+      "scope": "actual S02href care travel/accommodation net support/conditions",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 122563,
+      "sha256": "72cebf0fe7d697bac4e757757f382de87575964ca0869f0073048efb32ffa6ac",
+      "localPath": "originals/christie-cost-help.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:32:31.855576+00:00",
+      "routeIndexes": [16],
+      "resolvedUrl": "https://www.christie.nhs.uk/visiting-the-christie/directions-and-transport/help-with-travel-and-costs",
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 16:32:32 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "LastupdatedOct2025 travelhelp, income-benefit eligibility not medianautomatic; HC5post/email/documentproof/bankreimbursement, noonsitecashier; taxifaresnotreimbursable. Actualoperationguide, notpaidclaimscohort.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true,
+      "publishedHeadersAreSelectedMetadata": true
+    },
+    {
+      "id": "S18",
+      "url": "https://www.manchesterairport.co.uk/",
+      "path": "airport-current.html",
+      "scope": "actual S15href outward airport services/nav; actual independent transport not presume fromairportname",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 1297684,
+      "sha256": "4cb66a2139ded2ff802b088d3c52f3d78a25bd6e591af5f7405d83cd315d56a7",
+      "localPath": "originals/airport-current.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:32:33.608531+00:00",
+      "routeIndexes": [17],
+      "resolvedUrl": "https://www.manchesterairport.co.uk/",
+      "contentType": "text/html",
+      "headers": {
+        "Content-Type": "text/html",
+        "Content-Length": "1297684",
+        "Date": "Thu, 15 Oct 2026 14:30:05 GMT",
+        "Last-Modified": "Thu, 15 Oct 2026 13:26:22 GMT",
+        "ETag": "\"95bbf2dc4ca1b993b0b95f83a27767c6\""
+      },
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Current airportoriginal includes flight/transportnav but no verifiedroutefrequency/fare/independentcapacity; not provedavailable flightor aircraft activity.",
+      "sourceRole": "navigation_or_locator_only",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "publishedHeadersAreSelectedMetadata": true
+    },
+    {
+      "id": "R03",
+      "url": "https://www.gesetze-im-internet.de/aufenthv/__41.html",
+      "path": "R03-aufenthv41.html",
+      "localPath": "originals/R03-aufenthv41.html",
+      "validOriginal": true,
+      "originalBytes": 4613,
+      "sha256": "0294e3696361d9294ae75c66475ccb897dcf68e1ffd1346fabf3a83104f74c85",
+      "originLocalPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-full37/aufenthv41.html",
+      "preservedOriginMetadata": {
+        "file": "aufenthv41.html",
+        "url": "https://www.gesetze-im-internet.de/aufenthv/__41.html",
+        "requestAtUTC": "2026-10-15T11:41:29.159745+00:00",
+        "requestMechanism": "www.gesetze-im-internet.de|urllib_normal_TLS",
+        "method": "one normalTLS request no retry",
+        "historicalCutoffBytesAuthenticated": false,
+        "httpStatus": 200,
+        "finalUrl": "https://www.gesetze-im-internet.de/aufenthv/__41.html",
+        "contentType": "text/html",
+        "responseBytes": 4613,
+        "responseSha256": "0294e3696361d9294ae75c66475ccb897dcf68e1ffd1346fabf3a83104f74c85",
+        "validOriginal": true,
+        "originalBytes": 4613,
+        "sha256": "0294e3696361d9294ae75c66475ccb897dcf68e1ffd1346fabf3a83104f74c85"
+      },
+      "method": "verified durable copy no HTTP",
+      "scope": "German law shared Britishcitizen personal eligibility; independent Manchester applicability, no Korean score",
+      "cutoffOriginalBytesAuthenticated": false,
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceRole": "substantive_primary_original",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/daejeon-full46/originals/aufenthv41.html",
+      "verifiedLocalOn": "2026-10-16",
+      "observationAndVersion": "German law shared Britishcitizen personal eligibility; independent Manchester applicability, no Korean score",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false
+    },
+    {
+      "id": "R04",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__5.html",
+      "path": "R04-aufenthg5.html",
+      "localPath": "originals/R04-aufenthg5.html",
+      "validOriginal": true,
+      "originalBytes": 6953,
+      "sha256": "2b1c6d9b2cda3c69f96b893150025c1490298f8de35741bb297ef82335df4e27",
+      "originLocalPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-full37/aufenthg5.html",
+      "preservedOriginMetadata": {
+        "file": "aufenthg5.html",
+        "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__5.html",
+        "requestAtUTC": "2026-10-15T11:45:36.653995+00:00",
+        "requestMechanism": "www.gesetze-im-internet.de|urllib_normal_TLS",
+        "method": "one normalTLS request no retry",
+        "historicalCutoffBytesAuthenticated": false,
+        "httpStatus": 200,
+        "finalUrl": "https://www.gesetze-im-internet.de/aufenthg_2004/__5.html",
+        "contentType": "text/html",
+        "responseBytes": 6953,
+        "responseSha256": "2b1c6d9b2cda3c69f96b893150025c1490298f8de35741bb297ef82335df4e27",
+        "validOriginal": true,
+        "originalBytes": 6953,
+        "sha256": "2b1c6d9b2cda3c69f96b893150025c1490298f8de35741bb297ef82335df4e27"
+      },
+      "method": "verified durable copy no HTTP",
+      "scope": "German law shared Britishcitizen personal eligibility; independent Manchester applicability, no Korean score",
+      "cutoffOriginalBytesAuthenticated": false,
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceRole": "substantive_primary_original",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/daejeon-full46/originals/aufenthg5.html",
+      "verifiedLocalOn": "2026-10-16",
+      "observationAndVersion": "German law shared Britishcitizen personal eligibility; independent Manchester applicability, no Korean score",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false
+    },
+    {
+      "id": "R05",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__18b.html",
+      "path": "R05-aufenthg18b.html",
+      "localPath": "originals/R05-aufenthg18b.html",
+      "validOriginal": true,
+      "originalBytes": 3632,
+      "sha256": "d605edfdbf1977205ccc0f1c5b267b061e59f072200c04fbe5d02d340bc6a7b4",
+      "originLocalPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-full37/aufenthg18b.html",
+      "preservedOriginMetadata": {
+        "file": "aufenthg18b.html",
+        "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__18b.html",
+        "requestAtUTC": "2026-10-15T11:45:36.654557+00:00",
+        "requestMechanism": "www.gesetze-im-internet.de|urllib_normal_TLS",
+        "method": "one normalTLS request no retry",
+        "historicalCutoffBytesAuthenticated": false,
+        "httpStatus": 200,
+        "finalUrl": "https://www.gesetze-im-internet.de/aufenthg_2004/__18b.html",
+        "contentType": "text/html",
+        "responseBytes": 3632,
+        "responseSha256": "d605edfdbf1977205ccc0f1c5b267b061e59f072200c04fbe5d02d340bc6a7b4",
+        "validOriginal": true,
+        "originalBytes": 3632,
+        "sha256": "d605edfdbf1977205ccc0f1c5b267b061e59f072200c04fbe5d02d340bc6a7b4"
+      },
+      "method": "verified durable copy no HTTP",
+      "scope": "German law shared Britishcitizen personal eligibility; independent Manchester applicability, no Korean score",
+      "cutoffOriginalBytesAuthenticated": false,
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceRole": "substantive_primary_original",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/daejeon-full46/originals/aufenthg18b.html",
+      "verifiedLocalOn": "2026-10-16",
+      "observationAndVersion": "German law shared Britishcitizen personal eligibility; independent Manchester applicability, no Korean score",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false
+    },
+    {
+      "id": "R06",
+      "url": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+      "path": "R06-S10-nice-ta1048.html",
+      "localPath": "originals/R06-S10-nice-ta1048.html",
+      "originalBytes": 20164,
+      "sha256": "7d37836575b240bd2359d0de728c2e937e73a1cc32906576e086a1af57733e3f",
+      "validOriginal": true,
+      "method": "verified durable copy no HTTP",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S10-nice-ta1048.html",
+      "inheritedMetadata": {
+        "id": "S21",
+        "url": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+        "path": "S10-nice-ta1048.html",
+        "localPath": "originals/S10-nice-ta1048.html",
+        "originalBytes": 20164,
+        "sha256": "7d37836575b240bd2359d0de728c2e937e73a1cc32906576e086a1af57733e3f",
+        "validOriginal": true,
+        "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S10-nice-ta1048.html",
+        "originalResponseMetadata": {
+          "id": "S10",
+          "file": "S10-nice-ta1048.html",
+          "url": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+          "host": "www.nice.org.uk",
+          "mechanism": "normal_https_tls_urllib",
+          "requestAtUTC": "2026-10-15T13:28:48.800782+00:00",
+          "cutoffHistoricalBytesAuthenticated": false,
+          "priorKnownSameHostFailures": 1,
+          "redirectsFollowed": 0,
+          "retries": 0,
+          "httpStatus": 200,
+          "finalUrl": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+          "headers": {
+            "Date": "Thu, 15 Oct 2026 13:28:50 GMT",
+            "Content-Type": "text/html; charset=utf-8",
+            "ETag": "W/C0B0BE68DC2CEA8F8D26D7DDF59AA04E"
+          },
+          "completeBodyRead": true,
+          "bytes": 20164,
+          "sha256": "7d37836575b240bd2359d0de728c2e937e73a1cc32906576e086a1af57733e3f",
+          "validOriginal": true,
+          "substantiveBodyMustBeSeparatelyReviewed": true,
+          "elapsedSeconds": 2.616
+        },
+        "cutoffOriginalBytesAuthenticated": false,
+        "role": "National common fact independently adapted; not Cambridge score",
+        "observedOn": "2026-10-15",
+        "versionAndObservation": "NICE TA1048 26Mar2025 LISOCABTAGENE for qualifiedadultLBCL; uncertainOS, notOxfordproduct-specificadoption",
+        "historicalCutoffBytesAuthenticated": false,
+        "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+      },
+      "cutoffOriginalBytesAuthenticated": false,
+      "scope": "Mature human disease-limited cellreprogramming/context UKqualified NICE adoption; not localbrand confirmation or Frenchpayer transfer",
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Mature human disease-limited cellreprogramming/context UKqualified NICE adoption; not localbrand confirmation or Frenchpayer transfer",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true
+    },
+    {
+      "id": "R07",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "path": "R07-has-kymriah-2023.pdf",
+      "localPath": "originals/R07-has-kymriah-2023.pdf",
+      "originalBytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "validOriginal": true,
+      "method": "verified durable copy no HTTP",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/oxford-full41/originals/has-kymriah-2023.pdf",
+      "inheritedMetadata": {
+        "id": "S22",
+        "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+        "path": "has-kymriah-2023.pdf",
+        "localPath": "originals/has-kymriah-2023.pdf",
+        "originalBytes": 741078,
+        "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+        "validOriginal": true,
+        "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/has-kymriah-2023.pdf",
+        "cutoffOriginalBytesAuthenticated": false,
+        "originalRetrieval": "2026-10-15; copied durable actualbytes, not re-requested or historicalauthentication",
+        "observedOn": "2026-10-15",
+        "versionAndObservation": "HAS Sept2023 tisa adultDLBCL; JULIET phaseII noncomparative20Feb2020 update, DESCAR-T registry; notUKpayer or Oxfordcohort",
+        "historicalCutoffBytesAuthenticated": false,
+        "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+      },
+      "cutoffOriginalBytesAuthenticated": false,
+      "scope": "Mature human disease-limited cellreprogramming/context UKqualified NICE adoption; not localbrand confirmation or Frenchpayer transfer",
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 40,
+      "pdfMetadata": {
+        "format": "PDF 1.7",
+        "title": "KYMRIAH 1,2 x 10^6 – 6 x 10^8 cellules,",
+        "author": "PERCHERON Romain",
+        "subject": "dispersion cellulaire pour perfusion",
+        "keywords": "tisagenlecleucel",
+        "creator": "Microsoft® Word pour Microsoft 365",
+        "producer": "Microsoft® Word pour Microsoft 365",
+        "creationDate": "D:20231010112442+02'00'",
+        "modDate": "D:20231010112442+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "observationAndVersion": "Mature human disease-limited cellreprogramming/context UKqualified NICE adoption; not localbrand confirmation or Frenchpayer transfer",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "id": "S03",
+      "url": "https://www.manchester.gov.uk/news-stories/2025/council-rolls-out-support-for-residents-affected-by-new-years-day-flooding",
+      "path": "flood-recovery2025.html",
+      "scope": "Jan9_2025 actual local evacuation/recovery and important residual",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": false,
+      "originalBytes": null,
+      "sha256": null,
+      "localPath": null,
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:25:52.649487+00:00",
+      "routeIndexes": [2],
+      "error": "HTTP Error 403: Forbidden",
+      "observationAndVersion": "Jan9_2025 actual local evacuation/recovery and important residual",
+      "sourceRole": "failed_no_original"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.manchester.gov.uk/news-stories/2025/call-goes-out-for-mancunians-to-claim-200-to-pay-heating-bills",
+      "path": "fuel-food-digital-help2025.html",
+      "scope": "March6_2025 actual supports/subgroups/remainingneed; web read before raw attempt",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": false,
+      "originalBytes": null,
+      "sha256": null,
+      "localPath": null,
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:27:23.872530+00:00",
+      "routeIndexes": [5],
+      "error": "HTTP Error 403: Forbidden",
+      "observationAndVersion": "March6_2025 actual supports/subgroups/remainingneed; web read before raw attempt",
+      "sourceRole": "failed_no_original"
+    }
+  ],
+  "webOnlySourceSnapshots": [
+    {
+      "id": "W01",
+      "url": "https://www.manchester.gov.uk/news-stories/2025/call-goes-out-for-mancunians-to-claim-200-to-pay-heating-bills",
+      "capturePath": "web-open01-tool-response.json",
+      "toolTranscriptBytes": 25624,
+      "toolTranscriptSha256": "58cef94d922f6425c70b607231bca7f09a54e85fe16fa736bd4adbf4e5a3d77e",
+      "providerOriginalBytes": null,
+      "sha256": null,
+      "scope": "Exact full stored tool response including turn2375view2 received before failednormalS06; source body contains114lines, not searchsummary. March6_2025actualaid, eligibility66+notallportrait.",
+      "rootExactHistoricalToolBlockVerified": true,
+      "rootActualBodyLinesRead": [18, 64],
+      "rootUsedForScore": true,
+      "toolDigestIsWebsiteOriginalDigest": false,
+      "rootHistoricalToolProof": {
+        "session": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-02-01a13e5e-2ed3-76e3-b2b0-eefa22db05d9.jsonl",
+        "matches": [
+          {
+            "sessionLine": 3809,
+            "callId": "call_60a441e110a249dd9e5545a9ae907789",
+            "blockIndex": 1,
+            "bytes": 25280,
+            "toolTextSha256": "9c97707983234bc252b51018abc03b2f5dffa28f50e8e92465ae72b4bb1d7be8"
+          }
+        ],
+        "captureFileSha256": "58cef94d922f6425c70b607231bca7f09a54e85fe16fa736bd4adbf4e5a3d77e",
+        "providerOriginalBytes": null,
+        "providerOriginalSha256": null
+      }
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allCandidatesChecked": 9031,
+    "repairCount": 136,
+    "records": [
+      {
+        "fid": 8416,
+        "eFUA_ID": 3304.0,
+        "UC_num": 5.0,
+        "UC_IDs": "1772;1775;1776;1780;1792",
+        "eFUA_name": "Manchester",
+        "Commuting": 1.0,
+        "Cntry_ISO": "GBR",
+        "Cntry_name": "UnitedKingdom",
+        "FUA_area": 2182.0,
+        "UC_area": 865.0,
+        "FUA_p_2015": 3270370.459773466,
+        "UC_p_2015": 2686209.349802971,
+        "Com_p_2015": 584161.1099704951
+      }
+    ],
+    "points": [
+      {
+        "label": "Manchester centre approximate",
+        "longitude": -2.2453,
+        "latitude": 53.4794,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 3304,
+            "name": "Manchester"
+          }
+        ]
+      },
+      {
+        "label": "MFT Oxford Road approximate",
+        "longitude": -2.229,
+        "latitude": 53.4601,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 3304,
+            "name": "Manchester"
+          }
+        ]
+      },
+      {
+        "label": "Christie Withington approximate",
+        "longitude": -2.2294,
+        "latitude": 53.4286,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 3304,
+            "name": "Manchester"
+          }
+        ]
+      },
+      {
+        "label": "Manchester airport approximate",
+        "longitude": -2.2727,
+        "latitude": 53.3653,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 3304,
+            "name": "Manchester"
+          }
+        ]
+      },
+      {
+        "label": "Stockport MeadowMill neighbourhood approximate",
+        "longitude": -2.1496,
+        "latitude": 53.4148,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 3304,
+            "name": "Manchester"
+          }
+        ]
+      },
+      {
+        "label": "Didsbury hotel neighbourhood approximate",
+        "longitude": -2.244,
+        "latitude": 53.403,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 3304,
+            "name": "Manchester"
+          }
+        ]
+      },
+      {
+        "label": "Harpurhey neighbourhood approximate",
+        "longitude": -2.211,
+        "latitude": 53.506,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 3304,
+            "name": "Manchester"
+          }
+        ]
+      },
+      {
+        "label": "Wigan centre reference only",
+        "longitude": -2.6333,
+        "latitude": 53.5449,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 2374,
+            "name": "Liverpool"
+          }
+        ]
+      }
+    ],
+    "targetWkbSha256": "293894f892b096131be163f01497dff4e2442d3a2d3e1bc758e3d6c42a1305f4",
+    "meaning": "Approximate reference points do not establish provider service coverage, citywide outcomes or residence; Hospital referrals/water service/city/FUA differ; airport point not proof of journey access.",
+    "rootIndependentVerification": true
+  },
+  "sensitivity": {
+    "PCSWithdrawn": [27, 77],
+    "ISRWithdrawn": [24, 74],
+    "MEDWithdrawn": [27, 77],
+    "LONWithdrawn": [27, 72],
+    "TECWithdrawn": [27, 72],
+    "PCS60": [36, 71],
+    "MED60": [36, 71],
+    "ISR40": [30, 65],
+    "LON40": [31, 66],
+    "TEC40": [31, 66],
+    "TEC80": [35, 70],
+    "allJudgmentsWithdrawn": [0, 100]
+  },
+  "coverageReview": [
+    {
+      "dimension": "PCS",
+      "subpillar": "heat_humidity",
+      "status": "context",
+      "sourceIds": ["S07"],
+      "fullyMeasured": false,
+      "note": "FRS identifies warmer/drier summers; no humidity/indoorhealthmodel, not nohazard."
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "flood_sea_level",
+      "status": "partial",
+      "sourceIds": ["S07", "S04"],
+      "fullyMeasured": false,
+      "note": "Jan2025Didsbury/Stockport actual unsafe floodwater/power-watercuts/evacuation despite effectiveboat/mountainrescue; approximatepointscopefits3304, notWiganregionaltotal."
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "geophysical",
+      "status": "not_started",
+      "sourceIds": [],
+      "fullyMeasured": false,
+      "note": "Noverified earthquakes/landslide/buildingscope; notzero."
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "severe_weather_wildfire",
+      "status": "partial",
+      "sourceIds": ["S07"],
+      "fullyMeasured": false,
+      "note": "ActualMarch2025moorlandfires andspecialistvehicles/liveburnresponse; 10km²event spansWestYorkshire/GMnotall3304; noFUAresidentexposurerate."
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "organized_violence",
+      "status": "partial",
+      "sourceIds": ["S07"],
+      "fullyMeasured": false,
+      "note": "2017Arenamajorattack/2022coordinationfailures +2024/25 implementedtraining/weeklyjointpractice; agencyselfreport not currentlowimpactcoverage."
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "regional_conflict",
+      "status": "context",
+      "sourceIds": ["S07"],
+      "fullyMeasured": false,
+      "note": "Geopolitical/largeincidentpreparationcontext only, not actualregionalconflictimpact/airspace continuity inspected."
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "strategic_exposure",
+      "status": "partial",
+      "sourceIds": ["S07"],
+      "fullyMeasured": false,
+      "note": "High-impactlow-probabilityscenario and realresponderscoordinationreform; notproofallstrategicnodes/ordinaryimpactlow."
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "governance",
+      "status": "partial",
+      "sourceIds": ["W01", "S01", "S07", "S17"],
+      "fullyMeasured": false,
+      "note": "Actualaid payments/procedures, clinicalauditfeedback/electronicchecks, emergencycoordination; noentirecouncilcompletionrate."
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "adaptive_capacity",
+      "status": "partial",
+      "sourceIds": ["S04", "S07", "S08"],
+      "fullyMeasured": false,
+      "note": "Actualwater sensors/repair, floodboats/rescue, wildfirespecialistequipment, hospitaldischargeambulance; futureHARP/fullriskpilotnotcompleted."
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "social_cohesion",
+      "status": "partial",
+      "sourceIds": ["W01", "S17"],
+      "fullyMeasured": false,
+      "note": "Delivereddevice/SIM/food/communitygrants, means/ageconditions andincomehelpclaimburden retained; not allmedianeligible."
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "emergency_recovery",
+      "status": "partial",
+      "sourceIds": ["S07", "S08"],
+      "fullyMeasured": false,
+      "note": "Actualover100regionalincidentsrescueresponse no reportedseriousinjuriesforthatfloodperiod; someunsafeproperties/powerlossstillforcedevacuation, not everyhouseholdfullyrecovered."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "water",
+      "status": "partial",
+      "sourceIds": ["S04"],
+      "fullyMeasured": false,
+      "note": "Operatorregion14m17saverageinterruptiontwoevents vs5mintarget, alternativevehicles/repairs; 84726lifted3%waterpoverty operatorclaim, noFUAorunique5yearsum."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "food",
+      "status": "partial",
+      "sourceIds": ["W01"],
+      "fullyMeasured": false,
+      "note": "46000schoolholidaymeals/1mGBPfoodbanksupplies since2022/155000extrafoodsupport actualdelivery; subgroup/timewindow notusualmedianhouseholdfoodbudget."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "energy",
+      "status": "partial",
+      "sourceIds": ["W01", "S07"],
+      "fullyMeasured": false,
+      "note": "1632age-qualifiedwinterpayments263000GBP withrecipientunitdifferences, powercutsinactualflood; no ordinary energybill/meansnetdirection."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "supply_chain",
+      "status": "partial",
+      "sourceIds": ["S04", "S07"],
+      "fullyMeasured": false,
+      "note": "Aqueductconcentration andHARPpreferredbiddernotcompleted; realalternativewatersupply/rescue butnotindependentfood/energybackupforwholeFUA."
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "access",
+      "status": "partial",
+      "sourceIds": ["S01", "S08", "R01", "R02", "S17"],
+      "fullyMeasured": false,
+      "note": "Actualtreatment/waits, NHSordinarilyresidentusuallyfreehospital; prescriptions/dentaleye/travelnotallfree, helpmeans-qualified."
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "routine_quality",
+      "status": "partial",
+      "sourceIds": ["S01"],
+      "fullyMeasured": false,
+      "note": "SHMI106Oct23–Sep24noCI, age-specificreadmission6.6/5.0%notpooled, VTEassessment74.34%notprophylaxistreatmentcoverage, safetyincidentreportingdifferentdenominator."
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "specialist_capacity",
+      "status": "partial",
+      "sourceIds": ["S08", "S02"],
+      "fullyMeasured": false,
+      "note": "3891specialistoperations/ICUactual2024/25 andstandardCAR-T running, notFUAresidentsorallnecessaryspecialtiesguaranteed."
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "system_continuity",
+      "status": "partial",
+      "sourceIds": ["S08", "S01"],
+      "fullyMeasured": false,
+      "note": "ActualSaturdaydischarge/weekday10–20ambulance/trustedassessors, still postcode diabetespath variation andelectivewaits notresolvedbyfuturepilot."
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "translation",
+      "status": "partial",
+      "sourceIds": ["S02", "S08", "S13"],
+      "fullyMeasured": false,
+      "note": "Realcellcollection/reprogramming/reinfusion standardcare +trials for bloodmalignancy; regenerative/diseaseplatformwithinreviewedscope, notallcancerorhealthylifespan."
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "trial_maturity",
+      "status": "partial",
+      "sourceIds": ["R07", "R06"],
+      "fullyMeasured": false,
+      "note": "HAS tisa JULIETIIlongfollowup/registry, ITTm99 vsITT167/actual115distinct; NICE liso comparativeprogressionbenefit withOSuncertain, notsameproductresult."
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "regulatory_adoption",
+      "status": "partial",
+      "sourceIds": ["S02", "S08", "R06"],
+      "fullyMeasured": false,
+      "note": "Localstandardcare since2019still2024/25actualgrowth; UKqualifiedliso recommendation notlocalbrandconfirmation; finiteatleastone disease-matchedlicensedpathassumption explicit."
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "resident_access",
+      "status": "partial",
+      "sourceIds": ["S13", "S17", "R01", "R02", "S15"],
+      "fullyMeasured": false,
+      "note": "Specialistclinic/referral/eligibility/manufacture4weeks/2–4weekinpatient/caregiverdriver/hourdistance/3visitsweek/24hhotline; old2020guidecontinuityrevocable, travelhelpnotmedianautomatic/taxi excluded."
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "knowledge_output",
+      "status": "partial",
+      "sourceIds": ["S10", "S16"],
+      "fullyMeasured": false,
+      "note": "Actual114trackedspinouts2011–Jan2025with8definitionadditions; FY25/26new11 and65minvestment, notranktoscore."
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "industry_density",
+      "status": "partial",
+      "sourceIds": ["S16", "S10"],
+      "fullyMeasured": false,
+      "note": "82portfoliofirms/500mvaluation notlocaljobs/GVA/revenue, differentuniverse114trackednotdecline; manyproductsstilldeveloping."
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "digital_infrastructure",
+      "status": "partial",
+      "sourceIds": ["S01", "S04", "W01"],
+      "fullyMeasured": false,
+      "note": "ActualHIVEchecklist/utilityDNMsensors andrealdevice/SIMhelp, notuniversalbroadband/private2FApressuremeasurement."
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "diffusion",
+      "status": "partial",
+      "sourceIds": ["S04", "S08", "W01", "S16"],
+      "fullyMeasured": false,
+      "note": "Utilitysensors/clinicalrobots andhouseholddevice/SIMassistance actuallyused/delivered; earlyspinoutproductdevelopmentnotallmarketdelivery, institutional/regionboundaries remain."
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "transport_redundancy",
+      "status": "partial",
+      "sourceIds": ["S15", "S18"],
+      "fullyMeasured": false,
+      "note": "Hospitalpracticalbus43airportlink/rail/tram directions; airporthomepageonlynavigationnotactualflightfare/frequency/independentroutesunderpressure."
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "legal_mobility",
+      "status": "partial",
+      "sourceIds": ["R03", "R04", "R05"],
+      "fullyMeasured": false,
+      "note": "UKnationalGermany§41then90dayapply; subsistence/passport/employmentconditions, notautomaticlongstayorassumedallacademics."
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "asset_portability",
+      "status": "not_started",
+      "sourceIds": [],
+      "fullyMeasured": false,
+      "note": "NoverifiedordinaryUKpersonaltransfer/foreignaccountretentionchain; notdenied/banned."
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "network_continuity",
+      "status": "partial",
+      "sourceIds": ["S09", "S11"],
+      "fullyMeasured": false,
+      "note": "PersonalEuropevoice/textanddata upto25GB, >63day/4moafterwarningpricedcontinuation; notfreepermanentroamingnorallproviders/accountauthentication continuity."
+    }
+  ],
+  "rootScopeReview": {
+    "all83PreviousCaseBytesUnchanged": true,
+    "frozen112PayloadsVerified": true,
+    "rootPdfPageCount": 19,
+    "rootPdfPixelsViewed": [
+      {
+        "sourceId": "S01",
+        "physicalPage": 21
+      },
+      {
+        "sourceId": "S01",
+        "physicalPage": 22
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 5
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 7
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 10
+      },
+      {
+        "sourceId": "S07",
+        "physicalPage": 8
+      },
+      {
+        "sourceId": "S07",
+        "physicalPage": 29
+      },
+      {
+        "sourceId": "S08",
+        "physicalPage": 17
+      },
+      {
+        "sourceId": "S08",
+        "physicalPage": 18
+      },
+      {
+        "sourceId": "S13",
+        "physicalPage": 3
+      },
+      {
+        "sourceId": "S13",
+        "physicalPage": 5
+      },
+      {
+        "sourceId": "S13",
+        "physicalPage": 6
+      },
+      {
+        "sourceId": "R07",
+        "physicalPage": 14
+      },
+      {
+        "sourceId": "R07",
+        "physicalPage": 24
+      },
+      {
+        "sourceId": "R07",
+        "physicalPage": 25
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 6
+      },
+      {
+        "sourceId": "S13",
+        "physicalPage": 4
+      },
+      {
+        "sourceId": "S01",
+        "physicalPage": 5
+      },
+      {
+        "sourceId": "S08",
+        "physicalPage": 20
+      }
+    ],
+    "all9031IndependentlyLoaded": true,
+    "rootNewNetworkRequests": 0,
+    "rootExactW01ToolBlockVerified": true,
+    "rootLocalRenderBatchException": {
+      "generatedPagesOneCall": 4,
+      "sourceFilesInCall": 2,
+      "rule": "self-imposed local render batch <=3 pages",
+      "correction": "No rerender to conceal. Actual visual inspection used3plus1 pages; later render batches must assert page count as well as sources."
+    },
+    "rootPixelViewBatchMax": 3,
+    "gmFireServiceAreaEqualsFua3304": false,
+    "wiganCentreFallsInManchester3304": false,
+    "allEvacueesAreLocalLongtermResidents": false,
+    "nationalAverageColumnsAre2025ConcurrentComparator": false,
+    "diagnostic14Point2DirectionUsedForScore": false,
+    "shmi106ProvesSignificantExcessMortality": false,
+    "vte74Point34MeansProphylaxisDrugCoverage": false,
+    "reportedSafetyIncidentsAreUniqueResidentHarmRate": false,
+    "plannedRiskStratificationAlreadyResolvedAllInequality": false,
+    "everyArenaRecommendationIndependentlyCertifiedAllAgencies": false,
+    "old2020GuideIsCertified2026NewVersion": false,
+    "hasTisaOutcomesTransferredToLocalOrLiso": false,
+    "has2021And2022DatesSilentlyReconciled": false,
+    "trialAndRegistryAnalysisSetsPooled": false,
+    "nhsNationalityAloneDeterminesFreeCare": false,
+    "allCarerAccommodationAndTaxiCostsPaid": false,
+    "under66MedianResidentAutomaticallyReceivesHeatingAid": false,
+    "supportPaymentsHouseholdsAndPeopleSummed": false,
+    "university2019PdfUsedAs2025Performance": false,
+    "spinout114And82AreSameDenominator": false,
+    "investmentEqualsSalesOrResidentIncome": false,
+    "o2PermanentRoamingIsUnlimitedFree": false,
+    "airport2027AdvertisementsArePrecutoffRoutes": false,
+    "germany41MeansAutomaticLongResidence": false,
+    "sourceFailurePenalizesCapability": false,
+    "sourceCountDeterminesScore": false,
+    "unknownsFilledWithMidpoint": false,
+    "score40RequiresDominanceOrMajorityOrShutdown": false
+  },
+  "sourceAndStopLedger": {
+    "normalBudget": 18,
+    "normalActualHTTPlegs": 18,
+    "journal": "http-request-journal.json",
+    "normalValid": 16,
+    "normalFailed": 2,
+    "durableCopiesVerified": 7,
+    "discoveryRounds": [
+      [
+        "site.mft.nhs.uk 2025 quality report annual report mortality waiting",
+        "site.manchester.gov.uk 2025 annual performance poverty food energy flood delivered",
+        "site.manchesterfire.gov.uk 2025 annual report flooding emergency terrorism",
+        "site.christie.nhs.uk CAR-T 2025 patients routine outcomes"
+      ],
+      [
+        "site.manchester.gov.uk 2025 household support fund delivered food fuel grants residents",
+        "site.manchester.ac.uk 2025 commercialisation spinouts licences income annual",
+        "site.unitedutilities.com 2025 annual report Manchester water customers affordability support",
+        "site.o2.co.uk 2026 Europe roaming 25GB pay monthly"
+      ]
+    ],
+    "networkClosed": true,
+    "successNeverResetsFailure": true,
+    "historicalManchesterSpecificCounters": "unknown, not0 and not automaticwholeproviderstop",
+    "knownInheritedStops": [
+      "EC83city/WHOtopicdiscoveryclosed: no request",
+      "NHS England/UCLH previous multipleTLS/challengefailures stopped: no request, NHS.uk is distinctprovider and useddurableonly",
+      "ING/WIPO2026 stopped: no request",
+      "PriorCambridgeCTArawDNSfailure concretepath not re-requested; exactCTAcontent not usedwithoutstoredoriginal",
+      "Otherpreviousstopsremain, no losttmpidentity treatedasvalidraw"
+    ],
+    "newFailures": [
+      {
+        "sourceId": "S03",
+        "provider": "www.manchester.gov.uk",
+        "mechanism": "normalTLS urllibHTTPGET",
+        "status": 403,
+        "action": "Exactflooddocument stopped, no webretry. Searchsnippet notadoptedasfulloriginal; eventjudgment independently uses originalFRSreportS07."
+      },
+      {
+        "sourceId": "S06",
+        "provider": "www.manchester.gov.uk",
+        "mechanism": "normalTLS urllibHTTPGET",
+        "status": 403,
+        "action": "exactfuelhelpdocumentstopped, no laterwebretry. Pre-existing actualwebbody W01 preserved beforefailure."
+      }
+    ],
+    "knownNewProviderFailureLowerBound": {
+      "www.manchester.gov.uk": 2
+    },
+    "cityProviderAction": "No further cityproviderrequests, voluntaryconservativeclosure2knownnewfailures; unknownpriornotcleared or falselycalled3. Not cityservicesfailure.",
+    "toolOnlyLimit": [
+      {
+        "ref": "turn2376view0",
+        "provider": "test.manchesterfire.gov.uk",
+        "mechanism": "web PDFtoolsizeceiling29588487",
+        "action": "not providerHTTPfailure; first normalbyte acquisition S07success, no failedrawretry/CDNswap"
+      }
+    ],
+    "routePolicy": "18actuallegs individuallyjournalled incl errors; no hiddenretry; redirects count separately. ActualHTTPstatuschain storedheaders. Everyread/request/pixelbatch explicit<=3; discover<=4/round.",
+    "reuseDiagnostic": "Firstlocal reuse helper matched Cambridge manifest wrongshape -> StopIteration then missingextraction; no HTTP, no failedoriginal or falsevalidsource. CorrectedusingalreadyverifiedOxfordmanifest + actualCambridgebytes; all7copiedfilesverified.",
+    "candidateEffects": "Acquisition problems never converted into localcapabilitypenalties/opacity. No candidate excluded."
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-manchester-score-completion-review.md",
+    "sha256": "2362251c2656aaacfe5d5a1b9f582db80cfb4009f272d3f9ba902e627e99c25c",
+    "researchReport": "docs/cci-manchester-priority-review.md",
+    "researchReportSha256": "330ac7b8726efb55193935c5e5405923c9ca595ccf5c56874cfb8aa1f99b8da3",
+    "researchFrozenReportSha256": "449c6742b50350bbe0f6d4e40a219bf45777deadc4a8aa64ee9229929af6c30b",
+    "frozenManifestSha256": "084988d1b7c0725303c48ac045751ea792c98930cd1bf296a7a68e001d5d4e7f",
+    "frozenFilesVerified": 112,
+    "validOriginalCount": 23,
+    "newValidOriginalCount": 16,
+    "reusedOriginalCount": 7,
+    "rootNewNetworkRequests": 0
+  },
+  "reportBytes": 17357,
+  "reportSha256": "2362251c2656aaacfe5d5a1b9f582db80cfb4009f272d3f9ba902e627e99c25c"
+}

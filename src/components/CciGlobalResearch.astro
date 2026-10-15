@@ -93,6 +93,7 @@ import eindhoven from "../../docs/data/cci-local-2026-eindhoven-case.json";
 import luxembourg from "../../docs/data/cci-local-2026-luxembourg-case.json";
 import stuttgart from "../../docs/data/cci-local-2026-stuttgart-case.json";
 import daejeon from "../../docs/data/cci-local-2026-daejeon-case.json";
+import manchester from "../../docs/data/cci-local-2026-manchester-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -190,8 +191,10 @@ const cases = [
   luxembourg,
   stuttgart,
   daejeon,
+  manchester,
 ];
 const caseNamesZh: Record<number, string> = {
+  [manchester.candidateId]: "曼彻斯特功能区",
   [daejeon.candidateId]: "大田功能区",
   [stuttgart.candidateId]: "斯图加特功能区",
   [luxembourg.candidateId]: "卢森堡功能区",
@@ -381,6 +384,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [manchester.candidateId]: [
+    zh
+      ? "曼彻斯特防护与医疗条件40，制度／疾病转化／技术条件60，安全／资源／退出未知；原权重小计33、数学域33—68，无完整总分。真实救援、NHS诊疗／接续、居民帮助和技术采用，与洪灾水电中断、治疗等待及净照护余障共同判断。"
+      : "Manchester has conditional 40 for PCS and MED, and 60 for ISR, LON and TEC; GSS, RES and OPT remain unknown. The original-weight subtotal is 33 and the arithmetic domain 33–68, without a complete total. Delivered rescue, NHS care and continuity, resident help and technology use are assessed alongside flood-related utility disruption, treatment waits and net-care constraints.",
+    zh
+      ? "消防服务域不等功能区，Wigan中心参考点归Liverpool2374；旧同期比较、诊断14.2%方向及人体队列分母不混。LON为成熟疾病平台到当地标准CAR-T和通常净监护的有限桥，不搬tisa／liso疗效或法国付款。原83案不变，关键假设拒绝即回未知，全球入围未证明。"
+      : "The fire-service area is not the FUA: the Wigan-centre reference falls in Liverpool2374. Old comparator periods, the ambiguous 14.2% diagnostic row and human-study denominators are not conflated. LON uses a bounded mature-disease-platform bridge to local standard CAR-T and usual net monitoring; tisa/liso outcomes and French payment rules are not transferred. The previous 83 cases are unchanged. Rejecting necessary assumptions restores unknowns; global qualification is unproven.",
+  ],
   [daejeon.candidateId]: [
     zh
       ? "大田制度与技术条件60，其余六维未知；原权重小计15、数学域15—90，无完整总分。实际供水、重复检验、反馈／居民帮助及许可与企业活动支持有限判断；国家医保规则不替代当地诊疗，科研名望不换分。"

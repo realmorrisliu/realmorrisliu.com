@@ -135,6 +135,7 @@ const realCases = [
   "luxembourg",
   "stuttgart",
   "daejeon",
+  "manchester",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -261,6 +262,7 @@ const [
   luxembourg,
   stuttgart,
   daejeon,
+  manchester,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -3243,3 +3245,69 @@ for (const [id, value, lower, upper] of [
   ["TEC", 80, 17, 92],
 ] as const)
   assert.deepEqual(total({ ...daejeon, [id]: value }), { center: null, lower, upper });
+
+const manchesterCase = realCases.find(c => c.candidateId === 3304);
+assert.equal(
+  manchesterCase.priorityCompletionReview.sha256,
+  digest(manchesterCase.priorityCompletionReview.path)
+);
+assert.equal(
+  manchesterCase.priorityCompletionReview.researchReportSha256,
+  digest(manchesterCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(manchester, { PCS: 40, ISR: 60, MED: 40, LON: 60, TEC: 60 });
+assert.deepEqual(total(manchester), { center: null, lower: 33, upper: 68 });
+assert.equal(manchesterCase.coverageReview.length, 31);
+assert.equal(manchesterCase.sourceSnapshots.length, 23);
+assert.equal(manchesterCase.failedSourceSnapshots.length, 2);
+assert.equal(manchesterCase.rootScopeReview.rootPdfPageCount, 19);
+assert.equal(manchesterCase.rootScopeReview.rootExactW01ToolBlockVerified, true);
+for (const key of [
+  "gmFireServiceAreaEqualsFua3304",
+  "wiganCentreFallsInManchester3304",
+  "allEvacueesAreLocalLongtermResidents",
+  "nationalAverageColumnsAre2025ConcurrentComparator",
+  "diagnostic14Point2DirectionUsedForScore",
+  "shmi106ProvesSignificantExcessMortality",
+  "vte74Point34MeansProphylaxisDrugCoverage",
+  "everyArenaRecommendationIndependentlyCertifiedAllAgencies",
+  "old2020GuideIsCertified2026NewVersion",
+  "hasTisaOutcomesTransferredToLocalOrLiso",
+  "has2021And2022DatesSilentlyReconciled",
+  "trialAndRegistryAnalysisSetsPooled",
+  "allCarerAccommodationAndTaxiCostsPaid",
+  "under66MedianResidentAutomaticallyReceivesHeatingAid",
+  "university2019PdfUsedAs2025Performance",
+  "spinout114And82AreSameDenominator",
+  "investmentEqualsSalesOrResidentIncome",
+  "o2PermanentRoamingIsUnlimitedFree",
+  "airport2027AdvertisementsArePrecutoffRoutes",
+  "sourceFailurePenalizesCapability",
+  "unknownsFilledWithMidpoint",
+])
+  assert.equal(manchesterCase.rootScopeReview[key], false);
+for (const [id, lower, upper] of [
+  ["PCS", 27, 77],
+  ["ISR", 24, 74],
+  ["MED", 27, 77],
+  ["LON", 27, 72],
+  ["TEC", 27, 72],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...manchester };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+for (const [id, value, lower, upper] of [
+  ["PCS", 60, 36, 71],
+  ["MED", 60, 36, 71],
+  ["ISR", 40, 30, 65],
+  ["LON", 40, 31, 66],
+  ["TEC", 40, 31, 66],
+  ["TEC", 80, 35, 70],
+] as const)
+  assert.deepEqual(total({ ...manchester, [id]: value }), { center: null, lower, upper });
+const manchesterPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (c: { efua_id: string }) => c.efua_id === "3304"
+);
+assert.equal(manchesterPosition.bestPosition, 1);
+assert.equal(manchesterPosition.worstPosition, rankAudit.candidateCount);
