@@ -143,6 +143,7 @@ const realCases = [
   "lund",
   "almere",
   "portsmouth",
+  "birmingham",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -277,6 +278,7 @@ const [
   lund,
   almere,
   portsmouth,
+  birmingham,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -3650,3 +3652,37 @@ assert(portsmouthMed.sourceIds.includes("N01"));
 assert.equal(portsmouthCase.sourceSnapshots.length, 18);
 assert.equal(portsmouthCase.failedSourceSnapshots.length, 4);
 assert.equal(portsmouthCase.sourceAndStopLedger.rootSupplement.combinedActualLegs, 20);
+
+const birminghamCase = realCases.find(c => c.candidateId === 3799);
+assert.equal(
+  birminghamCase.priorityCompletionReview.sha256,
+  digest(birminghamCase.priorityCompletionReview.path)
+);
+assert.equal(
+  birminghamCase.priorityCompletionReview.researchReportSha256,
+  digest(birminghamCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(birmingham), { center: null, lower: 30, upper: 65 });
+assert.equal(birminghamCase.unknownWeight, 35);
+assert.deepEqual(
+  birminghamCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["GSS", "RES", "OPT"]
+);
+for (const [id, lower, upper] of [
+  ["PCS", 24, 74],
+  ["ISR", 24, 74],
+  ["MED", 24, 74],
+  ["LON", 24, 69],
+  ["TEC", 24, 69],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...birmingham };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...birmingham, MED: 60 }), { center: null, lower: 33, upper: 68 });
+assert.equal(birminghamCase.sourceSnapshots.length, 20);
+assert(birminghamCase.sourceSnapshots.every((s: { validOriginal: boolean }) => s.validOriginal));
+assert.equal(birminghamCase.failedSourceSnapshots.length, 2);
+assert.equal(birminghamCase.sourceAndStopLedger.normalHTTPActualLegs, 18);

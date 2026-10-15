@@ -101,6 +101,7 @@ import newcastle from "../../docs/data/cci-local-2026-newcastle-case.json";
 import lund from "../../docs/data/cci-local-2026-lund-case.json";
 import almere from "../../docs/data/cci-local-2026-almere-case.json";
 import portsmouth from "../../docs/data/cci-local-2026-portsmouth-case.json";
+import birmingham from "../../docs/data/cci-local-2026-birmingham-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -206,8 +207,10 @@ const cases = [
   lund,
   almere,
   portsmouth,
+  birmingham,
 ];
 const caseNamesZh: Record<number, string> = {
+  [birmingham.candidateId]: "伯明翰功能区",
   [portsmouth.candidateId]: "朴茨茅斯功能区",
   [almere.candidateId]: "阿尔梅勒功能区",
   [lund.candidateId]: "隆德功能区",
@@ -405,6 +408,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [birmingham.candidateId]: [
+    zh
+      ? "伯明翰防护／制度／医疗条件40，专项转化／技术条件60；安全／资源／退出未知。原权重贡献30、数学域30—65，无完整总分。实际供水与护理改善、服务恢复和真实疾病给药／工业应用，同严旱准备、履约及护理余障一起判断。"
+      : "Birmingham has conditional PCS/ISR/MED 40 and LON/TEC 60; GSS/RES/OPT remain unknown. The original-weight contribution is 30 and arithmetic domain 30–65, without a complete total. Water and care improvements, service recovery, actual disease treatment and industrial use are assessed alongside drought preparedness, institutional and care constraints.",
+    zh
+      ? "56.2%是严旱下25年平均客户风险且达监管目标，不是当年断水比例；垃圾连续服务已恢复。新版医院观察窗／分母分别，真实CAR-T与设备合同不代所有人受益。普通付款／照护等有限连接可撤，原91案保持不变。"
+      : "The 56.2% measure is a 25-year average customer risk under severe drought and meets its regulatory target; it is not an annual outage rate. Waste-service continuity has been restored. Hospital observation windows and denominators remain distinct; actual CAR-T and equipment contracts are not universal benefit. Usual payment and care bridges remain revocable; the previous 91 cases are unchanged.",
+  ],
   [portsmouth.candidateId]: [
     zh
       ? "朴茨茅斯防护／医疗条件40，制度／专项转化／技术条件60；安全／资源／退出未知。原权重贡献33、数学域33—68，无完整总分。实际供水备援、临床与区域CAR-T交付和知识应用，同严旱保护及护理约束一起判断。"

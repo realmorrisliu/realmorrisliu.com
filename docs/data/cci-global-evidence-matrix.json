@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 91,
+    "conditionalCaseCount": 92,
     "completeConditionalCaseCount": 19,
-    "partialCaseCount": 72,
-    "unassessedCount": 8940,
+    "partialCaseCount": 73,
+    "unassessedCount": 8939,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -760,8 +760,13 @@
       "sha256": "8e422626584f4537bccb4b17fda48afc6a261a3d67a0119de8a5c7dfb66da897",
       "provenance": "cci-portsmouth-score-completion-review.md",
       "provenanceSha256": "696eeedef73ec988b419e7570436b2952d70f1374db8a9b70115de7808fc4236"
+    },
+    "cci-local-2026-birmingham-case.json": {
+      "sha256": "0ad2a7b392933c06b2876785a39b979512f27ba40bfb6151ebae9c637148e91b",
+      "provenance": "cci-birmingham-score-completion-review.md",
+      "provenanceSha256": "86ea6b152954a1e1197d77701514d066371ca80a6d9353204e76b8881d75ac69"
     }
   },
-  "scriptSha256": "b28224405f7a895bfce25b7098746bd61c81f68be8d338c52f17e2d61f3f600d",
-  "csvSha256": "87c7a0b7e55c86eba29f8bf09a67e581a4e26dcb3ee43ee0bf389deb4043a8a1"
+  "scriptSha256": "10a4f69fa3cc40b84c1a20d3f642abaaf8bb68757f28d219d758c244427fcc14",
+  "csvSha256": "7b088eb1b5e558bcb7f82d93dece11a5263eb25abfc997d894e000e28211c1c8"
 }
