@@ -80,6 +80,7 @@ import munich from "../../docs/data/cci-local-2026-munich-case.json";
 import oslo from "../../docs/data/cci-local-2026-oslo-case.json";
 import antwerp from "../../docs/data/cci-local-2026-antwerp-case.json";
 import brussels from "../../docs/data/cci-local-2026-brussels-case.json";
+import hamburg from "../../docs/data/cci-local-2026-hamburg-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -164,8 +165,10 @@ const cases = [
   oslo,
   antwerp,
   brussels,
+  hamburg,
 ];
 const caseNamesZh: Record<number, string> = {
+  [hamburg.candidateId]: "汉堡功能区",
   [brussels.candidateId]: "布鲁塞尔功能区",
   [antwerp.candidateId]: "安特卫普功能区",
   [oslo.candidateId]: "奥斯陆功能区",
@@ -342,6 +345,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [hamburg.candidateId]: [
+    zh
+      ? "汉堡ISR／LON／TEC／OPT条件60，PCS／GSS／RES／MED未知，数学域27—82、无中心。实际跨公用事业生产协同、本地成熟疾病治疗及个人出境路径支持有限判断；必要护理的质量正反结果、护理配置与净影响尚不能择档。"
+      : "Hamburg has conditional ISR/LON/TEC/OPT scores of 60; PCS/GSS/RES/MED remain unknown: a 27–82 mathematical domain without a centre. Operating utility coordination, local mature-disease treatment and personal exit routes support limited judgments. Mixed clinical results, nursing gaps and their ordinary effects remain unresolved.",
+    zh
+      ? "压疮O/E2.17仍在报告参考内，骨折行走结局O/E4.70异常；班次护理比例不当死亡率。Tisa隐私行不推人数／病种，人体ALL≤25岁依据不移Axi；本地适应证、普通支付与近院照护净资源可撤，撤LON为21—86。水食能合束、实际威胁余障及全区适配仍未定，不证明全球入围。"
+      : "Pressure-injury O/E 2.17 remains within the report's reference, while the fracture walking outcome at 4.70 is outside it. Shift compliance is not mortality. The suppressed Tisa row supplies no count or indication; ALL evidence through age 25 does not transfer to Axi. Local indication, usual payment and net nearby-care resources are revocable: withdrawing LON gives 21–86. Global qualification remains unproven.",
+  ],
   [brussels.candidateId]: [
     zh
       ? "布鲁塞尔ISR／MED／LON／TEC／OPT条件60，PCS／GSS／RES未知，数学域36—76、无中心。实际纠偏与服务使用、多科护理及普通付款、本地成熟疾病治疗支持有限判断；双债、等待、未报销费用、毒性及照护负担保留。"

@@ -122,6 +122,7 @@ const realCases = [
   "oslo",
   "antwerp",
   "brussels",
+  "hamburg",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -235,6 +236,7 @@ const [
   oslo,
   antwerp,
   brussels,
+  hamburg,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2592,4 +2594,48 @@ assert.deepEqual(sydneyGss.conditionalAlternatives, []);
 assert.equal(total({ ...sydney, GSS: 40 }).center, 54);
 for (const id of sydneyGssReview.newSourceIds) {
   assert.equal(sydneyGssCase.sourceSnapshots.filter((s: { id: string }) => s.id === id).length, 1);
+}
+
+const hamburgCase = realCases.find(c => c.candidateId === 3793);
+assert.equal(
+  hamburgCase.priorityCompletionReview.sha256,
+  digest(hamburgCase.priorityCompletionReview.path)
+);
+assert.equal(
+  hamburgCase.priorityCompletionReview.researchReportSha256,
+  digest(hamburgCase.priorityCompletionReview.researchReport)
+);
+assert.equal(hamburgCase.sourceSnapshots.length, 18);
+assert.equal(
+  hamburgCase.sourceSnapshots.filter((s: { reusedFrom?: string }) => s.reusedFrom).length,
+  13
+);
+assert.equal(hamburgCase.failedSourceSnapshots.length, 5);
+assert.equal(hamburgCase.rootScopeReview.rootPdfPageCount, 14);
+assert.equal(hamburgCase.rootScopeReview.notes.pressureInjury.riskRatio, 2.17);
+assert(
+  hamburgCase.rootScopeReview.notes.pressureInjury.riskRatio <=
+    hamburgCase.rootScopeReview.notes.pressureInjury.referenceMax
+);
+assert(
+  hamburgCase.rootScopeReview.notes.hipFractureWalking50mAtDischarge.riskRatio >
+    hamburgCase.rootScopeReview.notes.hipFractureWalking50mAtDischarge.referenceMax
+);
+assert.equal(hamburgCase.rootScopeReview.notes.riskAdjustedOutlierIsProofOfPoorQuality, false);
+assert.equal(hamburgCase.rootScopeReview.sgb62CapsAllPrivateAndCaregiverCosts, false);
+assert.deepEqual(total(hamburg), { center: null, lower: 27, upper: 82 });
+for (const dimension of ["ISR", "LON", "TEC", "OPT"] as const) {
+  const withdrawn = { ...hamburg };
+  delete withdrawn[dimension];
+  const is15 = weights[dimension] === 15;
+  assert.deepEqual(total(withdrawn), {
+    center: null,
+    lower: is15 ? 18 : 21,
+    upper: is15 ? 88 : 86,
+  });
+  assert.deepEqual(total({ ...hamburg, [dimension]: 40 }), {
+    center: null,
+    lower: is15 ? 24 : 25,
+    upper: is15 ? 79 : 80,
+  });
 }

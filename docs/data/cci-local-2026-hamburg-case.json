@@ -1,0 +1,1417 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 3793,
+  "name": "Hamburg",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-15",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "researchFrozenInputCommit": "2dce2ecae6df1d77f7a87be0b073cc2938c1b993",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "weight": 15,
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "实际防洪线、维护与预警具实质保护作用，但2026热旱、堤外居住和尾部洪水等余险的通常净影响尚不能在40/60间判断。",
+      "assumption": "未以无危险或全人口2026完整量测为门槛；地质未审诚实保留，未知不作40。",
+      "conditionalAlternatives": [],
+      "rejectionOutcome": null,
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "PCS",
+          "subpillar": "heat_humidity",
+          "status": "reviewed_partial",
+          "evidence": "W02",
+          "finding": "Actualsummer2026heat/tropicalnightsandpublicadvice; no boundedresidualaftercooling/ordinarynetprotectiondirection,37%preparationisselfreport.",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "flood_sea_level",
+          "status": "reviewed_partial",
+          "evidence": "W01;H01:p3,11",
+          "finding": "Existing103kmdefences/actualhistoricalperformanceandwatermaintenance;protectiveoperationnotall2050workscomplete,HafenCityscope/tailriskretained.",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "geophysical",
+          "status": "not_started",
+          "evidence": "",
+          "finding": "No independent local geophysicalreview; nozeroassumption.",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "severe_weather_wildfire",
+          "status": "reviewed_partial",
+          "evidence": "W02;H01:p3,11",
+          "finding": "Storm/heavyraindroughtknown, warning/reportingandwatermaintenanceoperating; severeweather/wildfireprotectionresidualnotclassified.",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "GSS",
+      "weight": 15,
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "本地港口/经济设施面对真实混合威胁，2025禁令是已运行保护；极端主义人数不是攻击伤亡，区域能源供应压力也不等当地战争伤亡。现材料不足裁匹配保护后普通居民受到的重要限制。",
+      "assumption": "不从无战争、普通犯罪、国家均值或单一网络能力补60；不是必须先受攻击或证明所有战略节点均防住。",
+      "conditionalAlternatives": [],
+      "rejectionOutcome": null,
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "GSS",
+          "subpillar": "organized_violence",
+          "status": "reviewed_partial",
+          "evidence": "S03",
+          "finding": "2025violent-orientedextremismpotentialsnotactualattack/victimcounts; actualMuslimInteraktivbanOct2025; ordinaryremainingimpactnotclassified.",
+          "score": null
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "regional_conflict",
+          "status": "reviewed_context",
+          "evidence": "S03;H01:p10-11",
+          "finding": "Ukraine/Russianhybridactivities/Mideastenergy&supplycostconcreteregionaltransmission; noabsenceofwarorcountryrankproxy.",
+          "score": null
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "strategic_exposure",
+          "status": "reviewed_partial",
+          "evidence": "S03;H01:p11",
+          "finding": "Port/economicresearchinterestandhybridthreat, watermaintenanceonlypartialmatchedprotection; noallstrategicprotectionorcybersingleitemscore.",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "ISR",
+      "weight": 15,
+      "score": 60,
+      "scoreStatus": "conditional_root_adopted",
+      "rationale": "水务真实供给/网络维护与实际数字许可流程、三公用事业生产接口和已经落地的协调规则，加上居民现场数字协助及过往实际救助，支持普通执行和调整能力确实可用。",
+      "assumption": "A-ISR：接受这些跨功能实际交付对通常市政执行有有限代表性，流程和居民帮助在截止日继续运转；并不把旧基金当2026补助。真实服务量与已应用协调直接降低日常办事/供给摩擦，故通常功能并未被已知余障主导。未审司法救济、群体排斥和破管尾险保留；若此代表性/普通受益桥不成立=>null，若重要净障碍主导=>40。",
+      "conditionalAlternatives": [40],
+      "rejectionOutcome": null,
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "ISR",
+          "subpillar": "governance",
+          "status": "reviewed_partial",
+          "evidence": "S04;S08:p1-6;H05",
+          "finding": "Actualstandardisedpermittingrollout/publicformalreportandreviewprocedures; nofullrightsremedy/auditcompletionassessment.",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "adaptive_capacity",
+          "status": "reviewed_partial",
+          "evidence": "S04;W01;H01:p8-11",
+          "finding": "ActualproductionITconnectionsandcoordinationrules,waternetworkinvestment/fieldmeasurement; announced2050defencesnotfinished.",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "social_cohesion",
+          "status": "reviewed_partial",
+          "evidence": "W03;S08:p3,5-6;W06-W07",
+          "finding": "WalkineIDhelpactualoffered,75pastpaid/debtwaivercasesonlyselectedoldfundended; noallusers/cohesionsurveytransfer.",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "emergency_recovery",
+          "status": "reviewed_partial",
+          "evidence": "W01;H01:p3,11;H05:p52-53",
+          "finding": "Operatingflooddefence/maintenanceandlevel3emergencyservice; notallcurrentcrisesrestored/zerooutage.",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "RES",
+      "weight": 10,
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "实际供水及水价、已发生能源债减免与当前帮助入口均有证；旧基金已结束、供水维修/能源成本压力仍在，食品及通常合束取得方向未闭。",
+      "assumption": "不是要求逐户完整账单；现有保护确实帮助特定75案，却不能解释2026画像通常食水能取得后的余障大小，不能由供水量或基金小额推60/40。",
+      "conditionalAlternatives": [],
+      "rejectionOutcome": null,
+      "subpillars": {
+        "water": "partial",
+        "food": "unresolved",
+        "energy": "partial",
+        "supply_chain": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "RES",
+          "subpillar": "water",
+          "status": "reviewed_partial",
+          "evidence": "H01:p7-11",
+          "finding": "Actual117.4m3millioncustomerwater,pricing1.99/m3+7.52meterbase,waterloss3.8%;supraFUA2.2mnotFUAshare,pipefailures/energycostsretained.",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "food",
+          "status": "not_started",
+          "evidence": "",
+          "finding": "No bounded foodusualnetacquisitionreview; not inferredfromnationalwealth or airportcargo.",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "energy",
+          "status": "reviewed_partial",
+          "evidence": "H01:p9-11;S08:p3,5-6;W04-W07",
+          "finding": "Actualproviderenergycostandpast75debtwaivers,currentadvice/conditionalassistanceoffer; endedMar2024fundnotextended,costbundleafterhelpdirectionunresolved.",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "supply_chain",
+          "status": "reviewed_partial",
+          "evidence": "H01:p8,10-11",
+          "finding": "Actualdryperiodsupply,maintenancemarketcapacityconstraints/Mideastpriceandsupplyrisk; notportpresence=allfoodfuelredundancy.",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "MED",
+      "weight": 15,
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "真实广泛护理/必要诊疗、普通GKV支付与部分在参考范围的多病种结果提供正证；骨折功能结果、压疮高于模型预期及部分夜班护理配置是实质反证。帮助后通常必要护理40/60仍未定。",
+      "assumption": "不要求全市/全院完美结局：在已读有限链内，法定支付使全额临床票价通常不直接压给居民，且实际护理持续交付，不能仅异常项推40；但结果异质、重要功能/配置余障的实际缓解和通常影响尚无可裁方向，亦不能把合规/服务量直接推60。未知保留，而不是加完美资料门槛。",
+      "conditionalAlternatives": [],
+      "rejectionOutcome": null,
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "MED",
+          "subpillar": "access",
+          "status": "reviewed_partial",
+          "evidence": "H04:p4;H05:p20,52-53;R6:27,39,61,62",
+          "finding": "OrdinaryGKVadmission/actualbroadcare/level3emergencyplusstatutorycopays; necessarycarewaiteffectnotresolved.",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "routine_quality",
+          "status": "reviewed_partial",
+          "evidence": "H05:p394-395,408-409,432-433,458-459,481,498-499,690-691,860-861,902",
+          "finding": "Actualmixedriskadjustedmulti-conditionresults:somewithinreference,butfracturewalkingO/E4.70andstaffing31.69%night; U62uninterpreted,notcausalmortality/currentallcityfailure.",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "specialist_capacity",
+          "status": "reviewed_partial",
+          "evidence": "H05:p20,51-53,942,1030,1045;H02",
+          "finding": "Actualcare/CAR-Tcodes/24hequipmentandclinicalteam;volumenotqualityorordinarypayerproof.",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "system_continuity",
+          "status": "reviewed_partial",
+          "evidence": "H04:p4;R6:39;H05:p902;H02",
+          "finding": "Actualadmission/referralpatientIDandstatutorydischargemanagement/monitoringteam; staffingandmanufacturingwaitretained,noallnecessarycareordinaryresidualdirection.",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "LON",
+      "weight": 10,
+      "score": 60,
+      "scoreStatus": "conditional_root_adopted",
+      "rationale": "本地2024真实CAR-T给药（含Tisa隐私抑制行）、ATMP适应证资格、实际跨专业监护，与同产品Tisa获批ALL人体成熟资料和通常GKV必要住院/药品/出院保障组成有限的成熟疾病治疗路径。",
+      "assumption": "A-LON：只在Tisagenlecleucel获批ALL及年龄/病情资格内，接受本地已交付Tisa与具资格ALL路径实际可接、截止延续；常规GKV承担必要药品/住院/护理、法定自付上限，使药品全价通常不成为画像的主要财务门槛。住院监护真实已运行；接受普通当地人在所需近院照护/随访的时间、交通、支持净资源通常可安排，未审远端家庭/陪护仍可能阻断。制造等待可恶化病情、毒性及护理压力保留，不能称零障碍/普遍治愈。若此适应证、运行、支付或连续监护资源连接不可接受=>null；若重要剩余取得障碍主导=>40。不把Tisa疗效转给Axi，不用逐剂票据/固定成人门槛。",
+      "conditionalAlternatives": [40],
+      "rejectionOutcome": null,
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "LON",
+          "subpillar": "translation",
+          "status": "reviewed_partial",
+          "evidence": "H05:p1030,1045;H02",
+          "finding": "Actual2024Axicaptagen10codedcasesandTisa suppressed row; notdedupresidents/indication/payment; old80since2019not2025new.",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "trial_maturity",
+          "status": "reviewed_partial",
+          "evidence": "R13:p6,8,10",
+          "finding": "TisaALL<=25 phaseII/IIIb humanlongfollowup/conditionalRFSandtoxicity; notAxioutcomes/alllocalcures/healthyrejuvenation.",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "regulatory_adoption",
+          "status": "reviewed_partial",
+          "evidence": "H05:p942;R13:p6;R6:27,39",
+          "finding": "LocalATMPANT01indicationslistedadult/childBprecursorALLandadultBlymphoma/myeloma; product/useclassspecificeligiblepathonlynotalltrialscovered.",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "resident_access",
+          "status": "reviewed_partial",
+          "evidence": "H04:p4;H02;H05:p942,1045;R6:27,39,61,62",
+          "finding": "ActualregulatedlocaldrugdeliveryandmultiteammonitoringplususualGKVnecessarycare allowsfiniteeligiblematurepath; specificTisaALL/continuity/payment/nearhospitalresourcebridge revocable,manufacturingdelaydeteriorationretained.",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "TEC",
+      "weight": 10,
+      "score": 60,
+      "scoreStatus": "conditional_root_adopted",
+      "rationale": "三家公用事业自2025-11以内部生产系统接通BauWeiser、协调规则已在相关机构应用，与实际居民数字服务/现场协助及医疗交付，显示技术已从单点试验进入多主体日常流程。",
+      "assumption": "A-TEC：接受这些真实跨公用事业和居民办事的采用是有意义的通常扩散，截止日延续。已接生产接口与实际协调直接可用于日常工程/服务，故不是论文/规划数量或只医院名气支持60；未量测企业密度/宽带普及和被排斥者仍保留。拒代表性/通常受益/延续=>null，若重要取得排斥主导=>40。",
+      "conditionalAlternatives": [40],
+      "rejectionOutcome": null,
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "unresolved",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "TEC",
+          "subpillar": "knowledge_output",
+          "status": "reviewed_partial",
+          "evidence": "H01:p8;S04",
+          "finding": "Actual2025geophysicsfieldboreandproductiveITintegration,notpatentprestige/outputcountalone.",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "industry_density",
+          "status": "not_fully_reviewed",
+          "evidence": "S04",
+          "finding": "Multiplenamedutilityproductionpartnersbut noFUAworker/firmdensitydenominator; notzero.",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "digital_infrastructure",
+          "status": "reviewed_partial",
+          "evidence": "S04;W03",
+          "finding": "ActualNov2025interfacesandrollout, sixeID/accounthelpdesks; no broadbandcoverage/subscriptionmeasurement.",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "diffusion",
+          "status": "reviewed_partial",
+          "evidence": "S04;W03;H05:p1030,1045",
+          "finding": "Alreadyusedmultiutilitypermittingandlocaldigitalservices/clinicaldrugs,notfutureLLMclaims=universalbenefit.",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "OPT",
+      "weight": 10,
+      "score": 60,
+      "scoreStatus": "conditional_root_adopted",
+      "rationale": "实际机场运行与国际线路，加上直接适用德国EU公民的有条件居留路径、个人银行鉴权/跨境付款和可充值通信服务，支持有限可行的合法、资金与通信退出。",
+      "assumption": "A-OPT：接受画像具通常必要出行/初期安置与费用资源、符合适用EU居留目的（已审工人路径，并未假定所有居民为工人）、有效ID/SIM/设备/鉴权且可完成新地址/医疗和服务安排；初始及后续个人通信预算可维持。多家航司/路线和正式个人支付实际可用，使通常退出不被已知门槛主导。非工人权利未单独确认、长期境外账户/漫游政策和地面国际独立冗余未闭，不能宣称永久原账户/无限漫游。若画像适格或持续净安排桥拒绝=>null，若重要障碍主导=>40。",
+      "conditionalAlternatives": [40],
+      "rejectionOutcome": null,
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "OPT",
+          "subpillar": "transport_redundancy",
+          "status": "reviewed_partial",
+          "evidence": "S06:p2,5,38-39",
+          "finding": "Actual2025airport14.77mflows andprintedairline/routes; notuniqueresidents/all120uniqueroutesnorprovenindependentintlgroundroute.",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "legal_mobility",
+          "status": "reviewed_partial",
+          "evidence": "R11",
+          "finding": "GermanEUcitizenworkerpathdirectapplicableifeligible,newregister/ID/employment; nonworkereligibilitynotindependentlyestablished,EULawraw202failednotused.",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "asset_portability",
+          "status": "reviewed_partial",
+          "evidence": "R7-R8;R12",
+          "finding": "Actualindividualcard/account/appauthandEUequalfees/IBANnondiscrimination;FX/ATMfees,SCA,funds andbanknewaddressscope remainconditions.",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "network_continuity",
+          "status": "reviewed_partial",
+          "evidence": "R9-R10;R8",
+          "finding": "Personalprepaidactivation/topup/roam anddeviceauthactualservices; validSIM/device/balance/eligiblecountriesinitialcontinuation,nopermanentunlimitedroamguarantee.",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "knownWeightedSubtotal": 27.0,
+  "unknownWeight": 55,
+  "unresolvedScoreRange": [27.0, 82.0],
+  "expectedConditionalTotal": null,
+  "globalRankingEligible": false,
+  "exclusionCount": 0,
+  "scoreSensitivity": [
+    {
+      "dimension": "ISR",
+      "rejectToNull": [18.0, 88.0],
+      "majorBarrier40": [24.0, 79.0]
+    },
+    {
+      "dimension": "LON",
+      "rejectToNull": [21.0, 86.0],
+      "majorBarrier40": [25.0, 80.0]
+    },
+    {
+      "dimension": "TEC",
+      "rejectToNull": [21.0, 86.0],
+      "majorBarrier40": [25.0, 80.0]
+    },
+    {
+      "dimension": "OPT",
+      "rejectToNull": [21.0, 86.0],
+      "majorBarrier40": [25.0, 80.0]
+    }
+  ],
+  "allUnknownSensitivity": [0, 100],
+  "sourceSnapshots": [
+    {
+      "id": "H01",
+      "url": "https://www.hamburgwasser.de/fileadmin/Redakteur/Downloads/geschaeftsberichte/hamburgwasser-geschaeftsbericht-2025.pdf",
+      "at": "2026-10-15T08:59:18.347236+00:00",
+      "method": "urllib_default_TLS_one_request_no_retry",
+      "finalUrl": "https://www.hamburgwasser.de/fileadmin/Redakteur/Downloads/geschaeftsberichte/hamburgwasser-geschaeftsbericht-2025.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 3157632,
+      "sha256": "5927c77a5f41cab1a82fc11fb1009a30405e81abc988b4c7e4d374e433b41a35",
+      "file": "hamburg-water2025.pdf",
+      "result": "valid_raw",
+      "observationAndVersionLimit": "FY2025; signed/supervisoryMay28_2026 andJune2026foreword; service region broader than FUA",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-29/hamburg-water2025.pdf",
+      "historicalCutoffBytesVerified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/hamburg-water2025.pdf",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "See report explicit actual fact/counterevidence/revocable ordinary temporal and geography bridge;sourcecountnotability",
+      "observationWindow": "FY2025actualoperations;June2026foreword,Apr15management/May28supervision;2026risknotall2026outcomes",
+      "physicalPagesTextRead": [3, 7, 8, 9, 10, 11, 12],
+      "serviceAreaNotFUA": true,
+      "originalBytes": 3157632,
+      "originalSha256": "5927c77a5f41cab1a82fc11fb1009a30405e81abc988b4c7e4d374e433b41a35"
+    },
+    {
+      "id": "H02",
+      "url": "https://www.uke.de/landingpage/zukunftsplan-2050/medizin-der-zukunft/02-lebende-medikamente-car-t-zell-immuntherapie.html",
+      "at": "2026-10-15T08:59:24.710601+00:00",
+      "method": "urllib_default_TLS_one_request_no_retry",
+      "finalUrl": "https://www.uke.de/landingpage/zukunftsplan-2050/medizin-der-zukunft/02-lebende-medikamente-car-t-zell-immuntherapie.html",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 49169,
+      "sha256": "b4298ff4ebc4fc0177d70577b7871df51efe12a2d9047f20030238ade8d2bab0",
+      "file": "hamburg-cart.html",
+      "result": "valid_raw",
+      "observationAndVersionLimit": "Undated current article narrates80since2019 and old ten-year examples; not2025/26count",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-29/hamburg-cart.html",
+      "historicalCutoffBytesVerified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/hamburg-cart.html",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "ActualpriorCAR-Tclinicalpath/toxicityteamandmanufacturingwaitdeterioration;2024deliveryseparateH05",
+      "observationWindow": "Actualold80since2019; webpage explicitly lastchanged2023-09-27; notundated2025cohort",
+      "publishedOrVersionDate": "Lastchanged2023-09-27",
+      "originalBytes": 49169,
+      "originalSha256": "b4298ff4ebc4fc0177d70577b7871df51efe12a2d9047f20030238ade8d2bab0"
+    },
+    {
+      "id": "H03",
+      "url": "https://www.uke.de/patienten-besucher/qualitaet-und-sicherheit/qualit%C3%A4tsberichte/index.html",
+      "at": "2026-10-15T09:00:06.863076+00:00",
+      "method": "urllib_default_TLS_one_request_no_retry",
+      "finalUrl": "https://www.uke.de/patienten-besucher/qualitaet-und-sicherheit/qualit%C3%A4tsberichte/index.html",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 510496,
+      "sha256": "90374f198558ed991dd615f3042f0ca8040a534b60b7ee235fc00cc008052707",
+      "file": "hamburg-quality-index.html",
+      "result": "valid_raw",
+      "observationAndVersionLimit": "Current directory locator only; not capability evidence",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-29/hamburg-quality-index.html",
+      "historicalCutoffBytesVerified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/hamburg-quality-index.html",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "Locatoronly,notcapabilityevidence",
+      "observationWindow": "Currentdirectorywith2024latestformalqualityreport",
+      "originalBytes": 510496,
+      "originalSha256": "90374f198558ed991dd615f3042f0ca8040a534b60b7ee235fc00cc008052707"
+    },
+    {
+      "id": "H04",
+      "url": "https://www.uke.de/dateien/zielgruppen/patienten-angehoerige/dokumente/uke_patientenbroschuere_herzlich-willkommen_online.pdf",
+      "at": "2026-10-15T09:01:22.356315+00:00",
+      "method": "urllib_default_TLS_one_request_no_retry",
+      "finalUrl": "https://www.uke.de/dateien/zielgruppen/patienten-angehoerige/dokumente/uke_patientenbroschuere_herzlich-willkommen_online.pdf",
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "bytes": 6407831,
+      "sha256": "c03e436f0ce28285169df03d78c7c581518ffdb891dd884cc644821203b7c4e7",
+      "file": "hamburg-patient.pdf",
+      "result": "valid_raw",
+      "observationAndVersionLimit": "Undated patient guidance includesMarch2021parking; admission mechanism not all2026fee/coverage proof",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-29/hamburg-patient.pdf",
+      "historicalCutoffBytesVerified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/hamburg-patient.pdf",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "See report explicit actual fact/counterevidence/revocable ordinary temporal and geography bridge;sourcecountnotability",
+      "observationWindow": "UndatedpatientguidewithlegacyMarch2021parking;currentavailabilitynotfull2026feeproof",
+      "physicalPagesTextRead": [4],
+      "originalBytes": 6407831,
+      "originalSha256": "c03e436f0ce28285169df03d78c7c581518ffdb891dd884cc644821203b7c4e7"
+    },
+    {
+      "id": "H05",
+      "url": "https://www.uke.de/dateien/einrichtungen/qualitaetsmanagement-und-klinisches-prozessmanagement/dokumente/qualit%C3%A4tsberichte/260200013-773675000-2024-xml.pdf",
+      "at": "2026-10-15T09:01:41.803951+00:00",
+      "method": "urllib_default_TLS_one_request_no_retry",
+      "finalUrl": "https://www.uke.de/dateien/einrichtungen/qualitaetsmanagement-und-klinisches-prozessmanagement/dokumente/qualit%C3%A4tsberichte/260200013-773675000-2024-xml.pdf",
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "bytes": 6896272,
+      "sha256": "f25bc9ad3105fc2192a36e36bf03cedab9113e50f6641115338d685befd9a0fc",
+      "file": "hamburg-quality2024.pdf",
+      "result": "valid_raw",
+      "observationAndVersionLimit": "2024structured report; XML submitted2025-11-05; created2026-01-23;layout2026-01-29; not all2284pages reviewed",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-29/hamburg-quality2024.pdf",
+      "historicalCutoffBytesVerified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/hamburg-quality2024.pdf",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "See report explicit actual fact/counterevidence/revocable ordinary temporal and geography bridge;sourcecountnotability",
+      "observationWindow": "FY2024;submitted2025-11-05,generated2026-01-23,layout2026-01-29",
+      "physicalPagesTextRead": [
+        1, 2, 3, 4, 20, 51, 52, 53, 54, 392, 393, 394, 395, 408, 409, 432, 433, 458, 459, 481, 498,
+        499, 690, 691, 734, 735, 812, 813, 833, 850, 860, 861, 902, 941, 942, 943, 1030, 1045, 1202,
+        1301
+      ],
+      "notAll2284PagesReviewed": true,
+      "originalBytes": 6896272,
+      "originalSha256": "f25bc9ad3105fc2192a36e36bf03cedab9113e50f6641115338d685befd9a0fc"
+    },
+    {
+      "id": "R6",
+      "file": "sgb5.html",
+      "url": "https://www.gesetze-im-internet.de/sgb_5/BJNR024820988.html",
+      "bytes": 3647929,
+      "sha256": "22b946cf88aedb5d53694d5d7b0703d10ca0ddfc9b09613e45ac9ecb397fb404",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/munich/sgb5.html",
+      "historicalCutoffBytesVerified": false,
+      "cutoffAdaptation": "Dated<=Oct10 elements plus revocable temporal continuity; currentHTML is not cutoff snapshot.",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/sgb5.html",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "See report explicit actual fact/counterevidence/revocable ordinary temporal and geography bridge;sourcecountnotability",
+      "observationWindow": "Directrule/servicefactsreadinreport;currentOct15snapshotisnotcutoffexactbytes;SGBVlastlawOct6andEUcheckedAug19/Apr28precedecutoff",
+      "originalBytes": 3647929,
+      "originalSha256": "22b946cf88aedb5d53694d5d7b0703d10ca0ddfc9b09613e45ac9ecb397fb404"
+    },
+    {
+      "id": "R7",
+      "file": "ing-eligibility.html",
+      "url": "https://www.ing.de/girokonto/kundenservice/",
+      "bytes": 309978,
+      "sha256": "fc0ce7af1b2fdbf5cdc9aa87b44ead075a231c1ba943c9b3ccfbcbf43e79e4e2",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/munich/ing-eligibility.html",
+      "historicalCutoffBytesVerified": false,
+      "cutoffAdaptation": "Dated<=Oct10 elements plus revocable temporal continuity; currentHTML is not cutoff snapshot.",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/ing-eligibility.html",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "See report explicit actual fact/counterevidence/revocable ordinary temporal and geography bridge;sourcecountnotability",
+      "observationWindow": "Directrule/servicefactsreadinreport;currentOct15snapshotisnotcutoffexactbytes;SGBVlastlawOct6andEUcheckedAug19/Apr28precedecutoff",
+      "originalBytes": 309978,
+      "originalSha256": "fc0ce7af1b2fdbf5cdc9aa87b44ead075a231c1ba943c9b3ccfbcbf43e79e4e2"
+    },
+    {
+      "id": "R8",
+      "file": "ing-app.html",
+      "url": "https://www.ing.de/hilfe/ing-app/",
+      "bytes": 48810,
+      "sha256": "a2b9faa8e9c1703139e51974c709eec84f29b4a4bfd7c704bd01497c18284cd9",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/munich/ing-app.html",
+      "historicalCutoffBytesVerified": false,
+      "cutoffAdaptation": "Dated<=Oct10 elements plus revocable temporal continuity; currentHTML is not cutoff snapshot.",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/ing-app.html",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "See report explicit actual fact/counterevidence/revocable ordinary temporal and geography bridge;sourcecountnotability",
+      "observationWindow": "Directrule/servicefactsreadinreport;currentOct15snapshotisnotcutoffexactbytes;SGBVlastlawOct6andEUcheckedAug19/Apr28precedecutoff",
+      "originalBytes": 48810,
+      "originalSha256": "a2b9faa8e9c1703139e51974c709eec84f29b4a4bfd7c704bd01497c18284cd9"
+    },
+    {
+      "id": "R9",
+      "file": "telekom-prepaid.html",
+      "url": "https://www.telekom.de/shop/tarife/prepaid-tarife",
+      "bytes": 2220328,
+      "sha256": "1ed46bdf352cb089e202f70404765c94743ad21322af4ccf29f19d06656efbef",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/munich/telekom-prepaid.html",
+      "historicalCutoffBytesVerified": false,
+      "cutoffAdaptation": "Dated<=Oct10 elements plus revocable temporal continuity; currentHTML is not cutoff snapshot.",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/telekom-prepaid.html",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "See report explicit actual fact/counterevidence/revocable ordinary temporal and geography bridge;sourcecountnotability",
+      "observationWindow": "Directrule/servicefactsreadinreport;currentOct15snapshotisnotcutoffexactbytes;SGBVlastlawOct6andEUcheckedAug19/Apr28precedecutoff",
+      "originalBytes": 2220328,
+      "originalSha256": "1ed46bdf352cb089e202f70404765c94743ad21322af4ccf29f19d06656efbef"
+    },
+    {
+      "id": "R10",
+      "file": "telekom-roaming.html",
+      "url": "https://www.telekom.de/shop/shop/mobilfunk/roaming",
+      "bytes": 2206276,
+      "sha256": "22203bb0fdf1b9a715927a293b39ba5e8334bd883d859d15a65e3ff1b9414db1",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/munich/telekom-roaming.html",
+      "historicalCutoffBytesVerified": false,
+      "cutoffAdaptation": "Dated<=Oct10 elements plus revocable temporal continuity; currentHTML is not cutoff snapshot.",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/telekom-roaming.html",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "See report explicit actual fact/counterevidence/revocable ordinary temporal and geography bridge;sourcecountnotability",
+      "observationWindow": "Directrule/servicefactsreadinreport;currentOct15snapshotisnotcutoffexactbytes;SGBVlastlawOct6andEUcheckedAug19/Apr28precedecutoff",
+      "originalBytes": 2206276,
+      "originalSha256": "22203bb0fdf1b9a715927a293b39ba5e8334bd883d859d15a65e3ff1b9414db1"
+    },
+    {
+      "id": "R11",
+      "file": "eu-worker-residence.html",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_en.htm",
+      "bytes": 149227,
+      "sha256": "7efe28815c063333746989e18f412dd25f1ae88c45acde4b56e1e16d2187d42a",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/munich/eu-worker-residence.html",
+      "historicalCutoffBytesVerified": false,
+      "cutoffAdaptation": "Dated<=Oct10 elements plus revocable temporal continuity; currentHTML is not cutoff snapshot.",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/eu-worker-residence.html",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "See report explicit actual fact/counterevidence/revocable ordinary temporal and geography bridge;sourcecountnotability",
+      "observationWindow": "Directrule/servicefactsreadinreport;currentOct15snapshotisnotcutoffexactbytes;SGBVlastlawOct6andEUcheckedAug19/Apr28precedecutoff",
+      "originalBytes": 149227,
+      "originalSha256": "7efe28815c063333746989e18f412dd25f1ae88c45acde4b56e1e16d2187d42a"
+    },
+    {
+      "id": "R12",
+      "file": "eu-payments.html",
+      "url": "https://europa.eu/youreurope/citizens/consumers/financial-products-and-services/payments-transfers-cheques/index_en.htm",
+      "bytes": 155296,
+      "sha256": "0a457237f62980c579bc7dba314552421cb5b0fa826dc830b0e35bb42d458ee8",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/munich/eu-payments.html",
+      "historicalCutoffBytesVerified": false,
+      "cutoffAdaptation": "Dated<=Oct10 elements plus revocable temporal continuity; currentHTML is not cutoff snapshot.",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/eu-payments.html",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "See report explicit actual fact/counterevidence/revocable ordinary temporal and geography bridge;sourcecountnotability",
+      "observationWindow": "Directrule/servicefactsreadinreport;currentOct15snapshotisnotcutoffexactbytes;SGBVlastlawOct6andEUcheckedAug19/Apr28precedecutoff",
+      "originalBytes": 155296,
+      "originalSha256": "0a457237f62980c579bc7dba314552421cb5b0fa826dc830b0e35bb42d458ee8"
+    },
+    {
+      "id": "S03",
+      "file": "vsb2025-index.html",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/behoerde-fuer-inneres-und-sport/vsb-2025-1175766",
+      "mechanism": "www.hamburg.de|urllib_TLS",
+      "retrievedAt": "2026-10-15T09:16:30.739138+00:00",
+      "historicalCutoffBytesVerified": false,
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "finalUrl": "https://www.hamburg.de/politik-und-verwaltung/behoerden/behoerde-fuer-inneres-und-sport/vsb-2025-1175766",
+      "bytes": 265427,
+      "sha256": "dd8ecfb36649ca25ef3a0f99d61ccc5460df68765ff4e82058558608c02f9bc9",
+      "result": "valid_raw",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/vsb2025-index.html",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "See report explicit actual fact/counterevidence/revocable ordinary temporal and geography bridge;sourcecountnotability",
+      "publishedOrVersionDate": "2026-05-19",
+      "observationWindow": "2025extremism/hybridthreatandOct2025ban,not2026attackstatistics",
+      "originalBytes": 265427,
+      "originalSha256": "dd8ecfb36649ca25ef3a0f99d61ccc5460df68765ff4e82058558608c02f9bc9"
+    },
+    {
+      "id": "S04",
+      "file": "digitall-project.html",
+      "url": "https://digitall.hamburg.de/projekt/",
+      "mechanism": "digitall.hamburg.de|urllib_TLS",
+      "retrievedAt": "2026-10-15T09:17:03.375746+00:00",
+      "historicalCutoffBytesVerified": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://digitall.hamburg.de/projekt/",
+      "bytes": 151799,
+      "sha256": "0d9c60638b9d69dd8af36debebe82cb5e83b3f6c71b47e16a2f013e453c313b4",
+      "result": "valid_raw",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/digitall-project.html",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "Actualproductionadoptionandruledeployment;claimedbenefitsnotmeasuredtravel/emergencyoutcomes",
+      "observationWindow": "Projectended2025-12-31,interfacesproductiveNov2025;undatedcurrentreview",
+      "originalBytes": 151799,
+      "originalSha256": "0d9c60638b9d69dd8af36debebe82cb5e83b3f6c71b47e16a2f013e453c313b4"
+    },
+    {
+      "id": "S06",
+      "file": "airport2025.pdf",
+      "url": "https://www.hamburg-airport.de/resource/blob/93136/92f7c2385fded912bce98dcd17c0c533/geschaeftsbericht-2025-data.pdf",
+      "mechanism": "www.hamburg-airport.de|urllib_TLS",
+      "retrievedAt": "2026-10-15T09:17:09.190327+00:00",
+      "historicalCutoffBytesVerified": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.hamburg-airport.de/resource/blob/93136/92f7c2385fded912bce98dcd17c0c533/geschaeftsbericht-2025-data.pdf",
+      "bytes": 5818896,
+      "sha256": "29fb9c33d0942bda34e7c21e4b24d8645253cf5285798579bcc22e96cb944ba2",
+      "result": "valid_raw",
+      "pages": 41,
+      "pdfMetadata": {
+        "format": "PDF 1.5",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "Adobe InDesign 21.2 (Macintosh)",
+        "producer": "Adobe PDF Library 18.0",
+        "creationDate": "D:20260416092435+02'00'",
+        "modDate": "D:20260416092445+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/airport2025.pdf",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "Actualflightflows/routeavailabilitycontext;120headingnotverified120unique,printedZTH/ZRHduplicated",
+      "observationWindow": "FY2025actualairport;managementFeb23_2026,PDFmetadataApr16_2026",
+      "physicalPagesTextRead": [2, 5, 6, 37, 38, 39],
+      "originalBytes": 5818896,
+      "originalSha256": "29fb9c33d0942bda34e7c21e4b24d8645253cf5285798579bcc22e96cb944ba2"
+    },
+    {
+      "id": "S08",
+      "file": "fund-final2024.pdf",
+      "url": "https://linksfraktion-hamburg-harburg.de/wp-content/uploads/2025/01/Drs.-22_17371_haertefallfonds_energiesperren_vermeiden_abschlussbericht.pdf",
+      "mechanism": "linksfraktion-hamburg-harburg.de|urllib_TLS",
+      "retrievedAt": "2026-10-15T09:19:36.403358+00:00",
+      "historicalCutoffBytesVerified": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://linksfraktion-hamburg-harburg.de/wp-content/uploads/2025/01/Drs.-22_17371_haertefallfonds_energiesperren_vermeiden_abschlussbericht.pdf",
+      "bytes": 6093048,
+      "sha256": "7be8e3663df50a9c9f459ad71bb5b6ac1f400a8e910c813b32f3f4024b4a671e",
+      "result": "valid_raw",
+      "pages": 20,
+      "pdfMetadata": {
+        "format": "PDF 1.7",
+        "title": "",
+        "author": "Bürgerschaft der Freien und Hansestadt Hamburg",
+        "subject": "",
+        "keywords": "",
+        "creator": "Adobe Acrobat Pro 2020 20.5.30748",
+        "producer": "Adobe Acrobat Pro 2020 20.5.30748",
+        "creationDate": "D:20250103105258+01'00'",
+        "modDate": "D:20250110094455+01'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/fund-final2024.pdf",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "Formalgovernmentauthoredparliamentoriginalhostedbyfactioncopy;fund75approvedcasesnotallprospectiveapplications,benefit84,410.42+21,102.58waiver",
+      "publishedOrVersionDate": "Parliament22/17371dated2024-12-20;letter2024-12-16;filemetadataJan2025",
+      "observationWindow": "Fund2022-12-01to2024-03-31ended,not2026aid",
+      "physicalPagesTextRead": [1, 2, 3, 4, 5, 6, 8],
+      "originalBytes": 6093048,
+      "originalSha256": "7be8e3663df50a9c9f459ad71bb5b6ac1f400a8e910c813b32f3f4024b4a671e"
+    },
+    {
+      "id": "S09",
+      "file": "uke-stemclinic.html",
+      "url": "http://www.uke.de/forschung-stammzellen",
+      "mechanism": "www.uke.de|urllib_TLS",
+      "retrievedAt": "2026-10-15T09:19:41.324425+00:00",
+      "historicalCutoffBytesVerified": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://www.uke.de/kliniken-institute/kliniken/stammzelltransplantation/forschung/index.html",
+      "bytes": 498129,
+      "sha256": "656bcce7ea2fce9857f6bcf460bd10d856f29a2e841e57f281f8a8373ad36da8",
+      "result": "valid_raw",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/uke-stemclinic.html",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "Hamburgcore/provider, directGerman/EUrules or selectedclinicalcohorts; notFUAordinaryresidentoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "FollowedH02cliniclinktoactualresearchdirectory;locatornotnewclinicaldeliveryornewscoreproof",
+      "observationWindow": "Currentresearchdirectory,notcertified2026serviceimplementation",
+      "originalBytes": 498129,
+      "originalSha256": "656bcce7ea2fce9857f6bcf460bd10d856f29a2e841e57f281f8a8373ad36da8"
+    },
+    {
+      "id": "R13",
+      "file": "gba-tisa2024.pdf",
+      "url": "https://www.g-ba.de/downloads/92-975-7153/2024-02-15_Amendment-G-BA_Tisagenlecleucel_D-976.pdf",
+      "bytes": 416757,
+      "sha256": "f961e25e40d4e557340d7b16f36b6720f286f3d08ea8ab2ddfe476e130c5a9f4",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/munich/gba-tisa2024.pdf",
+      "historicalCutoffBytesVerified": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/hamburg/gba-tisa2024.pdf",
+      "retrievedOn": "2026-10-15",
+      "populationAndScope": "SelectedinternationalTisaALL<=25diseasecohorts;notAxi/alladultlymphoma/healthypeople/localcaseoutcomes",
+      "cutoffHistoricalBytesCertified": false,
+      "useScope": "See report explicit actual fact/counterevidence/revocable ordinary temporal and geography bridge;sourcecountnotability",
+      "publishedOrVersionDate": "Amendment2024-01-26,fileURL2024-02-15",
+      "observationWindow": "Humantrialcutsoff2019/2020/2022;report2024",
+      "physicalPagesTextRead": [2, 3, 6, 8, 10],
+      "originalBytes": 416757,
+      "originalSha256": "f961e25e40d4e557340d7b16f36b6720f286f3d08ea8ab2ddfe476e130c5a9f4"
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/themen/wasser/hochwasser/hochwasserschutz-176712",
+      "date": "undated current official page",
+      "finding": "103km public floodline, average main dike raised2.5m; actual past higher surges without serious mainline damage;2050program incomplete, HafenCity not behindpublicline, irreducibletailrisk.",
+      "toolRead": "turn2223view0 actualHTMLlines18-42",
+      "bytes": null,
+      "sha256": null,
+      "historicalCutoffBytesVerified": false,
+      "retrievedOn": "2026-10-15",
+      "sourceKind": "web_only_actual_primary_body_exceptW05_firstpartyfactionclaim",
+      "populationAndScope": "City/protection/service or eligiblehouseholds, not allFUAordinaryresident outcomes"
+    },
+    {
+      "id": "W02",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/aktuelles/pressemeldungen/klimaanpassung-und-vorsorge-vor-extremwetter-1214752",
+      "date": "2026-09-01",
+      "finding": "Summer2026 measuredheat/drought includingJune27airport39.1C/Neuwiedenthal39.4C,11hotdays/3tropicalnights; representativecommissionedsurvey37%feelprepared is perceptionnotprotectionoutcome; reporting/campaignoperating, adaptationsmostlygeneric.",
+      "toolRead": "turn2223view1 actualHTMLlines18-46; Oct13relatedstoryexcluded",
+      "bytes": null,
+      "sha256": null,
+      "historicalCutoffBytesVerified": false,
+      "retrievedOn": "2026-10-15",
+      "sourceKind": "web_only_actual_primary_body_exceptW05_firstpartyfactionclaim",
+      "populationAndScope": "City/protection/service or eligiblehouseholds, not allFUAordinaryresident outcomes"
+    },
+    {
+      "id": "W03",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/senat/presseservice-des-senats/landespressekonferenz/hamburgs-neue-digitalstrategie-1010996",
+      "date": "2025-01-21",
+      "finding": "ActualsixwalkinDigitalLotsensitesaccount/eIDhelp; namedLLMoin/RescueMate providerclaimnotquantifiedoutcome; noallstrategycompletedclaim.",
+      "toolRead": "turn2233view0 actualHTMLlines32-35,120-124",
+      "bytes": null,
+      "sha256": null,
+      "historicalCutoffBytesVerified": false,
+      "retrievedOn": "2026-10-15",
+      "sourceKind": "web_only_actual_primary_body_exceptW05_firstpartyfactionclaim",
+      "populationAndScope": "City/protection/service or eligiblehouseholds, not allFUAordinaryresident outcomes"
+    },
+    {
+      "id": "W04",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/themen/energiesperren",
+      "date": "undated current page",
+      "finding": "Freeenergyadviceandfridgereplacementeligibility/linkoffers, notactualpaidgrants.",
+      "toolRead": "turn2226view1 actualHTMLlines19-57",
+      "bytes": null,
+      "sha256": null,
+      "historicalCutoffBytesVerified": false,
+      "retrievedOn": "2026-10-15",
+      "sourceKind": "web_only_actual_primary_body_exceptW05_firstpartyfactionclaim",
+      "populationAndScope": "City/protection/service or eligiblehouseholds, not allFUAordinaryresident outcomes"
+    },
+    {
+      "id": "W05",
+      "url": "https://www.linksfraktion-hamburg.de/immer-mehr-energiesperren-linksfraktion-fordert-notfallfond/",
+      "date": "2026-01-23",
+      "finding": "Firstpartyfactionclaim6600electricity/67gas/>800waterdisconnections2025and~80daydebtappointmentwait; referencedSenatereplyunavailable, notadoptedindependentlyconfirmedofficialratesorcitywideordinaryfailure.",
+      "toolRead": "turn2226view2 actualHTMLlines33-41",
+      "bytes": null,
+      "sha256": null,
+      "historicalCutoffBytesVerified": false,
+      "retrievedOn": "2026-10-15",
+      "sourceKind": "web_only_actual_primary_body_exceptW05_firstpartyfactionclaim",
+      "populationAndScope": "City/protection/service or eligiblehouseholds, not allFUAordinaryresident outcomes"
+    },
+    {
+      "id": "W06",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/themen/strom-gas-wasser-158186",
+      "date": "undated current page",
+      "finding": "Providerratepaymentdiscussionentrywithnamedordinarysuppliers; notreportedresolvedcases.",
+      "toolRead": "turn2233view1 actualHTMLlines19-42",
+      "bytes": null,
+      "sha256": null,
+      "historicalCutoffBytesVerified": false,
+      "retrievedOn": "2026-10-15",
+      "sourceKind": "web_only_actual_primary_body_exceptW05_firstpartyfactionclaim",
+      "populationAndScope": "City/protection/service or eligiblehouseholds, not allFUAordinaryresident outcomes"
+    },
+    {
+      "id": "W07",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/themen/beratungsstellen-158182",
+      "date": "undated current page",
+      "finding": "BenefitrecipientJobcenter/Sozialamt/consultationsometimesfinancialhelp; neitherallmedianhouseholdeligiblenoractualaidoutcomes.",
+      "toolRead": "turn2233view2 actualHTMLlines22-36; page carriesautomatictranslationnotice",
+      "bytes": null,
+      "sha256": null,
+      "historicalCutoffBytesVerified": false,
+      "retrievedOn": "2026-10-15",
+      "sourceKind": "web_only_actual_primary_body_exceptW05_firstpartyfactionclaim",
+      "populationAndScope": "City/protection/service or eligiblehouseholds, not allFUAordinaryresident outcomes"
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "id": "S01",
+      "file": "flood-current.html",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/themen/wasser/hochwasser/hochwasserschutz-176712",
+      "mechanism": "www.hamburg.de|urllib_TLS",
+      "retrievedAt": "2026-10-15T09:16:27.137587+00:00",
+      "historicalCutoffBytesVerified": false,
+      "result": "failed",
+      "error": "URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1127)'))",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "id": "S02",
+      "file": "summer2026.html",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bukea/aktuelles/pressemeldungen/klimaanpassung-und-vorsorge-vor-extremwetter-1214752",
+      "mechanism": "www.hamburg.de|urllib_TLS",
+      "retrievedAt": "2026-10-15T09:16:29.087239+00:00",
+      "historicalCutoffBytesVerified": false,
+      "result": "failed",
+      "error": "URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1127)'))",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "id": "S05",
+      "file": "digital2025.html",
+      "url": "https://www.hamburg.de/politik-und-verwaltung/senat/presseservice-des-senats/landespressekonferenz/hamburgs-neue-digitalstrategie-1010996",
+      "mechanism": "www.hamburg.de|urllib_TLS",
+      "retrievedAt": "2026-10-15T09:17:06.330831+00:00",
+      "historicalCutoffBytesVerified": false,
+      "result": "failed",
+      "error": "URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1127)'))",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "id": "S07",
+      "file": "energy2025-parliament.pdf",
+      "url": "https://parlamentsdatenbank.hamburg.de/parldok/dokument/102241/23_02635_strom_gas_und_wassersperren_in_hamburg_in_2025",
+      "mechanism": "parlamentsdatenbank.hamburg.de|urllib_TLS",
+      "retrievedAt": "2026-10-15T09:19:24.939041+00:00",
+      "historicalCutoffBytesVerified": false,
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://portal.hamburg.de/logon/LogonPoint/tmindex.html",
+      "result": "failed",
+      "error": "AssertionError('invalid body')",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "id": "S10",
+      "file": "eu-residence-directive.html",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02004L0038-20110616",
+      "mechanism": "eur-lex.europa.eu|urllib_TLS",
+      "retrievedAt": "2026-10-15T09:22:46.265577+00:00",
+      "historicalCutoffBytesVerified": false,
+      "status": 202,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02004L0038-20110616",
+      "result": "failed",
+      "error": "AssertionError('invalid body')",
+      "bytes": null,
+      "sha256": null
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allGeometryCount": 9031,
+    "repairsCount": 136,
+    "candidateId": 3793,
+    "targetGeometrySha256": "20145f19be0eeceb80b95f59c85eb94a52076bf6350324548d3a65bccb0cd866",
+    "referencePoints": [
+      {
+        "label": "Hamburg centre",
+        "longitude": 9.9937,
+        "latitude": 53.5511,
+        "approximate": true,
+        "matches": [
+          {
+            "id": 3793,
+            "name": "Hamburg"
+          }
+        ]
+      },
+      {
+        "label": "UKE approximate",
+        "longitude": 9.9761,
+        "latitude": 53.5893,
+        "approximate": true,
+        "matches": [
+          {
+            "id": 3793,
+            "name": "Hamburg"
+          }
+        ]
+      },
+      {
+        "label": "Hamburg airport approximate",
+        "longitude": 9.9882,
+        "latitude": 53.6304,
+        "approximate": true,
+        "matches": [
+          {
+            "id": 3793,
+            "name": "Hamburg"
+          }
+        ]
+      },
+      {
+        "label": "DigiLab office Sachsenfeld approximate",
+        "longitude": 10.0151,
+        "latitude": 53.5437,
+        "approximate": true,
+        "matches": [
+          {
+            "id": 3793,
+            "name": "Hamburg"
+          }
+        ]
+      }
+    ],
+    "scope": "Analyst approximate points, not officialserviceGPS or full provider/catchments; HWW waterworks span Niedersachsen/SchleswigHolstein, 2.2mservicepopulation not equalFUA. No2015population/outcome denominator transfer."
+  },
+  "limitations": [
+    "No centre/ranking/probability/renormalisation/exclusion",
+    "CurrentretrievalOct15notcutoffbytes;finiteconditionalcontinuityonly",
+    "18validraw13reused5newnotallprimaryprotectionrawaccessible",
+    "Noeverydoseinvoice/all2026allpopulationperfectgate;unknownnotpenalty",
+    "Awaitrootindependentacceptance;repositoryuntouched"
+  ],
+  "processDeviation": "Local singleton PDF/text extraction and the compose integrity loop sometimes omitted an explicit inline items-length assert even though each actual source list was one file; no batch exceeded3. Network acquisition/websource/image batches had explicit asserts. Recorded without re-requesting/redownloading to retroactively claim compliance.",
+  "residentEligibility": "local_German_citizen_usual_longterm_local_residence_medianincome_usualGKV_no_fixedage",
+  "evidenceReview": "cci-hamburg-score-completion-review.md",
+  "publishedInputCommit": "3b4ae3413c23f612bc4c5c2f23f270986cf7c0a0",
+  "scopeCompletionReview": {
+    "dimensionCount": 8,
+    "subpillarCount": 31,
+    "allSubpillarsFullyReviewed": false,
+    "allSubpillarsHaveOutcomeMeasurements": false,
+    "eightDimensionScoresComplete": false,
+    "coverageTable": [
+      {
+        "dimension": "PCS",
+        "subpillar": "heat_humidity",
+        "status": "reviewed_partial",
+        "evidence": "W02",
+        "finding": "Actualsummer2026heat/tropicalnightsandpublicadvice; no boundedresidualaftercooling/ordinarynetprotectiondirection,37%preparationisselfreport.",
+        "score": null
+      },
+      {
+        "dimension": "PCS",
+        "subpillar": "flood_sea_level",
+        "status": "reviewed_partial",
+        "evidence": "W01;H01:p3,11",
+        "finding": "Existing103kmdefences/actualhistoricalperformanceandwatermaintenance;protectiveoperationnotall2050workscomplete,HafenCityscope/tailriskretained.",
+        "score": null
+      },
+      {
+        "dimension": "PCS",
+        "subpillar": "geophysical",
+        "status": "not_started",
+        "evidence": "",
+        "finding": "No independent local geophysicalreview; nozeroassumption.",
+        "score": null
+      },
+      {
+        "dimension": "PCS",
+        "subpillar": "severe_weather_wildfire",
+        "status": "reviewed_partial",
+        "evidence": "W02;H01:p3,11",
+        "finding": "Storm/heavyraindroughtknown, warning/reportingandwatermaintenanceoperating; severeweather/wildfireprotectionresidualnotclassified.",
+        "score": null
+      },
+      {
+        "dimension": "GSS",
+        "subpillar": "organized_violence",
+        "status": "reviewed_partial",
+        "evidence": "S03",
+        "finding": "2025violent-orientedextremismpotentialsnotactualattack/victimcounts; actualMuslimInteraktivbanOct2025; ordinaryremainingimpactnotclassified.",
+        "score": null
+      },
+      {
+        "dimension": "GSS",
+        "subpillar": "regional_conflict",
+        "status": "reviewed_context",
+        "evidence": "S03;H01:p10-11",
+        "finding": "Ukraine/Russianhybridactivities/Mideastenergy&supplycostconcreteregionaltransmission; noabsenceofwarorcountryrankproxy.",
+        "score": null
+      },
+      {
+        "dimension": "GSS",
+        "subpillar": "strategic_exposure",
+        "status": "reviewed_partial",
+        "evidence": "S03;H01:p11",
+        "finding": "Port/economicresearchinterestandhybridthreat, watermaintenanceonlypartialmatchedprotection; noallstrategicprotectionorcybersingleitemscore.",
+        "score": null
+      },
+      {
+        "dimension": "ISR",
+        "subpillar": "governance",
+        "status": "reviewed_partial",
+        "evidence": "S04;S08:p1-6;H05",
+        "finding": "Actualstandardisedpermittingrollout/publicformalreportandreviewprocedures; nofullrightsremedy/auditcompletionassessment.",
+        "score": null
+      },
+      {
+        "dimension": "ISR",
+        "subpillar": "adaptive_capacity",
+        "status": "reviewed_partial",
+        "evidence": "S04;W01;H01:p8-11",
+        "finding": "ActualproductionITconnectionsandcoordinationrules,waternetworkinvestment/fieldmeasurement; announced2050defencesnotfinished.",
+        "score": null
+      },
+      {
+        "dimension": "ISR",
+        "subpillar": "social_cohesion",
+        "status": "reviewed_partial",
+        "evidence": "W03;S08:p3,5-6;W06-W07",
+        "finding": "WalkineIDhelpactualoffered,75pastpaid/debtwaivercasesonlyselectedoldfundended; noallusers/cohesionsurveytransfer.",
+        "score": null
+      },
+      {
+        "dimension": "ISR",
+        "subpillar": "emergency_recovery",
+        "status": "reviewed_partial",
+        "evidence": "W01;H01:p3,11;H05:p52-53",
+        "finding": "Operatingflooddefence/maintenanceandlevel3emergencyservice; notallcurrentcrisesrestored/zerooutage.",
+        "score": null
+      },
+      {
+        "dimension": "RES",
+        "subpillar": "water",
+        "status": "reviewed_partial",
+        "evidence": "H01:p7-11",
+        "finding": "Actual117.4m3millioncustomerwater,pricing1.99/m3+7.52meterbase,waterloss3.8%;supraFUA2.2mnotFUAshare,pipefailures/energycostsretained.",
+        "score": null
+      },
+      {
+        "dimension": "RES",
+        "subpillar": "food",
+        "status": "not_started",
+        "evidence": "",
+        "finding": "No bounded foodusualnetacquisitionreview; not inferredfromnationalwealth or airportcargo.",
+        "score": null
+      },
+      {
+        "dimension": "RES",
+        "subpillar": "energy",
+        "status": "reviewed_partial",
+        "evidence": "H01:p9-11;S08:p3,5-6;W04-W07",
+        "finding": "Actualproviderenergycostandpast75debtwaivers,currentadvice/conditionalassistanceoffer; endedMar2024fundnotextended,costbundleafterhelpdirectionunresolved.",
+        "score": null
+      },
+      {
+        "dimension": "RES",
+        "subpillar": "supply_chain",
+        "status": "reviewed_partial",
+        "evidence": "H01:p8,10-11",
+        "finding": "Actualdryperiodsupply,maintenancemarketcapacityconstraints/Mideastpriceandsupplyrisk; notportpresence=allfoodfuelredundancy.",
+        "score": null
+      },
+      {
+        "dimension": "MED",
+        "subpillar": "access",
+        "status": "reviewed_partial",
+        "evidence": "H04:p4;H05:p20,52-53;R6:27,39,61,62",
+        "finding": "OrdinaryGKVadmission/actualbroadcare/level3emergencyplusstatutorycopays; necessarycarewaiteffectnotresolved.",
+        "score": null
+      },
+      {
+        "dimension": "MED",
+        "subpillar": "routine_quality",
+        "status": "reviewed_partial",
+        "evidence": "H05:p394-395,408-409,432-433,458-459,481,498-499,690-691,860-861,902",
+        "finding": "Actualmixedriskadjustedmulti-conditionresults:somewithinreference,butfracturewalkingO/E4.70andstaffing31.69%night; U62uninterpreted,notcausalmortality/currentallcityfailure.",
+        "score": null
+      },
+      {
+        "dimension": "MED",
+        "subpillar": "specialist_capacity",
+        "status": "reviewed_partial",
+        "evidence": "H05:p20,51-53,942,1030,1045;H02",
+        "finding": "Actualcare/CAR-Tcodes/24hequipmentandclinicalteam;volumenotqualityorordinarypayerproof.",
+        "score": null
+      },
+      {
+        "dimension": "MED",
+        "subpillar": "system_continuity",
+        "status": "reviewed_partial",
+        "evidence": "H04:p4;R6:39;H05:p902;H02",
+        "finding": "Actualadmission/referralpatientIDandstatutorydischargemanagement/monitoringteam; staffingandmanufacturingwaitretained,noallnecessarycareordinaryresidualdirection.",
+        "score": null
+      },
+      {
+        "dimension": "LON",
+        "subpillar": "translation",
+        "status": "reviewed_partial",
+        "evidence": "H05:p1030,1045;H02",
+        "finding": "Actual2024Axicaptagen10codedcasesandTisa suppressed row; notdedupresidents/indication/payment; old80since2019not2025new.",
+        "score": null
+      },
+      {
+        "dimension": "LON",
+        "subpillar": "trial_maturity",
+        "status": "reviewed_partial",
+        "evidence": "R13:p6,8,10",
+        "finding": "TisaALL<=25 phaseII/IIIb humanlongfollowup/conditionalRFSandtoxicity; notAxioutcomes/alllocalcures/healthyrejuvenation.",
+        "score": null
+      },
+      {
+        "dimension": "LON",
+        "subpillar": "regulatory_adoption",
+        "status": "reviewed_partial",
+        "evidence": "H05:p942;R13:p6;R6:27,39",
+        "finding": "LocalATMPANT01indicationslistedadult/childBprecursorALLandadultBlymphoma/myeloma; product/useclassspecificeligiblepathonlynotalltrialscovered.",
+        "score": null
+      },
+      {
+        "dimension": "LON",
+        "subpillar": "resident_access",
+        "status": "reviewed_partial",
+        "evidence": "H04:p4;H02;H05:p942,1045;R6:27,39,61,62",
+        "finding": "ActualregulatedlocaldrugdeliveryandmultiteammonitoringplususualGKVnecessarycare allowsfiniteeligiblematurepath; specificTisaALL/continuity/payment/nearhospitalresourcebridge revocable,manufacturingdelaydeteriorationretained.",
+        "score": null
+      },
+      {
+        "dimension": "TEC",
+        "subpillar": "knowledge_output",
+        "status": "reviewed_partial",
+        "evidence": "H01:p8;S04",
+        "finding": "Actual2025geophysicsfieldboreandproductiveITintegration,notpatentprestige/outputcountalone.",
+        "score": null
+      },
+      {
+        "dimension": "TEC",
+        "subpillar": "industry_density",
+        "status": "not_fully_reviewed",
+        "evidence": "S04",
+        "finding": "Multiplenamedutilityproductionpartnersbut noFUAworker/firmdensitydenominator; notzero.",
+        "score": null
+      },
+      {
+        "dimension": "TEC",
+        "subpillar": "digital_infrastructure",
+        "status": "reviewed_partial",
+        "evidence": "S04;W03",
+        "finding": "ActualNov2025interfacesandrollout, sixeID/accounthelpdesks; no broadbandcoverage/subscriptionmeasurement.",
+        "score": null
+      },
+      {
+        "dimension": "TEC",
+        "subpillar": "diffusion",
+        "status": "reviewed_partial",
+        "evidence": "S04;W03;H05:p1030,1045",
+        "finding": "Alreadyusedmultiutilitypermittingandlocaldigitalservices/clinicaldrugs,notfutureLLMclaims=universalbenefit.",
+        "score": null
+      },
+      {
+        "dimension": "OPT",
+        "subpillar": "transport_redundancy",
+        "status": "reviewed_partial",
+        "evidence": "S06:p2,5,38-39",
+        "finding": "Actual2025airport14.77mflows andprintedairline/routes; notuniqueresidents/all120uniqueroutesnorprovenindependentintlgroundroute.",
+        "score": null
+      },
+      {
+        "dimension": "OPT",
+        "subpillar": "legal_mobility",
+        "status": "reviewed_partial",
+        "evidence": "R11",
+        "finding": "GermanEUcitizenworkerpathdirectapplicableifeligible,newregister/ID/employment; nonworkereligibilitynotindependentlyestablished,EULawraw202failednotused.",
+        "score": null
+      },
+      {
+        "dimension": "OPT",
+        "subpillar": "asset_portability",
+        "status": "reviewed_partial",
+        "evidence": "R7-R8;R12",
+        "finding": "Actualindividualcard/account/appauthandEUequalfees/IBANnondiscrimination;FX/ATMfees,SCA,funds andbanknewaddressscope remainconditions.",
+        "score": null
+      },
+      {
+        "dimension": "OPT",
+        "subpillar": "network_continuity",
+        "status": "reviewed_partial",
+        "evidence": "R9-R10;R8",
+        "finding": "Personalprepaidactivation/topup/roam anddeviceauthactualservices; validSIM/device/balance/eligiblecountriesinitialcontinuation,nopermanentunlimitedroamguarantee.",
+        "score": null
+      }
+    ],
+    "statusCounts": {
+      "reviewed_partial": 27,
+      "not_started": 2,
+      "reviewed_context": 1,
+      "not_fully_reviewed": 1
+    }
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-hamburg-score-completion-review.md",
+    "sha256": "23ef33ffdea1f111fe0e291aac9ce5a6201233252bcac5187fdbe79197c8c9ad",
+    "researchReport": "docs/cci-hamburg-priority-review.md",
+    "researchReportSha256": "11edd6d4768e813575439a7c1339f66961787348b76c05de816e5c213a68448e",
+    "reviewedOn": "2026-10-15",
+    "validOriginalCount": 18,
+    "sourceManifestSha256": "0b2e4150bae9c5e42ac52045b2b36d4a234bc8a166d1a9a9aa404c6eaac4fd48",
+    "handoffSha256": "324482c3d59b6efd13d775468dbbc22addea66ab2a4c60f12bc7d4dbfdd194c2",
+    "handoffManifestSha256": "eae23afa33bfc8e08b66be36d34ea3f826dbf69e7d3509f7cdc730d4e3ba33d7",
+    "rootAcceptanceCheckSha256": "45536b0dd932583deabe4b958cd0800ee2d2434fd77c78b7cbd17d0afbe03d70",
+    "rootVerifiedFull9031AndOriginals": true,
+    "rootPdfPageCount": 14
+  },
+  "rootScopeReview": {
+    "sourceFile": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-29/hamburg-quality2024.pdf",
+    "sourceBytes": 6896272,
+    "sourceSha256": "f25bc9ad3105fc2192a36e36bf03cedab9113e50f6641115338d685befd9a0fc",
+    "pagesPrepared": [395, 409, 458, 459, 902, 1045, 942, 1030, 394],
+    "rootActuallyViewed": [395, 409, 458, 459, 902, 1045, 942, 1030, 394],
+    "scope": "Pre-review only; no score adoption or repository mutation",
+    "notes": {
+      "biliary30dayComplications": {
+        "N": 175,
+        "observed": 0,
+        "expected": 2.3,
+        "riskRatio": 0,
+        "ci": [0, 1.09],
+        "referenceMax": 1.15,
+        "qualitativeCode": "R10_not_interpreted"
+      },
+      "pressureInjury": {
+        "N": 58634,
+        "observed": 360,
+        "expected": 166.14,
+        "riskRatio": 2.17,
+        "ci": [1.95, 2.4],
+        "referenceMax": 2.45,
+        "qualitativeCode": "R10_not_interpreted"
+      },
+      "hipFractureWalking50mAtDischarge": {
+        "N": 24,
+        "observed": 6,
+        "expected": 1.28,
+        "riskRatio": 4.7,
+        "ci": [2.26, 8.44],
+        "referenceMax": 2.37,
+        "qualitativeCode": "U62_not_interpreted"
+      },
+      "stroke5DShiftNursingCompliance": [84.15, 31.69],
+      "orthopaedic4EDayNightCompliance": [100, 95.9],
+      "axiCodedCases": 10,
+      "tisaCodedCases": "privacy suppressed; no numerical inference",
+      "atmpANT01Indications": "class eligibility, not exact Tisa patient indication or same outcome cohort",
+      "riskAdjustedOutlierIsProofOfPoorQuality": false,
+      "currentWholeFuaQualityCertified": false
+    },
+    "rawVerified": 18,
+    "reusedRawVerified": 13,
+    "newRaw": 5,
+    "frozenArtifactsVerified": 10,
+    "full9031FourPointsAndWkbVerified": true,
+    "currentPublishedInput": "3b4ae3413c23f612bc4c5c2f23f270986cf7c0a0",
+    "old70CaseBytesUnchanged": true,
+    "additionalRootPdfPagesActuallyViewed": ["H01:7", "H04:4", "R13:8", "R13:10", "S06:39"],
+    "rootRawBodiesRead": ["S04", "H02", "R6 sections27/39/61/62"],
+    "rootPdfPageCount": 14,
+    "sgb62LimitUsesGrossSubsistenceIncome": true,
+    "sgb62CapsAllPrivateAndCaregiverCosts": false
+  }
+}
