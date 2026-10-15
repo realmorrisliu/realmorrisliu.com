@@ -1111,8 +1111,8 @@ const jakartaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
   (c: { efua_id: string }) => c.efua_id === "4897"
 );
 assert(jakartaPosition);
-// Helsinki's restored centre adds one fixed lower bound above Jakarta's upper53.
-assert.equal(jakartaPosition.bestPosition, 19);
+// Berlin's new conditional lower54 also exceeds Jakarta's upper53.
+assert.equal(jakartaPosition.bestPosition, 20);
 assert.equal(jakartaPosition.worstPosition, rankAudit.candidateCount);
 
 assert.deepEqual(total(nanjing), { center: null, lower: 49, upper: 64 });
@@ -2251,7 +2251,7 @@ assert.equal(amsterdamCase.resourceScopeReview.demoLoremTemplateAdopted, false);
 
 for (const [id, expectedRange, count] of [
   [3147, [21, 86], 33],
-  [4946, [45, 70], 37],
+  [4946, [54, 64], 37],
 ] as const) {
   const c = realCases.find(c => c.candidateId === id);
   assert.equal(c.priorityCompletionReview.sha256, digest(c.priorityCompletionReview.path));
@@ -2276,7 +2276,7 @@ delete madridWithoutOpt.OPT;
 assert.deepEqual(total(madridWithoutOpt), { center: null, lower: 15, upper: 90 });
 const berlinWithoutLon = { ...berlin };
 delete berlinWithoutLon.LON;
-assert.deepEqual(total(berlinWithoutLon), { center: null, lower: 39, upper: 74 });
+assert.deepEqual(total(berlinWithoutLon), { center: null, lower: 48, upper: 68 });
 assert.equal(
   realCases.find(c => c.candidateId === 3147).rootScopeReview.mortalityTablePhysical120Year,
   2023
@@ -2360,3 +2360,25 @@ for (const [dimension, lower, upper] of [
   delete withdrawn[dimension];
   assert.deepEqual(total(withdrawn), { center: null, lower, upper });
 }
+
+const berlinGssCase = realCases.find(c => c.candidateId === 4946);
+const berlinGssReview = berlinGssCase.gssCompletionReview;
+assert.equal(berlinGssReview.sha256, digest(berlinGssReview.path));
+assert.equal(berlinGssReview.researchReportSha256, digest(berlinGssReview.researchReport));
+assert.equal(berlinGssReview.original37HistoricalSourcesReverified, false);
+assert.equal(berlinGssReview.validOriginalCount, 7);
+assert.equal(berlinGssCase.gssSourceSnapshots.length, 7);
+assert.equal(
+  berlinGssCase.gssSourceSnapshots.filter((r: { usedForScore: boolean }) => r.usedForScore).length,
+  6
+);
+assert.equal(berlinGssReview.validPDFCount, 0);
+assert.equal(berlinGssReview.newPdfPixelsViewed, 0);
+assert.deepEqual(total(berlin), { center: null, lower: 54, upper: 64 });
+assert.deepEqual(total({ ...berlin, GSS: 40 }), { center: null, lower: 51, upper: 61 });
+const berlinWithoutGss = { ...berlin };
+delete berlinWithoutGss.GSS;
+assert.deepEqual(total(berlinWithoutGss), { center: null, lower: 45, upper: 70 });
+const berlinWithoutMed = { ...berlin };
+delete berlinWithoutMed.MED;
+assert.deepEqual(total(berlinWithoutMed), { center: null, lower: 45, upper: 70 });

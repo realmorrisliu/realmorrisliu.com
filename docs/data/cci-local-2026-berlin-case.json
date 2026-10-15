@@ -4,11 +4,11 @@
   "name": "Berlin",
   "targetYear": 2026,
   "evidenceCutoff": "2026-10-10",
-  "retrievedOn": "2026-10-14",
+  "retrievedOn": "2026-10-15",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "residentEligibility": "Ordinary German citizen longterm usualresident, localmedianincome/usualGKV; no fixedage; individual clinicalindication/product/lawqualifications real, not blanketagegate",
   "boundaryVersion": "GHS-FUA R2019A",
-  "evidenceReview": "cci-berlin-score-completion-review.md",
+  "evidenceReview": "cci-berlin-gss-completion-review.md",
   "publishedInputCommit": "79d38d03fd2091ecc494b80091a19babdb35844c",
   "dimensions": [
     {
@@ -62,10 +62,10 @@
     },
     {
       "id": "GSS",
-      "score": null,
-      "rationale": "Actualorganizedcriticalgridviolence/multidayharm and implementedpartialhardening read. Current residual aftermatchedprotection cannotreasonably choose40vs60; secondaryoperatorquotes/plannedgeoredundancy/ordinarycrime cannot closebridge. Null is not lowperformance.",
-      "assumption": "No mainnumeric choice; unknownnotpenalty. Do notusepropertycrimedecline,zero-warassumption or failed429body tocomplete organizedviolent/strategicnetprotection.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "Two organized infrastructure attacks caused actual multi-day local electricity/heating disruption. Dated operator reports establish restoration after roughly50/100hours; May19 Senate primary confirms already implemented police/operator24h guarding at critical points. Local security authority documents clandestine violent groups and foreign-conflict-related extremism/intelligence scenarios. Current limited realized ordinary impact with matched operating response/protection is a bounded conditional inference, not an absence-of-war or generalcrime inference.",
+      "assumption": "Accept reported full reconnection as materially restoring usual life, actual guarding as useful and continuing through cutoff against shared-node organized/state-linked sabotage scenarios, and examined core/local dependency evidence as directionally relevant to ordinary4946 residents. Repeated severe local outages/targeted communities retain important tails; do not infer all nodes protected, no further attacks, completed georedundancy or independent prevention efficacy.",
+      "conditionalAlternatives": [40],
       "subpillars": {
         "organized_violence": "partial",
         "regional_conflict": "partial",
@@ -76,28 +76,28 @@
           "dimension": "GSS",
           "subpillar": "organized_violence",
           "status": "reviewed_partial",
-          "reviewedEvidence": "security2025;BVGsafety3/6/8;W03",
-          "finding": "Organizedclandestine smallgroup infrastructurearson actualmultidayoutage; ordinarytransportcrimerates notorganizedviolentdecline; actualvideo/response/fences limited coverage.",
+          "reviewedEvidence": "security2025;BVGsafety3/6/8;W03;GSS-2026-10-15 dated6HTML",
+          "finding": "Actual repeated organized critical-grid violence and multi-day electricity/heating harm, dated reconnection and subsequently implemented matched24h guarding; no allcasescleared/ordinarycrime proxy.",
           "score": null
         },
         {
           "dimension": "GSS",
           "subpillar": "regional_conflict",
           "status": "reviewed_partial",
-          "reviewedEvidence": "security2025;W03",
-          "finding": "Foreignrelatedextremism/conflictlinkedmobilization and infrastructureconsequences reviewed; no allralliesviolent/actualwarneeded; present residual strategicprotect notclassified.",
+          "reviewedEvidence": "security2025;W03;GSS-2026-10-15 dated6HTML",
+          "finding": "Earlier bounded foreign-related/conflict-linked local observation retained; new official summary adds local extremism/intelligence context, not local war or foreign perpetrator attribution. Shared-node scenario/protection adaptation revocable.",
           "score": null
         },
         {
           "dimension": "GSS",
           "subpillar": "strategic_exposure",
           "status": "reviewed_partial",
-          "reviewedEvidence": "security2025;water34/35;W03",
-          "finding": "Foreignintelligenceactivity assessed and criticalnode vulnerability; B3Simplemented localwater not allelectricity/nationaldefence; geo-redundancyonlyplan. Cannotchoose40vs60 afterprotections.",
+          "reviewedEvidence": "security2025;water34/35;W03;GSS-2026-10-15 dated6HTML",
+          "finding": "Actual vulnerable shared electricity/necessary-facility nodes, recovery and formal implemented continuous guarding; georedundancy/video/physical-building proposals not all completed, no independent prevention efficacy/wholeFUA footprint.",
           "score": null
         }
       ],
-      "scoreStatus": "reviewed_insufficient_direction",
+      "scoreStatus": "conditional_root_adopted",
       "rejectionOutcome": null
     },
     {
@@ -396,18 +396,20 @@
     }
   ],
   "expectedConditionalTotal": null,
-  "knownWeightedSubtotal": 45.0,
-  "unresolvedScoreRange": [45.0, 70.0],
+  "knownWeightedSubtotal": 54,
+  "unresolvedScoreRange": [54, 64],
   "globalRankingEligible": false,
   "limitations": [
     "Parent reviews numeric finite bridges; do not integrate automatically fromthishandoff.",
-    "GSS/RESunknown notpoorperformance or midpoints; mathematical45-70domainnotarankbound.",
     "No fixedage/allpatientinvoice/allhospitalperfectoutcomes requirement; substantialassumptions not onlynamed.",
     "All31 meaningfully reviewed onlyin stated actual/context scopes; notuniformfullmeasurement.",
     "Geophysicalmodelcontext is not localizeddamage/protection; wildfire specificresidual remainsunmeasured.",
     "Numeric choices are dimensionlevelrevocable netinterpretations, not31 fabricatedsubscores.",
     "Root bounded eight-dimension consideration does not claim all31 fully reviewed/measured; explicitly unstarted/partial/background components remain.",
-    "Finite ordinary resource/eligibility/local clinical and temporal adaptation assumptions can be rejected; no unknown midpoint, probability or supported exclusion."
+    "Finite ordinary resource/eligibility/local clinical and temporal adaptation assumptions can be rejected; no unknown midpoint, probability or supported exclusion.",
+    "GSS now conditional60 after actual restoration and formally implemented matched24h guarding; other seven judgments unchanged. RES unknown;54–64 is a mathematical domain, not rank/exclusion confidence.",
+    "GSS usual-life restoration, shared-node adaptation, core/FUA representativeness and cutoff continuity are revocable; GSS40=>51–61, reject=>45–70.",
+    "Original37 historical source records retained without new raw re-verification;7 current HTML separately frozen, FAQ context only,0 validPDF/no new PDFpixels."
   ],
   "sourceSnapshots": [
     {
@@ -1836,24 +1838,24 @@
           "dimension": "GSS",
           "subpillar": "organized_violence",
           "status": "reviewed_partial",
-          "reviewedEvidence": "security2025;BVGsafety3/6/8;W03",
-          "finding": "Organizedclandestine smallgroup infrastructurearson actualmultidayoutage; ordinarytransportcrimerates notorganizedviolentdecline; actualvideo/response/fences limited coverage.",
+          "reviewedEvidence": "security2025;BVGsafety3/6/8;W03;GSS-2026-10-15 dated6HTML",
+          "finding": "Actual repeated organized critical-grid violence and multi-day electricity/heating harm, dated reconnection and subsequently implemented matched24h guarding; no allcasescleared/ordinarycrime proxy.",
           "score": null
         },
         {
           "dimension": "GSS",
           "subpillar": "regional_conflict",
           "status": "reviewed_partial",
-          "reviewedEvidence": "security2025;W03",
-          "finding": "Foreignrelatedextremism/conflictlinkedmobilization and infrastructureconsequences reviewed; no allralliesviolent/actualwarneeded; present residual strategicprotect notclassified.",
+          "reviewedEvidence": "security2025;W03;GSS-2026-10-15 dated6HTML",
+          "finding": "Earlier bounded foreign-related/conflict-linked local observation retained; new official summary adds local extremism/intelligence context, not local war or foreign perpetrator attribution. Shared-node scenario/protection adaptation revocable.",
           "score": null
         },
         {
           "dimension": "GSS",
           "subpillar": "strategic_exposure",
           "status": "reviewed_partial",
-          "reviewedEvidence": "security2025;water34/35;W03",
-          "finding": "Foreignintelligenceactivity assessed and criticalnode vulnerability; B3Simplemented localwater not allelectricity/nationaldefence; geo-redundancyonlyplan. Cannotchoose40vs60 afterprotections.",
+          "reviewedEvidence": "security2025;water34/35;W03;GSS-2026-10-15 dated6HTML",
+          "finding": "Actual vulnerable shared electricity/necessary-facility nodes, recovery and formal implemented continuous guarding; georedundancy/video/physical-building proposals not all completed, no independent prevention efficacy/wholeFUA footprint.",
           "score": null
         },
         {
@@ -2130,5 +2132,306 @@
       "originalBytes": null,
       "originalSha256": null
     }
-  ]
+  ],
+  "gssPublishedInputCommit": "c7a31b057bef7ac1a4325267c54b35f514c7d417",
+  "gssSourceSnapshots": [
+    {
+      "file": "top-may2026.html",
+      "url": "https://www.berlin.de/rbmskzl/aktuelles/pressemitteilungen/2026/pressemitteilung.1672172.php",
+      "publishedDate": "2026-05-19",
+      "retrievedOn": "2026-10-15",
+      "requestCount": 1,
+      "historicalCutoffBytesVerified": false,
+      "httpStatus": 200,
+      "finalUrl": "https://www.berlin.de/rbmskzl/aktuelles/pressemitteilungen/2026/pressemitteilung.1672172.php",
+      "responseBytes": 49526,
+      "responseSha256": "001946bb5bc668864f06784f7e5fad723530789bd31abe813b93238ce7f6167b",
+      "validOriginal": true,
+      "originalBytes": 49526,
+      "originalSha256": "001946bb5bc668864f06784f7e5fad723530789bd31abe813b93238ce7f6167b",
+      "usedForScore": true,
+      "scope": "Berlin Land/core electricity dependency, not all4946 population or complete nodes",
+      "cutoffAdaptation": "Dated<=Oct10 content observed aftercutoff; no historical byte certification; revocable version/continuity inference.",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/berlin-gss-comparability/top-may2026.html"
+    },
+    {
+      "file": "security-summary.html",
+      "url": "https://www.berlin.de/sen/inneres/verfassungsschutz/aktuelle-meldungen/2026/artikel.1676481.php",
+      "publishedDate": "2026-06-02",
+      "retrievedOn": "2026-10-15",
+      "requestCount": 1,
+      "historicalCutoffBytesVerified": false,
+      "httpStatus": 200,
+      "finalUrl": "https://www.berlin.de/sen/inneres/verfassungsschutz/aktuelle-meldungen/2026/artikel.1676481.php",
+      "responseBytes": 66162,
+      "responseSha256": "2ebe0131ecae11827309e97a9d681594e4944935d15bb17d751549d323264809",
+      "validOriginal": true,
+      "originalBytes": 66162,
+      "originalSha256": "2ebe0131ecae11827309e97a9d681594e4944935d15bb17d751549d323264809",
+      "usedForScore": true,
+      "scope": "Berlin Land/core electricity dependency, not all4946 population or complete nodes",
+      "cutoffAdaptation": "Dated<=Oct10 content observed aftercutoff; no historical byte certification; revocable version/continuity inference.",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/berlin-gss-comparability/security-summary.html"
+    },
+    {
+      "file": "jan-restoration.html",
+      "url": "https://www.stromnetz.berlin/uber-uns/presse/pressemitteilungen-2026/strom-ist-fur-alle-wieder-da/",
+      "publishedDate": "2026-01-08",
+      "retrievedOn": "2026-10-15",
+      "requestCount": 1,
+      "historicalCutoffBytesVerified": false,
+      "httpStatus": 200,
+      "finalUrl": "https://www.stromnetz.berlin/uber-uns/presse/pressemitteilungen-2026/strom-ist-fur-alle-wieder-da/",
+      "responseBytes": 49737,
+      "responseSha256": "ec97267ed291c21c2af13d7a565166985a15c603ca2d9a9b313c0cfd7746ed17",
+      "validOriginal": true,
+      "originalBytes": 49737,
+      "originalSha256": "ec97267ed291c21c2af13d7a565166985a15c603ca2d9a9b313c0cfd7746ed17",
+      "usedForScore": true,
+      "scope": "Berlin Land/core electricity dependency, not all4946 population or complete nodes",
+      "cutoffAdaptation": "Dated<=Oct10 content observed aftercutoff; no historical byte certification; revocable version/continuity inference.",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/berlin-gss-comparability/jan-restoration.html"
+    },
+    {
+      "file": "sept-restoration-works.html",
+      "url": "https://www.stromnetz.berlin/en/about-us/press/press-releases-2026/work-on-the-power-grid-in-johannisthal-konigsheideweg-to-be-closed-off-again/",
+      "publishedDate": "2026-01-27",
+      "retrievedOn": "2026-10-15",
+      "requestCount": 1,
+      "historicalCutoffBytesVerified": false,
+      "httpStatus": 200,
+      "finalUrl": "https://www.stromnetz.berlin/en/about-us/press/press-releases-2026/work-on-the-power-grid-in-johannisthal-konigsheideweg-to-be-closed-off-again/",
+      "responseBytes": 14814,
+      "responseSha256": "6ba4a1605d68b2ea9e62e07a38ba82ed1d5b3e0a9b3b4ffdb5fbc836af6e929e",
+      "validOriginal": true,
+      "originalBytes": 49179,
+      "originalSha256": "3df65bc7242c48c62042bd5c48e23bb1b4893732fc253b2d669857fce9ace323",
+      "transportEncoding": "gzip",
+      "responsePath": "/Users/morris/.local/share/cci-research/2026-10-10/berlin-gss-comparability/sept-restoration-works.html.response.gz",
+      "usedForScore": true,
+      "scope": "Berlin Land/core electricity dependency, not all4946 population or complete nodes",
+      "cutoffAdaptation": "Dated<=Oct10 content observed aftercutoff; no historical byte certification; revocable version/continuity inference.",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/berlin-gss-comparability/sept-restoration-works.html"
+    },
+    {
+      "file": "jan-review.html",
+      "url": "https://www.berlin.de/rbmskzl/aktuelles/pressemitteilungen/2026/pressemitteilung.1638016.php",
+      "publishedDate": "2026-01-27",
+      "retrievedOn": "2026-10-15",
+      "requestCount": 1,
+      "historicalCutoffBytesVerified": false,
+      "httpStatus": 200,
+      "finalUrl": "https://www.berlin.de/rbmskzl/aktuelles/pressemitteilungen/2026/pressemitteilung.1638016.php",
+      "responseBytes": 41706,
+      "responseSha256": "556b9bbf3536bb7b47cce7e87c99b1aff989a2efa81bd21530d762cc924ffdb6",
+      "validOriginal": true,
+      "originalBytes": 41706,
+      "originalSha256": "556b9bbf3536bb7b47cce7e87c99b1aff989a2efa81bd21530d762cc924ffdb6",
+      "usedForScore": true,
+      "scope": "Berlin Land/core electricity dependency, not all4946 population or complete nodes",
+      "cutoffAdaptation": "Dated<=Oct10 content observed aftercutoff; no historical byte certification; revocable version/continuity inference.",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/berlin-gss-comparability/jan-review.html"
+    },
+    {
+      "file": "jan-initial.html",
+      "url": "https://www.berlin.de/sen/web/presse/pressemitteilungen/2026/pressemitteilung.1629952.php",
+      "publishedDate": "2026-01-03",
+      "retrievedOn": "2026-10-15",
+      "requestCount": 1,
+      "historicalCutoffBytesVerified": false,
+      "httpStatus": 200,
+      "finalUrl": "https://www.berlin.de/sen/web/presse/pressemitteilungen/2026/pressemitteilung.1629952.php",
+      "responseBytes": 34771,
+      "responseSha256": "32d25fa75aa62a7451726aa08ec0a83c9c0a514dfc83ca47703ea22f0702fa8f",
+      "validOriginal": true,
+      "originalBytes": 34771,
+      "originalSha256": "32d25fa75aa62a7451726aa08ec0a83c9c0a514dfc83ca47703ea22f0702fa8f",
+      "usedForScore": true,
+      "scope": "Berlin Land/core electricity dependency, not all4946 population or complete nodes",
+      "cutoffAdaptation": "Dated<=Oct10 content observed aftercutoff; no historical byte certification; revocable version/continuity inference.",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/berlin-gss-comparability/jan-initial.html"
+    },
+    {
+      "file": "resilience-faq.html",
+      "url": "https://www.berlin.de/sen/energie/resilienz-kritischer-infrastrukturen-in-berlin/",
+      "publishedDate": "undated current; search indexed pre-cutoff but not independently firstpub verified",
+      "retrievedOn": "2026-10-15",
+      "requestCount": 1,
+      "historicalCutoffBytesVerified": false,
+      "httpStatus": 200,
+      "finalUrl": "https://www.berlin.de/sen/energie/resilienz-kritischer-infrastrukturen-in-berlin/",
+      "responseBytes": 67867,
+      "responseSha256": "322d26db2ac9ec43e723e5c2a13dd31cf18232b409ef42d211854ef419965325",
+      "validOriginal": true,
+      "originalBytes": 67867,
+      "originalSha256": "322d26db2ac9ec43e723e5c2a13dd31cf18232b409ef42d211854ef419965325",
+      "usedForScore": false,
+      "scope": "Berlin Land/core electricity dependency, not all4946 population or complete nodes",
+      "cutoffAdaptation": "Not used as positive cutoff score proof.",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/berlin-gss-comparability/resilience-faq.html"
+    }
+  ],
+  "gssFailedSourceSnapshots": [
+    {
+      "file": "security2025.pdf",
+      "url": "https://www.berlin.de/sen/inneres/verfassungsschutz/publikationen/verfassungsschutzberichte/verfassungsschutzbericht-berlin-2025-pressefassung.pdf?ts=1780397957",
+      "publishedDate": "2026-06",
+      "retrievedOn": "2026-10-15",
+      "requestCount": 1,
+      "historicalCutoffBytesVerified": false,
+      "error": "HTTP Error 429: Too Many Requests",
+      "validOriginal": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false,
+      "scope": "Berlin Land/core electricity dependency, not all4946 population or complete nodes",
+      "cutoffAdaptation": "Not used as positive cutoff score proof.",
+      "httpStatus": 429,
+      "responseBytes": null,
+      "responseSha256": null,
+      "responseBodySaved": false
+    },
+    {
+      "file": "jan-protection.pdf",
+      "url": "https://www.berlin.de/sen/web/presse/pressemitteilungen/2026/20260113_pm-land-berlin-unterstuetzt-betreiber-kritischer-infrastruktur.pdf?ts=1768315788",
+      "publishedDate": "2026-01-13",
+      "retrievedOn": "2026-10-15",
+      "requestCount": 1,
+      "historicalCutoffBytesVerified": false,
+      "error": "HTTP Error 429: Too Many Requests",
+      "validOriginal": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false,
+      "scope": "Berlin Land/core electricity dependency, not all4946 population or complete nodes",
+      "cutoffAdaptation": "Not used as positive cutoff score proof.",
+      "httpStatus": 429,
+      "responseBytes": null,
+      "responseSha256": null,
+      "responseBodySaved": false
+    }
+  ],
+  "gssCompletionReview": {
+    "path": "docs/cci-berlin-gss-completion-review.md",
+    "sha256": "815ba355a2d0fb569c71b2dac14835ab73d9ab1d97a6e41e1d9f85508d70ce11",
+    "reviewedOn": "2026-10-15",
+    "researchReport": "docs/cci-berlin-gss-comparability-review.md",
+    "researchReportSha256": "b9c0c908df372c1501582a3e39fef04d003028729e4b5b44b0908a33adbc1f1d",
+    "sourceManifestSha256": "ba9e6b5024c98ea11ea36534126146126dbba027c941fb8f5219a653e09d2e26",
+    "handoffSha256": "e5204e1630d8e6ba95955946a40d17267ef1ec315b176de8d5f5680799578b5f",
+    "validOriginalCount": 7,
+    "datedOriginalCount": 6,
+    "validPDFCount": 0,
+    "newPdfPixelsViewed": 0,
+    "original37HistoricalSourcesReverified": false,
+    "rootVerifiedFull9031AndOriginals": true,
+    "referenceBoundaryCheck": {
+      "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+      "sourceBytes": 9932800,
+      "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+      "allGeometryCount": 9031,
+      "targetGeometrySha256": "3451855a3fa0aeeb0b7ab3fe1843aececd57a7768f192e249970e1739cb70568",
+      "referencePoints": [
+        {
+          "label": "Berlin centre",
+          "longitude": 13.405,
+          "latitude": 52.52,
+          "approximate": true,
+          "fuaMatches": [4946]
+        },
+        {
+          "label": "Johannisthal approximate district",
+          "longitude": 13.5,
+          "latitude": 52.44,
+          "approximate": true,
+          "fuaMatches": [4946]
+        },
+        {
+          "label": "Lichterfelde approximate district",
+          "longitude": 13.3,
+          "latitude": 52.42,
+          "approximate": true,
+          "fuaMatches": [4946]
+        }
+      ],
+      "scope": "Analyst district approximations, not official incident coordinates or whole service catchment/population denominators."
+    },
+    "stageArtifacts": [
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/berlin-gss-comparability/report.md",
+        "bytes": 10041,
+        "sha256": "dce1201df7bda87e2379de33bab61d8fe5773a32274356cd3300cee8a290bbde"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/berlin-gss-comparability/candidate.json",
+        "bytes": 2740,
+        "sha256": "e5204e1630d8e6ba95955946a40d17267ef1ec315b176de8d5f5680799578b5f"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/berlin-gss-comparability/source-manifest.json",
+        "bytes": 10475,
+        "sha256": "ac2c072f786e2dd293eb6a5f98254ac5e74c2ac764e3928f4b2a60e55b7db466"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/berlin-gss-comparability/input-snapshot.json",
+        "bytes": 14047,
+        "sha256": "10e553c11d83350991759ef6acd5f1659e9aed6a559c43136daba2db98ee2581"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/berlin-gss-comparability/geo-check.json",
+        "bytes": 1060,
+        "sha256": "69acd85fd9e88fb1834c2393d59f1689429a1398bf91ef0af33ba6e3cccb6635"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/berlin-gss-comparability/root/independent-check.json",
+        "bytes": 247,
+        "sha256": "4d4eaa8ebb942b8517ff72f0caf60452ef73346313a8037973dfbefd495a5678"
+      }
+    ],
+    "newEvidenceSubpillars": {
+      "organized_violence": "partial",
+      "regional_conflict": "context",
+      "strategic_exposure": "partial"
+    },
+    "combinedPriorCoverageRetained": true,
+    "sourceRequestDeviation": "Four simultaneous webPDF find requests were issued in one batch before error results returned; all failed internally. This exceeded per-mechanism3 cap; no further PDF/web retrieval attempted and no PDF content or pixels adopted.",
+    "webReadSources": [
+      {
+        "url": "https://www.berlin.de/rbmskzl/aktuelles/pressemitteilungen/2026/pressemitteilung.1672172.php",
+        "retrievedOn": "2026-10-15",
+        "originalBytes": null,
+        "originalSha256": null,
+        "scope": "Root direct web corroboration of dated saved primary, not extra raw source or historical-cutoff byte verification."
+      },
+      {
+        "url": "https://www.berlin.de/sen/inneres/verfassungsschutz/aktuelle-meldungen/2026/artikel.1676481.php",
+        "retrievedOn": "2026-10-15",
+        "originalBytes": null,
+        "originalSha256": null,
+        "scope": "Root direct web corroboration of dated saved primary, not extra raw source or historical-cutoff byte verification."
+      },
+      {
+        "url": "https://www.stromnetz.berlin/uber-uns/presse/pressemitteilungen-2026/strom-ist-fur-alle-wieder-da/",
+        "retrievedOn": "2026-10-15",
+        "originalBytes": null,
+        "originalSha256": null,
+        "scope": "Root direct web corroboration of dated saved primary, not extra raw source or historical-cutoff byte verification."
+      }
+    ],
+    "webOnlyDiagnostics": [
+      {
+        "url": "https://www.berlin.de/sen/inneres/verfassungsschutz/publikationen/verfassungsschutzberichte/verfassungsschutzbericht-berlin-2025-pressefassung.pdf?ts=1780397957",
+        "initialWebParse": "140-page listing shown; substantive pages not opened/read",
+        "findFailures": 4,
+        "validOriginal": false,
+        "originalBytes": null,
+        "originalSha256": null,
+        "usedForScore": false
+      }
+    ],
+    "sensitivity": {
+      "GSS40": [51, 61],
+      "GSSUnknown": [45, 70]
+    }
+  }
 }

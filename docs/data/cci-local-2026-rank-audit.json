@@ -457,7 +457,7 @@
           "center": null,
           "lower": 43.0,
           "upper": 53.0,
-          "bestPosition": 19,
+          "bestPosition": 20,
           "worstPosition": 9031
         },
         {
@@ -473,10 +473,10 @@
           "efua_id": "4946",
           "source_name": "Berlin",
           "center": null,
-          "lower": 45.0,
-          "upper": 70.0,
+          "lower": 54.0,
+          "upper": 64.0,
           "bestPosition": 1,
-          "worstPosition": 9031
+          "worstPosition": 9030
         },
         {
           "efua_id": "5129",
@@ -1064,8 +1064,8 @@
           "efua_id": "4946",
           "source_name": "Berlin",
           "center": null,
-          "lower": 36.0,
-          "upper": 76.0,
+          "lower": 45.0,
+          "upper": 70.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -2246,8 +2246,8 @@
           "efua_id": "4946",
           "source_name": "Berlin",
           "center": null,
-          "lower": 36.0,
-          "upper": 76.0,
+          "lower": 45.0,
+          "upper": 70.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -2837,8 +2837,8 @@
           "efua_id": "4946",
           "source_name": "Berlin",
           "center": null,
-          "lower": 45.0,
-          "upper": 70.0,
+          "lower": 54.0,
+          "upper": 64.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -3428,8 +3428,8 @@
           "efua_id": "4946",
           "source_name": "Berlin",
           "center": null,
-          "lower": 36.0,
-          "upper": 76.0,
+          "lower": 45.0,
+          "upper": 70.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -4019,8 +4019,8 @@
           "efua_id": "4946",
           "source_name": "Berlin",
           "center": null,
-          "lower": 39.0,
-          "upper": 74.0,
+          "lower": 48.0,
+          "upper": 68.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -4610,8 +4610,8 @@
           "efua_id": "4946",
           "source_name": "Berlin",
           "center": null,
-          "lower": 39.0,
-          "upper": 74.0,
+          "lower": 48.0,
+          "upper": 68.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -5201,8 +5201,8 @@
           "efua_id": "4946",
           "source_name": "Berlin",
           "center": null,
-          "lower": 39.0,
-          "upper": 74.0,
+          "lower": 48.0,
+          "upper": 68.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -5948,7 +5948,7 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "bc71adf58d09d01a2819b97e46cd0d378c6a9b9991028f4a72f3a646c2373a46",
+    "cci-global-evidence-matrix.csv": "ceeaa9c6ae5958fe2073eda7565a652277c80cc12ca4851f32188d149281889a",
     "cci-legal-mobility-rules.json": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "cci-legal-mobility.md": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e",
     "cci-local-2026-singapore-case.json": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -6071,8 +6071,8 @@
     "cci-amsterdam-score-completion-review.md": "4c808a3e401ead420850365c5171c06e2c4b3b917059e276559a4d98d058a618",
     "cci-local-2026-madrid-case.json": "3dcb279c99fb8286edc720d45919fecb444a543ad8940e7e13a57b280758b796",
     "cci-madrid-score-completion-review.md": "f5de02b118e833e7f0ae53522d2b383011ab539401d825c52ff778569b951cdd",
-    "cci-local-2026-berlin-case.json": "1c7f792f2ec7b46115c6212676febd2af7746c048dfbd90d0a6baa3a79ababbc",
-    "cci-berlin-score-completion-review.md": "84533e9c14fc46cd8fc7babf04b66eb43c0ba95c62e198a40e72f7f814c05085",
+    "cci-local-2026-berlin-case.json": "fec0cf469b6b85b80a0e4b23b11be841921e873c356be04b131889c1997291e0",
+    "cci-berlin-gss-completion-review.md": "815ba355a2d0fb569c71b2dac14835ab73d9ab1d97a6e41e1d9f85508d70ce11",
     "cci-local-2026-montreal-case.json": "3b0595a42bdfadc8f36d71c8a121a0293966231ef3123aacae9ecb302628e374",
     "cci-montreal-score-completion-review.md": "8db53b8f78b4d57d354b1751682cdcbde9242535f54632d7b1242d99489c887b",
     "cci-local-2026-fukuoka-case.json": "0ca1ab2d181c14df1dd0985ff81fcda904f1317cf4d43448ae01dbc65e26a330",
@@ -6082,11 +6082,11 @@
     "cci-local-2026-barcelona-case.json": "04bcd122aad53d8f756302c5cf4cc024733a47a5abe228e24240bfd6e8198ded",
     "cci-barcelona-score-completion-review.md": "c292c5ba9fd324855f4f0fb15bc38b37b73caa2e851fdbfacf9dd51c6921e639",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "e33e3a2a41da967e2d2f058f5219e383d4d831722e9cf706b3614edaa1878863",
+    "cci-global-evidence-matrix.json": "776c25a3cb41d2ea62d8da06f94fa0303cc3252f81e91863d911e3f25382195c",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "8e2dd8e75caf2e2d782f921dc48e618fb605a2ac33feab6f9a593c40434b5616"
+    "cci-local-2026-scoring-calibration.md": "aa5487198ded916cc9d7d82b993fe7ca29dff61a58c407617e63f7eca38b2179"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "e6098599537da5caf1b1cd5d39e2c97ff01a43c1a1a0456a16b2bb8cef96b271",
+  "csvSha256": "e64a0c36d223814578ca9c6be71b14586aaf3ac54ade15380242736e000743d4",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }
