@@ -115,6 +115,7 @@ const realCases = [
   "berlin",
   "montreal",
   "fukuoka",
+  "milan",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -221,6 +222,7 @@ const [
   berlin,
   montreal,
   fukuoka,
+  milan,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2319,3 +2321,17 @@ assert.equal(
   realCases.find(c => c.candidateId === 708).rootScopeReview.localCollection248CountedAsInfusions,
   false
 );
+
+const milanCase = realCases.find(c => c.candidateId === 1600);
+assert.equal(
+  milanCase.priorityCompletionReview.sha256,
+  digest(milanCase.priorityCompletionReview.path)
+);
+assert.equal(milanCase.rootScopeReview.ctmoCurrentUpdatedAfterCutoff, true);
+assert.equal(milanCase.rootScopeReview.newCurrentIndicationsBackfilled, false);
+assert.deepEqual(total(milan), { center: null, lower: 12, upper: 92 });
+for (const dimension of ["LON", "TEC"] as const) {
+  const withdrawn = { ...milan };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower: 6, upper: 96 });
+}

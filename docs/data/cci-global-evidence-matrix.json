@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 63,
+    "conditionalCaseCount": 64,
     "completeConditionalCaseCount": 16,
-    "partialCaseCount": 47,
-    "unassessedCount": 8968,
+    "partialCaseCount": 48,
+    "unassessedCount": 8967,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -620,8 +620,13 @@
       "sha256": "0ca1ab2d181c14df1dd0985ff81fcda904f1317cf4d43448ae01dbc65e26a330",
       "provenance": "cci-fukuoka-score-completion-review.md",
       "provenanceSha256": "ddd5a8186f99196ccf04aea9beec8e15a84bd6e0e57a0148f0564ac86e701045"
+    },
+    "cci-local-2026-milan-case.json": {
+      "sha256": "b4196c814b2482166a6e6465249a6bb470dec0f94d9e5e3ddfb8ce229a860b97",
+      "provenance": "cci-milan-score-completion-review.md",
+      "provenanceSha256": "669522ed3fd6bd0bf5f299c6ffb6dca2a131c805e23ffcc4cab46c08724dc659"
     }
   },
-  "scriptSha256": "222aa4d5919ca9d44d1c100e1da1da10df73ce66a5f8c3db69aac845d1656760",
-  "csvSha256": "654080390f7dc4a3f5a63c023eaa92d23b23ed2453b4fdcd752bb26892896569"
+  "scriptSha256": "180429e1a10a7121bd224d0931f49ff694070ca283feb8e0be6e778ef0e64137",
+  "csvSha256": "6e91ddec9da67962e2d0f7918ae92b7dfcc223be1ae99239e84254e3fb71e6d7"
 }

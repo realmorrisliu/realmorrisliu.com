@@ -1,0 +1,1013 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 1600,
+  "name": "Milan",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-15",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "Ordinary Italian citizen/usual local longterm resident/median local income/usual public coverage; no fixed age, no automatic disease eligibility",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-milan-score-completion-review.md",
+  "publishedInputCommit": "982c8934035ad0326dc35d7e0c9d9eab98cb1232",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": null,
+      "rationale": "Located heat/flood sources not obtained as usable full original; geology/severe weather not started; no low score from retrieval failure.",
+      "assumption": "No ordinary major-hazard/implemented-protection direction is established by failed municipal sources or unstarted geology/weather; unknown is not a low score.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "heat_humidity": "unresolved",
+        "flood_sea_level": "unresolved",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "unresolved"
+      },
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "Actual prefecture anti-mafia interdictions and operations are partial; ordinary crime counts not all organized violence, regional/strategic impact unresolved.",
+      "assumption": "Actual anti-mafia administration is one component; ordinary organized, regional and strategic impacts/remaining constraints are not sufficiently connected to select40/60.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "context"
+      },
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "ISR",
+      "score": null,
+      "rationale": "Actual administrative operations/local university partnerships and digital service components; ordinary broad execution/help/resilience and recovery not resolved.",
+      "assumption": "University partnerships and service/payment entry points do not establish the missing ordinary broad execution, group reach and emergency-recovery direction.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "context",
+        "social_cohesion": "partial",
+        "emergency_recovery": "unresolved"
+      },
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "No verified full water-food-energy combined ordinary net acquisition/help outcome; unknown, no missing-data penalty.",
+      "assumption": "Water/food/energy ordinary combined net access and implemented-help effects are unresolved; no source-count, market-existence, perfect-household-invoice gate or failure penalty.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "unresolved",
+        "food": "unresolved",
+        "energy": "unresolved",
+        "supply_chain": "unresolved"
+      },
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "MED",
+      "score": null,
+      "rationale": "Actual selected short waits plus major mean priority waits, ordinary ticket and remedy rules; realized remedy and routine quality unresolved, adjacent40/60 not settled.",
+      "assumption": "Selected short waits, actual long priority mean waits, public ticket and formal remedy paths coexist; actual alternative arrangements/routine quality/net care direction unresolved. No full-population-adjusted-endpoint gate or assumption every remedy succeeded/failed.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "unresolved",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "Finite mature disease-class human evidence, actual2024 local SSN CAR-T infusion/multidisciplinary longterm followup; currentpostcutoff page continuity corroboration only. Usually eligible local matureclass/publicpayment/netmonitor bridge revocable; foreign payment and experimental new indications excluded.",
+      "assumption": "Finite mature disease class connects2024 actual local SSN infusion/team followup to cutoff by revocable continuity/ordinary eligibility/resources/net monitoring assumptions; currentOct14 page is postcutoff corroboration only. Specific brand/indication/net costs are not all directly verified. Reject any necessary bridge=>null; no fixed adult or per-dose invoice gate, no foreign payer transfer.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Actual2025 patent licensing/assignments/spinouts and clinical digital projects plus ordinary payment/mobile entry; finite local2026/usualresources diffusion bridge, no wholeFUA network/density measurement; revocable.",
+      "assumption": "Actual2025 licensing/assignments/spinouts and clinical digital use plus ordinary service entry support finite local/2026/usual-device/resources/diffusion inference; industry/user coverage and redundancy remain limited. Reject bridge=>null; counts are not wholeFUA density/coverage.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "OPT",
+      "score": null,
+      "rationale": "Actual ordinary roaming rules with stableItaly/4month conditions; actual transport, legal longterm destination and personalasset continuation not begun, no score.",
+      "assumption": "Ordinary consumer roaming is a component with stable-Italy/fair-use constraints, not permanent international continuity; actual transport, long-residence and personal asset continuation not substantively reviewed.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "transport_redundancy": "unresolved",
+        "legal_mobility": "unresolved",
+        "asset_portability": "unresolved",
+        "network_continuity": "partial"
+      },
+      "scoreStatus": "reviewed_insufficient_direction"
+    }
+  ],
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 12,
+  "unresolvedScoreRange": [12, 92],
+  "globalRankingEligible": false,
+  "limitations": [
+    "Finite local/temporal/ordinary resource/approved-disease/payer/net monitoring assumptions are revocable; rejecting either known dimension gives6–96, both0–100.",
+    "31 scope records do not prove fully reviewed subpillars;9 unstarted/5 insufficient/2context retained.",
+    "CurrentOct14 CTMO version is postcutoff corroboration only; new indications not backfilled.",
+    "2025 median and2026 mean waits are different, not deterioration ratios or patient prevalence.",
+    "Five initial municipal concurrent requests exceed batch3, retained as process deviation; failed acquisition not low capability.",
+    "All old/new candidates remain; no qualified32nd threshold or supported exclusion."
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "ctmo",
+      "url": "https://www.policlinico.mi.it/reparti/213/centro-trapianti-midollo-osseo-ctmo",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "finalUrl": "https://www.policlinico.mi.it/reparti/213/centro-trapianti-midollo-osseo-ctmo",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "ctmo.html",
+      "bytes": 764859,
+      "sha256": "e417d5117342d5ebbb1ad0c20d8fe69595d2c42a192adce2be061e118262ae5a",
+      "validRaw": true,
+      "originalBytes": 764859,
+      "originalSha256": "e417d5117342d5ebbb1ad0c20d8fe69595d2c42a192adce2be061e118262ae5a",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "current_postcutoff_version_component_only",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "Current page explicitly updated2026-10-14 11:10 aftercutoff; oldqueueFeb4not certified",
+      "evidenceConsidered": true,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/ctmo.html",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    },
+    {
+      "id": "cart2024",
+      "url": "https://www.policlinico.mi.it/news/2024-04-03/3822/car-t-una-possibilita-in-piu-per-trattare-i-tumori-del-sangue-al-policlinico-di-milano",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "finalUrl": "https://www.policlinico.mi.it/news/2024-04-03/3822/car-t-una-possibilita-in-piu-per-trattare-i-tumori-del-sangue-al-policlinico-di-milano",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "cart2024.html",
+      "bytes": 777286,
+      "sha256": "ac91055787a456ef579b58410b0c1a0dacdf11c0b9c36bbbe07c0c65a1d537cc",
+      "validRaw": true,
+      "originalBytes": 777286,
+      "originalSha256": "ac91055787a456ef579b58410b0c1a0dacdf11c0b9c36bbbe07c0c65a1d537cc",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "bounded_component_or_counterevidence",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "2024-04-03 article, actual ongoing localservice asreported; finite2026continuity",
+      "evidenceConsidered": true,
+      "usedForProposedScore": true,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/cart2024.html",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    },
+    {
+      "id": "hospital-wait",
+      "url": "https://www.policlinico.mi.it/amministrazione_trasparente/servizi-erogati/liste-di-attesa",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "finalUrl": "https://www.policlinico.mi.it/amministrazione_trasparente/servizi-erogati/liste-di-attesa",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "hospital-wait.html",
+      "bytes": 74169,
+      "sha256": "124ea8bf4316e5369320a37bc2e5b991ee8a5e2204d485f5b18face75211170f",
+      "validRaw": true,
+      "originalBytes": 74169,
+      "originalSha256": "124ea8bf4316e5369320a37bc2e5b991ee8a5e2204d485f5b18face75211170f",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "current_postcutoff_version_component_only",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "Current indexupdated2026-10-14 aftercutoff; underlyingdatedPDFs separate",
+      "evidenceConsidered": true,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/hospital-wait.html",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    },
+    {
+      "id": "ats-wait",
+      "url": "https://www.ats-milano.it/ats/carta-servizi/guida-servizi/assistenza-sociosanitaria/tempi-attesa-0",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "finalUrl": "https://www.ats-milano.it/ats/carta-servizi/guida-servizi/assistenza-sociosanitaria/tempi-attesa-0",
+      "contentType": "text/html; charset=utf-8",
+      "file": "ats-wait.html",
+      "bytes": 89082,
+      "sha256": "fff44f46d638da2894d3cab6746b86c68d2d4e4834298b4739372e3b70ab3044",
+      "validRaw": true,
+      "originalBytes": 89082,
+      "originalSha256": "fff44f46d638da2894d3cab6746b86c68d2d4e4834298b4739372e3b70ab3044",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "bounded_component_or_counterevidence",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "Current page with attachmentsSep2026/prior rules; full historicalHTMLnotattested",
+      "evidenceConsidered": true,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/ats-wait.html",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    },
+    {
+      "id": "region-wait",
+      "url": "https://www.regione.lombardia.it/sanita/prenotazioni-e-tempi-d-attesa/tempi-attesa-pretazioni-sanitarie",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "finalUrl": "https://www.regione.lombardia.it/sanita/prenotazioni-e-tempi-d-attesa/tempi-attesa-pretazioni-sanitarie",
+      "contentType": "text/html;charset=utf-8",
+      "file": "region-wait.html",
+      "bytes": 448381,
+      "sha256": "065ec1eb238a7cb615268a0d1bf6f6a26d0d5e53e46d578a55e4bec9f6f58618",
+      "validRaw": true,
+      "originalBytes": 448381,
+      "originalSha256": "065ec1eb238a7cb615268a0d1bf6f6a26d0d5e53e46d578a55e4bec9f6f58618",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "bounded_component_or_counterevidence",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "Pageupdated2026-09-17; proceduresprior/effectiveSep15_2026",
+      "evidenceConsidered": true,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/region-wait.html",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    },
+    {
+      "id": "security",
+      "url": "https://prefettura.interno.gov.it/it/prefetture/milano/comunicazioni/misure-capodanno-istituzione-zone-rosse-e-bilancio-attivita-2024",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "finalUrl": "https://prefettura.interno.gov.it/it/prefetture/milano/comunicazioni/misure-capodanno-istituzione-zone-rosse-e-bilancio-attivita-2024",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "security.html",
+      "bytes": 94739,
+      "sha256": "b36a2b8727945fd58c50c4e44715ec6de0b3a167976c686741196f5343785cb7",
+      "validRaw": true,
+      "originalBytes": 94739,
+      "originalSha256": "b36a2b8727945fd58c50c4e44715ec6de0b3a167976c686741196f5343785cb7",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "bounded_component_or_counterevidence",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "2024-12-27 officialstatement; provisionalJan1-Dec20_2024 observations, notfull2024",
+      "evidenceConsidered": true,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/security.html",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    },
+    {
+      "id": "polimi2025",
+      "url": "https://trasparenza.polimi.it/archiviofile/polimi/Trasparenza/amministrazione_trasparente/Bilanci/2026_04_30_bilancio-unico-2025.pdf",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "finalUrl": "https://trasparenza.polimi.it/archiviofile/polimi/Trasparenza/amministrazione_trasparente/Bilanci/2026_04_30_bilancio-unico-2025.pdf",
+      "contentType": "application/pdf",
+      "file": "polimi2025.pdf",
+      "bytes": 9678486,
+      "sha256": "72e3b780b9c1ce9a00ce8e86e6b62abda36b6a1c1ea2d4d67812ae7744be67a2",
+      "validRaw": true,
+      "originalBytes": 9678486,
+      "originalSha256": "72e3b780b9c1ce9a00ce8e86e6b62abda36b6a1c1ea2d4d67812ae7744be67a2",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "bounded_component_or_counterevidence",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "2025 annualobservations; PDFcreated2026-04-29 modifiedApr30; firstpublicationnot independentlycertified",
+      "evidenceConsidered": true,
+      "usedForProposedScore": true,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/polimi2025.pdf",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    },
+    {
+      "id": "iliad-roam",
+      "url": "https://assistenza.iliad.it/privati/mobile/supporto/sim-mobile-estero-e-roaming",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "finalUrl": "https://assistenza.iliad.it/privati/mobile/supporto/sim-mobile-estero-e-roaming",
+      "contentType": "text/html; charset=utf-8",
+      "file": "iliad-roam.html",
+      "bytes": 405901,
+      "sha256": "d639454e64659a6f56f5b2cef197b52797121a5bb947d85c5c1d24d57b63d08d",
+      "validRaw": true,
+      "originalBytes": 405901,
+      "originalSha256": "d639454e64659a6f56f5b2cef197b52797121a5bb947d85c5c1d24d57b63d08d",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "navigation_only",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "CurrentHTMLnavigation shell only; rawvalidnotfullconsumerbody",
+      "evidenceConsidered": true,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/iliad-roam.html",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    },
+    {
+      "id": "iliad-tariff",
+      "url": "https://registrazione.iliad.it/docs/prezzi/prezzi-giga200-999_dal_17_07_2025.pdf",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "finalUrl": "https://cdn001.iliad.it/strapi/prezzi_giga200_999_dal_17_07_2025_a99013102b.pdf",
+      "contentType": "application/pdf",
+      "file": "iliad-tariff.pdf",
+      "bytes": 4565088,
+      "sha256": "7030cd08f5d4fa2658ea8b3d04b25273e4a0d93947cf6f6e4b8a30a29ac38e91",
+      "validRaw": true,
+      "originalBytes": 4565088,
+      "originalSha256": "7030cd08f5d4fa2658ea8b3d04b25273e4a0d93947cf6f6e4b8a30a29ac38e91",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "bounded_component_or_counterevidence",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "PDFsays2026-01-01 effective; sourceURL2025-07-17 notthecurrentPDFversiondate",
+      "evidenceConsidered": true,
+      "usedForProposedScore": true,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/iliad-tariff.pdf",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    },
+    {
+      "id": "wait2025-outpatient",
+      "url": "https://www.policlinico.mi.it/uploads/fom/attachments/amministrazione_trasparente/amministrazione_trasparente_m/90/files/allegati/2422/rilevazione_tempi_di_attesa_____ambulatoriale_2025.pdf",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "finalUrl": "https://www.policlinico.mi.it/uploads/fom/attachments/amministrazione_trasparente/amministrazione_trasparente_m/90/files/allegati/2422/rilevazione_tempi_di_attesa_____ambulatoriale_2025.pdf",
+      "contentType": "application/pdf",
+      "file": "wait2025-outpatient.pdf",
+      "bytes": 367140,
+      "sha256": "9dfee743625c6d18edf2248e3ebce0143aff07d4893bd11f361372bf48c056cd",
+      "validRaw": true,
+      "originalBytes": 367140,
+      "originalSha256": "9dfee743625c6d18edf2248e3ebce0143aff07d4893bd11f361372bf48c056cd",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "bounded_component_or_counterevidence",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "2025December titled; PDFcreatedDec22_2025; exante median notfullmonthend or patientrange",
+      "evidenceConsidered": true,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/wait2025-outpatient.pdf",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    },
+    {
+      "id": "wait2025-inpatient",
+      "url": "https://www.policlinico.mi.it/uploads/fom/attachments/amministrazione_trasparente/amministrazione_trasparente_m/90/files/allegati/2423/rilevazione_tempi_di_attesa_____ricoveri_2025.pdf",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "finalUrl": "https://www.policlinico.mi.it/uploads/fom/attachments/amministrazione_trasparente/amministrazione_trasparente_m/90/files/allegati/2423/rilevazione_tempi_di_attesa_____ricoveri_2025.pdf",
+      "contentType": "application/pdf",
+      "file": "wait2025-inpatient.pdf",
+      "bytes": 265807,
+      "sha256": "c47cd7f182ef743d1c6d4526832b8ed90c16f79a1b26b3fe170630cb1211e85c",
+      "validRaw": true,
+      "originalBytes": 265807,
+      "originalSha256": "c47cd7f182ef743d1c6d4526832b8ed90c16f79a1b26b3fe170630cb1211e85c",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "bounded_component_or_counterevidence",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "2025December titled; PDFcreatedDec22_2025; expostClassA; method/countnotshown",
+      "evidenceConsidered": true,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/wait2025-inpatient.pdf",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    },
+    {
+      "id": "wait2026-outpatient",
+      "url": "https://www.policlinico.mi.it/uploads/fom/attachments/amministrazione_trasparente/amministrazione_trasparente_m/90/files/allegati/2681/rilevazione_tempi_attesa_settembre_2026___ambulatoriale.pdf",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "finalUrl": "https://www.policlinico.mi.it/uploads/fom/attachments/amministrazione_trasparente/amministrazione_trasparente_m/90/files/allegati/2681/rilevazione_tempi_attesa_settembre_2026___ambulatoriale.pdf",
+      "contentType": "application/pdf",
+      "file": "wait2026-outpatient.pdf",
+      "bytes": 329117,
+      "sha256": "d10ab764ef855f1fb6358f5a73d9f4a7cc4b7761437fa9ae85f61e9081492d0c",
+      "validRaw": true,
+      "originalBytes": 329117,
+      "originalSha256": "d10ab764ef855f1fb6358f5a73d9f4a7cc4b7761437fa9ae85f61e9081492d0c",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "bounded_component_or_counterevidence",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "2026Septembermeans; PDFcreated2026-10-02; stale2020metadataTitle notmeasurementyear",
+      "evidenceConsidered": true,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/wait2026-outpatient.pdf",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    },
+    {
+      "id": "hospital-science2025",
+      "url": "https://www.policlinico.mi.it/assets/fom/documenti/relazione-scientifica-2025.pdf",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "finalUrl": "https://www.policlinico.mi.it/assets/fom/documenti/relazione-scientifica-2025.pdf",
+      "contentType": "application/pdf",
+      "file": "hospital-science2025.pdf",
+      "bytes": 3225369,
+      "sha256": "0b9ba5ea6001f1e11f79dff06cbfa578b156e5ed7a6629fcaa2baa3141a41bb2",
+      "validRaw": true,
+      "originalBytes": 3225369,
+      "originalSha256": "0b9ba5ea6001f1e11f79dff06cbfa578b156e5ed7a6629fcaa2baa3141a41bb2",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "bounded_component_or_counterevidence",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "2025 reportedactivities; PDFcreated2026-05-29",
+      "evidenceConsidered": true,
+      "usedForProposedScore": true,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/hospital-science2025.pdf",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    },
+    {
+      "id": "hospital-pay",
+      "url": "https://www.policlinico.mi.it/servizi-al-paziente/pagamenti",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "finalUrl": "https://www.policlinico.mi.it/servizi-al-paziente/pagamenti",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "hospital-pay.html",
+      "bytes": 762140,
+      "sha256": "4556b0ef87faf67bca759e97ed3388960448e9c66ef6c0ef4eeef023faf61b46",
+      "validRaw": true,
+      "originalBytes": 762140,
+      "originalSha256": "4556b0ef87faf67bca759e97ed3388960448e9c66ef6c0ef4eeef023faf61b46",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "bounded_component_or_counterevidence",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "Current undated servicepage; limitedordinarycontinuity assumption",
+      "evidenceConsidered": true,
+      "usedForProposedScore": true,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/hospital-pay.html",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    },
+    {
+      "id": "hospital-charter",
+      "url": "https://www.policlinico.mi.it/chi-siamo/carta-dei-servizi",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "finalUrl": "https://www.policlinico.mi.it/chi-siamo/carta-dei-servizi",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "hospital-charter.html",
+      "bytes": 751399,
+      "sha256": "b676f827d2a78dc817f755649af8c6333e6f9750e3f88e44ed344b3990697b23",
+      "validRaw": true,
+      "originalBytes": 751399,
+      "originalSha256": "b676f827d2a78dc817f755649af8c6333e6f9750e3f88e44ed344b3990697b23",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "navigation_only",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "Navigationindex updated2023-04-26; notcharterqualityoutcomereview",
+      "evidenceConsidered": true,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/hospital-charter.html",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    },
+    {
+      "id": "regional-ticket",
+      "url": "https://www.regione.lombardia.it/sanita/ticket-ed-esenzioni/ticket-esenzioni-prestazioni-ssr",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "finalUrl": "https://www.regione.lombardia.it/sanita/ticket-ed-esenzioni/ticket-esenzioni-prestazioni-ssr",
+      "contentType": "text/html;charset=utf-8",
+      "file": "regional-ticket.html",
+      "bytes": 484463,
+      "sha256": "9427784c43a2dc2c6a4208a9f827703040640536b5ace979fc8fd4e49b282144",
+      "validRaw": true,
+      "originalBytes": 484463,
+      "originalSha256": "9427784c43a2dc2c6a4208a9f827703040640536b5ace979fc8fd4e49b282144",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "bounded_component_or_counterevidence",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "Pageupdated2026-07-28; namednorms2007/2017/2024/2025; currentbytesnot exacthistoricalHTML",
+      "evidenceConsidered": true,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/regional-ticket.html",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": false,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    },
+    {
+      "id": "mature-tisa-has2023-curl",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "attempt": 2,
+      "retrievedOn": "2026-10-15",
+      "status": 200,
+      "file": "mature-tisa-has2023.pdf",
+      "bytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "validRaw": true,
+      "scope": "Mature human selected adult DLBCL trial evidence only; French recommendation is not Italian approval or payer",
+      "originalBytes": 741078,
+      "originalSha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "exactHistoricalCutoffBytesVerified": false,
+      "evidenceRole": "bounded_component_or_counterevidence",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "sourceDateAndWindow": "CTopinion2023-09-06; JULIETanalysis2020-02-20; original2023publication inoldercase onlynotrecheckedindexthisrun",
+      "evidenceConsidered": true,
+      "usedForProposedScore": true,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/mature-tisa-has2023.pdf",
+      "validOriginal": true,
+      "stageDeclaredUsedForScore": true,
+      "rootUse": "Finite component/bridge/counterevidence and limitations in root report; navigation and postcutoff version not positive cutoff proof."
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "id": "flood",
+      "url": "https://www.comune.milano.it/argomenti/ambiente-e-animali/la-vasca-di-laminazione-delle-piene-del-seveso",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "validRaw": false,
+      "error": "HTTP Error 403: Forbidden",
+      "bytes": null,
+      "sha256": null,
+      "evidenceRole": "retrieval_failure_not_city_defect",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "originalBytes": null,
+      "originalSha256": null,
+      "sourceDateAndWindow": "Failed acquisition, no observed performance",
+      "evidenceConsidered": false,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer"
+    },
+    {
+      "id": "climate",
+      "url": "https://www.comune.milano.it/it/argomenti/ambiente-e-animali/la-resilienza-a-milano-e-adattamento-ai-cambiamenti-climatici",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "validRaw": false,
+      "error": "HTTP Error 403: Forbidden",
+      "bytes": null,
+      "sha256": null,
+      "evidenceRole": "retrieval_failure_not_city_defect",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "originalBytes": null,
+      "originalSha256": null,
+      "sourceDateAndWindow": "Failed acquisition, no observed performance",
+      "evidenceConsidered": false,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer"
+    },
+    {
+      "id": "energy",
+      "url": "https://www.comune.milano.it/w/ambiente.-al-via-la-consultazione-pubblica-per-contribuire-al-piano-di-contrasto-alla-povert%C3%A0-e-alla-precariet%C3%A0-energetica",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "validRaw": false,
+      "error": "HTTP Error 403: Forbidden",
+      "bytes": null,
+      "sha256": null,
+      "evidenceRole": "retrieval_failure_not_city_defect",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "originalBytes": null,
+      "originalSha256": null,
+      "sourceDateAndWindow": "Failed acquisition, no observed performance",
+      "evidenceConsidered": false,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer"
+    },
+    {
+      "id": "food",
+      "url": "https://www.comune.milano.it/aree-tematiche/food_policy/contrasto-allo-spreco-e-aiuto-alimentare",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "validRaw": false,
+      "error": "HTTP Error 403: Forbidden",
+      "bytes": null,
+      "sha256": null,
+      "evidenceRole": "retrieval_failure_not_city_defect",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "originalBytes": null,
+      "originalSha256": null,
+      "sourceDateAndWindow": "Failed acquisition, no observed performance",
+      "evidenceConsidered": false,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer"
+    },
+    {
+      "id": "benefits",
+      "url": "https://www2.comune.milano.it/sostegno-reddito/sostegno-al-reddito-titoli-sociali",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "validRaw": false,
+      "error": "HTTP Error 403: Forbidden",
+      "bytes": null,
+      "sha256": null,
+      "evidenceRole": "retrieval_failure_not_city_defect",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "originalBytes": null,
+      "originalSha256": null,
+      "sourceDateAndWindow": "Failed acquisition, no observed performance",
+      "evidenceConsidered": false,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer"
+    },
+    {
+      "id": "mature-tisa-has2023",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "attempt": 1,
+      "retrievedOn": "2026-10-15",
+      "validRaw": false,
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1127)>",
+      "bytes": null,
+      "sha256": null,
+      "evidenceRole": "retrieval_failure_not_city_defect",
+      "cutoffCaveat": "Current saved bytes, source stated dates/observation and finite continuity assessed; no exact historical cutoff byte attestation.",
+      "originalBytes": null,
+      "originalSha256": null,
+      "sourceDateAndWindow": "Failed acquisition, no observed performance",
+      "evidenceConsidered": false,
+      "usedForProposedScore": false,
+      "denominatorCaveat": "Selectedinstitution/product/trial; notallFUAresidents; exactscope inreport; noforeignpaymenttransfer"
+    }
+  ],
+  "inheritedFailedSourceSnapshotsNotRetried": [
+    {
+      "mechanism": "MM three raw403 and prior web-locate/cache failures",
+      "originalBytes": null,
+      "originalSha256": null,
+      "retried": false
+    }
+  ],
+  "webReadSources": [
+    {
+      "url": "https://www.policlinico.mi.it/news/2024-04-03/3822/car-t-una-possibilita-in-piu-per-trattare-i-tumori-del-sangue-al-policlinico-di-milano",
+      "retrievedOn": "2026-10-15",
+      "kind": "primary_web_body_root_crosscheck",
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false,
+      "scope": "2024 source actual local SSN/multidisciplinary access, finite to-cutoff continuation; current bytes not historical certification"
+    },
+    {
+      "url": "https://www.policlinico.mi.it/reparti/213/centro-trapianti-midollo-osseo-ctmo",
+      "retrievedOn": "2026-10-15",
+      "kind": "primary_web_body_root_crosscheck",
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedForScore": false,
+      "scope": "ExplicitOct14 update, postcutoff corroboration only, new indications not backfilled"
+    }
+  ],
+  "webFailureDiagnostics": [
+    {
+      "ref": "turn2138view0",
+      "url": "https://www.policlinico.mi.it/reparti/213/centro-trapianti-midollo-osseo-ctmo",
+      "result": "Internal Error",
+      "originalBytes": null,
+      "originalSha256": null
+    },
+    {
+      "ref": "turn2142view0",
+      "url": "https://www.comune.milano.it/argomenti/ambiente-e-animali/la-vasca-di-laminazione-delle-piene-del-seveso",
+      "result": "403",
+      "originalBytes": null,
+      "originalSha256": null
+    },
+    {
+      "ref": "turn2142view1",
+      "url": "https://www.comune.milano.it/it/argomenti/ambiente-e-animali/la-resilienza-a-milano-e-adattamento-ai-cambiamenti-climatici",
+      "result": "Internal Error",
+      "originalBytes": null,
+      "originalSha256": null
+    },
+    {
+      "ref": "turn2142view2",
+      "url": "https://www.comune.milano.it/w/ambiente.-al-via-la-consultazione-pubblica-per-contribuire-al-piano-di-contrasto-alla-povert%C3%A0-e-alla-precariet%C3%A0-energetica",
+      "result": "Timeout",
+      "originalBytes": null,
+      "originalSha256": null
+    },
+    {
+      "ref": "turn2142view3",
+      "url": "https://www.comune.milano.it/aree-tematiche/food_policy/contrasto-allo-spreco-e-aiuto-alimentare",
+      "result": "Internal Error",
+      "originalBytes": null,
+      "originalSha256": null
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "candidateId": 1600,
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allGeometryCount": 9031,
+    "targetGeometrySha256": "c798a7f71dbea69ddae0de4ddd36ee098b89d8d3c83a7abd39aad236c6514204",
+    "referencePoints": [
+      {
+        "label": "Policlinico",
+        "longitude": 9.1955,
+        "latitude": 45.4597,
+        "fuaMatches": [1600]
+      },
+      {
+        "label": "Polimi",
+        "longitude": 9.2274,
+        "latitude": 45.4782,
+        "fuaMatches": [1600]
+      },
+      {
+        "label": "Centrale",
+        "longitude": 9.2044,
+        "latitude": 45.4855,
+        "fuaMatches": [1600]
+      },
+      {
+        "label": "cityCentre",
+        "longitude": 9.19,
+        "latitude": 45.4642,
+        "fuaMatches": [1600]
+      }
+    ],
+    "scope": "Approximate anchors do not identify provider catchments, patient residences, university campuses or telecom users throughout FUA."
+  },
+  "scopeCompletionReview": {
+    "dimensionCount": 8,
+    "subpillarCount": 31,
+    "allDimensionSemanticsConsideredWithinBoundedReview": true,
+    "allSubpillarsHaveOutcomeMeasurements": false,
+    "allSubpillarsFullyReviewed": false,
+    "eightDimensionScoresComplete": false,
+    "coverageTable": [
+      {
+        "dimension": "PCS",
+        "id": "heat_humidity",
+        "status": "not_fully_reviewed"
+      },
+      {
+        "dimension": "PCS",
+        "id": "flood_sea_level",
+        "status": "not_fully_reviewed"
+      },
+      {
+        "dimension": "PCS",
+        "id": "geophysical",
+        "status": "not_started"
+      },
+      {
+        "dimension": "PCS",
+        "id": "severe_weather_wildfire",
+        "status": "not_started"
+      },
+      {
+        "dimension": "GSS",
+        "id": "organized_violence",
+        "status": "partial"
+      },
+      {
+        "dimension": "GSS",
+        "id": "regional_conflict",
+        "status": "not_started"
+      },
+      {
+        "dimension": "GSS",
+        "id": "strategic_exposure",
+        "status": "context"
+      },
+      {
+        "dimension": "ISR",
+        "id": "governance",
+        "status": "partial"
+      },
+      {
+        "dimension": "ISR",
+        "id": "adaptive_capacity",
+        "status": "context"
+      },
+      {
+        "dimension": "ISR",
+        "id": "social_cohesion",
+        "status": "partial"
+      },
+      {
+        "dimension": "ISR",
+        "id": "emergency_recovery",
+        "status": "not_started"
+      },
+      {
+        "dimension": "RES",
+        "id": "water",
+        "status": "not_fully_reviewed"
+      },
+      {
+        "dimension": "RES",
+        "id": "food",
+        "status": "not_fully_reviewed"
+      },
+      {
+        "dimension": "RES",
+        "id": "energy",
+        "status": "not_fully_reviewed"
+      },
+      {
+        "dimension": "RES",
+        "id": "supply_chain",
+        "status": "not_started"
+      },
+      {
+        "dimension": "MED",
+        "id": "access",
+        "status": "partial"
+      },
+      {
+        "dimension": "MED",
+        "id": "routine_quality",
+        "status": "not_started"
+      },
+      {
+        "dimension": "MED",
+        "id": "specialist_capacity",
+        "status": "partial"
+      },
+      {
+        "dimension": "MED",
+        "id": "system_continuity",
+        "status": "partial"
+      },
+      {
+        "dimension": "LON",
+        "id": "translation",
+        "status": "partial"
+      },
+      {
+        "dimension": "LON",
+        "id": "trial_maturity",
+        "status": "partial"
+      },
+      {
+        "dimension": "LON",
+        "id": "regulatory_adoption",
+        "status": "partial"
+      },
+      {
+        "dimension": "LON",
+        "id": "resident_access",
+        "status": "partial"
+      },
+      {
+        "dimension": "TEC",
+        "id": "knowledge_output",
+        "status": "partial"
+      },
+      {
+        "dimension": "TEC",
+        "id": "industry_density",
+        "status": "partial"
+      },
+      {
+        "dimension": "TEC",
+        "id": "digital_infrastructure",
+        "status": "partial"
+      },
+      {
+        "dimension": "TEC",
+        "id": "diffusion",
+        "status": "partial"
+      },
+      {
+        "dimension": "OPT",
+        "id": "transport_redundancy",
+        "status": "not_started"
+      },
+      {
+        "dimension": "OPT",
+        "id": "legal_mobility",
+        "status": "not_started"
+      },
+      {
+        "dimension": "OPT",
+        "id": "asset_portability",
+        "status": "not_started"
+      },
+      {
+        "dimension": "OPT",
+        "id": "network_continuity",
+        "status": "partial"
+      }
+    ],
+    "statusCounts": {
+      "not_fully_reviewed": 5,
+      "not_started": 9,
+      "partial": 15,
+      "context": 2
+    }
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-milan-score-completion-review.md",
+    "sha256": "669522ed3fd6bd0bf5f299c6ffb6dca2a131c805e23ffcc4cab46c08724dc659",
+    "reviewedOn": "2026-10-15",
+    "validOriginalCount": 17,
+    "sourceManifestSha256": "2a1aa1e75193000270b49ab71fed74bd6012dbbb36ff598a0182905ba770569e",
+    "handoffSha256": "0fa4d9bf0844d2542e0f5e653d6aa8f3f9fe9c0d9e56431cfe353b497d3206a9",
+    "rootVerifiedFull9031AndOriginals": true,
+    "stageArtifacts": [
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/report.md",
+        "bytes": 15194,
+        "sha256": "574143c4b1b978fe5af7769b7b5a04cf6f6292aab5e4c496afad6f96fd7ece55"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/source-manifest.json",
+        "bytes": 28915,
+        "sha256": "9aa159f78ef4171eff0f7b00e1cc7f17315f34c627ccf3009cc841c0658c2ad9"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/candidate-handoff.json",
+        "bytes": 7362,
+        "sha256": "0fa4d9bf0844d2542e0f5e653d6aa8f3f9fe9c0d9e56431cfe353b497d3206a9"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/handoff-manifest.json",
+        "bytes": 11714,
+        "sha256": "1069b903e11ac95eea60293c4ee765afcb4e9d2f0999e7b1a9866b8990d26b52"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/milan/geometry.json",
+        "bytes": 36982,
+        "sha256": "56c453dd47e48a36308363d3d519cf27a2e756966d75e49afe39413cf54d1f85"
+      }
+    ]
+  },
+  "rootScopeReview": {
+    "ctmoCurrentUpdatedAfterCutoff": true,
+    "ctmoUpdatedOn": "2026-10-14",
+    "newCurrentIndicationsBackfilled": false,
+    "wait2025Statistic": "median",
+    "wait2026Statistic": "mean",
+    "waitUrgentShoulderDays": 91,
+    "waitUrgentKneeDays": 42,
+    "polimiCumulativeGraphic": 824,
+    "polimiCumulativeProse": 714,
+    "polimiConflictRetained": true,
+    "fiveMunicipalConcurrentRequestDeviationRetained": true,
+    "foreignPayerTransferred": false,
+    "fixedAdultPortrait": false
+  }
+}

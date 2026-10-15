@@ -73,6 +73,7 @@ import madrid from "../../docs/data/cci-local-2026-madrid-case.json";
 import berlin from "../../docs/data/cci-local-2026-berlin-case.json";
 import montreal from "../../docs/data/cci-local-2026-montreal-case.json";
 import fukuoka from "../../docs/data/cci-local-2026-fukuoka-case.json";
+import milan from "../../docs/data/cci-local-2026-milan-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -150,8 +151,10 @@ const cases = [
   berlin,
   montreal,
   fukuoka,
+  milan,
 ];
 const caseNamesZh: Record<number, string> = {
+  [milan.candidateId]: "米兰功能区",
   [montreal.candidateId]: "蒙特利尔功能区",
   [fukuoka.candidateId]: "福冈功能区",
   [madrid.candidateId]: "马德里功能区",
@@ -321,6 +324,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [milan.candidateId]: [
+    zh
+      ? "米兰LON／TEC条件60，另六维未知，数学域12—92、无中心。有限成熟血液癌的人体证据、本地SSN给药与监护，以及已完成技术转化和临床数字使用支持可撤判断；医疗整体等待／补救和其余维度仍有实质不足。"
+      : "Milan has conditional LON/TEC60 and six unknown dimensions: a 12–92 mathematical domain without a centre. Limited mature blood-cancer evidence, actual local SSN treatment/monitoring and completed technology transfer/clinical digital use support revocable judgments. Overall care waits/remedies and other dimensions remain insufficiently resolved.",
+    zh
+      ? "当前CTMO更新于Oct14，新增业务不回填截止；2025中位等待与2026平均等待不算恶化倍数。U级肩片91／膝片42天与短等待并存，n.d.不填零；Polimi图824／正文714冲突保留。撤LON或TEC各6—96、两项撤0—100。取得失败不扣城市分。"
+      : "Current CTMO content was updated Oct14; new services are not backfilled before cutoff.2025 median and2026 mean waits do not yield deterioration ratios. Urgent shoulder91/knee42-day values coexist with short waits; n.d. is not zero. Polimi graphic824/prose714 conflict remains. Withdrawing either LON/TEC gives6–96, both0–100. Failed retrieval does not lower the city score.",
+  ],
   [montreal.candidateId]: [
     zh
       ? "蒙特利尔ISR60／MED40／LON60，其余五维未知，数学域21—81、无中心。实际分流已有改善，但必要肿瘤手术和诊断等待仍重要；选定肿瘤门诊达标与独立质量正证同时保留。制度实际恢复及有限成熟疾病路径支持可撤判断。"
@@ -919,7 +930,7 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
       {zh ? "全球 Top 32 研究进展" : "Global Top 32 research progress"}
     </h2>
     <p class="research-date">
-      {zh ? "研究更新" : "Research update"} · <time datetime="2026-10-14">2026-10-14</time>
+      {zh ? "研究更新" : "Research update"} · <time datetime="2026-10-15">2026-10-15</time>
     </p>
   </div>
   <div class="research-overview">

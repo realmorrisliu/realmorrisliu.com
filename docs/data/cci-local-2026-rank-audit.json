@@ -4,10 +4,10 @@
   "evidenceCutoff": "2026-10-10",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
-  "conditionalCaseCount": 63,
+  "conditionalCaseCount": 64,
   "completeConditionalCaseCount": 16,
-  "partialCaseCount": 47,
-  "unassessedCount": 8968,
+  "partialCaseCount": 48,
+  "unassessedCount": 8967,
   "weights": {
     "PCS": 15,
     "GSS": 15,
@@ -270,6 +270,15 @@
           "upper": 60.0,
           "bestPosition": 6,
           "worstPosition": 9024
+        },
+        {
+          "efua_id": "1600",
+          "source_name": "Milan",
+          "center": null,
+          "lower": 12.0,
+          "upper": 92.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
         },
         {
           "efua_id": "1642",
@@ -841,6 +850,15 @@
           "center": null,
           "lower": 51.0,
           "upper": 66.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "1600",
+          "source_name": "Milan",
+          "center": null,
+          "lower": 12.0,
+          "upper": 92.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1418,6 +1436,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "1600",
+          "source_name": "Milan",
+          "center": null,
+          "lower": 12.0,
+          "upper": 92.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "1642",
           "source_name": "Los Angeles",
           "center": null,
@@ -1987,6 +2014,15 @@
           "center": null,
           "lower": 51.0,
           "upper": 66.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "1600",
+          "source_name": "Milan",
+          "center": null,
+          "lower": 12.0,
+          "upper": 92.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -2564,6 +2600,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "1600",
+          "source_name": "Milan",
+          "center": null,
+          "lower": 12.0,
+          "upper": 92.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "1642",
           "source_name": "Los Angeles",
           "center": null,
@@ -3133,6 +3178,15 @@
           "center": null,
           "lower": 51.0,
           "upper": 66.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "1600",
+          "source_name": "Milan",
+          "center": null,
+          "lower": 12.0,
+          "upper": 92.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -3710,6 +3764,15 @@
           "worstPosition": 9030
         },
         {
+          "efua_id": "1600",
+          "source_name": "Milan",
+          "center": null,
+          "lower": 6.0,
+          "upper": 96.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "1642",
           "source_name": "Los Angeles",
           "center": null,
@@ -4279,6 +4342,15 @@
           "center": null,
           "lower": 54.0,
           "upper": 64.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "1600",
+          "source_name": "Milan",
+          "center": null,
+          "lower": 6.0,
+          "upper": 96.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -4856,6 +4928,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "1600",
+          "source_name": "Milan",
+          "center": null,
+          "lower": 12.0,
+          "upper": 92.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "1642",
           "source_name": "Los Angeles",
           "center": null,
@@ -5429,6 +5510,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "1600",
+          "source_name": "Milan",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "1642",
           "source_name": "Los Angeles",
           "center": null,
@@ -5768,7 +5858,7 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "654080390f7dc4a3f5a63c023eaa92d23b23ed2453b4fdcd752bb26892896569",
+    "cci-global-evidence-matrix.csv": "6e91ddec9da67962e2d0f7918ae92b7dfcc223be1ae99239e84254e3fb71e6d7",
     "cci-legal-mobility-rules.json": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "cci-legal-mobility.md": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e",
     "cci-local-2026-singapore-case.json": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -5897,12 +5987,14 @@
     "cci-montreal-score-completion-review.md": "8db53b8f78b4d57d354b1751682cdcbde9242535f54632d7b1242d99489c887b",
     "cci-local-2026-fukuoka-case.json": "0ca1ab2d181c14df1dd0985ff81fcda904f1317cf4d43448ae01dbc65e26a330",
     "cci-fukuoka-score-completion-review.md": "ddd5a8186f99196ccf04aea9beec8e15a84bd6e0e57a0148f0564ac86e701045",
+    "cci-local-2026-milan-case.json": "b4196c814b2482166a6e6465249a6bb470dec0f94d9e5e3ddfb8ce229a860b97",
+    "cci-milan-score-completion-review.md": "669522ed3fd6bd0bf5f299c6ffb6dca2a131c805e23ffcc4cab46c08724dc659",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "16b4cf22cb5f2e69cb01a5c6030a4682a4ccea163b6a0a87b564ed12559ce16d",
+    "cci-global-evidence-matrix.json": "33070646bd2bc2c8608d36e24c0fb9aa1dc4cd7199240f257861aa4646a4f8af",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "5225f89b9268f550d16c11f1000b63f05e168af766375e6f48f1c9d8c18c6733"
+    "cci-local-2026-scoring-calibration.md": "9ac2688198a1edb360b2080dae28e63334488437267445ace72882dac24d2559"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "aeea1d38b72fc6f6de05ac6a8abaf7f61009d42aa44966141fa76069b5f48496",
+  "csvSha256": "9293073fc67e5cd65a890988bddfcb4f6fcee37cfc57583257ec3ac5000826e8",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }
