@@ -120,6 +120,7 @@ const realCases = [
   "basel",
   "munich",
   "oslo",
+  "antwerp",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -231,6 +232,7 @@ const [
   basel,
   munich,
   oslo,
+  antwerp,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2486,5 +2488,46 @@ for (const dimension of ["PCS", "ISR", "MED", "LON", "TEC", "OPT"] as const) {
     center: null,
     lower: is15 ? 42 : 43,
     upper: is15 ? 67 : 68,
+  });
+}
+
+const antwerpCase = realCases.find(c => c.candidateId === 1160);
+assert.equal(
+  antwerpCase.priorityCompletionReview.sha256,
+  digest(antwerpCase.priorityCompletionReview.path)
+);
+assert.equal(
+  antwerpCase.priorityCompletionReview.researchReportSha256,
+  digest(antwerpCase.priorityCompletionReview.researchReport)
+);
+assert.equal(antwerpCase.sourceSnapshots.length, 26);
+assert.equal(
+  antwerpCase.sourceSnapshots.filter((s: { reusedFrom?: string }) => s.reusedFrom).length,
+  8
+);
+assert.equal(antwerpCase.failedSourceSnapshots.length, 4);
+assert.equal(antwerpCase.rootScopeReview.oldLostBytesCertified, false);
+assert.equal(antwerpCase.rootScopeReview.trauma343CommonDenominatorCertified, false);
+assert.notEqual((206 / 343) * 100, antwerpCase.rootScopeReview.issPrintedPercentage);
+assert.notEqual((70 / 343) * 100, antwerpCase.rootScopeReview.urgentPrintedPercentage);
+assert.equal(antwerpCase.rootScopeReview.mortality9_9MeansAdjustedCityQuality, false);
+assert.equal(antwerpCase.rootScopeReview.optipac5To15ReductionMeasured, false);
+assert.equal(antwerpCase.rootScopeReview.phase1CartEqualsMatureRoutinePaidCare, false);
+assert.equal(antwerpCase.rootScopeReview.egisGlobalListUsedAsAntwerpRoutes, false);
+assert.equal(antwerpCase.scopeCompletionReview.allSubpillarsFullyReviewed, false);
+assert.deepEqual(total(antwerp), { center: null, lower: 30, upper: 80 });
+for (const dimension of ["ISR", "MED", "TEC", "OPT"] as const) {
+  const withdrawn = { ...antwerp };
+  delete withdrawn[dimension];
+  const is15 = weights[dimension] === 15;
+  assert.deepEqual(total(withdrawn), {
+    center: null,
+    lower: is15 ? 21 : 24,
+    upper: is15 ? 86 : 84,
+  });
+  assert.deepEqual(total({ ...antwerp, [dimension]: 40 }), {
+    center: null,
+    lower: is15 ? 27 : 28,
+    upper: is15 ? 77 : 78,
   });
 }

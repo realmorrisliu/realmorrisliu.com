@@ -78,6 +78,7 @@ import barcelona from "../../docs/data/cci-local-2026-barcelona-case.json";
 import basel from "../../docs/data/cci-local-2026-basel-case.json";
 import munich from "../../docs/data/cci-local-2026-munich-case.json";
 import oslo from "../../docs/data/cci-local-2026-oslo-case.json";
+import antwerp from "../../docs/data/cci-local-2026-antwerp-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -160,8 +161,10 @@ const cases = [
   basel,
   munich,
   oslo,
+  antwerp,
 ];
 const caseNamesZh: Record<number, string> = {
+  [antwerp.candidateId]: "安特卫普功能区",
   [oslo.candidateId]: "奥斯陆功能区",
   [munich.candidateId]: "慕尼黑功能区",
   [basel.candidateId]: "巴塞尔功能区（瑞士）",
@@ -336,6 +339,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [antwerp.candidateId]: [
+    zh
+      ? "安特卫普 ISR／MED／TEC／OPT 条件60，PCS／GSS／RES／LON未知，数学域30—80、无中心。实际施工替代供水、问题处理与生产线调整、必要诊治和已运行的出院心理接续支持有限判断；等待、安全和普通净负担的反证保留。"
+      : "Antwerp has conditional ISR/MED/TEC/OPT scores of 60, with PCS/GSS/RES/LON unknown: a 30–80 mathematical domain without a centre. Actual substitute water supply during works, complaint processing and production adjustments, necessary treatment and implemented psychological follow-up support limited judgments. Waiting, safety and ordinary net-cost constraints remain.",
+    zh
+      ? "创伤206／60.4%和70／20.3%不能统一套343分母；9.9%死亡未作风险调整。PRRT真实给药与隔离有据，成熟人体／通常付款监护仍未裁清，不能借CAR-T试验补分。普通临床作用、地域和延续可撤；撤ISR／MED为21—86，撤TEC／OPT为24—84，不证明全球入围。"
+      : "The printed trauma figures 206/60.4% and 70/20.3% cannot both assume a denominator of 343; mortality of 9.9% is not risk adjusted. Actual PRRT administration and isolation are supported, while human maturity and ordinary payment/monitoring remain unresolved. Clinical effect, geography and continuity are revocable: withdrawing ISR/MED gives 21–86, or TEC/OPT 24–84. Global qualification remains unproven.",
+  ],
   [oslo.candidateId]: [
     zh
       ? "奥斯陆 PCS／ISR／MED／LON／TEC／OPT 条件60，GSS／RES未知，数学域45—70、无中心。现有自然危险保护、真实救助与部分纠偏、医疗等待改善、成熟疾病治疗及数字服务支持有限判断；2028备用供水尚未完成，受检经济建议服务违法和必要护理长等待仍保留。"
