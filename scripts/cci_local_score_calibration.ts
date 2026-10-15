@@ -126,6 +126,7 @@ const realCases = [
   "lyon",
   "leuven",
   "nagoya",
+  "philadelphia",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -243,6 +244,7 @@ const [
   lyon,
   leuven,
   nagoya,
+  philadelphia,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -1129,8 +1131,8 @@ const jakartaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
   (c: { efua_id: string }) => c.efua_id === "4897"
 );
 assert(jakartaPosition);
-// Berlin's conditional60 also exceeds Jakarta's upper53.
-assert.equal(jakartaPosition.bestPosition, 21);
+// Philadelphia's lower54 also exceeds Jakarta's upper53.
+assert.equal(jakartaPosition.bestPosition, 22);
 assert.equal(jakartaPosition.worstPosition, rankAudit.candidateCount);
 
 assert.deepEqual(total(nanjing), { center: null, lower: 49, upper: 64 });
@@ -2792,3 +2794,33 @@ assert.equal(
   nagoyaCase.sourceSnapshots.find((s: { id: string }) => s.id === "N03").usedForScore,
   true
 );
+
+const philadelphiaCase = realCases.find(c => c.candidateId === 7165);
+assert.equal(
+  philadelphiaCase.priorityCompletionReview.sha256,
+  digest(philadelphiaCase.priorityCompletionReview.path)
+);
+assert.equal(
+  philadelphiaCase.priorityCompletionReview.researchReportSha256,
+  digest(philadelphiaCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(philadelphia), { center: null, lower: 54, upper: 64 });
+for (const dimension of ["PCS", "GSS", "ISR", "MED", "LON", "TEC", "OPT"] as const) {
+  const withdrawn = { ...philadelphia };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), {
+    center: null,
+    lower: weights[dimension] === 15 ? 45 : 48,
+    upper: weights[dimension] === 15 ? 70 : 68,
+  });
+}
+assert.equal(philadelphiaCase.rootScopeReview.lonChangedFromFrozenUnknown, true);
+assert.equal(philadelphiaCase.rootScopeReview.lancasterRoutineInfusionMovedInto7165, false);
+assert.equal(
+  philadelphiaCase.rootScopeReview.historicalTrialAdultsClaimedCurrentRoutineDenominator,
+  false
+);
+assert.equal(philadelphiaCase.rootScopeReview.thriveUniversalMedianResidentCoverage, false);
+assert.equal(philadelphiaCase.rootScopeReview.domesticSmsProvesOverseasRoaming, false);
+assert.equal(philadelphiaCase.rootScopeReview.pewCrimeConcernIsOrganizedViolenceRate, false);
+assert.equal(philadelphiaCase.rootAdditionalWebReadSources[0].sha256, null);

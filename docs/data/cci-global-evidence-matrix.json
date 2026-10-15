@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 74,
+    "conditionalCaseCount": 75,
     "completeConditionalCaseCount": 18,
-    "partialCaseCount": 56,
-    "unassessedCount": 8957,
+    "partialCaseCount": 57,
+    "unassessedCount": 8956,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -675,8 +675,13 @@
       "sha256": "3f7e10461a92cdf0be7a933ac3e2855e1ad6cb47037280250b53c54fd173d8be",
       "provenance": "cci-nagoya-score-completion-review.md",
       "provenanceSha256": "78e5af5784387f89ae01947ebb28443584ed8c474a90ff16eafed085458c2065"
+    },
+    "cci-local-2026-philadelphia-case.json": {
+      "sha256": "f298e4ac181bfccf702702d4df6925ccb7be421d582377a63db626bbb70462ef",
+      "provenance": "cci-philadelphia-score-completion-review.md",
+      "provenanceSha256": "441bf3e648566c0fa7764d8d0f0d6f9f86e192e0a85d8394a31aba2e688663d6"
     }
   },
-  "scriptSha256": "01943f77eaa969ba62aaa02b32b9fca8b05ab677265c96fa7b26f3429c227817",
-  "csvSha256": "74a013796e196c3b58608a2ad8b315b05ef7b8b5974d1c8f540ebeb3ec19a1c4"
+  "scriptSha256": "4ad56bacb27da55ab721c6c23bdfee8e76ef91aad0a4b0e74d0df84253ab6ea0",
+  "csvSha256": "879bbff357c2e5a76ac70ab84c4580da9825f1ad8c3a3376fe70140d23c58858"
 }
