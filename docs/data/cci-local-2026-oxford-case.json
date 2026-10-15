@@ -1,0 +1,1181 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 4792,
+  "name": "Oxford",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-15",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "2026 ordinary British national, usually longterm local resident, local median income/usual effective coverage; no fixed age. Disease/adult fitness conditions do not redefine whole resident.",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-oxford-score-completion-review.md",
+  "publishedInputCommit": "308619ff50566e143d53595747dd4519470ad803",
+  "researchFrozenInputCommit": "fdcc2ba2bd267ca2e923d3c6bba580ea8375cfc9",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "weight": 15,
+      "score": 40,
+      "conditionalAlternatives": [60],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "heat_humidity": "context",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "context"
+      },
+      "rationale": "重要洪水暴露有已在役水泵、临时挡板及2017年110户蓄洪保护，但2026清点的主体防线一般仅5年事件标准，主要大型方案尚未建设。现有帮助后仍有显著防护缺口，有限判40；不是把一场洪水或未给参数直接当整维失败。",
+      "assumption": "将Oxford市中心/河流危险和现有防护对普通FUA居民的重要性作有限地域适配，并推定Jan2026已在役状态延续到截止。其他危险未完整测量；拒绝此主要危险/地域重要性推定回未知。",
+      "scoreStatus": "conditional_root_accepted_assumption_sensitive",
+      "coverageReview": [
+        {
+          "dimension": "PCS",
+          "subpillar": "heat_humidity",
+          "status": "context",
+          "fullyMeasured": false,
+          "sourceIds": ["S06", "S14"],
+          "note": "Climatechange/planning andenergyadvice, not actual localheat exposure/protection result."
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "flood_sea_level",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S06", "S09"],
+          "note": "Existingpumps/demountables/storage110properties versus lowgenerally5yearSOP; futuremajorOFAS notcredited; citynotallFUA."
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "geophysical",
+          "status": "not_started",
+          "fullyMeasured": false,
+          "sourceIds": [],
+          "note": "No qualified geophysicalsource within boundedwork; no inferredlowrisk."
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "severe_weather_wildfire",
+          "status": "context",
+          "fullyMeasured": false,
+          "sourceIds": ["S08"],
+          "note": "Droughtrestriction and floodrelevant servicefragility not fullweather/fire protectionassessment."
+        }
+      ],
+      "sourceIds": ["S06", "S08", "S09", "S14"],
+      "alternativeReasoning": "若认为已运行临时防线、水泵、蓄洪和较低危险区域使通常生活影响有限，可解释60；本次将主要河流危险与较低防护标准的显著余障同判40，不以多数受害或全城停摆为门槛。拒绝主要危险重要性／地域／延续假设回未知。"
+    },
+    {
+      "id": "GSS",
+      "weight": 15,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "organized_violence": "context",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      },
+      "rationale": "已定位跨警区组织犯罪线索，但原网页未取得；社区ASB讨论不能替代组织暴力、区域与战略影响/保护审查。无法区分低现实影响的60和重要约束40，主未知。",
+      "assumption": "不以英国位置、未搜得战争或获取失败推断安全/危险；未形成定向假设。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "GSS",
+          "subpillar": "organized_violence",
+          "status": "context",
+          "fullyMeasured": false,
+          "sourceIds": [],
+          "note": "Primarysearch surfaced multi-forceoperation but originalweb404; no verifiedcity impact/mitigation chain. ASB is not automatically organizedviolence."
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "regional_conflict",
+          "status": "not_started",
+          "fullyMeasured": false,
+          "sourceIds": [],
+          "note": "No verified matched regionalimpact original; UKposition notscore."
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "strategic_exposure",
+          "status": "not_started",
+          "fullyMeasured": false,
+          "sourceIds": [],
+          "note": "Hospitals/research/airportlocation not quantifiedstrategic risk or protection."
+        }
+      ],
+      "sourceIds": []
+    },
+    {
+      "id": "ISR",
+      "weight": 15,
+      "score": 60,
+      "conditionalAlternatives": [40],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "rationale": "已运行公共诊疗、无需转介的多点食品服务、供水复杂修复及瓶装援助支持有限通常制度运作60；服务触达未测、复压延迟和推荐治疗跨机构资助断点仍重要。原S07未留可复核正文的咨询和走访陈述不采用，不由披露或机构数量换分。",
+      "assumption": "将实际公共／社区服务与恢复对普通当地居民的作用有限适配至FUA，并允许2025–26到截止延续；触达和凝聚未充分测量。不采用197回复／富裕偏向／每周走访。若帮助后障碍构成通常显著约束可审40，拒绝必要运行／地域／时间桥回未知。",
+      "scoreStatus": "conditional_root_accepted_assumption_sensitive",
+      "coverageReview": [
+        {
+          "dimension": "ISR",
+          "subpillar": "governance",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S01", "S08"],
+          "note": "Actual service execution and disclosed funding-coordination failure; S07 consultation assertions excluded without independently readable primary body."
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "adaptive_capacity",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S08", "S14", "S16", "S18"],
+          "note": "Realrepair/bottledwater and operatinglocalfood/help pathways; plannedrecruitment/SmartSystems notcompleted."
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "social_cohesion",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S16"],
+          "note": "Open community food services provide bounded practical inclusion, not a representative trust/cohesion measurement. S07 consultation and weekly-visit claims not used."
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "emergency_recovery",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S08"],
+          "note": "Swinford repair6March21:00/bottledwater,7000stillwaitingpressure; no allfamilyrecovery claim."
+        }
+      ],
+      "sourceIds": ["S01", "S08", "S14", "S16", "S18"]
+    },
+    {
+      "id": "RES",
+      "weight": 10,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "context"
+      },
+      "rationale": "水网真实运行、爆管修复/瓶装援助、已发社会水费帮助及开放低价食物均有据；同时有限改线、数日中断、资格和食物时段约束存在。能源原件主要是建议/评估入口与未定位个案，尚不能判帮助后普通中位收入居民的水食能通常净取得方向。40/60均未获足够整体方向，未知。",
+      "assumption": "不是要求完美账单：可接受有限普通预算判断，但当前真实能源供给/净影响连接仍未定，低收入水费帮助不能自动授予中位画像。取得失败不作负证。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "RES",
+          "subpillar": "water",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S08"],
+          "note": "Actualwaterdistribution, prolongedlocalburst/droughtrestrictions, socialtariffdelivery companywide, notOxfordresidentrate."
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "food",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S13", "S16"],
+          "note": "Openfreefridges and£3.50/£7larders withscopeandhours; no nutritionaladequacy/wholeFUAhouseholdcoverage inference."
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "energy",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S14", "S18"],
+          "note": "Advice andassessmentavailable; grants/testimonial do not establish ordinary household netenergy reliability/affordability direction."
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "supply_chain",
+          "status": "context",
+          "fullyMeasured": false,
+          "sourceIds": ["S08", "S15", "S16"],
+          "note": "Some alternativefoodchannels/transport andwaterbottles, but common food/energy supply exposure not established."
+        }
+      ],
+      "sourceIds": ["S08", "S13", "S14", "S15", "S16", "S18"]
+    },
+    {
+      "id": "MED",
+      "weight": 15,
+      "score": 40,
+      "conditionalAlternatives": [60],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "rationale": "广泛必要与专科诊治确在交付，通常居住者NHS和出院/急救接续支持进入。但癌症62天60.6%对85%目标、诊断76.3%对95%、高占床及实际因推荐帕金森药物服务未获经费而症状恶化，说明帮助后及时必要治疗仍有显著约束；感染上升同判。此有限40来自实际净取得断点，不由混合结果自动未知或单个事故机械扣分。",
+      "assumption": "推定这些定义清楚、不同窗口但反复出现的等待/未治疗伤害，对普通OxfordFUA必要治疗仍具实质意义并延续至截止；不把全部患者未治疗。若认为已交付治疗和改善更主导且特定延误不足构成通常显著约束，可解释60；撤地域/延续/重要性推定则未知。",
+      "scoreStatus": "conditional_root_accepted_assumption_sensitive",
+      "coverageReview": [
+        {
+          "dimension": "MED",
+          "subpillar": "access",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S01", "S19", "S20"],
+          "note": "OrdinaryresidentNHS eligibility andusualcharges read; cancer/diagnosticwaiting actual constraint, lowincome exemption not medianautomatic."
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "routine_quality",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S01", "S02"],
+          "note": "Mortalitymodels/selectedmaternaloutcomes andinfections/harm; preserve HSMRtableconflict andreadmissiondefinitions. Noallriskadjusted cityquality claim."
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "specialist_capacity",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S01", "S04", "S05", "S10"],
+          "note": "Actualroutine/specialistdelivery includingCAR-T, notallFUAresidents; PDNICEdrugservicefunding missing withharm."
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "system_continuity",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S01", "S02", "S10"],
+          "note": "Additionalcapacity anddischarge/ACTtriage/scheduledfollowup, but waits/bedpressure andcaregiverburden remain."
+        }
+      ],
+      "sourceIds": ["S01", "S02", "S04", "S05", "S10", "S19", "S20"]
+    },
+    {
+      "id": "LON",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "rationale": "限定血液恶性肿瘤疾病转化：Oxford已有实际CAR-T给药、2026细胞改造/监护路径和NHS/CDF支付连接；HAS人体长期随访/真实世界及NICE合资格LBCL选项提供成熟疾病证据。不是健康人延寿。筛选/制造期失格、毒性、24/7司机陪护和长期监护仍重要；有具体住宿餐食帮助，有限60，不称所有治疗均已普及。",
+      "assumption": "有限推定本地已运行血癌CAR-T路径包含至少一条与成熟疾病证据相符的通常NHS适应证，并在截止仍运行；不认证本地已用某品牌/某二线。合资格居民能完成面板、可承受额外交通/照护且可取得必要照护支持是可撤条件。拒绝任一回未知，不能拿法国报销或NICE推荐替当地实际给药。若个人照护/等待在帮助后仍构成主要限制，可40。",
+      "scoreStatus": "conditional_root_accepted_assumption_sensitive",
+      "coverageReview": [
+        {
+          "dimension": "LON",
+          "subpillar": "translation",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S05", "S10", "S22"],
+          "note": "ActuallocalCAR-Tcellengineering/reinfusion forbloodcancer andmature disease evidence; nothealthyaging or literalimmunerejuvenation."
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "trial_maturity",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S21", "S22"],
+          "note": "HumanphaseIIlongfollowup/registry plus NICEcomparativetrialbenefit; uncertainOSand selection, notOxfordcohortcausality."
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "regulatory_adoption",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S05", "S10", "S21"],
+          "note": "Oxford commissionedNHS/CDF pathway plusNICEqualifiedlisooption; localbrand/matchedline not enumerated so finiteclassadaptation explicit."
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "resident_access",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S04", "S10", "S19", "S20"],
+          "note": "Nationalpanel/fitness/manufacturingwait/NHSpathway; paidpartialhotelmeals and28day24/7drivercare plus15yearfollowup; no assumeduniversalfamilyhelp."
+        }
+      ],
+      "sourceIds": ["S04", "S05", "S10", "S19", "S20", "S21", "S22"]
+    },
+    {
+      "id": "TEC",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [80],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "context",
+        "diffusion": "partial"
+      },
+      "rationale": "OUI实际许可/咨询，OXB载体制造、OCS临床使用、FSL商业/学术工具及Oxa实际部署显示多条科研到产用连接。不是论文/排名/收入换分。临床经费使推荐药物未能采用的实际地方断点表明强产出不保证普通净受益，数字与扩散仍有薄弱环节；有限60。",
+      "assumption": "将Oxford机构/企业的实际多节点产用、公开临床工具与全球用户作用有限适配到本地能力并延续至截止，不把全球用户或国外部署当居民覆盖。若认为成熟多节点与免费临床工具已足以支持强广泛扩散、地方PD断点不足主导该维可80；该替代仍是研究解释，非完整数字普测。拒绝本地持续产用适配则未知。",
+      "scoreStatus": "conditional_root_accepted_assumption_sensitive",
+      "coverageReview": [
+        {
+          "dimension": "TEC",
+          "subpillar": "knowledge_output",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S03"],
+          "note": "Realresearch/consultancy/licensing outputs; income not papersquality or populationoutcome."
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "industry_density",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S03"],
+          "note": "OXB/Oxa andnonspinoutlicensees actualbusinesses/products, Oxfordshire2023densitycontext only; nowholeFUAcurrentdensitymeasure."
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "digital_infrastructure",
+          "status": "context",
+          "fullyMeasured": false,
+          "sourceIds": ["S03", "S10"],
+          "note": "FSLsoftware actualproduction andclinicaldigitalfollowup; no householdbroadband/skillscoverage measurement."
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "diffusion",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S03", "S01"],
+          "note": "OCSactualclinicallicenses/FSLcommercialusers/Oxaairportdeployment; outwardnotlocalresidentuptake, localPDfunded-adoptionbreak retained."
+        }
+      ],
+      "sourceIds": ["S01", "S03", "S10"]
+    },
+    {
+      "id": "OPT",
+      "weight": 10,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "unresolved",
+        "network_continuity": "context"
+      },
+      "rationale": "已有真实公路长途车/铁路及机场接续方向，英国合资格公民可德国入境后申请长期许可。但尚未核实当前普通个人资金在外可用及通信/鉴权接续，不能由旅行便利填完整60，也没有重要资本封锁/实际被困依据可填40；未知。",
+      "assumption": "不要求每目的地逐笔交易或完美压力测试；当前资金与境外接续两个基本实质桥未成立。运营商403仅是研究获取失败，不判道路不可用。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "OPT",
+          "subpillar": "transport_redundancy",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S15"],
+          "note": "Realroadcoach/railaccess andairportlink directions; Heathrow outsideFUA, operator403not routeclosure; no currentfares/capacity/commonfailuretest."
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "legal_mobility",
+          "status": "partial",
+          "fullyMeasured": false,
+          "sourceIds": ["S23"],
+          "note": "QualifiedUKnational Germanyvisa-free longstayentry andwithin90dayresidenceapplication; notguaranteedpermit/work."
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "asset_portability",
+          "status": "not_started",
+          "fullyMeasured": false,
+          "sourceIds": [],
+          "note": "No verifiedcurrent ordinary personalfunds/foreignaccount/paymentcontinuity original; no inferredcapitalrestriction."
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "network_continuity",
+          "status": "context",
+          "fullyMeasured": false,
+          "sourceIds": ["S10"],
+          "note": "Domesticphone/video contact not overseasroaming/authentication path; no current foreignnormalplan original."
+        }
+      ],
+      "sourceIds": ["S10", "S15", "S23"]
+    }
+  ],
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 33.0,
+  "unresolvedScoreRange": [33.0, 68.0],
+  "globalRankingEligible": false,
+  "limitations": [
+    "No globalTop32/rank/probability or candidateexclusion; all9031/new/unmatched retained.",
+    "31keys reviewed bounded, not fullmeasurement; no fixedage, no proportional score from sourcecount.",
+    "CurrentOct15bytes not historicalOct10authentication; actualobservation/version separate.",
+    "Institution/city/provider/FUA scopes differ; no2015populationused ascurrentdenominator."
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.ouh.nhs.uk/media/dy2d3age/ouh-nhs-ft-annual-report-and-accounts-2024-25.pdf",
+      "path": "ouh-annual2024-25.pdf",
+      "scope": "Actual annual treatments/operations/netdelivery and governance, not hospitalprestige",
+      "requestAtUTC": "2026-10-15T13:17:47.948349+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 3378945,
+      "sha256": "7300d62c77548a848f1cf1835bfdad46b35395f4613d0fca899564f0d70823d4",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.ouh.nhs.uk/media/dy2d3age/ouh-nhs-ft-annual-report-and-accounts-2024-25.pdf",
+      "validOriginal": true,
+      "localPath": "originals/ouh-annual2024-25.pdf",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "OUH FY2024/25; metrics mix FY,31March and footnoted mortality windows; current retrieved bytes not authenticated Oct10",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S02",
+      "url": "https://www.ouh.nhs.uk/media/orfkkygx/quality-account-2024-2025.pdf",
+      "path": "ouh-quality2024-25.pdf",
+      "scope": "Actual hospitalquality positives/negative/waiting/continuity windowcohort",
+      "requestAtUTC": "2026-10-15T13:17:54.591992+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 3925442,
+      "sha256": "b5b36701ee33b8240dbd6bb1524ed9e4cbd1c872507984a4c9b4ea7899e92205",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.ouh.nhs.uk/media/orfkkygx/quality-account-2024-2025.pdf",
+      "validOriginal": true,
+      "localPath": "originals/ouh-quality2024-25.pdf",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "Quality account FY2024/25, physical208 pages, readmission Nov2023–Oct2024; no pooled10.9 inference",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S03",
+      "url": "https://impactreport2025.innovation.ox.ac.uk/wp-content/uploads/2025/11/OUI_Impact-Report-2025_PDF_Web.pdf",
+      "path": "oui-impact2025.pdf",
+      "scope": "Actual industrialknowledge/outputs/adoption vs historicalspinoutcumulative",
+      "requestAtUTC": "2026-10-15T13:17:59.127993+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 8048281,
+      "sha256": "b97afe0aa4a5519bfa52714850e23ad4ca6f71af3285dced50f14e214c09dd22",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://impactreport2025.innovation.ox.ac.uk/wp-content/uploads/2025/11/OUI_Impact-Report-2025_PDF_Web.pdf",
+      "validOriginal": true,
+      "localPath": "originals/oui-impact2025.pdf",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "Impact2025 with FY2024/25 outputs; FY2023/24 income;2023Oxfordshire externaldensity; externalpatient/activity not Oxfordresidents",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S04",
+      "url": "https://www.ouh.nhs.uk/haematology/services/act/",
+      "path": "ouh-act-pathway.html",
+      "scope": "Actual ordinary indicated localCAR-T entry/monitoring/feesupport and residualburdens",
+      "requestAtUTC": "2026-10-15T13:19:09.214479+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 48222,
+      "sha256": "66a4ad526fa5902f0beae430d28c47935b04aa85cacff45415b1bb22806a3996",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "resolvedUrl": "https://www.ouh.nhs.uk/haematology/services/act/",
+      "validOriginal": true,
+      "localPath": "originals/ouh-act-pathway.html",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "Lastreview25Nov2025; operatingpathway currentcapture",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.ouh.nhs.uk/news/articles/2000/",
+      "path": "ouh-cart-delivery2023.html",
+      "scope": "Actual fourpatients treated, firstcase/selection vs projected20–30peryear",
+      "requestAtUTC": "2026-10-15T13:19:11.137694+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 286231,
+      "sha256": "8d828da05b440c9b10e449e6fd7619cf966a56500656e7d8554eeb4da4113fec",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "resolvedUrl": "https://www.ouh.nhs.uk/news/articles/2000/",
+      "validOriginal": true,
+      "localPath": "originals/ouh-cart-delivery2023.html",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "24Oct2023 fouractualtreatments,20–30futureannualexpectation",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.oxford.gov.uk/downloads/file/3979/strategic-flood-risk-assessment-sfra-level-1---january-2026",
+      "path": "oxford-sfra2026.pdf",
+      "scope": "Actual city floodexposure/implementeddefencesconditionSOP vsnotyetbuiltnewmajorplan",
+      "requestAtUTC": "2026-10-15T13:19:14.668098+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 2208632,
+      "sha256": "7eea2e86b37fac4328ae8e0ccf70a008ee0184fd847c0b8bff474aee9f571669",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.oxford.gov.uk/downloads/file/3979/strategic-flood-risk-assessment-sfra-level-1---january-2026",
+      "validOriginal": true,
+      "localPath": "originals/oxford-sfra2026.pdf",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "OxfordCity Level1 SFRA Jan2026; existingdefenceinventory,2017storage, futureOFAS separate",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S08",
+      "url": "https://www.thameswater.co.uk/media-library/2upd1y40/apr-2025-26.pdf",
+      "path": "thames-apr2025-26.pdf",
+      "scope": "Actual regionalproviderreliability/safety/affordability/support;OxfordqualificationsnotFUAaverages",
+      "requestAtUTC": "2026-10-15T13:21:52.246629+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 8840109,
+      "sha256": "fc3b00e00ed0d8a6b231cf25a98001ed334091149f2f593030ec1f5341dabb0d",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.thameswater.co.uk/media-library/2upd1y40/apr-2025-26.pdf",
+      "validOriginal": true,
+      "localPath": "originals/thames-apr2025-26.pdf",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "1Apr2025–31Mar2026 companywide; SwinfordMarch2026 finiteincident; WaterHelp lowincome not medianautomatic",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S09",
+      "url": "https://www.gov.uk/government/publications/oxford-flood-scheme/oxford-flood-scheme",
+      "path": "ea-oxford-flood-scheme.html",
+      "scope": "Official mainhazards/existingcompletedmitigation andnotyetbuiltmajorproject withdates",
+      "requestAtUTC": "2026-10-15T13:21:57.361375+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 63411,
+      "sha256": "51dfc5eb5a05938e40eb7fc2c741582dbf07601730acc20c6691f9fb666a1179",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "resolvedUrl": "https://www.gov.uk/government/publications/oxford-flood-scheme/oxford-flood-scheme",
+      "validOriginal": true,
+      "localPath": "originals/ea-oxford-flood-scheme.html",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "Government scheme page currentcapture with16Sep2026 update; benefits prospective construction not completed",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S10",
+      "url": "https://nssg.oxford-haematology.org.uk/advanced-cellular-therapies/documents/patient-information/ACT-9-0-patient-information-leaflet.pdf",
+      "path": "oxford-cart-patient.pdf",
+      "scope": "Actual observed ACTpatientleaflet, indications/benefits/toxicitymonitoring/paymenteligibility",
+      "requestAtUTC": "2026-10-15T13:25:38.373213+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 479994,
+      "sha256": "52842c0bd4b213bb2a0e5e8890b3c68ec68d86c8ef6661c5b93cba72b2c18c56",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://nssg.oxford-haematology.org.uk/advanced-cellular-therapies/documents/patient-information/ACT-9-0-patient-information-leaflet.pdf",
+      "validOriginal": true,
+      "localPath": "originals/oxford-cart-patient.pdf",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "ACT9.0 V1.5Feb2026; actual local clinicalprocedure andmonitoring; adulteligiblepatients not fixedage resident",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S11",
+      "url": "https://www.ouh.nhs.uk/hospitals/churchill/find-us/",
+      "path": "churchill-transport.html",
+      "scope": "Actual observedlocalroute/nationalairlinks/coaches notairportpointassumption",
+      "requestAtUTC": "2026-10-15T13:25:41.668622+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 287947,
+      "sha256": "1e4df585bb7f933e39fa959cad9a98ef98dcc547fbe26fa7cc7cf167d4d9082d",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "resolvedUrl": "https://www.ouh.nhs.uk/hospitals/churchill/find-us/",
+      "validOriginal": true,
+      "localPath": "originals/churchill-transport.html",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "Currenthospital transportindex only; no actual itinerary at index",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S12",
+      "url": "https://www.oxford.gov.uk/costofliving",
+      "path": "oxford-cost-help.html",
+      "scope": "Observed official localfoodenergy/housinghelp plusrealpastimplementation links",
+      "requestAtUTC": "2026-10-15T13:25:43.896406+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 39063,
+      "sha256": "1e6aa64bd537c82837f0009c96770aa7f58b48bf870ee83ed1ba2393b8d63460",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.oxford.gov.uk/costofliving",
+      "validOriginal": true,
+      "localPath": "originals/oxford-cost-help.html",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "Currenthelpindex; Sep16_2026 £121305 grant applications not paid",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S13",
+      "url": "https://www.oxford.gov.uk/help-cost-living-crisis/help-food-costs",
+      "path": "oxford-food-help.html",
+      "scope": "Actual linked food netcost/access support, no medianincome autoeligibility",
+      "requestAtUTC": "2026-10-15T13:31:49.717271+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 32262,
+      "sha256": "595d299ee588ced56a00537dd08bcc369d2f96a25007e63e81df439f43c0656a",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.oxford.gov.uk/help-cost-living-crisis/help-food-costs",
+      "validOriginal": true,
+      "localPath": "originals/oxford-food-help.html",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "Currentfoodhelp index, means/child/pregnancy conditions not universally qualified",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S14",
+      "url": "https://www.oxford.gov.uk/help-cost-living-crisis/help-energy-costs",
+      "path": "oxford-energy-help.html",
+      "scope": "Actual linked ordinary energy protection and eligibility",
+      "requestAtUTC": "2026-10-15T13:31:51.417647+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 32486,
+      "sha256": "603c66b64c84f63ff058a35e0e3f4c299395e1673ebd6f6e60fc0c0834355f27",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.oxford.gov.uk/help-cost-living-crisis/help-energy-costs",
+      "validOriginal": true,
+      "localPath": "originals/oxford-energy-help.html",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "Currentenergyadvice accessibleanyone; actualgrants not automatically awarded",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S15",
+      "url": "https://www.ouh.nhs.uk/hospitals/churchill/find-us/other-transport/",
+      "path": "oxford-other-transport.html",
+      "scope": "Actual observed outward railairport/route navigation, no itinerary inferred",
+      "requestAtUTC": "2026-10-15T13:31:53.283530+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 290447,
+      "sha256": "46a118676b039890799c35368b32f12e9998aeca915249d454d8c7249d573e0f",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "resolvedUrl": "https://www.ouh.nhs.uk/hospitals/churchill/find-us/other-transport/",
+      "validOriginal": true,
+      "localPath": "originals/oxford-other-transport.html",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "Currenthospitalphysicaldirections; OxfordTube24h/rail and Heathrowabout70min coach, not livefares or capacity",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S16",
+      "url": "https://www.oxford.gov.uk/people-communities/free-low-cost-food-oxford",
+      "path": "oxford-food-services.html",
+      "scope": "Observed actual provider links and ordinary netfood access conditions",
+      "requestAtUTC": "2026-10-15T13:33:14.064667+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 34288,
+      "sha256": "0c4b90134dbee27d427cec7ecfcdc3385af3515560cfd8c2007cc9636701b0cd",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.oxford.gov.uk/people-communities/free-low-cost-food-oxford",
+      "validOriginal": true,
+      "localPath": "originals/oxford-food-services.html",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "Currentfoodserviceprices/hours; council explicitly says notregularlyupdated and checkbeforevisiting",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S18",
+      "url": "https://www.bhbh.org.uk/",
+      "path": "better-housing-health.html",
+      "scope": "Observed actual localenergyhelp with delivery/ordinary eligibility",
+      "requestAtUTC": "2026-10-15T13:33:17.493089+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 381960,
+      "sha256": "554f2f98c59e698f1e4067c28ea459a7a7408f22ff87cf96049fbe7d545219a9",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.bhbh.org.uk/",
+      "validOriginal": true,
+      "localPath": "originals/better-housing-health.html",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "CurrentBHBH service/referral operating inOxfordshire; singleunlocated testimonial not local representativeoutcome",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S19",
+      "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+      "path": "S08-nhs-ordinary-residence.html",
+      "localPath": "originals/S08-nhs-ordinary-residence.html",
+      "originalBytes": 32662,
+      "sha256": "42c4cf404fdfc984257c5ea70f222b8c786e5d0d4d95c0e99f0b7eab682ed0ec",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S08-nhs-ordinary-residence.html",
+      "originalResponseMetadata": {
+        "id": "S08",
+        "file": "S08-nhs-ordinary-residence.html",
+        "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+        "host": "www.nhs.uk",
+        "mechanism": "normal_https_tls_urllib",
+        "requestAtUTC": "2026-10-15T13:21:51.121239+00:00",
+        "cutoffHistoricalBytesAuthenticated": false,
+        "priorKnownSameHostFailures": 0,
+        "redirectsFollowed": 0,
+        "retries": 0,
+        "httpStatus": 200,
+        "finalUrl": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+        "headers": {
+          "Content-Type": "text/html; charset=utf-8",
+          "Date": "Thu, 15 Oct 2026 13:21:52 GMT",
+          "Content-Length": "32662"
+        },
+        "completeBodyRead": true,
+        "bytes": 32662,
+        "sha256": "42c4cf404fdfc984257c5ea70f222b8c786e5d0d4d95c0e99f0b7eab682ed0ec",
+        "validOriginal": true,
+        "substantiveBodyMustBeSeparatelyReviewed": true,
+        "elapsedSeconds": 1.947
+      },
+      "cutoffOriginalBytesAuthenticated": false,
+      "role": "National common fact independently adapted; not Cambridge score",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "NHSordinaryresident rule lastreview24Oct2023 nextdue24Oct2026; due not update",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S20",
+      "url": "https://www.nhs.uk/nhs-services/help-with-health-costs/when-you-need-to-pay-towards-nhs-care/",
+      "path": "S12-nhs-charges.html",
+      "localPath": "originals/S12-nhs-charges.html",
+      "originalBytes": 28145,
+      "sha256": "81b0a7b5cdeb5d401dc9835500553a5b646f8a3b89407af9404b577a3e7dcc0a",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S12-nhs-charges.html",
+      "originalResponseMetadata": {
+        "id": "S12",
+        "file": "S12-nhs-charges.html",
+        "url": "https://www.nhs.uk/nhs-services/help-with-health-costs/when-you-need-to-pay-towards-nhs-care/",
+        "host": "www.nhs.uk",
+        "mechanism": "normal_https_tls_urllib",
+        "requestAtUTC": "2026-10-15T13:28:48.801106+00:00",
+        "cutoffHistoricalBytesAuthenticated": false,
+        "priorKnownSameHostFailures": 0,
+        "redirectsFollowed": 0,
+        "retries": 0,
+        "httpStatus": 200,
+        "finalUrl": "https://www.nhs.uk/nhs-services/help-with-health-costs/when-you-need-to-pay-towards-nhs-care/",
+        "headers": {
+          "Content-Type": "text/html; charset=utf-8",
+          "Date": "Thu, 15 Oct 2026 13:28:49 GMT",
+          "Content-Length": "28145"
+        },
+        "completeBodyRead": true,
+        "bytes": 28145,
+        "sha256": "81b0a7b5cdeb5d401dc9835500553a5b646f8a3b89407af9404b577a3e7dcc0a",
+        "validOriginal": true,
+        "substantiveBodyMustBeSeparatelyReviewed": true,
+        "elapsedSeconds": 1.525
+      },
+      "cutoffOriginalBytesAuthenticated": false,
+      "role": "National common fact independently adapted; not Cambridge score",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "NHSchargeguidance lastreview22May2023 due22May2026 not refreshedversion",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S21",
+      "url": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+      "path": "S10-nice-ta1048.html",
+      "localPath": "originals/S10-nice-ta1048.html",
+      "originalBytes": 20164,
+      "sha256": "7d37836575b240bd2359d0de728c2e937e73a1cc32906576e086a1af57733e3f",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S10-nice-ta1048.html",
+      "originalResponseMetadata": {
+        "id": "S10",
+        "file": "S10-nice-ta1048.html",
+        "url": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+        "host": "www.nice.org.uk",
+        "mechanism": "normal_https_tls_urllib",
+        "requestAtUTC": "2026-10-15T13:28:48.800782+00:00",
+        "cutoffHistoricalBytesAuthenticated": false,
+        "priorKnownSameHostFailures": 1,
+        "redirectsFollowed": 0,
+        "retries": 0,
+        "httpStatus": 200,
+        "finalUrl": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+        "headers": {
+          "Date": "Thu, 15 Oct 2026 13:28:50 GMT",
+          "Content-Type": "text/html; charset=utf-8",
+          "ETag": "W/C0B0BE68DC2CEA8F8D26D7DDF59AA04E"
+        },
+        "completeBodyRead": true,
+        "bytes": 20164,
+        "sha256": "7d37836575b240bd2359d0de728c2e937e73a1cc32906576e086a1af57733e3f",
+        "validOriginal": true,
+        "substantiveBodyMustBeSeparatelyReviewed": true,
+        "elapsedSeconds": 2.616
+      },
+      "cutoffOriginalBytesAuthenticated": false,
+      "role": "National common fact independently adapted; not Cambridge score",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "NICE TA1048 26Mar2025 LISOCABTAGENE for qualifiedadultLBCL; uncertainOS, notOxfordproduct-specificadoption",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S22",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "path": "has-kymriah-2023.pdf",
+      "localPath": "originals/has-kymriah-2023.pdf",
+      "originalBytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/has-kymriah-2023.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "originalRetrieval": "2026-10-15; copied durable actualbytes, not re-requested or historicalauthentication",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "HAS Sept2023 tisa adultDLBCL; JULIET phaseII noncomparative20Feb2020 update, DESCAR-T registry; notUKpayer or Oxfordcohort",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    },
+    {
+      "id": "S23",
+      "url": "https://www.gesetze-im-internet.de/aufenthv/__41.html",
+      "path": "germany-japanese-application.html",
+      "localPath": "originals/germany-japanese-application.html",
+      "originalBytes": 4613,
+      "sha256": "0294e3696361d9294ae75c66475ccb897dcf68e1ffd1346fabf3a83104f74c85",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/nagoya-full37/originals/germany-japanese-application.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "originalRetrieval": "2026-10-15; copied durable actualbytes, not re-requested or historicalauthentication",
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "CurrentGerman §41 statutorytext includes qualifyingUKnationals, procedural privilege not automaticwork/residencegrant",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "id": "S07",
+      "url": "https://mycouncil.oxford.gov.uk/documents/g8170/Public%20reports%20pack%20Tuesday%2014-Oct-2025%2018.00%20Scrutiny%20Committee.pdf?T=10",
+      "path": "council-scrutiny2025.pdf",
+      "scope": "Actual localcostofliving/housing/food-energy assistance delivery notmenuorautomaticmedianeligibility",
+      "requestAtUTC": "2026-10-15T13:21:50.962506+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": null,
+      "sha256": null,
+      "cutoffOriginalBytesAuthenticated": false,
+      "validOriginal": false,
+      "error": "HTTP Error 403: Forbidden",
+      "localPath": null,
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "Rawrequestfailed; no validoriginalmeasurement",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "failed_raw_no_original_bytes",
+      "usedForScore": false
+    },
+    {
+      "id": "S17",
+      "url": "https://airline.oxfordbus.co.uk/",
+      "path": "oxford-airline.html",
+      "scope": "Observed actual coachoperator airport route and fares",
+      "requestAtUTC": "2026-10-15T13:33:15.662858+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": null,
+      "sha256": null,
+      "cutoffOriginalBytesAuthenticated": false,
+      "validOriginal": false,
+      "error": "HTTP Error 403: Forbidden",
+      "localPath": null,
+      "observedOn": "2026-10-15",
+      "versionAndObservation": "Rawrequestfailed; no validoriginalmeasurement",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceStatus": "failed_raw_no_original_bytes",
+      "usedForScore": false
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allCandidatesChecked": 9031,
+    "repairCount": 136,
+    "records": [
+      {
+        "fid": 8440,
+        "eFUA_ID": 4792.0,
+        "UC_num": 1.0,
+        "UC_IDs": "1858",
+        "eFUA_name": "Oxford",
+        "Commuting": 1.0,
+        "Cntry_ISO": "GBR",
+        "Cntry_name": "UnitedKingdom",
+        "FUA_area": 1340.0,
+        "UC_area": 46.0,
+        "FUA_p_2015": 482932.18073981255,
+        "UC_p_2015": 161120.72665405273,
+        "Com_p_2015": 321811.4540857598
+      }
+    ],
+    "points": [
+      {
+        "label": "Oxford centre reference",
+        "longitude": -1.2577,
+        "latitude": 51.752,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 4792,
+            "name": "Oxford"
+          }
+        ]
+      },
+      {
+        "label": "JohnRadcliffe hospital reference",
+        "longitude": -1.2156,
+        "latitude": 51.7639,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 4792,
+            "name": "Oxford"
+          }
+        ]
+      },
+      {
+        "label": "Harwell campus context reference",
+        "longitude": -1.316,
+        "latitude": 51.575,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 4792,
+            "name": "Oxford"
+          }
+        ]
+      },
+      {
+        "label": "Heathrow airport externalcontext reference",
+        "longitude": -0.4543,
+        "latitude": 51.47,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 5288,
+            "name": "London"
+          }
+        ]
+      }
+    ],
+    "targetWkbSha256": "b20ceba398c919ce77c0a797741d88e1d6d1a912deaa985fa6fbf214f46dcafd",
+    "meaning": "Approximate reference points do not establish provider service coverage, citywide outcomes or residence; Hospital referrals/water service/city/FUA differ; airport point not proof of journey access."
+  },
+  "sensitivity": [
+    {
+      "dimension": "PCS",
+      "withdrawToUnknownDomain": [27.0, 77.0],
+      "conditionalAlternatives": [
+        {
+          "score": 60,
+          "domain": [36, 71]
+        }
+      ]
+    },
+    {
+      "dimension": "ISR",
+      "withdrawToUnknownDomain": [24.0, 74.0],
+      "conditionalAlternatives": [
+        {
+          "score": 40,
+          "domain": [30.0, 65.0]
+        }
+      ]
+    },
+    {
+      "dimension": "MED",
+      "withdrawToUnknownDomain": [27.0, 77.0],
+      "conditionalAlternatives": [
+        {
+          "score": 60,
+          "domain": [36.0, 71.0]
+        }
+      ]
+    },
+    {
+      "dimension": "LON",
+      "withdrawToUnknownDomain": [27.0, 72.0],
+      "conditionalAlternatives": [
+        {
+          "score": 40,
+          "domain": [31.0, 66.0]
+        }
+      ]
+    },
+    {
+      "dimension": "TEC",
+      "withdrawToUnknownDomain": [27.0, 72.0],
+      "conditionalAlternatives": [
+        {
+          "score": 80,
+          "domain": [35.0, 70.0]
+        }
+      ]
+    }
+  ],
+  "unknownWeight": 35,
+  "rootExcludedWebClaims": [
+    {
+      "id": "S07-web",
+      "url": "https://mycouncil.oxford.gov.uk/documents/g8170/Public%20reports%20pack%20Tuesday%2014-Oct-2025%2018.00%20Scrutiny%20Committee.pdf?T=10",
+      "originalBytes": null,
+      "sha256": null,
+      "usedForScore": false,
+      "reason": "No independently readable original text retained; no repeat request after failure."
+    }
+  ],
+  "priorityCompletionReview": {
+    "path": "docs/cci-oxford-score-completion-review.md",
+    "sha256": "643ece27139dbc8f7d136583817062b815ddbd463da238ae218aa5fdce5412f8",
+    "researchReport": "docs/cci-oxford-priority-review.md",
+    "researchReportSha256": "2c9bb406de13abdded1a75f3194b6a279f85400fdc5ee2dd79b80613ec37030c",
+    "researchFrozenReportSha256": "2de3d5ca0caefc120a019c32b298829f027b93dc6a618412bee7f41c70328407",
+    "frozenManifestSha256": "0a5c05b1d32e8d1f65837c68f7e1067a0770fc839e5456accbfd6ebe86d4188c",
+    "frozenFilesVerified": 243,
+    "validOriginalCount": 21,
+    "rootNewNetworkRequests": 0
+  },
+  "rootScopeReview": {
+    "rootPdfPageCount": 18,
+    "rootPdfPixelsViewed": [
+      {
+        "sourceId": "S01",
+        "physicalPage": 16
+      },
+      {
+        "sourceId": "S01",
+        "physicalPage": 20
+      },
+      {
+        "sourceId": "S01",
+        "physicalPage": 23
+      },
+      {
+        "sourceId": "S01",
+        "physicalPage": 24
+      },
+      {
+        "sourceId": "S02",
+        "physicalPage": 142
+      },
+      {
+        "sourceId": "S03",
+        "physicalPage": 19
+      },
+      {
+        "sourceId": "S06",
+        "physicalPage": 25
+      },
+      {
+        "sourceId": "S06",
+        "physicalPage": 26
+      },
+      {
+        "sourceId": "S08",
+        "physicalPage": 17
+      },
+      {
+        "sourceId": "S10",
+        "physicalPage": 5
+      },
+      {
+        "sourceId": "S10",
+        "physicalPage": 16
+      },
+      {
+        "sourceId": "S10",
+        "physicalPage": 22
+      },
+      {
+        "sourceId": "S22",
+        "physicalPage": 14
+      },
+      {
+        "sourceId": "S22",
+        "physicalPage": 24
+      },
+      {
+        "sourceId": "S22",
+        "physicalPage": 25
+      },
+      {
+        "sourceId": "S03",
+        "physicalPage": 21
+      },
+      {
+        "sourceId": "S03",
+        "physicalPage": 22
+      },
+      {
+        "sourceId": "S08",
+        "physicalPage": 81
+      }
+    ],
+    "s07ConsultationAssertionsUsedForScore": false,
+    "pcsScore40RequiresMajorityHarmOrShutdown": false,
+    "hsmrDifferentTablesAveraged": false,
+    "ageSpecificReadmissionRatesAdded": false,
+    "tisaOutcomeTransferredToLisoOrOxfordFourPatients": false,
+    "healthyLifeExtensionClaimed": false,
+    "paidHotelMeansAllCaregiverCostsCovered": false,
+    "thamesP81UnitsSilentlyCorrected": false,
+    "all76PreviousCaseBytesUnchanged": true,
+    "unknownsFilledWithMidpoint": false
+  },
+  "reportSha256": "643ece27139dbc8f7d136583817062b815ddbd463da238ae218aa5fdce5412f8",
+  "reportBytes": 8937
+}

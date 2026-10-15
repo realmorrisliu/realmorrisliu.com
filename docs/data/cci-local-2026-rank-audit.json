@@ -4,10 +4,10 @@
   "evidenceCutoff": "2026-10-10",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
-  "conditionalCaseCount": 76,
+  "conditionalCaseCount": 77,
   "completeConditionalCaseCount": 18,
-  "partialCaseCount": 58,
-  "unassessedCount": 8955,
+  "partialCaseCount": 59,
+  "unassessedCount": 8954,
   "weights": {
     "PCS": 15,
     "GSS": 15,
@@ -520,6 +520,15 @@
           "center": null,
           "lower": 45.0,
           "upper": 70.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "4792",
+          "source_name": "Oxford",
+          "center": null,
+          "lower": 33.0,
+          "upper": 68.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1214,6 +1223,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "4792",
+          "source_name": "Oxford",
+          "center": null,
+          "lower": 27.0,
+          "upper": 77.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "4881",
           "source_name": "Salt Lake City",
           "center": null,
@@ -1900,6 +1918,15 @@
           "center": null,
           "lower": 36.0,
           "upper": 76.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "4792",
+          "source_name": "Oxford",
+          "center": null,
+          "lower": 33.0,
+          "upper": 68.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -2594,6 +2621,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "4792",
+          "source_name": "Oxford",
+          "center": null,
+          "lower": 24.0,
+          "upper": 74.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "4881",
           "source_name": "Salt Lake City",
           "center": null,
@@ -3280,6 +3316,15 @@
           "center": null,
           "lower": 45.0,
           "upper": 70.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "4792",
+          "source_name": "Oxford",
+          "center": null,
+          "lower": 33.0,
+          "upper": 68.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -3974,6 +4019,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "4792",
+          "source_name": "Oxford",
+          "center": null,
+          "lower": 27.0,
+          "upper": 77.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "4881",
           "source_name": "Salt Lake City",
           "center": null,
@@ -4660,6 +4714,15 @@
           "center": null,
           "lower": 39.0,
           "upper": 74.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "4792",
+          "source_name": "Oxford",
+          "center": null,
+          "lower": 27.0,
+          "upper": 72.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -5354,6 +5417,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "4792",
+          "source_name": "Oxford",
+          "center": null,
+          "lower": 27.0,
+          "upper": 72.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "4881",
           "source_name": "Salt Lake City",
           "center": null,
@@ -6040,6 +6112,15 @@
           "center": null,
           "lower": 39.0,
           "upper": 74.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "4792",
+          "source_name": "Oxford",
+          "center": null,
+          "lower": 33.0,
+          "upper": 68.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -6734,6 +6815,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "4792",
+          "source_name": "Oxford",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "4881",
           "source_name": "Salt Lake City",
           "center": null,
@@ -6938,7 +7028,7 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "33abc786753a066af3eedafc80efcfc9fd0ae78cf152a196d7f498ec0c81ed98",
+    "cci-global-evidence-matrix.csv": "21286f32d19d6e034a359c89a708d6d46175d34b08b0c81f5e1788c207645d6b",
     "cci-legal-mobility-rules.json": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "cci-legal-mobility.md": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e",
     "cci-local-2026-singapore-case.json": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -7093,12 +7183,14 @@
     "cci-philadelphia-score-completion-review.md": "441bf3e648566c0fa7764d8d0f0d6f9f86e192e0a85d8394a31aba2e688663d6",
     "cci-local-2026-kuala-lumpur-case.json": "07da99b980e13834e6a1e667ed7f6382760413ce553aef0508b6b7a4956f74c2",
     "cci-kuala-lumpur-score-completion-review.md": "a0d6e604ce28b53e8b98f7b47151b3133665f58a4c5e79096764db3bb7d47113",
+    "cci-local-2026-oxford-case.json": "92c855f4943824ae67f5a24fa657d9fe471b5fdc4d163c71f2ba31cf051037a4",
+    "cci-oxford-score-completion-review.md": "643ece27139dbc8f7d136583817062b815ddbd463da238ae218aa5fdce5412f8",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "bdab35cf7c2c8c7267a3e51e1d4fff5f63e987c980b0f4bb27968412b3f10267",
+    "cci-global-evidence-matrix.json": "00ae4ef0bcac4146e0d562ce39d8f5f2b9a3128c9d72064bd942232421eaf21b",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "a7aaa70010e98040499f8e08b91d54f53df9189bc2c41a58bd5aea12e2347c21"
+    "cci-local-2026-scoring-calibration.md": "ed0f4630cf5a3cb906d8f5f9e60c99d049ce8c9664911d013ac46c0db201cd05"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "3941015ba440afabf644af6b1d6b2b3dccad4e742fe94ab7daa37654bb0470ad",
+  "csvSha256": "36516acd902d6f79a22728383a6e276fb6ca85b9f742ebe8af52da6e70740a55",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }

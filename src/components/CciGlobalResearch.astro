@@ -86,6 +86,7 @@ import leuven from "../../docs/data/cci-local-2026-leuven-case.json";
 import nagoya from "../../docs/data/cci-local-2026-nagoya-case.json";
 import philadelphia from "../../docs/data/cci-local-2026-philadelphia-case.json";
 import kualaLumpur from "../../docs/data/cci-local-2026-kuala-lumpur-case.json";
+import oxford from "../../docs/data/cci-local-2026-oxford-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -176,8 +177,10 @@ const cases = [
   nagoya,
   philadelphia,
   kualaLumpur,
+  oxford,
 ];
 const caseNamesZh: Record<number, string> = {
+  [oxford.candidateId]: "牛津功能区",
   [kualaLumpur.candidateId]: "吉隆坡功能区",
   [philadelphia.candidateId]: "费城功能区",
   [nagoya.candidateId]: "名古屋功能区",
@@ -360,6 +363,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [oxford.candidateId]: [
+    zh
+      ? "牛津PCS／MED条件40、ISR／LON／TEC条件60，GSS／RES／OPT未知；数学域33—68，无完整总分。真实防护、医疗及科研产用与低防洪标准、必要治疗未获配套经费造成的伤害同判；大学声誉不直接换分。"
+      : "Oxford has conditional 40 for PCS/MED and 60 for ISR/LON/TEC; GSS/RES/OPT remain unknown: 33–68 without a complete total. Operating protection, care and technology production are assessed alongside low flood-defence standards and actual harm from unfunded treatment-service resources. University reputation is not a score.",
+    zh
+      ? "原研究未保留正文的咨询陈述未采用。成熟tisa研究不当作liso或Oxford四名患者结局，LON仅有限疾病平台判断；酒店餐食帮助不等全部陪护和交通免费。能源净取得与境外资金通信未知保留，关键范围、照护或延续假设拒绝则撤回相应维度，不证明全球入围。"
+      : "Consultation claims without retained primary text are unused. Mature tisa studies are not liso or Oxford four-patient outcomes; LON is a bounded disease-platform judgment. Hotel/meal help does not cover all care and travel. Net energy access and overseas funds/connectivity remain unresolved; rejecting necessary scope, care or continuity assumptions withdraws the relevant judgment. Global qualification remains unproven.",
+  ],
   [kualaLumpur.candidateId]: [
     zh
       ? "吉隆坡的制度、资源和技术取条件60，其余五维未知。已知加权小计21，数学范围21—86，无完整总分。实际供水修复、家庭消费背景、当前成本缓解及工业数字应用支持有限判断；重要停水、投诉与群体差异均保留。"

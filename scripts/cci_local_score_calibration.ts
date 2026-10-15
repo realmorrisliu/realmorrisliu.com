@@ -128,6 +128,7 @@ const realCases = [
   "nagoya",
   "philadelphia",
   "kuala-lumpur",
+  "oxford",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -247,6 +248,7 @@ const [
   nagoya,
   philadelphia,
   kualaLumpur,
+  oxford,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2910,3 +2912,33 @@ assert.deepEqual(total({ ...vienna, GSS: 40 }), { center: null, lower: 51, upper
 const viennaWithoutGss = { ...vienna };
 delete viennaWithoutGss.GSS;
 assert.deepEqual(total(viennaWithoutGss), { center: null, lower: 45, upper: 70 });
+
+const oxfordCase = realCases.find(c => c.candidateId === 4792);
+assert.equal(
+  oxfordCase.priorityCompletionReview.sha256,
+  digest(oxfordCase.priorityCompletionReview.path)
+);
+assert.equal(
+  oxfordCase.priorityCompletionReview.researchReportSha256,
+  digest(oxfordCase.priorityCompletionReview.researchReport)
+);
+assert.equal(oxfordCase.sourceSnapshots.length, 21);
+assert.deepEqual(total(oxford), { center: null, lower: 33, upper: 68 });
+for (const [id, lower, upper] of [
+  ["PCS", 27, 77],
+  ["ISR", 24, 74],
+  ["MED", 27, 77],
+  ["LON", 27, 72],
+  ["TEC", 27, 72],
+] as const) {
+  const withdrawn = { ...oxford };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...oxford, PCS: 60 }), { center: null, lower: 36, upper: 71 });
+assert.deepEqual(total({ ...oxford, MED: 60 }), { center: null, lower: 36, upper: 71 });
+assert.deepEqual(total({ ...oxford, ISR: 40 }), { center: null, lower: 30, upper: 65 });
+assert.deepEqual(total({ ...oxford, LON: 40 }), { center: null, lower: 31, upper: 66 });
+assert.deepEqual(total({ ...oxford, TEC: 80 }), { center: null, lower: 35, upper: 70 });
+assert.equal(oxfordCase.rootExcludedWebClaims[0].usedForScore, false);
+assert(oxfordCase.dimensions.every((d: { sourceIds: string[] }) => !d.sourceIds.includes("S07")));

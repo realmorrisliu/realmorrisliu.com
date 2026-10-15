@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 76,
+    "conditionalCaseCount": 77,
     "completeConditionalCaseCount": 18,
-    "partialCaseCount": 58,
-    "unassessedCount": 8955,
+    "partialCaseCount": 59,
+    "unassessedCount": 8954,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -685,8 +685,13 @@
       "sha256": "07da99b980e13834e6a1e667ed7f6382760413ce553aef0508b6b7a4956f74c2",
       "provenance": "cci-kuala-lumpur-score-completion-review.md",
       "provenanceSha256": "a0d6e604ce28b53e8b98f7b47151b3133665f58a4c5e79096764db3bb7d47113"
+    },
+    "cci-local-2026-oxford-case.json": {
+      "sha256": "92c855f4943824ae67f5a24fa657d9fe471b5fdc4d163c71f2ba31cf051037a4",
+      "provenance": "cci-oxford-score-completion-review.md",
+      "provenanceSha256": "643ece27139dbc8f7d136583817062b815ddbd463da238ae218aa5fdce5412f8"
     }
   },
-  "scriptSha256": "700631c60c027945b8f7364910fbd1046cbc7dba769527263e652b2c971a7f74",
-  "csvSha256": "33abc786753a066af3eedafc80efcfc9fd0ae78cf152a196d7f498ec0c81ed98"
+  "scriptSha256": "726d323e78f191445aaf6ebf67e9f04e11f7fd52cbc196784ed984e7f7e6743f",
+  "csvSha256": "21286f32d19d6e034a359c89a708d6d46175d34b08b0c81f5e1788c207645d6b"
 }
