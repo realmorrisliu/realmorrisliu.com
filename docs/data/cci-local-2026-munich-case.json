@@ -8,7 +8,7 @@
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "residentEligibility": "Ordinary German national/usual longterm local residence/median local income/usual GKV coverage/no fixed age",
   "boundaryVersion": "GHS-FUA R2019A",
-  "evidenceReview": "cci-munich-score-completion-review.md",
+  "evidenceReview": "cci-munich-med39-completion-review.md",
   "publishedInputCommit": "05545492c96989585a26dfa23cd7a6e0e0d124d7",
   "researchFrozenInputCommit": "6c594d14254e094c4e97dd96209e3263ff4f51f2",
   "dimensions": [
@@ -201,52 +201,58 @@
     },
     {
       "id": "MED",
-      "score": null,
-      "rationale": "Actualtimelyemergencycare, mixed2025clinicaloutcomes and usualGKV/dischargecoordination coexist with aboveexpectedstroke/COPD/cardiacmortality and staffcuts. For ordinarynecessarycare aftermitigation, mixeddirection stillcannot reasonablychoose40/60.",
-      "assumption": "No mainchoice; not demandallhospital/2026populationperfectmeasurement. 60wouldrequire substantivelyaccepting mixedreviewedoutcomes/clinicaldelivery and typicalGKV/continuity as normallyadequate despite retainedharm;40requires significantnetbarrier direction, not oneSMRorfinancialcutalone.",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "实际紧急分级/医院接收、多病种必要治疗及混合真实结局，与通常GKV净付款和本地监护/出院接续构成有限通常可用链。卒中、COPD及部分心脏较高结果、减员和转介门槛仍重要；不平均不同队列、不假定不利信号无害，也不由混合结果机械保未知。",
+      "assumption": "接受已观察核心服务对普通必要就医的有限通常适配、正确年龄/收入/治疗资格下GKV付款与本地接续、2024/2025到截止运行延续；非全FUA普查/所有指标优于模型/私人附加全覆盖。拒绝任一必要推定恢复未知，不设受害过半或全面失效门槛。",
+      "conditionalAlternatives": [40],
       "subpillars": {
         "access": "partial",
         "routine_quality": "partial",
         "specialist_capacity": "partial",
         "system_continuity": "partial"
       },
+      "scoreStatus": "conditional_root_adopted",
       "coverageReview": [
         {
           "dimension": "MED",
           "subpillar": "access",
           "status": "reviewed_partial",
-          "evidence": "fire2025.pdf:p10;sgb5.html:27,39,61,62;lmu-discharge.html",
-          "finding": "Actualemergencytransport/ordinaryGKVrights/co-paycaps/referral-dependentdischargehelp, no ordinarycurrentwait/accessnetdirection established.",
+          "evidence": "S10physical10;S18§27/39/61/62;S30",
+          "finding": "实际急救运送/GKV必要治疗净共付保护与本院接续入口，不代表所有等待/净账单已测。",
           "score": null
         },
         {
           "dimension": "MED",
           "subpillar": "routine_quality",
           "status": "reviewed_partial",
-          "evidence": "iqm2025.pdf:p1,3,6,9,58-61;lmu2025.pdf:p2",
-          "finding": "Actual2025hospitaloutcomesmixedagainstnationalmodels; higherstroke/COPD/cardiacindicators, lowerpneumonia/someprocedures; cutsretained; no blanketpoorqualityoracceptability.",
+          "evidence": "S22physical1/3/6/9/58–61;S20physical2",
+          "finding": "真实不同队列结果正反并存，较高卒中/COPD/心脏和减员保留；无显著性/完整风险调整/跨队列平均。",
           "score": null
         },
         {
           "dimension": "MED",
           "subpillar": "specialist_capacity",
           "status": "reviewed_partial",
-          "evidence": "lmu-cart-2024.html;lmu2025.pdf:p4;iqm2025.pdf",
-          "finding": "Actualspecialtytreatment/monitoring andPARKLINKremotecoordination, not prestigeorvolumealone=ordinaryquality.",
+          "evidence": "S04;S20physical4;S22",
+          "finding": "真实CAR-T交付/监护与PARKLINK会诊/远程调整；非机构声誉、治愈率或全居民资格。",
           "score": null
         },
         {
           "dimension": "MED",
           "subpillar": "system_continuity",
           "status": "reviewed_partial",
-          "evidence": "lmu-discharge.html;sgb5.html;lmu2025.pdf:p2,4",
-          "finding": "Actualserviceoffer/clinicalnetwork andlegalpaymentcontinuity, but staffcuts/necessaryreferralgate and ordinary netremainingbarriers unresolved.",
+          "evidence": "S18§39;S30;S20physical2/4;S04",
+          "finding": "免费但需EM转介/同意的出院支持与实际网络/跟进，减员与外地范围/未审每人闭环仍限制。",
           "score": null
         }
       ],
-      "rejectionOutcome": null,
-      "scoreStatus": "reviewed_insufficient_direction"
+      "sourceIds": ["S22", "S20", "S10", "S18", "S30", "S04"],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": [],
+        "identificationDomain": [36, 76]
+      },
+      "alternative40Rationale": "若实际帮助后的已知质量、减员或接续障碍被判断为普通必要就医的明显净约束，可取较低条件40；不要求受害过半或全面失效，拒绝必要方向桥则恢复未知。"
     },
     {
       "id": "LON",
@@ -397,17 +403,17 @@
     }
   ],
   "expectedConditionalTotal": null,
-  "knownWeightedSubtotal": 36,
-  "unresolvedScoreRange": [36, 76],
+  "knownWeightedSubtotal": 45,
+  "unresolvedScoreRange": [45, 70],
   "globalRankingEligible": false,
   "limitations": [
-    "Five conditional60 judgments have explicit revocable ordinary-impact/implementation, usual means/eligibility, core-FUA and cutoff bridges; no scores from reputation/source count or missingness.",
-    "MED unresolved because actual mixed outcomes/staffing/real mitigation do not settle usual necessary net quality/access40vs60; not an all-hospital/2026perfect-data gate or singleSMR penalty. MED60=>45–70, MED40=>42–67.",
+    "Six conditional60 judgments retain explicit revocable ordinary-capability, usual means/eligibility, core-FUA and cutoff bridges; PCS/RES remain unknown; no sourcecount/reputation/missingness scores.",
+    "MED nowconditional60 after finite review of existing actualdelivery, mixedclinicalresults, GKVnetpayment andcontinuity; no newclinicalfacts, noaveraging/dismissalofbadoutcomes or allmetricsbettergate. Reject necessarybridge ->null36–76; conditional40 ->42–67.",
     "LON mature eligible disease class/local actual treatment/payment/monitoring bridge revocable; youngALL evidence not adultDLBCL efficacy or local150 outcomes, no fixed adult/per-dose invoice gate.",
     "Oct15INGprices and Oct12–16airport banner excluded; dynamic basic consumer mechanisms/cutoff continuation remain weaker OPT assumptions, not permanent old contract guarantee.",
     "26partial/1context/1notstarted/3notfullyreviewed scope records are not31 complete outcome measurements.",
     "34 saved raw originals include navigation/context/late pages;28new/6independently verified reused;0rawfailure, web failures separate. Current bytes not cutoff historical authentication.",
-    "Other66 cases byte-identical; all old/new candidates retained, zero supported exclusions or qualified32 threshold."
+    "Other75 cases wholebytes and Munich other7dimension exactUTF8objects unchanged against5ba34fb; all old/new competitors retained, zero supportedexclusions/qualified32threshold."
   ],
   "sourceSnapshots": [
     {
@@ -1566,32 +1572,32 @@
         "dimension": "MED",
         "subpillar": "access",
         "status": "reviewed_partial",
-        "evidence": "fire2025.pdf:p10;sgb5.html:27,39,61,62;lmu-discharge.html",
-        "finding": "Actualemergencytransport/ordinaryGKVrights/co-paycaps/referral-dependentdischargehelp, no ordinarycurrentwait/accessnetdirection established.",
+        "evidence": "S10physical10;S18§27/39/61/62;S30",
+        "finding": "实际急救运送/GKV必要治疗净共付保护与本院接续入口，不代表所有等待/净账单已测。",
         "score": null
       },
       {
         "dimension": "MED",
         "subpillar": "routine_quality",
         "status": "reviewed_partial",
-        "evidence": "iqm2025.pdf:p1,3,6,9,58-61;lmu2025.pdf:p2",
-        "finding": "Actual2025hospitaloutcomesmixedagainstnationalmodels; higherstroke/COPD/cardiacindicators, lowerpneumonia/someprocedures; cutsretained; no blanketpoorqualityoracceptability.",
+        "evidence": "S22physical1/3/6/9/58–61;S20physical2",
+        "finding": "真实不同队列结果正反并存，较高卒中/COPD/心脏和减员保留；无显著性/完整风险调整/跨队列平均。",
         "score": null
       },
       {
         "dimension": "MED",
         "subpillar": "specialist_capacity",
         "status": "reviewed_partial",
-        "evidence": "lmu-cart-2024.html;lmu2025.pdf:p4;iqm2025.pdf",
-        "finding": "Actualspecialtytreatment/monitoring andPARKLINKremotecoordination, not prestigeorvolumealone=ordinaryquality.",
+        "evidence": "S04;S20physical4;S22",
+        "finding": "真实CAR-T交付/监护与PARKLINK会诊/远程调整；非机构声誉、治愈率或全居民资格。",
         "score": null
       },
       {
         "dimension": "MED",
         "subpillar": "system_continuity",
         "status": "reviewed_partial",
-        "evidence": "lmu-discharge.html;sgb5.html;lmu2025.pdf:p2,4",
-        "finding": "Actualserviceoffer/clinicalnetwork andlegalpaymentcontinuity, but staffcuts/necessaryreferralgate and ordinary netremainingbarriers unresolved.",
+        "evidence": "S18§39;S30;S20physical2/4;S04",
+        "finding": "免费但需EM转介/同意的出院支持与实际网络/跟进，减员与外地范围/未审每人闭环仍限制。",
         "score": null
       },
       {
@@ -1784,10 +1790,66 @@
     ]
   },
   "sensitivity": {
-    "withdraw15pctKnown": [27, 82],
-    "withdraw10pctKnown": [30, 80],
-    "known15pctTo40": [33, 73],
-    "known10pctTo40": [34, 74],
-    "ifMED60": [45, 70]
+    "withdraw15pctKnown": [36, 76],
+    "withdraw10pctKnown": [39, 74],
+    "known15pctTo40": [42, 67],
+    "known10pctTo40": [43, 68],
+    "ifMED40": [42, 67],
+    "ifMEDUnknown": [36, 76],
+    "allKnownWithdrawn": [0, 100]
+  },
+  "medCompletionReview": {
+    "path": "docs/cci-munich-med39-completion-review.md",
+    "sha256": "830151d9503ee54de15d86fe4f459c0874444a0fe027f13a1f91a591fc054a4f",
+    "researchReport": "docs/cci-munich-med39-priority-review.md",
+    "researchReportSha256": "3bf316b5d5fa9449aa86121ee0c61d5a2a3d3475dcfd98840d8c71846f6a84af",
+    "reviewedOn": "2026-10-15",
+    "publishedInputCommit": "5ba34fbb3473845f15024d29603a3e5432f4eea5",
+    "fixedResearchInputCommit": "dfb226976451c8017b7790c95b148ddfb8933d61",
+    "frozenResearchReportSha256": "059b699d3a282f8618f63c3618b7d341778877d882f490fe0c74c437aa44c98f",
+    "frozenManifestSha256": "7714a1159ee1d64e1258f60a063c6188950d0416a644da0c1750a0593953063b",
+    "suggestionSha256": "f51b0936d72de79de1fc96d6e2aec33b606acac5d6ab8ec78a51e3257f5854bc",
+    "rootAcceptanceSha256": "c204c96b06567261a0158ae1d7a3b694fd75984d8694aa5d76de87fecfc70791",
+    "frozenFilesVerified": 122,
+    "reusedOriginalCount": 6,
+    "newSourceCount": 0,
+    "rootNewNetworkRequests": 0,
+    "rootNewDiscoveryQueries": 0,
+    "rootActualPdfPages": 9,
+    "adoptedScore": 60,
+    "otherSevenDimensionObjectsUnchanged": true,
+    "other75CasesByteIdentical": true,
+    "rootReview": {
+      "status": "root_conditional_MED60_acceptance",
+      "publishedInputCommit": "5ba34fbb3473845f15024d29603a3e5432f4eea5",
+      "researchInputCommit": "dfb226976451c8017b7790c95b148ddfb8933d61",
+      "fixedResearchCases": 75,
+      "currentCasesGuarded": 76,
+      "externalKualaLumpurAdditionRetained": true,
+      "all76CaseBytesUnchanged": true,
+      "frozenFilesVerified": 122,
+      "frozenManifestSha256": "7714a1159ee1d64e1258f60a063c6188950d0416a644da0c1750a0593953063b",
+      "rootExistingOriginalsVerified": 6,
+      "rootPdfPixelsActuallyViewed": 9,
+      "rootMethodsPage60ReadAsTextOnly": true,
+      "rootLawSectionExtractionInitialSelectorFailed": true,
+      "rootLawSections27_39_61_62ActuallyReadAfterSelectorFix": true,
+      "rootRawHtmlBodiesRead": 3,
+      "rootNewNetworkRequests": 0,
+      "rootNewDiscoveryQueries": 0,
+      "rootScore": 60,
+      "previousScore": null,
+      "otherSevenDimensionObjectsUnchanged": true,
+      "other75CasesByteIdentical": true,
+      "differentCohortsAveragedIntoQualityScore": false,
+      "adverseClinicalSignalsDismissed": false,
+      "allMetricsMustBeatModelGate": false,
+      "noBroadSystemFailureUsedAsPositiveEvidence": false,
+      "copayCapIncludesPrivateOrUncoveredExtras": false,
+      "allResidentsFixedAdults": false,
+      "physicianEmReferralGateRetained": true,
+      "rootBoundaryRecomputedThisTurn": false,
+      "newClinicalFactsObtained": false
+    }
   }
 }

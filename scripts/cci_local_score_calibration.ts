@@ -2445,15 +2445,15 @@ assert.equal(munichCase.rootScopeReview.ingPriceUsedForCutoffScore, false);
 assert.equal(munichCase.rootScopeReview.ingPriceEffectiveOn, "2026-10-15");
 assert.equal(munichCase.rootScopeReview.iqmCopdSmr1_5Means50PercentMortality, false);
 assert.equal(munichCase.rootScopeReview.iqmPneumoniaBetterOutcomeRetained, true);
-assert.deepEqual(total(munich), { center: null, lower: 36, upper: 76 });
-assert.deepEqual(total({ ...munich, MED: 60 }), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total(munich), { center: null, lower: 45, upper: 70 });
 assert.deepEqual(total({ ...munich, MED: 40 }), { center: null, lower: 42, upper: 67 });
 for (const [dimension, lower, upper] of [
-  ["GSS", 27, 82],
-  ["ISR", 27, 82],
-  ["LON", 30, 80],
-  ["TEC", 30, 80],
-  ["OPT", 30, 80],
+  ["GSS", 36, 76],
+  ["ISR", 36, 76],
+  ["MED", 36, 76],
+  ["LON", 39, 74],
+  ["TEC", 39, 74],
+  ["OPT", 39, 74],
 ] as const) {
   const withdrawn = { ...munich };
   delete withdrawn[dimension];
@@ -2875,3 +2875,16 @@ assert.deepEqual(
   kualaLumpurCase.referenceBoundaryCheck.cases["1322"].approximateReferences[2].all9031Matches,
   []
 );
+
+const munichMedReview = munichCase.medCompletionReview;
+assert.equal(munichMedReview.sha256, digest(munichMedReview.path));
+assert.equal(munichMedReview.researchReportSha256, digest(munichMedReview.researchReport));
+assert.equal(munichMedReview.adoptedScore, 60);
+assert.equal(munichMedReview.rootNewNetworkRequests, 0);
+assert.equal(munichMedReview.otherSevenDimensionObjectsUnchanged, true);
+assert.equal(munichMedReview.rootReview.differentCohortsAveragedIntoQualityScore, false);
+assert.equal(munichMedReview.rootReview.adverseClinicalSignalsDismissed, false);
+assert.equal(munichMedReview.rootReview.allMetricsMustBeatModelGate, false);
+assert.equal(munichMedReview.rootReview.noBroadSystemFailureUsedAsPositiveEvidence, false);
+assert.equal(munichMedReview.rootReview.copayCapIncludesPrivateOrUncoveredExtras, false);
+assert.equal(munichMedReview.rootReview.allResidentsFixedAdults, false);
