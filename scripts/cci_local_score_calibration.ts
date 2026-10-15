@@ -141,6 +141,7 @@ const realCases = [
   "austin",
   "newcastle",
   "lund",
+  "almere",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -273,6 +274,7 @@ const [
   austin,
   newcastle,
   lund,
+  almere,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -3574,3 +3576,35 @@ for (const [id, lower, upper] of [
 }
 assert.deepEqual(total({ ...lund, MED: 40 }), { center: null, lower: 39, upper: 64 });
 assert.deepEqual(total({ ...lund, PCS: 60 }), { center: null, lower: 45, upper: 70 });
+
+const almereCase = realCases.find(c => c.candidateId === 1956);
+assert.equal(
+  almereCase.priorityCompletionReview.sha256,
+  digest(almereCase.priorityCompletionReview.path)
+);
+assert.equal(
+  almereCase.priorityCompletionReview.researchReportSha256,
+  digest(almereCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(almere), { center: null, lower: 42, upper: 62 });
+assert.equal(almereCase.unknownWeight, 20);
+assert.deepEqual(
+  almereCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["LON", "OPT"]
+);
+for (const [id, lower, upper] of [
+  ["PCS", 36, 71],
+  ["GSS", 36, 71],
+  ["ISR", 33, 68],
+  ["MED", 33, 68],
+  ["RES", 36, 66],
+  ["TEC", 36, 66],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...almere };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...almere, MED: 40 }), { center: null, lower: 39, upper: 59 });
+assert.deepEqual(total({ ...almere, PCS: 60 }), { center: null, lower: 45, upper: 65 });

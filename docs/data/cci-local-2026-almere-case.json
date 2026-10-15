@@ -1,0 +1,1852 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 1956,
+  "name": "Almere",
+  "countryIso": "NLD",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-16",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "Dutch citizen/usual longterm local resident/local median income/usual effective coverage/no fixed age",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-almere-score-completion-review.md",
+  "researchFrozenInputCommit": "eb3b4ca02aba7fd105592a5f1a23adbd10d3ccec",
+  "fixedInputCases": 89,
+  "fixedInputComplete": 19,
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 42,
+  "unknownWeight": 20,
+  "unresolvedScoreRange": [42, 62],
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 40,
+      "rationale": "实际堤检维护、抽排及远控保护已运行，但泵水—电力共因、核心任务接网瓶颈与长停电后备仍需强化，是帮助后重要保护约束。",
+      "assumption": "接受Zuiderzeeland运营域中明确Almere堤段及共同电泵依赖对420km² FUA通常保护的有限地域、实际后果和2026延续桥。p67说已影响核心任务，不只是未来预算；不声称发生本城停电失泵或多数居民受害。Noordoostpolder85mm雨量/处置不搬为Almere事件。",
+      "conditionalAlternatives": [60],
+      "alternativeRationales": "60若已有堤检、泵水、远控和多承包商维护足以支持主要危险匹配的通常保护，仍承认共因余障；80需更强多危险实效与后备，非零风险。拒地域/后果/延续桥撤null。",
+      "sourceIds": ["S02", "S16", "S08"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "heat_humidity": "unresolved",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": 40,
+      "rationale": "2025真实爆炸、过度暴力和居民影响，在已有干预后仍挤占长期预防及治理资源；普通犯罪小降与该重要余障并存。",
+      "assumption": "接受市域2025对旧FUA普通居民安全的有限代表及延续。并非所有爆炸都已证有组织犯罪，不把嫌疑、临时封屋或旧2023数据当2026定罪率；区域冲突/战略路径仍不足，本维按已有重要组织安全影响作有界方向。",
+      "conditionalAlternatives": [60],
+      "alternativeRationales": "60若实际预防、执法协调和总体犯罪改善已使通常匹配保护可用；40不需暴力占全部犯罪多数。80需更广威胁匹配实效；拒暴力性质/通常影响/地域与时点桥撤null。",
+      "sourceIds": ["S10", "S17", "S02"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "维护重采购、实际远控、临床接续与信息改进，自动收入补贴、五处Financial Houses及已兑现公交试点，形成跨机构实际履约正链。",
+      "assumption": "接受市域/当地服务网络有限代表FUA通常履约并延续至2026。S10p61自动IIT确在2025兑现；自动免地方税只决定2026生效，未冒已发；7000触达不等7000均乘车。Onegov无法接Digi-D、约半合资格者未申请减免及预算收缩是实障，不能由未见崩溃推60。",
+      "conditionalAlternatives": [40],
+      "alternativeRationales": "40若数字准入、福利漏领、安全事件挤预防及人手/预算问题在既有帮助后仍构成重要通常履约约束，不需全制度失败；80欠更广触达/压力替代实效。拒代表/实际兑现/时点桥撤null。",
+      "sourceIds": ["S02", "S04", "S09", "S10"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "供应商实际水质/中断表现、现行居民能源供给和已避免全面住宅接网停止的限定事实，与实际食品应急采购及财务帮助共同支持通常水食能可取得。",
+      "assumption": "接受Vitens供区质量与中断对本地通常末端服务的有限代表、现行能源供给及普通食品市场延续；中位收入通常可负担必要资源，困难时帮助仅按真实资格可用。非中位收入自动低收入补贴。水价单项不等净全账单，食品银行维持必要品不等全城营养无障碍；这些实际维持措施而非无崩溃支持有限60。",
+      "conditionalAlternatives": [40],
+      "alternativeRationales": "40若新增住宅接网、共同停电、食品价格/救助覆盖或净水能成本在帮助后形成普通画像重要取得约束，不需多数/主导；80需更强冲击备援与可负担效果，非全户账本。拒供区末端/市场净预算/资格及延续桥撤null。",
+      "sourceIds": ["S06", "S08", "S09", "S10", "S11"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "Flevo实际必要诊治、全保司/全保单2025合同和在院合作/共同医生/出院接续，配合有限质量结果，支持通常必要护理净可用。",
+      "assumption": "2024 HSMR92(82–104)不显著异于全国，2025尚未出；不以其证明所有护理优良。20疑似/8上报及2287事件不是患者率，调查和用药改进是实交付。接受2025本地合同与转诊/通常自付、交通照护可承受的有限2026延续。S15学术医院预算保单例外不能由Flevo全合同消解；本维仅本地常规/必要路径通常可用，不保证所有外转尖端疗法。",
+      "conditionalAlternatives": [40],
+      "alternativeRationales": "40若真实安全事件、等待或保险外净照护/外转限制在现有帮助后仍成重要必要护理约束，不需障碍主导；80欠更广及时性/质量和净取得实效。拒实际临床代表/普通支付接续/延续桥撤null。",
+      "sourceIds": ["S04", "S12", "S15"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "疾病免疫细胞转化已有可信人体与Amsterdam实际交付，且有Flevo共同血液病/移植后接续；普通学术中心净付款与适当替代路径桥仍未接受，主unknown。",
+      "assumption": "HAS tisa只支持特定B细胞疾病同类成熟性，不把法国分组或未具名Amsterdam45人变Almere产品疗效。S13有限适应证报销，S14历史真实制造/回输/毒性管理及S12实际接续均正证；S15明确所有保司预算保单均未签AmsterdamUMC，这是实质普通取得反证，Flevo全保单不覆盖该学术服务。尚未接受通常合适患者经已覆盖转诊/合理授权替代并负担重复照护的净桥；不因缺每剂票据或S18获取未闭合自动未知。",
+      "conditionalAlternatives": [],
+      "alternativeRationales": "可条件60：接受标准成熟类路径到2026有限延续、适合人群通过通常覆盖或真实可行授权替代获得该学术服务，并有可负担制造等待/毒性/后续监护交通桥；无需逐保单逐剂证明。可40：这些路径中现有帮助后仍有实际重要取得/照护约束。80看多条可信转化及审慎实际采用，不要求健康人延寿/零风险。未知不强选40/60。",
+      "sourceIds": ["S12", "S13", "S14", "S15", "R04"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "已运行企业共享Energy Hub、城市Digital Twin/交通模型、真实再培训及雇主匹配，加上水务远控和医疗信息应用，支持独立非医院知识产用与普通服务扩散。",
+      "assumption": "接受实际本地应用知识生成、企业能源协作和公共服务数字技术共同有限代表知识—产用—扩散；不是用公司数/论文/大学名气换分。ASM高科技园与IAMM仍计划，不能补产业实绩；31证书/22匹配不等所有人稳定就业，数字模型不是普遍AI，水务远控不是全FUA网络覆盖。",
+      "conditionalAlternatives": [40],
+      "alternativeRationales": "40若已有应用之后持续产业使用、数字准入或普通扩散仍有重要断点；不因缺全城量表自动40。80需更广有效采用和独立效果，不要求所有部门前沿化。拒联合代表/实际使用/2026延续桥撤null。",
+      "sourceIds": ["S02", "S04", "S10"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": null,
+      "rationale": "实际Almere–Amsterdam周末夜车、EU条件居留、个人欧元支付及暂时漫游是正证；尚未接受普通长期外出交通—生活来源—资金与通信接续的完整净方向。",
+      "assumption": "EU工作者权利以工作/自雇与登记等条件为限，不默认已有外国工作。个人支付平价不等所有资产/长期账户保证；暂时漫游四月公平使用不保证永久在外免费。R03虽Jan2026检查，€1.30数值明确2025，不移为2026上限。未证路径不等没有能力，也不另设所有目的地逐笔交易/本城自有机场硬门槛。",
+      "conditionalAlternatives": [],
+      "alternativeRationales": "60可采有限有据国际交通接续及通常法律生活来源、个人资金鉴权和长期通信替代；40需真实重要退出余障。本批尚未接受这些净方向，不因封采或失败扣分。",
+      "sourceIds": ["S10", "R01", "R02", "R03"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "transport_redundancy": "context",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "coverageReview": [
+    {
+      "dimensionId": "PCS",
+      "subpillar": "heat_humidity",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "evidence": "boundedpass",
+      "finding": "未触达热湿与匹配建筑保护，不以模型低暴露换分。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "PCS",
+      "subpillar": "flood_sea_level",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S02p10/17;S16p32/67",
+      "finding": "堤检与泵水实运，电泵共因/接网后备余障；区域雨量非本地。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "PCS",
+      "subpillar": "geophysical",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "evidence": "boundedpass",
+      "finding": "无地质与实际建筑保护原件，不推安全。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "PCS",
+      "subpillar": "severe_weather_wildfire",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S16p32/67;S08",
+      "finding": "实际重雨抽排及电力依赖；未全面评野火。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "GSS",
+      "subpillar": "organized_violence",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S10p29–30;S17p8–9",
+      "finding": "真实爆炸暴力/居民影响及保护；非全部有组织或全人口率。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "GSS",
+      "subpillar": "regional_conflict",
+      "status": "context",
+      "boundedReviewPerformed": true,
+      "evidence": "S02p29;S17",
+      "finding": "数字威胁和危机组织背景，区域冲突净影响未定。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "GSS",
+      "subpillar": "strategic_exposure",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S02p29;S16p67",
+      "finding": "实际远控/数字依赖和电泵备援，非全战略通道测量。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "ISR",
+      "subpillar": "governance",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S10p29/61;S02p10",
+      "finding": "年度实交付/预防挤占与维护纠正。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "ISR",
+      "subpillar": "adaptive_capacity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S02p10/29;S04p32–33",
+      "finding": "重采购和控制/临床纠正，未来融资分开。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "ISR",
+      "subpillar": "social_cohesion",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S10p61;S09p2/6/7",
+      "finding": "自动IIT、五财务站/公交试点与资格/漏领。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "ISR",
+      "subpillar": "emergency_recovery",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S16p32/67;S09",
+      "finding": "重雨/食品真实应对，未测全灾恢复。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "RES",
+      "subpillar": "water",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S06;S11;S16",
+      "finding": "供应商质量/中断与ICT/电力约束，不套本地率。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "RES",
+      "subpillar": "food",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S09p2/6/7;S10p61",
+      "finding": "必要食品采购维持、缩水及鲜食试点停止，低收入非中位。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "RES",
+      "subpillar": "energy",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S08;S16p67;S10p42",
+      "finding": "普通现行供应/共享能源及接网约束，未来Flexpower不当运行。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "RES",
+      "subpillar": "supply_chain",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S09;S11;S02",
+      "finding": "食品采购、材料/电力共因与实际维护响应。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "MED",
+      "subpillar": "access",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S04p17;S15",
+      "finding": "本地全合同与学术中心预算保单例外。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "MED",
+      "subpillar": "routine_quality",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S04p32–33",
+      "finding": "HSMR不显著/年份、事件分母与实际纠正。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "MED",
+      "subpillar": "specialist_capacity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S12;S14",
+      "finding": "共同医生/复杂转诊和实际细胞路径，不是居民疗效率。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "MED",
+      "subpillar": "system_continuity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S04p17/33;S12;S15",
+      "finding": "当地/学术合作和移植后随访，净付款限制。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "LON",
+      "subpillar": "translation",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S14;R04p14/24/25",
+      "finding": "真实免疫细胞疾病转化，不泛所有抗癌。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "LON",
+      "subpillar": "trial_maturity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "R04p14/24/25;S14",
+      "finding": "特定tisa成熟人体/分析集；本地历史描述非原队列。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "LON",
+      "subpillar": "regulatory_adoption",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S13;S14",
+      "finding": "有限产品适应证报销 vs建议/研究。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "LON",
+      "subpillar": "resident_access",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S12;S15",
+      "finding": "真实本地接续与预算保单/净监护桥未接受。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "TEC",
+      "subpillar": "knowledge_output",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S10p42/43/182",
+      "finding": "实际城市模型/知识共建，未来校园排除。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "TEC",
+      "subpillar": "industry_density",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S10p42–43",
+      "finding": "真实能源企业协作/再培训匹配，未完整产业密度。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "TEC",
+      "subpillar": "digital_infrastructure",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S02p29;S04p33",
+      "finding": "现行远控/HiX与Onegov准入障碍。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "TEC",
+      "subpillar": "diffusion",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S10p42/43/61;S02",
+      "finding": "公共服务应用与培训/财政触达，非全居民数字覆盖。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "OPT",
+      "subpillar": "transport_redundancy",
+      "status": "context",
+      "boundedReviewPerformed": true,
+      "evidence": "S10p85",
+      "finding": "2025周末夜车运行，未将国际接续闭合。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "OPT",
+      "subpillar": "legal_mobility",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "R01",
+      "finding": "EU工作/自雇及登记条件，不默认雇佣。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "OPT",
+      "subpillar": "asset_portability",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "R02",
+      "finding": "个人欧元支付/鉴权/IBAN条件非所有资产。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "OPT",
+      "subpillar": "network_continuity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "R03",
+      "finding": "暂时漫游与永久使用收费，不认证永久续接。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "R01",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_es.htm",
+      "path": "R01-eu-workers.html",
+      "localPath": "originals/R01-eu-workers.html",
+      "originalBytes": 153770,
+      "sha256": "1555b5f65525917eee8fab3fef570e9a27b5d26dab38779b5bd26659b2bfb34f",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/eindhoven-full42/originals/R01-eu-workers.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationAndVersion": "EU workerconditionalresidence;lastchecked19Aug2026; originalretrievalmetadataunavailable notinvented",
+      "scope": "Independently read common EU personal rules; Dutch citizen and Almere adaptation, no Eindhoven score copied",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "newHTTPRequest": false,
+      "independentAlmereAdaptationRequired": true,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R02",
+      "url": "https://europa.eu/youreurope/citizens/consumers/financial-products-and-services/payments-transfers-cheques/index_en.htm",
+      "path": "R02-eu-payments.html",
+      "localPath": "originals/R02-eu-payments.html",
+      "originalBytes": 155296,
+      "sha256": "0a457237f62980c579bc7dba314552421cb5b0fa826dc830b0e35bb42d458ee8",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/eindhoven-full42/originals/R02-eu-payments.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationAndVersion": "Lastchecked28Apr2026, capturedOct15 durableMunich",
+      "scope": "Independently read common EU personal rules; Dutch citizen and Almere adaptation, no Eindhoven score copied",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "newHTTPRequest": false,
+      "independentAlmereAdaptationRequired": true,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R03",
+      "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/mobile-roaming-costs/index_en.htm",
+      "path": "R03-eu-roaming.html",
+      "localPath": "originals/R03-eu-roaming.html",
+      "originalBytes": 155071,
+      "sha256": "e2e15e5e0521db23b3d99d06fa691c557b5ebdb63b09aa5ccb50f58af9a8f0d4",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/eindhoven-full42/originals/R03-eu-roaming.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationAndVersion": "Lastchecked7Jan2026,capturedOct15durableLyon",
+      "scope": "Independently read common EU personal rules; Dutch citizen and Almere adaptation, no Eindhoven score copied",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "newHTTPRequest": false,
+      "independentAlmereAdaptationRequired": true,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R04",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "path": "has-kymriah-2023.pdf",
+      "localPath": "originals/has-kymriah-2023.pdf",
+      "originalBytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/eindhoven-full42/originals/has-kymriah-2023.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationAndVersion": "Sept2023HAS;JULIET20Feb2020noncomparativeupdate/registry; actualdurableBaselbytes acquiredOct15",
+      "scope": "MatureadultDLBCLtisa evidence; notDutchpayment/localbrand/localcohort, finiteplatformadaptation only",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 40,
+      "pdfMetadata": {
+        "format": "PDF 1.7",
+        "title": "KYMRIAH 1,2 x 10^6 – 6 x 10^8 cellules,",
+        "author": "PERCHERON Romain",
+        "subject": "dispersion cellulaire pour perfusion",
+        "keywords": "tisagenlecleucel",
+        "creator": "Microsoft® Word pour Microsoft 365",
+        "producer": "Microsoft® Word pour Microsoft 365",
+        "creationDate": "D:20231010112442+02'00'",
+        "modDate": "D:20231010112442+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "newHTTPRequest": false,
+      "independentAlmereAdaptationRequired": true,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S01",
+      "url": "https://www.flevoziekenhuis.nl/organisatie/publicaties/",
+      "path": "flevo-publications.html",
+      "scope": "2025annual/providerquality truehrefs only",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 110201,
+      "sha256": "3d098d71adeabfcb66a6810d9063ab90892bc9951d208ffa6b1da17c9831368a",
+      "localPath": "originals/flevo-publications.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:25:06.806394+00:00",
+      "routeIndexes": [0],
+      "resolvedUrl": "https://www.flevoziekenhuis.nl/organisatie/publicaties/",
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:25:08 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S02",
+      "url": "https://www.zuiderzeeland.nl/app/uploads/2025/10/Bijlage-a.-Bestuursrapportage-2025_definitief.pdf",
+      "path": "waterboard-interim2025.pdf",
+      "scope": "actual2025polderflood/pump/poweroperations andresidual; regionnotFUA",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 1016371,
+      "sha256": "21622007e76ab0a43e135b7e1e29b8d4c97274358a99f12b9539dbd920178460",
+      "localPath": "originals/waterboard-interim2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:25:09.130072+00:00",
+      "routeIndexes": [1],
+      "resolvedUrl": "https://www.zuiderzeeland.nl/app/uploads/2025/10/Bijlage-a.-Bestuursrapportage-2025_definitief.pdf",
+      "contentType": null,
+      "headers": {
+        "date": "Thu, 15 Oct 2026 20:25:11 GMT",
+        "content-type": "application/pdf",
+        "content-length": "1016371",
+        "last-modified": "Thu, 30 Oct 2025 09:39:10 GMT",
+        "etag": "\"6903323e-f8233\""
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S03",
+      "url": "https://www.almere.nl/bestuur-en-organisatie/wet-open-overheid-woo/jaarplannen-en-jaarverslagen",
+      "path": "city-annual-index.html",
+      "scope": "officialmunicipalityactualreportlocator",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 14308,
+      "sha256": "0a566ca3d1bbacf61387ab88a9518f649a5e38c04856b4cad6669e2dbb0558a6",
+      "localPath": "originals/city-annual-index.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:25:12.254730+00:00",
+      "routeIndexes": [2],
+      "resolvedUrl": "https://www.almere.nl/bestuur-en-organisatie/wet-open-overheid-woo/jaarplannen-en-jaarverslagen",
+      "contentType": null,
+      "headers": {
+        "date": "Thu, 15 Oct 2026 20:25:14 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "14308",
+        "etag": "\"584200c40aaf1ceb17dabbb009440c44\""
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S04",
+      "url": "https://www.flevoziekenhuis.nl/media/rovdp35k/flevoziekenhuis-jaarverslag-2025.pdf",
+      "path": "flevo-annual2025.pdf",
+      "scope": "actual2025necessarycarequality/continuity/ordinarypayer/referralnotFUAallpatients",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 3582407,
+      "sha256": "79356a7f257dbecb94f03450aae9fd7a953d0f0c01255b3da34a7572cc649732",
+      "localPath": "originals/flevo-annual2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:26:19.848074+00:00",
+      "routeIndexes": [3],
+      "resolvedUrl": "https://www.flevoziekenhuis.nl/media/rovdp35k/flevoziekenhuis-jaarverslag-2025.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:26:21 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "3582407",
+        "ETag": "\"1dd3623b07295c7\"",
+        "Last-Modified": "Thu, 27 Aug 2026 12:58:00 GMT"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S05",
+      "url": "https://almere.pcportal.nl/",
+      "path": "city-portal.html",
+      "scope": "actualcity2025reporthrefs notscorebyindex",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 89783,
+      "sha256": "d9becdca254444fe2ef8588e11fd4ba5b2a59fb5bb399f98b3ebd8928820bed3",
+      "localPath": "originals/city-portal.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:26:22.984229+00:00",
+      "routeIndexes": [4],
+      "resolvedUrl": "https://almere.pcportal.nl/",
+      "contentType": "text/html",
+      "headers": {
+        "Content-Length": "89783",
+        "Content-Type": "text/html",
+        "Date": "Thu, 15 Oct 2026 20:26:24 GMT",
+        "ETag": "\"1e3e024f357dd1:0\"",
+        "Last-Modified": "Fri, 09 Oct 2026 13:36:09 GMT"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S06",
+      "url": "https://publicaties.vitens.nl/jaarverslag-2025/bestuursverslag/onze-doelstellingen-en-resultaten",
+      "path": "vitens-results2025.html",
+      "scope": "actualwaterservicequality/interruptions/ordinarynetnotwholeFUA",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 646960,
+      "sha256": "e868248973c9440e2fdc778d3a0f12d078cd2f122f3e0eb03bebe862644f0cda",
+      "localPath": "originals/vitens-results2025.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:26:25.833826+00:00",
+      "routeIndexes": [5],
+      "resolvedUrl": "https://publicaties.vitens.nl/jaarverslag-2025/bestuursverslag/onze-doelstellingen-en-resultaten",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:26:27 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S07",
+      "url": "https://almere.jaarverslag-2025.nl",
+      "path": "city-report2025-index.html",
+      "scope": "officialcityreportgenuinehrefs notscorebydirectory",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 28876,
+      "sha256": "c3bdd0860123cb1f1672228e6961766cf51177aa97f51c83d2b468f3c3d63288",
+      "localPath": "originals/city-report2025-index.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:27:45.789609+00:00",
+      "routeIndexes": [6],
+      "resolvedUrl": "https://almere.jaarverslag-2025.nl",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:27:47 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "28876",
+        "ETag": "\"9da090481eddd1:0\"",
+        "Last-Modified": "Mon, 06 Jul 2026 08:06:00 GMT"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S08",
+      "url": "https://www.almere.nl/duurzaamheid/energie/vol-stroomnet-netcongestie",
+      "path": "city-grid-congestion.html",
+      "scope": "actualenergyconstraints/responses anddates notfuturecompleted",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 28778,
+      "sha256": "1f63e527e16767ddb82f8d63ddbb2d2ddb26ed6d72e67d20323ec694b2ec7326",
+      "localPath": "originals/city-grid-congestion.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:27:48.255289+00:00",
+      "routeIndexes": [7],
+      "resolvedUrl": "https://www.almere.nl/duurzaamheid/energie/vol-stroomnet-netcongestie",
+      "contentType": null,
+      "headers": {
+        "date": "Thu, 15 Oct 2026 20:27:49 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "28778",
+        "etag": "\"cac69e47b026510c1bced5fb69561c92\""
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S09",
+      "url": "https://www.voedselbankalmere.nl/attachments/Bestuurlijk_jaarverslag_Voedselbank_Almere_2024_versie_13062025.pdf",
+      "path": "foodbank-annual2024.pdf",
+      "scope": "VBA actual food assistance and constraints; cover version16June2025 differs from filename13June2025; not VLA combined helpers or median eligibility",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 902044,
+      "sha256": "f822d864040a2eef0cf0698a01c0cc0df3fe2ba7965dffdf213f2a41d836034e",
+      "localPath": "originals/foodbank-annual2024.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:27:50.288992+00:00",
+      "routeIndexes": [8],
+      "resolvedUrl": "https://www.voedselbankalmere.nl/attachments/Bestuurlijk_jaarverslag_Voedselbank_Almere_2024_versie_13062025.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:27:52 GMT",
+        "Last-Modified": "Wed, 23 Jul 2025 15:16:24 GMT",
+        "ETag": "\"dc39c-63a9a31265ea2\"",
+        "Content-Length": "902044",
+        "Content-Type": "application/pdf"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S10",
+      "url": "https://almere.jaarverslag-2025.nl/assets/docs/PROGRAMMAREKENING_2025.pdf",
+      "path": "city-annual2025.pdf",
+      "scope": "actualmunicipalprotection/resourcehelp/industrialknowledgeuse andresidual",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 5949668,
+      "sha256": "8c72ef52670021c5fa18bd9a316c94b2ad4da2dbf23ef8c522576dfc1f724bcc",
+      "localPath": "originals/city-annual2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:29:34.394450+00:00",
+      "routeIndexes": [9],
+      "resolvedUrl": "https://almere.jaarverslag-2025.nl/assets/docs/PROGRAMMAREKENING_2025.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:29:35 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "5949668",
+        "ETag": "\"e0f32b51bbadd1:0\"",
+        "Last-Modified": "Fri, 03 Jul 2026 07:12:32 GMT"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S11",
+      "url": "https://publicaties.vitens.nl/jaarverslag-2025/duurzaamheidsverklaring/sociaal",
+      "path": "vitens-social2025.html",
+      "scope": "actualquality/interruptions/customerincidentassistance andscope section3.3.3onlyifbodyread",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 739197,
+      "sha256": "267db7c3514cdbb8c220befd5c334aeb48489fd6ac8a292231bf226f58801b78",
+      "localPath": "originals/vitens-social2025.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:29:37.909952+00:00",
+      "routeIndexes": [10],
+      "resolvedUrl": "https://publicaties.vitens.nl/jaarverslag-2025/duurzaamheidsverklaring/sociaal",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:29:39 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S12",
+      "url": "https://www.amsterdamumc.org/nl/vandaag/samen-met-flevoziekenhuis-leveren-we-al-15-jaar-de-juiste-zorg-op-de-juiste-plek",
+      "path": "umc-flevo-alliance2024.html",
+      "scope": "actualtwohospitalreferral/care/sitejointwork notsameFUAorCARTproductpayment",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 51442,
+      "sha256": "ed17fa3dc00e2f31efc2e36a500dcae14e9f87ee6cb703e2692ca8f27a45ab09",
+      "localPath": "originals/umc-flevo-alliance2024.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:29:40.609954+00:00",
+      "routeIndexes": [11],
+      "resolvedUrl": "https://www.amsterdamumc.org/nl/vandaag/samen-met-flevoziekenhuis-leveren-we-al-15-jaar-de-juiste-zorg-op-de-juiste-plek",
+      "contentType": "text/html;charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:29:43 GMT",
+        "Last-Modified": "Thu, 15 Oct 2026 20:29:43 GMT",
+        "Content-Type": "text/html;charset=utf-8"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S13",
+      "url": "https://www.zorginstituutnederland.nl/documenten/2025/02/24/vergoeding-car-t-behandelingen-bij-kanker",
+      "path": "zin-cart-coverage2025.html",
+      "scope": "priorlocatedsuccessfulactualpayeroriginal oldtmplost notauthrestoration; products/diseases reimbursedvsadvice/research",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 229251,
+      "sha256": "c4d2bf1545ab2583bc8c3dda9337efe04661e109ba67542a1e2ead0d130472f8",
+      "localPath": "originals/zin-cart-coverage2025.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:29:53.215156+00:00",
+      "routeIndexes": [12],
+      "resolvedUrl": "https://www.zorginstituutnederland.nl/documenten/2025/02/24/vergoeding-car-t-behandelingen-bij-kanker",
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Thu, 15 Oct 2026 20:29:54 GMT"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S14",
+      "url": "https://www.amsterdamumc.org/nl/vandaag/je-eigen-afweercellen-als-medicijn",
+      "path": "umc-cart2021.html",
+      "scope": "realhistoric45adultlymphomaoutside-trialpath+manufacturemonitoring/risks, notAlmerecohort",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 59257,
+      "sha256": "dd8d8848a007b862bf41342af0cb9bfa02e3f099e469de383e42730c9c6651c3",
+      "localPath": "originals/umc-cart2021.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:29:55.629759+00:00",
+      "routeIndexes": [13],
+      "resolvedUrl": "https://www.amsterdamumc.org/nl/vandaag/je-eigen-afweercellen-als-medicijn",
+      "contentType": "text/html;charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:29:57 GMT",
+        "Last-Modified": "Thu, 15 Oct 2026 20:29:57 GMT",
+        "Content-Type": "text/html;charset=utf-8"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S15",
+      "url": "https://www.amsterdamumc.nl/nl/patienteninformatie/informatie-over-rechten-en-plichten-kosten-en-betaling-van-uw-behandeling-1",
+      "path": "umc-patient-payment.html",
+      "scope": "actualordinaryinsurance/referral/deductible/conditions notfreeeveryproduct orforeignvisitor",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 69370,
+      "sha256": "c5f986ed7a77536fbd4c8cc10d2fb22044306c28aab1efbeec91d3195bd04f22",
+      "localPath": "originals/umc-patient-payment.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:29:57.789967+00:00",
+      "routeIndexes": [14],
+      "resolvedUrl": "https://www.amsterdamumc.nl/nl/patienteninformatie/informatie-over-rechten-en-plichten-kosten-en-betaling-van-uw-behandeling-1",
+      "contentType": "text/html;charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:29:59 GMT",
+        "Last-Modified": "Thu, 15 Oct 2026 20:29:59 GMT",
+        "Content-Type": "text/html;charset=utf-8"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S16",
+      "url": "https://www.zuiderzeeland.nl/app/uploads/2025/06/Jaarstukken_2024_vkl_web.pdf",
+      "path": "waterboard-annual2024.pdf",
+      "scope": "actualpolderpump/energydependence andprotectionnotallFUA",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 1431945,
+      "sha256": "625b61ac0427ef328e3c18af388c46de2988d337656664963aec1ff1a089d4e5",
+      "localPath": "originals/waterboard-annual2024.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:31:01.249150+00:00",
+      "routeIndexes": [15],
+      "resolvedUrl": "https://www.zuiderzeeland.nl/app/uploads/2025/06/Jaarstukken_2024_vkl_web.pdf",
+      "contentType": null,
+      "headers": {
+        "date": "Thu, 15 Oct 2026 20:31:02 GMT",
+        "content-type": "application/pdf",
+        "content-length": "1431945",
+        "last-modified": "Tue, 17 Jun 2025 10:01:33 GMT",
+        "etag": "\"68513cfd-15d989\""
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S17",
+      "url": "https://www.almere.nl/fileadmin/files/almere/veiligheid/1e_voortgangsrapportage_veiligheidsagenda_2023-2026.pdf",
+      "path": "safety-progress2025.pdf",
+      "scope": "First safety progress report, chiefly2023 observation; local filename2025 is misleading, not2025 outcomes; bounded context only",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 3440345,
+      "sha256": "2b821cdec0cd26f83a6cbd4e1df5d2f1af27d3ffff03dcd7a69c6b0d4d1d4aa4",
+      "localPath": "originals/safety-progress2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:31:03.875518+00:00",
+      "routeIndexes": [16],
+      "resolvedUrl": "https://www.almere.nl/fileadmin/files/almere/veiligheid/1e_voortgangsrapportage_veiligheidsagenda_2023-2026.pdf",
+      "contentType": null,
+      "headers": {
+        "date": "Thu, 15 Oct 2026 20:31:06 GMT",
+        "content-type": "application/pdf",
+        "content-length": "3440345",
+        "last-modified": "Thu, 27 Nov 2025 08:44:14 GMT",
+        "etag": "\"69280f5e-347ed9\""
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    }
+  ],
+  "globalRankingEligible": false,
+  "supportedExclusions": 0,
+  "qualified32Threshold": null,
+  "candidateUniverseRetained": 9031,
+  "newAndUnmatchedCompetitorsRetained": true,
+  "sourceName": "Almere",
+  "publishedInputCommit": "eb3b4ca02aba7fd105592a5f1a23adbd10d3ccec",
+  "sourceManifest": [
+    {
+      "id": "R01",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_es.htm",
+      "path": "R01-eu-workers.html",
+      "localPath": "originals/R01-eu-workers.html",
+      "originalBytes": 153770,
+      "sha256": "1555b5f65525917eee8fab3fef570e9a27b5d26dab38779b5bd26659b2bfb34f",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/eindhoven-full42/originals/R01-eu-workers.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationAndVersion": "EU workerconditionalresidence;lastchecked19Aug2026; originalretrievalmetadataunavailable notinvented",
+      "scope": "Independently read common EU personal rules; Dutch citizen and Almere adaptation, no Eindhoven score copied",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "newHTTPRequest": false,
+      "independentAlmereAdaptationRequired": true,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R02",
+      "url": "https://europa.eu/youreurope/citizens/consumers/financial-products-and-services/payments-transfers-cheques/index_en.htm",
+      "path": "R02-eu-payments.html",
+      "localPath": "originals/R02-eu-payments.html",
+      "originalBytes": 155296,
+      "sha256": "0a457237f62980c579bc7dba314552421cb5b0fa826dc830b0e35bb42d458ee8",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/eindhoven-full42/originals/R02-eu-payments.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationAndVersion": "Lastchecked28Apr2026, capturedOct15 durableMunich",
+      "scope": "Independently read common EU personal rules; Dutch citizen and Almere adaptation, no Eindhoven score copied",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "newHTTPRequest": false,
+      "independentAlmereAdaptationRequired": true,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R03",
+      "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/mobile-roaming-costs/index_en.htm",
+      "path": "R03-eu-roaming.html",
+      "localPath": "originals/R03-eu-roaming.html",
+      "originalBytes": 155071,
+      "sha256": "e2e15e5e0521db23b3d99d06fa691c557b5ebdb63b09aa5ccb50f58af9a8f0d4",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/eindhoven-full42/originals/R03-eu-roaming.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationAndVersion": "Lastchecked7Jan2026,capturedOct15durableLyon",
+      "scope": "Independently read common EU personal rules; Dutch citizen and Almere adaptation, no Eindhoven score copied",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "newHTTPRequest": false,
+      "independentAlmereAdaptationRequired": true,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R04",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "path": "has-kymriah-2023.pdf",
+      "localPath": "originals/has-kymriah-2023.pdf",
+      "originalBytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/eindhoven-full42/originals/has-kymriah-2023.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationAndVersion": "Sept2023HAS;JULIET20Feb2020noncomparativeupdate/registry; actualdurableBaselbytes acquiredOct15",
+      "scope": "MatureadultDLBCLtisa evidence; notDutchpayment/localbrand/localcohort, finiteplatformadaptation only",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 40,
+      "pdfMetadata": {
+        "format": "PDF 1.7",
+        "title": "KYMRIAH 1,2 x 10^6 – 6 x 10^8 cellules,",
+        "author": "PERCHERON Romain",
+        "subject": "dispersion cellulaire pour perfusion",
+        "keywords": "tisagenlecleucel",
+        "creator": "Microsoft® Word pour Microsoft 365",
+        "producer": "Microsoft® Word pour Microsoft 365",
+        "creationDate": "D:20231010112442+02'00'",
+        "modDate": "D:20231010112442+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "newHTTPRequest": false,
+      "independentAlmereAdaptationRequired": true,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S01",
+      "url": "https://www.flevoziekenhuis.nl/organisatie/publicaties/",
+      "path": "flevo-publications.html",
+      "scope": "2025annual/providerquality truehrefs only",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 110201,
+      "sha256": "3d098d71adeabfcb66a6810d9063ab90892bc9951d208ffa6b1da17c9831368a",
+      "localPath": "originals/flevo-publications.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:25:06.806394+00:00",
+      "routeIndexes": [0],
+      "resolvedUrl": "https://www.flevoziekenhuis.nl/organisatie/publicaties/",
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:25:08 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S02",
+      "url": "https://www.zuiderzeeland.nl/app/uploads/2025/10/Bijlage-a.-Bestuursrapportage-2025_definitief.pdf",
+      "path": "waterboard-interim2025.pdf",
+      "scope": "actual2025polderflood/pump/poweroperations andresidual; regionnotFUA",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 1016371,
+      "sha256": "21622007e76ab0a43e135b7e1e29b8d4c97274358a99f12b9539dbd920178460",
+      "localPath": "originals/waterboard-interim2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:25:09.130072+00:00",
+      "routeIndexes": [1],
+      "resolvedUrl": "https://www.zuiderzeeland.nl/app/uploads/2025/10/Bijlage-a.-Bestuursrapportage-2025_definitief.pdf",
+      "contentType": null,
+      "headers": {
+        "date": "Thu, 15 Oct 2026 20:25:11 GMT",
+        "content-type": "application/pdf",
+        "content-length": "1016371",
+        "last-modified": "Thu, 30 Oct 2025 09:39:10 GMT",
+        "etag": "\"6903323e-f8233\""
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S03",
+      "url": "https://www.almere.nl/bestuur-en-organisatie/wet-open-overheid-woo/jaarplannen-en-jaarverslagen",
+      "path": "city-annual-index.html",
+      "scope": "officialmunicipalityactualreportlocator",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 14308,
+      "sha256": "0a566ca3d1bbacf61387ab88a9518f649a5e38c04856b4cad6669e2dbb0558a6",
+      "localPath": "originals/city-annual-index.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:25:12.254730+00:00",
+      "routeIndexes": [2],
+      "resolvedUrl": "https://www.almere.nl/bestuur-en-organisatie/wet-open-overheid-woo/jaarplannen-en-jaarverslagen",
+      "contentType": null,
+      "headers": {
+        "date": "Thu, 15 Oct 2026 20:25:14 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "14308",
+        "etag": "\"584200c40aaf1ceb17dabbb009440c44\""
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S04",
+      "url": "https://www.flevoziekenhuis.nl/media/rovdp35k/flevoziekenhuis-jaarverslag-2025.pdf",
+      "path": "flevo-annual2025.pdf",
+      "scope": "actual2025necessarycarequality/continuity/ordinarypayer/referralnotFUAallpatients",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 3582407,
+      "sha256": "79356a7f257dbecb94f03450aae9fd7a953d0f0c01255b3da34a7572cc649732",
+      "localPath": "originals/flevo-annual2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:26:19.848074+00:00",
+      "routeIndexes": [3],
+      "resolvedUrl": "https://www.flevoziekenhuis.nl/media/rovdp35k/flevoziekenhuis-jaarverslag-2025.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:26:21 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "3582407",
+        "ETag": "\"1dd3623b07295c7\"",
+        "Last-Modified": "Thu, 27 Aug 2026 12:58:00 GMT"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S05",
+      "url": "https://almere.pcportal.nl/",
+      "path": "city-portal.html",
+      "scope": "actualcity2025reporthrefs notscorebyindex",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 89783,
+      "sha256": "d9becdca254444fe2ef8588e11fd4ba5b2a59fb5bb399f98b3ebd8928820bed3",
+      "localPath": "originals/city-portal.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:26:22.984229+00:00",
+      "routeIndexes": [4],
+      "resolvedUrl": "https://almere.pcportal.nl/",
+      "contentType": "text/html",
+      "headers": {
+        "Content-Length": "89783",
+        "Content-Type": "text/html",
+        "Date": "Thu, 15 Oct 2026 20:26:24 GMT",
+        "ETag": "\"1e3e024f357dd1:0\"",
+        "Last-Modified": "Fri, 09 Oct 2026 13:36:09 GMT"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S06",
+      "url": "https://publicaties.vitens.nl/jaarverslag-2025/bestuursverslag/onze-doelstellingen-en-resultaten",
+      "path": "vitens-results2025.html",
+      "scope": "actualwaterservicequality/interruptions/ordinarynetnotwholeFUA",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 646960,
+      "sha256": "e868248973c9440e2fdc778d3a0f12d078cd2f122f3e0eb03bebe862644f0cda",
+      "localPath": "originals/vitens-results2025.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:26:25.833826+00:00",
+      "routeIndexes": [5],
+      "resolvedUrl": "https://publicaties.vitens.nl/jaarverslag-2025/bestuursverslag/onze-doelstellingen-en-resultaten",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:26:27 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S07",
+      "url": "https://almere.jaarverslag-2025.nl",
+      "path": "city-report2025-index.html",
+      "scope": "officialcityreportgenuinehrefs notscorebydirectory",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 28876,
+      "sha256": "c3bdd0860123cb1f1672228e6961766cf51177aa97f51c83d2b468f3c3d63288",
+      "localPath": "originals/city-report2025-index.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:27:45.789609+00:00",
+      "routeIndexes": [6],
+      "resolvedUrl": "https://almere.jaarverslag-2025.nl",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:27:47 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "28876",
+        "ETag": "\"9da090481eddd1:0\"",
+        "Last-Modified": "Mon, 06 Jul 2026 08:06:00 GMT"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S08",
+      "url": "https://www.almere.nl/duurzaamheid/energie/vol-stroomnet-netcongestie",
+      "path": "city-grid-congestion.html",
+      "scope": "actualenergyconstraints/responses anddates notfuturecompleted",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 28778,
+      "sha256": "1f63e527e16767ddb82f8d63ddbb2d2ddb26ed6d72e67d20323ec694b2ec7326",
+      "localPath": "originals/city-grid-congestion.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:27:48.255289+00:00",
+      "routeIndexes": [7],
+      "resolvedUrl": "https://www.almere.nl/duurzaamheid/energie/vol-stroomnet-netcongestie",
+      "contentType": null,
+      "headers": {
+        "date": "Thu, 15 Oct 2026 20:27:49 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "28778",
+        "etag": "\"cac69e47b026510c1bced5fb69561c92\""
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S09",
+      "url": "https://www.voedselbankalmere.nl/attachments/Bestuurlijk_jaarverslag_Voedselbank_Almere_2024_versie_13062025.pdf",
+      "path": "foodbank-annual2024.pdf",
+      "scope": "VBA actual food assistance and constraints; cover version16June2025 differs from filename13June2025; not VLA combined helpers or median eligibility",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 902044,
+      "sha256": "f822d864040a2eef0cf0698a01c0cc0df3fe2ba7965dffdf213f2a41d836034e",
+      "localPath": "originals/foodbank-annual2024.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:27:50.288992+00:00",
+      "routeIndexes": [8],
+      "resolvedUrl": "https://www.voedselbankalmere.nl/attachments/Bestuurlijk_jaarverslag_Voedselbank_Almere_2024_versie_13062025.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:27:52 GMT",
+        "Last-Modified": "Wed, 23 Jul 2025 15:16:24 GMT",
+        "ETag": "\"dc39c-63a9a31265ea2\"",
+        "Content-Length": "902044",
+        "Content-Type": "application/pdf"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S10",
+      "url": "https://almere.jaarverslag-2025.nl/assets/docs/PROGRAMMAREKENING_2025.pdf",
+      "path": "city-annual2025.pdf",
+      "scope": "actualmunicipalprotection/resourcehelp/industrialknowledgeuse andresidual",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 5949668,
+      "sha256": "8c72ef52670021c5fa18bd9a316c94b2ad4da2dbf23ef8c522576dfc1f724bcc",
+      "localPath": "originals/city-annual2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:29:34.394450+00:00",
+      "routeIndexes": [9],
+      "resolvedUrl": "https://almere.jaarverslag-2025.nl/assets/docs/PROGRAMMAREKENING_2025.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:29:35 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "5949668",
+        "ETag": "\"e0f32b51bbadd1:0\"",
+        "Last-Modified": "Fri, 03 Jul 2026 07:12:32 GMT"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S11",
+      "url": "https://publicaties.vitens.nl/jaarverslag-2025/duurzaamheidsverklaring/sociaal",
+      "path": "vitens-social2025.html",
+      "scope": "actualquality/interruptions/customerincidentassistance andscope section3.3.3onlyifbodyread",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 739197,
+      "sha256": "267db7c3514cdbb8c220befd5c334aeb48489fd6ac8a292231bf226f58801b78",
+      "localPath": "originals/vitens-social2025.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:29:37.909952+00:00",
+      "routeIndexes": [10],
+      "resolvedUrl": "https://publicaties.vitens.nl/jaarverslag-2025/duurzaamheidsverklaring/sociaal",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:29:39 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S12",
+      "url": "https://www.amsterdamumc.org/nl/vandaag/samen-met-flevoziekenhuis-leveren-we-al-15-jaar-de-juiste-zorg-op-de-juiste-plek",
+      "path": "umc-flevo-alliance2024.html",
+      "scope": "actualtwohospitalreferral/care/sitejointwork notsameFUAorCARTproductpayment",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 51442,
+      "sha256": "ed17fa3dc00e2f31efc2e36a500dcae14e9f87ee6cb703e2692ca8f27a45ab09",
+      "localPath": "originals/umc-flevo-alliance2024.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:29:40.609954+00:00",
+      "routeIndexes": [11],
+      "resolvedUrl": "https://www.amsterdamumc.org/nl/vandaag/samen-met-flevoziekenhuis-leveren-we-al-15-jaar-de-juiste-zorg-op-de-juiste-plek",
+      "contentType": "text/html;charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:29:43 GMT",
+        "Last-Modified": "Thu, 15 Oct 2026 20:29:43 GMT",
+        "Content-Type": "text/html;charset=utf-8"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S13",
+      "url": "https://www.zorginstituutnederland.nl/documenten/2025/02/24/vergoeding-car-t-behandelingen-bij-kanker",
+      "path": "zin-cart-coverage2025.html",
+      "scope": "priorlocatedsuccessfulactualpayeroriginal oldtmplost notauthrestoration; products/diseases reimbursedvsadvice/research",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 229251,
+      "sha256": "c4d2bf1545ab2583bc8c3dda9337efe04661e109ba67542a1e2ead0d130472f8",
+      "localPath": "originals/zin-cart-coverage2025.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:29:53.215156+00:00",
+      "routeIndexes": [12],
+      "resolvedUrl": "https://www.zorginstituutnederland.nl/documenten/2025/02/24/vergoeding-car-t-behandelingen-bij-kanker",
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Thu, 15 Oct 2026 20:29:54 GMT"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S14",
+      "url": "https://www.amsterdamumc.org/nl/vandaag/je-eigen-afweercellen-als-medicijn",
+      "path": "umc-cart2021.html",
+      "scope": "realhistoric45adultlymphomaoutside-trialpath+manufacturemonitoring/risks, notAlmerecohort",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 59257,
+      "sha256": "dd8d8848a007b862bf41342af0cb9bfa02e3f099e469de383e42730c9c6651c3",
+      "localPath": "originals/umc-cart2021.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:29:55.629759+00:00",
+      "routeIndexes": [13],
+      "resolvedUrl": "https://www.amsterdamumc.org/nl/vandaag/je-eigen-afweercellen-als-medicijn",
+      "contentType": "text/html;charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:29:57 GMT",
+        "Last-Modified": "Thu, 15 Oct 2026 20:29:57 GMT",
+        "Content-Type": "text/html;charset=utf-8"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S15",
+      "url": "https://www.amsterdamumc.nl/nl/patienteninformatie/informatie-over-rechten-en-plichten-kosten-en-betaling-van-uw-behandeling-1",
+      "path": "umc-patient-payment.html",
+      "scope": "actualordinaryinsurance/referral/deductible/conditions notfreeeveryproduct orforeignvisitor",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 69370,
+      "sha256": "c5f986ed7a77536fbd4c8cc10d2fb22044306c28aab1efbeec91d3195bd04f22",
+      "localPath": "originals/umc-patient-payment.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:29:57.789967+00:00",
+      "routeIndexes": [14],
+      "resolvedUrl": "https://www.amsterdamumc.nl/nl/patienteninformatie/informatie-over-rechten-en-plichten-kosten-en-betaling-van-uw-behandeling-1",
+      "contentType": "text/html;charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 20:29:59 GMT",
+        "Last-Modified": "Thu, 15 Oct 2026 20:29:59 GMT",
+        "Content-Type": "text/html;charset=utf-8"
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S16",
+      "url": "https://www.zuiderzeeland.nl/app/uploads/2025/06/Jaarstukken_2024_vkl_web.pdf",
+      "path": "waterboard-annual2024.pdf",
+      "scope": "actualpolderpump/energydependence andprotectionnotallFUA",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 1431945,
+      "sha256": "625b61ac0427ef328e3c18af388c46de2988d337656664963aec1ff1a089d4e5",
+      "localPath": "originals/waterboard-annual2024.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:31:01.249150+00:00",
+      "routeIndexes": [15],
+      "resolvedUrl": "https://www.zuiderzeeland.nl/app/uploads/2025/06/Jaarstukken_2024_vkl_web.pdf",
+      "contentType": null,
+      "headers": {
+        "date": "Thu, 15 Oct 2026 20:31:02 GMT",
+        "content-type": "application/pdf",
+        "content-length": "1431945",
+        "last-modified": "Tue, 17 Jun 2025 10:01:33 GMT",
+        "etag": "\"68513cfd-15d989\""
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S17",
+      "url": "https://www.almere.nl/fileadmin/files/almere/veiligheid/1e_voortgangsrapportage_veiligheidsagenda_2023-2026.pdf",
+      "path": "safety-progress2025.pdf",
+      "scope": "First safety progress report, chiefly2023 observation; local filename2025 is misleading, not2025 outcomes; bounded context only",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 3440345,
+      "sha256": "2b821cdec0cd26f83a6cbd4e1df5d2f1af27d3ffff03dcd7a69c6b0d4d1d4aa4",
+      "localPath": "originals/safety-progress2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:31:03.875518+00:00",
+      "routeIndexes": [16],
+      "resolvedUrl": "https://www.almere.nl/fileadmin/files/almere/veiligheid/1e_voortgangsrapportage_veiligheidsagenda_2023-2026.pdf",
+      "contentType": null,
+      "headers": {
+        "date": "Thu, 15 Oct 2026 20:31:06 GMT",
+        "content-type": "application/pdf",
+        "content-length": "3440345",
+        "last-modified": "Thu, 27 Nov 2025 08:44:14 GMT",
+        "etag": "\"69280f5e-347ed9\""
+      },
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S18",
+      "url": "https://www.amsterdamumc.nl/nl/rechten-plichten/locatie-amc/gecontracteerde-zorgverzekeraars.htm",
+      "path": "umc-contracted-insurers.html",
+      "scope": "Rootauthorizedlast18thleg fromactualS15href forordinarycoverage/budgetpolicyexceptions; nofollowifwouldexceed18",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": false,
+      "originalBytes": null,
+      "sha256": null,
+      "localPath": null,
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:35:50.692447+00:00",
+      "routeIndexes": [17],
+      "error": "18HTTPlegbudget_stoppedbeforeRequest"
+    }
+  ],
+  "privateSourceManifestSha256": "826dee19f2457cbe59286cd13123c92267e392ec84ba9c2ad2ecefa2e490b2fd",
+  "sourceAndStopLedger": {
+    "normalHTTPActualLegs": 18,
+    "normalLegLimit": 18,
+    "normalRequestsClosed": true,
+    "discoveryRounds": 2,
+    "queriesPerRound": [4, 4],
+    "discoveryClosed": true,
+    "validNewOriginals": 17,
+    "reusedValidOriginals": 4,
+    "validOriginalTotal": 21,
+    "providerFailuresThisResearch": 0,
+    "redirectIncomplete": [
+      {
+        "id": "S18",
+        "HTTP": 301,
+        "leg": 18,
+        "destinationNotRequested": true,
+        "meaning": "budget stopped before19th request; no original, diagnostic bytes only, no city capability penalty"
+      }
+    ],
+    "rawAndDiagnosticSeparation": "source-manifest has valid originals; http journal has all response bodies including legitimate301; headers are parsed dictionary not wire representation, duplicates may collapse.",
+    "inheritedLedgerFiles": ["inherited-stops.json", "inherited-dutch-failures.json"],
+    "specificPreservedStops": [
+      "ING main/news≥3 normal failures stopped; no alternateCDN",
+      "KPN explicit inherited stop",
+      "UMCG≥3 raw403 stopped",
+      "AmsterdamUMC specific failed CAR-T monitor PDF400 not retried/bypassed",
+      "Schiphol annualindex403 not retried",
+      "Amsterdam/Groningen failed municipality documents not retried",
+      "Dutch police two inherited normal403 preserved; no new police request",
+      "EC83/WHO topics closed; WIPO2026/DOJ/FBI/NHSEngland/UCLH and inherited others remain stopped",
+      "Skåne clinical three403/EON two403/VA SYD oldMayTLS retained, no request"
+    ],
+    "unknownHistoricalAlmereCounter": "unknown, neither zero nor whole-city stop",
+    "successResetsFailures": false,
+    "newCityResetsFailures": false,
+    "noBypassOrRetry": true,
+    "processDeviations": [
+      "Preparatory batch04 anticipated section3.3.3 was not observed href; assertion failed before any HTTP, then actual observed social section chosen; no guessed request.",
+      "S09 filename13June differs cover16June2025; cover version used.",
+      "S17 stored filename2025 but original first-progress observation mostly2023; corrected role, not current outcome.",
+      "S18 local extract/read attempted missing original after301 budget stop: localFileNotFound only, no newHTTP/repair request."
+    ],
+    "historicalCutoffBytesAuthenticated": false,
+    "toolTextIndex": "tooltext-index.json",
+    "webOnlyScoringFacts": []
+  },
+  "failedSourceSnapshots": [
+    {
+      "id": "S18",
+      "url": "https://www.amsterdamumc.nl/nl/rechten-plichten/locatie-amc/gecontracteerde-zorgverzekeraars.htm",
+      "path": "umc-contracted-insurers.html",
+      "scope": "Rootauthorizedlast18thleg fromactualS15href forordinarycoverage/budgetpolicyexceptions; nofollowifwouldexceed18",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": false,
+      "originalBytes": null,
+      "sha256": null,
+      "localPath": null,
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T20:35:50.692447+00:00",
+      "routeIndexes": [17],
+      "error": "18HTTPlegbudget_stoppedbeforeRequest"
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allCandidatesChecked": 9031,
+    "repairCount": 136,
+    "targetWkbSha256": "d1d9553494d7ca9ff8da8c66b4a8c918e66219bf4e2b047ece343d1f76cf540e",
+    "targetAreaKm2": 420,
+    "points": [
+      {
+        "label": "Almere centre analyst approximate only",
+        "longitude": 5.22,
+        "latitude": 52.37,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 1956,
+            "name": "Almere"
+          }
+        ]
+      },
+      {
+        "label": "Flevo streetblock reference analyst approximate only",
+        "longitude": 5.223,
+        "latitude": 52.366,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 1956,
+            "name": "Almere"
+          }
+        ]
+      },
+      {
+        "label": "AlmereBuiten station vicinity analyst approximate only",
+        "longitude": 5.278,
+        "latitude": 52.395,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 1956,
+            "name": "Almere"
+          }
+        ]
+      },
+      {
+        "label": "BlocqvanKuffeler vicinity analyst approximate only",
+        "longitude": 5.226,
+        "latitude": 52.416,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 1956,
+            "name": "Almere"
+          }
+        ]
+      },
+      {
+        "label": "Amsterdam centre comparator analyst approximate only",
+        "longitude": 4.895,
+        "latitude": 52.37,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 1427,
+            "name": "Amsterdam"
+          }
+        ]
+      },
+      {
+        "label": "Amsterdam AMC vicinity comparator analyst approximate only",
+        "longitude": 4.957,
+        "latitude": 52.294,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 1427,
+            "name": "Amsterdam"
+          }
+        ]
+      }
+    ],
+    "meaning": "Analyst approximate points only, not surveyed addresses, facility footprints, service coverage, residence, travel feasibility or administrative equivalence. Amsterdam complex treatment is cross-FUA."
+  },
+  "webReadSources": [
+    {
+      "round": 1,
+      "callId": "call_09b1bc083e4f4a1aa02e6661ef9f075a",
+      "sessionFile": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-02-01a13e5e-2ed3-76e3-b2b0-eefa22db05d9.jsonl",
+      "line": 5628,
+      "outputBlockZeroBased": 1,
+      "bytes": 32471,
+      "toolTextSha256": "ecb7690a19212e2ec6052273bad3d0967f803b3a4b33bf653e8d12b967b03be9",
+      "websiteOriginalSha256": null,
+      "role": "Root matched exact historical tool text; discovery only, not website original.",
+      "id": "W01",
+      "discoveryOnlyNotScoringSource": true
+    },
+    {
+      "round": 2,
+      "callId": "call_1779ac3e29e942a99455a3fc6065d94c",
+      "sessionFile": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-02-01a13e5e-2ed3-76e3-b2b0-eefa22db05d9.jsonl",
+      "line": 5649,
+      "outputBlockZeroBased": 1,
+      "bytes": 33053,
+      "toolTextSha256": "07b1bc5461dc1d5cd4284ee8dc12f874dc1995eb5c38c41f2aac241a12d335f3",
+      "websiteOriginalSha256": null,
+      "role": "Root matched exact historical tool text; discovery only, not website original.",
+      "id": "W02",
+      "discoveryOnlyNotScoringSource": true
+    }
+  ],
+  "rootScopeReview": {
+    "frozenPayloadFilesVerified": 136,
+    "validOriginalsVerified": 21,
+    "newOriginals": 17,
+    "reusedOriginals": 4,
+    "rootRawCopiesMatch": 21,
+    "rootPdfPageCount": 18,
+    "rootPdfPixelsViewed": [
+      {
+        "sourceId": "S02",
+        "physicalPage": 10
+      },
+      {
+        "sourceId": "S02",
+        "physicalPage": 17
+      },
+      {
+        "sourceId": "S02",
+        "physicalPage": 29
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 17
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 32
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 33
+      },
+      {
+        "sourceId": "S09",
+        "physicalPage": 6
+      },
+      {
+        "sourceId": "S09",
+        "physicalPage": 9
+      },
+      {
+        "sourceId": "S09",
+        "physicalPage": 10
+      },
+      {
+        "sourceId": "S10",
+        "physicalPage": 42
+      },
+      {
+        "sourceId": "S10",
+        "physicalPage": 43
+      },
+      {
+        "sourceId": "S10",
+        "physicalPage": 182
+      },
+      {
+        "sourceId": "S10",
+        "physicalPage": 29
+      },
+      {
+        "sourceId": "S10",
+        "physicalPage": 30
+      },
+      {
+        "sourceId": "S10",
+        "physicalPage": 61
+      },
+      {
+        "sourceId": "S16",
+        "physicalPage": 32
+      },
+      {
+        "sourceId": "S16",
+        "physicalPage": 67
+      },
+      {
+        "sourceId": "S17",
+        "physicalPage": 1
+      }
+    ],
+    "previouslyViewedSameShaHasPages": [
+      {
+        "sourceId": "R01",
+        "physicalPage": 14,
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/lund-root54/views/R01-p14.png",
+        "sha256": "b00b7b8967b62a2d7f47bbca25b27b6eafb58fed47335dbea851a6017444be6f",
+        "currentAlmereSourceId": "R04",
+        "originalSha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+        "reuseMeaning": "Previously root viewed; not newly viewed this Almere turn"
+      },
+      {
+        "sourceId": "R01",
+        "physicalPage": 24,
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/lund-root54/views/R01-p24.png",
+        "sha256": "79882bbc991f65383dd12c95705015e156fefd0268707c986b0cf1168f3c3e24",
+        "currentAlmereSourceId": "R04",
+        "originalSha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+        "reuseMeaning": "Previously root viewed; not newly viewed this Almere turn"
+      },
+      {
+        "sourceId": "R01",
+        "physicalPage": 25,
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/lund-root54/views/R01-p25.png",
+        "sha256": "b3b3756a990861a78fb5a7056fc1a6b6e87c7887ccf21c6867e27b5ecc9dd5a3",
+        "currentAlmereSourceId": "R04",
+        "originalSha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+        "reuseMeaning": "Previously root viewed; not newly viewed this Almere turn"
+      }
+    ],
+    "crossreviewPayloadsVerified": 37,
+    "crossreviewReportSha256": "51a4863954e4aa7182355a1d59172ebf6f81e570d10d42262cad934c1d46c5ed",
+    "crossreviewManifestSha256": "caeb6ba4a069629bae376d3f723b6e35969118fc516a2cd5a40693b9cb686219",
+    "crossreviewReadNewS15": false,
+    "rootNewNetworkRequests": 0,
+    "all9031GeometriesRecomputed": true,
+    "sixAnalystApproximatePointsRecomputed": true,
+    "original89WholeCaseBytesComparedToFixedGit": true,
+    "allOriginalBodiesFullyAudited": false,
+    "allPdfPagesViewed": false,
+    "cutoffSameBytesAuthenticated": false,
+    "sourceCountAffectsScore": false,
+    "fuaEqualsAdministrativeOrProviderArea": false,
+    "processDeviations": "Root and crossreview each initially readmanifest plus3raw=4files; root earlymixedHTML/PDFtextcounting unclear. Retained not replayed tohide. Subsequentmetadata+raw/selectedpage/render/viewcalls<=3. Researchlocalunobservedsectionassert andmissingS18bodyattemptdidnotcauseHTTP."
+  },
+  "sharedProviderAssumptionFollowup": {
+    "candidateId": 1427,
+    "dimensionId": "LON",
+    "newCounterevidence": "S15 Amsterdam UMC budget-policy exception",
+    "currentOldCaseModified": false,
+    "newEvidenceDepthIsNotCityCapabilityDifference": true,
+    "action": "Separate independent small-release review of previously accepted usual payer/access assumptions; no automatic downgrade."
+  },
+  "sensitivity": {
+    "PCS60": [45, 65],
+    "GSS60": [45, 65],
+    "ISR40": [39, 59],
+    "MED40": [39, 59],
+    "RES40": [40, 60],
+    "TEC40": [40, 60],
+    "PCSWithdrawn": [36, 71],
+    "GSSWithdrawn": [36, 71],
+    "ISRWithdrawn": [33, 68],
+    "MEDWithdrawn": [33, 68],
+    "RESWithdrawn": [36, 66],
+    "TECWithdrawn": [36, 66],
+    "LON60OnlyIfAccessBridgeAccepted": [48, 58],
+    "allJudgmentsWithdrawn": [0, 100]
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-almere-score-completion-review.md",
+    "sha256": "ab6fa6b22b3a1174802622fef0ba403a926430df83c07d5a1516e92183cf0490",
+    "researchReport": "docs/cci-almere-priority-review.md",
+    "researchReportSha256": "d32dcdb17271e9966714690e68898bc5644c0c16b81e3d809d31ae5d8694d706",
+    "researchFrozenReportSha256": "08cbfa7072910f2ec48e7a49460afee7296c84359a933cd3a71a14cbd5375c37",
+    "frozenManifestSha256": "abff0b1c4134ce0b8497a230bc0e8bf7a7fdcdf8bb54b401d94049efa1bcbef6",
+    "frozenFilesVerified": 136,
+    "validOriginalCount": 21,
+    "newValidOriginalCount": 17,
+    "reusedOriginalCount": 4,
+    "rootPdfPageCount": 18,
+    "crossReviewReportSha256": "51a4863954e4aa7182355a1d59172ebf6f81e570d10d42262cad934c1d46c5ed",
+    "crossReviewManifestSha256": "caeb6ba4a069629bae376d3f723b6e35969118fc516a2cd5a40693b9cb686219"
+  },
+  "reportBytes": 12960,
+  "reportSha256": "ab6fa6b22b3a1174802622fef0ba403a926430df83c07d5a1516e92183cf0490",
+  "limitations": [
+    "条件性研究判断，非全球排名或可靠排除界限；全部新旧竞争者保留，原89案逐字不变。",
+    "LON普通净付款/监护桥未接受，非因S18未跟随、逐剂票据缺失或所有保单必须完美；同提供者旧Amsterdam假设另待复核。",
+    "地域/观察期/当前延续、普通资源与护理净取得均可撤；未知不补中点、不重归一。",
+    "136冻结payload、21原件、根本轮18页及此前HAS三页目视记录，不等全部原文或所有居民质量已测。",
+    "18HTTP腿最后301仅诊断、未请求Location；0新失败不清零历史停止，截止同字节未认证。"
+  ]
+}

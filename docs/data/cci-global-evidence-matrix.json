@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 89,
+    "conditionalCaseCount": 90,
     "completeConditionalCaseCount": 19,
-    "partialCaseCount": 70,
-    "unassessedCount": 8942,
+    "partialCaseCount": 71,
+    "unassessedCount": 8941,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -750,8 +750,13 @@
       "sha256": "61ab10a179a3170323b58b0884e04300c0ae3a14ec37b547e2f80085deb0ac3d",
       "provenance": "cci-lund-score-completion-review.md",
       "provenanceSha256": "3fec8f7bef08e5fa52ee3c78b63fbd9248d9a5d47c2e34c1b6c2f2c632c65eab"
+    },
+    "cci-local-2026-almere-case.json": {
+      "sha256": "5863f37338528fbfba36291cdd703a84999ba0c6e1d14a705f694885d0fb639d",
+      "provenance": "cci-almere-score-completion-review.md",
+      "provenanceSha256": "ab6fa6b22b3a1174802622fef0ba403a926430df83c07d5a1516e92183cf0490"
     }
   },
-  "scriptSha256": "1ad572fbc1f3319b051ac57cf8f23b38e8ddae55340883987cceece23f197484",
-  "csvSha256": "fd0fec5b4215d02a67f017438a538f9c75e3185a71335c1f26a3490671875759"
+  "scriptSha256": "68f9ba06be7443026429db517b1d193a89b8b277a39c41ca13be8f20a8b395c0",
+  "csvSha256": "ca412e70ed3cb75bc39dc84f8ab416250ddb9d3f393148ca1e27340390e48ec0"
 }
