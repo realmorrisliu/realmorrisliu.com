@@ -4,12 +4,12 @@
   "name": "Eindhoven",
   "targetYear": 2026,
   "evidenceCutoff": "2026-10-10",
-  "retrievedOn": "2026-10-15",
+  "retrievedOn": "2026-10-16",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "residentEligibility": "2026 ordinary Dutch citizen, usually longterm local resident, local median income/usual effective coverage; no fixed age",
   "boundaryVersion": "GHS-FUA R2019A",
-  "evidenceReview": "cci-eindhoven-score-completion-review.md",
-  "publishedInputCommit": "c3844ad2b5378211b9534b01eac9c7c6a46b45c8",
+  "evidenceReview": "cci-eindhoven-res-completion-review.md",
+  "publishedInputCommit": "0a54cb0592d2de9fec3da6bcd07da3dcf90eb95f",
   "researchFrozenInputCommit": "f4dd35fd561910f3e8e7e74532e578201ea14360",
   "dimensions": [
     {
@@ -159,8 +159,8 @@
     {
       "id": "RES",
       "weight": 10,
-      "score": null,
-      "conditionalAlternatives": [],
+      "score": 60,
+      "conditionalAlternatives": [40],
       "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
       "subpillars": {
         "water": "partial",
@@ -168,9 +168,9 @@
         "energy": "partial",
         "supply_chain": "partial"
       },
-      "rationale": "供水数量/运行/平均预付费、应急与债务协作和真实食品免费选择/冷链有据；食物资格/3–4天覆盖/健康捐赠减少及电网约束均保留。尚不能把能源项目、企业接网帮助和贫困食品子集转成普通中位收入居民在帮助后的整体资源净方向，主未知。",
-      "assumption": "不是要求每户全成本账单或多数人受害；当前可有限判断水/食物帮助，但能源普通净取得和资源共同压力的方向未定，40/60均不主填。取证预算或失败不作负面能力事实。",
-      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "Actualnormal waterdelivery/householdadvance, free-choicefood/logistics and alreadydelivered housingenergymeasures plus J55reported directuse/billreduction support conditional60. Meanseligibility,3-4dayfoodhelp,hiddenpoverty,shrinkingdonations/ageingcoldchain,gridconnection andcommonsource pressures remain. J55/14 counts1489advice,notuniquehouseholds/successrate;post51budgetzero notunreconciledJ55totalzero.",
+      "assumption": "Root accepts actualnormal provision plus deliveredenergyrelief/results as a finite positivebasis for ordinarymedian residents usuallyobtaining/affording necessarywaterfoodenergy, with reasonablecity/provider-toFUA and2024/2025-to-cutoff continuity. Aid remainsconditional and targetresident notautomatically eligible; householdnetbundle/currentenergyreliability notdirectlymeasured. Importantresiduals remainbut are judged insufficient to make usualnecessaryresourceaccess materiallyconstrained. Reject anynecessary netaccess/income/scope/time bridge restores null/[]; actualimportant posthelp targetconstraints can support40 withoutmajority/dominance/shutdown. No midpoint,renormalisation,absence-of-failure60 orborrowedcityscore.",
+      "scoreStatus": "conditional_root_adopted",
       "coverageReview": [
         {
           "dimension": "RES",
@@ -186,7 +186,7 @@
           "status": "partial",
           "sourceIds": ["S08"],
           "fullyMeasured": false,
-          "note": "Actualfreechoice32kshopping/680endyearhouseholds, incomplete3–4dayhelp/means criteria; poorresidentssubset notmedianfoodsecuritymeasure."
+          "note": "Actualfreechoice32kshopping/680endyearhouseholds, incomplete3–4dayhelp/means criteria; poorresidentssubset notmedianfoodsecuritymeasure. Actualdonation/logistics/coldchain constraints and2026plans retained; medianincome notautomaticallyfoodbankeligible."
         },
         {
           "dimension": "RES",
@@ -194,7 +194,7 @@
           "status": "partial",
           "sourceIds": ["S05", "S12"],
           "fullyMeasured": false,
-          "note": "Operatingdistribution/actualenergycoaches andfirmcongestionhelp; newconnections andplannedhubs nothouseholdoutages; ordinarynetenergycost remainsundirected."
+          "note": "S05p273/274actualhousingfacilities4628rental/2263owned;2225advisedhouseholds;J55/14reported1489adviceleadingdirectenergyuse/billreduction. Countsnotunique/additive/successrate;effectcontrolnvt,expenditureRnotindependentauditofeffect;2024tablewindowsnot2026. Conditionalusualnetaccessbridgeexplicit."
         },
         {
           "dimension": "RES",
@@ -202,10 +202,11 @@
           "status": "partial",
           "sourceIds": ["S02", "S08", "S12"],
           "fullyMeasured": false,
-          "note": "Actualwateremergency/materialstock andfoodcoldchain/redistribution; healthyfooddonationsshrinking, industryrelocation/geopoliticaldependency notfullhouseholdcontinuity."
+          "note": "Actualwateremergency/materialstock andfoodcoldchain/redistribution; healthyfooddonationsshrinking, industryrelocation/geopoliticaldependency notfullhouseholdcontinuity. Ageingenergy-intensivecoldchain/conditionalreplacementfunding andvendorpressure retained; noallhouseholdbackupclaim."
         }
       ],
-      "sourceIds": ["S02", "S05", "S08", "S12"]
+      "sourceIds": ["S02", "S05", "S08", "S12"],
+      "alternativeRationales": "40 if actualfood/energy/supplyconstraints remainimportant for targetordinaryresidents afteractualhelp; reject netaccess/scope/continuitybridge ->null/[];80notadopted because strongerlowresidual/independentbackupjointsupport remainsunproven."
     },
     {
       "id": "MED",
@@ -413,9 +414,9 @@
       "sourceIds": ["S05", "S14", "S15", "R01", "R02", "R03"]
     }
   ],
-  "expectedConditionalTotal": null,
-  "knownWeightedSubtotal": 51.0,
-  "unresolvedScoreRange": [51.0, 61.0],
+  "expectedConditionalTotal": 57,
+  "knownWeightedSubtotal": 57,
+  "unresolvedScoreRange": [57, 57],
   "globalRankingEligible": false,
   "limitations": [
     "Bounded8D31review not31fullmeasurements; no ranking/Top32/probability/exclusion. All9031andunmatched retained.",
@@ -423,7 +424,8 @@
     "Institution/provider/21municipalityBrainport/city/FUAdiffer; MUMCexternal; 2015populationnotcurrentdenominator.",
     "Finiteusualaccess/netpayment/caregiving/adoption/time/geography assumptions withdrawtoUnknown.",
     "No globalproof/no datafailure penalty/no borrowedcityscores.",
-    "主任务验收优先：17PDF页及恢复警方工具正文独核，工具摘要非网站SHA；WIJ未留原正文横幅不评分，40不要求主导／多数／停摆，TEC保留40／80。原79案整文件不变。"
+    "主任务验收优先：17PDF页及恢复警方工具正文独核，工具摘要非网站SHA；WIJ未留原正文横幅不评分，40不要求主导／多数／停摆，TEC保留40／80。原79案整文件不变。",
+    "2026-10-16资源补缺：同SHA原件J55实际交付及直接降耗结果漏读纠正，根条件RES60；其余七维对象逐字段不变。8实际PDF页/4原件/35冻结payload及全9031独核；预算post与J55未对账保留，普通取得/时间/范围桥可撤，非中位全账单实测。一次本地脚本额外单水务文本搜索漏批assert如实留痕，实际渲染/目视≤3。"
   ],
   "sourceSnapshots": [
     {
@@ -1095,24 +1097,26 @@
     "meaning": "Approximate reference points do not establish provider service coverage, citywide outcomes or residence; Hospital referrals/water service/city/FUA differ; airport point not proof of journey access."
   },
   "sensitivity": {
-    "PCSWithdrawn": [45, 70],
-    "GSSWithdrawn": [42, 67],
-    "ISRWithdrawn": [42, 67],
-    "MEDWithdrawn": [42, 67],
-    "LONWithdrawn": [45, 65],
-    "TECWithdrawn": [45, 65],
-    "OPTWithdrawn": [45, 65],
-    "PCS60": [54, 64],
-    "GSS40": [48, 58],
-    "ISR40": [48, 58],
-    "MED40": [48, 58],
-    "LON40": [49, 59],
-    "TEC40": [49, 59],
-    "TEC80": [53, 63],
-    "OPT40": [49, 59],
+    "PCSWithdrawn": [51.0, 66.0],
+    "GSSWithdrawn": [48.0, 63.0],
+    "ISRWithdrawn": [48.0, 63.0],
+    "RESWithdrawn": [51.0, 61.0],
+    "MEDWithdrawn": [48.0, 63.0],
+    "LONWithdrawn": [51.0, 61.0],
+    "TECWithdrawn": [51.0, 61.0],
+    "OPTWithdrawn": [51.0, 61.0],
+    "PCS60": [60.0, 60.0],
+    "GSS40": [54.0, 54.0],
+    "ISR40": [54.0, 54.0],
+    "RES40": [55.0, 55.0],
+    "MED40": [54.0, 54.0],
+    "LON40": [55.0, 55.0],
+    "TEC40": [55.0, 55.0],
+    "TEC80": [59.0, 59.0],
+    "OPT40": [55.0, 55.0],
     "allJudgmentsWithdrawn": [0, 100]
   },
-  "unknownWeight": 10,
+  "unknownWeight": 0,
   "coverageReview": [
     {
       "dimension": "PCS",
@@ -1216,7 +1220,7 @@
       "status": "partial",
       "sourceIds": ["S08"],
       "fullyMeasured": false,
-      "note": "Actualfreechoice32kshopping/680endyearhouseholds, incomplete3–4dayhelp/means criteria; poorresidentssubset notmedianfoodsecuritymeasure."
+      "note": "Actualfreechoice32kshopping/680endyearhouseholds, incomplete3–4dayhelp/means criteria; poorresidentssubset notmedianfoodsecuritymeasure. Actualdonation/logistics/coldchain constraints and2026plans retained; medianincome notautomaticallyfoodbankeligible."
     },
     {
       "dimension": "RES",
@@ -1224,7 +1228,7 @@
       "status": "partial",
       "sourceIds": ["S05", "S12"],
       "fullyMeasured": false,
-      "note": "Operatingdistribution/actualenergycoaches andfirmcongestionhelp; newconnections andplannedhubs nothouseholdoutages; ordinarynetenergycost remainsundirected."
+      "note": "S05p273/274actualhousingfacilities4628rental/2263owned;2225advisedhouseholds;J55/14reported1489adviceleadingdirectenergyuse/billreduction. Countsnotunique/additive/successrate;effectcontrolnvt,expenditureRnotindependentauditofeffect;2024tablewindowsnot2026. Conditionalusualnetaccessbridgeexplicit."
     },
     {
       "dimension": "RES",
@@ -1232,7 +1236,7 @@
       "status": "partial",
       "sourceIds": ["S02", "S08", "S12"],
       "fullyMeasured": false,
-      "note": "Actualwateremergency/materialstock andfoodcoldchain/redistribution; healthyfooddonationsshrinking, industryrelocation/geopoliticaldependency notfullhouseholdcontinuity."
+      "note": "Actualwateremergency/materialstock andfoodcoldchain/redistribution; healthyfooddonationsshrinking, industryrelocation/geopoliticaldependency notfullhouseholdcontinuity. Ageingenergy-intensivecoldchain/conditionalreplacementfunding andvendorpressure retained; noallhouseholdbackupclaim."
     },
     {
       "dimension": "MED",
@@ -1577,6 +1581,85 @@
     "reusedOriginalCount": 5,
     "rootNewNetworkRequests": 0
   },
-  "reportBytes": 12849,
-  "reportSha256": "e23c002238787f4273e7a9fd0a27ff3fcb2fd82d6a13b0fc21393f1308f1eef0"
+  "reportBytes": 8408,
+  "reportSha256": "9b2308bb909348aaa95312fe6a6d2f874f8e5b0725e099d4efa703937060745d",
+  "resourceCompletionReview": {
+    "path": "docs/cci-eindhoven-res-completion-review.md",
+    "sha256": "9b2308bb909348aaa95312fe6a6d2f874f8e5b0725e099d4efa703937060745d",
+    "reviewedOn": "2026-10-16",
+    "fixedInputCommit": "0a54cb0592d2de9fec3da6bcd07da3dcf90eb95f",
+    "fixedCases": 85,
+    "reviewReportSha256": "6d050133ed1959d35203b2f6a0f4487b621ee07c71104101a1d08f44e7fd4fe4",
+    "reviewManifestSha256": "0370e6ea2e9da104226133c678e24d3b623c3bf5696c9fbbed788f52d70df8cf",
+    "frozenPayloadsVerified": 35,
+    "rootValidOriginalsReverified": 4,
+    "rootPdfPageCount": 8,
+    "rootNewNetworkRequests": 0,
+    "newOriginalDownloads": 0,
+    "evidenceCorrection": "ExistingS05J55p273/274actuallydeliveredanddirectreliefresults wereomitted frompublishedresourceargument",
+    "originalSevenDimensionObjectsUnchanged": true,
+    "other84WholeCaseBytesUnchanged": true,
+    "rootPdfPixelsViewed": [
+      {
+        "sourceId": "S05",
+        "physicalPage": 273
+      },
+      {
+        "sourceId": "S05",
+        "physicalPage": 274
+      },
+      {
+        "sourceId": "S02",
+        "physicalPage": 27
+      },
+      {
+        "sourceId": "S08",
+        "physicalPage": 13
+      },
+      {
+        "sourceId": "S12",
+        "physicalPage": 8
+      },
+      {
+        "sourceId": "S05",
+        "physicalPage": 51
+      },
+      {
+        "sourceId": "S02",
+        "physicalPage": 18
+      },
+      {
+        "sourceId": "S05",
+        "physicalPage": 15
+      }
+    ]
+  },
+  "resourceScopeReview": {
+    "rootAll9031And4ReferencePointsReverified": true,
+    "j55Advice1489IsUniqueHouseholds": false,
+    "j55Advice1489DividedBy2225IsSuccessRate": false,
+    "j55CountsAre2024NewUniqueHouseholds": false,
+    "j55ExpenditureYearTAndCumulativeCountsMerged": false,
+    "effectControlNvtMeansIndependentEffectAudit": false,
+    "budgetPost51ZeroMeansAllJ55SpendZero": false,
+    "budgetPost51AndJ55ReconciliationVerified": false,
+    "medianIncomeAutomaticallyAidEligible": false,
+    "foodHelp3To4DaysMeansWholeWeekCovered": false,
+    "providerAreaOrCityEqualsWholeFua": false,
+    "enterpriseNewConnectionsAreHouseholdOutages": false,
+    "water13Min9SecIsEveryHouseholdLongestOutage": false,
+    "household30Point78AdvanceIsFinalMedianBill": false,
+    "absenceOfFailureUsedFor60": false,
+    "resourceAllHouseholdNetBundleDirectlyMeasured": false,
+    "localBatchDisclosure": {
+      "actualLocalSourceReadCallFileCount": 4,
+      "assertedFirstBatchSourceCount": 3,
+      "followingSeparateSingleWaterTextSearchHadExplicitAssertion": false,
+      "maxRenderedPhysicalPagesInBatch": 3,
+      "maxActuallyViewedImagesInBatch": 3,
+      "networkRequests": 0,
+      "notReplayedToHideDeviation": true,
+      "scope": "One local script read3asserted source files then separately searched1waterPDF without its own explicitbatchassert. Retain this accounting deviation; no score/capability inference."
+    }
+  }
 }

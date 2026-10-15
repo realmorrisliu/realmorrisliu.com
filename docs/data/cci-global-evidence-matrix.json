@@ -177,8 +177,8 @@
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
     "conditionalCaseCount": 85,
-    "completeConditionalCaseCount": 18,
-    "partialCaseCount": 67,
+    "completeConditionalCaseCount": 19,
+    "partialCaseCount": 66,
     "unassessedCount": 8946,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
@@ -702,9 +702,9 @@
       "provenanceSha256": "a70f3c12820d253a67951a5d657efc033366d1bdd162d75701fbb202faf4fc0d"
     },
     "cci-local-2026-eindhoven-case.json": {
-      "sha256": "4b81c52f2ccca974f2fac00ea5f006865524687df58e10b010461b6829a8c567",
-      "provenance": "cci-eindhoven-score-completion-review.md",
-      "provenanceSha256": "e23c002238787f4273e7a9fd0a27ff3fcb2fd82d6a13b0fc21393f1308f1eef0"
+      "sha256": "5c0f5573785db972bd1c2987d73713cb256ec3716949a12d768b4c0830fbcc8f",
+      "provenance": "cci-eindhoven-res-completion-review.md",
+      "provenanceSha256": "9b2308bb909348aaa95312fe6a6d2f874f8e5b0725e099d4efa703937060745d"
     },
     "cci-local-2026-luxembourg-case.json": {
       "sha256": "fc632745310e8fbb054e42864fd6b19dcc194e1d1703a5fd20be95b6019e659f",
@@ -733,5 +733,5 @@
     }
   },
   "scriptSha256": "a728ba23974af7535f4f517f0b3605af5ff0ee005474b6bcff515ea083d6c0ed",
-  "csvSha256": "6c878b44f147e6d6a85f2a8e6bd522e94aba7b3195b2a75f34f0934daf38529b"
+  "csvSha256": "b2a44d3c88a6f511d063c118e732c18e31c71ce6b3e5391fb570564c48539f64"
 }
