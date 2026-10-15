@@ -113,6 +113,8 @@ const realCases = [
   "amsterdam",
   "madrid",
   "berlin",
+  "montreal",
+  "fukuoka",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -217,6 +219,8 @@ const [
   amsterdam,
   madrid,
   berlin,
+  montreal,
+  fukuoka,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2272,4 +2276,46 @@ assert.deepEqual(total(berlinWithoutLon), { center: null, lower: 39, upper: 74 }
 assert.equal(
   realCases.find(c => c.candidateId === 3147).rootScopeReview.mortalityTablePhysical120Year,
   2023
+);
+
+for (const [id, range, originals] of [
+  [3485, [21, 81], 24],
+  [708, [30, 80], 41],
+] as const) {
+  const c = realCases.find(c => c.candidateId === id);
+  assert.equal(c.priorityCompletionReview.sha256, digest(c.priorityCompletionReview.path));
+  assert.equal(c.sourceSnapshots.length, originals);
+  assert.equal(c.scopeCompletionReview.allSubpillarsFullyReviewed, false);
+  assert.equal(c.scopeCompletionReview.allSubpillarsHaveOutcomeMeasurements, false);
+  assert.deepEqual(c.unresolvedScoreRange, range);
+  assert.equal(c.expectedConditionalTotal, null);
+  assert.equal(c.globalRankingEligible, false);
+  for (const r of [
+    ...c.webReadSources,
+    ...c.failedSourceSnapshots,
+    ...c.inheritedFailedSourceSnapshotsNotRetried,
+    ...c.webFailureDiagnostics,
+  ]) {
+    assert.equal(r.originalBytes, null);
+    assert.equal(r.originalSha256, null);
+  }
+}
+for (const [scores, dimension, lower, upper] of [
+  [montreal, "LON", 15, 85],
+  [montreal, "MED", 15, 90],
+  [fukuoka, "LON", 24, 84],
+  [fukuoka, "MED", 21, 86],
+] as const) {
+  const withdrawn = { ...scores };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.equal(
+  realCases.find(c => c.candidateId === 3485).rootScopeReview.committeePrintedTotal,
+  189
+);
+assert.equal(realCases.find(c => c.candidateId === 3485).rootScopeReview.committeeCategorySum, 206);
+assert.equal(
+  realCases.find(c => c.candidateId === 708).rootScopeReview.localCollection248CountedAsInfusions,
+  false
 );

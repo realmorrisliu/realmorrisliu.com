@@ -71,6 +71,8 @@ import hongKong from "../../docs/data/cci-local-2026-hong-kong-case.json";
 import amsterdam from "../../docs/data/cci-local-2026-amsterdam-case.json";
 import madrid from "../../docs/data/cci-local-2026-madrid-case.json";
 import berlin from "../../docs/data/cci-local-2026-berlin-case.json";
+import montreal from "../../docs/data/cci-local-2026-montreal-case.json";
+import fukuoka from "../../docs/data/cci-local-2026-fukuoka-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -146,8 +148,12 @@ const cases = [
   amsterdam,
   madrid,
   berlin,
+  montreal,
+  fukuoka,
 ];
 const caseNamesZh: Record<number, string> = {
+  [montreal.candidateId]: "蒙特利尔功能区",
+  [fukuoka.candidateId]: "福冈功能区",
   [madrid.candidateId]: "马德里功能区",
   [berlin.candidateId]: "柏林功能区",
   [stockholm.candidateId]: "斯德哥尔摩功能区",
@@ -315,6 +321,22 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [montreal.candidateId]: [
+    zh
+      ? "蒙特利尔ISR60／MED40／LON60，其余五维未知，数学域21—81、无中心。实际分流已有改善，但必要肿瘤手术和诊断等待仍重要；选定肿瘤门诊达标与独立质量正证同时保留。制度实际恢复及有限成熟疾病路径支持可撤判断。"
+      : "Montreal has conditional ISR60/MED40/LON60 and five unknown dimensions: a 21–81 mathematical domain without a centre. Actual surgical diversion improved care, while important necessary oncology surgery and diagnostic delays remain. Selected outpatient waits meeting targets and external quality findings are retained. Actual institutional recovery and limited mature-disease access support revocable judgments.",
+    zh
+      ? "评审条件不是患者率，投诉分类和206与印刷189冲突不修数；铅行动阈值0.002与法定0.005分开，启动过滤帮助不消除后续自付。产品／通常付款／专属监护及净照护桥可撤，撤LON15—85、撤MED15—90；导航壳不当机场运行，31项记录不称充分审阅。"
+      : "Assessment criteria are not patient rates; complaint categories sum to206 against the printed189, without silent correction. The lead action threshold0.002 differs from the legal0.005, and starter filters do not remove ongoing costs. Product/ordinary-payment/specific-monitoring/net-care bridges are revocable: withdrawing LON gives15–85 or MED15–90. Airport navigation is not operating evidence;31 scope records are not sufficient review.",
+  ],
+  [fukuoka.candidateId]: [
+    zh
+      ? "福冈ISR／MED／LON／TEC条件60，其余四维未知，数学域30—80、无中心。真实必要治疗、公保和转诊接续、已完成供水应急及线上使用支持有限判断；主要自然／组织安全、资源合并净取得与境外通信认证仍未择档。"
+      : "Fukuoka has conditional ISR/MED/LON/TEC60 and four unknown dimensions: a 30–80 mathematical domain without a centre. Actual necessary treatment, public coverage/referral continuity, completed water resilience and online use support finite judgments. Major natural/organized protection, combined net resource access and foreign connectivity/authentication remain unresolved.",
+    zh
+      ? "DPC真实难治淋巴瘤CAR-T与试验分开；248采集／18名ALL儿童不改为回输或成人效果，外国付款不迁入。保险类别／产品／净监护桥可撤，撤LON24—84、撤MED21—86。55%是已线上化手续处理分母，256连接已完成／90为计划；未保费用与伤害、未充分实查项保留。"
+      : "DPC actual refractory-lymphoma CAR-T differs from trials;248 collections/18 ALL children are not infusions or adult outcomes, and foreign payment is not transferred. Insured-category/product/net-monitoring bridges are revocable: withdrawing LON gives24–84 or MED21–86. Online55% uses processing of online-enabled procedures;256 water connections are completed and90 planned. Uncovered costs, harms and insufficiently studied components remain.",
+  ],
   [madrid.candidateId]: [
     zh
       ? "马德里ISR／TEC／OPT条件60，其余五维未知，数学域21—86、无中心。实际纠偏、技术产用与单机场／消费者通信／直接适用欧元规则支持有限判断；暴雨、地质与战略等部分尚未实质开展，不称31项全部实审。"

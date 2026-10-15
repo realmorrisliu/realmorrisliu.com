@@ -1,5 +1,7 @@
 # CCI 第一版当地居民评分：锁定口径与校准演算
 
+**2026-10-14 第二十一批验收：** 新增[蒙特利尔3485](cci-montreal-score-completion-review.md)ISR60／MED40／LON60，其余五维未知，域21—81；[福冈708](cci-fukuoka-score-completion-review.md)ISR／MED／LON／TEC60，其余四维未知，域30—80，均无中心。必要护理判断结合实际帮助后的余障，选定门诊达标和质量正证保留；成熟疾病、当地真实运行、通常付款及净监护有限桥可撤，不移外国付款或把采集当回输。八维有界考虑不称31项充分实查，未开始／不足保留。当前**63份审阅、16完整／47部分、8,968未审**，原61案逐字不变。[下一批入口](cci-next-priority-batch-22-review.md)Brussels1269／Antwerp1160已启动，第三任务继续检验候选优先级，最多三研究任务。全部新旧候选保留、零支持排除、无合格第32名门槛；以下为历史快照。
+
 **2026-10-14 第二十批验收：** 新增[马德里3147](cci-madrid-score-completion-review.md)ISR／TEC／OPT条件60、其余未知，域21—86；[柏林4946](cci-berlin-score-completion-review.md)PCS／ISR／MED／LON／TEC／OPT60、GSS／RES未知，域45—70，均无中心。八维有界考虑不称31项充分测量；马德里退出同国共用规则但独立适配、未加具体银行硬门槛，临床物理120表年明确2023；柏林科普不是本地队列、通常运行／付款监护桥可撤，独立急症反证保留。当前**61份审阅、16完整／45部分、8,970未审**，原59评分逐字不变。[第21批入口](cci-next-priority-batch-21-review.md)Montreal3485已交接待主验收、Fukuoka708在研，Barcelona4523保留；最多三研究任务接续。全部新旧候选保留、零支持排除、无合格第32名门槛。以下为历史快照。
 
 **2026-10-14 第十九批验收：** 新增[斯德哥尔摩1445](cci-stockholm-score-completion-review.md)ISR／MED／LON／TEC／OPT条件60、其余未知，域36—76；[香港73](cci-hong-kong-score-completion-review.md)ISR60／MED40、其余未知，域15—85；[阿姆斯特丹1427](cci-amsterdam-score-completion-review.md)ISR／LON／TEC／OPT60、其余未知，域27—82，均无中心。八维有界考虑不等于31子项充分测量，尚未完整审阅项明确保留；等待、实际缓解、产品/支付/监护及通常退出使用同一可撤规则。当前**59份审阅、16完整／43部分、8,972未审**。[广州纠错](cci-guangzhou-lon-discriminatory-evidence-review.md)核清“即将接受”不是已给药、原56案例逐字不变。[下一批](cci-next-priority-batch-20-review.md)建议Madrid3147／Berlin4946，Montreal3485保留第三；旧缺口无新实际桥不循环，最多三研究任务。全部候选保留、零支持排除、无合格第32名门槛。以下为历史快照。
