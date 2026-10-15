@@ -131,6 +131,7 @@ const realCases = [
   "oxford",
   "cambridge",
   "pittsburgh",
+  "eindhoven",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -253,6 +254,7 @@ const [
   oxford,
   cambridge,
   pittsburgh,
+  eindhoven,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -485,7 +487,7 @@ const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.
 assert(tokyoPosition);
 assert.equal(tokyoPosition.center, 62);
 assert.equal(tokyoPosition.bestPosition, 1);
-assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 16);
+assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 17);
 assert.deepEqual(total(washington), { center: 58, lower: 58, upper: 58 });
 assert.equal(washington.RES, 40);
 assert.equal(washington.OPT, 60);
@@ -1219,7 +1221,7 @@ const praguePosition = rankAudit.scenarios.fixed_conditional_centers.caseResults
 );
 assert(praguePosition);
 assert.equal(praguePosition.bestPosition, 1);
-assert.equal(praguePosition.worstPosition, rankAudit.candidateCount - 16);
+assert.equal(praguePosition.worstPosition, rankAudit.candidateCount - 17);
 const tokyoWithoutTec = { ...tokyo };
 delete tokyoWithoutTec.TEC;
 assert.deepEqual(total(tokyoWithoutTec), { center: null, lower: 54, upper: 64 });
@@ -3026,3 +3028,56 @@ const pittsburghWithoutLonOpt = { ...pittsburgh };
 delete pittsburghWithoutLonOpt.LON;
 delete pittsburghWithoutLonOpt.OPT;
 assert.deepEqual(total(pittsburghWithoutLonOpt), { center: null, lower: 30, upper: 75 });
+
+const eindhovenCase = realCases.find(c => c.candidateId === 2254);
+assert.equal(
+  eindhovenCase.priorityCompletionReview.sha256,
+  digest(eindhovenCase.priorityCompletionReview.path)
+);
+assert.equal(
+  eindhovenCase.priorityCompletionReview.researchReportSha256,
+  digest(eindhovenCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(eindhoven), { center: null, lower: 51, upper: 61 });
+assert.equal(eindhovenCase.sourceSnapshots.length, 21);
+assert.equal(eindhovenCase.webReadSources.length, 2);
+assert.equal(eindhovenCase.rootScopeReview.policeToolTextMatchedOriginalSessionContentBlock, true);
+for (const key of [
+  "policeToolTextDigestIsWebsiteOriginalDigest",
+  "wijUnretainedBannerUsedForScore",
+  "asctHomeConditionsAreAllTreatmentPrerequisites",
+  "mumcIsInside2254",
+  "asctAftercareTransferredToCart",
+  "leuven463OutcomesAreLocalCohort",
+  "hsmr96IsSignificantlyLowerMortality",
+  "possibleCalamitiesAreConfirmedDeaths",
+  "report6WeekBenchmarkIndependentlyCertifiedNationalStandard",
+  "score40RequiresDominanceOrMajorityOrShutdown",
+])
+  assert.equal(eindhovenCase.rootScopeReview[key], false);
+for (const [id, lower, upper] of [
+  ["PCS", 45, 70],
+  ["GSS", 42, 67],
+  ["ISR", 42, 67],
+  ["MED", 42, 67],
+  ["LON", 45, 65],
+  ["TEC", 45, 65],
+  ["OPT", 45, 65],
+] as const) {
+  const withdrawn = { ...eindhoven };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...eindhoven, PCS: 60 }), { center: null, lower: 54, upper: 64 });
+assert.deepEqual(total({ ...eindhoven, GSS: 40 }), { center: null, lower: 48, upper: 58 });
+assert.deepEqual(total({ ...eindhoven, MED: 40 }), { center: null, lower: 48, upper: 58 });
+assert.deepEqual(total({ ...eindhoven, LON: 40 }), { center: null, lower: 49, upper: 59 });
+assert.deepEqual(total({ ...eindhoven, TEC: 40 }), { center: null, lower: 49, upper: 59 });
+assert.deepEqual(total({ ...eindhoven, TEC: 80 }), { center: null, lower: 53, upper: 63 });
+assert.deepEqual(total({ ...eindhoven, OPT: 40 }), { center: null, lower: 49, upper: 59 });
+
+const eindhovenPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (c: { efua_id: string }) => c.efua_id === "2254"
+);
+assert.equal(eindhovenPosition.bestPosition, 6);
+assert.equal(eindhovenPosition.worstPosition, rankAudit.candidateCount);

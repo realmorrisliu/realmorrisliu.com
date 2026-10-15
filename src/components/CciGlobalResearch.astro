@@ -89,6 +89,7 @@ import kualaLumpur from "../../docs/data/cci-local-2026-kuala-lumpur-case.json";
 import oxford from "../../docs/data/cci-local-2026-oxford-case.json";
 import cambridge from "../../docs/data/cci-local-2026-cambridge-case.json";
 import pittsburgh from "../../docs/data/cci-local-2026-pittsburgh-case.json";
+import eindhoven from "../../docs/data/cci-local-2026-eindhoven-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -182,8 +183,10 @@ const cases = [
   oxford,
   cambridge,
   pittsburgh,
+  eindhoven,
 ];
 const caseNamesZh: Record<number, string> = {
+  [eindhoven.candidateId]: "埃因霍温功能区",
   [pittsburgh.candidateId]: "匹兹堡功能区",
   [cambridge.candidateId]: "剑桥功能区（英国）",
   [oxford.candidateId]: "牛津功能区",
@@ -369,6 +372,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [eindhoven.candidateId]: [
+    zh
+      ? "埃因霍温PCS条件40，其余六维条件60，RES未知；原权重小计51、数学域51—61，无完整总分。实际排水修复、必要诊疗、社会服务和技术产用，与反复损害、择期等待、资金及应急能力余障共同判断，产业声誉不直接换分。"
+      : "Eindhoven has conditional 40 for PCS and 60 for six other dimensions; RES remains unknown: subtotal 51 and arithmetic domain 51–61, without a complete total. Actual drainage repairs, care, social services and technology use are assessed alongside repeated damage, elective waits, funding and emergency-capacity constraints. Industrial reputation is not a score.",
+    zh
+      ? "疾病转化以造血细胞重建及跨院治疗／本地恢复网络为主，不将外地机构或队列移入，也不把可选居家条件当全部治疗门槛、ASCT照护当CAR-T随访。警方工具原记录已恢复独核，网站原始摘要仍未知；付款、照护、地域或时间关键假设拒绝则相应维度回未知，全球入围未证明。"
+      : "LON rests on haematopoietic cell reconstitution and cross-hospital treatment/local recovery. External facilities/cohorts stay separate; optional home-care conditions are not prerequisites for all treatment, and ASCT aftercare is not CAR-T follow-up. Historical police tool text was recovered and checked; website-original digests remain unknown. Rejecting necessary payment, care, scope or time assumptions restores the dimension to unknown. Global qualification remains unproven.",
+  ],
   [pittsburgh.candidateId]: [
     zh
       ? "匹兹堡PCS条件40，ISR／MED／LON／TEC／OPT条件60，GSS／RES未知；原权重小计42、数学域42—67，无完整总分。实际风暴保护后多日停电、通道和医氧约束保留；具体诊疗、执行与产用支持可撤判断。"

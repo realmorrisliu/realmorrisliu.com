@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 79,
+    "conditionalCaseCount": 80,
     "completeConditionalCaseCount": 18,
-    "partialCaseCount": 61,
-    "unassessedCount": 8952,
+    "partialCaseCount": 62,
+    "unassessedCount": 8951,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -700,8 +700,13 @@
       "sha256": "a3b2f8ee23da7311576c093d68d9d08dc63113ae35835fba3b2ab40d499ca671",
       "provenance": "cci-pittsburgh-score-completion-review.md",
       "provenanceSha256": "a70f3c12820d253a67951a5d657efc033366d1bdd162d75701fbb202faf4fc0d"
+    },
+    "cci-local-2026-eindhoven-case.json": {
+      "sha256": "4b81c52f2ccca974f2fac00ea5f006865524687df58e10b010461b6829a8c567",
+      "provenance": "cci-eindhoven-score-completion-review.md",
+      "provenanceSha256": "e23c002238787f4273e7a9fd0a27ff3fcb2fd82d6a13b0fc21393f1308f1eef0"
     }
   },
-  "scriptSha256": "f0bbc605e3eef02b8376b2b83141201ba19e802e5523027dfce5d3eebadc5fad",
-  "csvSha256": "f2665328caf8d942155da81cf2c0a13c647bd1d015a62f27ce3ce470621736a6"
+  "scriptSha256": "d12531e7b9b91da651ee5e78cc2970306feceaf0a6f236b02c026b9ac777654e",
+  "csvSha256": "ae8140dacf97f27fc58d250ead26fc5e972a570c18bc8aedb25d2389560d367e"
 }

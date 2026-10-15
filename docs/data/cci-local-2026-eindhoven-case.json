@@ -1,0 +1,1582 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 2254,
+  "name": "Eindhoven",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-15",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "2026 ordinary Dutch citizen, usually longterm local resident, local median income/usual effective coverage; no fixed age",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-eindhoven-score-completion-review.md",
+  "publishedInputCommit": "c3844ad2b5378211b9534b01eac9c7c6a46b45c8",
+  "researchFrozenInputCommit": "f4dd35fd561910f3e8e7e74532e578201ea14360",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "weight": 15,
+      "score": 40,
+      "conditionalAlternatives": [60],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "context",
+        "severe_weather_wildfire": "partial"
+      },
+      "rationale": "城市2024反复极端雨/旱/风损害及下水道压溃/地下水余障，已大量修复并新增水结构、绿化与断接；传统系统仍不适应极端雨量，修复挤占计划维护。有限判断帮助后重要防护缺口仍在，40；不是由单次事件或无地质数据给低分。",
+      "assumption": "有限接受2024已查明的设计／反复损害、帮助后余障对普通FUA居民的重要性及向截止延续；不称每个旧坑仍未修。若认为实际新增保护及修复已足以使通常主要危险可应对，可审60；拒绝范围、时间或余障重要性桥则未知。40不要求主导、受害过半或停摆。",
+      "scoreStatus": "conditional_proposed_pending_root_acceptance",
+      "coverageReview": [
+        {
+          "dimension": "PCS",
+          "subpillar": "heat_humidity",
+          "status": "partial",
+          "sourceIds": ["S05"],
+          "fullyMeasured": false,
+          "note": "Actualgreening/waterretention/depaving mayreduceheat, noheatmortality/comprehensivecomfortmeasurement; finitefunctionalbridge."
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "flood_sea_level",
+          "status": "partial",
+          "sourceIds": ["S05"],
+          "fullyMeasured": false,
+          "note": "Groundwater/sewagepressure/sinkholerepair,6421mrelining/replacement3950mwaterstructure/8.2ha actual; heavy-rain/designgap anddeferredmaintenance. CitynotwholeFUA."
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "geophysical",
+          "status": "context",
+          "sourceIds": ["S05"],
+          "fullyMeasured": false,
+          "note": "Reported sinkholes are sewer/weatherrelated, not tectonic hazard; earthquake/exposure notstarted."
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "severe_weather_wildfire",
+          "status": "partial",
+          "sourceIds": ["S05"],
+          "fullyMeasured": false,
+          "note": "Repeatedactualstorm/drought/rain damages andpublicspace repair; wildfireprotection notfullyreviewed."
+        }
+      ],
+      "sourceIds": ["S05"]
+    },
+    {
+      "id": "GSS",
+      "weight": 15,
+      "score": 60,
+      "conditionalAlternatives": [40],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "partial",
+        "strategic_exposure": "partial"
+      },
+      "rationale": "地方组织犯罪实际处置和爆炸物EOD限制影响/居民临时安置，结合共享水务物理/SOC保护与地方实际秩序服务，支持有限可用缓解能力。军事/民用机场、区域战争资源压力、真实犯罪渗透及安全区常规能力不足仍重要；不由无战争、逮捕数或网站失败直接评分。",
+      "assumption": "将正式城市观察与已处置事件中的局部影响限制、实际适配保护作为通常居民方向的有限证据，非全城组织暴力低风险率。2024–25本地处置及2025共享保护延续至截止且水务对本地有实际作用；拒绝观察代表性/作用/延续回未知。若认为战略与组织犯罪尾部在帮助后仍构成显著约束可40。",
+      "scoreStatus": "conditional_proposed_pending_root_acceptance",
+      "coverageReview": [
+        {
+          "dimension": "GSS",
+          "subpillar": "organized_violence",
+          "status": "partial",
+          "sourceIds": ["S05", "S10", "S11"],
+          "fullyMeasured": false,
+          "note": "Realregionalintegratedoperations andlocalEODneutralisation, policeoriginalrawfailedbutpriorwebbodyread; arrests notconvictions orcityimpactrate."
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "regional_conflict",
+          "status": "partial",
+          "sourceIds": ["S05", "S02"],
+          "fullyMeasured": false,
+          "note": "Ukraine/refugee/energyimpact andactualLebanonrepatriation72h reception; notlocallyfoughtwar orcompletefutureconflictscan."
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "strategic_exposure",
+          "status": "partial",
+          "sourceIds": ["S02", "S05"],
+          "fullyMeasured": false,
+          "note": "Militarysharedairport/vitalwaterdependency; realSOC/physicalriskanalysis/emergencywater; not testedallattackscenarios."
+        }
+      ],
+      "sourceIds": ["S05", "S02", "S10", "S11"]
+    },
+    {
+      "id": "ISR",
+      "weight": 15,
+      "score": 60,
+      "conditionalAlternatives": [40],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "rationale": "WIJ实际个案、目标进展及98件不满调解，加上食物援助/修复/临时安置，证明制度服务可运行。86%十工作日受理低于95%、病假9.4%、经费补助后仍差3.3m和安全区不合规是重要余障；有限60不等所有人及时/所有治理合规。",
+      "assumption": "接受这些多组织实际交付对普通长期本地居民有用且延续至截止，目标/观察分母不作FUA全民结果。认为资金/等待/应急缺陷在真实帮助后已构成主要服务限制可40；拒绝作用/地区/延续则未知。",
+      "scoreStatus": "conditional_proposed_pending_root_acceptance",
+      "coverageReview": [
+        {
+          "dimension": "ISR",
+          "subpillar": "governance",
+          "status": "partial",
+          "sourceIds": ["S05", "S07"],
+          "fullyMeasured": false,
+          "note": "Realcasework/mediations, 2026additionalfundingandremaining3.3mgap; mandaterecordgaps andsafetyregionnoncompliance retained."
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "adaptive_capacity",
+          "status": "partial",
+          "sourceIds": ["S05", "S07", "S12"],
+          "fullyMeasured": false,
+          "note": "Repairs/workingregionalcare/assistance andfundingadjustment actual; many2026programmes/goals notdelivered."
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "social_cohesion",
+          "status": "partial",
+          "sourceIds": ["S07", "S08"],
+          "fullyMeasured": false,
+          "note": "Socialnetworks/goalprogress/volunteerfoodsystem actual; helpselection andhiddenpoverty notwholeFUAtrustsurvey."
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "emergency_recovery",
+          "status": "partial",
+          "sourceIds": ["S05", "S11", "S02"],
+          "fullyMeasured": false,
+          "note": "Actualevacuationtemporaryshelter/repatriation/sinkholerepairs withVRBZOweakcapacity, no fullrecoveryrate."
+        }
+      ],
+      "sourceIds": ["S05", "S02", "S07", "S08", "S11"]
+    },
+    {
+      "id": "RES",
+      "weight": 10,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      },
+      "rationale": "供水数量/运行/平均预付费、应急与债务协作和真实食品免费选择/冷链有据；食物资格/3–4天覆盖/健康捐赠减少及电网约束均保留。尚不能把能源项目、企业接网帮助和贫困食品子集转成普通中位收入居民在帮助后的整体资源净方向，主未知。",
+      "assumption": "不是要求每户全成本账单或多数人受害；当前可有限判断水/食物帮助，但能源普通净取得和资源共同压力的方向未定，40/60均不主填。取证预算或失败不作负面能力事实。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "RES",
+          "subpillar": "water",
+          "status": "partial",
+          "sourceIds": ["S02"],
+          "fullyMeasured": false,
+          "note": "Actual177.2m m3/€30.78householdadvance/companyunderperformanceminutes andsupport; WestBrabantcodered not Eindhovenrationing; no residentqualityrate."
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "food",
+          "status": "partial",
+          "sourceIds": ["S08"],
+          "fullyMeasured": false,
+          "note": "Actualfreechoice32kshopping/680endyearhouseholds, incomplete3–4dayhelp/means criteria; poorresidentssubset notmedianfoodsecuritymeasure."
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "energy",
+          "status": "partial",
+          "sourceIds": ["S05", "S12"],
+          "fullyMeasured": false,
+          "note": "Operatingdistribution/actualenergycoaches andfirmcongestionhelp; newconnections andplannedhubs nothouseholdoutages; ordinarynetenergycost remainsundirected."
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "supply_chain",
+          "status": "partial",
+          "sourceIds": ["S02", "S08", "S12"],
+          "fullyMeasured": false,
+          "note": "Actualwateremergency/materialstock andfoodcoldchain/redistribution; healthyfooddonationsshrinking, industryrelocation/geopoliticaldependency notfullhouseholdcontinuity."
+        }
+      ],
+      "sourceIds": ["S02", "S05", "S08", "S12"]
+    },
+    {
+      "id": "MED",
+      "weight": 15,
+      "score": 60,
+      "conditionalAlternatives": [40],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "rationale": "实际常规/专科交付、普通2026保险合同及直接结算、起搏器/卒中居家监护和本地恢复/急症优先，连同定义受限的临床观察支持有限通常必要医疗能力。择期平均9周/8.5周、病组风险/缓和替代床位、个人照护和自付条件仍重要；不把HSMR96当显著优越或混合结果自动未知。",
+      "assumption": "普通保障居民获有效转诊、使用覆盖必要治疗、承担通常自付，已交付分诊/随访对目标居民足以维持通常净可得；当前质量/时点及转诊网络适配是可撤桥。没有保证每例急症达标；若择期/接续余障被认定构成显著约束，可40；拒绝桥则未知。",
+      "scoreStatus": "conditional_proposed_pending_root_acceptance",
+      "coverageReview": [
+        {
+          "dimension": "MED",
+          "subpillar": "access",
+          "status": "partial",
+          "sourceIds": ["S01", "S13", "S17", "S15"],
+          "fullyMeasured": false,
+          "note": "Directbillingcontract2026/GP-referral/deductible andend2025elective9w/8.5w vsreport6w/7w. Urgentpriorityproviderclaim notallpatientwaitmeasurement."
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "routine_quality",
+          "status": "partial",
+          "sourceIds": ["S01", "S03", "S04"],
+          "fullyMeasured": false,
+          "note": "HSMR96CI89–104; diagnosticCIs2022–24 andcasecomplexitylimits;14possiblecalamityreports not14confirmedavoidabledeaths."
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "specialist_capacity",
+          "status": "partial",
+          "sourceIds": ["S01", "S06", "S18"],
+          "fullyMeasured": false,
+          "note": "Actualheart/cancer/triage/imaging andregionalstemcellreferral, MUMCexternal; noFUAresidentclinicaleffectrate."
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "system_continuity",
+          "status": "partial",
+          "sourceIds": ["S01", "S06", "S09"],
+          "fullyMeasured": false,
+          "note": "Actualpacemaker/strokehomefollowup,localASCTrecovery/24hcontact; caregiver/45min/visits andhospiceaccessgaps remain."
+        }
+      ],
+      "sourceIds": ["S01", "S03", "S04", "S06", "S09", "S13", "S17", "S18"]
+    },
+    {
+      "id": "LON",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "rationale": "已运行MUMC+造血细胞移植与本地住院／可选ASCT居家恢复网络，结合共同成熟自体造血重建人体随访及通常保障／净照护有限桥，支持疾病细胞转化条件60；不把外地队列、ASCT照护或HAS tisa移为本地CAR-T实绩，不称健康延寿。",
+      "assumption": "接受本地正式已运行细胞治疗网络/普通覆盖对合适疾病的取得延续，ASCT造血重建属本项目疾病细胞转化范围，非所有移植/所有癌症治疗。合资格居民能获覆盖的MUMC治疗并转回本地取得必要住院恢复/监护，承担通常自付；选择居家者另需45分钟范围/陪护/往返条件，不把居家条件当全部治疗门槛。拒绝范围、实际运行/付款/照护桥任一回未知；若这些余障构成显著约束则40。健康延寿未知，分数不证明抗衰疗效。",
+      "scoreStatus": "conditional_proposed_pending_root_acceptance",
+      "coverageReview": [
+        {
+          "dimension": "LON",
+          "subpillar": "translation",
+          "status": "partial",
+          "sourceIds": ["S06", "S09", "S18", "R05"],
+          "fullyMeasured": false,
+          "note": "Specific livinghematopoieticcellcollection/reinfusion andmarrowreconstruction/localrecovery, notarbitraryadvancedtreatment equalsLON. CAR-Texternalpathseparate."
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "trial_maturity",
+          "status": "partial",
+          "sourceIds": ["R05", "R04"],
+          "fullyMeasured": false,
+          "note": "Autologousfirsttransplantn4632016–24longitudinalKM maturitynotrandomizedcausalbenefit; adulttisaJULIETITT167/ITTm99/actual115separate notMUMCcohort."
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "regulatory_adoption",
+          "status": "partial",
+          "sourceIds": ["S06", "S16", "S18"],
+          "fullyMeasured": false,
+          "note": "ActualroutineASCTnetwork andZINspecificCAR-T reimbursement/advice distinction; noallbrands/allindicationsDutch2026coverage."
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "resident_access",
+          "status": "partial",
+          "sourceIds": ["S09", "S13", "S17"],
+          "fullyMeasured": false,
+          "note": "Usualinsuredlocaldirectbilling finite networkbridge; ASCT45minradius/frequentcontrols/caregiver/no-driving. NotCAR-Taftercareorfreealltransport."
+        }
+      ],
+      "sourceIds": ["S06", "S09", "S13", "S17", "S18", "R05"]
+    },
+    {
+      "id": "TEC",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40, 80],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "rationale": "临床数字/影像、公共宽带与水务实际技术使用，和产业多节点研发/融资/产品连接，支持持续科研产用/扩散。实际产能外迁/成本人才压力、许多方案仍pilot/规划、企业与居民接入差异仍重要，有限60；不靠ASML名声/WIPO/预算/来源数换档。",
+      "assumption": "有限将Brainport与本地医疗/通信多节点的实际作用适配到FUA持续能力，不把21行政市等同本候选、不把会议/券张数当商业生产或全民技能。若认为真实多节点与广泛采用足够、残余不构成显著约束可80；拒绝地域/实际持续产用桥回未知。",
+      "scoreStatus": "conditional_proposed_pending_root_acceptance",
+      "coverageReview": [
+        {
+          "dimension": "TEC",
+          "subpillar": "knowledge_output",
+          "status": "partial",
+          "sourceIds": ["S01", "S12"],
+          "fullyMeasured": false,
+          "note": "Researchtoimplementedclinicalnetwork/platforms/SEframework actual; noWIPO/patents/brandreputation scoreconversion."
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "industry_density",
+          "status": "partial",
+          "sourceIds": ["S12", "S05"],
+          "fullyMeasured": false,
+          "note": "Multipleindustry/research/publicnodes/financing andclaimedTomTomconnection, regional21municipalityscope notexact1381km2 inventory; relocationrisks retained."
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "digital_infrastructure",
+          "status": "partial",
+          "sourceIds": ["S05", "S14", "S02"],
+          "fullyMeasured": false,
+          "note": "ActualEFX/GVE broadbandusers andmobile/maintenance/healthdigitaluse; noallhouseholdcoverage/skillsstats."
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "diffusion",
+          "status": "partial",
+          "sourceIds": ["S01", "S02", "S12"],
+          "fullyMeasured": false,
+          "note": "Actualpacemaker/strokehomeadoption/SPECT/MRI,utilityrobot/mobilemaintenance,MKBvouchers; pilots/proposals distinct fromdeployments."
+        }
+      ],
+      "sourceIds": ["S01", "S02", "S05", "S12"],
+      "alternativeRationales": "40：若实际采用后的扩散、群体接入及试点限制构成显著通常受益障碍，可审40。80：若多节点与公共实际产用足以缓解当前余障，可审80；不因缺全户测量封顶。地域／持续产用桥拒绝则未知。"
+    },
+    {
+      "id": "OPT",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      },
+      "rationale": "实际普通本地道路/公交/铁路接入及民用机场运行，欧盟有条件长期居留、通常欧元个人支付与实际KPN消费漫游/补值，支持有限初始退出和后续安排。共用道路/机场军事空域、资金/照护成本、就业注册/KYC/永久迁移通信仍重要，有限60。",
+      "assumption": "指定荷兰公民有通常合法身份证、可用个人资金/账户/鉴权设备与普通交通费用；从2024机场实绩和当前地方接续对2026运行作有限延续，不认证当前具体出境行程。按条件完成他国就业/注册和后续账户/通信安排，不保证永久原账户/无限原SIM。拒任一基本净取得桥回未知；认为资格/资源/共因限制构成显著约束可40。",
+      "scoreStatus": "conditional_proposed_pending_root_acceptance",
+      "coverageReview": [
+        {
+          "dimension": "OPT",
+          "subpillar": "transport_redundancy",
+          "status": "partial",
+          "sourceIds": ["S05", "S15"],
+          "fullyMeasured": false,
+          "note": "Actualcivilairport2024/currentlocalroad/CSbus and400AirportShuttle; capacity/parkingconstraint/sharedmilitaryairport; no currentforeignfare/completeitinerary."
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "legal_mobility",
+          "status": "partial",
+          "sourceIds": ["R01"],
+          "fullyMeasured": false,
+          "note": "DutchEUcitizen worker/selfemployed conditionalresidence/registration and5yearrule; no guaranteedforeignemployment or automaticpermanentresidence."
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "asset_portability",
+          "status": "partial",
+          "sourceIds": ["R02"],
+          "fullyMeasured": false,
+          "note": "EuroEUtransfer/card/ATM domestic-likefees andIBANrules; ordinaryexistingfunds/account/auth device finiteassumption, noteveryassetliquidation orpermanentbankretention."
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "network_continuity",
+          "status": "partial",
+          "sourceIds": ["S14", "R03"],
+          "fullyMeasured": false,
+          "note": "ActualKPNconsumercreditabroad/freeSMS/online topup andEUfairuse; paid/nonEU/permanentroaming anddevice/KYC/changeaddress residual."
+        }
+      ],
+      "sourceIds": ["S05", "S14", "S15", "R01", "R02", "R03"]
+    }
+  ],
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 51.0,
+  "unresolvedScoreRange": [51.0, 61.0],
+  "globalRankingEligible": false,
+  "limitations": [
+    "Bounded8D31review not31fullmeasurements; no ranking/Top32/probability/exclusion. All9031andunmatched retained.",
+    "Source observation/version/currentcapture distinct; no authenticated identicalOct10bytes.",
+    "Institution/provider/21municipalityBrainport/city/FUAdiffer; MUMCexternal; 2015populationnotcurrentdenominator.",
+    "Finiteusualaccess/netpayment/caregiving/adoption/time/geography assumptions withdrawtoUnknown.",
+    "No globalproof/no datafailure penalty/no borrowedcityscores.",
+    "主任务验收优先：17PDF页及恢复警方工具正文独核，工具摘要非网站SHA；WIJ未留原正文横幅不评分，40不要求主导／多数／停摆，TEC保留40／80。原79案整文件不变。"
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.catharinaziekenhuis.nl/app/uploads/2026/06/Jaarverslaggeving-2025-Catharina-Ziekenhuis.pdf",
+      "path": "catharina2025.pdf",
+      "scope": "Actual2025care/quality/continuity/digitaldelivery; nothospitalrank orFUAallresidents",
+      "requestAtUTC": "2026-10-15T14:05:22.482062+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 2357246,
+      "sha256": "a9f180582968abea2c68b5d440dace5592ced296bc87f9a5b64cc688ce96f72d",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.catharinaziekenhuis.nl/app/uploads/2026/06/Jaarverslaggeving-2025-Catharina-Ziekenhuis.pdf",
+      "validOriginal": true,
+      "localPath": "originals/catharina2025.pdf",
+      "observationAndVersion": "FY2025 actual; HSMR2024; electiveaccess end2025, reportcurrentOct15capture, notall2026outcomes",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 108,
+      "pdfMetadata": {
+        "format": "PDF 1.7",
+        "title": "",
+        "author": "u027309",
+        "subject": "",
+        "keywords": "",
+        "creator": "Adobe Acrobat Pro 11.0.9",
+        "producer": "Adobe Acrobat Pro 11.0.9",
+        "creationDate": "D:20260522125126+02'00'",
+        "modDate": "D:20260522125126+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S02",
+      "url": "https://www.brabantwater.nl/sites/brabantwater.nl/files/documents/Jaarverslagen/Brabant%20Water_Jaarverslag%202025.pdf",
+      "path": "brabantwater2025.pdf",
+      "scope": "Actualsupply/quality/fees/help andremainingsource/netresourcebarriers, providerarea notFUA",
+      "requestAtUTC": "2026-10-15T14:05:29.411515+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 5216329,
+      "sha256": "92a8907f29305fc458ea9acbd19fb2cdf2bf4525242fb7c627b502f497fcc9b3",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.brabantwater.nl/sites/brabantwater.nl/files/documents/Jaarverslagen/Brabant%20Water_Jaarverslag%202025.pdf",
+      "validOriginal": true,
+      "localPath": "originals/brabantwater2025.pdf",
+      "observationAndVersion": "FY2025 utilityarea, currentPDF;13m9sunderperformance,planned9m22s distinct;averageadvance€30.78 not householdmaximum",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 73,
+      "pdfMetadata": {
+        "format": "PDF 1.4",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "Adobe InDesign 21.3 (Windows)",
+        "producer": "Adobe PDF Library 18.0",
+        "creationDate": "D:20260612084806+02'00'",
+        "modDate": "D:20260612085025+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S03",
+      "url": "https://www.catharinaziekenhuis.nl/over-catharina/kwaliteit-veiligheid/",
+      "path": "catharina-quality.html",
+      "scope": "ActualHSMRmethod/selectedresults plus trueSMRPDFhref, notabsenceofqualityproblems",
+      "requestAtUTC": "2026-10-15T14:05:34.225124+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 71186,
+      "sha256": "d76e82619f9eb21baa24a12068fbea3e7649208def2f68dfbfdcff7806955478",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.catharinaziekenhuis.nl/over-catharina/kwaliteit-veiligheid/",
+      "validOriginal": true,
+      "localPath": "originals/catharina-quality.html",
+      "observationAndVersion": "Currentqualitypage lists2024HSMR andgeneralmethod; exactcutoffbyte notauthenticated",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S04",
+      "url": "https://www.catharinaziekenhuis.nl/app/uploads/2026/01/06011009-NZaformat-HSMR-2022-2024.pdf",
+      "path": "catharina-hsmr2024.pdf",
+      "scope": "Actual2024HSMR/2022–24diagnoses withCIs noFUAresidentmortality causalclaim",
+      "requestAtUTC": "2026-10-15T14:07:03.252947+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 201960,
+      "sha256": "90908f2ff7fb675ab56ae1182e2215e2a162bd869386063a001dd7267c2eb9d4",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.catharinaziekenhuis.nl/app/uploads/2026/01/06011009-NZaformat-HSMR-2022-2024.pdf",
+      "validOriginal": true,
+      "localPath": "originals/catharina-hsmr2024.pdf",
+      "observationAndVersion": "HSMR2024 anddiagnosegroups2022–24, differentwindows; admissioncounts/expecteddenominatorsnotgiven; CIs printed",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 2,
+      "pdfMetadata": {
+        "format": "PDF 1.7",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "Microsoft® Excel® for Microsoft 365",
+        "producer": "Microsoft® Excel® for Microsoft 365",
+        "creationDate": "D:20250901145322+02'00'",
+        "modDate": "D:20250901145322+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S05",
+      "url": "https://eindhoven.jaarverslag-2024.nl/assets/docs/jaarstukken2024.pdf",
+      "path": "eindhoven-city2024.pdf",
+      "scope": "Actualcityprotection/safety/help/delivery andcounterevidence;2024not2026measurement",
+      "requestAtUTC": "2026-10-15T14:07:05.884427+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 6338677,
+      "sha256": "ec9c9acbfea77f41b7c0a3fdf47a304edb0bba615ef6a9d80503c2275ac5ac59",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://eindhoven.jaarverslag-2024.nl/assets/docs/jaarstukken2024.pdf",
+      "validOriginal": true,
+      "localPath": "originals/eindhoven-city2024.pdf",
+      "observationAndVersion": "Municipal2024actual/2025plans andrisks, no claim2026maintenancestatus or2024budget=delivery",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 311,
+      "pdfMetadata": {
+        "format": "PDF 1.7",
+        "title": "Jaarstukken 2024",
+        "author": "Gemeente Eindhoven - CTRL",
+        "subject": "v2",
+        "keywords": "",
+        "creator": "Microsoft® Word voor Microsoft 365",
+        "producer": "Microsoft® Word voor Microsoft 365",
+        "creationDate": "D:20250528154609+02'00'",
+        "modDate": "D:20250603164709+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S06",
+      "url": "https://www.catharinaziekenhuis.nl/aandoeningen/lymfeklierkanker/",
+      "path": "catharina-lymphoma.html",
+      "scope": "Actuallocalreferral/preparation/regionalMDT/stemcellrecovery andCAR-TinexternalMUMC+, no localbrandinference",
+      "requestAtUTC": "2026-10-15T14:07:11.829704+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 107830,
+      "sha256": "502d14ff864232cdfdb76a2ed04d4a8756b8e80a838a1134b58e445ce90da640",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.catharinaziekenhuis.nl/aandoeningen/lymfeklierkanker/",
+      "validOriginal": true,
+      "localPath": "originals/catharina-lymphoma.html",
+      "observationAndVersion": "Currentlymphomapatientpathway; updateddate not independentlyestablished; externalMUMC+ treatment/localpreparation/recovery distinguished",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S07",
+      "url": "https://www.wijeindhoven.nl/sites/default/files/2026-06/2025%20Jaarrapport%20WIJeindhoven%202025%20-%20Stichting%20WIJeindhoven.pdf",
+      "path": "wijeindhoven2025.pdf",
+      "scope": "Actualdeliveredordinarysocialsupport/helpafterresidualwaiting/funding/mandatebounds",
+      "requestAtUTC": "2026-10-15T14:07:49.184725+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 2883263,
+      "sha256": "22d5a7f4df9eb192f81e74a5a47483ba9faac1a2031719cc5d9688e5b1f3eeba",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.wijeindhoven.nl/sites/default/files/2026-06/2025%20Jaarrapport%20WIJeindhoven%202025%20-%20Stichting%20WIJeindhoven.pdf",
+      "validOriginal": true,
+      "localPath": "originals/wijeindhoven2025.pdf",
+      "observationAndVersion": "2025 deliveredcasework and2026financialrisk; formalagreementthroughJun2026/mandates risk notresolved2026everybody",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 48,
+      "pdfMetadata": {
+        "format": "PDF 1.6",
+        "title": "[Tekst]",
+        "author": "Merel Cirkel",
+        "subject": "",
+        "keywords": "",
+        "creator": "Microsoft® Word voor Microsoft 365",
+        "producer": "Microsoft® Word voor Microsoft 365",
+        "creationDate": "D:20260407100118+02'00'",
+        "modDate": "D:20260407150833Z",
+        "trapped": "",
+        "encryption": "Standard V4 R4 128-bit AES"
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S08",
+      "url": "https://www.voedselbankeindhoven.nl/wp-content/uploads/2026/04/VBE_jaarverslag2025.pdf",
+      "path": "foodbank2025.pdf",
+      "scope": "Actualfoodaccessdelivery/meanseligibility/remainingcostconstraints, notmedianautomaticeligibility",
+      "requestAtUTC": "2026-10-15T14:07:53.314610+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 2565583,
+      "sha256": "93786e890062908b7228d97a10c597c300d6879a41d0f132db63cfe7e7110732",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.voedselbankeindhoven.nl/wp-content/uploads/2026/04/VBE_jaarverslag2025.pdf",
+      "validOriginal": true,
+      "localPath": "originals/foodbank2025.pdf",
+      "observationAndVersion": "Foodbank2025 delivery; foreword677atwriting vs31Dec680; 2026investmentplans notdone",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 21,
+      "pdfMetadata": {
+        "format": "PDF 1.4",
+        "title": "Opmaak 1",
+        "author": "Frank5",
+        "subject": "",
+        "keywords": "",
+        "creator": "QuarkXPress(R) 21.03",
+        "producer": "QuarkXPress(R) 21.03",
+        "creationDate": "D:20260415133809+01'00'",
+        "modDate": "D:20260415133809+01'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S09",
+      "url": "https://www.catharinaziekenhuis.nl/patientenfolders/ambulant-traject-na-autologe-stamceltransplantatie-folder-cki-029/",
+      "path": "catharina-asct-home.html",
+      "scope": "Actuallocalposttransplantclinicalmonitoring/netcareburden andexternalMUMCprocedure notinsideFUA",
+      "requestAtUTC": "2026-10-15T14:07:58.223390+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 71205,
+      "sha256": "9dd55abfb5493dba9f5241fe3b9bcc75f3743e9be2b7e49d37bfed5b981469ce",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.catharinaziekenhuis.nl/patientenfolders/ambulant-traject-na-autologe-stamceltransplantatie-folder-cki-029/",
+      "validOriginal": true,
+      "localPath": "originals/catharina-asct-home.html",
+      "observationAndVersion": "PatientCKI-029 lastedited25Feb2025; ASCT ONLY, notCAR-Tmonitoring",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S12",
+      "url": "https://brainporteindhoven.com/fileadmin/user_upload/Brainport_Development/Strategie/3-Brainport_Jaaroverzicht_2025_WEB_RGB.pdf",
+      "path": "brainport2025.pdf",
+      "scope": "Actual2025industryimplementation/helpdiffusion withfutureobjectivesseparate,regionalnotFUAidentityassumed",
+      "requestAtUTC": "2026-10-15T14:09:00.763037+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 10080786,
+      "sha256": "b44c03676e3e5fd9b46fffe3d946844d6db897aac8cb2e2e06daed74257975a3",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://brainporteindhoven.com/fileadmin/user_upload/Brainport_Development/Strategie/3-Brainport_Jaaroverzicht_2025_WEB_RGB.pdf",
+      "validOriginal": true,
+      "localPath": "originals/brainport2025.pdf",
+      "observationAndVersion": "Yearreview2025, result/goalcolumns retained, DITMclosure wording2025/2026overlap; no allplannedpilotsalreadydeployed",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 24,
+      "pdfMetadata": {
+        "format": "PDF 1.4",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "Adobe InDesign 21.3 (Macintosh)",
+        "producer": "Adobe PDF Library 18.0",
+        "creationDate": "D:20260416181918+02'00'",
+        "modDate": "D:20260602133910+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S13",
+      "url": "https://www.catharinaziekenhuis.nl/prijzen-en-vergoedingen/contracten-zorgverzekeraars/",
+      "path": "catharina-insurance2026.html",
+      "scope": "Realobserved2026ordinaryinsurancecontract/paymentqualification no blankfreecare",
+      "requestAtUTC": "2026-10-15T14:09:41.039398+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 64169,
+      "sha256": "8ce230c9e387a164805bfb6138647e8b88b66432cdb9a20cf53e5d1e627b937f",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.catharinaziekenhuis.nl/prijzen-en-vergoedingen/contracten-zorgverzekeraars/",
+      "validOriginal": true,
+      "localPath": "originals/catharina-insurance2026.html",
+      "observationAndVersion": "31Jan2026 explicitcontractstatus2026; older2024budgetpolicyqualificationsseparate",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S14",
+      "url": "https://www.kpn.com/prepaid/buitenland?navMethod=header",
+      "path": "kpn-prepaid.html",
+      "scope": "OldsuccessfulactualURL newcurrentraw snapshot notoldSHA; realordinaryconsumerEUroaming/credit/receivingsms conditions",
+      "requestAtUTC": "2026-10-15T14:09:43.877658+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 241135,
+      "sha256": "83d73186e198def25e8ede36d99b1531b8e0b05fd82a091b307fe2dedd45a4d7",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html;charset=utf-8",
+      "resolvedUrl": "https://www.kpn.com/prepaid/buitenland?navMethod=header",
+      "validOriginal": true,
+      "localPath": "originals/kpn-prepaid.html",
+      "observationAndVersion": "Currentconsumerprepaidservice; exactcutoffversionunknown. FreshnewbytesnotoldAmsterdambyterecertification",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S15",
+      "url": "https://www.catharinaziekenhuis.nl/telefoonnummers-en-openingstijden-van-afdelingen/route-parkeren/",
+      "path": "catharina-transport.html",
+      "scope": "Realobservedlocalroad/rail/busnetaccess andcapacity/costbounds, noimaginedairportitinerary",
+      "requestAtUTC": "2026-10-15T14:09:46.425760+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 97992,
+      "sha256": "4d08cfdc9583761440749fc667e0ce8f8450fe7ebf6d76f5018f7757aa6d692b",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.catharinaziekenhuis.nl/telefoonnummers-en-openingstijden-van-afdelingen/route-parkeren/",
+      "validOriginal": true,
+      "localPath": "originals/catharina-transport.html",
+      "observationAndVersion": "Currenthospitalroad/bus/CS/400airportroute; occasionalparkingfull/cashless andshuttlehours; notverifiedforeignitinerary",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S16",
+      "url": "https://www.zorginstituutnederland.nl/documenten/2025/02/24/vergoeding-car-t-behandelingen-bij-kanker",
+      "path": "zin-car2025.html",
+      "scope": "PreviouslysuccessfulactualpayerURL nownewcapture;24Feb2025ceasedmaintenance indications notreimbursementall2026",
+      "requestAtUTC": "2026-10-15T14:11:26.310411+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 229251,
+      "sha256": "29f5620e6eebc244beeb48f5a9daa6333659bbb0bf00442cecabdb9899649bca",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "resolvedUrl": "https://www.zorginstituutnederland.nl/documenten/2025/02/24/vergoeding-car-t-behandelingen-bij-kanker",
+      "validOriginal": true,
+      "localPath": "originals/zin-car2025.html",
+      "observationAndVersion": "ZIN24Feb2025,lastupdateexplicitlynotmaintained; reimbursed/advice/noncovered/researchdistinct; notall2026brands",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "rootBytesReverified": true,
+      "usedForScore": false
+    },
+    {
+      "id": "S17",
+      "url": "https://www.catharinaziekenhuis.nl/prijzen-en-vergoedingen/veelgestelde-vragen-over-prijzen-en-vergoedingen/",
+      "path": "catharina-payment.html",
+      "scope": "Actuallocalnormalreferral/insured/deductible/netpayment rules not allindicationspaid",
+      "requestAtUTC": "2026-10-15T14:11:29.428022+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 78879,
+      "sha256": "0d542a03f0cb772912ec59ea6e1459ca07a48b673c52c5af77e81095f70accde",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.catharinaziekenhuis.nl/prijzen-en-vergoedingen/veelgestelde-vragen-over-prijzen-en-vergoedingen/",
+      "validOriginal": true,
+      "localPath": "originals/catharina-payment.html",
+      "observationAndVersion": "Currentlocaldirectinsurancebilling/referral/deductibles; no precise annualdeductiblerateauthenticated; currentnotcutoffbytes",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S18",
+      "url": "https://oncologie.mumc.nl/stamceltransplantatie",
+      "path": "mumc-stemcell.html",
+      "scope": "Actualexternalnetworktreatment delivery/appropriateness at trueobservedlocalreferralhref, externalnotEindhovenfacility",
+      "requestAtUTC": "2026-10-15T14:11:32.236394+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 130110,
+      "sha256": "3173a11220409295784285f2bfb33620a3ae3820a0d600ab4234b54d303fd746",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://oncologie.mumc.nl/stamceltransplantatie",
+      "validOriginal": true,
+      "localPath": "originals/mumc-stemcell.html",
+      "observationAndVersion": "CurrentformalMUMC+ inpatientstemcellprogramme; externalhospital notEindhovenFUAfacility",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "R01",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_es.htm",
+      "path": "R01-eu-workers.html",
+      "localPath": "originals/R01-eu-workers.html",
+      "originalBytes": 153770,
+      "sha256": "1555b5f65525917eee8fab3fef570e9a27b5d26dab38779b5bd26659b2bfb34f",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/leuven/originals/eu-workers.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationAndVersion": "EU workerconditionalresidence;lastchecked19Aug2026; originalretrievalmetadataunavailable notinvented",
+      "scope": "CommonEUfact independentlyDutch/Eindhovenadapted; noscorecopied",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "R02",
+      "url": "https://europa.eu/youreurope/citizens/consumers/financial-products-and-services/payments-transfers-cheques/index_en.htm",
+      "path": "R02-eu-payments.html",
+      "localPath": "originals/R02-eu-payments.html",
+      "originalBytes": 155296,
+      "sha256": "0a457237f62980c579bc7dba314552421cb5b0fa826dc830b0e35bb42d458ee8",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/munich/eu-payments.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationAndVersion": "Lastchecked28Apr2026, capturedOct15 durableMunich",
+      "scope": "CommonEUfact independentlyDutch/Eindhovenadapted; noscorecopied",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "R03",
+      "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/mobile-roaming-costs/index_en.htm",
+      "path": "R03-eu-roaming.html",
+      "localPath": "originals/R03-eu-roaming.html",
+      "originalBytes": 155071,
+      "sha256": "e2e15e5e0521db23b3d99d06fa691c557b5ebdb63b09aa5ccb50f58af9a8f0d4",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/eu-roaming.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationAndVersion": "Lastchecked7Jan2026,capturedOct15durableLyon",
+      "scope": "CommonEUfact independentlyDutch/Eindhovenadapted; noscorecopied",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "R04",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "path": "has-kymriah-2023.pdf",
+      "localPath": "originals/has-kymriah-2023.pdf",
+      "originalBytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "validOriginal": true,
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/has-kymriah-2023.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationAndVersion": "Sept2023HAS;JULIET20Feb2020noncomparativeupdate/registry; actualdurableBaselbytes acquiredOct15",
+      "scope": "MatureadultDLBCLtisa evidence; notDutchpayment/localbrand/localcohort, finiteplatformadaptation only",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 40,
+      "pdfMetadata": {
+        "format": "PDF 1.7",
+        "title": "KYMRIAH 1,2 x 10^6 – 6 x 10^8 cellules,",
+        "author": "PERCHERON Romain",
+        "subject": "dispersion cellulaire pour perfusion",
+        "keywords": "tisagenlecleucel",
+        "creator": "Microsoft® Word pour Microsoft 365",
+        "producer": "Microsoft® Word pour Microsoft 365",
+        "creationDate": "D:20231010112442+02'00'",
+        "modDate": "D:20231010112442+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "rootBytesReverified": true,
+      "usedForScore": false
+    },
+    {
+      "id": "R05",
+      "url": "https://www.uzleuven.be/nl/media/600a8621-93f2-47a9-887c-01d563e9b672/Jaarverslag%20transplantatie%202024%2012%20stamceltransplantaties.pdf",
+      "path": "stemcell2024.pdf",
+      "scope": "Mature hematopoieticautologoushuman common diseaseprocedure; notEindhovenorMUMCcohort, not sameasCAR-T",
+      "requestAtUTC": "2026-10-15T10:44:09.678924+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": 2911972,
+      "sha256": "786c63a4bcb07f542a411e00f95432619c456f472cc267874fd80d92695aeac3",
+      "cutoffOriginalBytesAuthenticated": false,
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.uzleuven.be/nl/media/600a8621-93f2-47a9-887c-01d563e9b672/Jaarverslag%20transplantatie%202024%2012%20stamceltransplantaties.pdf",
+      "validOriginal": true,
+      "localPath": "originals/stemcell2024.pdf",
+      "observationAndVersion": "2024 operations; first-transplant KM2016–24; JACIE2011/15/19 historical",
+      "geographicAndPopulationScope": "Selected UZ marrow/stem-cell recipients including referrals and children, not local resident denominator",
+      "historicalCutoffBytesCertified": false,
+      "cutoffAdaptation": "Current acquired bytes do not certify identical bytes on2026-10-10; dated pre-cutoff event/version accepted only with explicit continuation assumption in report; undated current text is weaker context.",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/leuven/originals/stemcell2024.pdf",
+      "sourceKind": "durable_verified_reuse_no_new_network",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 15,
+      "pdfMetadata": {
+        "format": "PDF 1.6",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "Adobe InDesign 20.4 (Macintosh)",
+        "producer": "Adobe PDF Library 17.0",
+        "creationDate": "D:20250708195311+02'00'",
+        "modDate": "D:20251010093548+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "rootBytesReverified": true,
+      "usedForScore": true
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "id": "S10",
+      "url": "https://www.politie.nl/nieuws/2025/mei/26/aanhoudingen-tijdens-actiedagen-ondermijning-eindhoven.html",
+      "path": "police-eindhoven2025.html",
+      "scope": "Actualregionalorganizedcrimeinterventions andrisk,16arrests/120trafficnotconvictionorcityriskrate",
+      "requestAtUTC": "2026-10-15T14:08:58.742035+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": null,
+      "sha256": null,
+      "cutoffOriginalBytesAuthenticated": false,
+      "validOriginal": false,
+      "error": "HTTP Error 403: Forbidden",
+      "localPath": null,
+      "observationAndVersion": "Normalraw403; earlierofficialwebbody26May2025 observed,notvalidraw",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false
+    },
+    {
+      "id": "S11",
+      "url": "https://www.politie.nl/gezocht/getuigenoproep/2025/september/09-aantreffen-explosief---gerretsonplein---eindhoven",
+      "path": "police-explosive2025.html",
+      "scope": "ActualSeptember25explosivematerial/evacuation/temporaryshelter/EODneutralisation, not allthreatremoved",
+      "requestAtUTC": "2026-10-15T14:08:59.878796+00:00",
+      "method": "urllib_normal_TLS_once_no_retry",
+      "originalBytes": null,
+      "sha256": null,
+      "cutoffOriginalBytesAuthenticated": false,
+      "validOriginal": false,
+      "error": "HTTP Error 403: Forbidden",
+      "localPath": null,
+      "observationAndVersion": "Normalraw403; earlierofficialwebbody25Sep2025 observed,notvalidraw",
+      "verifiedLocalOn": "2026-10-15",
+      "historicalCutoffBytesAuthenticated": false
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allCandidatesChecked": 9031,
+    "repairCount": 136,
+    "records": [
+      {
+        "fid": 6480,
+        "eFUA_ID": 2254.0,
+        "UC_num": 2.0,
+        "UC_IDs": "2205;2218",
+        "eFUA_name": "Eindhoven",
+        "Commuting": 1.0,
+        "Cntry_ISO": "NLD",
+        "Cntry_name": "Netherlands",
+        "FUA_area": 1381.0,
+        "UC_area": 127.0,
+        "FUA_p_2015": 801180.710347496,
+        "UC_p_2015": 349901.16189575195,
+        "Com_p_2015": 451279.548451744
+      }
+    ],
+    "points": [
+      {
+        "label": "Eindhoven centre reference",
+        "longitude": 5.4797,
+        "latitude": 51.4416,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 2254,
+            "name": "Eindhoven"
+          }
+        ]
+      },
+      {
+        "label": "Catharina hospital reference",
+        "longitude": 5.4814,
+        "latitude": 51.4642,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 2254,
+            "name": "Eindhoven"
+          }
+        ]
+      },
+      {
+        "label": "MaximaVeldhoven reference",
+        "longitude": 5.406,
+        "latitude": 51.406,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 2254,
+            "name": "Eindhoven"
+          }
+        ]
+      },
+      {
+        "label": "Eindhovenairport reference",
+        "longitude": 5.3745,
+        "latitude": 51.4501,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 2254,
+            "name": "Eindhoven"
+          }
+        ]
+      }
+    ],
+    "targetWkbSha256": "1814d5fc8d93fe0ff187b74b63def8c9718c220287f56e755f8bc314207525f1",
+    "meaning": "Approximate reference points do not establish provider service coverage, citywide outcomes or residence; Hospital referrals/water service/city/FUA differ; airport point not proof of journey access."
+  },
+  "sensitivity": {
+    "PCSWithdrawn": [45, 70],
+    "GSSWithdrawn": [42, 67],
+    "ISRWithdrawn": [42, 67],
+    "MEDWithdrawn": [42, 67],
+    "LONWithdrawn": [45, 65],
+    "TECWithdrawn": [45, 65],
+    "OPTWithdrawn": [45, 65],
+    "PCS60": [54, 64],
+    "GSS40": [48, 58],
+    "ISR40": [48, 58],
+    "MED40": [48, 58],
+    "LON40": [49, 59],
+    "TEC40": [49, 59],
+    "TEC80": [53, 63],
+    "OPT40": [49, 59],
+    "allJudgmentsWithdrawn": [0, 100]
+  },
+  "unknownWeight": 10,
+  "coverageReview": [
+    {
+      "dimension": "PCS",
+      "subpillar": "heat_humidity",
+      "status": "partial",
+      "sourceIds": ["S05"],
+      "fullyMeasured": false,
+      "note": "Actualgreening/waterretention/depaving mayreduceheat, noheatmortality/comprehensivecomfortmeasurement; finitefunctionalbridge."
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "flood_sea_level",
+      "status": "partial",
+      "sourceIds": ["S05"],
+      "fullyMeasured": false,
+      "note": "Groundwater/sewagepressure/sinkholerepair,6421mrelining/replacement3950mwaterstructure/8.2ha actual; heavy-rain/designgap anddeferredmaintenance. CitynotwholeFUA."
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "geophysical",
+      "status": "context",
+      "sourceIds": ["S05"],
+      "fullyMeasured": false,
+      "note": "Reported sinkholes are sewer/weatherrelated, not tectonic hazard; earthquake/exposure notstarted."
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "severe_weather_wildfire",
+      "status": "partial",
+      "sourceIds": ["S05"],
+      "fullyMeasured": false,
+      "note": "Repeatedactualstorm/drought/rain damages andpublicspace repair; wildfireprotection notfullyreviewed."
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "organized_violence",
+      "status": "partial",
+      "sourceIds": ["S05", "S10", "S11"],
+      "fullyMeasured": false,
+      "note": "Realregionalintegratedoperations andlocalEODneutralisation, policeoriginalrawfailedbutpriorwebbodyread; arrests notconvictions orcityimpactrate."
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "regional_conflict",
+      "status": "partial",
+      "sourceIds": ["S05", "S02"],
+      "fullyMeasured": false,
+      "note": "Ukraine/refugee/energyimpact andactualLebanonrepatriation72h reception; notlocallyfoughtwar orcompletefutureconflictscan."
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "strategic_exposure",
+      "status": "partial",
+      "sourceIds": ["S02", "S05"],
+      "fullyMeasured": false,
+      "note": "Militarysharedairport/vitalwaterdependency; realSOC/physicalriskanalysis/emergencywater; not testedallattackscenarios."
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "governance",
+      "status": "partial",
+      "sourceIds": ["S05", "S07"],
+      "fullyMeasured": false,
+      "note": "Realcasework/mediations, 2026additionalfundingandremaining3.3mgap; mandaterecordgaps andsafetyregionnoncompliance retained."
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "adaptive_capacity",
+      "status": "partial",
+      "sourceIds": ["S05", "S07", "S12"],
+      "fullyMeasured": false,
+      "note": "Repairs/workingregionalcare/assistance andfundingadjustment actual; many2026programmes/goals notdelivered."
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "social_cohesion",
+      "status": "partial",
+      "sourceIds": ["S07", "S08"],
+      "fullyMeasured": false,
+      "note": "Socialnetworks/goalprogress/volunteerfoodsystem actual; helpselection andhiddenpoverty notwholeFUAtrustsurvey."
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "emergency_recovery",
+      "status": "partial",
+      "sourceIds": ["S05", "S11", "S02"],
+      "fullyMeasured": false,
+      "note": "Actualevacuationtemporaryshelter/repatriation/sinkholerepairs withVRBZOweakcapacity, no fullrecoveryrate."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "water",
+      "status": "partial",
+      "sourceIds": ["S02"],
+      "fullyMeasured": false,
+      "note": "Actual177.2m m3/€30.78householdadvance/companyunderperformanceminutes andsupport; WestBrabantcodered not Eindhovenrationing; no residentqualityrate."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "food",
+      "status": "partial",
+      "sourceIds": ["S08"],
+      "fullyMeasured": false,
+      "note": "Actualfreechoice32kshopping/680endyearhouseholds, incomplete3–4dayhelp/means criteria; poorresidentssubset notmedianfoodsecuritymeasure."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "energy",
+      "status": "partial",
+      "sourceIds": ["S05", "S12"],
+      "fullyMeasured": false,
+      "note": "Operatingdistribution/actualenergycoaches andfirmcongestionhelp; newconnections andplannedhubs nothouseholdoutages; ordinarynetenergycost remainsundirected."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "supply_chain",
+      "status": "partial",
+      "sourceIds": ["S02", "S08", "S12"],
+      "fullyMeasured": false,
+      "note": "Actualwateremergency/materialstock andfoodcoldchain/redistribution; healthyfooddonationsshrinking, industryrelocation/geopoliticaldependency notfullhouseholdcontinuity."
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "access",
+      "status": "partial",
+      "sourceIds": ["S01", "S13", "S17", "S15"],
+      "fullyMeasured": false,
+      "note": "Directbillingcontract2026/GP-referral/deductible andend2025elective9w/8.5w vsreport6w/7w. Urgentpriorityproviderclaim notallpatientwaitmeasurement."
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "routine_quality",
+      "status": "partial",
+      "sourceIds": ["S01", "S03", "S04"],
+      "fullyMeasured": false,
+      "note": "HSMR96CI89–104; diagnosticCIs2022–24 andcasecomplexitylimits;14possiblecalamityreports not14confirmedavoidabledeaths."
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "specialist_capacity",
+      "status": "partial",
+      "sourceIds": ["S01", "S06", "S18"],
+      "fullyMeasured": false,
+      "note": "Actualheart/cancer/triage/imaging andregionalstemcellreferral, MUMCexternal; noFUAresidentclinicaleffectrate."
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "system_continuity",
+      "status": "partial",
+      "sourceIds": ["S01", "S06", "S09"],
+      "fullyMeasured": false,
+      "note": "Actualpacemaker/strokehomefollowup,localASCTrecovery/24hcontact; caregiver/45min/visits andhospiceaccessgaps remain."
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "translation",
+      "status": "partial",
+      "sourceIds": ["S06", "S09", "S18", "R05"],
+      "fullyMeasured": false,
+      "note": "Specific livinghematopoieticcellcollection/reinfusion andmarrowreconstruction/localrecovery, notarbitraryadvancedtreatment equalsLON. CAR-Texternalpathseparate."
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "trial_maturity",
+      "status": "partial",
+      "sourceIds": ["R05", "R04"],
+      "fullyMeasured": false,
+      "note": "Autologousfirsttransplantn4632016–24longitudinalKM maturitynotrandomizedcausalbenefit; adulttisaJULIETITT167/ITTm99/actual115separate notMUMCcohort."
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "regulatory_adoption",
+      "status": "partial",
+      "sourceIds": ["S06", "S16", "S18"],
+      "fullyMeasured": false,
+      "note": "ActualroutineASCTnetwork andZINspecificCAR-T reimbursement/advice distinction; noallbrands/allindicationsDutch2026coverage."
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "resident_access",
+      "status": "partial",
+      "sourceIds": ["S09", "S13", "S17"],
+      "fullyMeasured": false,
+      "note": "Usualinsuredlocaldirectbilling finite networkbridge; ASCT45minradius/frequentcontrols/caregiver/no-driving. NotCAR-Taftercareorfreealltransport."
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "knowledge_output",
+      "status": "partial",
+      "sourceIds": ["S01", "S12"],
+      "fullyMeasured": false,
+      "note": "Researchtoimplementedclinicalnetwork/platforms/SEframework actual; noWIPO/patents/brandreputation scoreconversion."
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "industry_density",
+      "status": "partial",
+      "sourceIds": ["S12", "S05"],
+      "fullyMeasured": false,
+      "note": "Multipleindustry/research/publicnodes/financing andclaimedTomTomconnection, regional21municipalityscope notexact1381km2 inventory; relocationrisks retained."
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "digital_infrastructure",
+      "status": "partial",
+      "sourceIds": ["S05", "S14", "S02"],
+      "fullyMeasured": false,
+      "note": "ActualEFX/GVE broadbandusers andmobile/maintenance/healthdigitaluse; noallhouseholdcoverage/skillsstats."
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "diffusion",
+      "status": "partial",
+      "sourceIds": ["S01", "S02", "S12"],
+      "fullyMeasured": false,
+      "note": "Actualpacemaker/strokehomeadoption/SPECT/MRI,utilityrobot/mobilemaintenance,MKBvouchers; pilots/proposals distinct fromdeployments."
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "transport_redundancy",
+      "status": "partial",
+      "sourceIds": ["S05", "S15"],
+      "fullyMeasured": false,
+      "note": "Actualcivilairport2024/currentlocalroad/CSbus and400AirportShuttle; capacity/parkingconstraint/sharedmilitaryairport; no currentforeignfare/completeitinerary."
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "legal_mobility",
+      "status": "partial",
+      "sourceIds": ["R01"],
+      "fullyMeasured": false,
+      "note": "DutchEUcitizen worker/selfemployed conditionalresidence/registration and5yearrule; no guaranteedforeignemployment or automaticpermanentresidence."
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "asset_portability",
+      "status": "partial",
+      "sourceIds": ["R02"],
+      "fullyMeasured": false,
+      "note": "EuroEUtransfer/card/ATM domestic-likefees andIBANrules; ordinaryexistingfunds/account/auth device finiteassumption, noteveryassetliquidation orpermanentbankretention."
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "network_continuity",
+      "status": "partial",
+      "sourceIds": ["S14", "R03"],
+      "fullyMeasured": false,
+      "note": "ActualKPNconsumercreditabroad/freeSMS/online topup andEUfairuse; paid/nonEU/permanentroaming anddevice/KYC/changeaddress residual."
+    }
+  ],
+  "rootExcludedWebClaims": [
+    {
+      "sourceId": "WIJ-index",
+      "claim": "currentundated staffshortage banner",
+      "usedForScore": false,
+      "reason": "No retained actual body independently reviewed; WIJ2025 actual9.4%absence/wait/funding primary evidence remains."
+    }
+  ],
+  "sourceAndStopLedger": {
+    "normalNewRequests": 18,
+    "normalValidOriginals": 16,
+    "normalFailures": 2,
+    "reusedVerifiedDurableOriginals": 5,
+    "validOriginalsTotal": 21,
+    "sourceRecords": 23,
+    "discoveryRounds": [
+      {
+        "queries": [
+          "site.eindhoven.nl jaarverslag 2025 armoede wateroverlast resultaten",
+          "site.catharinaziekenhuis.nl 2025 jaarverslag HSMR stamcel CAR T",
+          "site.brabantwater.nl jaarverslag 2025 drinkwaterkwaliteit leveringsonderbreking",
+          "site.brainport.nl 2025 jaarverslag technologie toepassing inwoners"
+        ],
+        "count": 4
+      },
+      {
+        "queries": [
+          "Eindhoven jaarstukken 2025 klimaatadaptatie voedselbank veiligheid resultaten",
+          "site.catharinaziekenhuis.nl stamceltransplantatie CAR T celtherapie behandeling",
+          "site.tue.nl annual report 2025 industry impact technology transfer actual",
+          "site.politie.nl Eindhoven 2025 ondermijning explosies dreiging aanpak"
+        ],
+        "count": 4
+      }
+    ],
+    "extraQueries": 0,
+    "networkClosed": true,
+    "rawBatchSizes": [3, 3, 3, 3, 3, 3],
+    "maxSourceRequestOrPixelBatch": 3,
+    "explicitAssertions": true,
+    "webOnly": [
+      {
+        "sourceId": "S10",
+        "url": "https://www.politie.nl/nieuws/2025/mei/26/aanhoudingen-tijdens-actiedagen-ondermijning-eindhoven.html",
+        "originalBytes": null,
+        "sha256": null,
+        "readOrder": "Officialwebbody successfulbefore normalraw403; no nextrequestafter403",
+        "facts": "26May2025 integratedactions21/22MayEindhovenregion/DeKempen16arrests includingnonorganizedtraffic/openwarrants;120trafficcitations,weapons/drugs seized. Notconvictions orlocalrate."
+      },
+      {
+        "sourceId": "S11",
+        "url": "https://www.politie.nl/gezocht/getuigenoproep/2025/september/09-aantreffen-explosief---gerretsonplein---eindhoven",
+        "originalBytes": null,
+        "sha256": null,
+        "readOrder": "Officialwebbody successfulbefore normalraw403; no nextrequestafter403",
+        "facts": "25Sep2025 Gerretsonplein explosives, partialflat/streetclosure/evacuation, nearbytemporaryshelter,EODneutralised/releasedarea; culprit/motive thenunknown. LaterNovarrestsnotusedasprecutoff2025Sepfact."
+      },
+      {
+        "sourceId": "WIJ-index",
+        "url": "https://www.wijeindhoven.nl/over-wijeindhoven/publicaties-verslagen-en-onderzoeken",
+        "originalBytes": null,
+        "sha256": null,
+        "facts": "Currentundatedbanner staffshortage/longerwaits in someareas; contextual only, notcertifiedcutoff condition."
+      }
+    ],
+    "webFailures": [
+      {
+        "url": "https://www.eindhoven.nl/nieuws/inwonersenquete-2025-meeste-inwoners-voelen-zich-een-trotse-eindhovenaar",
+        "error": "403 once",
+        "usedAsRaw": false,
+        "action": "notretried; searchsummarynotadoptedresidentresult"
+      }
+    ],
+    "inheritedStops": [
+      "ING main/news cumulative3 stopped; noINGnetworkorCDNbypass, nofailedmechanismreset",
+      "Amsterdam/Groningenpriorfailures preservedin inherited-failures.json; alloldtmporiginalpathsverifiedmissing notoldSHArecertified",
+      "HASBasel priorTLSfailure1 retained; actualsuccessfuldurablebytesverified locally no request",
+      "NHS England/UCLH priorstops remain no requests; not relevantnewcountry reset"
+    ],
+    "failureMeaning": "Fetchfailure notpoorcityability/transparency; successfullycopiedbytes do noterase historicfailures.",
+    "correction": "Aninterimmessage currencyfragment was mistaken: waterhouseholdadvance is euro€30.78, neverGBP£. Raw/report/case all useEUR."
+  },
+  "webReadSources": [
+    {
+      "sourceId": "S10",
+      "url": "https://www.politie.nl/nieuws/2025/mei/26/aanhoudingen-tijdens-actiedagen-ondermijning-eindhoven.html",
+      "originalBytes": null,
+      "sha256": null,
+      "readOrder": "Officialwebbody successfulbefore normalraw403; no nextrequestafter403",
+      "facts": "26May2025 integratedactions21/22MayEindhovenregion/DeKempen16arrests includingnonorganizedtraffic/openwarrants;120trafficcitations,weapons/drugs seized. Notconvictions orlocalrate.",
+      "rootActualHistoricalToolTextRead": true,
+      "historicalToolTextBytes": 29579,
+      "historicalToolTextSha256": "80dfe536aa3ad987df09895673e143b1a4bfd90864c7f9bfd764be23483deba8",
+      "originalSessionContentBlockIndependentlyMatched": true,
+      "toolDigestIsWebsiteOriginalDigest": false,
+      "rootNewRequests": 0
+    },
+    {
+      "sourceId": "S11",
+      "url": "https://www.politie.nl/gezocht/getuigenoproep/2025/september/09-aantreffen-explosief---gerretsonplein---eindhoven",
+      "originalBytes": null,
+      "sha256": null,
+      "readOrder": "Officialwebbody successfulbefore normalraw403; no nextrequestafter403",
+      "facts": "25Sep2025 Gerretsonplein explosives, partialflat/streetclosure/evacuation, nearbytemporaryshelter,EODneutralised/releasedarea; culprit/motive thenunknown. LaterNovarrestsnotusedasprecutoff2025Sepfact.",
+      "rootActualHistoricalToolTextRead": true,
+      "historicalToolTextBytes": 29579,
+      "historicalToolTextSha256": "80dfe536aa3ad987df09895673e143b1a4bfd90864c7f9bfd764be23483deba8",
+      "originalSessionContentBlockIndependentlyMatched": true,
+      "toolDigestIsWebsiteOriginalDigest": false,
+      "rootNewRequests": 0
+    }
+  ],
+  "rootScopeReview": {
+    "rootPdfPageCount": 17,
+    "rootPdfPixelsViewed": [
+      {
+        "sourceId": "S05",
+        "physicalPage": 14
+      },
+      {
+        "sourceId": "S05",
+        "physicalPage": 19
+      },
+      {
+        "sourceId": "S05",
+        "physicalPage": 84
+      },
+      {
+        "sourceId": "S05",
+        "physicalPage": 85
+      },
+      {
+        "sourceId": "S05",
+        "physicalPage": 120
+      },
+      {
+        "sourceId": "S05",
+        "physicalPage": 142
+      },
+      {
+        "sourceId": "S01",
+        "physicalPage": 27
+      },
+      {
+        "sourceId": "S01",
+        "physicalPage": 28
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 1
+      },
+      {
+        "sourceId": "S07",
+        "physicalPage": 19
+      },
+      {
+        "sourceId": "S07",
+        "physicalPage": 21
+      },
+      {
+        "sourceId": "S02",
+        "physicalPage": 27
+      },
+      {
+        "sourceId": "S02",
+        "physicalPage": 37
+      },
+      {
+        "sourceId": "S08",
+        "physicalPage": 13
+      },
+      {
+        "sourceId": "S12",
+        "physicalPage": 10
+      },
+      {
+        "sourceId": "R05",
+        "physicalPage": 3
+      },
+      {
+        "sourceId": "R05",
+        "physicalPage": 13
+      }
+    ],
+    "all79PreviousCaseBytesUnchanged": true,
+    "all9031IndependentlyLoaded": true,
+    "fuaWkbSha256": "1814d5fc8d93fe0ff187b74b63def8c9718c220287f56e755f8bc314207525f1",
+    "rootNewNetworkRequests": 0,
+    "policeToolTextMatchedOriginalSessionContentBlock": true,
+    "policeToolTextDigestIsWebsiteOriginalDigest": false,
+    "wijUnretainedBannerUsedForScore": false,
+    "asctHomeConditionsAreAllTreatmentPrerequisites": false,
+    "mumcIsInside2254": false,
+    "asctAftercareTransferredToCart": false,
+    "leuven463OutcomesAreLocalCohort": false,
+    "hsmr96IsSignificantlyLowerMortality": false,
+    "possibleCalamitiesAreConfirmedDeaths": false,
+    "report6WeekBenchmarkIndependentlyCertifiedNationalStandard": false,
+    "score40RequiresDominanceOrMajorityOrShutdown": false,
+    "unknownsFilledWithMidpoint": false
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-eindhoven-score-completion-review.md",
+    "sha256": "e23c002238787f4273e7a9fd0a27ff3fcb2fd82d6a13b0fc21393f1308f1eef0",
+    "researchReport": "docs/cci-eindhoven-priority-review.md",
+    "researchReportSha256": "315874a6d2265a3789c53fbf946c3d8565a957a0e6b78317ebacaf2ebd7a6e3a",
+    "researchFrozenReportSha256": "00ed18a736c12edb0c5a7c6036d6a51d2e63f2e776799da748fb16c31d538f5d",
+    "frozenManifestSha256": "4c83300783fe85be758410eb33a22b5fad9ce9391922cab0ec530041c89caa07",
+    "frozenFilesVerified": 81,
+    "validOriginalCount": 21,
+    "newValidOriginalCount": 16,
+    "reusedOriginalCount": 5,
+    "rootNewNetworkRequests": 0
+  },
+  "reportBytes": 12849,
+  "reportSha256": "e23c002238787f4273e7a9fd0a27ff3fcb2fd82d6a13b0fc21393f1308f1eef0"
+}
