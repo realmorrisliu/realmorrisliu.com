@@ -82,6 +82,7 @@ import antwerp from "../../docs/data/cci-local-2026-antwerp-case.json";
 import brussels from "../../docs/data/cci-local-2026-brussels-case.json";
 import hamburg from "../../docs/data/cci-local-2026-hamburg-case.json";
 import lyon from "../../docs/data/cci-local-2026-lyon-case.json";
+import leuven from "../../docs/data/cci-local-2026-leuven-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -168,8 +169,10 @@ const cases = [
   brussels,
   hamburg,
   lyon,
+  leuven,
 ];
 const caseNamesZh: Record<number, string> = {
+  [leuven.candidateId]: "鲁汶功能区",
   [lyon.candidateId]: "里昂功能区",
   [hamburg.candidateId]: "汉堡功能区",
   [brussels.candidateId]: "布鲁塞尔功能区",
@@ -348,6 +351,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [leuven.candidateId]: [
+    zh
+      ? "鲁汶的制度、医疗、长寿转化准备、技术和退出能力暂定为条件60；物理安全、地缘安全和资源仍未知。已知加权小计36，未知部分使数学范围为36—76，无完整总分。实际服务、诊疗与付款、产业应用和迁移路径支持有限判断；等待、照护接续和费用限制仍保留。"
+      : "Leuven has conditional scores of 60 for ISR, MED, LON, TEC and OPT. PCS, GSS and RES remain unknown. The known weighted subtotal is 36, with an arithmetic domain of 36–76 and no total estimate. Actual services, clinical care and payment, product use and onward routes support limited judgments; waiting, care transitions and costs remain constraints.",
+    zh
+      ? "长寿维度仅评估特定疾病的造血细胞重建准备度，不证明健康延寿。移植随访是选择队列观察，TRANSMET宣传比例的分析集未核实，也未证明新适应证已常规报销。若不接受该范围及通常付款、监护和延续假设，LON恢复未知，范围改为30—80；这仍不能证明全球入围。"
+      : "LON is limited to disease-specific haematopoietic-cell reconstruction readiness; it does not prove healthy life extension. Transplant follow-up uses selected cohorts. The analysis set behind TRANSMET publicity ratios and routine reimbursement of the new indication remain unverified. Rejecting the LON scope, payment, monitoring or continuity assumptions restores it to unknown, giving 30–80. Global qualification remains unproven.",
+  ],
   [lyon.candidateId]: [
     zh
       ? "里昂ISR／MED／LON／TEC／OPT条件60，PCS／GSS／RES未知，数学域36—76、无中心。实际减免与跟进、有限质量和普通付款、多科疾病治疗、产业及数字交付支持有限判断；低PCC／出院联系、局部PFAS及费用照护余障保留。"

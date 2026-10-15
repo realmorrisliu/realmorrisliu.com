@@ -124,6 +124,7 @@ const realCases = [
   "brussels",
   "hamburg",
   "lyon",
+  "leuven",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -239,6 +240,7 @@ const [
   brussels,
   hamburg,
   lyon,
+  leuven,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2730,3 +2732,27 @@ const berlinExcludedFood = berlinGssCase.sourceSnapshots.find(
 );
 assert.equal(berlinExcludedFood.usedForScore, false);
 assert(!berlinResReview.newScoringSourceIds.includes("R30-N02"));
+
+const leuvenCase = realCases.find(c => c.candidateId === 1565);
+assert.equal(
+  leuvenCase.priorityCompletionReview.sha256,
+  digest(leuvenCase.priorityCompletionReview.path)
+);
+assert.equal(
+  leuvenCase.priorityCompletionReview.researchReportSha256,
+  digest(leuvenCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(leuven), { center: null, lower: 36, upper: 76 });
+for (const dimension of ["ISR", "MED", "LON", "TEC", "OPT"] as const) {
+  const withdrawn = { ...leuven };
+  delete withdrawn[dimension];
+  const is15 = weights[dimension] === 15;
+  assert.deepEqual(total(withdrawn), {
+    center: null,
+    lower: is15 ? 27 : 30,
+    upper: is15 ? 82 : 80,
+  });
+}
+assert.equal(leuvenCase.rootScopeReview.transmet73And9CertifiedAsWholeRandomizedSet, false);
+assert.equal(leuvenCase.rootScopeReview.stemCellCohortProvesHealthyLifeExtension, false);
+assert.equal(leuvenCase.rootScopeReview.sourceGvhdWordingAdoptedAsBeneficialMechanism, false);
