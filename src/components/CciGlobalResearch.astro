@@ -85,6 +85,7 @@ import lyon from "../../docs/data/cci-local-2026-lyon-case.json";
 import leuven from "../../docs/data/cci-local-2026-leuven-case.json";
 import nagoya from "../../docs/data/cci-local-2026-nagoya-case.json";
 import philadelphia from "../../docs/data/cci-local-2026-philadelphia-case.json";
+import kualaLumpur from "../../docs/data/cci-local-2026-kuala-lumpur-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -174,8 +175,10 @@ const cases = [
   leuven,
   nagoya,
   philadelphia,
+  kualaLumpur,
 ];
 const caseNamesZh: Record<number, string> = {
+  [kualaLumpur.candidateId]: "吉隆坡功能区",
   [philadelphia.candidateId]: "费城功能区",
   [nagoya.candidateId]: "名古屋功能区",
   [leuven.candidateId]: "鲁汶功能区",
@@ -357,6 +360,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [kualaLumpur.candidateId]: [
+    zh
+      ? "吉隆坡的制度、资源和技术取条件60，其余五维未知。已知加权小计21，数学范围21—86，无完整总分。实际供水修复、家庭消费背景、当前成本缓解及工业数字应用支持有限判断；重要停水、投诉与群体差异均保留。"
+      : "Kuala Lumpur has conditional scores of 60 for ISR, RES and TEC; five dimensions remain unknown. The known weighted subtotal is 21, with an arithmetic domain of 21–86 and no total estimate. Actual water restoration, household consumption context, current cost relief and industrial digital use support bounded judgments; major outages, complaints and group differences remain.",
+    zh
+      ? "供水后版的单位更正已核，旧错误数值未用于评分。资源判断仍依赖行政家庭、供区与普通中位居民之间的有限适配；低收入补贴、均值消费比和贷款指标不当个人预算。低医疗收费不等必要护理已完成，机场在旧边界外也不等无法使用。必要假设拒绝则恢复未知。"
+      : "The revised water report’s unit correction is checked; the old erroneous quantity is excluded. RES still requires a bounded bridge from administrative households and service areas to the ordinary median resident; low-income aid, mean consumption ratios and loan indicators are not personal budgets. Low medical fees do not establish completed necessary care, and an airport outside the old boundary is not proof of no access. Rejecting a necessary assumption restores the dimension to unknown.",
+  ],
   [philadelphia.candidateId]: [
     zh
       ? "费城七维取条件60，资源仍未知。已知加权小计54，数学范围54—64，无完整总分。实际应急、必要诊疗、制度执行和公共应用支持有限判断；真实持枪侵害、居民安全担忧、资格与费用障碍均保留。"

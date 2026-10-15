@@ -1,0 +1,1458 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 1322,
+  "name": "Kuala Lumpur",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-15",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "2026普通马来西亚本国公民、通常长期当地居住、中位收入、通常有效保障，不设固定年龄；公立本国人费用不能混用外籍/私立或低收入特殊资格。",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-kuala-lumpur-score-completion-review.md",
+  "publishedInputCommit": "dfb226976451c8017b7790c95b148ddfb8933d61",
+  "researchFrozenInputCommit": "6b3a0ee0bf21a272c761765b6fae42b0251fb30a",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "weight": 15,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "heat_humidity": "context",
+        "flood_sea_level": "context",
+        "geophysical": "context",
+        "severe_weather_wildfire": "unresolved"
+      },
+      "rationale": "旧热/PGA代理和供水机构洪旱准备提供了风险线索，但尚未建立本地热、洪涝及其他主要自然危险在已运行保护后的通常生活负担方向。水恢复不能替代洪水防护，也不能把未知当40。",
+      "assumption": "当前证据不足以接受决定性通常/地理/成熟/净取得推定；未知不扣分。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "PCS",
+          "pillar": "heat_humidity",
+          "status": "context",
+          "sources": ["D01"],
+          "limits": "Old annual centreUTCI>32 exposure proxy, not2026 heat protection/ordinary burden after help.",
+          "score": null,
+          "researchStatus": "prior_proxy_only"
+        },
+        {
+          "dimension": "PCS",
+          "pillar": "flood_sea_level",
+          "status": "context",
+          "sources": ["S16"],
+          "limits": "Provider p73flood/drought framework andtaskforce planning, not city actual flood-life burden/operational protection. Water interruptions do not allocate flood impact.",
+          "score": null,
+          "researchStatus": "partial_protection_plan_only"
+        },
+        {
+          "dimension": "PCS",
+          "pillar": "geophysical",
+          "status": "context",
+          "sources": ["D01"],
+          "limits": "OldPGA0.051249g is hazard proxy not actual protection/building vulnerability or net usual risk.",
+          "score": null,
+          "researchStatus": "prior_proxy_only"
+        },
+        {
+          "dimension": "PCS",
+          "pillar": "severe_weather_wildfire",
+          "status": "unresolved",
+          "sources": ["D01"],
+          "limits": "No substantive local storm/wildfire protection or residual ordinary impact obtained; missing is not40.",
+          "score": null,
+          "researchStatus": "not_started"
+        }
+      ],
+      "alternativeReasoning": "拒绝40：没有重要自然风险通常主导生活的当期事实；拒绝60：已有计划不等于真实保护已将主要危险压至有限影响。不是要求每种危险发生或全部人口风险率。",
+      "researchSubpillarStates": {
+        "heat_humidity": "prior_proxy_only",
+        "flood_sea_level": "partial_protection_plan_only",
+        "geophysical": "prior_proxy_only",
+        "severe_weather_wildfire": "not_started"
+      }
+    },
+    {
+      "id": "GSS",
+      "weight": 15,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "partial",
+        "strategic_exposure": "partial"
+      },
+      "rationale": "正式FATF材料有真实调查、跨境合作和惩处，也有区域组织覆盖及没收/威慑余障；2026冲突已影响物流/能源价格，水务已部署部分网络保护。其帮助真实，但还不能区分本地普通居民重要有组织暴力/战略干扰通常已有限，还是保护后仍有主导障碍。",
+      "assumption": "当前证据不足以接受决定性通常/地理/成熟/净取得推定；未知不扣分。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "GSS",
+          "pillar": "organized_violence",
+          "status": "partial",
+          "sources": ["W08", "S15"],
+          "limits": "TF prosecutions and cooperation real; consumerfraud protection not organized physical violence. National predicatecrime/confiscation weaknesses cannot assignKLfrequency.",
+          "score": null,
+          "researchStatus": "partial_national_mechanisms"
+        },
+        {
+          "dimension": "GSS",
+          "pillar": "regional_conflict",
+          "status": "partial",
+          "sources": ["S11", "W08"],
+          "limits": "Actual2026 regional conflict price/logistics pressures with mitigation; TFregional investigations also real. No bounded ordinaryKL physical/mobility impact or matched local protection chain.",
+          "score": null,
+          "researchStatus": "partial_current_impact"
+        },
+        {
+          "dimension": "GSS",
+          "pillar": "strategic_exposure",
+          "status": "partial",
+          "sources": ["S16", "W08"],
+          "limits": "WaterNCIIzeroTrust2500users,15cyberinitiatives complete, not all4500users or75complete; financing controls not full physical strategic shelter/corridor protection.",
+          "score": null,
+          "researchStatus": "partial_protection"
+        }
+      ],
+      "alternativeReasoning": "拒绝40：国家诈骗和旧事件不能证明当前本地普遍重要暴力；拒绝60：资金侦办和水务网络部署无法单独推出组织暴力、区域及战略全维通常有限影响。未要求必须发生攻击或统一罪类样本。",
+      "researchSubpillarStates": {
+        "organized_violence": "partial_national_mechanisms",
+        "regional_conflict": "partial_current_impact",
+        "strategic_exposure": "partial_protection"
+      }
+    },
+    {
+      "id": "ISR",
+      "weight": 15,
+      "score": 60,
+      "conditionalAlternatives": [40],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "rationale": "水管/水表修复已完成，且分类故障实际恢复89/92/98/99%达到相应24/36/48小时窗口；这比机构存在/计划有更直接的帮助后结果。58场实际社区触达、运营监测和已运行支付反诈协调说明有日常执行与适应；余下WTP停水、投诉和不同群体触达限制真实。有限推定区域运营的恢复及普通服务能力适用于KL长期普通居民，重要执行障碍通常未主导，可给60而非把投诉量当失效。",
+      "assumption": "A-ISR-region:同运营者覆盖含KL的实际分类修复结果可有限承接旧FUA核心普通服务；A-ISR-usual:已运行恢复/社区触达及金融协调在通常居民场景的重要执行障碍未主导；A-cutoff:2024运行能力在截止前未有已读反向终止证，2026材料可辅助延续。投诉非解决，机构非结果。",
+      "scoreStatus": "conditional_root_adopted",
+      "coverageReview": [
+        {
+          "dimension": "ISR",
+          "pillar": "governance",
+          "status": "partial",
+          "sources": ["S16", "S15"],
+          "limits": "Watermeters/pipes actually repaired and resumed89/92/98/99%; financialcoordination real. Complaint volumes not resolutions, funds/interceptions not restitution.",
+          "score": null,
+          "researchStatus": "partial_real_execution"
+        },
+        {
+          "dimension": "ISR",
+          "pillar": "adaptive_capacity",
+          "status": "partial",
+          "sources": ["S16", "S11", "S15"],
+          "limits": "Implemented leak/monitoring/networkanalysis and current fuel/cash mitigation, continuedburden and lateplanned features retained.",
+          "score": null,
+          "researchStatus": "partial_real_execution"
+        },
+        {
+          "dimension": "ISR",
+          "pillar": "social_cohesion",
+          "status": "partial",
+          "sources": ["S16"],
+          "limits": "58actualoutreach programmes and B40boxes1800 across12locations, not broadtrust/fullmedianwelfare; programmes not all problemsresolved.",
+          "score": null,
+          "researchStatus": "partial_limited_groups"
+        },
+        {
+          "dimension": "ISR",
+          "pillar": "emergency_recovery",
+          "status": "partial",
+          "sources": ["S16"],
+          "limits": "Actualcategory repair+resumption89/92%within24h,98%36h,99%48h; categories separateunknownN, realWTP/plannedoutages remain.",
+          "score": null,
+          "researchStatus": "partial_measured_categories"
+        }
+      ],
+      "alternativeReasoning": "40：若实际修复类别不能代表本地普通主要服务，或尚未恢复的WTP/重要群体负担主导，则该档仍有实质可能，当前分类恢复与已运行支持反对直接采用40。80：大量投诉并未证明解决、备用余量与大规模停水/群体覆盖仍有重要约束，现证不支持低余障80。撤销地域/代表性/连续运行桥时回null。",
+      "withdrawToUnknownDomain": [12, 92],
+      "researchSubpillarStates": {
+        "governance": "partial_real_execution",
+        "adaptive_capacity": "partial_real_execution",
+        "social_cohesion": "partial_limited_groups",
+        "emergency_recovery": "partial_measured_categories"
+      },
+      "alternative40Rationale": "若帮助后实际约束被判断为普通居民主要障碍，可取较低条件40；当前未作为另一已证实评分。必要适配桥拒绝则先撤未知。"
+    },
+    {
+      "id": "RES",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      },
+      "rationale": "供水已经实际生产、修复和恢复，质量监测达标并有重要停水及备用余量约束；不能说零停水。2024公民家庭可支配收入与消费关系提供普通资源取得背景，10月5日2026正式观察明确持续燃油补贴和扩展现金帮助已经抑制冲突价格传递，同时部分家庭拖欠上升。有限推定与中位长期居民相关的通常资源束在这些帮助后仍可取得，而非仅以水或低收入福利外推全部资源；余障有但未有证据占通常资源取得的主导。 主任务采纳的是有限合束研究判断，不是2026中位人的食品／电力可靠性直接测量；SADE、均值比及借款人指标不能代替此画像。",
+      "assumption": "A-RES-bundle:2024公民行政家庭消费/可支配关系与2026已观察价格减缓可有限支持本地通常中位资源束仍可取得；不是精确个人预算/全束成本清单；A-RES-region:跨KL/Selangor的真实水供给可有限适配，供区非FUA；A-cutoff:旧基础运营延续与当前冲突余障同看。SADE不移至KL或中位人。",
+      "scoreStatus": "conditional_root_adopted",
+      "coverageReview": [
+        {
+          "dimension": "RES",
+          "pillar": "water",
+          "status": "partial",
+          "sources": ["S16"],
+          "limits": "OperationalLangat2,repairrestoration and sampledwaterquality; real largeWTP/plannedinterruptions, average reserve16.71v18.06target and18.60differentstatement. 2025actual tariff not read; SADEnotKLmedian.",
+          "score": null,
+          "researchStatus": "partial_actual_supply_after_help"
+        },
+        {
+          "dimension": "RES",
+          "pillar": "food",
+          "status": "partial",
+          "sources": ["S04", "S11", "S16"],
+          "limits": "Administrativecitizenhousehold consumption/disposable data and currentpurchasingpowermitigation support usualbundle finitebridge; no itemizedmedianfoodintake. B40boxes not medianfoodsecurity.",
+          "score": null,
+          "researchStatus": "partial_household_and_mitigation_bridge"
+        },
+        {
+          "dimension": "RES",
+          "pillar": "energy",
+          "status": "partial",
+          "sources": ["S11", "S04"],
+          "limits": "Continuedfuel subsidies alreadyhelpedcontainpass-through; realMiddleEastpressure/selectedborrowersarrears remain. Not household electricityavailability/outage panel.",
+          "score": null,
+          "researchStatus": "partial_current_subsidy_after_stress"
+        },
+        {
+          "dimension": "RES",
+          "pillar": "supply_chain",
+          "status": "partial",
+          "sources": ["S11", "S16"],
+          "limits": "Actualnational logisticscost shocks andmanageablefinancialeffects; currentuseful water production and repairs. No physicalindependence or wholeFUA food/energyinventory.",
+          "score": null,
+          "researchStatus": "partial_current_after_help"
+        }
+      ],
+      "alternativeReasoning": "40：若2024行政家庭关系不能承接2026普通中位人的资源束，或实际燃料/食品供给限制使净取得重要受阻，则40方向可成立；该桥不接受时先回null，不凭缺失填40。80：实际大WTP/计划停水、储备目标未达及当前冲突物价/部分拖欠不支持资源余障已很低。没有把均值消费比当中位个人预算，也未转用Selangor低收入SADE。",
+      "withdrawToUnknownDomain": [15, 90],
+      "researchSubpillarStates": {
+        "water": "partial_actual_supply_after_help",
+        "food": "partial_household_and_mitigation_bridge",
+        "energy": "partial_current_subsidy_after_stress",
+        "supply_chain": "partial_current_after_help"
+      },
+      "alternative40Rationale": "若帮助后实际约束被判断为普通居民主要障碍，可取较低条件40；当前未作为另一已证实评分。必要适配桥拒绝则先撤未知。"
+    },
+    {
+      "id": "MED",
+      "weight": 15,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "unresolved",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "rationale": "HKL公民第三等床位/治疗和选定服务收费具有实质普通付款减负，门诊/专科及CRC并非不存在。但当前读到的服务和收费未接上一个可判断的必要常规护理质量、等待与实际完成链；未读到850卡像素，MOH原报告不可得。低收费与必要护理成功取得仍有两种实质解释，故不是因缺少全市全院结局而机械null。",
+      "assumption": "当前证据不足以接受决定性通常/地理/成熟/净取得推定；未知不扣分。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "MED",
+          "pillar": "access",
+          "status": "partial",
+          "sources": ["W01", "W02"],
+          "limits": "Citizenclass3fees materially low and local department routes; notforeign/private/executive or allcarefree; tariff not necessarycarecompleted.",
+          "score": null,
+          "researchStatus": "partial_tariff_service"
+        },
+        {
+          "dimension": "MED",
+          "pillar": "routine_quality",
+          "status": "unresolved",
+          "sources": ["W02", "W05"],
+          "limits": "Clinical card pixels unavailable; no actual bounded routinequality/wait/delay evidence chain read. Not a demand forallcity/allhospitalperfectoutcomes.",
+          "score": null,
+          "researchStatus": "unresolved_discriminating_gap"
+        },
+        {
+          "dimension": "MED",
+          "pillar": "specialist_capacity",
+          "status": "partial",
+          "sources": ["W02", "W01"],
+          "limits": "Specialistservice and dialysis/oncology tariff descriptions actual institutional offer, no measuredordinarytakeup/quality orcapacitywait.",
+          "score": null,
+          "researchStatus": "partial_named_service"
+        },
+        {
+          "dimension": "MED",
+          "pillar": "system_continuity",
+          "status": "partial",
+          "sources": ["S16", "W04"],
+          "limits": "Waterrepair actual generalresilience and hospitalsecurityremit/oldposts; no actualnecessarycaremonitoring/wait/treatmentcompletion connection.",
+          "score": null,
+          "researchStatus": "partial_provider_protection"
+        }
+      ],
+      "alternativeReasoning": "拒绝40：低公民收费和真实服务反对无依据称通常必要护理严重失效；拒绝60：无法从价目/机构菜单区分是否存在主导的等待/质量或连续监护负担。未设逐剂账单/固定成人/全院完美门槛。",
+      "researchSubpillarStates": {
+        "access": "partial_tariff_service",
+        "routine_quality": "unresolved_discriminating_gap",
+        "specialist_capacity": "partial_named_service",
+        "system_continuity": "partial_provider_protection"
+      }
+    },
+    {
+      "id": "LON",
+      "weight": 10,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "unresolved",
+        "regulatory_adoption": "unresolved",
+        "resident_access": "unresolved"
+      },
+      "rationale": "CRC/CTU已有运行的研究支持和设备，但没有读到具体成熟人体疾病结果、批准适应证/年龄、本地常规治疗以及通常付款监护的连接。收费表不能让未识别疗法成为成熟常规产品，也不能把干细胞疾病治疗概念写为健康延寿。",
+      "assumption": "当前证据不足以接受决定性通常/地理/成熟/净取得推定；未知不扣分。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "LON",
+          "pillar": "translation",
+          "status": "partial",
+          "sources": ["W03"],
+          "limits": "CTUoperating2019andclinicalresearchsupport, no selectedmaturedisease-specifichumanresult/routineuse chain.",
+          "score": null,
+          "researchStatus": "partial_research_support"
+        },
+        {
+          "dimension": "LON",
+          "pillar": "trial_maturity",
+          "status": "unresolved",
+          "sources": ["W03"],
+          "limits": "Equipment/GCP andcentreoperation not completedmaturehumanefficacy. Nohealthylifespan claim.",
+          "score": null,
+          "researchStatus": "not_demonstrated"
+        },
+        {
+          "dimension": "LON",
+          "pillar": "regulatory_adoption",
+          "status": "unresolved",
+          "sources": [],
+          "limits": "No selectedtherapy/indication/age authorisation source read; hospitalpresence notapproval.",
+          "score": null,
+          "researchStatus": "not_started"
+        },
+        {
+          "dimension": "LON",
+          "pillar": "resident_access",
+          "status": "unresolved",
+          "sources": ["W01", "W03"],
+          "limits": "Citizenfees alone cannot convert unidentifiedtrial into fundedroutine therapy with usualmonitoring; not requiring everydose invoice.",
+          "score": null,
+          "researchStatus": "unresolved_chain"
+        }
+      ],
+      "alternativeReasoning": "拒绝40：没有所需正向链不等于不存在成熟应用或普通资源取得被主导阻挡；拒绝60：当前仅研究支持/价目，没有一个具体疗法可应用有限成熟产品/支付/监护桥。不是需要每剂票据。",
+      "researchSubpillarStates": {
+        "translation": "partial_research_support",
+        "trial_maturity": "not_demonstrated",
+        "regulatory_adoption": "not_started",
+        "resident_access": "unresolved_chain"
+      }
+    },
+    {
+      "id": "TEC",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "rationale": "FRIM残余物再用试验已完成并报告相对标准土壤的树木生长改善，UMPSA气味检测研究已完成；它们是有范围的研究到应用输出。运营ICC覆盖、实际智能表部署和eBill78%客户采用形成工业/数字扩散，当前支付网络分析已实际识别可疑账户而非只宣布计划。有限推定KL共享设施和通常支付体系将这些运行能力带给普通居民，足以支持有约束的60；不会把水务单项、旧带宽、下载量或国家总排名直接转分。 UMPSA等合作方不自动变成本地知识节点，试点样本／位置未明和外部验证局限保留。",
+      "assumption": "A-TEC-translation:已完成有范围研究和工业运营部署构成有限实用技术转译；A-TEC-local-diffusion:含KL的水务运营及普通全国支付服务实际扩散可有限承接本地居民，不把国家均值转城市分；A-cutoff:已运行设施延续，不将2027预警/未完成数字目标视为完成。",
+      "scoreStatus": "conditional_root_adopted",
+      "coverageReview": [
+        {
+          "dimension": "TEC",
+          "pillar": "knowledge_output",
+          "status": "partial",
+          "sources": ["S16", "W03"],
+          "limits": "CompletedFRIMresidualpilot andUMPSAodourdetectionstudy; actualboundedoutputs not globalpatent count. Cohort/site/replication andpublicclinicaloutputslimited.",
+          "score": null,
+          "researchStatus": "partial_completed_local_application"
+        },
+        {
+          "dimension": "TEC",
+          "pillar": "industry_density",
+          "status": "partial",
+          "sources": ["S16", "S15"],
+          "limits": "Operatingwaterinfrastructure digitalindustry application and financialnetworkdeployment; no citywidefirmdensity measurement/cluster transfers.",
+          "score": null,
+          "researchStatus": "partial_industrial_use"
+        },
+        {
+          "dimension": "TEC",
+          "pillar": "digital_infrastructure",
+          "status": "partial",
+          "sources": ["S16", "S15", "D01"],
+          "limits": "OperatingICCwatercoverage650/734and1399/1677,51,514smartmeters andpaymentnetworkanalysis; oldsamplebandwidth onlycontext, appdownloadnotusers.",
+          "score": null,
+          "researchStatus": "partial_actual_operations"
+        },
+        {
+          "dimension": "TEC",
+          "pillar": "diffusion",
+          "status": "partial",
+          "sources": ["S16", "S15"],
+          "limits": "Water eBill78%providercustomers andrealmeterdeployment, fraudnetwork1600flaggedaccountsnotconvictions; nationalpaymentreach->localordinaryusefinitebridge, pilotnotallindustry.",
+          "score": null,
+          "researchStatus": "partial_real_deployment"
+        }
+      ],
+      "alternativeReasoning": "40：若已完成试验/工业部署与普通本地使用之间的地域与扩散桥不接受，较弱或局限能力仍可能，首先撤销至null。80：试验样本/外部验证、产业广度和普遍扩散尚有限，后续2027预警仍计划，不能据几个项目称广泛成熟80。水务和金融仅有限实际应用证据，不代表完整科研产业人口测量。",
+      "withdrawToUnknownDomain": [15, 90],
+      "researchSubpillarStates": {
+        "knowledge_output": "partial_completed_local_application",
+        "industry_density": "partial_industrial_use",
+        "digital_infrastructure": "partial_actual_operations",
+        "diffusion": "partial_real_deployment"
+      },
+      "alternative40Rationale": "若帮助后实际约束被判断为普通居民主要障碍，可取较低条件40；当前未作为另一已证实评分。必要适配桥拒绝则先撤未知。"
+    },
+    {
+      "id": "OPT",
+      "weight": 10,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "transport_redundancy": "unresolved",
+        "legal_mobility": "unresolved",
+        "asset_portability": "partial",
+        "network_continuity": "unresolved"
+      },
+      "rationale": "普通个人真实可通过Maybank向外转账，但有费用、汇率/代理扣费、营业时段和FEA规则；没有读到境外账户/鉴权持续取得、海外通信以及明确长期居留目的地。KLIA作为共享设施地理在旧边界外并不意味着无法使用，只是还没有真实接驳/替代路线材料。",
+      "assumption": "当前证据不足以接受决定性通常/地理/成熟/净取得推定；未知不扣分。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "OPT",
+          "pillar": "transport_redundancy",
+          "status": "unresolved",
+          "sources": ["D01", "D02", "W08"],
+          "limits": "KLIA outsideoldall9031; airportdirectory/inspectionstaff not ordinaryaccess or independent routes. No operatoraccess/timetable bodyread.",
+          "score": null,
+          "researchStatus": "unresolved_actual_access"
+        },
+        {
+          "dimension": "OPT",
+          "pillar": "legal_mobility",
+          "status": "unresolved",
+          "sources": ["W09"],
+          "limits": "FEAcategoryindex not long-term immigrationright; no legalentry->residence substitution or named destination pathway.",
+          "score": null,
+          "researchStatus": "not_started"
+        },
+        {
+          "dimension": "OPT",
+          "pillar": "asset_portability",
+          "status": "partial",
+          "sources": ["W06", "W07", "W09"],
+          "limits": "PersonaloutwardFTTactualmin/cap/charges andFEAconditions; abroad account/auth and exceptions notread, not generalunrestrictedcapital.",
+          "score": null,
+          "researchStatus": "partial_real_personal_service"
+        },
+        {
+          "dimension": "OPT",
+          "pillar": "network_continuity",
+          "status": "unresolved",
+          "sources": [],
+          "limits": "No actualoverseasordinarypersonaltelecom/authentication continuity read; domesticapp/fintechnotinternationalnetworkproof.",
+          "score": null,
+          "researchStatus": "not_started"
+        }
+      ],
+      "alternativeReasoning": "拒绝40：实际个人转款存在，未读交通或居留链不能推断被困；拒绝60：单一转款、机场目录和合法入境概念不足以组成普通资源约束下可长期退出的实际方案。无完整目的地逐笔交易硬门槛。",
+      "researchSubpillarStates": {
+        "transport_redundancy": "unresolved_actual_access",
+        "legal_mobility": "not_started",
+        "asset_portability": "partial_real_personal_service",
+        "network_continuity": "not_started"
+      }
+    }
+  ],
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 21,
+  "unresolvedScoreRange": [21, 86],
+  "globalRankingEligible": false,
+  "limitations": [
+    "Three60s are revocable private research proposals awaiting root, not published adoption.",
+    "No candidateexcluded; all9031 and new/unmatchedglobalcompetitors retained.73inputcases18complete not globalproof.",
+    "ExactsourcebytesretrievedOct15notauthenticatedhistoricalOct10bytes.",
+    "OldFUA/admin/provider/citizenhousehold/countryborrowerscopes differ; finitebridges explicit.",
+    "No globalTop32/rank/probability or unknown midpoint/renormalization."
+  ],
+  "sourceSnapshots": [
+    {
+      "file": "S01-airselangor2024.pdf",
+      "url": "https://content.airselangor.com/cmi-prod-blobstorageanon-001-sea/media/yb0kgn4o/air-selangor-sustainability-report-2024-full-compressed.pdf",
+      "mechanism": "airselangor_raw_https",
+      "requestAtUTC": "2026-10-15T11:24:34.002310+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "status": 200,
+      "finalUrl": "https://content.airselangor.com/cmi-prod-blobstorageanon-001-sea/media/yb0kgn4o/air-selangor-sustainability-report-2024-full-compressed.pdf",
+      "contentType": "application/pdf",
+      "lastModified": "Fri, 30 May 2025 16:12:11 GMT",
+      "validOriginal": true,
+      "bytes": 7710974,
+      "sha256": "23126abb912537abb1790d5bca6630bf2d71ddf6f8c929748448c770d3f94c03",
+      "id": "S01",
+      "metadataFile": "originals/S01-airselangor2024.pdf.meta.json",
+      "bytesReverified": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "scopeAndVersion": "FY2024 provider Selangor/Kuala Lumpur/Putrajaya; old May30_2025 HTTP version, 150 pages. Superseded for selected facts by S16, not independent corroboration.",
+      "usableSubstantiveEvidence": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/kuala-lumpur-full37/originals/S01-airselangor2024.pdf",
+      "substantiveOriginal": true,
+      "usedForScore": false
+    },
+    {
+      "file": "S04-household-income2024.pdf",
+      "url": "https://storage.dosm.gov.my/hies/household_income_2024.pdf",
+      "mechanism": "dosm_storage_raw_https",
+      "requestAtUTC": "2026-10-15T11:26:37.100584+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "status": 200,
+      "finalUrl": "https://storage.dosm.gov.my/hies/household_income_2024.pdf",
+      "contentType": "application/pdf",
+      "lastModified": "Wed, 08 Oct 2025 08:14:39 GMT",
+      "validOriginal": true,
+      "bytes": 11075541,
+      "sha256": "320d59850617bcc51e58ed04ba50641a0828c38e3b97c38247ac30e3dc74d138",
+      "id": "S04",
+      "metadataFile": "originals/S04-household-income2024.pdf.meta.json",
+      "bytesReverified": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "scopeAndVersion": "2024 citizen households by administrative state/federal territory, published2025-10-08; 246pages; not individual income or oldFUA.",
+      "usableSubstantiveEvidence": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/kuala-lumpur-full37/originals/S04-household-income2024.pdf",
+      "substantiveOriginal": true,
+      "usedForScore": true
+    },
+    {
+      "file": "S07-localstats2024.html",
+      "url": "https://www.dosm.gov.my/portal-main/release-content/my-local-stats-malaysia-negeri--daerah-pentadbiran-2024",
+      "mechanism": "dosm_portal_raw_https",
+      "requestAtUTC": "2026-10-15T11:30:33.340739+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "status": 200,
+      "finalUrl": "https://www.dosm.gov.my/portal-main/release-content/my-local-stats-malaysia-negeri--daerah-pentadbiran-2024",
+      "contentType": "text/html; charset=UTF-8",
+      "lastModified": null,
+      "validOriginal": true,
+      "bytes": 117304,
+      "sha256": "cff17865f96c157f6e53861b9529c26950a58af44ca1dd30bbad23c98abf29df",
+      "id": "S07",
+      "metadataFile": "originals/S07-localstats2024.html.meta.json",
+      "bytesReverified": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "scopeAndVersion": "National LocalStats2024 press/release published24Nov2025; state/district full book not obtained.",
+      "usableSubstantiveEvidence": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/kuala-lumpur-full37/originals/S07-localstats2024.html",
+      "substantiveOriginal": true,
+      "usedForScore": false
+    },
+    {
+      "file": "S08-water-tariff2025.html",
+      "url": "https://www.airselangor.com/support/topic/details/63cce538-b049-4966-94b9-5d10c285becc",
+      "mechanism": "airselangor_main_raw_https",
+      "requestAtUTC": "2026-10-15T11:30:44.830395+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "status": 200,
+      "finalUrl": "https://www.airselangor.com/support/topic/details/63cce538-b049-4966-94b9-5d10c285becc?lang=en",
+      "contentType": "text/html; charset=utf-8",
+      "lastModified": null,
+      "validOriginal": true,
+      "bytes": 26039,
+      "sha256": "27fe9347722e7eeb18af8e5c194a28750e7d20da0c729db6fcedf99e82bc3a1c",
+      "id": "S08",
+      "metadataFile": "originals/S08-water-tariff2025.html.meta.json",
+      "bytesReverified": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "scopeAndVersion": "Valid HTML JS shell only, no substantive tariff/body; not adopted as current water charge evidence.",
+      "usableSubstantiveEvidence": false,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/kuala-lumpur-full37/originals/S08-water-tariff2025.html",
+      "substantiveOriginal": false,
+      "usedForScore": false
+    },
+    {
+      "file": "S11-bnm-geopolitical20261005.pdf",
+      "url": "https://www.bnm.gov.my/documents/20124/23237430/bnm-insights-oct-2026--beyond-oil-prices.pdf",
+      "mechanism": "bnm_raw_https",
+      "requestAtUTC": "2026-10-15T11:35:23.087397+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "status": 200,
+      "finalUrl": "https://www.bnm.gov.my/documents/20124/23237430/bnm-insights-oct-2026--beyond-oil-prices.pdf",
+      "contentType": "application/pdf",
+      "lastModified": "Mon, 05 Oct 2026 01:49:46 GMT",
+      "validOriginal": true,
+      "bytes": 11467490,
+      "sha256": "dcfc15cd89d4141fd21ed0643df69864a98b3be97f8129e3ee21a3163eec1777",
+      "id": "S11",
+      "metadataFile": "originals/S11-bnm-geopolitical20261005.pdf.meta.json",
+      "bytesReverified": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "scopeAndVersion": "BNM official5Oct2026 current conflict/financial assessment, 9pages; national borrower/market scope, not KL local household rates.",
+      "usableSubstantiveEvidence": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/kuala-lumpur-full37/originals/S11-bnm-geopolitical20261005.pdf",
+      "substantiveOriginal": true,
+      "usedForScore": true
+    },
+    {
+      "file": "S15-bnm-ifctf20261006.html",
+      "url": "https://www.bnm.gov.my/-/g-spch-ifctf26",
+      "mechanism": "bnm_raw_https",
+      "requestAtUTC": "2026-10-15T11:41:15.310973+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "status": 200,
+      "finalUrl": "https://www.bnm.gov.my/-/g-spch-ifctf26",
+      "contentType": "text/html;charset=UTF-8",
+      "lastModified": null,
+      "validOriginal": true,
+      "bytes": 227034,
+      "sha256": "ba6348bfb2537c8c56454082d4266b6e83407c8bca57e9afb10bcc47ea6054df",
+      "id": "S15",
+      "metadataFile": "originals/S15-bnm-ifctf20261006.html.meta.json",
+      "bytesReverified": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "scopeAndVersion": "Governor speech6Oct2026 in Kuala Lumpur, national financial fraud protection/technology, not city exposure rate.",
+      "usableSubstantiveEvidence": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/kuala-lumpur-full37/originals/S15-bnm-ifctf20261006.html",
+      "substantiveOriginal": true,
+      "usedForScore": true
+    },
+    {
+      "file": "S16-airselangor-located-update091225.pdf",
+      "url": "https://content.airselangor.com/cmi-prod-blobstorageanon-001-sea/media/1pamvbzc/air-selangor-sustainability-report-update-091225.pdf",
+      "mechanism": "airselangor_raw_https",
+      "requestAtUTC": "2026-10-15T11:51:42.181107+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "status": 200,
+      "finalUrl": "https://content.airselangor.com/cmi-prod-blobstorageanon-001-sea/media/1pamvbzc/air-selangor-sustainability-report-update-091225.pdf",
+      "contentType": "application/pdf",
+      "lastModified": "Tue, 09 Dec 2025 09:09:26 GMT",
+      "validOriginal": true,
+      "bytes": 31355196,
+      "sha256": "ab673ec1f5cf734968207b33eb49cb2e2135d9186c59df1db407866687a590b3",
+      "id": "S16",
+      "metadataFile": "originals/S16-airselangor-located-update091225.pdf.meta.json",
+      "bytesReverified": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "scopeAndVersion": "FY2024 same provider; later HTTP9Dec2025 version,152pages; selected critical page comparison and actualpixels. Exact cutoff bytes unverified.",
+      "usableSubstantiveEvidence": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/kuala-lumpur-full37/originals/S16-airselangor-located-update091225.pdf",
+      "substantiveOriginal": true,
+      "usedForScore": true
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "file": "S02-hkl-main.html",
+      "url": "https://hkl.moh.gov.my/index.php",
+      "mechanism": "hkl_raw_https",
+      "requestAtUTC": "2026-10-15T11:24:39.031915+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "validOriginal": false,
+      "error": "<urlopen error _ssl.c:1109: The handshake operation timed out>",
+      "bytes": 0,
+      "sha256": null,
+      "id": "S02",
+      "metadataFile": "originals/S02-hkl-main.html.meta.json",
+      "bytesReverified": false,
+      "historicalCutoffBytesAuthenticated": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "responseBytes": 0,
+      "responseSha256": null,
+      "usedForScore": false
+    },
+    {
+      "file": "S03-hkl-charges.html",
+      "url": "https://hkl.moh.gov.my/awam/caj-hospital?highlight=WyJvZnRhbG1vbG9naSJd",
+      "mechanism": "hkl_raw_https",
+      "requestAtUTC": "2026-10-15T11:25:04.094797+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "validOriginal": false,
+      "error": "<urlopen error _ssl.c:1109: The handshake operation timed out>",
+      "bytes": 0,
+      "sha256": null,
+      "id": "S03",
+      "metadataFile": "originals/S03-hkl-charges.html.meta.json",
+      "bytesReverified": false,
+      "historicalCutoffBytesAuthenticated": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "responseBytes": 0,
+      "responseSha256": null,
+      "usedForScore": false
+    },
+    {
+      "file": "S05-kl-expenditure2024.pdf",
+      "url": "https://www.dosm.gov.my/portal-main/release-document-log?release_document_id=16530",
+      "mechanism": "dosm_portal_raw_https",
+      "requestAtUTC": "2026-10-15T11:26:43.708219+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "status": 200,
+      "finalUrl": "https://www.dosm.gov.my/uploads/release-content/file_20260210092740.xls",
+      "contentType": "application/vnd.ms-excel",
+      "lastModified": "Tue, 10 Feb 2026 01:27:40 GMT",
+      "validOriginal": false,
+      "error": "The read operation timed out",
+      "bytes": 0,
+      "sha256": null,
+      "id": "S05",
+      "metadataFile": "originals/S05-kl-expenditure2024.pdf.meta.json",
+      "bytesReverified": false,
+      "historicalCutoffBytesAuthenticated": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "responseBytes": 0,
+      "responseSha256": null,
+      "usedForScore": false
+    },
+    {
+      "file": "S06-maybank-ftt.html",
+      "url": "https://www.maybank2u.com.my/maybank2u/malaysia/en/personal/services/funds_transfer/overseas/foreign_telegrapic_transfer.page",
+      "mechanism": "maybank_raw_https",
+      "requestAtUTC": "2026-10-15T11:27:21.180838+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "validOriginal": false,
+      "error": "The read operation timed out",
+      "bytes": 0,
+      "sha256": null,
+      "id": "S06",
+      "metadataFile": "originals/S06-maybank-ftt.html.meta.json",
+      "bytesReverified": false,
+      "historicalCutoffBytesAuthenticated": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "responseBytes": 0,
+      "responseSha256": null,
+      "usedForScore": false
+    },
+    {
+      "file": "S09-hkl-card1.png",
+      "url": "https://hkl.moh.gov.my/images/banners/Konten850_1.png",
+      "mechanism": "hkl_raw_https",
+      "requestAtUTC": "2026-10-15T11:30:47.994047+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "validOriginal": false,
+      "error": "<urlopen error _ssl.c:1109: The handshake operation timed out>",
+      "bytes": 0,
+      "sha256": null,
+      "id": "S09",
+      "metadataFile": "originals/S09-hkl-card1.png.meta.json",
+      "bytesReverified": false,
+      "historicalCutoffBytesAuthenticated": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "responseBytes": 0,
+      "responseSha256": null,
+      "usedForScore": false
+    },
+    {
+      "file": "S10-moh2024.pdf",
+      "url": "https://www.moh.gov.my/images/04-penerbitan/laporan-tahunan/Laporan_TahunanKKM2024.pdf",
+      "mechanism": "moh_raw_https",
+      "requestAtUTC": "2026-10-15T11:35:20.822603+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "validOriginal": false,
+      "error": "HTTP Error 403: Forbidden",
+      "bytes": 0,
+      "sha256": null,
+      "id": "S10",
+      "metadataFile": "originals/S10-moh2024.pdf.meta.json",
+      "bytesReverified": false,
+      "historicalCutoffBytesAuthenticated": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "responseBytes": 0,
+      "responseSha256": null,
+      "usedForScore": false
+    },
+    {
+      "file": "S12-fatf2025.pdf",
+      "url": "https://www.fatf-gafi.org/content/dam/fatf-gafi/mer/mer-malaysia-2025.pdf.coredownload.inline.pdf",
+      "mechanism": "fatf_raw_https",
+      "requestAtUTC": "2026-10-15T11:35:27.426207+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "validOriginal": false,
+      "error": "HTTP Error 403: Forbidden",
+      "bytes": 0,
+      "sha256": null,
+      "id": "S12",
+      "metadataFile": "originals/S12-fatf2025.pdf.meta.json",
+      "bytesReverified": false,
+      "historicalCutoffBytesAuthenticated": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "responseBytes": 0,
+      "responseSha256": null,
+      "usedForScore": false
+    },
+    {
+      "file": "S13-moh2024-curl.pdf",
+      "url": "https://www.moh.gov.my/images/04-penerbitan/laporan-tahunan/Laporan_TahunanKKM2024.pdf",
+      "mechanism": "moh_raw_https",
+      "method": "one bounded normal TLS curl request; previous urllib403 preserved; original body critical for quality/care scope, not compliance repair",
+      "requestAtUTC": "2026-10-15T11:40:48.367660+00:00",
+      "historicalCutoffBytesAuthenticated": false,
+      "status": "403",
+      "finalUrl": "https://www.moh.gov.my/images/04-penerbitan/laporan-tahunan/Laporan_TahunanKKM2024.pdf",
+      "contentType": "text/html",
+      "returnCode": 0,
+      "bytes": 461,
+      "sha256": "712c92be1ba47d33ca19c50d500cb1c5935f090cc3eace1f5759f76fbdac8abd",
+      "validOriginal": false,
+      "id": "S13",
+      "metadataFile": "originals/S13-moh2024-curl.pdf.meta.json",
+      "bytesReverified": true,
+      "originalBytes": null,
+      "originalSha256": null,
+      "responseBytes": 461,
+      "responseSha256": "712c92be1ba47d33ca19c50d500cb1c5935f090cc3eace1f5759f76fbdac8abd",
+      "usedForScore": false
+    },
+    {
+      "file": "S14-maybank-ftt-faq.pdf",
+      "url": "https://www.maybank2u.com.my/iwov-resources/pdf/personal/services/funds_transfer/ftt-m2u-m2ubiz-faq.pdf",
+      "mechanism": "maybank_raw_https",
+      "requestAtUTC": "2026-10-15T11:40:49.543867+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "validOriginal": false,
+      "error": "The read operation timed out",
+      "bytes": 0,
+      "sha256": null,
+      "id": "S14",
+      "metadataFile": "originals/S14-maybank-ftt-faq.pdf.meta.json",
+      "bytesReverified": false,
+      "historicalCutoffBytesAuthenticated": false,
+      "originalBytes": null,
+      "originalSha256": null,
+      "responseBytes": 0,
+      "responseSha256": null,
+      "usedForScore": false
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://hkl.moh.gov.my/awam/caj-hospital",
+      "scope": "Citizen vs foreign charges table, class3 wardRM3/day, class3 inpatient treatment0/day; selected class3 rehab and oncology/dialysis charges. Tariff not receipt/availability/quality/waiting; all care not free.",
+      "capturedDerivative": "web-card-charges.json",
+      "rawBytesSha256": null,
+      "cutoffVersionAuthenticated": false
+    },
+    {
+      "id": "W02",
+      "url": "https://hkl.moh.gov.my/index.php",
+      "scope": "Service and department navigation, no reliable card quantities. FooterOct12_2026 later than cutoff; not all body content dated.",
+      "capturedDerivative": "web-open1.json",
+      "rawBytesSha256": null
+    },
+    {
+      "id": "W03",
+      "url": "https://hkl.moh.gov.my/mengenai-kami/jabatan/perubatan-iii/direktorat-sokongan-klinikal/pusat-penyelidikan-klinikal",
+      "scope": "ClinicalResearchCentre/CTU operational sinceNov2019, local trial support/GCP and equipment; bodyAug29_2025. No selected mature human treatment chain/routine payment monitoring.",
+      "capturedDerivative": "web-services.json",
+      "rawBytesSha256": null
+    },
+    {
+      "id": "W04",
+      "url": "https://hkl.moh.gov.my/mengenai-kami/jabatan/pengurusan/keselamatan",
+      "scope": "Security remit and old2017 authorised posts1082; not2026staff onshift/effectiveness.",
+      "capturedDerivative": "web-clinical-links.json",
+      "rawBytesSha256": null
+    },
+    {
+      "id": "W05",
+      "url": "https://hkl.moh.gov.my/mengenai-kami/kad-laporan-850-hari",
+      "scope": "Card index/6images only; no actual clinical card pixels.",
+      "capturedDerivative": "web-clinical-links.json",
+      "rawBytesSha256": null
+    },
+    {
+      "id": "W06",
+      "url": "https://www.maybank2u.com.my/maybank2u/malaysia/en/personal/services/funds_transfer/overseas/foreign_telegrapic_transfer.page",
+      "scope": "Personal outward FTT actual service, minRM1, personal dailyshared capRM100k, onlineRM10+agent/SST8% on fees; working-hour timing andFEA constraints. Current undatedUSD promotional waiver excluded from cutoff claim. No abroad account/authentication or unrestricted asset route proved.",
+      "capturedDerivative": "web-open1.json",
+      "rawBytesSha256": null
+    },
+    {
+      "id": "W07",
+      "url": "https://www.maybank2u.com.my/iwov-resources/pdf/personal/services/funds_transfer/ftt-m2u-m2ubiz-faq.pdf",
+      "scope": "Web14pageFAQ on FTT; no raw/pixels; only crosschecks HTML facts, not new numeric PDFtable proof.",
+      "capturedDerivative": "web-scope-paths.json",
+      "rawBytesSha256": null
+    },
+    {
+      "id": "W08",
+      "url": "https://www.fatf-gafi.org/content/dam/fatf-gafi/mer/mer-malaysia-2025.pdf.coredownload.inline.pdf",
+      "scope": "Formal275page mutual evaluation releasedDec2025, measures asof21Feb2025. Substantive narrative TF investigations/cooperation and regional protection gaps read around physical169–173; raw403. Screenshot170 only text citation returned, no actual pixels; numerical tables not adopted. National terrorism financing risk is not city physical violence rate.",
+      "capturedDerivative": "web-fatf-scope-find.json",
+      "rawBytesSha256": null,
+      "actuallyViewedPixels": false,
+      "additionalCapturedDerivatives": ["web-risk-body.json", "web-risk-legal-linked.json"]
+    },
+    {
+      "id": "W09",
+      "url": "https://www.bnm.gov.my/fep/policies/rules-by-residency",
+      "scope": "Index of residency-based foreign-exchange rules only; underlying rule exceptions/limits not read, no cap inferred.",
+      "capturedDerivative": "web-risk-legal-linked.json",
+      "rawBytesSha256": null
+    },
+    {
+      "id": "W10",
+      "url": "https://www.moh.gov.my/fasiliti-kesihatan/hospital/selangor",
+      "scope": "Official hospital names/address inclAmpang, no actualHSCT routine outcome or observed hospital officialhref; Googlemap link not clinical evidence.",
+      "capturedDerivative": "web-moh-paths.json",
+      "rawBytesSha256": null
+    },
+    {
+      "id": "W11",
+      "url": "https://www.dosm.gov.my/portal-main/release-document-log?release_document_id=18193",
+      "scope": "Sevenpage national LocalStats presssummary, not obtained district book or KL clinical quality/organizedviolence rates.",
+      "capturedDerivative": "web-scope-paths.json",
+      "rawBytesSha256": null
+    }
+  ],
+  "webFailureDiagnostics": [
+    {
+      "mechanism": "hkl_raw_https",
+      "count": 3,
+      "status": "stopped_third_failure",
+      "attempts": ["S02", "S03", "S09"],
+      "reason": "TLS handshake timeouts, no bytes; no reset."
+    },
+    {
+      "mechanism": "hkl_web_read",
+      "count": 3,
+      "status": "conservatively_stopped",
+      "reason": "Own riskmanagement and charges-tab timeouts plus root one image URL not accessible turn2274view0. Root image has no bytes or pixels; do not call card read."
+    },
+    {
+      "mechanism": "moh_raw_https",
+      "count": 2,
+      "status": "voluntarily_stopped",
+      "attempts": ["S10", "S13"],
+      "reason": "urllib403 then one bounded sameURL curl403 HTML461B, notPDF. Retry was critical quality original attempt, not hidden compliance repair."
+    },
+    {
+      "mechanism": "maybank_raw_https",
+      "count": 2,
+      "status": "voluntarily_stopped",
+      "attempts": ["S06", "S14"],
+      "reason": "Two readtimeouts; web body distinct usable mechanism, no raw authentication."
+    },
+    {
+      "mechanism": "fatf_raw_https",
+      "count": 1,
+      "status": "not_retried",
+      "attempts": ["S12"],
+      "reason": "403, primary web narrative readable but raw/pixelsnull."
+    },
+    {
+      "mechanism": "dosm_download",
+      "count": 1,
+      "status": "not_retried",
+      "attempts": ["S05"],
+      "reason": "Locator redirected to XLS notPDF, readtimeout0bytes. No consumption microdata adopted."
+    },
+    {
+      "mechanism": "dosm_web_localstats",
+      "count": 1,
+      "status": "not_retried_web",
+      "reason": "Webtimeout; S07 raw subsequently succeeded; not identical mechanism."
+    },
+    {
+      "mechanism": "web_large_pdf",
+      "count": 2,
+      "status": "different_sources",
+      "reason": "MOH andBNM >10MB parse failures. S11 valid raw later succeeds; MOH not obtained."
+    },
+    {
+      "mechanism": "mygov_web",
+      "count": 2,
+      "status": "not_retried",
+      "reason": "Portal andMySejahtera app403; no capability deduction."
+    },
+    {
+      "mechanism": "cua_iab",
+      "count": 1,
+      "status": "stopped",
+      "reason": "Browser not available:iab, no page/pixels obtained. Firstentry API invocation only as required byCUA."
+    },
+    {
+      "mechanism": "fatf_web_screenshot",
+      "count": 1,
+      "status": "not_actual_pixels",
+      "reason": "Physical170 tool returned only citation turn2275view0 through string interface, not seen; no image inference."
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "inputCommit": "dfb226976451c8017b7790c95b148ddfb8933d61",
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "full9031Loaded": 9031,
+    "existingRepairs": 136,
+    "cases": {
+      "1322": {
+        "metadata": {
+          "efua_id": "1322",
+          "source_name": "Kuala Lumpur",
+          "country_iso": "MYS",
+          "urban_centre_ids": "11139;11143;11154",
+          "area_km2": "3314.0",
+          "population_2015": "7481102.847486123"
+        },
+        "wkbSha256": "7d267ace3b94d50c24ce4f554fc54dca0fce08856be98c097bae738fca8046ae",
+        "approximateReferences": [
+          {
+            "label": "Kuala Lumpur centre approximate reference",
+            "longitude": 101.6869,
+            "latitude": 3.139,
+            "all9031Matches": [1322]
+          },
+          {
+            "label": "HKL neighbourhood approximate reference",
+            "longitude": 101.701,
+            "latitude": 3.171,
+            "all9031Matches": [1322]
+          },
+          {
+            "label": "KLIA approximate external reference",
+            "longitude": 101.709,
+            "latitude": 2.745,
+            "all9031Matches": []
+          }
+        ]
+      }
+    },
+    "limits": "Analyst approximate point references only, not official provider coordinates/footprints, service areas, travel times, or working exit proof. Old2015metadata not2026residentdenominators."
+  },
+  "scopeCompletionReview": {
+    "scopeItems": 31,
+    "coverageFile": "coverage.json",
+    "fullyMeasuredItems": 0,
+    "notStartedItemsRetained": true,
+    "allDimensionsConsidered": true,
+    "items": [
+      {
+        "dimension": "PCS",
+        "subpillar": "heat_humidity",
+        "status": "context",
+        "researchStatus": "prior_proxy_only",
+        "reviewed": true,
+        "sources": ["D01"],
+        "note": "Old annual centreUTCI>32 exposure proxy, not2026 heat protection/ordinary burden after help."
+      },
+      {
+        "dimension": "PCS",
+        "subpillar": "flood_sea_level",
+        "status": "context",
+        "researchStatus": "partial_protection_plan_only",
+        "reviewed": true,
+        "sources": ["S16"],
+        "note": "Provider p73flood/drought framework andtaskforce planning, not city actual flood-life burden/operational protection. Water interruptions do not allocate flood impact."
+      },
+      {
+        "dimension": "PCS",
+        "subpillar": "geophysical",
+        "status": "context",
+        "researchStatus": "prior_proxy_only",
+        "reviewed": true,
+        "sources": ["D01"],
+        "note": "OldPGA0.051249g is hazard proxy not actual protection/building vulnerability or net usual risk."
+      },
+      {
+        "dimension": "PCS",
+        "subpillar": "severe_weather_wildfire",
+        "status": "unresolved",
+        "researchStatus": "not_started",
+        "reviewed": true,
+        "sources": ["D01"],
+        "note": "No substantive local storm/wildfire protection or residual ordinary impact obtained; missing is not40."
+      },
+      {
+        "dimension": "GSS",
+        "subpillar": "organized_violence",
+        "status": "partial",
+        "researchStatus": "partial_national_mechanisms",
+        "reviewed": true,
+        "sources": ["W08", "S15"],
+        "note": "TF prosecutions and cooperation real; consumerfraud protection not organized physical violence. National predicatecrime/confiscation weaknesses cannot assignKLfrequency."
+      },
+      {
+        "dimension": "GSS",
+        "subpillar": "regional_conflict",
+        "status": "partial",
+        "researchStatus": "partial_current_impact",
+        "reviewed": true,
+        "sources": ["S11", "W08"],
+        "note": "Actual2026 regional conflict price/logistics pressures with mitigation; TFregional investigations also real. No bounded ordinaryKL physical/mobility impact or matched local protection chain."
+      },
+      {
+        "dimension": "GSS",
+        "subpillar": "strategic_exposure",
+        "status": "partial",
+        "researchStatus": "partial_protection",
+        "reviewed": true,
+        "sources": ["S16", "W08"],
+        "note": "WaterNCIIzeroTrust2500users,15cyberinitiatives complete, not all4500users or75complete; financing controls not full physical strategic shelter/corridor protection."
+      },
+      {
+        "dimension": "ISR",
+        "subpillar": "governance",
+        "status": "partial",
+        "researchStatus": "partial_real_execution",
+        "reviewed": true,
+        "sources": ["S16", "S15"],
+        "note": "Watermeters/pipes actually repaired and resumed89/92/98/99%; financialcoordination real. Complaint volumes not resolutions, funds/interceptions not restitution."
+      },
+      {
+        "dimension": "ISR",
+        "subpillar": "adaptive_capacity",
+        "status": "partial",
+        "researchStatus": "partial_real_execution",
+        "reviewed": true,
+        "sources": ["S16", "S11", "S15"],
+        "note": "Implemented leak/monitoring/networkanalysis and current fuel/cash mitigation, continuedburden and lateplanned features retained."
+      },
+      {
+        "dimension": "ISR",
+        "subpillar": "social_cohesion",
+        "status": "partial",
+        "researchStatus": "partial_limited_groups",
+        "reviewed": true,
+        "sources": ["S16"],
+        "note": "58actualoutreach programmes and B40boxes1800 across12locations, not broadtrust/fullmedianwelfare; programmes not all problemsresolved."
+      },
+      {
+        "dimension": "ISR",
+        "subpillar": "emergency_recovery",
+        "status": "partial",
+        "researchStatus": "partial_measured_categories",
+        "reviewed": true,
+        "sources": ["S16"],
+        "note": "Actualcategory repair+resumption89/92%within24h,98%36h,99%48h; categories separateunknownN, realWTP/plannedoutages remain."
+      },
+      {
+        "dimension": "RES",
+        "subpillar": "water",
+        "status": "partial",
+        "researchStatus": "partial_actual_supply_after_help",
+        "reviewed": true,
+        "sources": ["S16"],
+        "note": "OperationalLangat2,repairrestoration and sampledwaterquality; real largeWTP/plannedinterruptions, average reserve16.71v18.06target and18.60differentstatement. 2025actual tariff not read; SADEnotKLmedian."
+      },
+      {
+        "dimension": "RES",
+        "subpillar": "food",
+        "status": "partial",
+        "researchStatus": "partial_household_and_mitigation_bridge",
+        "reviewed": true,
+        "sources": ["S04", "S11", "S16"],
+        "note": "Administrativecitizenhousehold consumption/disposable data and currentpurchasingpowermitigation support usualbundle finitebridge; no itemizedmedianfoodintake. B40boxes not medianfoodsecurity."
+      },
+      {
+        "dimension": "RES",
+        "subpillar": "energy",
+        "status": "partial",
+        "researchStatus": "partial_current_subsidy_after_stress",
+        "reviewed": true,
+        "sources": ["S11", "S04"],
+        "note": "Continuedfuel subsidies alreadyhelpedcontainpass-through; realMiddleEastpressure/selectedborrowersarrears remain. Not household electricityavailability/outage panel."
+      },
+      {
+        "dimension": "RES",
+        "subpillar": "supply_chain",
+        "status": "partial",
+        "researchStatus": "partial_current_after_help",
+        "reviewed": true,
+        "sources": ["S11", "S16"],
+        "note": "Actualnational logisticscost shocks andmanageablefinancialeffects; currentuseful water production and repairs. No physicalindependence or wholeFUA food/energyinventory."
+      },
+      {
+        "dimension": "MED",
+        "subpillar": "access",
+        "status": "partial",
+        "researchStatus": "partial_tariff_service",
+        "reviewed": true,
+        "sources": ["W01", "W02"],
+        "note": "Citizenclass3fees materially low and local department routes; notforeign/private/executive or allcarefree; tariff not necessarycarecompleted."
+      },
+      {
+        "dimension": "MED",
+        "subpillar": "routine_quality",
+        "status": "unresolved",
+        "researchStatus": "unresolved_discriminating_gap",
+        "reviewed": true,
+        "sources": ["W02", "W05"],
+        "note": "Clinical card pixels unavailable; no actual bounded routinequality/wait/delay evidence chain read. Not a demand forallcity/allhospitalperfectoutcomes."
+      },
+      {
+        "dimension": "MED",
+        "subpillar": "specialist_capacity",
+        "status": "partial",
+        "researchStatus": "partial_named_service",
+        "reviewed": true,
+        "sources": ["W02", "W01"],
+        "note": "Specialistservice and dialysis/oncology tariff descriptions actual institutional offer, no measuredordinarytakeup/quality orcapacitywait."
+      },
+      {
+        "dimension": "MED",
+        "subpillar": "system_continuity",
+        "status": "partial",
+        "researchStatus": "partial_provider_protection",
+        "reviewed": true,
+        "sources": ["S16", "W04"],
+        "note": "Waterrepair actual generalresilience and hospitalsecurityremit/oldposts; no actualnecessarycaremonitoring/wait/treatmentcompletion connection."
+      },
+      {
+        "dimension": "LON",
+        "subpillar": "translation",
+        "status": "partial",
+        "researchStatus": "partial_research_support",
+        "reviewed": true,
+        "sources": ["W03"],
+        "note": "CTUoperating2019andclinicalresearchsupport, no selectedmaturedisease-specifichumanresult/routineuse chain."
+      },
+      {
+        "dimension": "LON",
+        "subpillar": "trial_maturity",
+        "status": "unresolved",
+        "researchStatus": "not_demonstrated",
+        "reviewed": true,
+        "sources": ["W03"],
+        "note": "Equipment/GCP andcentreoperation not completedmaturehumanefficacy. Nohealthylifespan claim."
+      },
+      {
+        "dimension": "LON",
+        "subpillar": "regulatory_adoption",
+        "status": "unresolved",
+        "researchStatus": "not_started",
+        "reviewed": true,
+        "sources": [],
+        "note": "No selectedtherapy/indication/age authorisation source read; hospitalpresence notapproval."
+      },
+      {
+        "dimension": "LON",
+        "subpillar": "resident_access",
+        "status": "unresolved",
+        "researchStatus": "unresolved_chain",
+        "reviewed": true,
+        "sources": ["W01", "W03"],
+        "note": "Citizenfees alone cannot convert unidentifiedtrial into fundedroutine therapy with usualmonitoring; not requiring everydose invoice."
+      },
+      {
+        "dimension": "TEC",
+        "subpillar": "knowledge_output",
+        "status": "partial",
+        "researchStatus": "partial_completed_local_application",
+        "reviewed": true,
+        "sources": ["S16", "W03"],
+        "note": "CompletedFRIMresidualpilot andUMPSAodourdetectionstudy; actualboundedoutputs not globalpatent count. Cohort/site/replication andpublicclinicaloutputslimited."
+      },
+      {
+        "dimension": "TEC",
+        "subpillar": "industry_density",
+        "status": "partial",
+        "researchStatus": "partial_industrial_use",
+        "reviewed": true,
+        "sources": ["S16", "S15"],
+        "note": "Operatingwaterinfrastructure digitalindustry application and financialnetworkdeployment; no citywidefirmdensity measurement/cluster transfers."
+      },
+      {
+        "dimension": "TEC",
+        "subpillar": "digital_infrastructure",
+        "status": "partial",
+        "researchStatus": "partial_actual_operations",
+        "reviewed": true,
+        "sources": ["S16", "S15", "D01"],
+        "note": "OperatingICCwatercoverage650/734and1399/1677,51,514smartmeters andpaymentnetworkanalysis; oldsamplebandwidth onlycontext, appdownloadnotusers."
+      },
+      {
+        "dimension": "TEC",
+        "subpillar": "diffusion",
+        "status": "partial",
+        "researchStatus": "partial_real_deployment",
+        "reviewed": true,
+        "sources": ["S16", "S15"],
+        "note": "Water eBill78%providercustomers andrealmeterdeployment, fraudnetwork1600flaggedaccountsnotconvictions; nationalpaymentreach->localordinaryusefinitebridge, pilotnotallindustry."
+      },
+      {
+        "dimension": "OPT",
+        "subpillar": "transport_redundancy",
+        "status": "unresolved",
+        "researchStatus": "unresolved_actual_access",
+        "reviewed": true,
+        "sources": ["D01", "D02", "W08"],
+        "note": "KLIA outsideoldall9031; airportdirectory/inspectionstaff not ordinaryaccess or independent routes. No operatoraccess/timetable bodyread."
+      },
+      {
+        "dimension": "OPT",
+        "subpillar": "legal_mobility",
+        "status": "unresolved",
+        "researchStatus": "not_started",
+        "reviewed": true,
+        "sources": ["W09"],
+        "note": "FEAcategoryindex not long-term immigrationright; no legalentry->residence substitution or named destination pathway."
+      },
+      {
+        "dimension": "OPT",
+        "subpillar": "asset_portability",
+        "status": "partial",
+        "researchStatus": "partial_real_personal_service",
+        "reviewed": true,
+        "sources": ["W06", "W07", "W09"],
+        "note": "PersonaloutwardFTTactualmin/cap/charges andFEAconditions; abroad account/auth and exceptions notread, not generalunrestrictedcapital."
+      },
+      {
+        "dimension": "OPT",
+        "subpillar": "network_continuity",
+        "status": "unresolved",
+        "researchStatus": "not_started",
+        "reviewed": true,
+        "sources": [],
+        "note": "No actualoverseasordinarypersonaltelecom/authentication continuity read; domesticapp/fintechnotinternationalnetworkproof."
+      }
+    ],
+    "allMeasured": false
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-kuala-lumpur-score-completion-review.md",
+    "sha256": "a0d6e604ce28b53e8b98f7b47151b3133665f58a4c5e79096764db3bb7d47113",
+    "researchReport": "docs/cci-kuala-lumpur-priority-review.md",
+    "researchReportSha256": "4b21c73aa0ded74d256950fc94055e789f724de3f46422a329d3740ecd1d5358",
+    "reviewedOn": "2026-10-15",
+    "frozenResearchReportSha256": "6730c5d60bd600c8d8bc9a404255ce27224a678f953f56e3fe6b6431054610f8",
+    "handoffSha256": "e74f9c7ce8d32409c591faee1e40487306edce71195c39c4db16bdcecbf1ede1",
+    "frozenManifestSha256": "c16c25393860f11af818af82bf7a387126e2ddf0f0bd682eeaaa6d78af8b397d",
+    "sourceManifestSha256": "3849076f57d90bdd27c4fec820fc160bc6d5b50f17268acab16fd0f4e3ed31e4",
+    "rootAcceptanceCheckSha256": "2a19c178c14bd6ac837bc868a7b71a6429cafb62edec018becd096cece75568c",
+    "frozenFileCount": 148,
+    "researchRawResponseCount": 16,
+    "researchValidRawCount": 7,
+    "researchSubstantiveRawCount": 6,
+    "researchJsShellCount": 1,
+    "researchDiagnosticCount": 9,
+    "researchWebOnlyCount": 11,
+    "rootNewRawRequests": 0,
+    "discoveryQueries": 8
+  },
+  "sensitivity": {
+    "withdrawISR": [12, 92],
+    "withdrawRES": [15, 90],
+    "withdrawTEC": [15, 90],
+    "ISR60to40": [18, 83],
+    "RES60to40": [19, 84],
+    "TEC60to40": [19, 84],
+    "allThree40Domain": [14, 79],
+    "allKnownWithdrawn": [0, 100]
+  },
+  "privateResearchArtifacts": [
+    "report.md",
+    "source-manifest.json",
+    "coverage.json",
+    "version-comparison.json",
+    "geometry.json",
+    "pixels-index.json",
+    "final-guard.json"
+  ],
+  "rootScopeReview": {
+    "status": "root_conditional_acceptance",
+    "publishedInputCommit": "dfb226976451c8017b7790c95b148ddfb8933d61",
+    "researchInputCommit": "6b3a0ee0bf21a272c761765b6fae42b0251fb30a",
+    "researchFixedCases": 73,
+    "currentCasesGuarded": 75,
+    "newNagoyaAndPhiladelphiaAreRootExternalAdditions": true,
+    "old75CaseBytesUnchanged": true,
+    "frozenFilesVerified": 148,
+    "frozenFilesManifestSha256": "c16c25393860f11af818af82bf7a387126e2ddf0f0bd682eeaaa6d78af8b397d",
+    "validRawVerified": 7,
+    "validSubstantiveRaw": 6,
+    "unusableJsShellCount": 1,
+    "sameUnderlyingWaterDocumentVersions": 2,
+    "failedRawDiagnosticsNotOriginals": 9,
+    "webOnlyBodiesNoOriginalSha": 11,
+    "rootDecisionPending": false,
+    "rootAcceptedScores": {
+      "PCS": null,
+      "GSS": null,
+      "ISR": 60,
+      "RES": 60,
+      "MED": null,
+      "LON": null,
+      "TEC": 60,
+      "OPT": null
+    },
+    "rootPdfPixelsActuallyViewedThisTurn": 9,
+    "rootPriorOldVersionPdfPixelsActuallyViewed": 3,
+    "rootRawHtmlBodiesRead": 2,
+    "rootWebRecordsReadAsExcerpts": 3,
+    "rootAllOriginalBodiesRead": false,
+    "currentWaterTariffObtained": false,
+    "jsShellUsedForTariff": false,
+    "sadeTransferredToKlMedianResident": false,
+    "meanConsumptionRatioIsMedianHouseholdBudget": false,
+    "loanValueRatiosAreHouseholdPopulationRates": false,
+    "outageDurationIsEachHouseholdDuration": false,
+    "complaintCountIsResolvedCount": false,
+    "trialIsMatureIndustrialUptake": false,
+    "2027AlertTargetCountedAsOperating": false,
+    "nationalFraudIsCityOrganizedViolence": false,
+    "hkl850CardPixelsActuallyViewed": false,
+    "fatf170PixelsActuallyViewed": false,
+    "rootVersionComparison": {
+      "physicalPagesTextIdentical": [41, 42, 63, 64, 89, 90, 124, 126, 130, 137, 141],
+      "pageCounts": [150, 152],
+      "page85ActualUnitCorrectionVerified": true,
+      "wholeDocumentEquivalent": false,
+      "laterVersionUsedForSelectedFacts": true
+    },
+    "rootNewRawRequests": 0,
+    "rootNewDiscoveryQueries": 0,
+    "rootAdditionalWebFailures": {
+      "newDiscoveryQueries": 0,
+      "newRawRequests": 0,
+      "webOpenAttempts": 2,
+      "webFailures": [
+        {
+          "url": "https://www.bnm.gov.my/-/g-spch-ifctf26",
+          "result": "timeout turn2282view0; saved valid raw original exists; no retry"
+        },
+        {
+          "url": "https://www.dosm.gov.my/portal-main/release-content/my-local-stats-malaysia-negeri--daerah-pentadbiran-2024",
+          "result": "timeout turn2282view1; inherited prior webtimeout retained, saved valid raw original exists; no retry"
+        }
+      ],
+      "rootHKLImageFailureInherited": "root37/kl-root-image-failure.json; do not retry stopped hkl web mechanism"
+    }
+  }
+}

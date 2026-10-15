@@ -127,6 +127,7 @@ const realCases = [
   "leuven",
   "nagoya",
   "philadelphia",
+  "kuala-lumpur",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -245,6 +246,7 @@ const [
   leuven,
   nagoya,
   philadelphia,
+  kualaLumpur,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2824,3 +2826,52 @@ assert.equal(philadelphiaCase.rootScopeReview.thriveUniversalMedianResidentCover
 assert.equal(philadelphiaCase.rootScopeReview.domesticSmsProvesOverseasRoaming, false);
 assert.equal(philadelphiaCase.rootScopeReview.pewCrimeConcernIsOrganizedViolenceRate, false);
 assert.equal(philadelphiaCase.rootAdditionalWebReadSources[0].sha256, null);
+
+const kualaLumpurCase = realCases.find(c => c.candidateId === 1322);
+assert.equal(
+  kualaLumpurCase.priorityCompletionReview.sha256,
+  digest(kualaLumpurCase.priorityCompletionReview.path)
+);
+assert.equal(
+  kualaLumpurCase.priorityCompletionReview.researchReportSha256,
+  digest(kualaLumpurCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(kualaLumpur), { center: null, lower: 21, upper: 86 });
+for (const dimension of ["ISR", "RES", "TEC"] as const) {
+  const withdrawn = { ...kualaLumpur };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), {
+    center: null,
+    lower: dimension === "ISR" ? 12 : 15,
+    upper: dimension === "ISR" ? 92 : 90,
+  });
+}
+assert.equal(
+  kualaLumpurCase.sourceSnapshots.find((s: { id: string }) => s.id === "S08").usedForScore,
+  false
+);
+assert.equal(
+  kualaLumpurCase.sourceSnapshots.find((s: { id: string }) => s.id === "S08").substantiveOriginal,
+  false
+);
+assert.equal(
+  kualaLumpurCase.sourceSnapshots.find((s: { id: string }) => s.id === "S01").usedForScore,
+  false
+);
+assert.equal(
+  kualaLumpurCase.sourceSnapshots.find((s: { id: string }) => s.id === "S16").usedForScore,
+  true
+);
+assert.equal(
+  kualaLumpurCase.rootScopeReview.rootVersionComparison.page85ActualUnitCorrectionVerified,
+  true
+);
+assert.equal(kualaLumpurCase.rootScopeReview.sadeTransferredToKlMedianResident, false);
+assert.equal(kualaLumpurCase.rootScopeReview.meanConsumptionRatioIsMedianHouseholdBudget, false);
+assert.equal(kualaLumpurCase.rootScopeReview.loanValueRatiosAreHouseholdPopulationRates, false);
+assert.equal(kualaLumpurCase.rootScopeReview.outageDurationIsEachHouseholdDuration, false);
+assert.equal(kualaLumpurCase.rootScopeReview.hkl850CardPixelsActuallyViewed, false);
+assert.deepEqual(
+  kualaLumpurCase.referenceBoundaryCheck.cases["1322"].approximateReferences[2].all9031Matches,
+  []
+);
