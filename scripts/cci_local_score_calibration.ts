@@ -137,6 +137,7 @@ const realCases = [
   "daejeon",
   "manchester",
   "houston",
+  "san-diego",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -265,6 +266,7 @@ const [
   daejeon,
   manchester,
   houston,
+  sanDiego,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -3411,3 +3413,49 @@ const houstonPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
 );
 assert.equal(houstonPosition.bestPosition, 1);
 assert.equal(houstonPosition.worstPosition, rankAudit.candidateCount);
+
+const sanDiegoCase = realCases.find(c => c.candidateId === 2204);
+assert.equal(
+  sanDiegoCase.priorityCompletionReview.sha256,
+  digest(sanDiegoCase.priorityCompletionReview.path)
+);
+assert.equal(
+  sanDiegoCase.priorityCompletionReview.researchReportSha256,
+  digest(sanDiegoCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(sanDiego, { PCS: 40, ISR: 40, MED: 60, LON: 60, TEC: 60 });
+assert.deepEqual(total(sanDiego), { center: null, lower: 33, upper: 68 });
+assert.equal(sanDiegoCase.unknownWeight, 35);
+assert.equal(sanDiegoCase.coverageReview.length, 31);
+assert.equal(sanDiegoCase.sourceSnapshots.length, 21);
+assert.equal(sanDiegoCase.failedSourceSnapshots.length, 1);
+assert.equal(sanDiegoCase.webReadSources.length, 1);
+assert.equal(sanDiegoCase.rootScopeReview.rootPdfPageCount, 18);
+assert.equal(sanDiegoCase.sourceName, "Tijuana");
+assert.equal(sanDiegoCase.countryIso, "USA");
+assert.equal(sanDiegoCase.rootScopeReview.lonNetMonitoringBridgeExplicitlyAccepted, true);
+assert.equal(sanDiegoCase.rootScopeReview.eindhovenResourceDeltaPreserved, true);
+for (const [id, lower, upper] of [
+  ["PCS", 27, 77],
+  ["ISR", 27, 77],
+  ["MED", 24, 74],
+  ["LON", 27, 72],
+  ["TEC", 27, 72],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...sanDiego };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+for (const [id, value, lower, upper] of [
+  ["PCS", 60, 36, 71],
+  ["ISR", 60, 36, 71],
+  ["MED", 40, 30, 65],
+  ["LON", 40, 31, 66],
+  ["TEC", 40, 31, 66],
+] as const)
+  assert.deepEqual(total({ ...sanDiego, [id]: value }), { center: null, lower, upper });
+const sanDiegoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
+  (c: { efua_id: string }) => c.efua_id === "2204"
+);
+assert.equal(sanDiegoPosition.bestPosition, 1);
+assert.equal(sanDiegoPosition.worstPosition, rankAudit.candidateCount);

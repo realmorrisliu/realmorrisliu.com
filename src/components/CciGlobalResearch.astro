@@ -95,6 +95,7 @@ import stuttgart from "../../docs/data/cci-local-2026-stuttgart-case.json";
 import daejeon from "../../docs/data/cci-local-2026-daejeon-case.json";
 import manchester from "../../docs/data/cci-local-2026-manchester-case.json";
 import houston from "../../docs/data/cci-local-2026-houston-case.json";
+import sanDiego from "../../docs/data/cci-local-2026-san-diego-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -194,8 +195,10 @@ const cases = [
   daejeon,
   manchester,
   houston,
+  sanDiego,
 ];
 const caseNamesZh: Record<number, string> = {
+  [sanDiego.candidateId]: "圣迭戈相关美国功能区",
   [houston.candidateId]: "休斯敦功能区",
   [manchester.candidateId]: "曼彻斯特功能区",
   [daejeon.candidateId]: "大田功能区",
@@ -387,6 +390,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [sanDiego.candidateId]: [
+    zh
+      ? "圣迭戈相关美国功能区防护／制度条件40，医疗／专项转化／技术条件60，安全／资源／退出未知；原权重贡献33、数学域33—68，无完整总分。洪灾救助与恢复余障、现行临床治疗和实际技术产用一起判断。"
+      : "The San Diego-related USA FUA has conditional 40 for PCS and ISR, and 60 for MED, LON and TEC; GSS, RES and OPT remain unknown. Its original-weight contribution is 33 and arithmetic domain 33–68, without a complete total. Flood assistance and recovery constraints, current clinical treatment and technology in use are considered together.",
+    zh
+      ? "专项转化60依赖普通合资格居民通常能取得并承担疗程、反复／紧急MRI及必要照护的可撤判断；保险合同不等净费用实测，五类社会需要干预0和ARIA风险保留。旧2204原名Tijuana但国家USA，墨西哥440另列；原85案不变，全球入围未证明。"
+      : "LON 60 depends on revocable judgments that ordinary eligible residents can usually obtain and afford treatment, repeated and urgent MRI, and necessary care. Insurance contracts do not measure net affordability; zero interventions in five reported social-need categories and ARIA risks remain counterevidence. Old FUA2204 is named Tijuana with country USA; Mexico FUA440 stays separate. The previous 85 cases are unchanged; global qualification is unproven.",
+  ],
   [houston.candidateId]: [
     zh
       ? "休斯敦防护／制度／资源条件40，医疗／技术条件60，安全／专项转化／退出未知；原权重贡献31、数学域31—66，无完整总分。实际救援、港口恢复、食品帮助、诊疗接续与技术产用，同风暴共同失效及执行余障一起判断。"

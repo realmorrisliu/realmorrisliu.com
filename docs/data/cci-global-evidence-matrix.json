@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 85,
+    "conditionalCaseCount": 86,
     "completeConditionalCaseCount": 19,
-    "partialCaseCount": 66,
-    "unassessedCount": 8946,
+    "partialCaseCount": 67,
+    "unassessedCount": 8945,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -730,8 +730,13 @@
       "sha256": "7f174d96631c3fc40747a374b96b2c051149e9e8861406f48056e2dc2d11f29a",
       "provenance": "cci-houston-score-completion-review.md",
       "provenanceSha256": "80e653525d8d7a7a35d529aec376b1f8c784b060fbf9f7a66f6c0b5b5a8b6a19"
+    },
+    "cci-local-2026-san-diego-case.json": {
+      "sha256": "d897cf3afa5faf1cbe1232c23b9f9ae53ba75c13120b5a3678654c21fc775e2e",
+      "provenance": "cci-san-diego-score-completion-review.md",
+      "provenanceSha256": "2dfb5223ca4cb81c0b72b1855a7f9559bdf3d42b0363286030e5920bc74a656e"
     }
   },
-  "scriptSha256": "a728ba23974af7535f4f517f0b3605af5ff0ee005474b6bcff515ea083d6c0ed",
-  "csvSha256": "b2a44d3c88a6f511d063c118e732c18e31c71ce6b3e5391fb570564c48539f64"
+  "scriptSha256": "26660167fe2657500d6bae36ca071a10fb3dc1e9a86a24813d2e5d1c122bd54a",
+  "csvSha256": "c12099a25d64ccc4e3d8a0d6d5a49283fb07f22501cb09bb24532c2dec52438d"
 }
