@@ -97,6 +97,7 @@ import manchester from "../../docs/data/cci-local-2026-manchester-case.json";
 import houston from "../../docs/data/cci-local-2026-houston-case.json";
 import sanDiego from "../../docs/data/cci-local-2026-san-diego-case.json";
 import austin from "../../docs/data/cci-local-2026-austin-case.json";
+import newcastle from "../../docs/data/cci-local-2026-newcastle-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -198,8 +199,10 @@ const cases = [
   houston,
   sanDiego,
   austin,
+  newcastle,
 ];
 const caseNamesZh: Record<number, string> = {
+  [newcastle.candidateId]: "纽卡斯尔功能区",
   [austin.candidateId]: "奥斯汀功能区",
   [sanDiego.candidateId]: "圣迭戈相关美国功能区",
   [houston.candidateId]: "休斯敦功能区",
@@ -393,6 +396,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [newcastle.candidateId]: [
+    zh
+      ? "纽卡斯尔防护／医疗条件40，制度／专项转化／技术条件60；安全／资源／退出未知。原权重贡献33、数学域33—68，无完整总分。已完防洪、必要治疗与转化产用，同风暴电力共因、诊疗等待和安全余障一起判断。"
+      : "Newcastle has conditional 40 for PCS and MED, and 60 for ISR, LON and TEC; GSS, RES and OPT remain unknown. Its original-weight contribution is 33 and arithmetic domain 33–68, without a complete total. Delivered flood protection, necessary care and translation are assessed alongside storm–power dependencies, waits and safety gaps.",
+    zh
+      ? "疾病CAR-T依赖成熟类路径、当前NHS实施延续及普通净监护的可撤判断，不把不同药物结果移给本地患者，也不推健康延寿。Town Moor较晚已完工；未来扩展和工程预期受益不当已测效果。原87案不变，全球入围未证明。"
+      : "Disease-specific CAR-T depends on revocable judgments about a mature treatment family, continuing NHS delivery and ordinary net monitoring costs. Product-specific outcomes are not transferred to local patients, and healthy lifespan extension is not claimed. A later report confirms Town Moor completion; future expansion and intended benefits are not measured outcomes. The previous 87 cases are unchanged; global qualification is unproven.",
+  ],
   [austin.candidateId]: [
     zh
       ? "奥斯汀防护／制度／医疗／技术条件60，安全／资源／专项转化／退出未知；原权重贡献33、数学域33—78，无完整总分。实际防洪、2025风暴恢复、必要诊疗与知识及数字公共服务产用，同数日停电、信息触达和照护缺口一起判断。"

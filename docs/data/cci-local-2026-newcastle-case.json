@@ -1,0 +1,2009 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 4227,
+  "name": "Newcastle upon Tyne",
+  "countryIso": "GBR",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-16",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "OrdinaryBritishnational/usual local longtermresident/localmedianincome/usualeffectivecoverage/nofixedage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-newcastle-score-completion-review.md",
+  "researchFrozenInputCommit": "47b8accdd36bec3996c713d4214ec487c085be01",
+  "fixedInputCases": 87,
+  "fixedInputComplete": 19,
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 33.0,
+  "unknownWeight": 35,
+  "unresolvedScoreRange": [33.0, 68.0],
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 40,
+      "rationale": "TownMoor及雨园已完工、Tyneside智能污水网络实际激活、火灾访视/响应提供真实防护；但风暴—电力共因下污水站/处理厂仍有重要实际余障，条件40。",
+      "assumption": "接受东北水务区域2024强风暴/电力故障对4227相同服务网络有有限普通后果代表性，并有限延续到2026；不是把公司120次Cat3事件当本地洪灾率或2026停服。已完TownMoor保护57properties为模型/项目范围，不抵消区域网络自述仍不能应付最强风暴；不能仅因备用电源未获足额拨款判低。",
+      "conditionalAlternatives": [60],
+      "alternativeRationales": "60若接受在役工程、15次激活和日常响应已使通常主要危险匹配保护足够；40不需多数受害/障碍主导。80缺联合危险备援/效果证，20缺严重持续失效。拒绝区域后果/时点桥撤null。",
+      "sourceIds": ["S02", "S05", "S08", "S11"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "heat_humidity": "context",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "地区消防真实事故响应与预防、交通/港口等关键节点描述已读，但未将组织暴力、区域外溢或战略暴露的普通影响与匹配保护接成净方向，未知。",
+      "assumption": "故意纵火不是组织暴力分类；消防常备与一般治理不能自动替代安全战略保护。没有战争不直接给60，也不要求战争已发生才能评。",
+      "conditionalAlternatives": [],
+      "alternativeRationales": "40需帮助后实际重要组织/区域/战略约束；60可接受有据有限威胁影响与保护适配，不必完整人口率，但本批尚未连接；缺证不降40。",
+      "sourceIds": ["S11", "S08"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "organized_violence": "context",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "context"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "城市已完成防洪/保温和实际燃料食物帮助，水务智能调节与医疗出院纠错形成多节点履约实绩，支持通常制度可用；仍有保护范围、准入及质量治理余障，条件60。",
+      "assumption": "接受市/供区/Trust多领域已交付措施有限代表旧FUA普通履约及2026延续。并非菜单或未来预算：57properties工程、56home改造、260household燃料实付、15次智能激活和出院流程真实行动足以支持主要机制通常运作；不等各群体均被覆盖。",
+      "conditionalAlternatives": [40],
+      "alternativeRationales": "40若现有帮助后，前置购买/数字材料、有限保护范围、院感执行和风暴协同缺口仍构成重要通常履约障碍，无需全制度失效。80欠跨群体/压力备援有效性；拒绝代表/延续/通常执行桥null。",
+      "sourceIds": ["S02", "S04", "S08", "S11", "S15"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "水务实际供给、收费、150k以上减免和125k优先服务，及真实燃料/食品/保温交付均存在；鲜食仍难、付款帮助有资格和前置购买，尚不能稳定裁出普通中位画像水食能合束净方向。",
+      "assumption": "不是要求全部子项量表或逐户完整账本。供区平均£1.47每日水费不是当地中位预算；<£30k等援助资格不自动属于画像；针对冷屋慢病家庭的260实付不能直接推广全部家庭，鲜食个案也不等中位普遍匮乏。",
+      "conditionalAlternatives": [],
+      "alternativeRationales": "60可在有限接受实际普通供给、付款与定向帮助足以通常取得时采；40须把帮助后真实食品/能源/住房余障连到画像，而非资料少或项目金额换分。本批对这些代表和净费用方向未定，拒两向直接搬用；80缺共因备援。",
+      "sourceIds": ["S02", "S08", "S10", "S13", "S15"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "context"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 40,
+      "rationale": "NHS必要护理、专科与实际出院接续改进明确；在容量和感染措施之后，癌症/诊断等待与筛查、隔离、治疗执行的安全余障仍重要，条件40。",
+      "assumption": "接受地方Trust真实混合临床/及时性证据对普通必要护理有有限代表性、2026延续；NHS普通居住付款和通常院外费用/交通照护可有限承担。SHMI as expected、年龄组内部再入院及满意调查不平均、不当风险调整优越，更不抵消实际延迟和院感执行缺口；40不要求多数患者受害。",
+      "conditionalAlternatives": [60],
+      "alternativeRationales": "60若判断已运行必要护理/接续/NHS支付与容量改进足以通常取得，仍承认等待尾部和安全余障；不能靠未见全面失效推60。80缺及时性和安全残障消解；20缺普遍基本护理失效。拒临床代表/付款/净照护/延续桥null。",
+      "sourceIds": ["S04", "S07", "S14", "R01", "R02"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "成熟疾病CAR-T免疫改造人体依据与Newcastle已100余成人NHS实际治疗、2–3周住院监护连成有限疾病转化路径，条件60；不推健康延寿或本地未具名产品长期疗效。",
+      "assumption": "必要可撤：接受HAS tisa成熟B细胞疾病证据仅作同类机制/成熟路径支持，结合本地真实NHS标准部署，而不移植产品/适应证/分析集结果；接受2024实际交付及现行病种/支持服务延续到截止、合适患者通常获得NHS路径与住院副作用管理，普通交通/家庭照护在现有接续后通常可承担。保留筛选、制造等待、严重毒性及2–3周照护时间；并不要求无年龄画像人人合适。",
+      "conditionalAlternatives": [40],
+      "alternativeRationales": "40若真实资格、制造等待、严重毒性或净家庭照护在现有NHS与监护后仍构成重要取得约束，无需多数或主导；拒产品类适配、当地实施延续或通常净取得桥则未知。80检视多条可信转化和审慎实际采用，不要求健康人延寿或零风险；本案主要一类路径，产品适配、制造与监护仍有限，未采80。",
+      "sourceIds": ["S06", "S07", "S14", "R01", "R02", "R06", "R07"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "MSI-plus实际应用、Kuano已开发平台、Berghaus最终产品验证及校内Curium设施，与Tyneside在役传感调流和住房技术实交付联合支持持续知识产用和有限普通扩散，条件60；未来效果与扩展不冒当前成果。",
+      "assumption": "接受大学/伙伴真实产用与本地水务数字应用共同有限代表持续知识和产业服务能力；不说大学制造了水务系统，也不以排名、论文、融资额、奖励或来源数量赋分。2026报告当前快照需接受项目事实已在截止可用的有限时点桥，来源首次发布未独立认证；无法接受可撤。",
+      "conditionalAlternatives": [40],
+      "alternativeRationales": "40若实际产业持续使用/普通服务扩散在已交付后仍有重要断层，须实质依据，不因缺全城产业数量封顶。80缺多主体广覆盖/独立结果与备援；未来AIgrowthzone、Arrow预测143jobs/53products不当已实绩。拒代表/时间/实际产用桥null。",
+      "sourceIds": ["S03", "S02", "S08"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": null,
+      "rationale": "英国国籍的德国附条件长期申请和个人银行跨境付款有真实路径；地区官方交通节点描述提供背景，但尚未接成普通长期生活来源、当地可用外出和个人海外通信延续的净路径。",
+      "assumption": "免签可入境不等自动长居或工作；不默认学位/工作合同；NatWest个人鉴权/限额/费用是资金正证，不是长期海外账户保留保证。交通导航与消防区域机场/铁路存在不冒时刻表/可达性；未取得通信原件不是无通信能力。",
+      "conditionalAlternatives": [],
+      "alternativeRationales": "60可接受有据普通交通、附条件长期法律/生活来源、个人资金和通信转换有限桥，不要求每目的地逐笔交易；40须真实重要退出余障，不能由没读机场时刻表或缺源扣。当前合束普通路径代表未定。",
+      "sourceIds": ["S11", "S12", "S16", "R03", "R04", "R05"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "transport_redundancy": "context",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "unresolved"
+      }
+    }
+  ],
+  "coverageReview": [
+    {
+      "dimensionId": "PCS",
+      "subpillar": "heat_humidity",
+      "status": "context",
+      "boundedReviewPerformed": true,
+      "evidence": "S08p4/9",
+      "finding": "改造/植树属局部保护，热湿实际暴露与效果未充分触达。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "PCS",
+      "subpillar": "flood_sea_level",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S05;S08p8;S02p28",
+      "finding": "TownMoor从施工到已完成及雨园、传感实运；海平面全域未测。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "PCS",
+      "subpillar": "geophysical",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "evidence": "boundedpass",
+      "finding": "未取得地震/地质主要危险及建筑匹配保护原件；几何不测危险。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "PCS",
+      "subpillar": "severe_weather_wildfire",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S02p28;S11p8",
+      "finding": "2024强风暴和电力共因实障、救援预防正证；野火暴露未量化。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "GSS",
+      "subpillar": "organized_violence",
+      "status": "context",
+      "boundedReviewPerformed": true,
+      "evidence": "S11p8",
+      "finding": "故意火灾计数不是组织暴力分类，未裁匹配保护净方向。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "GSS",
+      "subpillar": "regional_conflict",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "evidence": "boundedpass",
+      "finding": "未接成区域外溢实际普通影响及保护，非以无战事补分。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "GSS",
+      "subpillar": "strategic_exposure",
+      "status": "context",
+      "boundedReviewPerformed": true,
+      "evidence": "S11p7/23",
+      "finding": "铁路港口机场等节点与风险治理背景，不等军事战略风险匹配。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "ISR",
+      "subpillar": "governance",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S04p30/43/44;S11;S15",
+      "finding": "透明质量/纠错及现行资格执行，内部数据与draft身份限制。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "ISR",
+      "subpillar": "adaptive_capacity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S02p28;S08p8",
+      "finding": "真实传感激活、雨园和防洪完工，后续potential不当已交付。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "ISR",
+      "subpillar": "social_cohesion",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S08p23/24;S15",
+      "finding": "实际食物/燃料合作，数字证据/前置购买和鲜食触达限制。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "ISR",
+      "subpillar": "emergency_recovery",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S02p24/28;S11p8",
+      "finding": "水务供水响应/临时替代及消防实服务；不宣称全FUA灾后恢复闭环。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "RES",
+      "subpillar": "water",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S02p24/25/28;S10;S13",
+      "finding": "实供/中断/CRI和账单帮助，供区异质、资格和时窗分别。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "RES",
+      "subpillar": "food",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S08p24;S15",
+      "finding": "40+食品项目/75吨剩食与Throckley鲜食缺口；非营养充分或中位居民率。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "RES",
+      "subpillar": "energy",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S08p4/23/24;S15",
+      "finding": "保温56house/260household燃料实付；低收入慢病目标，前置采购限制。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "RES",
+      "subpillar": "supply_chain",
+      "status": "context",
+      "boundedReviewPerformed": true,
+      "evidence": "S02p28;S08p24",
+      "finding": "风暴电力共因、剩食网络/鲜食余障；未测独立替代/家庭储备。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "MED",
+      "subpillar": "access",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S04p42/44;R01;R02",
+      "finding": "真实癌症诊断/RTT等待与NHS付款/院外收费。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "MED",
+      "subpillar": "routine_quality",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S04p30/42/43/45/47/48",
+      "finding": "混合感染/SHMI/内部再入院，分母/窗口和方法冲突不平均。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "MED",
+      "subpillar": "specialist_capacity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S04p29/44;S07",
+      "finding": "真实专科容量与人员空缺/转诊延迟，目录不独作结果。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "MED",
+      "subpillar": "system_continuity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S04p30;S14",
+      "finding": "出院包/社区护理SOP/血液支持与aim48h目标区别。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "LON",
+      "subpillar": "translation",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S06;R07p14/24/25",
+      "finding": "疾病免疫改造同类成熟人体与本地真实部署，非健康延寿。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "LON",
+      "subpillar": "trial_maturity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "R07p14/24/25;R06",
+      "finding": "JULIET/DESCAR分群与毒性，liso生存仍不确定。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "LON",
+      "subpillar": "regulatory_adoption",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S06;S07;R06",
+      "finding": "本地NHS早期采用后100+实际治疗，NICE另产品限定不移。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "LON",
+      "subpillar": "resident_access",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S06;S14;R01;R02",
+      "finding": "NHS/2–3周住院监护及有限净照护桥，资格/制造/家庭负担可撤。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "TEC",
+      "subpillar": "knowledge_output",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S03p15/17/18",
+      "finding": "实际产品/诊断和平台开发，不按声誉/论文数。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "TEC",
+      "subpillar": "industry_density",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S03p15/18/19",
+      "finding": "LiteralLabs/Berghaus/P&G等产业合作真实阶段，不等全城密度测量。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "TEC",
+      "subpillar": "digital_infrastructure",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S02p28",
+      "finding": "Tyneside800+传感实际连网和15次激活，自评非独立因果。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "TEC",
+      "subpillar": "diffusion",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S02p28;S03p17/18",
+      "finding": "公共服务产用及UK诊断采用叙述，非全FUA人人获益。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "OPT",
+      "subpillar": "transport_redundancy",
+      "status": "context",
+      "boundedReviewPerformed": true,
+      "evidence": "S11p7;S16",
+      "finding": "地区官方国际机场/铁路/港口背景及道路导航，未核通常可达/替代。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "OPT",
+      "subpillar": "legal_mobility",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "R03;R04;R05",
+      "finding": "英国公民90日内申居留、生活来源和合资格工作条件，非自动权利。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "OPT",
+      "subpillar": "asset_portability",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S12",
+      "finding": "个人转账/FX/鉴权/限额；UlsterApp措辞风险与海外保留未核。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "OPT",
+      "subpillar": "network_continuity",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "evidence": "boundedpass",
+      "finding": "本批未读个人海外通信/长期转换原件；不以缺源评分。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.newcastle-hospitals.nhs.uk/about/corporate-information/reports-and-publications/quality-accounts/",
+      "localPath": "originals/trust-quality-index.html",
+      "originalBytes": 103531,
+      "sha256": "01350997d28c89b7a5d213a577d3461f0abcc3414b808e9e505643011818fadc",
+      "retrievedAt": "2026-10-15T19:13:10.901182+00:00",
+      "scope": "Locator only, not scored directory",
+      "versionWindow": "Index updated24June2026",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S02",
+      "url": "https://www.nwg.co.uk/globalassets/corporate/debt-issuance/2025/nwl_annual-report-and-financial-statements_2025_final.pdf",
+      "localPath": "originals/water-annual2025.pdf",
+      "originalBytes": 6346138,
+      "sha256": "8a96ece5999ddbcbbcaba16fef0846b96582fa6f31832e2decb4ffd27e60b351",
+      "retrievedAt": "2026-10-15T19:13:13.257635+00:00",
+      "scope": "NorthumbrianWater andEssex&Suffolk areas differ fromFUA; operator selfreport andDWI/Ofwat descriptions; p46NorthWest wording notsilentlycorrected",
+      "versionWindow": "2024/25annual report; actual2024storms andFeb2025smartsewer; somebaseline2019/20",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S03",
+      "url": "https://www.ncl.ac.uk/mediav8/business-and-partnerships-newcastle-innovations/files/Newcastle-Innovations-Annual-Report-2026-digital.pdf",
+      "localPath": "originals/innovation2026.pdf",
+      "originalBytes": 9653751,
+      "sha256": "4c57619c362a87247c3380060d5f59d5736315a6886521929f25c0af18adaa2d",
+      "retrievedAt": "2026-10-15T19:13:17.227932+00:00",
+      "scope": "University/partner operations, someexternalregion andfutureprojects; noallFUA residentdenominator",
+      "versionWindow": "Annual report2026; observed currentOct16 snapshot; report publication bycutoff not independentlycertified",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R01",
+      "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+      "localPath": "originals/R01-S08-nhs-ordinary-residence.html",
+      "originalBytes": 32662,
+      "sha256": "42c4cf404fdfc984257c5ea70f222b8c786e5d0d4d95c0e99f0b7eab682ed0ec",
+      "retrievedAt": "2026-10-15T13:21:51.121239+00:00",
+      "scope": "Ordinaryresidence legalsettledbasis, nationalityalone insufficient; currentbytes do notcertifycutoff",
+      "versionWindow": "NHSreview24Oct2023, nextdue24Oct2026",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R02",
+      "url": "https://www.nhs.uk/nhs-services/help-with-health-costs/when-you-need-to-pay-towards-nhs-care/",
+      "localPath": "originals/R02-S12-nhs-charges.html",
+      "originalBytes": 28145,
+      "sha256": "81b0a7b5cdeb5d401dc9835500553a5b646f8a3b89407af9404b577a3e7dcc0a",
+      "retrievedAt": "2026-10-15T13:28:48.801106+00:00",
+      "scope": "Charges/exemptionproof; due date notupdatedversion; medianincomenotautomaticlowincomehelp",
+      "versionWindow": "NHSreview22May2023, nextdue22May2026",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R03",
+      "url": "https://www.gesetze-im-internet.de/aufenthv/__41.html",
+      "localPath": "originals/R03-aufenthv41.html",
+      "originalBytes": 4613,
+      "sha256": "0294e3696361d9294ae75c66475ccb897dcf68e1ffd1346fabf3a83104f74c85",
+      "retrievedAt": null,
+      "scope": "Britishcitizens explicit, in-countryapplicationwithin90days notautomaticlongstay/work",
+      "versionWindow": "DurablecurrentGerman§41snapshot",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R04",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__5.html",
+      "localPath": "originals/R04-aufenthg5.html",
+      "originalBytes": 6953,
+      "sha256": "2b1c6d9b2cda3c69f96b893150025c1490298f8de35741bb297ef82335df4e27",
+      "retrievedAt": null,
+      "scope": "Identity/passport/securedsubsistence andapplicableconditions",
+      "versionWindow": "DurablecurrentGerman§5snapshot",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R05",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__18b.html",
+      "localPath": "originals/R05-aufenthg18b.html",
+      "originalBytes": 3632,
+      "sha256": "d605edfdbf1977205ccc0f1c5b267b061e59f072200c04fbe5d02d340bc6a7b4",
+      "retrievedAt": null,
+      "scope": "Qualifiedacademicemployment; noassumeddegree/joboffer",
+      "versionWindow": "DurablecurrentGerman§18bsnapshot",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R06",
+      "url": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+      "localPath": "originals/R06-S10-nice-ta1048.html",
+      "originalBytes": 20164,
+      "sha256": "7d37836575b240bd2359d0de728c2e937e73a1cc32906576e086a1af57733e3f",
+      "retrievedAt": null,
+      "scope": "Liso-celadultLBCLfirstlinefailure≤12months/ASCTfit+commercialarrangement; OSuncertain; notlocal100productproof",
+      "versionWindow": "NICE TA1048 published26Mar2025",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R07",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "localPath": "originals/R07-has-kymriah-2023.pdf",
+      "originalBytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "retrievedAt": null,
+      "scope": "Tisa-specificmaturehuman evidence; noncomparative/selectedanalyses notlocalCAR-T efficacy orhealthylifespan",
+      "versionWindow": "HAS CT20262 KYMRIAH2023, olderJULIET/DESCAR cohorts",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S04",
+      "url": "https://www.newcastle-hospitals.nhs.uk/wp-content/uploads/2026/06/Quality-Account-2025-2026-The-Newcastle-upon-Tyne-Hospital-NHS-Foundation-Trust.pdf",
+      "localPath": "originals/trust-quality2025-26.pdf",
+      "originalBytes": 2217472,
+      "sha256": "fe2c1e505ec43fc5367057510631df53fcdf446bcdfcc30d07625d4d4c3ac506",
+      "retrievedAt": "2026-10-15T19:14:30.396918+00:00",
+      "scope": "Trustregional/tertiaryreferrals notFUAresidentcohort; internaldata/method conflicts preserved",
+      "versionWindow": "2025Apr–2026Mar quality account linkedJune2026; someApr–Feb provisionalmetrics; overlappingSHMIwindows",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S05",
+      "url": "https://new.newcastle.gov.uk/news/2025/pilot-make-newcastle-more-flood-resilient",
+      "localPath": "originals/townmoor-flood2025.html",
+      "originalBytes": 35375,
+      "sha256": "85e771bdc2082aa4b35dbdc1026f7573daf2b846e44c1399eb1158f49145feaa",
+      "retrievedAt": "2026-10-15T19:14:32.626390+00:00",
+      "scope": "LaterS08completed2025 evidence supersedes currentconstruction inference, nothistoricalrecord",
+      "versionWindow": "24June2025underconstruction",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S06",
+      "url": "https://www.newcastle-hospitals.nhs.uk/news/newcastle-hospitals-treats-100th-adult-car-t-cell-patient-as-early-adopter/",
+      "localPath": "originals/cart-delivery.html",
+      "originalBytes": 106577,
+      "sha256": "29d2c16d095a4ceca02b376c977012410df343b4478107abfa7dc158b17766d8",
+      "retrievedAt": "2026-10-15T19:15:43.861342+00:00",
+      "scope": "Freeman/NCCC regionalpatients; unspecifiedproducts, not100localresidents orlongtermoutcome",
+      "versionWindow": "23Apr2024actual100adultCAR-T deliveries",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S07",
+      "url": "https://www.newcastle-hospitals.nhs.uk/services/haematology/disease-specific-clinics/",
+      "localPath": "originals/haematology-clinics.html",
+      "originalBytes": 105548,
+      "sha256": "0b3deeb9725059f50fbd66c916012f56f886c1b139285e75aca6c3781ff99cd1",
+      "retrievedAt": "2026-10-15T19:15:45.826763+00:00",
+      "scope": "Actualdisease-specific service description, notcompletedpatientcount",
+      "versionWindow": "Currentservicepage updated03Apr2024",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S08",
+      "url": "https://new.newcastle.gov.uk/sites/default/files/2026-03/Net%20Zero%20Newcastle%20Priority%20Actions%20Update%20January%202025%20to%20December%202025.pdf",
+      "localPath": "originals/city-netzero-delivery2025.pdf",
+      "originalBytes": 2460282,
+      "sha256": "e760ac55c7170c561dad5d8479c047544c81afd5d9de2611b70b98a830d98170",
+      "retrievedAt": "2026-10-15T19:15:47.830681+00:00",
+      "scope": "Cityprogramme/targetedhouseholds, notallFUA ormedianeligibility",
+      "versionWindow": "2025Jan–Decdeliveryupdate, March2026file; someMar2026futuretargets",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S09",
+      "url": "https://www.natwest.com/support-centre/banking-from-home/make-payments.html",
+      "localPath": "originals/natwest-personal-payments.html",
+      "originalBytes": 120558,
+      "sha256": "61d2bc145c98c5ed8a78a58075aba030ea02c81e4e79298cee8959de9a2002bc",
+      "retrievedAt": "2026-10-15T19:16:43.675083+00:00",
+      "scope": "Locator only; expat/businessproducts notprofile",
+      "versionWindow": "Current personalpayment index",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S10",
+      "url": "https://www.nwl.co.uk/myaccount/charges/",
+      "localPath": "originals/water-charges2026.html",
+      "originalBytes": 211421,
+      "sha256": "caa45c51cc5c45ee227b6205682bbeab1ef988ad0c4f0e8684f738b2992f6128",
+      "retrievedAt": "2026-10-15T19:16:46.013428+00:00",
+      "scope": "Northumbrian supplyarea; provideraverage£1.47/day notmedianfamilybudget",
+      "versionWindow": "2026/27charges effective01Apr2026",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S11",
+      "url": "https://www.twfire.gov.uk/wp-content/uploads/2025/06/Financial-Statements-2024-25-Draft.pdf",
+      "localPath": "originals/fire-service2024-25-draft.pdf",
+      "originalBytes": 1456643,
+      "sha256": "d340927035250f8069c832dca4d05a375c1e3c769dbb0be32e7169ac129811db",
+      "retrievedAt": "2026-10-15T19:16:48.975905+00:00",
+      "scope": "TyneWear538km2/1.1m servicepopulation, notFUA; incidentcounts notorganizedviolence",
+      "versionWindow": "2024/25DraftFinancialStatements June2025 subjecttoaudit",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S12",
+      "url": "https://www.natwest.com/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
+      "localPath": "originals/natwest-personal-international.html",
+      "originalBytes": 155117,
+      "sha256": "3ee8c0cae114cfb51eeba606db44f4d2605b92b1620f2873c1c0dd55be4b56d6",
+      "retrievedAt": "2026-10-15T19:18:35.888285+00:00",
+      "scope": "Account/device/authentication/FXconditions; UlsterBankApp textbrand inconsistency preserved; notlongtermbankretentionabroad",
+      "versionWindow": "CurrentNatWestUKpersonalpayment FAQ",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S13",
+      "url": "https://www.nwl.co.uk/bill-help",
+      "localPath": "originals/water-bill-help.html",
+      "originalBytes": 198779,
+      "sha256": "94071495c5c2be6e1ab144c0eadc56ebd79968f791af595b5c3cde7d26f49d57",
+      "retrievedAt": "2026-10-15T19:18:39.013159+00:00",
+      "scope": "Income<£30k orPensionCredit possibleupto50%; notmedianautomaticorallawardsproved",
+      "versionWindow": "Current billhelpscheme",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S14",
+      "url": "https://www.newcastle-hospitals.nhs.uk/services/haematology/supportive-care-services/",
+      "localPath": "originals/haematology-supportive-care.html",
+      "originalBytes": 103516,
+      "sha256": "5a7b7de56323c1a78b2edb9626de6b943cd3ddc6d4f66df578691dfa2e3e0b48",
+      "retrievedAt": "2026-10-15T19:18:41.214417+00:00",
+      "scope": "Timecontinuity explicit, aim48h notactualallresponses; notCAR-Tcarerfunding guarantee",
+      "versionWindow": "Currentsupportpage lastupdated12Feb2021",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S15",
+      "url": "https://new.newcastle.gov.uk/benefits-and-money-advice/debt-and-money-advice/crisis-and-resilience-fund-crf",
+      "localPath": "originals/crisis-resilience2026.html",
+      "originalBytes": 37784,
+      "sha256": "e34a0e618b3ac3631437dbc1ac63592344a2a2eecc081a96a68fdbd4b2359772",
+      "retrievedAt": "2026-10-15T19:20:42.281982+00:00",
+      "scope": "Currentcriteria/cashfirstsupport; noactualcohortpaymentperformance; formerHSFclosed31Mar2026",
+      "versionWindow": "CRF01Apr2026–31Mar2029, applications07Apr2026",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S16",
+      "url": "https://new.newcastle.gov.uk/travel",
+      "localPath": "originals/city-travel.html",
+      "originalBytes": 44739,
+      "sha256": "2ecfbacdfba7a624a51c3dfdf15a6ffd13b6bd0b0a1d60da3b56966f10438e1b",
+      "retrievedAt": "2026-10-15T19:20:45.824489+00:00",
+      "scope": "Noairport/Nexus usablechannel fact acquired; navigation nottransportperformance",
+      "versionWindow": "Current citytravelnavigation",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    }
+  ],
+  "globalRankingEligible": false,
+  "globalTop32Threshold": null,
+  "supportedExclusions": 0,
+  "all9031AndNewUnmatchedCompetitorsRetained": true,
+  "sourceManifest": [
+    {
+      "id": "S01",
+      "url": "https://www.newcastle-hospitals.nhs.uk/about/corporate-information/reports-and-publications/quality-accounts/",
+      "path": "trust-quality-index.html",
+      "scope": "actual2026qualityaccountlocator, no directoryscore",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 103531,
+      "sha256": "01350997d28c89b7a5d213a577d3461f0abcc3414b808e9e505643011818fadc",
+      "localPath": "originals/trust-quality-index.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:13:10.901182+00:00",
+      "routeIndexes": [0],
+      "resolvedUrl": "https://www.newcastle-hospitals.nhs.uk/about/corporate-information/reports-and-publications/quality-accounts/",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:13:12 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "Index updated24June2026",
+      "boundedGeographicEligibilityUse": "Locator only, not scored directory",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S02",
+      "url": "https://www.nwg.co.uk/globalassets/corporate/debt-issuance/2025/nwl_annual-report-and-financial-statements_2025_final.pdf",
+      "path": "water-annual2025.pdf",
+      "scope": "actual2024/25service quality/netbill help and residual; separateNW/EssexSuffolkserviceareas",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 6346138,
+      "sha256": "8a96ece5999ddbcbbcaba16fef0846b96582fa6f31832e2decb4ffd27e60b351",
+      "localPath": "originals/water-annual2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:13:13.257635+00:00",
+      "routeIndexes": [1],
+      "resolvedUrl": "https://www.nwg.co.uk/globalassets/corporate/debt-issuance/2025/nwl_annual-report-and-financial-statements_2025_final.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:13:15 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "6346138",
+        "etag": "\"1dc27db2852749a\"",
+        "Last-Modified": "Wed, 17 Sep 2025 13:58:34 GMT"
+      },
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "2024/25annual report; actual2024storms andFeb2025smartsewer; somebaseline2019/20",
+      "boundedGeographicEligibilityUse": "NorthumbrianWater andEssex&Suffolk areas differ fromFUA; operator selfreport andDWI/Ofwat descriptions; p46NorthWest wording notsilentlycorrected",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S03",
+      "url": "https://www.ncl.ac.uk/mediav8/business-and-partnerships-newcastle-innovations/files/Newcastle-Innovations-Annual-Report-2026-digital.pdf",
+      "path": "innovation2026.pdf",
+      "scope": "actualknowledge-to-production and ordinaryservice adoption, avoidfunding/future-only",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 9653751,
+      "sha256": "4c57619c362a87247c3380060d5f59d5736315a6886521929f25c0af18adaa2d",
+      "localPath": "originals/innovation2026.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:13:17.227932+00:00",
+      "routeIndexes": [2],
+      "resolvedUrl": "https://www.ncl.ac.uk/mediav8/business-and-partnerships-newcastle-innovations/files/Newcastle-Innovations-Annual-Report-2026-digital.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:13:19 GMT",
+        "Last-Modified": "Thu, 21 May 2026 07:49:16 GMT",
+        "ETag": "\"934df7-6524f2627716d\"",
+        "Content-Length": "9653751",
+        "Content-Type": "application/pdf"
+      },
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "Annual report2026; observed currentOct16 snapshot; report publication bycutoff not independentlycertified",
+      "boundedGeographicEligibilityUse": "University/partner operations, someexternalregion andfutureprojects; noallFUA residentdenominator",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "R01",
+      "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+      "path": "R01-S08-nhs-ordinary-residence.html",
+      "scope": "Common NHSordinary residence/charges, independently localadapt; no clinical outcome transfer",
+      "method": "durable verified copy no HTTP",
+      "validOriginal": true,
+      "originalBytes": 32662,
+      "sha256": "42c4cf404fdfc984257c5ea70f222b8c786e5d0d4d95c0e99f0b7eab682ed0ec",
+      "localPath": "originals/R01-S08-nhs-ordinary-residence.html",
+      "originalResponseMetadata": {
+        "id": "S08",
+        "file": "S08-nhs-ordinary-residence.html",
+        "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+        "host": "www.nhs.uk",
+        "mechanism": "normal_https_tls_urllib",
+        "requestAtUTC": "2026-10-15T13:21:51.121239+00:00",
+        "cutoffHistoricalBytesAuthenticated": false,
+        "priorKnownSameHostFailures": 0,
+        "redirectsFollowed": 0,
+        "retries": 0,
+        "httpStatus": 200,
+        "finalUrl": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+        "headers": {
+          "Content-Type": "text/html; charset=utf-8",
+          "Date": "Thu, 15 Oct 2026 13:21:52 GMT",
+          "Content-Length": "32662"
+        },
+        "completeBodyRead": true,
+        "bytes": 32662,
+        "sha256": "42c4cf404fdfc984257c5ea70f222b8c786e5d0d4d95c0e99f0b7eab682ed0ec",
+        "validOriginal": true,
+        "substantiveBodyMustBeSeparatelyReviewed": true,
+        "elapsedSeconds": 1.947
+      },
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T13:21:51.121239+00:00",
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Common NHSordinary residence/charges, independently localadapt; no clinical outcome transfer",
+      "sourceRole": "substantive_primary_original",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/manchester-full47/originals/R01-S08-nhs-ordinary-residence.html",
+      "newHTTPRequest": false,
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "NHSreview24Oct2023, nextdue24Oct2026",
+      "boundedGeographicEligibilityUse": "Ordinaryresidence legalsettledbasis, nationalityalone insufficient; currentbytes do notcertifycutoff",
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R02",
+      "url": "https://www.nhs.uk/nhs-services/help-with-health-costs/when-you-need-to-pay-towards-nhs-care/",
+      "path": "R02-S12-nhs-charges.html",
+      "scope": "Common NHSordinary residence/charges, independently localadapt; no clinical outcome transfer",
+      "method": "durable verified copy no HTTP",
+      "validOriginal": true,
+      "originalBytes": 28145,
+      "sha256": "81b0a7b5cdeb5d401dc9835500553a5b646f8a3b89407af9404b577a3e7dcc0a",
+      "localPath": "originals/R02-S12-nhs-charges.html",
+      "originalResponseMetadata": {
+        "id": "S12",
+        "file": "S12-nhs-charges.html",
+        "url": "https://www.nhs.uk/nhs-services/help-with-health-costs/when-you-need-to-pay-towards-nhs-care/",
+        "host": "www.nhs.uk",
+        "mechanism": "normal_https_tls_urllib",
+        "requestAtUTC": "2026-10-15T13:28:48.801106+00:00",
+        "cutoffHistoricalBytesAuthenticated": false,
+        "priorKnownSameHostFailures": 0,
+        "redirectsFollowed": 0,
+        "retries": 0,
+        "httpStatus": 200,
+        "finalUrl": "https://www.nhs.uk/nhs-services/help-with-health-costs/when-you-need-to-pay-towards-nhs-care/",
+        "headers": {
+          "Content-Type": "text/html; charset=utf-8",
+          "Date": "Thu, 15 Oct 2026 13:28:49 GMT",
+          "Content-Length": "28145"
+        },
+        "completeBodyRead": true,
+        "bytes": 28145,
+        "sha256": "81b0a7b5cdeb5d401dc9835500553a5b646f8a3b89407af9404b577a3e7dcc0a",
+        "validOriginal": true,
+        "substantiveBodyMustBeSeparatelyReviewed": true,
+        "elapsedSeconds": 1.525
+      },
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T13:28:48.801106+00:00",
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Common NHSordinary residence/charges, independently localadapt; no clinical outcome transfer",
+      "sourceRole": "substantive_primary_original",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/manchester-full47/originals/R02-S12-nhs-charges.html",
+      "newHTTPRequest": false,
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "NHSreview22May2023, nextdue22May2026",
+      "boundedGeographicEligibilityUse": "Charges/exemptionproof; due date notupdatedversion; medianincomenotautomaticlowincomehelp",
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R03",
+      "url": "https://www.gesetze-im-internet.de/aufenthv/__41.html",
+      "path": "R03-aufenthv41.html",
+      "localPath": "originals/R03-aufenthv41.html",
+      "validOriginal": true,
+      "originalBytes": 4613,
+      "sha256": "0294e3696361d9294ae75c66475ccb897dcf68e1ffd1346fabf3a83104f74c85",
+      "originLocalPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-full37/aufenthv41.html",
+      "preservedOriginMetadata": {
+        "file": "aufenthv41.html",
+        "url": "https://www.gesetze-im-internet.de/aufenthv/__41.html",
+        "requestAtUTC": "2026-10-15T11:41:29.159745+00:00",
+        "requestMechanism": "www.gesetze-im-internet.de|urllib_normal_TLS",
+        "method": "one normalTLS request no retry",
+        "historicalCutoffBytesAuthenticated": false,
+        "httpStatus": 200,
+        "finalUrl": "https://www.gesetze-im-internet.de/aufenthv/__41.html",
+        "contentType": "text/html",
+        "responseBytes": 4613,
+        "responseSha256": "0294e3696361d9294ae75c66475ccb897dcf68e1ffd1346fabf3a83104f74c85",
+        "validOriginal": true,
+        "originalBytes": 4613,
+        "sha256": "0294e3696361d9294ae75c66475ccb897dcf68e1ffd1346fabf3a83104f74c85"
+      },
+      "method": "verified durable copy no HTTP",
+      "scope": "German law shared Britishcitizen personal eligibility; independent Manchester applicability, no Korean score",
+      "cutoffOriginalBytesAuthenticated": false,
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceRole": "substantive_primary_original",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/daejeon-full46/originals/aufenthv41.html",
+      "verifiedLocalOn": "2026-10-16",
+      "observationAndVersion": "German law shared Britishcitizen personal eligibility; independent Manchester applicability, no Korean score",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/manchester-full47/originals/R03-aufenthv41.html",
+      "newHTTPRequest": false,
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "DurablecurrentGerman§41snapshot",
+      "boundedGeographicEligibilityUse": "Britishcitizens explicit, in-countryapplicationwithin90days notautomaticlongstay/work",
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R04",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__5.html",
+      "path": "R04-aufenthg5.html",
+      "localPath": "originals/R04-aufenthg5.html",
+      "validOriginal": true,
+      "originalBytes": 6953,
+      "sha256": "2b1c6d9b2cda3c69f96b893150025c1490298f8de35741bb297ef82335df4e27",
+      "originLocalPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-full37/aufenthg5.html",
+      "preservedOriginMetadata": {
+        "file": "aufenthg5.html",
+        "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__5.html",
+        "requestAtUTC": "2026-10-15T11:45:36.653995+00:00",
+        "requestMechanism": "www.gesetze-im-internet.de|urllib_normal_TLS",
+        "method": "one normalTLS request no retry",
+        "historicalCutoffBytesAuthenticated": false,
+        "httpStatus": 200,
+        "finalUrl": "https://www.gesetze-im-internet.de/aufenthg_2004/__5.html",
+        "contentType": "text/html",
+        "responseBytes": 6953,
+        "responseSha256": "2b1c6d9b2cda3c69f96b893150025c1490298f8de35741bb297ef82335df4e27",
+        "validOriginal": true,
+        "originalBytes": 6953,
+        "sha256": "2b1c6d9b2cda3c69f96b893150025c1490298f8de35741bb297ef82335df4e27"
+      },
+      "method": "verified durable copy no HTTP",
+      "scope": "German law shared Britishcitizen personal eligibility; independent Manchester applicability, no Korean score",
+      "cutoffOriginalBytesAuthenticated": false,
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceRole": "substantive_primary_original",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/daejeon-full46/originals/aufenthg5.html",
+      "verifiedLocalOn": "2026-10-16",
+      "observationAndVersion": "German law shared Britishcitizen personal eligibility; independent Manchester applicability, no Korean score",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/manchester-full47/originals/R04-aufenthg5.html",
+      "newHTTPRequest": false,
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "DurablecurrentGerman§5snapshot",
+      "boundedGeographicEligibilityUse": "Identity/passport/securedsubsistence andapplicableconditions",
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R05",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__18b.html",
+      "path": "R05-aufenthg18b.html",
+      "localPath": "originals/R05-aufenthg18b.html",
+      "validOriginal": true,
+      "originalBytes": 3632,
+      "sha256": "d605edfdbf1977205ccc0f1c5b267b061e59f072200c04fbe5d02d340bc6a7b4",
+      "originLocalPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-full37/aufenthg18b.html",
+      "preservedOriginMetadata": {
+        "file": "aufenthg18b.html",
+        "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__18b.html",
+        "requestAtUTC": "2026-10-15T11:45:36.654557+00:00",
+        "requestMechanism": "www.gesetze-im-internet.de|urllib_normal_TLS",
+        "method": "one normalTLS request no retry",
+        "historicalCutoffBytesAuthenticated": false,
+        "httpStatus": 200,
+        "finalUrl": "https://www.gesetze-im-internet.de/aufenthg_2004/__18b.html",
+        "contentType": "text/html",
+        "responseBytes": 3632,
+        "responseSha256": "d605edfdbf1977205ccc0f1c5b267b061e59f072200c04fbe5d02d340bc6a7b4",
+        "validOriginal": true,
+        "originalBytes": 3632,
+        "sha256": "d605edfdbf1977205ccc0f1c5b267b061e59f072200c04fbe5d02d340bc6a7b4"
+      },
+      "method": "verified durable copy no HTTP",
+      "scope": "German law shared Britishcitizen personal eligibility; independent Manchester applicability, no Korean score",
+      "cutoffOriginalBytesAuthenticated": false,
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceRole": "substantive_primary_original",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/daejeon-full46/originals/aufenthg18b.html",
+      "verifiedLocalOn": "2026-10-16",
+      "observationAndVersion": "German law shared Britishcitizen personal eligibility; independent Manchester applicability, no Korean score",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/manchester-full47/originals/R05-aufenthg18b.html",
+      "newHTTPRequest": false,
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "DurablecurrentGerman§18bsnapshot",
+      "boundedGeographicEligibilityUse": "Qualifiedacademicemployment; noassumeddegree/joboffer",
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R06",
+      "url": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+      "path": "R06-S10-nice-ta1048.html",
+      "localPath": "originals/R06-S10-nice-ta1048.html",
+      "originalBytes": 20164,
+      "sha256": "7d37836575b240bd2359d0de728c2e937e73a1cc32906576e086a1af57733e3f",
+      "validOriginal": true,
+      "method": "verified durable copy no HTTP",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S10-nice-ta1048.html",
+      "inheritedMetadata": {
+        "id": "S21",
+        "url": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+        "path": "S10-nice-ta1048.html",
+        "localPath": "originals/S10-nice-ta1048.html",
+        "originalBytes": 20164,
+        "sha256": "7d37836575b240bd2359d0de728c2e937e73a1cc32906576e086a1af57733e3f",
+        "validOriginal": true,
+        "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S10-nice-ta1048.html",
+        "originalResponseMetadata": {
+          "id": "S10",
+          "file": "S10-nice-ta1048.html",
+          "url": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+          "host": "www.nice.org.uk",
+          "mechanism": "normal_https_tls_urllib",
+          "requestAtUTC": "2026-10-15T13:28:48.800782+00:00",
+          "cutoffHistoricalBytesAuthenticated": false,
+          "priorKnownSameHostFailures": 1,
+          "redirectsFollowed": 0,
+          "retries": 0,
+          "httpStatus": 200,
+          "finalUrl": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+          "headers": {
+            "Date": "Thu, 15 Oct 2026 13:28:50 GMT",
+            "Content-Type": "text/html; charset=utf-8",
+            "ETag": "W/C0B0BE68DC2CEA8F8D26D7DDF59AA04E"
+          },
+          "completeBodyRead": true,
+          "bytes": 20164,
+          "sha256": "7d37836575b240bd2359d0de728c2e937e73a1cc32906576e086a1af57733e3f",
+          "validOriginal": true,
+          "substantiveBodyMustBeSeparatelyReviewed": true,
+          "elapsedSeconds": 2.616
+        },
+        "cutoffOriginalBytesAuthenticated": false,
+        "role": "National common fact independently adapted; not Cambridge score",
+        "observedOn": "2026-10-15",
+        "versionAndObservation": "NICE TA1048 26Mar2025 LISOCABTAGENE for qualifiedadultLBCL; uncertainOS, notOxfordproduct-specificadoption",
+        "historicalCutoffBytesAuthenticated": false,
+        "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+      },
+      "cutoffOriginalBytesAuthenticated": false,
+      "scope": "Mature human disease-limited cellreprogramming/context UKqualified NICE adoption; not localbrand confirmation or Frenchpayer transfer",
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Mature human disease-limited cellreprogramming/context UKqualified NICE adoption; not localbrand confirmation or Frenchpayer transfer",
+      "sourceRole": "substantive_primary_original",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/manchester-full47/originals/R06-S10-nice-ta1048.html",
+      "newHTTPRequest": false,
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "NICE TA1048 published26Mar2025",
+      "boundedGeographicEligibilityUse": "Liso-celadultLBCLfirstlinefailure≤12months/ASCTfit+commercialarrangement; OSuncertain; notlocal100productproof",
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R07",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "path": "R07-has-kymriah-2023.pdf",
+      "localPath": "originals/R07-has-kymriah-2023.pdf",
+      "originalBytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "validOriginal": true,
+      "method": "verified durable copy no HTTP",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/oxford-full41/originals/has-kymriah-2023.pdf",
+      "inheritedMetadata": {
+        "id": "S22",
+        "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+        "path": "has-kymriah-2023.pdf",
+        "localPath": "originals/has-kymriah-2023.pdf",
+        "originalBytes": 741078,
+        "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+        "validOriginal": true,
+        "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/has-kymriah-2023.pdf",
+        "cutoffOriginalBytesAuthenticated": false,
+        "originalRetrieval": "2026-10-15; copied durable actualbytes, not re-requested or historicalauthentication",
+        "observedOn": "2026-10-15",
+        "versionAndObservation": "HAS Sept2023 tisa adultDLBCL; JULIET phaseII noncomparative20Feb2020 update, DESCAR-T registry; notUKpayer or Oxfordcohort",
+        "historicalCutoffBytesAuthenticated": false,
+        "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+      },
+      "cutoffOriginalBytesAuthenticated": false,
+      "scope": "Mature human disease-limited cellreprogramming/context UKqualified NICE adoption; not localbrand confirmation or Frenchpayer transfer",
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 40,
+      "pdfMetadata": {
+        "format": "PDF 1.7",
+        "title": "KYMRIAH 1,2 x 10^6 – 6 x 10^8 cellules,",
+        "author": "PERCHERON Romain",
+        "subject": "dispersion cellulaire pour perfusion",
+        "keywords": "tisagenlecleucel",
+        "creator": "Microsoft® Word pour Microsoft 365",
+        "producer": "Microsoft® Word pour Microsoft 365",
+        "creationDate": "D:20231010112442+02'00'",
+        "modDate": "D:20231010112442+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "observationAndVersion": "Mature human disease-limited cellreprogramming/context UKqualified NICE adoption; not localbrand confirmation or Frenchpayer transfer",
+      "sourceRole": "substantive_primary_original",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/manchester-full47/originals/R07-has-kymriah-2023.pdf",
+      "newHTTPRequest": false,
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "HAS CT20262 KYMRIAH2023, olderJULIET/DESCAR cohorts",
+      "boundedGeographicEligibilityUse": "Tisa-specificmaturehuman evidence; noncomparative/selectedanalyses notlocalCAR-T efficacy orhealthylifespan",
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S04",
+      "url": "https://www.newcastle-hospitals.nhs.uk/wp-content/uploads/2026/06/Quality-Account-2025-2026-The-Newcastle-upon-Tyne-Hospital-NHS-Foundation-Trust.pdf",
+      "path": "trust-quality2025-26.pdf",
+      "scope": "S01actualhref mostrecentprecutoffclinical outcomes/waiting/safety/continuity",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 2217472,
+      "sha256": "fe2c1e505ec43fc5367057510631df53fcdf446bcdfcc30d07625d4d4c3ac506",
+      "localPath": "originals/trust-quality2025-26.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:14:30.396918+00:00",
+      "routeIndexes": [3],
+      "resolvedUrl": "https://www.newcastle-hospitals.nhs.uk/wp-content/uploads/2026/06/Quality-Account-2025-2026-The-Newcastle-upon-Tyne-Hospital-NHS-Foundation-Trust.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:14:31 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "2217472",
+        "Last-Modified": "Wed, 24 Jun 2026 08:23:57 GMT",
+        "ETag": "\"6a3b941d-21d600\""
+      },
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "2025Apr–2026Mar quality account linkedJune2026; someApr–Feb provisionalmetrics; overlappingSHMIwindows",
+      "boundedGeographicEligibilityUse": "Trustregional/tertiaryreferrals notFUAresidentcohort; internaldata/method conflicts preserved",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S05",
+      "url": "https://new.newcastle.gov.uk/news/2025/pilot-make-newcastle-more-flood-resilient",
+      "path": "townmoor-flood2025.html",
+      "scope": "actualJune2025protectionprojectstage, residualhazard and linkedcurrentprogramme; notcompletionassumed",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 35375,
+      "sha256": "85e771bdc2082aa4b35dbdc1026f7573daf2b846e44c1399eb1158f49145feaa",
+      "localPath": "originals/townmoor-flood2025.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:14:32.626390+00:00",
+      "routeIndexes": [4],
+      "resolvedUrl": "https://new.newcastle.gov.uk/news/2025/pilot-make-newcastle-more-flood-resilient",
+      "contentType": null,
+      "headers": {
+        "date": "Thu, 15 Oct 2026 00:56:37 GMT",
+        "last-modified": "Thu, 15 Oct 2026 18:14:07 GMT",
+        "etag": "\"1792088047\"",
+        "content-length": "35375",
+        "content-type": "text/html; charset=utf-8"
+      },
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "24June2025underconstruction",
+      "boundedGeographicEligibilityUse": "LaterS08completed2025 evidence supersedes currentconstruction inference, nothistoricalrecord",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S06",
+      "url": "https://www.newcastle-hospitals.nhs.uk/news/newcastle-hospitals-treats-100th-adult-car-t-cell-patient-as-early-adopter/",
+      "path": "cart-delivery.html",
+      "scope": "actuallocaladultCAR-Tdelivery and patientcourse, no product-specificmaturecohortclaim",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 106577,
+      "sha256": "29d2c16d095a4ceca02b376c977012410df343b4478107abfa7dc158b17766d8",
+      "localPath": "originals/cart-delivery.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:15:43.861342+00:00",
+      "routeIndexes": [5],
+      "resolvedUrl": "https://www.newcastle-hospitals.nhs.uk/news/newcastle-hospitals-treats-100th-adult-car-t-cell-patient-as-early-adopter/",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:15:45 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "23Apr2024actual100adultCAR-T deliveries",
+      "boundedGeographicEligibilityUse": "Freeman/NCCC regionalpatients; unspecifiedproducts, not100localresidents orlongtermoutcome",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S07",
+      "url": "https://www.newcastle-hospitals.nhs.uk/services/haematology/disease-specific-clinics/",
+      "path": "haematology-clinics.html",
+      "scope": "actualcurrentCAR-Tclinicpath/realhrefs; no automaticdirectoryscore",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 105548,
+      "sha256": "0b3deeb9725059f50fbd66c916012f56f886c1b139285e75aca6c3781ff99cd1",
+      "localPath": "originals/haematology-clinics.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:15:45.826763+00:00",
+      "routeIndexes": [6],
+      "resolvedUrl": "https://www.newcastle-hospitals.nhs.uk/services/haematology/disease-specific-clinics/",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:15:47 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "Currentservicepage updated03Apr2024",
+      "boundedGeographicEligibilityUse": "Actualdisease-specific service description, notcompletedpatientcount",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S08",
+      "url": "https://new.newcastle.gov.uk/sites/default/files/2026-03/Net%20Zero%20Newcastle%20Priority%20Actions%20Update%20January%202025%20to%20December%202025.pdf",
+      "path": "city-netzero-delivery2025.pdf",
+      "scope": "actual2025completedfood/energy/flood andnethelp, plans notoutcomes",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 2460282,
+      "sha256": "e760ac55c7170c561dad5d8479c047544c81afd5d9de2611b70b98a830d98170",
+      "localPath": "originals/city-netzero-delivery2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:15:47.830681+00:00",
+      "routeIndexes": [7],
+      "resolvedUrl": "https://new.newcastle.gov.uk/sites/default/files/2026-03/Net%20Zero%20Newcastle%20Priority%20Actions%20Update%20January%202025%20to%20December%202025.pdf",
+      "contentType": null,
+      "headers": {
+        "date": "Thu, 15 Oct 2026 19:15:49 GMT",
+        "last-modified": "Tue, 06 Oct 2026 07:13:51 GMT",
+        "etag": "\"258a7a-65d26bd9409c0\"",
+        "content-length": "2460282",
+        "content-type": "application/pdf"
+      },
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "2025Jan–Decdeliveryupdate, March2026file; someMar2026futuretargets",
+      "boundedGeographicEligibilityUse": "Cityprogramme/targetedhouseholds, notallFUA ormedianeligibility",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S09",
+      "url": "https://www.natwest.com/support-centre/banking-from-home/make-payments.html",
+      "path": "natwest-personal-payments.html",
+      "scope": "actualretailpersonalpaymentshref notNatWestInternational/businessBankline",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 120558,
+      "sha256": "61d2bc145c98c5ed8a78a58075aba030ea02c81e4e79298cee8959de9a2002bc",
+      "localPath": "originals/natwest-personal-payments.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:16:43.675083+00:00",
+      "routeIndexes": [8],
+      "resolvedUrl": "https://www.natwest.com/support-centre/banking-from-home/make-payments.html",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:16:45 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "Current personalpayment index",
+      "boundedGeographicEligibilityUse": "Locator only; expat/businessproducts notprofile",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S10",
+      "url": "https://www.nwl.co.uk/myaccount/charges/",
+      "path": "water-charges2026.html",
+      "scope": "actual1Apr2026personalhouseholdtariffs, meter/RV assumptions andnetcost",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 211421,
+      "sha256": "caa45c51cc5c45ee227b6205682bbeab1ef988ad0c4f0e8684f738b2992f6128",
+      "localPath": "originals/water-charges2026.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:16:46.013428+00:00",
+      "routeIndexes": [9],
+      "resolvedUrl": "https://www.nwl.co.uk/myaccount/charges/",
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:16:48 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "2026/27charges effective01Apr2026",
+      "boundedGeographicEligibilityUse": "Northumbrian supplyarea; provideraverage£1.47/day notmedianfamilybudget",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S11",
+      "url": "https://www.twfire.gov.uk/wp-content/uploads/2025/06/Financial-Statements-2024-25-Draft.pdf",
+      "path": "fire-service2024-25-draft.pdf",
+      "scope": "actualpublishedDRAFT preaudit financial/governance andrisk/operationaldelivery, notsignedfinal ifnot",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 1456643,
+      "sha256": "d340927035250f8069c832dca4d05a375c1e3c769dbb0be32e7169ac129811db",
+      "localPath": "originals/fire-service2024-25-draft.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:16:48.975905+00:00",
+      "routeIndexes": [10],
+      "resolvedUrl": "https://www.twfire.gov.uk/wp-content/uploads/2025/06/Financial-Statements-2024-25-Draft.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:16:52 GMT",
+        "Last-Modified": "Mon, 30 Jun 2025 15:21:39 GMT",
+        "ETag": "\"163a03-638cb958fa6c0\"",
+        "Content-Length": "1456643",
+        "Content-Type": "application/pdf"
+      },
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "2024/25DraftFinancialStatements June2025 subjecttoaudit",
+      "boundedGeographicEligibilityUse": "TyneWear538km2/1.1m servicepopulation, notFUA; incidentcounts notorganizedviolence",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S12",
+      "url": "https://www.natwest.com/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
+      "path": "natwest-personal-international.html",
+      "scope": "S09actualhref retailpersonal outboundinternationalpayments, authentication/limits andcosts ifprovided",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 155117,
+      "sha256": "3ee8c0cae114cfb51eeba606db44f4d2605b92b1620f2873c1c0dd55be4b56d6",
+      "localPath": "originals/natwest-personal-international.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:18:35.888285+00:00",
+      "routeIndexes": [11],
+      "resolvedUrl": "https://www.natwest.com/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:18:37 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "CurrentNatWestUKpersonalpayment FAQ",
+      "boundedGeographicEligibilityUse": "Account/device/authentication/FXconditions; UlsterBankApp textbrand inconsistency preserved; notlongtermbankretentionabroad",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S13",
+      "url": "https://www.nwl.co.uk/bill-help",
+      "path": "water-bill-help.html",
+      "scope": "actualround1href ordinaryeligibility netpayment assistance andimportantconditions",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 198779,
+      "sha256": "94071495c5c2be6e1ab144c0eadc56ebd79968f791af595b5c3cde7d26f49d57",
+      "localPath": "originals/water-bill-help.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:18:39.013159+00:00",
+      "routeIndexes": [12],
+      "resolvedUrl": "https://www.nwl.co.uk/bill-help",
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:18:40 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "Current billhelpscheme",
+      "boundedGeographicEligibilityUse": "Income<£30k orPensionCredit possibleupto50%; notmedianautomaticorallawardsproved",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S14",
+      "url": "https://www.newcastle-hospitals.nhs.uk/services/haematology/supportive-care-services/",
+      "path": "haematology-supportive-care.html",
+      "scope": "S07actualhref localtreatment/support monitoringordinarycontinuity, notallCARTloopassumed",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 103516,
+      "sha256": "5a7b7de56323c1a78b2edb9626de6b943cd3ddc6d4f66df578691dfa2e3e0b48",
+      "localPath": "originals/haematology-supportive-care.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:18:41.214417+00:00",
+      "routeIndexes": [13],
+      "resolvedUrl": "https://www.newcastle-hospitals.nhs.uk/services/haematology/supportive-care-services/",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:18:43 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "Currentsupportpage lastupdated12Feb2021",
+      "boundedGeographicEligibilityUse": "Timecontinuity explicit, aim48h notactualallresponses; notCAR-Tcarerfunding guarantee",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S15",
+      "url": "https://new.newcastle.gov.uk/benefits-and-money-advice/debt-and-money-advice/crisis-and-resilience-fund-crf",
+      "path": "crisis-resilience2026.html",
+      "scope": "actualround2new2026scheme vs closedHSF ordinarynetcrisiseligibility upfrontcashconditions",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 37784,
+      "sha256": "e34a0e618b3ac3631437dbc1ac63592344a2a2eecc081a96a68fdbd4b2359772",
+      "localPath": "originals/crisis-resilience2026.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:20:42.281982+00:00",
+      "routeIndexes": [14],
+      "resolvedUrl": "https://new.newcastle.gov.uk/benefits-and-money-advice/debt-and-money-advice/crisis-and-resilience-fund-crf",
+      "contentType": null,
+      "headers": {
+        "date": "Wed, 14 Oct 2026 18:49:18 GMT",
+        "last-modified": "Thu, 15 Oct 2026 19:20:43 GMT",
+        "etag": "\"1792092043\"",
+        "content-length": "37784",
+        "content-type": "text/html; charset=utf-8"
+      },
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "CRF01Apr2026–31Mar2029, applications07Apr2026",
+      "boundedGeographicEligibilityUse": "Currentcriteria/cashfirstsupport; noactualcohortpaymentperformance; formerHSFclosed31Mar2026",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S16",
+      "url": "https://new.newcastle.gov.uk/travel",
+      "path": "city-travel.html",
+      "scope": "S05actualnavhref physicalordinarytransport links; independentairport/ferry/railpaths onlyifactuallyobserved",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 44739,
+      "sha256": "2ecfbacdfba7a624a51c3dfdf15a6ffd13b6bd0b0a1d60da3b56966f10438e1b",
+      "localPath": "originals/city-travel.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:20:45.824489+00:00",
+      "routeIndexes": [15],
+      "resolvedUrl": "https://new.newcastle.gov.uk/travel",
+      "contentType": null,
+      "headers": {
+        "date": "Wed, 14 Oct 2026 18:44:58 GMT",
+        "last-modified": "Thu, 15 Oct 2026 19:09:39 GMT",
+        "etag": "\"1792091379\"",
+        "content-length": "44739",
+        "content-type": "text/html; charset=utf-8"
+      },
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "Current citytravelnavigation",
+      "boundedGeographicEligibilityUse": "Noairport/Nexus usablechannel fact acquired; navigation nottransportperformance",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    }
+  ],
+  "boundaryManifest": "geometry-check.json",
+  "sourceName": "Newcastle upon Tyne",
+  "publishedInputCommit": "47b8accdd36bec3996c713d4214ec487c085be01",
+  "privateSourceManifestSha256": "a4f8ff3c3183d4f945cdf39b217bd0e25dc96e105e1fd5a0fedd46efa9930acc",
+  "sourceAndStopLedger": {
+    "inheritedLedgers": [
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/austin-full52/source-and-stop-ledger.json",
+        "bytes": 8486,
+        "sha256": "5f2f7e0f2fe911bbe4ab8504f0455cb43d12c3d367ead9ba0a3c0e75b9ebee43"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/manchester-full47/source-and-stop-ledger.json",
+        "bytes": 3208,
+        "sha256": "ff1d559818a76a88aaba378aa750b278bb48826a937c36692d10f78c4eeff8f7"
+      }
+    ],
+    "inheritedProviderStopsAndCounts": [
+      {
+        "provider": "www.justice.gov",
+        "mechanism": "normalTLS",
+        "knownFailureLowerBound": 4,
+        "action": "stopped,no requests orwebbypass"
+      },
+      {
+        "provider": "www.fbi.gov",
+        "mechanism": "normalTLS/web",
+        "action": "conservativestopped,norequests"
+      },
+      {
+        "provider": "www.pennmedicine.org",
+        "mechanism": "normalTLS",
+        "knownFailureLowerBound": 2,
+        "action": "retained,norequests"
+      },
+      {
+        "provider": "pci.upenn.edu",
+        "mechanism": "normalTLS",
+        "knownFailureLowerBound": 1,
+        "action": "retained,norequests"
+      },
+      {
+        "provider": "wwww.septa.org",
+        "mechanism": "normalTLS",
+        "knownFailureLowerBound": 1,
+        "action": "retained,norequests"
+      },
+      {
+        "provider": "www.alleghenycounty.us",
+        "mechanism": "normalTLS",
+        "knownFailureLowerBound": 1,
+        "action": "retained,norequests"
+      },
+      {
+        "provider": "www.pittsburghpa.gov",
+        "mechanism": "web",
+        "knownFailureLowerBound": 1,
+        "action": "retained,norequests"
+      },
+      {
+        "provider": "EC/WHO globaldiscovery",
+        "mechanism": "discovery",
+        "action": "two roundsclosed,priorpreciseledgerunknown,noreopen"
+      },
+      {
+        "provider": "ING/WIPO2026/otheroldstops",
+        "mechanism": "inherited",
+        "action": "retained,norequests"
+      }
+    ],
+    "inheritedAustinNewFailures": [
+      {
+        "sourceId": "S04",
+        "provider": "austin.widen.net",
+        "mechanism": "normalTLS",
+        "url": "https://austin.widen.net/view/pdf/bhbyyujqym/Extreme_Heat_Preparedness_March_2025_1.pdf?t.download=true",
+        "kind": "HTTP200nonPDF_typeinvalid",
+        "knownHistoricalFailures": null,
+        "providerOriginalBytes": null,
+        "providerOriginalSha256": null,
+        "action": "Concretefile stopped, no retry/web/CDN bypass; success/differentcity notresetcount"
+      },
+      {
+        "sourceId": "S05",
+        "provider": "austin.widen.net",
+        "mechanism": "normalTLS",
+        "url": "https://austin.widen.net/view/pdf/olm10prt8x/AW_WQR_Report_2025.pdf",
+        "kind": "HTTP200nonPDF_typeinvalid",
+        "knownHistoricalFailures": null,
+        "providerOriginalBytes": null,
+        "providerOriginalSha256": null,
+        "action": "Concretefile stopped, no retry/web/CDN bypass; success/differentcity notresetcount"
+      },
+      {
+        "sourceId": "S15",
+        "provider": "www.austintexas.gov",
+        "mechanism": "normalTLS",
+        "url": "https://www.austintexas.gov/sites/default/files/files/Airport/October-2025_Report-Combined.pdf",
+        "kind": "HTTP404",
+        "knownHistoricalFailures": null,
+        "providerOriginalBytes": null,
+        "providerOriginalSha256": null,
+        "action": "Concretefile stopped, no retry/web/CDN bypass; success/differentcity notresetcount"
+      }
+    ],
+    "UKInheritedLedgerContent": {
+      "normalBudget": 18,
+      "normalActualHTTPlegs": 18,
+      "journal": "http-request-journal.json",
+      "normalValid": 16,
+      "normalFailed": 2,
+      "durableCopiesVerified": 7,
+      "discoveryRounds": [
+        [
+          "site.mft.nhs.uk 2025 quality report annual report mortality waiting",
+          "site.manchester.gov.uk 2025 annual performance poverty food energy flood delivered",
+          "site.manchesterfire.gov.uk 2025 annual report flooding emergency terrorism",
+          "site.christie.nhs.uk CAR-T 2025 patients routine outcomes"
+        ],
+        [
+          "site.manchester.gov.uk 2025 household support fund delivered food fuel grants residents",
+          "site.manchester.ac.uk 2025 commercialisation spinouts licences income annual",
+          "site.unitedutilities.com 2025 annual report Manchester water customers affordability support",
+          "site.o2.co.uk 2026 Europe roaming 25GB pay monthly"
+        ]
+      ],
+      "networkClosed": true,
+      "successNeverResetsFailure": true,
+      "historicalManchesterSpecificCounters": "unknown, not0 and not automaticwholeproviderstop",
+      "knownInheritedStops": [
+        "EC83city/WHOtopicdiscoveryclosed: no request",
+        "NHS England/UCLH previous multipleTLS/challengefailures stopped: no request, NHS.uk is distinctprovider and useddurableonly",
+        "ING/WIPO2026 stopped: no request",
+        "PriorCambridgeCTArawDNSfailure concretepath not re-requested; exactCTAcontent not usedwithoutstoredoriginal",
+        "Otherpreviousstopsremain, no losttmpidentity treatedasvalidraw"
+      ],
+      "newFailures": [
+        {
+          "sourceId": "S03",
+          "provider": "www.manchester.gov.uk",
+          "mechanism": "normalTLS urllibHTTPGET",
+          "status": 403,
+          "action": "Exactflooddocument stopped, no webretry. Searchsnippet notadoptedasfulloriginal; eventjudgment independently uses originalFRSreportS07."
+        },
+        {
+          "sourceId": "S06",
+          "provider": "www.manchester.gov.uk",
+          "mechanism": "normalTLS urllibHTTPGET",
+          "status": 403,
+          "action": "exactfuelhelpdocumentstopped, no laterwebretry. Pre-existing actualwebbody W01 preserved beforefailure."
+        }
+      ],
+      "knownNewProviderFailureLowerBound": {
+        "www.manchester.gov.uk": 2
+      },
+      "cityProviderAction": "No further cityproviderrequests, voluntaryconservativeclosure2knownnewfailures; unknownpriornotcleared or falselycalled3. Not cityservicesfailure.",
+      "toolOnlyLimit": [
+        {
+          "ref": "turn2376view0",
+          "provider": "test.manchesterfire.gov.uk",
+          "mechanism": "web PDFtoolsizeceiling29588487",
+          "action": "not providerHTTPfailure; first normalbyte acquisition S07success, no failedrawretry/CDNswap"
+        }
+      ],
+      "routePolicy": "18actuallegs individuallyjournalled incl errors; no hiddenretry; redirects count separately. ActualHTTPstatuschain storedheaders. Everyread/request/pixelbatch explicit<=3; discover<=4/round.",
+      "reuseDiagnostic": "Firstlocal reuse helper matched Cambridge manifest wrongshape -> StopIteration then missingextraction; no HTTP, no failedoriginal or falsevalidsource. CorrectedusingalreadyverifiedOxfordmanifest + actualCambridgebytes; all7copiedfilesverified.",
+      "candidateEffects": "Acquisition problems never converted into localcapabilitypenalties/opacity. No candidate excluded."
+    },
+    "NewcastleDedicatedHistory": "Finite local priorfilename/ledger inspection found no certified dedicated priorcounter. Unknown doesnotmean0 or stoppedwholeprovider; root authorizedatmost2rounds. NoNHS England/UCLH requests; noEC83/WHO/WIPO2026/INGrestart.",
+    "discovery": {
+      "rounds": 2,
+      "queriesPerRound": [4, 4],
+      "closed": true,
+      "thirdRound": false,
+      "transcripts": "web-tool-transcripts.json"
+    },
+    "newNormalHTTPLegs": 16,
+    "maxAuthorizedLegs": 18,
+    "routes": 16,
+    "validNewOriginals": 16,
+    "validReusedOriginals": 7,
+    "newFailures": [],
+    "redirectResponses": 0,
+    "normalRetries": 0,
+    "remainingUnusedLegs": 2,
+    "closure": "Closedafter16; remainderunused, noadditionalnetwork. Successfulrequests do not reset inheritedfailures.",
+    "responseCaptureScope": "Each actualleg response body preservedbeforetypecheck, complete originalbytes/hash and per-legdiagnostics retained. Headers are parsed dictionary, notwireheaderblock; duplicateheaders maycollapse.",
+    "processDeviations": [
+      "Defaultpython lackedPDF/HTMLmodule in one local-only helper invocation; correctedtoexisting shared-geoenv before anyaffected sourceprocessing. No extra HTTP/providerfailure.",
+      "Report/HTMLcurrentbytes acquiredaftercutoff; currentpresence/LastModified doesnotauthenticateOct10originalbytes.",
+      "Discoverytoolreturn immediatelysavedasJSON-string ofaggregate text; exacttextblock recoveredfromexistingoriginalsession withcallId/blockindex, notrefetched."
+    ]
+  },
+  "failedSourceSnapshots": [],
+  "referenceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allCandidatesChecked": 9031,
+    "repairCount": 136,
+    "records": [
+      {
+        "fid": 8431,
+        "eFUA_ID": 4227.0,
+        "UC_num": 3.0,
+        "UC_IDs": "1830;1836;1849",
+        "eFUA_name": "Newcastle upon Tyne",
+        "Commuting": 1.0,
+        "Cntry_ISO": "GBR",
+        "Cntry_name": "UnitedKingdom",
+        "FUA_area": 2249.0,
+        "UC_area": 335.0,
+        "FUA_p_2015": 1687394.754408894,
+        "UC_p_2015": 1008259.2531776428,
+        "Com_p_2015": 679135.5012312513
+      }
+    ],
+    "points": [
+      {
+        "label": "Newcastle centre approximate",
+        "longitude": -1.613,
+        "latitude": 54.978,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 4227,
+            "name": "Newcastle upon Tyne"
+          }
+        ]
+      },
+      {
+        "label": "RVI district approximate",
+        "longitude": -1.618,
+        "latitude": 54.98,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 4227,
+            "name": "Newcastle upon Tyne"
+          }
+        ]
+      },
+      {
+        "label": "Freeman Hospital district approximate",
+        "longitude": -1.5935,
+        "latitude": 55.003,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 4227,
+            "name": "Newcastle upon Tyne"
+          }
+        ]
+      },
+      {
+        "label": "Cramlington district approximate",
+        "longitude": -1.579,
+        "latitude": 55.074,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 4227,
+            "name": "Newcastle upon Tyne"
+          }
+        ]
+      },
+      {
+        "label": "Gateshead centre approximate",
+        "longitude": -1.6,
+        "latitude": 54.95,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 4227,
+            "name": "Newcastle upon Tyne"
+          }
+        ]
+      },
+      {
+        "label": "Newcastle airport approximate",
+        "longitude": -1.69,
+        "latitude": 55.038,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 4227,
+            "name": "Newcastle upon Tyne"
+          }
+        ]
+      },
+      {
+        "label": "Nissan Sunderland district approximate",
+        "longitude": -1.46,
+        "latitude": 54.93,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 4227,
+            "name": "Newcastle upon Tyne"
+          }
+        ]
+      }
+    ],
+    "targetWkbSha256": "d48331373ccd2b6d5a8f97eb066561031a37a47da118fbfdd799d400cb701a17",
+    "meaning": "Approximate reference points do not establish provider service coverage, citywide outcomes or residence; Hospital referrals/water service/city/FUA differ; airport point not proof of journey access.",
+    "rootIndependentlyRecomputed": true,
+    "rootAll9031Verified": true
+  },
+  "webReadSources": [
+    {
+      "round": "round1",
+      "originalSession": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-02-01a13e5e-2ed3-76e3-b2b0-eefa22db05d9.jsonl",
+      "lineOneBased": 4925,
+      "callId": "call_eec9412deb13479cb243279ce3625a58",
+      "blockIndexZeroBased": 1,
+      "localToolTextPath": "web-round1-exact-tooltext.txt",
+      "toolTextBytes": 37483,
+      "toolTextSha256": "5018252ead6080ab83142c1e6e358224ae736c13a8c0035ecacb7b992f1c0a1e",
+      "providerOriginalBytes": null,
+      "providerOriginalSha256": null,
+      "scope": "Full exact aggregated search-tool block, partial entries rather than completewebsitepages; locator only. No webopen/find/click or failedrawbypass.",
+      "rootHistoricalToolProof": {
+        "round": "round1",
+        "callId": "call_eec9412deb13479cb243279ce3625a58",
+        "lineOneBased": 4925,
+        "blockIndexZeroBased": 1,
+        "exactToolBlockRecovered": true,
+        "savedEqualsExact": true,
+        "addsOnlyTrailingNewline": false,
+        "toolTextSha256": "5018252ead6080ab83142c1e6e358224ae736c13a8c0035ecacb7b992f1c0a1e",
+        "toolDigestIsWebsiteOriginalDigest": false,
+        "discoveryOnly": true
+      },
+      "discoveryOnlyNotScoringSource": true
+    },
+    {
+      "round": "round2",
+      "originalSession": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-02-01a13e5e-2ed3-76e3-b2b0-eefa22db05d9.jsonl",
+      "lineOneBased": 4965,
+      "callId": "call_dbdc9c0bcf07451e989d565807ca75cd",
+      "blockIndexZeroBased": 2,
+      "localToolTextPath": "web-round2-exact-tooltext.txt",
+      "toolTextBytes": 37381,
+      "toolTextSha256": "ee36630799eecf47d4b7a0f3048bc35c0d91608cc4162999ea5b4dd1e03be17c",
+      "providerOriginalBytes": null,
+      "providerOriginalSha256": null,
+      "scope": "Full exact aggregated search-tool block, partial entries rather than completewebsitepages; locator only. No webopen/find/click or failedrawbypass.",
+      "rootHistoricalToolProof": {
+        "round": "round2",
+        "callId": "call_dbdc9c0bcf07451e989d565807ca75cd",
+        "lineOneBased": 4965,
+        "blockIndexZeroBased": 2,
+        "exactToolBlockRecovered": true,
+        "savedEqualsExact": true,
+        "addsOnlyTrailingNewline": false,
+        "toolTextSha256": "ee36630799eecf47d4b7a0f3048bc35c0d91608cc4162999ea5b4dd1e03be17c",
+        "toolDigestIsWebsiteOriginalDigest": false,
+        "discoveryOnly": true
+      },
+      "discoveryOnlyNotScoringSource": true
+    }
+  ],
+  "rootScopeReview": {
+    "frozenPayloadFilesVerified": 119,
+    "validOriginalsVerified": 23,
+    "rootRawCopiesMatch": 23,
+    "newOriginals": 16,
+    "reusedOriginals": 7,
+    "rootPdfPageCount": 17,
+    "rootPdfPixelsViewed": [
+      {
+        "sourceId": "S04",
+        "physicalPage": 42
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 44
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 48
+      },
+      {
+        "sourceId": "S02",
+        "physicalPage": 24
+      },
+      {
+        "sourceId": "S02",
+        "physicalPage": 25
+      },
+      {
+        "sourceId": "S03",
+        "physicalPage": 29
+      },
+      {
+        "sourceId": "S03",
+        "physicalPage": 17
+      },
+      {
+        "sourceId": "S03",
+        "physicalPage": 18
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 45
+      },
+      {
+        "sourceId": "S08",
+        "physicalPage": 8
+      },
+      {
+        "sourceId": "S08",
+        "physicalPage": 24
+      },
+      {
+        "sourceId": "S02",
+        "physicalPage": 28
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 4
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 30
+      },
+      {
+        "sourceId": "R07",
+        "physicalPage": 2
+      },
+      {
+        "sourceId": "S11",
+        "physicalPage": 8
+      },
+      {
+        "sourceId": "S08",
+        "physicalPage": 4
+      }
+    ],
+    "crossreviewPayloadsVerified": 31,
+    "rootNewNetworkRequests": 0,
+    "all9031GeometriesRecomputed": true,
+    "sevenApproximatePointsRecomputed": true,
+    "original87WholeCaseBytesComparedToFixedGit": true,
+    "allOriginalBodiesFullyAudited": false,
+    "allPdfPagesViewed": false,
+    "cutoffSameBytesAuthenticated": false,
+    "coverageNotStartedMappedToUnresolved": true,
+    "lon80DoesNotRequireHealthyLifespanProof": true,
+    "toolSummariesAreOriginalWebsiteBytes": false,
+    "fuaEqualsAdministrativeOrProviderArea": false
+  },
+  "sensitivity": {
+    "PCS60": [36, 71],
+    "MED60": [36, 71],
+    "PCSWithdrawn": [27, 77],
+    "MEDWithdrawn": [27, 77],
+    "ISRWithdrawn": [24, 74],
+    "LONWithdrawn": [27, 72],
+    "TECWithdrawn": [27, 72],
+    "ISR40": [30, 65],
+    "LON40": [31, 66],
+    "TEC40": [31, 66],
+    "allJudgmentsWithdrawn": [0, 100]
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-newcastle-score-completion-review.md",
+    "sha256": "b4f4f3698ed7a4771e8ee25175ffb00cd9e322b558aacea0ff7df84db1eb782d",
+    "researchReport": "docs/cci-newcastle-priority-review.md",
+    "researchReportSha256": "578b6e673e9be217d0a8dc392923c2ef474517799208aea29b5259a9558d4a51",
+    "researchFrozenReportSha256": "87050c8008f55e03879e04434e2717f7ea17d9d41370e0d06ba00529f9881671",
+    "frozenManifestSha256": "f9f6db05793282b0e1862e5636db8750671ded95a7342f062b6349b77ca36fb2",
+    "frozenFilesVerified": 119,
+    "validOriginalCount": 23,
+    "newValidOriginalCount": 16,
+    "reusedOriginalCount": 7,
+    "rootPdfPageCount": 17,
+    "crossReviewReportSha256": "16cbf4e15913ca7dd225c4792276d3e8c04e50b6d1181ae5ef31756e6df60e60",
+    "crossReviewManifestSha256": "c65d369a814d864e5c32317102d99a31010c409ee46874f69fc0496cf6646ecc"
+  },
+  "reportBytes": 13838,
+  "reportSha256": "b4f4f3698ed7a4771e8ee25175ffb00cd9e322b558aacea0ff7df84db1eb782d",
+  "limitations": [
+    "条件性专家研究判断，非全球名次或客观量尺；原87案逐字不变，全部新旧竞争者保留。",
+    "地域／观察期／当前延续与普通净取得、CAR-T类路径适配均可撤；未知维不补中点。",
+    "119冻结payload、23原件字节、17个根实际目视页及9031几何核验，不等全部PDF逐页或全部临床分母认证。",
+    "16新HTTP腿全200和7复用不清零历史停止；当前捕获不是截止同字节证明。",
+    "LON80不要求健康人延寿或零风险；原not_started状态规范为unresolved，不补分。"
+  ]
+}

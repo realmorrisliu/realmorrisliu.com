@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 87,
+    "conditionalCaseCount": 88,
     "completeConditionalCaseCount": 19,
-    "partialCaseCount": 68,
-    "unassessedCount": 8944,
+    "partialCaseCount": 69,
+    "unassessedCount": 8943,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -740,8 +740,13 @@
       "sha256": "b0fa06e195e626d6c9e4e5229dae64d4da0c7c67b982ec35441e7515d61f6546",
       "provenance": "cci-austin-score-completion-review.md",
       "provenanceSha256": "65958c0c7f4e72c8c0b2b487e0a1c10ac31b7d2e2af9b3400a66ee1d6d186a8f"
+    },
+    "cci-local-2026-newcastle-case.json": {
+      "sha256": "b9b7e7c620613f0f3a88bd7dd709d3d29da1f1dcaf77a2a471d0a8e339ace664",
+      "provenance": "cci-newcastle-score-completion-review.md",
+      "provenanceSha256": "b4f4f3698ed7a4771e8ee25175ffb00cd9e322b558aacea0ff7df84db1eb782d"
     }
   },
-  "scriptSha256": "7678e8ddd423af218260c33f22f846b6a3d924a586ab48823797f251499d7fa2",
-  "csvSha256": "cf765461166d42636440de1e3ade1047931ce8f18db1debaee0819a3287f1ebf"
+  "scriptSha256": "00e1c168b1727a516e0dbce40428562f6b83b8e6513b4f7a3cfba9dacbcae4b9",
+  "csvSha256": "7f02254eb8ceeb2b2bc1a168dac3fc9fbc45720f56bcd991c2e9ed796856f516"
 }
