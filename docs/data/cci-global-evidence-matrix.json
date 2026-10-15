@@ -177,8 +177,8 @@
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
     "conditionalCaseCount": 72,
-    "completeConditionalCaseCount": 17,
-    "partialCaseCount": 55,
+    "completeConditionalCaseCount": 18,
+    "partialCaseCount": 54,
     "unassessedCount": 8959,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
@@ -607,9 +607,9 @@
       "provenanceSha256": "f5de02b118e833e7f0ae53522d2b383011ab539401d825c52ff778569b951cdd"
     },
     "cci-local-2026-berlin-case.json": {
-      "sha256": "fec0cf469b6b85b80a0e4b23b11be841921e873c356be04b131889c1997291e0",
-      "provenance": "cci-berlin-gss-completion-review.md",
-      "provenanceSha256": "815ba355a2d0fb569c71b2dac14835ab73d9ab1d97a6e41e1d9f85508d70ce11"
+      "sha256": "f182e0046e4d7b6e9fc026c1db3fd0fff5ce33012f7849805f9eec0532eac4d3",
+      "provenance": "cci-berlin-res30-completion-review.md",
+      "provenanceSha256": "9b0e6ae9f32137b26c3c30d2fe702cd4a8a7485e2a040a531fad92f604e08ce9"
     },
     "cci-local-2026-montreal-case.json": {
       "sha256": "3b0595a42bdfadc8f36d71c8a121a0293966231ef3123aacae9ecb302628e374",
@@ -668,5 +668,5 @@
     }
   },
   "scriptSha256": "839a4ac83522815b844db0ad71c1013124a8df755ff7be9d32498a8e39cec781",
-  "csvSha256": "e6d29b944854d15f274c4a8f65837c2b2faa03e3a3ff456c7b188b34ab537818"
+  "csvSha256": "e335ea7c29e0ee77d1e50f28e82353a8a71424988983e3bd304bc14963264c9f"
 }
