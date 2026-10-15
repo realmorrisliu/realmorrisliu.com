@@ -144,6 +144,7 @@ const realCases = [
   "almere",
   "portsmouth",
   "birmingham",
+  "rostock",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -279,6 +280,7 @@ const [
   almere,
   portsmouth,
   birmingham,
+  rostock,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -3686,3 +3688,44 @@ assert.equal(birminghamCase.sourceSnapshots.length, 20);
 assert(birminghamCase.sourceSnapshots.every((s: { validOriginal: boolean }) => s.validOriginal));
 assert.equal(birminghamCase.failedSourceSnapshots.length, 2);
 assert.equal(birminghamCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
+
+const rostockCase = realCases.find(c => c.candidateId === 4586);
+assert.equal(
+  rostockCase.priorityCompletionReview.sha256,
+  digest(rostockCase.priorityCompletionReview.path)
+);
+assert.equal(
+  rostockCase.priorityCompletionReview.researchReportSha256,
+  digest(rostockCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(rostock), { center: null, lower: 30, upper: 80 });
+assert.equal(rostockCase.unknownWeight, 50);
+assert.deepEqual(
+  rostockCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["PCS", "GSS", "RES", "TEC"]
+);
+for (const [id, lower, upper] of [
+  ["ISR", 21, 86],
+  ["MED", 21, 86],
+  ["LON", 24, 84],
+  ["OPT", 24, 84],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...rostock };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...rostock, MED: 40 }), { center: null, lower: 27, upper: 77 });
+assert.equal(rostockCase.sourceSnapshots.length, 22);
+assert(rostockCase.sourceSnapshots.every((s: { validOriginal: boolean }) => s.validOriginal));
+assert.equal(
+  rostockCase.failedSourceSnapshots.filter((s: { status: number }) => s.status === 404).length,
+  1
+);
+assert.equal(
+  rostockCase.failedSourceSnapshots.filter((s: { status: number }) => [302, 307].includes(s.status))
+    .length,
+  2
+);
+assert.equal(rostockCase.sourceAndStopLedger.normalHTTPActualLegs, 18);

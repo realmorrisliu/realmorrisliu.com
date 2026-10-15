@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 92,
+    "conditionalCaseCount": 93,
     "completeConditionalCaseCount": 19,
-    "partialCaseCount": 73,
-    "unassessedCount": 8939,
+    "partialCaseCount": 74,
+    "unassessedCount": 8938,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -765,8 +765,13 @@
       "sha256": "0ad2a7b392933c06b2876785a39b979512f27ba40bfb6151ebae9c637148e91b",
       "provenance": "cci-birmingham-score-completion-review.md",
       "provenanceSha256": "86ea6b152954a1e1197d77701514d066371ca80a6d9353204e76b8881d75ac69"
+    },
+    "cci-local-2026-rostock-case.json": {
+      "sha256": "6c43926521d8a6527d3fbe257ce153da5841aec249ba6d7a34b74ef38422e96a",
+      "provenance": "cci-rostock-score-completion-review.md",
+      "provenanceSha256": "128c6128c7be4f29de81a94254baac57f7328e8918c975cb5baeade2f29e1b10"
     }
   },
-  "scriptSha256": "10a4f69fa3cc40b84c1a20d3f642abaaf8bb68757f28d219d758c244427fcc14",
-  "csvSha256": "7b088eb1b5e558bcb7f82d93dece11a5263eb25abfc997d894e000e28211c1c8"
+  "scriptSha256": "ce3396e5b835db94d73ac51ce2b5e32bbadd99e6403d16361b07b604a168059a",
+  "csvSha256": "391176e34cf9b761e0a686247137f4aadb863e16fbcf95bb361082a85554732a"
 }

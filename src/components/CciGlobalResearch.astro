@@ -102,6 +102,7 @@ import lund from "../../docs/data/cci-local-2026-lund-case.json";
 import almere from "../../docs/data/cci-local-2026-almere-case.json";
 import portsmouth from "../../docs/data/cci-local-2026-portsmouth-case.json";
 import birmingham from "../../docs/data/cci-local-2026-birmingham-case.json";
+import rostock from "../../docs/data/cci-local-2026-rostock-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -208,8 +209,10 @@ const cases = [
   almere,
   portsmouth,
   birmingham,
+  rostock,
 ];
 const caseNamesZh: Record<number, string> = {
+  [rostock.candidateId]: "罗斯托克功能区",
   [birmingham.candidateId]: "伯明翰功能区",
   [portsmouth.candidateId]: "朴茨茅斯功能区",
   [almere.candidateId]: "阿尔梅勒功能区",
@@ -408,6 +411,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [rostock.candidateId]: [
+    zh
+      ? "罗斯托克制度／医疗／专项转化／退出条件60，防护／安全／资源／技术未知。原权重贡献30、数学域30—80，无完整总分。实际协作、诊疗与疾病重建、普通客运和取得路径支持有限判断，地域／延续及支付／照护等假设可撤。"
+      : "Rostock has conditional ISR/MED/LON/OPT 60; PCS/GSS/RES/TEC remain unknown. The original-weight contribution is 30 and arithmetic domain 30–80, without a complete total. Actual cooperation, care and disease reconstruction, passenger transport and access routes support limited judgments; geographic, continuity, payment and care assumptions remain revocable.",
+    zh
+      ? "护理发布模型在参考内且高于全国，原分母30／事件174冲突保留、不重建风险率。港口停运／封线属于货运，三轮渡＋三RoRo不是六条普通客运；Basiskonto拓宽资金入口，仍不等足额迁居预算。原92案保持不变。"
+      : "The published care model meets its reference while exceeding the national result; the original denominator 30 / events 174 conflict is retained without rebuilding rates. Port cancellations and closures concern freight; three ferry and three RoRo routes are not six ordinary passenger routes. Basiskonto broadens payment access without proving a sufficient relocation budget. The previous 92 cases are unchanged.",
+  ],
   [birmingham.candidateId]: [
     zh
       ? "伯明翰防护／制度／医疗条件40，专项转化／技术条件60；安全／资源／退出未知。原权重贡献30、数学域30—65，无完整总分。实际供水与护理改善、服务恢复和真实疾病给药／工业应用，同严旱准备、履约及护理余障一起判断。"
