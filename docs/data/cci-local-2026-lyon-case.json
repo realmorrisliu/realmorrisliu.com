@@ -1,0 +1,1353 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 3718,
+  "name": "Lyon",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-15",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "2026ordinaryFrench national usuallylongtermlocal medianincome usualvalidcoverage nofixedage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-lyon-score-completion-review.md",
+  "publishedInputCommit": "b369c41452d17edbbb8779921978903b0857decf",
+  "researchFrozenInputCommit": "2dce2ecae6df1d77f7a87be0b073cc2938c1b993",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "weight": 15,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "unresolved"
+      },
+      "rationale": "实际绿化／去硬化及洪水组织有帮助，旧急洪、热风险及未完治理与主要危险净保护方向未闭；地质未开始、强天气／野火不足。",
+      "assumption": "不由无新灾或未来工程未完择档，不设每楼全2026测量硬门槛；有限保护代表性尚未定向。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "PCS",
+          "pillar": "heat_humidity",
+          "status": "partial",
+          "sources": ["S01"],
+          "limits": "Actualtrees/natureadaptation; not actualwholeFUAheatprotection",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "pillar": "flood_sea_level",
+          "status": "partial",
+          "sources": ["S01", "S11"],
+          "limits": "2024real116haactualsurface and2025coordination; noeventnotriskzero,2024flashflood andpendingworks retained",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "pillar": "geophysical",
+          "status": "not_started",
+          "sources": [],
+          "limits": "No specificgeophysicalexposure/adaptationread",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "pillar": "severe_weather_wildfire",
+          "status": "not_fully_assessed",
+          "sources": ["S11"],
+          "limits": "Floodrainonlypartial,stormwildfirecompound unknown",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "GSS",
+      "weight": 15,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "organized_violence": "context",
+        "regional_conflict": "context",
+        "strategic_exposure": "unresolved"
+      },
+      "rationale": "实际共同反恐背景不等Lyon分类组织伤害／区域战略适配，地方保护与通常生活余障未闭；失败警方片段未采。",
+      "assumption": "不由没有战争、国家计划或获取失败选40／60，未审真实当地影响保留未知。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "GSS",
+          "pillar": "organized_violence",
+          "status": "context",
+          "sources": ["W03"],
+          "limits": "Commonnationalthreat/realdisruptedplots; localpolicePDFfailed, searchsnippetnotverifiedfact",
+          "score": null
+        },
+        {
+          "dimension": "GSS",
+          "pillar": "regional_conflict",
+          "status": "context",
+          "sources": ["W03"],
+          "limits": "DGSIexternalprojectionandregionalreturnpossible, notlocalimpactrate",
+          "score": null
+        },
+        {
+          "dimension": "GSS",
+          "pillar": "strategic_exposure",
+          "status": "not_fully_assessed",
+          "sources": ["W03"],
+          "limits": "Localstrategicmatching/response incomplete, notneedattackprerequisite",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "ISR",
+      "weight": 15,
+      "score": 60,
+      "conditionalAlternatives": [40, 80],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "rationale": "真实水费处理／未计费、接水点及能源家访／电话和数字帮助支持日常执行与纠偏；部分改造未完成、恢复协调和群体触达余障保留。",
+      "assumption": "核心大都市服务对FUA普通居民的实际作用、有限群体代表性与截止延续可撤，不把处理案／启动改造当全部支付或已解决。",
+      "withdrawToUnknownDomain": [27.0, 82.0],
+      "scoreStatus": "conditional_root_adopted",
+      "coverageReview": [
+        {
+          "dimension": "ISR",
+          "pillar": "governance",
+          "status": "partial",
+          "sources": ["L01", "S01"],
+          "limits": "Actualwatercaseprocessing/debtwaivers/socialservices notonlybudget",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "pillar": "adaptive_capacity",
+          "status": "partial",
+          "sources": ["S01", "S11"],
+          "limits": "Actual950energyvisits/70%initiatedrenovationandorfund; real58meetings andcoordinationlimits",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "pillar": "social_cohesion",
+          "status": "partial",
+          "sources": ["L01", "S01"],
+          "limits": "Actualunconnectedwater/youngsupportandshelter and5000helped; not fulltrustorallgroups",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "pillar": "emergency_recovery",
+          "status": "partial",
+          "sources": ["S11"],
+          "limits": "Actualriskcoordination/IRMAconvention andpolitical/personneldifferences; notsamehazardrestorationtimes",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "RES",
+      "weight": 10,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      },
+      "rationale": "实际供给及帮扶与局部PFAS非合规、未完处理、食品旧诊断和能源费用余障同看，帮助后的中位水食能净取得方向仍未择档。",
+      "assumption": "旧2018／2019数据和2025重述不当新测量，学校采购／贫困样本不移全部中位人，不因缺每户总账单或失败扣分。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "RES",
+          "pillar": "water",
+          "status": "partial",
+          "sources": ["L01"],
+          "limits": "Actualquality/supply/debtwaiver/13connections; localPFASmax/noncompliance andJune2024dilution versus2026plannedtreatment",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "pillar": "food",
+          "status": "partial",
+          "sources": ["S01"],
+          "limits": "Actualagricultural/schoolprocurement support; 2018survey and2025repeated15%notcurrentnewmeasurement; ordinarybundleunresolved",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "pillar": "energy",
+          "status": "partial",
+          "sources": ["S01"],
+          "limits": "ActualSlime/photovoltaicgridconnection, financingnotallfinishedsavings,2022mixnotcurrentavailability",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "pillar": "supply_chain",
+          "status": "partial",
+          "sources": ["L01", "S01"],
+          "limits": "97%watersourceconcentration/old50kmfoodautonomy andRhonedepartmentimports notFUA essentialbackup",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "MED",
+      "weight": 15,
+      "score": 60,
+      "conditionalAlternatives": [40, 80],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "rationale": "真实必要及复杂诊疗、有限正反质量与普通付款形成可用路径；低PCC／疼痛预案／出院联系及费用／等待仍重要，不被认证分掩盖。",
+      "assumption": "接受选定本地服务和质量对通常必要护理的有限代表性、有效保障／补充安排或常见余费可付及截止延续；不默认全员mutuelle，拒桥未知，实质重要净限制可40。",
+      "withdrawToUnknownDomain": [27.0, 82.0],
+      "scoreStatus": "conditional_root_adopted",
+      "coverageReview": [
+        {
+          "dimension": "MED",
+          "pillar": "access",
+          "status": "partial",
+          "sources": ["L03", "W01"],
+          "limits": "NormalFrenchinsuredadmission/copayrules;2026hospitalfee andconditions; nofull2026medianbill/waitdistribution",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "pillar": "routine_quality",
+          "status": "partial",
+          "sources": ["S09", "S10"],
+          "limits": "2023/24mixedwindows actualPCC40/contact32/duration/admission/outcomes; posterNandfullriskmodelunknown, notallclinicalquality",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "pillar": "specialist_capacity",
+          "status": "partial",
+          "sources": ["L04", "L02"],
+          "limits": "Actualmultiplelocalendometriosispathways/complexcancer/CART; institutionvolumesincludeVar",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "pillar": "system_continuity",
+          "status": "partial",
+          "sources": ["L02", "L03", "S09", "S10"],
+          "limits": "Actualcoordination/yearfollowup/rehab andhandoffweakness; notallpressurebackup",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "LON",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40, 80],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "rationale": "实际重复常规CAR-T、真实给药及未自付个案、多科监护和长期随访接成熟疾病型人体方案；制造等待、严重毒性及近院照护仍重要。",
+      "assumption": "本地成熟CD19方案匹配本身、适应证／线次、通常ALD或保障核准、净付款／近院照护与截止延续均可撤；未认证500例同产品、品牌或本地居民，不由患者个案保证全体支付，无固定年龄。",
+      "withdrawToUnknownDomain": [30.0, 80.0],
+      "scoreStatus": "conditional_root_adopted",
+      "coverageReview": [
+        {
+          "dimension": "LON",
+          "pillar": "translation",
+          "status": "partial",
+          "sources": ["L02", "L04"],
+          "limits": "March2025cumulative500adultactualCART andsince2022pediatricpath; Allo3experimental andfutureownmanufacture separated",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "pillar": "trial_maturity",
+          "status": "partial",
+          "sources": ["R01", "L02"],
+          "limits": "MaturediseaseJULIET167/115/main99/40.3mo; localquotesnotdefinedcohorts/healthyhumanlifespan",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "pillar": "regulatory_adoption",
+          "status": "partial",
+          "sources": ["R01", "L02"],
+          "limits": "FrenchmatureindicationpositiveHASopinion andactualcommercialroutine local; ministerialcurrentpaymentnotindependentlyrecertified",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "pillar": "resident_access",
+          "status": "partial",
+          "sources": ["L02", "L03", "W01"],
+          "limits": "ActualindividualnotoutofpocketisArdechepatient notalllocal; eligibleordinarypayment/monitor/currentcontinuationfinitebridge",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "TEC",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40, 80],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "rationale": "HCL与Lyon1实际产出和产业连接、公共／临床数字采用及已交设备／人的帮助支持多节点扩散；计划产线不当实绩、可及差距与非本地范围保留。",
+      "assumption": "核心机构／公共服务对普通FUA的有限代表性、真实净接入与持续采用可撤，企业密度未全测，设备交付与采购不合计去重人。",
+      "withdrawToUnknownDomain": [30.0, 80.0],
+      "scoreStatus": "conditional_root_adopted",
+      "coverageReview": [
+        {
+          "dimension": "TEC",
+          "pillar": "knowledge_output",
+          "status": "partial",
+          "sources": ["L04", "S02", "S14"],
+          "limits": "Actual2024HCLpublications/patents plusUCBLactual2023research; notrankconverted",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "pillar": "industry_density",
+          "status": "partial",
+          "sources": ["S14", "L04"],
+          "limits": "MablinkactualLillyintegration/Mecawareactualfunding butfutureproduction,287industryexternalprojectsnotfirmdensity",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "pillar": "digital_infrastructure",
+          "status": "partial",
+          "sources": ["S01", "S07", "S09", "S10"],
+          "limits": "Operatingpublic/clinicalsystems andequipment; DMPonlythosehavingone, noallhouseholdcoverage",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "pillar": "diffusion",
+          "status": "partial",
+          "sources": ["S01", "S07"],
+          "limits": "2000kits/5000actuallyhelped/74.70auditedaccessibility and130agentpilot; noallFUAadoptionclaim",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "OPT",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40, 80],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      },
+      "rationale": "现实法意铁路／票务、合资格EU长期工作居留、个人资金web-only入口及初到漫游组成有限退出路径；共因、费用、资格和境外续办余障保留。",
+      "assumption": "BNP首正文仅研究者有效读取，根未重开停止机制；合规个人账户／鉴权、合法目的地、普通初期和后续预算、金融及当地通信接续是可撤假设，拒依据或桥则未知，不要求全目的地逐笔交易。",
+      "withdrawToUnknownDomain": [30.0, 80.0],
+      "scoreStatus": "conditional_root_adopted",
+      "coverageReview": [
+        {
+          "dimension": "OPT",
+          "pillar": "transport_redundancy",
+          "status": "partial",
+          "sources": ["S04"],
+          "limits": "ActualTGVFranceItaly30cities/operatingticketpaths; railcommoncause, noverified2025airnetwork/replacementbusbody",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "pillar": "legal_mobility",
+          "status": "partial",
+          "sources": ["R02"],
+          "limits": "FrenchEUcitizenworker/selfemployedconditionalresidence; nofixedageorassumedjob;resources/proxyfitfinite",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "pillar": "asset_portability",
+          "status": "partial",
+          "sources": ["W02"],
+          "limits": "Firstvalidpersonalonlineforeigncurrencytransferbody; exactauth/currenttermstailnotread, ordinaryaccount/device/continuation explicitfiniteassumption",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "pillar": "network_continuity",
+          "status": "partial",
+          "sources": ["S13"],
+          "limits": "EU/EEAinitialroaming/fairuse/permanentextras/cutoff; localnewproviderandlegitimatefuturelinkfinite notoldSIMforever",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 36,
+  "unresolvedScoreRange": [36, 76],
+  "globalRankingEligible": false,
+  "limitations": [
+    "不由无新灾或未来工程未完择档，不设每楼全2026测量硬门槛；有限保护代表性尚未定向。",
+    "不由没有战争、国家计划或获取失败选40／60，未审真实当地影响保留未知。",
+    "核心大都市服务对FUA普通居民的实际作用、有限群体代表性与截止延续可撤，不把处理案／启动改造当全部支付或已解决。",
+    "旧2018／2019数据和2025重述不当新测量，学校采购／贫困样本不移全部中位人，不因缺每户总账单或失败扣分。",
+    "接受选定本地服务和质量对通常必要护理的有限代表性、有效保障／补充安排或常见余费可付及截止延续；不默认全员mutuelle，拒桥未知，实质重要净限制可40。",
+    "本地成熟CD19方案匹配本身、适应证／线次、通常ALD或保障核准、净付款／近院照护与截止延续均可撤；未认证500例同产品、品牌或本地居民，不由患者个案保证全体支付，无固定年龄。",
+    "核心机构／公共服务对普通FUA的有限代表性、真实净接入与持续采用可撤，企业密度未全测，设备交付与采购不合计去重人。",
+    "BNP首正文仅研究者有效读取，根未重开停止机制；合规个人账户／鉴权、合法目的地、普通初期和后续预算、金融及当地通信接续是可撤假设，拒依据或桥则未知，不要求全目的地逐笔交易。"
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "L01",
+      "url": "https://www.grandlyon.com/fileadmin/user_upload/media/pdf/eau/rapports/20251204_eau_rapport_annuel_2024.pdf",
+      "at": "2026-10-15T08:58:06.930088+00:00",
+      "method": "urllib_default_TLS_one_request_no_retry",
+      "finalUrl": "https://www.grandlyon.com/fileadmin/user_upload/media/pdf/eau/rapports/20251204_eau_rapport_annuel_2024.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 6404197,
+      "sha256": "0bc4a4191a867f1fff7f032581f85a000157ce011ba236dc3c31dec73a866124",
+      "file": "lyon-water2024.pdf",
+      "result": "valid_raw",
+      "observationAndVersionLimit": "FY2024 operations; named filename20251204, actual original first-publication timing not independently certified; 2026 PFAS target not complete",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-29/lyon-water2024.pdf",
+      "localPath": "originals/lyon-water2024.pdf",
+      "sourceKind": "verified durable newOct15 snapshot reused, not historicalcutoffbytescertification",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "originalBytes": 6404197,
+      "originalSha256": "0bc4a4191a867f1fff7f032581f85a000157ce011ba236dc3c31dec73a866124",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/lyon-water2024.pdf"
+    },
+    {
+      "id": "L02",
+      "url": "https://www.chu-lyon.fr/sites/default/files/publication-presse/Leaders%20dans%20le%20traitement%20par%20CAR-T%20cells%2C%20les%20HCL%20soignent%20leur%20500e%20patient%20adulte%20avec%20cette%20th%C3%A9rapie%20r%C3%A9volutionnaire.pdf",
+      "at": "2026-10-15T08:58:12.528242+00:00",
+      "method": "urllib_default_TLS_one_request_no_retry",
+      "finalUrl": "https://www.chu-lyon.fr/sites/default/files/publication-presse/Leaders%20dans%20le%20traitement%20par%20CAR-T%20cells%2C%20les%20HCL%20soignent%20leur%20500e%20patient%20adulte%20avec%20cette%20th%C3%A9rapie%20r%C3%A9volutionnaire.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 930254,
+      "sha256": "c88308d39dfd1525a0b662e171e3b5e3811258ad047128dbfcca33236fd25386",
+      "file": "lyon-cart500.pdf",
+      "result": "valid_raw",
+      "observationAndVersionLimit": "Dated2025-04-25;500th cumulative adult given therapy inMarch2025, not500new2025 residents",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-29/lyon-cart500.pdf",
+      "localPath": "originals/lyon-cart500.pdf",
+      "sourceKind": "verified durable newOct15 snapshot reused, not historicalcutoffbytescertification",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "originalBytes": 930254,
+      "originalSha256": "c88308d39dfd1525a0b662e171e3b5e3811258ad047128dbfcca33236fd25386",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/lyon-cart500.pdf"
+    },
+    {
+      "id": "L03",
+      "url": "https://www.chu-lyon.fr/consultation",
+      "at": "2026-10-15T08:58:16.304749+00:00",
+      "method": "urllib_default_TLS_one_request_no_retry",
+      "finalUrl": "https://www.chu-lyon.fr/consultation",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 107844,
+      "sha256": "f855446efcebb35ed5f77bd111478f04d98111f1a08259ae44245365b7b1de41",
+      "file": "lyon-consultation.html",
+      "result": "valid_raw",
+      "observationAndVersionLimit": "Current undated guidance includes2023/24 tariff attachments and legacy CMUC label; no full2026 version/payer certification",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-29/lyon-consultation.html",
+      "localPath": "originals/lyon-consultation.html",
+      "sourceKind": "verified durable newOct15 snapshot reused, not historicalcutoffbytescertification",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "originalBytes": 107844,
+      "originalSha256": "f855446efcebb35ed5f77bd111478f04d98111f1a08259ae44245365b7b1de41",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/lyon-consultation.html"
+    },
+    {
+      "id": "L04",
+      "url": "https://www.chu-lyon.fr/sites/default/files/rapport-activite-2024.pdf",
+      "at": "2026-10-15T08:59:54.890577+00:00",
+      "method": "urllib_default_TLS_one_request_no_retry",
+      "finalUrl": "https://www.chu-lyon.fr/sites/default/files/rapport-activite-2024.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 7127810,
+      "sha256": "1c53d2b31a879bb20efe5e238241c1ce877e5e89f706e3f049bbc954d29ac677",
+      "file": "lyon-hcl2024.pdf",
+      "result": "valid_raw",
+      "observationAndVersionLimit": "FY2024 actual HCL; institution includesVar hospital outside local FUA; web locator version differs from search2025 summary",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-29/lyon-hcl2024.pdf",
+      "localPath": "originals/lyon-hcl2024.pdf",
+      "sourceKind": "verified durable newOct15 snapshot reused, not historicalcutoffbytescertification",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "originalBytes": 7127810,
+      "originalSha256": "1c53d2b31a879bb20efe5e238241c1ce877e5e89f706e3f049bbc954d29ac677",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/lyon-hcl2024.pdf"
+    },
+    {
+      "id": "S01",
+      "url": "https://www.grandlyon.com/fileadmin/user_upload/media/pdf/environnement/20251125_rapport-transition-resilience-2025.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/transition2025.pdf",
+      "scope": "2025actualclimate/foodenergy/socialdelivery and actual harms not futureplans",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 11699774,
+      "sha256": "4c5fdf8fe17edf66fff659970176a64e5867fe7cf10417dc14d275b41f21eb0b",
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.grandlyon.com/fileadmin/user_upload/media/pdf/environnement/20251125_rapport-transition-resilience-2025.pdf",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "localPath": "originals/transition2025.pdf",
+      "sourceKind": "ActualnewOct15snapshot nothistoricalcutoffbytescertification",
+      "originalSha256": "4c5fdf8fe17edf66fff659970176a64e5867fe7cf10417dc14d275b41f21eb0b"
+    },
+    {
+      "id": "S02",
+      "url": "https://www.univ-lyon1.fr/universite/identite-et-chiffres-cles",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/lyon1-key.html",
+      "scope": "Knowledgeoutputs and located official annualreport",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 166855,
+      "sha256": "e18bdfdd57d5e7e521e7f834897550861bcddb93927e6dad9720ff36ee38b5c0",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "resolvedUrl": "https://www.univ-lyon1.fr/universite/identite-et-chiffres-cles",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "localPath": "originals/lyon1-key.html",
+      "sourceKind": "ActualnewOct15snapshot nothistoricalcutoffbytescertification",
+      "originalSha256": "e18bdfdd57d5e7e521e7f834897550861bcddb93927e6dad9720ff36ee38b5c0"
+    },
+    {
+      "id": "S03",
+      "url": "https://teamhcl.chu-lyon.fr/qualite-et-securite-des-soins",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/hcl-quality.html",
+      "scope": "Actualqualityscope/official2025IQSSlink",
+      "validOriginal": true,
+      "originalBytes": 84252,
+      "sha256": "5592a12119d40b50175d78964835326257c178917982f6af310ea77616f47613",
+      "retrievedOn": "2026-10-15 localbytesobservation; originalrequestexacttimeunavailable",
+      "status": null,
+      "contentType": null,
+      "resolvedUrl": null,
+      "reconstruction": "Original bytes existed from successful actualrequest; concurrent metadata writer omitted entry. HTTPheader metadata unavailable; no re-request. S07/S08 stdout recorded success; S03 durablefilevalid.",
+      "cutoffOriginalBytesAuthenticated": false,
+      "localPath": "originals/hcl-quality.html",
+      "at": null,
+      "retrievedAt": null,
+      "sourceKind": "ActualnewOct15snapshot nothistoricalcutoffbytescertification",
+      "originalSha256": "5592a12119d40b50175d78964835326257c178917982f6af310ea77616f47613"
+    },
+    {
+      "id": "S04",
+      "url": "https://www.lyonaeroports.com/acces-transports/gare-tgv-lyon-saint-exupery",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/airport-rail.html",
+      "scope": "Ordinaryactualrailairportconnection no all140destinationshistoricalproof",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 479201,
+      "sha256": "2db98053577126a11e1697b53fb0958e556bf912d2a1d45e2830bce77e4ff819",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "resolvedUrl": "https://www.lyonaeroports.com/acces-transports/gare-tgv-lyon-saint-exupery",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "localPath": "originals/airport-rail.html",
+      "sourceKind": "ActualnewOct15snapshot nothistoricalcutoffbytescertification",
+      "originalSha256": "2db98053577126a11e1697b53fb0958e556bf912d2a1d45e2830bce77e4ff819"
+    },
+    {
+      "id": "S07",
+      "url": "https://www.grandlyon.com/actions/le-numerique-responsable",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/digital-action.html",
+      "scope": "Actualdigitalinclusiondelivery andlocatedreport no planadoptionconfusion",
+      "validOriginal": true,
+      "originalBytes": 58039,
+      "sha256": "b31d20011851ddea87d86be74d54fca3a90e4f015a7e56ed430f13a2d62d5f9c",
+      "retrievedOn": "2026-10-15 localbytesobservation; originalrequestexacttimeunavailable",
+      "status": null,
+      "contentType": null,
+      "resolvedUrl": null,
+      "reconstruction": "Original bytes existed from successful actualrequest; concurrent metadata writer omitted entry. HTTPheader metadata unavailable; no re-request. S07/S08 stdout recorded success; S03 durablefilevalid.",
+      "cutoffOriginalBytesAuthenticated": false,
+      "localPath": "originals/digital-action.html",
+      "at": null,
+      "retrievedAt": null,
+      "sourceKind": "ActualnewOct15snapshot nothistoricalcutoffbytescertification",
+      "originalSha256": "b31d20011851ddea87d86be74d54fca3a90e4f015a7e56ed430f13a2d62d5f9c"
+    },
+    {
+      "id": "S08",
+      "url": "https://developpementdurable.grandlyon.com/strategie-inondation-de-laire-lyonnaise/",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/flood-strategy.html",
+      "scope": "Actualfloodadaptation/located2025bilan not strategyalone",
+      "validOriginal": true,
+      "originalBytes": 164673,
+      "sha256": "92f3f6f346f4b194bd3bd56e39eefc38ae2900519325590996ac0ed5d192394d",
+      "retrievedOn": "2026-10-15 localbytesobservation; originalrequestexacttimeunavailable",
+      "status": null,
+      "contentType": null,
+      "resolvedUrl": null,
+      "reconstruction": "Original bytes existed from successful actualrequest; concurrent metadata writer omitted entry. HTTPheader metadata unavailable; no re-request. S07/S08 stdout recorded success; S03 durablefilevalid.",
+      "cutoffOriginalBytesAuthenticated": false,
+      "localPath": "originals/flood-strategy.html",
+      "at": null,
+      "retrievedAt": null,
+      "sourceKind": "ActualnewOct15snapshot nothistoricalcutoffbytescertification",
+      "originalSha256": "92f3f6f346f4b194bd3bd56e39eefc38ae2900519325590996ac0ed5d192394d"
+    },
+    {
+      "id": "S09",
+      "url": "https://www.chu-lyon.fr/sites/default/files/affiche-ghc-iqss.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/quality-ghc2025.pdf",
+      "scope": "ActualGHC2025qualityplotsandlimits",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 179629,
+      "sha256": "415e81b3f7cc4e555d99fa769da03e6a1630f90f80b4f51a855b85c2aef98161",
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.chu-lyon.fr/sites/default/files/affiche-ghc-iqss.pdf",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "localPath": "originals/quality-ghc2025.pdf",
+      "sourceKind": "ActualnewOct15snapshot nothistoricalcutoffbytescertification",
+      "originalSha256": "415e81b3f7cc4e555d99fa769da03e6a1630f90f80b4f51a855b85c2aef98161"
+    },
+    {
+      "id": "S10",
+      "url": "https://www.chu-lyon.fr/sites/default/files/affiche-ghs-iqss.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/quality-ghs2024.pdf",
+      "scope": "ActualLyonSud2024qualityplotsandlimits",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 225466,
+      "sha256": "c6244ef746a18f2ef2ab63a97a5f48646fbd5402b23a78267f8bdcae3c269e7d",
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.chu-lyon.fr/sites/default/files/affiche-ghs-iqss.pdf",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "localPath": "originals/quality-ghs2024.pdf",
+      "sourceKind": "ActualnewOct15snapshot nothistoricalcutoffbytescertification",
+      "originalSha256": "c6244ef746a18f2ef2ab63a97a5f48646fbd5402b23a78267f8bdcae3c269e7d"
+    },
+    {
+      "id": "S11",
+      "url": "https://developpementdurable.grandlyon.com/app/uploads/2026/03/BILAN-2025_web.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/flood-bilan2025.pdf",
+      "scope": "Actual2025floodadaptationdeliveryandremainingbarriers",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 13884188,
+      "sha256": "1e3789cf47f25502fb59c1541297107358bb9c799ff636b52930bea9b65385a4",
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://developpementdurable.grandlyon.com/app/uploads/2026/03/BILAN-2025_web.pdf",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "localPath": "originals/flood-bilan2025.pdf",
+      "sourceKind": "ActualnewOct15snapshot nothistoricalcutoffbytescertification",
+      "originalSha256": "1e3789cf47f25502fb59c1541297107358bb9c799ff636b52930bea9b65385a4"
+    },
+    {
+      "id": "R01",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/has-kymriah-2023.pdf",
+      "localPath": "originals/has-kymriah-2023.pdf",
+      "validOriginal": true,
+      "originalBytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/has-kymriah-2023.pdf",
+      "sourceKind": "Verified existingdurablebytes reused, France/EU applicability independently assessed notothercityscore",
+      "cutoffOriginalBytesAuthenticated": false,
+      "originalSha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409"
+    },
+    {
+      "id": "R02",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_es.htm",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/eu-workers.html",
+      "localPath": "originals/eu-workers.html",
+      "validOriginal": true,
+      "originalBytes": 153770,
+      "sha256": "1555b5f65525917eee8fab3fef570e9a27b5d26dab38779b5bd26659b2bfb34f",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/eu-workers.html",
+      "sourceKind": "Verified existingdurablebytes reused, France/EU applicability independently assessed notothercityscore",
+      "cutoffOriginalBytesAuthenticated": false,
+      "originalSha256": "1555b5f65525917eee8fab3fef570e9a27b5d26dab38779b5bd26659b2bfb34f"
+    },
+    {
+      "id": "S12",
+      "url": "https://www.univ-lyon1.fr/universite/identite-et-chiffres-cles/rapport-dactivite-2023",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/lyon1-report2023.html",
+      "scope": "Locatedactual2023report notkeyrank",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 160070,
+      "sha256": "7a6f588081b3acee9011fc47c038413beaeac2eeb33e77011fbfc30391dabd00",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "resolvedUrl": "https://www.univ-lyon1.fr/universite/identite-et-chiffres-cles/rapport-dactivite-2023",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "localPath": "originals/lyon1-report2023.html",
+      "sourceKind": "ActualnewOct15snapshot nothistoricalcutoffbytescertification",
+      "originalSha256": "7a6f588081b3acee9011fc47c038413beaeac2eeb33e77011fbfc30391dabd00"
+    },
+    {
+      "id": "S13",
+      "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/mobile-roaming-costs/index_en.htm",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/eu-roaming.html",
+      "scope": "CommonEUordinaryroaminglimits andfairuse notpermanentresidence",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 155071,
+      "sha256": "e2e15e5e0521db23b3d99d06fa691c557b5ebdb63b09aa5ccb50f58af9a8f0d4",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/mobile-roaming-costs/index_en.htm",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "localPath": "originals/eu-roaming.html",
+      "sourceKind": "ActualnewOct15snapshot nothistoricalcutoffbytescertification",
+      "originalSha256": "e2e15e5e0521db23b3d99d06fa691c557b5ebdb63b09aa5ccb50f58af9a8f0d4"
+    },
+    {
+      "id": "S14",
+      "url": "https://www.univ-lyon1.fr/medias/fichier/2023-rapportactivite-web_1734690509480-pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/originals/lyon1-annual2023.pdf",
+      "scope": "Locatedactual2023knowledge/industrialtransfer outputs and scope",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 5776605,
+      "sha256": "dd98ca65caee16aab0d7ef770eb27ac53191ac0f7a95c01b57b74f9242c231e5",
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.univ-lyon1.fr/medias/fichier/2023-rapportactivite-web_1734690509480-pdf",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "localPath": "originals/lyon1-annual2023.pdf",
+      "sourceKind": "ActualnewOct15snapshot nothistoricalcutoffbytescertification",
+      "originalSha256": "dd98ca65caee16aab0d7ef770eb27ac53191ac0f7a95c01b57b74f9242c231e5"
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "id": "S05",
+      "url": "https://www.lyonaeroports.com/en/news/rhonexpress-travaux",
+      "path": "airport-disruptions.html",
+      "scope": "2025replacementbuses and conflicting2026webtimestamp",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": null,
+      "sha256": null,
+      "validOriginal": false,
+      "error": "HTTP Error 403: Forbidden",
+      "cutoffOriginalBytesAuthenticated": false,
+      "localPath": null,
+      "originalSha256": null
+    },
+    {
+      "id": "S06",
+      "url": "https://www.rhone.gouv.fr/contenu/telechargement/66408/447358/file/CP_211125_op%C3%A9ration_s%C3%A9curisation_Lyon_Guilloti%C3%A8re_.pdf",
+      "path": "police-operation2025.pdf",
+      "scope": "ActualNov2025specificenforcement locally,notallordinarycrimeorganizedviolence",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": null,
+      "sha256": null,
+      "validOriginal": false,
+      "error": "Remote end closed connection without response",
+      "cutoffOriginalBytesAuthenticated": false,
+      "localPath": null,
+      "originalSha256": null
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.ameli.fr/assure/remboursements/rembourse/hospitalisation-chirurgie",
+      "validBody": true,
+      "reference": "turn2229view0",
+      "originalBytes": null,
+      "sha256": null,
+      "scope": "PageOct7_2026;80%normal/conditional100%;Mar2026daily23/17 notallfree"
+    },
+    {
+      "id": "W02",
+      "url": "https://mabanque.bnpparibas/fr/gerer/cartes-moyens-paiement/moyens-paiement/virement-international",
+      "validBody": true,
+      "reference": "turn2229view1",
+      "originalBytes": null,
+      "sha256": null,
+      "scope": "Onlyfirstvalidbody partactuallyread:personalonlinecurrencytransfer/100countries36currencies/1–3days/confirmationFX; noauth/tarifftailcertification"
+    },
+    {
+      "id": "W03",
+      "url": "https://www.dgsi.interieur.gouv.fr/dgsi-a-vos-cotes/lutte-contre-terrorisme/letat-de-menace-terroriste-en-france",
+      "validBody": true,
+      "reference": "turn2231view0",
+      "originalBytes": null,
+      "sha256": null,
+      "scope": "HeaderApr3_2023body includes2024/25nationalplots andregionalprojection threat,notLyonrate"
+    }
+  ],
+  "rootAdditionalWebReadSources": [
+    {
+      "url": "https://www.ameli.fr/assure/remboursements/rembourse/hospitalisation-chirurgie",
+      "reference": "turn2239view0",
+      "pageDate": "2026-10-07",
+      "originalBytes": null,
+      "sha256": null,
+      "bodyRead": true
+    }
+  ],
+  "webFailureDiagnostics": {
+    "discoveryRounds": 2,
+    "queriesPerRound": [4, 4],
+    "sourceReadingBatchLimit": 3,
+    "batchSizes": [3, 3, 2, 3, 2, 1],
+    "primaryWebOnly": [
+      {
+        "id": "W01",
+        "url": "https://www.ameli.fr/assure/remboursements/rembourse/hospitalisation-chirurgie",
+        "validBody": true,
+        "reference": "turn2229view0",
+        "originalBytes": null,
+        "sha256": null,
+        "scope": "PageOct7_2026;80%normal/conditional100%;Mar2026daily23/17 notallfree"
+      },
+      {
+        "id": "W02",
+        "url": "https://mabanque.bnpparibas/fr/gerer/cartes-moyens-paiement/moyens-paiement/virement-international",
+        "validBody": true,
+        "reference": "turn2229view1",
+        "originalBytes": null,
+        "sha256": null,
+        "scope": "Onlyfirstvalidbody partactuallyread:personalonlinecurrencytransfer/100countries36currencies/1–3days/confirmationFX; noauth/tarifftailcertification"
+      },
+      {
+        "id": "W03",
+        "url": "https://www.dgsi.interieur.gouv.fr/dgsi-a-vos-cotes/lutte-contre-terrorisme/letat-de-menace-terroriste-en-france",
+        "validBody": true,
+        "reference": "turn2231view0",
+        "originalBytes": null,
+        "sha256": null,
+        "scope": "HeaderApr3_2023body includes2024/25nationalplots andregionalprojection threat,notLyonrate"
+      }
+    ],
+    "inheritedStopped": [
+      {
+        "provider": "Ameli raw",
+        "old": "Parisraw403",
+        "thisTaskRawRequests": 0
+      },
+      {
+        "provider": "BNP raw",
+        "old": "Parisraw403",
+        "thisTaskRawRequests": 0,
+        "additional": "firstwebbodyvalid then webopenInternalError andfindInternalError/no matchingbody, stop afterthirdaggregateproviderfailure inclinheritedraw; no furtherrequests"
+      },
+      {
+        "provider": "DGSI raw",
+        "old": "Parisraw403",
+        "thisTaskRawRequests": 0
+      }
+    ],
+    "newFailed": [
+      {
+        "id": "S05",
+        "raw": "403",
+        "web": "turn2228view1 403",
+        "stop": "Voluntaryafter2, noalternateurlretry, successfuldifferentairport railS04previouslyread retained"
+      },
+      {
+        "id": "S06",
+        "raw": "remoteclosed",
+        "web": "turn2228view0 502",
+        "stop": "Voluntaryafter2, searchsnippetnotbodyandnoretry"
+      }
+    ],
+    "metadataRace": {
+      "cause": "Three<=3itemfetchscripts overlapped sharedmanifestwrites inprivate directory",
+      "affected": ["S03", "S07", "S08"],
+      "bytesPresentAndRehashed": true,
+      "httpStatusHeadersAndExactCaptureTimeAuthenticated": false,
+      "reconstructionDoesNotRecertifyHTTPMetadata": true,
+      "rerequestsToHideDeviation": 0,
+      "laterRequestsSequential": true
+    },
+    "errorsDeductNoCityCapability": true,
+    "syntaxErrorsBeforeExecution": 2,
+    "syntaxErrorsSentNoNetworkRequests": true
+  },
+  "referenceBoundaryCheck": {
+    "candidateId": 3718,
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allGeometryCount": 9031,
+    "targetGeometrySha256": "8de5343a95a22ae06c36709fc5a358705c53c399fbc5bbb3f990db20ff6c682b",
+    "referencePoints": [
+      {
+        "label": "Lyon centre",
+        "longitude": 4.8357,
+        "latitude": 45.7644,
+        "approximate": true,
+        "fuaMatches": [3718]
+      },
+      {
+        "label": "Lyon Sud approximatecampus",
+        "longitude": 4.8068,
+        "latitude": 45.6994,
+        "approximate": true,
+        "fuaMatches": [3718]
+      },
+      {
+        "label": "Marcy reference",
+        "longitude": 4.705,
+        "latitude": 45.781,
+        "approximate": true,
+        "fuaMatches": [3718]
+      },
+      {
+        "label": "Givors reference",
+        "longitude": 4.77,
+        "latitude": 45.588,
+        "approximate": true,
+        "fuaMatches": [3718]
+      },
+      {
+        "label": "Ternay treatment reference",
+        "longitude": 4.8072,
+        "latitude": 45.6034,
+        "approximate": true,
+        "fuaMatches": [3718]
+      },
+      {
+        "label": "CrepieuxCharmy field reference",
+        "longitude": 4.922,
+        "latitude": 45.806,
+        "approximate": true,
+        "fuaMatches": [3718]
+      },
+      {
+        "label": "Lyon airport reference",
+        "longitude": 5.0908,
+        "latitude": 45.7234,
+        "approximate": true,
+        "fuaMatches": [3718]
+      },
+      {
+        "label": "UCBL Doua campus reference",
+        "longitude": 4.8674,
+        "latitude": 45.7829,
+        "approximate": true,
+        "fuaMatches": [3718]
+      },
+      {
+        "label": "ReneeSabran Var exclusion reference",
+        "longitude": 6.148,
+        "latitude": 43.038,
+        "approximate": true,
+        "fuaMatches": [4158]
+      }
+    ],
+    "scope": "Approximate reference points do not establish provider service coverage, citywide outcomes or residence; Var hospital site is not merged into Lyon; Metro/utility/FUA boundaries differ."
+  },
+  "scopeCompletionReview": {
+    "dimensionCount": 8,
+    "subpillarCount": 31,
+    "allSubpillarsHaveOutcomeMeasurements": false,
+    "allSubpillarsFullyReviewed": false,
+    "eightDimensionScoresComplete": false,
+    "coverageTable": [
+      {
+        "dimension": "PCS",
+        "pillar": "heat_humidity",
+        "status": "partial",
+        "sources": ["S01"],
+        "limits": "Actualtrees/natureadaptation; not actualwholeFUAheatprotection",
+        "score": null
+      },
+      {
+        "dimension": "PCS",
+        "pillar": "flood_sea_level",
+        "status": "partial",
+        "sources": ["S01", "S11"],
+        "limits": "2024real116haactualsurface and2025coordination; noeventnotriskzero,2024flashflood andpendingworks retained",
+        "score": null
+      },
+      {
+        "dimension": "PCS",
+        "pillar": "geophysical",
+        "status": "not_started",
+        "sources": [],
+        "limits": "No specificgeophysicalexposure/adaptationread",
+        "score": null
+      },
+      {
+        "dimension": "PCS",
+        "pillar": "severe_weather_wildfire",
+        "status": "not_fully_assessed",
+        "sources": ["S11"],
+        "limits": "Floodrainonlypartial,stormwildfirecompound unknown",
+        "score": null
+      },
+      {
+        "dimension": "GSS",
+        "pillar": "organized_violence",
+        "status": "context",
+        "sources": ["W03"],
+        "limits": "Commonnationalthreat/realdisruptedplots; localpolicePDFfailed, searchsnippetnotverifiedfact",
+        "score": null
+      },
+      {
+        "dimension": "GSS",
+        "pillar": "regional_conflict",
+        "status": "context",
+        "sources": ["W03"],
+        "limits": "DGSIexternalprojectionandregionalreturnpossible, notlocalimpactrate",
+        "score": null
+      },
+      {
+        "dimension": "GSS",
+        "pillar": "strategic_exposure",
+        "status": "not_fully_assessed",
+        "sources": ["W03"],
+        "limits": "Localstrategicmatching/response incomplete, notneedattackprerequisite",
+        "score": null
+      },
+      {
+        "dimension": "ISR",
+        "pillar": "governance",
+        "status": "partial",
+        "sources": ["L01", "S01"],
+        "limits": "Actualwatercaseprocessing/debtwaivers/socialservices notonlybudget",
+        "score": null
+      },
+      {
+        "dimension": "ISR",
+        "pillar": "adaptive_capacity",
+        "status": "partial",
+        "sources": ["S01", "S11"],
+        "limits": "Actual950energyvisits/70%initiatedrenovationandorfund; real58meetings andcoordinationlimits",
+        "score": null
+      },
+      {
+        "dimension": "ISR",
+        "pillar": "social_cohesion",
+        "status": "partial",
+        "sources": ["L01", "S01"],
+        "limits": "Actualunconnectedwater/youngsupportandshelter and5000helped; not fulltrustorallgroups",
+        "score": null
+      },
+      {
+        "dimension": "ISR",
+        "pillar": "emergency_recovery",
+        "status": "partial",
+        "sources": ["S11"],
+        "limits": "Actualriskcoordination/IRMAconvention andpolitical/personneldifferences; notsamehazardrestorationtimes",
+        "score": null
+      },
+      {
+        "dimension": "RES",
+        "pillar": "water",
+        "status": "partial",
+        "sources": ["L01"],
+        "limits": "Actualquality/supply/debtwaiver/13connections; localPFASmax/noncompliance andJune2024dilution versus2026plannedtreatment",
+        "score": null
+      },
+      {
+        "dimension": "RES",
+        "pillar": "food",
+        "status": "partial",
+        "sources": ["S01"],
+        "limits": "Actualagricultural/schoolprocurement support; 2018survey and2025repeated15%notcurrentnewmeasurement; ordinarybundleunresolved",
+        "score": null
+      },
+      {
+        "dimension": "RES",
+        "pillar": "energy",
+        "status": "partial",
+        "sources": ["S01"],
+        "limits": "ActualSlime/photovoltaicgridconnection, financingnotallfinishedsavings,2022mixnotcurrentavailability",
+        "score": null
+      },
+      {
+        "dimension": "RES",
+        "pillar": "supply_chain",
+        "status": "partial",
+        "sources": ["L01", "S01"],
+        "limits": "97%watersourceconcentration/old50kmfoodautonomy andRhonedepartmentimports notFUA essentialbackup",
+        "score": null
+      },
+      {
+        "dimension": "MED",
+        "pillar": "access",
+        "status": "partial",
+        "sources": ["L03", "W01"],
+        "limits": "NormalFrenchinsuredadmission/copayrules;2026hospitalfee andconditions; nofull2026medianbill/waitdistribution",
+        "score": null
+      },
+      {
+        "dimension": "MED",
+        "pillar": "routine_quality",
+        "status": "partial",
+        "sources": ["S09", "S10"],
+        "limits": "2023/24mixedwindows actualPCC40/contact32/duration/admission/outcomes; posterNandfullriskmodelunknown, notallclinicalquality",
+        "score": null
+      },
+      {
+        "dimension": "MED",
+        "pillar": "specialist_capacity",
+        "status": "partial",
+        "sources": ["L04", "L02"],
+        "limits": "Actualmultiplelocalendometriosispathways/complexcancer/CART; institutionvolumesincludeVar",
+        "score": null
+      },
+      {
+        "dimension": "MED",
+        "pillar": "system_continuity",
+        "status": "partial",
+        "sources": ["L02", "L03", "S09", "S10"],
+        "limits": "Actualcoordination/yearfollowup/rehab andhandoffweakness; notallpressurebackup",
+        "score": null
+      },
+      {
+        "dimension": "LON",
+        "pillar": "translation",
+        "status": "partial",
+        "sources": ["L02", "L04"],
+        "limits": "March2025cumulative500adultactualCART andsince2022pediatricpath; Allo3experimental andfutureownmanufacture separated",
+        "score": null
+      },
+      {
+        "dimension": "LON",
+        "pillar": "trial_maturity",
+        "status": "partial",
+        "sources": ["R01", "L02"],
+        "limits": "MaturediseaseJULIET167/115/main99/40.3mo; localquotesnotdefinedcohorts/healthyhumanlifespan",
+        "score": null
+      },
+      {
+        "dimension": "LON",
+        "pillar": "regulatory_adoption",
+        "status": "partial",
+        "sources": ["R01", "L02"],
+        "limits": "FrenchmatureindicationpositiveHASopinion andactualcommercialroutine local; ministerialcurrentpaymentnotindependentlyrecertified",
+        "score": null
+      },
+      {
+        "dimension": "LON",
+        "pillar": "resident_access",
+        "status": "partial",
+        "sources": ["L02", "L03", "W01"],
+        "limits": "ActualindividualnotoutofpocketisArdechepatient notalllocal; eligibleordinarypayment/monitor/currentcontinuationfinitebridge",
+        "score": null
+      },
+      {
+        "dimension": "TEC",
+        "pillar": "knowledge_output",
+        "status": "partial",
+        "sources": ["L04", "S02", "S14"],
+        "limits": "Actual2024HCLpublications/patents plusUCBLactual2023research; notrankconverted",
+        "score": null
+      },
+      {
+        "dimension": "TEC",
+        "pillar": "industry_density",
+        "status": "partial",
+        "sources": ["S14", "L04"],
+        "limits": "MablinkactualLillyintegration/Mecawareactualfunding butfutureproduction,287industryexternalprojectsnotfirmdensity",
+        "score": null
+      },
+      {
+        "dimension": "TEC",
+        "pillar": "digital_infrastructure",
+        "status": "partial",
+        "sources": ["S01", "S07", "S09", "S10"],
+        "limits": "Operatingpublic/clinicalsystems andequipment; DMPonlythosehavingone, noallhouseholdcoverage",
+        "score": null
+      },
+      {
+        "dimension": "TEC",
+        "pillar": "diffusion",
+        "status": "partial",
+        "sources": ["S01", "S07"],
+        "limits": "2000kits/5000actuallyhelped/74.70auditedaccessibility and130agentpilot; noallFUAadoptionclaim",
+        "score": null
+      },
+      {
+        "dimension": "OPT",
+        "pillar": "transport_redundancy",
+        "status": "partial",
+        "sources": ["S04"],
+        "limits": "ActualTGVFranceItaly30cities/operatingticketpaths; railcommoncause, noverified2025airnetwork/replacementbusbody",
+        "score": null
+      },
+      {
+        "dimension": "OPT",
+        "pillar": "legal_mobility",
+        "status": "partial",
+        "sources": ["R02"],
+        "limits": "FrenchEUcitizenworker/selfemployedconditionalresidence; nofixedageorassumedjob;resources/proxyfitfinite",
+        "score": null
+      },
+      {
+        "dimension": "OPT",
+        "pillar": "asset_portability",
+        "status": "partial",
+        "sources": ["W02"],
+        "limits": "Firstvalidpersonalonlineforeigncurrencytransferbody; exactauth/currenttermstailnotread, ordinaryaccount/device/continuation explicitfiniteassumption",
+        "score": null
+      },
+      {
+        "dimension": "OPT",
+        "pillar": "network_continuity",
+        "status": "partial",
+        "sources": ["S13"],
+        "limits": "EU/EEAinitialroaming/fairuse/permanentextras/cutoff; localnewproviderandlegitimatefuturelinkfinite notoldSIMforever",
+        "score": null
+      }
+    ],
+    "statusCounts": {
+      "partial": 26,
+      "not_started": 1,
+      "not_fully_assessed": 2,
+      "context": 2
+    }
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-lyon-score-completion-review.md",
+    "sha256": "7c57a6f38a017728bf846b14fba9c6886c27e89058b3cdc4cd80251b11093bc0",
+    "reviewedOn": "2026-10-15",
+    "researchReport": "docs/cci-lyon-priority-review.md",
+    "researchReportSha256": "d47e36d623caaa14d2d2eb5533b3236e114e26874adc6df84c38955c58ab4e1a",
+    "sourceManifestSha256": "8078212cb8d9b40337db55513cac92f1f4ac64d702706abec8ce71ed8baf568c",
+    "handoffSha256": "4b30cc031a923b909fc78fde8d1b5b4abf841d83717db79c80317905240e937b",
+    "rootAcceptanceCheckSha256": "a796ce636e40be718b10f8250b15f151bce485f42dbb4d8f2a0bd1b9c2a20030",
+    "rootVerifiedFull9031AndOriginals": true,
+    "stageArtifacts": [
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/report.md",
+        "bytes": 19678,
+        "sha256": "c100214a0dfdd3afd40c4153bc8e168b4c322eb29dcee6156b032552bc2fd00b"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/candidate-handoff.json",
+        "bytes": 7315,
+        "sha256": "4b30cc031a923b909fc78fde8d1b5b4abf841d83717db79c80317905240e937b"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/source-manifest.json",
+        "bytes": 16300,
+        "sha256": "8078212cb8d9b40337db55513cac92f1f4ac64d702706abec8ce71ed8baf568c"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/handoff-manifest.json",
+        "bytes": 28230,
+        "sha256": "880d670df668f5efa78b78a9eb1dae2674182c46c63a6fbe617cc29281e53f3a"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/coverage.json",
+        "bytes": 9204,
+        "sha256": "3b98aa93ead6f3cc964d0c34f17189513fe9c179e89562c8e20be45158a8bebc"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/geometry-check.json",
+        "bytes": 3231,
+        "sha256": "2af949c774c4b452588a3e9fcfcabe92a3a37e159550cc4422aca0105ff84f0d"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/pixels.json",
+        "bytes": 6011,
+        "sha256": "3290c10a0bd7fe363fcee8cf987a36d8ef8d84f5b77f6d5ad5a566a5e2f03364"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/lyon/web-and-failures.json",
+        "bytes": 2745,
+        "sha256": "607b728db1d7890ac1e75a8cf0480eb6b8d82ab4e1da0978f81a31cc40ead1ad"
+      }
+    ]
+  },
+  "rootScopeReview": {
+    "status": "root_conditional_acceptance",
+    "frozenFilesVerified": 164,
+    "validRawVerified": 18,
+    "reuseCopiedBytesVerified": 6,
+    "newRaw": 12,
+    "failedRawEntries": 2,
+    "sourceManifestSha256": "8078212cb8d9b40337db55513cac92f1f4ac64d702706abec8ce71ed8baf568c",
+    "reportSha256": "c100214a0dfdd3afd40c4153bc8e168b4c322eb29dcee6156b032552bc2fd00b",
+    "rootPrimaryBodiesRead": ["L03", "S04", "S07", "R02", "S13", "L02"],
+    "rootPdfPixelsActuallyViewed": [
+      "L01:40",
+      "L01:41",
+      "L01:66",
+      "S09:1",
+      "S10:1",
+      "S01:51",
+      "L02:2",
+      "L02:3",
+      "L02:5",
+      "S14:24",
+      "S14:26",
+      "S11:22"
+    ],
+    "sourceHeadersAndExactFetchTimeRecoveredForS03S07S08": false,
+    "cutoffHistoricalSnapshotsCertified": false,
+    "rootWebOnlyAmeliBodyRead": {
+      "url": "https://www.ameli.fr/assure/remboursements/rembourse/hospitalisation-chirurgie",
+      "reference": "turn2239view0",
+      "pageDate": "2026-10-07",
+      "originalBytes": null,
+      "sha256": null,
+      "bodyRead": true
+    },
+    "rootBNPRead": false,
+    "rootBNPNoFurtherRequestsAfterInheritedStop": true,
+    "priorSameHashHas14And38ActuallyViewed": true,
+    "rootReadL02Physical1And4Text": true,
+    "publishedInputCommit": "b369c41452d17edbbb8779921978903b0857decf",
+    "full9031NinePointsAndWkbVerified": true,
+    "eightTargetAndOneOutside4158": true,
+    "old71CaseBytesUnchanged": true,
+    "rootPdfPageCount": 12,
+    "rootBankFurtherRequestsAfterStop": 0,
+    "rootNewWebRequests": 1,
+    "rootClinicalOutcomeModelIndependentlyRecomputed": false,
+    "all500PeopleSameProductCertified": false,
+    "all500PeopleLocalResidentsCertified": false,
+    "ordinaryFrenchCitizenAutomaticallyHasFullMutuelle": false,
+    "ameli100MeansNoDailyOrPrivateCosts": false
+  },
+  "sensitivity": {
+    "withdrawISRorMED": [27, 82],
+    "withdrawLONorTECorOPT": [30, 80],
+    "ISRorMEDto40": [33, 73],
+    "ISRorMEDto80": [39, 79],
+    "LONorTECorOPTto40": [34, 74],
+    "LONorTECorOPTto80": [38, 78],
+    "withdrawAll": [0, 100]
+  }
+}

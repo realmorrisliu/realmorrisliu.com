@@ -81,6 +81,7 @@ import oslo from "../../docs/data/cci-local-2026-oslo-case.json";
 import antwerp from "../../docs/data/cci-local-2026-antwerp-case.json";
 import brussels from "../../docs/data/cci-local-2026-brussels-case.json";
 import hamburg from "../../docs/data/cci-local-2026-hamburg-case.json";
+import lyon from "../../docs/data/cci-local-2026-lyon-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -166,8 +167,10 @@ const cases = [
   antwerp,
   brussels,
   hamburg,
+  lyon,
 ];
 const caseNamesZh: Record<number, string> = {
+  [lyon.candidateId]: "里昂功能区",
   [hamburg.candidateId]: "汉堡功能区",
   [brussels.candidateId]: "布鲁塞尔功能区",
   [antwerp.candidateId]: "安特卫普功能区",
@@ -345,6 +348,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [lyon.candidateId]: [
+    zh
+      ? "里昂ISR／MED／LON／TEC／OPT条件60，PCS／GSS／RES未知，数学域36—76、无中心。实际减免与跟进、有限质量和普通付款、多科疾病治疗、产业及数字交付支持有限判断；低PCC／出院联系、局部PFAS及费用照护余障保留。"
+      : "Lyon has conditional ISR/MED/LON/TEC/OPT scores of 60; PCS/GSS/RES remain unknown: a 36–76 mathematical domain without a centre. Actual relief and follow-up, scoped quality with usual payment, coordinated disease treatment, industry links and digital delivery support limited judgments. Low precaution/follow-up measures, local PFAS and net-care burdens remain.",
+    zh
+      ? "500成人是累计给药而非500本地居民或同产品；未自付为个案，方案匹配、适应证、普通支付及持续照护资源可撤。Var院区不归本区；BNP首web正文仅研究者读到，未读鉴权／接续为明示假设，失败后未重开。撤ISR／MED为27—82，撤LON／TEC／OPT为30—80，不证明全球入围。"
+      : "The 500 adults are cumulative treatments, not 500 local residents or one verified product. No out-of-pocket payment is an individual case; regimen, eligibility, payment and ongoing-care resources are revocable. The Var hospital is outside. The BNP web body was read by the researcher only; authentication and continuation remain explicit assumptions. Withdrawing ISR/MED gives 27–82; LON/TEC/OPT gives 30–80. Global qualification remains unproven.",
+  ],
   [hamburg.candidateId]: [
     zh
       ? "汉堡ISR／LON／TEC／OPT条件60，PCS／GSS／RES／MED未知，数学域27—82、无中心。实际跨公用事业生产协同、本地成熟疾病治疗及个人出境路径支持有限判断；必要护理的质量正反结果、护理配置与净影响尚不能择档。"

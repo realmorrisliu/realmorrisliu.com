@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 71,
+    "conditionalCaseCount": 72,
     "completeConditionalCaseCount": 16,
-    "partialCaseCount": 55,
-    "unassessedCount": 8960,
+    "partialCaseCount": 56,
+    "unassessedCount": 8959,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -660,8 +660,13 @@
       "sha256": "3983fa092ba8e203805793bfb713675a30805e5554ef2c98ecbccc90c09a0a75",
       "provenance": "cci-hamburg-score-completion-review.md",
       "provenanceSha256": "23ef33ffdea1f111fe0e291aac9ce5a6201233252bcac5187fdbe79197c8c9ad"
+    },
+    "cci-local-2026-lyon-case.json": {
+      "sha256": "b66eeed88e9d2127b52203b83c4fd00ca8a2bcfd7f52b527713c97bc11ddc9ef",
+      "provenance": "cci-lyon-score-completion-review.md",
+      "provenanceSha256": "7c57a6f38a017728bf846b14fba9c6886c27e89058b3cdc4cd80251b11093bc0"
     }
   },
-  "scriptSha256": "e4d91aea2e4148a2e1de599886a777254bca494aaf34617c51333e9a8c964061",
-  "csvSha256": "ad25abed8f1ac77b02fabba74929fbf9c549012e191645f8bab44eb3d7fd578e"
+  "scriptSha256": "839a4ac83522815b844db0ad71c1013124a8df755ff7be9d32498a8e39cec781",
+  "csvSha256": "dc9aba92ae43544924ed226849a0d06416befc5e60f82c21a4cade541e9e349d"
 }

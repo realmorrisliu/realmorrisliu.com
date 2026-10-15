@@ -123,6 +123,7 @@ const realCases = [
   "antwerp",
   "brussels",
   "hamburg",
+  "lyon",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -237,6 +238,7 @@ const [
   antwerp,
   brussels,
   hamburg,
+  lyon,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2637,5 +2639,47 @@ for (const dimension of ["ISR", "LON", "TEC", "OPT"] as const) {
     center: null,
     lower: is15 ? 24 : 25,
     upper: is15 ? 79 : 80,
+  });
+}
+
+const lyonCase = realCases.find(c => c.candidateId === 3718);
+assert.equal(
+  lyonCase.priorityCompletionReview.sha256,
+  digest(lyonCase.priorityCompletionReview.path)
+);
+assert.equal(
+  lyonCase.priorityCompletionReview.researchReportSha256,
+  digest(lyonCase.priorityCompletionReview.researchReport)
+);
+assert.equal(lyonCase.sourceSnapshots.length, 18);
+assert.equal(
+  lyonCase.sourceSnapshots.filter((s: { reusedFrom?: string }) => s.reusedFrom).length,
+  6
+);
+assert.equal(lyonCase.failedSourceSnapshots.length, 2);
+assert.equal(lyonCase.rootScopeReview.rootPdfPageCount, 12);
+assert.equal(lyonCase.rootScopeReview.sourceHeadersAndExactFetchTimeRecoveredForS03S07S08, false);
+assert.equal(lyonCase.rootScopeReview.all500PeopleSameProductCertified, false);
+assert.equal(lyonCase.rootScopeReview.ordinaryFrenchCitizenAutomaticallyHasFullMutuelle, false);
+assert.equal(lyonCase.rootScopeReview.ameli100MeansNoDailyOrPrivateCosts, false);
+assert.equal(lyonCase.rootScopeReview.rootBNPRead, false);
+assert.equal(lyonCase.rootScopeReview.rootBankFurtherRequestsAfterStop, 0);
+for (const p of lyonCase.referenceBoundaryCheck.referencePoints) {
+  assert.deepEqual(p.fuaMatches, p.label.startsWith("ReneeSabran") ? [4158] : [3718]);
+}
+assert.deepEqual(total(lyon), { center: null, lower: 36, upper: 76 });
+for (const dimension of ["ISR", "MED", "LON", "TEC", "OPT"] as const) {
+  const withdrawn = { ...lyon };
+  delete withdrawn[dimension];
+  const is15 = weights[dimension] === 15;
+  assert.deepEqual(total(withdrawn), {
+    center: null,
+    lower: is15 ? 27 : 30,
+    upper: is15 ? 82 : 80,
+  });
+  assert.deepEqual(total({ ...lyon, [dimension]: 40 }), {
+    center: null,
+    lower: is15 ? 33 : 34,
+    upper: is15 ? 73 : 74,
   });
 }
