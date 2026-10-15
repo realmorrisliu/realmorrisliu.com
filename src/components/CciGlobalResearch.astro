@@ -100,6 +100,7 @@ import austin from "../../docs/data/cci-local-2026-austin-case.json";
 import newcastle from "../../docs/data/cci-local-2026-newcastle-case.json";
 import lund from "../../docs/data/cci-local-2026-lund-case.json";
 import almere from "../../docs/data/cci-local-2026-almere-case.json";
+import portsmouth from "../../docs/data/cci-local-2026-portsmouth-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -204,8 +205,10 @@ const cases = [
   newcastle,
   lund,
   almere,
+  portsmouth,
 ];
 const caseNamesZh: Record<number, string> = {
+  [portsmouth.candidateId]: "朴茨茅斯功能区",
   [almere.candidateId]: "阿尔梅勒功能区",
   [lund.candidateId]: "隆德功能区",
   [newcastle.candidateId]: "纽卡斯尔功能区",
@@ -402,6 +405,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [portsmouth.candidateId]: [
+    zh
+      ? "朴茨茅斯防护／医疗条件40，制度／专项转化／技术条件60；安全／资源／退出未知。原权重贡献33、数学域33—68，无完整总分。实际供水备援、临床与区域CAR-T交付和知识应用，同严旱保护及护理约束一起判断。"
+      : "Portsmouth has conditional PCS/MED 40 and ISR/LON/TEC 60; GSS/RES/OPT remain unknown. The original-weight contribution is 33 and arithmetic domain 33–68, without a complete total. Operating water resilience, care, regional CAR-T delivery and knowledge use are assessed alongside severe-drought protection and care constraints.",
+    zh
+      ? "已核医院2025/26新版：电子记录缺口不全等实际漏评，旧床位数字不当当前。新版真实伤害和急诊余障与改善同读。Southampton医院近似点在同一旧功能区，但供区、患者池和功能区不同；普通付款／照护等有限连接可撤。原90案保持不变。"
+      : "The 2025/26 hospital report is reviewed: electronic-record gaps are not all actual missed assessments, and older bed figures are not current results. New harm and emergency-care constraints are assessed with improvements. The Southampton hospital reference point is in the same old FUA, but supply areas, patient pools and FUA differ; usual payment and care bridges remain revocable. The previous 90 cases are unchanged.",
+  ],
   [almere.candidateId]: [
     zh
       ? "阿尔梅勒防护／安全条件40，制度／资源／医疗／技术条件60；专项转化／退出未知。原权重贡献42、数学域42—62，无完整总分。实际堤检抽排、供水与护理，同电泵依赖、暴力影响及服务准入限制一起判断。"

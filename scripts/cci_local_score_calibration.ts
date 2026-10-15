@@ -142,6 +142,7 @@ const realCases = [
   "newcastle",
   "lund",
   "almere",
+  "portsmouth",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -275,6 +276,7 @@ const [
   newcastle,
   lund,
   almere,
+  portsmouth,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -3613,3 +3615,38 @@ for (const [id, lower, upper] of [
 }
 assert.deepEqual(total({ ...almere, MED: 40 }), { center: null, lower: 39, upper: 59 });
 assert.deepEqual(total({ ...almere, PCS: 60 }), { center: null, lower: 45, upper: 65 });
+
+const portsmouthCase = realCases.find(c => c.candidateId === 4867);
+assert.equal(
+  portsmouthCase.priorityCompletionReview.sha256,
+  digest(portsmouthCase.priorityCompletionReview.path)
+);
+assert.equal(
+  portsmouthCase.priorityCompletionReview.researchReportSha256,
+  digest(portsmouthCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(portsmouth), { center: null, lower: 33, upper: 68 });
+assert.equal(portsmouthCase.unknownWeight, 35);
+assert.deepEqual(
+  portsmouthCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["GSS", "RES", "OPT"]
+);
+for (const [id, lower, upper] of [
+  ["PCS", 27, 77],
+  ["MED", 27, 77],
+  ["ISR", 24, 74],
+  ["LON", 27, 72],
+  ["TEC", 27, 72],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...portsmouth };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...portsmouth, MED: 60 }), { center: null, lower: 36, upper: 71 });
+const portsmouthMed = portsmouthCase.dimensions.find((d: { id: string }) => d.id === "MED");
+assert(portsmouthMed.sourceIds.includes("N01"));
+assert.equal(portsmouthCase.sourceSnapshots.length, 18);
+assert.equal(portsmouthCase.failedSourceSnapshots.length, 4);
+assert.equal(portsmouthCase.sourceAndStopLedger.rootSupplement.combinedActualLegs, 20);
