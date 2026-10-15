@@ -1,0 +1,1089 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 935,
+  "name": "Basel",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-15",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "2026 ordinary Swiss national, usual long-term local resident, median local income/usual coverage, no fixed age",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-basel-score-completion-review.md",
+  "publishedInputCommit": "11496f319a7c631ddfdf9d1ff163dbf93a89ee88",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 60,
+      "rationale": "Actual heat protection, earthquake-safe utility control and technically redundant emergency centres/operating rescue substantiate usual protection; whole-FUA flood, old-stock seismic and storm/wildfire limits remain.",
+      "assumption": "Local/cantonal observed protection reasonably serves ordinary935residents and2025operations persist to cutoff; no broader unreviewed failure is assumed absent as a proven fact.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "unresolved"
+      },
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "Actual targeting/security activity and infrastructure protection are retained; police offences are not classified organised-violence impacts and local regional/strategic residual chain is incomplete.",
+      "assumption": "No unknown score or conditional middle assigned.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "ISR",
+      "score": 40,
+      "rationale": "Actual social support, successful appeals and emergency adaptation coexist with persistent deferral of ordinary threats/assault/theft cases explicitly called unlawful and unsustainable; conditional40 reflects an important unresolved ordinary rights-remedy bottleneck.",
+      "assumption": "The direct ordinary-remedy constraint remains material through cutoff and sufficiently represents the935Swiss profile despite real help; reject temporal/spatial/materiality bridge to null.60 alternative if limited historical/lower-priority backlog does not dominate usual capacity.",
+      "conditionalAlternatives": [60],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "Water/energy operations and real low-income support are substantive, but food sufficiency and ordinary median net bundle acquisition after help remain insufficiently discriminating.",
+      "assumption": "No score based on lack of information or supply quantity alone.",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "partial",
+        "food": "unresolved",
+        "energy": "partial",
+        "supply_chain": "context"
+      },
+      "scoreStatus": "reviewed_insufficient_direction"
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "Operating necessary care/rescue, actual nursing/outcome monitoring, ordinary compulsory coverage and delivered administrative support support usual care with infection, exclusions, waits, transport co-pay and staffing/future-project limits.",
+      "assumption": "Necessary care is usually clinically adequate, obtainable and affordable at ordinary median resources/usual coverage including premiums, chosen deductibles, hospital days, transport and ancillary burdens; selected actual quality evidence reasonably represents routine capacity and persists to cutoff.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "Local routine selected B-cell CAR-T and actual mixed-cell translation connect to mature disease-specific human evidence, Swiss authorization and July2026complex-treatment reimbursement/prior insurer approval; experimental products, foreign payer and local outcomes are not conflated.",
+      "assumption": "The locally operating mature disease class reasonably connects to authorized/reimbursed indications and usual eligible residents obtain insurer approval and needed close monitoring with affordable residual/delay/ancillary burdens; undated current page represents pre-cutoff operation. Reject any critical bridge to null; no per-dose brand receipt or fixed-adult criterion introduced.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "Actual clinical/GMP translation, operational utility/digital production, rented technology-park node and ordinary digital uptake support conditional60; falling park occupancy, PoCs and incomplete whole-industry output/household diffusion constrain high-tier inference.",
+      "assumption": "Concrete sustained knowledge/production and measured service uptake reasonably represent the ordinary935technology capability and persist through cutoff; not a pharma-reputation judgment or proof of whole-population coverage.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "scoreStatus": "conditional_root_adopted"
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "Actual trinational ground services, Swiss conditional EU/EFTA residence rights, ordinary personal foreign transfers and roaming support initial and continued ordinary exit; independent aviation redundancy, destination/account/SIM eligibility, fees and shared failure remain.",
+      "assumption": "Ordinary median resources suffice for lawful destination work/residence, transfer, actual devices/credentials and legal new-address account/mobile continuation; dynamic owner texts reasonably represent cutoff practice. No guarantee of permanent original bank/mobile contract or retirement assumption.",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      },
+      "scoreStatus": "conditional_root_adopted"
+    }
+  ],
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 42,
+  "unresolvedScoreRange": [42, 67],
+  "globalRankingEligible": false,
+  "limitations": [
+    "Swiss935 separate from German2227; cantonal/core utility/provider facts not universal fullFUA household/patient coverage.",
+    "ISR40 rests on persistent ordinary-rights deferral after actual help; case totals not resident crime/rights-success rates; temporal/materiality/core-area bridge revocable, ISR60=>45–70, reject=>36–76.",
+    "MED ordinary residual premiums/deductibles/hospital days/transport and quality/necessary continuity assumptions explicit, not all-cost1000CHF cap or independent whole-hospital adjusted-endpoint proof.",
+    "LON finite mature disease class and actual local routine description plus current complex-treatment rule/prior insurer approval; usual eligibility/payment/net monitoring and cutoff bridges revocable, no foreign payer/healthy antiaging/fixed adult/per-dose invoice gate.",
+    "Transport302.4m passengerkm coversBVB/BLT/AAGL,118.7mBVB preliminary,16.7kSBB pending reconciliation; no independent current aviation proof.",
+    "31 scope records include27partial/2context/2notfullyreviewed, not complete measurements;GSS/RESunknown notpenalty.",
+    "15 current raw originals/3failed diagnostics/3web-only separate; prior USBraw not retried, batch deviations retained; current bytes not cutoff historical authentication.",
+    "Other65 cases unchanged; all old/new competitors retained, zero supported exclusions, no qualified32 threshold."
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.iwb.ch/ueber-uns/unternehmen/geschaeftsbericht",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/iwb-2025.html",
+      "scope": "2025 actual operations; new retrieval restoring located lost source, not old bytes reused",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 153145,
+      "sha256": "3b99ee173f01763276d7a1df01b5b1536ef01967938935d83b4d76e8cc1668ec",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "resolvedUrl": "https://www.iwb.ch/ueber-uns/unternehmen/geschaeftsbericht",
+      "validOriginal": true,
+      "usedForScore": true,
+      "role": "actual_fact_or_formal_rule",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": "3b99ee173f01763276d7a1df01b5b1536ef01967938935d83b4d76e8cc1668ec",
+      "file": "iwb-2025.html",
+      "rootUse": "Bounded component/formal rule/counterevidence in root report; declared background remains background, current bytes not historical-cutoff authentication."
+    },
+    {
+      "id": "S02",
+      "url": "https://www.iwb.ch/dam/jcr:41078177-2f9a-4403-908c-30d9929bcbbb/report_2025.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/iwb-report-2025.pdf",
+      "scope": "2025 financial/operating context",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 4302229,
+      "sha256": "f72fc4a1f894e0ee85246bd542258bd1c7e883e82b1f3a0d246bd6018d0b2c6a",
+      "status": 200,
+      "contentType": "application/pdf;charset=UTF-8",
+      "resolvedUrl": "https://www.iwb.ch/dam/jcr:41078177-2f9a-4403-908c-30d9929bcbbb/report_2025.pdf",
+      "validOriginal": true,
+      "usedForScore": true,
+      "role": "actual_fact_or_formal_rule",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": "f72fc4a1f894e0ee85246bd542258bd1c7e883e82b1f3a0d246bd6018d0b2c6a",
+      "file": "iwb-report-2025.pdf",
+      "rootUse": "Bounded component/formal rule/counterevidence in root report; declared background remains background, current bytes not historical-cutoff authentication."
+    },
+    {
+      "id": "S03",
+      "url": "https://media.bs.ch/original_file/fc85e1a406f662bdb998217907f5f195e0f74029/jahresbericht-2025.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/bs-annual-2025.pdf",
+      "scope": "2025 actual cantonal operations, beneficiaries and constraints, not FUA coverage",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 6577262,
+      "sha256": "8c138f0e863602464564014386cf7bcd1d8d126f0232bf2f947fd1ce815e3b16",
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://media.bs.ch/original_file/fc85e1a406f662bdb998217907f5f195e0f74029/jahresbericht-2025.pdf",
+      "validOriginal": true,
+      "usedForScore": true,
+      "role": "actual_fact_or_formal_rule",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": "8c138f0e863602464564014386cf7bcd1d8d126f0232bf2f947fd1ce815e3b16",
+      "file": "bs-annual-2025.pdf",
+      "rootUse": "Bounded component/formal rule/counterevidence in root report; declared background remains background, current bytes not historical-cutoff authentication."
+    },
+    {
+      "id": "S04",
+      "url": "https://www.bs.ch/schwerpunkte/umweltbericht-beider-basel/zustandsberichte-07",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/bs-nature-2026.html",
+      "scope": "January2026 two-canton natural hazards and mitigation",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 138690,
+      "sha256": "219b3ee959f795edefc9049535b89e2a15800d13033c8a5bf79c631d34804f9c",
+      "status": 200,
+      "contentType": "text/html;charset=utf-8",
+      "resolvedUrl": "https://www.bs.ch/schwerpunkte/umweltbericht-beider-basel/zustandsberichte-07",
+      "validOriginal": true,
+      "usedForScore": true,
+      "role": "actual_fact_or_formal_rule",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": "219b3ee959f795edefc9049535b89e2a15800d13033c8a5bf79c631d34804f9c",
+      "file": "bs-nature-2026.html",
+      "rootUse": "Bounded component/formal rule/counterevidence in root report; declared background remains background, current bytes not historical-cutoff authentication."
+    },
+    {
+      "id": "S05",
+      "url": "https://media.bs.ch/original_file/74249561832cf0b63c85d22a923381fa9b685d76/polizeiliche-kriminalstatistik-basel-stadt-2025.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/bs-police-2025.pdf",
+      "scope": "2025 police recorded acts, not organized-violence fatalities",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 4681160,
+      "sha256": "23b56841742a9a1c5ae9b6224c1c2b5a69a3208f26e27220978603069a2a8596",
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://media.bs.ch/original_file/74249561832cf0b63c85d22a923381fa9b685d76/polizeiliche-kriminalstatistik-basel-stadt-2025.pdf",
+      "validOriginal": true,
+      "usedForScore": true,
+      "role": "actual_fact_or_formal_rule",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": "23b56841742a9a1c5ae9b6224c1c2b5a69a3208f26e27220978603069a2a8596",
+      "file": "bs-police-2025.pdf",
+      "rootUse": "Bounded component/formal rule/counterevidence in root report; declared background remains background, current bytes not historical-cutoff authentication."
+    },
+    {
+      "id": "S06",
+      "url": "https://www.unispital-basel.ch/ueber-uns/publikationen-veranstaltungen-news/jahresbericht/qualitaetsbericht/spitalweite-indikatoren",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/usb-quality-2025.html",
+      "scope": "actual2025 hospital-wide outcome/measurement denominators",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 90445,
+      "sha256": "5bc8a474eda079fcafc269bc10b911948ab164018a799d1676b6bb25a64be530",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "resolvedUrl": "https://www.unispital-basel.ch/ueber-uns/publikationen-veranstaltungen-news/jahresbericht/qualitaetsbericht/spitalweite-indikatoren",
+      "validOriginal": true,
+      "usedForScore": true,
+      "role": "actual_fact_or_formal_rule",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": "5bc8a474eda079fcafc269bc10b911948ab164018a799d1676b6bb25a64be530",
+      "file": "usb-quality-2025.html",
+      "rootUse": "Bounded component/formal rule/counterevidence in root report; declared background remains background, current bytes not historical-cutoff authentication."
+    },
+    {
+      "id": "S07",
+      "url": "https://www.unispital-basel.ch/dam/jcr%3Ac342fa25-d26a-467b-a265-3029da46ed32/FINAL-USB2601-NHBericht2025-20260330-V08-ES-LowRes.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/usb-sustainability-2025.pdf",
+      "scope": "2025 hospital actual operations, research and digital use",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 1454896,
+      "sha256": "83136d40ded067f39bc58662eacbfc31267545e05fbe886d31ff58a794cb1bc0",
+      "status": 200,
+      "contentType": "application/pdf;charset=UTF-8",
+      "resolvedUrl": "https://www.unispital-basel.ch/dam/jcr%3Ac342fa25-d26a-467b-a265-3029da46ed32/FINAL-USB2601-NHBericht2025-20260330-V08-ES-LowRes.pdf",
+      "validOriginal": true,
+      "usedForScore": false,
+      "role": "background_only",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": "83136d40ded067f39bc58662eacbfc31267545e05fbe886d31ff58a794cb1bc0",
+      "file": "usb-sustainability-2025.pdf",
+      "rootUse": "Bounded component/formal rule/counterevidence in root report; declared background remains background, current bytes not historical-cutoff authentication."
+    },
+    {
+      "id": "S08",
+      "url": "https://www.unispital-basel.ch/ueber-uns/forschung-innovation/innovations-focus/innovations-focus-zelltherapien",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/usb-cell-innovation.html",
+      "scope": "actual2020-25 mixed cell therapies; not all routine CAR-T or local residents",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 50372,
+      "sha256": "e2cd42cc21ea41e480d7b5662091747692168a88e329b19775f2039bdd7573f5",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "resolvedUrl": "https://www.unispital-basel.ch/ueber-uns/forschung-innovation/innovations-focus/innovations-focus-zelltherapien",
+      "validOriginal": true,
+      "usedForScore": true,
+      "role": "actual_fact_or_formal_rule",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": "e2cd42cc21ea41e480d7b5662091747692168a88e329b19775f2039bdd7573f5",
+      "file": "usb-cell-innovation.html",
+      "rootUse": "Bounded component/formal rule/counterevidence in root report; declared background remains background, current bytes not historical-cutoff authentication."
+    },
+    {
+      "id": "S09",
+      "url": "https://www.bag.admin.ch/dam/de/sd-web/ImdyprmtRKyP/KLV_Anhang%201_per%201.7.2026.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/klv-annex-july2026.pdf",
+      "scope": "formal effective1July2026 Swiss complex CAR-T reimbursement conditions",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 1360498,
+      "sha256": "0074799b5d3b408f18e81d6d09a47e9678db83e79d5888a0e99d6d0636119759",
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.bag.admin.ch/dam/de/sd-web/ImdyprmtRKyP/KLV_Anhang%201_per%201.7.2026.pdf",
+      "validOriginal": true,
+      "usedForScore": true,
+      "role": "actual_fact_or_formal_rule",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": "0074799b5d3b408f18e81d6d09a47e9678db83e79d5888a0e99d6d0636119759",
+      "file": "klv-annex-july2026.pdf",
+      "rootUse": "Bounded component/formal rule/counterevidence in root report; declared background remains background, current bytes not historical-cutoff authentication."
+    },
+    {
+      "id": "S10",
+      "url": "https://www.bag.admin.ch/dam/en/sd-web/eW3bxVwcU0qg/BAG_Ratgeber_Obligatorische_KV_e_2025.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/bag-guide-2025.pdf",
+      "scope": "usual Swiss basic coverage and residual cost sharing no fixed age",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 462942,
+      "sha256": "0d032ae3639ac699e977ee59cfe28b6518c135c26ec8367ed73fd333ee6c42be",
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.bag.admin.ch/dam/en/sd-web/eW3bxVwcU0qg/BAG_Ratgeber_Obligatorische_KV_e_2025.pdf",
+      "validOriginal": true,
+      "usedForScore": true,
+      "role": "actual_fact_or_formal_rule",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": "0d032ae3639ac699e977ee59cfe28b6518c135c26ec8367ed73fd333ee6c42be",
+      "file": "bag-guide-2025.pdf",
+      "rootUse": "Bounded component/formal rule/counterevidence in root report; declared background remains background, current bytes not historical-cutoff authentication."
+    },
+    {
+      "id": "S11",
+      "url": "https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/authorisations/new-medicines/kymriahtm_zellsuspensionzurinfusiontisagenlecleucelum.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/swissmedic-kymriah.html",
+      "scope": "formal2018 Swiss indications not all current cell therapies",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 44124,
+      "sha256": "0314da7e1fd7cad4adba5af9fb7de7fd3c4621fb46d02e34cfe573614be65895",
+      "status": 200,
+      "contentType": "text/html;charset=utf-8",
+      "resolvedUrl": "https://www.swissmedic.ch/swissmedic/de/home/humanarzneimittel/authorisations/new-medicines/kymriahtm_zellsuspensionzurinfusiontisagenlecleucelum.html",
+      "validOriginal": true,
+      "usedForScore": true,
+      "role": "actual_fact_or_formal_rule",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": "0314da7e1fd7cad4adba5af9fb7de7fd3c4621fb46d02e34cfe573614be65895",
+      "file": "swissmedic-kymriah.html",
+      "rootUse": "Bounded component/formal rule/counterevidence in root report; declared background remains background, current bytes not historical-cutoff authentication."
+    },
+    {
+      "id": "S12",
+      "url": "https://www.bkb.ch/de/privatkunden/konten-und-karten/konditionen-und-zinssaetze",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/bkb-conditions.html",
+      "scope": "ordinary consumer foreign transfer and foreign domicile fees; dynamic date unknown",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 429693,
+      "sha256": "198a0170785ae896aa8a3f69e85d812ad2a0d3525dd7bfbd1f20be3b6a697166",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "resolvedUrl": "https://www.bkb.ch/de/privatkunden/konten-und-karten/konditionen-und-zinssaetze",
+      "validOriginal": true,
+      "usedForScore": true,
+      "role": "actual_fact_or_formal_rule",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": "198a0170785ae896aa8a3f69e85d812ad2a0d3525dd7bfbd1f20be3b6a697166",
+      "file": "bkb-conditions.html",
+      "rootUse": "Bounded component/formal rule/counterevidence in root report; declared background remains background, current bytes not historical-cutoff authentication."
+    },
+    {
+      "id": "S13",
+      "url": "https://www.bkb.ch/de/die-basler-kantonalbank/kontakt-services/hilfe-und-kontakt-konto",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/bkb-account.html",
+      "scope": "ordinary personal opening and digital use, not business",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 428322,
+      "sha256": "2798c67dc25a10c6c52ebb8562dfef551c2d59ef3affde01a7fac799f8836bdb",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "resolvedUrl": "https://www.bkb.ch/de/die-basler-kantonalbank/kontakt-services/hilfe-und-kontakt-konto",
+      "validOriginal": true,
+      "usedForScore": true,
+      "role": "actual_fact_or_formal_rule",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": "2798c67dc25a10c6c52ebb8562dfef551c2d59ef3affde01a7fac799f8836bdb",
+      "file": "bkb-account.html",
+      "rootUse": "Bounded component/formal rule/counterevidence in root report; declared background remains background, current bytes not historical-cutoff authentication."
+    },
+    {
+      "id": "S14",
+      "url": "https://www.swisscom.ch/de/privatkunden/hilfe/mobile/roaming.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/swisscom-roaming.html",
+      "scope": "actual ordinary foreign connectivity and limits; not indefinite emigrant account",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 303770,
+      "sha256": "0bcdb27cc6fba160189beed4795be02062d060eab41f5ca9d24aaf806d33297f",
+      "status": 200,
+      "contentType": "text/html;charset=utf-8",
+      "resolvedUrl": "https://www.swisscom.ch/de/privatkunden/hilfe/mobile/roaming.html",
+      "validOriginal": true,
+      "usedForScore": true,
+      "role": "actual_fact_or_formal_rule",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": "0bcdb27cc6fba160189beed4795be02062d060eab41f5ca9d24aaf806d33297f",
+      "file": "swisscom-roaming.html",
+      "rootUse": "Bounded component/formal rule/counterevidence in root report; declared background remains background, current bytes not historical-cutoff authentication."
+    },
+    {
+      "id": "S15-retry2",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/has-kymriah-2023.pdf",
+      "retrievedOn": "2026-10-15",
+      "requestNumberThisMechanism": 2,
+      "originalBytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "validOriginal": true,
+      "error": null,
+      "usedForScore": true,
+      "role": "actual_fact_or_formal_rule",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "file": "has-kymriah-2023.pdf",
+      "rootUse": "Bounded component/formal rule/counterevidence in root report; declared background remains background, current bytes not historical-cutoff authentication."
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "id": "S15",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "scope": "mature adult DLBCL clinical evidence, not Swiss payer or Basel cohort",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": null,
+      "sha256": null,
+      "validOriginal": false,
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1127)>",
+      "usedForScore": false,
+      "role": "failed_request_diagnostic_not_evidence",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": null,
+      "attemptedFilename": "has-kymriah-2023.pdf"
+    },
+    {
+      "id": "S16",
+      "url": "https://www.dfae.admin.ch/en/country-dossier-eu-efta-entry-and-stay",
+      "scope": "1February2026 Swiss citizen conditional outward EU/EFTA work/residence and funds insurance no fixed age",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": null,
+      "sha256": null,
+      "validOriginal": false,
+      "error": "HTTP Error 403: Forbidden",
+      "usedForScore": false,
+      "role": "failed_request_diagnostic_not_evidence",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": null,
+      "attemptedFilename": "fdfa-entry.html"
+    },
+    {
+      "id": "S17",
+      "url": "https://www.eda.admin.ch/en/retiring-abroad-swiss-abroad",
+      "scope": "1February2026 ordinary OASI foreign pay and locked second pillar/foreign bank restrictions, no assumption already retired",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": null,
+      "sha256": null,
+      "validOriginal": false,
+      "error": "HTTP Error 403: Forbidden",
+      "usedForScore": false,
+      "role": "failed_request_diagnostic_not_evidence",
+      "cutoffBytesAuthenticated": false,
+      "originalSha256": null,
+      "attemptedFilename": "fdfa-asset.html"
+    }
+  ],
+  "inheritedFailedSourceSnapshotsNotRetried": [
+    {
+      "url": "https://www.unispital-basel.ch/zentrum-fuer-zelltherapien/angebot",
+      "mechanism": "USB prior raw SSL timeout",
+      "retried": false,
+      "originalBytes": null,
+      "originalSha256": null
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.unispital-basel.ch/zentrum-fuer-zelltherapien/angebot",
+      "originalBytes": null,
+      "originalSha256": null,
+      "validBodyRead": true,
+      "sourceKind": "primary_web_body_no_original_bytes",
+      "retrievedOn": "2026-10-15",
+      "firstPublishedOn": null,
+      "cutoffBytesAuthenticated": false,
+      "usedForScore": true,
+      "bodyReviewed": "Routine selected B-cell lymphoma/leukaemia CAR-T at USB; strict medical selection and close interdisciplinary care. Academic new CAR-T, NK/TIL/VST and research are separate. No treatment count inferred. The page patient-story13June2025 heading does not authenticate entire current page date; chronology not scored.",
+      "requestHistory": [
+        "first web timeout",
+        "second web body success",
+        "third selected text reread"
+      ],
+      "inheritedRawFailure": "prior SSL timeout; never retried raw",
+      "rootBodyCrossReadOn": "2026-10-15",
+      "rootBodyCrossRead": true
+    },
+    {
+      "id": "W02",
+      "url": "https://www.dfae.admin.ch/en/country-dossier-eu-efta-entry-and-stay",
+      "originalBytes": null,
+      "originalSha256": null,
+      "validBodyRead": true,
+      "sourceKind": "primary_web_body_no_original_bytes",
+      "retrievedOn": "2026-10-15",
+      "firstPublishedOn": "2026-02-01",
+      "cutoffBytesAuthenticated": false,
+      "usedForScore": true,
+      "bodyReviewed": "Swiss/EU citizens conditional outward residence/work; >90days/work destination registration, sufficient means/health insurance for inactive residents, no automatic social assistance; Swiss representation registration separately within90days.",
+      "rawFailure": "S16 403, not retried",
+      "rootBodyCrossReadOn": "2026-10-15",
+      "rootBodyCrossRead": true
+    },
+    {
+      "id": "W03",
+      "url": "https://www.eda.admin.ch/en/retiring-abroad-swiss-abroad",
+      "originalBytes": null,
+      "originalSha256": null,
+      "validBodyRead": true,
+      "sourceKind": "primary_web_body_no_original_bytes",
+      "retrievedOn": "2026-10-15",
+      "firstPublishedOn": "2026-02-01",
+      "cutoffBytesAuthenticated": false,
+      "usedForScore": true,
+      "bodyReviewed": "Usual accumulated OASI foreign payment; supplementary/helpless allowances Swiss-residence limits; mandatory secondpillar before retirement constrained for EU/EFTA; foreign bank private-contract limits and fees. No assumption already retired.",
+      "rawFailure": "S17 403, not retried",
+      "rootBodyCrossReadOn": "2026-10-15",
+      "rootBodyCrossRead": true
+    }
+  ],
+  "webFailureDiagnostics": [
+    {
+      "mechanism": "USB offer primary web",
+      "priorFailure": "first timeout, second body success, root located body corroboration success",
+      "originalBytes": null,
+      "originalSha256": null,
+      "usedFailureAsScore": false
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "candidateId": 935,
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allGeometryCount": 9031,
+    "targetGeometrySha256": "09b8d9a113b4a27bef95d16159dc669cea9017a40da49cee28f8526bf6a32f27",
+    "referencePoints": [
+      {
+        "label": "Basel Marktplatz",
+        "longitude": 7.5886,
+        "latitude": 47.5583,
+        "fuaMatches": [935]
+      },
+      {
+        "label": "USB Spitalstrasse campus",
+        "longitude": 7.5818,
+        "latitude": 47.5622,
+        "fuaMatches": [935]
+      },
+      {
+        "label": "Basel SBB",
+        "longitude": 7.5898,
+        "latitude": 47.5474,
+        "fuaMatches": [935]
+      },
+      {
+        "label": "IWB Margarethenstrasse headquarters",
+        "longitude": 7.5862,
+        "latitude": 47.543,
+        "fuaMatches": [935]
+      },
+      {
+        "label": "Weil am Rhein German comparison",
+        "longitude": 7.6108,
+        "latitude": 47.5933,
+        "fuaMatches": [2227]
+      }
+    ],
+    "scope": "Approximate reference points do not establish provider service coverage or residence; Swiss935 and German2227 remain distinct."
+  },
+  "scopeCompletionReview": {
+    "dimensionCount": 8,
+    "subpillarCount": 31,
+    "allDimensionSemanticsConsideredWithinBoundedReview": true,
+    "allSubpillarsHaveOutcomeMeasurements": false,
+    "allSubpillarsFullyReviewed": false,
+    "eightDimensionScoresComplete": false,
+    "coverageTable": [
+      {
+        "number": 1,
+        "dimension": "PCS",
+        "name": "heat_humidity",
+        "status": "partial",
+        "finding": "2025实际62盆栽45遮阳12喷雾；未独立热健康效应/全区防护",
+        "sourceIds": ["S03"]
+      },
+      {
+        "number": 2,
+        "dimension": "PCS",
+        "name": "flood_sea_level",
+        "status": "partial",
+        "finding": "2026两州报告既有危险和保护；街道/海绵工程有未完工，海平面非本区主要直接因素但不当所有洪水已解",
+        "sourceIds": ["S03", "S04"]
+      },
+      {
+        "number": 3,
+        "dimension": "PCS",
+        "name": "geophysical",
+        "status": "partial",
+        "finding": "抗震IWB控制室、部分Spiegelhof整改已投；SIA适用规则不等全部旧房已补强",
+        "sourceIds": ["S01", "S03", "S04"]
+      },
+      {
+        "number": 4,
+        "dimension": "PCS",
+        "name": "severe_weather_wildfire",
+        "status": "not_fully_reviewed",
+        "finding": "报告列真实地区暴露/运行救援，但未专题核林火风暴本地事件及匹配保护",
+        "sourceIds": ["S03", "S04"]
+      },
+      {
+        "number": 5,
+        "dimension": "GSS",
+        "name": "organized_violence",
+        "status": "partial",
+        "finding": "实际重点警务和风险个案干预；PKS罪行没有全归属有组织事件",
+        "sourceIds": ["S03", "S05"]
+      },
+      {
+        "number": 6,
+        "dimension": "GSS",
+        "name": "regional_conflict",
+        "status": "context",
+        "finding": "IWB地缘价格/供给反应不当区域战略冲突影响与缓解完整调查",
+        "sourceIds": ["S01", "S02"]
+      },
+      {
+        "number": 7,
+        "dimension": "GSS",
+        "name": "strategic_exposure",
+        "status": "partial",
+        "finding": "新抗震控制室/双应急中心/SOC实际运行，不证明特定攻击匹配效果",
+        "sourceIds": ["S01", "S03"]
+      },
+      {
+        "number": 8,
+        "dimension": "ISR",
+        "name": "governance",
+        "status": "partial",
+        "finding": "实际申诉纠错和服务；日常威胁盗窃等仍被长期延后处理、司法明确超载",
+        "sourceIds": ["S03"]
+      },
+      {
+        "number": 9,
+        "dimension": "ISR",
+        "name": "adaptive_capacity",
+        "status": "partial",
+        "finding": "帮助程序数字化、混编救护车、6.5 FTE实际补足；改革未全解断点",
+        "sourceIds": ["S03"]
+      },
+      {
+        "number": 10,
+        "dimension": "ISR",
+        "name": "social_cohesion",
+        "status": "partial",
+        "finding": "PV/EL/住房帮助实绩、青年申诉触达及HousingFirst未落地",
+        "sourceIds": ["S03"]
+      },
+      {
+        "number": 11,
+        "dimension": "ISR",
+        "name": "emergency_recovery",
+        "status": "partial",
+        "finding": "17危机点、双指挥中心、消防救护实际时限；全区长期恢复未知",
+        "sourceIds": ["S01", "S03"]
+      },
+      {
+        "number": 12,
+        "dimension": "RES",
+        "name": "water",
+        "status": "partial",
+        "finding": "IWB17.7m m3及15.14min/客户平均中断、老阀/修漏；净负担未知",
+        "sourceIds": ["S01", "S02"]
+      },
+      {
+        "number": 13,
+        "dimension": "RES",
+        "name": "food",
+        "status": "not_fully_reviewed",
+        "finding": "食品质量执法不等食品充分性、通常价格/帮助后中位净取得",
+        "sourceIds": ["S03"]
+      },
+      {
+        "number": 14,
+        "dimension": "RES",
+        "name": "energy",
+        "status": "partial",
+        "finding": "2025电热气实绩及故障管理、冬供和价格约束；普通全束费用未闭",
+        "sourceIds": ["S01", "S02"]
+      },
+      {
+        "number": 15,
+        "dimension": "RES",
+        "name": "supply_chain",
+        "status": "context",
+        "finding": "共电网/水源和地缘价格依赖有背景；未查实主要物资库存/独立物流替代",
+        "sourceIds": ["S01", "S02"]
+      },
+      {
+        "number": 16,
+        "dimension": "MED",
+        "name": "access",
+        "status": "partial",
+        "finding": "通常KVG基本保障、名单医院/转诊与实际救护/帮助；等待/支付剩余条件",
+        "sourceIds": ["S03", "S10"]
+      },
+      {
+        "number": 17,
+        "dimension": "MED",
+        "name": "routine_quality",
+        "status": "partial",
+        "finding": "单日5.8%院感；585/34579压疮及明确排除；非全院全年调整优劣",
+        "sourceIds": ["S06"]
+      },
+      {
+        "number": 18,
+        "dimension": "MED",
+        "name": "specialist_capacity",
+        "status": "partial",
+        "finding": "实际临床细胞治疗/必要专科组织；成熟病种与实验分开",
+        "sourceIds": ["S08", "W01"]
+      },
+      {
+        "number": 19,
+        "dimension": "MED",
+        "name": "system_continuity",
+        "status": "partial",
+        "finding": "救护混编/调度与双中心；蓝灯走廊及第二站2027，不能当前化",
+        "sourceIds": ["S03"]
+      },
+      {
+        "number": 20,
+        "dimension": "LON",
+        "name": "translation",
+        "status": "partial",
+        "finding": "USB已常规限定B细胞疾病，>120混合创新细胞不是全部常规CAR-T",
+        "sourceIds": ["S08", "W01"]
+      },
+      {
+        "number": 21,
+        "dimension": "LON",
+        "name": "trial_maturity",
+        "status": "partial",
+        "finding": "HAS单臂长期疾病人体/未输注/毒性；不是本地队列或健康延寿",
+        "sourceIds": ["S15-retry2"]
+      },
+      {
+        "number": 22,
+        "dimension": "LON",
+        "name": "regulatory_adoption",
+        "status": "partial",
+        "finding": "Swissmedic2018限定适应证及KLV2026-07复合体前置付款批准",
+        "sourceIds": ["S09", "S11"]
+      },
+      {
+        "number": 23,
+        "dimension": "LON",
+        "name": "resident_access",
+        "status": "partial",
+        "finding": "本地团队照护+通常KVG与实际帮助有限适配；未核每类实际产品/中心证书/净陪护费用",
+        "sourceIds": ["S03", "S09", "S10", "W01"]
+      },
+      {
+        "number": 24,
+        "dimension": "TEC",
+        "name": "knowledge_output",
+        "status": "partial",
+        "finding": "2020-25实际创新细胞/GMP及跨服务运营知识，持续全产业量化未完整核",
+        "sourceIds": ["S03", "S08"]
+      },
+      {
+        "number": 25,
+        "dimension": "TEC",
+        "name": "industry_density",
+        "status": "partial",
+        "finding": "真实技术园租赁67.7%/大租户离开与生科融资困难；非全FUA公司密度",
+        "sourceIds": ["S03"]
+      },
+      {
+        "number": 26,
+        "dimension": "TEC",
+        "name": "digital_infrastructure",
+        "status": "partial",
+        "finding": "DC1-3已运行、70%部门客户迁移、IWB实际数字调度；非家庭宽带覆盖",
+        "sourceIds": ["S01", "S03"]
+      },
+      {
+        "number": 27,
+        "dimension": "TEC",
+        "name": "diffusion",
+        "status": "partial",
+        "finding": "近68000AGOV用户/190余服务/60%保费申请数字，2745已装LED；不把PoC全采用",
+        "sourceIds": ["S01", "S02", "S03"]
+      },
+      {
+        "number": 28,
+        "dimension": "OPT",
+        "name": "transport_redundancy",
+        "status": "partial",
+        "finding": "实际三国S-Bahn347班及公共交通实用；机场当前独立航空冗余未核、共因备援未闭",
+        "sourceIds": ["S03"]
+      },
+      {
+        "number": 29,
+        "dimension": "OPT",
+        "name": "legal_mobility",
+        "status": "partial",
+        "finding": "Swiss国民附条件EU/EFTA长期居住/工作、资源医保及登记，非无条件全球许可",
+        "sourceIds": ["W02"]
+      },
+      {
+        "number": 30,
+        "dimension": "OPT",
+        "name": "asset_portability",
+        "status": "partial",
+        "finding": "普通BKB境外支付/账户费、OASI及第二支柱限制；合规具体住址接续可撤",
+        "sourceIds": ["S12", "S13", "W03"]
+      },
+      {
+        "number": 31,
+        "dimension": "OPT",
+        "name": "network_continuity",
+        "status": "partial",
+        "finding": "个人境外语音/短信/数据与可调额度；额度达顶全部停止、无限迁居合约未知",
+        "sourceIds": ["S14"]
+      }
+    ],
+    "statusCounts": {
+      "partial": 27,
+      "not_fully_reviewed": 2,
+      "context": 2
+    }
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-basel-score-completion-review.md",
+    "sha256": "c372377b2a0f5228d74d7e0cec13041674c2127fa129751768fe60e486232fc7",
+    "reviewedOn": "2026-10-15",
+    "validOriginalCount": 15,
+    "sourceManifestSha256": "97b68bfabbbb87579f3b0f9eab5fc995ea1196fbb671408f046fb883890f1a6a",
+    "handoffSha256": "5147f7404946a200c896059ce988f699a5a4c0433a5e5e858cf3b62de2882279",
+    "rootVerifiedFull9031AndOriginals": true,
+    "stageArtifacts": [
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/report.md",
+        "bytes": 19707,
+        "sha256": "90d0aea048dc2565eb43c9dccd001f304d9883db941534de726ab28aaf09de0a"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/source-manifest.json",
+        "bytes": 13693,
+        "sha256": "5f5eddbdd04c1744ee66334180a2f45d394441e08160a0b7b4964fdf1391c7ce"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/candidate-handoff.json",
+        "bytes": 25748,
+        "sha256": "5147f7404946a200c896059ce988f699a5a4c0433a5e5e858cf3b62de2882279"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/handoff-manifest.json",
+        "bytes": 15564,
+        "sha256": "eed989f449b6d267d471849609661e0873d21dfe301369b1497285d75bd3496b"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/geometry-check.json",
+        "bytes": 2550,
+        "sha256": "5751744826f18aa0d305d7686203955593571f83aab47c5b686c4e05f4fcccd9"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/basel/root/independent-check.json",
+        "bytes": 695,
+        "sha256": "795f59132a1e725e87f95e9d24cf07c69d3a72637aa9248f130b880b72480c31"
+      }
+    ],
+    "researchReport": "docs/cci-basel-priority-review.md",
+    "researchReportSha256": "90d0aea048dc2565eb43c9dccd001f304d9883db941534de726ab28aaf09de0a"
+  },
+  "rootScopeReview": {
+    "swiss935AndGerman2227KeptSeparate": true,
+    "isrOrdinaryDeferredProceedingsNotAllPopulationVictimRate": true,
+    "isrActualHelpAndAppealCorrectionsRetained": true,
+    "isr40TemporalSpatialMaterialityBridgeRevocable": true,
+    "healthCost1000IsAllAnnualCostsCap": false,
+    "carTPriorInsurerApprovalRequired": true,
+    "mixed120CellTherapiesCountedAsRoutineCarT": false,
+    "foreignPayerTransferred": false,
+    "fixedAdultPortrait": false,
+    "transport302_4PassengerKmOperators": ["BVB", "BLT", "AAGL"],
+    "transport118_7BvbPreliminary": true,
+    "sbb16_7PendingLaterReconciliation": true,
+    "iwb30MeansCombinedOnCallNotAllInsideControlRoom": true,
+    "rootPdfPixelsViewed": [
+      "bs-annual-2025-p486",
+      "bs-annual-2025-p265",
+      "klv-annex-july2026-p28",
+      "bs-annual-2025-p230",
+      "bs-annual-2025-p244",
+      "bag-guide-2025-p16",
+      "has-kymriah-2023-p14",
+      "has-kymriah-2023-p38",
+      "bs-annual-2025-p137"
+    ],
+    "batchDeviationRetained": true
+  },
+  "sensitivity": {
+    "withdrawPCS": {
+      "scores": {
+        "PCS": null,
+        "GSS": null,
+        "ISR": 40,
+        "RES": null,
+        "MED": 60,
+        "LON": 60,
+        "TEC": 60,
+        "OPT": 60
+      },
+      "range": [33.0, 73.0],
+      "center": null
+    },
+    "withdrawISR": {
+      "scores": {
+        "PCS": 60,
+        "GSS": null,
+        "ISR": null,
+        "RES": null,
+        "MED": 60,
+        "LON": 60,
+        "TEC": 60,
+        "OPT": 60
+      },
+      "range": [36.0, 76.0],
+      "center": null
+    },
+    "withdrawMED": {
+      "scores": {
+        "PCS": 60,
+        "GSS": null,
+        "ISR": 40,
+        "RES": null,
+        "MED": null,
+        "LON": 60,
+        "TEC": 60,
+        "OPT": 60
+      },
+      "range": [33.0, 73.0],
+      "center": null
+    },
+    "withdrawLON": {
+      "scores": {
+        "PCS": 60,
+        "GSS": null,
+        "ISR": 40,
+        "RES": null,
+        "MED": 60,
+        "LON": null,
+        "TEC": 60,
+        "OPT": 60
+      },
+      "range": [36.0, 71.0],
+      "center": null
+    },
+    "withdrawTEC": {
+      "scores": {
+        "PCS": 60,
+        "GSS": null,
+        "ISR": 40,
+        "RES": null,
+        "MED": 60,
+        "LON": 60,
+        "TEC": null,
+        "OPT": 60
+      },
+      "range": [36.0, 71.0],
+      "center": null
+    },
+    "withdrawOPT": {
+      "scores": {
+        "PCS": 60,
+        "GSS": null,
+        "ISR": 40,
+        "RES": null,
+        "MED": 60,
+        "LON": 60,
+        "TEC": 60,
+        "OPT": null
+      },
+      "range": [36.0, 71.0],
+      "center": null
+    },
+    "ISR60": {
+      "scores": {
+        "PCS": 60,
+        "GSS": null,
+        "ISR": 60,
+        "RES": null,
+        "MED": 60,
+        "LON": 60,
+        "TEC": 60,
+        "OPT": 60
+      },
+      "range": [45, 70],
+      "center": null
+    },
+    "PCS40": {
+      "scores": {
+        "PCS": 40,
+        "GSS": null,
+        "ISR": 40,
+        "RES": null,
+        "MED": 60,
+        "LON": 60,
+        "TEC": 60,
+        "OPT": 60
+      },
+      "range": [39.0, 64.0],
+      "center": null
+    },
+    "MED40": {
+      "scores": {
+        "PCS": 60,
+        "GSS": null,
+        "ISR": 40,
+        "RES": null,
+        "MED": 40,
+        "LON": 60,
+        "TEC": 60,
+        "OPT": 60
+      },
+      "range": [39.0, 64.0],
+      "center": null
+    },
+    "LON40": {
+      "scores": {
+        "PCS": 60,
+        "GSS": null,
+        "ISR": 40,
+        "RES": null,
+        "MED": 60,
+        "LON": 40,
+        "TEC": 60,
+        "OPT": 60
+      },
+      "range": [40.0, 65.0],
+      "center": null
+    },
+    "TEC40": {
+      "scores": {
+        "PCS": 60,
+        "GSS": null,
+        "ISR": 40,
+        "RES": null,
+        "MED": 60,
+        "LON": 60,
+        "TEC": 40,
+        "OPT": 60
+      },
+      "range": [40.0, 65.0],
+      "center": null
+    },
+    "OPT40": {
+      "scores": {
+        "PCS": 60,
+        "GSS": null,
+        "ISR": 40,
+        "RES": null,
+        "MED": 60,
+        "LON": 60,
+        "TEC": 60,
+        "OPT": 40
+      },
+      "range": [40.0, 65.0],
+      "center": null
+    }
+  }
+}

@@ -75,6 +75,7 @@ import montreal from "../../docs/data/cci-local-2026-montreal-case.json";
 import fukuoka from "../../docs/data/cci-local-2026-fukuoka-case.json";
 import milan from "../../docs/data/cci-local-2026-milan-case.json";
 import barcelona from "../../docs/data/cci-local-2026-barcelona-case.json";
+import basel from "../../docs/data/cci-local-2026-basel-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -154,8 +155,10 @@ const cases = [
   fukuoka,
   milan,
   barcelona,
+  basel,
 ];
 const caseNamesZh: Record<number, string> = {
+  [basel.candidateId]: "巴塞尔功能区（瑞士）",
   [barcelona.candidateId]: "巴塞罗那功能区",
   [milan.candidateId]: "米兰功能区",
   [montreal.candidateId]: "蒙特利尔功能区",
@@ -327,6 +330,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [basel.candidateId]: [
+    zh
+      ? "瑞士巴塞尔935：PCS／MED／LON／TEC／OPT条件60、ISR40，GSS／RES未知，数学域42—67、无中心。实际救助、申诉纠错与应急运行保留；普通威胁／盗窃等刑事程序持续延期支持制度瓶颈判断，不由积案数量自动降分，也不将瑞士待遇移给德国2227。"
+      : "Swiss Basel935 has conditional PCS/MED/LON/TEC/OPT60 and ISR40, with GSS/RES unknown: a42–67 mathematical domain without a centre. Actual aid, appeal corrections and emergency operations remain. Persistent deferral of ordinary threat/theft proceedings supports a governance constraint, not an automatic penalty for backlog counts. Swiss benefits do not transfer to German2227.",
+    zh
+      ? "ISR的重要性、地域与延续可撤：取60为45—70、撤回36—76。医疗仍有保费、住院日费和运输自付，CAR-T须事前保险承诺；混合120人非全部常规CAR-T。交通初步数／后核值与三运营者人公里分开，银行／通信合法接续不保证永久原合约。撤PCS／MED33—73、LON／TEC／OPT36—71，均不证明全球入围。"
+      : "ISR materiality, scope and continuity are revocable: ISR60 gives45–70, withdrawal36–76. Premiums, hospital-day and transport costs remain; CAR-T needs prior insurer approval and120 mixed-cell patients are not all routine CAR-T. Preliminary/reconciled traffic and three-operator passengerkm differ. Lawful banking/mobile continuation does not guarantee permanent contracts. Withdrawing PCS/MED gives33–73 or LON/TEC/OPT36–71; no global qualification follows.",
+  ],
   [barcelona.candidateId]: [
     zh
       ? "巴塞罗那 ISR／MED／LON／TEC 条件性60，另外四维未知，数学域30—80、无中心。实际行政纠错与应急响应、常规医疗观察和已实施改进、成熟疾病治疗及技术采用支持有限判断；等待、儿童照护断点和共源停电仍保留。"

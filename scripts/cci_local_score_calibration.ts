@@ -117,6 +117,7 @@ const realCases = [
   "fukuoka",
   "milan",
   "barcelona",
+  "basel",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -225,6 +226,7 @@ const [
   fukuoka,
   milan,
   barcelona,
+  basel,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2382,3 +2384,33 @@ assert.deepEqual(total(berlinWithoutGss), { center: null, lower: 45, upper: 70 }
 const berlinWithoutMed = { ...berlin };
 delete berlinWithoutMed.MED;
 assert.deepEqual(total(berlinWithoutMed), { center: null, lower: 45, upper: 70 });
+
+const baselCase = realCases.find(c => c.candidateId === 935);
+assert.equal(
+  baselCase.priorityCompletionReview.sha256,
+  digest(baselCase.priorityCompletionReview.path)
+);
+assert.equal(baselCase.sourceSnapshots.length, 15);
+assert.equal(baselCase.scopeCompletionReview.allSubpillarsFullyReviewed, false);
+assert.deepEqual(baselCase.referenceBoundaryCheck.referencePoints[4].fuaMatches, [2227]);
+assert.equal(baselCase.rootScopeReview.healthCost1000IsAllAnnualCostsCap, false);
+assert.equal(baselCase.rootScopeReview.carTPriorInsurerApprovalRequired, true);
+assert.deepEqual(baselCase.rootScopeReview.transport302_4PassengerKmOperators, [
+  "BVB",
+  "BLT",
+  "AAGL",
+]);
+assert.deepEqual(total(basel), { center: null, lower: 42, upper: 67 });
+assert.deepEqual(total({ ...basel, ISR: 60 }), { center: null, lower: 45, upper: 70 });
+for (const [dimension, lower, upper] of [
+  ["PCS", 33, 73],
+  ["ISR", 36, 76],
+  ["MED", 33, 73],
+  ["LON", 36, 71],
+  ["TEC", 36, 71],
+  ["OPT", 36, 71],
+] as const) {
+  const withdrawn = { ...basel };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
