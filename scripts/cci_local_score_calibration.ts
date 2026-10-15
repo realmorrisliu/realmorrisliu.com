@@ -118,6 +118,7 @@ const realCases = [
   "milan",
   "barcelona",
   "basel",
+  "munich",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -227,6 +228,7 @@ const [
   milan,
   barcelona,
   basel,
+  munich,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2411,6 +2413,31 @@ for (const [dimension, lower, upper] of [
   ["OPT", 36, 71],
 ] as const) {
   const withdrawn = { ...basel };
+  delete withdrawn[dimension];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+
+const munichCase = realCases.find(c => c.candidateId === 4736);
+assert.equal(
+  munichCase.priorityCompletionReview.sha256,
+  digest(munichCase.priorityCompletionReview.path)
+);
+assert.equal(munichCase.sourceSnapshots.length, 34);
+assert.equal(munichCase.rootScopeReview.ingPriceUsedForCutoffScore, false);
+assert.equal(munichCase.rootScopeReview.ingPriceEffectiveOn, "2026-10-15");
+assert.equal(munichCase.rootScopeReview.iqmCopdSmr1_5Means50PercentMortality, false);
+assert.equal(munichCase.rootScopeReview.iqmPneumoniaBetterOutcomeRetained, true);
+assert.deepEqual(total(munich), { center: null, lower: 36, upper: 76 });
+assert.deepEqual(total({ ...munich, MED: 60 }), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total({ ...munich, MED: 40 }), { center: null, lower: 42, upper: 67 });
+for (const [dimension, lower, upper] of [
+  ["GSS", 27, 82],
+  ["ISR", 27, 82],
+  ["LON", 30, 80],
+  ["TEC", 30, 80],
+  ["OPT", 30, 80],
+] as const) {
+  const withdrawn = { ...munich };
   delete withdrawn[dimension];
   assert.deepEqual(total(withdrawn), { center: null, lower, upper });
 }

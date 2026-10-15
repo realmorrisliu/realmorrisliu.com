@@ -76,6 +76,7 @@ import fukuoka from "../../docs/data/cci-local-2026-fukuoka-case.json";
 import milan from "../../docs/data/cci-local-2026-milan-case.json";
 import barcelona from "../../docs/data/cci-local-2026-barcelona-case.json";
 import basel from "../../docs/data/cci-local-2026-basel-case.json";
+import munich from "../../docs/data/cci-local-2026-munich-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -156,8 +157,10 @@ const cases = [
   milan,
   barcelona,
   basel,
+  munich,
 ];
 const caseNamesZh: Record<number, string> = {
+  [munich.candidateId]: "慕尼黑功能区",
   [basel.candidateId]: "巴塞尔功能区（瑞士）",
   [barcelona.candidateId]: "巴塞罗那功能区",
   [milan.candidateId]: "米兰功能区",
@@ -330,6 +333,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [munich.candidateId]: [
+    zh
+      ? "慕尼黑GSS／ISR／LON／TEC／OPT条件60，PCS／RES／MED未知，数学域36—76、无中心。实际安全处置、保护与应急交付、当地成熟疾病治疗及数字服务支持有限判断；医疗质量有较好和较差结果，结合节省及实际缓解后，通常必要护理40／60仍未裁清。"
+      : "Munich has conditional GSS/ISR/LON/TEC/OPT60, with PCS/RES/MED unknown: a36–76 mathematical domain without a centre. Actual security response/protection and emergency delivery, local mature-disease treatment and digital services support limited judgments. Mixed clinical outcomes, savings and actual mitigation leave the usual necessary-care40/60 direction unresolved.",
+    zh
+      ? "ING10月15日价目表、机场10月12—16日横幅及未来基因服务不回填截止；供暖基金已于2024年底结束。警方21／34冲突、不同伤者口径、SMR与实际死亡率、试验与本地150治疗者分开。普通付款／净监护和合法账户通信接续可撤；撤GSS／ISR27—82、LON／TEC／OPT30—80；MED60情景45—70，均不证明全球入围。"
+      : "Oct15INGprices, the airportOct12–16banner and future gene services are not backfilled; the heat fund ended2024. Police21/34conflict, injury scopes, SMR versus mortality, and trial versus150local treated patients remain separate. Ordinary payment/net monitoring and lawful bank/mobile continuation are revocable. Withdrawing GSS/ISR gives27–82 or LON/TEC/OPT30–80; MED60scenario45–70. None proves global qualification.",
+  ],
   [basel.candidateId]: [
     zh
       ? "瑞士巴塞尔935：PCS／MED／LON／TEC／OPT条件60、ISR40，GSS／RES未知，数学域42—67、无中心。实际救助、申诉纠错与应急运行保留；普通威胁／盗窃等刑事程序持续延期支持制度瓶颈判断，不由积案数量自动降分，也不将瑞士待遇移给德国2227。"
