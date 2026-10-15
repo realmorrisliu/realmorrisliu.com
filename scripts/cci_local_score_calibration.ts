@@ -134,6 +134,7 @@ const realCases = [
   "eindhoven",
   "luxembourg",
   "stuttgart",
+  "daejeon",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -259,6 +260,7 @@ const [
   eindhoven,
   luxembourg,
   stuttgart,
+  daejeon,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -3194,3 +3196,50 @@ const stuttgartPosition = rankAudit.scenarios.fixed_conditional_centers.caseResu
 );
 assert.equal(stuttgartPosition.bestPosition, 6);
 assert.equal(stuttgartPosition.worstPosition, rankAudit.candidateCount);
+
+const daejeonCase = realCases.find(c => c.candidateId === 1782);
+assert.equal(
+  daejeonCase.priorityCompletionReview.sha256,
+  digest(daejeonCase.priorityCompletionReview.path)
+);
+assert.equal(
+  daejeonCase.priorityCompletionReview.researchReportSha256,
+  digest(daejeonCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(daejeon, { ISR: 60, TEC: 60 });
+assert.deepEqual(total(daejeon), { center: null, lower: 15, upper: 90 });
+assert.equal(daejeonCase.coverageReview.length, 31);
+assert.equal(daejeonCase.sourceSnapshots.length, 18);
+assert.equal(daejeonCase.failedSourceSnapshots.length, 3);
+assert.equal(daejeonCase.rootScopeReview.rootPdfPageCount, 14);
+assert.equal(daejeonCase.rootScopeReview.rootHistoricalToolBlocksVerified, 11);
+for (const key of [
+  "national2055FirmsAllLocal",
+  "nationalRevenueTransferredToDaejeon",
+  "local455FirmsAllDiscloseJobs",
+  "insuredJobsAreFuaResidentEmployees",
+  "sameSurvivalCohortAcrossAges",
+  "waterTwoIntakesIndependentBasins",
+  "futureAdvancedTreatmentAndTunnelCompleted",
+  "waterQualityPointsAreWholeFuaPopulation",
+  "allResidentsReceiveMultichildDiscount",
+  "nhisCapCoversAllSpending",
+  "nationalCapProvesLocalClinicalDelivery",
+  "licenseRevenueProvesLonHumanMaturity",
+  "planned80InternsCompletedJobs",
+  "employment60PercentIsAllAgeSuccessRate",
+  "remittance2017FeesCertified2026",
+  "germany41MeansAutomaticLongResidence",
+  "sourceFailurePenalizesCapability",
+  "unknownsFilledWithMidpoint",
+])
+  assert.equal(daejeonCase.rootScopeReview[key], false);
+assert.deepEqual(total({ TEC: 60 }), { center: null, lower: 6, upper: 96 });
+assert.deepEqual(total({ ISR: 60 }), { center: null, lower: 9, upper: 94 });
+for (const [id, value, lower, upper] of [
+  ["ISR", 40, 12, 87],
+  ["ISR", 80, 18, 93],
+  ["TEC", 40, 13, 88],
+  ["TEC", 80, 17, 92],
+] as const)
+  assert.deepEqual(total({ ...daejeon, [id]: value }), { center: null, lower, upper });

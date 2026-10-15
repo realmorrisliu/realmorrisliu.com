@@ -92,6 +92,7 @@ import pittsburgh from "../../docs/data/cci-local-2026-pittsburgh-case.json";
 import eindhoven from "../../docs/data/cci-local-2026-eindhoven-case.json";
 import luxembourg from "../../docs/data/cci-local-2026-luxembourg-case.json";
 import stuttgart from "../../docs/data/cci-local-2026-stuttgart-case.json";
+import daejeon from "../../docs/data/cci-local-2026-daejeon-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -188,8 +189,10 @@ const cases = [
   eindhoven,
   luxembourg,
   stuttgart,
+  daejeon,
 ];
 const caseNamesZh: Record<number, string> = {
+  [daejeon.candidateId]: "大田功能区",
   [stuttgart.candidateId]: "斯图加特功能区",
   [luxembourg.candidateId]: "卢森堡功能区",
   [eindhoven.candidateId]: "埃因霍温功能区",
@@ -378,6 +381,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [daejeon.candidateId]: [
+    zh
+      ? "大田制度与技术条件60，其余六维未知；原权重小计15、数学域15—90，无完整总分。实际供水、重复检验、反馈／居民帮助及许可与企业活动支持有限判断；国家医保规则不替代当地诊疗，科研名望不换分。"
+      : "Daejeon has conditional 60 for ISR and TEC; six dimensions remain unknown. The original-weight subtotal is 15 and the arithmetic domain 15–90, without a complete total. Delivered water services, repeated testing, feedback and resident help, plus realized licensing and firm activity, support bounded judgments. National insurance rules do not establish local clinical delivery; research reputation is not a score.",
+    zh
+      ? "全国2,055家关联企业不全在大田；当地455家总部与披露就业308家／9,682参保岗位分开，全国营收不搬用。水务双取水仍共水系，未来扩建不当完成；原82案不变，关键地域／通常取得／延续假设拒绝即回未知，未证明全球入围。"
+      : "The national 2,055-firm cohort is not all local: 455 Daejeon headquarters and 308 firms disclosing 9,682 pension-insured jobs have different denominators. National revenue is not transferred. Two water intakes still share a basin and future expansions are not completed. The previous 82 cases are unchanged; rejecting necessary scope, usual-access or continuity assumptions restores unknowns. Global qualification is unproven.",
+  ],
   [stuttgart.candidateId]: [
     zh
       ? "斯图加特安全条件40，其余六维条件60，资源未知；原权重小计51、数学域51—61，无完整总分。蓄洪、堤防、实际执法／诊疗及技术采用，与组织暴力、热夜暴雨、较高急性医疗结果和服务触达余障共同判断，品牌与科研声誉不换分。"

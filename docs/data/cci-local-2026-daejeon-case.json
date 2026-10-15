@@ -1,0 +1,1723 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 1782,
+  "name": "Daejeon",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-16",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "2026 ordinary Korean citizen/usual long-term local resident/local median income/usual effective coverage; no fixed age",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-daejeon-score-completion-review.md",
+  "publishedInputCommit": "e5b8f2709ceebda85950cfa4c551f59f36a03b7b",
+  "researchFrozenInputCommit": "cc5bb3266d5bb1577df1404d29a093bba7fbeb9f",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "weight": 15,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "insufficient_direction_not_fullmeasurement",
+      "subpillars": {
+        "heat_humidity": "unresolved",
+        "flood_sea_level": "context",
+        "geophysical": "partial",
+        "severe_weather_wildfire": "context"
+      },
+      "rationale": "重要地震/老设施缺口与真实源水缓解并存，但主要自然危险及普通居民适配防护方向仍未识别，不能以计划缺口独判40或有水处理补60。",
+      "assumption": "40需明确当地重要暴露与缓解后仍重要的约束；60可由有范围的主要危险与已运行适配保护支持，不要求全FUA逐户普测。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "PCS",
+          "subpillar": "heat_humidity",
+          "status": "not_started",
+          "sourceIds": [],
+          "fullyMeasured": false,
+          "note": "无可采当地热湿暴露与普通居民防护链；不是零危险。"
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "flood_sea_level",
+          "status": "context",
+          "sourceIds": ["S12", "S14"],
+          "fullyMeasured": false,
+          "note": "Daecheong调蓄/源水设施背景，不证明FUA洪水暴露、已适配防洪或备用独立。"
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "geophysical",
+          "status": "partial",
+          "sourceIds": ["S14"],
+          "fullyMeasured": false,
+          "note": "原老取水设施地震/坍塌替换仍设计、2028目标；实运行水源保护与此缺口并列，不扩大为全城不安全。"
+        },
+        {
+          "dimension": "PCS",
+          "subpillar": "severe_weather_wildfire",
+          "status": "context",
+          "sourceIds": ["S14", "S16"],
+          "fullyMeasured": false,
+          "note": "水源集中与轨道寒潮检查标题仅背景，无实际主要天气风险/缓解净方向。"
+        }
+      ],
+      "sourceIds": ["S12", "S14", "S16"]
+    },
+    {
+      "id": "GSS",
+      "weight": 15,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "insufficient_direction_not_fullmeasurement",
+      "subpillars": {
+        "organized_violence": "context",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "context"
+      },
+      "rationale": "演练标题说明运营商曾组织处置活动，但实际暴力/区域战略影响及匹配保护仍未形成可判链，不能用无战争概括或科研密度赋分。",
+      "assumption": "40需有据重要战略/外溢约束；60需有范围的较低现实影响与实际适配缓解。允许有限地方/共享服务桥，不要求发生成功攻击。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "GSS",
+          "subpillar": "organized_violence",
+          "status": "context",
+          "sourceIds": ["S16"],
+          "fullyMeasured": false,
+          "note": "爆炸/脱轨应急演练仅2025-11-20标题，未核正文或暴力实际影响覆盖。"
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "regional_conflict",
+          "status": "not_started",
+          "sourceIds": [],
+          "fullyMeasured": false,
+          "note": "未取得适配当地的区域冲突现实影响与缓解链，不由无事件材料推低影响。"
+        },
+        {
+          "dimension": "GSS",
+          "subpillar": "strategic_exposure",
+          "status": "context",
+          "sourceIds": ["S16"],
+          "fullyMeasured": false,
+          "note": "重要节点威胁只有演练标题背景，无真实战略通道/共同失效处置方向。"
+        }
+      ],
+      "sourceIds": ["S16"]
+    },
+    {
+      "id": "ISR",
+      "weight": 15,
+      "score": 60,
+      "conditionalAlternatives": [40, 80],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "context"
+      },
+      "rationale": "真实水务生产、2025重复合规检测、实时IoT反馈与委员会已运行，医保费用上限/共付有明确程序；就业也有有限过去转正主管报告，支持主要服务能执行的有限60。普通账单减免/免费水检是可触达机制，非全靠多孩或贫困资格；内部管线和未完成备援、局限就业资格/无危机恢复闭环仍重要。",
+      "assumption": "接受关键水务与国家通常付款执行对当地长期普通居民具有有限代表性，并从2024/2025实绩至截止有限延续；不把市域服务人口或就业过去比例扩全FUA。拒绝代表性/延续桥则撤未知；若有实际服务或群体交付的重要未缓解障碍可40，不要求障碍主导。",
+      "scoreStatus": "conditional_root_adopted",
+      "coverageReview": [
+        {
+          "dimension": "ISR",
+          "subpillar": "governance",
+          "status": "partial",
+          "sourceIds": ["S12", "S14", "S05", "S06"],
+          "fullyMeasured": false,
+          "note": "真实生产/监测/公开表、普通法定医保给付及申请上限机制；非仅主管菜单，国家保护不替代当地治疗。"
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "adaptive_capacity",
+          "status": "partial",
+          "sourceIds": ["S14"],
+          "fullyMeasured": false,
+          "note": "已运行30万t/day先进处理、IoT实时监测共享及水务委员会；未来2028/2030扩建不当实绩。"
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "social_cohesion",
+          "status": "partial",
+          "sourceIds": ["W01", "S14"],
+          "fullyMeasured": false,
+          "note": "就业过去约60%转正主管概括无明确窗口分母；计划80招聘非已完成。多孩/低资格帮助不默认中位居民；一般自动支付/电子账单及免费水检可用。"
+        },
+        {
+          "dimension": "ISR",
+          "subpillar": "emergency_recovery",
+          "status": "context",
+          "sourceIds": ["S16", "S14"],
+          "fullyMeasured": false,
+          "note": "轨道实际演练仅标题；水设备/源水处理真实运行但不是经历危机后的恢复结局。"
+        }
+      ],
+      "sourceIds": ["S05", "S06", "S12", "S14", "S16", "W01"],
+      "alternativeRationales": "40须有实际重要服务交付／群体触达余障的正证，不要求多数受害、障碍主导或全城停摆；现有水务实绩／普通检验与费用帮助支持有限60，未完备援等反证保留。80需更强跨服务／压力恢复与群体取得方向；未测不是80已不存在。拒绝关键地域／通常执行／延续桥则null，不以缺资料改40。"
+    },
+    {
+      "id": "RES",
+      "weight": 10,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "insufficient_direction_not_fullmeasurement",
+      "subpillars": {
+        "water": "partial",
+        "food": "unresolved",
+        "energy": "partial",
+        "supply_chain": "context"
+      },
+      "rationale": "供水实际合规、费率与帮助已读；但家庭内管线/共湖备援限制仍在，国家电力均值/实现销售价不是当地净账单，食品通常取得方向未定。当前不能解释整体日常水食能在真实帮助后通常够用还是有明显约束，保留未知。",
+      "assumption": "不要求逐户账单；有范围的中位预算/通常食物与能源取得和真实帮助可支持60，或重要剩余净取得约束支持40。水已完成链不因整维未知抹除，也不由获取失败封顶。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "RES",
+          "subpillar": "water",
+          "status": "partial",
+          "sourceIds": ["S11", "S12", "S14"],
+          "fullyMeasured": false,
+          "note": "2025三厂60项/54配水点季度12项/月170家庭点加旧管15点均合规；同源水库双取水非独立备援；费率/减免与内部管线自责并读。"
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "food",
+          "status": "not_started",
+          "sourceIds": [],
+          "fullyMeasured": false,
+          "note": "没有可采通常食物净预算/实际帮助后取得证据。"
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "energy",
+          "status": "partial",
+          "sourceIds": ["S07"],
+          "fullyMeasured": false,
+          "note": "国家公司2025SAIDI9.32min、住宅单位销售价158.97KRW/kWh；非大田户账单/停电尾部/当地救助实绩。"
+        },
+        {
+          "dimension": "RES",
+          "subpillar": "supply_chain",
+          "status": "context",
+          "sourceIds": ["S12", "S14"],
+          "fullyMeasured": false,
+          "note": "供水跨Gyeryong/Sejong、单湖共因风险；无其他关键物资实际替代路径。"
+        }
+      ],
+      "sourceIds": ["S07", "S11", "S12", "S14"]
+    },
+    {
+      "id": "MED",
+      "weight": 15,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "insufficient_direction_not_fullmeasurement",
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "unresolved",
+        "specialist_capacity": "unresolved",
+        "system_continuity": "context"
+      },
+      "rationale": "国家普通医保共付和2026年度上限构成真实付款保护；本地必要治疗交付、质量/等待和转诊接续没有可采用原事实，仍是实质本地桥缺口，非因缺全院2026完美测量。",
+      "assumption": "当地普通必要诊疗和有限质量/接续事实可与现有付款规则形成可撤60；若已知实际等待/质量/净费用重要约束可40。未知不等医院差，不拿CNUH搜索片段或外市医院代替。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "MED",
+          "subpillar": "access",
+          "status": "partial",
+          "sourceIds": ["S05", "S06"],
+          "fullyMeasured": false,
+          "note": "通常覆盖住院20%、登记癌症5%/罕见病10%，门诊层级30–60%，2026年度上限；非全部费用且不证明当地预约/等待。"
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "routine_quality",
+          "status": "not_started",
+          "sourceIds": [],
+          "fullyMeasured": false,
+          "note": "本地医院原件未取得，搜索片段不采；不能以获取失败扣质量分。"
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "specialist_capacity",
+          "status": "not_started",
+          "sourceIds": [],
+          "fullyMeasured": false,
+          "note": "没有可采当地必要专科真实接诊/结局/转诊链；Chonnam/Hwasun不同城市不搬用。"
+        },
+        {
+          "dimension": "MED",
+          "subpillar": "system_continuity",
+          "status": "context",
+          "sourceIds": ["S05", "S06"],
+          "fullyMeasured": false,
+          "note": "国家保障年度限额排除若干费用且结算条件明确，不证明当地临床交接/压力持续。"
+        }
+      ],
+      "sourceIds": ["S05", "S06"]
+    },
+    {
+      "id": "LON",
+      "weight": 10,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "insufficient_direction_not_fullmeasurement",
+      "subpillars": {
+        "translation": "context",
+        "trial_maturity": "unresolved",
+        "regulatory_adoption": "unresolved",
+        "resident_access": "context"
+      },
+      "rationale": "实际许可与癌症通常共付不能证明符合本维允许机制的成熟人体疾病结果到当地采用/普通取得；缺具体转化链，未知。",
+      "assumption": "允许成熟病种有限路径及费用/照护合理桥，不要求健康人延寿、所有人口或逐剂账单；仍需产品/机制/适应证不混用的可信人体与本地实际采用连接。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "LON",
+          "subpillar": "translation",
+          "status": "context",
+          "sourceIds": ["S04", "S17"],
+          "fullyMeasured": false,
+          "note": "通用技术转让/创业不等疾病细胞转化或健康延寿；不采外地临床路径。"
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "trial_maturity",
+          "status": "not_started",
+          "sourceIds": [],
+          "fullyMeasured": false,
+          "note": "无合资格本地关联机制成熟人体原结果，不能借KAIST声誉。"
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "regulatory_adoption",
+          "status": "not_started",
+          "sourceIds": [],
+          "fullyMeasured": false,
+          "note": "NHIS一般登记癌症付款非特定干预本地常规采用/批准。"
+        },
+        {
+          "dimension": "LON",
+          "subpillar": "resident_access",
+          "status": "context",
+          "sourceIds": ["S05", "S06"],
+          "fullyMeasured": false,
+          "note": "一般医保支付背景不能自动覆盖特定新干预付款/照护；没有固定成人要求。"
+        }
+      ],
+      "sourceIds": ["S04", "S05", "S06", "S17"]
+    },
+    {
+      "id": "TEC",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40, 80],
+      "coverageStatus": "partial_bounded_judgment_not_fullmeasurement",
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "rationale": "已实现技术许可、2025大田总部创业企业和披露就业，以及真实运行的市政IoT/先进水处理提供科研到产业和公共服务的实际使用连接，有限60。结论接受现有机构/总部与公共端范围的重要局限；不是因未知项自动封顶，也不宣称80已被排除。付费RID仍属当时计划，不能当广泛既成采用。",
+      "assumption": "接受总部在大田的部分公司活动及KAIST当地核心节点对FUA产业连接具有有限代表性，技术许可和2025活动延续至截止；真实水务采用支持公共端扩散但不冒全民采用。60不是因来源多或有大学；80需要现有节点/范围短板被有据缓解及广泛采用方向更强，拒绝有限地域/延续桥撤未知。",
+      "scoreStatus": "conditional_root_adopted",
+      "coverageReview": [
+        {
+          "dimension": "TEC",
+          "subpillar": "knowledge_output",
+          "status": "partial",
+          "sourceIds": ["S04", "S17"],
+          "fullyMeasured": false,
+          "note": "实际2024技术许可收入81亿韩元、年度平均69合同未给平均窗；RID计划不当产用。"
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "industry_density",
+          "status": "partial",
+          "sourceIds": ["S04"],
+          "fullyMeasured": false,
+          "note": "2025survey2055总样本中大田总部455；披露就业308家/9682养老金参保岗位，不等本地居民/全FUA产业密度。"
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "digital_infrastructure",
+          "status": "partial",
+          "sourceIds": ["S14"],
+          "fullyMeasured": false,
+          "note": "水务IoT实时测量共享已运行，非全户宽带覆盖／抗攻击测试；个人电子银行不作为本维已实现扩散依据。"
+        },
+        {
+          "dimension": "TEC",
+          "subpillar": "diffusion",
+          "status": "partial",
+          "sourceIds": ["S04", "S17", "S14"],
+          "fullyMeasured": false,
+          "note": "许可/公司实际岗位和市政处理/IoT采用构成有限真实产用连接；无广泛家庭采用或所有许可厂内效果。"
+        }
+      ],
+      "sourceIds": ["S04", "S14", "S17"],
+      "alternativeRationales": "40须真实重要产用／采用断点正证，不能由范围缺测或摘要矛盾自动推低；80需更广、可取得且已采用的方向，不能靠WIPO、许可数或机构名望。拒绝关键地域／实际采用／有限扩散／延续桥则null。"
+    },
+    {
+      "id": "OPT",
+      "weight": 10,
+      "score": null,
+      "conditionalAlternatives": [],
+      "coverageStatus": "insufficient_direction_not_fullmeasurement",
+      "subpillars": {
+        "transport_redundancy": "context",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "unresolved"
+      },
+      "rationale": "合法赴德国申请及实际个人银行汇款规则有用，但普通长期资源/就业资格和实体独立向外路径、境外通信接续仍无可裁方向。不是免签少或费率高的负面结论，未知。",
+      "assumption": "不要求每个目的地/每笔交易；一条有据普通长期资格、实体向外可用及资金通信接续可形成有限60，有重要实际法律/通道约束可40。§41本身不证明居留许可已可获。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageReview": [
+        {
+          "dimension": "OPT",
+          "subpillar": "transport_redundancy",
+          "status": "context",
+          "sourceIds": ["S16"],
+          "fullyMeasured": false,
+          "note": "地铁/公交/终点站导航与演练标题非独立向外实体通道/运力已核。"
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "legal_mobility",
+          "status": "partial",
+          "sourceIds": ["R01", "R02", "R03"],
+          "fullyMeasured": false,
+          "note": "韩国公民德国§41可先免签入境再90日内申所需许可；生计/身份/合格就业等条件，非自动长期居留或假定所有普通居民学位工作。"
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "asset_portability",
+          "status": "partial",
+          "sourceIds": ["S08"],
+          "fullyMeasured": false,
+          "note": "2026免指定外汇银行、全机构年合计10万美元内合条件免证明；不含应申报海外投资房产。2017费用表不作2026报价/长居后持续账户保证。"
+        },
+        {
+          "dimension": "OPT",
+          "subpillar": "network_continuity",
+          "status": "not_started",
+          "sourceIds": [],
+          "fullyMeasured": false,
+          "note": "电子银行注册路径非海外手机/通信接续或替代鉴权已核。"
+        }
+      ],
+      "sourceIds": ["R01", "R02", "R03", "S08", "S16"]
+    }
+  ],
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 15,
+  "unresolvedScoreRange": [15, 90],
+  "globalRankingEligible": false,
+  "limitations": [
+    "No total score, ranking, candidate exclusion or Top32 conclusion.",
+    "All31 inspected for coverage; none fully measured; two conditional proposed judgments, six unknown.",
+    "New current bytes captured Oct15UTC/localOct15–16 do not authenticate identical cutoff bytes. Actual observed windows preserved.",
+    "Municipality/water operator/Korea/KAIST headquarters not equivalent entire oldFUA.",
+    "New raw and exact web transcripts classified separately; tool SHA is not provider original SHA.",
+    "Prior CNUH/Hwasun/Chonnam misassociation excluded; research acquisition problems not local capability deductions.",
+    "根逐块比对11历史工具输出，W01网站原字节仍null；14PDF页与全9031几何独核。全国总体／披露就业／市域供水与FUA分开；40与80均需实质方向依据，拒绝必要桥回未知。原82案整文件不变。"
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S02",
+      "url": "https://startup.kaist.ac.kr/boards/view/board_reference/2196",
+      "path": "kaist-startup2025-index.html",
+      "scope": "Oct2_2026posting actual2025startupreportlocator; notall2055companiesFUA",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 52459,
+      "sha256": "b6b171d21cf3f1b2a3f6673b23ff17dabf735e2dfe6e60803ff42490548764a4",
+      "localPath": "originals/kaist-startup2025-index.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T15:48:38.031855+00:00",
+      "routeIndexes": [1],
+      "resolvedUrl": "https://startup.kaist.ac.kr/boards/view/board_reference/2196",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 15:48:40 GMT",
+        "Server": "Apache",
+        "Expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+        "Cache-Control": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+        "Pragma": "no-cache",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Posted2026-10-02 20:06:12; attachment describes2025; current capture after cutoff not certified historical bytes.",
+      "sourceRole": "navigation_or_locator_only",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "rootBodyScope": "context or locator only; no city score inferred"
+    },
+    {
+      "id": "S04",
+      "url": "https://startup.kaist.ac.kr/boards/download_att/board_reference/ff6b21f5a975f6babe30ca4fcd560f564acb7868",
+      "path": "kaist-startups2025.pdf",
+      "scope": "ExactownerindexPDFattachment; actualobservations/locations/firmadoptionnotallFUA",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 2883602,
+      "sha256": "fc5f75fe6a41e7722816281bb7809d621a21f53296932b69c4a5da047b254387",
+      "localPath": "originals/kaist-startups2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T15:50:23.994670+00:00",
+      "routeIndexes": [3],
+      "resolvedUrl": "https://startup.kaist.ac.kr/boards/download_att/board_reference/ff6b21f5a975f6babe30ca4fcd560f564acb7868",
+      "contentType": "application/octet-stream",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 15:50:25 GMT",
+        "Server": "Apache",
+        "Expires": "0",
+        "Cache-Control": "private, no-transform, no-store, must-revalidate",
+        "Pragma": "no-cache",
+        "Content-Disposition": "attachment; filename=\"2025_KAIST_%EC%B0%BD%EC%97%85%EA%B8%B0%EC%97%85_%EC%84%B1%EA%B3%BC%EC%A1%B0%EC%82%AC%28%EB%82%B1%EC%9E%A5%29_V2_0.pdf\"",
+        "Content-Transfer-Encoding": "binary",
+        "Content-Length": "2883602",
+        "Connection": "close",
+        "Content-Type": "application/octet-stream"
+      },
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "2025yearend firm survey, Oct2_2026 PDFcreation/posting; selected-disclosing subsets and distinct survival cohorts. Korean/English summary inconsistencies retained.",
+      "sourceRole": "substantive_primary_original",
+      "pdfMetadata": {
+        "format": "PDF 1.6",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "Adobe InDesign 17.4 (Macintosh)",
+        "producer": "Adobe PDF Library 16.0.7",
+        "creationDate": "D:20261002133510+09'00'",
+        "modDate": "D:20261002133656+09'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "actualPhysicalPages": 44,
+      "rootBytesReverified": true,
+      "rootUsedForScore": true,
+      "rootBodyScope": "score-bearing body/table read"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.nhis.or.kr/english/wbheaa02600m01.do",
+      "path": "nhis-benefits.html",
+      "scope": "Previouslylocatedordinarypaymentcommonrule; newcapture notrestoredoldbytes",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 64734,
+      "sha256": "df954d0ef3165b4a8e1a72f00fb3950d0c4f458312673a08b0fd14673c74c562",
+      "localPath": "originals/nhis-benefits.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T15:50:33.012271+00:00",
+      "routeIndexes": [4],
+      "resolvedUrl": "https://www.nhis.or.kr/english/wbheaa02600m01.do",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 15:50:35 GMT",
+        "Server": "None",
+        "Cache-Control": "no-cache no-store",
+        "Pragma": "no-cache",
+        "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+        "Content-Language": "en",
+        "Connection": "close",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Transfer-Encoding": "chunked"
+      },
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Current national NHIS benefits, includes2026 cap; initial publication date not certified, current benefits not local outcomes.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true,
+      "rootBodyScope": "score-bearing body/table read"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.nhis.or.kr/nhis/minwon/wbhapa01000m01.do?mode=view&articleNo=10946900",
+      "path": "nhis-cap2026.html",
+      "scope": "OldknownexactNHIScaplocator newlycaptured; version/observation independentoldSHA",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 278132,
+      "sha256": "791ccaba55bc71f918fbbc7c26161f74753a9f47b70dc23a99e2b366c6415196",
+      "localPath": "originals/nhis-cap2026.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T15:51:53.676810+00:00",
+      "routeIndexes": [5],
+      "resolvedUrl": "https://www.nhis.or.kr/nhis/minwon/wbhapa01000m01.do?mode=view&articleNo=10946900",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 15:51:55 GMT",
+        "Server": "None",
+        "Cache-Control": "no-cache no-store",
+        "Pragma": "no-cache",
+        "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+        "Content-Language": "ko",
+        "Connection": "close",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Transfer-Encoding": "chunked"
+      },
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Current table explicitly2026; page old registration2024-12-31 not table publication proof. Premium-decile limits not medianincome mapping; old SHA match not old HTTP authentication.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true,
+      "rootBodyScope": "score-bearing body/table read"
+    },
+    {
+      "id": "S07",
+      "url": "https://www.kepco.co.kr/home/esg/esgdata/entire/conts.do",
+      "path": "kepco2025.html",
+      "scope": "Nationaloperator actualreliability/energy background; notDaejeonhouseholdnetcost",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 303920,
+      "sha256": "b3afe13c0ba9fe9eeb7f2ed12778ddafa91f6f6047fd50795dc5ed3ab250d6be",
+      "localPath": "originals/kepco2025.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T15:51:58.234959+00:00",
+      "routeIndexes": [6],
+      "resolvedUrl": "https://www.kepco.co.kr/home/esg/esgdata/entire/conts.do",
+      "contentType": "text/html;charset=utf-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 15:52:00 GMT",
+        "Server": "Apache",
+        "X-Frame-options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://dapi.kakao.com https://ssl.daumcdn.net https://t1.kakaocdn.net https://t1.daumcdn.net; connect-src 'self' https://www.google-analytics.com https://dapi.kakao.com; img-src 'self' data: blob: https://*.daumcdn.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src 'self' https://postcode.map.daum.net https://postcode.map.kakao.com https://ir.gsifn.io https://www.data.go.kr; object-src 'self'; base-uri 'self'; frame-ancestors 'self';",
+        "Content-Language": "en-",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "text/html;charset=utf-8"
+      },
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Companywide2023–2025 ESG, 2025 SAIDI9.32min and residential realized unit salesprice158.97KRW/kWh; not Daejeon household bills/local maximum outage.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "rootBodyScope": "context or locator only; no city score inferred"
+    },
+    {
+      "id": "S08",
+      "url": "https://www.kebhana.com/cont/customer/customer01/customer0102/customer010204/index%2C1%2Clist%2C2.jsp",
+      "path": "hana-remittance.html",
+      "scope": "OrdinaryKoreanresidentbankremittanceactualconditions; notallassets orDaejeonstressavailability",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 354108,
+      "sha256": "45cee3a318643bd19bcb55d72fd332d5c450196ab72f0ad499613b31fc5985c5",
+      "localPath": "originals/hana-remittance.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T15:52:02.486738+00:00",
+      "routeIndexes": [7],
+      "resolvedUrl": "https://www.kebhana.com/cont/customer/customer01/customer0102/customer010204/index%2C1%2Clist%2C2.jsp",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 15:52:04 GMT",
+        "Server": "KebHana",
+        "X-Content-Type-Options": "nosniff",
+        "X-XSS-Protection": "1; mode=block",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "FAQ remittance rule explicitly2026-01-01 amendment: no designated FXbank required for eligible all-institution aggregate <=USD100000/year. Student subsection separate. Fee subsection explicitlyFeb2017, not2026 validated fees.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "rootBodyScope": "context or locator only; no city score inferred"
+    },
+    {
+      "id": "S09",
+      "url": "https://www.waterworks.daejeon.kr/kor",
+      "path": "water-current-index.html",
+      "scope": "Differentcurrentwaterofficialindexnotoldfailedrecruitment; actualhrefs notqualityclaimedfrommenu",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 544857,
+      "sha256": "97e3554093b3052ffeb4f811ae06acaf69cdcd233a29df9e0cd0f04dff62dedc",
+      "localPath": "originals/water-current-index.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T15:54:11.550751+00:00",
+      "routeIndexes": [8],
+      "resolvedUrl": "https://www.waterworks.daejeon.kr/kor",
+      "contentType": "text/html;charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 15:54:14 GMT",
+        "Server": "Apache",
+        "X-Content-Type-Options": "nosniff",
+        "X-XSS-Protection": "1; mode=block",
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "0",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Content-Language": "ko-KR",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "text/html;charset=UTF-8",
+        "Connection": "close"
+      },
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Current water index/actual navigation; no service outcome inferred from menus.",
+      "sourceRole": "navigation_or_locator_only",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "rootBodyScope": "context or locator only; no city score inferred"
+    },
+    {
+      "id": "S10",
+      "url": "https://www.waterworks.daejeon.kr/kor/ebook/ebookList?trgtUid=019918348A6E7B0A9C6E73643CF1D929&currentMenuUid=0198822302AF7089BA6521745F25CB12",
+      "path": "water-quality-report-index.html",
+      "scope": "ActualS09menuJSON+fn_moveHeaderMenu-generatednavigation, notguessedroute; 수돗물품질보고서",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 536529,
+      "sha256": "7bdc8cdccf4f9654d6cf87414ceef44dc73d93064f676a5f00e781c18fa763e5",
+      "localPath": "originals/water-quality-report-index.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T15:56:40.785571+00:00",
+      "routeIndexes": [9],
+      "resolvedUrl": "https://www.waterworks.daejeon.kr/kor/ebook/ebookList?trgtUid=019918348A6E7B0A9C6E73643CF1D929&currentMenuUid=0198822302AF7089BA6521745F25CB12",
+      "contentType": "text/html;charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 15:56:42 GMT",
+        "Server": "Apache",
+        "X-Content-Type-Options": "nosniff",
+        "X-XSS-Protection": "1; mode=block",
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "0",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Content-Language": "ko-KR",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "text/html;charset=UTF-8",
+        "Connection": "close"
+      },
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Current ebook index with2026 report actual download handler; locator not quality measurement.",
+      "sourceRole": "navigation_or_locator_only",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "rootBodyScope": "context or locator only; no city score inferred"
+    },
+    {
+      "id": "S11",
+      "url": "https://www.waterworks.daejeon.kr/kor/content/cntn/view?trgtUid=0198976A01FB7BF8AA0B5DD6104FFD6B&currentMenuUid=0198823904A270808EF553ED5F74B0BB",
+      "path": "water-tariffs.html",
+      "scope": "ActualS09menuJSON+fn_moveHeaderMenu-generatednavigation, notguessedroute; 업종별/구경별요금표",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 541682,
+      "sha256": "2b9ba3cdcd0d032ba6b3c3b773afc7d5e7b262ec24e680ec6cbf1c17532bd1b6",
+      "localPath": "originals/water-tariffs.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T15:56:43.585895+00:00",
+      "routeIndexes": [10],
+      "resolvedUrl": "https://www.waterworks.daejeon.kr/kor/content/cntn/view?trgtUid=0198976A01FB7BF8AA0B5DD6104FFD6B&currentMenuUid=0198823904A270808EF553ED5F74B0BB",
+      "contentType": "text/html;charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 15:56:45 GMT",
+        "Server": "Apache",
+        "X-Content-Type-Options": "nosniff",
+        "X-XSS-Protection": "1; mode=block",
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "0",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Content-Language": "ko-KR",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "text/html;charset=UTF-8",
+        "Connection": "close"
+      },
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Current published tariff; effective date unverified. Water610/sewage530/levy170KRW/m3 plus meter base; not actual median bill.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "rootBodyScope": "context or locator only; no city score inferred"
+    },
+    {
+      "id": "S12",
+      "url": "https://www.waterworks.daejeon.kr/kor/content/cntn/view?trgtUid=0198C5BE81347B86A72378572E5A6506&currentMenuUid=01988223449971258E63A8BFB2FED3CF",
+      "path": "water-supply.html",
+      "scope": "ActualS09menuJSON+fn_moveHeaderMenu-generatednavigation, notguessedroute; 급수정보",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 547997,
+      "sha256": "c3e0df8f3ee835d891396db122fc770ce8003a7564b1686e772eb455bb1386ce",
+      "localPath": "originals/water-supply.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T15:56:46.387747+00:00",
+      "routeIndexes": [11],
+      "resolvedUrl": "https://www.waterworks.daejeon.kr/kor/content/cntn/view?trgtUid=0198C5BE81347B86A72378572E5A6506&currentMenuUid=01988223449971258E63A8BFB2FED3CF",
+      "contentType": "text/html;charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 15:56:48 GMT",
+        "Server": "Apache",
+        "X-Content-Type-Options": "nosniff",
+        "X-XSS-Protection": "1; mode=block",
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "0",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Content-Language": "ko-KR",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "text/html;charset=UTF-8",
+        "Connection": "close"
+      },
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "2024-12-31 city service/2024 production, outside-city supply separately; not2026FUA population or household consumption.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true,
+      "rootBodyScope": "score-bearing body/table read"
+    },
+    {
+      "id": "S13",
+      "url": "https://www.waterworks.daejeon.kr/js/common/common.js",
+      "path": "water-common.js",
+      "scope": "ObservedS09scriptdefinesactualfiledownload action; implementationlocator notscoring",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 53977,
+      "sha256": "6f9a9245d4870dcf558dffb9757bf68f50a65d96c96512f771c1483c824f2385",
+      "localPath": "originals/water-common.js",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T15:59:41.286347+00:00",
+      "routeIndexes": [12],
+      "resolvedUrl": "https://www.waterworks.daejeon.kr/js/common/common.js",
+      "contentType": "application/javascript",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 15:59:42 GMT",
+        "Server": "Apache",
+        "Last-Modified": "Fri, 03 Jul 2026 05:08:08 GMT",
+        "ETag": "\"d2d9-655ade9169855\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "53977",
+        "Vary": "Accept-Encoding",
+        "Content-Type": "application/javascript",
+        "Connection": "close"
+      },
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Current JS observed download implementation only, no capacity scoring.",
+      "sourceRole": "navigation_or_locator_only",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "rootBodyScope": "context or locator only; no city score inferred"
+    },
+    {
+      "id": "S14",
+      "url": "https://www.waterworks.daejeon.kr/kor/file/down/019F68B601F27EE19BB93D7B6881FA12",
+      "path": "water2026.pdf",
+      "scope": "ActualS10button+S13downloadfunction-definedfileURL; verify2026reportobservationandfirstpublication",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 30228259,
+      "sha256": "f1637f6aeac2731ca424eda9a43836bf5c68675833d8f63790a1f2285c1d25f9",
+      "localPath": "originals/water2026.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:00:40.811562+00:00",
+      "routeIndexes": [13],
+      "resolvedUrl": "https://www.waterworks.daejeon.kr/kor/file/down/019F68B601F27EE19BB93D7B6881FA12",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 16:00:42 GMT",
+        "Server": "Apache",
+        "Content-Disposition": "attachment; filename=\"2026%EB%85%84%20%EC%88%98%EB%8F%97%EB%AC%BC%ED%92%88%EC%A7%88%EB%B3%B4%EA%B3%A0%EC%84%9C.pdf\"; filename*=UTF-8''2026%EB%85%84%20%EC%88%98%EB%8F%97%EB%AC%BC%ED%92%88%EC%A7%88%EB%B3%B4%EA%B3%A0%EC%84%9C.pdf",
+        "Accept-Ranges": "bytes",
+        "X-Content-Type-Options": "nosniff",
+        "X-XSS-Protection": "1; mode=block",
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "0",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "Content-Length": "30228259",
+        "Content-Type": "application/pdf",
+        "Connection": "close"
+      },
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "2026 nominal report, forewordMay2026/PDFcreationJun10_2026; actual waterquality Jan–Dec2025, pages32–33 help rules current at report, no paid-beneficiary counts.",
+      "sourceRole": "substantive_primary_original",
+      "pdfMetadata": {
+        "format": "PDF 1.7",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "PDFium",
+        "producer": "PDFium",
+        "creationDate": "D:20260610231740",
+        "modDate": "",
+        "trapped": "",
+        "encryption": null
+      },
+      "actualPhysicalPages": 36,
+      "rootBytesReverified": true,
+      "rootUsedForScore": true,
+      "rootBodyScope": "score-bearing body/table read"
+    },
+    {
+      "id": "S15",
+      "url": "https://www.djtc.kr/",
+      "path": "transit-index.html",
+      "scope": "Actualofficialcitylinkedtransitoperator; onlyuseactualservice notnavigation",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 679,
+      "sha256": "d2edb1f28e7cc7329844e796b5b4d45c8eb771b7d3ba97854028eb817475b471",
+      "localPath": "originals/transit-index.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:01:17.116396+00:00",
+      "routeIndexes": [14],
+      "resolvedUrl": "https://www.djtc.kr/",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "X-UA-Compatible": "IE=edge",
+        "Cache-Control": "private",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "679",
+        "Connection": "close",
+        "Date": "Thu, 15 Oct 2026 16:01:19 GMT"
+      },
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "679B meta-refresh router only, explicitly followed in separately counted S16leg; not actual transport provision.",
+      "sourceRole": "navigation_or_locator_only",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "rootBodyScope": "context or locator only; no city score inferred"
+    },
+    {
+      "id": "S16",
+      "url": "https://www.djtc.kr/kor/index.do",
+      "path": "transit-actual-index.html",
+      "scope": "S15actualmetarefresh target explicitsecondrouteleg; servicevsnav retained",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 494818,
+      "sha256": "01b5aed8fb5b92c24f05b31adc6884fe77d9e3c298b4c6c895d3d2413af17633",
+      "localPath": "originals/transit-actual-index.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:02:39.993639+00:00",
+      "routeIndexes": [15],
+      "resolvedUrl": "https://www.djtc.kr/kor/index.do",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "X-UA-Compatible": "IE=edge",
+        "Cache-Control": "private",
+        "Content-Language": "ko-KR",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked",
+        "Date": "Thu, 15 Oct 2026 16:02:41 GMT"
+      },
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Current operator index with dated headlines, not full news bodies or outcome review. Nov20_2025 emergency drill headline only.",
+      "sourceRole": "navigation_or_locator_only",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "rootBodyScope": "context or locator only; no city score inferred"
+    },
+    {
+      "id": "S17",
+      "url": "https://kaist.ac.kr/news/html/news/?GotoPage=1&list_e_date=&list_s_date=&mng_no=45850&mode=V&skey=keyword&sval=%EA%B8%B0%EC%88%A0%EC%82%AC%EC%97%85%ED%99%94",
+      "path": "kaist-transfer2024.html",
+      "scope": "Previouslyobservedactual2024licensingreceipts+69annualcontracts, newRIDofferednotcompleted",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 43550,
+      "sha256": "3ee625ae5a2a687ed8fef7f6a5ec88ecae8ef59fa7ab7c5fe1a1d5a72037cb24",
+      "localPath": "originals/kaist-transfer2024.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:02:44.080316+00:00",
+      "routeIndexes": [16],
+      "resolvedUrl": "https://kaist.ac.kr/news/html/news/?GotoPage=1&list_e_date=&list_s_date=&mng_no=45850&mode=V&skey=keyword&sval=%EA%B8%B0%EC%88%A0%EC%82%AC%EC%97%85%ED%99%94",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 16:02:45 GMT",
+        "Expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+        "Cache-Control": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+        "Pragma": "no-cache",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndVersion": "Posted2025-04-24; actual2024royalties81억KRW, annual-average69transfer contracts with averaging window not specified. FutureAug RID launch/planned100technologies not completed deployment.",
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": true,
+      "rootBodyScope": "score-bearing body/table read"
+    },
+    {
+      "id": "R01",
+      "url": "https://www.gesetze-im-internet.de/aufenthv/__41.html",
+      "path": "aufenthv41.html",
+      "localPath": "originals/aufenthv41.html",
+      "validOriginal": true,
+      "originalBytes": 4613,
+      "sha256": "0294e3696361d9294ae75c66475ccb897dcf68e1ffd1346fabf3a83104f74c85",
+      "originLocalPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-full37/aufenthv41.html",
+      "preservedOriginMetadata": {
+        "file": "aufenthv41.html",
+        "url": "https://www.gesetze-im-internet.de/aufenthv/__41.html",
+        "requestAtUTC": "2026-10-15T11:41:29.159745+00:00",
+        "requestMechanism": "www.gesetze-im-internet.de|urllib_normal_TLS",
+        "method": "one normalTLS request no retry",
+        "historicalCutoffBytesAuthenticated": false,
+        "httpStatus": 200,
+        "finalUrl": "https://www.gesetze-im-internet.de/aufenthv/__41.html",
+        "contentType": "text/html",
+        "responseBytes": 4613,
+        "responseSha256": "0294e3696361d9294ae75c66475ccb897dcf68e1ffd1346fabf3a83104f74c85",
+        "validOriginal": true,
+        "originalBytes": 4613,
+        "sha256": "0294e3696361d9294ae75c66475ccb897dcf68e1ffd1346fabf3a83104f74c85"
+      },
+      "method": "Verifieddurablecopy_zeroHTTP",
+      "scope": "ConditionalGermanylongstaylegalbridgeforKoreancitizen, notalreadyqualifiedjob/subsistence/workpermission",
+      "cutoffOriginalBytesAuthenticated": false,
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "rootBodyScope": "context or locator only; no city score inferred"
+    },
+    {
+      "id": "R02",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__5.html",
+      "path": "aufenthg5.html",
+      "localPath": "originals/aufenthg5.html",
+      "validOriginal": true,
+      "originalBytes": 6953,
+      "sha256": "2b1c6d9b2cda3c69f96b893150025c1490298f8de35741bb297ef82335df4e27",
+      "originLocalPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-full37/aufenthg5.html",
+      "preservedOriginMetadata": {
+        "file": "aufenthg5.html",
+        "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__5.html",
+        "requestAtUTC": "2026-10-15T11:45:36.653995+00:00",
+        "requestMechanism": "www.gesetze-im-internet.de|urllib_normal_TLS",
+        "method": "one normalTLS request no retry",
+        "historicalCutoffBytesAuthenticated": false,
+        "httpStatus": 200,
+        "finalUrl": "https://www.gesetze-im-internet.de/aufenthg_2004/__5.html",
+        "contentType": "text/html",
+        "responseBytes": 6953,
+        "responseSha256": "2b1c6d9b2cda3c69f96b893150025c1490298f8de35741bb297ef82335df4e27",
+        "validOriginal": true,
+        "originalBytes": 6953,
+        "sha256": "2b1c6d9b2cda3c69f96b893150025c1490298f8de35741bb297ef82335df4e27"
+      },
+      "method": "Verifieddurablecopy_zeroHTTP",
+      "scope": "ConditionalGermanylongstaylegalbridgeforKoreancitizen, notalreadyqualifiedjob/subsistence/workpermission",
+      "cutoffOriginalBytesAuthenticated": false,
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "rootBodyScope": "context or locator only; no city score inferred"
+    },
+    {
+      "id": "R03",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__18b.html",
+      "path": "aufenthg18b.html",
+      "localPath": "originals/aufenthg18b.html",
+      "validOriginal": true,
+      "originalBytes": 3632,
+      "sha256": "d605edfdbf1977205ccc0f1c5b267b061e59f072200c04fbe5d02d340bc6a7b4",
+      "originLocalPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-full37/aufenthg18b.html",
+      "preservedOriginMetadata": {
+        "file": "aufenthg18b.html",
+        "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__18b.html",
+        "requestAtUTC": "2026-10-15T11:45:36.654557+00:00",
+        "requestMechanism": "www.gesetze-im-internet.de|urllib_normal_TLS",
+        "method": "one normalTLS request no retry",
+        "historicalCutoffBytesAuthenticated": false,
+        "httpStatus": 200,
+        "finalUrl": "https://www.gesetze-im-internet.de/aufenthg_2004/__18b.html",
+        "contentType": "text/html",
+        "responseBytes": 3632,
+        "responseSha256": "d605edfdbf1977205ccc0f1c5b267b061e59f072200c04fbe5d02d340bc6a7b4",
+        "validOriginal": true,
+        "originalBytes": 3632,
+        "sha256": "d605edfdbf1977205ccc0f1c5b267b061e59f072200c04fbe5d02d340bc6a7b4"
+      },
+      "method": "Verifieddurablecopy_zeroHTTP",
+      "scope": "ConditionalGermanylongstaylegalbridgeforKoreancitizen, notalreadyqualifiedjob/subsistence/workpermission",
+      "cutoffOriginalBytesAuthenticated": false,
+      "independentlyVerifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceRole": "substantive_primary_original",
+      "rootBytesReverified": true,
+      "rootUsedForScore": false,
+      "rootBodyScope": "context or locator only; no city score inferred"
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.cnuh.co.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000309198Vz9&fileSn=0",
+      "path": "cnuh2026-plan.pdf",
+      "scope": "2025actualmainhospitalcarecontinuity/2026plans; CNHUChungnamnotChonnam",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": false,
+      "originalBytes": null,
+      "sha256": null,
+      "localPath": null,
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T15:48:33.107700+00:00",
+      "routeIndexes": [0],
+      "error": "[SSL: RECORD_LAYER_FAILURE] record layer failure (_ssl.c:2768)",
+      "sourceRole": "failed_no_original"
+    },
+    {
+      "id": "S03",
+      "url": "https://daejeon.go.kr/",
+      "path": "city-home.html",
+      "scope": "Observedofficialnavigation tocityprimaryservice/evidence; indexnotdelivery",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": false,
+      "originalBytes": null,
+      "sha256": null,
+      "localPath": null,
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T15:48:41.024095+00:00",
+      "routeIndexes": [2],
+      "error": "[SSL: RECORD_LAYER_FAILURE] record layer failure (_ssl.c:2768)",
+      "sourceRole": "failed_no_original"
+    },
+    {
+      "id": "S18",
+      "url": "https://daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0189&menuSeq=6825&ntatcSeq=1473452849&pageIndex=1",
+      "path": "city-employment2025.html",
+      "scope": "Differentearlierwebbodyfullyreadsource, approximatehistoricalregularconversionvs2025future80places; nofailureddocretry",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": false,
+      "originalBytes": null,
+      "sha256": null,
+      "localPath": null,
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T16:02:46.662494+00:00",
+      "routeIndexes": [17],
+      "error": "[SSL: RECORD_LAYER_FAILURE] record layer failure (_ssl.c:2768)",
+      "sourceRole": "failed_no_original"
+    }
+  ],
+  "webOnlySourceSnapshots": [
+    {
+      "id": "W01",
+      "url": "https://daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0189&menuSeq=6825&ntatcSeq=1473452849&pageIndex=1",
+      "validOriginal": false,
+      "providerOriginalBytes": null,
+      "sha256": null,
+      "toolTranscript": {
+        "refs": [
+          "turn2365view0",
+          "turn2367view1",
+          "turn2368view0",
+          "turn2368view1",
+          "turn2368view2"
+        ],
+        "sessionLine": 3443,
+        "callId": "call_9d133b855f4044d58e26ac4ef12b26a8",
+        "path": "web-tool-transcripts/line3443-block1.txt",
+        "bytes": 28362,
+        "toolTranscriptSha256": "81720e58f814b8da142c0dcbfaeca46a3aa1899bf83d20aff728584e5d357665",
+        "providerOriginalBytes": null,
+        "providerOriginalSha256": null,
+        "meaning": "exact historical tool response block, not provider original bytes; response may be excerpted, total-lines label not all lines received"
+      },
+      "scope": "2025-01-23 employment announcement body actually read before normalraw S18failed; planned80interns not completed80jobs; official about60%past regular conversion has no explicit cohort denominator/window; eligibility18–39 not entire no-fixed-age portrait",
+      "rootExactHistoricalToolBlockVerified": true,
+      "rootActualBodyLinesRead": [687, 726],
+      "rootUsedForScore": true,
+      "toolDigestIsWebsiteOriginalDigest": false
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allCandidatesChecked": 9031,
+    "repairCount": 136,
+    "records": [
+      {
+        "fid": 7769,
+        "eFUA_ID": 1782.0,
+        "UC_num": 1.0,
+        "UC_IDs": "12540",
+        "eFUA_name": "Daejeon",
+        "Commuting": 1.0,
+        "Cntry_ISO": "KOR",
+        "Cntry_name": "SouthKorea",
+        "FUA_area": 1001.0,
+        "UC_area": 205.0,
+        "FUA_p_2015": 1746023.247787349,
+        "UC_p_2015": 1534182.4002513885,
+        "Com_p_2015": 211840.84753596038
+      }
+    ],
+    "points": [
+      {
+        "label": "Daejeon centre reference",
+        "longitude": 127.3845,
+        "latitude": 36.3504,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 1782,
+            "name": "Daejeon"
+          }
+        ]
+      },
+      {
+        "label": "CNUH hospital reference",
+        "longitude": 127.415,
+        "latitude": 36.3175,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 1782,
+            "name": "Daejeon"
+          }
+        ]
+      },
+      {
+        "label": "KAIST reference",
+        "longitude": 127.3626,
+        "latitude": 36.3721,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 1782,
+            "name": "Daejeon"
+          }
+        ]
+      },
+      {
+        "label": "Daejeonrail reference",
+        "longitude": 127.4344,
+        "latitude": 36.3325,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 1782,
+            "name": "Daejeon"
+          }
+        ]
+      }
+    ],
+    "targetWkbSha256": "1b3943ea7206536d58c7e85cf1981dcceff7660171f291f1ad539656e8c63c7d",
+    "meaning": "Approximate reference points do not establish provider service coverage, citywide outcomes or residence; Hospital referrals/water service/city/FUA differ; airport point not proof of journey access.",
+    "localValidationCorrection": "InitialsummaryassertstillLuxembourgstring afteradaptation; actualwhole9031alreadycorrect, correctedassertverifiedsavedresultsno networkrerun",
+    "rootIndependentVerification": true
+  },
+  "sensitivity": {
+    "ISRWithdrawn": [6, 96],
+    "TECWithdrawn": [9, 94],
+    "allJudgmentsWithdrawn": [0, 100],
+    "ISR40": [12, 87],
+    "ISR80": [18, 93],
+    "TEC40": [13, 88],
+    "TEC80": [17, 92]
+  },
+  "coverageReview": [
+    {
+      "dimension": "PCS",
+      "subpillar": "heat_humidity",
+      "status": "not_started",
+      "sourceIds": [],
+      "fullyMeasured": false,
+      "note": "无可采当地热湿暴露与普通居民防护链；不是零危险。"
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "flood_sea_level",
+      "status": "context",
+      "sourceIds": ["S12", "S14"],
+      "fullyMeasured": false,
+      "note": "Daecheong调蓄/源水设施背景，不证明FUA洪水暴露、已适配防洪或备用独立。"
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "geophysical",
+      "status": "partial",
+      "sourceIds": ["S14"],
+      "fullyMeasured": false,
+      "note": "原老取水设施地震/坍塌替换仍设计、2028目标；实运行水源保护与此缺口并列，不扩大为全城不安全。"
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "severe_weather_wildfire",
+      "status": "context",
+      "sourceIds": ["S14", "S16"],
+      "fullyMeasured": false,
+      "note": "水源集中与轨道寒潮检查标题仅背景，无实际主要天气风险/缓解净方向。"
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "organized_violence",
+      "status": "context",
+      "sourceIds": ["S16"],
+      "fullyMeasured": false,
+      "note": "爆炸/脱轨应急演练仅2025-11-20标题，未核正文或暴力实际影响覆盖。"
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "regional_conflict",
+      "status": "not_started",
+      "sourceIds": [],
+      "fullyMeasured": false,
+      "note": "未取得适配当地的区域冲突现实影响与缓解链，不由无事件材料推低影响。"
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "strategic_exposure",
+      "status": "context",
+      "sourceIds": ["S16"],
+      "fullyMeasured": false,
+      "note": "重要节点威胁只有演练标题背景，无真实战略通道/共同失效处置方向。"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "governance",
+      "status": "partial",
+      "sourceIds": ["S12", "S14", "S05", "S06"],
+      "fullyMeasured": false,
+      "note": "真实生产/监测/公开表、普通法定医保给付及申请上限机制；非仅主管菜单，国家保护不替代当地治疗。"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "adaptive_capacity",
+      "status": "partial",
+      "sourceIds": ["S14"],
+      "fullyMeasured": false,
+      "note": "已运行30万t/day先进处理、IoT实时监测共享及水务委员会；未来2028/2030扩建不当实绩。"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "social_cohesion",
+      "status": "partial",
+      "sourceIds": ["W01", "S14"],
+      "fullyMeasured": false,
+      "note": "就业过去约60%转正主管概括无明确窗口分母；计划80招聘非已完成。多孩/低资格帮助不默认中位居民；一般自动支付/电子账单及免费水检可用。"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "emergency_recovery",
+      "status": "context",
+      "sourceIds": ["S16", "S14"],
+      "fullyMeasured": false,
+      "note": "轨道实际演练仅标题；水设备/源水处理真实运行但不是经历危机后的恢复结局。"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "water",
+      "status": "partial",
+      "sourceIds": ["S11", "S12", "S14"],
+      "fullyMeasured": false,
+      "note": "2025三厂60项/54配水点季度12项/月170家庭点加旧管15点均合规；同源水库双取水非独立备援；费率/减免与内部管线自责并读。"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "food",
+      "status": "not_started",
+      "sourceIds": [],
+      "fullyMeasured": false,
+      "note": "没有可采通常食物净预算/实际帮助后取得证据。"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "energy",
+      "status": "partial",
+      "sourceIds": ["S07"],
+      "fullyMeasured": false,
+      "note": "国家公司2025SAIDI9.32min、住宅单位销售价158.97KRW/kWh；非大田户账单/停电尾部/当地救助实绩。"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "supply_chain",
+      "status": "context",
+      "sourceIds": ["S12", "S14"],
+      "fullyMeasured": false,
+      "note": "供水跨Gyeryong/Sejong、单湖共因风险；无其他关键物资实际替代路径。"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "access",
+      "status": "partial",
+      "sourceIds": ["S05", "S06"],
+      "fullyMeasured": false,
+      "note": "通常覆盖住院20%、登记癌症5%/罕见病10%，门诊层级30–60%，2026年度上限；非全部费用且不证明当地预约/等待。"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "routine_quality",
+      "status": "not_started",
+      "sourceIds": [],
+      "fullyMeasured": false,
+      "note": "本地医院原件未取得，搜索片段不采；不能以获取失败扣质量分。"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "specialist_capacity",
+      "status": "not_started",
+      "sourceIds": [],
+      "fullyMeasured": false,
+      "note": "没有可采当地必要专科真实接诊/结局/转诊链；Chonnam/Hwasun不同城市不搬用。"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "system_continuity",
+      "status": "context",
+      "sourceIds": ["S05", "S06"],
+      "fullyMeasured": false,
+      "note": "国家保障年度限额排除若干费用且结算条件明确，不证明当地临床交接/压力持续。"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "translation",
+      "status": "context",
+      "sourceIds": ["S04", "S17"],
+      "fullyMeasured": false,
+      "note": "通用技术转让/创业不等疾病细胞转化或健康延寿；不采外地临床路径。"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "trial_maturity",
+      "status": "not_started",
+      "sourceIds": [],
+      "fullyMeasured": false,
+      "note": "无合资格本地关联机制成熟人体原结果，不能借KAIST声誉。"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "regulatory_adoption",
+      "status": "not_started",
+      "sourceIds": [],
+      "fullyMeasured": false,
+      "note": "NHIS一般登记癌症付款非特定干预本地常规采用/批准。"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "resident_access",
+      "status": "context",
+      "sourceIds": ["S05", "S06"],
+      "fullyMeasured": false,
+      "note": "一般医保支付背景不能自动覆盖特定新干预付款/照护；没有固定成人要求。"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "knowledge_output",
+      "status": "partial",
+      "sourceIds": ["S04", "S17"],
+      "fullyMeasured": false,
+      "note": "实际2024技术许可收入81亿韩元、年度平均69合同未给平均窗；RID计划不当产用。"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "industry_density",
+      "status": "partial",
+      "sourceIds": ["S04"],
+      "fullyMeasured": false,
+      "note": "2025survey2055总样本中大田总部455；披露就业308家/9682养老金参保岗位，不等本地居民/全FUA产业密度。"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "digital_infrastructure",
+      "status": "partial",
+      "sourceIds": ["S14"],
+      "fullyMeasured": false,
+      "note": "水务IoT实时测量共享已运行，非全户宽带覆盖／抗攻击测试；个人电子银行不作为本维已实现扩散依据。"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "diffusion",
+      "status": "partial",
+      "sourceIds": ["S04", "S17", "S14"],
+      "fullyMeasured": false,
+      "note": "许可/公司实际岗位和市政处理/IoT采用构成有限真实产用连接；无广泛家庭采用或所有许可厂内效果。"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "transport_redundancy",
+      "status": "context",
+      "sourceIds": ["S16"],
+      "fullyMeasured": false,
+      "note": "地铁/公交/终点站导航与演练标题非独立向外实体通道/运力已核。"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "legal_mobility",
+      "status": "partial",
+      "sourceIds": ["R01", "R02", "R03"],
+      "fullyMeasured": false,
+      "note": "韩国公民德国§41可先免签入境再90日内申所需许可；生计/身份/合格就业等条件，非自动长期居留或假定所有普通居民学位工作。"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "asset_portability",
+      "status": "partial",
+      "sourceIds": ["S08"],
+      "fullyMeasured": false,
+      "note": "2026免指定外汇银行、全机构年合计10万美元内合条件免证明；不含应申报海外投资房产。2017费用表不作2026报价/长居后持续账户保证。"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "network_continuity",
+      "status": "not_started",
+      "sourceIds": [],
+      "fullyMeasured": false,
+      "note": "电子银行注册路径非海外手机/通信接续或替代鉴权已核。"
+    }
+  ],
+  "rootScopeReview": {
+    "all82PreviousCaseBytesUnchanged": true,
+    "frozen110PayloadsVerified": true,
+    "rootPdfPageCount": 14,
+    "rootPdfPixelsViewed": [
+      {
+        "sourceId": "S04",
+        "physicalPage": 6
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 7
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 23
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 24
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 33
+      },
+      {
+        "sourceId": "S14",
+        "physicalPage": 7
+      },
+      {
+        "sourceId": "S14",
+        "physicalPage": 13
+      },
+      {
+        "sourceId": "S14",
+        "physicalPage": 21
+      },
+      {
+        "sourceId": "S14",
+        "physicalPage": 23
+      },
+      {
+        "sourceId": "S14",
+        "physicalPage": 24
+      },
+      {
+        "sourceId": "S14",
+        "physicalPage": 32
+      },
+      {
+        "sourceId": "S14",
+        "physicalPage": 33
+      },
+      {
+        "sourceId": "S14",
+        "physicalPage": 12
+      },
+      {
+        "sourceId": "S14",
+        "physicalPage": 22
+      }
+    ],
+    "all9031IndependentlyLoaded": true,
+    "rootNewNetworkRequests": 0,
+    "rootHistoricalToolBlocksVerified": 11,
+    "W01WebsiteOriginalBytesAvailable": false,
+    "national2055FirmsAllLocal": false,
+    "nationalRevenueTransferredToDaejeon": false,
+    "local455FirmsAllDiscloseJobs": false,
+    "insuredJobsAreFuaResidentEmployees": false,
+    "sameSurvivalCohortAcrossAges": false,
+    "summary104107AndBusinessSharesSilentlyReconciled": false,
+    "waterTwoIntakesIndependentBasins": false,
+    "futureAdvancedTreatmentAndTunnelCompleted": false,
+    "waterQualityPointsAreWholeFuaPopulation": false,
+    "water99Point95CoverageIs2026FuaRate": false,
+    "nonRevenueShareIsPhysicalLeakage": false,
+    "allResidentsReceiveMultichildDiscount": false,
+    "nhisCapCoversAllSpending": false,
+    "nhisPremiumDecileEqualsMedianIncome": false,
+    "nationalCapProvesLocalClinicalDelivery": false,
+    "licenseRevenueProvesLonHumanMaturity": false,
+    "planned80InternsCompletedJobs": false,
+    "employment60PercentIsAllAgeSuccessRate": false,
+    "remittance2017FeesCertified2026": false,
+    "germany41MeansAutomaticLongResidence": false,
+    "sourceFailurePenalizesCapability": false,
+    "sourceCountDeterminesScore": false,
+    "unknownsFilledWithMidpoint": false,
+    "score40RequiresDominanceOrMajorityOrShutdown": false
+  },
+  "sourceAndStopLedger": {
+    "discoveryRounds": [
+      [
+        "site.cnuh.co.kr 2025 충남대학교병원 의료 질 평가 대기 조혈모세포이식",
+        "site.daejeon.go.kr 2025 결산 재난 폭우 폭염 지원 성과",
+        "site.waterworks.daejeon.kr 2025 수돗물 품질 보고서",
+        "site.kaist.ac.kr 2025 기술이전 사업화 실제 성과"
+      ],
+      [
+        "대전광역시 상수도 2025 수돗물 품질 보고서 수질검사",
+        "site.daejeon.go.kr 2025 폭우 침수 폭염 대피 지원 실적",
+        "site.daejeon.go.kr 2025 을지연습 민방위 북한 실제",
+        "site.cnuh.co.kr 조혈모세포이식 2025 환자 CAR-T"
+      ]
+    ],
+    "discoveryClosed": true,
+    "normalHTTPActualLegs": 18,
+    "normalBudget": 18,
+    "networkClosed": true,
+    "journal": "http-request-journal.json",
+    "normalValid": 15,
+    "normalFailed": 3,
+    "durableReused": 3,
+    "sameMechanismSuccessDoesNotResetFailures": true,
+    "inherited": "inherited-stops.json",
+    "entries": [
+      {
+        "provider": "daejeon.go.kr main city host",
+        "knownFailures": [
+          {
+            "mechanism": "normalTLS",
+            "source": "S03",
+            "error": "SSL RECORD_LAYER_FAILURE"
+          },
+          {
+            "mechanism": "web.open whitepaper document",
+            "ref": "turn2367view0",
+            "error": "timeout"
+          },
+          {
+            "mechanism": "normalTLS different employment story",
+            "source": "S18",
+            "error": "SSL RECORD_LAYER_FAILURE"
+          }
+        ],
+        "knownProviderTotal": 3,
+        "action": "provider stopped now; not citywide network stop; S18 prior successful web body not retry after failedraw"
+      },
+      {
+        "provider": "cnuh.co.kr Chungnam hospital",
+        "knownFailures": [
+          {
+            "mechanism": "web.open exact planPDF",
+            "ref": "turn2363view0",
+            "error": "timeout"
+          },
+          {
+            "mechanism": "normalTLS samePDF",
+            "source": "S01",
+            "error": "SSL RECORD_LAYER_FAILURE"
+          }
+        ],
+        "knownTotal": 2,
+        "action": "voluntarily no further CNUH chain; not claim threshold3; no alternative host replacement"
+      },
+      {
+        "provider": "waterworks.daejeon.kr old recruitment path",
+        "knownFailures": [
+          {
+            "mechanism": "web.open oldspecificURL",
+            "ref": "turn2364view0",
+            "error": "404"
+          }
+        ],
+        "knownNewFailures": 1,
+        "olderFailureCount": "unknown, not0",
+        "action": "exact olddocument not retried; independent current water nav and actual href sources S09–S14 were permitted, valid; success does not erase404"
+      },
+      {
+        "provider": "startup.kaist.ac.kr attachment",
+        "knownFailures": [
+          {
+            "mechanism": "web click",
+            "ref": "turn2364view1",
+            "error": "unsupported application/octetstream tool format"
+          }
+        ],
+        "action": "not provider rawTLS failure; actual first normalbyte request S04 succeeded; no hidden retry"
+      },
+      {
+        "provider": "unresolved internal preview/navigation",
+        "refs": ["turn2365view2", "turn2366view1", "turn2368view2"],
+        "nature": "internal tool errors with targetURL not reported; cannot assign city provider count or cityservice defect",
+        "action": "specific chains stopped, not inferred all-city threshold"
+      },
+      {
+        "provider": "water monthly selector",
+        "refs": ["turn2368view1", "turn2369view0"],
+        "nature": "defaultselector no matching records, not HTTPfailure or no watermeasurement; report S14 actual measurements acquired"
+      },
+      {
+        "provider": "find no matches",
+        "refs": ["turn2371view0", "turn2371view1"],
+        "nature": "not website failure"
+      },
+      {
+        "provider": "djtc.kr",
+        "ref": "turn2372view0",
+        "nature": "web returned0lines; actual normalrouter S15 and metarefreshfollow S16 success, no hidden HTTPredirect"
+      },
+      {
+        "provider": "historically stopped EC/WHO/NHS England/UCLH/ING; HIRA/PMC/Asan previous failure chains",
+        "action": "not requested; old success paths lost not recertified; see inherited-stops.json"
+      }
+    ],
+    "correction": "Initial reasoning overaggregated cityhomeTLS, waterold404 and unresolvedpreviewerror as broadcitystop. Parent corrected; provider/mechanism distinctions above used for later legitimate independenthref requests; no failed concrete document retried to conceal issue. No capability penalty.",
+    "routes": "Each HTTPleg explicit journal/headers; no automatic redirect retries. Meta-refresh S15 to S16 separately consumed1leg. All actual source/request/pixel batches<=3."
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-daejeon-score-completion-review.md",
+    "sha256": "1964ff8606df7a24305646cbb46d1451e3f4ff700c7ef87592b2ad6f34861889",
+    "researchReport": "docs/cci-daejeon-priority-review.md",
+    "researchReportSha256": "ed0251e42c69a88a7c7d7e34ce9b96540e61c7e30c13fd36d5ab34682f8ddca6",
+    "researchFrozenReportSha256": "fffe00a8ccbba35aeb067582e241ec794a00c024675e6e47070f3881b6d37790",
+    "frozenManifestSha256": "7ca3b06288c6cced3e9b56cf9a842dd2da59c719cb00f8700a0156b97ca053cc",
+    "frozenFilesVerified": 110,
+    "validOriginalCount": 18,
+    "newValidOriginalCount": 15,
+    "reusedOriginalCount": 3,
+    "rootNewNetworkRequests": 0
+  },
+  "reportBytes": 13906,
+  "reportSha256": "1964ff8606df7a24305646cbb46d1451e3f4ff700c7ef87592b2ad6f34861889"
+}

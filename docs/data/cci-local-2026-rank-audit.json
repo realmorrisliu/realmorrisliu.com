@@ -4,10 +4,10 @@
   "evidenceCutoff": "2026-10-10",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
-  "conditionalCaseCount": 82,
+  "conditionalCaseCount": 83,
   "completeConditionalCaseCount": 18,
-  "partialCaseCount": 64,
-  "unassessedCount": 8949,
+  "partialCaseCount": 65,
+  "unassessedCount": 8948,
   "weights": {
     "PCS": 15,
     "GSS": 15,
@@ -349,6 +349,15 @@
           "center": null,
           "lower": 42.0,
           "upper": 67.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "1782",
+          "source_name": "Daejeon",
+          "center": null,
+          "lower": 15.0,
+          "upper": 90.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1097,6 +1106,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "1782",
+          "source_name": "Daejeon",
+          "center": null,
+          "lower": 15.0,
+          "upper": 90.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "1830",
           "source_name": "Sydney",
           "center": null,
@@ -1837,6 +1855,15 @@
           "center": null,
           "lower": 42.0,
           "upper": 67.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "1782",
+          "source_name": "Daejeon",
+          "center": null,
+          "lower": 15.0,
+          "upper": 90.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -2585,6 +2612,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "1782",
+          "source_name": "Daejeon",
+          "center": null,
+          "lower": 6.0,
+          "upper": 96.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "1830",
           "source_name": "Sydney",
           "center": null,
@@ -3325,6 +3361,15 @@
           "center": null,
           "lower": 42.0,
           "upper": 67.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "1782",
+          "source_name": "Daejeon",
+          "center": null,
+          "lower": 15.0,
+          "upper": 90.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -4073,6 +4118,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "1782",
+          "source_name": "Daejeon",
+          "center": null,
+          "lower": 15.0,
+          "upper": 90.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "1830",
           "source_name": "Sydney",
           "center": null,
@@ -4813,6 +4867,15 @@
           "center": null,
           "lower": 36.0,
           "upper": 71.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "1782",
+          "source_name": "Daejeon",
+          "center": null,
+          "lower": 15.0,
+          "upper": 90.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -5561,6 +5624,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "1782",
+          "source_name": "Daejeon",
+          "center": null,
+          "lower": 9.0,
+          "upper": 94.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "1830",
           "source_name": "Sydney",
           "center": null,
@@ -6301,6 +6373,15 @@
           "center": null,
           "lower": 36.0,
           "upper": 71.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "1782",
+          "source_name": "Daejeon",
+          "center": null,
+          "lower": 15.0,
+          "upper": 90.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -7049,6 +7130,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "1782",
+          "source_name": "Daejeon",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "1830",
           "source_name": "Sydney",
           "center": null,
@@ -7478,7 +7568,7 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "b5ba8ccdd31a07d3f536dba8945dfdbce67b261830607a516d2f82c0704591e3",
+    "cci-global-evidence-matrix.csv": "f86abbd932c27f2fc52d416c15d8a9404e49cedf6a03e6b25c81b3aa2502bb8d",
     "cci-legal-mobility-rules.json": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "cci-legal-mobility.md": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e",
     "cci-local-2026-singapore-case.json": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -7645,12 +7735,14 @@
     "cci-luxembourg-score-completion-review.md": "77514f720699b5676456671f01307ca1b30c21aec36c01ad35a5c94f94097911",
     "cci-local-2026-stuttgart-case.json": "af433b6b4d364b8dd79900a4da1a9a43f6515882c2686c895cce0f2f6bac3ba8",
     "cci-stuttgart-score-completion-review.md": "d8e83cd5eac0cd6373eb704fa05eab0a3fa05ad4d27e487d3909b7f40c939106",
+    "cci-local-2026-daejeon-case.json": "b110865996c8bee327f4e1774a3cb048cc95db7a2484c097ec26d7ea9366f39d",
+    "cci-daejeon-score-completion-review.md": "1964ff8606df7a24305646cbb46d1451e3f4ff700c7ef87592b2ad6f34861889",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "0efe6a22cbbf271aeb6d131fec9e3620890848da3015bf8eb32039c8b1535b06",
+    "cci-global-evidence-matrix.json": "6ccc0d2e48500fd3aaaecd3beee612796086337381b96b92c9e53585e894f5c5",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "c451558fd2e9d214a5d6d4b85a6277cd2d34ba42cf0f93694271ef6267c3e91d"
+    "cci-local-2026-scoring-calibration.md": "f659f85f990be30ea629aec1d49f60602b49076ba4aba68bb5de9f7ad55adecd"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "9f4712f5acb4d86a0d747a499ecedfb8480aac6f1362326aa0708bfd6c1fe22c",
+  "csvSha256": "5c2c7d92da35466c5c3e8b78b806ce118f994f36e28095830d25826fd27dea00",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }
