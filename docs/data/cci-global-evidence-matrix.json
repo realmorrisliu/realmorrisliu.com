@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 78,
+    "conditionalCaseCount": 79,
     "completeConditionalCaseCount": 18,
-    "partialCaseCount": 60,
-    "unassessedCount": 8953,
+    "partialCaseCount": 61,
+    "unassessedCount": 8952,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -695,8 +695,13 @@
       "sha256": "f1d6d68724cfa05536cf8a69ceb3064b767b75d58a67105aaad7df13e82bf68e",
       "provenance": "cci-cambridge-score-completion-review.md",
       "provenanceSha256": "43d3ee11241103b218c774eb9d20266813eea1d554b37dda5e19e917a37f9824"
+    },
+    "cci-local-2026-pittsburgh-case.json": {
+      "sha256": "a3b2f8ee23da7311576c093d68d9d08dc63113ae35835fba3b2ab40d499ca671",
+      "provenance": "cci-pittsburgh-score-completion-review.md",
+      "provenanceSha256": "a70f3c12820d253a67951a5d657efc033366d1bdd162d75701fbb202faf4fc0d"
     }
   },
-  "scriptSha256": "26342e3f158b0f63766c3901d6925f0e2bbc5eb744020b1db36a1882f6743cc0",
-  "csvSha256": "45f1b60e6addb9b17b6d43e3d05d65ac0e89d9b26a63f1f8c85d9ce8cd4e7540"
+  "scriptSha256": "f0bbc605e3eef02b8376b2b83141201ba19e802e5523027dfce5d3eebadc5fad",
+  "csvSha256": "f2665328caf8d942155da81cf2c0a13c647bd1d015a62f27ce3ce470621736a6"
 }

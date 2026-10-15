@@ -130,6 +130,7 @@ const realCases = [
   "kuala-lumpur",
   "oxford",
   "cambridge",
+  "pittsburgh",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -251,6 +252,7 @@ const [
   kualaLumpur,
   oxford,
   cambridge,
+  pittsburgh,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2979,3 +2981,48 @@ assert.deepEqual(total({ ...cambridge, MED: 60 }), { center: null, lower: 24, up
 assert.deepEqual(total({ ...cambridge, ISR: 40 }), { center: null, lower: 18, upper: 78 });
 assert.deepEqual(total({ ...cambridge, TEC: 40 }), { center: null, lower: 19, upper: 79 });
 assert.deepEqual(total({ ...cambridge, TEC: 80 }), { center: null, lower: 23, upper: 83 });
+
+const pittsburghCase = realCases.find(c => c.candidateId === 7020);
+assert.equal(
+  pittsburghCase.priorityCompletionReview.sha256,
+  digest(pittsburghCase.priorityCompletionReview.path)
+);
+assert.equal(
+  pittsburghCase.priorityCompletionReview.researchReportSha256,
+  digest(pittsburghCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(pittsburgh), { center: null, lower: 42, upper: 67 });
+assert.equal(pittsburghCase.sourceSnapshots.length, 20);
+assert.equal(pittsburghCase.failedSourceSnapshots.length, 1);
+assert.equal(pittsburghCase.routingSourceSnapshots.length, 1);
+for (const key of [
+  "score40RequiresDominanceOrMajorityOrShutdown",
+  "bmtOrTdm1OutcomesTransferredToCart",
+  "hasTisaOutcomesArePittsburgh100Patients",
+  "fapTransplantExclusionMeansAllInsuranceDenied",
+  "hardshipThresholdIs15PercentCopayCap",
+  "airportFareCertifiedAtCutoff",
+  "overseasCommunicationDirectlyMeasured",
+  "germanApplicationMeansResidenceGranted",
+])
+  assert.equal(pittsburghCase.rootScopeReview[key], false);
+for (const [id, lower, upper] of [
+  ["PCS", 36, 76],
+  ["ISR", 33, 73],
+  ["MED", 33, 73],
+  ["LON", 36, 71],
+  ["TEC", 36, 71],
+  ["OPT", 36, 71],
+] as const) {
+  const withdrawn = { ...pittsburgh };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...pittsburgh, PCS: 60 }), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total({ ...pittsburgh, MED: 40 }), { center: null, lower: 39, upper: 64 });
+assert.deepEqual(total({ ...pittsburgh, LON: 40 }), { center: null, lower: 40, upper: 65 });
+assert.deepEqual(total({ ...pittsburgh, OPT: 40 }), { center: null, lower: 40, upper: 65 });
+const pittsburghWithoutLonOpt = { ...pittsburgh };
+delete pittsburghWithoutLonOpt.LON;
+delete pittsburghWithoutLonOpt.OPT;
+assert.deepEqual(total(pittsburghWithoutLonOpt), { center: null, lower: 30, upper: 75 });

@@ -88,6 +88,7 @@ import philadelphia from "../../docs/data/cci-local-2026-philadelphia-case.json"
 import kualaLumpur from "../../docs/data/cci-local-2026-kuala-lumpur-case.json";
 import oxford from "../../docs/data/cci-local-2026-oxford-case.json";
 import cambridge from "../../docs/data/cci-local-2026-cambridge-case.json";
+import pittsburgh from "../../docs/data/cci-local-2026-pittsburgh-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -180,8 +181,10 @@ const cases = [
   kualaLumpur,
   oxford,
   cambridge,
+  pittsburgh,
 ];
 const caseNamesZh: Record<number, string> = {
+  [pittsburgh.candidateId]: "匹兹堡功能区",
   [cambridge.candidateId]: "剑桥功能区（英国）",
   [oxford.candidateId]: "牛津功能区",
   [kualaLumpur.candidateId]: "吉隆坡功能区",
@@ -366,6 +369,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [pittsburgh.candidateId]: [
+    zh
+      ? "匹兹堡PCS条件40，ISR／MED／LON／TEC／OPT条件60，GSS／RES未知；原权重小计42、数学域42—67，无完整总分。实际风暴保护后多日停电、通道和医氧约束保留；具体诊疗、执行与产用支持可撤判断。"
+      : "Pittsburgh has conditional 40 for PCS and 60 for ISR/MED/LON/TEC/OPT; GSS/RES remain unknown: subtotal 42 and arithmetic domain 42–67, without a complete total. Multi-day power, corridor and medical-oxygen constraints after actual storm assistance remain; concrete care, institutional delivery and technology use support revocable judgments.",
+    zh
+      ? "成熟tisa资料不搬成当地100余CAR-T患者、儿科BMT或T-DM1结局；移植FAP排除不等普通保险全拒付。疾病转化仍须通常保险／净监护桥，退出仍须实体居留资格、预算／鉴权及替代通信桥；任一必要条件拒绝即相应维度未知，两维同撤回30—75。全球入围未证明。"
+      : "Mature tisa evidence is not the local 100-plus CAR-T cohort, paediatric BMT or T-DM1 outcomes; transplant financial-aid exclusion does not mean universal insurance denial. LON requires ordinary insurance/net-care assumptions; OPT requires substantive residence eligibility, budget/authentication and replacement connectivity. Rejecting a necessary bridge restores the dimension to unknown; withdrawing both returns 30–75. Global qualification remains unproven.",
+  ],
   [cambridge.candidateId]: [
     zh
       ? "英国剑桥MED条件40、ISR／TEC条件60，其余五维未知；已知小计21、数学域21—81，无完整总分。真实诊疗、通常NHS住院付款和已实施整改，与儿童骨科伤害、复杂服务缺口及持续等待共同判断，沿用牛津尺度。"
