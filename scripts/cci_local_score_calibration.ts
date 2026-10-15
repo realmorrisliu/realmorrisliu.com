@@ -1133,8 +1133,8 @@ const jakartaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
   (c: { efua_id: string }) => c.efua_id === "4897"
 );
 assert(jakartaPosition);
-// Philadelphia's lower54 also exceeds Jakarta's upper53.
-assert.equal(jakartaPosition.bestPosition, 22);
+// Vienna's lower54 also exceeds Jakarta's upper53.
+assert.equal(jakartaPosition.bestPosition, 23);
 assert.equal(jakartaPosition.worstPosition, rankAudit.candidateCount);
 
 assert.deepEqual(total(nanjing), { center: null, lower: 49, upper: 64 });
@@ -2078,13 +2078,13 @@ assert.equal(torontoCase.optPriorityReview.otherSevenWholeObjectsUnchanged, true
 assert.deepEqual(total(vancouver), { center: null, lower: 45, upper: 70 });
 assert.deepEqual(total({ ...vancouver, RES: 40 }), { center: null, lower: 49, upper: 64 });
 assert.deepEqual(total({ ...vancouver, RES: 60 }), { center: null, lower: 51, upper: 66 });
-assert.deepEqual(total(vienna), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total(vienna), { center: null, lower: 54, upper: 64 });
 const viennaWithoutMed = { ...vienna };
 delete viennaWithoutMed.MED;
-assert.deepEqual(total(viennaWithoutMed), { center: null, lower: 36, upper: 76 });
+assert.deepEqual(total(viennaWithoutMed), { center: null, lower: 45, upper: 70 });
 const viennaWithoutLon = { ...vienna };
 delete viennaWithoutLon.LON;
-assert.deepEqual(total(viennaWithoutLon), { center: null, lower: 39, upper: 74 });
+assert.deepEqual(total(viennaWithoutLon), { center: null, lower: 48, upper: 68 });
 for (const id of [375, 790]) {
   const c = realCases.find(c => c.candidateId === id);
   assert.equal(c.priorityCompletionReview.sha256, digest(c.priorityCompletionReview.path));
@@ -2888,3 +2888,25 @@ assert.equal(munichMedReview.rootReview.allMetricsMustBeatModelGate, false);
 assert.equal(munichMedReview.rootReview.noBroadSystemFailureUsedAsPositiveEvidence, false);
 assert.equal(munichMedReview.rootReview.copayCapIncludesPrivateOrUncoveredExtras, false);
 assert.equal(munichMedReview.rootReview.allResidentsFixedAdults, false);
+
+const viennaGssCase = realCases.find(c => c.candidateId === 790);
+const viennaGssReview = viennaGssCase.gssCompletionReview;
+assert.equal(viennaGssReview.sha256, digest(viennaGssReview.path));
+assert.equal(viennaGssReview.researchReportSha256, digest(viennaGssReview.researchReport));
+assert.equal(viennaGssCase.reportSha256, digest(viennaGssReview.path));
+assert.equal(viennaGssReview.adoptedScore, 60);
+assert.equal(viennaGssReview.otherSevenExactUtf8ObjectsUnchanged, true);
+assert.equal(viennaGssReview.exactHistoricalByteMatches, 2);
+assert.equal(viennaGssReview.currentDifferentVersionSnapshots, 1);
+assert.equal(viennaGssReview.rootNewNetworkRequests, 0);
+assert.equal(viennaGssReview.rootReview.targetedGroupsExcludedFromOrdinaryPortrait, false);
+assert.equal(viennaGssReview.rootReview.seizureIsConvictionOrAvoidedAttackCount, false);
+assert.equal(viennaGssReview.rootReview.airportPassengersAreResidentRiskRate, false);
+assert.equal(viennaGssReview.rootReview.airportBackupIsCitywideMilitaryProtection, false);
+assert.equal(viennaGssReview.rootReview.currentChangedBodyIsRecoveredOldBody, false);
+assert.equal(viennaGssReview.rootReview.companySurvivalProvesResidentSafety, false);
+assert.equal(viennaGssReview.rootReview.score40RequiresMajorityVictimsOrCityShutdown, false);
+assert.deepEqual(total({ ...vienna, GSS: 40 }), { center: null, lower: 51, upper: 61 });
+const viennaWithoutGss = { ...vienna };
+delete viennaWithoutGss.GSS;
+assert.deepEqual(total(viennaWithoutGss), { center: null, lower: 45, upper: 70 });

@@ -7,14 +7,14 @@
   "portraitDetail": "2026普通奥地利本国长期居民、当地中位收入、通常公共保障、无固定年龄；干预特定年龄/病种资格另记",
   "evidenceCutoff": "2026-10-10",
   "targetYear": 2026,
-  "retrievedOn": "2026-10-14",
-  "evidenceReview": "cci-vienna-priority-review.md",
-  "reportBytes": 19886,
-  "reportSha256": "52c601c42fd43dee493403c5ddc2e365bf8c9dee6c5f8e847dfebe3d52e0eb9b",
+  "retrievedOn": "2026-10-15",
+  "evidenceReview": "cci-vienna-gss40-completion-review.md",
+  "reportBytes": 7350,
+  "reportSha256": "644d4b4d64c949a9ca4c37c2ece3c3a9b09cfa590534518eebbf27bf169f176c",
   "expectedConditionalTotal": null,
-  "knownWeightedSubtotal": 45,
-  "unknownWeight": 25,
-  "unresolvedScoreRange": [45, 70],
+  "knownWeightedSubtotal": 54,
+  "unknownWeight": 10,
+  "unresolvedScoreRange": [54, 64],
   "dimensions": [
     {
       "id": "PCS",
@@ -31,15 +31,96 @@
     },
     {
       "id": "GSS",
-      "score": null,
-      "rationale": "真实地方武器查获/会议攻击/Eurovision保护和枢纽防护；全国组织犯罪不代当地居民影响。",
-      "assumption": "限定暴力通常影响与地区/战略剩余保护连接未闭；不凭资料少或没发生战争判40/60。不新增成功攻击前置门槛。",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "实际维也纳武器移除、已执行定向防范、冲突下实际通道调整和在役节点保护支持有限通常能力判断；会议攻击、针对群体威胁及现实空域／战略余障保留。影响程度未直接测量，通常作用／节点代表性／版本时点桥必要且可撤，不由国家案件、无战争或未整体停摆给分。",
+      "assumption": "接受具体控制对普通必要生活（包括受针对群体）的通常保护作用、机场运行／改线／在役措施对重要通道的有限代表性及2025–26能力到截止的延续。当前国安新快照非旧正文/截止认证；拒绝任一必要连接恢复未知。40无需受害过半或全城停摆。",
+      "conditionalAlternatives": [40],
       "subpillars": {
         "organized_violence": "partial",
-        "regional_conflict": "context",
+        "regional_conflict": "partial",
         "strategic_exposure": "partial"
-      }
+      },
+      "coverageReview": [
+        {
+          "dimension": "GSS",
+          "status": "partial",
+          "score": null,
+          "sources": ["R40-S01", "R40-S02"],
+          "actualHelp": "Viennaactualfivehandguns/tenmagazinesremoved; crossborderLondonarrestnotconviction; actual2026Vienna/LowerAustriareportingobligations/discussions executed.",
+          "counterevidence": "Actual2025Viennadroneconferencebutyricacidattack; intendedIsraeli/Jewishtargetthreat remainsmaterial; highnationalterrorwarningandnationalextremismincreasearenotlocalrates.",
+          "unmeasured": "No injury/count/durationprovidedfortheconferenceattack; noaffectedgroupusualactivityrestrictionoutcome. Noallpopulationrate required; the finiteeffectbridgeis necessary.",
+          "researchStatus": "partial_conditional_usual_effect_bridge",
+          "subpillar": "organized_violence"
+        },
+        {
+          "dimension": "GSS",
+          "status": "partial",
+          "score": null,
+          "sources": ["R40-S01", "R40-S02", "R40-S03"],
+          "actualHelp": "Actualairlineavoidance/reroutingafterJan2026Iranwarning, operating2025VIEEuropean/intercontinentaldestinations; crossborderweaponinterdictionaddressesactualthreatlink.",
+          "counterevidence": "OngoingUkraine/RussianairspaceclosuresalreadylengthenEast/SoutheastAsianflights;Feb2026Iran/MiddleEastescalationactualflightrestrictionsandairspaceclosures.",
+          "unmeasured": "Reroutingnotallroutecost/continuityoutcomes; 5.7%is2025VIEMiddleEastpassengershare, notresidentexposure. KošiceUkraineproximitynotViennaexposure.",
+          "researchStatus": "partial_actual_local_corridor_effect_and_response",
+          "subpillar": "regional_conflict"
+        },
+        {
+          "dimension": "GSS",
+          "status": "partial",
+          "score": null,
+          "sources": ["R40-S01", "R40-S03"],
+          "actualHelp": "Airportphysical59backupgenerators+increasingownPV, operationalISMS/securityincidentmonitoring/vulnerabilityscans/EOLreplacement. DSNrealcriticaloperatorconsultation/earlywarningsnationalcontext only.",
+          "counterevidence": "CentralITfailure/cyberattacks/terrorincidentsandconflictrestrictionsremainrecognizedrisks; nationalespionage/hybridriskhigh,notcitycountrate.",
+          "unmeasured": "No measuredbackuphours/wholeairportpeakloadcovered orsecuritydefeateffect; generatornotfuelindependent/PVnotfirmbackup bydefinition, insurancefinancialcovernotpreventiveshield; nodeexampledoesnotprovemilitary/citywidecoverage.",
+          "researchStatus": "partial_local_operational_protection",
+          "subpillar": "strategic_exposure"
+        }
+      ],
+      "scoreStatus": "conditional_root_adopted",
+      "necessaryAssumptions": [
+        {
+          "id": "A-targeted-control-usual",
+          "necessary": true,
+          "claim": "实际移除维也纳武器链与2026定向监控/安全对话，能有限推定对普通居民（包括被针对的犹太/以色列机构相关者）有通常保护作用；现证支持重要组织暴力约束仍有但通常未主导必要生活。",
+          "basis": [
+            "S02 Viennaweaponseizure",
+            "S01 actualVienna/LowerAustria2026preventiveexecution"
+          ],
+          "limits": "不是袭击被避免人数或受保护人口率，未测受威胁群体实际活动限制/恢复；不排除群体、不按多数投票消除其伤害。",
+          "withdrawal": "若这些具体控制不足以连接通常生活，或定向群体重要残余尚无法裁定，则主分回null；不能由缺失自动40。"
+        },
+        {
+          "id": "A-corridor-and-node",
+          "necessary": true,
+          "claim": "机场已经实用的多方向通道、冲突下真实改线及本地在役备用/IT监测，可有限承接关键必要通道的通常能力，足以支持有约束60。",
+          "basis": [
+            "S03 physical31 actualdepartures",
+            "S03 physical55 actualroutesadapted",
+            "S03 physical59 runningbackupandISMS"
+          ],
+          "limits": "航空公司改线是欧洲/奥地利场景，不是每条VIE航线完成清单；不把机场保护当全城电网/军事盾，不把商业客流当居民风险率；普通乘客必要航程/费用及节点代表性未逐人测。",
+          "withdrawal": "若单关键节点不足以代表当地重要战略影响或必要通道实际可用，撤回null，不以机场未破产或城市未停摆替代。"
+        },
+        {
+          "id": "A-time-and-current-text",
+          "necessary": true,
+          "claim": "2025实际保护/运行、Jan/Feb2026改线和May2026本地措施可有限适配2026-10-10目标；S01仅接受其当前正文与名义2026期对早期事件的陈述。",
+          "basis": [
+            "S01 nominalJuly/August2026issue",
+            "S02 6Nov2025body",
+            "S03 5May2026versionclue"
+          ],
+          "limits": "精确截止历史字节均未认证；S01与旧字节不同且旧正文丢失，无法排除截止后内容修改，不能称旧body已恢复；后续冲突升级/保护停运未系统核查。",
+          "withdrawal": "若不接受时间或S01截止适配，则回null，不声称版本历史已被认证。"
+        }
+      ],
+      "alternativeRationales": {
+        "40": "重要约束40有实质竞争解释：被针对群体仍可能因组织威胁/保护不足重要限制日常必要活动，或区域关闭/中心系统共同失效使必要通道在帮助后仍明显受限。但当前三源未给出这种实际残余主导的范围，不能由高国家警报/单次攻击或未知自动40。若通常影响桥无法接受，先回null。",
+        "60": "具体武器已经移除、定向监控已实际执行、风险下真实通道仍运行并改线及有在役节点防护，提供积极帮助后能力证据。有限判断其通常作用使重要约束未主导必要生活/通道，保留所有具体威胁与定向群体代价；不等于安全无害或零风险。"
+      },
+      "withdrawToUnknown": true,
+      "alternative40Rationale": "若实际保护后定向群体必要活动或区域／战略余障使通常必要生活、通道明显受制，可取较低条件40；当前未作另一已证实分数。不能定向或拒绝必要桥则恢复未知。",
+      "sourceIds": ["R40-S01", "R40-S02", "R40-S03"],
+      "withdrawToUnknownDomain": [45, 70]
     },
     {
       "id": "ISR",
@@ -121,7 +202,7 @@
     }
   ],
   "referenceBoundaryCheck": {
-    "source": "/private/tmp/cci-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
     "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
     "allGeometryCount": 9031,
     "candidateId": 790,
@@ -167,27 +248,32 @@
     "limitation": "Approximate reference points; no whole clinical/service/resident boundary proof",
     "sourceBytes": 9932800,
     "method": "Full9031 independently read; EPSG4326 toESRI54009 always_xy; covers; approximate named site reference points only",
-    "reviewedOn": "2026-10-14"
+    "reviewedOn": "2026-10-15",
+    "existingGeometryRepairs": 136,
+    "rootRevalidationInputCommit": "fdcc2ba2bd267ca2e923d3c6bba580ea8375cfc9",
+    "limitsReaffirmed": "Analyst approximate references only, not official footprint/event exact position/resident service population or proof of corridor access. Old2015metadata not2026denominator."
   },
   "sourceManifest": {
     "path": "/private/tmp/cci-global/vienna/source-manifest.json",
     "sha256": "40d70ba7c6da99f37623517bebff8f347513e75d7a50287e0b6eb779ddf3ddbd"
   },
   "sensitivity": {
-    "PCS40": [42, 67],
-    "ISR40": [42, 67],
-    "MED40": [42, 67],
-    "LON40": [43, 68],
-    "OPT40": [43, 68],
-    "TEC80": [47, 72],
-    "OPT80": [47, 72],
-    "LON80": [47, 72],
-    "MEDWithdrawn": [36, 76],
-    "LONWithdrawn": [39, 74],
-    "OPTWithdrawn": [39, 74],
-    "PCSWithdrawn": [36, 76],
-    "MEDandLONWithdrawn": [30, 80],
-    "allJudgmentsWithdrawn": [0, 100]
+    "PCS40": [51, 61],
+    "ISR40": [51, 61],
+    "MED40": [51, 61],
+    "LON40": [52, 62],
+    "OPT40": [52, 62],
+    "TEC80": [56, 66],
+    "OPT80": [56, 66],
+    "LON80": [56, 66],
+    "MEDWithdrawn": [45, 70],
+    "LONWithdrawn": [48, 68],
+    "OPTWithdrawn": [48, 68],
+    "PCSWithdrawn": [45, 70],
+    "MEDandLONWithdrawn": [39, 74],
+    "allJudgmentsWithdrawn": [0, 100],
+    "GSS40": [51, 61],
+    "GSSWithdrawn": [45, 70]
   },
   "sourceSnapshots": [
     {
@@ -262,13 +348,18 @@
       "publicationOrVersion": "2026 July/August issue",
       "scope": "Specific Vienna incident/actual Vienna-LowerAustria protection; nation totals separate",
       "evidenceRole": "GSS",
-      "usedForScore": true,
+      "usedForScore": false,
       "independentCutoffVersionVerified": true,
-      "currentPageUseRequiresRevocableContinuity": false
+      "currentPageUseRequiresRevocableContinuity": false,
+      "historicalRecordOnly": true,
+      "currentOldOriginalAvailable": false,
+      "usedForCurrentGssReview": false,
+      "historicalCutoffClaimReauthenticated": false,
+      "supersededForCurrentGssReviewBy": "R40-S01"
     },
     {
       "file": "terror-weapons2025.html",
-      "path": "/private/tmp/cci-global/vienna/terror-weapons2025.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/vienna-original-recovery40/terror-weapons2025.html",
       "url": "https://www.bmi.gv.at/news4f94.html",
       "requestExitCode": 0,
       "httpStatus": "200",
@@ -283,7 +374,10 @@
       "evidenceRole": "GSS",
       "usedForScore": true,
       "independentCutoffVersionVerified": true,
-      "currentPageUseRequiresRevocableContinuity": false
+      "currentPageUseRequiresRevocableContinuity": false,
+      "recoveredOn": "2026-10-15",
+      "recoveredExactHistoricalByteMatch": true,
+      "recoveryAuthenticatesCutoffHistoricalBytes": false
     },
     {
       "file": "hospital-costs2024.html",
@@ -477,7 +571,7 @@
     },
     {
       "file": "airport2025.pdf",
-      "path": "/private/tmp/cci-global/vienna/airport2025.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/vienna-original-recovery40/airport2025.pdf",
       "url": "https://viennaairport.com/jart/prj3/va/uploads/data-uploads/IR/2026/GB/VIE_GB_2025_DE.pdf",
       "requestExitCode": 0,
       "httpStatus": "200",
@@ -492,7 +586,10 @@
       "evidenceRole": "OPT GSS",
       "usedForScore": true,
       "independentCutoffVersionVerified": false,
-      "currentPageUseRequiresRevocableContinuity": true
+      "currentPageUseRequiresRevocableContinuity": true,
+      "recoveredOn": "2026-10-15",
+      "recoveredExactHistoricalByteMatch": true,
+      "recoveryAuthenticatesCutoffHistoricalBytes": false
     },
     {
       "file": "heat2025.pdf",
@@ -934,13 +1031,71 @@
       "evidenceRole": "LON",
       "independentCutoffVersionVerified": true,
       "currentPageUseRequiresRevocableContinuity": false
+    },
+    {
+      "id": "R40-S01",
+      "file": "state-security2025.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/vienna-original-recovery40/state-security2025.html",
+      "url": "https://www.bmi.gv.at/magazin/2026_07_08/01_verfassungsschutzbericht_2025.html",
+      "retrievedOn": "2026-10-15",
+      "requestAtUTC": "2026-10-15T12:44:02.786141+00:00",
+      "validOriginal": true,
+      "originalBytes": 73873,
+      "originalSha256": "b59fbd87bcb4b8b4530fab6ebe34aeed5bcda2f31a88ef6ba7204e45547f7da2",
+      "sha256": "b59fbd87bcb4b8b4530fab6ebe34aeed5bcda2f31a88ef6ba7204e45547f7da2",
+      "httpStatus": 200,
+      "sameUnderlyingHistoricalSourceFile": "state-security2025.html",
+      "sameHistoricalBytes": false,
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceKind": "new_current_version_snapshot",
+      "usedForScore": true,
+      "useScope": "CurrentGSS actualcomponent/counterevidence or revocablebridge only; not newindependentcorroboration/cutoffhistoricalauthentication; datedcurrentbody calendar/futureforecasts excluded."
+    },
+    {
+      "id": "R40-S02",
+      "file": "terror-weapons2025.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/vienna-original-recovery40/terror-weapons2025.html",
+      "url": "https://www.bmi.gv.at/news4f94.html",
+      "retrievedOn": "2026-10-15",
+      "requestAtUTC": "2026-10-15T12:44:02.786452+00:00",
+      "validOriginal": true,
+      "originalBytes": 57609,
+      "originalSha256": "d280c6077319eeb36d58f293b7e040365166875dd079a9eb27f585ec3d64aaa0",
+      "sha256": "d280c6077319eeb36d58f293b7e040365166875dd079a9eb27f585ec3d64aaa0",
+      "httpStatus": 200,
+      "sameUnderlyingHistoricalSourceFile": "terror-weapons2025.html",
+      "sameHistoricalBytes": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceKind": "recovered_same_bytes",
+      "usedForScore": true,
+      "useScope": "CurrentGSS actualcomponent/counterevidence or revocablebridge only; not newindependentcorroboration/cutoffhistoricalauthentication; datedcurrentbody calendar/futureforecasts excluded."
+    },
+    {
+      "id": "R40-S03",
+      "file": "airport2025.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/vienna-original-recovery40/airport2025.pdf",
+      "url": "https://viennaairport.com/jart/prj3/va/uploads/data-uploads/IR/2026/GB/VIE_GB_2025_DE.pdf",
+      "retrievedOn": "2026-10-15",
+      "requestAtUTC": "2026-10-15T12:44:02.786498+00:00",
+      "validOriginal": true,
+      "originalBytes": 40781579,
+      "originalSha256": "93e81cc2c24a8290287db658677f0433940d1c50d64ab26b680de5c9bf530653",
+      "sha256": "93e81cc2c24a8290287db658677f0433940d1c50d64ab26b680de5c9bf530653",
+      "httpStatus": 200,
+      "sameUnderlyingHistoricalSourceFile": "airport2025.pdf",
+      "sameHistoricalBytes": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "sourceKind": "recovered_same_bytes",
+      "usedForScore": true,
+      "useScope": "CurrentGSS actualcomponent/counterevidence or revocablebridge only; not newindependentcorroboration/cutoffhistoricalauthentication; datedcurrentbody calendar/futureforecasts excluded."
     }
   ],
   "weakestNecessaryConnections": [
     "MED local ordinary clinical quality/currentwaiting/publicpayer and portrait representation",
-    "LON2021actualroutine continuation2026 +currentproduct/humanmaturity +ordinaryrecognized payment/netmonitoring"
+    "LON2021actualroutine continuation2026 +currentproduct/humanmaturity +ordinaryrecognized payment/netmonitoring",
+    "GSS actualtargetedcontrol/ordinaryeffect includesaffectedgroups; corridor/nodefit and currentchangedbody/cutoffcontinuity allrevocable"
   ],
-  "limitations": "8/31审核映射不等充分测量；GSS/RES未知。有限推定与既有Geneva/Copenhagen同层可撤，不以国家平均/机构量/许可/感受/旧病例补实测；无2026常规CAR-T队列/具体账单，不新增逐例品牌或全户门槛。全9031及后出现竞争者仍保留，零排除，不据该域宣称全球Top32。",
+  "limitations": "8/31映射不等充分测量；GSS条件60依赖具体保护的通常作用、重要节点代表性与当前正文/截止延续桥，RES仍未知。定向群体不排除，现实攻击及空域限制不抹去。其余七维原对象保持，旧医疗/长寿等必要有限假设仍可撤；本轮未重核其余36条旧来源。全9031及后出现竞争者保留，零排除，无完整总分或全球Top32资格。",
   "stopRecord": {
     "discoveryRounds": 2,
     "closed": true,
@@ -957,5 +1112,75 @@
     "sourceManifestSha256": "40d70ba7c6da99f37623517bebff8f347513e75d7a50287e0b6eb779ddf3ddbd",
     "handoffSha256": "3bf92f5979d54f9827575559b831641027fe1403f35d87fa1ab22ab8b938ba38",
     "rootVerifiedFull9031AndOriginals": true
+  },
+  "gssCompletionReview": {
+    "path": "docs/cci-vienna-gss40-completion-review.md",
+    "sha256": "644d4b4d64c949a9ca4c37c2ece3c3a9b09cfa590534518eebbf27bf169f176c",
+    "researchReport": "docs/cci-vienna-gss40-priority-review.md",
+    "researchReportSha256": "dac7e50e567d0ebf46b30f987aa584a93e2c990662e5a36139b5c12b05d7675d",
+    "reviewedOn": "2026-10-15",
+    "publishedInputCommit": "fdcc2ba2bd267ca2e923d3c6bba580ea8375cfc9",
+    "researchInputCommit": "5ba34fbb3473845f15024d29603a3e5432f4eea5",
+    "frozenReportSha256": "0f28bfce96c7a7ba542d186a11989c55dc49a932794ef3c89e1f6955e66d3204",
+    "frozenManifestSha256": "16b306b095c4478a4598f955937d8326dac9dbbb0d2c306b185efa76fb2067eb",
+    "recoveryManifestSha256": "9f1ee958a42286635e3b520324ae2e5fb48bb3161696981f49ddc8149342986a",
+    "suggestionSha256": "90b76b35acb1cfb1052bc7244bccef3cdd7b45b54d25d199a8a1cd48f96133e9",
+    "rootAcceptanceSha256": "48083047dc98968196fd10a94bac15cc50213f055969f11ee43086320db73c33",
+    "researchFrozenFiles": 101,
+    "recoveryFrozenFiles": 13,
+    "newSourceRecordCount": 3,
+    "newUnderlyingSourceCount": 0,
+    "exactHistoricalByteMatches": 2,
+    "currentDifferentVersionSnapshots": 1,
+    "rootNewNetworkRequests": 0,
+    "priorTurnBoundedRecoveryRequests": 3,
+    "newDiscoveryQueries": 0,
+    "adoptedScore": 60,
+    "otherSevenExactUtf8ObjectsUnchanged": true,
+    "other75CaseBytesUnchanged": true,
+    "rootReview": {
+      "status": "root_conditional_GSS60_acceptance",
+      "publishedInputCommit": "fdcc2ba2bd267ca2e923d3c6bba580ea8375cfc9",
+      "researchInputCommit": "5ba34fbb3473845f15024d29603a3e5432f4eea5",
+      "fixedResearchCases": 76,
+      "currentCasesGuarded": 76,
+      "externalMunichMedChangeRetained": true,
+      "allCurrent76CaseBytesUnchanged": true,
+      "frozenInputs": {
+        "vienna-original-recovery40": {
+          "filesVerified": 13,
+          "manifestSha256": "9f1ee958a42286635e3b520324ae2e5fb48bb3161696981f49ddc8149342986a"
+        },
+        "vienna-gss40": {
+          "filesVerified": 101,
+          "manifestSha256": "16b306b095c4478a4598f955937d8326dac9dbbb0d2c306b185efa76fb2067eb"
+        }
+      },
+      "currentSubstantiveOriginalsVerified": 3,
+      "exactHistoricalByteMatches": 2,
+      "currentDifferentVersionSnapshots": 1,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "historicalStopLedgerUnknownNotReset": true,
+      "rootTwoHtmlBodiesActuallyRead": true,
+      "rootPdfPixelsActuallyViewed": [31, 55, 59],
+      "rootNewNetworkRequestsThisTurn": 0,
+      "rootOriginalRecoveryRequestsPriorTurn": 3,
+      "rootNewDiscoveryQueries": 0,
+      "rootScore": 60,
+      "otherSevenExactUtf8ObjectsUnchanged": true,
+      "other75CaseBytesUnchanged": true,
+      "newGeometryRecomputed": true,
+      "targetedGroupsExcludedFromOrdinaryPortrait": false,
+      "seizureIsConvictionOrAvoidedAttackCount": false,
+      "nationalCountsAreCityRates": false,
+      "airportPassengersAreResidentRiskRate": false,
+      "airportBackupIsCitywideMilitaryProtection": false,
+      "unchangedTwoHashesAuthenticateHistoricalCutoff": false,
+      "currentChangedBodyIsRecoveredOldBody": false,
+      "companySurvivalProvesResidentSafety": false,
+      "noWarOrNoShutdownUsedAsPositiveEvidence": false,
+      "score40RequiresMajorityVictimsOrCityShutdown": false,
+      "rootRecheckedAll39OldSources": false
+    }
   }
 }
