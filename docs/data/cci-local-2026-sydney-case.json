@@ -8,7 +8,7 @@
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "boundaryVersion": "GHS-FUA R2019A",
   "boundaryReview": "docs/cci-sydney-priority-review.md",
-  "evidenceReview": "cci-sydney-priority-review.md",
+  "evidenceReview": "cci-sydney-gss28-completion-review.md",
   "expectedConditionalTotal": null,
   "limitations": "Full 31 semanticreview, not 31 measurements. PCS 40 and GSSnull are conditional evidence judgments, not historical-event or unfinished-plan penalties. Necessarydate/geography/ordinaryeligibility/payment/monitoring/remaining-impact assumptions reversible; WIPOcluster doesnot equal FUA orpredetermine score. No globalranking or exclusion bound.",
   "dimensions": [
@@ -28,8 +28,8 @@
     {
       "id": "GSS",
       "score": null,
-      "rationale": "Bondi 15 victims and concrete Shelter/police-law response establish serious local harm and scoped protective capacity. The Feb 2026 release separates existing temporary operations from future permanent 250 officer/28 staff,long-arm and POC arrangements. Current target-community residual effects and ordinary-impact coverage remain insufficiently connected; an old 2024 ASIO 12 month forecast is not 2026 measurement. Historical single harm or unfinished upgrades alone do not establish 40, while capability/national context alone do not establish 60.",
-      "assumption": "No assigned whole-dimension score. Conditional 60 can be reviewed if the already implemented response is accepted as continuing and representative of usable protection with ordinarily limited remaining effects, preserving severe targeted harm.40 requires accepting current important insufficiently mitigated targeted/route constraints, not just 15 historicaldeaths or missingnew-unitcompletion;80 needs stronger city/regional impact and response evidence. Reject necessary connection to keep null. Do not require completed war, successful strategicattack, full population rates or every-node testing.",
+      "rationale": "Bondi severe targeted harm remains material. G28-C records continued investigations after PEARL was absorbed into a standing squad and real school reassurance visits, while regional-conflict context remains relevant. G28-R adds actually used recovery support and an operating free no-referral mental-health entry; 1,400 visits are not people and 650 applications are not awards or payments. G28-C leaves competing static-resource request accounts unresolved. Its April summary of an upgraded permanent unit cites the February announcement; G28-A on 8 October still describes ARC training and preparation for operation, so the full future 250-officer/24-hour capability is not counted. Existing protection and help establish adapted capacity, but their recorded delivery and use do not yet distinguish ordinarily limited remaining effects from important continuing life or route constraints. Neither the old single attack, unfinished ARC nor service availability alone selects 40 or 60; GSS remains null.",
+      "assumption": "No assigned whole-dimension score and alternatives remain empty. Accept the scoped real protection/investigation and low-entry-cost recovery service as usable capacity, with explicit local relevance and possible continuity; do not equate those bridges with proof of ordinarily low remaining violence impact. Conditional60 would additionally accept that existing implemented protection and recovery reasonably cover the target ordinary resident and keep remaining activity/route effects limited without future ARC. Conditional40 would accept that important targeted/regional constraints still materially shape ordinary life after real mitigation, not merely historical15 deaths or unresolved resource claims. Present material does not substantively select either remaining-impact interpretation. Reject either necessary impact/geography/continuity bridge to null. School guidance is not attack prevention, applications are not funded recovery, charges are not convictions or victim rates, and unreviewed May hearing claims are excluded. No full2026, full-population or every-node attack/testing requirement; stop this evidence loop.",
       "conditionalAlternatives": [],
       "subpillars": {
         "organized_violence": "partial",
@@ -404,6 +404,81 @@
       "observed": "State Ministry/deliveryindividualagreements;ALL:RPA/Westmead/SCHN;adult DLBCL/MCL:RPA/Westmead",
       "scope": "Physical 11 printed 10 pixels; not CCLHDlocaldelivery oralloncologycoverage;serviceadoption notsamepatientpayments/monitors orcapacity",
       "kind": "normal_TLS_original_response"
+    },
+    {
+      "id": "G28-R",
+      "url": "https://www.nsw.gov.au/ministerial-releases/bondi-recovery-hub-transitions-as-local-supports-are-embedded-community",
+      "at": "2026-10-15T08:30:34.301504+00:00",
+      "method": "urllib_default_TLS_one_request_no_retry",
+      "finalUrl": "https://www.nsw.gov.au/ministerial-releases/bondi-recovery-hub-transitions-as-local-supports-are-embedded-community",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 146189,
+      "sha256": "9966b38819961db00c620b4214329d5065410ed6c7fa7b474b021664dead92e2",
+      "file": "bondi-recovery.html",
+      "result": "valid_raw",
+      "copiedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-28/bondi-recovery.html",
+      "copyBytesVerified": true,
+      "originalRetrievedAtPreserved": "2026-10-15T08:30:34.301504+00:00",
+      "noNewRequest": true,
+      "evidenceTag": "G28-R",
+      "copyVerifiedAt": "2026-10-15T08:45:56.647509+00:00",
+      "stageOriginalId": "S01",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/sydney-gss28/bondi-recovery.html",
+      "originalBytes": 146189,
+      "originalSha256": "9966b38819961db00c620b4214329d5065410ed6c7fa7b474b021664dead92e2",
+      "historicalCutoffSnapshotCertified": false,
+      "scope": "GSS only: actual restoration/investigation/adapted protection and ARC preparation; applications are not awards and future capability is not operating"
+    },
+    {
+      "id": "G28-A",
+      "url": "https://www.nsw.gov.au/ministerial-releases/first-look-at-armed-response-command-nsw-polices-new-rapid-response-policing-unit",
+      "at": "2026-10-15T08:30:38.077930+00:00",
+      "method": "urllib_default_TLS_one_request_no_retry",
+      "finalUrl": "https://www.nsw.gov.au/ministerial-releases/first-look-at-armed-response-command-nsw-polices-new-rapid-response-policing-unit",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 147250,
+      "sha256": "8633d748ce67e0228eb166995227b28d7aba4395ec11880c0f5cb99514fc7774",
+      "file": "arc-2026.html",
+      "result": "valid_raw",
+      "copiedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-28/arc-2026.html",
+      "copyBytesVerified": true,
+      "originalRetrievedAtPreserved": "2026-10-15T08:30:38.077930+00:00",
+      "noNewRequest": true,
+      "evidenceTag": "G28-A",
+      "copyVerifiedAt": "2026-10-15T08:45:56.647509+00:00",
+      "stageOriginalId": "S02",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/sydney-gss28/arc-2026.html",
+      "originalBytes": 147250,
+      "originalSha256": "8633d748ce67e0228eb166995227b28d7aba4395ec11880c0f5cb99514fc7774",
+      "historicalCutoffSnapshotCertified": false,
+      "scope": "GSS only: actual restoration/investigation/adapted protection and ARC preparation; applications are not awards and future capability is not operating"
+    },
+    {
+      "id": "G28-C",
+      "url": "https://www.parliament.vic.gov.au/49aea9/globalassets/tabled-paper-documents/tabled-paper-10157/for-tabling---interim-report-of-the-royal-commission-on-antisemitism-and-social-cohesion.pdf",
+      "at": "2026-10-15T08:31:31.989155+00:00",
+      "method": "urllib_default_TLS_one_request_no_retry",
+      "finalUrl": "https://www.parliament.vic.gov.au/4a27f3/globalassets/tabled-paper-documents/tabled-paper-10157/for-tabling---interim-report-of-the-royal-commission-on-antisemitism-and-social-cohesion.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 1513365,
+      "sha256": "2eb143cec02e51c78da07497fa79936d58cb329bcaf20aca9ed75cdcfa12a0c2",
+      "file": "royal-commission-interim.pdf",
+      "result": "valid_raw",
+      "copiedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/next-priority-batch-28/royal-commission-interim.pdf",
+      "copyBytesVerified": true,
+      "originalRetrievedAtPreserved": "2026-10-15T08:31:31.989155+00:00",
+      "noNewRequest": true,
+      "evidenceTag": "G28-C",
+      "copyVerifiedAt": "2026-10-15T08:45:56.647509+00:00",
+      "stageOriginalId": "S04",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/sydney-gss28/royal-commission-interim.pdf",
+      "originalBytes": 1513365,
+      "originalSha256": "2eb143cec02e51c78da07497fa79936d58cb329bcaf20aca9ed75cdcfa12a0c2",
+      "historicalCutoffSnapshotCertified": false,
+      "scope": "GSS only: actual restoration/investigation/adapted protection and ARC preparation; applications are not awards and future capability is not operating"
     }
   ],
   "webReadSources": [
@@ -588,5 +663,109 @@
     "sourceManifestSha256": "96c1ed28b2e4d78765895999abe716c1b9b05fb107179a25237acf4d0ffd5d55",
     "acceptanceSha256": "535d122b858516e5c7362f1ade7549f24ef466605756f233796916564a96647a",
     "scope": "bounded8/31 review, full9031 identity and scoped reference points; not all measured or ranking eligibility"
+  },
+  "gssCompletionReview": {
+    "path": "docs/cci-sydney-gss28-completion-review.md",
+    "sha256": "ecdd09e29163b79694f76c7f6f015aa23a754544d84ff33760d32226ea787b1c",
+    "researchReport": "docs/cci-sydney-gss28-priority-review.md",
+    "researchReportSha256": "5e27c420ebbdb23fa128380a58afb3286231dbf7250978b2470a425f32cf716d",
+    "reviewedOn": "2026-10-15",
+    "publishedInputCommit": "2dce2ecae6df1d77f7a87be0b073cc2938c1b993",
+    "researchFrozenInputCommit": "05ec527c0975ccbcb57a33c4e0097b0e63327e1a",
+    "scoreChanged": false,
+    "originalScore": null,
+    "adoptedScore": null,
+    "newSourceIds": ["G28-R", "G28-A", "G28-C"],
+    "newSourceCount": 3,
+    "newNetworkRequests": 0,
+    "newDiscoveryRounds": 0,
+    "sourceManifestSha256": "d7378c3cd8d3d4b62044b38b7a4cdff9aa6aa6eb7dbb375fba956cce4642091e",
+    "handoffManifestSha256": "34cc15bb849167ba1dc9c9a414b1449a611325c9635218a7d4a3c047bde5aab0",
+    "rootAdoptionCheckSha256": "3e2e92a367694d79e89eb7072f00b9f2d1603fe54897b296eeb3cc599730a98d",
+    "frozenFilesVerified": 92,
+    "rootPreviouslyViewedPdfPhysicalPages": [15, 38, 116],
+    "full9031ThreeApproximatePointsVerified": true,
+    "boundary": {
+      "inputGeoPackage": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+      "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+      "sourceBytes": 9932800,
+      "totalGeometries": 9031,
+      "repairCount": 136,
+      "transform": "EPSG:4326 to ESRI:54009,always_xy",
+      "predicate": "covers",
+      "points": [
+        {
+          "label": "Bondi Pavilion recovery approximate reference",
+          "lon": 151.2748,
+          "lat": -33.8915,
+          "all9031Matches": [1830],
+          "sourceName": "Sydney",
+          "wkbSha256": "5b0000ea13b88313b3ecb224a7f6e3b4c863a51460dca209c8c156665c9d8b69"
+        },
+        {
+          "label": "Sydney Opera House approximate reference",
+          "lon": 151.2153,
+          "lat": -33.8568,
+          "all9031Matches": [1830],
+          "sourceName": "Sydney",
+          "wkbSha256": "5b0000ea13b88313b3ecb224a7f6e3b4c863a51460dca209c8c156665c9d8b69"
+        },
+        {
+          "label": "Sydney centre approximate reference",
+          "lon": 151.2093,
+          "lat": -33.8688,
+          "all9031Matches": [1830],
+          "sourceName": "Sydney",
+          "wkbSha256": "5b0000ea13b88313b3ecb224a7f6e3b4c863a51460dca209c8c156665c9d8b69"
+        }
+      ],
+      "limits": "Analyst approximate reference points only; not exact attack, police patrol or hub footprint, not administrative/whole-state equivalence."
+    },
+    "otherSevenDimensionObjectsUnchanged": true,
+    "oldLostBytesCertified": false,
+    "currentRawIsCutoffHistoricalSnapshot": false,
+    "arcWholeCommandOperationalByOct8": false,
+    "recoveryVisitsAreUniquePeople": false,
+    "supportApplicationsAreAwardsOrPayments": false,
+    "staticResourceDisputeResolved": false,
+    "reviewedMayHearing": false,
+    "stageArtifacts": [
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/sydney-gss28/report.md",
+        "bytes": 9299,
+        "sha256": "4c844d3ce775b8457866dd03ee3b21194ca62e08fbc1ea5b927eb9a18a70011b"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/sydney-gss28/handoff-manifest.json",
+        "bytes": 16724,
+        "sha256": "34cc15bb849167ba1dc9c9a414b1449a611325c9635218a7d4a3c047bde5aab0"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/sydney-gss28/source-manifest.json",
+        "bytes": 3485,
+        "sha256": "d7378c3cd8d3d4b62044b38b7a4cdff9aa6aa6eb7dbb375fba956cce4642091e"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/sydney-gss28/candidate-handoff.json",
+        "bytes": 38548,
+        "sha256": "ca3b99d616701de12c5f64353191042dcf6f3ea0f7086ea50ac3a10899d36f36"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/sydney-gss28/boundary.json",
+        "bytes": 1391,
+        "sha256": "69bd7f012182c9265fd0209a4879f9a9a0498bab6ef1b015853d332052414a56"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/sydney-gss28/pixels.json",
+        "bytes": 882,
+        "sha256": "e0db640010be72e5c7c78e6b95e47908ebc5ce3b22d30bb6f6ee13d7392db1b1"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/sydney-gss28/single-dimension-guard.json",
+        "bytes": 17998,
+        "sha256": "7a120b9ca11b7294ceabde240e19db9a775d902cb07559d294b980c0f61ec526"
+      }
+    ],
+    "stopSameThreeSourcesLoop": true
   }
 }

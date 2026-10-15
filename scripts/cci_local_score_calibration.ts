@@ -2574,3 +2574,22 @@ for (const dimension of ["ISR", "MED", "LON", "TEC", "OPT"] as const) {
     upper: is15 ? 73 : 74,
   });
 }
+
+const sydneyGssCase = realCases.find(c => c.candidateId === 1830);
+const sydneyGssReview = sydneyGssCase.gssCompletionReview;
+assert.equal(sydneyGssReview.sha256, digest(sydneyGssReview.path));
+assert.equal(sydneyGssReview.researchReportSha256, digest(sydneyGssReview.researchReport));
+assert.equal(sydneyGssReview.scoreChanged, false);
+assert.equal(sydneyGssReview.newNetworkRequests, 0);
+assert.equal(sydneyGssReview.newSourceCount, 3);
+assert.equal(sydneyGssReview.arcWholeCommandOperationalByOct8, false);
+assert.equal(sydneyGssReview.supportApplicationsAreAwardsOrPayments, false);
+assert.equal(sydneyGssReview.staticResourceDisputeResolved, false);
+assert.equal(sydneyGssReview.stopSameThreeSourcesLoop, true);
+const sydneyGss = sydneyGssCase.dimensions.find((d: { id: string }) => d.id === "GSS");
+assert.equal(sydneyGss.score, null);
+assert.deepEqual(sydneyGss.conditionalAlternatives, []);
+assert.equal(total({ ...sydney, GSS: 40 }).center, 54);
+for (const id of sydneyGssReview.newSourceIds) {
+  assert.equal(sydneyGssCase.sourceSnapshots.filter((s: { id: string }) => s.id === id).length, 1);
+}
