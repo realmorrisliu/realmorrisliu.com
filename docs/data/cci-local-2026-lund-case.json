@@ -1,0 +1,1522 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 624,
+  "name": "Lund",
+  "countryIso": "SWE",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-16",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "OrdinarySwedishnational/usual longterm localresident/localmedianincome/usualeffectivecoverage/nofixedage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-lund-score-completion-review.md",
+  "researchFrozenInputCommit": "f5faf75051fc6ee663e38bbe0aaab5e6f1ff50c6",
+  "fixedInputCases": 88,
+  "fixedInputComplete": 19,
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 42,
+  "unknownWeight": 25,
+  "unresolvedScoreRange": [42, 67],
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 40,
+      "rationale": "市政备电/应急仓、食品配送组织及供水控制和防护已运行；热洪风险已具体定位，但旧学校/房产/街道公园适应不足、湿地/雨水塘实施余障仍重要，条件40。",
+      "assumption": "接受市域和本地共同水能网络事实对737km²旧FUA普通保护的有限代表性及2026延续；旧环境被明确识别为仍可能受热浪/洪水影响，结合旱情农业实际影响及具体实施缺口支持重要余障，不由气候目标未达/未来项目未建单独扣分。已有备电、演练、受监管水务正证保留。",
+      "conditionalAlternatives": [60],
+      "alternativeRationales": "60若现行在役防护、规划主动触达和普通备援足以使通常主要危险适配保护可用；不需证明多数无损。40不需多数受害/障碍主导，80欠更广危险适配及实际效果，20缺持续基本失效。拒范围/实际后果/延续桥撤null。",
+      "sourceIds": ["S03", "S09", "S10", "S12"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "市域联合住房/劳工犯罪检查、无特别脆弱区的分类与真实民防/供水SOC存在，但普通组织暴力、区域冲突或战略暴露与匹配防护的合束净方向尚未锁定。",
+      "assumption": "23联合检查是查住房/人口登记/劳工犯罪疑点，不等组织暴力发生率；主观安全调查不等无威胁，已运行SOC/备电不保证全部战略通道。原Säpo失败页不绕取，不因资料少扣分。",
+      "conditionalAlternatives": [],
+      "alternativeRationales": "40需真实帮助后重要安全余障，60可接受有据有限威胁影响与保护匹配，不要求战争实际发生或全人口率；本批未接这些方向，不能拿一般治理/无战争补60。",
+      "sourceIds": ["S02", "S03", "S09", "S10"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "市政实际备电/危机演练与运行仓、食品和数字照护/出院接续、能源及水务现行控制形成多节点真实履约，支持通常制度可用；人手、维护与旧环境触达余障保留。",
+      "assumption": "接受市/服务网络已完成交付及通常住民触达有限代表FUA2026；24项特殊任务完成不等所有任务质量合格。实际运行仓、共同停电演练、1.7天出院接续与现行供水控制足以支持日常履约，不由预算盈余/未见崩溃推60；危机持久能力仍需加强与实际日常执行并存。",
+      "conditionalAlternatives": [40],
+      "alternativeRationales": "40若旧环境适应、维护、员工15%流失和治理/数字协调在现有帮助后仍构成重要通常履约约束，不需全制度失效或余障主导。80欠跨群体压力替代实效，不要求所有节点独立压测；拒代表/执行/时点桥撤null。",
+      "sourceIds": ["S01", "S02", "S03", "S09", "S10", "S12"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": 60,
+      "rationale": "2025隆德实际供水9.0百万m³、主干检测与异常复测，现行能源末端配售、餐食与食品监管及运行备援仓共同支持普通资源取得，条件60；通常末端安全和中位净负担为可撤假设。",
+      "assumption": "接受受监管主干到本地末端通常安全、Kraftringen及普通食品市场实际供给可延续至2026，通常中位收入可承担普通必要水食能费用，必要帮助可在合资格时兑现；不把992受助家庭当画像资格，不把企业利润或批发水价当家庭账单，不把监管满意度当食品零风险。两厂全冗余/新水库验收仍计划，未用未来补备援。",
+      "conditionalAlternatives": [40],
+      "alternativeRationales": "40若重要末端/能源共同故障、食物或保险外住房能源净负担在实际帮助后形成普通取得约束，不需多数或主导；当前未核此方向足以采主40。80欠共同冲击下独立备援与广泛净负担缓解，不要求全部家庭账本。拒通常末端/普通能源与净费用桥撤null。",
+      "sourceIds": ["S02", "S03", "S08", "S09", "S10", "S12"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "实际必要治疗、2024本地出院待接续1.7天、现行公费保护及已发表共同SUS2025过程改善背景，支持有限通常护理取得，条件60；IVO整改后床位/及时性/护理风险仍是重要反证，40替代保留。",
+      "assumption": "接受实际SUS必要服务与Lund地方接续对通常FUA居民适用、普通注册资格/中位净交通照护可承担，并接受2024–2025观察延续至截止。P01为已发表共享提供者主张摘要，非本轮恢复临床原PDF/旧工具全文；共同首接改善不是全部专科疗效，Malmö病区迁入或重建队列55%不搬Lund。IVO风险选样27明确包括全部大学医院，但各院严重度不同，不将严重10或全国多数>95%占床率归SUS。60来自实际服务/帮助与通常取得连接，不由未证明全面失败或既有Malmö分数推得。",
+      "conditionalAlternatives": [40],
+      "alternativeRationales": "若床位、等待、错误或复发预防缺陷在现有帮助后仍对普通必要护理形成实际重要约束，可40，无需多数、占主导或停摆；域39–64。若地域/延续/通常资格、净支付或照护取得连接不能接受，恢复null/[]，域33–73。80尚缺更广及时质量与接续冗余实效；不要求全院完美量表。",
+      "sourceIds": ["S03", "S04", "S05", "S07", "S11", "P01"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "可信成熟B细胞疾病CAR-T人体依据，与本地临床医生明确的淋巴瘤产品/采集改造回输及住院监护路径、现行公费收费保护构成有限疾病转化正链，条件60。",
+      "assumption": "必要可撤：S04为2022本地实际临床路径/可用产品描述，不是本地队列结果或2026给药人数；接受该标准淋巴瘤路径有限延续到截止，R01 tisa仅支持同类成熟疾病机制，不自动认当地产品即tisa或移植其适应证/结果。接受通常合适患者在公立实际路径内净支付/1–2周住院副作用管理及后续照护交通通常可得；S05不是每品牌人人赔。骨髓瘤当时为试验，LUCAR新早期试验不冒成熟。",
+      "conditionalAlternatives": [40],
+      "alternativeRationales": "40若制造最长四周、严重免疫/神经毒性及ICU、临床筛选/床位和家庭净照护在现行帮助后仍构成重要通常取得约束，不需多数受害/障碍主导。80本案仅有限一类成熟路径，产品适配/制造监护及普通取得仍有限；看多条可信转化和审慎实际采用，不要求健康人延寿/零风险。拒本地实际实施/四年延续/类内成熟适配或净付款监护桥撤null，不缺逐剂账单自动40。",
+      "sourceIds": ["S04", "S05", "S03", "S06", "R01"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "实际知识转化公司/已有组合商业营收，与SmartFlex已发布、水务全流程现行控制及数字家护/市政传感采用共同支持非医院知识—产用—普通服务扩散，条件60。",
+      "assumption": "接受LU/伙伴实质商业活动和本地多领域已用服务技术共同有限代表持续知识产用；不按排名/26公司数量直接给分，不认所有组合/校友公司都在Lund、不把融资当销售或把大学技术因果认作全部水能系统来源。2024商业营收与2025交付延续到2026，数字家护98/95为使用者主观结果且N未给，不冒临床效益。",
+      "conditionalAlternatives": [40],
+      "alternativeRationales": "40若已有知识商业化后产业持续使用/普通扩散仍有重要断点，应给实质方向；不能缺全城产用量表或普遍AI自动40。80欠更广多主体有效触达/外部效果和备援，不要求所有部门都用前沿技术；拒有限联合代表/实际产用/时点桥撤null。",
+      "sourceIds": ["S02", "S03", "S06", "S09"],
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": null,
+      "rationale": "瑞典国籍德国EU长期自由移动条件和个人跨境转账路径明确，地方公共交通运行亦有事实；本批未将可用国际外出接续与普通长期个人通信/资金转换合成净退出方向。",
+      "assumption": "短期无签证不等不受就业/生活来源与医保条件约束；德国法为EU个人权利而非英国§41规则。Swedbank可办个人款项需联络激活/核实目的、身份和额度，非所有人开户/无限或长期海外账户保证。地方电/沼气公交和铁路运行不是机场/跨国可达实绩，未读个人通信不称无能力。",
+      "conditionalAlternatives": [],
+      "alternativeRationales": "60可接受有限、有据普通跨国交通/法律生活来源/个人资金与通信续接桥，不必每目的地逐笔交易；40需真实重要退出余障，不能因为余两腿没用/缺航班或通信原件而低分。当前两向未知。",
+      "sourceIds": ["S12", "S13", "S14", "S10"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "transport_redundancy": "context",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "context"
+      }
+    }
+  ],
+  "coverageReview": [
+    {
+      "dimensionId": "PCS",
+      "subpillar": "heat_humidity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S12p16–18",
+      "finding": "本地热岛/学校热应激实际识别用于规划，旧房产学校适应余障。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "PCS",
+      "subpillar": "flood_sea_level",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S12p16/18/30",
+      "finding": "主要洪水风险及既有建成环境/雨水塘实施缺口；无全域海潮测量。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "PCS",
+      "subpillar": "geophysical",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "evidence": "boundedpass",
+      "finding": "未触达地质与建筑匹配保护原件，低模型背景不换分。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "PCS",
+      "subpillar": "severe_weather_wildfire",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S03p24/33/35;S10",
+      "finding": "真实备电/仓/演练，雪清理满意度局部及天气应对限制，非全面野火量表。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "GSS",
+      "subpillar": "organized_violence",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S03p36/75",
+      "finding": "23联合住房/劳工犯罪检查与无特别脆弱区分类；不等组织暴力人口率。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "GSS",
+      "subpillar": "regional_conflict",
+      "status": "context",
+      "boundedReviewPerformed": true,
+      "evidence": "S09p19;S03p24",
+      "finding": "北欧/波罗的海物流情境与真实民军事演练，未定本地净外溢。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "GSS",
+      "subpillar": "strategic_exposure",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S02p5;S09p17–19;S10",
+      "finding": "现行SOC/技术保护/供水合作及备援仓，不证明全战略通道有效。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "ISR",
+      "subpillar": "governance",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S01;S03p24/34/36",
+      "finding": "透明年度执行、跨部门检查/新规则与维护/数字系统余障。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "ISR",
+      "subpillar": "adaptive_capacity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S03p24/33;S09p18",
+      "finding": "真实停电演练、运行仓、供水控制已切换；未来水库不当完成。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "ISR",
+      "subpillar": "social_cohesion",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S03p30/82;S10",
+      "finding": "食物社交/166家访/992家庭支持与志愿者机制，目标受助者非全部居民。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "ISR",
+      "subpillar": "emergency_recovery",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S03p24/33;S10;S09",
+      "finding": "真实食品/备电/信息点和演练，未认所有灾害恢复闭环。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "RES",
+      "subpillar": "water",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S08p4/6/14/15/21;S09p17/18",
+      "finding": "厂/主干质量和复测，非末端；1143不同项目不能一概同分母。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "RES",
+      "subpillar": "food",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S03p30/33/36;S12p11",
+      "finding": "实际餐食/运行备援仓/食品接触材料监管与市场流通；营养负担作有限桥。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "RES",
+      "subpillar": "energy",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S02p4/7/8;S03p33",
+      "finding": "当前配售电/热及备电，燃料价格/biogas依赖/2028新CHP区别。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "RES",
+      "subpillar": "supply_chain",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S03p33;S09p17/18;S02p8",
+      "finding": "现行仓配/工厂控制及尚未全冗余、燃料与天气共同依赖。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "MED",
+      "subpillar": "access",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S05;S07p7/10–12;S11p27/28",
+      "finding": "公费费用与风险选样全大学医院容量/等待余障，非直接本地人群率。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "MED",
+      "subpillar": "routine_quality",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S07;S11;S03p30",
+      "finding": "独立检查同项目正反/地方接续，不平均异窗/不套全国占床率。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "MED",
+      "subpillar": "specialist_capacity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S04;S06",
+      "finding": "当地专科临床机制真实，试验/新平台不是所有患者成熟效果。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "MED",
+      "subpillar": "system_continuity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S03p30/31;S05",
+      "finding": "2024出院待接续1.7天、数字家护与人手15%流失/收费外负担。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "LON",
+      "subpillar": "translation",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S04;R01p14/24/25",
+      "finding": "疾病免疫改造当地路径与同类可信人体，不泛化所有抗癌/健康人延寿。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "LON",
+      "subpillar": "trial_maturity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "R01p14/24/25;S04",
+      "finding": "JULIET/DESCAR特定tisa分群；本地骨髓瘤试验/早期LUCAR非成熟采用。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "LON",
+      "subpillar": "regulatory_adoption",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S04;S06p56",
+      "finding": "2022本地标准淋巴瘤产品可用及路径，2025ATMP项目非额外成熟产品；延续可撤。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "LON",
+      "subpillar": "resident_access",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S04;S05;S03p30",
+      "finding": "公费收费/1–2wk住院监护及有限付款/照护桥，制造4wk/毒性/资格。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "TEC",
+      "subpillar": "knowledge_output",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S06p56–58",
+      "finding": "真实创新项目/公司与商业组合财报，非声誉或专利数赋分。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "TEC",
+      "subpillar": "industry_density",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S06p58;S02p4/5",
+      "finding": "2024portfolio/alumni营收/就业与实际能源创新，组合不全在本地。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "TEC",
+      "subpillar": "digital_infrastructure",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S09p17/18;S02p4;S03p10/30",
+      "finding": "当前全控制/SOC、SmartFlex已launch和数字家护，非全部居民光纤覆盖。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "TEC",
+      "subpillar": "diffusion",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S03p30/33;S09p18",
+      "finding": "真实公共服务采用和机构节能，主观家护N未知不当临床效果。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "OPT",
+      "subpillar": "transport_redundancy",
+      "status": "context",
+      "boundedReviewPerformed": true,
+      "evidence": "S12p18;S03p7/34",
+      "finding": "地方公交通行与自行车道实际，未核跨国机场/铁路接续及独立结构。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "OPT",
+      "subpillar": "legal_mobility",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S14§2/2a/4",
+      "finding": "EU瑞典公民法律路径，非就业需充足资源/医保，非人人无条件永居。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "OPT",
+      "subpillar": "asset_portability",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "evidence": "S13",
+      "finding": "个人境外付款需激活/目的核实/鉴权与额度，免费EU渠道不免FX/中间费。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    },
+    {
+      "dimensionId": "OPT",
+      "subpillar": "network_continuity",
+      "status": "context",
+      "boundedReviewPerformed": true,
+      "evidence": "S13;S10",
+      "finding": "个人网银鉴权与一周家庭通信准备背景，海外长期个人线路未触达。",
+      "score": null,
+      "scope": "Bounded semantic review only; partial/context/unresolved are not complete population measurements or subpillar scores."
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://lund.se/kommun-och-politik/mal-ekonomi-och-budget/kommunens-mal-och-budget/summering-av-aret-2025",
+      "localPath": "originals/city-annual-index2025.html",
+      "originalBytes": 82814,
+      "sha256": "7aa0be68811540c30a0891514ee7558c538289d59ae5f3e75757fa8c8ec37c88",
+      "retrievedAt": "2026-10-15T19:47:49.196850+00:00",
+      "versionWindow": "Municipal2025index updated05May2026",
+      "scope": "Actual annualreportlocator, citynotFUA",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S02",
+      "url": "https://www.kraftringen.se/globalassets/kraftringen/media/dokument-ny-sajt/rapporter/arsredovisningar/finansiell_rapport_2025_kraftringen.pdf",
+      "localPath": "originals/energy-financial2025.pdf",
+      "originalBytes": 686279,
+      "sha256": "6d11d0208d22df19a5e049d996b33b02fc1081cc51f2480aad7ef001b6dc7456",
+      "retrievedAt": "2026-10-15T19:47:52.102888+00:00",
+      "versionWindow": "FinancialreportFY2025; newCHP2028 and2026commissioning futureatobservation",
+      "scope": "Kraftringengroup severalmunicipalities/nets, normalyearproduction not2025exact; prices/profitnotfamilybill",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S03",
+      "url": "https://lund.se/download/18.4936e4af19ddce06f0e296/1777537230976/%C3%85rsredovisning%202025%20Lunds%20kommun_2026-04-30.pdf",
+      "localPath": "originals/city-annual2025.pdf",
+      "originalBytes": 4019664,
+      "sha256": "e39a61fc37721b50482ab44f1ca07ae1ee56819a37bf83ee13189b48148ffa08",
+      "retrievedAt": "2026-10-15T19:48:48.509361+00:00",
+      "versionWindow": "Annualreport2025, finalfile30Apr2026; some2024quality/latestdata andfuture2034/35",
+      "scope": "Lundmunicipal not737km2FUA orallSUSpatients; caretargets/elderqualifications notfixedprofileage",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S04",
+      "url": "https://www.lu.se/artikel/infor-varldscancerdagen-kroppens-fantastiska-forsvar-far-hjalp-i-kampen-mot-cancer",
+      "localPath": "originals/lu-cart2022.html",
+      "originalBytes": 140247,
+      "sha256": "287648d1fec6ebb48966920bc4b013f38af0da012327a4799f3967f40bd49a3d",
+      "retrievedAt": "2026-10-15T19:48:56.194085+00:00",
+      "versionWindow": "Published02Feb2022; displayedupdated15Sep2023; currentfeedOct2026notadopted",
+      "scope": "Localclinicianreport standardlymphomaCAR-T access vsmyelomtrial; notindependentcohort/2026deliverycount; sameunderlyingplatformnotindependentvotes",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S05",
+      "url": "https://www.1177.se/Skane/sa-fungerar-varden/kostnader-och-ersattningar/patientavgifter-i-skane/",
+      "localPath": "originals/patient-fees2026.html",
+      "originalBytes": 323988,
+      "sha256": "e0a60163f0e2f7b1a032791490a349111aefb1fc1044b74c41baccf86482d3cb",
+      "retrievedAt": "2026-10-15T19:49:00.719299+00:00",
+      "versionWindow": "Current1177Skane2026fees; newretrievalnotoldMalmorawauthentication",
+      "scope": "Public/contractedcare200/ED400,1450rollingoutpatientcap;130/dayfirst30then65inpatientoutsidecap; noage/lowincomeexemptionassumed",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S06",
+      "url": "https://www.lu.se/sites/www.lu.se/files/2026-02/Lunds-universitets-arsredovisning-2025.pdf",
+      "localPath": "originals/university-annual2025.pdf",
+      "originalBytes": 10827745,
+      "sha256": "f0e05de1fe2f37ca675aae1ee17edd5f99612e25c3593fb810642b690fad4f7a",
+      "retrievedAt": "2026-10-15T19:50:10.299841+00:00",
+      "versionWindow": "Universityannual2025 filedFeb2026; portfolio/alumnifinancialresults2024lag",
+      "scope": "University includesoutsideLundpartners/sites;26newcompanies/7patentapplicationsnot26matureproducts or7grantedpatents; portfolio revenue notallFUA",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S07",
+      "url": "https://www.ivo.se/globalassets/dokument/publikationer/rapporter/rapporter-2024/ivo-nationell-tillsyn-av-vardplatser-och-patientsakerhet-pa-sjukhus-.pdf",
+      "localPath": "originals/ivo-hospital-beds2024.pdf",
+      "originalBytes": 866135,
+      "sha256": "9abbb3945f4832f8052052dbb292854266404af9f874763d2a70f452131e2b61",
+      "retrievedAt": "2026-10-15T19:50:24.012310+00:00",
+      "versionWindow": "IVO19June2024:2022–24riskbasedinspection27/alluniversityhospitals",
+      "scope": "All27persistentdeficiencies withvaryingseverity,17closeddespiteresidual/10continued; notrepresentativeofall100Swedishhospitals orlocalriskrate",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S08",
+      "url": "https://sydvatten.se//app/uploads/2026/07/Kvalitetsrapport-Sydvatten-2025.pdf",
+      "localPath": "originals/water-quality2025.pdf",
+      "originalBytes": 597447,
+      "sha256": "1833cd4f37b3e9b57950ddc43a4d8b7d41e246eb664a3d146971d5242e85b1bf",
+      "retrievedAt": "2026-10-15T19:50:28.315809+00:00",
+      "versionWindow": "Waterquality2025, URLJuly2026; opening2024vs2025tablesinternaldateconflict",
+      "scope": "Newbytesmatchpriorpublishedhash butnotoldHTTPmetadata/cutoffauthentication; outlet/mainnetwork notresidentialtap",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S09",
+      "url": "https://sydvatten.se/app/uploads/2026/04/Sydvatten_Hallbarhets_Arsredovisning_2025_lankad.pdf",
+      "localPath": "originals/water-annual2025.pdf",
+      "originalBytes": 3475186,
+      "sha256": "07a1a29f4240db68b0515fa0ee66316423e968134dffb261d4765fdbb7f4a146",
+      "retrievedAt": "2026-10-15T19:51:46.369257+00:00",
+      "versionWindow": "Sydvattenannual2025, URLApril2026",
+      "scope": "Newvalidsnapshot; twofullynewcontrols/SOCinoperation vsreservoirplanned2026acceptance; servicearea broaderthanLund",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S10",
+      "url": "https://lund.se/kommun-och-politik/samhallsskydd-och-beredskap/din-egna-beredskap",
+      "localPath": "originals/resident-preparedness.html",
+      "originalBytes": 80459,
+      "sha256": "f626af65db7b65c7ce25fa88004dcf890914d24e989dce1f501817ff20526f3b",
+      "retrievedAt": "2026-10-15T19:51:49.261494+00:00",
+      "versionWindow": "Currentresidentpreparedness updated16Sep2026; actual301canonicalURLdin-egen",
+      "scope": "Supportpoint/advice/oneweekselfreadiness notfullstress-testedcoverage; currentbodydifferspreexistingsearchwaterexcerptnotadopted",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S11",
+      "url": "https://www.ivo.se/globalassets/dokument/publikationer/rapporter/rapporter-2025/ivo_vhis_2024.pdf",
+      "localPath": "originals/ivo-observations2024.pdf",
+      "originalBytes": 1261264,
+      "sha256": "cdc346cab4515ca6fbdcc1e601b209632468880f16dc8593927172a1fa90a6ce",
+      "retrievedAt": "2026-10-15T19:51:52.295405+00:00",
+      "versionWindow": "IVO2025formalreport observations2024, physical27–28",
+      "scope": "Follow-upsummaryofsame27inspectionprogramme, notindependentsecondclinicalcohort",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S12",
+      "url": "https://lund.se/download/18.5f38ad6e19db51c94e66f57/1777444645447/Hallbarhetsredovisning%202025.pdf",
+      "localPath": "originals/city-sustainability2025.pdf",
+      "originalBytes": 3861527,
+      "sha256": "91bf10a4fac048fce0f75f85b2c525d0fc91b3d810decd08a518ae80db368ade",
+      "retrievedAt": "2026-10-15T19:53:43.517700+00:00",
+      "versionWindow": "Lundsustainability2025, fileApril2026; latestemissions2023/2024preliminary",
+      "scope": "Actualolderinfrastructurevulnerability andimplementationlimits; goalratingnotCCIscore; localdefinitionincludesKraftringenoutsidecity",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S13",
+      "url": "https://www.swedbank.se/privat/betala-och-overfora/betalningar-till-utlandet.html",
+      "localPath": "originals/personal-crossborder-payments.html",
+      "originalBytes": 193633,
+      "sha256": "ec284df5eec2806ca0e8693cedef404a618cf441728fa62d25d0414297928cbb",
+      "retrievedAt": "2026-10-15T19:53:54.245524+00:00",
+      "versionWindow": "CurrentSwedbankpersonalpayments; noexactfirstpublicationverified",
+      "scope": "Requiresaccount/contact/serviceactivation/beneficiary/authentication, internationalFX/fees/limits; notallbankaccounts/assetretentionabroad",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "S14",
+      "url": "https://www.gesetze-im-internet.de/freiz_gg_eu_2004/BJNR198600004.html",
+      "localPath": "originals/eu-free-movement-germany.html",
+      "originalBytes": 75349,
+      "sha256": "b53478451d8605d7b5b31aeee028542c9d415df2dedfef634e66a0d60433c0fe",
+      "retrievedAt": "2026-10-15T19:53:56.954253+00:00",
+      "versionWindow": "GermanEUfree-movementlaw currentamendment16July2026",
+      "scope": "SwedishnationalEUeligibility; employed/jobseekers/nonemployedmeansandinsuranceconditions; notblanketunconditionalpermanentresidence",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    },
+    {
+      "id": "R01",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "localPath": "originals/has-kymriah-2023.pdf",
+      "originalBytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "retrievedAt": null,
+      "versionWindow": "HASCT20262 KYMRIAH September2023; oldselectedJULIET/DESCAR humanwindows",
+      "scope": "Tisa-specificmatureBcelldiseasemechanism, notLundproduct/clinicalcohort/Swedishpaymentorhealthylifespan",
+      "cutoffOriginalBytesAuthenticated": false,
+      "rootBytesReverified": true
+    }
+  ],
+  "globalRankingEligible": false,
+  "globalTop32Threshold": null,
+  "supportedExclusions": 0,
+  "all9031AndNewUnmatchedCompetitorsRetained": true,
+  "sourceName": "Lund",
+  "publishedInputCommit": "4144222842b8c399fc99714cd3c93fcb2aba3abb",
+  "sourceManifest": [
+    {
+      "id": "S01",
+      "url": "https://lund.se/kommun-och-politik/mal-ekonomi-och-budget/kommunens-mal-och-budget/summering-av-aret-2025",
+      "path": "city-annual-index2025.html",
+      "scope": "actualmunicipal2025deliveryindex; notallFUA",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 82814,
+      "sha256": "7aa0be68811540c30a0891514ee7558c538289d59ae5f3e75757fa8c8ec37c88",
+      "localPath": "originals/city-annual-index2025.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:47:49.196850+00:00",
+      "routeIndexes": [0],
+      "resolvedUrl": "https://lund.se/kommun-och-politik/mal-ekonomi-och-budget/kommunens-mal-och-budget/summering-av-aret-2025",
+      "contentType": "text/html;charset=UTF-8",
+      "headers": {
+        "Content-Type": "text/html;charset=UTF-8",
+        "Date": "Thu, 15 Oct 2026 19:47:50 GMT"
+      },
+      "finalByteCheck": true,
+      "observationVersionWindow": "Municipal2025index updated05May2026",
+      "boundedGeographicEligibilityUse": "Actual annualreportlocator, citynotFUA",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S02",
+      "url": "https://www.kraftringen.se/globalassets/kraftringen/media/dokument-ny-sajt/rapporter/arsredovisningar/finansiell_rapport_2025_kraftringen.pdf",
+      "path": "energy-financial2025.pdf",
+      "scope": "realoperations2025/serviceandrisknotfullFUA",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 686279,
+      "sha256": "6d11d0208d22df19a5e049d996b33b02fc1081cc51f2480aad7ef001b6dc7456",
+      "localPath": "originals/energy-financial2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:47:52.102888+00:00",
+      "routeIndexes": [1, 2],
+      "resolvedUrl": "https://www.kraftringen.se/globalassets/kraftringen/media/dokument-ny-sajt/rapporter/arsredovisningar/finansiell_rapport_2025_kraftringen.pdf/",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:47:56 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "686279",
+        "ETag": "\"1dcdc7874e0c747\"",
+        "Last-Modified": "Tue, 05 May 2026 10:18:03 GMT"
+      },
+      "finalByteCheck": true,
+      "observationVersionWindow": "FinancialreportFY2025; newCHP2028 and2026commissioning futureatobservation",
+      "boundedGeographicEligibilityUse": "Kraftringengroup severalmunicipalities/nets, normalyearproduction not2025exact; prices/profitnotfamilybill",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S03",
+      "url": "https://lund.se/download/18.4936e4af19ddce06f0e296/1777537230976/%C3%85rsredovisning%202025%20Lunds%20kommun_2026-04-30.pdf",
+      "path": "city-annual2025.pdf",
+      "scope": "actualcity2025multiservice outcomes/risk/ordinaryaid",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 4019664,
+      "sha256": "e39a61fc37721b50482ab44f1ca07ae1ee56819a37bf83ee13189b48148ffa08",
+      "localPath": "originals/city-annual2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:48:48.509361+00:00",
+      "routeIndexes": [3],
+      "resolvedUrl": "https://lund.se/download/18.4936e4af19ddce06f0e296/1777537230976/%C3%85rsredovisning%202025%20Lunds%20kommun_2026-04-30.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:48:49 GMT",
+        "Last-Modified": "Thu, 30 Apr 2026 08:20:30 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "4019664"
+      },
+      "finalByteCheck": true,
+      "observationVersionWindow": "Annualreport2025, finalfile30Apr2026; some2024quality/latestdata andfuture2034/35",
+      "boundedGeographicEligibilityUse": "Lundmunicipal not737km2FUA orallSUSpatients; caretargets/elderqualifications notfixedprofileage",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S04",
+      "url": "https://www.lu.se/artikel/infor-varldscancerdagen-kroppens-fantastiska-forsvar-far-hjalp-i-kampen-mot-cancer",
+      "path": "lu-cart2022.html",
+      "scope": "differentuniversityprimaryclinicalreport; older2022/possiblysameclinicians notindependentcohort",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 140247,
+      "sha256": "287648d1fec6ebb48966920bc4b013f38af0da012327a4799f3967f40bd49a3d",
+      "localPath": "originals/lu-cart2022.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:48:56.194085+00:00",
+      "routeIndexes": [4],
+      "resolvedUrl": "https://www.lu.se/artikel/infor-varldscancerdagen-kroppens-fantastiska-forsvar-far-hjalp-i-kampen-mot-cancer",
+      "contentType": "text/html; charset=UTF-8",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:48:59 GMT",
+        "Last-Modified": "Thu, 15 Oct 2026 19:48:58 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "finalByteCheck": true,
+      "observationVersionWindow": "Published02Feb2022; displayedupdated15Sep2023; currentfeedOct2026notadopted",
+      "boundedGeographicEligibilityUse": "Localclinicianreport standardlymphomaCAR-T access vsmyelomtrial; notindependentcohort/2026deliverycount; sameunderlyingplatformnotindependentvotes",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S05",
+      "url": "https://www.1177.se/Skane/sa-fungerar-varden/kostnader-och-ersattningar/patientavgifter-i-skane/",
+      "path": "patient-fees2026.html",
+      "scope": "independentresidentfeeprovider, priorMalmovalidrawnotfound noinheritrawauthentication; notstoppedclinicalPDF",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 323988,
+      "sha256": "e0a60163f0e2f7b1a032791490a349111aefb1fc1044b74c41baccf86482d3cb",
+      "localPath": "originals/patient-fees2026.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:49:00.719299+00:00",
+      "routeIndexes": [5],
+      "resolvedUrl": "https://www.1177.se/Skane/sa-fungerar-varden/kostnader-och-ersattningar/patientavgifter-i-skane/",
+      "contentType": null,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 15 Oct 2026 19:49:02 GMT",
+        "content-length": "323988"
+      },
+      "finalByteCheck": true,
+      "observationVersionWindow": "Current1177Skane2026fees; newretrievalnotoldMalmorawauthentication",
+      "boundedGeographicEligibilityUse": "Public/contractedcare200/ED400,1450rollingoutpatientcap;130/dayfirst30then65inpatientoutsidecap; noage/lowincomeexemptionassumed",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S06",
+      "url": "https://www.lu.se/sites/www.lu.se/files/2026-02/Lunds-universitets-arsredovisning-2025.pdf",
+      "path": "university-annual2025.pdf",
+      "scope": "real2025researchtranslation/industrialuse/residentdiffusionnotrank",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 10827745,
+      "sha256": "f0e05de1fe2f37ca675aae1ee17edd5f99612e25c3593fb810642b690fad4f7a",
+      "localPath": "originals/university-annual2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:50:10.299841+00:00",
+      "routeIndexes": [6],
+      "resolvedUrl": "https://www.lu.se/sites/www.lu.se/files/2026-02/Lunds-universitets-arsredovisning-2025.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:50:11 GMT",
+        "Last-Modified": "Tue, 24 Feb 2026 08:46:08 GMT",
+        "Content-Length": "10827745",
+        "Content-Type": "application/pdf"
+      },
+      "finalByteCheck": true,
+      "observationVersionWindow": "Universityannual2025 filedFeb2026; portfolio/alumnifinancialresults2024lag",
+      "boundedGeographicEligibilityUse": "University includesoutsideLundpartners/sites;26newcompanies/7patentapplicationsnot26matureproducts or7grantedpatents; portfolio revenue notallFUA",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S07",
+      "url": "https://www.ivo.se/globalassets/dokument/publikationer/rapporter/rapporter-2024/ivo-nationell-tillsyn-av-vardplatser-och-patientsakerhet-pa-sjukhus-.pdf",
+      "path": "ivo-hospital-beds2024.pdf",
+      "scope": "independentnationalriskbasedinspection, exactSUSinclusioncheck, notallSwedishpopulationrate",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 866135,
+      "sha256": "9abbb3945f4832f8052052dbb292854266404af9f874763d2a70f452131e2b61",
+      "localPath": "originals/ivo-hospital-beds2024.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:50:24.012310+00:00",
+      "routeIndexes": [7],
+      "resolvedUrl": "https://www.ivo.se/globalassets/dokument/publikationer/rapporter/rapporter-2024/ivo-nationell-tillsyn-av-vardplatser-och-patientsakerhet-pa-sjukhus-.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Content-Length": "866135",
+        "Content-Type": "application/pdf",
+        "Last-Modified": "Thu, 20 Jun 2024 11:50:57 GMT",
+        "ETag": "\"1dac3081cb791d7\"",
+        "Date": "Thu, 15 Oct 2026 19:50:25 GMT"
+      },
+      "finalByteCheck": true,
+      "observationVersionWindow": "IVO19June2024:2022–24riskbasedinspection27/alluniversityhospitals",
+      "boundedGeographicEligibilityUse": "All27persistentdeficiencies withvaryingseverity,17closeddespiteresidual/10continued; notrepresentativeofall100Swedishhospitals orlocalriskrate",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S08",
+      "url": "https://sydvatten.se//app/uploads/2026/07/Kvalitetsrapport-Sydvatten-2025.pdf",
+      "path": "water-quality2025.pdf",
+      "scope": "newrestoredsnapshotfrompriorlocatedvalidURLnotoldSHAauthentication; plants/distributionnotFUAallhomes",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 597447,
+      "sha256": "1833cd4f37b3e9b57950ddc43a4d8b7d41e246eb664a3d146971d5242e85b1bf",
+      "localPath": "originals/water-quality2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:50:28.315809+00:00",
+      "routeIndexes": [8],
+      "resolvedUrl": "https://sydvatten.se//app/uploads/2026/07/Kvalitetsrapport-Sydvatten-2025.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Content-Length": "597447",
+        "Content-Type": "application/pdf",
+        "Date": "Thu, 15 Oct 2026 19:50:30 GMT",
+        "Etag": "\"91dc7-656f91a9c55c5\"",
+        "Last-Modified": "Sun, 19 Jul 2026 16:15:53 GMT"
+      },
+      "finalByteCheck": true,
+      "observationVersionWindow": "Waterquality2025, URLJuly2026; opening2024vs2025tablesinternaldateconflict",
+      "boundedGeographicEligibilityUse": "Newbytesmatchpriorpublishedhash butnotoldHTTPmetadata/cutoffauthentication; outlet/mainnetwork notresidentialtap",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S09",
+      "url": "https://sydvatten.se/app/uploads/2026/04/Sydvatten_Hallbarhets_Arsredovisning_2025_lankad.pdf",
+      "path": "water-annual2025.pdf",
+      "scope": "new snapshot priorvalidlocatedoriginal lostoldbytes, actualoperationsredundancytoLund notoldmetadataauth",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 3475186,
+      "sha256": "07a1a29f4240db68b0515fa0ee66316423e968134dffb261d4765fdbb7f4a146",
+      "localPath": "originals/water-annual2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:51:46.369257+00:00",
+      "routeIndexes": [9],
+      "resolvedUrl": "https://sydvatten.se/app/uploads/2026/04/Sydvatten_Hallbarhets_Arsredovisning_2025_lankad.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Content-Length": "3475186",
+        "Content-Type": "application/pdf",
+        "Date": "Thu, 15 Oct 2026 19:51:47 GMT",
+        "Etag": "\"3506f2-64f9341896c0d\"",
+        "Last-Modified": "Thu, 16 Apr 2026 12:48:58 GMT"
+      },
+      "finalByteCheck": true,
+      "observationVersionWindow": "Sydvattenannual2025, URLApril2026",
+      "boundedGeographicEligibilityUse": "Newvalidsnapshot; twofullynewcontrols/SOCinoperation vsreservoirplanned2026acceptance; servicearea broaderthanLund",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S10",
+      "url": "https://lund.se/kommun-och-politik/samhallsskydd-och-beredskap/din-egna-beredskap",
+      "path": "resident-preparedness.html",
+      "scope": "currentactualresidentemergencyroutes andlimits; advice/contingency notalltested",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 80459,
+      "sha256": "f626af65db7b65c7ce25fa88004dcf890914d24e989dce1f501817ff20526f3b",
+      "localPath": "originals/resident-preparedness.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:51:49.261494+00:00",
+      "routeIndexes": [10, 11],
+      "resolvedUrl": "https://lund.se/kommun-och-politik/samhallsskydd-och-beredskap/din-egen-beredskap",
+      "contentType": "text/html;charset=UTF-8",
+      "headers": {
+        "Content-Type": "text/html;charset=UTF-8",
+        "Date": "Thu, 15 Oct 2026 19:51:51 GMT"
+      },
+      "finalByteCheck": true,
+      "observationVersionWindow": "Currentresidentpreparedness updated16Sep2026; actual301canonicalURLdin-egen",
+      "boundedGeographicEligibilityUse": "Supportpoint/advice/oneweekselfreadiness notfullstress-testedcoverage; currentbodydifferspreexistingsearchwaterexcerptnotadopted",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S11",
+      "url": "https://www.ivo.se/globalassets/dokument/publikationer/rapporter/rapporter-2025/ivo_vhis_2024.pdf",
+      "path": "ivo-observations2024.pdf",
+      "scope": "independentlater2025clinicalinspectionupdate allunihosp scope finite notLundriskadjustedrate",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 1261264,
+      "sha256": "cdc346cab4515ca6fbdcc1e601b209632468880f16dc8593927172a1fa90a6ce",
+      "localPath": "originals/ivo-observations2024.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:51:52.295405+00:00",
+      "routeIndexes": [12],
+      "resolvedUrl": "https://www.ivo.se/globalassets/dokument/publikationer/rapporter/rapporter-2025/ivo_vhis_2024.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Content-Length": "1261264",
+        "Content-Type": "application/pdf",
+        "Last-Modified": "Fri, 28 Feb 2025 07:59:50 GMT",
+        "ETag": "\"1db89b6bdce21d0\"",
+        "Date": "Thu, 15 Oct 2026 19:51:53 GMT"
+      },
+      "finalByteCheck": true,
+      "observationVersionWindow": "IVO2025formalreport observations2024, physical27–28",
+      "boundedGeographicEligibilityUse": "Follow-upsummaryofsame27inspectionprogramme, notindependentsecondclinicalcohort",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S12",
+      "url": "https://lund.se/download/18.5f38ad6e19db51c94e66f57/1777444645447/Hallbarhetsredovisning%202025.pdf",
+      "path": "city-sustainability2025.pdf",
+      "scope": "actual2025localphysicalprotection/food-energy-net/residual, nottargetscores",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 3861527,
+      "sha256": "91bf10a4fac048fce0f75f85b2c525d0fc91b3d810decd08a518ae80db368ade",
+      "localPath": "originals/city-sustainability2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:53:43.517700+00:00",
+      "routeIndexes": [13],
+      "resolvedUrl": "https://lund.se/download/18.5f38ad6e19db51c94e66f57/1777444645447/Hallbarhetsredovisning%202025.pdf",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:53:44 GMT",
+        "Last-Modified": "Wed, 29 Apr 2026 06:37:25 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "3861527"
+      },
+      "finalByteCheck": true,
+      "observationVersionWindow": "Lundsustainability2025, fileApril2026; latestemissions2023/2024preliminary",
+      "boundedGeographicEligibilityUse": "Actualolderinfrastructurevulnerability andimplementationlimits; goalratingnotCCIscore; localdefinitionincludesKraftringenoutsidecity",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S13",
+      "url": "https://www.swedbank.se/privat/betala-och-overfora/betalningar-till-utlandet.html",
+      "path": "personal-crossborder-payments.html",
+      "scope": "new snapshot priorvalidrawnotfound notoldSHAauth; ordinarypersonalroute notallbankaccounts",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 193633,
+      "sha256": "ec284df5eec2806ca0e8693cedef404a618cf441728fa62d25d0414297928cbb",
+      "localPath": "originals/personal-crossborder-payments.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:53:54.245524+00:00",
+      "routeIndexes": [14],
+      "resolvedUrl": "https://www.swedbank.se/privat/betala-och-overfora/betalningar-till-utlandet.html",
+      "contentType": null,
+      "headers": {
+        "Content-Length": "193633",
+        "content-type": "text/html;charset=utf-8",
+        "Date": "Thu, 15 Oct 2026 19:53:56 GMT"
+      },
+      "finalByteCheck": true,
+      "observationVersionWindow": "CurrentSwedbankpersonalpayments; noexactfirstpublicationverified",
+      "boundedGeographicEligibilityUse": "Requiresaccount/contact/serviceactivation/beneficiary/authentication, internationalFX/fees/limits; notallbankaccounts/assetretentionabroad",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "S14",
+      "url": "https://www.gesetze-im-internet.de/freiz_gg_eu_2004/BJNR198600004.html",
+      "path": "eu-free-movement-germany.html",
+      "scope": "SwedishordinarycitizenconditionalGermanlongstay, notMalmocityscore",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 75349,
+      "sha256": "b53478451d8605d7b5b31aeee028542c9d415df2dedfef634e66a0d60433c0fe",
+      "localPath": "originals/eu-free-movement-germany.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-15T19:53:56.954253+00:00",
+      "routeIndexes": [15],
+      "resolvedUrl": "https://www.gesetze-im-internet.de/freiz_gg_eu_2004/BJNR198600004.html",
+      "contentType": "text/html",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 19:53:58 GMT",
+        "Last-Modified": "Thu, 15 Oct 2026 00:14:48 GMT",
+        "ETag": "\"12655-65dd5ef87336b\"",
+        "Content-Length": "75349",
+        "Content-Type": "text/html"
+      },
+      "finalByteCheck": true,
+      "observationVersionWindow": "GermanEUfree-movementlaw currentamendment16July2026",
+      "boundedGeographicEligibilityUse": "SwedishnationalEUeligibility; employed/jobseekers/nonemployedmeansandinsuranceconditions; notblanketunconditionalpermanentresidence",
+      "rootBytesReverified": true,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false
+    },
+    {
+      "id": "R01",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "path": "R07-has-kymriah-2023.pdf",
+      "localPath": "originals/has-kymriah-2023.pdf",
+      "originalBytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "validOriginal": true,
+      "method": "verified durable copy no HTTP",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/oxford-full41/originals/has-kymriah-2023.pdf",
+      "inheritedMetadata": {
+        "id": "S22",
+        "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+        "path": "has-kymriah-2023.pdf",
+        "localPath": "originals/has-kymriah-2023.pdf",
+        "originalBytes": 741078,
+        "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+        "validOriginal": true,
+        "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/has-kymriah-2023.pdf",
+        "cutoffOriginalBytesAuthenticated": false,
+        "originalRetrieval": "2026-10-15; copied durable actualbytes, not re-requested or historicalauthentication",
+        "observedOn": "2026-10-15",
+        "versionAndObservation": "HAS Sept2023 tisa adultDLBCL; JULIET phaseII noncomparative20Feb2020 update, DESCAR-T registry; notUKpayer or Oxfordcohort",
+        "historicalCutoffBytesAuthenticated": false,
+        "sourceStatus": "valid_original_current_snapshot_or_durable_reuse"
+      },
+      "cutoffOriginalBytesAuthenticated": false,
+      "scope": "Tisa mature selectedBcell disease humanmechanism only, notLundunidentifiedproductcohort/healthy-longevity",
+      "verifiedLocalOn": "2026-10-16",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualPhysicalPages": 40,
+      "pdfMetadata": {
+        "format": "PDF 1.7",
+        "title": "KYMRIAH 1,2 x 10^6 – 6 x 10^8 cellules,",
+        "author": "PERCHERON Romain",
+        "subject": "dispersion cellulaire pour perfusion",
+        "keywords": "tisagenlecleucel",
+        "creator": "Microsoft® Word pour Microsoft 365",
+        "producer": "Microsoft® Word pour Microsoft 365",
+        "creationDate": "D:20231010112442+02'00'",
+        "modDate": "D:20231010112442+02'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "observationAndVersion": "Mature human disease-limited cellreprogramming/context UKqualified NICE adoption; not localbrand confirmation or Frenchpayer transfer",
+      "sourceRole": "substantive_primary_original",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/newcastle-full53/originals/R07-has-kymriah-2023.pdf",
+      "newHTTPRequest": false,
+      "finalIndependentByteCheck": true,
+      "observationVersionWindow": "HASCT20262 KYMRIAH September2023; oldselectedJULIET/DESCAR humanwindows",
+      "boundedGeographicEligibilityUse": "Tisa-specificmatureBcelldiseasemechanism, notLundproduct/clinicalcohort/Swedishpaymentorhealthylifespan",
+      "finalByteCheck": true,
+      "rootBytesReverified": true
+    }
+  ],
+  "privateSourceManifestSha256": "049942be5f94d4f028cf341dd3f7c429480757a4d282f0ecaa411e942483f7d5",
+  "sourceAndStopLedger": {
+    "inheritedLedgers": [
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/global-priority-comparison53/frozen-manifest.json",
+        "bytes": 199263,
+        "sha256": "6e0a5bf0f20f9a9b8e5a7d904eda7a50f0c3b716fbc0de912ee22f772eed6cc0"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/newcastle-full53/source-and-stop-ledger.json",
+        "bytes": 8204,
+        "sha256": "479b820bacf940fe30756dc9d1bd300dc711dc0d76ad0e60a12cbf1bea30c96b"
+      }
+    ],
+    "preciseInheritedStops": "inherited-stops.json",
+    "requiredStopDetails": {
+      "SkaneClinical": "Three403, twoPDF+CAR-Tnews atvard.skane.se/vardgivare.skane.se. Stopped, zerorequests/nootherweb/CDNmirrors. DifferentLUarticleisnotnewindependentclinicalcohort.",
+      "EON": "two403, priorclosure retained, zerorequests.",
+      "VASyD": "OldMay2026sewerconcreteURLTLSfailure retained/no re-request. CurrentcityreportquotesVAstrategicwork notretrievalofthatfailure.",
+      "other": "NHS England/UCLH/EC83/WHO/ING/WIPO2026/DOJ/FBI andotherpriorstops retained; no requests."
+    },
+    "LundDedicatedHistoricalLedger": "Boundedlocalfilenames/priorcandidatepublishedreview andglobal53stopinspection: no dedicatedpriorLundusedround evidence authenticated, historyunknownnotzero/noautomaticwholecitystop. Root explicitlyauthorized max2newquestionrounds.",
+    "discovery": {
+      "rounds": 2,
+      "queriesPerRound": [4, 4],
+      "closed": true,
+      "thirdRound": false,
+      "transcripts": "web-tool-transcripts.json"
+    },
+    "newNormalHTTPLegs": 16,
+    "authorizedMax": 18,
+    "validNewOriginals": 14,
+    "validReusedOriginals": 1,
+    "redirectResponses": 2,
+    "followedRedirectLegs": 2,
+    "normalRetries": 0,
+    "newFailures": [],
+    "redirects": [
+      {
+        "sourceId": "S02",
+        "status": 301,
+        "url": "https://www.kraftringen.se/globalassets/kraftringen/media/dokument-ny-sajt/rapporter/arsredovisningar/finansiell_rapport_2025_kraftringen.pdf",
+        "target": "https://www.kraftringen.se/globalassets/kraftringen/media/dokument-ny-sajt/rapporter/arsredovisningar/finansiell_rapport_2025_kraftringen.pdf/"
+      },
+      {
+        "sourceId": "S10",
+        "status": 301,
+        "url": "https://lund.se/kommun-och-politik/samhallsskydd-och-beredskap/din-egna-beredskap",
+        "target": "https://lund.se/kommun-och-politik/samhallsskydd-och-beredskap/din-egen-beredskap"
+      }
+    ],
+    "historyNeverResetBySuccessOrCity": true,
+    "newProviderCounters": "Newfailures0, historicalunknownnotassertedzero; exactprovider/mechanism stopsretained. Legitimate301Location legs arenotfailures orsamefailedfilebypass.",
+    "closure": "16legsclosed;2unused; no furthernetwork ordiscovery.",
+    "responseCapture": "Allsuccessfulresponsebytes andredirectdiagnosticbodies preservedimmediately beforetypevalidation. ParsedHTTPheaderdictionarynotwireheadertranscript/duplicateheadersmaycollapse.",
+    "processDeviations": [
+      "Onefirstextract invocationmistookIDsforfilenames; failedlocallybeforeread/network, correctedfilenames. Defaultpythonbs4invocationfailedlocallybeforebodyprocessing, existingenvused; noHTTPretry.",
+      "Onecommandread9textPDFpages as3documentgroups of3, eachassert<=3 butcombined9inoneexec; subsequenttext/render/viewpagebatchesstrict<=3total; noextraHTTP orrepairreadtohide.",
+      "Earlyrootmessagecorrect16legswronglyattributed2redirectstoEUlaw; actualjournalS02PDFtrailing slash andS10canonicaldin-egen, correctedbeforefreeze.",
+      "S10currentmain differspreexistingsearchcachedwaterexcerpt; adoptedonlyactualrawbody, keptsearchaslocator.",
+      "S08/S09newbytesmatchhistoricalpublishedhashnotauthenticationoflostpriorHTTPheaders/actualoldbytes; nooldtimestampinferred.",
+      "Allcurrentretrievalaftercutoff, nominaldates/LastModifieddonotauthenticatecutoffbytes."
+    ]
+  },
+  "failedSourceSnapshots": [],
+  "referenceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allCandidatesChecked": 9031,
+    "repairCount": 136,
+    "records": [
+      {
+        "fid": 7965,
+        "eFUA_ID": 624.0,
+        "UC_num": 1.0,
+        "UC_IDs": "2809",
+        "eFUA_name": "Lund",
+        "Commuting": 1.0,
+        "Cntry_ISO": "SWE",
+        "Cntry_name": "Sweden",
+        "FUA_area": 737.0,
+        "UC_area": 24.0,
+        "FUA_p_2015": 206764.22174325585,
+        "UC_p_2015": 76621.27905273438,
+        "Com_p_2015": 130142.94269052148
+      }
+    ],
+    "points": [
+      {
+        "label": "Lund centre approximate",
+        "longitude": 13.191,
+        "latitude": 55.704,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 624,
+            "name": "Lund"
+          }
+        ]
+      },
+      {
+        "label": "Lund SUS district approximate",
+        "longitude": 13.199,
+        "latitude": 55.711,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 624,
+            "name": "Lund"
+          }
+        ]
+      },
+      {
+        "label": "Ideon district approximate",
+        "longitude": 13.213,
+        "latitude": 55.715,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 624,
+            "name": "Lund"
+          }
+        ]
+      },
+      {
+        "label": "MAXIV district approximate",
+        "longitude": 13.25,
+        "latitude": 55.73,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 624,
+            "name": "Lund"
+          }
+        ]
+      },
+      {
+        "label": "Ortofta district approximate",
+        "longitude": 13.24,
+        "latitude": 55.78,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 624,
+            "name": "Lund"
+          }
+        ]
+      },
+      {
+        "label": "Malmo centre comparator",
+        "longitude": 13.003,
+        "latitude": 55.605,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 481,
+            "name": "Malmö"
+          }
+        ]
+      }
+    ],
+    "targetWkbSha256": "2aa833198412f07e5374dca853f02b14490277deb544be431733519db3fe7ce7",
+    "meaning": "Approximate reference points do not establish provider service coverage, citywide outcomes or residence; Hospital referrals/water service/city/FUA differ; airport point not proof of journey access.",
+    "rootRecomputed": true,
+    "all9031Checked": true,
+    "administrativeCityEqualsFua": false,
+    "approximatePointsNotCoverage": true
+  },
+  "webReadSources": [
+    {
+      "round": "round1",
+      "originalSession": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-02-01a13e5e-2ed3-76e3-b2b0-eefa22db05d9.jsonl",
+      "lineOneBased": 5245,
+      "callId": "call_5b1a65101c204069a17d5e071edaa8a4",
+      "blockIndexZeroBased": 2,
+      "localToolTextPath": "web-round1-exact-tooltext.txt",
+      "toolTextBytes": 27187,
+      "toolTextSha256": "ef33546788a2d8b7c815d00b126583bdcd48ed80dfee2719047d3ea5709b0356",
+      "websiteOriginalBytes": null,
+      "websiteOriginalSha256": null,
+      "scope": "Exactfullactualsearchtoolaggregateblock, notcompletewebsitepages; locatoronly, noadditionalwebopen/find/click, nofailedrawbypass.",
+      "rootHistoricalToolProof": {
+        "round": "round1",
+        "callId": "call_5b1a65101c204069a17d5e071edaa8a4",
+        "lineOneBased": 5245,
+        "blockIndexZeroBased": 2,
+        "exactToolBlockRecovered": true,
+        "savedEqualsExact": true,
+        "toolTextSha256": "ef33546788a2d8b7c815d00b126583bdcd48ed80dfee2719047d3ea5709b0356",
+        "toolDigestIsWebsiteOriginalDigest": false,
+        "discoveryOnly": true
+      },
+      "discoveryOnlyNotScoringSource": true
+    },
+    {
+      "round": "round2",
+      "originalSession": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-02-01a13e5e-2ed3-76e3-b2b0-eefa22db05d9.jsonl",
+      "lineOneBased": 5314,
+      "callId": "call_a53e8a09becd47de9ff9e31588890b72",
+      "blockIndexZeroBased": 1,
+      "localToolTextPath": "web-round2-exact-tooltext.txt",
+      "toolTextBytes": 29106,
+      "toolTextSha256": "37eeb95834f90d416346170b498928d769aa30f26b324249a8429b4952b40164",
+      "websiteOriginalBytes": null,
+      "websiteOriginalSha256": null,
+      "scope": "Exactfullactualsearchtoolaggregateblock, notcompletewebsitepages; locatoronly, noadditionalwebopen/find/click, nofailedrawbypass.",
+      "rootHistoricalToolProof": {
+        "round": "round2",
+        "callId": "call_a53e8a09becd47de9ff9e31588890b72",
+        "lineOneBased": 5314,
+        "blockIndexZeroBased": 1,
+        "exactToolBlockRecovered": true,
+        "savedEqualsExact": true,
+        "toolTextSha256": "37eeb95834f90d416346170b498928d769aa30f26b324249a8429b4952b40164",
+        "toolDigestIsWebsiteOriginalDigest": false,
+        "discoveryOnly": true
+      },
+      "discoveryOnlyNotScoringSource": true
+    }
+  ],
+  "publishedContextRecords": [
+    {
+      "id": "P01",
+      "kind": "previously_adopted_published_claim_summaries_not_new_original",
+      "path": "docs/cci-malmo-priority-review.md",
+      "sha256": "b61db1476284c64d22d27328690cd37de96aacecf71a03ffef04acf8109390eb",
+      "casePath": "docs/data/cci-local-2026-malmo-case.json",
+      "caseSha256": "6585937c3e3f2107d04ec9fad21513d691ecdec80f2e0092c7142782d81e7f8f",
+      "fixedCommit": "4144222842b8c399fc99714cd3c93fcb2aba3abb",
+      "sourceRecords": [
+        {
+          "id": "W01",
+          "url": "https://vard.skane.se/siteassets/sjukhus/bilder-och-pdfer/skanes-universitetssjukhus/om-oss/skanes-universitetssjukhus-i-korthet-2025.pdf",
+          "retrievedOn": "2026-10-13",
+          "reviewedOn": "2026-10-13",
+          "publishedOn": null,
+          "bytes": null,
+          "sha256": null,
+          "scope": "原32pPDF文本，实际2025SUS多院/外地患者；Malmö病区迁入与队列改善、首接76.1%及长队。raw403，未称核心图表已目视/取原bytes。"
+        },
+        {
+          "id": "W02",
+          "url": "https://vardgivare.skane.se/siteassets/5.-uppfoljning/omraden/patientsakerhet/patientsakerhetsberattelser---fillistning/patientsakerhetsberattelse-skanes-universitetssjukhus.pdf",
+          "retrievedOn": "2026-10-13",
+          "reviewedOn": "2026-10-13",
+          "publishedOn": null,
+          "bytes": null,
+          "sha256": null,
+          "scope": "当前为42p2025安全PDF；封面2026-未填月日，search仍标2024旧版。真实288LexMaria，报告有漏报/双系统重复；raw403，未得pixels，不数字化图。"
+        },
+        {
+          "id": "W05",
+          "url": "https://www.skane.se/halsa-och-vard/regler-och-rattigheter-i-varden/vardgaranti-och-vantetider/",
+          "retrievedOn": "2026-10-13",
+          "reviewedOn": "2026-10-13",
+          "publishedOn": "2026-03-09",
+          "bytes": null,
+          "sha256": null,
+          "scope": "原Region当前0/3/90/90保证和Vårdlots可转介路径，是目标/手续不等全部实绩，更不用于替代急症即时。"
+        }
+      ],
+      "clinicalRawOriginalsReauthenticated": 0,
+      "clinicalOldToolFulltextRecovered": false,
+      "malmoLocalWardAnd55PercentQueueImprovementTransferredToLund": false,
+      "sharedProviderNotTwoIndependentResidentSamples": true,
+      "ordinaryLundAccessAndContinuityAreRevocable": true
+    }
+  ],
+  "rootScopeReview": {
+    "frozenPayloadFilesVerified": 109,
+    "validOriginalsVerified": 15,
+    "rootRawCopiesMatch": 15,
+    "newOriginals": 14,
+    "reusedOriginals": 1,
+    "rootPdfPageCount": 24,
+    "rootPdfPixelsViewed": [
+      {
+        "sourceId": "R01",
+        "physicalPage": 14
+      },
+      {
+        "sourceId": "R01",
+        "physicalPage": 24
+      },
+      {
+        "sourceId": "R01",
+        "physicalPage": 25
+      },
+      {
+        "sourceId": "S02",
+        "physicalPage": 4
+      },
+      {
+        "sourceId": "S02",
+        "physicalPage": 8
+      },
+      {
+        "sourceId": "S03",
+        "physicalPage": 24
+      },
+      {
+        "sourceId": "S03",
+        "physicalPage": 30
+      },
+      {
+        "sourceId": "S03",
+        "physicalPage": 33
+      },
+      {
+        "sourceId": "S03",
+        "physicalPage": 36
+      },
+      {
+        "sourceId": "S03",
+        "physicalPage": 82
+      },
+      {
+        "sourceId": "S06",
+        "physicalPage": 56
+      },
+      {
+        "sourceId": "S06",
+        "physicalPage": 58
+      },
+      {
+        "sourceId": "S07",
+        "physicalPage": 10
+      },
+      {
+        "sourceId": "S07",
+        "physicalPage": 11
+      },
+      {
+        "sourceId": "S07",
+        "physicalPage": 7
+      },
+      {
+        "sourceId": "S08",
+        "physicalPage": 13
+      },
+      {
+        "sourceId": "S08",
+        "physicalPage": 14
+      },
+      {
+        "sourceId": "S08",
+        "physicalPage": 15
+      },
+      {
+        "sourceId": "S08",
+        "physicalPage": 21
+      },
+      {
+        "sourceId": "S09",
+        "physicalPage": 18
+      },
+      {
+        "sourceId": "S11",
+        "physicalPage": 28
+      },
+      {
+        "sourceId": "S12",
+        "physicalPage": 17
+      },
+      {
+        "sourceId": "S12",
+        "physicalPage": 18
+      },
+      {
+        "sourceId": "S12",
+        "physicalPage": 30
+      }
+    ],
+    "crossreviewPayloadsVerified": 9,
+    "rootNewNetworkRequests": 0,
+    "all9031GeometriesRecomputed": true,
+    "sixApproximatePointsRecomputed": true,
+    "original88WholeCaseBytesComparedToFixedGit": true,
+    "allOriginalBodiesFullyAudited": false,
+    "allPdfPagesViewed": false,
+    "cutoffSameBytesAuthenticated": false,
+    "medResearch40ChangedTo60WithExplicitOrdinaryAccessBridge": true,
+    "sharedSusClinicalRawReauthenticated": false,
+    "sourceCountAffectsScore": false,
+    "fuaEqualsAdministrativeOrProviderArea": false,
+    "processDeviations": "Research and root initial PDFtext calls each grouped9pages as3documents; render/view batches<=3. Root24already-viewedimage hashes once lacked3itemassert; retained not reread tohide. Local301field lookup fixed withno networkretry."
+  },
+  "sensitivity": {
+    "PCS60": [45, 70],
+    "MED40": [39, 64],
+    "ISR40": [39, 64],
+    "RES40": [40, 65],
+    "LON40": [40, 65],
+    "TEC40": [40, 65],
+    "PCSWithdrawn": [36, 76],
+    "MEDWithdrawn": [33, 73],
+    "ISRWithdrawn": [33, 73],
+    "RESWithdrawn": [36, 71],
+    "LONWithdrawn": [36, 71],
+    "TECWithdrawn": [36, 71],
+    "allJudgmentsWithdrawn": [0, 100]
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-lund-score-completion-review.md",
+    "sha256": "3fec8f7bef08e5fa52ee3c78b63fbd9248d9a5d47c2e34c1b6c2f2c632c65eab",
+    "researchReport": "docs/cci-lund-priority-review.md",
+    "researchReportSha256": "daa66495216a194426c5db5389074c55141484c91fd3e6742756304d63fe4a8d",
+    "researchFrozenReportSha256": "6bfc1e53703dfa57b3908a9e8dbf9fc00a9a564b7ca7ec22be4540f02b4dabcd",
+    "frozenManifestSha256": "b8d514978e0966a4aa24b689c14fd392cfb6a4778e873946e79f5be2222748ed",
+    "frozenFilesVerified": 109,
+    "validOriginalCount": 15,
+    "newValidOriginalCount": 14,
+    "reusedOriginalCount": 1,
+    "rootPdfPageCount": 24,
+    "crossReviewReportSha256": "28d1feb436b9f1f56642f46407570a578153a83f399979ef030724933175ad4a",
+    "crossReviewManifestSha256": "f5706e1286178cc5c2525104ce94dfe08ecfebc26f5e8a09239bd6cc20111975"
+  },
+  "reportBytes": 12274,
+  "reportSha256": "3fec8f7bef08e5fa52ee3c78b63fbd9248d9a5d47c2e34c1b6c2f2c632c65eab",
+  "limitations": [
+    "条件性研究判断，非全球排名或可靠排除界限；全部新旧竞争者保留，原88案逐字不变。",
+    "MED研究40改为根条件60，重要余障仍支持40；共享临床背景为已发表主张摘要，未恢复旧临床原PDF或旧工具全文。",
+    "空间/观察期/当前延续、普通净取得和CAR-T类内成熟适配均可撤；未知不补中点、不重归一。",
+    "109冻结payload、15原件字节、根24不同物理页与9031几何独核，不等全部原文或所有居民质量已测。",
+    "16HTTP腿含两正常301，0新失败不清零历史停止；截止同字节未认证，报告已标记流程偏差。"
+  ]
+}

@@ -98,6 +98,7 @@ import houston from "../../docs/data/cci-local-2026-houston-case.json";
 import sanDiego from "../../docs/data/cci-local-2026-san-diego-case.json";
 import austin from "../../docs/data/cci-local-2026-austin-case.json";
 import newcastle from "../../docs/data/cci-local-2026-newcastle-case.json";
+import lund from "../../docs/data/cci-local-2026-lund-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -200,8 +201,10 @@ const cases = [
   sanDiego,
   austin,
   newcastle,
+  lund,
 ];
 const caseNamesZh: Record<number, string> = {
+  [lund.candidateId]: "隆德功能区",
   [newcastle.candidateId]: "纽卡斯尔功能区",
   [austin.candidateId]: "奥斯汀功能区",
   [sanDiego.candidateId]: "圣迭戈相关美国功能区",
@@ -396,6 +399,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [lund.candidateId]: [
+    zh
+      ? "隆德防护条件40，制度／资源／医疗／专项转化／技术条件60；安全／退出未知。原权重贡献42、数学域42—67，无完整总分。实际备电、供水和照护交付，与热洪防护缺口、床位等待及治疗风险一起判断。"
+      : "Lund has conditional 40 for PCS and 60 for ISR, RES, MED, LON and TEC; GSS and OPT remain unknown. The original-weight contribution is 42 and arithmetic domain 42–67, without a complete total. Operating backup power, water and care are assessed alongside heat–flood protection gaps, bed delays and treatment risks.",
+    zh
+      ? "医疗由研究40改为条件60：采用实际治疗、地方接续和普通公费取得的有限判断，共享医院旧背景未重认证临床PDF；马尔默当地改善不搬隆德。MED40替代39—64，拒关键取得／延续推定则33—73。疾病CAR-T不等健康延寿，原88案保持不变。"
+      : "Root review adopts MED 60 instead of the research proposal of 40, based on actual care, local discharge support and usual publicly funded access. Shared hospital context is not newly authenticated clinical PDF evidence; Malmö-specific improvements are not transferred to Lund. MED 40 gives 39–64; rejecting its key access or continuity assumptions gives 33–73. Disease-specific CAR-T is not evidence of healthy lifespan extension. The previous 88 cases are unchanged.",
+  ],
   [newcastle.candidateId]: [
     zh
       ? "纽卡斯尔防护／医疗条件40，制度／专项转化／技术条件60；安全／资源／退出未知。原权重贡献33、数学域33—68，无完整总分。已完防洪、必要治疗与转化产用，同风暴电力共因、诊疗等待和安全余障一起判断。"

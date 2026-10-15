@@ -140,6 +140,7 @@ const realCases = [
   "san-diego",
   "austin",
   "newcastle",
+  "lund",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -271,6 +272,7 @@ const [
   sanDiego,
   austin,
   newcastle,
+  lund,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -3538,3 +3540,37 @@ for (const [id, lower, upper] of [
 }
 assert.deepEqual(total({ ...newcastle, PCS: 60 }), { center: null, lower: 36, upper: 71 });
 assert.deepEqual(total({ ...newcastle, MED: 60 }), { center: null, lower: 36, upper: 71 });
+
+const lundCase = realCases.find(c => c.candidateId === 624);
+assert.equal(
+  lundCase.priorityCompletionReview.sha256,
+  digest(lundCase.priorityCompletionReview.path)
+);
+assert.equal(
+  lundCase.priorityCompletionReview.researchReportSha256,
+  digest(lundCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(lund), { center: null, lower: 42, upper: 67 });
+assert.equal(lundCase.unknownWeight, 25);
+assert.deepEqual(
+  lundCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["GSS", "OPT"]
+);
+assert.equal(lundCase.coverageReview.length, 31);
+assert.equal(lundCase.sourceSnapshots.length, 15);
+for (const [id, lower, upper] of [
+  ["PCS", 36, 76],
+  ["ISR", 33, 73],
+  ["MED", 33, 73],
+  ["RES", 36, 71],
+  ["LON", 36, 71],
+  ["TEC", 36, 71],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...lund };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...lund, MED: 40 }), { center: null, lower: 39, upper: 64 });
+assert.deepEqual(total({ ...lund, PCS: 60 }), { center: null, lower: 45, upper: 70 });
