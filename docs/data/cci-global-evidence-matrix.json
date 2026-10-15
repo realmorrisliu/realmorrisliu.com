@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 77,
+    "conditionalCaseCount": 78,
     "completeConditionalCaseCount": 18,
-    "partialCaseCount": 59,
-    "unassessedCount": 8954,
+    "partialCaseCount": 60,
+    "unassessedCount": 8953,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -690,8 +690,13 @@
       "sha256": "92c855f4943824ae67f5a24fa657d9fe471b5fdc4d163c71f2ba31cf051037a4",
       "provenance": "cci-oxford-score-completion-review.md",
       "provenanceSha256": "643ece27139dbc8f7d136583817062b815ddbd463da238ae218aa5fdce5412f8"
+    },
+    "cci-local-2026-cambridge-case.json": {
+      "sha256": "f1d6d68724cfa05536cf8a69ceb3064b767b75d58a67105aaad7df13e82bf68e",
+      "provenance": "cci-cambridge-score-completion-review.md",
+      "provenanceSha256": "43d3ee11241103b218c774eb9d20266813eea1d554b37dda5e19e917a37f9824"
     }
   },
-  "scriptSha256": "726d323e78f191445aaf6ebf67e9f04e11f7fd52cbc196784ed984e7f7e6743f",
-  "csvSha256": "21286f32d19d6e034a359c89a708d6d46175d34b08b0c81f5e1788c207645d6b"
+  "scriptSha256": "26342e3f158b0f63766c3901d6925f0e2bbc5eb744020b1db36a1882f6743cc0",
+  "csvSha256": "45f1b60e6addb9b17b6d43e3d05d65ac0e89d9b26a63f1f8c85d9ce8cd4e7540"
 }

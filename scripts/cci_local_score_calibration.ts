@@ -129,6 +129,7 @@ const realCases = [
   "philadelphia",
   "kuala-lumpur",
   "oxford",
+  "cambridge",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -249,6 +250,7 @@ const [
   philadelphia,
   kualaLumpur,
   oxford,
+  cambridge,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2942,3 +2944,38 @@ assert.deepEqual(total({ ...oxford, LON: 40 }), { center: null, lower: 31, upper
 assert.deepEqual(total({ ...oxford, TEC: 80 }), { center: null, lower: 35, upper: 70 });
 assert.equal(oxfordCase.rootExcludedWebClaims[0].usedForScore, false);
 assert(oxfordCase.dimensions.every((d: { sourceIds: string[] }) => !d.sourceIds.includes("S07")));
+
+const cambridgeCase = realCases.find(c => c.candidateId === 5550);
+assert.equal(
+  cambridgeCase.priorityCompletionReview.sha256,
+  digest(cambridgeCase.priorityCompletionReview.path)
+);
+assert.equal(
+  cambridgeCase.priorityCompletionReview.researchReportSha256,
+  digest(cambridgeCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(cambridge), { center: null, lower: 21, upper: 81 });
+assert.equal(cambridgeCase.sourceSnapshots.length, 11);
+assert.equal(cambridgeCase.failedSourceSnapshots.length, 2);
+assert.equal(cambridgeCase.routingSourceSnapshots.length, 2);
+assert.equal(
+  cambridgeCase.sourceSnapshots.find((s: { id: string }) => s.id === "S14").usedForScore,
+  false
+);
+assert.equal(cambridgeCase.rootScopeReview.htmlTrustTemporalConflictAdopted, false);
+assert.equal(cambridgeCase.rootScopeReview.score40RequiresMajorityVictimsOrCityShutdown, false);
+assert.equal(cambridgeCase.rootScopeReview.survey5501And1411Pooled, false);
+assert.equal(cambridgeCase.rootScopeReview.stanstedIsInside5550, false);
+for (const [id, lower, upper] of [
+  ["MED", 15, 90],
+  ["ISR", 12, 87],
+  ["TEC", 15, 85],
+] as const) {
+  const withdrawn = { ...cambridge };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...cambridge, MED: 60 }), { center: null, lower: 24, upper: 84 });
+assert.deepEqual(total({ ...cambridge, ISR: 40 }), { center: null, lower: 18, upper: 78 });
+assert.deepEqual(total({ ...cambridge, TEC: 40 }), { center: null, lower: 19, upper: 79 });
+assert.deepEqual(total({ ...cambridge, TEC: 80 }), { center: null, lower: 23, upper: 83 });

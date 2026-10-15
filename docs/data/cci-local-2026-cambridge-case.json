@@ -1,0 +1,1321 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 5550,
+  "name": "Cambridge",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "portraitDetail": "2026普通英国本国公民、当地通常长期居民、当地中位收入、通常有效公共保障、无固定年龄；疾病具体年龄/适应证另记。英国Cambridge，非美国Boston/Cambridge。",
+  "evidenceCutoff": "2026-10-10",
+  "targetYear": 2026,
+  "retrievedOn": "2026-10-15",
+  "researchFrozenInputCommit": "fdcc2ba2bd267ca2e923d3c6bba580ea8375cfc9",
+  "fixedInputCaseCount": 76,
+  "fixedInputCompleteCount": 18,
+  "evidenceReview": "cci-cambridge-score-completion-review.md",
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 21,
+  "unknownWeight": 60,
+  "unresolvedScoreRange": [21, 81],
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": null,
+      "rationale": "热旱中真实供水/抢修与UV、排水制度和医院连续安排存在；同时夏屋过热33%及未完成适应/老化设施表明余障。",
+      "assumption": "尚不能判主要物理危险在帮助后通常已适配（60）或重要暴露保护缺口显著受制（40）。不是因未测全部人口/地质而机械未知：真正未闭的是过热与洪水保护对普通居住/关键通道的当前有效范围。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "partial"
+      },
+      "alternativeRationales": "若接受通常住房过热为重要未缓解威胁且适配本FUA可讨论40；若接受已运行水/排水/医院保护对主要危险的通常作用可讨论60。两桥都不能仅机构存在或33%感受单项完成。",
+      "weight": 15,
+      "withdrawToUnknownOnNecessaryBridgeRefusal": false,
+      "sourceIds": []
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "本地县线重伤真实定罪与急救、跨地针对查缉/脆弱住址访问；普通社区安全感85%；水务实际OT/IT/SOC保护与网络攻击民诉并读。",
+      "assumption": "未接受从一般安全感+少数针对案件+水务共同保护，跨至全部组织/区域/战略通常低影响的联合推定；缺的是相关影响/保护的有范围连接，非必须发生战争、每节点攻击或组织暴力普查。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "alternativeRationales": "条件60可接受安全感与实际针对保护支持通常低现实组织影响，并以水务保护/持续服务有限代理重要共享节点；但仍缺地区战略匹配，需根明确接受。40须重要未缓解生活/通道约束，不能由一件重伤/民诉直接判。",
+      "weight": 15,
+      "withdrawToUnknownOnNecessaryBridgeRefusal": false,
+      "sourceIds": []
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "已实施的MDT／外审SOP、真实旱情抢修和UV、公共诊疗及数字服务支持跨服务执行和适应能力的有限判断；儿童伤害、复杂服务执行缺口和群体差异仍重要，不因公开问题本身加减分。",
+      "assumption": "有限接受当地核心及共享机构对普通FUA居民服务和适应的代表性、2026延续及通常触达；真实改进与不同服务运作支持60，非只存在机构或没证明崩溃。MED评必要照护约束，ISR评制度执行与适应，不机械复制同一事件分数；拒绝关键桥则未知。",
+      "conditionalAlternatives": [40],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "alternativeRationales": "40：若认为已实施改善后安全执行及群体交付余障仍构成显著制度约束，可审40。需未来整改完成才支持的80不作当前替代档。代表性／通常触达／延续桥拒绝则未知。",
+      "weight": 15,
+      "withdrawToUnknownOnNecessaryBridgeRefusal": true,
+      "sourceIds": ["S04", "S05", "S07", "S13", "W01", "W07"]
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "真实日常供水及UV/抢修，联合指标较短中断；同时营养食23%/取暖29%/foodbank6%和真实账单帮助12%、水务扶助1100signups支持与负担共存。",
+      "assumption": "两种相邻解释仍实质可辩：通常居民日常够用但有重要集中/费用短板，或帮助后食能净取得已明显受约束。样本不是中位人物/完整FUA，但不要求精确逐户账单；实际缺的是食能负担严重性、帮助后未缓解程度与通常画像的有据连接。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "context"
+      },
+      "alternativeRationales": "40需有限有据接受上述食能削减为重要必要资源约束且12%账单帮助未解除；60需接受普通画像通常足够且帮助/非削减人群支持净取得方向。不能把23%都饥饿、12%都救助成功、或多数无该选项都充足。",
+      "weight": 10,
+      "withdrawToUnknownOnNecessaryBridgeRefusal": false,
+      "sourceIds": []
+    },
+    {
+      "id": "MED",
+      "score": 40,
+      "rationale": "广泛诊疗、通常NHS住院付款和已实施整改真实存在；儿童骨科实际伤害、复杂服务治理与人员缺口、多种必要诊疗等待在帮助后仍构成重要取得／安全／接续约束，按与牛津相同尺度取条件40。",
+      "assumption": "有限接受CUH主要服务对当地普通居民的重要性、2026延续及通常付款／必要接续的代表性；不把国籍视为住院资格、不把县6%减处方当FUA个人率。不是所有治疗失败、受害过半或全城停摆门槛，也非一个未达目标即40；拒绝关键范围、时点或净取得桥则回未知。",
+      "conditionalAlternatives": [60],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "alternativeRationales": "60：若认为广泛已交付服务、通常NHS住院保障、Band2和实际整改足以使通常取得／安全约束有限，可审条件60；不能以未证明全面崩溃为依据。当前80没有获采纳的同尺度缓解解释。关键桥拒绝回未知。",
+      "weight": 15,
+      "withdrawToUnknownOnNecessaryBridgeRefusal": true,
+      "sourceIds": ["S04", "S07", "S08", "S12", "S13", "W03", "W04", "W05"]
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "NICE liso-cel具人体证据/有条件采用，CUH实际血液疾病服务/监护和一般癌症治疗类别存在。",
+      "assumption": "未定位能把特定成熟人体疾病干预接到当地实际常规实施和普通临床合资格居民付款/近院监护净取得的同一条链；这不证明没有此能力，亦非要求逐剂品牌账单。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "unresolved"
+      },
+      "alternativeRationales": "60若确认真实当地成熟路径且通常资助/监护可有限连接；40要实质研究→人体/采用/取得断点，不因没找到就40。S10国家建议不能单独补。",
+      "weight": 10,
+      "withdrawToUnknownOnNecessaryBridgeRefusal": false,
+      "sourceIds": []
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "真实持续许可/咨询/新公司及Trismik功能产品/企业试用，MyChart真实患者采用与水务UV/OT保护说明知识、产业、数字与实际使用相连。",
+      "assumption": "接受这些当地核心机构/已运行共享设施对FUA能力和通常扩散的有限代表性、2026持续；部分产业产品仍beta/企业试用，CUH明确格式可及不一致与自动化尚开发，扩散在帮助后仍重要。故60不是因为没有全城技术普查或仅一个大学节点。",
+      "conditionalAlternatives": [40, 80],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "alternativeRationales": "40：若认为实际产用仍主要限少数活动、可及性及试用阶段的重要扩散断层使通常受益显著受制，可审40，不要求障碍主导所有活动。80：若认为真实跨领域许可、产品和患者采用足以缓解当前扩散余障，可审80；不因缺更多指标封顶。必要代表性／延续桥拒绝则未知。",
+      "weight": 10,
+      "withdrawToUnknownOnNecessaryBridgeRefusal": true,
+      "sourceIds": ["S02", "S05", "S07"]
+    },
+    {
+      "id": "OPT",
+      "score": null,
+      "rationale": "实际医院多式交通和公交安全调整；CTA给British公民真正Ireland长期居住工作权，旧个人EE漫游规则有范围。",
+      "assumption": "尚未形成国际物理通道实际接近及普通资产/境外持续通信的当期联合路径；现有医院出行不能推机场可达，旧2022漫游不能推2026新售。不是所有目的地/全资产交易都须完成。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "unresolved",
+        "network_continuity": "context"
+      },
+      "alternativeRationales": "60可用一条真实通常可得交通/法律/资金/通信组合加有限冗余桥，不要求每目的地实办；40须真实重要退出限制，不能由S09DNS/本轮无资金原件推出。",
+      "weight": 10,
+      "withdrawToUnknownOnNecessaryBridgeRefusal": false,
+      "sourceIds": []
+    }
+  ],
+  "coverageReview": [
+    {
+      "dimensionId": "PCS",
+      "subpillar": "heat_humidity",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "S13p36实际33%夏屋过热、群体差异；S05p10实际热旱供给/抢修。水可用不等人体热防护。"
+    },
+    {
+      "dimensionId": "PCS",
+      "subpillar": "flood_sea_level",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "S15已采用2016排水SPD/法定咨询；Fens设施老化/未来三阶段计划非已建防洪。S07医院沿海低暴露不扩全FUA。"
+    },
+    {
+      "dimensionId": "PCS",
+      "subpillar": "geophysical",
+      "status": "unresolved",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "本轮未取得能辨别相关地质暴露及匹配防护的地方实证；不当零危险或要求不必要设施。"
+    },
+    {
+      "dimensionId": "PCS",
+      "subpillar": "severe_weather_wildfire",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "S07实际医院恶劣天气/洪水连续安排；专门适应计划预定Nov2026未到，未验证住户通常恢复效果。"
+    },
+    {
+      "dimensionId": "GSS",
+      "subpillar": "organized_violence",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "W01本地县线刺伤/真实GBH定罪/紧急救助；W02跨三地查缉/潜在cuckooing保护；S13p26安全感85%但非组织暴力率。"
+    },
+    {
+      "dimensionId": "GSS",
+      "subpillar": "regional_conflict",
+      "status": "context",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "本轮来源未形成能辨别地区冲突对当地普通生活/必要通道影响及匹配保护的实质链，不用无战争补低影响。"
+    },
+    {
+      "dimensionId": "GSS",
+      "subpillar": "strategic_exposure",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "S05p36实际OT/IT隔离、独立SOC、测试；p54真实网络攻击民诉，未定位居民/供水影响。不能把单一水务保护当全城战略保护。"
+    },
+    {
+      "dimensionId": "ISR",
+      "subpillar": "governance",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "CUH实际外部评审、MDT/SOP实施、质量报告/救助和水务整改；儿童伤害/105服务共性缺陷/持续审查均留。"
+    },
+    {
+      "dimensionId": "ISR",
+      "subpillar": "adaptive_capacity",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "S05实际旱情增抢修队/临时UV，S07已用MyChart；未来Grafham/适应计划不算已交付。"
+    },
+    {
+      "dimensionId": "ISR",
+      "subpillar": "social_cohesion",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "S13加权调查City信任65/SouthCambs65但县55下降；残障/租房/低SEG差异及孤独存在，不把信任换能力分。"
+    },
+    {
+      "dimensionId": "ISR",
+      "subpillar": "emergency_recovery",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "W01公共/急救实际救助；水务实际维持供给/抢修；缺完整压力恢复结果，采用通常服务触达有限桥。"
+    },
+    {
+      "dimensionId": "RES",
+      "subpillar": "water",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "S05真实98MLD六月需求/抢修/UV；联合供区04:52中断指标及质量/爆管短板；供区不等FUA。"
+    },
+    {
+      "dimensionId": "RES",
+      "subpillar": "food",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "S13p30营养食削减23%、foodbank6%；不是绝对饥饿率/中位人物率；未定位帮助后余障及供给合束。"
+    },
+    {
+      "dimensionId": "RES",
+      "subpillar": "energy",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "S13p30因成本减暖29%/p36昂贵取暖18%；p32账单公司帮助12%混水电通信税，不知后续解困；非停电率。"
+    },
+    {
+      "dimensionId": "RES",
+      "subpillar": "supply_chain",
+      "status": "context",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "实际水系统运行/已投UV有限链；未来转水/水库不算，食能替代/通常合束净取得未闭。"
+    },
+    {
+      "dimensionId": "MED",
+      "subpillar": "access",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "S08通常居住公共住院基准免费；S12处方牙眼等收费/证明，S13减处方6%不抹除；W05实际医院交通。"
+    },
+    {
+      "dimensionId": "MED",
+      "subpillar": "routine_quality",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "S04 SHMI0.99Band2真实Dec24–Nov25；营养/产科过程改善；儿童实际伤害、7NeverEvents/治理缺陷与持续审查并列。"
+    },
+    {
+      "dimensionId": "MED",
+      "subpillar": "specialist_capacity",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "S04真实广泛急诊/日间/住院与必要专科；W04凝血病急救/因子；转诊等待/复杂服务人力床位不足留。"
+    },
+    {
+      "dimensionId": "MED",
+      "subpillar": "system_continuity",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "真实虚拟病房/MyChart/服务量及通常付款；RTT/cancer/diagnostics显著未达目标，气候及数字无一致可及性。"
+    },
+    {
+      "dimensionId": "LON",
+      "subpillar": "translation",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "CUH治疗分类/因子服务实际存在，但未定位特定成熟先进疾病干预的本地常规实施链；不判全城没有。"
+    },
+    {
+      "dimensionId": "LON",
+      "subpillar": "trial_maturity",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "S10liso-cel临床改善下一线治疗/进展时间，OS不确定；不能移给AXI或健康延寿。"
+    },
+    {
+      "dimensionId": "LON",
+      "subpillar": "regulatory_adoption",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "NICE2025选定成人LBCL、ASCT适合与commercialarrangement条件；非所有人/病种；国家条件不证明本地采用。"
+    },
+    {
+      "dimensionId": "LON",
+      "subpillar": "resident_access",
+      "status": "unresolved",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "NHS通常付款与凝血病监护不自动接到liso本地成熟给药/必要照护净资源；不要求每剂票据，关键路径尚未定位。"
+    },
+    {
+      "dimensionId": "TEC",
+      "subpillar": "knowledge_output",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "S02真实874商业+科研许可/528咨询、实际回流，非论文/外榜换分；机构口径非全FUA。"
+    },
+    {
+      "dimensionId": "TEC",
+      "subpillar": "industry_density",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "20新公司/实际咨询及Trismik功能产品企业试用；£7.4m是批准46公司，不混另口径实投。"
+    },
+    {
+      "dimensionId": "TEC",
+      "subpillar": "digital_infrastructure",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "S07实际MyChart账户/使用，S05实际OT/IT隔离/SOC；不是全城网络率或无线容量。"
+    },
+    {
+      "dimensionId": "TEC",
+      "subpillar": "diffusion",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "真实医院患者采用/水处理UV/产品beta和企业试用；可及格式不一致、部分产品仍试用阶段的重要扩散短板。"
+    },
+    {
+      "dimensionId": "OPT",
+      "subpillar": "transport_redundancy",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "W05真实铁路/巴士/院内摆渡及W07限速；Stansted点属London5288，没实证接驳/国际运行，不能由地图推路可用。"
+    },
+    {
+      "dimensionId": "OPT",
+      "subpillar": "legal_mobility",
+      "status": "partial",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "W06 British公民CTA可往Ireland居住工作，保留排除令/家庭/福利条件；不是全欧移居。"
+    },
+    {
+      "dimensionId": "OPT",
+      "subpillar": "asset_portability",
+      "status": "unresolved",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "本轮未取得普通个人跨境资金/鉴权/净资源的有效实质路径；不假设资本普遍封锁或要求全资产全交易。"
+    },
+    {
+      "dimensionId": "OPT",
+      "subpillar": "network_continuity",
+      "status": "context",
+      "score": null,
+      "reviewedInBoundedPass": true,
+      "evidenceAndCounterevidence": "S11真实2022个人RoamAbroad条款/50GB/稳定联系，非2026新售或永久移居通信；新EEbusiness不适用。"
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "sourcePath": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "all9031IndependentlyLoaded": true,
+    "repairs": 136,
+    "target": {
+      "candidateId": 5550,
+      "name": "Cambridge",
+      "geometricAreaKm2": 1434.0,
+      "bounds": [-14000.0, 6081000.0, 36000.0, 6127000.0],
+      "wkbSha256": "573e0ca8d100e72137c224cdd1ad9c9a404cca4946cd72e6365763e5660d46a3"
+    },
+    "analystApproximatePoints": [
+      {
+        "label": "Cambridgecentre",
+        "lon": 0.1218,
+        "lat": 52.2053,
+        "all9031Matches": [
+          {
+            "candidateId": 5550,
+            "name": "Cambridge",
+            "wkbSha256": "573e0ca8d100e72137c224cdd1ad9c9a404cca4946cd72e6365763e5660d46a3"
+          }
+        ]
+      },
+      {
+        "label": "Addenbrookesneighbourhood",
+        "lon": 0.1392,
+        "lat": 52.1738,
+        "all9031Matches": [
+          {
+            "candidateId": 5550,
+            "name": "Cambridge",
+            "wkbSha256": "573e0ca8d100e72137c224cdd1ad9c9a404cca4946cd72e6365763e5660d46a3"
+          }
+        ]
+      },
+      {
+        "label": "HauserForumneighbourhood",
+        "lon": 0.0891,
+        "lat": 52.209,
+        "all9031Matches": [
+          {
+            "candidateId": 5550,
+            "name": "Cambridge",
+            "wkbSha256": "573e0ca8d100e72137c224cdd1ad9c9a404cca4946cd72e6365763e5660d46a3"
+          }
+        ]
+      },
+      {
+        "label": "GreatWilbrahamapproximate",
+        "lon": 0.27,
+        "lat": 52.195,
+        "all9031Matches": [
+          {
+            "candidateId": 5550,
+            "name": "Cambridge",
+            "wkbSha256": "573e0ca8d100e72137c224cdd1ad9c9a404cca4946cd72e6365763e5660d46a3"
+          }
+        ]
+      },
+      {
+        "label": "Stanstedairportapproximate",
+        "lon": 0.2389,
+        "lat": 51.885,
+        "all9031Matches": [
+          {
+            "candidateId": 5288,
+            "name": "London",
+            "wkbSha256": "999587e4c09c96fb20f00d885040ef02d34588d67c246ad4b73164ccf31300b6"
+          }
+        ]
+      }
+    ],
+    "notOfficialFootprints": true,
+    "serviceAreasNotIdenticalToFua": true,
+    "newUcdbGeometry": "No newUCDBGPKGfoundin durable scope; controlled crosswalk rows only until separately available. Do not claim independent newgeometryload."
+  },
+  "sourceManifest": {
+    "path": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/source-manifest.json",
+    "sha256": "11a006ee8da3c7cc39b25e4a99e1838beeaa666dddbf77ec8887a12648d5b543"
+  },
+  "sourceSnapshots": [
+    {
+      "id": "S02",
+      "file": "S02-enterprise2025.pdf",
+      "url": "https://www.enterprise.cam.ac.uk/wp-content/uploads/2026/03/Cambridge-Enterprise-Annual-Review-2025.pdf",
+      "host": "www.enterprise.cam.ac.uk",
+      "mechanism": "normal_https_tls_urllib",
+      "requestAtUTC": "2026-10-15T13:19:21.442180+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "priorKnownSameHostFailures": 0,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://www.enterprise.cam.ac.uk/wp-content/uploads/2026/03/Cambridge-Enterprise-Annual-Review-2025.pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 13:19:23 GMT",
+        "Last-Modified": "Fri, 06 Mar 2026 11:39:23 GMT",
+        "Content-Length": "7084609",
+        "Content-Type": "application/pdf"
+      },
+      "completeBodyRead": true,
+      "bytes": 7084609,
+      "sha256": "02616c059a9d92d78c6b034bf5cd181845f4b95b002d9878a486b16243d28827",
+      "validOriginal": true,
+      "substantiveBodyMustBeSeparatelyReviewed": true,
+      "elapsedSeconds": 5.754,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S02-enterprise2025.pdf",
+      "responseMetadataPath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S02-enterprise2025.pdf.response.json",
+      "bytesReverified": true,
+      "publicationOrVersion": "Annual Review2025; PDF/HTTP6Mar2026",
+      "observationWindowAndScope": "FY2024/25 foreword plus later2025/current cumulative case studies; units kept separate",
+      "evidenceRole": "TEC",
+      "independentCutoffHistoricalBytesVerified": false,
+      "newSnapshotNotOldByteRecovery": true,
+      "substantiveOriginal": true,
+      "identityOnly": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S04",
+      "file": "S04-cuh-quality202526.pdf",
+      "url": "https://media.cuh.nhs.uk/documents/CUH_Quality_Account_2025-2026.pdf",
+      "host": "media.cuh.nhs.uk",
+      "mechanism": "normal_https_tls_urllib",
+      "requestAtUTC": "2026-10-15T13:20:21.021197+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "priorKnownSameHostFailures": 0,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://media.cuh.nhs.uk/documents/CUH_Quality_Account_2025-2026.pdf",
+      "headers": {
+        "Content-Type": "application/pdf",
+        "Content-Length": "2123595",
+        "Date": "Thu, 15 Oct 2026 13:20:22 GMT",
+        "Last-Modified": "Tue, 30 Jun 2026 12:10:06 GMT",
+        "ETag": "\"99ac3f97c4c89e84cd5d35a2a05f8749\""
+      },
+      "completeBodyRead": true,
+      "bytes": 2123595,
+      "sha256": "a136b5bc3f9430fb8d4ec937f7434a71098e1f317737944602dda7a11be3e17e",
+      "validOriginal": true,
+      "substantiveBodyMustBeSeparatelyReviewed": true,
+      "elapsedSeconds": 3.982,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S04-cuh-quality202526.pdf",
+      "responseMetadataPath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S04-cuh-quality202526.pdf.response.json",
+      "bytesReverified": true,
+      "publicationOrVersion": "Quality Account2025/26; PDF/HTTP30Jun2026",
+      "observationWindowAndScope": "Apr2025–Mar2026 metrics; SHMI Dec2024–Nov2025 published9Apr2026; March maternity separate",
+      "evidenceRole": "MED ISR TEC",
+      "independentCutoffHistoricalBytesVerified": false,
+      "newSnapshotNotOldByteRecovery": true,
+      "substantiveOriginal": true,
+      "identityOnly": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S05",
+      "file": "S05-water-apr202526.pdf",
+      "url": "https://www.cambridge-water.co.uk/media/ovvlu3yk/annual-performance-report-ye-31-march-2026-final.pdf",
+      "host": "www.cambridge-water.co.uk",
+      "mechanism": "normal_https_tls_urllib",
+      "requestAtUTC": "2026-10-15T13:20:21.021489+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "priorKnownSameHostFailures": 0,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://www.cambridge-water.co.uk/media/ovvlu3yk/annual-performance-report-ye-31-march-2026-final.pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 13:20:23 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "10091198",
+        "ETag": "\"1dd13730365f4be\"",
+        "Last-Modified": "Tue, 14 Jul 2026 09:27:40 GMT"
+      },
+      "completeBodyRead": true,
+      "bytes": 10091198,
+      "sha256": "d931d8cc8cf8cda207968cb17fea703707e1317811f08cac0ff250fc9beea89f",
+      "validOriginal": true,
+      "substantiveBodyMustBeSeparatelyReviewed": true,
+      "elapsedSeconds": 5.262,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S05-water-apr202526.pdf",
+      "responseMetadataPath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S05-water-apr202526.pdf.response.json",
+      "bytesReverified": true,
+      "publicationOrVersion": "APR year ended31Mar2026; PDF6Jul/HTTP14Jul2026",
+      "observationWindowAndScope": "2025/26 Cambridge+SouthStaffs combined regulatory indicators; Cambridge-specific paragraphs marked",
+      "evidenceRole": "PCS GSS ISR RES TEC",
+      "independentCutoffHistoricalBytesVerified": false,
+      "newSnapshotNotOldByteRecovery": true,
+      "substantiveOriginal": true,
+      "identityOnly": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S07",
+      "file": "S07-cuh-annual202526.pdf",
+      "url": "https://media.cuh.nhs.uk/documents/Cambridge_University_Hospitals_NHS_FT_-_2025-26_Annual_Report_and_Accounts.pdf",
+      "host": "media.cuh.nhs.uk",
+      "mechanism": "normal_https_tls_urllib",
+      "requestAtUTC": "2026-10-15T13:21:51.120861+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "priorKnownSameHostFailures": 0,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://media.cuh.nhs.uk/documents/Cambridge_University_Hospitals_NHS_FT_-_2025-26_Annual_Report_and_Accounts.pdf",
+      "headers": {
+        "Content-Type": "application/pdf",
+        "Content-Length": "5606634",
+        "Last-Modified": "Wed, 16 Sep 2026 12:26:52 GMT",
+        "Date": "Thu, 15 Oct 2026 13:21:53 GMT",
+        "ETag": "\"7ae7ead41de208a4af77a895c987f9ef\""
+      },
+      "completeBodyRead": true,
+      "bytes": 5606634,
+      "sha256": "0b5302868df90071b975999bdb68236d934eab45634201e7bd72013cc41ad073",
+      "validOriginal": true,
+      "substantiveBodyMustBeSeparatelyReviewed": true,
+      "elapsedSeconds": 3.857,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S07-cuh-annual202526.pdf",
+      "responseMetadataPath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S07-cuh-annual202526.pdf.response.json",
+      "bytesReverified": true,
+      "publicationOrVersion": "Annual2025/26; PDF13Jul/mod14Aug/HTTP16Sep2026",
+      "observationWindowAndScope": "FY2025/26; March2026 MyChart and diagnostic wait snapshots; futureNov2026 plan separate",
+      "evidenceRole": "PCS ISR MED TEC OPT",
+      "independentCutoffHistoricalBytesVerified": false,
+      "newSnapshotNotOldByteRecovery": true,
+      "substantiveOriginal": true,
+      "identityOnly": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S08",
+      "file": "S08-nhs-ordinary-residence.html",
+      "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+      "host": "www.nhs.uk",
+      "mechanism": "normal_https_tls_urllib",
+      "requestAtUTC": "2026-10-15T13:21:51.121239+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "priorKnownSameHostFailures": 0,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Thu, 15 Oct 2026 13:21:52 GMT",
+        "Content-Length": "32662"
+      },
+      "completeBodyRead": true,
+      "bytes": 32662,
+      "sha256": "42c4cf404fdfc984257c5ea70f222b8c786e5d0d4d95c0e99f0b7eab682ed0ec",
+      "validOriginal": true,
+      "substantiveBodyMustBeSeparatelyReviewed": true,
+      "elapsedSeconds": 1.947,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S08-nhs-ordinary-residence.html",
+      "responseMetadataPath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S08-nhs-ordinary-residence.html.response.json",
+      "bytesReverified": true,
+      "publicationOrVersion": "NHS page reviewed24Oct2023; due24Oct2026 not update",
+      "observationWindowAndScope": "Ordinary residence eligibility; current retrieved body, continuity hypothesis",
+      "evidenceRole": "MED LON",
+      "independentCutoffHistoricalBytesVerified": false,
+      "newSnapshotNotOldByteRecovery": true,
+      "substantiveOriginal": true,
+      "identityOnly": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S10",
+      "file": "S10-nice-ta1048.html",
+      "url": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+      "host": "www.nice.org.uk",
+      "mechanism": "normal_https_tls_urllib",
+      "requestAtUTC": "2026-10-15T13:28:48.800782+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "priorKnownSameHostFailures": 1,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://www.nice.org.uk/guidance/ta1048/chapter/1-Recommendations",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 13:28:50 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "ETag": "W/C0B0BE68DC2CEA8F8D26D7DDF59AA04E"
+      },
+      "completeBodyRead": true,
+      "bytes": 20164,
+      "sha256": "7d37836575b240bd2359d0de728c2e937e73a1cc32906576e086a1af57733e3f",
+      "validOriginal": true,
+      "substantiveBodyMustBeSeparatelyReviewed": true,
+      "elapsedSeconds": 2.616,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S10-nice-ta1048.html",
+      "responseMetadataPath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S10-nice-ta1048.html.response.json",
+      "bytesReverified": true,
+      "publicationOrVersion": "NICE TA1048 published26Mar2025",
+      "observationWindowAndScope": "LISO-CEL selected adult LBCL evidence/recommendation; not AXI efficacy or Cambridge use",
+      "evidenceRole": "LON context",
+      "independentCutoffHistoricalBytesVerified": false,
+      "newSnapshotNotOldByteRecovery": false,
+      "substantiveOriginal": true,
+      "identityOnly": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S11",
+      "file": "S11-ee-personal-legacy2022.pdf",
+      "url": "https://ee.co.uk/content/dam/ee-help/help-pdfs/ee-monthly-price-plans-Device%20Finance%20310822.pdf",
+      "host": "ee.co.uk",
+      "mechanism": "normal_https_tls_urllib",
+      "requestAtUTC": "2026-10-15T13:28:48.801050+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "priorKnownSameHostFailures": 0,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://ee.co.uk/content/dam/ee-help/help-pdfs/ee-monthly-price-plans-Device%20Finance%20310822.pdf",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 13:28:50 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "631470",
+        "last-modified": "Fri, 22 Mar 2024 01:01:51 GMT",
+        "etag": "\"0x8DC4A0BA8C5E096\""
+      },
+      "completeBodyRead": true,
+      "bytes": 631470,
+      "sha256": "f534a038a78cd8a6abd498d2cf589f0d75e98579c8e9f3838b4979aa77361ff7",
+      "validOriginal": true,
+      "substantiveBodyMustBeSeparatelyReviewed": true,
+      "elapsedSeconds": 3.417,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S11-ee-personal-legacy2022.pdf",
+      "responseMetadataPath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S11-ee-personal-legacy2022.pdf.response.json",
+      "bytesReverified": true,
+      "publicationOrVersion": "Personal EE Device Credit terms available31Aug2022; updatedSep2022",
+      "observationWindowAndScope": "Old personal product; no new2026 availability/pricing claim. Search Dec2021 title wrong",
+      "evidenceRole": "OPT limited old context",
+      "independentCutoffHistoricalBytesVerified": false,
+      "newSnapshotNotOldByteRecovery": true,
+      "substantiveOriginal": true,
+      "identityOnly": false,
+      "rootBytesReverified": true,
+      "usedForScore": false
+    },
+    {
+      "id": "S12",
+      "file": "S12-nhs-charges.html",
+      "url": "https://www.nhs.uk/nhs-services/help-with-health-costs/when-you-need-to-pay-towards-nhs-care/",
+      "host": "www.nhs.uk",
+      "mechanism": "normal_https_tls_urllib",
+      "requestAtUTC": "2026-10-15T13:28:48.801106+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "priorKnownSameHostFailures": 0,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://www.nhs.uk/nhs-services/help-with-health-costs/when-you-need-to-pay-towards-nhs-care/",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Thu, 15 Oct 2026 13:28:49 GMT",
+        "Content-Length": "28145"
+      },
+      "completeBodyRead": true,
+      "bytes": 28145,
+      "sha256": "81b0a7b5cdeb5d401dc9835500553a5b646f8a3b89407af9404b577a3e7dcc0a",
+      "validOriginal": true,
+      "substantiveBodyMustBeSeparatelyReviewed": true,
+      "elapsedSeconds": 1.525,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S12-nhs-charges.html",
+      "responseMetadataPath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S12-nhs-charges.html.response.json",
+      "bytesReverified": true,
+      "publicationOrVersion": "NHS page reviewed22May2023; due22May2026 not update",
+      "observationWindowAndScope": "Charges/exemptions/low-income proof; no median automatic exemption",
+      "evidenceRole": "MED LON",
+      "independentCutoffHistoricalBytesVerified": false,
+      "newSnapshotNotOldByteRecovery": true,
+      "substantiveOriginal": true,
+      "identityOnly": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S13",
+      "file": "S13-county-qol2026.pdf",
+      "url": "https://www.cambridgeshire.gov.uk/asset-library/Quality-of-Life-Survey-2026-report.pdf",
+      "host": "www.cambridgeshire.gov.uk",
+      "mechanism": "normal_https_tls_urllib",
+      "requestAtUTC": "2026-10-15T13:41:02.819995+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "priorKnownSameHostFailures": 0,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://www.cambridgeshire.gov.uk/asset-library/Quality-of-Life-Survey-2026-report.pdf",
+      "headers": {
+        "content-length": "1106233",
+        "content-type": "application/pdf",
+        "date": "Thu, 15 Oct 2026 13:41:03 GMT",
+        "last-modified": "Tue, 22 Sep 2026 08:44:38 GMT"
+      },
+      "completeBodyRead": true,
+      "bytes": 1106233,
+      "sha256": "d23b9383f6730cf00079d31257da668d7c8b1e281d775240ae6d15d2b4e48692",
+      "validOriginal": true,
+      "substantiveBodyMustBeSeparatelyReviewed": true,
+      "elapsedSeconds": 3.917,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S13-county-qol2026.pdf",
+      "responseMetadataPath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S13-county-qol2026.pdf.response.json",
+      "bytesReverified": true,
+      "publicationOrVersion": "County Quality of Life Survey2026; coverSep2026; PDF22Sep/HTTP22Sep2026",
+      "observationWindowAndScope": "Fieldwork w/c11May–w/c3Aug2026; weighted sample5501; 18+ weighting; separate1411open replies not pooled",
+      "evidenceRole": "PCS GSS ISR RES MED",
+      "independentCutoffHistoricalBytesVerified": false,
+      "newSnapshotNotOldByteRecovery": true,
+      "substantiveOriginal": true,
+      "identityOnly": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S14",
+      "file": "S14-county-qol2025.pdf",
+      "url": "https://www.cambridgeshire.gov.uk/asset-library/Quality-of-Life-Survey-2025-report.pdf",
+      "host": "www.cambridgeshire.gov.uk",
+      "mechanism": "normal_https_tls_urllib",
+      "requestAtUTC": "2026-10-15T13:41:02.820571+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "priorKnownSameHostFailures": 0,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://www.cambridgeshire.gov.uk/asset-library/Quality-of-Life-Survey-2025-report.pdf",
+      "headers": {
+        "content-length": "1187825",
+        "content-type": "application/pdf",
+        "date": "Thu, 15 Oct 2026 13:41:03 GMT",
+        "last-modified": "Wed, 10 Sep 2025 10:53:12 GMT"
+      },
+      "completeBodyRead": true,
+      "bytes": 1187825,
+      "sha256": "a23dec9cec1786b7fc82738ebf63dd93574d82e96cb58b2d7b7ca33f9c174553",
+      "validOriginal": true,
+      "substantiveBodyMustBeSeparatelyReviewed": true,
+      "elapsedSeconds": 3.382,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S14-county-qol2025.pdf",
+      "responseMetadataPath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S14-county-qol2025.pdf.response.json",
+      "bytesReverified": true,
+      "publicationOrVersion": "County Quality of Life Survey2025; PDF9Sep/mod10Sep2025",
+      "observationWindowAndScope": "Identity/version only locally reviewed; no independent adoption of all2025 tables; comparison numbers from S13",
+      "evidenceRole": "version context",
+      "independentCutoffHistoricalBytesVerified": false,
+      "newSnapshotNotOldByteRecovery": true,
+      "substantiveOriginal": false,
+      "identityOnly": true,
+      "rootBytesReverified": true,
+      "usedForScore": false
+    },
+    {
+      "id": "S15",
+      "file": "S15-county-adaptation.html",
+      "url": "https://www.cambridgeshire.gov.uk/residents/climate-change-energy-and-environment/climate-change-action/adapting-to-climate-change",
+      "host": "www.cambridgeshire.gov.uk",
+      "mechanism": "normal_https_tls_urllib",
+      "requestAtUTC": "2026-10-15T13:41:02.820642+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "priorKnownSameHostFailures": 0,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://www.cambridgeshire.gov.uk/residents/climate-change-energy-and-environment/climate-change-action/adapting-to-climate-change",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 15 Oct 2026 13:35:46 GMT",
+        "etag": "W/\"8ac5d-J3gdFveKxwDEKIGYZeKLkenjPUY\"",
+        "content-length": "570033"
+      },
+      "completeBodyRead": true,
+      "bytes": 570033,
+      "sha256": "b53437cb9047cb7d67e8571c09fb056382cc66ab239dd54a039433c0c04f8cd2",
+      "validOriginal": true,
+      "substantiveBodyMustBeSeparatelyReviewed": true,
+      "elapsedSeconds": 3.269,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S15-county-adaptation.html",
+      "responseMetadataPath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S15-county-adaptation.html.response.json",
+      "bytesReverified": true,
+      "publicationOrVersion": "Undated current county adaptation webpage",
+      "observationWindowAndScope": "Plans,2016 adopted drainage SPD, ageing Fens infrastructure; not completed future strategy/wholeFUA protection",
+      "evidenceRole": "PCS ISR context",
+      "independentCutoffHistoricalBytesVerified": false,
+      "newSnapshotNotOldByteRecovery": true,
+      "substantiveOriginal": true,
+      "identityOnly": false,
+      "rootBytesReverified": true,
+      "usedForScore": true
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.cambs.police.uk/news/cambridgeshire/news/2025/december/two-men-jailed-after-brutal-drug-related-stabbing-in-cambridge/",
+      "savedToolResponsePath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/web-services.json",
+      "toolRef": "turn2298view2",
+      "publicationOrVersion": "Published23Dec2025; attack2Oct2024; conviction/sentence22Dec2025",
+      "scopeAndLimitations": "Cambridge NicholsonWay countyline GBH/knife/drug convictions; NOTGUILTY attempted murder; public/paramedic assistance not long-term outcome",
+      "evidenceRole": "GSS ISR",
+      "actualSubstantiveWebBodyRead": true,
+      "websiteOriginalBytes": null,
+      "websiteOriginalSha256": null,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "rootActualSavedPrimaryBodyRead": true,
+      "savedToolTextSha256": "6580aa5f50cba8c16a435143838f222703e3c8dfb7506be5934b69868e233f57",
+      "savedToolTextDigestIsWebsiteOriginalDigest": false
+    },
+    {
+      "id": "W02",
+      "url": "https://www.cambs.police.uk/news/cambridgeshire/news/2026/march/arrests-following-county-lines-crackdown/",
+      "savedToolResponsePath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/web-open1.json",
+      "toolRef": "turn2289view2",
+      "publicationOrVersion": "13Mar2026; operation2–8Mar2026",
+      "scopeAndLimitations": "32 arrests/12 warrants across3places,3charged; not32convictions/allCambridge; cuckooing visits not all resolved",
+      "evidenceRole": "GSS ISR",
+      "actualSubstantiveWebBodyRead": true,
+      "websiteOriginalBytes": null,
+      "websiteOriginalSha256": null,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "rootActualSavedPrimaryBodyRead": true,
+      "savedToolTextSha256": "0c9689c80db6fb9841dc177a43119ae9f6f3376618117ccdc106a3e7b5250770",
+      "savedToolTextDigestIsWebsiteOriginalDigest": false
+    },
+    {
+      "id": "W03",
+      "url": "https://www.cuh.nhs.uk/our-services/cancer-services/cancer-and-types-of-treatment/treatments/",
+      "savedToolResponsePath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/web-clinical-transport.json",
+      "toolRef": "turn2301view0",
+      "publicationOrVersion": "Undated current body; printedOct15 not update",
+      "scopeAndLimitations": "General CUH treatment categories; not a specific routine product/patient cohort",
+      "evidenceRole": "MED LON context",
+      "actualSubstantiveWebBodyRead": true,
+      "websiteOriginalBytes": null,
+      "websiteOriginalSha256": null,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "rootActualSavedPrimaryBodyRead": true,
+      "savedToolTextSha256": "f204eb3bf9e33ded4d5a802276a1680873d463631ff3248f23270f160eccaf95",
+      "savedToolTextDigestIsWebsiteOriginalDigest": false
+    },
+    {
+      "id": "W04",
+      "url": "https://www.cuh.nhs.uk/our-services/haemophilia-centre/",
+      "savedToolResponsePath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/web-clinical-transport-body.json",
+      "toolRef": "turn2302view0",
+      "publicationOrVersion": "Undated current service body",
+      "scopeAndLimitations": "Adult/children reviews/factor home delivery/emergency treatment; no selected mature gene product",
+      "evidenceRole": "MED LON context",
+      "actualSubstantiveWebBodyRead": true,
+      "websiteOriginalBytes": null,
+      "websiteOriginalSha256": null,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "rootActualSavedPrimaryBodyRead": true,
+      "savedToolTextSha256": "7690867bde99cda5bf63ee9b0b2e8dbd92836d09bc2fb5fa8a17b4827389be73",
+      "savedToolTextDigestIsWebsiteOriginalDigest": false
+    },
+    {
+      "id": "W05",
+      "url": "https://www.cuh.nhs.uk/visiting-our-hospitals/travel-and-parking/getting-here/",
+      "savedToolResponsePath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/web-clinical-transport-body.json",
+      "toolRef": "turn2302view1",
+      "publicationOrVersion": "Current service; temporary11Sep2026 notice separate",
+      "scopeAndLimitations": "Rail/bus/onsite shuttle hospital access; not airport access",
+      "evidenceRole": "ISR OPT",
+      "actualSubstantiveWebBodyRead": true,
+      "websiteOriginalBytes": null,
+      "websiteOriginalSha256": null,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "rootActualSavedPrimaryBodyRead": true,
+      "savedToolTextSha256": "2bc1d4d7c4dce18e27c4f6c0c0a60b1dde49c70ca2383677773bdaf1b04ef030",
+      "savedToolTextDigestIsWebsiteOriginalDigest": false
+    },
+    {
+      "id": "W06",
+      "url": "https://www.gov.uk/government/publications/common-travel-area-guidance/common-travel-area-guidance",
+      "savedToolResponsePath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/web-paths.json",
+      "toolRef": "turn2295view0",
+      "publicationOrVersion": "Updated1Jan2026",
+      "scopeAndLimitations": "British citizen right to live/work Ireland subject legal exclusions; foreign family not automatic; not allEU right",
+      "evidenceRole": "OPT",
+      "actualSubstantiveWebBodyRead": true,
+      "websiteOriginalBytes": null,
+      "websiteOriginalSha256": null,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "rootActualSavedPrimaryBodyRead": true,
+      "savedToolTextSha256": "67f066d9f73f06d74289d0d4f7e89f3b8674ffd9fe7c55a82950b66fb0072efb",
+      "savedToolTextDigestIsWebsiteOriginalDigest": false
+    },
+    {
+      "id": "W07",
+      "url": "https://www.cambridgeshire.gov.uk/residents/travel-roads-and-parking/public-transport-park-and-ride-and-guided-busway/guided-busway-improvements",
+      "savedToolResponsePath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/web-county-services.json",
+      "toolRef": "turn2304view2",
+      "publicationOrVersion": "Speed limitsfrom6Oct2025; June2026committee; fencing futureend2026",
+      "scopeAndLimitations": "Actual speed restriction/operation, not completed fence or international redundancy",
+      "evidenceRole": "ISR OPT",
+      "actualSubstantiveWebBodyRead": true,
+      "websiteOriginalBytes": null,
+      "websiteOriginalSha256": null,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "rootActualSavedPrimaryBodyRead": true,
+      "savedToolTextSha256": "def0147e5497e13eaa6eb9c716c72f67b707fbe0d82ea3098858024126540188",
+      "savedToolTextDigestIsWebsiteOriginalDigest": false
+    },
+    {
+      "id": "W08",
+      "url": "https://www.cambridgeshire.gov.uk/council/quality-of-life-survey",
+      "savedToolResponsePath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/web-county-evidence-paths.json",
+      "toolRef": "turn2306view1",
+      "publicationOrVersion": "Current index2026",
+      "scopeAndLimitations": "6912 includes5501sample+1411open replies; separate unanalysed open replies not denominator",
+      "evidenceRole": "method",
+      "actualSubstantiveWebBodyRead": true,
+      "websiteOriginalBytes": null,
+      "websiteOriginalSha256": null,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "rootActualSavedPrimaryBodyRead": true,
+      "savedToolTextSha256": "0e679bfb6bba9851de6c5bb8c2cd33719ec865e2ae48e13ae8ecb88271aa8bd2",
+      "savedToolTextDigestIsWebsiteOriginalDigest": false
+    },
+    {
+      "id": "W09",
+      "url": "https://www.cambridgeshire.gov.uk/council/quality-of-life-survey/quality-of-life-survey-results-and-findings-2026",
+      "savedToolResponsePath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/web-final-county-bodies.json",
+      "toolRef": "turn2307view0",
+      "publicationOrVersion": "Current2026summary",
+      "scopeAndLimitations": "Actual HTML says55 trust higher than LGA49, not higher than2025. Alleged temporal conflict in frozen research unsupported and unused. PDF58→55 retained; LGA question/scale differs.",
+      "evidenceRole": "method conflict",
+      "actualSubstantiveWebBodyRead": true,
+      "websiteOriginalBytes": null,
+      "websiteOriginalSha256": null,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "rootActualSavedPrimaryBodyRead": true,
+      "savedToolTextSha256": "5a4065d32638b9db06a049d68217cfd96d2bec4e0d45e4dad07bd888a3a02e83",
+      "savedToolTextDigestIsWebsiteOriginalDigest": false
+    }
+  ],
+  "globalRankingEligible": false,
+  "sensitivity": {
+    "ISR40": [18, 78],
+    "MED60": [24, 84],
+    "TEC40": [19, 79],
+    "TEC80": [23, 83],
+    "GSS60IfAdditionalBridgeAccepted": [30, 75],
+    "RES40IfAdditionalBridgeAccepted": [25, 75],
+    "RES60IfAdditionalBridgeAccepted": [27, 77],
+    "MEDWithdrawn": [15, 90],
+    "ISRWithdrawn": [12, 87],
+    "TECWithdrawn": [15, 85],
+    "allJudgmentsWithdrawn": [0, 100]
+  },
+  "limitations": [
+    "No centre, ranking, admission probability, exclusion or new Top32claim. All9031 and newer/unmatched competitors retained.",
+    "Old FUA independently checked full9031; newUCDB6080 only controlled crosswalk context, no independently loaded newgeometry. Administrativecounty and service areas not FUA or portrait denominators.",
+    "Current raw bytes not independently authenticated as cutoff historical edition. All temporal continuation assumptions revocable.",
+    "S14 is valid original identity/version only locally; no claim all2025 tables substantively reviewed.",
+    "LON/OPT/GSS/PCS/RES unknowns are substantive directional gaps, not missing-source penalties.",
+    "主任务验收优先于冻结研究：MED60改40；ISR80不是当前替代档；县HTML信任趋势冲突陈述未获正文支持，不采用。原77案整文件字节保持。"
+  ],
+  "stopRecord": {
+    "discoveryRounds": 2,
+    "queries": 8,
+    "newNormalOriginalRequests": 15,
+    "newNormalOriginalLimit": 18,
+    "retries": 0,
+    "networkFrozen": true,
+    "noAdditionalCityWork": true,
+    "inheritedStops": "source-manifest.json",
+    "remainingUnusedBudgetIsNotCompletionRequirement": true
+  },
+  "reportBytes": 10315,
+  "reportSha256": "43d3ee11241103b218c774eb9d20266813eea1d554b37dda5e19e917a37f9824",
+  "publishedInputCommit": "f4dd35fd561910f3e8e7e74532e578201ea14360",
+  "failedSourceSnapshots": [
+    {
+      "id": "S03",
+      "file": "S03-cambridge-stabbing2025.html",
+      "url": "https://www.cambs.police.uk/news/cambridgeshire/news/2025/december/two-men-jailed-after-brutal-drug-related-stabbing-in-cambridge/",
+      "host": "www.cambs.police.uk",
+      "mechanism": "normal_https_tls_urllib",
+      "requestAtUTC": "2026-10-15T13:19:21.446917+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "priorKnownSameHostFailures": 0,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "httpStatus": 403,
+      "finalUrl": "https://www.cambs.police.uk/news/cambridgeshire/news/2025/december/two-men-jailed-after-brutal-drug-related-stabbing-in-cambridge/",
+      "headers": {
+        "Date": "Thu, 15 Oct 2026 13:19:23 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "5897"
+      },
+      "completeBodyRead": true,
+      "bytes": 5897,
+      "sha256": "a9035cdf2c95a0ba73083a419f6805ba4d02af220c4434ce43ab94e39f9fba0b",
+      "validOriginal": false,
+      "substantiveBodyMustBeSeparatelyReviewed": true,
+      "elapsedSeconds": 1.802,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S03-cambridge-stabbing2025.html",
+      "responseMetadataPath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S03-cambridge-stabbing2025.html.response.json",
+      "bytesReverified": true,
+      "publicationOrVersion": "HTTP403 diagnostic",
+      "observationWindowAndScope": "Current rejection bytes, not police article",
+      "evidenceRole": "not adopted",
+      "independentCutoffHistoricalBytesVerified": false,
+      "newSnapshotNotOldByteRecovery": true,
+      "substantiveOriginal": false,
+      "identityOnly": false,
+      "diagnosticClass": "HTTP403_rejection_not_substantive_article"
+    },
+    {
+      "id": "S09",
+      "file": "S09-cta-guidance.html",
+      "url": "https://www.gov.uk/government/publications/common-travel-area-guidance/common-travel-area-guidance",
+      "host": "www.gov.uk",
+      "mechanism": "normal_https_tls_urllib",
+      "requestAtUTC": "2026-10-15T13:21:51.121348+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "priorKnownSameHostFailures": 0,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+      "completeBodyRead": false,
+      "bytes": 0,
+      "sha256": null,
+      "validOriginal": false,
+      "substantiveBodyMustBeSeparatelyReviewed": true,
+      "elapsedSeconds": 0.058,
+      "path": null,
+      "responseMetadataPath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S09-cta-guidance.html.response.json",
+      "bytesReverified": true,
+      "publicationOrVersion": "DNS failure",
+      "observationWindowAndScope": "No bytes; separate web-only actual CTA body",
+      "evidenceRole": "not adopted raw",
+      "independentCutoffHistoricalBytesVerified": false,
+      "newSnapshotNotOldByteRecovery": true,
+      "substantiveOriginal": false,
+      "identityOnly": false,
+      "diagnosticClass": "DNS_failure_no_raw"
+    }
+  ],
+  "routingSourceSnapshots": [
+    {
+      "id": "S01",
+      "file": "S01-cuh-quality202526.pdf",
+      "url": "https://www.cuh.nhs.uk/documents/2199/CUH_Quality_Account_2025-2026.pdf",
+      "host": "www.cuh.nhs.uk",
+      "mechanism": "normal_https_tls_urllib",
+      "requestAtUTC": "2026-10-15T13:19:21.434168+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "priorKnownSameHostFailures": 0,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "httpStatus": 302,
+      "finalUrl": "https://www.cuh.nhs.uk/documents/2199/CUH_Quality_Account_2025-2026.pdf",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Date": "Thu, 15 Oct 2026 13:19:23 GMT",
+        "Location": "https://media.cuh.nhs.uk/documents/CUH_Quality_Account_2025-2026.pdf"
+      },
+      "completeBodyRead": true,
+      "bytes": 0,
+      "sha256": null,
+      "validOriginal": false,
+      "substantiveBodyMustBeSeparatelyReviewed": true,
+      "elapsedSeconds": 2.064,
+      "path": null,
+      "responseMetadataPath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S01-cuh-quality202526.pdf.response.json",
+      "bytesReverified": true,
+      "publicationOrVersion": "official302routing",
+      "observationWindowAndScope": "No substantive body; observed official media redirect followed once as S04",
+      "evidenceRole": "not adopted",
+      "independentCutoffHistoricalBytesVerified": false,
+      "newSnapshotNotOldByteRecovery": true,
+      "substantiveOriginal": false,
+      "identityOnly": false,
+      "diagnosticClass": "official_redirect_no_body_not_provider_capability_failure"
+    },
+    {
+      "id": "S06",
+      "file": "S06-cuh-annual202526.pdf",
+      "url": "https://www.cuh.nhs.uk/documents/2955/Cambridge_University_Hospitals_NHS_FT_-_2025-26_Annual_Report_and_Accounts.pdf",
+      "host": "www.cuh.nhs.uk",
+      "mechanism": "normal_https_tls_urllib",
+      "requestAtUTC": "2026-10-15T13:20:21.021545+00:00",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "priorKnownSameHostFailures": 1,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "httpStatus": 302,
+      "finalUrl": "https://www.cuh.nhs.uk/documents/2955/Cambridge_University_Hospitals_NHS_FT_-_2025-26_Annual_Report_and_Accounts.pdf",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Date": "Thu, 15 Oct 2026 13:20:22 GMT",
+        "Location": "https://media.cuh.nhs.uk/documents/Cambridge_University_Hospitals_NHS_FT_-_2025-26_Annual_Report_and_Accounts.pdf"
+      },
+      "completeBodyRead": true,
+      "bytes": 0,
+      "sha256": null,
+      "validOriginal": false,
+      "substantiveBodyMustBeSeparatelyReviewed": true,
+      "elapsedSeconds": 1.378,
+      "path": null,
+      "responseMetadataPath": "/Users/morris/.local/share/cci-research/2026-10-10/cambridge-full41/originals/S06-cuh-annual202526.pdf.response.json",
+      "bytesReverified": true,
+      "publicationOrVersion": "official302routing",
+      "observationWindowAndScope": "No substantive body; observed official media redirect followed once as S07",
+      "evidenceRole": "not adopted",
+      "independentCutoffHistoricalBytesVerified": false,
+      "newSnapshotNotOldByteRecovery": true,
+      "substantiveOriginal": false,
+      "identityOnly": false,
+      "diagnosticClass": "official_redirect_no_body_not_provider_capability_failure"
+    }
+  ],
+  "rootExcludedClaims": [
+    {
+      "claim": "County HTML trust trend contradicts2025→2026 PDF",
+      "usedForScore": false,
+      "reason": "Actual saved primary body compares55 with LGA49, not2025. Original research assertion not supported."
+    }
+  ],
+  "rootScopeReview": {
+    "rootPdfPageCount": 12,
+    "rootPdfPixelsViewed": [
+      {
+        "sourceId": "S04",
+        "physicalPage": 10
+      },
+      {
+        "sourceId": "S07",
+        "physicalPage": 16
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 77
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 14
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 54
+      },
+      {
+        "sourceId": "S05",
+        "physicalPage": 25
+      },
+      {
+        "sourceId": "S13",
+        "physicalPage": 26
+      },
+      {
+        "sourceId": "S13",
+        "physicalPage": 30
+      },
+      {
+        "sourceId": "S13",
+        "physicalPage": 42
+      },
+      {
+        "sourceId": "S13",
+        "physicalPage": 32
+      },
+      {
+        "sourceId": "S07",
+        "physicalPage": 44
+      },
+      {
+        "sourceId": "S02",
+        "physicalPage": 11
+      }
+    ],
+    "all77PreviousCaseBytesUnchanged": true,
+    "all9031IndependentlyLoaded": true,
+    "fuaWkbSha256": "573e0ca8d100e72137c224cdd1ad9c9a404cca4946cd72e6365763e5660d46a3",
+    "score40RequiresMajorityVictimsOrCityShutdown": false,
+    "unknownsFilledWithMidpoint": false,
+    "htmlTrustTemporalConflictAdopted": false,
+    "survey5501And1411Pooled": false,
+    "diagnosticAnnualAndMarchAveraged": false,
+    "countySurveyIsFuaMedianProfile": false,
+    "stanstedIsInside5550": false,
+    "matureProductLocalUseOrPaymentInferredFromNationalRecommendation": false,
+    "rootNewNetworkRequests": 0
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-cambridge-score-completion-review.md",
+    "sha256": "43d3ee11241103b218c774eb9d20266813eea1d554b37dda5e19e917a37f9824",
+    "researchReport": "docs/cci-cambridge-priority-review.md",
+    "researchReportSha256": "6198ba343464424f3bb93f31bcbf62923988c45d7bfbe8a3f4bd0c102a95a496",
+    "researchFrozenReportSha256": "b2713f0ec068a778e01b9be09b8b39da54fc620c9433a402e8e491c875b6a622",
+    "frozenManifestSha256": "c0774dec8e5a4bcd8b5aa2bde5a57ff1dc9b260e1b5c065731cf2e19b5f08c74",
+    "frozenFilesVerified": 169,
+    "validOriginalCount": 11,
+    "substantiveOriginalCount": 10,
+    "identityOnlyOriginalCount": 1,
+    "rootNewNetworkRequests": 0
+  }
+}

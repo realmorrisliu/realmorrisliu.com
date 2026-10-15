@@ -87,6 +87,7 @@ import nagoya from "../../docs/data/cci-local-2026-nagoya-case.json";
 import philadelphia from "../../docs/data/cci-local-2026-philadelphia-case.json";
 import kualaLumpur from "../../docs/data/cci-local-2026-kuala-lumpur-case.json";
 import oxford from "../../docs/data/cci-local-2026-oxford-case.json";
+import cambridge from "../../docs/data/cci-local-2026-cambridge-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -178,8 +179,10 @@ const cases = [
   philadelphia,
   kualaLumpur,
   oxford,
+  cambridge,
 ];
 const caseNamesZh: Record<number, string> = {
+  [cambridge.candidateId]: "剑桥功能区（英国）",
   [oxford.candidateId]: "牛津功能区",
   [kualaLumpur.candidateId]: "吉隆坡功能区",
   [philadelphia.candidateId]: "费城功能区",
@@ -363,6 +366,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [cambridge.candidateId]: [
+    zh
+      ? "英国剑桥MED条件40、ISR／TEC条件60，其余五维未知；已知小计21、数学域21—81，无完整总分。真实诊疗、通常NHS住院付款和已实施整改，与儿童骨科伤害、复杂服务缺口及持续等待共同判断，沿用牛津尺度。"
+      : "UK Cambridge has conditional 40 for MED and 60 for ISR/TEC; five dimensions remain unknown: subtotal 21 and arithmetic domain 21–81, without a complete total. Actual care, usual NHS hospital funding and implemented reforms are assessed alongside paediatric harm, complex-service gaps and persistent waits, on Oxford’s scale.",
+    zh
+      ? "医疗60仍是合理替代解释。县调查不当FUA中位人物，账单帮助不等已解困；原研究的HTML信任趋势冲突说法未获正文支持、不采用。国家治疗建议不补本地成熟路径，旧漫游不补当期退出；关键范围、付款接续或时间假设拒绝则相应维度回未知，全球入围未证明。"
+      : "MED 60 remains a reasonable alternative. The county survey is not the FUA median resident, and bill help does not prove resolved hardship. The research claim of a conflicting HTML trust trend is unsupported and unused. National treatment advice does not establish a mature local pathway; legacy roaming does not establish current exit continuity. Rejecting necessary scope, payment/care or time assumptions restores the relevant dimension to unknown; global qualification remains unproven.",
+  ],
   [oxford.candidateId]: [
     zh
       ? "牛津PCS／MED条件40、ISR／LON／TEC条件60，GSS／RES／OPT未知；数学域33—68，无完整总分。真实防护、医疗及科研产用与低防洪标准、必要治疗未获配套经费造成的伤害同判；大学声誉不直接换分。"
