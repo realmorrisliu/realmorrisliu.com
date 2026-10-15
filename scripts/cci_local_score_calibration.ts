@@ -121,6 +121,7 @@ const realCases = [
   "munich",
   "oslo",
   "antwerp",
+  "brussels",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -233,6 +234,7 @@ const [
   munich,
   oslo,
   antwerp,
+  brussels,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -2529,5 +2531,46 @@ for (const dimension of ["ISR", "MED", "TEC", "OPT"] as const) {
     center: null,
     lower: is15 ? 27 : 28,
     upper: is15 ? 77 : 78,
+  });
+}
+
+const brusselsCase = realCases.find(c => c.candidateId === 1269);
+assert.equal(
+  brusselsCase.priorityCompletionReview.sha256,
+  digest(brusselsCase.priorityCompletionReview.path)
+);
+assert.equal(
+  brusselsCase.priorityCompletionReview.researchReportSha256,
+  digest(brusselsCase.priorityCompletionReview.researchReport)
+);
+assert.equal(brusselsCase.sourceSnapshots.length, 23);
+assert.equal(brusselsCase.failedSourceSnapshots.length, 2);
+assert(
+  brusselsCase.failedSourceSnapshots.every(
+    (s: { originalBytes: number | null; originalSha256: string | null }) =>
+      s.originalBytes === null && s.originalSha256 === null
+  )
+);
+assert.equal(brusselsCase.rootScopeReview.rootSncbPdfPixelsSeen, false);
+assert.equal(
+  brusselsCase.rootScopeReview.rootSncbExactCancellationTableIndependentlyVerified,
+  false
+);
+assert.equal(brusselsCase.rootScopeReview.rootPdfPixelsViewed.length, 9);
+assert.equal(brusselsCase.scopeCompletionReview.allSubpillarsFullyReviewed, false);
+assert.deepEqual(total(brussels), { center: null, lower: 36, upper: 76 });
+for (const dimension of ["ISR", "MED", "LON", "TEC", "OPT"] as const) {
+  const withdrawn = { ...brussels };
+  delete withdrawn[dimension];
+  const is15 = weights[dimension] === 15;
+  assert.deepEqual(total(withdrawn), {
+    center: null,
+    lower: is15 ? 27 : 30,
+    upper: is15 ? 82 : 80,
+  });
+  assert.deepEqual(total({ ...brussels, [dimension]: 40 }), {
+    center: null,
+    lower: is15 ? 33 : 34,
+    upper: is15 ? 73 : 74,
   });
 }

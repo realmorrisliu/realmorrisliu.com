@@ -79,6 +79,7 @@ import basel from "../../docs/data/cci-local-2026-basel-case.json";
 import munich from "../../docs/data/cci-local-2026-munich-case.json";
 import oslo from "../../docs/data/cci-local-2026-oslo-case.json";
 import antwerp from "../../docs/data/cci-local-2026-antwerp-case.json";
+import brussels from "../../docs/data/cci-local-2026-brussels-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -162,8 +163,10 @@ const cases = [
   munich,
   oslo,
   antwerp,
+  brussels,
 ];
 const caseNamesZh: Record<number, string> = {
+  [brussels.candidateId]: "布鲁塞尔功能区",
   [antwerp.candidateId]: "安特卫普功能区",
   [oslo.candidateId]: "奥斯陆功能区",
   [munich.candidateId]: "慕尼黑功能区",
@@ -339,6 +342,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [brussels.candidateId]: [
+    zh
+      ? "布鲁塞尔ISR／MED／LON／TEC／OPT条件60，PCS／GSS／RES未知，数学域36—76、无中心。实际纠偏与服务使用、多科护理及普通付款、本地成熟疾病治疗支持有限判断；双债、等待、未报销费用、毒性及照护负担保留。"
+      : "Brussels has conditional ISR/MED/LON/TEC/OPT scores of 60; PCS/GSS/RES remain unknown: a 36–76 mathematical domain without a centre. Actual corrections and service use, coordinated care with ordinary payment, and local mature-disease treatment support limited judgments. Debt, waits, uncovered costs, toxicity and caregiver burdens remain.",
+    zh
+      ? "2023本地CAR-T支付监护延续至截止是可撤推定，当前科室页未重证治疗数；40人和医生成功率不是同定义队列。19市镇不等完整功能区，区外Gosselies不合并，铁路共因和合法境外生活资源仍重要。撤ISR／MED为27—82，撤LON／TEC／OPT为30—80，不证明全球入围。"
+      : "Continuation of the 2023 local CAR-T payment and monitoring pathway to the cutoff is revocable; current service pages do not re-establish treatment counts. The 40 treated people and a doctor's success estimate are not one defined cohort. Nineteen municipalities are not the full FUA; Gosselies is outside. Shared rail disruption and lawful destination resources remain material. Withdrawing ISR/MED gives 27–82; LON/TEC/OPT gives 30–80. Global qualification remains unproven.",
+  ],
   [antwerp.candidateId]: [
     zh
       ? "安特卫普 ISR／MED／TEC／OPT 条件60，PCS／GSS／RES／LON未知，数学域30—80、无中心。实际施工替代供水、问题处理与生产线调整、必要诊治和已运行的出院心理接续支持有限判断；等待、安全和普通净负担的反证保留。"

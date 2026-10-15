@@ -1,0 +1,1319 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 1269,
+  "name": "Brussels",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-15",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "2026 ordinary Belgian national, usually longterm local, medianincome/usualvalidcoverage, no fixedage",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-brussels-score-completion-review.md",
+  "publishedInputCommit": "1e6faa9635c4192ebee92a5d79d5fac49cb65b70",
+  "researchFrozenInputCommit": "05ec527c0975ccbcb57a33c4e0097b0e63327e1a",
+  "dimensions": [
+    {
+      "id": "PCS",
+      "weight": 15,
+      "score": null,
+      "conditionalAlternatives": [],
+      "rationale": "局部2025降温和排水已交付，干年共因与洪水余障仍在；地质未开始、强天气／野火未充分评估，主要危险共同方向不能择档。",
+      "assumption": "不将局部工程或上报降雨事件当全FUA保护，不因未知补40／60。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "heat_humidity": "partial",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "unresolved"
+      },
+      "coverageReview": [
+        {
+          "dimension": "PCS",
+          "pillar": "heat_humidity",
+          "status": "partial",
+          "sources": ["S17"],
+          "limits": "2025 seven completed schoolyard cooling/green sites; not wholeFUA heat protection",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "pillar": "flood_sea_level",
+          "status": "partial",
+          "sources": ["S03"],
+          "limits": "2025 implemented overflows/bypass versus known risk/remaining Gray street; no wholeFUA netprotection",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "pillar": "geophysical",
+          "status": "not_started",
+          "sources": [],
+          "limits": "No new original geophysical/building adaptation chain",
+          "score": null
+        },
+        {
+          "dimension": "PCS",
+          "pillar": "severe_weather_wildfire",
+          "status": "not_fully_assessed",
+          "sources": ["S03"],
+          "limits": "Heavy rain actions are partial; storm/wildfire compound risks not assessed",
+          "score": null
+        }
+      ],
+      "sourceIds": ["S03", "S17"]
+    },
+    {
+      "id": "GSS",
+      "weight": 15,
+      "score": null,
+      "conditionalAlternatives": [],
+      "rationale": "实际CBRNe训练不证明战略攻击缓解；旧组织暴力数字字节遗失，区域／战略适配与通常余障未闭。",
+      "assumption": "旧计数未恢复、失败不扣分，未知不等没有保护或没有战争。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "organized_violence": "context",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "GSS",
+          "pillar": "organized_violence",
+          "status": "context",
+          "sources": [],
+          "limits": "Prior raw lost, federal PDF failed; unarchived HTML context is not a reproducible bounded-low-impact chain",
+          "score": null
+        },
+        {
+          "dimension": "GSS",
+          "pillar": "regional_conflict",
+          "status": "not_fully_assessed",
+          "sources": [],
+          "limits": "No matched regional spillover/response chain",
+          "score": null
+        },
+        {
+          "dimension": "GSS",
+          "pillar": "strategic_exposure",
+          "status": "partial",
+          "sources": ["S02"],
+          "limits": "2025 CBRNe real training not verified actual strategic-impact mitigation",
+          "score": null
+        }
+      ],
+      "sourceIds": ["S02"]
+    },
+    {
+      "id": "ISR",
+      "weight": 15,
+      "score": 60,
+      "conditionalAlternatives": [40, 80],
+      "rationale": "实际账单／合同纠偏、已运行欠费识别跟进、跨机构水务施工及公共办理使用支持有限通常执行；双债和效果跟踪余障保留。",
+      "assumption": "核心公共服务对普通FUA居民的真实作用、通常触达及截止延续可撤，非未发现广泛失败反推60；政治司法与信任未全测。",
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "ISR",
+          "pillar": "governance",
+          "status": "partial",
+          "sources": ["S01", "S12"],
+          "limits": "2025 actual rulings/reparationrequirements/digital service users; not every judicial/political right",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "pillar": "adaptive_capacity",
+          "status": "partial",
+          "sources": ["S01", "S03", "S17"],
+          "limits": "Actual protection process changed and water engineering delivered; remaining financial/political blocks",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "pillar": "social_cohesion",
+          "status": "partial",
+          "sources": ["S01"],
+          "limits": "Actual CPAS protected-customer followup; no full trust/group survey",
+          "score": null
+        },
+        {
+          "dimension": "ISR",
+          "pillar": "emergency_recovery",
+          "status": "partial",
+          "sources": ["S01", "S03"],
+          "limits": "Urgent cut-legality intervention and actual water changes; not comparable disaster restoration time",
+          "score": null
+        }
+      ],
+      "sourceIds": ["S01", "S03", "S12", "S17"]
+    },
+    {
+      "id": "RES",
+      "weight": 10,
+      "score": null,
+      "conditionalAlternatives": [],
+      "rationale": "能源中位账单方向、社会费率和水务改造不等中位家庭水食能共同净取得；食品及来源库存替代未完成。",
+      "assumption": "社会受益样本不移全部中位家庭，生态水质不当饮水质量；不要求完美全户账单、不因取源失败择档。",
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "water": "partial",
+        "food": "unresolved",
+        "energy": "partial",
+        "supply_chain": "context"
+      },
+      "coverageReview": [
+        {
+          "dimension": "RES",
+          "pillar": "water",
+          "status": "partial",
+          "sources": ["S01", "S03"],
+          "limits": "2026 typicalwater tariff increase and actual water treatment changes; not drinking-quality/ordinary net-bundle",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "pillar": "food",
+          "status": "not_started",
+          "sources": [],
+          "limits": "No actual food net-acquisition chain",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "pillar": "energy",
+          "status": "partial",
+          "sources": ["S01"],
+          "limits": "2025 median-customer bill direction/socialtariff/protected customer doubledebt; not all middleincome netability",
+          "score": null
+        },
+        {
+          "dimension": "RES",
+          "pillar": "supply_chain",
+          "status": "context",
+          "sources": ["S06"],
+          "limits": "Operating international rail passenger route not verified essential supply redundancy",
+          "score": null
+        }
+      ],
+      "sourceIds": ["S01", "S03", "S06"]
+    },
+    {
+      "id": "MED",
+      "weight": 15,
+      "score": 60,
+      "conditionalAlternatives": [40, 80],
+      "rationale": "真实必要／复杂护理、多科及已运行跟进、有限基本安全测量，与普通门诊净费用、住院保障和MAF组成实际取得桥；未报销心理费、等待及赤字仍重要。",
+      "assumption": "有限临床及全FUA代表性、普通净负担、实际接续和截止延续成立才保留60；拒绝则未知，真实余障可支持40；2025表非2026精确费用。",
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "MED",
+          "pillar": "access",
+          "status": "partial",
+          "sources": ["S07", "S08", "S21"],
+          "limits": "2025 ordinary consultation netfees +2026hospital rules/eligibleMAF; waiting and uncovered-cost distribution unknown",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "pillar": "routine_quality",
+          "status": "partial",
+          "sources": ["S16", "S23"],
+          "limits": "Basicprocess rates without explicit period/N; provider outcomes summary lacks original cohorts; no wholecity adjusted rate",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "pillar": "specialist_capacity",
+          "status": "partial",
+          "sources": ["S02", "S18", "S22"],
+          "limits": "Actual heartfailure/systemic disease/haematology/complex continuity; no fixedadultportrait",
+          "score": null
+        },
+        {
+          "dimension": "MED",
+          "pillar": "system_continuity",
+          "status": "partial",
+          "sources": ["S02", "S22"],
+          "limits": "Actual followup/nurse/clinicalcoordination and2025expandedcognitivepath, structuraldeficit remains; no allhazard backup guarantee",
+          "score": null
+        }
+      ],
+      "sourceIds": ["S02", "S07", "S08", "S16", "S18", "S21", "S22", "S23"]
+    },
+    {
+      "id": "LON",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40, 80],
+      "rationale": "约40例实际本地CAR-T、当地报销与住院／跨院随访，接成熟人体有限疾病转化；严重毒性、筛选、等待和近院照护仍重要。",
+      "assumption": "2023本地成熟适应证支付及监护路径延续至截止、适合者普通保障与净照护资源可撤；当前服务页未重证CAR-T，不认证每种品牌或健康人延寿，无固定年龄。",
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "LON",
+          "pillar": "translation",
+          "status": "partial",
+          "sources": ["S04", "S02"],
+          "limits": "Since2019about40localCAR-Ttreated; firsttesticularcase/ARpilot not mature benefit",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "pillar": "trial_maturity",
+          "status": "partial",
+          "sources": ["R01", "S04"],
+          "limits": "JULIET167enrolled/115infused/main99follow40.3months; local40patients not clinician40–50%summary denominator",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "pillar": "regulatory_adoption",
+          "status": "partial",
+          "sources": ["S04", "R01"],
+          "limits": "LocalDecember2023limitedsecondlinereimbursement claim plus mature indication review; Frenchpayer not transferred",
+          "score": null
+        },
+        {
+          "dimension": "LON",
+          "pillar": "resident_access",
+          "status": "partial",
+          "sources": ["S04", "S07", "S08", "S18", "S22"],
+          "limits": "Historical local routinepayment/monitoring +current clinicalteam; explicit finitecontinuation/eligible ordinarynetcare; current CART not explicit in servicepages",
+          "score": null
+        }
+      ],
+      "sourceIds": ["R01", "S02", "S04", "S07", "S08", "S18", "S22"]
+    },
+    {
+      "id": "TEC",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40, 80],
+      "rationale": "多本地知识／转化和临床节点加真实公共数字使用支持有限普通扩散；专利与企业数不是采用，区外企业排开、动态电价采用困难保留。",
+      "assumption": "核心大区与已核本地节点对全FUA通常技术能力的有限适配、普通使用和截止延续可撤，不由资料量自动填分。",
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "TEC",
+          "pillar": "knowledge_output",
+          "status": "partial",
+          "sources": ["S10", "S02"],
+          "limits": "2026Sep24updated130technologies90patentfamilies+actualclinicalresearch; offers not all commercial use",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "pillar": "industry_density",
+          "status": "partial",
+          "sources": ["S11", "S19", "S20"],
+          "limits": "Active actual local D-Sight software;33ULBactivefirms not all local/density, Gosselies1372excluded",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "pillar": "digital_infrastructure",
+          "status": "partial",
+          "sources": ["S12", "S02"],
+          "limits": "Operational IRISbox/Fidus/patientplatform; not all householdbroadband/coverage",
+          "score": null
+        },
+        {
+          "dimension": "TEC",
+          "pillar": "diffusion",
+          "status": "partial",
+          "sources": ["S12", "S01"],
+          "limits": "2025IRISbox286395activecustomers745853interactions; dynamicenergypricing verylimited adoption; no fullFUA rate",
+          "score": null
+        }
+      ],
+      "sourceIds": ["S01", "S02", "S10", "S11", "S12", "S19", "S20"]
+    },
+    {
+      "id": "OPT",
+      "weight": 10,
+      "score": 60,
+      "conditionalAlternatives": [40, 80],
+      "rationale": "实际Midi购票／跨境运行、附条件EU居留、个人资金转出和通信接续形成有限路径；铁路共因、就业资源及长期账户通信约束保留。",
+      "assumption": "合资格目的地、初始及后续普通预算、合法资金／设备鉴权和新居后续手续适配可撤；不假定已有外地工作，须适配代理照护，不承诺永久旧号码。",
+      "scoreStatus": "conditional_root_adopted",
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      },
+      "coverageReview": [
+        {
+          "dimension": "OPT",
+          "pillar": "transport_redundancy",
+          "status": "partial",
+          "sources": ["S06"],
+          "limits": "2025internationalrail operating/purchase/routes/cancellations, primarywebbody only; railcommoncause important, airrawstopped",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "pillar": "legal_mobility",
+          "status": "partial",
+          "sources": ["R02"],
+          "limits": "EUcitizen worker/selfemployed conditional residence; not preassumed employment/permanentunconditionalstay",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "pillar": "asset_portability",
+          "status": "partial",
+          "sources": ["S09", "S15"],
+          "limits": "Actual personalSEPA/internationalfees and authentication; lawfulnewaddress/accountcontinuation finite",
+          "score": null
+        },
+        {
+          "dimension": "OPT",
+          "pillar": "network_continuity",
+          "status": "partial",
+          "sources": ["S13", "S14", "S15"],
+          "limits": "ActualEUroam/July2026nonEUinitialplans+deviceauth; not permanentforeignnetwork/accountguarantee",
+          "score": null
+        }
+      ],
+      "sourceIds": ["R02", "S06", "S09", "S13", "S14", "S15"]
+    }
+  ],
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 36,
+  "unresolvedScoreRange": [36, 76],
+  "globalRankingEligible": false,
+  "limitations": [
+    "不将局部工程或上报降雨事件当全FUA保护，不因未知补40／60。",
+    "旧计数未恢复、失败不扣分，未知不等没有保护或没有战争。",
+    "核心公共服务对普通FUA居民的真实作用、通常触达及截止延续可撤，非未发现广泛失败反推60；政治司法与信任未全测。",
+    "社会受益样本不移全部中位家庭，生态水质不当饮水质量；不要求完美全户账单、不因取源失败择档。",
+    "有限临床及全FUA代表性、普通净负担、实际接续和截止延续成立才保留60；拒绝则未知，真实余障可支持40；2025表非2026精确费用。",
+    "2023本地成熟适应证支付及监护路径延续至截止、适合者普通保障与净照护资源可撤；当前服务页未重证CAR-T，不认证每种品牌或健康人延寿，无固定年龄。",
+    "核心大区与已核本地节点对全FUA通常技术能力的有限适配、普通使用和截止延续可撤，不由资料量自动填分。",
+    "合资格目的地、初始及后续普通预算、合法资金／设备鉴权和新居后续手续适配可撤；不假定已有外地工作，须适配代理照护，不承诺永久旧号码。"
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://brugel.brussels/publication/document/rapports/2026/fr/20260520_Rapport_Annuel_2025.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/brugel2025.pdf",
+      "scope": "New snapshot of located prior successful original; actual2025 energy/social correction, not recovery of lost SHA",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 6605080,
+      "sha256": "9ff9455fea820850016a4529af8ffdee36b65ea1fa808e977fa76d2bee381b67",
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://brugel.brussels/publication/document/rapports/2026/fr/20260520_Rapport_Annuel_2025.pdf",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/brugel2025.pdf",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "9ff9455fea820850016a4529af8ffdee36b65ea1fa808e977fa76d2bee381b67"
+    },
+    {
+      "id": "S02",
+      "url": "https://www.uzbrussel.be/documents/d/guest/uzbrussel_jaarverslag25_010_final",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/uz2025.pdf",
+      "scope": "Actual2025 routine pathways, research and financial constraints; new bytes",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 9267999,
+      "sha256": "8a005f60a264a0eee9f644befe3fc7b8ce89e0159fb637e709e4d83205a1aeb0",
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.uzbrussel.be/documents/d/guest/uzbrussel_jaarverslag25_010_final",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/uz2025.pdf",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "8a005f60a264a0eee9f644befe3fc7b8ce89e0159fb637e709e4d83205a1aeb0"
+    },
+    {
+      "id": "S03",
+      "url": "https://environnement.brussels/media/21379/download?inline=",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/water2025.pdf",
+      "scope": "2025 actual water coordination/protection and remaining harms; new snapshot",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 1644263,
+      "sha256": "ee2bf82ee6da26e1fb92680a68e761d9dfb44f51c9076aa1ef18999a9c210ed3",
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://environnement.brussels/media/21379/download?inline=",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/water2025.pdf",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "ee2bf82ee6da26e1fb92680a68e761d9dfb44f51c9076aa1ef18999a9c210ed3"
+    },
+    {
+      "id": "S04",
+      "url": "https://www.saintluc.be/sites/default/files/2023-12/stluc-magg11.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/saintluc-cart-2023.pdf",
+      "scope": "Actual local CART treated since2019, around40 and2019-2023clinical monitoring; December2023payment transition; not all current products or city residents",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 1900589,
+      "sha256": "3b45604e7c9d01936a9e623013af12b1dd1a3d9a6740cfcf95743add3ea68acc",
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.saintluc.be/sites/default/files/2023-12/stluc-magg11.pdf",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/saintluc-cart-2023.pdf",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "3b45604e7c9d01936a9e623013af12b1dd1a3d9a6740cfcf95743add3ea68acc"
+    },
+    {
+      "id": "S07",
+      "url": "https://www.inami.fgov.be/fr/theme/les-frais-d-hospitalisation",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/inami-hospital2026.html",
+      "scope": "Ordinary insured Belgian hospital net costs and exemptions, current2026version scope",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 32243,
+      "sha256": "a4adb8c0ff846d2f1f06a6f32781732a8882a6c36c7a5844bb72c6be06324a77",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.inami.fgov.be/fr/theme/les-frais-d-hospitalisation",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/inami-hospital2026.html",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "a4adb8c0ff846d2f1f06a6f32781732a8882a6c36c7a5844bb72c6be06324a77"
+    },
+    {
+      "id": "S08",
+      "url": "https://www.inami.fgov.be/fr/themes/soins-de-sante-cout-et-remboursement/facilites-financieres/maximum-a-facturer-maf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/inami-maf.html",
+      "scope": "Income/household ordinary cost ceiling eligibleco-pay not all spending",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 136004,
+      "sha256": "1c6c406818c5c4f8840625b734891ffc094868e7ce5655ffd0901d5a71d45a52",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.inami.fgov.be/fr/themes/soins-de-sante-cout-et-remboursement/facilites-financieres/maximum-a-facturer-maf",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/inami-maf.html",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "1c6c406818c5c4f8840625b734891ffc094868e7ce5655ffd0901d5a71d45a52"
+    },
+    {
+      "id": "S09",
+      "url": "https://www.kbc.be/particuliers/fr/produits/paiements/virement.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/kbc-transfer.html",
+      "scope": "Ordinary personal transfer costs limits, no universal destination/account guarantee",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 225984,
+      "sha256": "e6281bb34e2a7a9b881b69f2e87d3cd7962cc7573ce63146adcf0fb2e25fc6f3",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "resolvedUrl": "https://www.kbc.be/particuliers/fr/produits/paiements/virement.html",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/kbc-transfer.html",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "e6281bb34e2a7a9b881b69f2e87d3cd7962cc7573ce63146adcf0fb2e25fc6f3"
+    },
+    {
+      "id": "S10",
+      "url": "https://www.ulb.be/fr/innovation-services-aux-entreprises/offres-de-technologies",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/ulb-technologies.html",
+      "scope": "Owner current research products, 24September2026 update; not all commercial adoption",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 392282,
+      "sha256": "43723ceb0f73073b75b833fd668fe390ec7cac217eb676414bf2a27ac431260e",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "resolvedUrl": "https://www.ulb.be/fr/innovation-services-aux-entreprises/offres-de-technologies",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/ulb-technologies.html",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "43723ceb0f73073b75b833fd668fe390ec7cac217eb676414bf2a27ac431260e"
+    },
+    {
+      "id": "S11",
+      "url": "https://www.ulb.be/fr/innovation-services-aux-entreprises/spin-offs",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/ulb-spinoffs.html",
+      "scope": "Current33 active spinoffs with dates/sectors; not all within Brussels FUA",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 391264,
+      "sha256": "bc4449b79a93955d824ae5085247f9f5b6c4bccfeb5c7e16ff2600e7f336b7b1",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "resolvedUrl": "https://www.ulb.be/fr/innovation-services-aux-entreprises/spin-offs",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/ulb-spinoffs.html",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "bc4449b79a93955d824ae5085247f9f5b6c4bccfeb5c7e16ff2600e7f336b7b1"
+    },
+    {
+      "id": "S12",
+      "url": "https://be.brussels/nl/over-het-gewest/balans-2025-een-recordjaar-voor-onze-diensten",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/brussels-digital2025.html",
+      "scope": "23January2026 actual2025 ordinary digital service use and denominators",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 116233,
+      "sha256": "05ed7f95fe7fc588a0c693505081376f18c259d48c9df29dd192aff7d782847d",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "resolvedUrl": "https://be.brussels/nl/over-het-gewest/balans-2025-een-recordjaar-voor-onze-diensten",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/brussels-digital2025.html",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "05ed7f95fe7fc588a0c693505081376f18c259d48c9df29dd192aff7d782847d"
+    },
+    {
+      "id": "S13",
+      "url": "https://www.orange.be/nl/hulp/mobiele-telefonie/internationaal/roaming-en-internationaal-verbruik",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/orange-roaming.html",
+      "scope": "Actual personal EU/EER roaming ordinary limits, not permanent foreign residence",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 78404,
+      "sha256": "a74c72939282cbab56a247515efb50b8ef64edb2a580004916446da34d4ddd8b",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.orange.be/nl/hulp/mobiele-telefonie/internationaal/roaming-en-internationaal-verbruik",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/orange-roaming.html",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "a74c72939282cbab56a247515efb50b8ef64edb2a580004916446da34d4ddd8b"
+    },
+    {
+      "id": "S14",
+      "url": "https://corporate.orange.be/en/news-medias/orange-belgium-introduces-new-roaming-offers-help-travelers-stay-connected-abroad",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/orange-july2026.html",
+      "scope": "13July2026 owner actual9Julylaunch residential offers, not corporate subscription or future launch",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 125135,
+      "sha256": "e6ee79c82b310766eab9489166475ae1c4067fb4cc0179f7d7588a6faa94772a",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://corporate.orange.be/en/news-medias/orange-belgium-introduces-new-roaming-offers-help-travelers-stay-connected-abroad",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/orange-july2026.html",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "e6ee79c82b310766eab9489166475ae1c4067fb4cc0179f7d7588a6faa94772a"
+    },
+    {
+      "id": "S15",
+      "url": "https://www.kbc.be/particuliers/fr/produits/paiements/self-banking/sur-votre-smartphone/mobile/kbc-mobile-faqs/telechargement-inscription-connexion.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/kbc-auth.html",
+      "scope": "Ordinary personal payment authentication/device registration, not universal account continuation",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 279908,
+      "sha256": "a2bb4d5296febbd99692f71b6bc63e32411afd33256f255bf094dfb7deb48f78",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "resolvedUrl": "https://www.kbc.be/particuliers/fr/produits/paiements/self-banking/sur-votre-smartphone/mobile/kbc-mobile-faqs/telechargement-inscription-connexion.html",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/kbc-auth.html",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "a2bb4d5296febbd99692f71b6bc63e32411afd33256f255bf094dfb7deb48f78"
+    },
+    {
+      "id": "S16",
+      "url": "https://www.uzbrussel.be/web/kwaliteitszorg/home",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/uz-quality.html",
+      "scope": "Actual basic patient safety measurements; explicit unknown denominator/year and not all clinical outcomes",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 176709,
+      "sha256": "1d3d8f485ff0923d5d2f890a5d86cab335e6d74979612105d8ce075508caffac",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "resolvedUrl": "https://www.uzbrussel.be/web/kwaliteitszorg/home",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/uz-quality.html",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "1d3d8f485ff0923d5d2f890a5d86cab335e6d74979612105d8ce075508caffac"
+    },
+    {
+      "id": "S17",
+      "url": "https://environnement.brussels/citoyen/rapports-annuels/le-rapport-annuel-2025-de-bruxelles-environnement",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/environment2025.html",
+      "scope": "2025 actual7schoolyard cooling/green projects and measures versus future2027/2029funding",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 278785,
+      "sha256": "8052046c77097f334aa6baecd8497c0fb29315c0182f0fce9bb17bfa397f6fae",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://environnement.brussels/citoyen/rapports-annuels/le-rapport-annuel-2025-de-bruxelles-environnement",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/environment2025.html",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "8052046c77097f334aa6baecd8497c0fb29315c0182f0fce9bb17bfa397f6fae"
+    },
+    {
+      "id": "S18",
+      "url": "https://www.saintluc.be/fr/service-dhematologie",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/saintluc-current-haematology.html",
+      "scope": "Current operating benign/malignantblood care inpatient/outpatient and specialist team; not a2026CARTcount",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 202738,
+      "sha256": "f6801152014002f3df6c894607816257893f6ebeabd3476350c2a295d6e30159",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.saintluc.be/fr/service-dhematologie",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/saintluc-current-haematology.html",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "f6801152014002f3df6c894607816257893f6ebeabd3476350c2a295d6e30159"
+    },
+    {
+      "id": "S19",
+      "url": "https://www.d-sight.com/contact",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/dsight-contact.html",
+      "scope": "Actual local enterprise location Brussels; not all33ULBspinoffs located locally",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 124797,
+      "sha256": "85a99a5e527bf634722aa6bd52f03d323a8cbe98a909eb02fe57dc2bf4336e39",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.d-sight.com/contact",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/dsight-contact.html",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "85a99a5e527bf634722aa6bd52f03d323a8cbe98a909eb02fe57dc2bf4336e39"
+    },
+    {
+      "id": "S20",
+      "url": "https://www.d-sight.com/",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/dsight-product.html",
+      "scope": "Current owner actual decision software/service offering linked by ULB active spinoff list, not all customer-local adoption",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 396507,
+      "sha256": "3cbe6756045127355a28f44344458166649864588438cf906f75a964a0c898fb",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.d-sight.com/",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/dsight-product.html",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "3cbe6756045127355a28f44344458166649864588438cf906f75a964a0c898fb"
+    },
+    {
+      "id": "S21",
+      "url": "https://www.erasme.be/sites/default/files/2025-02-12_tarifs%20consult%20ERASME%20FR%202025%20v2.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/erasme-consult2025.pdf",
+      "scope": "Actual2025 ordinary consultation net fee table and restrictions; not2026allpatientclaim",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 730697,
+      "sha256": "c49e35bc808eef4e76eb5de765dd2ea2354f87008464b3ea500e815c1c46d8e7",
+      "status": 200,
+      "contentType": "application/pdf",
+      "resolvedUrl": "https://www.erasme.be/sites/default/files/2025-02-12_tarifs%20consult%20ERASME%20FR%202025%20v2.pdf",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/erasme-consult2025.pdf",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "c49e35bc808eef4e76eb5de765dd2ea2354f87008464b3ea500e815c1c46d8e7"
+    },
+    {
+      "id": "S22",
+      "url": "https://www.institutroialbertdeux.be/fr/hematologie-adulte",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/roi-current-haematology.html",
+      "scope": "Current undated actual adult clinical blood-care pathway/team/dayhospital, NOT explicit current CAR-T confirmation or2026 cohort",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 257505,
+      "sha256": "b0d05c3ddb1d359e0b9ef0563617b9028c1b258df1369430004a4483186cc53f",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.institutroialbertdeux.be/fr/hematologie-adulte",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/roi-current-haematology.html",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "b0d05c3ddb1d359e0b9ef0563617b9028c1b258df1369430004a4483186cc53f"
+    },
+    {
+      "id": "S23",
+      "url": "https://www.institutroialbertdeux.be/fr/resultats-des-traitements",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/roi-outcomes.html",
+      "scope": "Provider summary of cancer-registry comparisons; original cohort/window/N not read, not independently verified current outcome advantage",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": 195161,
+      "sha256": "9a889b1973d6c899870e9d8027ed0e92ff29f93da795c4feb03650e7445a7cd7",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "resolvedUrl": "https://www.institutroialbertdeux.be/fr/resultats-des-traitements",
+      "validOriginal": true,
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/roi-outcomes.html",
+      "sourceKind": "new_2026-10-15_snapshot_not_recovery_of_lost_bytes",
+      "originalSha256": "9a889b1973d6c899870e9d8027ed0e92ff29f93da795c4feb03650e7445a7cd7"
+    },
+    {
+      "id": "R01",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/has-kymriah-2023.pdf",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/basel/originals/has-kymriah-2023.pdf",
+      "scope": "Mature disease-specific human evidence; French payer not transferred",
+      "validOriginal": true,
+      "originalBytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "sourceKind": "verified_existing_durable_bytes_reused_not_new_request",
+      "retrievedOn": "2026-10-15",
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/has-kymriah-2023.pdf",
+      "originalSha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409"
+    },
+    {
+      "id": "R02",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_es.htm",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/originals/eu-workers.html",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/barcelona/eu-workers.html",
+      "scope": "CommonEUworker/selfemployedcitizen outward residence rights, appliedtoBelgian national not Spanishscore",
+      "validOriginal": true,
+      "originalBytes": 153770,
+      "sha256": "1555b5f65525917eee8fab3fef570e9a27b5d26dab38779b5bd26659b2bfb34f",
+      "sourceKind": "verified_existing_durable_bytes_reused_not_new_request",
+      "retrievedOn": "2026-10-15",
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": "originals/eu-workers.html",
+      "originalSha256": "1555b5f65525917eee8fab3fef570e9a27b5d26dab38779b5bd26659b2bfb34f"
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "id": "S05",
+      "url": "https://www.police.be/rapportannuel-policefederale/sites/jaarverslag/files/media/file/2026-03/rapportannuel2025FR.pdf",
+      "path": "police2025.pdf",
+      "scope": "Failed federal2025 PDF; search snippet and unread tables not used as verified body",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": null,
+      "sha256": null,
+      "validOriginal": false,
+      "error": "HTTP Error 403: Forbidden",
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": null,
+      "originalSha256": null
+    },
+    {
+      "id": "S06",
+      "url": "https://www.belgiantrain.be/-/media/corporate/2026/2025-reports/2025-fr-rapport-annuel-qualite-service-era-782.ashx?v=a2cd503602964e67ad6f8bf7c33cf56b",
+      "path": "sncb-quality2025.pdf",
+      "scope": "Actual2025 international operating/cancellation denominators and passenger support, national/Brussels connections separate",
+      "retrievedOn": "2026-10-15",
+      "originalBytes": null,
+      "sha256": null,
+      "validOriginal": false,
+      "error": "HTTP Error 403: Forbidden",
+      "cutoffOriginalBytesAuthenticated": false,
+      "observationWindowNote": "See report and coverage: observation date, publication and snapshot date are separate.",
+      "localPath": null,
+      "originalSha256": null
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "sameAs": "S06",
+      "url": "https://www.belgiantrain.be/-/media/corporate/2026/2025-reports/2025-fr-rapport-annuel-qualite-service-era-782.ashx?v=a2cd503602964e67ad6f8bf7c33cf56b",
+      "validBody": true,
+      "originalBytes": null,
+      "sha256": null,
+      "bodyReference": "turn2200view1",
+      "scope": "2025 international service/ticketpurchase/punctuality/cancellation; no fullrawauthentication",
+      "failedActualPixelAttempts": 2,
+      "actualPdfPixelsSeen": false
+    }
+  ],
+  "webFailureDiagnostics": [
+    {
+      "provider": "Zorgkwaliteit",
+      "inherited": "2webtimeouts+raw404 thirdstop",
+      "thisTaskRequests": 0
+    },
+    {
+      "provider": "BrusselsAirport",
+      "inherited": "raw403 stop",
+      "thisTaskRequests": 0
+    },
+    {
+      "provider": "Belgiantrain/NMBS/SNCB",
+      "inherited": "PriorAntwerpraw403stopped; exactoldURLlost",
+      "thisTask": "S06newlocatedqualityPDF raw403; sameprovidernotautomaticallyindependentzeroedmechanism, stopped; webbodyonly; no repeatedraw"
+    },
+    {
+      "provider": "FederalPolice PDF",
+      "inherited": "Priorpolice403sameprovider relation; exactpatholdunavailable",
+      "thisTask": "S05raw403 andwebInternalError; no retry; two locatedHTMLwebbodies notPDFrecovery"
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "candidateId": 1269,
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceBytes": 9932800,
+    "fuaSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allGeometryCount": 9031,
+    "targetGeometrySha256": "83073ae05ab2090c190eee1b89e53edc540b23eda2af75cbbde4b265265de487",
+    "referencePoints": [
+      {
+        "label": "Brussels GrandPlace",
+        "longitude": 4.3524,
+        "latitude": 50.8467,
+        "approximate": true,
+        "fuaMatches": [1269]
+      },
+      {
+        "label": "UZ Jette campus",
+        "longitude": 4.3088,
+        "latitude": 50.886,
+        "approximate": true,
+        "fuaMatches": [1269]
+      },
+      {
+        "label": "SaintLuc Woluwe campus",
+        "longitude": 4.4531,
+        "latitude": 50.8517,
+        "approximate": true,
+        "fuaMatches": [1269]
+      },
+      {
+        "label": "Bruxelles Midi",
+        "longitude": 4.3364,
+        "latitude": 50.8357,
+        "approximate": true,
+        "fuaMatches": [1269]
+      },
+      {
+        "label": "ULB Solbosch",
+        "longitude": 4.381,
+        "latitude": 50.813,
+        "approximate": true,
+        "fuaMatches": [1269]
+      },
+      {
+        "label": "D-Sight contact address approximate",
+        "longitude": 4.421,
+        "latitude": 50.8,
+        "approximate": true,
+        "fuaMatches": [1269]
+      },
+      {
+        "label": "Gosselies AULAB comparison only",
+        "longitude": 4.4511,
+        "latitude": 50.4691,
+        "approximate": true,
+        "fuaMatches": [1372]
+      }
+    ],
+    "scope": "Approximate reference points do not establish provider service coverage, citywide outcomes or residence; outside spinoff site is not merged."
+  },
+  "scopeCompletionReview": {
+    "dimensionCount": 8,
+    "subpillarCount": 31,
+    "allDimensionSemanticsConsideredWithinBoundedReview": true,
+    "allSubpillarsHaveOutcomeMeasurements": false,
+    "allSubpillarsFullyReviewed": false,
+    "eightDimensionScoresComplete": false,
+    "coverageTable": [
+      {
+        "dimension": "PCS",
+        "pillar": "heat_humidity",
+        "status": "partial",
+        "sources": ["S17"],
+        "limits": "2025 seven completed schoolyard cooling/green sites; not wholeFUA heat protection",
+        "score": null
+      },
+      {
+        "dimension": "PCS",
+        "pillar": "flood_sea_level",
+        "status": "partial",
+        "sources": ["S03"],
+        "limits": "2025 implemented overflows/bypass versus known risk/remaining Gray street; no wholeFUA netprotection",
+        "score": null
+      },
+      {
+        "dimension": "PCS",
+        "pillar": "geophysical",
+        "status": "not_started",
+        "sources": [],
+        "limits": "No new original geophysical/building adaptation chain",
+        "score": null
+      },
+      {
+        "dimension": "PCS",
+        "pillar": "severe_weather_wildfire",
+        "status": "not_fully_assessed",
+        "sources": ["S03"],
+        "limits": "Heavy rain actions are partial; storm/wildfire compound risks not assessed",
+        "score": null
+      },
+      {
+        "dimension": "GSS",
+        "pillar": "organized_violence",
+        "status": "context",
+        "sources": [],
+        "limits": "Prior raw lost, federal PDF failed; unarchived HTML context is not a reproducible bounded-low-impact chain",
+        "score": null
+      },
+      {
+        "dimension": "GSS",
+        "pillar": "regional_conflict",
+        "status": "not_fully_assessed",
+        "sources": [],
+        "limits": "No matched regional spillover/response chain",
+        "score": null
+      },
+      {
+        "dimension": "GSS",
+        "pillar": "strategic_exposure",
+        "status": "partial",
+        "sources": ["S02"],
+        "limits": "2025 CBRNe real training not verified actual strategic-impact mitigation",
+        "score": null
+      },
+      {
+        "dimension": "ISR",
+        "pillar": "governance",
+        "status": "partial",
+        "sources": ["S01", "S12"],
+        "limits": "2025 actual rulings/reparationrequirements/digital service users; not every judicial/political right",
+        "score": null
+      },
+      {
+        "dimension": "ISR",
+        "pillar": "adaptive_capacity",
+        "status": "partial",
+        "sources": ["S01", "S03", "S17"],
+        "limits": "Actual protection process changed and water engineering delivered; remaining financial/political blocks",
+        "score": null
+      },
+      {
+        "dimension": "ISR",
+        "pillar": "social_cohesion",
+        "status": "partial",
+        "sources": ["S01"],
+        "limits": "Actual CPAS protected-customer followup; no full trust/group survey",
+        "score": null
+      },
+      {
+        "dimension": "ISR",
+        "pillar": "emergency_recovery",
+        "status": "partial",
+        "sources": ["S01", "S03"],
+        "limits": "Urgent cut-legality intervention and actual water changes; not comparable disaster restoration time",
+        "score": null
+      },
+      {
+        "dimension": "RES",
+        "pillar": "water",
+        "status": "partial",
+        "sources": ["S01", "S03"],
+        "limits": "2026 typicalwater tariff increase and actual water treatment changes; not drinking-quality/ordinary net-bundle",
+        "score": null
+      },
+      {
+        "dimension": "RES",
+        "pillar": "food",
+        "status": "not_started",
+        "sources": [],
+        "limits": "No actual food net-acquisition chain",
+        "score": null
+      },
+      {
+        "dimension": "RES",
+        "pillar": "energy",
+        "status": "partial",
+        "sources": ["S01"],
+        "limits": "2025 median-customer bill direction/socialtariff/protected customer doubledebt; not all middleincome netability",
+        "score": null
+      },
+      {
+        "dimension": "RES",
+        "pillar": "supply_chain",
+        "status": "context",
+        "sources": ["S06"],
+        "limits": "Operating international rail passenger route not verified essential supply redundancy",
+        "score": null
+      },
+      {
+        "dimension": "MED",
+        "pillar": "access",
+        "status": "partial",
+        "sources": ["S07", "S08", "S21"],
+        "limits": "2025 ordinary consultation netfees +2026hospital rules/eligibleMAF; waiting and uncovered-cost distribution unknown",
+        "score": null
+      },
+      {
+        "dimension": "MED",
+        "pillar": "routine_quality",
+        "status": "partial",
+        "sources": ["S16", "S23"],
+        "limits": "Basicprocess rates without explicit period/N; provider outcomes summary lacks original cohorts; no wholecity adjusted rate",
+        "score": null
+      },
+      {
+        "dimension": "MED",
+        "pillar": "specialist_capacity",
+        "status": "partial",
+        "sources": ["S02", "S18", "S22"],
+        "limits": "Actual heartfailure/systemic disease/haematology/complex continuity; no fixedadultportrait",
+        "score": null
+      },
+      {
+        "dimension": "MED",
+        "pillar": "system_continuity",
+        "status": "partial",
+        "sources": ["S02", "S22"],
+        "limits": "Actual followup/nurse/clinicalcoordination and2025expandedcognitivepath, structuraldeficit remains; no allhazard backup guarantee",
+        "score": null
+      },
+      {
+        "dimension": "LON",
+        "pillar": "translation",
+        "status": "partial",
+        "sources": ["S04", "S02"],
+        "limits": "Since2019about40localCAR-Ttreated; firsttesticularcase/ARpilot not mature benefit",
+        "score": null
+      },
+      {
+        "dimension": "LON",
+        "pillar": "trial_maturity",
+        "status": "partial",
+        "sources": ["R01", "S04"],
+        "limits": "JULIET167enrolled/115infused/main99follow40.3months; local40patients not clinician40–50%summary denominator",
+        "score": null
+      },
+      {
+        "dimension": "LON",
+        "pillar": "regulatory_adoption",
+        "status": "partial",
+        "sources": ["S04", "R01"],
+        "limits": "LocalDecember2023limitedsecondlinereimbursement claim plus mature indication review; Frenchpayer not transferred",
+        "score": null
+      },
+      {
+        "dimension": "LON",
+        "pillar": "resident_access",
+        "status": "partial",
+        "sources": ["S04", "S07", "S08", "S18", "S22"],
+        "limits": "Historical local routinepayment/monitoring +current clinicalteam; explicit finitecontinuation/eligible ordinarynetcare; current CART not explicit in servicepages",
+        "score": null
+      },
+      {
+        "dimension": "TEC",
+        "pillar": "knowledge_output",
+        "status": "partial",
+        "sources": ["S10", "S02"],
+        "limits": "2026Sep24updated130technologies90patentfamilies+actualclinicalresearch; offers not all commercial use",
+        "score": null
+      },
+      {
+        "dimension": "TEC",
+        "pillar": "industry_density",
+        "status": "partial",
+        "sources": ["S11", "S19", "S20"],
+        "limits": "Active actual local D-Sight software;33ULBactivefirms not all local/density, Gosselies1372excluded",
+        "score": null
+      },
+      {
+        "dimension": "TEC",
+        "pillar": "digital_infrastructure",
+        "status": "partial",
+        "sources": ["S12", "S02"],
+        "limits": "Operational IRISbox/Fidus/patientplatform; not all householdbroadband/coverage",
+        "score": null
+      },
+      {
+        "dimension": "TEC",
+        "pillar": "diffusion",
+        "status": "partial",
+        "sources": ["S12", "S01"],
+        "limits": "2025IRISbox286395activecustomers745853interactions; dynamicenergypricing verylimited adoption; no fullFUA rate",
+        "score": null
+      },
+      {
+        "dimension": "OPT",
+        "pillar": "transport_redundancy",
+        "status": "partial",
+        "sources": ["S06"],
+        "limits": "2025internationalrail operating/purchase/routes/cancellations, primarywebbody only; railcommoncause important, airrawstopped",
+        "score": null
+      },
+      {
+        "dimension": "OPT",
+        "pillar": "legal_mobility",
+        "status": "partial",
+        "sources": ["R02"],
+        "limits": "EUcitizen worker/selfemployed conditional residence; not preassumed employment/permanentunconditionalstay",
+        "score": null
+      },
+      {
+        "dimension": "OPT",
+        "pillar": "asset_portability",
+        "status": "partial",
+        "sources": ["S09", "S15"],
+        "limits": "Actual personalSEPA/internationalfees and authentication; lawfulnewaddress/accountcontinuation finite",
+        "score": null
+      },
+      {
+        "dimension": "OPT",
+        "pillar": "network_continuity",
+        "status": "partial",
+        "sources": ["S13", "S14", "S15"],
+        "limits": "ActualEUroam/July2026nonEUinitialplans+deviceauth; not permanentforeignnetwork/accountguarantee",
+        "score": null
+      }
+    ],
+    "statusCounts": {
+      "partial": 25,
+      "not_started": 2,
+      "not_fully_assessed": 2,
+      "context": 2
+    }
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-brussels-score-completion-review.md",
+    "sha256": "fd1c474a60153d6f46c06cae82b920a4c5941058c829246c560bd0a9be696f81",
+    "reviewedOn": "2026-10-15",
+    "validOriginalCount": 23,
+    "sourceManifestSha256": "2ba44ac233cea32ced26441ae4051783ad099fcdaa732f898bd1cd51202bf83e",
+    "handoffSha256": "57536ab2e8818d5a60b62fc8d3e78b2f660057e0418e9b4188751630d9dacf6e",
+    "rootVerifiedFull9031AndOriginals": true,
+    "stageArtifacts": [
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/report.md",
+        "bytes": 18262,
+        "sha256": "62add1a8b3b0ece1af64e77d170a2c4ae8f822909089e3a9c6e6131a59c07320"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/candidate-handoff.json",
+        "bytes": 4303,
+        "sha256": "57536ab2e8818d5a60b62fc8d3e78b2f660057e0418e9b4188751630d9dacf6e"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/source-manifest.json",
+        "bytes": 21641,
+        "sha256": "a54316f593752ba00b87b7a918bbc18ee85568387ad75c36cbcc58c838c9f8aa"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/handoff-manifest.json",
+        "bytes": 15266,
+        "sha256": "ba8b93285305c03b65ae696f92fc12d0bd256344e7d05ec0697712ac232c80e4"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/coverage.json",
+        "bytes": 9072,
+        "sha256": "ad1e1f8fddcce72b7cf0af1d80723b0fc6104cfb619b728050353c74dc873cd7"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/geometry-check.json",
+        "bytes": 2704,
+        "sha256": "2f3a166a94e03c91cd4423d83359a240e3e67af5ecec0d04c096e2ca4eaf40ad"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/pixels.json",
+        "bytes": 3723,
+        "sha256": "be59417191117d3b82d1bbf42a4ba5812020299ee3ac2f129f5b5e33241402c5"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/web-and-failures.json",
+        "bytes": 1837,
+        "sha256": "21d8aacbf618fef731daf48075230b3c4a39f8c500938edd67f2a1d9258ac3e6"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/brussels-recovery/root/independent-check.json",
+        "bytes": 1075,
+        "sha256": "9bbb586f75ab3113753c301716f21a0e8aa25098ae8e9d35678136fb8e40703f"
+      }
+    ],
+    "researchReport": "docs/cci-brussels-priority-review.md",
+    "researchReportSha256": "a6a37c697aabec8982a211649f412147b9a97e755670984d0d3e78a7862cd4fb"
+  },
+  "rootScopeReview": {
+    "validOriginalsVerified": 23,
+    "reusedOriginalsVerified": 2,
+    "newSnapshots": 21,
+    "frozenManifestEntriesVerified": 94,
+    "reviewedOn": "2026-10-15",
+    "rootPdfPixelsViewed": [
+      "saintluc-cart-2023.pdf:5",
+      "uz2025.pdf:9",
+      "uz2025.pdf:12",
+      "brugel2025.pdf:26",
+      "brugel2025.pdf:35",
+      "water2025.pdf:4",
+      "erasme-consult2025.pdf:1",
+      "erasme-consult2025.pdf:2",
+      "has-kymriah-2023.pdf:38"
+    ],
+    "rootSncbWebBodyInitialRead": true,
+    "rootSncbExactCancellationTableIndependentlyVerified": false,
+    "rootSncbPdfPixelsSeen": false,
+    "rootWebFollowupFailure": "SNCB followup open InternalError; two image attempts returned only a link/timeout, no pixels seen. Stopped; known stage image failures were followed by two root image attempts, a process deviation retained, not a city performance penalty. No further request on this mechanism.",
+    "rootEuWorkersBodyRead": true,
+    "oldLostBytesCertified": false,
+    "full9031SevenPointsAndWkbVerified": true,
+    "sixTargetPointsAndOneOutside1372": true,
+    "rootPreviouslyViewedSameHashHas14": true
+  },
+  "sensitivity": {
+    "withdrawISRorMED": [27, 82],
+    "withdrawLONorTECorOPT": [30, 80],
+    "ISRorMEDto40": [33, 73],
+    "ISRorMEDto80": [39, 79],
+    "LONorTECorOPTto40": [34, 74],
+    "LONorTECorOPTto80": [38, 78],
+    "withdrawAll": [0, 100]
+  }
+}
