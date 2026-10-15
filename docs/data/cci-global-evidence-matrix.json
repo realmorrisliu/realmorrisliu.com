@@ -177,8 +177,8 @@
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
     "conditionalCaseCount": 72,
-    "completeConditionalCaseCount": 16,
-    "partialCaseCount": 56,
+    "completeConditionalCaseCount": 17,
+    "partialCaseCount": 55,
     "unassessedCount": 8959,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
@@ -452,9 +452,9 @@
       "provenanceSha256": "ddbe51ab1b7862eaaf7c638d57d245f8b470d53d5b7b979c739791f46def37c7"
     },
     "cci-local-2026-tampere-case.json": {
-      "sha256": "2e2163d414d7b5d29596b62add9447b87174786936e298cf537902e3c6e0cfb2",
-      "provenance": "cci-tampere-priority-review.md",
-      "provenanceSha256": "0217c577797d804d8e4225d8d12786acf55f7dbc140953b901b8b7b1ee9e9b80"
+      "sha256": "8fb0fc2abce872bd047c2a778d8746413e0d59ea3a283d290ee2b429ed64df58",
+      "provenance": "cci-tampere-gss31-completion-review.md",
+      "provenanceSha256": "df04aaffa218da3f872b9d4edeb416060f374a29b70b7f5c68ae8d4da5d47dd7"
     },
     "cci-local-2026-cima-case.json": {
       "sha256": "755f3788a1c3de7d3b39932df148e51ade222be7825fb784bd5d8d204d215496",
@@ -668,5 +668,5 @@
     }
   },
   "scriptSha256": "839a4ac83522815b844db0ad71c1013124a8df755ff7be9d32498a8e39cec781",
-  "csvSha256": "dc9aba92ae43544924ed226849a0d06416befc5e60f82c21a4cade541e9e349d"
+  "csvSha256": "e6d29b944854d15f274c4a8f65837c2b2faa03e3a3ff456c7b188b34ab537818"
 }

@@ -471,7 +471,7 @@ const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.
 assert(tokyoPosition);
 assert.equal(tokyoPosition.center, 62);
 assert.equal(tokyoPosition.bestPosition, 1);
-assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 14);
+assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 15);
 assert.deepEqual(total(washington), { center: 58, lower: 58, upper: 58 });
 assert.equal(washington.RES, 40);
 assert.equal(washington.OPT, 60);
@@ -519,7 +519,7 @@ const washingtonPosition = rankAudit.scenarios.fixed_conditional_centers.caseRes
 );
 assert(washingtonPosition);
 assert.equal(washingtonPosition.center, 58);
-assert.equal(washingtonPosition.bestPosition, 13);
+assert.equal(washingtonPosition.bestPosition, 14);
 assert.equal(washingtonPosition.worstPosition, rankAudit.candidateCount - 1);
 assert.equal(total({ ...washington, GSS: 40 }).center, 55);
 assert.equal(total({ ...washington, GSS: 80 }).center, 61);
@@ -575,7 +575,7 @@ const newYorkPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
 );
 assert(newYorkPosition);
 assert.equal(newYorkPosition.center, 58);
-assert.equal(newYorkPosition.bestPosition, 13);
+assert.equal(newYorkPosition.bestPosition, 14);
 assert.equal(newYorkPosition.worstPosition, rankAudit.candidateCount - 1);
 assert.deepEqual(realCases[7].clinicBoundaryCheck.fuaMatches, [7244]);
 assert.equal(realCases[7].referenceBoundaryCheck.referencePoints.length, 6);
@@ -1043,7 +1043,7 @@ const shanghaiPosition = rankAudit.scenarios.fixed_conditional_centers.caseResul
   (c: { efua_id: string }) => c.efua_id === "10097"
 );
 assert(shanghaiPosition);
-assert.equal(shanghaiPosition.bestPosition, 13);
+assert.equal(shanghaiPosition.bestPosition, 14);
 assert.equal(shanghaiPosition.worstPosition, rankAudit.candidateCount - 1);
 
 assert.deepEqual(total(jakarta), { center: null, lower: 43, upper: 53 });
@@ -1126,7 +1126,7 @@ const jakartaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
 );
 assert(jakartaPosition);
 // Berlin's new conditional lower54 also exceeds Jakarta's upper53.
-assert.equal(jakartaPosition.bestPosition, 20);
+assert.equal(jakartaPosition.bestPosition, 21);
 assert.equal(jakartaPosition.worstPosition, rankAudit.candidateCount);
 
 assert.deepEqual(total(nanjing), { center: null, lower: 49, upper: 64 });
@@ -1205,7 +1205,7 @@ const praguePosition = rankAudit.scenarios.fixed_conditional_centers.caseResults
 );
 assert(praguePosition);
 assert.equal(praguePosition.bestPosition, 1);
-assert.equal(praguePosition.worstPosition, rankAudit.candidateCount - 14);
+assert.equal(praguePosition.worstPosition, rankAudit.candidateCount - 15);
 const tokyoWithoutTec = { ...tokyo };
 delete tokyoWithoutTec.TEC;
 assert.deepEqual(total(tokyoWithoutTec), { center: null, lower: 54, upper: 64 });
@@ -1610,7 +1610,7 @@ const surabayaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResul
   (row: { efua_id: string }) => row.efua_id === "6401"
 );
 assert(surabayaPosition);
-assert.equal(surabayaPosition.bestPosition, 13);
+assert.equal(surabayaPosition.bestPosition, 14);
 assert.equal(surabayaPosition.worstPosition, rankAudit.candidateCount);
 
 assert.deepEqual(total(hangzhou), { center: 58, lower: 58, upper: 58 });
@@ -1700,13 +1700,13 @@ assert.equal(saifaiPosition.worstPosition, rankAudit.candidateCount);
 
 // New priority reviews preserve unresolved dimensions and original weights.
 assert.deepEqual(total(grimsby), { center: null, lower: 42, upper: 67 });
-assert.deepEqual(total(tampere), { center: null, lower: 51, upper: 66 });
+assert.deepEqual(total(tampere), { center: 60, lower: 60, upper: 60 });
 assert.equal(grimsby.GSS, undefined);
-assert.equal(tampere.GSS, undefined);
+assert.equal(tampere.GSS, 60);
 assert.equal(grimsby.LON, undefined);
 assert.equal(tampere.LON, 60);
 assert.deepEqual(total({ ...grimsby, MED: 60 }), { center: null, lower: 45, upper: 70 });
-assert.deepEqual(total({ ...tampere, TEC: 80 }), { center: null, lower: 53, upper: 68 });
+assert.deepEqual(total({ ...tampere, TEC: 80 }), { center: 62, lower: 62, upper: 62 });
 for (const id of [5518, 397]) {
   const caseInput = realCases.find(c => c.candidateId === id);
   assert(caseInput);
@@ -2027,7 +2027,7 @@ for (const id of [4881, 1830]) {
 
 const tampereWithoutLon = { ...tampere };
 delete tampereWithoutLon.LON;
-assert.deepEqual(total(tampereWithoutLon), { center: null, lower: 45, upper: 70 });
+assert.deepEqual(total(tampereWithoutLon), { center: null, lower: 54, upper: 64 });
 const tampereCase = realCases.find(c => c.candidateId === 397);
 assert.equal(tampereCase.lonPriorityReview.sha256, digest(tampereCase.lonPriorityReview.path));
 assert.equal(tampereCase.lonPriorityReview.otherSevenDimensionsUnchanged, true);
@@ -2682,4 +2682,26 @@ for (const dimension of ["ISR", "MED", "LON", "TEC", "OPT"] as const) {
     lower: is15 ? 33 : 34,
     upper: is15 ? 73 : 74,
   });
+}
+
+const tampereGssReview = tampereCase.gssCompletionReview;
+assert.equal(tampereGssReview.sha256, digest(tampereGssReview.path));
+assert.equal(tampereGssReview.researchReportSha256, digest(tampereGssReview.researchReport));
+assert.equal(tampereGssReview.adoptedScore, 60);
+assert.equal(tampereGssReview.frozenResearchRecommendation, null);
+assert.equal(tampereGssReview.rootCorrectedMissedReportedOutcome, true);
+assert.equal(tampereGssReview.reported88PercentIsCitywideGangEffect, false);
+assert.equal(tampereGssReview.rootNewNetworkRequests, 0);
+assert.equal(tampereGssReview.otherSevenDimensionObjectsUnchanged, true);
+assert.equal(total({ ...tampere, GSS: 40 }).center, 57);
+assert.equal(total({ ...tampere, GSS: 80 }).center, 63);
+const tampereWithoutGss = { ...tampere };
+delete tampereWithoutGss.GSS;
+assert.deepEqual(total(tampereWithoutGss), { center: null, lower: 51, upper: 66 });
+assert.equal(tampereGssReview.newSourceCount, 7);
+for (const id of tampereGssReview.newSourceIds) {
+  const sources = tampereCase.sourceSnapshots.filter((s: { id: string }) => s.id === id);
+  assert.equal(sources.length, 1);
+  assert.equal(sources[0].historicalCutoffBytesVerified, false);
+  assert.equal(sources[0].originalSha256, sources[0].sha256);
 }
