@@ -177,8 +177,8 @@
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
     "conditionalCaseCount": 105,
-    "completeConditionalCaseCount": 21,
-    "partialCaseCount": 84,
+    "completeConditionalCaseCount": 22,
+    "partialCaseCount": 83,
     "unassessedCount": 8926,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
@@ -677,9 +677,9 @@
       "provenanceSha256": "78e5af5784387f89ae01947ebb28443584ed8c474a90ff16eafed085458c2065"
     },
     "cci-local-2026-philadelphia-case.json": {
-      "sha256": "8fa332886269401c7d6ca4b30f58d59b7b2ccdce2bd2eb47c2f1d56686c7c181",
-      "provenance": "cci-philadelphia-res-completion-review.md",
-      "provenanceSha256": "75ded70e63b72d71cabf1d85ff55bb608278555393e8489ede283a84bcf921ba"
+      "sha256": "16f45f46a1fa92fbfcf356d3bb5f49d75ddfa0548da4b3942d6f142a0ddbd195",
+      "provenance": "cci-philadelphia-res-reconsideration-review.md",
+      "provenanceSha256": "389275ce9319fc1187a9b47435248f5102f314caa3baec2e09edb456332c6436"
     },
     "cci-local-2026-kuala-lumpur-case.json": {
       "sha256": "07da99b980e13834e6a1e667ed7f6382760413ce553aef0508b6b7a4956f74c2",
@@ -833,5 +833,5 @@
     }
   },
   "scriptSha256": "cd4f2fbac370cb8ec9827bab63da0842475f0cedd2d77b6d992088418c43bc36",
-  "csvSha256": "31203f115b9cb6542bab5462c29705c15f03455902facda379772310395c5bf2"
+  "csvSha256": "635eedafb50f4be1fc2315be17b3d594f0b1dfc72edb3bc40a11ef023df91687"
 }

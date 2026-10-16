@@ -8,7 +8,7 @@
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "residentEligibility": "US national, usual longterm local resident, local median income/usual effective coverage, no fixed age",
   "boundaryVersion": "GHS-FUA R2019A",
-  "evidenceReview": "cci-philadelphia-res-completion-review.md",
+  "evidenceReview": "cci-philadelphia-res-reconsideration-review.md",
   "researchFrozenInputCommit": "6b3a0ee0bf21a272c761765b6fae42b0251fb30a",
   "dimensions": [
     {
@@ -67,9 +67,9 @@
     {
       "id": "RES",
       "weight": 10,
-      "score": null,
-      "conditionalAlternatives": [],
-      "scoreStatus": "reviewed_insufficient_direction",
+      "score": 60,
+      "conditionalAlternatives": [40],
+      "scoreStatus": "conditional_root_adopted",
       "coverageStatus": "bounded_review_not_all_measured",
       "subpillars": {
         "water": "partial",
@@ -77,13 +77,13 @@
         "energy": "partial",
         "supply_chain": "partial"
       },
-      "rationale": "根接受新增能源实际交付、已发资助和默认供应选择为实质正证；与实际供水/费率/减免、食物交付和帮助后价格/资格/食品不安全余障同读。仍不接受从全市或困难群体食品口径推普通中位资源通常食品净取得的较弱代表桥，故RES维持未知/[]；不是来源少、403或缺完美2026家庭总账而降分或封60。",
-      "assumption": "60允许实际水食帮助、可靠电力/已发资助/默认供应与通常中位资源的有限合束判断；须接受食品/家庭净资源代表、观察延续和市/运营域向多州7165的有限桥。根本轮尚不接受食品/净资源方向桥，非认定城市能力低。40需帮助后实际重要余障适配画像，不要求多数/主导/停城；80非零风险。当前维持null/[]，不重配权重。",
+      "rationale": "既存实际水食能与已交付帮助合束，接受普通中位资源通常可承接基本需求的有限代表判断，拟RES60；非新增事实、非源数或多数无障碍换分。",
+      "assumption": "实际日常供水/2026明确费率、运行电力及默认供应、已发救助和每日餐食网络构成正链。接受普通中位资源通常承接基本水食能、必要费用/交通/申请余障仍可管理的有限净取得桥；不默认TAP/CAP/LIHEAP人人资格，不把救助群体数据直接当画像实测。2025–26观察到截止的延续、市与PECO运营域对多州7165核心/shared路径代表均可撤；不宣称所有NJ/DE或家庭同费。拒食品/净资源/范围/时点桥回null/[]，数学域54–64。",
       "alternativeRationales": {
-        "60": "可公平采用的有限合束解释：真实供水/费率/减免、防停水及餐食网络，加上可靠电力、已实际资助与默认供应选择，足以支持通常中位资源能取得基本水食能；接受困难帮助与一般市场能力对目标普通居民的有限代表、必要费用通常可承接、2025–26延续及市/运营域到7165共同服务的桥。不是直接以73%多数/没有崩溃/机构存在评分，也不需新增精确家庭账本。该桥拒绝仍null。",
-        "40": "食品不安全、TAP资料/资格障碍、供能价格上涨和竞争合同实际高价是帮助后重要约束的竞争解释；若有据接受这些实际余障对目标普通居民/服务域的重要影响，40可成立，不需多数、主导或停城。但不能将所有困难/竞争供应者/绿色产品购买者强套中位普通居民，或将403、无完整账本作为40依据。",
-        "80": "若有更强证据表明基本营养/水食能净取得、可靠替代及压力下剩余重要约束得到有效缓解，80可辩；不要求零风险/所有住户相同账单。当前新增不把可选默认/资助人数换成80。",
-        "null": "目前作者不接受关键食品/净资源代表桥，维持null/[]；根可依同尺度接受较弱合理60或有据40，非把未知固定为低分。"
+        "40": "食品不安全、TAP资格/资料障碍及涨价/合同退出费在真实帮助后若对目标普通居民仍重要，可40，不需多数/主导/停城；RES40时全案条件58。不可将困难用户/竞争供应用户一概当中位画像。",
+        "60": "本提案接受已运行一般供给、食物实际供餐及有条件救助组成通常基本净取得的有限代表桥，保留重要短板；不是没有崩溃或供餐量直接换分。",
+        "80": "现有资料未支持更强营养、替代/压力恢复与净取得余量；不要求零风险或全户账单。RES80→62仅算术情景，未建议采用。",
+        "null": "若拒普通中位资源/食品净取得、市运营域/时点桥，恢复原null/[]与54–64，不归一、不补中点。"
       },
       "sourceIds": [
         "RES68-R01",
@@ -190,17 +190,18 @@
       "withdrawToUnknownDomain": [48, 68]
     }
   ],
-  "expectedConditionalTotal": null,
+  "expectedConditionalTotal": 60,
   "limitations": [
-    "RES supplement adopts substantive regionalenergy delivery/aid/defaultchoice evidence but no numerical score;sevenoriginaldimensionobjects retained. Known54/unknown10/domain54–64/no total.",
-    "40/60/80 are fair conditional interpretations withhypothetical totals58/60/62,not adopted point scores;root doesnotyet acceptordinarynetfood/resource representative bridge. No exact2026ledger,majority,shutdown,orzero-risk gate.",
+    "RES reconsidered on existing facts: root now accepts revocable ordinary food/net-resource, service-domain and continuity bridges; conditional total60, unknownWeight0. No new external facts/network. Reject RES restores null/[] and54–64/no total.",
+    "RES40 gives58 as fair residual-constraint interpretation;80 gives62 only a mathematical scenario, not currently supported. No exact2026ledger/majority/shutdown/zero-risk gate. Original7objects and18sourceobjects unchanged, not semantically reaudited; old internal withdrawal domains reflect historical RESunknown, current top-level joint sensitivity is authoritative.",
     "73%customers0or1outage and88minaverage restoration are2025operatorarea observations,notannualperhouseholdoutagetime orfullmultistateFUA supply.",
     "Annual140k/$200m unspecifiedannualwindow and8300Reliefrecipientsto-date areactualtargetedhelp,notall2026newpayments/automaticmedianeligibility. LIHEAPApr10/createdApr14conflict retained,notOcteligibility.",
     "56%electric/65%gas supplypremium forcompetitivecustomersnotalltotalbillinflation;voluntaryproducts/defaultchoice/renewalandexitfeesretained;budgetbillingnotdiscount.",
     "810640mealsnofixedwindow/uniquepeople/nutritionrate;nearlyquartertextvsapprox18%foodriskgraph notresolved. TAP973cheaperalternativesnotfailures;1184documentationbarriersreal;CMCiswateraudit.",
     "Root7reviewrawcopies/7PDFtextpages/5viewedpages/3fullHTMLmainbodies+waterqualityboundedsegmentsnotall18originalsemanticreaudit. Sixouterinput-countdeviationsretained,total4newlegbudgetseparatelyvalid,no scorepenalty/source reset.",
     "Currentbytes/creation/mtime notcutoffhistoricalpublicationauthentication;limitedtimeandservice-domainbridgesrevocable. OldFUA/approxpointsnotprovidercoverage/household/actualjourneys.",
-    "OriginalsevenUTF8objects/15sourceobjects/other97wholecases unchangedincludingpublishedCorby. Research37e1555/97/21androota084101/98/21separate. All9031/newunmatchedretained,zeroexclusions,32thresholdnull/globalRankingEligiblefalse;globalTop32unproven."
+    "OriginalsevenUTF8objects/15sourceobjects/other97wholecases unchangedincludingpublishedCorby. Research37e1555/97/21androota084101/98/21separate. All9031/newunmatchedretained,zeroexclusions,32thresholdnull/globalRankingEligiblefalse;globalTop32unproven.",
+    "2026-10-16 reconsideration fixed4b9383f/105cases/21complete; now105/22complete/83partial/8926unassessed. Other104wholecasebytes and5historicalreleases unchanged. Root reread7raw/5PDFpages/3fullHTML+boundedwaterquality; no fresh geometry. Prior6outer-unit deviations retained, current2additional outer-call deviations disclosed; not all-process or cutoff-byte certification."
   ],
   "sourceSnapshots": [
     {
@@ -874,8 +875,8 @@
   },
   "newCitiesScoredForGlobalRanking": 0,
   "publishedInputCommit": "a084101d6253831fdd806fffcf15b2034fdca6ff",
-  "knownWeightedSubtotal": 54,
-  "unresolvedScoreRange": [54, 64],
+  "knownWeightedSubtotal": 60,
+  "unresolvedScoreRange": [60, 60],
   "globalRankingEligible": false,
   "scopeCompletionReview": {
     "candidateId": 7165,
@@ -1117,15 +1118,16 @@
     }
   ],
   "sensitivity": {
-    "withdrawPCS": [45, 70],
-    "withdrawGSS": [45, 70],
-    "withdrawISR": [45, 70],
-    "withdrawMED": [45, 70],
-    "withdrawLON": [48, 68],
-    "withdrawTEC": [48, 68],
-    "withdrawOPT": [48, 68],
-    "any15Percent60to40": [51, 61],
-    "any10Percent60to40": [52, 62],
+    "withdrawPCS": [51.0, 66.0],
+    "withdrawGSS": [51.0, 66.0],
+    "withdrawISR": [51.0, 66.0],
+    "withdrawRES": [54.0, 64.0],
+    "withdrawMED": [51.0, 66.0],
+    "withdrawLON": [54.0, 64.0],
+    "withdrawTEC": [54.0, 64.0],
+    "withdrawOPT": [54.0, 64.0],
+    "RES40Total": 58,
+    "RES80TotalNotAdopted": 62,
     "allKnownWithdrawn": [0, 100]
   },
   "rootScopeReview": {
@@ -1185,7 +1187,7 @@
     "discoveryQueries": 8
   },
   "publishedInputCases": 98,
-  "unknownWeight": 10,
+  "unknownWeight": 0,
   "resourceFailedSourceSnapshots": [
     {
       "id": "RES68-S04",
@@ -1223,12 +1225,11 @@
     }
   ],
   "resourceSensitivity": {
+    "adoptedConditionalRES60Total": 60,
     "conditionalRES40Total": 58,
-    "conditionalRES60Total": 60,
-    "conditionalRES80Total": 62,
-    "RESRemainsUnknownDomain": [54, 64],
-    "allJudgmentsWithdrawn": [0, 100],
-    "alternativeTotalsNotAdoptedScores": true
+    "conditionalRES80TotalNotAdopted": 62,
+    "RESWithdrawnDomain": [54, 64],
+    "allJudgmentsWithdrawn": [0, 100]
   },
   "resourceScopeReview": {
     "validOriginalsVerified": 7,
@@ -1808,6 +1809,62 @@
     },
     "originalFifteenSourceSnapshotsJSONHash": "b8593ff44954a6799a65adf20f84b59814c9c211f4d98cee222797921938dbb4"
   },
-  "reportSha256": "75ded70e63b72d71cabf1d85ff55bb608278555393e8489ede283a84bcf921ba",
-  "reportBytes": 6323
+  "reportSha256": "389275ce9319fc1187a9b47435248f5102f314caa3baec2e09edb456332c6436",
+  "reportBytes": 6093,
+  "resourceReconsiderationReview": {
+    "path": "docs/cci-philadelphia-res-reconsideration-review.md",
+    "sha256": "389275ce9319fc1187a9b47435248f5102f314caa3baec2e09edb456332c6436",
+    "reviewedOn": "2026-10-16",
+    "fixedInputCommit": "4b9383faadaa33f0c3e0874658c94ee7a7c9e6a7",
+    "fixedCases": 105,
+    "fixedComplete": 21,
+    "newExternalFacts": 0,
+    "newHTTPActualLegs": 0,
+    "newDiscoveryQueries": 0,
+    "researchManifestSha256": "55fb74dcdf46be506ae9382b00aadaf359bc44388fed1f1b46f2021b6496c236",
+    "researchReportSha256": "047d30d635f657191ddff0107f1678566d1b868313e9085e38e93bb805c75ae1",
+    "researchResultSha256": "07129951a2ffe8c4e390185faa8b78deea883737934a134f1e62d683861b4054",
+    "researchProposalSha256": "15e56b0f5cfa38cbd0c0df16323e3edde25dc4ece11ac815c8d646659fdeb31e",
+    "frozenPayloadsVerified": 30,
+    "frozenPayloadBytes": 4723136,
+    "rootRawIdentitiesVerified": 7,
+    "rootPdfTextPages": 5,
+    "rootPdfPagesActuallyViewed": 5,
+    "rootHtmlFullMainBodies": 3,
+    "rootWaterQualityRead": "opening7000 and selectedlead/immun/PFAS contexts only",
+    "allSourceBodiesReaudited": false,
+    "otherSevenReaudited": false,
+    "newGeometryCalculation": false,
+    "sameCutoffBytesAuthenticated": false,
+    "priorSixProcessDifferencesRetained": true,
+    "currentOuterUnitDifferences": [
+      {
+        "meaning": "Two code files+smokehelper+baseline in one outer execution",
+        "conservativeUnits": 4,
+        "network": 0
+      },
+      {
+        "meaning": "Two preeditcopies+formatthreefiles in one outer execution",
+        "conservativeUnits": 5,
+        "network": 0
+      }
+    ],
+    "currentLocalSchemaReadErrorsCorrected": 2,
+    "originalSevenDimensionObjectsUnchanged": true,
+    "originalEighteenSourceObjectsUnchanged": true,
+    "originalEighteenSourceObjectsSha256": "2f1961e81ec5f1666f5a77ad2d482cacb13b6a84f14075b265228aa8add5b79b",
+    "other104WholeCasesUnchanged": true,
+    "historicReviewFieldsRemainHistorical": true,
+    "acceptedNecessaryConnections": [
+      "A-food-to-portrait",
+      "A-net-resource",
+      "A-time-service-domain"
+    ],
+    "rejectBridge": {
+      "score": null,
+      "conditionalAlternatives": [],
+      "domain": [54, 64],
+      "total": null
+    }
+  }
 }
