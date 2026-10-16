@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 116,
+    "conditionalCaseCount": 117,
     "completeConditionalCaseCount": 25,
-    "partialCaseCount": 91,
-    "unassessedCount": 8915,
+    "partialCaseCount": 92,
+    "unassessedCount": 8914,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -885,8 +885,13 @@
       "sha256": "c35ded8c4bd907d1f7594f24e46989fef1c32f7b507686480d599dd4ebbca008",
       "provenance": "cci-flensburg-priority-review.md",
       "provenanceSha256": "5f6cc6515a8a686a2a7cc31c4cbc3a9b315a86a7fb89da774000757d089b92b7"
+    },
+    "cci-local-2026-maldonado-case.json": {
+      "sha256": "1cad57ab78071d65d2d12a2307559f403b13935c2be6f6246004db8088fa0503",
+      "provenance": "cci-maldonado-priority-review.md",
+      "provenanceSha256": "671967dc9f8441cd480f29fbc545bfc11f9480bcb5aec3c67a88901bb99ec14f"
     }
   },
-  "scriptSha256": "4a7e319a995a901be7edbd2708f357ff40f886907eea4953aa5854f753de6270",
-  "csvSha256": "8a7f8cd41dc1ca4ae873a4a28f5e308f68d3080ff36675fd73b480be4a1fd39c"
+  "scriptSha256": "47fa99de9acb9e258e99c55bbccf1022d0a2e5300299e7f82dd0075a1402d86e",
+  "csvSha256": "bc7a6f429f23d70ec2cb27f4152c76a999b9a1fc384b7241048b953b60d8a93d"
 }

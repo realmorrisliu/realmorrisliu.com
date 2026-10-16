@@ -126,6 +126,7 @@ import alkmaar from "../../docs/data/cci-local-2026-alkmaar-case.json";
 import bydgoszcz from "../../docs/data/cci-local-2026-bydgoszcz-case.json";
 import bilbao from "../../docs/data/cci-local-2026-bilbao-case.json";
 import flensburg from "../../docs/data/cci-local-2026-flensburg-case.json";
+import maldonado from "../../docs/data/cci-local-2026-maldonado-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -256,8 +257,10 @@ const cases = [
   bydgoszcz,
   bilbao,
   flensburg,
+  maldonado,
 ];
 const caseNamesZh: Record<number, string> = {
+  [maldonado.candidateId]: "马尔多纳多功能区",
   [flensburg.candidateId]: "弗伦斯堡功能区",
   [bilbao.candidateId]: "毕尔巴鄂功能区",
   [bydgoszcz.candidateId]: "比得哥什功能区",
@@ -480,6 +483,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [maldonado.candidateId]: [
+    zh
+      ? "马尔多纳多制度／医疗／专项转化／技术条件60，防护／安全／资源／退出未知。贡献30、数学域30—80，无完整总分。真实服务修正、全天护理、全国成熟造血重建及共享监测产用支持有限判断；通常质量、支付、异地反复净照护和地域／时间代表桥可撤。"
+      : "Maldonado has conditional ISR/MED/LON/TEC 60; PCS/GSS/RES/OPT remain unknown. Contribution is 30, with a 30–80 arithmetic domain and no complete total. Delivered service corrections, round-the-clock care, mature national HSCT and shared monitoring production support bounded judgments. Usual quality, payment, repeat care away from home, geography and continuity bridges are revocable.",
+    zh
+      ? "专项转化40公平解释为28—78，资源60为36—76、防护60为39—74。全国移植授权非全部实施，旧生存表非本市2026疗效；评估延期、资格／费用及陪护负担保留。全省服务池、全国补贴户和旧70km²边界不互换，校园点非项目足迹、界外服务亦可实际惠及本地；全球入围未证。"
+      : "Fair LON40, RES60 and PCS60 interpretations give 28–78, 36–76 and 39–74. National transplant approvals are not all delivered, and historic survival is not a local 2026 rate. Assessment delays, eligibility, fees and family care remain constraints. Departmental service pools, national subsidy households and the old 70 km² boundary differ. A campus point is not a project footprint; outside services can still benefit residents. Global inclusion is unproven.",
+  ],
   [flensburg.candidateId]: [
     zh
       ? "弗伦斯堡防护／制度／医疗／专项转化／技术条件60，安全／资源／退出未知。贡献39、数学域39—74，无完整总分。实际排水维护、协同部署、水热交付及护理接续支持有限判断；防潮墙测试非实灾，锅炉限用与未来工程同权，通常质量／付款／反复净照护和较长技术持续桥可撤。"

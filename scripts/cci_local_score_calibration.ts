@@ -168,6 +168,7 @@ const realCases = [
   "bydgoszcz",
   "bilbao",
   "flensburg",
+  "maldonado",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -327,6 +328,7 @@ const [
   bydgoszcz,
   bilbao,
   flensburg,
+  maldonado,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4504,6 +4506,49 @@ assert(
   lasPalmasCase.coverageReview.length === 31 &&
     lasPalmasCase.coverageReview.every(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
+    )
+);
+
+const maldonadoCase = realCases.find(c => c.candidateId === 1145);
+assert.equal(
+  maldonadoCase.priorityCompletionReview.sha256,
+  digest(maldonadoCase.priorityCompletionReview.path)
+);
+assert.equal(
+  maldonadoCase.priorityCompletionReview.researchReportSha256,
+  digest(maldonadoCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(maldonado, { ISR: 60, MED: 60, LON: 60, TEC: 60 });
+assert.deepEqual(total(maldonado), { center: null, lower: 30, upper: 80 });
+assert.deepEqual(total({ ...maldonado, LON: 40 }), { center: null, lower: 28, upper: 78 });
+assert.deepEqual(total({ ...maldonado, RES: 60 }), { center: null, lower: 36, upper: 76 });
+assert.deepEqual(total({ ...maldonado, PCS: 60 }), { center: null, lower: 39, upper: 74 });
+for (const id of ["ISR", "MED", "LON", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...maldonado };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    maldonadoCase.sensitivity.withdrawals[id]
+  );
+}
+for (const flag of [
+  "departmentEqualsFua",
+  "allNationalEnergyBeneficiariesAreLocal",
+  "allAffiliationIsFree",
+  "approvalEqualsRealizedTransplant",
+  "historicNationalSurvivalIsCurrentLocalRate",
+  "allTransplantTravelAndFamilyCostsPaid",
+  "genericDrugFollowupIsHSCTProtocol",
+  "currentLinkedNormCertifiedLatest2026",
+  "campusPointProvesProjectFootprint",
+  "additionalTreatmentCapacityAllUsed",
+  "sourceFailurePenalizesCity",
+])
+  assert.equal(maldonadoCase.rootScopeReview[flag], false);
+assert(
+  maldonadoCase.coverageReview.length === 31 &&
+    maldonadoCase.coverageReview.every(
+      (c: { score: null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
 
