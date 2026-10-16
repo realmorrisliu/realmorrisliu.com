@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 110,
+    "conditionalCaseCount": 111,
     "completeConditionalCaseCount": 25,
-    "partialCaseCount": 85,
-    "unassessedCount": 8921,
+    "partialCaseCount": 86,
+    "unassessedCount": 8920,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -855,8 +855,13 @@
       "sha256": "6a29664a9ba26cedcd51317d99cfe4d730c9885c27f1900fa6ba638cc3165b80",
       "provenance": "cci-vilnius-priority-review.md",
       "provenanceSha256": "184e66779bcd447618e184f9ae6b096d49db5162f88956283ba72aa37fcff5a1"
+    },
+    "cci-local-2026-blackpool-case.json": {
+      "sha256": "85de31cd3909a88701d406423107bde860ac1085be57427794e59e4879422fd5",
+      "provenance": "cci-blackpool-priority-review.md",
+      "provenanceSha256": "25497f89b2d734151f0cb2cf9f4545b999d62dee33a79bb741e811e2ef9143ae"
     }
   },
-  "scriptSha256": "0fb23998340f43f1f707827adbdc779ebd3782ad38572f8e92a3be3515755c83",
-  "csvSha256": "8d58153a064b10ccb66cf64031b3d0d62a9305c0678cfffeaa73a1408fd869ae"
+  "scriptSha256": "9b0d021d0da9cb7d21908e26839dd53e61afe92de769cf3ad2f79ce0aa3c7e9a",
+  "csvSha256": "86d5915ca9d6e348ff8eafbf9696e2430c694ed03f0be654c3bc0f111af028df"
 }

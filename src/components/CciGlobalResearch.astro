@@ -120,6 +120,7 @@ import bremen from "../../docs/data/cci-local-2026-bremen-case.json";
 import larbert from "../../docs/data/cci-local-2026-larbert-case.json";
 import panevezys from "../../docs/data/cci-local-2026-panevezys-case.json";
 import vilnius from "../../docs/data/cci-local-2026-vilnius-case.json";
+import blackpool from "../../docs/data/cci-local-2026-blackpool-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -244,8 +245,10 @@ const cases = [
   larbert,
   panevezys,
   vilnius,
+  blackpool,
 ];
 const caseNamesZh: Record<number, string> = {
+  [blackpool.candidateId]: "布莱克浦功能区",
   [vilnius.candidateId]: "维尔纽斯功能区",
   [panevezys.candidateId]: "帕内韦日斯功能区",
   [larbert.candidateId]: "拉伯特功能区",
@@ -462,6 +465,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [blackpool.candidateId]: [
+    zh
+      ? "布莱克浦防护／安全／制度／资源／技术条件60，医疗／专项转化／退出未知。贡献39、数学域39—74，无完整总分。实际海岸与保供、组织犯罪处置、住宅适配和专业网络服务支持有限判断；地域、时间与通常净取得桥可撤，安全40是公平替代。"
+      : "Blackpool has conditional PCS/GSS/ISR/RES/TEC 60; MED/LON/OPT remain unknown. Contribution is 39, with a 39–74 arithmetic domain and no complete total. Delivered coastal and utility protection, organized-crime intervention, housing adaptation and specialist network services support bounded judgments; geography, time and usual net-access bridges are revocable, with GSS40 a fair alternative.",
+    zh
+      ? "资源维依赖旧家庭帮扶到2026普通中位净取得的较强假设，拒则回未知、域33—78。623加3刀具属整个警务分区，423是用品／券项数；可达物业非订户，联合工程受保护物业非全本地。首三次响应捕捉丢失不扣城市分，全球入围未证。"
+      : "RES needs a stronger bridge from older household support to ordinary median-resource access in2026; rejecting it returns RES to unknown and the domain to33–78. The623 plus3 knives cover the police division, while423 counts items or vouchers. Reachable premises are not subscribers, and joint-project properties are not all local. Three lost response captures do not penalize the city; global inclusion is unproven.",
+  ],
   [vilnius.candidateId]: [
     zh
       ? "维尔纽斯防护／安全／制度／退出条件40，专项转化／技术条件60，资源／医疗未知。贡献34、数学域34—59，无完整总分。工程、转送与照护确有交付，帮助后仍有重要积水、重复安全限制及住宅适配等候；四个40均保留60公平解释。"

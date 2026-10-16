@@ -162,6 +162,7 @@ const realCases = [
   "larbert",
   "panevezys",
   "vilnius",
+  "blackpool",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -315,6 +316,7 @@ const [
   larbert,
   panevezys,
   vilnius,
+  blackpool,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4492,6 +4494,48 @@ assert(
   lasPalmasCase.coverageReview.length === 31 &&
     lasPalmasCase.coverageReview.every(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
+    )
+);
+
+const blackpoolCase = realCases.find(c => c.candidateId === 2574);
+assert.equal(
+  blackpoolCase.priorityCompletionReview.sha256,
+  digest(blackpoolCase.priorityCompletionReview.path)
+);
+assert.equal(
+  blackpoolCase.priorityCompletionReview.researchReportSha256,
+  digest(blackpoolCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(blackpool, { PCS: 60, GSS: 60, ISR: 60, RES: 60, TEC: 60 });
+assert.deepEqual(total(blackpool), { center: null, lower: 39, upper: 74 });
+assert.deepEqual(total({ ...blackpool, GSS: 40 }), { center: null, lower: 36, upper: 71 });
+for (const id of ["PCS", "GSS", "ISR", "RES", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...blackpool };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    blackpoolCase.sensitivity.withdrawals[id]
+  );
+}
+assert.equal(blackpoolCase.sourceSnapshots.length, 9);
+assert.equal(blackpoolCase.webReadSources.length, 3);
+assert(
+  blackpoolCase.webReadSources.every(
+    (s: { sha256: null; isWebsiteRaw: boolean }) => s.sha256 === null && !s.isWebsiteRaw
+  )
+);
+for (const flag of [
+  "knivesAreBlackpoolAttackers",
+  "joint12000PropertiesAreAllLocal",
+  "foodItemsAreHouseholds",
+  "medianResidentsAutomaticallyAidEligible",
+  "initialLostResponsesHaveKnownStatus",
+])
+  assert.equal(blackpoolCase.rootScopeReview[flag], false);
+assert(
+  blackpoolCase.coverageReview.length === 31 &&
+    blackpoolCase.coverageReview.every(
+      (c: { score: null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
 
