@@ -151,6 +151,7 @@ const realCases = [
   "odense",
   "corby",
   "livingston",
+  "szczecin",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -293,6 +294,7 @@ const [
   odense,
   corby,
   livingston,
+  szczecin,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4091,4 +4093,50 @@ assert.equal(
 assert.deepEqual(
   livingstonCase.dimensions.find((d: { id: string }) => d.id === "TEC").conditionalAlternatives,
   []
+);
+
+const szczecinCase = realCases.find(c => c.candidateId === 140);
+assert.equal(
+  szczecinCase.priorityCompletionReview.sha256,
+  digest(szczecinCase.priorityCompletionReview.path)
+);
+assert.equal(
+  szczecinCase.priorityCompletionReview.researchReportSha256,
+  digest(szczecinCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(szczecin), { center: null, lower: 30, upper: 80 });
+assert.equal(szczecinCase.unknownWeight, 50);
+assert.deepEqual(
+  szczecinCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["PCS", "GSS", "RES", "OPT"]
+);
+for (const [id, lower, upper] of [
+  ["ISR", 21, 86],
+  ["MED", 21, 86],
+  ["LON", 24, 84],
+  ["TEC", 24, 84],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...szczecin };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.equal(szczecinCase.sourceSnapshots.length, 20);
+assert(szczecinCase.sourceSnapshots.every((s: { validOriginal: boolean }) => s.validOriginal));
+assert.equal(szczecinCase.failedSourceSnapshots.length, 2);
+assert(
+  szczecinCase.webReadSources.every(
+    (s: { websiteRawSHA256: string | null }) => s.websiteRawSHA256 === null
+  )
+);
+assert.equal(szczecinCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
+assert.equal(szczecinCase.rootScopeReview.specificCARTProductPayerDirectlyVerified, false);
+assert.equal(szczecinCase.rootScopeReview.CARTSpecificRepeatFollowupDirectlyVerified, false);
+assert.equal(szczecinCase.rootScopeReview.rootSelectedPdfTextPageCount, 30);
+assert.equal(szczecinCase.rootScopeReview.rootPdfPageCount, 7);
+assert(
+  szczecinCase.dimensions.every(
+    (d: { conditionalAlternatives: number[] }) => d.conditionalAlternatives.length === 0
+  )
 );

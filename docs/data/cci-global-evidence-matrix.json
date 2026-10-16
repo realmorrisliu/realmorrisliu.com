@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 99,
+    "conditionalCaseCount": 100,
     "completeConditionalCaseCount": 21,
-    "partialCaseCount": 78,
-    "unassessedCount": 8932,
+    "partialCaseCount": 79,
+    "unassessedCount": 8931,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -800,8 +800,13 @@
       "sha256": "57fc0bdcbcd2160e50b0966812b8291ec49ed266545ea16e92217b28f8cb5de4",
       "provenance": "cci-livingston-score-completion-review.md",
       "provenanceSha256": "1ddd5b314509efbbf389a012e4600730f42dc7fb7d7ea2938e0a646c90d40811"
+    },
+    "cci-local-2026-szczecin-case.json": {
+      "sha256": "89f4edc58ac0071f4e8216734c4ef1789b8e9592857129ae82ac26182bbf16fe",
+      "provenance": "cci-szczecin-score-completion-review.md",
+      "provenanceSha256": "e9242c4394109543be56eb736fa1f8585245d2f8ec3d0886b7713cc4ba5961cd"
     }
   },
-  "scriptSha256": "7ac11eb027a0359b02974fff319a20074f0a7c68972540d52f30f1603b13bc80",
-  "csvSha256": "23f713eb8d62bfe41017fe45b8c287b8094acf51b2246ff4a81d7e0f686c8f02"
+  "scriptSha256": "7cd2ca6d6d4fc748a66194291b3268d81eeb557f5e8248d247f94f819640daa9",
+  "csvSha256": "d78c92ff6f92544778ac7b2c00578bb48da4acb4d45629647b68d7ba554dca88"
 }

@@ -4,10 +4,10 @@
   "evidenceCutoff": "2026-10-10",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
-  "conditionalCaseCount": 99,
+  "conditionalCaseCount": 100,
   "completeConditionalCaseCount": 21,
-  "partialCaseCount": 78,
-  "unassessedCount": 8932,
+  "partialCaseCount": 79,
+  "unassessedCount": 8931,
   "weights": {
     "PCS": 15,
     "GSS": 15,
@@ -88,6 +88,15 @@
           "center": null,
           "lower": 36.0,
           "upper": 71.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "140",
+          "source_name": "Szczecin",
+          "center": null,
+          "lower": 30.0,
+          "upper": 80.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -982,6 +991,15 @@
         {
           "efua_id": "103",
           "source_name": "Luxembourg",
+          "center": null,
+          "lower": 30.0,
+          "upper": 80.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "140",
+          "source_name": "Szczecin",
           "center": null,
           "lower": 30.0,
           "upper": 80.0,
@@ -1886,6 +1904,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "140",
+          "source_name": "Szczecin",
+          "center": null,
+          "lower": 30.0,
+          "upper": 80.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "154",
           "source_name": "Singapore",
           "center": null,
@@ -2779,6 +2806,15 @@
           "center": null,
           "lower": 27.0,
           "upper": 77.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "140",
+          "source_name": "Szczecin",
+          "center": null,
+          "lower": 21.0,
+          "upper": 86.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -3680,6 +3716,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "140",
+          "source_name": "Szczecin",
+          "center": null,
+          "lower": 30.0,
+          "upper": 80.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "154",
           "source_name": "Singapore",
           "center": null,
@@ -4573,6 +4618,15 @@
           "center": null,
           "lower": 27.0,
           "upper": 77.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "140",
+          "source_name": "Szczecin",
+          "center": null,
+          "lower": 21.0,
+          "upper": 86.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -5474,6 +5528,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "140",
+          "source_name": "Szczecin",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "154",
           "source_name": "Singapore",
           "center": null,
@@ -6367,6 +6430,15 @@
           "center": null,
           "lower": 30.0,
           "upper": 75.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "140",
+          "source_name": "Szczecin",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -7268,6 +7340,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "140",
+          "source_name": "Szczecin",
+          "center": null,
+          "lower": 30.0,
+          "upper": 80.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "154",
           "source_name": "Singapore",
           "center": null,
@@ -8165,6 +8246,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "140",
+          "source_name": "Szczecin",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "154",
           "source_name": "Singapore",
           "center": null,
@@ -9008,7 +9098,7 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "23f713eb8d62bfe41017fe45b8c287b8094acf51b2246ff4a81d7e0f686c8f02",
+    "cci-global-evidence-matrix.csv": "d78c92ff6f92544778ac7b2c00578bb48da4acb4d45629647b68d7ba554dca88",
     "cci-legal-mobility-rules.json": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "cci-legal-mobility.md": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e",
     "cci-local-2026-singapore-case.json": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -9209,12 +9299,14 @@
     "cci-corby-score-completion-review.md": "ba5db5c6b81670c72987a9eea7481bd2874d49d453c5240b40d4600e2983d986",
     "cci-local-2026-livingston-case.json": "57fc0bdcbcd2160e50b0966812b8291ec49ed266545ea16e92217b28f8cb5de4",
     "cci-livingston-score-completion-review.md": "1ddd5b314509efbbf389a012e4600730f42dc7fb7d7ea2938e0a646c90d40811",
+    "cci-local-2026-szczecin-case.json": "89f4edc58ac0071f4e8216734c4ef1789b8e9592857129ae82ac26182bbf16fe",
+    "cci-szczecin-score-completion-review.md": "e9242c4394109543be56eb736fa1f8585245d2f8ec3d0886b7713cc4ba5961cd",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "ccdec260f253568ec86b7caaddca3ac3ef2dbd6c1e8ad886a1b110250e7c66bc",
+    "cci-global-evidence-matrix.json": "e6d3902df0ed2c9535893887ee17296cabc67d8711423d5925d0a0608f8ff42c",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "fd6c0148cbfa51724853f6eae99bbafb644ce87de24b8a2c5def6fc527650886"
+    "cci-local-2026-scoring-calibration.md": "bfb9d0f1afce1827288a07e670ec55675988126f95da225fda1a6be8304d99ff"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "d618ff163745cb7627c8a9d29cab9d187c4ba36b6f5caabe074111abf2779eec",
+  "csvSha256": "da5b94bde606a5d06597f36db345a0cd3ec22892bb18eaa09d35d8e43d9fcafe",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }

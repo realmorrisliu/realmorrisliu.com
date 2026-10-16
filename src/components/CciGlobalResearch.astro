@@ -109,6 +109,7 @@ import hilversum from "../../docs/data/cci-local-2026-hilversum-case.json";
 import odense from "../../docs/data/cci-local-2026-odense-case.json";
 import corby from "../../docs/data/cci-local-2026-corby-case.json";
 import livingston from "../../docs/data/cci-local-2026-livingston-case.json";
+import szczecin from "../../docs/data/cci-local-2026-szczecin-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -222,8 +223,10 @@ const cases = [
   odense,
   corby,
   livingston,
+  szczecin,
 ];
 const caseNamesZh: Record<number, string> = {
+  [szczecin.candidateId]: "什切青功能区",
   [livingston.candidateId]: "利文斯顿功能区",
   [corby.candidateId]: "科比功能区（含凯特林）",
   [odense.candidateId]: "欧登塞功能区",
@@ -429,6 +432,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [szczecin.candidateId]: [
+    zh
+      ? "什切青制度／医疗／专项转化／技术条件60，四维未知。原权重贡献30、数学域30—80，无完整总分。实际公共服务、当地诊疗与技术产用支持有限判断，地域、时点、质量及普通净取得假设可撤。"
+      : "Szczecin has conditional ISR/MED/LON/TEC 60; four dimensions remain unknown. Its original-weight contribution is 30 and arithmetic domain 30–80, without a complete total. Delivered public services, local care and productive technology support scoped judgments; geography, time, quality and usual net access assumptions are revocable.",
+    zh
+      ? "专项转化仍依赖未具名治疗属成熟CAR-T类、宽B细胞项目通常付款及反复照护可承担的推定；具体产品支付未直接核实，普通移植门诊非CAR-T专项随诊。任一必要推定拒绝则该维未知。认证非结局率，热援助预计支付非已发放；全球入围未证明。"
+      : "LON still assumes that the unnamed treatment belongs to a mature CAR-T class, the broad B-cell programme usually pays for eligible care, and repeat care is affordable. Specific product payment is not directly verified; a general transplant clinic is not CAR-T-specific follow-up. Rejecting a necessary inference restores unknown. Accreditation is not an outcome rate, and expected heat-benefit payments are not delivered payments; global qualification is unproven.",
+  ],
   [livingston.candidateId]: [
     zh
       ? "利文斯顿制度／技术条件60、医疗条件40，五维未知。原权重贡献21、数学域21—81，无完整总分。真实救助、风暴恢复、地方制造和居家护理应用，与财务韧性及出院接续余障一起判断；地域、时间、普通净照护与技术广度假设可撤。"
