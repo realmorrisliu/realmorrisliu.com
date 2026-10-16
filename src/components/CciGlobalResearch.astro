@@ -121,6 +121,7 @@ import larbert from "../../docs/data/cci-local-2026-larbert-case.json";
 import panevezys from "../../docs/data/cci-local-2026-panevezys-case.json";
 import vilnius from "../../docs/data/cci-local-2026-vilnius-case.json";
 import blackpool from "../../docs/data/cci-local-2026-blackpool-case.json";
+import miltonKeynes from "../../docs/data/cci-local-2026-milton-keynes-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -246,8 +247,10 @@ const cases = [
   panevezys,
   vilnius,
   blackpool,
+  miltonKeynes,
 ];
 const caseNamesZh: Record<number, string> = {
+  [miltonKeynes.candidateId]: "米尔顿凯恩斯功能区",
   [blackpool.candidateId]: "布莱克浦功能区",
   [vilnius.candidateId]: "维尔纽斯功能区",
   [panevezys.candidateId]: "帕内韦日斯功能区",
@@ -465,6 +468,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [miltonKeynes.candidateId]: [
+    zh
+      ? "米尔顿凯恩斯防护／医疗条件40，制度／专项转化／技术条件60，安全／资源／退出未知。贡献33、数学域33—68，无完整总分。实际防洪减损与护理改善同权，帮助后洪灾余障和必要治疗长候支持40；两项均保留60公平解释，旧观察至2026延续可撤。"
+      : "Milton Keynes has conditional PCS/MED 40 and ISR/LON/TEC 60; GSS/RES/OPT remain unknown. Contribution is 33, with a 33–68 arithmetic domain and no complete total. Actual flood mitigation and care improvements coexist with important remaining flood impacts and necessary-treatment waits. Both 40s retain fair 60 alternatives; continuity from older observations to 2026 is revocable.",
+    zh
+      ? "专项转化采用牛津区域造血重建转诊、普通付款及净反复照护桥，非本地给药或外国疗效移植；住宿／餐券有真实支持，也有四房容量与照护责任。技术持续产用桥较长，拒则未知、域27—72；未来Hub不算已成，一般犯罪表非组织安全，全球入围未证。"
+      : "LON uses revocable Oxford regional HSCT referral, usual payment and net repeat-care bridges; it does not claim local administration or import foreign outcomes. Accommodation and meal support coexist with four-room capacity and care responsibilities. TEC needs a longer production-and-diffusion continuity bridge; rejecting it returns TEC to unknown and the domain to 27–72. A future hub is not delivered capacity, and general crime tables do not establish organized safety; global inclusion is unproven.",
+  ],
   [blackpool.candidateId]: [
     zh
       ? "布莱克浦防护／安全／制度／资源／技术条件60，医疗／专项转化／退出未知。贡献39、数学域39—74，无完整总分。实际海岸与保供、组织犯罪处置、住宅适配和专业网络服务支持有限判断；地域、时间与通常净取得桥可撤，安全40是公平替代。"

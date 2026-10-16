@@ -163,6 +163,7 @@ const realCases = [
   "panevezys",
   "vilnius",
   "blackpool",
+  "milton-keynes",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -317,6 +318,7 @@ const [
   panevezys,
   vilnius,
   blackpool,
+  miltonKeynes,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4494,6 +4496,47 @@ assert(
   lasPalmasCase.coverageReview.length === 31 &&
     lasPalmasCase.coverageReview.every(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
+    )
+);
+
+const miltonKeynesCase = realCases.find(c => c.candidateId === 5087);
+assert.equal(
+  miltonKeynesCase.priorityCompletionReview.sha256,
+  digest(miltonKeynesCase.priorityCompletionReview.path)
+);
+assert.equal(
+  miltonKeynesCase.priorityCompletionReview.researchReportSha256,
+  digest(miltonKeynesCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(miltonKeynes, { PCS: 40, ISR: 60, MED: 40, LON: 60, TEC: 60 });
+assert.deepEqual(total(miltonKeynes), { center: null, lower: 33, upper: 68 });
+for (const id of ["PCS", "ISR", "MED", "LON", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...miltonKeynes };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    miltonKeynesCase.sensitivity.withdrawals[id]
+  );
+}
+for (const id of ["PCS", "MED"] as const)
+  assert.deepEqual(total({ ...miltonKeynes, [id]: 60 }), { center: null, lower: 36, upper: 71 });
+assert(
+  miltonKeynesCase.webReadSources.every(
+    (s: { sha256: null; isWebsiteRaw: boolean }) => s.sha256 === null && !s.isWebsiteRaw
+  )
+);
+for (const f of [
+  "floodPropertiesArePeople",
+  "foreignOutcomeIsLocalOutcome",
+  "OxfordBmtIs5087LocalDelivery",
+  "futureHubIsDelivered",
+  "crimeOutcomesAreConvictions",
+])
+  assert.equal(miltonKeynesCase.rootScopeReview[f], false);
+assert(
+  miltonKeynesCase.coverageReview.length === 31 &&
+    miltonKeynesCase.coverageReview.every(
+      (c: { score: null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
 

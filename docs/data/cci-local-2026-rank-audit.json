@@ -4,10 +4,10 @@
   "evidenceCutoff": "2026-10-10",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
-  "conditionalCaseCount": 111,
+  "conditionalCaseCount": 112,
   "completeConditionalCaseCount": 25,
-  "partialCaseCount": 86,
-  "unassessedCount": 8920,
+  "partialCaseCount": 87,
+  "unassessedCount": 8919,
   "weights": {
     "PCS": 15,
     "GSS": 15,
@@ -828,6 +828,15 @@
           "upper": 60.0,
           "bestPosition": 6,
           "worstPosition": 9019
+        },
+        {
+          "efua_id": "5087",
+          "source_name": "Milton Keynes",
+          "center": null,
+          "lower": 33.0,
+          "upper": 68.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
         },
         {
           "efua_id": "5129",
@@ -1831,6 +1840,15 @@
           "center": null,
           "lower": 51.0,
           "upper": 66.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "5087",
+          "source_name": "Milton Keynes",
+          "center": null,
+          "lower": 27.0,
+          "upper": 77.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -2840,6 +2858,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "5087",
+          "source_name": "Milton Keynes",
+          "center": null,
+          "lower": 33.0,
+          "upper": 68.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "5129",
           "source_name": "Tokyo",
           "center": null,
@@ -3841,6 +3868,15 @@
           "center": null,
           "lower": 51.0,
           "upper": 66.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "5087",
+          "source_name": "Milton Keynes",
+          "center": null,
+          "lower": 24.0,
+          "upper": 74.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -4850,6 +4886,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "5087",
+          "source_name": "Milton Keynes",
+          "center": null,
+          "lower": 33.0,
+          "upper": 68.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "5129",
           "source_name": "Tokyo",
           "center": null,
@@ -5851,6 +5896,15 @@
           "center": null,
           "lower": 51.0,
           "upper": 66.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "5087",
+          "source_name": "Milton Keynes",
+          "center": null,
+          "lower": 27.0,
+          "upper": 77.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -6860,6 +6914,15 @@
           "worstPosition": 9030
         },
         {
+          "efua_id": "5087",
+          "source_name": "Milton Keynes",
+          "center": null,
+          "lower": 27.0,
+          "upper": 72.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "5129",
           "source_name": "Tokyo",
           "center": null,
@@ -7861,6 +7924,15 @@
           "center": null,
           "lower": 54.0,
           "upper": 64.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "5087",
+          "source_name": "Milton Keynes",
+          "center": null,
+          "lower": 27.0,
+          "upper": 72.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -8870,6 +8942,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "5087",
+          "source_name": "Milton Keynes",
+          "center": null,
+          "lower": 33.0,
+          "upper": 68.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "5129",
           "source_name": "Tokyo",
           "center": null,
@@ -9875,6 +9956,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "5087",
+          "source_name": "Milton Keynes",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "5129",
           "source_name": "Tokyo",
           "center": null,
@@ -10088,7 +10178,7 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "86d5915ca9d6e348ff8eafbf9696e2430c694ed03f0be654c3bc0f111af028df",
+    "cci-global-evidence-matrix.csv": "3619865a50e1aae8ca865cbf40a4a2c5d72feaa4c64e1c082e20e13cc7a7b41c",
     "cci-legal-mobility-rules.json": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "cci-legal-mobility.md": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e",
     "cci-local-2026-singapore-case.json": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -10313,12 +10403,14 @@
     "cci-vilnius-priority-review.md": "184e66779bcd447618e184f9ae6b096d49db5162f88956283ba72aa37fcff5a1",
     "cci-local-2026-blackpool-case.json": "85de31cd3909a88701d406423107bde860ac1085be57427794e59e4879422fd5",
     "cci-blackpool-priority-review.md": "25497f89b2d734151f0cb2cf9f4545b999d62dee33a79bb741e811e2ef9143ae",
+    "cci-local-2026-milton-keynes-case.json": "fc8da6220219c6f1584e5796cd59bca7492974ec44df4c7a9527a7c99b5e65f5",
+    "cci-milton-keynes-priority-review.md": "b53c166ffd30de943db82392f1938b3e03329d1ba164bfe45fc4422aba2634b4",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "24f1413748d1d4fc380a828a6e9f9fa3981fdbcb778499047d4235844fd7d763",
+    "cci-global-evidence-matrix.json": "8efe3a0de1dc8773b47c648cd2691d87451af235f1914fef47a49c7b6f324864",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "b6f1a38978813476c1989da31e80cecb2e74856f76cc2e38fe6a8d674828bcba"
+    "cci-local-2026-scoring-calibration.md": "a6a57187706401c9690d945433d85c02ef70bc2d9917b6c9859bf77a251afc57"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "bccfb4648b26075693e1c946a65ac4e604d1fa13df27e5c374bd0df5f001e79c",
+  "csvSha256": "099d7d30a4f44fcb79b92a051246c310b6e3ee5ba9bdeba421a7f9bf960206fd",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }

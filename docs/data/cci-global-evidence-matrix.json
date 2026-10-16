@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 111,
+    "conditionalCaseCount": 112,
     "completeConditionalCaseCount": 25,
-    "partialCaseCount": 86,
-    "unassessedCount": 8920,
+    "partialCaseCount": 87,
+    "unassessedCount": 8919,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -860,8 +860,13 @@
       "sha256": "85de31cd3909a88701d406423107bde860ac1085be57427794e59e4879422fd5",
       "provenance": "cci-blackpool-priority-review.md",
       "provenanceSha256": "25497f89b2d734151f0cb2cf9f4545b999d62dee33a79bb741e811e2ef9143ae"
+    },
+    "cci-local-2026-milton-keynes-case.json": {
+      "sha256": "fc8da6220219c6f1584e5796cd59bca7492974ec44df4c7a9527a7c99b5e65f5",
+      "provenance": "cci-milton-keynes-priority-review.md",
+      "provenanceSha256": "b53c166ffd30de943db82392f1938b3e03329d1ba164bfe45fc4422aba2634b4"
     }
   },
-  "scriptSha256": "9b0d021d0da9cb7d21908e26839dd53e61afe92de769cf3ad2f79ce0aa3c7e9a",
-  "csvSha256": "86d5915ca9d6e348ff8eafbf9696e2430c694ed03f0be654c3bc0f111af028df"
+  "scriptSha256": "f876cb9c0020789e170b8f6d1fbc5d67f51746998b54e7b4eb57a559dfe91994",
+  "csvSha256": "3619865a50e1aae8ca865cbf40a4a2c5d72feaa4c64e1c082e20e13cc7a7b41c"
 }
