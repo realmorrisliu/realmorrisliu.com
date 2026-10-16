@@ -9,14 +9,14 @@
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "residentEligibility": "2026 ordinary German national/usually longterm local resident/local median income/usual effective GKV/no fixed age",
   "boundaryVersion": "GHS-FUA R2019A",
-  "evidenceReview": "cci-stuttgart-score-completion-review.md",
+  "evidenceReview": "cci-stuttgart-res-completion-review.md",
   "researchFrozenInputCommit": "deaa9feee6ee20ad7ba03f09546a0ebfb356b6b4",
   "fixedInputCases": 80,
   "fixedInputComplete": 18,
-  "expectedConditionalTotal": null,
-  "knownWeightedSubtotal": 51.0,
-  "unknownWeight": 10,
-  "unresolvedScoreRange": [51.0, 61.0],
+  "expectedConditionalTotal": 57,
+  "knownWeightedSubtotal": 57,
+  "unknownWeight": 0,
+  "unresolvedScoreRange": [57, 57],
   "dimensions": [
     {
       "id": "PCS",
@@ -83,22 +83,28 @@
     {
       "id": "RES",
       "weight": 10,
-      "score": null,
-      "scoreStatus": "reviewed_insufficient_direction",
-      "rationale": "供水真实交付、两远程来源/备用泵车/消毒/发电设备与水价线索，能源当班维修/有限燃料替代和实际交通货运均已审；备粮、灾时医疗电氧和物业侧约束也保留。水/能源正证较强，但日常食物及水食能净费用/帮助后的合束仍不能在本轮实质择40/60，保留未知。",
-      "assumption": "未把未获取的食物量价或中位家庭资源篮子当稀缺/不可负担，也不由双水源或备用设备直接推整维可靠；不要求逐户账单或全2026供给普查。60的日常净取得可用与40的依赖/压力约束都仍是实质解释；本稿不接受仅从备粮宣传/存在运输链完成食物通常可得的关键桥。",
-      "conditionalAlternatives": [],
-      "alternativeRationales": "60若接受实际通常水/能交付及有据食物/净费用通常可用的联合桥；40若现有集中依赖/净取得/修复负担仍明显。不是来源数量决定未知；无中点、概率或排除。",
+      "score": 60,
+      "scoreStatus": "conditional_root_adopted",
+      "rationale": "沿原已核水/能实际供给、备用及维修，新增2024食品真实购买/配送而非备粮宣传，兼看2022租户费用分布与2023收入/保障背景。有限合束推定普通本国长期居民中位收入通常可以取得必要水食能；Tafel救济不是中位家庭自动资格或营养充分证明。",
+      "assumption": "接受三项必要可撤桥：市域和已核FUA供水/能源线索可有限代表3580普通居民；2022–2024实际交付/费用结构在截止2026-10-10通常延续；中位净资源与较多数租户冷租低于30%背景合并真实食品交易，支持必要食水能通常净取得。没有测得中位家庭篮子，不把62%租户等同中位人、冷租等全能源费、无失败等成功。N03无日期仅资格背景，不依赖其截止前同版存在。",
+      "conditionalAlternatives": [40],
+      "alternativeRationales": "40须接受高生活成本、食品援助排队/物流捐赠依赖和运营负荷，对目标普通居民帮助后仍形成重要资源余障的桥；不用多数受害或停城门槛。但现有事实主要集中较贫困援助群体，尚不能直接将其全搬给中位画像。拒绝通常净资源、地域或截止延续的必要桥，则null、[]；不能由无全户账本反推40。",
       "subpillars": {
         "water": "partial",
-        "food": "context",
+        "food": "partial",
         "energy": "partial",
         "supply_chain": "partial"
       },
-      "sourceIds": ["S04", "S08", "S10", "S13", "S15"],
+      "sourceIds": ["S04", "S08", "S10", "S13", "S15", "N01", "N02", "N03"],
       "rejectionOutcome": {
         "score": null,
         "conditionalAlternatives": []
+      },
+      "researchSubpillarLabels": {
+        "water": "conditional_existing_delivery",
+        "food": "conditional_actual_delivery_and_net_access_bridge",
+        "energy": "conditional_existing_delivery_and_repair",
+        "supply_chain": "conditional_actual_delivery_with_dependency"
       }
     },
     {
@@ -319,9 +325,9 @@
     {
       "dimension": "RES",
       "subpillar": "food",
-      "status": "reviewed_context",
-      "evidence": "W05;S13",
-      "finding": "2023备粮宣传、冷藏/烹煮和条件灾时供给；非日常食物实供或中位居民量价净取得。",
+      "status": "reviewed_partial",
+      "evidence": "W05;S13;N01:p40,234;N02;N03background",
+      "finding": "Actualfoodpurchasesanddistribution plusoneopenedFairteiler;eligibility/notallmedian,regionaltonnes/queues/donationdependency retained. Conditionalordinarynetresourcebridge60,notwholebasketmeasurement.",
       "score": null,
       "scope": "Subpillar state is honest semantic review scope,not numeric subscore or completepopulationmeasurement",
       "fullyMeasured": false
@@ -340,8 +346,8 @@
       "dimension": "RES",
       "subpillar": "supply_chain",
       "status": "reviewed_partial",
-      "evidence": "S15;W13;S10:p6–9",
-      "finding": "实际港空铁路/公路配送与双远水，来源依赖/拥堵、施工及极端雨/能源共同冲击未全解。",
+      "evidence": "S15;W13;S10:p6–9;N01:p17,177,187–188;N02",
+      "finding": "实际港空铁路/公路配送与双远水，来源依赖/拥堵、施工及极端雨/能源共同冲击未全解。 新增实际食品物流及冷租／收入背景支持可撤通常净取得桥；跨区22Tafel、捐赠／人手与排队依赖保留，非全FUA家庭净篮子。",
       "score": null,
       "scope": "Subpillar state is honest semantic review scope,not numeric subscore or completepopulationmeasurement",
       "fullyMeasured": false
@@ -1364,6 +1370,158 @@
       "scope": "Common disease haematopoietic reconstitution and descriptive firstauto2016–24 n463 humanmaturity; notlocaloutcomes orCARTmaturity; sourcewordingGVHDnotadoptedasbenefit",
       "cutoffHistoricalBytesAuthenticated": false,
       "usedForScore": true
+    },
+    {
+      "id": "N01",
+      "url": "https://www.stuttgart.de/medien/ibs/bericht-lebenswertes-stuttgart-2025-barrierefrei.pdf",
+      "host": "www.stuttgart.de",
+      "requestUTC": "2026-10-16T00:42:46.737800+00:00",
+      "mechanism": "normal_https_tls_urllib",
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "oldProviderFailureLowerBound": null,
+      "unknownBroaderHistoryNotReset": true,
+      "leg": 1,
+      "cumulativeNormalLeg": 19,
+      "historicalCutoffBytesAuthenticated": false,
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 00:42:48 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "15877668",
+        "last-modified": "Tue, 28 Oct 2025 13:06:36 GMT"
+      },
+      "headersAreParsedNotWire": true,
+      "bodyComplete": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/stuttgart-res64/originals/N01.body",
+      "bytes": 15877668,
+      "sha256": "ee05aa6a04fb5b140b11080241535648257220a319212d1c6899d23fee801a18",
+      "bodySavedBeforeValidation": true,
+      "validHTTPBody": true,
+      "contentType": "application/pdf",
+      "websiteOriginalValidityNeedsBodyReview": true,
+      "semanticOriginalReviewed": true,
+      "currentValidBytes": true,
+      "primary": "Landeshauptstadt Stuttgart, SDG report2025",
+      "observedWindows": [
+        "2022 renter gross cold rent/net income",
+        "2023 microcensus poverty; survey income distribution distinct biased sample",
+        "2024 Tafel customers and Fairteiler opening"
+      ],
+      "publication": "edition2025; PDF creation14Aug2025/modification28Oct2025; HTTP LastModified28Oct2025; first publication and exact cutoff same bytes not authenticated",
+      "readPhysicalPages": [17, 18, 19, 40, 177, 187, 188, 234],
+      "actuallyViewedPhysicalPages": [17, 19, 40, 177, 187, 188, 234],
+      "renderedNotViewed": [18],
+      "scope": "Stuttgart administrative city, not all3580 FUA; Tafel mechanism also includes regional distribution; figures not unique resident/nutrition coverage",
+      "warnings": [
+        "p17 microcensus2023 poverty20.8 not p177 survey17.3; survey overrepresents middle/highincome",
+        "p187 headline allhouseholds19% conflicts body/figure renters; use renters",
+        "2022 Bruttokaltmiete excludes heat;62% renters<30% not a median household net resource basket",
+        "p17 Stepstone gross employee median not adopted as target net income",
+        "p40 and N02 same Tafel mechanism not independent validation",
+        "p234 funded Fairteiler opened11Nov2024 not quantified household nutritional result"
+      ],
+      "validOriginal": true,
+      "originalBytes": 15877668,
+      "originalSha256": "ee05aa6a04fb5b140b11080241535648257220a319212d1c6899d23fee801a18",
+      "actualOriginalPath": "/Users/morris/.local/share/cci-research/2026-10-10/stuttgart-res64/originals/N01.body",
+      "rootBytesReverified": true,
+      "scoreEligible": true,
+      "cutoffOriginalBytesAuthenticated": false
+    },
+    {
+      "id": "N02",
+      "url": "https://www.tafel-stuttgart.de/%C3%BCber-uns/grundsatz-und-standort/",
+      "host": "www.tafel-stuttgart.de",
+      "requestUTC": "2026-10-16T00:43:22.335807+00:00",
+      "mechanism": "normal_https_tls_urllib",
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "oldProviderFailureLowerBound": null,
+      "unknownBroaderHistoryNotReset": true,
+      "leg": 2,
+      "cumulativeNormalLeg": 20,
+      "historicalCutoffBytesAuthenticated": false,
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 00:43:23 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "headersAreParsedNotWire": true,
+      "bodyComplete": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/stuttgart-res64/originals/N02.body",
+      "bytes": 66702,
+      "sha256": "060b52b8b64ac4cb675f98af90e71d5032051145d6b77e039e174ec98079b8eb",
+      "bodySavedBeforeValidation": true,
+      "validHTTPBody": true,
+      "contentType": "text/html; charset=UTF-8",
+      "websiteOriginalValidityNeedsBodyReview": true,
+      "semanticOriginalReviewed": true,
+      "currentValidBytes": true,
+      "primary": "Schwaebische Tafel Stuttgart e.V. board position",
+      "observedWindows": ["signed11Apr2024; describes operations after2023 statute revision"],
+      "publication": "signed11Apr2024; first web publication/exact cutoff bytes not authenticated",
+      "read": "complete substantive HTML incl operating delivery and residuals",
+      "scope": "4shops:Stuttgart Mitte/BadCannstatt/Moehringen/Fellbach;40tonnes/day logistics includes22 regional Tafeln;2500dailycustomers not deduplicated residents;60% supraregional large donations;21vans plus1truck/8 refrigerated;declining retailer donations,queues,workload and donation dependence",
+      "warnings": [
+        "do not convert logistics tonnes into edible intake or all resident sufficiency",
+        "daily40tonnes remains as primary says; discovery news weekly40tonnes not acquired/adopted"
+      ],
+      "validOriginal": true,
+      "originalBytes": 66702,
+      "originalSha256": "060b52b8b64ac4cb675f98af90e71d5032051145d6b77e039e174ec98079b8eb",
+      "actualOriginalPath": "/Users/morris/.local/share/cci-research/2026-10-10/stuttgart-res64/originals/N02.body",
+      "rootBytesReverified": true,
+      "scoreEligible": true,
+      "cutoffOriginalBytesAuthenticated": false
+    },
+    {
+      "id": "N03",
+      "url": "https://www.tafel-stuttgart.de/%C3%BCber-uns/wer-darf-kommen/",
+      "host": "www.tafel-stuttgart.de",
+      "requestUTC": "2026-10-16T00:47:24.699255+00:00",
+      "mechanism": "normal_https_tls_urllib",
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "oldProviderFailureLowerBound": null,
+      "unknownBroaderHistoryNotReset": true,
+      "leg": 3,
+      "cumulativeNormalLeg": 21,
+      "historicalCutoffBytesAuthenticated": false,
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 00:47:25 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "headersAreParsedNotWire": true,
+      "bodyComplete": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/stuttgart-res64/originals/N03.body",
+      "bytes": 47814,
+      "sha256": "0dec89693352d12e99b26db92bc77091fa002c028e650347f81767a9363d3a2c",
+      "bodySavedBeforeValidation": true,
+      "validHTTPBody": true,
+      "contentType": "text/html; charset=UTF-8",
+      "websiteOriginalValidityNeedsBodyReview": true,
+      "semanticOriginalReviewed": true,
+      "currentValidBytes": true,
+      "primary": "localTafel eligibility HTML",
+      "observedWindows": [
+        "undated current snapshot, contains older statutory terms includingHartzIV"
+      ],
+      "publication": "undated, cutoff same content not authenticated; background only",
+      "read": "complete substantive HTML",
+      "scope": "proof of benefit/income or Bonuscard+photo supports food customer card;low wages/pensions/BAfoeG qualify casebycase;no automatic median qualification;no prices,net payment result or posthelp outcome",
+      "warnings": [
+        "not a new actual price relief measurement",
+        "not necessary to main60 cutoff inference"
+      ],
+      "validOriginal": true,
+      "originalBytes": 47814,
+      "originalSha256": "0dec89693352d12e99b26db92bc77091fa002c028e650347f81767a9363d3a2c",
+      "actualOriginalPath": "/Users/morris/.local/share/cci-research/2026-10-10/stuttgart-res64/originals/N03.body",
+      "rootBytesReverified": true,
+      "scoreEligible": false,
+      "cutoffOriginalBytesAuthenticated": false
     }
   ],
   "commonReusedSources": [
@@ -1776,35 +1934,40 @@
     }
   ],
   "sensitivity": {
-    "PCSWithdrawn": [42, 67],
-    "GSSWithdrawn": [45, 70],
-    "ISRWithdrawn": [42, 67],
-    "MEDWithdrawn": [42, 67],
-    "LONWithdrawn": [45, 65],
-    "TECWithdrawn": [45, 65],
-    "OPTWithdrawn": [45, 65],
-    "GSS60": [54, 64],
-    "PCS40": [48, 58],
-    "ISR40": [48, 58],
-    "MED40": [48, 58],
-    "LON40": [49, 59],
-    "TEC40": [49, 59],
-    "OPT40": [49, 59],
-    "ISR80": [54, 64],
-    "TEC80": [53, 63],
-    "OPT80": [53, 63],
+    "PCSWithdrawn": [48.0, 63.0],
+    "PCS40": [54.0, 54.0],
+    "GSSWithdrawn": [51.0, 66.0],
+    "GSS60": [60.0, 60.0],
+    "ISRWithdrawn": [48.0, 63.0],
+    "ISR40": [54.0, 54.0],
+    "ISR80": [60.0, 60.0],
+    "RESWithdrawn": [51.0, 61.0],
+    "RES40": [55.0, 55.0],
+    "MEDWithdrawn": [48.0, 63.0],
+    "MED40": [54.0, 54.0],
+    "LONWithdrawn": [51.0, 61.0],
+    "LON40": [55.0, 55.0],
+    "TECWithdrawn": [51.0, 61.0],
+    "TEC40": [55.0, 55.0],
+    "TEC80": [59.0, 59.0],
+    "OPTWithdrawn": [51.0, 61.0],
+    "OPT40": [55.0, 55.0],
+    "OPT80": [59.0, 59.0],
+    "RES80": [59, 59],
     "allJudgmentsWithdrawn": [0, 100]
   },
   "globalRankingEligible": false,
   "limitations": [
-    "Onecityboundedresearch notacceptedcanonical or publishedscore. All9031/newunmatchedretained,zeroexclusions.",
-    "Sourcefulldisclosure not fullpopulationmeasurement;old/private/tmp missingbytesnotrecovered/authenticated.",
-    "No currentcentre orTop32probability,unknownRESnotimputed.",
-    "Historical cutoff exactsamebytesnotcertified;source/scoringjudgments explicitlyrevocable.",
-    "根验收优先：19PDF关键页、22有效原件与6保存web叶页独核；异体免费咨询不套自体，缺trial数字不自动40，新增共同ASCT成熟人体原件不搬外地效果；TEC／OPT字段名规范，不改语义分数。原81案整文件不变。"
+    "Root accepted conditional research case,notglobalranking.All9031/newunmatchedretained,zeroexclusions.",
+    "RES conditional60 makes total57 only if ordinary net-resource/geographic/time bridges accepted; withdrawing RES restores51–61/no total.",
+    "New3 originals augment22 unchanged snapshots;root this round reverified3new+2old,notall25orall384PDFpages.",
+    "Tafel eligibility not automatic for medianincome;2022renter cold-rent data excludes heat andisnotfull2026netbasket.",
+    "2023microcensus20.8% and biasedsurvey17.3% distinct;daily2500notuniqueannualpeople;regionalfoodlogisticsnotalllocalnutrition.",
+    "Currentbytesnotcutoffsameversionauthentication;N03undatedlegacytermsbackgroundonly,withdrawaldoesnotchangemainbridge.",
+    "Other95casewholebytes,originalsevenStuttgartdimensionobjectsandnonREScoverageunchanged.Global32thresholdnull/globalfalse."
   ],
-  "reportBytes": 16155,
-  "reportSha256": "d8e83cd5eac0cd6373eb704fa05eab0a3fa05ad4d27e487d3909b7f40c939106",
+  "reportBytes": 8106,
+  "reportSha256": "ed7c5dec61cc5f28abbd3412a837f517f13cd8eae1c885988d214199d643a362",
   "publishedInputCommit": "cc5bb3266d5bb1577df1404d29a093bba7fbeb9f",
   "failedSourceSnapshots": [
     {
@@ -2233,5 +2396,389 @@
     "newValidOriginalCount": 15,
     "reusedOriginalCount": 7,
     "rootNewNetworkRequests": 0
+  },
+  "sourceManifestSupplement": {
+    "sources": [
+      {
+        "id": "N01",
+        "url": "https://www.stuttgart.de/medien/ibs/bericht-lebenswertes-stuttgart-2025-barrierefrei.pdf",
+        "host": "www.stuttgart.de",
+        "requestUTC": "2026-10-16T00:42:46.737800+00:00",
+        "mechanism": "normal_https_tls_urllib",
+        "redirectsFollowed": 0,
+        "retries": 0,
+        "oldProviderFailureLowerBound": null,
+        "unknownBroaderHistoryNotReset": true,
+        "leg": 1,
+        "cumulativeNormalLeg": 19,
+        "historicalCutoffBytesAuthenticated": false,
+        "status": 200,
+        "headers": {
+          "Date": "Fri, 16 Oct 2026 00:42:48 GMT",
+          "Content-Type": "application/pdf",
+          "Content-Length": "15877668",
+          "last-modified": "Tue, 28 Oct 2025 13:06:36 GMT"
+        },
+        "headersAreParsedNotWire": true,
+        "bodyComplete": true,
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/stuttgart-res64/originals/N01.body",
+        "bytes": 15877668,
+        "sha256": "ee05aa6a04fb5b140b11080241535648257220a319212d1c6899d23fee801a18",
+        "bodySavedBeforeValidation": true,
+        "validHTTPBody": true,
+        "contentType": "application/pdf",
+        "websiteOriginalValidityNeedsBodyReview": true,
+        "semanticOriginalReviewed": true,
+        "currentValidBytes": true,
+        "primary": "Landeshauptstadt Stuttgart, SDG report2025",
+        "observedWindows": [
+          "2022 renter gross cold rent/net income",
+          "2023 microcensus poverty; survey income distribution distinct biased sample",
+          "2024 Tafel customers and Fairteiler opening"
+        ],
+        "publication": "edition2025; PDF creation14Aug2025/modification28Oct2025; HTTP LastModified28Oct2025; first publication and exact cutoff same bytes not authenticated",
+        "readPhysicalPages": [17, 18, 19, 40, 177, 187, 188, 234],
+        "actuallyViewedPhysicalPages": [17, 19, 40, 177, 187, 188, 234],
+        "renderedNotViewed": [18],
+        "scope": "Stuttgart administrative city, not all3580 FUA; Tafel mechanism also includes regional distribution; figures not unique resident/nutrition coverage",
+        "warnings": [
+          "p17 microcensus2023 poverty20.8 not p177 survey17.3; survey overrepresents middle/highincome",
+          "p187 headline allhouseholds19% conflicts body/figure renters; use renters",
+          "2022 Bruttokaltmiete excludes heat;62% renters<30% not a median household net resource basket",
+          "p17 Stepstone gross employee median not adopted as target net income",
+          "p40 and N02 same Tafel mechanism not independent validation",
+          "p234 funded Fairteiler opened11Nov2024 not quantified household nutritional result"
+        ],
+        "validOriginal": true,
+        "originalBytes": 15877668,
+        "originalSha256": "ee05aa6a04fb5b140b11080241535648257220a319212d1c6899d23fee801a18",
+        "actualOriginalPath": "/Users/morris/.local/share/cci-research/2026-10-10/stuttgart-res64/originals/N01.body",
+        "rootBytesReverified": true,
+        "scoreEligible": true,
+        "cutoffOriginalBytesAuthenticated": false
+      },
+      {
+        "id": "N02",
+        "url": "https://www.tafel-stuttgart.de/%C3%BCber-uns/grundsatz-und-standort/",
+        "host": "www.tafel-stuttgart.de",
+        "requestUTC": "2026-10-16T00:43:22.335807+00:00",
+        "mechanism": "normal_https_tls_urllib",
+        "redirectsFollowed": 0,
+        "retries": 0,
+        "oldProviderFailureLowerBound": null,
+        "unknownBroaderHistoryNotReset": true,
+        "leg": 2,
+        "cumulativeNormalLeg": 20,
+        "historicalCutoffBytesAuthenticated": false,
+        "status": 200,
+        "headers": {
+          "Date": "Fri, 16 Oct 2026 00:43:23 GMT",
+          "Content-Type": "text/html; charset=UTF-8"
+        },
+        "headersAreParsedNotWire": true,
+        "bodyComplete": true,
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/stuttgart-res64/originals/N02.body",
+        "bytes": 66702,
+        "sha256": "060b52b8b64ac4cb675f98af90e71d5032051145d6b77e039e174ec98079b8eb",
+        "bodySavedBeforeValidation": true,
+        "validHTTPBody": true,
+        "contentType": "text/html; charset=UTF-8",
+        "websiteOriginalValidityNeedsBodyReview": true,
+        "semanticOriginalReviewed": true,
+        "currentValidBytes": true,
+        "primary": "Schwaebische Tafel Stuttgart e.V. board position",
+        "observedWindows": ["signed11Apr2024; describes operations after2023 statute revision"],
+        "publication": "signed11Apr2024; first web publication/exact cutoff bytes not authenticated",
+        "read": "complete substantive HTML incl operating delivery and residuals",
+        "scope": "4shops:Stuttgart Mitte/BadCannstatt/Moehringen/Fellbach;40tonnes/day logistics includes22 regional Tafeln;2500dailycustomers not deduplicated residents;60% supraregional large donations;21vans plus1truck/8 refrigerated;declining retailer donations,queues,workload and donation dependence",
+        "warnings": [
+          "do not convert logistics tonnes into edible intake or all resident sufficiency",
+          "daily40tonnes remains as primary says; discovery news weekly40tonnes not acquired/adopted"
+        ],
+        "validOriginal": true,
+        "originalBytes": 66702,
+        "originalSha256": "060b52b8b64ac4cb675f98af90e71d5032051145d6b77e039e174ec98079b8eb",
+        "actualOriginalPath": "/Users/morris/.local/share/cci-research/2026-10-10/stuttgart-res64/originals/N02.body",
+        "rootBytesReverified": true,
+        "scoreEligible": true,
+        "cutoffOriginalBytesAuthenticated": false
+      },
+      {
+        "id": "N03",
+        "url": "https://www.tafel-stuttgart.de/%C3%BCber-uns/wer-darf-kommen/",
+        "host": "www.tafel-stuttgart.de",
+        "requestUTC": "2026-10-16T00:47:24.699255+00:00",
+        "mechanism": "normal_https_tls_urllib",
+        "redirectsFollowed": 0,
+        "retries": 0,
+        "oldProviderFailureLowerBound": null,
+        "unknownBroaderHistoryNotReset": true,
+        "leg": 3,
+        "cumulativeNormalLeg": 21,
+        "historicalCutoffBytesAuthenticated": false,
+        "status": 200,
+        "headers": {
+          "Date": "Fri, 16 Oct 2026 00:47:25 GMT",
+          "Content-Type": "text/html; charset=UTF-8"
+        },
+        "headersAreParsedNotWire": true,
+        "bodyComplete": true,
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/stuttgart-res64/originals/N03.body",
+        "bytes": 47814,
+        "sha256": "0dec89693352d12e99b26db92bc77091fa002c028e650347f81767a9363d3a2c",
+        "bodySavedBeforeValidation": true,
+        "validHTTPBody": true,
+        "contentType": "text/html; charset=UTF-8",
+        "websiteOriginalValidityNeedsBodyReview": true,
+        "semanticOriginalReviewed": true,
+        "currentValidBytes": true,
+        "primary": "localTafel eligibility HTML",
+        "observedWindows": [
+          "undated current snapshot, contains older statutory terms includingHartzIV"
+        ],
+        "publication": "undated, cutoff same content not authenticated; background only",
+        "read": "complete substantive HTML",
+        "scope": "proof of benefit/income or Bonuscard+photo supports food customer card;low wages/pensions/BAfoeG qualify casebycase;no automatic median qualification;no prices,net payment result or posthelp outcome",
+        "warnings": [
+          "not a new actual price relief measurement",
+          "not necessary to main60 cutoff inference"
+        ],
+        "validOriginal": true,
+        "originalBytes": 47814,
+        "originalSha256": "0dec89693352d12e99b26db92bc77091fa002c028e650347f81767a9363d3a2c",
+        "actualOriginalPath": "/Users/morris/.local/share/cci-research/2026-10-10/stuttgart-res64/originals/N03.body",
+        "rootBytesReverified": true,
+        "scoreEligible": false,
+        "cutoffOriginalBytesAuthenticated": false
+      }
+    ],
+    "researchPath": "/Users/morris/.local/share/cci-research/2026-10-10/stuttgart-res64/source-manifest.json",
+    "researchManifestSha256": "c98031a7c02c024ab2caa11a69b8935776b85a7075c87d8e8071d7ecbdc3d08b",
+    "originalSourceManifestRetained": "/Users/morris/.local/share/cci-research/2026-10-10/stuttgart-full45/source-manifest.json"
+  },
+  "resourceSourceAndStopLedger": {
+    "fixedGit": "988b74edb2128baab6c13ea5dd74ef070e196325",
+    "oldFull45": {
+      "queries": 8,
+      "rounds": 2,
+      "normalLegs": 18,
+      "normalValid": 15,
+      "normalFailed": 3,
+      "webOperations": 47,
+      "webBackendLegs": "unknown; never conflated with normalHTTP"
+    },
+    "thisSupplement": {
+      "discoveryCalls": 1,
+      "queries": 2,
+      "normalLegs": 3,
+      "validSemanticOriginals": 3,
+      "failures": 0,
+      "redirects": 0,
+      "retries": 0,
+      "unusedNormalLegs": 1,
+      "closed": true
+    },
+    "cumulative": {
+      "queries": 10,
+      "normalLegs": 21,
+      "normalLimit": 22,
+      "queryLimit": 10
+    },
+    "inheritedLedgerExactCopy": "inherited-stuttgart-full45-ledger.json",
+    "additionalGermanLedger": "inherited-rostock-full60-ledger.json",
+    "stopsRemain": true,
+    "unknownHistoryNotZero": true,
+    "failedOldDocumentsNotRetried": true,
+    "newSuccessDoesNotResetFailureCounters": true,
+    "noMoreHTTPOrQueriesAuthorizedByThisOutput": true
+  },
+  "resourceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allCandidatesChecked": 9031,
+    "repairCount": 136,
+    "record": {
+      "fid": 3242,
+      "eFUA_ID": 3580.0,
+      "UC_num": 3.0,
+      "UC_IDs": "2506;2514;2532",
+      "eFUA_name": "Stuttgart",
+      "Commuting": 1.0,
+      "Cntry_ISO": "DEU",
+      "Cntry_name": "Germany",
+      "FUA_area": 2159.0,
+      "UC_area": 404.0,
+      "FUA_p_2015": 2234166.1767232195,
+      "UC_p_2015": 1160180.2913825512,
+      "Com_p_2015": 1073985.8853406683
+    },
+    "points": [
+      {
+        "label": "Stuttgart centre analyst approximate",
+        "longitude": 9.1829,
+        "latitude": 48.7758,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 3580,
+            "name": "Stuttgart"
+          }
+        ]
+      },
+      {
+        "label": "Hasenberg reservoir vicinity analyst approximate",
+        "longitude": 9.146,
+        "latitude": 48.769,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 3580,
+            "name": "Stuttgart"
+          }
+        ]
+      }
+    ],
+    "targetWkbSha256": "77338d5401d812b297db8474b3eb549426a1beab530783ec03f40c9d1a8c3c4c",
+    "meaning": "FUA is not municipal/provider/patient scope. Analyst approximate reference points are not surveyed footprints, residence, service coverage denominators or actual journeys."
+  },
+  "resourceCompletionReview": {
+    "path": "docs/cci-stuttgart-res-completion-review.md",
+    "sha256": "ed7c5dec61cc5f28abbd3412a837f517f13cd8eae1c885988d214199d643a362",
+    "reviewedOn": "2026-10-16",
+    "fixedInputCommit": "988b74edb2128baab6c13ea5dd74ef070e196325",
+    "fixedCases": 96,
+    "reviewReportSha256": "c451752300f3c15d878215d3849d62b7f621da05555656ddf2ccb2834341d156",
+    "reviewManifestSha256": "474d37dff10601661be0a028b178ea1875ec70ed766682b73f51d23911c56d88",
+    "frozenPayloadsVerified": 43,
+    "rootValidOriginalsReverified": 5,
+    "newOriginalDownloads": 3,
+    "rootPdfPageCount": 8,
+    "rootPdfPixelsViewed": [
+      {
+        "sourceId": "S04",
+        "physicalPage": 4,
+        "bytes": 207023,
+        "sha256": "dd5daafa0b8ad1833d009e3bb1b60427f1e800afa8c380ad8fab2a219e53cdcf",
+        "actuallyViewedByRoot": true
+      },
+      {
+        "sourceId": "S04",
+        "physicalPage": 6,
+        "bytes": 1352653,
+        "sha256": "cf47d605d75c86d97d4991c91dfaaf4f6fedce60bb7734403a8e15717f46283a",
+        "actuallyViewedByRoot": true
+      },
+      {
+        "sourceId": "N01",
+        "physicalPage": 17,
+        "bytes": 196188,
+        "sha256": "fb63efc335e3e3d3c5bbe7cd1494b0a2162d46ff6ab67487ed233b8daa3adc73",
+        "actuallyViewedByRoot": true
+      },
+      {
+        "sourceId": "N01",
+        "physicalPage": 40,
+        "bytes": 195672,
+        "sha256": "90964651579b969107665a2eecb966271568919c7675d5662517dcabba21481f",
+        "actuallyViewedByRoot": true
+      },
+      {
+        "sourceId": "N01",
+        "physicalPage": 177,
+        "bytes": 153215,
+        "sha256": "abfb1b0a0319752bf78bea47f1c70e0397c57155832c0f2695d671a0e38152d8",
+        "actuallyViewedByRoot": true
+      },
+      {
+        "sourceId": "N01",
+        "physicalPage": 187,
+        "bytes": 123359,
+        "sha256": "9a7694f8ed98b571f87317c7b38cbcfabdaefab362d68153c5cf48f5f4ef0076",
+        "actuallyViewedByRoot": true
+      },
+      {
+        "sourceId": "N01",
+        "physicalPage": 188,
+        "bytes": 100772,
+        "sha256": "c773c57f4e775df3be9859de6f2f5f824e33d507a985fa589820214b90ef6c3d",
+        "actuallyViewedByRoot": true
+      },
+      {
+        "sourceId": "N01",
+        "physicalPage": 234,
+        "bytes": 238961,
+        "sha256": "833edcbb53b61cb4aa7682f297af5e23d7d1165f19e4dc0b2558875176cff5f5",
+        "actuallyViewedByRoot": true
+      }
+    ],
+    "rootNewNetworkRequests": 0,
+    "newHTTPActualLegs": 3,
+    "cumulativeHTTPActualLegs": 21,
+    "cumulativeDiscoveryQueries": 10,
+    "originalSevenDimensionObjectsUnchanged": true,
+    "originalSevenDimensionJSONHashes": {
+      "PCS": "cf7e3ccc225021d482e0c3cc9cea29e475f9f007656a42b1244691d99c1a980a",
+      "GSS": "e85b46f63fe3258466687f2f53a7582d1c1f6494dbd553b0d05b3d2a3243308c",
+      "ISR": "10ad1c3b7f172c122da4b13352a0721a0c6d859a9939fb9e87ece773c256344c",
+      "MED": "61accd2b2d6d5f59a1c54b068a297117445f06a3b38e37b32aef670bbe6b8664",
+      "LON": "345e82e47f8b34f71338aecbd505283f39cf1493dd3469c62717b426d0271a04",
+      "TEC": "1c23448f928c6d652c7b7c793bbb949d0143a644b95e4f88f84d672dea496074",
+      "OPT": "aed089c12ac8893536b9a8b69ec4154ada43bc054d50b8ce0c899162fc226924"
+    },
+    "originalTwentyTwoSourceSnapshotObjectsUnchanged": true,
+    "nonRESCoverageObjectsUnchanged": true,
+    "other95WholeCaseBytesUnchanged": true,
+    "crossReviewReportSha256": "9ef1f93bfa4cbc1a8f15b37ab1ccf1d520da3a920f623c5e5f03fa0198e93ae8",
+    "independentIntegrityResultSha256": "4cb4596c3f4a190e45e5c295c687fbbf9e5193f60c838b98c0b3da4a9c847808",
+    "toolProof": [
+      {
+        "sessionPath": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-17-01a13e5e-6ab0-7b00-940d-bc7f7374094d.jsonl",
+        "sessionSizeAtRead": 100818725,
+        "tailStartByteOffset": 96818725,
+        "callId": "call_822e261c73944b4abeda59cdce982f76",
+        "callByteOffset": 98580305,
+        "callBytes": 1178,
+        "callRecordSha256": "97e014d3098f3061bf061359a810801dcd83088b504fc7367167e09f9afb614e",
+        "outputByteOffset": 98632085,
+        "outputBytes": 35013,
+        "outputRecordSha256": "2ec716d0615d1b6b086196365638910bfb0b2b02ec7a2789b9a39881d40dc8d0",
+        "blocks": [
+          {
+            "index": 0,
+            "bytes": 47,
+            "sha256": "c349e4147bb5ec6c03aff799e1922c904b86ffa02cb86a25641e84ad63fc227f",
+            "equalsSavedToolResult": false,
+            "prefix": "Script completed\nWall time 2.6 seconds\nOutput:\n",
+            "containsSavedToolResult": false
+          },
+          {
+            "index": 1,
+            "bytes": 34149,
+            "sha256": "a0c5d13522e0e788fda10f3d2ad9f4c7fe3f394dfda3aad7ecc06b3de3645cc6",
+            "equalsSavedToolResult": true,
+            "prefix": "Jahresbericht (https://www.tafel.de/?id=63)\nciteturn2412search0 [wordlim: 200] Crawled: today; Der Bericht gibt Einblicke in die Arbeit von Tafel Deutschland im Jahr 2025 und zeigt, wie vielfältig ",
+            "containsSavedToolResult": true
+          }
+        ],
+        "savedToolResultBytes": 34149,
+        "savedToolResultSha256": "a0c5d13522e0e788fda10f3d2ad9f4c7fe3f394dfda3aad7ecc06b3de3645cc6"
+      }
+    ]
+  },
+  "resourceScopeReview": {
+    "fullMedianResourceBasketDirectlyMeasured": false,
+    "medianIncomeAutomaticallyTafelEligible": false,
+    "renterColdRentIncludesHeat": false,
+    "nineteenPercentUsesAllHouseholdsDenominator": false,
+    "surveyLowIncome173EqualsMicrocensus208": false,
+    "food2500IsUniqueAnnualFuaResidents": false,
+    "fortyTonnesAllConsumedInThisFua": false,
+    "N01AndN02AreIndependentFoodCounts": false,
+    "N03CurrentStatutoryVersionAuthenticated": false,
+    "generator72HoursAllNodesTested": false,
+    "absenceOfFailureUsedFor60": false,
+    "ordinaryNetResourceJudgmentRevocable": true,
+    "rootLocalBatchDeviation": "One root outer exec copied S04 PDF and S13 HTML, then nested second tool extracted same S04 p4/p6. Counting distinct original+PDF-page units gives4 not3. Subsequent render/view calls respect3. Retained actual evidence, no new HTTP, no hidden repair rerun, no city penalty.",
+    "localSchemaReadErrors": "Two local inspection helpers first assumed coverage dimensionId and manifest files; actual legacy fields dimension and payloads then inspected. No source/score changed or network repeated."
   }
 }
