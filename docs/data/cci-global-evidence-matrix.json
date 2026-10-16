@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 113,
+    "conditionalCaseCount": 114,
     "completeConditionalCaseCount": 25,
-    "partialCaseCount": 88,
-    "unassessedCount": 8918,
+    "partialCaseCount": 89,
+    "unassessedCount": 8917,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -870,8 +870,13 @@
       "sha256": "12a11dbb72a9eebe76855ccbbedf3f28283201913bfb8a4d040a6d8dd7b9bf0b",
       "provenance": "cci-alkmaar-priority-review.md",
       "provenanceSha256": "98256cbeec3da3f01e528ff815f5fe3f70140031a9e58abadb35bcfeed4813ea"
+    },
+    "cci-local-2026-bydgoszcz-case.json": {
+      "sha256": "180573990b80f079ff8b19d7986cbc20fc23b012df65624fec96329a3c61e0ca",
+      "provenance": "cci-bydgoszcz-priority-review.md",
+      "provenanceSha256": "75e6217c3bd41c165f21bf592717465e6faea5b993aa88a02ee292e64d2d0d0e"
     }
   },
-  "scriptSha256": "3f25bd68272ca9cea57fc0417b04b72c1542d21bdfc2a656b382d0f3c97afba1",
-  "csvSha256": "95ffcc87db9dd00406afd1747aa95ec43e1e05c3b5c39466a30ddb054392d37e"
+  "scriptSha256": "eb80d5088632ded699c93f77faba7f6fd18038b9bcf0944a3f8cf6bc4bfad5a4",
+  "csvSha256": "7f139bf95a955dc096d22f771ebe8596b75c835f1c12cf29746b403b165f735d"
 }

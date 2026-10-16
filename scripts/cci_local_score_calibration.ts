@@ -165,6 +165,7 @@ const realCases = [
   "blackpool",
   "milton-keynes",
   "alkmaar",
+  "bydgoszcz",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -321,6 +322,7 @@ const [
   blackpool,
   miltonKeynes,
   alkmaar,
+  bydgoszcz,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4498,6 +4500,47 @@ assert(
   lasPalmasCase.coverageReview.length === 31 &&
     lasPalmasCase.coverageReview.every(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
+    )
+);
+
+const bydgoszczCase = realCases.find(c => c.candidateId === 1961);
+assert.equal(
+  bydgoszczCase.priorityCompletionReview.sha256,
+  digest(bydgoszczCase.priorityCompletionReview.path)
+);
+assert.equal(
+  bydgoszczCase.priorityCompletionReview.researchReportSha256,
+  digest(bydgoszczCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(bydgoszcz, { PCS: 60, ISR: 60, RES: 60, MED: 40, LON: 60, TEC: 60, OPT: 60 });
+assert.deepEqual(total(bydgoszcz), { center: null, lower: 48, upper: 63 });
+assert.deepEqual(total({ ...bydgoszcz, MED: 60 }), { center: null, lower: 51, upper: 66 });
+for (const id of ["PCS", "ISR", "RES", "MED", "LON", "TEC", "OPT"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...bydgoszcz };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    bydgoszczCase.sensitivity.withdrawals[id]
+  );
+}
+for (const flag of [
+  "all12095AreClinicalOutcomes",
+  "all600TransplantsSuccessful",
+  "allAgesClinicallyEligible",
+  "WestPomeraniaNetworkProvesLocalPayer",
+  "allCareCostsCovered",
+  "dischargeSheetProvesCompletedFollowup",
+  "all40TramsNewIn2025",
+  "airport199312UniqueResidents",
+  "suspectsAreConvicted",
+  "productionSupplyDifferenceIsLeakage",
+  "PM10ConflictResolved",
+])
+  assert.equal(bydgoszczCase.rootScopeReview[flag], false);
+assert(
+  bydgoszczCase.coverageReview.length === 31 &&
+    bydgoszczCase.coverageReview.every(
+      (c: { score: null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
 

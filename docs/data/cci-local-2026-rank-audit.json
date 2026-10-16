@@ -4,10 +4,10 @@
   "evidenceCutoff": "2026-10-10",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
-  "conditionalCaseCount": 113,
+  "conditionalCaseCount": 114,
   "completeConditionalCaseCount": 25,
-  "partialCaseCount": 88,
-  "unassessedCount": 8918,
+  "partialCaseCount": 89,
+  "unassessedCount": 8917,
   "weights": {
     "PCS": 15,
     "GSS": 15,
@@ -475,6 +475,15 @@
           "center": null,
           "lower": 42.0,
           "upper": 62.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "1961",
+          "source_name": "Bydgoszcz",
+          "center": null,
+          "lower": 48.0,
+          "upper": 63.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1502,6 +1511,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "1961",
+          "source_name": "Bydgoszcz",
+          "center": null,
+          "lower": 39.0,
+          "upper": 69.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "2011",
           "source_name": "Livingston",
           "center": null,
@@ -2521,6 +2539,15 @@
           "center": null,
           "lower": 36.0,
           "upper": 71.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "1961",
+          "source_name": "Bydgoszcz",
+          "center": null,
+          "lower": 48.0,
+          "upper": 63.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -3548,6 +3575,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "1961",
+          "source_name": "Bydgoszcz",
+          "center": null,
+          "lower": 39.0,
+          "upper": 69.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "2011",
           "source_name": "Livingston",
           "center": null,
@@ -4567,6 +4603,15 @@
           "center": null,
           "lower": 36.0,
           "upper": 66.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "1961",
+          "source_name": "Bydgoszcz",
+          "center": null,
+          "lower": 42.0,
+          "upper": 67.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -5594,6 +5639,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "1961",
+          "source_name": "Bydgoszcz",
+          "center": null,
+          "lower": 42.0,
+          "upper": 72.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "2011",
           "source_name": "Livingston",
           "center": null,
@@ -6613,6 +6667,15 @@
           "center": null,
           "lower": 42.0,
           "upper": 62.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "1961",
+          "source_name": "Bydgoszcz",
+          "center": null,
+          "lower": 42.0,
+          "upper": 67.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -7640,6 +7703,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "1961",
+          "source_name": "Bydgoszcz",
+          "center": null,
+          "lower": 42.0,
+          "upper": 67.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "2011",
           "source_name": "Livingston",
           "center": null,
@@ -8659,6 +8731,15 @@
           "center": null,
           "lower": 42.0,
           "upper": 62.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "1961",
+          "source_name": "Bydgoszcz",
+          "center": null,
+          "lower": 42.0,
+          "upper": 67.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -9686,6 +9767,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "1961",
+          "source_name": "Bydgoszcz",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "2011",
           "source_name": "Livingston",
           "center": null,
@@ -10268,7 +10358,7 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "95ffcc87db9dd00406afd1747aa95ec43e1e05c3b5c39466a30ddb054392d37e",
+    "cci-global-evidence-matrix.csv": "7f139bf95a955dc096d22f771ebe8596b75c835f1c12cf29746b403b165f735d",
     "cci-legal-mobility-rules.json": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "cci-legal-mobility.md": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e",
     "cci-local-2026-singapore-case.json": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -10497,12 +10587,14 @@
     "cci-milton-keynes-priority-review.md": "b53c166ffd30de943db82392f1938b3e03329d1ba164bfe45fc4422aba2634b4",
     "cci-local-2026-alkmaar-case.json": "12a11dbb72a9eebe76855ccbbedf3f28283201913bfb8a4d040a6d8dd7b9bf0b",
     "cci-alkmaar-priority-review.md": "98256cbeec3da3f01e528ff815f5fe3f70140031a9e58abadb35bcfeed4813ea",
+    "cci-local-2026-bydgoszcz-case.json": "180573990b80f079ff8b19d7986cbc20fc23b012df65624fec96329a3c61e0ca",
+    "cci-bydgoszcz-priority-review.md": "75e6217c3bd41c165f21bf592717465e6faea5b993aa88a02ee292e64d2d0d0e",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "ec3f2665887d1b34474726398fe92d4d42c2f0c7dd8c1b4834b364100db5b354",
+    "cci-global-evidence-matrix.json": "4c1c9919ea37cb4d296bc6a8caf5702c22c00936c8e0055b5837b43884147337",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "0fb6fe2534912a5030b71b8c2849c0f0c40d1ffc60ba5eb312860fac8c1eaf30"
+    "cci-local-2026-scoring-calibration.md": "a4cce876b58e91962e8a5783a9d15b448cc70226c16d8b190f361d31f3249ae9"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "942235a1f17c5a1e28fea9314cce1f47e71ac2fa0c9a577682dd382ecc1f68d6",
+  "csvSha256": "c54ca1623e833a94cbb827d4a1e732e8e6b5296e92de58bea71743a54b9de593",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }

@@ -123,6 +123,7 @@ import vilnius from "../../docs/data/cci-local-2026-vilnius-case.json";
 import blackpool from "../../docs/data/cci-local-2026-blackpool-case.json";
 import miltonKeynes from "../../docs/data/cci-local-2026-milton-keynes-case.json";
 import alkmaar from "../../docs/data/cci-local-2026-alkmaar-case.json";
+import bydgoszcz from "../../docs/data/cci-local-2026-bydgoszcz-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -250,8 +251,10 @@ const cases = [
   blackpool,
   miltonKeynes,
   alkmaar,
+  bydgoszcz,
 ];
 const caseNamesZh: Record<number, string> = {
+  [bydgoszcz.candidateId]: "比得哥什功能区",
   [alkmaar.candidateId]: "阿尔克马尔功能区",
   [miltonKeynes.candidateId]: "米尔顿凯恩斯功能区",
   [blackpool.candidateId]: "布莱克浦功能区",
@@ -471,6 +474,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [bydgoszcz.candidateId]: [
+    zh
+      ? "比得哥什防护／制度／资源／专项转化／技术／退出条件60，医疗条件40，安全未知。贡献48、数学域48—63，无完整总分。实际保供、食品帮助、公共服务与产用支持有限判断；必要全天照护在无法家中满足后仍长候支持40，医疗60公平解释给51—66，地域／时点／净取得桥可撤。"
+      : "Bydgoszcz has conditional PCS/ISR/RES/LON/TEC/OPT 60 and MED 40; GSS remains unknown. Contribution is 48, with a 48–63 arithmetic domain and no complete total. Delivered utilities, food support, public services and technical production support bounded judgments. Long waits for necessary round-the-clock care after home support cannot meet the need support MED40; a fair MED60 interpretation gives 51–66. Geography, time and net-access bridges are revocable.",
+    zh
+      ? "资源60采用普通中位资源加实际帮助后的净取得桥，拒则42—67；作者原提案未知仍保留。600例儿童造血重建非600成功／全龄适用，西滨海网络非本地付款证明，家属酒店非全免费，出院资料非已完成随访。PM10天数28／32冲突不裁真值，旅客非独立居民，被控非定罪，全球入围未证。"
+      : "RES60 accepts a bridge from median resources and delivered support to usual net access; rejecting it gives 42–67, and the author's unknown proposal remains preserved. The 600 paediatric HSCTs are not 600 successes or eligibility at every age. A West Pomeranian network does not prove local payment; family accommodation is not wholly free, and discharge documents do not prove completed follow-up. Conflicting PM10 counts of 28/32 remain unresolved. Journeys are not unique residents, charges are not convictions, and global inclusion is unproven.",
+  ],
   [alkmaar.candidateId]: [
     zh
       ? "阿尔克马尔防护／医疗／技术条件60，安全／制度条件40，资源／专项转化／退出未知。贡献36、数学域36—66，无完整总分。实际防洪、必要护理和技术产用同权，住宅爆炸及帮助迟少／住房久候支持40；两项60公平解释各给39—69，必要画像／时点／净取得桥可撤。"
