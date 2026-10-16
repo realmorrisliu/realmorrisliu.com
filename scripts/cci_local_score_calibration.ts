@@ -153,6 +153,7 @@ const realCases = [
   "livingston",
   "szczecin",
   "bedford",
+  "aarhus",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -297,6 +298,7 @@ const [
   livingston,
   szczecin,
   bedford,
+  aarhus,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -529,7 +531,7 @@ const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.
 assert(tokyoPosition);
 assert.equal(tokyoPosition.center, 62);
 assert.equal(tokyoPosition.bestPosition, 1);
-assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 19);
+assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 20);
 assert.deepEqual(total(washington), { center: 58, lower: 58, upper: 58 });
 assert.equal(washington.RES, 40);
 assert.equal(washington.OPT, 60);
@@ -1263,7 +1265,7 @@ const praguePosition = rankAudit.scenarios.fixed_conditional_centers.caseResults
 );
 assert(praguePosition);
 assert.equal(praguePosition.bestPosition, 1);
-assert.equal(praguePosition.worstPosition, rankAudit.candidateCount - 19);
+assert.equal(praguePosition.worstPosition, rankAudit.candidateCount - 20);
 const tokyoWithoutTec = { ...tokyo };
 delete tokyoWithoutTec.TEC;
 assert.deepEqual(total(tokyoWithoutTec), { center: null, lower: 54, upper: 64 });
@@ -4191,4 +4193,59 @@ assert(
 assert.deepEqual(
   bedfordCase.dimensions.find((d: { id: string }) => d.id === "TEC").conditionalAlternatives,
   []
+);
+
+const aarhusCase = realCases.find(c => c.candidateId === 229);
+assert.equal(
+  aarhusCase.priorityCompletionReview.sha256,
+  digest(aarhusCase.priorityCompletionReview.path)
+);
+assert.equal(
+  aarhusCase.priorityCompletionReview.researchReportSha256,
+  digest(aarhusCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(aarhus), { center: null, lower: 51, upper: 61 });
+assert.equal(aarhusCase.unknownWeight, 10);
+assert.deepEqual(
+  aarhusCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["RES"]
+);
+assert.deepEqual(total({ ...aarhus, PCS: 60 }), { center: null, lower: 54, upper: 64 });
+assert.deepEqual(total({ ...aarhus, ISR: 40 }), { center: null, lower: 48, upper: 58 });
+for (const [id, lower, upper] of [
+  ["PCS", 45, 70],
+  ["GSS", 42, 67],
+  ["ISR", 42, 67],
+  ["MED", 42, 67],
+  ["LON", 45, 65],
+  ["TEC", 45, 65],
+  ["OPT", 45, 65],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...aarhus };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+for (const [RES, center] of [
+  [40, 55],
+  [60, 57],
+  [80, 59],
+] as const)
+  assert.deepEqual(total({ ...aarhus, RES }), { center, lower: center, upper: center });
+assert.equal(aarhusCase.sourceSnapshots.length, 21);
+assert.equal(aarhusCase.failedSourceSnapshots.length, 2);
+assert.equal(aarhusCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
+assert.equal(aarhusCase.rootScopeReview.rootSelectedPdfTextPageCount, 23);
+assert.equal(aarhusCase.rootScopeReview.rootPdfPageCount, 6);
+assert.equal(aarhusCase.rootScopeReview.sewer2085IsCompletionYear, true);
+assert.equal(aarhusCase.rootScopeReview.residenceBanEffectiveIn2025, false);
+assert.equal(aarhusCase.rootScopeReview.expected2026EqualsVerifiedProjectStatus, false);
+assert.equal(aarhusCase.rootScopeReview.utilitySelfSupplyEqualsHouseholdEnergySecurity, false);
+assert.equal(aarhusCase.rootScopeReview.specificLocalCARTProductPayerDirectlyVerified, false);
+assert.equal(aarhusCase.rootScopeReview.patientExperienceEqualsClinicalOutcomes, false);
+assert(
+  aarhusCase.dimensions
+    .filter((d: { id: string }) => !["PCS", "ISR"].includes(d.id))
+    .every((d: { conditionalAlternatives: number[] }) => d.conditionalAlternatives.length === 0)
 );

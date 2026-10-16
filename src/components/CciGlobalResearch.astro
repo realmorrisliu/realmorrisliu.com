@@ -111,6 +111,7 @@ import corby from "../../docs/data/cci-local-2026-corby-case.json";
 import livingston from "../../docs/data/cci-local-2026-livingston-case.json";
 import szczecin from "../../docs/data/cci-local-2026-szczecin-case.json";
 import bedford from "../../docs/data/cci-local-2026-bedford-case.json";
+import aarhus from "../../docs/data/cci-local-2026-aarhus-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -226,8 +227,10 @@ const cases = [
   livingston,
   szczecin,
   bedford,
+  aarhus,
 ];
 const caseNamesZh: Record<number, string> = {
+  [aarhus.candidateId]: "奥胡斯功能区",
   [bedford.candidateId]: "贝德福德功能区",
   [szczecin.candidateId]: "什切青功能区",
   [livingston.candidateId]: "利文斯顿功能区",
@@ -435,6 +438,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [aarhus.candidateId]: [
+    zh
+      ? "奥胡斯防护条件40，其余六项条件60，资源未知。原权重贡献51、数学域51—61，无完整总分。实际分流、保护、公共护理、细胞治疗和技术产用支持有限判断；地域、时点、通常付款与净照护假设可撤。"
+      : "Aarhus has conditional PCS 40 and six dimensions at 60; RES remains unknown. Its original-weight contribution is 51 and arithmetic domain 51–61, without a complete total. Delivered drainage, protection, public care, cell therapy and productive technology support scoped judgments; geography, time, usual payment and net-care assumptions are revocable.",
+    zh
+      ? "防护60、制度40保留公平替代。预计2026工程可用不认证截止日完工状态；2085是分流完成年份。禁入出狱后起算，水务自供非家庭能源保障，患者体验非临床结局，具体CAR-T产品付款未直接核实。全球入围未证明。"
+      : "PCS 60 and ISR 40 remain fair alternatives. Expected project readiness in 2026 does not verify its cutoff status; 2085 is the sewer-separation completion year. Exclusion orders start after prison, utility energy self-supply is not household energy security, patient experience is not a clinical outcome, and specific CAR-T product payment is not directly verified. Global qualification is unproven.",
+  ],
   [bedford.candidateId]: [
     zh
       ? "贝德福德防护／医疗条件40、制度／技术条件60，四维未知。原权重贡献27、数学域27—72，无完整总分。实际防洪响应、公共救助、诊疗改善和工程产用，与帮助后仍重要的防护及必要护理余障合看；地域、时间与通常净取得假设可撤。"

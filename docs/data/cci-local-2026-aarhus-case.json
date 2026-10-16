@@ -1,0 +1,1334 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 229,
+  "name": "Aarhus",
+  "countryIso": "DNK",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-16",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "按医学、需求、保障、居留或程序分别审资格；不默认全民工作/每项专项合资格/全免费。",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "researchFrozenInputCommit": "fe052997d2903b8ffc92535e18175a14cf0673eb",
+  "fixedInputCases": 99,
+  "fixedInputComplete": 21,
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 51,
+  "unknownWeight": 10,
+  "unresolvedScoreRange": [51, 61],
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 40,
+      "rationale": "已有分流与备援同实际雨洪生活资产损害合看；重要余障延续至截止日的有限可撤推定下采用40，实际工程完工状态未核。",
+      "assumption": "S10物理45–48说明暴雨/地下水/海水多来源风险；2025实分流65ha且减少溢流，但Vesterbro Torv暴雨水不能排走，流向VesterAllé/Vesterport/Museumsgade并损坏物业商店道路；相关池/路床2025才启动，原件预计2026广场可用，不认证已完工。Viby仍受淹威胁，新湖亦刚开始。接受这些明确生活资产实害在已有全市分流帮助后仍是主要雨洪的重要残余、相关保护至Oct10未有实际完成证据时延续的可撤判断；不是推断2026又发生了同场灾害，也不是把未核完工直接当未完事实。S10物理97实际应急演练、多供应商/零件库存和无电时运营策略属正证，2025无激活不能证明极端冲击已验证，S17计划壳不能补成恢复实绩。",
+      "alternativeRationales": "60可在既有分流/控制/备援已使通常主要雨洪风险余障可管理的同等有限代表桥下辩；已有实害与未来工程使本建议暂不接受该桥。80需更强实际主要风险适配与恢复，不设零风险或四子项全民同年普测。拒重要性、地域或延续桥则null。",
+      "conditionalAlternatives": [60],
+      "sourceIds": ["S01", "S10", "S17"],
+      "scoreStatus": "conditional_root_accepted",
+      "subpillars": {
+        "heat_humidity": "context",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": 60,
+      "rationale": "实际本地组织暴力救治/追诉与高暴露国际活动保护合束，有限普通保护与时间桥下拟60。",
+      "assumption": "S15物理22具体Aarhus2023停车场刀斧棒袭击两人危急、现场救命及住院存活，2025三名Comanches关联被告各判9年并附出狱后8年Aarhus/Randers禁入，是真实暴力及缓解，非未发生风险推分。Randers枪击/俱乐部关闭不当Aarhus结果。亲见11的2025Jul3 EU开幕/泽连斯基来访，实际陆海空、PET/警区/消防/地方协调保护与道路封闭说明主要战略暴露有执行，不是机关名或未来演练。12跨机构停电/外来行动仅准备，21本地家族犯罪早介入尚无净效果队列。接受既有救命/追诉/判刑和实际高暴露保护通常可用于普通居民主要组织/战略风险且延续到截止的有限桥；不声称没有帮派或2026袭击率实测。 8年禁入出狱后起算，不预支2025净效果；水务2025实际分层监测/训练及供应备援补普通关键服务保护连接，不冒成功极端攻击测试。",
+      "alternativeRationales": "实际严重伤害仍是反证；若接受帮助后重要普通后果仍持续的有限连接可讨论40，无须新袭击/主导/多数。但本轮未据现有本地材料定向采用这一数值替代；拒通常代表性/时间/净保护推定则未知。80需更强主要保护余量与恢复，不要求战争实发或零风险。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S15", "S10"],
+      "scoreStatus": "conditional_root_accepted",
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "partial",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "实际社会帮助、护理接续和应急执行支持普通机构通常可用，有限合束拟60。",
+      "assumption": "S01物理23实际成人居家支持3511、2033儿童家庭预防服务、现金供养43695全时人（分母/画像不同不相加成人数）；29短疗程后自立69%，30实际353虚拟访问并接全部MSO紧急呼叫、约一半中心直接处理，32实际7539居家帮助及按需各年龄服务，是交付而非预算。S15亲见13承认资源取舍导致经济犯罪案件不优先及居民不满，官方争议说法两面保留；不能2026–30新钱当已修复。S14 Sep2026宣布2027节支是将来，不反推当下全部失效。接受市域帮助/执行对FUA普通公民按需通常可接近与2025至截止延续桥；不把中位人当每个专项合资格。",
+      "alternativeRationales": "40可在实际经济犯罪案件关闭/未调查对普通资产保护留下重要余障的有限桥下辩，不需多数或停城；本主张合判实际广泛可操作帮助仍拟60。80需更强跨机构恢复/申诉净结果，不要求完美全覆盖。拒通常可用/地域/时点桥则null。",
+      "conditionalAlternatives": [40],
+      "sourceIds": ["S01", "S14", "S15", "S17"],
+      "scoreStatus": "conditional_root_accepted",
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "真实水供、费用变化和按需食品/服务有据，普通中位家庭食品及家庭能源帮助后联合净取得仍不能定向。",
+      "assumption": "S10亲见11实际14.7m m³饮水/3.6%损失/27.8m m³污水/0.8%溢流，非家庭能耗或食品营养；13实际2025水价每m³增4.25DKK无全家庭总账分母。S05实际1117检测、已处理小幅菌/化学超标及Lyngby跟踪，供应商称无健康风险，不把全部案例说已关闭。S01物理32说明餐饮/按需所有年龄帮助，23实际供养支出与人数，但未核普通中位家庭食品实际取得/营养或困难后净资源。失败S07/S12不作城市能力反证，不用其403/TLS得低分，也不由水务自发电69%推出住户能量保障。现不接受水供/社会现金足以代普通食水能整束的推定；非要求每户精确账本。",
+      "alternativeRationales": "60可在真实食品与家庭能源净资源/已实施帮助能支持通常中位取得的有限桥后辩；40要有帮助后实际重要生活后果，不因涨水费或未知默认40；80看更强余量与共同供应恢复。当前两向未定，null/[]。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S01", "S05", "S10"],
+      "scoreStatus": "unresolved",
+      "subpillars": {
+        "water": "partial",
+        "food": "context",
+        "energy": "unresolved",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "当地真实专科与社区护理、患者体验及通常公费路径合束支持有限必要护理60。",
+      "assumption": "S03亲见8/9：2025急性住院11508发卷/5127(45%)回应，治疗4.35/总住院4.37（1–5量表），责任医3.68且低评价存在；12/13急性门诊1141/414(36%)，等待可接受3.79/治疗4.25，非错误率或所有FUA人口结局，2025比较显著性方法改变。S09实际移植/细胞治疗12床+门诊、协调员和多学科，S02监护/出院联络与S01实际7539居家帮助、短疗程自立69%支持反复接续。R04官方通常注册/有效保障下GP/专科/公院多数免费，限定登记/卡和权益，不把工作导向页变全公民无条件资格，也不搬邻城能力。接受这些实际照护与感受代表普通必要护理可用、地区/时间与中位净费用及家属额外费用通常可管理的有限桥。",
+      "alternativeRationales": "责任医连续性和参与决策较弱、人员压力及carer食宿自费都保留；没有本地因等待造成重要伤害或普通净护理断点的充分结果，不能仅量表不足5/目标差自动40。40须实际帮助后重要后果；80需更可信及时性/常规安全/净取得，非完美全年全民。拒回应者/地域/普通净护理/延续桥回null。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S01", "S02", "S03", "S09", "R04"],
+      "scoreStatus": "conditional_root_accepted",
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "本地实际提供造血重建/CAR-T及完整可操作监护路径，可有限接成熟疾病细胞转化，拟60。",
+      "assumption": "S09明确本院移植本人/供者细胞并给CAR-T，12床与移植门诊、协调员和具体流程是当前实施服务，不将研究邀请当均属试验，也不造本地给药人数/产品。S02实际采集—通常3–4周制造—桥接—3日准备—10–14日住院—4周接近合资格中心及CRS/ICANS救治、8周禁驾；家属病房床、食宿部分自付/社工入口，不当全免。R05物理14成熟tisa难治DLBCL非比较人体长随访并有31%入组未输注；24登记存活/响应，不移成Aarhus品牌/疗效/丹麦付款，2021/2022分析日与table7/5源内冲突保留。接受本院未具名CAR-T属于同类成熟疾病路径、通常公费公院服务覆盖符合指征的实际治疗、反复监护/交通及家属必要成本对普通中位人通常可承受并延续到截止的可撤桥。",
+      "alternativeRationales": "毒性、制造等待/进展未给药和carer成本是实质反证，但没有本地采用后普通重要净取得失败后果，不能以未知品牌/首例计数默认40。80不能仅凭多移植类型或医院名；需更强成熟转化真实应用及普通取得适配，不索健康人延寿/零风险/逐剂同牌账单。拒产品/公费/净照护或时点桥任一则null。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S02", "S09", "R04", "R05"],
+      "scoreStatus": "conditional_root_accepted",
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "specificLocalProductPayerDirectlyVerified": false,
+      "necessaryRevocableBridges": [
+        "unnamedlocalproductmaturediseaseclass",
+        "usualpubliccoveragequalifyingactualtreatment",
+        "repeatmonitoringtransportcarernetcare",
+        "currentservicecontinuitytocutoff"
+      ]
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "水务工程能源回收与数字照护、交通支付已有实际使用，非医院的产用扩散支持有限60。",
+      "assumption": "S10亲见11实际20.7GWh非化石能源产出及水务自供69%，非居民能源自给；46实分流65ha并以土壤现场复用等工程应用；S01亲见30实际353人虚拟访问及全MSO紧急呼叫中心，50%左右电话直接解决，其余外勤，是技术服务扩散而非论文数。Robotcafé曾试行但经济成本过高未永久实施，是反证不装成功规模化；97AI组/2026计划不当已完成效益。S16实际识牌停车/多付款方式与S18可操作客运支付另有应用。接受这些多用途本地产用对普通需求可实际受益并持续至截止的有限代表桥，不声称整个产业/网络每人已测。",
+      "alternativeRationales": "40需实际采用后重要成本/数字排除阻碍成为目标普通人重要余障；机器人试点未规模化不直接使全维40。80需更强知识生产、产业与多场景净扩散，但不设全民AI或逐节点压测。拒代表性/普通净受益/延续桥则null。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S01", "S10", "S16", "S18"],
+      "scoreStatus": "conditional_root_accepted",
+      "subpillars": {
+        "knowledge_output": "context",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": 60,
+      "rationale": "实际机场连接和城市接驳，结合有条件欧盟居留、个人付款及通信路由，有限普通退出路径60可辩。",
+      "assumption": "S06 Sept1_2026文章给Aug实际69680旅客行程与既有CPH转接，非独立居民/收入负担；10月5班/2027新增航线不作已实现。S18实际925X由中央站45–50分钟至机场、按航班调整且要留意延误/取消，可卡/现金/应用/纸票，不预设人人有车；312需提前1小时预约不混925X。S16停车费用和admin附加费保留，不当机票或最低成本。R01对丹麦EU公民给有条件工作/登记/长期路径，不默认境外已有工作或所有无业/退休自动同资格；R02非欧元区银行欧元跨境同等费用及强鉴权/换汇例外，非全部资产无摩擦搬走；R03临时漫游及4月fairuse、飞机卫星不含，2025cap不作2026数。接受实际路由加普通中位预算、合法满足一条居留路径、已有常用账户/鉴权/临时通信可用的有限接续桥；不许全年龄/全目的地自动资格门槛，机场在FUA外不当不能出行。",
+      "alternativeRationales": "现未发现普通人实际重要退出中断，不能因未核最低机票或永久SIM默认40。40需真实帮助后重要法律/付款/实体通道限制；80看更强替代/长期接续，不要求逐笔全迁居账本。拒通常预算/资格/账户鉴权接续桥则null。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S06", "S16", "S18", "R01", "R02", "R03"],
+      "scoreStatus": "conditional_root_accepted",
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      }
+    }
+  ],
+  "coverageReview": [
+    {
+      "subpillar": "heat_humidity",
+      "status": "context",
+      "boundedReviewPerformed": true,
+      "finding": "热湿与通常适配未独核，不由未知降分。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "PCS",
+      "sourceIds": ["S01", "S10", "S17"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "flood_sea_level",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "S10p46/47有实际分流和低谷雨洪损害；预计2026不认证Oct10工程状态，40需有限延续桥。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "PCS",
+      "sourceIds": ["S01", "S10", "S17"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "geophysical",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "finding": "本轮未补本地地球物理风险与适配测量。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "PCS",
+      "sourceIds": ["S01", "S10", "S17"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "severe_weather_wildfire",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "暴雨及管网容量与备援部分可核；不泛化成全自然风险失败。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "PCS",
+      "sourceIds": ["S01", "S10", "S17"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "organized_violence",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "S15p22本地严重帮派袭击/获救和2025判刑；禁入为出狱后，不搬Randers枪击。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "GSS",
+      "sourceIds": ["S15", "S10"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "regional_conflict",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "S15p11国际高暴露保护可核，p12外来行动协商只是准备，区域保护代表桥有限。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "GSS",
+      "sourceIds": ["S15", "S10"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "strategic_exposure",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "S15p11陆海空/PET实际保护与S10p97水务网络/供应韧性合判；非机关名或无事件即安全。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "GSS",
+      "sourceIds": ["S15", "S10"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "governance",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "S01实际社会支持与S15p13资源取舍合看，40保留公平替代。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "ISR",
+      "sourceIds": ["S01", "S14", "S15", "S17"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "adaptive_capacity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "S01康复/虚拟照护和S10p97真实训练备援，未来改革不算交付。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "ISR",
+      "sourceIds": ["S01", "S14", "S15", "S17"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "social_cohesion",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "S01按需社会帮助可核，不将不同对象全时人和服务数相加。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "ISR",
+      "sourceIds": ["S01", "S14", "S15", "S17"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "emergency_recovery",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "MSO实际全呼叫路径可核；计划索引、未激活与未来认证不冒恢复实绩。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "ISR",
+      "sourceIds": ["S01", "S14", "S15", "S17"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "water",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "S05实际1117份检测及余留Lyngby跟踪，S10p11水量/损失部分；供应商无风险说法保留。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "RES",
+      "sourceIds": ["S01", "S05", "S10"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "food",
+      "status": "context",
+      "boundedReviewPerformed": true,
+      "finding": "S01按需餐食与现金支持不等普通中位营养实际联合取得。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "RES",
+      "sourceIds": ["S01", "S05", "S10"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "energy",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "finding": "水务20.7GWh/69%自供非家庭能源，失败HTTP不作能力反证。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "RES",
+      "sourceIds": ["S01", "S05", "S10"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "supply_chain",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "水务多供应商/零件库存实际，但食品与家庭能源整束仍不定向。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "RES",
+      "sourceIds": ["S01", "S05", "S10"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "access",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "R04通常登记/有效保障与S09本地服务合判，国籍非自动医保。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "MED",
+      "sourceIds": ["S01", "S02", "S03", "S09", "R04"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "routine_quality",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "S03实际患者体验与回应偏差、方法变化合看，不当死亡/错误/及时率。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "MED",
+      "sourceIds": ["S01", "S02", "S03", "S09", "R04"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "specialist_capacity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "S02/S09真实移植及CAR-T提供、床和门诊可操作；非仅研究招募。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "MED",
+      "sourceIds": ["S01", "S02", "S03", "S09", "R04"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "system_continuity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "S01实际康复和MSO响应、S02/S09反复护理及家属成本，有限通常净照护桥可撤。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "MED",
+      "sourceIds": ["S01", "S02", "S03", "S09", "R04"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "translation",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "S09实际CAR-T与S02全流程接成熟疾病类别，未搬外国产品当地疗效。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "LON",
+      "sourceIds": ["S02", "S09", "R04", "R05"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "trial_maturity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "R05p14/24成熟非比较人体/登记类材料及未给药反证；无健康人延寿门槛。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "LON",
+      "sourceIds": ["S02", "S09", "R04", "R05"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "regulatory_adoption",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "本地未具名产品与具体付款未直接核实，成熟类别及通常公费连接明确可撤。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "LON",
+      "sourceIds": ["S02", "S09", "R04", "R05"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "resident_access",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "S02监护/近院/禁驾、S09交通与陪床、R04通常核心公费，净反复照护推定可撤。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "LON",
+      "sourceIds": ["S02", "S09", "R04", "R05"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "knowledge_output",
+      "status": "context",
+      "boundedReviewPerformed": true,
+      "finding": "水务测试/工程和护理产用为有限知识连接，非全区论文或专利测量。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "TEC",
+      "sourceIds": ["S01", "S10", "S16", "S18"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "industry_density",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "S10实际水务工程/回收支持有限产业产用，不借医院或未来AI当全产业。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "TEC",
+      "sourceIds": ["S01", "S10", "S16", "S18"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "digital_infrastructure",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "S01虚拟访视、全呼叫响应及S16/S18付款实际；未逐节点量测。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "TEC",
+      "sourceIds": ["S01", "S10", "S16", "S18"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "diffusion",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "机器人咖啡成本高未永久实施为反证，其他实际工程/护理/支付扩散合看。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "TEC",
+      "sourceIds": ["S01", "S10", "S16", "S18"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "transport_redundancy",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "S06真实Aug客运、S18实际925X接驳，区外机场可服务；未来航线不兑现。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "OPT",
+      "sourceIds": ["S06", "S16", "S18", "R01", "R02", "R03"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "legal_mobility",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "R01工作导向有条件EU居留，不默认就业/全年龄同资格；满足一条实际路径推定可撤。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "OPT",
+      "sourceIds": ["S06", "S16", "S18", "R01", "R02", "R03"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "asset_portability",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "R02个人欧元跨境同费、强鉴权/换汇及例外；非全部资产无摩擦迁走。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "OPT",
+      "sourceIds": ["S06", "S16", "S18", "R01", "R02", "R03"],
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "network_continuity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "finding": "R03临时漫游/公平使用/卫星及永久例外，2025费用不当2026数字。",
+      "score": null,
+      "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
+      "dimension": "OPT",
+      "sourceIds": ["S06", "S16", "S18", "R01", "R02", "R03"],
+      "fullyMeasured": false
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://aarhus.dk/media/lzqbj2bz/bilag-1-aarsberetning-2025.pdf?format=noformat",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/city-annual2025.pdf",
+      "originalBytes": 2917183,
+      "sha256": "50459c7b7b3b0859c63a8aac55b89430eb36fbcfbf3b3fa299061c0b2e52bb95",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "pdf",
+      "observationAndVersion": "2025municipalactuals;cover2024/body2025conflict;createdApr30_2026/HTTPMay1;notarchivedcutoffbytes",
+      "actualReadScopeAndLimits": "text1/2/6/7/22/23/28/29/30/31/32/33/41/42;view23/30; citynotallFUA",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S01-leg1.bin",
+      "responseBodyBytes": 2917183,
+      "responseBodySHA256": "50459c7b7b3b0859c63a8aac55b89430eb36fbcfbf3b3fa299061c0b2e52bb95",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
+    },
+    {
+      "id": "S02",
+      "url": "https://www.auh.dk/patientvejledninger/blodsygdomme/transplantation/car-t-behandling/",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/car-t-guide.html",
+      "originalBytes": 83677,
+      "sha256": "101fc35059c9441731b01fdd0b1172a4cfbdd83d899a989226f831bc41db1dc9",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "html",
+      "observationAndVersion": "undatedcurrentCAR-Tguide;searchpublished1.7yearsnotfirstpubauthentication",
+      "actualReadScopeAndLimits": "fullmain;actualmanufacture/bridging10–14dayinpatient/4weeknearcentre/monitoring/carerfoodlodgingnotfree; toolvariantnotmerged",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S02-leg2.bin",
+      "responseBodyBytes": 83677,
+      "responseBodySHA256": "101fc35059c9441731b01fdd0b1172a4cfbdd83d899a989226f831bc41db1dc9",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
+    },
+    {
+      "id": "S03",
+      "url": "https://www.fagperson.auh.dk/siteassets/06-om-os/kvalitet-for-patienten/patienttilfredshed/rapport-aarhus-universitetshospital-2025.pdf",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/LUP2025.pdf",
+      "originalBytes": 367820,
+      "sha256": "a3451224a37ab493c86a40d7c4ade3e6931a9e69639039139c953761fb32f008",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "pdf",
+      "observationAndVersion": "LUP2025experience;HTTPmodifiedMar17_2026; methodsignificancechanged",
+      "actualReadScopeAndLimits": "text1/2/8/9/12/13;view8/9/12/13; hospitalrespondentsnotallFUAclinicaloutcomes",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S03-leg3.bin",
+      "responseBodyBytes": 367820,
+      "responseBodySHA256": "a3451224a37ab493c86a40d7c4ade3e6931a9e69639039139c953761fb32f008",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
+    },
+    {
+      "id": "S04",
+      "url": "https://www.aarhusvand.dk/publikationer/",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/water-publications.html",
+      "originalBytes": 53231,
+      "sha256": "e00a98de0744c53e0d6231d08753b9159b6e5d02c23e53e35838f92a9a5a23a7",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "html",
+      "observationAndVersion": "currentpublicationsindex datesMay12andMay28_2026;PDFJune15metadataversiondiff",
+      "actualReadScopeAndLimits": "fullmain/hrefslocatoronly",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S04-leg4.bin",
+      "responseBodyBytes": 53231,
+      "responseBodySHA256": "e00a98de0744c53e0d6231d08753b9159b6e5d02c23e53e35838f92a9a5a23a7",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": false,
+      "locatorOrPlanOnly": true
+    },
+    {
+      "id": "S05",
+      "url": "https://www.aarhusvand.dk/forbrug-og-byggeri/drikkevand/vandkvalitet-og-haardhed/",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/water-quality2025.html",
+      "originalBytes": 46214,
+      "sha256": "b57bfb8fff46edbe26989789c87f043d5bbf4bf0a5f77adb1b685adc1f091a40",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "html",
+      "observationAndVersion": "undatedcurrentproviderwith2025sampleoutcomes;timebridge",
+      "actualReadScopeAndLimits": "fullmain;1117samples/treatedbacterialchemicalcasesongoingLyngbyfollowup; providerclaimsnotexternalriskadjustment",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S05-leg5.bin",
+      "responseBodyBytes": 46214,
+      "responseBodySHA256": "b57bfb8fff46edbe26989789c87f043d5bbf4bf0a5f77adb1b685adc1f091a40",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
+    },
+    {
+      "id": "S06",
+      "url": "https://www.aar.dk/august-maaned-lander-mere-vaekst-i-aarhus-airport-flere-nyheder-bringer-midt-og-oestjyderne-taettere-paa-verden/",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/airport-august2026.html",
+      "originalBytes": 222117,
+      "sha256": "378e801a2d10c94c85b4f3cf8eb0a319688b3c08d955579ffbc2c5e258d5d57a",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "html",
+      "observationAndVersion": "Sept1_2026release;Aug2026actualpassage;Octoberfrequencyand2027routesfuture",
+      "actualReadScopeAndLimits": "fullmain;69680journeysnotuniqueusers/affordability;relatednewsseparate",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S06-leg6.bin",
+      "responseBodyBytes": 222117,
+      "responseBodySHA256": "378e801a2d10c94c85b4f3cf8eb0a319688b3c08d955579ffbc2c5e258d5d57a",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
+    },
+    {
+      "id": "S08",
+      "url": "https://politi.dk/politikredse/oestjyllands-politi/om-oestjyllands-politi",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/police-district.html",
+      "originalBytes": 31695,
+      "sha256": "da3b29fce68e2643ac206de4b2c8ab680a94ec213616a408f8aa62ce62e892ff",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "html",
+      "observationAndVersion": "currentpolicedistrictaboutindex",
+      "actualReadScopeAndLimits": "main/hrefs;7municipalitiesscope,notlocalresults",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S08-leg8.bin",
+      "responseBodyBytes": 31695,
+      "responseBodySHA256": "da3b29fce68e2643ac206de4b2c8ab680a94ec213616a408f8aa62ce62e892ff",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": false,
+      "locatorOrPlanOnly": true
+    },
+    {
+      "id": "S09",
+      "url": "https://www.auh.dk/afdelinger/blodsygdomme/blodsygdomme-transplantationsafsnit/",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/transplant-service.html",
+      "originalBytes": 82900,
+      "sha256": "e12d276d7a68afee3ed013d76daaba9e398e392a716d7ae401650606ea097fa9",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "html",
+      "observationAndVersion": "undatedcurrentlocaltransplantservice;vaccinationOct1_2026label",
+      "actualReadScopeAndLimits": "fullmain;12beds+clinicactualdelivery/followup,ordinarytransportmostlyselfarrangedconditionalhelp;notcohort",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S09-leg9.bin",
+      "responseBodyBytes": 82900,
+      "responseBodySHA256": "e12d276d7a68afee3ed013d76daaba9e398e392a716d7ae401650606ea097fa9",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
+    },
+    {
+      "id": "S10",
+      "url": "https://www.aarhusvand.dk/media/f2rdnziw/aarhus-vand-aarsrapport-2025.pdf",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/water-annual2025.pdf",
+      "originalBytes": 17361490,
+      "sha256": "474b46f24571b596f92f9ee8cfa091aa1f8f0d7d96ade078a040581aaa5834e9",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "pdf",
+      "observationAndVersion": "2025waterannual;providerindexMay12_2026butPDFcreated/modifiedJune15_2026;notfirstpub/cutoffsamebytescertified",
+      "actualReadScopeAndLimits": "text1/2/11/13/45/46/47/48/97/98;view11/46/47/97; utility/citynotentireFUA",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S10-leg10.bin",
+      "responseBodyBytes": 17361490,
+      "responseBodySHA256": "474b46f24571b596f92f9ee8cfa091aa1f8f0d7d96ade078a040581aaa5834e9",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
+    },
+    {
+      "id": "S11",
+      "url": "https://politi.dk/oestjyllands-politi/om-oestjyllands-politi/om-politikredsen",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/police-about.html",
+      "originalBytes": 33969,
+      "sha256": "b7d89252a60184d6449dccf8ba517e401ac95d900372c1819f7efa160e661af5",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "html",
+      "observationAndVersion": "undatedpoliceabout",
+      "actualReadScopeAndLimits": "fullmain/hrefslocatoronly",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S11-leg11.bin",
+      "responseBodyBytes": 33969,
+      "responseBodySHA256": "b7d89252a60184d6449dccf8ba517e401ac95d900372c1819f7efa160e661af5",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": false,
+      "locatorOrPlanOnly": true
+    },
+    {
+      "id": "S13",
+      "url": "https://politi.dk/oestjyllands-politi/om-oestjyllands-politi/aarsberetninger",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/police-reports.html",
+      "originalBytes": 30587,
+      "sha256": "ec2d98ec94ae6bec11aba41a40920f7b64bfcbc77085cd87e67fc21ec6bb3302",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "html",
+      "observationAndVersion": "undatedpolicepublicationsindex",
+      "actualReadScopeAndLimits": "fullmain/hrefsactual2025PDFhref;notpoliceoutcomeitself",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S13-leg13.bin",
+      "responseBodyBytes": 30587,
+      "responseBodySHA256": "ec2d98ec94ae6bec11aba41a40920f7b64bfcbc77085cd87e67fc21ec6bb3302",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": false,
+      "locatorOrPlanOnly": true
+    },
+    {
+      "id": "S14",
+      "url": "https://aarhus.dk/msb",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/social-services.html",
+      "originalBytes": 46994,
+      "sha256": "a97d4dd743f7f7811cb9140aba6e767fd1d5cb4d96e14653eb9200799fd33d30",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "html",
+      "observationAndVersion": "currentcitysocialindexinclSep17_2026budget2027announcement",
+      "actualReadScopeAndLimits": "fullmain;2027cutsfuture/notcurrentprovedservicefailure",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S14-leg14.bin",
+      "responseBodyBytes": 46994,
+      "responseBodySHA256": "a97d4dd743f7f7811cb9140aba6e767fd1d5cb4d96e14653eb9200799fd33d30",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
+    },
+    {
+      "id": "S15",
+      "url": "https://politi.dk/-/media/mediefiler/oejyl/dokumenter/aarsberetninger/virksomhedsberetning-for-oestjyllands-politi-2025.pdf",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/police-annual2025.pdf",
+      "originalBytes": 31358882,
+      "sha256": "1a3de74095c345c094c7f7a58817fe6f6ad1ee1f1577866d58d32f4a7454ee8d",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "pdf",
+      "observationAndVersion": "2025policeactuals;PDFMarch27_2026metadataonlypublicationclue;2023Aarhusattack/2025sentences",
+      "actualReadScopeAndLimits": "text1/2/3/4/10/11/12/13/19/20/21/22;view10/11/13/19/21/22; districtnotAarhusonly,Randersnottransferred",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S15-leg15.bin",
+      "responseBodyBytes": 31358882,
+      "responseBodySHA256": "1a3de74095c345c094c7f7a58817fe6f6ad1ee1f1577866d58d32f4a7454ee8d",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
+    },
+    {
+      "id": "S16",
+      "url": "https://www.aar.dk/parkering-i-aarhus-airport/",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/airport-transport.html",
+      "originalBytes": 229975,
+      "sha256": "b7b124d84410c3e7d2f804b940e62e59c61056a1266c4df72eb5b6839bfb81f6",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "html",
+      "observationAndVersion": "undatedcurrentairportparking/prices",
+      "actualReadScopeAndLimits": "fullmain;notbusrouteitself,5hourdropoff/fees/paymentconditionsnotairfarebudget",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S16-leg16.bin",
+      "responseBodyBytes": 229975,
+      "responseBodySHA256": "b7b124d84410c3e7d2f804b940e62e59c61056a1266c4df72eb5b6839bfb81f6",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
+    },
+    {
+      "id": "S17",
+      "url": "https://aarhus.dk/borger/sundhed-og-sygdom/beredskab/beredskabsplaner",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/city-emergency-plans.html",
+      "originalBytes": 50322,
+      "sha256": "ef092e67cfe70a6fcc27cc82e2ccfb9af4e2434f796fbff15b7b581b4ccdf13e",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "html",
+      "observationAndVersion": "emergencyplanindexlastupdatedSep26_2025",
+      "actualReadScopeAndLimits": "fullmain;planpurpose/indexonlynotactualrestorationresult",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S17-leg17.bin",
+      "responseBodyBytes": 50322,
+      "responseBodySHA256": "ef092e67cfe70a6fcc27cc82e2ccfb9af4e2434f796fbff15b7b581b4ccdf13e",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": false,
+      "locatorOrPlanOnly": true
+    },
+    {
+      "id": "S18",
+      "url": "https://www.aar.dk/til-og-fra/",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/airport-bus.html",
+      "originalBytes": 199413,
+      "sha256": "5a89a088b4adc128552080875d7c698d13c6cc637e19fa763483fe2da3b4d06c",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "html",
+      "observationAndVersion": "undatedcurrentbus925X/airportpayment",
+      "actualReadScopeAndLimits": "fullmain;45–50min/trainstationactualroute,flexbusbooking/flightdelays/cards/cash;nomonetarybusfareinraw",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S18-leg18.bin",
+      "responseBodyBytes": 199413,
+      "responseBodySHA256": "5a89a088b4adc128552080875d7c698d13c6cc637e19fa763483fe2da3b4d06c",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
+    },
+    {
+      "id": "R01",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_es.htm",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/R01-eu-workers.html",
+      "originalBytes": 153770,
+      "bytes": 153770,
+      "sha256": "1555b5f65525917eee8fab3fef570e9a27b5d26dab38779b5bd26659b2bfb34f",
+      "validOriginal": true,
+      "actualReadScopeAndLimits": "fullmaincommonEUfacts; notallageautomaticlongterm/jobqualification",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/odense-full64/originals/R01-eu-workers.html",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
+    },
+    {
+      "id": "R02",
+      "url": "https://europa.eu/youreurope/citizens/consumers/financial-products-and-services/payments-transfers-cheques/index_en.htm",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/R02-eu-payments.html",
+      "originalBytes": 155296,
+      "bytes": 155296,
+      "sha256": "0a457237f62980c579bc7dba314552421cb5b0fa826dc830b0e35bb42d458ee8",
+      "validOriginal": true,
+      "actualReadScopeAndLimits": "fullmaincommonpersonalpayment/strongauthentication/exchangefeeandcardexceptions",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/odense-full64/originals/R02-eu-payments.html",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
+    },
+    {
+      "id": "R03",
+      "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/mobile-roaming-costs/index_en.htm",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/R03-eu-roaming.html",
+      "originalBytes": 155071,
+      "bytes": 155071,
+      "sha256": "e2e15e5e0521db23b3d99d06fa691c557b5ebdb63b09aa5ccb50f58af9a8f0d4",
+      "validOriginal": true,
+      "actualReadScopeAndLimits": "fullmaintemporaryroaming/fairuse/aircraftsatelliteexcluded;2025numericsnot2026caps",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/odense-full64/originals/R03-eu-roaming.html",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
+    },
+    {
+      "id": "R04",
+      "url": "https://lifeindenmark.borger.dk/healthcare/health-insurance/healthcare-when-working-in-denmark",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/healthcare-denmark.html",
+      "originalBytes": 81317,
+      "bytes": 81317,
+      "sha256": "e6d7ae45c3230c52983adbb8c24bca2bb0df7df3fdd14cc02fd8e0932f00796a",
+      "validOriginal": true,
+      "actualReadScopeAndLimits": "fullmainlastupdatedJune11_2026; ordinaryregistered/effectivelyinsuredDanishresident adaptation,notassumeallworkers/passports automatically",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/odense-full64/originals/healthcare-denmark.html",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
+    },
+    {
+      "id": "R05",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/has-kymriah-2023.pdf",
+      "originalBytes": 741078,
+      "bytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "validOriginal": true,
+      "actualReadScopeAndLimits": "read/view14/24;previoussameSHA25viewinSzczecincrossnotfreshAarhusview; maturetisaDLBCLhumanonlynotlocalbrand/payer",
+      "reusedFrom": "/Users/morris/.local/share/cci-research/2026-10-10/szczecin-full69/originals/R04-has-kymriah-2023.pdf",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
+    }
+  ],
+  "candidateUniverseRetained": 9031,
+  "newAndUnmatchedCompetitorsRetained": true,
+  "supportedExclusions": 0,
+  "qualified32Threshold": null,
+  "globalRankingEligible": false,
+  "externalDelta": {
+    "rootPublishedSzczecin": "56d3bc586cb5c1e2ea8f1e070a04fd20beb1f0b5",
+    "rootCurrentCases": 100,
+    "rootComplete": 21,
+    "fixedInputNotRefreshed": true
+  },
+  "residentPerspectiveDescription": "普通丹麦本国公民，通常长期居住本地，当地中位收入及通常有效保障，无固定年龄。",
+  "boundaryDescription": "GHSFUA2019oldeFUA229;all9031/136repair;1711km²;city/utility/hospitalpoolnotFUAdenominator;geometry-check.json",
+  "evidenceReview": "cci-aarhus-priority-review.md",
+  "publishedInputCommit": "17193a2484ad3e4a0d7072f31dc9c626dce158ed",
+  "publishedInputCases": 101,
+  "sourceName": "Aarhus",
+  "researchSourceSnapshotSummary": {
+    "manifest": "source-manifest.json",
+    "validNewOriginalIds": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18"
+    ],
+    "verifiedDurableReuse": ["R01", "R02", "R03", "R04", "R05"],
+    "failedIds": ["S07", "S12"],
+    "webOnlyAdopted": [],
+    "normalActualLegs": 18,
+    "sourceBytesNotHistoricalCutoffCertification": true
+  },
+  "failedSourceSnapshots": [
+    {
+      "id": "S07",
+      "url": "https://www.kredslob.dk/media/pqpkhad5/kredsloeb_aarsrapport_2024.pdf",
+      "localPath": null,
+      "validOriginal": false,
+      "status": 403,
+      "observationAndVersion": "2024annualPDFdiscoveredbefore403;notreadbody",
+      "actualReadScopeAndLimits": "403diagnosticbodyonly;stoppedexactfile,noprodPDF/web/CDNmirror",
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/diagnostics/S07-leg7.bin",
+      "responseBodyBytes": 20748,
+      "responseBodySHA256": "7405d6ad675785a6100b0fed4e5a1c4403a9ccfcb9d5c1caa2a8cfd3f8bca0ce",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": false
+    },
+    {
+      "id": "S12",
+      "url": "https://prod.kredslob.dk/om-os/presse-og-medier/pressemeddelelse/120625-presse-kredsloeb-loefter-omsaetning-og-indtjening-og-holder-igen-priser-i-ro",
+      "localPath": null,
+      "validOriginal": false,
+      "observationAndVersion": "June12_2025separatelydiscoveredpressrelease;TLSnoHTTPresponsebody",
+      "actualReadScopeAndLimits": "distinctpressnotfailedannualmirror;EOFexactfileclosed,noanothermechanism",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": false
+    }
+  ],
+  "routingSourceSnapshots": [],
+  "webReadSources": [],
+  "sourceManifest": {
+    "path": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/source-manifest.json",
+    "validOriginals": 21,
+    "new": 16,
+    "durableReuse": 5,
+    "failed": 2
+  },
+  "sensitivity": {
+    "PCS60": [54, 64],
+    "ISR40": [48, 58],
+    "PCSWithdrawn": [45, 70],
+    "GSSWithdrawn": [42, 67],
+    "ISRWithdrawn": [42, 67],
+    "MEDWithdrawn": [42, 67],
+    "LONWithdrawn": [45, 65],
+    "TECWithdrawn": [45, 65],
+    "OPTWithdrawn": [45, 65],
+    "RES40FullTotal": 55,
+    "RES60FullTotal": 57,
+    "RES80FullTotal": 59,
+    "allWithdrawn": [0, 100]
+  },
+  "rootScopeReview": {
+    "rootOriginalIdentitiesVerified": 21,
+    "rootCopiedOriginals": 21,
+    "rootPdfTextPages": {
+      "S01": [1, 2, 23, 29, 30, 32],
+      "S03": [1, 2, 8, 9, 12, 13],
+      "S10": [11, 13, 46, 47, 97],
+      "S15": [11, 12, 13, 22],
+      "R05": [14, 24]
+    },
+    "rootSelectedPdfTextPageCount": 23,
+    "rootPdfViewed": {
+      "S10": [11, 46, 47],
+      "S03": [9, 13],
+      "S15": [22]
+    },
+    "rootPdfPageCount": 6,
+    "rootFullHTMLMainRead": [
+      "S02",
+      "S05",
+      "S06",
+      "S09",
+      "S14",
+      "S16",
+      "S18",
+      "R01",
+      "R02",
+      "R03",
+      "R04"
+    ],
+    "wholePDFRead": false,
+    "allSourceSemanticReview": false,
+    "wholeWorkflowComplianceCertified": false,
+    "rootActualNewNetworkRequests": 0,
+    "previous101WholeCaseIdentitiesPreserved": true,
+    "specificLocalCARTProductPayerDirectlyVerified": false,
+    "expected2026EqualsVerifiedProjectStatus": false,
+    "sewer2085IsCompletionYear": true,
+    "residenceBanEffectiveIn2025": false,
+    "utilitySelfSupplyEqualsHouseholdEnergySecurity": false,
+    "patientExperienceEqualsClinicalOutcomes": false,
+    "rootLocalDiagnostics": [
+      "Initial source-manifest type assumed mapping; printed long list then failed .get; truncated display not relied on as full semantic audit. Later limited fields read.",
+      "Initial sourceSnapshots assumed list; actual frozen handoff is summary object. Correctly normalized later without original package edit.",
+      "Combined common HTML output truncated part of R02 noncritical section; R02 separately reread in full, no network retry.",
+      "Prior root dispatch described2085 as hectares; actual p46 personally viewed confirms year. Author did not make area error.",
+      "One root artifact-copy helper read prepared case and geometry then reread its newly serialized case for copying alongside report: conservatively4readoperations/3distinctinputs. Preserved without rerun to certify workflow or capability penalty."
+    ]
+  },
+  "exclusionCount": 0,
+  "threshold32": null,
+  "sourceAndStopLedger": {
+    "originatingResearch": "aarhus-full70",
+    "candidateId": 229,
+    "fixedInputCommit": "fe052997d2903b8ffc92535e18175a14cf0673eb",
+    "inheritedLedgers": [
+      "inherited-szczecin-ledger.json",
+      "inherited-odense-full64-ledger.json",
+      "inherited-kuopio-full62-ledger.json"
+    ],
+    "finiteHistoryScope": "immediatebasefilenamecheck foundonlycurrentAarhusdir, plusactualDenmarkfailureentriesOdense64andFinlandKuopio62read; noalldisk/historycertification",
+    "unknownHistoryNotZero": true,
+    "discovery": {
+      "authorizedRounds": 2,
+      "queriesPerRound": [4, 4],
+      "actualQueries": 8,
+      "actualRounds": 2,
+      "closed": true,
+      "proof": "discovery-tool-provenance.json",
+      "notBudgetReset": true
+    },
+    "normalHTTP": {
+      "actualLegs": 18,
+      "newValidOriginals": 16,
+      "durableReuse": 5,
+      "HTTP403DiagnosticBodies": 1,
+      "TLSNoHTTPBody": 1,
+      "redirects": 0,
+      "retryCount": 0,
+      "automaticRedirectCount": 0,
+      "closed": true,
+      "journal": "normaljournal.jsonl",
+      "helperMetadataFilesRead": 0,
+      "allResponseBodiesSavedBeforeValidation": true,
+      "TLSHasNoNonexistentRawBody": true,
+      "headers": "parsedresponseheadersfilteredcookies,notwireexact"
+    },
+    "newFailureRecords": [
+      {
+        "sourceId": "S07",
+        "leg": 7,
+        "provider": "Kredslob",
+        "host": "www.kredslob.dk",
+        "mechanism": "normalTLS urllib",
+        "url": "https://www.kredslob.dk/media/pqpkhad5/kredsloeb_aarsrapport_2024.pdf",
+        "failure": "403",
+        "body": "diagnostics/S07-leg7.bin",
+        "concreteFileStopped": true,
+        "noRetryWebCDNMirrorProdPDF": true
+      },
+      {
+        "sourceId": "S12",
+        "leg": 12,
+        "provider": "Kredslob",
+        "host": "prod.kredslob.dk",
+        "mechanism": "normalTLS urllib",
+        "url": "https://prod.kredslob.dk/om-os/presse-og-medier/pressemeddelelse/120625-presse-kredsloeb-loefter-omsaetning-og-indtjening-og-holder-igen-priser-i-ro",
+        "failure": "TLSunexpectedEOF",
+        "body": null,
+        "concreteFileStopped": true,
+        "distinctAlreadyObservedPressNotMirrorOfFailedAnnual": true
+      }
+    ],
+    "providerFailureInterpretation": "KredslobnormalTLSnewobservedminimum2includingbothhosts;priorcumulativeunknownnot0;nosubsequentrequest. EarlieractualRigshospitalet2invalidbody/SST429/SundK2reportfailures/CPH403/RegionHchallenge/KK404/TDCtimeoutallretainedexactscopes,notallDanishprovidersstopped. Successdoesnotreset.",
+    "inheritedClosedTopics": "EC83/WHOandallnestedING/KPN/WIPO2026/DOJ/FBI/NHS/UCLH/Skaneandotherconcreteproviderstopsunchanged",
+    "processDeviations": [
+      {
+        "type": "localProvenanceExtractorSelfMatch",
+        "details": "Broadpatternaccidentallymatcheditsownquotedquerypatternasdraftthirdrow;actualtwo4querycallsverifiedbyIDs/sessionoffset;selfmatchrawpreserveddiagnostics,nomorenetworkqueries."
+      },
+      {
+        "type": "preFreezeProvenanceSerialization",
+        "details": "Initialcall/outputJSONreserializationwasnotexactsessionline. Replacedbeforefreezewithactualoriginalsessionlinebytesbyoffset/SHA;toolblocksunchanged."
+      },
+      {
+        "type": "finalLocalCheckRepeatedCaseReads",
+        "callId": "call_9bbee34cd2ee4fd1b898c8fa94b8dd6d",
+        "description": "Finalhandoffcheckreadcase/source/provenance3distinctfiles, thenrereadcase2timesforlength/SHA=5readoperations. Strictactual-inputoperationinterpretationexceeds3although3distinctsources; noHTTP/querybudgetoverrun, noattempttore-runtoclaimcompliance, noabilitypenalty.",
+        "actualSessionProof": {
+          "callId": "call_9bbee34cd2ee4fd1b898c8fa94b8dd6d",
+          "offset": 129641425,
+          "bytes": 1827,
+          "sha256": "826c195b1492a572889d7ac66cb468826e495b893cf010e9d6ef849319c81a17",
+          "timestamp": "2026-10-16T04:23:00.211Z"
+        }
+      }
+    ],
+    "contentVersionDifferences": [
+      "S01cover2024/body2025;doNotSilentlyRelabel",
+      "S10publicationindexMay12_2026vsPDFmetadataJune15_2026,notfirstpuborcutoffarchivecertification",
+      "S02currentraw4weeksnearqualifiedcentreversuspre-fetchtoolvariant1/2hours+patienthotel;adoptactualraw,doNotMergeVersions",
+      "S15TOCpagelistandactualselectedpagesalignedviaactualbody;19isphotoonly,20synlighed21prevent22bande,notassumeTOCtextallaligns"
+    ],
+    "strictBatchScope": "CollectionactualouterHTTPbatches3/3/3/3/2/3/1=18,helper0existingmetadata,noautoRedirect/retry; PDF1+<=2selectedpages. Notallworkflow<=3compliant:finallocalcheck5readoperations/3distinctfilesrecorded. Fullfinalpayloadhashisintegrityonlyexception.",
+    "capabilityScoring": "nofailure/sourcecount/processdeviationpenalty",
+    "remainingNetworkAuthorization": 0,
+    "noMoreNetworkOrCityExpansion": true,
+    "strictDifferences": [
+      {
+        "type": "localOuterMoreThan3ReadOperations",
+        "sourceCountDistinct": 3,
+        "readOperations": 5,
+        "timeUTC": "2026-10-16T04:23:00",
+        "semanticSources": "case-handoff/source-manifest/discoveryprovenance",
+        "noCapabilityPenalty": true,
+        "callId": "call_9bbee34cd2ee4fd1b898c8fa94b8dd6d",
+        "offset": 129641425,
+        "bytes": 1827,
+        "sha256": "826c195b1492a572889d7ac66cb468826e495b893cf010e9d6ef849319c81a17",
+        "timestamp": "2026-10-16T04:23:00.211Z"
+      }
+    ],
+    "normalHTTPActualLegs": 18,
+    "validOriginalCount": 21,
+    "failedConcreteSourceCount": 2,
+    "wholeWorkflowCertified": false
+  },
+  "narrowCrossReview": {
+    "path": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-cross71",
+    "scope": "Narrowcross GSS/PCS/LON only; advisory root final decision; other5dimensions notreviewed or changed",
+    "manifestSha256": "75dd2fe14f5fb14dbb1fd59f7040a6ba73ad5a7826d4b876c725c9aeddb66e35",
+    "payloads": 28,
+    "reportSha256": "f1d440cbd4a033639a122c35c23ba3a7337716753bf9f52abd1ebef773e316c9",
+    "resultSha256": "f26def52eaab9bc756568a62b99990e0fef6c7e13801a21f2d5d8ae79d182c82",
+    "actualReadScope": {
+      "reportAndCase": "Authorreport/read narrow3case dims only; notwhole8semanticcaseaudit",
+      "newPDFTextAndPixels": {
+        "S15": [11, 22],
+        "S10": [46, 47, 97]
+      },
+      "newPersonallyViewedDistinctPDFPages": 5,
+      "HTML": "S02 relevant actual fullmain/selected clinicalcare paragraphs; S09fullmain; R04publicpayer main",
+      "R05": "ActualbyteSHAverified; personallyviewedSzczecin sameSHA physical14/24/25 reused, notfreshAarhuspixelview",
+      "sourceManifestAndLedger": "Targetmetadata andfailure/process scopes read; initial largeheaderoutputtruncated, rawclinicalHTML independentlyreadafterward"
+    },
+    "toolProof": {
+      "round1": {
+        "callId": "call_328e6d3fddad4596a7faa512f7d271f3",
+        "callOffset": 113442897,
+        "outputOffset": 113453063,
+        "queries": 4,
+        "bodyBlock": 1,
+        "sessionProof": "round1-session-proof.json"
+      },
+      "round2": {
+        "callId": "call_735948386e9043448d590cd8f19943f1",
+        "callOffset": 113545097,
+        "outputOffset": 113556842,
+        "queries": 4,
+        "bodyBlock": 1,
+        "sessionProof": "round2-session-proof.json"
+      },
+      "exactRecordsAndBlockSHA": "Independentlyreadactualsessionbytes atprovidedoffsets andmatchedcall/output/bodyblockSHA; savedrawrecords notreserialized",
+      "normalJournal": "18uniqueactuallegs with16status200/1status403/1TLSnoresponse; no3xx journalentries",
+      "scopeLimit": "Journalidentity/count andboundedquerysyntax, notallworkflow/nohiddenrequest certification"
+    },
+    "processBoundaries": {
+      "authorDeclaredStrictReadDeviation": "5readoperations/3distinctsourcefiles alreadyfrozenandpreserved; notfixedbyrerun",
+      "crossConservativeDeviation": "Oneouterreadmanifest/provenance/journal thenreadmanifestagainforlength duringintegrityreport=4file-readoperations/3distinctfiles. Fourthintegrityread conservativelyrecorded strictread-opoverrun, no rerun/no sourceedit/no network or scoringpenalty.",
+      "newQueries": 0,
+      "newNormalRequests": 0,
+      "noOriginalPackageRepoOrScoreWrite": true,
+      "noNewAgent": true,
+      "inheritedStopsUnchanged": true
+    },
+    "recommendation": {
+      "PCS": {
+        "direction": "conditional40 defensible",
+        "supports": [
+          "S10p46 actual65ha separation and sewer capacity problem",
+          "S10p47 localproperty/shops/roads actualfloodconsequence and2025mitigationstart",
+          "S10p97 actualtrainedpreparedness/multisupplierparts strategy, notactivated2025"
+        ],
+        "necessaryBridges": [
+          "Limited affectedlocation/FUAordinaryresident relevance",
+          "Important residual hazard consequences persist atcutoff despitehelp, not justifiedsolelybyunknowncompletion"
+        ],
+        "fairAlternative60": "Accept actualseparation/control/backups adequateforordinarymajorhazards despite importantspecificresiduals",
+        "rejectBridge": null,
+        "corrections": [
+          "2085 expectedyear, nothectares/denominator; rootscheduling contextmistake, notauthorcurrentcase mistake",
+          "Project expectedready2026 doesnotcertify Oct10completeorincomplete; conditionalinference mustnotbe written asverifiedunfinishedfact"
+        ]
+      },
+      "GSS": {
+        "direction": "conditional60 defensible",
+        "supports": [
+          "S15p22 actualAarhus2023 severeattack/rescue and2025court disposition",
+          "S15p11 actual2025 high-exposureevent security partnership",
+          "S10p97 actualordinarycriticalutility cyberlayering/monitoring/training and supplyresilience"
+        ],
+        "necessaryBridges": [
+          "Specificsuccessfulimplementation/justice/criticalserviceprotection representativeofordinarymajorrisk in limitedwindow",
+          "Time/ordinarynetprotection bridge, not event absence or lackofnewattack as proof"
+        ],
+        "fairAlternative40": "Known severe violence can support40 if importantordinary residualconsequences persist afterhelp; no newattack/majority/dominance prerequisite",
+        "rejectBridge": null,
+        "corrections": [
+          "3people each9years not27each",
+          "8year localresidenceban startsafterprison, not alreadyexecuted2025protection",
+          "Randersshooting/clubhouse closure notAarhusobservation",
+          "Exercises andunactivatedbackup not actualsuccessfulattacktest; no allnodehardgate"
+        ]
+      },
+      "LON": {
+        "direction": "conditional60 defensible",
+        "supports": [
+          "S09 directcurrentactualCAR-T treatmentservice, researchvoluntaryseparate",
+          "S02 actualtailoredproduct/diseaseplan/collection/manufacture/bridge/infusion/monitoring/followup",
+          "R04 usualregisteredcoveredresidentpublichospital baseline",
+          "R05 maturehuman tisaDLBCL evidence onlyclass adaptation, notlocalbrand/payer"
+        ],
+        "necessaryBridges": [
+          "UnnamedlocalCAR-T fallswithin matureclinicallyused diseasecellpath ratherthanmerelyearlyexperimentalproduct",
+          "Usualpubliccoverage reallyfunds qualifying treatment, notpassportalone or everyproduct automatically",
+          "Ordinarylocalmedianresident can usuallymeet remaining4weekproximity/8weeknodriving/carerfoodhoteltransport burden given publiccorecare/localreturn/patientroom option/actualtransportchoices",
+          "Currentundatedservicecontinuity tocutoff; nohistorysamebytecertification"
+        ],
+        "fairAlternative40": "Actual importantnetaccess/manufacturing/monitoringresidualafterhelp couldsupport40 withoutmajority; uncertainty/brandabsence alone not40",
+        "rejectAnyNecessaryBridge": null,
+        "limits": [
+          "Caregiverrecommended/supportive options not explicitmandatory24hdriver copiedfromelsewhere",
+          "3–4weekproduction can vary; severeCRS/ICANS andICUpossible",
+          "10–14dayinpatient/4weeksnearqualifiedcentre/8weekdrivingban remain actualburden",
+          "Publichealthgenericnotdirectspecificbrandreimbursement; tisaoutcomesnottransferredtoAarhus",
+          "No healthyhumanlongevity/zero-risk/perdoseinvoice hardgate"
+        ]
+      }
+    }
+  },
+  "rootToolProof": {
+    "actualOriginalSessionCallAndResponseRecordsIdentityVerified": true,
+    "queryCountAndToolBlocksIndependentlyCrossVerified": true,
+    "rootNewQueries": 0,
+    "wholeWorkflowCertified": false
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-aarhus-priority-review.md",
+    "researchReport": "docs/cci-aarhus-score-completion-review.md",
+    "reviewedOn": "2026-10-16",
+    "fixedInputCommit": "17193a2484ad3e4a0d7072f31dc9c626dce158ed",
+    "fixedCases": 101,
+    "fixedComplete": 21,
+    "researchFixedInputCommit": "fe052997d2903b8ffc92535e18175a14cf0673eb",
+    "researchFrozenReportSha256": "7726964d205732dc0ccf22a4d936e3b709dfcea6f16840af41885dc62360fef0",
+    "frozenManifestSha256": "6439e6ccb291ddba8bc6ff7058101a345aec647476e545d19e3b15f126ecc10b",
+    "frozenFilesVerified": 180,
+    "frozenPayloadBytes": 118473662,
+    "validOriginalCount": 21,
+    "newValidOriginalCount": 16,
+    "reusedOriginalCount": 5,
+    "failedConcreteOriginalCount": 2,
+    "rootPdfPageCount": 6,
+    "rootSelectedPdfTextPageCount": 23,
+    "sha256": "a540dbc56c8591209b279ca0bfc9b558353c314ee35a91281c6c9b5cfc610c9f",
+    "researchReportSha256": "1edbf0b492ecc8e290b6ca51b6066b18767682672d498943f7fee24e1b14277c"
+  },
+  "limitations": [
+    "Conditional score judgments with revocable geography/time/usual access/payer/net care bridges; no full population or independent31 subscores.",
+    "No historical cutoff same-byte authentication, whole workflow or hidden requests certification.",
+    "Failure and process records retained without capability penalties.",
+    "All9031 and new/unmatched competitors retained; no global qualification."
+  ],
+  "referenceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allCandidatesChecked": 9031,
+    "repairCount": 136,
+    "records": [
+      {
+        "fid": 2750,
+        "eFUA_ID": 229.0,
+        "UC_num": 1.0,
+        "UC_IDs": "2518",
+        "eFUA_name": "Aarhus",
+        "Commuting": 1.0,
+        "Cntry_ISO": "DNK",
+        "Cntry_name": "Denmark",
+        "FUA_area": 1711.0,
+        "UC_area": 83.0,
+        "FUA_p_2015": 466716.2571951896,
+        "UC_p_2015": 209180.70584106445,
+        "Com_p_2015": 257535.55135412514
+      }
+    ],
+    "points": [
+      {
+        "label": "Aarhus centre analystapprox",
+        "longitude": 10.2039,
+        "latitude": 56.1629,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 229,
+            "name": "Aarhus"
+          }
+        ]
+      },
+      {
+        "label": "AUH Skejby analystapprox",
+        "longitude": 10.173,
+        "latitude": 56.19,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 229,
+            "name": "Aarhus"
+          }
+        ]
+      },
+      {
+        "label": "Aarhus airport analystapprox",
+        "longitude": 10.619,
+        "latitude": 56.3,
+        "approximateReferenceOnly": true,
+        "matches": []
+      },
+      {
+        "label": "Aarhus centralstation analystapprox",
+        "longitude": 10.204,
+        "latitude": 56.15,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 229,
+            "name": "Aarhus"
+          }
+        ]
+      }
+    ],
+    "targetWkbSha256": "dade398db55a33007b2314f9eb025b4bbcee58ad81db4dde3407d41510fe3443",
+    "meaning": "2015population not2026denominator; analyst points notfootprints/servicecoverage/patients/residentaccess or actualjourneys; municipality/provider/patientpool is notentireFUA; outsideairport mayserve actualresident journeys"
+  }
+}

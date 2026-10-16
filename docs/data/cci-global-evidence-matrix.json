@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 101,
+    "conditionalCaseCount": 102,
     "completeConditionalCaseCount": 21,
-    "partialCaseCount": 80,
-    "unassessedCount": 8930,
+    "partialCaseCount": 81,
+    "unassessedCount": 8929,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -810,8 +810,13 @@
       "sha256": "3b595afcfab6cf82b1099938ff0303c74a6ed1d9983b5406c3efa8016d79b315",
       "provenance": "cci-bedford-priority-review.md",
       "provenanceSha256": "c7711d94e0ff5e6d8608775ad309b134d4e9628d87963a3f99bf4e8ee640ce5e"
+    },
+    "cci-local-2026-aarhus-case.json": {
+      "sha256": "01e030dc8d4bd5ec585a5387e5b01932a76d4b4a583f6bd9c37b7ade30840445",
+      "provenance": "cci-aarhus-priority-review.md",
+      "provenanceSha256": "a540dbc56c8591209b279ca0bfc9b558353c314ee35a91281c6c9b5cfc610c9f"
     }
   },
-  "scriptSha256": "f9be973b09cbc22b73488249953dd54e2292c4a0cb0c60ed5ac8cfd6df797fa8",
-  "csvSha256": "998769f78a951ebea179a318ac2cbf9d1ffe1118d7e8dfe778f7b7ba037df4fb"
+  "scriptSha256": "d4c551a504c57072d4a57bced5e4d3126c41da915c896e79bbfbfa3b3f235cd1",
+  "csvSha256": "a2cd977794adc8a4e2c0162ebe0d8db280d51e0e1d1507f5a3c9dc24ed292d14"
 }
