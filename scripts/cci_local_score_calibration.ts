@@ -3993,3 +3993,46 @@ assert.equal(corbyCase.sourceAndStopLedger.normalHTTPActualLegs, 16);
 assert.equal(corbyCase.rootScopeReview.rootPdfPageCount, 4);
 assert.equal(corbyCase.rootScopeReview.processDeviations.length, 1);
 assert.equal(corbyCase.referenceBoundaryCheck.allCandidatesChecked, 9031);
+
+assert.equal(
+  philadelphiaCase.resourceCompletionReview.sha256,
+  digest(philadelphiaCase.resourceCompletionReview.path)
+);
+assert.equal(
+  philadelphiaCase.resourceCompletionReview.researchReportSha256,
+  digest(philadelphiaCase.resourceCompletionReview.researchReport)
+);
+for (const d of philadelphiaCase.dimensions.filter((d: { id: string }) => d.id !== "RES"))
+  assert.equal(
+    createHash("sha256").update(JSON.stringify(d)).digest("hex"),
+    philadelphiaCase.resourceCompletionReview.originalSevenDimensionJSONHashes[d.id]
+  );
+assert.equal(
+  createHash("sha256")
+    .update(JSON.stringify(philadelphiaCase.sourceSnapshots.slice(0, 15)))
+    .digest("hex"),
+  philadelphiaCase.resourceCompletionReview.originalFifteenSourceSnapshotsJSONHash
+);
+assert.equal(
+  philadelphiaCase.dimensions.find((d: { id: string }) => d.id === "RES").subpillars.energy,
+  "partial"
+);
+assert.equal(philadelphiaCase.sourceSnapshots.length, 18);
+assert.equal(philadelphiaCase.resourceSourceManifestSupplement.sources.length, 7);
+assert.equal(philadelphiaCase.resourceFailedSourceSnapshots.length, 1);
+assert.equal(philadelphiaCase.resourceCompletionReview.newHTTPActualLegs, 4);
+assert.equal(philadelphiaCase.resourceCompletionReview.strictProcessDifferenceCount, 6);
+assert.equal(
+  philadelphiaCase.resourceScopeReview.reliability88MinEqualsAnnualPerHouseholdOutage,
+  false
+);
+assert.equal(
+  philadelphiaCase.resourceScopeReview.supplyPremiumEqualsAllCustomersTotalBillInflation,
+  false
+);
+for (const [RES, center] of [
+  [40, 58],
+  [60, 60],
+  [80, 62],
+] as const)
+  assert.deepEqual(total({ ...philadelphia, RES }), { center, lower: center, upper: center });

@@ -8,7 +8,7 @@
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "residentEligibility": "US national, usual longterm local resident, local median income/usual effective coverage, no fixed age",
   "boundaryVersion": "GHS-FUA R2019A",
-  "evidenceReview": "cci-philadelphia-score-completion-review.md",
+  "evidenceReview": "cci-philadelphia-res-completion-review.md",
   "researchFrozenInputCommit": "6b3a0ee0bf21a272c761765b6fae42b0251fb30a",
   "dimensions": [
     {
@@ -69,16 +69,53 @@
       "weight": 10,
       "score": null,
       "conditionalAlternatives": [],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "coverageStatus": "bounded_review_not_all_measured",
       "subpillars": {
         "water": "partial",
         "food": "partial",
-        "energy": "unresolved",
+        "energy": "partial",
         "supply_chain": "partial"
       },
-      "rationale": "2025合规供水/残余铅、2026实际典型水账单、已发放减免和防停水，加官方810640餐实际交付支持部分净取得。食品不安全并未按目标收入/公民/FUA适配；能源家庭可靠供给、正常净负担和真实帮助后余障未定向。不同群体/时期及自评财务不能合成中位家庭完整资源结论。",
-      "assumption": "维持未知及[]；不是缺项自动低分，也不要求全人口或一份精确总账单。若能接受食物和能源通常净取得/帮助后残余有限的有据合束判断可讨论60；若重要未缓解资源约束适配目标普通居民可讨论40；现有材料尚未给该必要方向，不能用水质/餐数/市场存在自动补齐。",
-      "coverageStatus": "bounded_review_not_all_measured",
-      "scoreStatus": "reviewed_insufficient_direction"
+      "rationale": "根接受新增能源实际交付、已发资助和默认供应选择为实质正证；与实际供水/费率/减免、食物交付和帮助后价格/资格/食品不安全余障同读。仍不接受从全市或困难群体食品口径推普通中位资源通常食品净取得的较弱代表桥，故RES维持未知/[]；不是来源少、403或缺完美2026家庭总账而降分或封60。",
+      "assumption": "60允许实际水食帮助、可靠电力/已发资助/默认供应与通常中位资源的有限合束判断；须接受食品/家庭净资源代表、观察延续和市/运营域向多州7165的有限桥。根本轮尚不接受食品/净资源方向桥，非认定城市能力低。40需帮助后实际重要余障适配画像，不要求多数/主导/停城；80非零风险。当前维持null/[]，不重配权重。",
+      "alternativeRationales": {
+        "60": "可公平采用的有限合束解释：真实供水/费率/减免、防停水及餐食网络，加上可靠电力、已实际资助与默认供应选择，足以支持通常中位资源能取得基本水食能；接受困难帮助与一般市场能力对目标普通居民的有限代表、必要费用通常可承接、2025–26延续及市/运营域到7165共同服务的桥。不是直接以73%多数/没有崩溃/机构存在评分，也不需新增精确家庭账本。该桥拒绝仍null。",
+        "40": "食品不安全、TAP资料/资格障碍、供能价格上涨和竞争合同实际高价是帮助后重要约束的竞争解释；若有据接受这些实际余障对目标普通居民/服务域的重要影响，40可成立，不需多数、主导或停城。但不能将所有困难/竞争供应者/绿色产品购买者强套中位普通居民，或将403、无完整账本作为40依据。",
+        "80": "若有更强证据表明基本营养/水食能净取得、可靠替代及压力下剩余重要约束得到有效缓解，80可辩；不要求零风险/所有住户相同账单。当前新增不把可选默认/资助人数换成80。",
+        "null": "目前作者不接受关键食品/净资源代表桥，维持null/[]；根可依同尺度接受较弱合理60或有据40，非把未知固定为低分。"
+      },
+      "sourceIds": [
+        "RES68-R01",
+        "RES68-R02",
+        "RES68-R03",
+        "RES68-R04",
+        "RES68-S01",
+        "RES68-S02",
+        "RES68-S03"
+      ],
+      "necessaryConnectionsFor60": [
+        {
+          "id": "A-food-to-portrait",
+          "claim": "Actualfoodhelpandgeneralprovisioningvalidlyrepresentordinarymedianlongtermcitizenbasicfoodaccessafterhelp; foodinsecuritysubgroupsnotautomaticwholeportrait.",
+          "withdrawToUnknown": true
+        },
+        {
+          "id": "A-net-resource",
+          "claim": "Wateractualfeesandhelp, reliableenergy/defaultchoiceandactualaidcombinewithusualmedianresourcesintofeasiblebasicfoodwaterenergybudget; noexactfullhouseholdledgerrequired.",
+          "withdrawToUnknown": true
+        },
+        {
+          "id": "A-time-service-domain",
+          "claim": "2025operationsandprecutoffMar/Apr2026statementssupportOct10continuation; operator/cityexamplesreasonablyrepresentordinaryFUAcore/sharedservices, notallNJ/DE/specificfuelproviders.",
+          "withdrawToUnknown": true
+        }
+      ],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": [],
+        "domain": [54, 64]
+      }
     },
     {
       "id": "MED",
@@ -154,7 +191,17 @@
     }
   ],
   "expectedConditionalTotal": null,
-  "limitations": "8 dimensions/31 subpillars considered in bounded research, not all measured; no centre, exclusion, probability, global rank or Top32 eligibility. Reject necessary bridges -> reassess/null, not automatic retained score.",
+  "limitations": [
+    "RES supplement adopts substantive regionalenergy delivery/aid/defaultchoice evidence but no numerical score;sevenoriginaldimensionobjects retained. Known54/unknown10/domain54–64/no total.",
+    "40/60/80 are fair conditional interpretations withhypothetical totals58/60/62,not adopted point scores;root doesnotyet acceptordinarynetfood/resource representative bridge. No exact2026ledger,majority,shutdown,orzero-risk gate.",
+    "73%customers0or1outage and88minaverage restoration are2025operatorarea observations,notannualperhouseholdoutagetime orfullmultistateFUA supply.",
+    "Annual140k/$200m unspecifiedannualwindow and8300Reliefrecipientsto-date areactualtargetedhelp,notall2026newpayments/automaticmedianeligibility. LIHEAPApr10/createdApr14conflict retained,notOcteligibility.",
+    "56%electric/65%gas supplypremium forcompetitivecustomersnotalltotalbillinflation;voluntaryproducts/defaultchoice/renewalandexitfeesretained;budgetbillingnotdiscount.",
+    "810640mealsnofixedwindow/uniquepeople/nutritionrate;nearlyquartertextvsapprox18%foodriskgraph notresolved. TAP973cheaperalternativesnotfailures;1184documentationbarriersreal;CMCiswateraudit.",
+    "Root7reviewrawcopies/7PDFtextpages/5viewedpages/3fullHTMLmainbodies+waterqualityboundedsegmentsnotall18originalsemanticreaudit. Sixouterinput-countdeviationsretained,total4newlegbudgetseparatelyvalid,no scorepenalty/source reset.",
+    "Currentbytes/creation/mtime notcutoffhistoricalpublicationauthentication;limitedtimeandservice-domainbridgesrevocable. OldFUA/approxpointsnotprovidercoverage/household/actualjourneys.",
+    "OriginalsevenUTF8objects/15sourceobjects/other97wholecases unchangedincludingpublishedCorby. Research37e1555/97/21androota084101/98/21separate. All9031/newunmatchedretained,zeroexclusions,32thresholdnull/globalRankingEligiblefalse;globalTop32unproven."
+  ],
   "sourceSnapshots": [
     {
       "file": "aufenthg-index.html",
@@ -470,6 +517,112 @@
       "scope": "typical430cf/month,5/8meter; excludes assuming individual same use",
       "retrievedOn": "2026-10-15",
       "path": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-full37/water-rates2026.html"
+    },
+    {
+      "id": "RES68-S01",
+      "url": "https://www.pecoconnection.com/2026/04/02/building-a-stronger-grid-pecos-2025-investments-boost-reliability/",
+      "file": "peco-reliability2025.html",
+      "scope": "ActualfirstpartyApr2_2026report on2025reliability; operatorarea notwhole7165; average88min meaning andmajorevents separate",
+      "requestAtUTC": "2026-10-16T02:18:06.668383+00:00",
+      "normalTLS": true,
+      "autoRedirect": false,
+      "retry": false,
+      "validOriginal": true,
+      "originalBytes": 83074,
+      "sha256": "f0442309a7ca5570609ac54f5fbfa14185237333d3a10d8999aaf90aaba04313",
+      "cutoffBytesAuthenticated": false,
+      "headersNature": "Selected parsed non-cookie headerdictionary, not wire",
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 02:18:09 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "responseBodyPath": "diagnostics/S01-leg0.bin",
+      "responseBodyBytes": 83074,
+      "responseBodySha256": "f0442309a7ca5570609ac54f5fbfa14185237333d3a10d8999aaf90aaba04313",
+      "originalPath": "originals/peco-reliability2025.html",
+      "observation": "2025,bodypublished2Apr2026",
+      "semanticScope": "Actualarticlemainread, regionalnotall7165;88minaverage restorationnotannualcustomeroutageduration; severeeventexclusion/methodnotgiven",
+      "historicalCutoffBytesAuthenticated": false,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "researchSourceId": "S01",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-res67/originals/peco-reliability2025.html",
+      "rootBytesReverified": true,
+      "scoreEligible": false,
+      "supportsBoundedResourceReview": true
+    },
+    {
+      "id": "RES68-S02",
+      "url": "https://xzeepbgen000pzpsta001.blob.core.windows.net/pecoconnection/2026/04/PECO_Energy_Affordability_Resources_Fact_Sheet.pdf",
+      "file": "peco-affordability-april2026.pdf",
+      "scope": "ObservedactualfirstpartyPECOassetininitialdiscovery, notalternateforfailedfile; actualannualaid/bill andeligibility ifprovided; oldsourcehistoryunknownnotzero",
+      "requestAtUTC": "2026-10-16T02:18:53.826061+00:00",
+      "normalTLS": true,
+      "autoRedirect": false,
+      "retry": false,
+      "validOriginal": true,
+      "originalBytes": 717261,
+      "sha256": "a1e25d7165e9ccfc1f78fe22f6389d1eba80b930c09397ed87ce3b99397904e8",
+      "cutoffBytesAuthenticated": false,
+      "headersNature": "Selected parsed non-cookie headerdictionary, not wire",
+      "status": 200,
+      "headers": {
+        "Content-Length": "717261",
+        "Content-Type": "application/pdf",
+        "Last-Modified": "Thu, 16 Apr 2026 19:27:29 GMT",
+        "ETag": "0x8DE9BEE32F802BD",
+        "Date": "Fri, 16 Oct 2026 02:18:55 GMT"
+      },
+      "responseBodyPath": "diagnostics/S02-leg1.bin",
+      "responseBodyBytes": 717261,
+      "responseBodySha256": "a1e25d7165e9ccfc1f78fe22f6389d1eba80b930c09397ed87ce3b99397904e8",
+      "originalPath": "originals/peco-affordability-april2026.pdf",
+      "observation": "April2026nominalsheet; annual140k/$200m unspecifiedannualreferenceyear;8300+todate",
+      "semanticScope": "Onephysicalpageactuallyread/viewed;April10LIHEAPclosingstatementandApril14creationnotautomaticallyOctobereligibility",
+      "publicationLimitation": "NominalApril2026andprior-cutoffavailability/continuitybridge, PDFcreationnotpublicationproof",
+      "historicalCutoffBytesAuthenticated": false,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "researchSourceId": "S02",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-res67/originals/peco-affordability-april2026.pdf",
+      "rootBytesReverified": true,
+      "scoreEligible": false,
+      "supportsBoundedResourceReview": true
+    },
+    {
+      "id": "RES68-S03",
+      "url": "https://www.pecoconnection.com/2026/03/24/energy-supply-choices-what-you-should-know-before-you-shop/",
+      "file": "peco-supply-cost2025.html",
+      "scope": "ActualdiscoveryfirstpartyMarch24_2026 consumerchoice outcomes; supply premium nottotalbill or allmedianhouseholds; defaultservice actualoption",
+      "requestAtUTC": "2026-10-16T02:21:08.305565+00:00",
+      "normalTLS": true,
+      "autoRedirect": false,
+      "retry": false,
+      "validOriginal": true,
+      "originalBytes": 84087,
+      "sha256": "78d53567b1a4174368ae0d994b635e86491d15edce409211572386b83931f870",
+      "cutoffBytesAuthenticated": false,
+      "headersNature": "Selected parsed non-cookie headerdictionary, not wire",
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 02:21:10 GMT",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "responseBodyPath": "diagnostics/S03-leg2.bin",
+      "responseBodyBytes": 84087,
+      "responseBodySha256": "78d53567b1a4174368ae0d994b635e86491d15edce409211572386b83931f870",
+      "originalPath": "originals/peco-supply-cost2025.html",
+      "observation": "2025shoppingcosts;bodypublished24Mar2026",
+      "semanticScope": "Electric56%/gas65% supplypremiumnotalltotalbills; voluntarygreen/additionalfeaturesandexitfees retained; defaultoptionnotguaranteedaffordable",
+      "historicalCutoffBytesAuthenticated": false,
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "researchSourceId": "S03",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-res67/originals/peco-supply-cost2025.html",
+      "rootBytesReverified": true,
+      "scoreEligible": false,
+      "supportsBoundedResourceReview": true
     }
   ],
   "webOnlySources": [
@@ -720,7 +873,7 @@
     "meaning": "2024MedicareFFS and2025endNPPES with nonexactAbingtongeocodes, not local treatment/residence/routine2026proof"
   },
   "newCitiesScoredForGlobalRanking": 0,
-  "publishedInputCommit": "288c55a333551482df4176d9ec4e5f253dd5ad01",
+  "publishedInputCommit": "a084101d6253831fdd806fffcf15b2034fdca6ff",
   "knownWeightedSubtotal": 54,
   "unresolvedScoreRange": [54, 64],
   "globalRankingEligible": false,
@@ -1030,5 +1183,631 @@
     "rootAdditionalWebOnlyCount": 1,
     "rootNewRawRequests": 0,
     "discoveryQueries": 8
-  }
+  },
+  "publishedInputCases": 98,
+  "unknownWeight": 10,
+  "resourceFailedSourceSnapshots": [
+    {
+      "id": "RES68-S04",
+      "url": "https://www.peco.com/news/news-releases/2026-03-23a",
+      "file": "peco-philadelphia-projects2025.html",
+      "scope": "ActualS01Philadelphiahref, localprojectsandordinaryservedareas scope, last4thleg; no guessedURL",
+      "requestAtUTC": "2026-10-16T02:21:23.940508+00:00",
+      "normalTLS": true,
+      "autoRedirect": false,
+      "retry": false,
+      "validOriginal": false,
+      "originalBytes": null,
+      "sha256": null,
+      "cutoffBytesAuthenticated": false,
+      "headersNature": "Selected parsed non-cookie headerdictionary, not wire",
+      "status": 403,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 02:21:24 GMT",
+        "Content-Type": "text/html",
+        "Content-Length": "1484"
+      },
+      "error": "HTTP Error 403: Forbidden",
+      "responseBodyPath": "diagnostics/S04-leg3.bin",
+      "responseBodyBytes": 1484,
+      "responseBodySha256": "8b843f9acff161fb4da4ad05f392fee18e8c749006aee477b2ad90edaed8b42d",
+      "role": "failedspecificoriginal",
+      "stop": "403 specificfile not retried/alternateweb/CDN/mirror; diagnosticnotvalidprovideroriginal",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "researchSourceId": "S04",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-res67/diagnostics/S04-leg3.bin",
+      "rootBytesReverified": false,
+      "scoreEligible": false,
+      "supportsBoundedResourceReview": false
+    }
+  ],
+  "resourceSensitivity": {
+    "conditionalRES40Total": 58,
+    "conditionalRES60Total": 60,
+    "conditionalRES80Total": 62,
+    "RESRemainsUnknownDomain": [54, 64],
+    "allJudgmentsWithdrawn": [0, 100],
+    "alternativeTotalsNotAdoptedScores": true
+  },
+  "resourceScopeReview": {
+    "validOriginalsVerified": 7,
+    "newValidOriginals": 3,
+    "reusedOriginals": 4,
+    "oldOriginalSnapshotObjectsPreserved": 15,
+    "rootNewResearchNetworkRequests": 0,
+    "rootDiscoveryQueries": 0,
+    "rootPdfSelectedTextPages": {
+      "R01": [1, 2],
+      "R02": [4, 19, 5, 13],
+      "S02": [1]
+    },
+    "rootSelectedPdfTextPageCount": 7,
+    "rootPdfPageCount": 5,
+    "rootPdfPagesActuallyViewed": {
+      "R01": [1, 2],
+      "R02": [4, 19],
+      "S02": [1]
+    },
+    "rootHtmlFullMainBodiesRead": ["S01", "S03", "R03"],
+    "rootHtmlBoundedRead": ["R04 opening7000 and leadcontext"],
+    "allPdfPagesViewed": false,
+    "allSourceBodiesFullyAudited": false,
+    "oldSevenDimensionsEvidenceReaudited": false,
+    "reliability88MinEqualsAnnualPerHouseholdOutage": false,
+    "supplyPremiumEqualsAllCustomersTotalBillInflation": false,
+    "allMedianHouseholdsAutomaticallyAidEligible": false,
+    "budgetBillingReducesTotalCost": false,
+    "foodMealCountEqualsPersonsOrNutritionRate": false,
+    "foodRiskGraphTextConflictResolved": false,
+    "noPerfect2026LedgerGate": true,
+    "noMajorityOrShutdownGateFor40": true,
+    "currentCutoffSameBytesAuthenticated": false,
+    "all9031GeometriesRecomputed": true,
+    "threeAnalystApproximatePointsRecomputed": true,
+    "originalSevenUTF8DimensionObjectsUnchanged": true,
+    "other97WholeCaseBytesUnchanged": true,
+    "sourceCountAffectsScore": false,
+    "strictProcessDifferences": [
+      {
+        "callId": "call_d67d81e9e4c84cdda55695829ea3d613",
+        "sessionRecordByteOffset": 163632827,
+        "request": 1,
+        "issue": "Threeexplicitmetadatafiles+oneHTTPsource=4outerunits",
+        "HTTPBudgetImpact": "Oneactuallegalreadycounted",
+        "actualCallIdMatches": true,
+        "interpretation": "3metadata reads+1normalHTTP source=>4outerunits",
+        "actualSessionCallIdVerified": true,
+        "actualSessionRecordSHA256": "6160c407f740f1173b6584bf6d7a9335d7d1403765760e8240b91c1783447463"
+      },
+      {
+        "callId": "call_99cbc9d171ca4a51825fd9e2e5078cbb",
+        "sessionRecordByteOffset": 163642773,
+        "issue": "Threeoldrawcopies+processpollmetadata conservatively4outerunits",
+        "HTTPBudgetImpact": "None",
+        "actualCallIdMatches": true,
+        "interpretation": "conservative processpollmixedwith3source/pageunits=>4outerunits",
+        "actualSessionCallIdVerified": true,
+        "actualSessionRecordSHA256": "b71456667935fa7ae107892e0a148fa77981970f837e1a17838982d97d74bec3"
+      },
+      {
+        "callId": "call_d7a3aca6545d4c1488a98833bbd7aed8",
+        "sessionRecordByteOffset": 163655458,
+        "request": 2,
+        "issue": "Threeexplicitmetadatafiles+oneHTTPsource=4outerunits",
+        "HTTPBudgetImpact": "Oneactuallegalreadycounted",
+        "actualCallIdMatches": true,
+        "interpretation": "3metadata reads+1normalHTTP source=>4outerunits",
+        "actualSessionCallIdVerified": true,
+        "actualSessionRecordSHA256": "9a5c3ff1efbee705894f3488f66e7f30f1750271b8904caa45bc2dcd90f5e554"
+      },
+      {
+        "callId": "call_43531243626d4c4382097a61bbd73326",
+        "sessionRecordByteOffset": 163690370,
+        "issue": "PDF+two selectedpages+processpollmetadata conservatively4outerunits",
+        "HTTPBudgetImpact": "None",
+        "actualCallIdMatches": true,
+        "interpretation": "conservative processpollmixedwith3source/pageunits=>4outerunits",
+        "actualSessionCallIdVerified": true,
+        "actualSessionRecordSHA256": "494f7a36607c57123ff4ea4f30e706368de7a9f6085959f6206900c4b3019624"
+      },
+      {
+        "callId": "call_ca101302fc7d4e5f8383a1253ed8e7b0",
+        "sessionRecordByteOffset": 164460661,
+        "request": 3,
+        "issue": "Threeexplicitmetadatafiles+oneHTTPsource=4outerunits",
+        "HTTPBudgetImpact": "Oneactuallegalreadycounted",
+        "actualCallIdMatches": true,
+        "interpretation": "3metadata reads+1normalHTTP source=>4outerunits",
+        "actualSessionCallIdVerified": true,
+        "actualSessionRecordSHA256": "b6e8cc615d562016d6fe609488a8db6e66f1be392fa5e0f06465fbe746afd641"
+      },
+      {
+        "callId": "call_5135718469ad4b55a7c1c7d532d314c9",
+        "sessionRecordByteOffset": 164467677,
+        "request": 4,
+        "issue": "Threeexplicitmetadatafiles+oneHTTPsource=4outerunits",
+        "HTTPBudgetImpact": "Oneactuallegalreadycounted",
+        "actualCallIdMatches": true,
+        "interpretation": "3metadata reads+1normalHTTP source=>4outerunits",
+        "actualSessionCallIdVerified": true,
+        "actualSessionRecordSHA256": "000172bf39893da8b0998b33266b1ecc992271f761036b9ceec0b14ac8a9b310"
+      }
+    ],
+    "strictProcessDifferencesAcknowledged": true,
+    "independentIntegrityPayloadsVerified": 56,
+    "independentCrossPayloadsVerified": 2
+  },
+  "resourceCoverageReview": [
+    {
+      "dimension": "RES",
+      "subpillar": "water",
+      "status": "reviewed_partial",
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["RES68-R02", "RES68-R03", "RES68-R04"],
+      "finding": "Existingacceptedquality/leadlimits,actualSep2026typicalbillandrealTAPdiscounts/forgiveness/shutoffhelpwitheligibility/documentationbarriers;ordinarynetbridgeunaccepted."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "food",
+      "status": "reviewed_partial",
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["RES68-R01"],
+      "finding": "41providers/810640mealsactualbutwindow/uniquepeople/nutritionunknown;nearlyquartertextversusapprox18%graphanddatedwindowsretained;ordinarymedianbasicfoodbridgeunaccepted."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "energy",
+      "status": "reviewed_partial",
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["RES68-S01", "RES68-S02", "RES68-S03"],
+      "finding": "Actual2025regionalreliability/2026publishedaid/defaultsupplychoiceestablished;88minutesnotannualpercustomeroutage;supplypremiumnottotalbill;eligibilityandpriceconstraintsretained."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "supply_chain",
+      "status": "reviewed_partial",
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["RES68-R01", "RES68-R03", "RES68-R04", "RES68-S01", "RES68-S03"],
+      "finding": "Operatingfood/water/electricityanddefaultchoicepositives;notallFUA/allfuelsorjointstressbackupmeasurement;40/60/80possibleconditionalinterpretationsnotadopted."
+    }
+  ],
+  "resourceSourceAndStopLedger": {
+    "originatingResearch": "philadelphia-res67",
+    "oldActualNormalRequestCount": 20,
+    "oldValidOriginals": 15,
+    "oldDiagnostics": 5,
+    "oldDiscovery": {
+      "rounds": 2,
+      "queries": [4, 4],
+      "closed": true
+    },
+    "oldOriginalManifestRecovered": true,
+    "priorProviderCounts": "Exactoldmanifestfailuresretained; broadercumulativehistoryunknownnotzero; success/newtaskneverresets",
+    "oldFailures": [
+      {
+        "file": "financial-policy2026.html",
+        "url": "https://www.pennmedicine.org/patient-resources/policies/financial-assistance/financial-assistance-policy",
+        "requestAtUTC": "2026-10-15T11:27:23.466191+00:00",
+        "requestMechanism": "www.pennmedicine.org|urllib_normal_TLS",
+        "method": "one normalTLS request no retry",
+        "historicalCutoffBytesAuthenticated": false,
+        "httpStatus": 200,
+        "finalUrl": "https://www.pennmedicine.org/patient-resources/policies/financial-assistance/financial-assistance-policy",
+        "contentType": "text/html",
+        "responseBytes": 212,
+        "responseSha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d",
+        "validOriginal": false,
+        "originalBytes": null,
+        "sha256": null,
+        "validationCorrection": "Actual body inspected: rejection/interstitial, not original. Response diagnostic SHA retained. No retry.",
+        "interpretation": "diagnostic only; no substantive original bytes/SHA; no scoring penalty; no retry"
+      },
+      {
+        "file": "kensington-dto2026.html",
+        "url": "https://www.justice.gov/usao-edpa/pr/alleged-leader-members-kensington-dto-charged-superseding-indictment-conspiracy",
+        "requestAtUTC": "2026-10-15T11:27:03.690104+00:00",
+        "requestMechanism": "www.justice.gov|urllib_normal_TLS",
+        "method": "one normalTLS request no retry",
+        "historicalCutoffBytesAuthenticated": false,
+        "httpStatus": 200,
+        "finalUrl": "https://www.justice.gov/usao-edpa/pr/alleged-leader-members-kensington-dto-charged-superseding-indictment-conspiracy",
+        "contentType": "text/html",
+        "responseBytes": 2531,
+        "responseSha256": "1db9a5a7db684fac16af80522b3cc93fad0e3cbde7de4996a866586903056440",
+        "validOriginal": false,
+        "originalBytes": null,
+        "sha256": null,
+        "validationCorrection": "Actual body inspected: rejection/interstitial, not original. Response diagnostic SHA retained. No retry.",
+        "interpretation": "diagnostic only; no substantive original bytes/SHA; no scoring penalty; no retry"
+      },
+      {
+        "file": "pci2025.html",
+        "url": "https://pci.upenn.edu/about/stats-and-reports/pci-year-in-review-fy2025/",
+        "requestAtUTC": "2026-10-15T11:29:28.074560+00:00",
+        "requestMechanism": "pci.upenn.edu|urllib_normal_TLS",
+        "method": "one normalTLS request no retry",
+        "historicalCutoffBytesAuthenticated": false,
+        "validOriginal": false,
+        "error": "HTTP Error 403: Forbidden",
+        "originalBytes": null,
+        "sha256": null,
+        "httpStatus": 403,
+        "responseBytes": 5607,
+        "responseSha256": "e08dd7ae46d4b00f838cff34d6a06f2723511e8dd2d8c9c58017100f67eaa5ef",
+        "interpretation": "diagnostic only; no substantive original bytes/SHA; no scoring penalty; no retry"
+      },
+      {
+        "file": "penn-mortality.html",
+        "url": "https://www.pennmedicine.org/patient-resources/patient-safety-clinical-quality/excellent-outcomes/mortality",
+        "requestAtUTC": "2026-10-15T11:29:28.075259+00:00",
+        "requestMechanism": "www.pennmedicine.org|urllib_normal_TLS",
+        "method": "one normalTLS request no retry",
+        "historicalCutoffBytesAuthenticated": false,
+        "httpStatus": 200,
+        "finalUrl": "https://www.pennmedicine.org/patient-resources/patient-safety-clinical-quality/excellent-outcomes/mortality",
+        "contentType": "text/html",
+        "responseBytes": 1050,
+        "responseSha256": "bb344251fa59da76a8b6484d615d94a67ae28ad0c94ee0c994aac73b2d787f99",
+        "validOriginal": false,
+        "originalBytes": null,
+        "sha256": null,
+        "interpretation": "diagnostic only; no substantive original bytes/SHA; no scoring penalty; no retry"
+      },
+      {
+        "file": "septa2025.html",
+        "url": "https://wwww.septa.org/reports/2025-highlights/",
+        "requestAtUTC": "2026-10-15T11:29:28.075139+00:00",
+        "requestMechanism": "wwww.septa.org|urllib_normal_TLS",
+        "method": "one normalTLS request no retry",
+        "historicalCutoffBytesAuthenticated": false,
+        "validOriginal": false,
+        "error": "HTTP Error 403: Forbidden",
+        "originalBytes": null,
+        "sha256": null,
+        "httpStatus": 403,
+        "responseBytes": 4546,
+        "responseSha256": "e968d6a858157d0f653406458945f86a53a1a15fb692c25bf966b0e681399ab3",
+        "interpretation": "diagnostic only; no substantive original bytes/SHA; no scoring penalty; no retry"
+      }
+    ],
+    "upstreamStops": [
+      "DOJ/FBI",
+      "WIPO2026",
+      "EC83/WHO",
+      "NHS/UCLH/ING/KPN andotherupstreammechanisms ifencountered"
+    ],
+    "newSupplementalAuthorization": {
+      "rounds": 1,
+      "maxQueries": 2,
+      "maxNormalActualLegs": 4,
+      "notOldBudgetReset": true
+    },
+    "discoveryNowClosed": true,
+    "newQueriesUsed": 2,
+    "rule": "Thirdsameprovider/mechanismfailure stop; concretefailedfile no retry/web/CDN/mirror; eachnormallegandredirectseparateoutercall; noautoRedirect/retry",
+    "newNormalActualLegs": 4,
+    "newValidOriginals": 3,
+    "newDiagnostics": 1,
+    "newRedirects": 0,
+    "newQueryRoundClosed": true,
+    "networkClosed": true,
+    "additionalBudget": 0,
+    "newFailures": [
+      {
+        "sourceId": "S04",
+        "provider": "www.peco.com",
+        "mechanism": "urllib_normal_TLS",
+        "status": 403,
+        "observedSupplementFailures": 1,
+        "earlierCumulative": "unknown not0",
+        "specificURLStopped": true
+      }
+    ],
+    "oldPlusNewKnownNormalRequests": 24,
+    "oldCountsAreNotReset": true,
+    "reusedDurableSources": 4,
+    "readScopeLimitations": [
+      "Initialcombinedreport/manifestoutputtruncated; subsequentexactselectedstopping/diagnostic/RESrecords read, not all20sourcebodies claimed",
+      "CMC EnergyServices inoldTAPiswateraudit, noelectricdelivery inference",
+      "PollingHTTPprocesscompletionnotanewHTTPleg; selectedsource/PDFpagecalls explicitasserts; nohiddenredirect/retry"
+    ],
+    "toolText": "Exactactualdiscoverycalloutput retained; anydisplaytruncation remains partofactualreturn, no unseencontentassumed; only3validnewprovideroriginalsadopted, noReddit/Wikipedia/secondaryclaims",
+    "processDeviations": {
+      "count": 6,
+      "session": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-02-01a13e5e-2ed3-76e3-b2b0-eefa22db05d9.jsonl",
+      "records": [
+        {
+          "callId": "call_d67d81e9e4c84cdda55695829ea3d613",
+          "sessionRecordByteOffset": 163632827,
+          "request": 1,
+          "issue": "Threeexplicitmetadatafiles+oneHTTPsource=4outerunits",
+          "HTTPBudgetImpact": "Oneactuallegalreadycounted"
+        },
+        {
+          "callId": "call_99cbc9d171ca4a51825fd9e2e5078cbb",
+          "sessionRecordByteOffset": 163642773,
+          "issue": "Threeoldrawcopies+processpollmetadata conservatively4outerunits",
+          "HTTPBudgetImpact": "None"
+        },
+        {
+          "callId": "call_d7a3aca6545d4c1488a98833bbd7aed8",
+          "sessionRecordByteOffset": 163655458,
+          "request": 2,
+          "issue": "Threeexplicitmetadatafiles+oneHTTPsource=4outerunits",
+          "HTTPBudgetImpact": "Oneactuallegalreadycounted"
+        },
+        {
+          "callId": "call_43531243626d4c4382097a61bbd73326",
+          "sessionRecordByteOffset": 163690370,
+          "issue": "PDF+two selectedpages+processpollmetadata conservatively4outerunits",
+          "HTTPBudgetImpact": "None"
+        },
+        {
+          "callId": "call_ca101302fc7d4e5f8383a1253ed8e7b0",
+          "sessionRecordByteOffset": 164460661,
+          "request": 3,
+          "issue": "Threeexplicitmetadatafiles+oneHTTPsource=4outerunits",
+          "HTTPBudgetImpact": "Oneactuallegalreadycounted"
+        },
+        {
+          "callId": "call_5135718469ad4b55a7c1c7d532d314c9",
+          "sessionRecordByteOffset": 164467677,
+          "request": 4,
+          "issue": "Threeexplicitmetadatafiles+oneHTTPsource=4outerunits",
+          "HTTPBudgetImpact": "Oneactuallegalreadycounted"
+        }
+      ],
+      "action": "No source changes orrepeatrequeststohide/fixpastdeviation; futuremetadata preparationseparate orsinglebundledstateinput.",
+      "cityScoreImpact": "None",
+      "rootClarificationReceived": true,
+      "locatorCorrection": "Initialtailwindowwasinsufficient/genericmatchincludedtheauditcallitself; thisrecord usesexactrequest01–04executions andexactpollpatterns, not a repeatHTTP."
+    },
+    "discoveryBudgetAccounting": "Original2roundsx4queries=8closed; explicitnew1roundx2queries=2closed; known10totalqueries, notreset. Old20normal+new4actuallegs=24knownnormal; cumulativeglobalmechanismunknownnotzero.",
+    "researchLedgerInitialAttemptsCounter": 0,
+    "newNormalAttemptsSoFar": 4,
+    "counterNote": "Frozenresearchledgerretainedinitial0counter;publishedcopylabelsitinitialandusesverified4actuallegsascurrent.No frozenpayloadedited."
+  },
+  "resourceSourceManifestSupplement": {
+    "sources": [
+      {
+        "id": "RES68-S01",
+        "file": "peco-reliability2025.html",
+        "url": "https://www.pecoconnection.com/2026/04/02/building-a-stronger-grid-pecos-2025-investments-boost-reliability/",
+        "sha256": "f0442309a7ca5570609ac54f5fbfa14185237333d3a10d8999aaf90aaba04313",
+        "originalBytes": 83074,
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-res67/originals/peco-reliability2025.html",
+        "validOriginal": true,
+        "reuse": false,
+        "existingSnapshotFile": "peco-reliability2025.html",
+        "scope": "Reviewreference;fullnewmetadataisinsourceSnapshots;reusedsnapshotobjectretainedinoriginal15."
+      },
+      {
+        "id": "RES68-S02",
+        "file": "peco-affordability-april2026.pdf",
+        "url": "https://xzeepbgen000pzpsta001.blob.core.windows.net/pecoconnection/2026/04/PECO_Energy_Affordability_Resources_Fact_Sheet.pdf",
+        "sha256": "a1e25d7165e9ccfc1f78fe22f6389d1eba80b930c09397ed87ce3b99397904e8",
+        "originalBytes": 717261,
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-res67/originals/peco-affordability-april2026.pdf",
+        "validOriginal": true,
+        "reuse": false,
+        "existingSnapshotFile": "peco-affordability-april2026.pdf",
+        "scope": "Reviewreference;fullnewmetadataisinsourceSnapshots;reusedsnapshotobjectretainedinoriginal15."
+      },
+      {
+        "id": "RES68-S03",
+        "file": "peco-supply-cost2025.html",
+        "url": "https://www.pecoconnection.com/2026/03/24/energy-supply-choices-what-you-should-know-before-you-shop/",
+        "sha256": "78d53567b1a4174368ae0d994b635e86491d15edce409211572386b83931f870",
+        "originalBytes": 84087,
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-res67/originals/peco-supply-cost2025.html",
+        "validOriginal": true,
+        "reuse": false,
+        "existingSnapshotFile": "peco-supply-cost2025.html",
+        "scope": "Reviewreference;fullnewmetadataisinsourceSnapshots;reusedsnapshotobjectretainedinoriginal15."
+      },
+      {
+        "id": "RES68-R01",
+        "file": "hunger2025.pdf",
+        "url": "https://www.phila.gov/media/20251204095543/hunger-dashboard-2025.pdf",
+        "sha256": "a292a74f6cf26486406153010896e13753f012aa9a0d4f9fefb69b077f16294e",
+        "originalBytes": 259687,
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-res67/originals/hunger2025.pdf",
+        "validOriginal": true,
+        "reuse": true,
+        "existingSnapshotFile": "hunger2025.pdf",
+        "scope": "Reviewreference;fullnewmetadataisinsourceSnapshots;reusedsnapshotobjectretainedinoriginal15."
+      },
+      {
+        "id": "RES68-R02",
+        "file": "tap2025.pdf",
+        "url": "https://www.phila.gov/media/20260512142535/Tiered-Assistance-Program-TAP-2025-annual-report.pdf",
+        "sha256": "d2c51aacee0b4e3d92d81101194525ddac2ac0f371b1322beb62933675e340ed",
+        "originalBytes": 2269067,
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-res67/originals/tap2025.pdf",
+        "validOriginal": true,
+        "reuse": true,
+        "existingSnapshotFile": "tap2025.pdf",
+        "scope": "Reviewreference;fullnewmetadataisinsourceSnapshots;reusedsnapshotobjectretainedinoriginal15."
+      },
+      {
+        "id": "RES68-R03",
+        "file": "water-rates2026.html",
+        "url": "https://water.phila.gov/drops/new-rate-information-effective-september-2026/",
+        "sha256": "f909484f9e01d499f1af92cb2a4b67be4c5ab63427c2e28727f573f4b3aeb158",
+        "originalBytes": 111334,
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-res67/originals/water-rates2026.html",
+        "validOriginal": true,
+        "reuse": true,
+        "existingSnapshotFile": "water-rates2026.html",
+        "scope": "Reviewreference;fullnewmetadataisinsourceSnapshots;reusedsnapshotobjectretainedinoriginal15."
+      },
+      {
+        "id": "RES68-R04",
+        "file": "water-quality2025.html",
+        "url": "https://water.phila.gov/drops/2025-drinking-water-quality-report/",
+        "sha256": "1867140d2b99c8c67c1a4d92a32d0aa53d9564a824cf76a759aa99780edbfb11",
+        "originalBytes": 288418,
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/philadelphia-res67/originals/water-quality2025.html",
+        "validOriginal": true,
+        "reuse": true,
+        "existingSnapshotFile": "water-quality2025.html",
+        "scope": "Reviewreference;fullnewmetadataisinsourceSnapshots;reusedsnapshotobjectretainedinoriginal15."
+      }
+    ],
+    "oldOriginalSnapshotCount": 15,
+    "newRawOriginalCount": 3,
+    "reusedOriginalCount": 4,
+    "newFailedOriginalCount": 1,
+    "scope": "Seven review originals:3new/4sameSHAreused. Original15snapshotobjects retained;new3 appendedonce gives18total. No new numerical score adopted; sixprocessdeviationsseparate,notcapabilitypenalties."
+  },
+  "resourceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allCandidatesChecked": 9031,
+    "repairCount": 136,
+    "record": {
+      "fid": 8709,
+      "eFUA_ID": 7165.0,
+      "UC_num": 4.0,
+      "UC_IDs": "898;911;920;933",
+      "eFUA_name": "Philadelphia",
+      "Commuting": 1.0,
+      "Cntry_ISO": "USA",
+      "Cntry_name": "UnitedStates",
+      "FUA_area": 11525.0,
+      "UC_area": 1732.0,
+      "FUA_p_2015": 6113871.237753222,
+      "UC_p_2015": 3502597.39757007,
+      "Com_p_2015": 2611273.840183152
+    },
+    "points": [
+      {
+        "label": "Philadelphia centre analyst approximate",
+        "longitude": -75.1636,
+        "latitude": 39.9526,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 7165,
+            "name": "Philadelphia"
+          }
+        ]
+      },
+      {
+        "label": "University City medical neighbourhood analyst approximate",
+        "longitude": -75.193,
+        "latitude": 39.95,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 7165,
+            "name": "Philadelphia"
+          }
+        ]
+      },
+      {
+        "label": "Philadelphia airport analyst approximate",
+        "longitude": -75.242,
+        "latitude": 39.874,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 7165,
+            "name": "Philadelphia"
+          }
+        ]
+      }
+    ],
+    "targetWkbSha256": "f18dd0d22ec62286e1da8aa926633422115cd887da5f7b54d22794b5cd9f89a1",
+    "meaning": "Old FUA is not municipal/provider/patient scope. Analyst approximate points are not surveyed footprints, residence, service-population denominators or actual journeys."
+  },
+  "resourceToolProof": {
+    "session": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-02-01a13e5e-2ed3-76e3-b2b0-eefa22db05d9.jsonl",
+    "callId": "call_55abf111d6ea4b3ea3cc54f77deb2150",
+    "outputByteOffset": 163551201,
+    "outputRecordBytes": 41721,
+    "outputRecordSHA256": "47da45e9fea75228738a86a1c4b825732b99948a87a7f95e9de6a0e2dd5359d6",
+    "timestamp": "2026-10-16T02:16:46.185Z",
+    "matchesCapturedJSON": true,
+    "blocks": [
+      {
+        "index": 0,
+        "bytes": 47,
+        "toolTextSHA256": "dd6d0708644de2552cecb217426430d957b681081e83e1bc6544bdb686bc5ddd"
+      },
+      {
+        "index": 1,
+        "bytes": 40107,
+        "toolTextSHA256": "d8405b8c8b0073951f78f1ae1bb2bf8f52e0fd0af32ad017ea0b835c41080319"
+      }
+    ],
+    "blocksMatch": true,
+    "websiteSHA256": null,
+    "queries": [
+      "site.peco.com 2025 2026 reliability customers bills assistance residential electricity",
+      "site.peco.com 2026 bill average residential customer assistance CAP food energy burden Philadelphia"
+    ],
+    "callLookupBoundedBytes": 65536,
+    "textNotWebsiteSHA": true,
+    "actualOriginalCall": {
+      "byteOffset": 163527247,
+      "recordBytes": 1623,
+      "recordSHA256": "321cce34783f319324fa03c2dcbdcadba0ad7146c9b9ecd1ab229b6ddcf7d5d6"
+    }
+  },
+  "resourceCompletionReview": {
+    "path": "docs/cci-philadelphia-res-completion-review.md",
+    "researchReport": "docs/cci-philadelphia-res-priority-review.md",
+    "reviewedOn": "2026-10-16",
+    "fixedInputCommit": "a084101d6253831fdd806fffcf15b2034fdca6ff",
+    "fixedCases": 98,
+    "fixedComplete": 21,
+    "researchFixedCommit": "37e1555413631e7eb6ceb4e3bcd4d46a5c57bd9d",
+    "researchFixedCases": 97,
+    "researchFixedComplete": 21,
+    "reviewManifestSha256": "be86515578677f3a13a7e61eacd23bd3678941ce7c000c2a92b2263df273106f",
+    "frozenPayloadsVerified": 56,
+    "crossReviewReportSha256": "f187054011e5a9bd441c458a9f35cd2be699c9a63b991651dd28139c07faa4ae",
+    "crossReviewResultSha256": "f3b1694b9b74061e3f110f04433a0339b54102d0bfe54d2e443599bae1fcf62f",
+    "crossReviewManifestSha256": "976460b03156b450b382d4f2a9a379a9da388f5994600cc1d7c7a0996f7530a4",
+    "crossPayloadsVerified": 2,
+    "validReviewOriginals": 7,
+    "newValidOriginals": 3,
+    "reusedOriginals": 4,
+    "newFailedOriginals": 1,
+    "newHTTPActualLegs": 4,
+    "newDiscoveryQueries": 2,
+    "oldTwoRoundsAnd20RequestsNotReset": true,
+    "rootNewNetworkRequests": 0,
+    "rootPdfPageCount": 5,
+    "rootSelectedPdfTextPageCount": 7,
+    "originalSevenUTF8DimensionObjectsUnchanged": true,
+    "originalFifteenSourceSnapshotObjectsUnchanged": true,
+    "other97WholeCaseBytesUnchanged": true,
+    "strictProcessDifferenceCount": 6,
+    "allEightScoresUnchanged": true,
+    "energyEvidenceNowSubstantive": true,
+    "proposedConditionalTotal": null,
+    "noPerfect2026LedgerGate": true,
+    "researchFrozenReportSha256": "7b69c51031ac444ae9a7c8c17a5c6c4598d370dd2683df08a9a872a2302268a0",
+    "sha256": "75ded70e63b72d71cabf1d85ff55bb608278555393e8489ede283a84bcf921ba",
+    "researchReportSha256": "aaa57817e8d64a9f080fa3c52dd6c5b66177f252537f4a2edeafae496b9e40fa",
+    "originalSevenDimensionJSONHashes": {
+      "PCS": "cd13f59c2c66aca986492b31ef17284e953ff9465d1888948d76b4e4fd879fe3",
+      "GSS": "f6f4bfdc29a172f3a289228ed362c8f4b22252c1f54060e6ed02effd725bb99c",
+      "ISR": "98de9c490944689bdae90fd97dbb8c8cde0cde650ef8f54e6995db9d31414f88",
+      "MED": "e6b81ebf61190ceb3158f3b50c2d76091a9b22ab7c6b1b81c3003ec18934daea",
+      "LON": "55822601ad8987a7492482572ee5a5dc60c2ece895d8fbe9a7ff516eacb586f7",
+      "TEC": "ba90b3ca2a2a1da15f5fcc5f61431f054a1b9a968c83acf9ed66ed4e90f6c68f",
+      "OPT": "a9b6466228bcd6369d577c4adcfbd96a30489a7a921a1d95cb56f7755302913b"
+    },
+    "originalFifteenSourceSnapshotsJSONHash": "b8593ff44954a6799a65adf20f84b59814c9c211f4d98cee222797921938dbb4"
+  },
+  "reportSha256": "75ded70e63b72d71cabf1d85ff55bb608278555393e8489ede283a84bcf921ba",
+  "reportBytes": 6323
 }
