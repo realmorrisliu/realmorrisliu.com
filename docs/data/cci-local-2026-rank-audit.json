@@ -5,8 +5,8 @@
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
   "conditionalCaseCount": 107,
-  "completeConditionalCaseCount": 23,
-  "partialCaseCount": 84,
+  "completeConditionalCaseCount": 24,
+  "partialCaseCount": 83,
   "unassessedCount": 8924,
   "weights": {
     "PCS": 15,
@@ -112,11 +112,11 @@
         {
           "efua_id": "229",
           "source_name": "Aarhus",
-          "center": null,
-          "lower": 51.0,
-          "upper": 61.0,
-          "bestPosition": 6,
-          "worstPosition": 9031
+          "center": 57.0,
+          "lower": 57.0,
+          "upper": 57.0,
+          "bestPosition": 22,
+          "worstPosition": 9030
         },
         {
           "efua_id": "239",
@@ -179,7 +179,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9021
+          "worstPosition": 9020
         },
         {
           "efua_id": "415",
@@ -206,7 +206,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9021
+          "worstPosition": 9020
         },
         {
           "efua_id": "535",
@@ -287,7 +287,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9021
+          "worstPosition": 9020
         },
         {
           "efua_id": "823",
@@ -386,7 +386,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9021
+          "worstPosition": 9020
         },
         {
           "efua_id": "1565",
@@ -512,7 +512,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9021
+          "worstPosition": 9020
         },
         {
           "efua_id": "2877",
@@ -620,7 +620,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9021
+          "worstPosition": 9020
         },
         {
           "efua_id": "4193",
@@ -772,7 +772,7 @@
           "center": null,
           "lower": 43.0,
           "upper": 53.0,
-          "bestPosition": 25,
+          "bestPosition": 26,
           "worstPosition": 9031
         },
         {
@@ -782,7 +782,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9021
+          "worstPosition": 9020
         },
         {
           "efua_id": "4946",
@@ -791,7 +791,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9021
+          "worstPosition": 9020
         },
         {
           "efua_id": "5129",
@@ -818,7 +818,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9021
+          "worstPosition": 9020
         },
         {
           "efua_id": "5349",
@@ -899,7 +899,7 @@
           "lower": 58.0,
           "upper": 58.0,
           "bestPosition": 17,
-          "worstPosition": 9028
+          "worstPosition": 9027
         },
         {
           "efua_id": "7094",
@@ -917,7 +917,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9021
+          "worstPosition": 9020
         },
         {
           "efua_id": "7244",
@@ -926,7 +926,7 @@
           "lower": 58.0,
           "upper": 58.0,
           "bestPosition": 17,
-          "worstPosition": 9028
+          "worstPosition": 9027
         },
         {
           "efua_id": "7347",
@@ -944,7 +944,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9021
+          "worstPosition": 9020
         },
         {
           "efua_id": "8299",
@@ -980,7 +980,7 @@
           "lower": 58.0,
           "upper": 58.0,
           "bestPosition": 17,
-          "worstPosition": 9028
+          "worstPosition": 9027
         },
         {
           "efua_id": "10078",
@@ -989,7 +989,7 @@
           "lower": 58.0,
           "upper": 58.0,
           "bestPosition": 17,
-          "worstPosition": 9028
+          "worstPosition": 9027
         },
         {
           "efua_id": "10097",
@@ -998,7 +998,7 @@
           "lower": 58.0,
           "upper": 58.0,
           "bestPosition": 17,
-          "worstPosition": 9028
+          "worstPosition": 9027
         }
       ]
     },
@@ -1082,8 +1082,8 @@
           "efua_id": "229",
           "source_name": "Aarhus",
           "center": null,
-          "lower": 45.0,
-          "upper": 70.0,
+          "lower": 51.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -2051,8 +2051,8 @@
           "efua_id": "229",
           "source_name": "Aarhus",
           "center": null,
-          "lower": 42.0,
-          "upper": 67.0,
+          "lower": 48.0,
+          "upper": 63.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -3020,8 +3020,8 @@
           "efua_id": "229",
           "source_name": "Aarhus",
           "center": null,
-          "lower": 42.0,
-          "upper": 67.0,
+          "lower": 48.0,
+          "upper": 63.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -4958,8 +4958,8 @@
           "efua_id": "229",
           "source_name": "Aarhus",
           "center": null,
-          "lower": 42.0,
-          "upper": 67.0,
+          "lower": 48.0,
+          "upper": 63.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -5927,8 +5927,8 @@
           "efua_id": "229",
           "source_name": "Aarhus",
           "center": null,
-          "lower": 45.0,
-          "upper": 65.0,
+          "lower": 51.0,
+          "upper": 61.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -6896,8 +6896,8 @@
           "efua_id": "229",
           "source_name": "Aarhus",
           "center": null,
-          "lower": 45.0,
-          "upper": 65.0,
+          "lower": 51.0,
+          "upper": 61.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -7865,8 +7865,8 @@
           "efua_id": "229",
           "source_name": "Aarhus",
           "center": null,
-          "lower": 45.0,
-          "upper": 65.0,
+          "lower": 51.0,
+          "upper": 61.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -9933,8 +9933,8 @@
     "cci-szczecin-score-completion-review.md": "e9242c4394109543be56eb736fa1f8585245d2f8ec3d0886b7713cc4ba5961cd",
     "cci-local-2026-bedford-case.json": "3b595afcfab6cf82b1099938ff0303c74a6ed1d9983b5406c3efa8016d79b315",
     "cci-bedford-priority-review.md": "c7711d94e0ff5e6d8608775ad309b134d4e9628d87963a3f99bf4e8ee640ce5e",
-    "cci-local-2026-aarhus-case.json": "01e030dc8d4bd5ec585a5387e5b01932a76d4b4a583f6bd9c37b7ade30840445",
-    "cci-aarhus-priority-review.md": "a540dbc56c8591209b279ca0bfc9b558353c314ee35a91281c6c9b5cfc610c9f",
+    "cci-local-2026-aarhus-case.json": "0a0f80422596226668547957d61dcbfcad89b90e212e58f5cb61a27d60d3cfd1",
+    "cci-aarhus-priority-review.md": "fb873bcebf50fd3aa3b69281b74af214c6b139853e07054a9e586bf19a81bee7",
     "cci-local-2026-nottingham-case.json": "235f9ba3775b927e16024b5482db3cc365b0722b6a3141afab4dae6daef868e1",
     "cci-nottingham-priority-review.md": "4155207f8f7d3b021b4ca00b85032b8da8a199a207ae06a76c59a465e0c5f1c7",
     "cci-local-2026-burton-on-trent-case.json": "7a50d7c9c9516155dcf5d50fbd65becdd951d21a03df0f6ba8871c3677441a4b",
@@ -9946,11 +9946,11 @@
     "cci-local-2026-bremen-case.json": "8a5aa05d1c7dcff1142f7652a7f97e7d6b5540542094de891def73071746959d",
     "cci-bremen-priority-review.md": "5295632ae2f3aa7dc84e370b4b82aee692db26099ab01ed536eb0641a3261672",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "e5ae6a0ed338920b6d0f02284d52b7b5cfc03c7406d769518adaf0a624999c0f",
+    "cci-global-evidence-matrix.json": "594eedd7fe17886c9abe3a1fee554f85c28c652a3323e5db0b5853239ef1273d",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "a17322d1ec227cf47c200cdb0324ce05dd13413c9bbd7c71f7e6c74de8b25988"
+    "cci-local-2026-scoring-calibration.md": "7b5d472f333f2be53f71f12b8308c1725ffb36eca6cc4f54d9cd7a6c61339c21"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "d74fcb9193ec74d074b381fb6fd9928ede86772582b560579bd4687d15b600cc",
+  "csvSha256": "eb986d64ebe2dfdc8e5b2c051e84b0405da6330529af3ec0674f20766bbffb12",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }

@@ -12,10 +12,10 @@
   "researchFrozenInputCommit": "fe052997d2903b8ffc92535e18175a14cf0673eb",
   "fixedInputCases": 99,
   "fixedInputComplete": 21,
-  "expectedConditionalTotal": null,
-  "knownWeightedSubtotal": 51,
-  "unknownWeight": 10,
-  "unresolvedScoreRange": [51, 61],
+  "expectedConditionalTotal": 57,
+  "knownWeightedSubtotal": 57,
+  "unknownWeight": 0,
+  "unresolvedScoreRange": [57, 57],
   "dimensions": [
     {
       "id": "PCS",
@@ -66,17 +66,17 @@
     },
     {
       "id": "RES",
-      "score": null,
-      "rationale": "真实水供、费用变化和按需食品/服务有据，普通中位家庭食品及家庭能源帮助后联合净取得仍不能定向。",
-      "assumption": "S10亲见11实际14.7m m³饮水/3.6%损失/27.8m m³污水/0.8%溢流，非家庭能耗或食品营养；13实际2025水价每m³增4.25DKK无全家庭总账分母。S05实际1117检测、已处理小幅菌/化学超标及Lyngby跟踪，供应商称无健康风险，不把全部案例说已关闭。S01物理32说明餐饮/按需所有年龄帮助，23实际供养支出与人数，但未核普通中位家庭食品实际取得/营养或困难后净资源。失败S07/S12不作城市能力反证，不用其403/TLS得低分，也不由水务自发电69%推出住户能量保障。现不接受水供/社会现金足以代普通食水能整束的推定；非要求每户精确账本。",
-      "alternativeRationales": "60可在真实食品与家庭能源净资源/已实施帮助能支持通常中位取得的有限桥后辩；40要有帮助后实际重要生活后果，不因涨水费或未知默认40；80看更强余量与共同供应恢复。当前两向未定，null/[]。",
+      "score": 60,
+      "rationale": "实际水供与处理、按需餐食/基本生活支持及市政确认主要在役供热，在有限普通净合束判断下采用条件60；并非家庭费用实测。",
+      "assumption": "新增N01是市政现行企业供热入口，明称districtheating为Aarhus最常用热源、由Kredsløb及地方热厂实际提供，补旧案家庭能供端完全未核的一环；无住户覆盖率/热费/停热/家庭帮助结局。S01物理23/32为2025真实转移收入（43695全时当量非独立人数）及餐食制作/咖啡服务及按需各年龄护理帮助，非中位者自动福利；S10物理11/13实际14.7m m³饮水、3.6%损失、0.8%污水溢流与每m³增4.25DKK，水务69%自发电绝不当居民能供；S05真实检查/处理并保留Lyngby跟踪和供应者风险主张。接受市域主要热源对普通FUA长期中位居民有限代表、2023/2025到截止持续，以及普通收入加已交付必要帮助后食水能通常净取得可管理的合束推定；不是未见失败就60，也不以供应者自发电/搜索价格片段填档。热电未分量、未测家庭完整账本，价格原件403仍不可采用，必要推定可以拒绝。 3511是成人居家支持人数，非餐食领取人数；7539是另一居家帮助口径，不相加。Lyngby仍有跟踪，Hasle两份超标与之相关，不把全部案例说已关闭。",
+      "alternativeRationales": "拒绝市域供热向普通家庭的代表/时间，或中位净费用与按需帮助通常可管理的必要推定，恢复null；不要求逐户账单但也不把企业接入页当中位家庭费用实测。40需实际帮助后重要食物/能源/水费生活后果，当前所读未证，涨价/403/timeout/未来风险不足以机械40；80需更强普通净余量及供链抗共因能力，不需完美零风险。本次40/80仅未来需事实条件，不列当前数值替代。",
       "conditionalAlternatives": [],
-      "sourceIds": ["S01", "S05", "S10"],
-      "scoreStatus": "unresolved",
+      "sourceIds": ["S01", "S05", "S10", "N01"],
+      "scoreStatus": "conditional_root_accepted",
       "subpillars": {
         "water": "partial",
-        "food": "context",
-        "energy": "unresolved",
+        "food": "partial",
+        "energy": "partial",
         "supply_chain": "partial"
       }
     },
@@ -278,44 +278,44 @@
       "subpillar": "water",
       "status": "partial",
       "boundedReviewPerformed": true,
-      "finding": "S05实际1117份检测及余留Lyngby跟踪，S10p11水量/损失部分；供应商无风险说法保留。",
+      "finding": "Actualproduction/qualityhandling/priceincrease;notallFUAhouseholdoutcomes",
       "score": null,
       "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
       "dimension": "RES",
-      "sourceIds": ["S01", "S05", "S10"],
+      "sourceIds": ["S05", "S10"],
       "fullyMeasured": false
     },
     {
       "subpillar": "food",
-      "status": "context",
+      "status": "partial",
       "boundedReviewPerformed": true,
-      "finding": "S01按需餐食与现金支持不等普通中位营养实际联合取得。",
+      "finding": "Actualmunicipalfoodpreparation/cafes/needbasedsupport;notmedianconsumption/nutrition",
       "score": null,
       "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
       "dimension": "RES",
-      "sourceIds": ["S01", "S05", "S10"],
+      "sourceIds": ["S01"],
       "fullyMeasured": false
     },
     {
       "subpillar": "energy",
-      "status": "unresolved",
+      "status": "partial",
       "boundedReviewPerformed": true,
-      "finding": "水务20.7GWh/69%自供非家庭能源，失败HTTP不作能力反证。",
+      "finding": "Municipalitystatesmainheatproviderisinoperation;nohouseholdnetfee/reliabilitydataset;limitedusualnetbridge",
       "score": null,
       "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
       "dimension": "RES",
-      "sourceIds": ["S01", "S05", "S10"],
+      "sourceIds": ["N01"],
       "fullyMeasured": false
     },
     {
       "subpillar": "supply_chain",
       "status": "partial",
       "boundedReviewPerformed": true,
-      "finding": "水务多供应商/零件库存实际，但食品与家庭能源整束仍不定向。",
+      "finding": "Existingwaterandheatproviderdelivery;noall-nodeindependentresiliencemeasurement",
       "score": null,
       "scope": "Bounded31semanticreviewnot31independentquantitativemeasurements",
       "dimension": "RES",
-      "sourceIds": ["S01", "S05", "S10"],
+      "sourceIds": ["S10", "N01"],
       "fullyMeasured": false
     },
     {
@@ -853,6 +853,21 @@
       "historicalCutoffBytesAuthenticated": false,
       "scoreEligible": true,
       "locatorOrPlanOnly": false
+    },
+    {
+      "id": "N01",
+      "url": "https://aarhus.dk/virksomhed/miljoe/fjernvarme",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-res80/originals/city-heat-supply.html",
+      "originalBytes": 52860,
+      "sha256": "b5e3cd042e42d188a2aaff7f75092e622f7cc1e734c04bd999108328d4f03324",
+      "validOriginal": true,
+      "status": 200,
+      "bodyType": "html",
+      "nominalUpdatedDate": "2023-08-17",
+      "actualReadScopeAndLimits": "Fullmain;municipalgeneral/businessentry,mostusedheatandactualproviders,notpopulationdenominator/householdfees",
+      "historicalCutoffBytesAuthenticated": false,
+      "scoreEligible": true,
+      "locatorOrPlanOnly": false
     }
   ],
   "candidateUniverseRetained": 9031,
@@ -922,9 +937,59 @@
       "actualReadScopeAndLimits": "distinctpressnotfailedannualmirror;EOFexactfileclosed,noanothermechanism",
       "historicalCutoffBytesAuthenticated": false,
       "scoreEligible": false
+    },
+    {
+      "id": "N02",
+      "url": "https://www.kredslob.dk/produkter-og-services/fjernvarme/fjernvarmepriser",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "responseBodyBytes": 20748,
+      "responseBodySHA256": "7405d6ad675785a6100b0fed4e5a1c4403a9ccfcb9d5c1caa2a8cfd3f8bca0ce",
+      "role": "failed_403_diagnostic",
+      "validOriginal": false,
+      "scoreEligible": false,
+      "historicalCutoffBytesAuthenticated": false,
+      "localPath": null,
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-res80/diagnostics/N02-leg2.bin",
+      "automaticRedirectFollowed": false,
+      "automaticRetry": false
+    },
+    {
+      "id": "N04",
+      "url": "https://aarhus.dk/borger/bolig-byggeri-og-miljoe/for-grundejere/fjernvarme",
+      "status": null,
+      "error": "The read operation timed out",
+      "responseBodyBytes": null,
+      "responseBodySHA256": null,
+      "role": "timeout_without_response_body",
+      "validOriginal": false,
+      "scoreEligible": false,
+      "historicalCutoffBytesAuthenticated": false,
+      "localPath": null,
+      "responseBodyPath": null,
+      "automaticRedirectFollowed": false,
+      "automaticRetry": false
     }
   ],
-  "routingSourceSnapshots": [],
+  "routingSourceSnapshots": [
+    {
+      "id": "N03",
+      "url": "https://aarhus.dk/virksomhed/miljoe/fjernvarme/fjernvarme-i-aarhus",
+      "status": 302,
+      "error": "HTTP Error 302: Found",
+      "responseBodyBytes": 0,
+      "responseBodySHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "302_routing_diagnostic",
+      "validOriginal": false,
+      "scoreEligible": false,
+      "historicalCutoffBytesAuthenticated": false,
+      "localPath": null,
+      "responseBodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-res80/diagnostics/N03-leg3.bin",
+      "automaticRedirectFollowed": false,
+      "automaticRetry": false,
+      "destinationNotRequested": true
+    }
+  ],
   "webReadSources": [],
   "sourceManifest": {
     "path": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/source-manifest.json",
@@ -934,19 +999,20 @@
     "failed": 2
   },
   "sensitivity": {
-    "PCS60": [54, 64],
-    "ISR40": [48, 58],
-    "PCSWithdrawn": [45, 70],
-    "GSSWithdrawn": [42, 67],
-    "ISRWithdrawn": [42, 67],
-    "MEDWithdrawn": [42, 67],
-    "LONWithdrawn": [45, 65],
-    "TECWithdrawn": [45, 65],
-    "OPTWithdrawn": [45, 65],
+    "PCS60": [60, 60],
+    "ISR40": [54, 54],
+    "PCSWithdrawn": [51, 66],
+    "GSSWithdrawn": [48, 63],
+    "ISRWithdrawn": [48, 63],
+    "MEDWithdrawn": [48, 63],
+    "LONWithdrawn": [51, 61],
+    "TECWithdrawn": [51, 61],
+    "OPTWithdrawn": [51, 61],
     "RES40FullTotal": 55,
     "RES60FullTotal": 57,
     "RES80FullTotal": 59,
-    "allWithdrawn": [0, 100]
+    "allWithdrawn": [0, 100],
+    "RESWithdrawn": [51, 61]
   },
   "rootScopeReview": {
     "rootOriginalIdentitiesVerified": 21,
@@ -1252,14 +1318,15 @@
     "failedConcreteOriginalCount": 2,
     "rootPdfPageCount": 6,
     "rootSelectedPdfTextPageCount": 23,
-    "sha256": "a540dbc56c8591209b279ca0bfc9b558353c314ee35a91281c6c9b5cfc610c9f",
+    "sha256": "fb873bcebf50fd3aa3b69281b74af214c6b139853e07054a9e586bf19a81bee7",
     "researchReportSha256": "1edbf0b492ecc8e290b6ca51b6066b18767682672d498943f7fee24e1b14277c"
   },
   "limitations": [
     "Conditional score judgments with revocable geography/time/usual access/payer/net care bridges; no full population or independent31 subscores.",
     "No historical cutoff same-byte authentication, whole workflow or hidden requests certification.",
     "Failure and process records retained without capability penalties.",
-    "All9031 and new/unmatched competitors retained; no global qualification."
+    "All9031 and new/unmatched competitors retained; no global qualification.",
+    "RES60依赖市域代表、2023/2025至截止延续和通常收入加适用帮助后的净资源合束推定；未实测中位家庭完整食水能账本。拒必要推定则RES未知、51—61无总分。"
   ],
   "referenceBoundaryCheck": {
     "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
@@ -1330,5 +1397,72 @@
     ],
     "targetWkbSha256": "dade398db55a33007b2314f9eb025b4bbcee58ad81db4dde3407d41510fe3443",
     "meaning": "2015population not2026denominator; analyst points notfootprints/servicecoverage/patients/residentaccess or actualjourneys; municipality/provider/patientpool is notentireFUA; outsideairport mayserve actualresident journeys"
+  },
+  "resourceCompletionReview": {
+    "path": "docs/cci-aarhus-res-completion-review.md",
+    "sha256": "60d49ecc1c7ba168c9adb570c7adc1bfe411e4b4f3f02cf3f45b65c1451d62d9",
+    "previousPriorityReviewSha256": "a540dbc56c8591209b279ca0bfc9b558353c314ee35a91281c6c9b5cfc610c9f",
+    "fixedInputCommit": "a9032ea869c82c211712882ea78871db329bae7a",
+    "fixedInputCases": 107,
+    "fixedInputComplete": 23,
+    "authorFixedInputCommit": "bc391152215cd4ae5e5cfcc51ed22b868905fa45",
+    "authorFixedInputComplete": 22,
+    "authorInputNotRefreshed": true,
+    "resultComplete": 24,
+    "researchPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-res80",
+    "researchManifestSha256": "0fae4d43cfabce05b2409a9283f2529393a652fa76041a88f50c6011fd5ca174",
+    "researchPayloads": 46,
+    "researchPayloadBytes": 21774949,
+    "rootAcceptancePath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-res-root81",
+    "rootActualOriginalBodiesRead": 4,
+    "rootFreshSelectedPdfTextPages": {
+      "S01": [23, 32],
+      "S10": [11, 13]
+    },
+    "rootFreshPdfPagesPersonallyViewed": 4,
+    "rootFullHtmlMainRead": ["S05", "N01"],
+    "rootNewNetworkRequests": 0,
+    "oldSevenDimensionsUnchanged": true,
+    "old21SourceSnapshotObjectsUnchanged": true,
+    "other27CoverageObjectsUnchanged": true,
+    "validOriginalCount": 22,
+    "failedConcreteSources": 4,
+    "routingOnlyCount": 1,
+    "newDiscoveryQueries": 2,
+    "newNormalHTTPActualLegs": 4,
+    "cumulativeDiscoveryQueries": 10,
+    "cumulativeNormalHTTPActualLegs": 22,
+    "newLedgerPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-res80/source-stop-ledger.json",
+    "kredslobKnownCumulativeFailuresAtLeast": 3,
+    "kredslobProviderMechanismStopped": true,
+    "unknownPriorHistoryNotZero": true,
+    "automaticRetries": 0,
+    "automaticRedirects": 0,
+    "fourActualHttpSessionRecordIdentitiesVerified": true,
+    "discoveryInputOutputSessionRecordIdentitiesVerified": true,
+    "allToolInputSemanticAudit": false,
+    "wholeWorkflowCertified": false,
+    "rootGeometryPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-res-root81/geometry-independent.json",
+    "targetWkbSha256": "dade398db55a33007b2314f9eb025b4bbcee58ad81db4dde3407d41510fe3443",
+    "approximatePointsNotCoverage": true,
+    "utilitySelfSupplyEqualsHouseholdEnergySecurity": false,
+    "householdNetBudgetDirectlyMeasured": false,
+    "allAgesCareEqualsFreeMealsForAll": false,
+    "necessaryRevocableBridges": [
+      "municipalmainheattoordinaryFUAresources",
+      "2023and2025actualtocutoffcontinuity",
+      "medianincomeplusapplicableaidnetfoodwaterenergyusuallymanageable"
+    ],
+    "rejectNecessaryBridge": {
+      "RES": null,
+      "completeTotal": null,
+      "domain": [51, 61]
+    },
+    "RES40And80ArithmeticOnly": true,
+    "historicalCutoffBytesAuthenticated": false,
+    "globalRankingEligible": false,
+    "rootDiagnostics": [
+      "An initial three-input local print exceeded the output limit; selected field reads and prior original-page acceptance support only the stated bounded scope, not a whole workflow audit."
+    ]
   }
 }

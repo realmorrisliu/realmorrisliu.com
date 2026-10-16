@@ -590,7 +590,7 @@ const washingtonPosition = rankAudit.scenarios.fixed_conditional_centers.caseRes
 assert(washingtonPosition);
 assert.equal(washingtonPosition.center, 58);
 assert.equal(washingtonPosition.bestPosition, 17);
-assert.equal(washingtonPosition.worstPosition, rankAudit.candidateCount - 3);
+assert.equal(washingtonPosition.worstPosition, rankAudit.candidateCount - 4);
 assert.equal(total({ ...washington, GSS: 40 }).center, 55);
 assert.equal(total({ ...washington, GSS: 80 }).center, 61);
 assert.equal(realCases[6].securityReview.sha256, digest(realCases[6].securityReview.path));
@@ -646,7 +646,7 @@ const newYorkPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
 assert(newYorkPosition);
 assert.equal(newYorkPosition.center, 58);
 assert.equal(newYorkPosition.bestPosition, 17);
-assert.equal(newYorkPosition.worstPosition, rankAudit.candidateCount - 3);
+assert.equal(newYorkPosition.worstPosition, rankAudit.candidateCount - 4);
 assert.deepEqual(realCases[7].clinicBoundaryCheck.fuaMatches, [7244]);
 assert.equal(realCases[7].referenceBoundaryCheck.referencePoints.length, 6);
 for (const point of realCases[7].referenceBoundaryCheck.referencePoints) {
@@ -681,7 +681,7 @@ const parisPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.
 assert(parisPosition);
 assert.equal(parisPosition.center, 60);
 assert.equal(parisPosition.bestPosition, 6);
-assert.equal(parisPosition.worstPosition, rankAudit.candidateCount - 10);
+assert.equal(parisPosition.worstPosition, rankAudit.candidateCount - 11);
 assert.equal(
   realCases[8].sharedLegalPath.sourceSha256,
   digest("docs/data/cci-legal-mobility-rules.json")
@@ -797,7 +797,7 @@ const osakaKyotoPosition = rankAudit.scenarios.fixed_conditional_centers.caseRes
 assert(osakaKyotoPosition);
 assert.equal(osakaKyotoPosition.center, 60);
 assert.equal(osakaKyotoPosition.bestPosition, 6);
-assert.equal(osakaKyotoPosition.worstPosition, rankAudit.candidateCount - 10);
+assert.equal(osakaKyotoPosition.worstPosition, rankAudit.candidateCount - 11);
 assert.equal(
   realCases[11].referenceBoundaryCheck.fuaSha256,
   realCases[10].referenceBoundaryCheck.fuaSha256
@@ -1048,7 +1048,7 @@ const beijingPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
 );
 assert(beijingPosition);
 assert.equal(beijingPosition.bestPosition, 6);
-assert.equal(beijingPosition.worstPosition, rankAudit.candidateCount - 10);
+assert.equal(beijingPosition.worstPosition, rankAudit.candidateCount - 11);
 
 assert.deepEqual(total(shanghai), { center: 58, lower: 58, upper: 58 });
 assert.equal(shanghai.LON, 40);
@@ -1114,7 +1114,7 @@ const shanghaiPosition = rankAudit.scenarios.fixed_conditional_centers.caseResul
 );
 assert(shanghaiPosition);
 assert.equal(shanghaiPosition.bestPosition, 17);
-assert.equal(shanghaiPosition.worstPosition, rankAudit.candidateCount - 3);
+assert.equal(shanghaiPosition.worstPosition, rankAudit.candidateCount - 4);
 
 assert.deepEqual(total(jakarta), { center: null, lower: 43, upper: 53 });
 assert(!Object.hasOwn(jakarta, "LON"));
@@ -1196,7 +1196,7 @@ const jakartaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
 );
 assert(jakartaPosition);
 // Vienna's conditional60 also exceeds Jakarta's upper53.
-assert.equal(jakartaPosition.bestPosition, 25);
+assert.equal(jakartaPosition.bestPosition, 26);
 assert.equal(jakartaPosition.worstPosition, rankAudit.candidateCount);
 
 assert.deepEqual(total(nanjing), { center: null, lower: 49, upper: 64 });
@@ -1449,7 +1449,7 @@ const guangzhouPosition = rankAudit.scenarios.fixed_conditional_centers.caseResu
 );
 assert(guangzhouPosition);
 assert.equal(guangzhouPosition.bestPosition, 17);
-assert.equal(guangzhouPosition.worstPosition, rankAudit.candidateCount - 3);
+assert.equal(guangzhouPosition.worstPosition, rankAudit.candidateCount - 4);
 
 assert.deepEqual(total(wuhan), { center: null, lower: 54, upper: 64 });
 assert(!Object.hasOwn(wuhan, "LON"));
@@ -4229,24 +4229,25 @@ assert.equal(
   aarhusCase.priorityCompletionReview.researchReportSha256,
   digest(aarhusCase.priorityCompletionReview.researchReport)
 );
-assert.deepEqual(total(aarhus), { center: null, lower: 51, upper: 61 });
-assert.equal(aarhusCase.unknownWeight, 10);
+assert.deepEqual(total(aarhus), { center: 57, lower: 57, upper: 57 });
+assert.equal(aarhusCase.unknownWeight, 0);
 assert.deepEqual(
   aarhusCase.dimensions
     .filter((d: { score: number | null }) => d.score === null)
     .map((d: { id: string }) => d.id),
-  ["RES"]
+  []
 );
-assert.deepEqual(total({ ...aarhus, PCS: 60 }), { center: null, lower: 54, upper: 64 });
-assert.deepEqual(total({ ...aarhus, ISR: 40 }), { center: null, lower: 48, upper: 58 });
+assert.deepEqual(total({ ...aarhus, PCS: 60 }), { center: 60, lower: 60, upper: 60 });
+assert.deepEqual(total({ ...aarhus, ISR: 40 }), { center: 54, lower: 54, upper: 54 });
 for (const [id, lower, upper] of [
-  ["PCS", 45, 70],
-  ["GSS", 42, 67],
-  ["ISR", 42, 67],
-  ["MED", 42, 67],
-  ["LON", 45, 65],
-  ["TEC", 45, 65],
-  ["OPT", 45, 65],
+  ["PCS", 51, 66],
+  ["GSS", 48, 63],
+  ["ISR", 48, 63],
+  ["MED", 48, 63],
+  ["RES", 51, 61],
+  ["LON", 51, 61],
+  ["TEC", 51, 61],
+  ["OPT", 51, 61],
 ] as const) {
   const withdrawn: Partial<Record<DimensionId, number>> = { ...aarhus };
   delete withdrawn[id];
@@ -4258,8 +4259,8 @@ for (const [RES, center] of [
   [80, 59],
 ] as const)
   assert.deepEqual(total({ ...aarhus, RES }), { center, lower: center, upper: center });
-assert.equal(aarhusCase.sourceSnapshots.length, 21);
-assert.equal(aarhusCase.failedSourceSnapshots.length, 2);
+assert.equal(aarhusCase.sourceSnapshots.length, 22);
+assert.equal(aarhusCase.failedSourceSnapshots.length, 4);
 assert.equal(aarhusCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
 assert.equal(aarhusCase.rootScopeReview.rootSelectedPdfTextPageCount, 23);
 assert.equal(aarhusCase.rootScopeReview.rootPdfPageCount, 6);
@@ -4274,6 +4275,15 @@ assert(
     .filter((d: { id: string }) => !["PCS", "ISR"].includes(d.id))
     .every((d: { conditionalAlternatives: number[] }) => d.conditionalAlternatives.length === 0)
 );
+
+assert.equal(aarhusCase.routingSourceSnapshots.length, 1);
+assert.equal(
+  aarhusCase.resourceCompletionReview.sha256,
+  digest(aarhusCase.resourceCompletionReview.path)
+);
+assert.equal(aarhusCase.resourceCompletionReview.rootFreshPdfPagesPersonallyViewed, 4);
+assert.equal(aarhusCase.resourceCompletionReview.householdNetBudgetDirectlyMeasured, false);
+assert.equal(aarhusCase.resourceCompletionReview.cumulativeNormalHTTPActualLegs, 22);
 
 const nottinghamCase = realCases.find(c => c.candidateId === 4767);
 assert.equal(
