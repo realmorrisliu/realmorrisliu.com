@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 107,
+    "conditionalCaseCount": 108,
     "completeConditionalCaseCount": 24,
-    "partialCaseCount": 83,
-    "unassessedCount": 8924,
+    "partialCaseCount": 84,
+    "unassessedCount": 8923,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -840,8 +840,13 @@
       "sha256": "8a5aa05d1c7dcff1142f7652a7f97e7d6b5540542094de891def73071746959d",
       "provenance": "cci-bremen-priority-review.md",
       "provenanceSha256": "5295632ae2f3aa7dc84e370b4b82aee692db26099ab01ed536eb0641a3261672"
+    },
+    "cci-local-2026-larbert-case.json": {
+      "sha256": "1de5905bc4a9674d6b0f96c9f1aceb080fa987e0ac9be18f92afd7729a3a22bd",
+      "provenance": "cci-larbert-priority-review.md",
+      "provenanceSha256": "2c4fa378cec8c8b0dbdeae8c16c612c2d941ec0fdcb9ba5c00d3556b7e8133eb"
     }
   },
-  "scriptSha256": "2e3edd81e1d788ed791336c0018ca5da9e772aea4a6ee71816689ce7e1ae7b86",
-  "csvSha256": "3a6826f8d4b8c8a9f92f5f93f426ac62dbb269cae68c6f99ae8a64d6c5de2bc9"
+  "scriptSha256": "b1362fdb9daece8e915f07db37a172b850c0e5ed4c321ab04732b235d4fdb1bb",
+  "csvSha256": "404770a1f2463ee00a1e6037b9ac8d1977557bbd7ba95c338ad78c2aa32794a8"
 }

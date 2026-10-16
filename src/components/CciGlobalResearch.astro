@@ -117,6 +117,7 @@ import burtonOnTrent from "../../docs/data/cci-local-2026-burton-on-trent-case.j
 import daugavpils from "../../docs/data/cci-local-2026-daugavpils-case.json";
 import lasPalmas from "../../docs/data/cci-local-2026-las-palmas-case.json";
 import bremen from "../../docs/data/cci-local-2026-bremen-case.json";
+import larbert from "../../docs/data/cci-local-2026-larbert-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -238,8 +239,10 @@ const cases = [
   daugavpils,
   lasPalmas,
   bremen,
+  larbert,
 ];
 const caseNamesZh: Record<number, string> = {
+  [larbert.candidateId]: "拉伯特功能区",
   [bremen.candidateId]: "不来梅功能区",
   [lasPalmas.candidateId]: "拉斯帕尔马斯功能区",
   [daugavpils.candidateId]: "道加夫皮尔斯功能区",
@@ -453,6 +456,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [larbert.candidateId]: [
+    zh
+      ? "拉伯特安全／制度／专项转化／技术条件60、医疗条件40，防护／资源／退出未知。已知贡献36、数学域36—71，无完整总分。实际公共帮助、护理与研究产用，结合帮助后必要治疗久候作有限判断；地域、时间、普通付款／净照护及技术受益假设可撤。"
+      : "Larbert has conditional GSS/ISR/LON/TEC 60 and MED 40; PCS/RES/OPT remain unknown. Known contribution is 36, with a 36–71 arithmetic domain and no complete total. Delivered support, care and research adoption are assessed alongside important treatment waits after improvements; geography, time, usual payment, net care and technology-use assumptions are revocable.",
+    zh
+      ? "医疗60、安全40保留公平替代。等待百分比非死亡或未治疗率；国家异体移植在格拉斯哥，须接受通常转诊／往返照护推定，不算本地自做。研究池非每项目在本区，试验开启非疗效，制造保留／工资支持非2026已复产。全球入围未证明。"
+      : "MED 60 and GSS 40 remain fair alternatives. Waiting percentages are not death or untreated rates. National allogeneic transplantation is in Glasgow and requires a usual referral and repeat-care inference; it is not local delivery. Board research is not all inside the FUA, trial opening is not efficacy, and retained factories or wage support do not verify a 2026 restart. Global qualification is unproven.",
+  ],
   [bremen.candidateId]: [
     zh
       ? "不来梅防护／制度／医疗／专项转化／技术条件60，安全／资源／退出未知。已知贡献39、数学域39—74，无完整总分。现有堤闸、实际公共服务、持续造血重建及研究产用支持有限判断；普通受用、地域时间、成熟类适配及净照护假设可撤。"

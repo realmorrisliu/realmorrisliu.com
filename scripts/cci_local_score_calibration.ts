@@ -159,6 +159,7 @@ const realCases = [
   "daugavpils",
   "las-palmas",
   "bremen",
+  "larbert",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -309,6 +310,7 @@ const [
   daugavpils,
   lasPalmas,
   bremen,
+  larbert,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4473,6 +4475,52 @@ assert.equal(lasPalmasCase.webReadSources[0].sha256, null);
 assert(
   lasPalmasCase.coverageReview.length === 31 &&
     lasPalmasCase.coverageReview.every(
+      (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
+    )
+);
+
+const larbertCase = realCases.find(c => c.candidateId === 1934);
+assert.equal(
+  larbertCase.priorityCompletionReview.sha256,
+  digest(larbertCase.priorityCompletionReview.path)
+);
+assert.equal(
+  larbertCase.priorityCompletionReview.researchReportSha256,
+  digest(larbertCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(larbert), { center: null, lower: 36, upper: 71 });
+assert.equal(larbertCase.unknownWeight, 35);
+assert.deepEqual(total({ ...larbert, GSS: 40 }), { center: null, lower: 33, upper: 68 });
+assert.deepEqual(total({ ...larbert, MED: 60 }), { center: null, lower: 39, upper: 74 });
+for (const [id, lower, upper] of [
+  ["GSS", 27, 77],
+  ["ISR", 27, 77],
+  ["MED", 30, 80],
+  ["LON", 30, 75],
+  ["TEC", 30, 75],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...larbert };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(
+  larbertCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["PCS", "RES", "OPT"]
+);
+assert.equal(larbertCase.sourceSnapshots.length, 24);
+assert.equal(larbertCase.failedSourceSnapshots.length, 1);
+assert.equal(larbertCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
+assert.equal(larbertCase.rootScopeReview.rootSelectedPdfTextPageCount, 12);
+assert.equal(larbertCase.rootScopeReview.rootPdfPageCount, 7);
+assert.equal(larbertCase.rootScopeReview.waitMetricEqualsDeathOrUntreatedRate, false);
+assert.equal(larbertCase.rootScopeReview.localAllogeneicTransplantDirectlyVerified, false);
+assert.equal(larbertCase.rootScopeReview.factory2026ProductionRestartVerified, false);
+assert.equal(larbertCase.rootScopeReview.clinicalTrialOpeningEqualsProvenEfficacy, false);
+assert(
+  larbertCase.coverageReview.length === 31 &&
+    larbertCase.coverageReview.every(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
