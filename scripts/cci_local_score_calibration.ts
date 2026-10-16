@@ -147,6 +147,7 @@ const realCases = [
   "rostock",
   "middlesbrough",
   "kuopio",
+  "hilversum",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -285,6 +286,7 @@ const [
   rostock,
   middlesbrough,
   kuopio,
+  hilversum,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -3814,3 +3816,38 @@ assert.equal(
 );
 assert.equal(kuopioCase.failedSourceSnapshots.length, 0);
 assert.equal(kuopioCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
+
+const hilversumCase = realCases.find(c => c.candidateId === 2032);
+assert.equal(
+  hilversumCase.priorityCompletionReview.sha256,
+  digest(hilversumCase.priorityCompletionReview.path)
+);
+assert.equal(
+  hilversumCase.priorityCompletionReview.researchReportSha256,
+  digest(hilversumCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(hilversum), { center: null, lower: 21, upper: 76 });
+assert.equal(hilversumCase.unknownWeight, 55);
+assert.deepEqual(
+  hilversumCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["GSS", "RES", "LON", "TEC", "OPT"]
+);
+for (const [id, lower, upper] of [
+  ["PCS", 12, 82],
+  ["ISR", 15, 85],
+  ["MED", 15, 85],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...hilversum };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...hilversum, ISR: 60 }), { center: null, lower: 24, upper: 79 });
+assert.deepEqual(total({ ...hilversum, MED: 60 }), { center: null, lower: 24, upper: 79 });
+assert.equal(hilversumCase.sourceSnapshots.length, 21);
+assert(hilversumCase.sourceSnapshots.every((s: { validOriginal: boolean }) => s.validOriginal));
+assert.equal(hilversumCase.webOnlySources.length, 1);
+assert.equal(hilversumCase.webOnlySources[0].sha256, null);
+assert.equal(hilversumCase.failedSourceSnapshots.length, 1);
+assert.equal(hilversumCase.sourceAndStopLedger.normalHTTPActualLegs, 18);

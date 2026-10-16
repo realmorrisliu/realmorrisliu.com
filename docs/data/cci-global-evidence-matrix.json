@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 95,
+    "conditionalCaseCount": 96,
     "completeConditionalCaseCount": 19,
-    "partialCaseCount": 76,
-    "unassessedCount": 8936,
+    "partialCaseCount": 77,
+    "unassessedCount": 8935,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -780,8 +780,13 @@
       "sha256": "b92183d8e2f72bf45098f49e4ceb2fd32a975eaf5f037afc50daf8515ba0cccb",
       "provenance": "cci-kuopio-score-completion-review.md",
       "provenanceSha256": "c5cb6ca97b1d430be6f1079e33977999f7fa0a4066e9791b4f443c7ea89201e2"
+    },
+    "cci-local-2026-hilversum-case.json": {
+      "sha256": "dc4f3da168f78a129193c0392118c3d2a8085e3ac7f87ad2be7a698c06538bef",
+      "provenance": "cci-hilversum-score-completion-review.md",
+      "provenanceSha256": "ca964604a9128df19725cbd23c7a30aff5dc6d93d6f88868f62007a515582ce5"
     }
   },
-  "scriptSha256": "76513df611cf514c5309740b62dd6008c4251d9c70dd5455e8e1d9b00c423fab",
-  "csvSha256": "7e7b55a23353ece5f3ec260c41ce03301eb4780a7ee17bd108984a005fd56df5"
+  "scriptSha256": "ea94716c601f38d0506efd51fdf1ab38e1e98ecb7bae7666cec81e6afe0a4b07",
+  "csvSha256": "500d4c7224a7e4a92faa967a7310a49c66a41b0e62fb234f90048ae61acea135"
 }

@@ -105,6 +105,7 @@ import birmingham from "../../docs/data/cci-local-2026-birmingham-case.json";
 import rostock from "../../docs/data/cci-local-2026-rostock-case.json";
 import middlesbrough from "../../docs/data/cci-local-2026-middlesbrough-case.json";
 import kuopio from "../../docs/data/cci-local-2026-kuopio-case.json";
+import hilversum from "../../docs/data/cci-local-2026-hilversum-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -214,8 +215,10 @@ const cases = [
   rostock,
   middlesbrough,
   kuopio,
+  hilversum,
 ];
 const caseNamesZh: Record<number, string> = {
+  [hilversum.candidateId]: "希尔弗瑟姆功能区",
   [kuopio.candidateId]: "库奥皮奥功能区",
   [middlesbrough.candidateId]: "米德尔斯堡功能区",
   [rostock.candidateId]: "罗斯托克功能区",
@@ -417,6 +420,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [hilversum.candidateId]: [
+    zh
+      ? "希尔弗瑟姆防护条件60，制度／医疗条件40，另五维未知。原权重贡献21、数学域21—76，无完整总分；已建储水、现金发放和护理接续与履约／质量余障共同判读，地域、年代和通常净取得假设可撤。"
+      : "Hilversum has conditional PCS 60 and ISR/MED 40; five dimensions remain unknown. The original-weight contribution is 21 and arithmetic domain 21–76, without a complete total. Completed water storage, cash support and care continuity are considered alongside execution and quality gaps; geographic, time and usual-net-access assumptions remain revocable.",
+    zh
+      ? "2024总HSMR111与2022–24病种指标分开，不推可避免死亡因果；2026保险合同按保单，385欧段仅截至2025。21有效原件、两PDF页与一合同图，另有一份直取403前已保存的第一方工具正文；取证失败不扣城市能力，原95案保持。"
+      : "The 2024 overall HSMR of 111 is separate from 2022–24 disease-group indicators and does not establish avoidable-death causation. The 2026 contracts depend on policy terms; the EUR 385 section only covers through 2025. Root reviewed 21 valid originals, two PDF pages and one contract image, plus primary tool text saved before a direct 403. Collection failures do not reduce capability scores; the previous 95 cases are unchanged.",
+  ],
   [kuopio.candidateId]: [
     zh
       ? "库奥皮奥防护／制度／专项转化／技术条件60，医疗条件40，安全／资源／退出未知。原权重贡献36、数学域36—71，无完整总分；天气保护、实际服务与疾病重建支持有限判断，地域、年代、通常取得及净照护假设可撤。"
