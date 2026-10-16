@@ -8,13 +8,13 @@
   "evidenceCutoff": "2026-10-10",
   "targetYear": 2026,
   "retrievedOn": "2026-10-15",
-  "evidenceReview": "cci-vienna-gss40-completion-review.md",
-  "reportBytes": 7350,
-  "reportSha256": "644d4b4d64c949a9ca4c37c2ece3c3a9b09cfa590534518eebbf27bf169f176c",
-  "expectedConditionalTotal": null,
-  "knownWeightedSubtotal": 54,
-  "unknownWeight": 10,
-  "unresolvedScoreRange": [54, 64],
+  "evidenceReview": "cci-vienna-res-completion-review.md",
+  "reportBytes": 5900,
+  "reportSha256": "b913b41d776d13f54ec91b4b757de3e47d7c48cbc6b772fa04bc24b776bb2a63",
+  "expectedConditionalTotal": 60,
+  "knownWeightedSubtotal": 60,
+  "unknownWeight": 0,
+  "unresolvedScoreRange": [60, 60],
   "dimensions": [
     {
       "id": "PCS",
@@ -137,15 +137,45 @@
     },
     {
       "id": "RES",
-      "score": null,
-      "rationale": "真实水源/系统供入/能源产供及本地5MW储能/冷网投用；食品/当前合并净负担未闭。",
-      "assumption": "2019/20家庭平均消费和2023平均工资不变2026中位收入预算；住房感受不单独整维40；不加全户账单硬门槛。",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "水热真实供给与本地2024/25实际家庭食品消费形成正链；接受均值到普通中位画像/必要营养及2026净取得的有限可撤桥，建议有条件60。",
+      "assumption": "W01官方工具原文明确Wien家庭月均食品/非酒饮430欧、住房能源1010欧/总3850欧；不是中位个人工资或每户营养充分率，不能直接以比例宣称负担轻。接受这些真实本地消费对通常中位收入长期居民的基本食品取得有有限代表性，现有水热服务能配合其通常资源承接必要支出，并接受2024/25→2026及市到FUA核心/共享服务的有限延续。S02年度公开/服务延续非由PDF创建日认证。W02有真实食物援助但需求更高，目标弱势不自动中位合资格或断粮；不把所有不足消除。该净可得/代表/时点任一必要桥拒绝即null，非因无精确2026预算或无PDF像素机械否决。",
+      "conditionalAlternatives": [40, 80],
+      "alternativeRationales": {
+        "40": "若援助后仍有实际重要食品/能源或净负担约束，40可成立，不需多数受害/主导或全城停摆；本包W02需求更高是具体竞争解释但机构域/目标群体不能自动转成普通中位居民余障，AK500不算能力。",
+        "60": "积极证据是真实家庭已消费食品＋实际水热/储能运行；有限判断通常中位资源能继续取得基本水食能，不要求全户同年账本或逐项发票；保留食物援助缺口/家庭异质/市场依赖。",
+        "80": "需更有力地证明多来源替代、基本营养/水热净取得及压力下残余已有效缓解；不设零风险或所有家庭同档消费门槛。",
+        "null": "若市家庭均值到本国普通中位收入/基本营养/2026净取得桥仍过弱，保留未知/[]；不是把均值硬充中位或来源失败降40。"
+      },
       "subpillars": {
         "water": "partial",
-        "food": "unresolved",
+        "food": "partial",
         "energy": "partial",
         "supply_chain": "partial"
+      },
+      "sourceIds": ["RES66-S01", "RES66-S02", "RES66-W01", "RES66-W02", "RES66-W03"],
+      "scoreStatus": "conditional_root_adopted",
+      "necessaryAssumptions": [
+        {
+          "id": "A-food-mean-to-portrait",
+          "withdrawToUnknown": true,
+          "claim": "ObservedWienhouseholdactualfoodconsumptionislimitedpositiveevidenceforordinarymedianlongtermcitizenbasicfoodaccess,notnumericallymedianincomeorprovennutritionadequacy."
+        },
+        {
+          "id": "A-combined-net-resource",
+          "withdrawToUnknown": true,
+          "claim": "Realwaterheatandordinaryresourcesenablebasicfood/water/heatnetacquisitiondespiteinflation/householdheterogeneity;noaggregateexpense/incomeratioisasserted."
+        },
+        {
+          "id": "A-time-and-geography",
+          "withdrawToUnknown": true,
+          "claim": "2024/25cityhouseholdconsumptionand2025operatorsupport2026-10-10ordinaryFUAcore/sharedservicecontinuation;nominaldatedevidenceisnotarchivedsamebytes."
+        }
+      ],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": [],
+        "domain": [54, 64]
       }
     },
     {
@@ -258,22 +288,31 @@
     "sha256": "40d70ba7c6da99f37623517bebff8f347513e75d7a50287e0b6eb779ddf3ddbd"
   },
   "sensitivity": {
-    "PCS40": [51, 61],
-    "ISR40": [51, 61],
-    "MED40": [51, 61],
-    "LON40": [52, 62],
-    "OPT40": [52, 62],
-    "TEC80": [56, 66],
-    "OPT80": [56, 66],
-    "LON80": [56, 66],
-    "MEDWithdrawn": [45, 70],
-    "LONWithdrawn": [48, 68],
-    "OPTWithdrawn": [48, 68],
-    "PCSWithdrawn": [45, 70],
-    "MEDandLONWithdrawn": [39, 74],
-    "allJudgmentsWithdrawn": [0, 100],
-    "GSS40": [51, 61],
-    "GSSWithdrawn": [45, 70]
+    "PCSWithdrawn": [51.0, 66.0],
+    "PCS40": [57.0, 57.0],
+    "PCS80": [63.0, 63.0],
+    "GSSWithdrawn": [51.0, 66.0],
+    "GSS40": [57.0, 57.0],
+    "ISRWithdrawn": [51.0, 66.0],
+    "ISR40": [57.0, 57.0],
+    "ISR80": [63.0, 63.0],
+    "RESWithdrawn": [54.0, 64.0],
+    "RES40": [58.0, 58.0],
+    "RES80": [62.0, 62.0],
+    "MEDWithdrawn": [51.0, 66.0],
+    "MED40": [57.0, 57.0],
+    "MED80": [63.0, 63.0],
+    "LONWithdrawn": [54.0, 64.0],
+    "LON40": [58.0, 58.0],
+    "LON80": [62.0, 62.0],
+    "TECWithdrawn": [54.0, 64.0],
+    "TEC40": [58.0, 58.0],
+    "TEC80": [62.0, 62.0],
+    "OPTWithdrawn": [54.0, 64.0],
+    "OPT40": [58.0, 58.0],
+    "OPT80": [62.0, 62.0],
+    "MEDandLONWithdrawn": [45, 70],
+    "allJudgmentsWithdrawn": [0, 100]
   },
   "sourceSnapshots": [
     {
@@ -1088,6 +1127,71 @@
       "sourceKind": "recovered_same_bytes",
       "usedForScore": true,
       "useScope": "CurrentGSS actualcomponent/counterevidence or revocablebridge only; not newindependentcorroboration/cutoffhistoricalauthentication; datedcurrentbody calendar/futureforecasts excluded."
+    },
+    {
+      "id": "RES66-S01",
+      "url": "https://www.wien.gv.at/statistik/wasserversorgung",
+      "path": "water-current.html",
+      "scope": "Oldexactsuccessfulwaterlocator; new snapshot not oldSHA restoration; ordinarysysteminfeed source",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 46909,
+      "sha256": "71be8913c3ce81991ac0781a8449bf296acd337a3d641d5ad1dd9441d8b94aaa",
+      "localPath": "originals/water-current.html",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-16T01:44:30.061590+00:00",
+      "routeIndexes": [0],
+      "resolvedUrl": "https://www.wien.gv.at/statistik/wasserversorgung",
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 01:44:33 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "46909"
+      },
+      "headersNature": "parsed non-cookie header dictionary, not raw HTTP wire",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationWindow": "2011–2024 systeminfeed/currentraw; municipalstatsnotallFUA",
+      "historicalComparison": "New46909B/SHA71be... differs old46895B/SHA9b14...; no oldbody recovered; do not infer changedobservations fromlength alone",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "researchSourceId": "S01",
+      "rootBytesReverified": true,
+      "scoreEligible": true,
+      "actualOriginalPath": "/Users/morris/.local/share/cci-research/2026-10-10/vienna-res66/originals/water-current.html"
+    },
+    {
+      "id": "RES66-S02",
+      "url": "https://dokumente.wienenergie.at/link/jahresbericht-2025/",
+      "path": "energy2025.pdf",
+      "scope": "OldexactsuccessfulannualURL; new snapshot/publicationdate not PDFcreationdate; actualphysical24 only",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": true,
+      "originalBytes": 656220,
+      "sha256": "ca48e47562095521c99d5f82f4625922726940aab9c38156dc35429f61497194",
+      "localPath": "originals/energy2025.pdf",
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-16T01:44:34.191421+00:00",
+      "routeIndexes": [1, 2],
+      "resolvedUrl": "https://dokumente.wienenergie.at/wp-content/uploads/P26003_WienEnergie_Lagebericht_2025.pdf?we_doc_token=bc905c15b2",
+      "contentType": "application/pdf",
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 01:44:38 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "656220",
+        "ETag": "\"6a3147a7-a035c\"",
+        "Last-Modified": "Tue, 16 Jun 2026 12:55:03 GMT"
+      },
+      "headersNature": "parsed non-cookie header dictionary, not raw HTTP wire",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationWindow": "2025 actual andlabelled2026/2028future; physical1/24 only read/viewed",
+      "historicalComparison": "Current656220B/SHAca48... matches oldidentity but doesnotauthenticateoldHTTPprocess/cutoffbytes",
+      "publicationLimitation": "June16_2026 PDFcreation/HTTPmodified not proof firstpublication; annualpriorcutoffpublicrelease/continuity remains limitednecessary bridge",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "researchSourceId": "S02",
+      "rootBytesReverified": true,
+      "scoreEligible": true,
+      "actualOriginalPath": "/Users/morris/.local/share/cci-research/2026-10-10/vienna-res66/originals/energy2025.pdf"
     }
   ],
   "weakestNecessaryConnections": [
@@ -1095,7 +1199,16 @@
     "LON2021actualroutine continuation2026 +currentproduct/humanmaturity +ordinaryrecognized payment/netmonitoring",
     "GSS actualtargetedcontrol/ordinaryeffect includesaffectedgroups; corridor/nodefit and currentchangedbody/cutoffcontinuity allrevocable"
   ],
-  "limitations": "8/31映射不等充分测量；GSS条件60依赖具体保护的通常作用、重要节点代表性与当前正文/截止延续桥，RES仍未知。定向群体不排除，现实攻击及空域限制不抹去。其余七维原对象保持，旧医疗/长寿等必要有限假设仍可撤；本轮未重核其余36条旧来源。全9031及后出现竞争者保留，零排除，无完整总分或全球Top32资格。",
+  "limitations": [
+    "Conditionaltotal60dependsordinaryportrait/netcost/time/cityFUAbridges;rejectRESrestores54–64/no total,RES40/80gives58/62.",
+    "Householdobservedfoodmean430/housingenergy1010/total3850notmedianpersonincome,nutritionrateorincomeburden;W01exactprimarytooltableisnotPDFraw/pixels.",
+    "S01newbytesdifferold;S02sameSHAdoesnotauthenticatehistoricalHTTP/cutoff;currentannualrelease/continuitybridgerevocable.",
+    "Realfoodhelpandhigherneedretained;organisation/targetgroupnotallmedianFUA;noautomaticaideligibility.",
+    "Tworaw/twoPDFpages andthreeadoptedprimarytoolsectionsplus45payloadintegritynotall44sourcebodysemanticreaudit;othersevenretained,notnewlyreauthenticated.",
+    "Authoroneouterbatch4actualHTTPlegswithredirectexceeds≤3units;overall4legbudgetnotexceeded,failedfile500stopped,Stats0requestandtoolspreexisted;nofailurepenalty/stophistoryreset.",
+    "OriginalsevenUTF8objectsand42sourceobjectsandother96casewholebytesunchanged;oldGSS45–70domainhistoricalRESunknown,currentGSSwithdraw51–66top-levelauthoritative.",
+    "All9031/newunmatchedretained,zeroexclusions,32ndthresholdnull/globalRankingEligiblefalse.GlobalTop32unproven."
+  ],
   "stopRecord": {
     "discoveryRounds": 2,
     "closed": true,
@@ -1182,5 +1295,589 @@
       "score40RequiresMajorityVictimsOrCityShutdown": false,
       "rootRecheckedAll39OldSources": false
     }
+  },
+  "resourceWebOnlySources": [
+    {
+      "id": "RES66-W01",
+      "url": "https://www.statistik.at/fileadmin/publications/Konsumerhebung_Kurzbericht_Teil1_bericht.pdf",
+      "contentType": "exact_firstparty_indexed_tool_excerpt_not_full_document",
+      "websiteRawSha256": null,
+      "providerOriginalBytes": null,
+      "toolTextPath": "W01-exact-returned-section.txt",
+      "toolTextBytes": 3324,
+      "toolTextSha256": "a60a2e2bda741461ea88c3f8dad176a5dd926b14861cac0c1cba82aef2e1a592",
+      "completeToolBlock": "discovery-exact-block2.txt",
+      "zeroBasedBlock": 2,
+      "sectionByteOffsetWithinBlock": 0,
+      "callId": "call_811258fea2dc4ba08066efdfe0e471ce",
+      "session": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-02-01a13e5e-2ed3-76e3-b2b0-eefa22db05d9.jsonl",
+      "sessionRecordByteOffset": 162757694,
+      "beforeNormalRequests": true,
+      "role": "Actualfirstparty2024/25Wien householdmeanfood430/housingenergy1010/total3850; no citizen/medianincome/nutritionrate",
+      "historicalCutoffBytesAuthenticated": false,
+      "researchSourceId": "W01",
+      "scoreEligible": true,
+      "rootToolTextIdentityVerified": true
+    },
+    {
+      "id": "RES66-W02",
+      "url": "https://www.wien.gv.at/umwelt/tafel-oesterreich",
+      "contentType": "exact_firstparty_indexed_tool_excerpt_not_full_document",
+      "websiteRawSha256": null,
+      "providerOriginalBytes": null,
+      "toolTextPath": "W02-exact-returned-section.txt",
+      "toolTextBytes": 967,
+      "toolTextSha256": "ed6c64ee56e9d7ff55483a2e16c3b41e280ef2aa2ee3634b7f4f556c8cb9f8b7",
+      "completeToolBlock": "discovery-exact-block2.txt",
+      "zeroBasedBlock": 2,
+      "sectionByteOffsetWithinBlock": 13148,
+      "callId": "call_811258fea2dc4ba08066efdfe0e471ce",
+      "session": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-02-01a13e5e-2ed3-76e3-b2b0-eefa22db05d9.jsonl",
+      "sessionRecordByteOffset": 162757694,
+      "beforeNormalRequests": true,
+      "role": "Actualfirstpartyreturnedexcerpt:2025food1500+ton redistributed, needhigher/March2026alliance; organisationtotalnotallVienna/currentundatedpage",
+      "historicalCutoffBytesAuthenticated": false,
+      "researchSourceId": "W02",
+      "scoreEligible": true,
+      "rootToolTextIdentityVerified": true
+    },
+    {
+      "id": "RES66-W03",
+      "url": "https://www.statistik.at/statistiken/bevoelkerung-und-soziales/ausgaben-und-ausstattung-privater-haushalte/ausgaben?cHash=2172c3cd60300f1e255e35fb01699f82&gh_jid=801363%2C801363&gh_src=utlfnr1%2Cutlfnr1",
+      "contentType": "exact_firstparty_indexed_tool_excerpt_not_full_document",
+      "websiteRawSha256": null,
+      "providerOriginalBytes": null,
+      "toolTextPath": "W03-exact-returned-section.txt",
+      "toolTextBytes": 1951,
+      "toolTextSha256": "cd28ef8c2b71b0f315d64be4a0ccbbac3270b7915c9c07df6dc86095ffb2d6b5",
+      "completeToolBlock": "discovery-exact-block2.txt",
+      "zeroBasedBlock": 2,
+      "sectionByteOffsetWithinBlock": 6194,
+      "callId": "call_811258fea2dc4ba08066efdfe0e471ce",
+      "session": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-02-01a13e5e-2ed3-76e3-b2b0-eefa22db05d9.jsonl",
+      "sessionRecordByteOffset": 162757694,
+      "beforeNormalRequests": true,
+      "role": "Officialtablemarkedcreated24Feb2026, nationalnotWien; creationnotpublicationproof",
+      "historicalCutoffBytesAuthenticated": false,
+      "researchSourceId": "W03",
+      "scoreEligible": true,
+      "rootToolTextIdentityVerified": true
+    },
+    {
+      "id": "RES66-W04",
+      "url": "https://www.wko.at/stmk/industrie/nahrungs-genussmittelindustrie/pa-6.3.2026--konsumerhebung-2024-25-ausgaben-fuer-ernaehrung.pdf",
+      "contentType": "exact_firstparty_indexed_tool_excerpt_not_full_document",
+      "websiteRawSha256": null,
+      "providerOriginalBytes": null,
+      "toolTextPath": "W04-exact-returned-section.txt",
+      "toolTextBytes": 712,
+      "toolTextSha256": "9911febb1dcb87d23635604f379746e7217a6d31870b1893bfa4ef31ec09e739",
+      "completeToolBlock": "discovery-exact-block2.txt",
+      "zeroBasedBlock": 2,
+      "sectionByteOffsetWithinBlock": 12356,
+      "callId": "call_811258fea2dc4ba08066efdfe0e471ce",
+      "session": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-02-01a13e5e-2ed3-76e3-b2b0-eefa22db05d9.jsonl",
+      "sessionRecordByteOffset": 162757694,
+      "beforeNormalRequests": true,
+      "role": "Contextonly notadopted: WKOowncomment onnew survey, not officialWien table/publication authentication",
+      "historicalCutoffBytesAuthenticated": false,
+      "researchSourceId": "W04",
+      "scoreEligible": false,
+      "rootToolTextIdentityVerified": true
+    }
+  ],
+  "resourceFailedSourceSnapshots": [
+    {
+      "id": "RES66-S03",
+      "url": "https://wien.arbeiterkammer.at/beratung/konsumentenschutz/einkaufundrecht/Preisemonitor_202603.pdf",
+      "path": "food-pricemonitor-march2026.pdf",
+      "scope": "Newdiscoveryactual primaryAKVienna retailpricefieldstudy, cheapestbasket not allnutrition or medianbudget",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": false,
+      "originalBytes": null,
+      "sha256": null,
+      "localPath": null,
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-16T01:44:40.325908+00:00",
+      "routeIndexes": [3],
+      "error": "HTTP Error 500: Internal Server Error",
+      "headersNature": "parsed non-cookie header dictionary, not raw HTTP wire",
+      "historicalCutoffBytesAuthenticated": false,
+      "role": "failedOriginal",
+      "stop": "SpecificAKPDF500 stopped; no retry/alternateweb/CDN; diagnosticbody not websitevalidoriginal",
+      "researchSourceId": "S03"
+    }
+  ],
+  "resourceUnrequestedLocatedSources": [
+    {
+      "id": "RES66-S04",
+      "url": "https://www.statistik.at/fileadmin/publications/Konsumerhebung_Kurzbericht_Teil1_bericht.pdf",
+      "path": "household-consumption2024-25.pdf",
+      "scope": "Discoveryexactofficialreport; current2024/25 household observed food/housingenergy, mean not median citizen budget",
+      "method": "normalTLS_noRetry_explicitRedirects",
+      "validOriginal": false,
+      "originalBytes": null,
+      "sha256": null,
+      "localPath": null,
+      "cutoffOriginalBytesAuthenticated": false,
+      "requestAtUTC": "2026-10-16T01:45:54.843382+00:00",
+      "routeIndexes": [],
+      "error": "4SupplementalHTTPlegbudget_stoppedbeforeRequest",
+      "headersNature": "parsed non-cookie header dictionary, not raw HTTP wire",
+      "historicalCutoffBytesAuthenticated": false,
+      "role": "unrequestedLocatedOriginal",
+      "normalHTTPAttempted": false,
+      "providerFailure": false,
+      "reason": "Budget exhaustedbyenergy302 beforethisrecord; validwebOnlyW01pre-existed, not failurebypass",
+      "researchSourceId": "S04"
+    }
+  ],
+  "resourceSourceManifestSupplement": {
+    "sources": [
+      {
+        "id": "RES66-S01",
+        "url": "https://www.wien.gv.at/statistik/wasserversorgung",
+        "path": "water-current.html",
+        "scope": "Oldexactsuccessfulwaterlocator; new snapshot not oldSHA restoration; ordinarysysteminfeed source",
+        "method": "normalTLS_noRetry_explicitRedirects",
+        "validOriginal": true,
+        "originalBytes": 46909,
+        "sha256": "71be8913c3ce81991ac0781a8449bf296acd337a3d641d5ad1dd9441d8b94aaa",
+        "localPath": "originals/water-current.html",
+        "cutoffOriginalBytesAuthenticated": false,
+        "requestAtUTC": "2026-10-16T01:44:30.061590+00:00",
+        "routeIndexes": [0],
+        "resolvedUrl": "https://www.wien.gv.at/statistik/wasserversorgung",
+        "contentType": "text/html; charset=utf-8",
+        "headers": {
+          "Date": "Fri, 16 Oct 2026 01:44:33 GMT",
+          "Content-Type": "text/html; charset=utf-8",
+          "Content-Length": "46909"
+        },
+        "headersNature": "parsed non-cookie header dictionary, not raw HTTP wire",
+        "historicalCutoffBytesAuthenticated": false,
+        "observationWindow": "2011–2024 systeminfeed/currentraw; municipalstatsnotallFUA",
+        "historicalComparison": "New46909B/SHA71be... differs old46895B/SHA9b14...; no oldbody recovered; do not infer changedobservations fromlength alone",
+        "publishedHeadersAreSelectedMetadata": true,
+        "headersAreRawWireBlock": false,
+        "researchSourceId": "S01",
+        "rootBytesReverified": true,
+        "scoreEligible": true,
+        "actualOriginalPath": "/Users/morris/.local/share/cci-research/2026-10-10/vienna-res66/originals/water-current.html"
+      },
+      {
+        "id": "RES66-S02",
+        "url": "https://dokumente.wienenergie.at/link/jahresbericht-2025/",
+        "path": "energy2025.pdf",
+        "scope": "OldexactsuccessfulannualURL; new snapshot/publicationdate not PDFcreationdate; actualphysical24 only",
+        "method": "normalTLS_noRetry_explicitRedirects",
+        "validOriginal": true,
+        "originalBytes": 656220,
+        "sha256": "ca48e47562095521c99d5f82f4625922726940aab9c38156dc35429f61497194",
+        "localPath": "originals/energy2025.pdf",
+        "cutoffOriginalBytesAuthenticated": false,
+        "requestAtUTC": "2026-10-16T01:44:34.191421+00:00",
+        "routeIndexes": [1, 2],
+        "resolvedUrl": "https://dokumente.wienenergie.at/wp-content/uploads/P26003_WienEnergie_Lagebericht_2025.pdf?we_doc_token=bc905c15b2",
+        "contentType": "application/pdf",
+        "headers": {
+          "Date": "Fri, 16 Oct 2026 01:44:38 GMT",
+          "Content-Type": "application/pdf",
+          "Content-Length": "656220",
+          "ETag": "\"6a3147a7-a035c\"",
+          "Last-Modified": "Tue, 16 Jun 2026 12:55:03 GMT"
+        },
+        "headersNature": "parsed non-cookie header dictionary, not raw HTTP wire",
+        "historicalCutoffBytesAuthenticated": false,
+        "observationWindow": "2025 actual andlabelled2026/2028future; physical1/24 only read/viewed",
+        "historicalComparison": "Current656220B/SHAca48... matches oldidentity but doesnotauthenticateoldHTTPprocess/cutoffbytes",
+        "publicationLimitation": "June16_2026 PDFcreation/HTTPmodified not proof firstpublication; annualpriorcutoffpublicrelease/continuity remains limitednecessary bridge",
+        "publishedHeadersAreSelectedMetadata": true,
+        "headersAreRawWireBlock": false,
+        "researchSourceId": "S02",
+        "rootBytesReverified": true,
+        "scoreEligible": true,
+        "actualOriginalPath": "/Users/morris/.local/share/cci-research/2026-10-10/vienna-res66/originals/energy2025.pdf"
+      }
+    ],
+    "researchPath": "/Users/morris/.local/share/cci-research/2026-10-10/vienna-res66/source-manifest.json",
+    "researchManifestSha256": "119879cb3241e07303cf0207054e91d6bff933cc743d9432d5f15365294f2d7e",
+    "originalSourceManifestRetained": {
+      "path": "/private/tmp/cci-global/vienna/source-manifest.json",
+      "sha256": "40d70ba7c6da99f37623517bebff8f347513e75d7a50287e0b6eb779ddf3ddbd"
+    },
+    "originalSnapshotCount": 42,
+    "newRawOriginals": 2,
+    "webOnlyAdopted": 3,
+    "webOnlyNotAdopted": 1,
+    "scope": "S01current water snapshot differs old;S02energy matches oldSHA;neitherhistoricalHTTP/cutoffsamebyteauthentication;toolsnotwebsiteRaw."
+  },
+  "resourceSourceAndStopLedger": {
+    "target": "Vienna790",
+    "rootTaskInitialWrongId": 2355,
+    "rootConfirmedIdentityCorrection": true,
+    "fixedInput": "3654924f0f3909279553ef0ca21c81c2a2a55408",
+    "oldResearch": {
+      "discoveryRounds": 2,
+      "closed": true,
+      "newOriginalsHistoricalClaim": 31,
+      "reuseHistoricalClaim": 8,
+      "normalFailureHistoricalClaim": 0,
+      "webParsingErrorsHistoricalClaim": 2,
+      "originalFullPerMechanismLedgerRecovered": false,
+      "currentCumulativeMechanismHistory": "unknown, not zero; success never clears prior failure"
+    },
+    "newSupplementalAuthorization": {
+      "discoveryRounds": 1,
+      "queriesMax": 2,
+      "newActualHTTPLegsMax": 4,
+      "notResetOfOldBudget": true
+    },
+    "specificPriorFailures": "Concrete two oldweb failures not recovered; no knownfailed specificfile retried; originalsuccessful water/energy URLs new snapshot allowed by root",
+    "inheritedStops": [
+      "EC83/WHO topics closed",
+      "ING/KPN/WIPO26/DOJ/FBI/NHSEngland/UCLH/Skane clinical retained upstream, no request here"
+    ],
+    "thirdAccumulatedProviderMechanismFailure": "stop; concretefailed document no retry/alternateweb/CDN/mirror",
+    "historyDocuments": [
+      "docs/cci-vienna-priority-review.md",
+      "docs/cci-vienna-gss40-completion-review.md",
+      "vienna-local-recovery39/report.md",
+      "vienna-local-recovery39/ledger-check.json"
+    ],
+    "missingOldRaw": "Finite durable exactfilenameinventory found no Vienna water/energy originals; othercities sameenergy2025 filename not claimed Vienna",
+    "newDiscoveryClosed": true,
+    "newQueriesUsed": 2,
+    "newNormalActualLegs": 4,
+    "newNormalSuccessfulProviderOriginals": 2,
+    "redirectLegs": 1,
+    "newFailureLegs": 1,
+    "newFailures": [
+      {
+        "provider": "wien.arbeiterkammer.at",
+        "mechanism": "normalTLS PDFGET",
+        "sourceId": "S03",
+        "status": 500,
+        "observedThisSupplement": 1,
+        "priorCumulative": "unknown notzero",
+        "specificFileStopped": true,
+        "alternateBypass": false
+      }
+    ],
+    "sourceS04": "notrequested; notproviderfailure; W01alreadyreturnedbeforeanynormalrequest",
+    "networkClosed": true,
+    "additionalBudget": 0,
+    "toolPriorToFailure": "call_811258fea2dc4ba08066efdfe0e471ce/block2 before allHTTP, no postfailurewebcall",
+    "identityCorrection": "Rootinitial2355 wasBrisbane; rootconfirmedVienna790; neitherBrisbane nor other7written"
+  },
+  "resourceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allCandidatesChecked": 9031,
+    "repairCount": 136,
+    "record": {
+      "fid": 258,
+      "eFUA_ID": 790.0,
+      "UC_num": 1.0,
+      "UC_IDs": "3027",
+      "eFUA_name": "Vienna",
+      "Commuting": 1.0,
+      "Cntry_ISO": "AUT",
+      "Cntry_name": "Austria",
+      "FUA_area": 3104.0,
+      "UC_area": 392.0,
+      "FUA_p_2015": 2381082.9286581497,
+      "UC_p_2015": 1856675.543018341,
+      "Com_p_2015": 524407.3856398086
+    },
+    "points": [
+      {
+        "label": "Vienna centre approximate",
+        "longitude": 16.3738,
+        "latitude": 48.2082,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 790,
+            "name": "Vienna"
+          }
+        ]
+      },
+      {
+        "label": "Klinik Donaustadt approximate",
+        "longitude": 16.4657,
+        "latitude": 48.2251,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 790,
+            "name": "Vienna"
+          }
+        ]
+      },
+      {
+        "label": "AKH Vienna approximate",
+        "longitude": 16.3468,
+        "latitude": 48.2202,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 790,
+            "name": "Vienna"
+          }
+        ]
+      },
+      {
+        "label": "Vienna Hauptbahnhof approximate",
+        "longitude": 16.3758,
+        "latitude": 48.1855,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 790,
+            "name": "Vienna"
+          }
+        ]
+      },
+      {
+        "label": "Viennaairport approximate",
+        "longitude": 16.5697,
+        "latitude": 48.1103,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 790,
+            "name": "Vienna"
+          }
+        ]
+      },
+      {
+        "label": "Simmeringpowerplant approximate",
+        "longitude": 16.4298,
+        "latitude": 48.1725,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 790,
+            "name": "Vienna"
+          }
+        ]
+      }
+    ],
+    "targetWkbSha256": "3b21a550d12bbb9645c8287e2e063c4f252ae0b3bf4383dd41d46cdd25ac39e8",
+    "meaning": "FUA is not municipal/provider/patient scope. Analyst approximate reference points are not surveyed footprints, residence, service coverage denominators or actual journeys."
+  },
+  "resourceCoverageReview": [
+    {
+      "dimension": "RES",
+      "subpillar": "water",
+      "status": "reviewed_partial",
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "evidence": "RES66-S01",
+      "finding": "Actualsysteminfeed/sources/reservoirs includeindustry/commercial/loss;notpurity/residentavailabilityrate."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "food",
+      "status": "reviewed_partial",
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "evidence": "RES66-W01;RES66-W02",
+      "finding": "Observed2024/25Wienhouseholdfoodmean;notmedianincome/person/nutritionrate;realhelpandhigherneedretained."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "energy",
+      "status": "reviewed_partial",
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "evidence": "RES66-S02:p24",
+      "finding": "Actualheatdelivery/localbatterystorage/coldnetwork;MWnotduration;newtariffmechanismnotallbillreduction."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "supply_chain",
+      "status": "reviewed_partial",
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "evidence": "RES66-W01;RES66-W02;RES66-S01;RES66-S02",
+      "finding": "Conditionalusualnetfoodwaterheatbridgewithgeography/time/householdheterogeneity;rejectbridgeunknown."
+    }
+  ],
+  "historicalSensitivityBeforeResource66": {
+    "PCS40": [51, 61],
+    "ISR40": [51, 61],
+    "MED40": [51, 61],
+    "LON40": [52, 62],
+    "OPT40": [52, 62],
+    "TEC80": [56, 66],
+    "OPT80": [56, 66],
+    "LON80": [56, 66],
+    "MEDWithdrawn": [45, 70],
+    "LONWithdrawn": [48, 68],
+    "OPTWithdrawn": [48, 68],
+    "PCSWithdrawn": [45, 70],
+    "MEDandLONWithdrawn": [39, 74],
+    "allJudgmentsWithdrawn": [0, 100],
+    "GSS40": [51, 61],
+    "GSSWithdrawn": [45, 70]
+  },
+  "retainedDimensionScenarioMetadata": {
+    "scope": "Seven unchanged dimension objects retain earlier scenario metadata in original historical context; top-level sensitivity is current after RES66.",
+    "GSSWithdrawToUnknownDomainOriginalRESUnknown": [45, 70],
+    "GSSWithdrawnCurrentRES60": [51, 66],
+    "currentAuthority": "sensitivity"
+  },
+  "resourceCompletionReview": {
+    "path": "docs/cci-vienna-res-completion-review.md",
+    "sha256": "b913b41d776d13f54ec91b4b757de3e47d7c48cbc6b772fa04bc24b776bb2a63",
+    "researchReport": "docs/cci-vienna-res-priority-review.md",
+    "researchReportSha256": "04d9ff5d1cd683e52486a42e54fe2cc60638fdd66f658fb4043a0df811f1281f",
+    "reviewedOn": "2026-10-16",
+    "fixedInputCommit": "3654924f0f3909279553ef0ca21c81c2a2a55408",
+    "fixedCases": 97,
+    "reviewReportSha256": "a78ef02895cf4c6137c73127c5b3cb444a8f112027401c1f30fb8dbf9462e09b",
+    "reviewManifestSha256": "51c7f911e95334b18a548a5287d0ea4d35322a2e28e62f2e89153b32851b64b5",
+    "frozenPayloadsVerified": 45,
+    "newRawOriginals": 2,
+    "newWebOnlyAdoptedSources": 3,
+    "failedConcreteOriginals": 1,
+    "locatedButUnrequestedOriginals": 1,
+    "rootRawCopiesMatch": 2,
+    "rootPdfPageCount": 2,
+    "rootPdfPixelsViewed": [
+      {
+        "sourceId": "RES66-S02",
+        "physicalPage": 1,
+        "bytes": 24280,
+        "sha256": "0de0ef4c749f5979912bcc804c202037233418d0fb0f867acd06794236d81cc3",
+        "actuallyViewedByRoot": true
+      },
+      {
+        "sourceId": "RES66-S02",
+        "physicalPage": 24,
+        "bytes": 268413,
+        "sha256": "946a511c231522e3b84776b19de15763a4c6b5b1f2bbac3c3848462af529ed50",
+        "actuallyViewedByRoot": true
+      }
+    ],
+    "rootNewNetworkRequests": 0,
+    "newHTTPActualLegs": 4,
+    "newDiscoveryQueries": 2,
+    "oldTwoRoundsNotReset": true,
+    "oldCumulativeMechanismHistoryNotCertified": true,
+    "originalSevenDimensionObjectsUnchanged": true,
+    "originalSevenDimensionJSONHashes": {
+      "PCS": "a3c12d297c18cd411e06ca45754830af6c48158c21eb89851b32e3f7e5a73000",
+      "GSS": "321a37510e91ae596bc9403f7a976e1a830ce2a8b6ecb4c665d67a40099692e5",
+      "ISR": "a0951e733e0ed3a329dfefe1d65a352e3f4076d469f7ee1db527c2eb6e70a008",
+      "MED": "2a5e5d3196a436e7ce186a620c4a90e6e5677c050c632238ee1e8eed0361e9b6",
+      "LON": "e11f05ecd326d4fdc7ef8b4eb0be4b90d88b1df1e605c34223491ad694aba2c7",
+      "TEC": "20be0e9c81a722d54a0236acb3eb5047579501277f7fa46a0fbc389a3aa5b9f4",
+      "OPT": "c50515d1445ceeb87d8c909c8f1d3989c5459535d52347bfca75dac3fd13f7de"
+    },
+    "originalFortyTwoSourceSnapshotObjectsUnchanged": true,
+    "other96WholeCaseBytesUnchanged": true,
+    "crossReviewReportSha256": "b79c2f4b70ad10a0b498506dd9eaf13fca712c43d4b4663b872f286f3a0a59ca",
+    "independentIntegrityResultSha256": "92ecff3c68da315cc666bdfc705151b7b9968fab22503f7191a6fbc7716bc47f",
+    "toolProof": {
+      "boundedSessionPath": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-02-01a13e5e-2ed3-76e3-b2b0-eefa22db05d9.jsonl",
+      "windowBeforeExtensionBytes": 65536,
+      "callId": "call_811258fea2dc4ba08066efdfe0e471ce",
+      "actualToolCallRecords": [
+        {
+          "byteOffset": 162738885,
+          "recordBytes": 1004,
+          "recordSHA256": "37c8e1ba70b75940cbd4674a84d3d89dfb8c30f1a27d07211988a34e36c19a04",
+          "record": {
+            "timestamp": "2026-10-16T01:43:44.444Z",
+            "ordinal": 8536,
+            "type": "response_item",
+            "payload": {
+              "type": "custom_tool_call",
+              "id": "ctc_035d44eb13640769016ad1814c422c81939ca6654afc01b4bc",
+              "status": "completed",
+              "call_id": "call_811258fea2dc4ba08066efdfe0e471ce",
+              "name": "exec",
+              "input": "text(await tools.exec_command({cmd:\"rg --files /Users/morris/.local/share/cci-research/2026-10-10 | rg '/(vienna-water\\\\.html|energy2025\\\\.pdf|city-markets-current\\\\.html|yearbook2025\\\\.pdf|.*vienna.*ledger.*json)$'\",\"max_output_tokens\":2000}));\nconst q=[{q:\"site.wien.gv.at Lebensmittel günstig Sozialmarkt 2026 2025 Märkte Lebensmittelversorgung\"},{q:\"site.statistik.at Konsumerhebung 2024 2025 Wien Ernährung Einkommen Ausgaben\"}];if(q.length>2)throw Error();const x=await tools.web__run({search_query:q,response_length:\"long\"});store(\"vienna-res66-discovery\",x);text(x);\n",
+              "internal_chat_message_metadata_passthrough": {
+                "turn_id": "01a1425f-e6e1-70e2-bceb-759d5ba2277c",
+                "create_time": 1792115020.2746315
+              }
+            }
+          }
+        }
+      ],
+      "outputRecord": {
+        "byteOffset": 162757694,
+        "recordBytes": 31636,
+        "timestamp": "2026-10-16T01:43:47.955Z",
+        "callId": "call_811258fea2dc4ba08066efdfe0e471ce",
+        "matchesCapturedJSONStructure": true
+      },
+      "blocks": [
+        {
+          "index": 0,
+          "bytes": 47,
+          "toolTextSHA256": "be4e9a1b2e908126ce08e09c9a98903a699acf84db77b2ad96e4ee3e7f809cad"
+        },
+        {
+          "index": 1,
+          "bytes": 578,
+          "toolTextSHA256": "68e1b8a65ef88d40af8db35c4e176bda775e75ce6c41153eeea8b7779b0a519a"
+        },
+        {
+          "index": 2,
+          "bytes": 30148,
+          "toolTextSHA256": "0928afd5c495238544e491722e7754bc91b6e29e3c4d2bdc2dfee983956142da"
+        }
+      ],
+      "allHTTPAfterToolOutput": true,
+      "httpLegs": 4,
+      "statuses": [200, 302, 200, 500],
+      "websiteRawSHA256": null
+    },
+    "strictProcessDifferencesAcknowledged": true,
+    "strictProcessDifferences": [
+      {
+        "id": "outer_batch01_exceeds_three_actual_units",
+        "callId": "call_454977eaf2c24a46874b877d51639e79",
+        "sessionByteOffset": 162798837,
+        "actualHTTPUnits": 4,
+        "sourceArrayEntries": 3,
+        "explanation": "Water200+energy302+energy200+AK500 in one outer execution,plus helper metadata reads;len(a)<=3 did not enforce actual total outer units<=3. Total4leg budget was not exceeded. No retry to repair process;not a city capacity penalty."
+      },
+      {
+        "id": "outer_batch02_metadata_and_read_total_exceeds_three",
+        "callId": "call_0f266f4fb58e4e5089071cd6e6353fd3",
+        "sessionByteOffset": 162848377,
+        "actualHTTPUnits": 0,
+        "distinctLocalInputFilesAtLeast": 4,
+        "localReadOperationsAtLeast": 5,
+        "explanation": "Helper reads batch02/source-manifest/http-journal then same outer reads waterHTML/http-journal. Stats request stopped before network;metadata+body reads still exceed strict aggregate outer<=3. No original frozen package edits."
+      }
+    ],
+    "processScope": "Authorbatch01outer3sourcesplusredirect4HTTPlegs;batch02localmetadataandbody4distinctfiles. Bothouterunitdeviationspreserved,overall4legbudgetvalid;notcapabilitypenalty."
+  },
+  "resourceScopeReview": {
+    "fullMedianResourceBasketDirectlyMeasured": false,
+    "householdMeanEqualsMedianCitizenIncome": false,
+    "foodConsumptionProvesNutritionAdequacy": false,
+    "consumptionShareIsIncomeBurdenRatio": false,
+    "medianCitizenAutomaticallyFoodAidEligible": false,
+    "tafel1500TonnesAllViennaOrUniqueResidents": false,
+    "waterSystemInfeedEqualsHouseholdPurityOrAvailability": false,
+    "MWEqualsStorageDuration": false,
+    "newTariffMechanismAllHouseholdBillsReduced": false,
+    "knownFutureProjectsTreatedAsOperational": false,
+    "webToolTextIsRawWebsiteOriginal": false,
+    "StatsPDFActuallyRequested": false,
+    "AK500CapabilityPenalty": false,
+    "PDFCreationAuthenticatesPublicRelease": false,
+    "cutoffSameBytesAuthenticated": false,
+    "otherSevenAllOriginalsReaudited": false,
+    "ordinaryNetResourceJudgmentRevocable": true,
+    "initialCandidate2355TypoCorrectedTo790BeforeMutation": true
   }
 }
