@@ -152,6 +152,7 @@ const realCases = [
   "corby",
   "livingston",
   "szczecin",
+  "bedford",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -295,6 +296,7 @@ const [
   corby,
   livingston,
   szczecin,
+  bedford,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4139,4 +4141,54 @@ assert(
   szczecinCase.dimensions.every(
     (d: { conditionalAlternatives: number[] }) => d.conditionalAlternatives.length === 0
   )
+);
+
+const bedfordCase = realCases.find(c => c.candidateId === 5373);
+assert.equal(
+  bedfordCase.priorityCompletionReview.sha256,
+  digest(bedfordCase.priorityCompletionReview.path)
+);
+assert.equal(
+  bedfordCase.priorityCompletionReview.researchReportSha256,
+  digest(bedfordCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(bedford), { center: null, lower: 27, upper: 72 });
+assert.equal(bedfordCase.unknownWeight, 45);
+assert.deepEqual(
+  bedfordCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["GSS", "RES", "LON", "OPT"]
+);
+for (const [id, value, lower, upper] of [
+  ["PCS", 60, 30, 75],
+  ["ISR", 40, 24, 69],
+  ["MED", 60, 30, 75],
+] as const)
+  assert.deepEqual(total({ ...bedford, [id]: value }), { center: null, lower, upper });
+for (const [id, lower, upper] of [
+  ["PCS", 21, 81],
+  ["ISR", 18, 78],
+  ["MED", 21, 81],
+  ["TEC", 21, 76],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...bedford };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.equal(bedfordCase.sourceSnapshots.length, 25);
+assert.equal(bedfordCase.failedSourceSnapshots.length, 1);
+assert.equal(bedfordCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
+assert.equal(bedfordCase.rootScopeReview.rootSelectedPdfTextPageCount, 20);
+assert.equal(bedfordCase.rootScopeReview.rootPdfPageCount, 7);
+assert.equal(bedfordCase.rootScopeReview.TrustWaitingEqualsWholeBedfordResidentRate, false);
+assert.equal(bedfordCase.rootScopeReview.actual2026Still65UnrepairedPropertiesClaimed, false);
+assert(
+  bedfordCase.webReadSources.every(
+    (s: { websiteRawSHA256: string | null }) => s.websiteRawSHA256 === null
+  )
+);
+assert.deepEqual(
+  bedfordCase.dimensions.find((d: { id: string }) => d.id === "TEC").conditionalAlternatives,
+  []
 );

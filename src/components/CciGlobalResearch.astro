@@ -110,6 +110,7 @@ import odense from "../../docs/data/cci-local-2026-odense-case.json";
 import corby from "../../docs/data/cci-local-2026-corby-case.json";
 import livingston from "../../docs/data/cci-local-2026-livingston-case.json";
 import szczecin from "../../docs/data/cci-local-2026-szczecin-case.json";
+import bedford from "../../docs/data/cci-local-2026-bedford-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -224,8 +225,10 @@ const cases = [
   corby,
   livingston,
   szczecin,
+  bedford,
 ];
 const caseNamesZh: Record<number, string> = {
+  [bedford.candidateId]: "贝德福德功能区",
   [szczecin.candidateId]: "什切青功能区",
   [livingston.candidateId]: "利文斯顿功能区",
   [corby.candidateId]: "科比功能区（含凯特林）",
@@ -432,6 +435,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [bedford.candidateId]: [
+    zh
+      ? "贝德福德防护／医疗条件40、制度／技术条件60，四维未知。原权重贡献27、数学域27—72，无完整总分。实际防洪响应、公共救助、诊疗改善和工程产用，与帮助后仍重要的防护及必要护理余障合看；地域、时间与通常净取得假设可撤。"
+      : "Bedford has conditional PCS/MED 40 and ISR/TEC 60; four dimensions remain unknown. Its original-weight contribution is 27 and arithmetic domain 27–72, without a complete total. Delivered flood response, public support, improved care and engineering use are assessed alongside important remaining protection and necessary-care constraints; geography, time and usual net access assumptions are revocable.",
+    zh
+      ? "防护60、医疗60及制度40保留公平替代。2024年65处物业报告内淹不表示2026仍未修，Trust候诊率不当全功能区居民率；产科已运行的改善保留。EFS资本化非无条件新增补贴，光伏实际使用不等未来年发电估计。全球入围未证明。"
+      : "PCS 60, MED 60 and ISR 40 remain fair alternatives. The 65 properties reporting internal flooding in 2024 are not claimed to remain unrepaired in 2026, and Trust waiting rates are not whole-area resident rates; implemented maternity improvements remain material. EFS capitalisation is not an unconditional new grant, and actual solar use is distinct from future annual-output estimates. Global qualification is unproven.",
+  ],
   [szczecin.candidateId]: [
     zh
       ? "什切青制度／医疗／专项转化／技术条件60，四维未知。原权重贡献30、数学域30—80，无完整总分。实际公共服务、当地诊疗与技术产用支持有限判断，地域、时点、质量及普通净取得假设可撤。"
