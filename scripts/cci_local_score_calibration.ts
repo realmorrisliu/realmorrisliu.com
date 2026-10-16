@@ -155,6 +155,7 @@ const realCases = [
   "bedford",
   "aarhus",
   "nottingham",
+  "burton-on-trent",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -301,6 +302,7 @@ const [
   bedford,
   aarhus,
   nottingham,
+  burtonOnTrent,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4303,4 +4305,47 @@ assert(
   nottinghamCase.dimensions
     .filter((d: { id: string }) => !["ISR", "MED"].includes(d.id))
     .every((d: { conditionalAlternatives: number[] }) => d.conditionalAlternatives.length === 0)
+);
+
+const burtonCase = realCases.find(c => c.candidateId === 4261);
+assert.equal(
+  burtonCase.priorityCompletionReview.sha256,
+  digest(burtonCase.priorityCompletionReview.path)
+);
+assert.equal(
+  burtonCase.priorityCompletionReview.researchReportSha256,
+  digest(burtonCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(burtonOnTrent), { center: null, lower: 24, upper: 79 });
+assert.equal(burtonCase.unknownWeight, 55);
+assert.deepEqual(
+  burtonCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["GSS", "RES", "LON", "TEC", "OPT"]
+);
+for (const id of ["PCS", "ISR"] as const)
+  assert.deepEqual(total({ ...burtonOnTrent, [id]: 40 }), { center: null, lower: 21, upper: 76 });
+assert.deepEqual(total({ ...burtonOnTrent, MED: 60 }), { center: null, lower: 27, upper: 82 });
+for (const [id, lower, upper] of [
+  ["PCS", 15, 85],
+  ["ISR", 15, 85],
+  ["MED", 18, 88],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...burtonOnTrent };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.equal(burtonCase.sourceSnapshots.length, 21);
+assert.equal(burtonCase.failedSourceSnapshots.length, 3);
+assert.equal(burtonCase.webReadSources.length, 2);
+assert.equal(burtonCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
+assert.equal(burtonCase.rootScopeReview.rootSelectedPdfTextPageCount, 17);
+assert.equal(burtonCase.rootScopeReview.rootPdfPageCount, 4);
+assert.equal(burtonCase.rootScopeReview.TrustWaitingEqualsBurtonUntreatedRate, false);
+assert.equal(burtonCase.rootScopeReview.sharedTrustResearchEqualsLocalSustainedProduction, false);
+assert(
+  burtonCase.webReadSources.every(
+    (s: { isWebsiteRaw: boolean; scoreEligible: boolean }) => !s.isWebsiteRaw && !s.scoreEligible
+  )
 );

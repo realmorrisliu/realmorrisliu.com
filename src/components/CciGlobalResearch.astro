@@ -113,6 +113,7 @@ import szczecin from "../../docs/data/cci-local-2026-szczecin-case.json";
 import bedford from "../../docs/data/cci-local-2026-bedford-case.json";
 import aarhus from "../../docs/data/cci-local-2026-aarhus-case.json";
 import nottingham from "../../docs/data/cci-local-2026-nottingham-case.json";
+import burtonOnTrent from "../../docs/data/cci-local-2026-burton-on-trent-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -230,8 +231,10 @@ const cases = [
   bedford,
   aarhus,
   nottingham,
+  burtonOnTrent,
 ];
 const caseNamesZh: Record<number, string> = {
+  [burtonOnTrent.candidateId]: "特伦特河畔伯顿功能区",
   [nottingham.candidateId]: "诺丁汉功能区",
   [aarhus.candidateId]: "奥胡斯功能区",
   [bedford.candidateId]: "贝德福德功能区",
@@ -441,6 +444,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [burtonOnTrent.candidateId]: [
+    zh
+      ? "伯顿防护／制度条件60、医疗条件40，安全／资源／专项转化／技术／退出未知。原权重贡献24、数学域24—79，无完整总分。实际防洪、公共执行及本地护理改善，与剩余洪水及诊疗等待合看；地域、时点、通常支付和净照护假设可撤。"
+      : "Burton-on-Trent has conditional PCS/ISR 60 and MED 40; GSS/RES/LON/TEC/OPT remain unknown. Its original-weight contribution is 24 and arithmetic domain 24–79, without a complete total. Actual flood protection, public delivery and local care improvements are considered alongside remaining flood and treatment delays; geography, time, usual payment and net-care assumptions are revocable.",
+    zh
+      ? "防护／制度40、医疗60保留公平替代。设计洪水概率非受灾率，集团等待非伯顿同率；投诉行动仅约三分之一关闭不等居民受害率。电动公交及数字临床确在用，集团科研尚不足接成本地持续产出，技术未知。未知不罚分，全球入围未证明。"
+      : "PCS/ISR 40 and MED 60 remain fair alternatives. A design-flood probability is not a damage rate, pooled Trust waits are not Burton-only rates, and about one-third of improvement actions closed is not a resident-harm rate. Electric buses and digital care are in use, but pooled research does not yet establish sustained local output; TEC remains unknown. Unknowns are not penalized. Global qualification is unproven.",
+  ],
   [nottingham.candidateId]: [
     zh
       ? "诺丁汉制度／资源／专项转化／技术条件60、医疗条件40，防护／安全／退出未知。原权重贡献33、数学域33—73，无完整总分。真实家庭帮助、供水食品、临床与商业产用同帮助后护理余障合看；地域、时点、通常付款与净取得假设可撤。"

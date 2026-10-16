@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 103,
+    "conditionalCaseCount": 104,
     "completeConditionalCaseCount": 21,
-    "partialCaseCount": 82,
-    "unassessedCount": 8928,
+    "partialCaseCount": 83,
+    "unassessedCount": 8927,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -820,8 +820,13 @@
       "sha256": "235f9ba3775b927e16024b5482db3cc365b0722b6a3141afab4dae6daef868e1",
       "provenance": "cci-nottingham-priority-review.md",
       "provenanceSha256": "4155207f8f7d3b021b4ca00b85032b8da8a199a207ae06a76c59a465e0c5f1c7"
+    },
+    "cci-local-2026-burton-on-trent-case.json": {
+      "sha256": "7a50d7c9c9516155dcf5d50fbd65becdd951d21a03df0f6ba8871c3677441a4b",
+      "provenance": "cci-burton-on-trent-priority-review.md",
+      "provenanceSha256": "265d7b12408b318e26b3c6a593f339f2f6cfff162ae2e67eccf8724d14c0d233"
     }
   },
-  "scriptSha256": "32f7b7a79960cabeb32fd1b9e8a110ba33ac2765f953e5eb339527c8fe9be9dc",
-  "csvSha256": "94d487d7ed48d2bf2750b5ebc806196731eae3c4abae34da7cc6436fb0e7d618"
+  "scriptSha256": "fb787a71edb9ca987f95b86b73ecf0d4491592c4ddecb26910edea38af866e15",
+  "csvSha256": "8c9fd8c69d8f74726d6fb7d7c6e5d3ece8270eabe436c851d180fc208b0b5148"
 }
