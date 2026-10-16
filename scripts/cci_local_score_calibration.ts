@@ -169,6 +169,7 @@ const realCases = [
   "bilbao",
   "flensburg",
   "maldonado",
+  "lodz",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -329,6 +330,7 @@ const [
   bilbao,
   flensburg,
   maldonado,
+  lodz,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4507,6 +4509,58 @@ assert(
     lasPalmasCase.coverageReview.every(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
+);
+
+const lodzCase = realCases.find(c => c.candidateId === 2787);
+assert.equal(
+  lodzCase.priorityCompletionReview.sha256,
+  digest(lodzCase.priorityCompletionReview.path)
+);
+assert.equal(
+  lodzCase.priorityCompletionReview.researchReportSha256,
+  digest(lodzCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(lodz, { GSS: 60, ISR: 60, RES: 60, LON: 60, TEC: 60 });
+assert.deepEqual(total(lodz), { center: null, lower: 36, upper: 76 });
+assert.deepEqual(total({ ...lodz, GSS: 40 }), { center: null, lower: 33, upper: 73 });
+assert.deepEqual(total({ ...lodz, RES: 40 }), { center: null, lower: 34, upper: 74 });
+assert.deepEqual(total({ ...lodz, MED: 60 }), { center: null, lower: 45, upper: 70 });
+for (const id of ["GSS", "ISR", "RES", "LON", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...lodz };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    lodzCase.sensitivity.withdrawals[id]
+  );
+}
+for (const flag of [
+  "allFraudVictimsAreLocal",
+  "arrestEqualsConviction",
+  "postArrestRecurrenceEstablished",
+  "magnesiumMinimumRequiresUtilitySupplementation",
+  "TomaszowWaterTableIsLodzTable",
+  "allFoodRecipientsAreMedianLocalResidents",
+  "annualFoodMaximumAllDelivered",
+  "allHeatCustomersEqualFuaPopulation",
+  "futureBiogasPlantAlreadyOperating",
+  "PlockFactoryIsInLodz",
+  "hospitalToolEntryIsWebsiteRaw",
+  "undatedTransplantCountIs2026Register",
+  "LeuvenSurvivalAndPayerTransferredToLodz",
+  "autoimmuneCARTTrialIsMatureRoutineDelivery",
+  "sourceFailurePenalizesCity",
+])
+  assert.equal(lodzCase.rootScopeReview[flag], false);
+assert(
+  lodzCase.coverageReview.length === 31 &&
+    lodzCase.coverageReview.every(
+      (c: { score: null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
+    )
+);
+assert(
+  lodzCase.webReadSources.every(
+    (s: { sha256: null; isWebsiteRaw: boolean }) => s.sha256 === null && !s.isWebsiteRaw
+  )
 );
 
 const maldonadoCase = realCases.find(c => c.candidateId === 1145);

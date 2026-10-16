@@ -127,6 +127,7 @@ import bydgoszcz from "../../docs/data/cci-local-2026-bydgoszcz-case.json";
 import bilbao from "../../docs/data/cci-local-2026-bilbao-case.json";
 import flensburg from "../../docs/data/cci-local-2026-flensburg-case.json";
 import maldonado from "../../docs/data/cci-local-2026-maldonado-case.json";
+import lodz from "../../docs/data/cci-local-2026-lodz-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -258,8 +259,10 @@ const cases = [
   bilbao,
   flensburg,
   maldonado,
+  lodz,
 ];
 const caseNamesZh: Record<number, string> = {
+  [lodz.candidateId]: "罗兹功能区",
   [maldonado.candidateId]: "马尔多纳多功能区",
   [flensburg.candidateId]: "弗伦斯堡功能区",
   [bilbao.candidateId]: "毕尔巴鄂功能区",
@@ -483,6 +486,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [lodz.candidateId]: [
+    zh
+      ? "罗兹安全／制度／资源／专项转化／技术条件60，防护／医疗／退出未知。贡献36、数学域36—76，无完整总分。根接受三互联供水、实际供热、食品帮助与普通中位资源净取得桥；拒资源桥回作者30—80。实际组织犯罪处置、成熟造血重建和工程技术服务支持其余有限判断，通常代表／支付／反复净照护桥可撤。"
+      : "Lodz has conditional GSS/ISR/RES/LON/TEC 60; PCS/MED/OPT remain unknown. Contribution is 36, with a 36–76 arithmetic domain and no complete total. The root accepts a usual median-resource access bridge from interconnected water systems, delivered heat and food support; rejecting RES returns the author's 30–80 domain. Actual organized-crime intervention, mature HSCT and engineering services support the other bounded judgments. Representation, payment and net repeat-care bridges are revocable.",
+    zh
+      ? "安全40公平解释33—73、资源40为34—74、医疗60为45—70。全国80余受害非全本地，逮捕非定罪；补贴退出、食品资格及份量限制保留。未标年份的移植量不是2026登记，工具正文非网站raw；外国曲线只作成熟类别，未来自身免疫CAR-T不当成熟给药。水表分城分窗、镁为建议值，Płock培训非本地工厂；全球入围未证。"
+      : "Fair GSS40, RES40 and MED60 interpretations give 33–73, 34–74 and 45–70. The 80-plus fraud victims are not all local, and arrests are not convictions. Subsidy expiry and food eligibility or quantity limits remain constraints. Undated transplant activity is not a 2026 register; tool text is not website raw. Foreign curves support maturity only, and a future autoimmune CAR-T trial is not mature delivery. Water tables differ by city and window, magnesium is a recommendation, and a course in Płock does not relocate its factory. Global inclusion is unproven.",
+  ],
   [maldonado.candidateId]: [
     zh
       ? "马尔多纳多制度／医疗／专项转化／技术条件60，防护／安全／资源／退出未知。贡献30、数学域30—80，无完整总分。真实服务修正、全天护理、全国成熟造血重建及共享监测产用支持有限判断；通常质量、支付、异地反复净照护和地域／时间代表桥可撤。"

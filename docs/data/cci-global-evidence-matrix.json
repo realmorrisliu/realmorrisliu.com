@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 117,
+    "conditionalCaseCount": 118,
     "completeConditionalCaseCount": 25,
-    "partialCaseCount": 92,
-    "unassessedCount": 8914,
+    "partialCaseCount": 93,
+    "unassessedCount": 8913,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -890,8 +890,13 @@
       "sha256": "1cad57ab78071d65d2d12a2307559f403b13935c2be6f6246004db8088fa0503",
       "provenance": "cci-maldonado-priority-review.md",
       "provenanceSha256": "671967dc9f8441cd480f29fbc545bfc11f9480bcb5aec3c67a88901bb99ec14f"
+    },
+    "cci-local-2026-lodz-case.json": {
+      "sha256": "9bb5f7e10c980bf6824fdc763a930f56033ea8124432a0f889788e63bcebec05",
+      "provenance": "cci-lodz-priority-review.md",
+      "provenanceSha256": "ea678b563fccab455fa406dfbde11b894fe931791a740f37e05b425e3f7bd192"
     }
   },
-  "scriptSha256": "47fa99de9acb9e258e99c55bbccf1022d0a2e5300299e7f82dd0075a1402d86e",
-  "csvSha256": "bc7a6f429f23d70ec2cb27f4152c76a999b9a1fc384b7241048b953b60d8a93d"
+  "scriptSha256": "45c41e611e786d0c878ae7fea8426860a770248d83570736186b8f9a37ffca1a",
+  "csvSha256": "43a28a9efd4d4b3fbb06b47699014e4f085ff612df614f4b974042cea8ce7232"
 }
