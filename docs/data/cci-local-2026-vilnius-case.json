@@ -1,0 +1,1049 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 853,
+  "name": "Vilnius",
+  "countryIso": "LTU",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-16",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "普通立陶宛本国公民、通常长期当地居民、当地中位收入/通常有效保障，无固定年龄；不默认贫困补助/境外工作/任何专科资格。",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "researchFrozenInputCommit": "860e3670f666c52212bf1211f4237ec27b96b064",
+  "fixedInputCases": 108,
+  "fixedInputComplete": 24,
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 34,
+  "unknownWeight": 25,
+  "unresolvedScoreRange": [34, 59],
+  "candidateUniverseRetained": 9031,
+  "newAndUnmatchedCompetitorsRetained": true,
+  "supportedExclusions": 0,
+  "qualified32Threshold": null,
+  "globalRankingEligible": false,
+  "externalDelta": {
+    "observedHEAD": "f2419143b1eb53456ee261f0cb295947ca174cdd",
+    "changedFixedCases": ["docs/data/cci-local-2026-boston-case.json"],
+    "explanation": "root已授权Boston GSS外部单维更新；原108 fixedGit快照不刷新，作者未写仓库。"
+  },
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": 40,
+      "rationale": "实际雨洪工程及维护已保护部分街区，仍有重要街道积水／通行和物业防护约束，有限判40。",
+      "assumption": "S09 May2026区分2025已建>5km新网/>1km更新、既有Taurupė蓄水与未来15m/46m工程；运营方明确现时历史容量不足且重雨街道积水。W06先于失败捕捉的原工具正文补正：工程已使问题点7降3、Narbuto与Gudelių防护起效、雨前部署和闭路清障。S02运营连续性演习属供水保护，不冒全灾种安全。 必要可撤桥：接受市核心街道／住宅雨洪后果对853普通日常防护具有重要性、2025–May2026状态有限延续至截止；不把25%市域网覆盖当FUA受灾率，不把规划未完成本身当40，未核热/震项不低分。",
+      "alternativeRationales": "60公平竞争解释是实际工程经暴雨起效、问题点减少及预置应急可支持通常保护较可用；本提案仍认为已帮助后的现时积水／通行后果重要，40不须多数。80需更强跨主要危险的实际适配与恢复余量，非零风险。拒重要性/地域/时间桥则null。",
+      "conditionalAlternatives": [40, 60],
+      "sourceIds": ["S09", "W06", "S02"],
+      "scoreStatus": "conditional_root_review",
+      "subpillars": {
+        "heat_humidity": "unresolved",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "partial"
+      },
+      "positiveEvidence": ["已运行蓄水/集流工程", "现场预置和清障", "供水连续性演练"],
+      "counterEvidence": ["重雨仍有街道积水", "不把未来管网当已完成", "热/震未定"]
+    },
+    {
+      "id": "GSS",
+      "score": 40,
+      "rationale": "真实气球相关航空安全限制，在重开／转送后仍反复影响出行，按战略暴露有限判40；并非认定战争或全部安全失效。",
+      "assumption": "W02 Oct2025机场实际重开、Palanga巴士转送是保护/恢复正证；W03 Nov2025仍7次临时限制、128航班/逾17000旅客受影响。W04仅运营方向检方请求调查及外国协助指控，不等判决归因。S02已有462站点分级保护、检查及避难演习，同时3次安保响应检查罚款不当3起袭击。W05仅年报工具片段作风险延续背景，未用失败PDF表或未完句结论。 必要可撤桥：必要桥为实际战略节点受威胁的安全处置与恢复后反复重要影响能有限代表当地普通居民战略安全约束，晚2025与2026报告叙述至截止延续；不把全部旅客当本地居民、未核组织暴力不默认低风险，也不把气球自行认定国家战争。",
+      "alternativeRationales": "60可接受保护性关闭、数小时恢复/巴士替代与实际设施防护使通常净保护仍可用；本建议40侧重恢复后仍反复的重要实际影响，不要求多数受害或患者伤亡。80需更强与主要威胁匹配且经验证的稳健余量。拒战略/重要性/延续桥则null，国家形象或无事件不能补60。",
+      "conditionalAlternatives": [40, 60],
+      "sourceIds": ["W02", "W03", "W04", "W05", "S02"],
+      "scoreStatus": "conditional_root_review",
+      "subpillars": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "context",
+        "strategic_exposure": "partial"
+      },
+      "positiveEvidence": ["实际恢复及异地转送", "分级设施防护/检查"],
+      "counterEvidence": ["重复限制的旅客影响", "归因未裁定", "组织暴力本地方向未闭"]
+    },
+    {
+      "id": "ISR",
+      "score": 40,
+      "rationale": "真实居家照护和适配交付、质量复核与公共设施恢复并存；住宅适配等待是已帮助后仍重要的必要服务取得约束，有限判40。",
+      "assumption": "S04 2025实际44户住宅适配、1122人85355h居家帮助、98人47342h日间居家照护及质量访视/回应；年末344人等待适配。139新请求/44完成/344存量不是同队列成功率。278反馈者满意度不是全体或因果改善。S02实际抢修缩短中断及自助手续、S09已交付工程补制度调整正证。p8原722评估/括注766选他机构内部冲突保留，不用于方向。 必要可撤桥：接受普通居民遇失能/照护需求时住宅适配是重要制度能力分支，实际年末仍待使净独立生活取得受约束，市服务资格与2025到2026通常延续有限代表853；不推全市制度瘫痪、不要求障碍主导。",
+      "alternativeRationales": "60同样可辩：实际规模化照护/高反馈满意度/访视纠偏和公共恢复支持通常制度能运作，等待分支并不否认其他交付；此建议仍将实际重要适配缺口计入40。80需更强压力下跨必要服务的稳定调整/公平取得证据，非所有分支完美。拒该分支代表性/延续桥则null，不由资料少降40。",
+      "conditionalAlternatives": [40, 60],
+      "sourceIds": ["S04", "S02", "S09"],
+      "scoreStatus": "conditional_root_review",
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "positiveEvidence": ["真实居家照护/住宅适配", "质量访视与反馈", "公共设施响应和手续改善"],
+      "counterEvidence": ["住宅适配344等待存量", "有限回访代表性", "722/766源内冲突"]
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "水务交付、抢修和检测有实据；食品营养、家庭能源可靠供给及帮助后的普通净负担连接未闭，整束未知。",
+      "assumption": "S02实际26788次41参数检测不是合格率；249事故/事件平均中断482min与修复改善同读，不等每户断水。S04居家帮助真实但不是已交付足够食品或能源。独立热运营者S05和补助S14未得正文不转能力负面，也不复制Panevezys供热。 必要可撤桥：本轮未接受只凭实际水务及社会照护便推整束普通食物/家庭能源通常净可得；缺的是实际具体供给/家庭费用帮助及余障方向，不是全户2026完美预算。",
+      "alternativeRationales": "60可在有据食物/家庭能源真实运行与通常中位净取得的有限桥后合束；40需实际帮助后重要资源约束，不能由403或未知自动40。80需更强可靠/可负担备援余量，不要求零故障；当前null/[]。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S02", "S04"],
+      "scoreStatus": "unresolved",
+      "subpillars": {
+        "water": "partial",
+        "food": "unresolved",
+        "energy": "context",
+        "supply_chain": "unresolved"
+      },
+      "positiveEvidence": ["水务检测/交付/抢修", "居家帮助"],
+      "counterEvidence": ["食物与家庭能源净方向未定", "事故/检验非人口率"]
+    },
+    {
+      "id": "MED",
+      "score": null,
+      "rationale": "本地造血服务说明与居家社会照护不能替代普通必要临床质量、等待和通常支付接续的判断，未知。",
+      "assumption": "W01实际预失败工具描述本地自体细胞采集保存/回输恢复造血，证实机制和服务说明；并非多病种常规质量率。S04是真社会照护与家访，不能升格医院质量。S11反腐文件取得失败不用于判断；不因医院名或网页条目存在填60。 必要可撤桥：尚未形成普通必要诊疗实际交付/质量或重要延误，及画像通常支付净护理的可解释联合方向；不是要求全医院全人群结果、固定成人或逐剂账单。",
+      "alternativeRationales": "若有实际多病种必要护理与净接续可有限判60；真实已帮助后必要治疗重要余障可40，不需多数/停城。80需更强可靠常规质量与跨专科取得余量；当前null/[]。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["W01", "S04"],
+      "scoreStatus": "unresolved",
+      "subpillars": {
+        "access": "context",
+        "routine_quality": "unresolved",
+        "specialist_capacity": "partial",
+        "system_continuity": "context"
+      },
+      "positiveEvidence": ["真实专科服务机制", "居家照护衔接背景"],
+      "counterEvidence": ["普通临床质量/时效/支付净路径未闭"]
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "rationale": "成熟疾病自体造血重建类别与本地同机制服务说明相接，结合国家医保条件及通常进入／净监护可撤桥，有限采用60。",
+      "assumption": "M01鲁汶年报物理3/12/13支持成熟疾病造血重建：2016–24首自体移植n463观察性结果及长期随访，不是因果净获益或维尔纽斯疗效；不混异体n651。W01失败前官方返回段有自体细胞采集、冻存、强化疗后回输恢复血细胞的具体服务说明，页末2026-03-10更新，本地地址在853；不是单凭组织库许可。根接受此现行服务语态有限代表医学适配患者的当地通常实施。T02/T03国家付款条件要求有效CHI、对应具体服务合同及必要转诊，基金直接付机构；付费问诊本身不造资格。根接受普通适配居民通常可经相应签约服务进入，并在当地中位资源下承担反复交通、家庭照护与长期监护的有限合束判断，以及地域/时点延续；没有直接认证Santaros专项合同、排队或整束照护执行。外国结果只闭成熟类别，未移入外国支付或随访网络，不认证当地人数/成功率/所有产品。",
+      "alternativeRationales": "任何必要类匹配、当地实施、专项合同通常可进入、净重复监护或时点地域桥被拒，LON即null、数学域28–63，无完整总分。不另索健康人延寿、当地随机试验或逐剂票据。一般治疗风险、缺失/403不足确定40；本轮无公平40/80数字替代。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["W01", "M01", "T02", "T03"],
+      "scoreStatus": "conditional_root_review",
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "context",
+        "resident_access": "partial"
+      },
+      "positiveEvidence": [
+        "成熟疾病自体造血重建类别",
+        "本地同机制现行服务说明",
+        "CHI对应合同/转诊付款条件"
+      ],
+      "counterEvidence": [
+        "当地专项合同与反复净监护未直接认证",
+        "外国观察性结果不可移作当地疗效",
+        "必要实施/取得/延续桥可撤"
+      ]
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "实际本地激光研发—制造/交付和独立公共服务数字使用合束，支持有限通常技术能力60。",
+      "assumption": "S08 Vilnius EKSPLA/Akoneer/VU/FTMC实际工业激光玻璃通孔/金属化测试和实物，不是论文数赋分；S12现行制造/OEM系列及2023实际SYLOS3异地安装显示非纯计划。S02真实远传户表、自助450848付款/961405登录与RPA运行显示普通服务扩散，不是唯一人数/全FUA覆盖。奖项/170团队/13m投资均不直接换分，外地设备效果不是本地居民健康结果。 必要可撤桥：接受具名Vilnius持续研发制造产用及独立水务普通数字服务能有限代表本地知识转化与通常扩散，2024/2025实绩及Sep2026公司状态延续；不把一个实物试验当量产，市/运营域有限适配853，不声称全产业测量。 根实际复核重点为工业激光实物与持续制造交付，以及水务自助付款/登录；未另读户表细表或RPA具体数字作评分。",
+      "alternativeRationales": "40可在实际本地知识转化/普通扩散受到重要能力取得障碍时判，当前所读未建立该重要断点，不能仅范围窄/资料少降40；60仍有限。80需更宽且稳定可得的知识产用与扩散余量、关键依赖适应证据，不索普遍AI/每节点独立压测。拒地方代表/通常服务桥则null。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S08", "S12", "S02"],
+      "scoreStatus": "conditional_root_review",
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "positiveEvidence": [
+        "具名本地工业应用研发实物",
+        "持续制造/OEM与实际设备交付",
+        "水务户表/自助实际普通使用"
+      ],
+      "counterEvidence": ["厂商自述及有限部门代表性", "研究不等量产", "公司省工时不等居民节费"]
+    },
+    {
+      "id": "OPT",
+      "score": 40,
+      "rationale": "欧盟本人迁居/个人支付/临时通信路线有条件可用，航空实际重开与转送后仍有重复重要退出摩擦，有限40。",
+      "assumption": "W02现役航空与异地巴士转送实证，不把机场点/名单当可达性；W03重复128航班/>17000旅客受影响。R01欧盟工作/自雇居留及登记、失业条件/5年规则不是已有境外工作或所有人无限长居；R02本人欧元跨境支付同费/双鉴权非一切资产永久账户保证；R03临时漫游与4月公平使用，永久境外可加费，页中€1.30/GB是2025示例不认证2026cap。 必要可撤桥：接受本地机场为普通长居公民向外实际路径，通常个人账户/设备可满足一般鉴权与有限欧盟条件路线，非默认人人已有工作。重复安全限制在恢复/转送帮助后仍是重要出行约束；晚2025→截止有限延续，可撤。机场旅客非FUA居民，Kaunas共同限制不冒所有替代失效。",
+      "alternativeRationales": "60可认为已恢复航班、实际转送和合法资金/临时通信路线使通常迁移仍可用；本提案40保留反复实际重要出行摩擦，不要求所有居民被困或全部资产逐笔测试。80需更多实际冗余及迁居后持续净接续余量，不索全节点无故障。拒通常路径/时间/影响重要性桥则null。",
+      "conditionalAlternatives": [40, 60],
+      "sourceIds": ["W02", "W03", "R01", "R02", "R03"],
+      "scoreStatus": "conditional_root_review",
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      },
+      "positiveEvidence": ["机场实际恢复/巴士转送", "有条件EU本人居留/支付/临时通信"],
+      "counterEvidence": ["重复关闭对出行的实际影响", "长期境外就业/所有账户通信续接非保证"]
+    }
+  ],
+  "coverageReview": [
+    {
+      "dimension": "PCS",
+      "subpillar": "heat_humidity",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S09", "W06", "S02"],
+      "finding": "实际雨洪工程及维护已保护部分街区，仍有重要街道积水／通行和物业防护约束，有限判40。 未闭合此项实质方向；未知不低分。"
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "flood_sea_level",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S09", "W06", "S02"],
+      "finding": "实际雨洪工程及维护已保护部分街区，仍有重要街道积水／通行和物业防护约束，有限判40。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "geophysical",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S09", "W06", "S02"],
+      "finding": "实际雨洪工程及维护已保护部分街区，仍有重要街道积水／通行和物业防护约束，有限判40。 未闭合此项实质方向；未知不低分。"
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "severe_weather_wildfire",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S09", "W06", "S02"],
+      "finding": "实际雨洪工程及维护已保护部分街区，仍有重要街道积水／通行和物业防护约束，有限判40。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "organized_violence",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W02", "W03", "W04", "W05", "S02"],
+      "finding": "真实气球相关航空安全限制，在重开／转送后仍反复影响出行，按战略暴露有限判40；并非认定战争或全部安全失效。 未闭合此项实质方向；未知不低分。"
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "regional_conflict",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W02", "W03", "W04", "W05", "S02"],
+      "finding": "真实气球相关航空安全限制，在重开／转送后仍反复影响出行，按战略暴露有限判40；并非认定战争或全部安全失效。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "strategic_exposure",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W02", "W03", "W04", "W05", "S02"],
+      "finding": "真实气球相关航空安全限制，在重开／转送后仍反复影响出行，按战略暴露有限判40；并非认定战争或全部安全失效。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "governance",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S04", "S02", "S09"],
+      "finding": "真实居家照护和适配交付、质量复核与公共设施恢复并存；住宅适配等待是已帮助后仍重要的必要服务取得约束，有限判40。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "adaptive_capacity",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S04", "S02", "S09"],
+      "finding": "真实居家照护和适配交付、质量复核与公共设施恢复并存；住宅适配等待是已帮助后仍重要的必要服务取得约束，有限判40。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "social_cohesion",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S04", "S02", "S09"],
+      "finding": "真实居家照护和适配交付、质量复核与公共设施恢复并存；住宅适配等待是已帮助后仍重要的必要服务取得约束，有限判40。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "emergency_recovery",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S04", "S02", "S09"],
+      "finding": "真实居家照护和适配交付、质量复核与公共设施恢复并存；住宅适配等待是已帮助后仍重要的必要服务取得约束，有限判40。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "water",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S02", "S04"],
+      "finding": "水务交付、抢修和检测有实据；食品营养、家庭能源可靠供给及帮助后的普通净负担连接未闭，整束未知。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "food",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S02", "S04"],
+      "finding": "水务交付、抢修和检测有实据；食品营养、家庭能源可靠供给及帮助后的普通净负担连接未闭，整束未知。 未闭合此项实质方向；未知不低分。"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "energy",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S02", "S04"],
+      "finding": "水务交付、抢修和检测有实据；食品营养、家庭能源可靠供给及帮助后的普通净负担连接未闭，整束未知。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "supply_chain",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S02", "S04"],
+      "finding": "水务交付、抢修和检测有实据；食品营养、家庭能源可靠供给及帮助后的普通净负担连接未闭，整束未知。 未闭合此项实质方向；未知不低分。"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "access",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01", "S04"],
+      "finding": "本地造血服务说明与居家社会照护不能替代普通必要临床质量、等待和通常支付接续的判断，未知。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "routine_quality",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01", "S04"],
+      "finding": "本地造血服务说明与居家社会照护不能替代普通必要临床质量、等待和通常支付接续的判断，未知。 未闭合此项实质方向；未知不低分。"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "specialist_capacity",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01", "S04"],
+      "finding": "本地造血服务说明与居家社会照护不能替代普通必要临床质量、等待和通常支付接续的判断，未知。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "system_continuity",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01", "S04"],
+      "finding": "本地造血服务说明与居家社会照护不能替代普通必要临床质量、等待和通常支付接续的判断，未知。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "translation",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01", "M01", "T02", "T03"],
+      "finding": "成熟疾病自体造血重建类别与本地同机制服务说明相接，结合国家医保条件及通常进入／净监护可撤桥，有限采用60。 M01鲁汶年报物理3/12/13支持成熟疾病造血重建：2016–24首自体移植n463观察性结果及长期随访，不是因果净获益或维尔纽斯疗效；不混异体n651。W01失败前官方返回段有自体细胞采集、冻存、强化疗后回输恢复血细胞的具体服务说明，页末2026-03-10更新，本地地址在853；不是单凭组织库许可。根接受此现行服务语态有限代表医学适配患者的当地通常实施。T02/T03国家付款条件要求有效CHI、对应具体服务合同及必要转诊，基金直接付机构；付费问诊本身不造资格。根接受普通适配居民通常可经相应签约服务进入，并在当地中位资源下承担反复交通、家庭照护与长期监护的有限合束判断，以及地域/时点延续；没有直接认证Santaros专项合同、排队或整束照护执行。外国结果只闭成熟类别，未移入外国支付或随访网络，不认证当地人数/成功率/所有产品。"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "trial_maturity",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01", "M01", "T02", "T03"],
+      "finding": "成熟疾病自体造血重建类别与本地同机制服务说明相接，结合国家医保条件及通常进入／净监护可撤桥，有限采用60。 M01鲁汶年报物理3/12/13支持成熟疾病造血重建：2016–24首自体移植n463观察性结果及长期随访，不是因果净获益或维尔纽斯疗效；不混异体n651。W01失败前官方返回段有自体细胞采集、冻存、强化疗后回输恢复血细胞的具体服务说明，页末2026-03-10更新，本地地址在853；不是单凭组织库许可。根接受此现行服务语态有限代表医学适配患者的当地通常实施。T02/T03国家付款条件要求有效CHI、对应具体服务合同及必要转诊，基金直接付机构；付费问诊本身不造资格。根接受普通适配居民通常可经相应签约服务进入，并在当地中位资源下承担反复交通、家庭照护与长期监护的有限合束判断，以及地域/时点延续；没有直接认证Santaros专项合同、排队或整束照护执行。外国结果只闭成熟类别，未移入外国支付或随访网络，不认证当地人数/成功率/所有产品。"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "regulatory_adoption",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01", "M01", "T02", "T03"],
+      "finding": "成熟疾病自体造血重建类别与本地同机制服务说明相接，结合国家医保条件及通常进入／净监护可撤桥，有限采用60。 M01鲁汶年报物理3/12/13支持成熟疾病造血重建：2016–24首自体移植n463观察性结果及长期随访，不是因果净获益或维尔纽斯疗效；不混异体n651。W01失败前官方返回段有自体细胞采集、冻存、强化疗后回输恢复血细胞的具体服务说明，页末2026-03-10更新，本地地址在853；不是单凭组织库许可。根接受此现行服务语态有限代表医学适配患者的当地通常实施。T02/T03国家付款条件要求有效CHI、对应具体服务合同及必要转诊，基金直接付机构；付费问诊本身不造资格。根接受普通适配居民通常可经相应签约服务进入，并在当地中位资源下承担反复交通、家庭照护与长期监护的有限合束判断，以及地域/时点延续；没有直接认证Santaros专项合同、排队或整束照护执行。外国结果只闭成熟类别，未移入外国支付或随访网络，不认证当地人数/成功率/所有产品。"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "resident_access",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01", "M01", "T02", "T03"],
+      "finding": "成熟疾病自体造血重建类别与本地同机制服务说明相接，结合国家医保条件及通常进入／净监护可撤桥，有限采用60。 M01鲁汶年报物理3/12/13支持成熟疾病造血重建：2016–24首自体移植n463观察性结果及长期随访，不是因果净获益或维尔纽斯疗效；不混异体n651。W01失败前官方返回段有自体细胞采集、冻存、强化疗后回输恢复血细胞的具体服务说明，页末2026-03-10更新，本地地址在853；不是单凭组织库许可。根接受此现行服务语态有限代表医学适配患者的当地通常实施。T02/T03国家付款条件要求有效CHI、对应具体服务合同及必要转诊，基金直接付机构；付费问诊本身不造资格。根接受普通适配居民通常可经相应签约服务进入，并在当地中位资源下承担反复交通、家庭照护与长期监护的有限合束判断，以及地域/时点延续；没有直接认证Santaros专项合同、排队或整束照护执行。外国结果只闭成熟类别，未移入外国支付或随访网络，不认证当地人数/成功率/所有产品。"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "knowledge_output",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S08", "S12", "S02"],
+      "finding": "实际本地激光研发—制造/交付和独立公共服务数字使用合束，支持有限通常技术能力60。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "industry_density",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S08", "S12", "S02"],
+      "finding": "实际本地激光研发—制造/交付和独立公共服务数字使用合束，支持有限通常技术能力60。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "digital_infrastructure",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S08", "S12", "S02"],
+      "finding": "实际本地激光研发—制造/交付和独立公共服务数字使用合束，支持有限通常技术能力60。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "diffusion",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S08", "S12", "S02"],
+      "finding": "实际本地激光研发—制造/交付和独立公共服务数字使用合束，支持有限通常技术能力60。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "transport_redundancy",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W02", "W03", "R01", "R02", "R03"],
+      "finding": "欧盟本人迁居/个人支付/临时通信路线有条件可用，航空实际重开与转送后仍有重复重要退出摩擦，有限40。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "legal_mobility",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W02", "W03", "R01", "R02", "R03"],
+      "finding": "欧盟本人迁居/个人支付/临时通信路线有条件可用，航空实际重开与转送后仍有重复重要退出摩擦，有限40。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "asset_portability",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W02", "W03", "R01", "R02", "R03"],
+      "finding": "欧盟本人迁居/个人支付/临时通信路线有条件可用，航空实际重开与转送后仍有重复重要退出摩擦，有限40。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "network_continuity",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W02", "W03", "R01", "R02", "R03"],
+      "finding": "欧盟本人迁居/个人支付/临时通信路线有条件可用，航空实际重开与转送后仍有重复重要退出摩擦，有限40。 实际已读有限语义，不宣称独立量表或全人群充分测量。"
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S02",
+      "url": "https://www.vv.lt/wp-content/uploads/2025/04/Vilniaus-Vandenys-UAB-FS-24-LT-esigned-20250326-2.pdf",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/diagnostics/S02-leg2.bin",
+      "originalBytes": 11492725,
+      "sha256": "41b21f602faa14b89b34d214e69a2a81fe292ca8edb62ef275d4c88353b775db",
+      "validOriginal": true,
+      "classification": "valid_original_PDF",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "FY2024; cover 2024-12-31; signed26Mar2025; public date not independently archived",
+      "actualReadScopeAndLimits": "provider Vilnius city plus district/Salcininkai/Svencionys, not FUA whole denominator"
+    },
+    {
+      "id": "S04",
+      "url": "https://www.spcentras.lt/uploads/ECB/content_1772621653/veiklos-ataskaita_2025-1_9799.pdf",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/diagnostics/S04-leg4.bin",
+      "originalBytes": 1645964,
+      "sha256": "219d02dbe73ed67d8346c82d1f2ad829a6e8de3a984be7d80ebd9f2d1c3074d4",
+      "validOriginal": true,
+      "classification": "valid_original_PDF",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "calendar2025; PDFcreated4Mar2026 is not certified first publication",
+      "actualReadScopeAndLimits": "municipal services/eligible recipients; not all FUA or median population"
+    },
+    {
+      "id": "S08",
+      "url": "https://ekspla.com/wp-content/uploads/Open-Publications/262_Andriukaitis.pdf",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/diagnostics/S08-leg8.bin",
+      "originalBytes": 1126979,
+      "sha256": "32818eba8c7f018a5eb8283d18872c7020050e23bf10ca6d9c47a1b6ba7883cf",
+      "validOriginal": true,
+      "classification": "valid_original_PDF",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "conference2025; PDFmetadata27Nov2025; no authenticated cutoff bytes",
+      "actualReadScopeAndLimits": "Vilnius company/university/FTMC affiliations; tested equipment, not mass adoption"
+    },
+    {
+      "id": "S09",
+      "url": "https://www.grinda.lt/naujienos/grinda-i-pavirsiniu-nuoteku-tinklus-siemet-investuos-15-mln-euru-iki-2029-uju-46-mln/",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/diagnostics/S09-leg9.bin",
+      "originalBytes": 104281,
+      "sha256": "5d01712d00983b6ed2de122293f00bd587d5270b3e88bbc37ffb37376d89f6e9",
+      "validOriginal": true,
+      "classification": "valid_original_HTML",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "displayed5May2026; actual2025 delivery vs future2026–29 plans",
+      "actualReadScopeAndLimits": "Vilnius municipality rainwater system; not all FUA"
+    },
+    {
+      "id": "S12",
+      "url": "https://ekspla.com/about-us/",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/diagnostics/S12-leg12.bin",
+      "originalBytes": 198414,
+      "sha256": "32be435826dd3d6ff941b5da5307fd525491a3286354632011dbb148e719b4c4",
+      "validOriginal": true,
+      "classification": "valid_original_HTML",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "modified22Sep2026 in current HTML; history includes2023 installation",
+      "actualReadScopeAndLimits": "Vilnius manufacturer, foreign installations not local resident outcomes"
+    },
+    {
+      "id": "R01",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_en.htm",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/reuse/R01.html",
+      "originalBytes": 149227,
+      "sha256": "7efe28815c063333746989e18f412dd25f1ae88c45acde4b56e1e16d2187d42a",
+      "validOriginal": true,
+      "classification": "durable_sameSHA_reuse",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "current durable EU rule; applicable dates and conditional scope retained",
+      "actualReadScopeAndLimits": "EU ordinary citizen conditional legal work-residence / personal euro payments / temporary roaming only; not guaranteed job, permanent free roaming or all asset portability"
+    },
+    {
+      "id": "R02",
+      "url": "https://europa.eu/youreurope/citizens/consumers/financial-products-and-services/payments-transfers-cheques/index_en.htm",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/reuse/R02.html",
+      "originalBytes": 155296,
+      "sha256": "0a457237f62980c579bc7dba314552421cb5b0fa826dc830b0e35bb42d458ee8",
+      "validOriginal": true,
+      "classification": "durable_sameSHA_reuse",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "current durable EU rule; applicable dates and conditional scope retained",
+      "actualReadScopeAndLimits": "EU ordinary citizen conditional legal work-residence / personal euro payments / temporary roaming only; not guaranteed job, permanent free roaming or all asset portability"
+    },
+    {
+      "id": "R03",
+      "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/mobile-roaming-costs/index_en.htm",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/reuse/R03.html",
+      "originalBytes": 155071,
+      "sha256": "e2e15e5e0521db23b3d99d06fa691c557b5ebdb63b09aa5ccb50f58af9a8f0d4",
+      "validOriginal": true,
+      "classification": "durable_sameSHA_reuse",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "current durable EU rule; applicable dates and conditional scope retained",
+      "actualReadScopeAndLimits": "EU ordinary citizen conditional legal work-residence / personal euro payments / temporary roaming only; not guaranteed job, permanent free roaming or all asset portability"
+    },
+    {
+      "id": "M01",
+      "url": "https://www.uzleuven.be/nl/media/600a8621-93f2-47a9-887c-01d563e9b672/Jaarverslag%20transplantatie%202024%2012%20stamceltransplantaties.pdf",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/leuven/originals/stemcell2024.pdf",
+      "originalBytes": 2911972,
+      "sha256": "786c63a4bcb07f542a411e00f95432619c456f472cc267874fd80d92695aeac3",
+      "validOriginal": true,
+      "classification": "durable_mature_disease_class_only",
+      "historicalCutoffBytesAuthenticated": false,
+      "actualReadScopeAndLimits": "physical3/12/13; autologousn463 mature class only, not Vilnius efficacy/payer/monitoring network"
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.santa.lt/hotc-paslaugos/",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": 403,
+      "scoreEligible": false,
+      "scope": "diagnostic_not_original"
+    },
+    {
+      "id": "S03",
+      "url": "https://vilnius.lt/savivaldybe/saugus-miestas/civiline-sauga/pasirengimas-ekstremalioms-situacijoms-institucijoms",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": 403,
+      "scoreEligible": false,
+      "scope": "diagnostic_not_original"
+    },
+    {
+      "id": "S05",
+      "url": "https://vkj.lt/apie-mus/ataskaitos/113",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": 403,
+      "scoreEligible": false,
+      "scope": "diagnostic_not_original"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.santa.lt/archyvas/2/",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": 403,
+      "scoreEligible": false,
+      "scope": "diagnostic_not_original"
+    },
+    {
+      "id": "S07",
+      "url": "https://ltou.lt/app/uploads/2026/05/LTOU_metine-ataskaita_2025_EN.pdf",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": 403,
+      "scoreEligible": false,
+      "scope": "diagnostic_not_original"
+    },
+    {
+      "id": "S10",
+      "url": "https://ltou.lt/keleiviu-srautas-lietuvos-oro-uostuose-lapkriti-augo/",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": 403,
+      "scoreEligible": false,
+      "scope": "diagnostic_not_original"
+    },
+    {
+      "id": "S11",
+      "url": "https://www.rvul.lt/wp-content/uploads/2025/02/RVUL_Sakines-korupcijos-prevencijos-2023-2025-m.-programos-igyvendinimo-2024-m.-ataskaita.pdf",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": 403,
+      "scoreEligible": false,
+      "scope": "diagnostic_not_original"
+    },
+    {
+      "id": "S13",
+      "url": "https://laikinas.grinda.lt/naujienos/grindos-igyvendinami-projektai-mazina-liuciu-metu-apsemiamu-gatviu-skaiciu/",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": null,
+      "scoreEligible": false,
+      "scope": "transport_error_no_body"
+    },
+    {
+      "id": "S14",
+      "url": "https://vilnius.lt/naujienos/prasidejo-prasymu-sildymo-kompensacijoms-gauti-teikimas-2025-2026-m-sildymo-sezonui",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": 403,
+      "scoreEligible": false,
+      "scope": "diagnostic_not_original"
+    }
+  ],
+  "routingSourceSnapshots": [],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.santa.lt/hotc-paslaugos/",
+      "localPath": null,
+      "sha256": null,
+      "originalBytes": null,
+      "isWebsiteRaw": false,
+      "transcriptPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/toolproof/W01-exact-source-segment.txt",
+      "transcriptBytes": 2536,
+      "transcriptSha256": "eb1ecec7597f0a00b20d9f93d8639d9bda1d34266a89b96a3132a88544c4aaf7",
+      "captureBeforeNormalRequest": true,
+      "scope": "actual prefailure discovery-tool source segment, not website raw or guaranteed full original; exact bounded source segment, truncation retained"
+    },
+    {
+      "id": "W02",
+      "url": "https://ltou.lt/sestadieni-nakti-vilniaus-oro-uoste-ir-kauno-oro-uoste-skrydziai-ir-operacijos-atnaujintos-visa-apimtimi-galimi-skrydziu-velavimai-dienos-eigoje/",
+      "localPath": null,
+      "sha256": null,
+      "originalBytes": null,
+      "isWebsiteRaw": false,
+      "transcriptPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/toolproof/W02-exact-source-segment.txt",
+      "transcriptBytes": 2251,
+      "transcriptSha256": "5772cbc1f30abf62456324854ec9bb222e2548101885f1e1db12a82573e5fdd2",
+      "captureBeforeNormalRequest": true,
+      "scope": "actual prefailure discovery-tool source segment, not website raw or guaranteed full original; exact bounded source segment, truncation retained"
+    },
+    {
+      "id": "W03",
+      "url": "https://ltou.lt/keleiviu-srautas-lietuvos-oro-uostuose-lapkriti-augo/",
+      "localPath": null,
+      "sha256": null,
+      "originalBytes": null,
+      "isWebsiteRaw": false,
+      "transcriptPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/toolproof/W03-exact-source-segment.txt",
+      "transcriptBytes": 1910,
+      "transcriptSha256": "ba4aba5acfa61fdff43e4cc9b327a2180aaed97b1fdaf83eb07c13e1daa08c06",
+      "captureBeforeNormalRequest": true,
+      "scope": "actual prefailure discovery-tool source segment, not website raw or guaranteed full original; exact bounded source segment, truncation retained"
+    },
+    {
+      "id": "W04",
+      "url": "https://ltou.lt/en/airspace-disruptions-trigger-legal-action-lithuanian-airports-seek-prosecutors-investigation-over-hostile-balloon-launches/",
+      "localPath": null,
+      "sha256": null,
+      "originalBytes": null,
+      "isWebsiteRaw": false,
+      "transcriptPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/toolproof/W04-exact-source-segment.txt",
+      "transcriptBytes": 2444,
+      "transcriptSha256": "08a3f9ee29f37b5db1ffb436dda5d8a9b85ee63e118166600d662da30f7577b7",
+      "captureBeforeNormalRequest": true,
+      "scope": "actual prefailure discovery-tool source segment, not website raw or guaranteed full original; exact bounded source segment, truncation retained"
+    },
+    {
+      "id": "W05",
+      "url": "https://ltou.lt/app/uploads/2026/05/LTOU_metine-ataskaita_2025_EN.pdf",
+      "localPath": null,
+      "sha256": null,
+      "originalBytes": null,
+      "isWebsiteRaw": false,
+      "transcriptPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/toolproof/W05-exact-source-segment.txt",
+      "transcriptBytes": 1662,
+      "transcriptSha256": "b69eba241909461122953d43e90e53b26697349efc5f5625584fadd070486a26",
+      "captureBeforeNormalRequest": true,
+      "scope": "actual prefailure discovery-tool source segment, not website raw or guaranteed full original; exact bounded source segment, truncation retained"
+    },
+    {
+      "id": "W06",
+      "url": "https://laikinas.grinda.lt/naujienos/grindos-igyvendinami-projektai-mazina-liuciu-metu-apsemiamu-gatviu-skaiciu/",
+      "localPath": null,
+      "sha256": null,
+      "originalBytes": null,
+      "isWebsiteRaw": false,
+      "transcriptPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/toolproof/W06-exact-source-segment.txt",
+      "transcriptBytes": 1914,
+      "transcriptSha256": "0670172246638c5f01f44c4a3d716c3d3b4d144cab06a07f0d39e2ddf80625a2",
+      "captureBeforeNormalRequest": true,
+      "scope": "actual prefailure discovery-tool source segment, not website raw or guaranteed full original; exact bounded source segment, truncation retained"
+    },
+    {
+      "id": "T02",
+      "url": "https://ligoniukasa.lrv.lt/en/news/healthcare-services-with-referral-things-to-know/",
+      "localPath": null,
+      "sha256": null,
+      "originalBytes": null,
+      "isWebsiteRaw": false,
+      "transcriptPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-lon-cross85/LTU-T02-prefailure-toolentry.txt",
+      "transcriptBytes": 5115,
+      "transcriptSha256": "34cc01006d9e129b8ae7c7b94608c0c7454e7cfed89d9d321384f15903a67bdc",
+      "captureBeforeNormalRequest": true,
+      "scope": "previously frozen primary official payer tool text, not guaranteed full article; original truncation retained, not specific transplant contract"
+    },
+    {
+      "id": "T03",
+      "url": "https://ligoniukasa.lrv.lt/en/news/referral-for-a-free-specialist-doctor-consultation-who-issues-and-when-SnT/",
+      "localPath": null,
+      "sha256": null,
+      "originalBytes": null,
+      "isWebsiteRaw": false,
+      "transcriptPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-lon-cross85/LTU-T03-prefailure-toolentry.txt",
+      "transcriptBytes": 4908,
+      "transcriptSha256": "8db4e3532ca63b0658afcf324a726c9d56b6ce8eaa25c0164ebe1f7f9b2fe530",
+      "captureBeforeNormalRequest": true,
+      "scope": "previously frozen primary official payer tool text, not guaranteed full article; original truncation retained, not specific transplant contract"
+    }
+  ],
+  "sourceManifest": {
+    "path": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/source-manifest.json",
+    "validRawOriginals": 9,
+    "newRaw": 5,
+    "durableRaw": 4,
+    "primaryToolTextSegments": 8,
+    "diagnosticFailures": 9
+  },
+  "sourceAndStopLedger": {
+    "path": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/source-and-stop-ledger.json",
+    "sha256": "e050fd299fe2fb0870aaabb92dceee48e17216a35b47214804225c3fb78e24ee",
+    "budget": {
+      "discoveryRounds": 2,
+      "queriesPerRound": [4, 4],
+      "authorizedMaxRounds": 2,
+      "normalActualLegs": 14,
+      "authorizedMaxNormalLegs": 18,
+      "unusedLegsClosed": 4,
+      "redirects": 0,
+      "automaticRetries": 0,
+      "automaticRedirects": 0,
+      "newDiscoveryQueriesAfterRound2": 0
+    },
+    "mechanisms": [
+      {
+        "provider": "santa.lt Santaros",
+        "mechanism": "normalTLS",
+        "newFailures": 2,
+        "priorCount": "unknown, notzero",
+        "stopped": true,
+        "reason": "voluntarilyclosed after S01/S06 403, notclaimed three known failures",
+        "exactFiles": ["S01", "S06"]
+      },
+      {
+        "provider": "vilnius.lt municipality",
+        "mechanism": "normalTLS",
+        "newFailures": 2,
+        "priorCount": "unknown, notzero",
+        "stopped": true,
+        "reason": "voluntarilyclosed after S03/S14 403",
+        "exactFiles": ["S03", "S14"]
+      },
+      {
+        "provider": "ltou.lt airports",
+        "mechanism": "normalTLS",
+        "newFailures": 2,
+        "priorCount": "unknown, notzero",
+        "stopped": true,
+        "reason": "voluntarilyclosed after S07/S10 403; W02–W05 tool content captured before firstfailure, no later recovery",
+        "exactFiles": ["S07", "S10"]
+      },
+      {
+        "provider": "vkj.lt cogeneration",
+        "mechanism": "normalTLS",
+        "newFailures": 1,
+        "priorCount": "unknown, notzero",
+        "exactFileStopped": ["S05"]
+      },
+      {
+        "provider": "rvul.lt hospital",
+        "mechanism": "normalTLS",
+        "newFailures": 1,
+        "priorCount": "unknown, notzero",
+        "exactFileStopped": ["S11"]
+      },
+      {
+        "provider": "laikinas.grinda.lt legacy",
+        "mechanism": "normalTLS certificate validation",
+        "newFailures": 1,
+        "priorCount": "unknown, notzero",
+        "exactFileStopped": ["S13"],
+        "scope": "do not merge unrelated failures into wholecity or allGrinda; www.grinda.lt S09 independent current document already successful before S13, no bypass"
+      },
+      {
+        "provider": "vv.lt/spcentras.lt/ekspla.com/www.grinda.lt",
+        "newObservedFailures": 0,
+        "priorCount": "unknown, notzero",
+        "scope": "successes not reset historical counts"
+      }
+    ],
+    "inheritedLedgerScope": "original frozen nested ledger retained outside; no request, failure or prior unknown history reset",
+    "authorProcessDeviations": [
+      "Round1 firstquery actual site.santa.lt lacks colon, retained as actually executed query, not redone",
+      "Initial broad schema/example output truncated; used explicit reread only for dimension/subpillar schema; no semantic wholeexample certification",
+      "A local read-only Python schema extraction syntaxerror corrected with no network; process error not city capability",
+      "Raw originals are stored under diagnostics/ as immutable response bodies; success/failure classification separate in manifest, directory name is not validity judgment",
+      "Ledger assembly prior outer used3 distinct metadata sources but opened inherited ledger twice (4 actual read operations); conservative strictreadops>3 deviation retained. No new HTTP/source or score consequence."
+    ],
+    "rootNewResearchNetworkRequests": 0
+  },
+  "referenceBoundaryCheck": {
+    "candidates": 9031,
+    "repairs": 136,
+    "metadata": {
+      "fid": 6016,
+      "eFUA_ID": 853.0,
+      "UC_num": 1.0,
+      "UC_IDs": "3339",
+      "eFUA_name": "Vilnius",
+      "Commuting": 1.0,
+      "Cntry_ISO": "LTU",
+      "Cntry_name": "Lithuania",
+      "FUA_area": 850.0,
+      "UC_area": 101.0,
+      "FUA_p_2015": 615156.7022164762,
+      "UC_p_2015": 355430.06396102905,
+      "Com_p_2015": 259726.63825544715
+    },
+    "wkbSha256": "063eb408d19ab4a6fcdc69311a5e1cdee5d0aa2398ca654a8c1fff589e93befd",
+    "points": [
+      {
+        "label": "center",
+        "lon": 25.2797,
+        "lat": 54.6872,
+        "matches": [853],
+        "approximateOnly": true
+      },
+      {
+        "label": "Santaros-neighborhood",
+        "lon": 25.279,
+        "lat": 54.753,
+        "matches": [853],
+        "approximateOnly": true
+      },
+      {
+        "label": "airport-neighborhood",
+        "lon": 25.2858,
+        "lat": 54.6341,
+        "matches": [853],
+        "approximateOnly": true
+      }
+    ],
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "scope": "analyst neighborhoods only; not coverage, actual trips, service qualification or patient pool"
+  },
+  "sourceCriticalFacts": {
+    "frozenAuthorPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/source-critical-facts.json",
+    "scope": "author frozen history; root actual reading and conclusions separate"
+  },
+  "pixels": {
+    "frozenAuthorPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/pixels.json",
+    "scope": "author frozen history; root actual reading and conclusions separate"
+  },
+  "inputGuard": {
+    "frozenAuthorPath": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-full83/input-guard.json",
+    "scope": "author frozen history; root actual reading and conclusions separate"
+  },
+  "sensitivity": {
+    "primaryKnownWeightedSubtotal": 34,
+    "unknownWeight": 25,
+    "mathematicalDomain": [34, 59],
+    "completeTotal": null,
+    "rank": null,
+    "fairAlternatives": {
+      "PCS60": [37, 62],
+      "GSS60": [37, 62],
+      "ISR60": [37, 62],
+      "OPT60": [36, 61]
+    },
+    "withdrawals": {
+      "PCS": [28, 68],
+      "GSS": [28, 68],
+      "ISR": [28, 68],
+      "OPT": [30, 65],
+      "TEC": [28, 63],
+      "LON": [28, 63]
+    },
+    "allWithdrawn": [0, 100],
+    "qualified32Threshold": null,
+    "globalRankingEligible": false,
+    "interpretation": "original-weight unknown arithmetic domain; not probability/confidence interval"
+  },
+  "limitations": [
+    "31项是有界语义审阅不是31项充分测量，子分全null",
+    "仅5新有效raw+3真持久复用，6段预失败原工具文本与网站raw分列；请求成败/来源数不评分",
+    "当前字节不认证截止历史同版；PDF创建日/路径不独证公开日，有限时点桥可撤；已知postcutoff相关文章排除",
+    "未全城/全院审计，也未以全人口/逐剂完美票据额外设门槛",
+    "所有旧新未匹配竞争者保留，不能据本案证明全球Top32",
+    "Root LON60 adds mature autologous disease class and LTU payment conditions; specific local entry and net monitoring remain revocable inferences.",
+    "Four40s have fair60 alternatives and individual withdrawals; no dominant/majority/city-collapse requirement.",
+    "Root has not read full PDFs or authenticated historical cutoff same bytes."
+  ],
+  "sourceName": "Vilnius",
+  "evidenceReview": "cci-vilnius-priority-review.md",
+  "publishedInputCommit": "e0a8baed23dcb9bf501c72f4bc0d0810c0930c70",
+  "publishedInputCases": 109,
+  "publishedInputComplete": 25,
+  "exclusionCount": 0,
+  "threshold32": null,
+  "rootScopeReview": {
+    "validRawIdentitiesVerified": 9,
+    "selectedPdfTextPages": {
+      "S02": [9, 10, 36, 38, 50],
+      "S04": [7, 8, 9],
+      "S08": [1, 7],
+      "M01": [3, 12, 13]
+    },
+    "rootSelectedPdfTextPageCount": 13,
+    "rootPdfPageCount": 13,
+    "rootNewHtmlMainBodiesRead": ["S09", "S12", "R03"],
+    "rootPreviouslyPersonallyReadIdenticalHtmlBodies": ["R01", "R02"],
+    "R01R02CurrentSelectedSectionsReread": true,
+    "toolEntriesRead": ["W01", "W02", "W03", "W04", "W05", "W06", "T02", "T03"],
+    "actualSessionRecordIdentitiesVerified": 24,
+    "discoveryInputsRead": 2,
+    "rootNewResearchNetworkRequests": 0,
+    "wholeWorkflowComplianceCertified": false,
+    "historicalCutoffSameBytesCertified": false,
+    "wholePdfsRead": false,
+    "all31SubscoresMeasured": false,
+    "housingStockFlowSameCohort": false,
+    "housing344AllIndividuallyAdjudicatedNeedVerified": false,
+    "airportPassengersAreFuaResidents": false,
+    "foreignStateResponsibilityAdjudicated": false,
+    "waterTestsEqualPassRate": false,
+    "foreignHsctOutcomeIsVilniusOutcome": false,
+    "specificLocalHsctContractDirectlyVerified": false,
+    "localLongTermMonitoringNetworkDirectlyVerified": false,
+    "sourceFailuresReduceCityScore": false
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-vilnius-priority-review.md",
+    "researchReport": "docs/cci-vilnius-score-completion-review.md",
+    "fixedInputCommit": "e0a8baed23dcb9bf501c72f4bc0d0810c0930c70",
+    "fixedCases": 109,
+    "fixedComplete": 25,
+    "researchFixedInputCommit": "860e3670f666c52212bf1211f4237ec27b96b064",
+    "researchFixedCases": 108,
+    "researchFixedComplete": 24,
+    "frozenManifestSha256": "65de63e1c4e0607f887a5e252a047c20d7d69e3c40537d67aac7d4481fc0c925",
+    "researchFrozenReportSha256": "1307544f08710d94c0330004b56d65d910aad92d2e25b84a8c4517c9e1fa4521",
+    "frozenFilesVerified": 137,
+    "frozenPayloadBytes": 19232476,
+    "crossReviewManifestSha256": "aa92b900986e2a462430c13d46e76a6b3642b0eb81eb48cac1b4e181effb925e",
+    "crossReviewReport": "/Users/morris/.local/share/cci-research/2026-10-10/vilnius-lon-cross85/report.md",
+    "crossReviewReportSha256": "685390ac22d8385b6308a3c737fcb6a84bd43e9897b9100500cf2d72bfb18e3d",
+    "crossFilesVerified": 16,
+    "LONResearchNullToRoot60": true,
+    "validOriginalCount": 9,
+    "sha256": "184e66779bcd447618e184f9ae6b096d49db5162f88956283ba72aa37fcff5a1",
+    "researchReportSha256": "bda0a972b206c1d04b4a39385c2c4a929b3d1301b665edf37da7c55a0b0173ee"
+  },
+  "reportSha256": "184e66779bcd447618e184f9ae6b096d49db5162f88956283ba72aa37fcff5a1"
+}

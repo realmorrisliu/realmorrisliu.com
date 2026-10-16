@@ -4,10 +4,10 @@
   "evidenceCutoff": "2026-10-10",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
-  "conditionalCaseCount": 109,
+  "conditionalCaseCount": 110,
   "completeConditionalCaseCount": 25,
-  "partialCaseCount": 84,
-  "unassessedCount": 8922,
+  "partialCaseCount": 85,
+  "unassessedCount": 8921,
   "weights": {
     "PCS": 15,
     "GSS": 15,
@@ -107,7 +107,7 @@
           "lower": 62.0,
           "upper": 62.0,
           "bestPosition": 1,
-          "worstPosition": 9008
+          "worstPosition": 9007
         },
         {
           "efua_id": "229",
@@ -179,7 +179,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9020
+          "worstPosition": 9019
         },
         {
           "efua_id": "415",
@@ -206,7 +206,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9020
+          "worstPosition": 9019
         },
         {
           "efua_id": "535",
@@ -215,7 +215,7 @@
           "lower": 62.0,
           "upper": 62.0,
           "bestPosition": 1,
-          "worstPosition": 9008
+          "worstPosition": 9007
         },
         {
           "efua_id": "537",
@@ -224,7 +224,7 @@
           "lower": 62.0,
           "upper": 62.0,
           "bestPosition": 1,
-          "worstPosition": 9008
+          "worstPosition": 9007
         },
         {
           "efua_id": "543",
@@ -278,7 +278,7 @@
           "lower": 62.0,
           "upper": 62.0,
           "bestPosition": 1,
-          "worstPosition": 9008
+          "worstPosition": 9007
         },
         {
           "efua_id": "708",
@@ -296,7 +296,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9020
+          "worstPosition": 9019
         },
         {
           "efua_id": "823",
@@ -305,6 +305,15 @@
           "lower": 36.0,
           "upper": 71.0,
           "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "853",
+          "source_name": "Vilnius",
+          "center": null,
+          "lower": 34.0,
+          "upper": 59.0,
+          "bestPosition": 18,
           "worstPosition": 9031
         },
         {
@@ -395,7 +404,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9020
+          "worstPosition": 9019
         },
         {
           "efua_id": "1565",
@@ -530,7 +539,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9020
+          "worstPosition": 9019
         },
         {
           "efua_id": "2877",
@@ -638,7 +647,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9020
+          "worstPosition": 9019
         },
         {
           "efua_id": "4193",
@@ -800,7 +809,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9020
+          "worstPosition": 9019
         },
         {
           "efua_id": "4946",
@@ -809,7 +818,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9020
+          "worstPosition": 9019
         },
         {
           "efua_id": "5129",
@@ -818,7 +827,7 @@
           "lower": 62.0,
           "upper": 62.0,
           "bestPosition": 1,
-          "worstPosition": 9008
+          "worstPosition": 9007
         },
         {
           "efua_id": "5236",
@@ -836,7 +845,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9020
+          "worstPosition": 9019
         },
         {
           "efua_id": "5349",
@@ -935,7 +944,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9020
+          "worstPosition": 9019
         },
         {
           "efua_id": "7244",
@@ -953,7 +962,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9020
+          "worstPosition": 9019
         },
         {
           "efua_id": "7704",
@@ -962,7 +971,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9020
+          "worstPosition": 9019
         },
         {
           "efua_id": "8299",
@@ -1291,6 +1300,15 @@
           "center": null,
           "lower": 27.0,
           "upper": 77.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "853",
+          "source_name": "Vilnius",
+          "center": null,
+          "lower": 28.0,
+          "upper": 68.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -2282,6 +2300,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "853",
+          "source_name": "Vilnius",
+          "center": null,
+          "lower": 28.0,
+          "upper": 68.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "935",
           "source_name": "Basel",
           "center": null,
@@ -3265,6 +3292,15 @@
           "center": null,
           "lower": 27.0,
           "upper": 77.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "853",
+          "source_name": "Vilnius",
+          "center": null,
+          "lower": 28.0,
+          "upper": 68.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -4256,6 +4292,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "853",
+          "source_name": "Vilnius",
+          "center": null,
+          "lower": 34.0,
+          "upper": 59.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "935",
           "source_name": "Basel",
           "center": null,
@@ -5239,6 +5284,15 @@
           "center": null,
           "lower": 30.0,
           "upper": 80.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "853",
+          "source_name": "Vilnius",
+          "center": null,
+          "lower": 34.0,
+          "upper": 59.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -6230,6 +6284,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "853",
+          "source_name": "Vilnius",
+          "center": null,
+          "lower": 28.0,
+          "upper": 63.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "935",
           "source_name": "Basel",
           "center": null,
@@ -7213,6 +7276,15 @@
           "center": null,
           "lower": 30.0,
           "upper": 75.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "853",
+          "source_name": "Vilnius",
+          "center": null,
+          "lower": 28.0,
+          "upper": 63.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -8204,6 +8276,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "853",
+          "source_name": "Vilnius",
+          "center": null,
+          "lower": 30.0,
+          "upper": 65.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "935",
           "source_name": "Basel",
           "center": null,
@@ -9191,6 +9272,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "853",
+          "source_name": "Vilnius",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "935",
           "source_name": "Basel",
           "center": null,
@@ -9908,7 +9998,7 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "97a283dc6f09379c8447933807f5e750e9d2168e55ea698505e0ec573421b9fb",
+    "cci-global-evidence-matrix.csv": "8d58153a064b10ccb66cf64031b3d0d62a9305c0678cfffeaa73a1408fd869ae",
     "cci-legal-mobility-rules.json": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "cci-legal-mobility.md": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e",
     "cci-local-2026-singapore-case.json": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -10129,12 +10219,14 @@
     "cci-larbert-priority-review.md": "2c4fa378cec8c8b0dbdeae8c16c612c2d941ec0fdcb9ba5c00d3556b7e8133eb",
     "cci-local-2026-panevezys-case.json": "6616433c09d092d597bea197a4a271190afa50986095cbf14314372d9e2d19d6",
     "cci-panevezys-priority-review.md": "93c95e665a522ba080680b97c43276ddb6b58b540b7dc714d3bd776d2b28a6b6",
+    "cci-local-2026-vilnius-case.json": "6a29664a9ba26cedcd51317d99cfe4d730c9885c27f1900fa6ba638cc3165b80",
+    "cci-vilnius-priority-review.md": "184e66779bcd447618e184f9ae6b096d49db5162f88956283ba72aa37fcff5a1",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "469520bef0328b7b37f0af3ca11555be1c054b5c6d21cb53563eaa22992a18b8",
+    "cci-global-evidence-matrix.json": "32c2b395a47730d486f7caef89746e258e6b913c548401f04c3333127ace3d7e",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "9a5d6d35bb9940bed3729b827c1c5ef82ddf0d0d8c2ebd2a61c58e8a36a17723"
+    "cci-local-2026-scoring-calibration.md": "49fb1922537b331f3ec7467ba51a1963085a919e4bc2a379529e522d01ee5634"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "bcb892208f5f4b4f3c23f3db35ea5156ff2ba7fa16dc159761f0b7f79c80069d",
+  "csvSha256": "3f302a5684622dadefac21b538984dce8f0e1af7f913a099d2cd3a560bd0f68a",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }

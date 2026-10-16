@@ -119,6 +119,7 @@ import lasPalmas from "../../docs/data/cci-local-2026-las-palmas-case.json";
 import bremen from "../../docs/data/cci-local-2026-bremen-case.json";
 import larbert from "../../docs/data/cci-local-2026-larbert-case.json";
 import panevezys from "../../docs/data/cci-local-2026-panevezys-case.json";
+import vilnius from "../../docs/data/cci-local-2026-vilnius-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -242,8 +243,10 @@ const cases = [
   bremen,
   larbert,
   panevezys,
+  vilnius,
 ];
 const caseNamesZh: Record<number, string> = {
+  [vilnius.candidateId]: "维尔纽斯功能区",
   [panevezys.candidateId]: "帕内韦日斯功能区",
   [larbert.candidateId]: "拉伯特功能区",
   [bremen.candidateId]: "不来梅功能区",
@@ -459,6 +462,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [vilnius.candidateId]: [
+    zh
+      ? "维尔纽斯防护／安全／制度／退出条件40，专项转化／技术条件60，资源／医疗未知。贡献34、数学域34—59，无完整总分。工程、转送与照护确有交付，帮助后仍有重要积水、重复安全限制及住宅适配等候；四个40均保留60公平解释。"
+      : "Vilnius has conditional PCS/GSS/ISR/OPT 40 and LON/TEC 60; RES/MED remain unknown. Contribution is 34, with a 34–59 arithmetic domain and no complete total. Delivered engineering, transfers and care coexist with important flooding, repeated safety restrictions and housing-adaptation waits; all four40s retain fair60 alternatives.",
+    zh
+      ? "LON连接成熟疾病自体造血重建类别与本地同机制服务说明，专项签约通常进入、净重复监护和地域时间桥可撤；外国疗效不移成本地疗效。等候存量非同队列失败率，机场旅客非全区居民，外国责任未裁定。工具来源段保留截断，全球入围未证。"
+      : "LON connects a mature disease autologous-HSCT class with the local same-mechanism service description; usual contracted entry, net repeat monitoring, geography and time bridges are revocable. Foreign outcomes are not local efficacy. Waiting stock is not a same-cohort failure rate, airport passengers are not all FUA residents, and foreign responsibility is unadjudicated. Tool-source truncation is retained; global inclusion is unproven.",
+  ],
   [panevezys.candidateId]: [
     zh
       ? "帕内韦日斯制度／医疗／技术条件60，其余五维未知。已知贡献24、数学域24—84，无完整总分。实际水热服务、多科护理、委托研究及工业／公共技术采用支持有限判断；普通签约项目可进入性、净照护与地域时间桥可撤。"
