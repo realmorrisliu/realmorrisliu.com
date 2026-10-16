@@ -112,6 +112,7 @@ import livingston from "../../docs/data/cci-local-2026-livingston-case.json";
 import szczecin from "../../docs/data/cci-local-2026-szczecin-case.json";
 import bedford from "../../docs/data/cci-local-2026-bedford-case.json";
 import aarhus from "../../docs/data/cci-local-2026-aarhus-case.json";
+import nottingham from "../../docs/data/cci-local-2026-nottingham-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -228,8 +229,10 @@ const cases = [
   szczecin,
   bedford,
   aarhus,
+  nottingham,
 ];
 const caseNamesZh: Record<number, string> = {
+  [nottingham.candidateId]: "诺丁汉功能区",
   [aarhus.candidateId]: "奥胡斯功能区",
   [bedford.candidateId]: "贝德福德功能区",
   [szczecin.candidateId]: "什切青功能区",
@@ -438,6 +441,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [nottingham.candidateId]: [
+    zh
+      ? "诺丁汉制度／资源／专项转化／技术条件60、医疗条件40，防护／安全／退出未知。原权重贡献33、数学域33—73，无完整总分。真实家庭帮助、供水食品、临床与商业产用同帮助后护理余障合看；地域、时点、通常付款与净取得假设可撤。"
+      : "Nottingham has conditional ISR/RES/LON/TEC 60 and MED 40; PCS/GSS/OPT remain unknown. Its original-weight contribution is 33 and arithmetic domain 33–73, without a complete total. Real household support, water and food services, clinical and commercial use are considered alongside remaining care constraints after improvements; geography, time, usual payment and net access assumptions are revocable.",
+    zh
+      ? "医疗60、制度40保留公平替代。已开设并委托CAR-T非已核回输队列，反复净照护与持续实施仍需推定；一般PIFU非CAR-T专项随诊。区域供水和受助家庭非全功能区中位账本，干旱模型非实际限水，未来基金分配非到账。全球入围未证明。"
+      : "MED 60 and ISR 40 remain fair alternatives. A launched, commissioned CAR-T service is not a verified infused cohort; continued delivery and repeat net care still require inference, and general PIFU is not CAR-T-specific follow-up. Regional water data and assisted households are not a whole-area median budget, drought modelling is not actual restrictions, and future fund allocation is not payment. Global qualification is unproven.",
+  ],
   [aarhus.candidateId]: [
     zh
       ? "奥胡斯防护条件40，其余六项条件60，资源未知。原权重贡献51、数学域51—61，无完整总分。实际分流、保护、公共护理、细胞治疗和技术产用支持有限判断；地域、时点、通常付款与净照护假设可撤。"

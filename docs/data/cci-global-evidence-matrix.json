@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 102,
+    "conditionalCaseCount": 103,
     "completeConditionalCaseCount": 21,
-    "partialCaseCount": 81,
-    "unassessedCount": 8929,
+    "partialCaseCount": 82,
+    "unassessedCount": 8928,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -815,8 +815,13 @@
       "sha256": "01e030dc8d4bd5ec585a5387e5b01932a76d4b4a583f6bd9c37b7ade30840445",
       "provenance": "cci-aarhus-priority-review.md",
       "provenanceSha256": "a540dbc56c8591209b279ca0bfc9b558353c314ee35a91281c6c9b5cfc610c9f"
+    },
+    "cci-local-2026-nottingham-case.json": {
+      "sha256": "235f9ba3775b927e16024b5482db3cc365b0722b6a3141afab4dae6daef868e1",
+      "provenance": "cci-nottingham-priority-review.md",
+      "provenanceSha256": "4155207f8f7d3b021b4ca00b85032b8da8a199a207ae06a76c59a465e0c5f1c7"
     }
   },
-  "scriptSha256": "d4c551a504c57072d4a57bced5e4d3126c41da915c896e79bbfbfa3b3f235cd1",
-  "csvSha256": "a2cd977794adc8a4e2c0162ebe0d8db280d51e0e1d1507f5a3c9dc24ed292d14"
+  "scriptSha256": "32f7b7a79960cabeb32fd1b9e8a110ba33ac2765f953e5eb339527c8fe9be9dc",
+  "csvSha256": "94d487d7ed48d2bf2750b5ebc806196731eae3c4abae34da7cc6436fb0e7d618"
 }

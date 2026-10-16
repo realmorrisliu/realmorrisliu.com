@@ -154,6 +154,7 @@ const realCases = [
   "szczecin",
   "bedford",
   "aarhus",
+  "nottingham",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -299,6 +300,7 @@ const [
   szczecin,
   bedford,
   aarhus,
+  nottingham,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4247,5 +4249,58 @@ assert.equal(aarhusCase.rootScopeReview.patientExperienceEqualsClinicalOutcomes,
 assert(
   aarhusCase.dimensions
     .filter((d: { id: string }) => !["PCS", "ISR"].includes(d.id))
+    .every((d: { conditionalAlternatives: number[] }) => d.conditionalAlternatives.length === 0)
+);
+
+const nottinghamCase = realCases.find(c => c.candidateId === 4767);
+assert.equal(
+  nottinghamCase.priorityCompletionReview.sha256,
+  digest(nottinghamCase.priorityCompletionReview.path)
+);
+assert.equal(
+  nottinghamCase.priorityCompletionReview.researchReportSha256,
+  digest(nottinghamCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(nottingham), { center: null, lower: 33, upper: 73 });
+assert.equal(nottinghamCase.unknownWeight, 40);
+assert.deepEqual(
+  nottinghamCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["PCS", "GSS", "OPT"]
+);
+assert.deepEqual(total({ ...nottingham, MED: 60 }), { center: null, lower: 36, upper: 76 });
+assert.deepEqual(total({ ...nottingham, ISR: 40 }), { center: null, lower: 30, upper: 70 });
+for (const [id, lower, upper] of [
+  ["ISR", 24, 79],
+  ["RES", 27, 77],
+  ["MED", 27, 82],
+  ["LON", 27, 77],
+  ["TEC", 27, 77],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...nottingham };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.equal(nottinghamCase.sourceSnapshots.length, 22);
+assert.equal(nottinghamCase.failedSourceSnapshots.length, 2);
+assert.equal(nottinghamCase.routingSourceSnapshots.length, 1);
+assert.equal(nottinghamCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
+assert.equal(nottinghamCase.rootScopeReview.rootSelectedPdfTextPageCount, 25);
+assert.equal(nottinghamCase.rootScopeReview.rootPdfPageCount, 6);
+assert.equal(nottinghamCase.rootScopeReview.actualInfusedLocalCARTCohortDirectlyVerified, false);
+assert.equal(nottinghamCase.rootScopeReview.specificLocalProductPayerDirectlyVerified, false);
+assert.equal(nottinghamCase.rootScopeReview.genericPIFUEqualsCARTSpecificFollowup, false);
+assert.equal(nottinghamCase.rootScopeReview.TrustWaitingEqualsAllFUAUntreatedRate, false);
+assert.equal(nottinghamCase.rootScopeReview.resourcesRepresentMeasuredMedianCompleteBudget, false);
+assert.equal(nottinghamCase.rootScopeReview.droughtModelEqualsActualRestrictions, false);
+assert.equal(nottinghamCase.rootScopeReview.commissionerExitRecommendedEqualsCompleted, false);
+assert.equal(
+  nottinghamCase.sourceSnapshots.find((s: { id: string }) => s.id === "S17").scoreEligible,
+  false
+);
+assert(
+  nottinghamCase.dimensions
+    .filter((d: { id: string }) => !["ISR", "MED"].includes(d.id))
     .every((d: { conditionalAlternatives: number[] }) => d.conditionalAlternatives.length === 0)
 );
