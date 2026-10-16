@@ -116,6 +116,7 @@ import nottingham from "../../docs/data/cci-local-2026-nottingham-case.json";
 import burtonOnTrent from "../../docs/data/cci-local-2026-burton-on-trent-case.json";
 import daugavpils from "../../docs/data/cci-local-2026-daugavpils-case.json";
 import lasPalmas from "../../docs/data/cci-local-2026-las-palmas-case.json";
+import bremen from "../../docs/data/cci-local-2026-bremen-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -236,8 +237,10 @@ const cases = [
   burtonOnTrent,
   daugavpils,
   lasPalmas,
+  bremen,
 ];
 const caseNamesZh: Record<number, string> = {
+  [bremen.candidateId]: "不来梅功能区",
   [lasPalmas.candidateId]: "拉斯帕尔马斯功能区",
   [daugavpils.candidateId]: "道加夫皮尔斯功能区",
   [burtonOnTrent.candidateId]: "特伦特河畔伯顿功能区",
@@ -450,6 +453,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [bremen.candidateId]: [
+    zh
+      ? "不来梅防护／制度／医疗／专项转化／技术条件60，安全／资源／退出未知。已知贡献39、数学域39—74，无完整总分。现有堤闸、实际公共服务、持续造血重建及研究产用支持有限判断；普通受用、地域时间、成熟类适配及净照护假设可撤。"
+      : "Bremen has conditional PCS/ISR/MED/LON/TEC 60; GSS/RES/OPT remain unknown. Known contribution is 39, with a 39–74 mathematical domain and no total. Operating defences, delivered services, sustained blood-stem-cell rebuilding and research adoption support bounded judgments, subject to ordinary use, scope, continuity, mature-class compatibility and net-care assumptions.",
+    zh
+      ? "第100次异体移植是2013历史实际，非2026人数或成功率；未来CAR-T不计。法定共付上限不包全部家庭照护。能源债务协商失败和停供是真实反证，困难咨询者不等中位居民；防洪设计事件量非实测失败率，Bremerhaven能力及海外DENCAI采用未移作本地居民结果。"
+      : "The hundredth allogeneic transplant was reported in 2013, not a 2026 volume or success rate; future CAR-T is excluded. Statutory copayment caps do not cover all household care. Failed energy-debt agreements and disconnections are real counterevidence, but selected debtors are not the median resident. Flood design events are not measured failure rates; Bremerhaven capacity and overseas DENCAI adoption are not local resident outcomes.",
+  ],
   [lasPalmas.candidateId]: [
     zh
       ? "拉斯帕尔马斯制度／医疗／专项转化／技术条件60，防护／安全／资源／退出未知。已知贡献30、数学域30—80，无完整总分；医疗40是公平竞争解释，对应27—77。实际社会援助、公立多专科与本地CAR-T持续实施、大学研究和临床应用支持有限判断，普通资格、净照护、类匹配、地域和延续假设可撤。"

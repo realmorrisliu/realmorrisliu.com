@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 106,
+    "conditionalCaseCount": 107,
     "completeConditionalCaseCount": 22,
-    "partialCaseCount": 84,
-    "unassessedCount": 8925,
+    "partialCaseCount": 85,
+    "unassessedCount": 8924,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -835,8 +835,13 @@
       "sha256": "70c732736456a45eea8d1fd6d2de0bf4da3402fc9db9e3dd375c49180a873938",
       "provenance": "cci-las-palmas-priority-review.md",
       "provenanceSha256": "5bac63604884548bd6b34344a41ca338ccb6e4fdb8e16a98bd6f3c076b6e9b61"
+    },
+    "cci-local-2026-bremen-case.json": {
+      "sha256": "8a5aa05d1c7dcff1142f7652a7f97e7d6b5540542094de891def73071746959d",
+      "provenance": "cci-bremen-priority-review.md",
+      "provenanceSha256": "5295632ae2f3aa7dc84e370b4b82aee692db26099ab01ed536eb0641a3261672"
     }
   },
-  "scriptSha256": "9ce961ee14c5ed93287c9a55906df7d511385d8f4cf6635e6b81c528c9549ae6",
-  "csvSha256": "9c6f24dd7f84fcac6a8908413f15a2784222614c636bbfe4e7bc6fb6548944cf"
+  "scriptSha256": "2e3edd81e1d788ed791336c0018ca5da9e772aea4a6ee71816689ce7e1ae7b86",
+  "csvSha256": "3a6826f8d4b8c8a9f92f5f93f426ac62dbb269cae68c6f99ae8a64d6c5de2bc9"
 }

@@ -158,6 +158,7 @@ const realCases = [
   "burton-on-trent",
   "daugavpils",
   "las-palmas",
+  "bremen",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -307,6 +308,7 @@ const [
   burtonOnTrent,
   daugavpils,
   lasPalmas,
+  bremen,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4455,6 +4457,46 @@ assert.equal(lasPalmasCase.webReadSources[0].sha256, null);
 assert(
   lasPalmasCase.coverageReview.length === 31 &&
     lasPalmasCase.coverageReview.every(
+      (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
+    )
+);
+
+const bremenCase = realCases.find(c => c.candidateId === 2877);
+assert.equal(
+  bremenCase.priorityCompletionReview.sha256,
+  digest(bremenCase.priorityCompletionReview.path)
+);
+assert.equal(
+  bremenCase.priorityCompletionReview.researchReportSha256,
+  digest(bremenCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(bremen), { center: null, lower: 39, upper: 74 });
+assert.equal(bremenCase.unknownWeight, 35);
+for (const [id, lower, upper] of [
+  ["PCS", 30, 80],
+  ["ISR", 30, 80],
+  ["MED", 30, 80],
+  ["LON", 33, 78],
+  ["TEC", 33, 78],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...bremen };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(
+  bremenCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["GSS", "RES", "OPT"]
+);
+assert.equal(bremenCase.sourceSnapshots.length, 23);
+assert.equal(bremenCase.failedSourceSnapshots.length, 1);
+assert.equal(bremenCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
+assert.equal(bremenCase.rootScopeReview.plannedCARTCountedAsOperating, false);
+assert.equal(bremenCase.rootScopeReview.statutoryCopayCapCoversAllHouseholdCare, false);
+assert(
+  bremenCase.coverageReview.length === 31 &&
+    bremenCase.coverageReview.every(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
