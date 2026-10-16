@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 115,
+    "conditionalCaseCount": 116,
     "completeConditionalCaseCount": 25,
-    "partialCaseCount": 90,
-    "unassessedCount": 8916,
+    "partialCaseCount": 91,
+    "unassessedCount": 8915,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -880,8 +880,13 @@
       "sha256": "a65ed44265086661320cd7a907ddbd16201b6dc5f738c710f480a35ccc46ebeb",
       "provenance": "cci-bilbao-priority-review.md",
       "provenanceSha256": "c9d2f73f4eff9d5ad05dd01ebe3981ed11a3f3840fa09ba8d54f57b151045fcc"
+    },
+    "cci-local-2026-flensburg-case.json": {
+      "sha256": "c35ded8c4bd907d1f7594f24e46989fef1c32f7b507686480d599dd4ebbca008",
+      "provenance": "cci-flensburg-priority-review.md",
+      "provenanceSha256": "5f6cc6515a8a686a2a7cc31c4cbc3a9b315a86a7fb89da774000757d089b92b7"
     }
   },
-  "scriptSha256": "709a6a5fee63432a506f723eae3bc6af825755262f7cc670dc0bcab72a425623",
-  "csvSha256": "9713efdddb598f65c2daa36e446eb1ccd9d4173f5907d2bb167e98721605ee60"
+  "scriptSha256": "4a7e319a995a901be7edbd2708f357ff40f886907eea4953aa5854f753de6270",
+  "csvSha256": "8a7f8cd41dc1ca4ae873a4a28f5e308f68d3080ff36675fd73b480be4a1fd39c"
 }

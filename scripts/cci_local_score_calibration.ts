@@ -167,6 +167,7 @@ const realCases = [
   "alkmaar",
   "bydgoszcz",
   "bilbao",
+  "flensburg",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -325,6 +326,7 @@ const [
   alkmaar,
   bydgoszcz,
   bilbao,
+  flensburg,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4503,6 +4505,55 @@ assert(
     lasPalmasCase.coverageReview.every(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
+);
+
+const flensburgCase = realCases.find(c => c.candidateId === 3395);
+assert.equal(
+  flensburgCase.priorityCompletionReview.sha256,
+  digest(flensburgCase.priorityCompletionReview.path)
+);
+assert.equal(
+  flensburgCase.priorityCompletionReview.researchReportSha256,
+  digest(flensburgCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(flensburg, { PCS: 60, ISR: 60, MED: 60, LON: 60, TEC: 60 });
+assert.deepEqual(total(flensburg), { center: null, lower: 39, upper: 74 });
+assert.deepEqual(total({ ...flensburg, MED: 40 }), { center: null, lower: 36, upper: 71 });
+assert.deepEqual(total({ ...flensburg, LON: 40 }), { center: null, lower: 37, upper: 72 });
+for (const id of ["PCS", "ISR", "MED", "LON", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...flensburg };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    flensburgCase.sensitivity.withdrawals[id]
+  );
+}
+for (const flag of [
+  "floodWallTestIsRealStormValidation",
+  "heatPumpAlreadyOperating",
+  "boiler13RepairCertifiedComplete",
+  "allUtilityCustomersAreLocalResidents",
+  "allStemFollowupPublicAndFree",
+  "S10RejectionMechanismAccepted",
+  "LeuvenSurvivalRateTransferredToFlensburg",
+  "BelgianPayerTransferredToGermany",
+  "copayCapCoversAllFamilyAndPrivateCosts",
+  "IQMBodyObservationYear2024",
+  "R10Decoded",
+  "BICompletedTestProvesPermanent2026Use",
+  "allHistoricResearchCurrentCommercialOutput",
+])
+  assert.equal(flensburgCase.rootScopeReview[flag], false);
+assert(
+  flensburgCase.coverageReview.length === 31 &&
+    flensburgCase.coverageReview.every(
+      (c: { score: null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
+    )
+);
+assert(
+  flensburgCase.webReadSources.every(
+    (s: { sha256: null; isWebsiteRaw: boolean }) => s.sha256 === null && !s.isWebsiteRaw
+  )
 );
 
 const bilbaoCase = realCases.find(c => c.candidateId === 3539);

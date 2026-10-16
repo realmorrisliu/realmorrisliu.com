@@ -4,10 +4,10 @@
   "evidenceCutoff": "2026-10-10",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
-  "conditionalCaseCount": 115,
+  "conditionalCaseCount": 116,
   "completeConditionalCaseCount": 25,
-  "partialCaseCount": 90,
-  "unassessedCount": 8916,
+  "partialCaseCount": 91,
+  "unassessedCount": 8915,
   "weights": {
     "PCS": 15,
     "GSS": 15,
@@ -610,6 +610,15 @@
           "center": null,
           "lower": 33.0,
           "upper": 68.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "3395",
+          "source_name": "Flensburg",
+          "center": null,
+          "lower": 39.0,
+          "upper": 74.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1655,6 +1664,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "3395",
+          "source_name": "Flensburg",
+          "center": null,
+          "lower": 30.0,
+          "upper": 80.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "3399",
           "source_name": "Cima",
           "center": null,
@@ -2692,6 +2710,15 @@
           "center": null,
           "lower": 33.0,
           "upper": 68.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "3395",
+          "source_name": "Flensburg",
+          "center": null,
+          "lower": 39.0,
+          "upper": 74.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -3737,6 +3764,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "3395",
+          "source_name": "Flensburg",
+          "center": null,
+          "lower": 30.0,
+          "upper": 80.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "3399",
           "source_name": "Cima",
           "center": null,
@@ -4774,6 +4810,15 @@
           "center": null,
           "lower": 33.0,
           "upper": 68.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "3395",
+          "source_name": "Flensburg",
+          "center": null,
+          "lower": 39.0,
+          "upper": 74.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -5819,6 +5864,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "3395",
+          "source_name": "Flensburg",
+          "center": null,
+          "lower": 30.0,
+          "upper": 80.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "3399",
           "source_name": "Cima",
           "center": null,
@@ -6856,6 +6910,15 @@
           "center": null,
           "lower": 27.0,
           "upper": 72.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "3395",
+          "source_name": "Flensburg",
+          "center": null,
+          "lower": 33.0,
+          "upper": 78.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -7901,6 +7964,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "3395",
+          "source_name": "Flensburg",
+          "center": null,
+          "lower": 33.0,
+          "upper": 78.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "3399",
           "source_name": "Cima",
           "center": null,
@@ -8938,6 +9010,15 @@
           "center": null,
           "lower": 33.0,
           "upper": 68.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "3395",
+          "source_name": "Flensburg",
+          "center": null,
+          "lower": 39.0,
+          "upper": 74.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -9983,6 +10064,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "3395",
+          "source_name": "Flensburg",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "3399",
           "source_name": "Cima",
           "center": null,
@@ -10448,7 +10538,7 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "9713efdddb598f65c2daa36e446eb1ccd9d4173f5907d2bb167e98721605ee60",
+    "cci-global-evidence-matrix.csv": "8a7f8cd41dc1ca4ae873a4a28f5e308f68d3080ff36675fd73b480be4a1fd39c",
     "cci-legal-mobility-rules.json": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "cci-legal-mobility.md": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e",
     "cci-local-2026-singapore-case.json": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -10681,12 +10771,14 @@
     "cci-bydgoszcz-priority-review.md": "75e6217c3bd41c165f21bf592717465e6faea5b993aa88a02ee292e64d2d0d0e",
     "cci-local-2026-bilbao-case.json": "a65ed44265086661320cd7a907ddbd16201b6dc5f738c710f480a35ccc46ebeb",
     "cci-bilbao-priority-review.md": "c9d2f73f4eff9d5ad05dd01ebe3981ed11a3f3840fa09ba8d54f57b151045fcc",
+    "cci-local-2026-flensburg-case.json": "c35ded8c4bd907d1f7594f24e46989fef1c32f7b507686480d599dd4ebbca008",
+    "cci-flensburg-priority-review.md": "5f6cc6515a8a686a2a7cc31c4cbc3a9b315a86a7fb89da774000757d089b92b7",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "47d645bc950cc0f6c59fb3b416de24d59a2de194560dfe703e2d01a12a87c216",
+    "cci-global-evidence-matrix.json": "d40782152884c230e3f2e3b6f992895b23027be3707bd5654ce9edf05cf2e1a2",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "7758fdb081b2b72fc223d9d67080ef4940e4feb73b74c5af7f3bb10bf3073715"
+    "cci-local-2026-scoring-calibration.md": "bf3bee19f3373300a17e6cc2f25d13c94cbf187e49967e12f346f9634b51aed4"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "3ce0a27ceb2bef33e374346355787c51ec95ff165f7877bcf2aa929b4aa45154",
+  "csvSha256": "ece5710b7d4a5b456946358c0bfa5b670a700234e1dbfe84ee0055f7a8654e89",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }

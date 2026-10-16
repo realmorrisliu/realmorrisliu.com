@@ -125,6 +125,7 @@ import miltonKeynes from "../../docs/data/cci-local-2026-milton-keynes-case.json
 import alkmaar from "../../docs/data/cci-local-2026-alkmaar-case.json";
 import bydgoszcz from "../../docs/data/cci-local-2026-bydgoszcz-case.json";
 import bilbao from "../../docs/data/cci-local-2026-bilbao-case.json";
+import flensburg from "../../docs/data/cci-local-2026-flensburg-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -254,8 +255,10 @@ const cases = [
   alkmaar,
   bydgoszcz,
   bilbao,
+  flensburg,
 ];
 const caseNamesZh: Record<number, string> = {
+  [flensburg.candidateId]: "弗伦斯堡功能区",
   [bilbao.candidateId]: "毕尔巴鄂功能区",
   [bydgoszcz.candidateId]: "比得哥什功能区",
   [alkmaar.candidateId]: "阿尔克马尔功能区",
@@ -477,6 +480,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [flensburg.candidateId]: [
+    zh
+      ? "弗伦斯堡防护／制度／医疗／专项转化／技术条件60，安全／资源／退出未知。贡献39、数学域39—74，无完整总分。实际排水维护、协同部署、水热交付及护理接续支持有限判断；防潮墙测试非实灾，锅炉限用与未来工程同权，通常质量／付款／反复净照护和较长技术持续桥可撤。"
+      : "Flensburg has conditional PCS/ISR/MED/LON/TEC 60; GSS/RES/OPT remain unknown. Contribution is 39, with a 39–74 arithmetic domain and no complete total. Delivered drainage maintenance, coordinated deployment, utilities and care continuity support bounded judgments. A flood-wall test is not real-storm validation; boiler restrictions and future works remain counterevidence. Usual quality, payment, repeat-care and longer technical-continuity bridges are revocable.",
+    zh
+      ? "医疗40公平解释为36—71，专项转化40为37—72；私人移植随访分支与交通审批保留，公保共付上限非全部家属／私人支出封顶。外国自体移植曲线仅作成熟类别，非本地疗效；IQM正文观测2023，R10未解码。房屋连接非全部本地订户，旧BI测试非永久采用，全球入围未证。"
+      : "Fair MED40 and LON40 interpretations give 36–71 and 37–72. Private transplant follow-up and transport approval remain constraints; statutory copayment caps do not cover all family or private costs. Foreign autologous-transplant curves support maturity only, not local outcomes. IQM observes 2023, R10 remains undecoded, house connections are not all local subscribers, and a completed BI test does not prove permanent adoption. Global inclusion is unproven.",
+  ],
   [bilbao.candidateId]: [
     zh
       ? "毕尔巴鄂防护／制度／医疗／专项转化／技术条件60，安全／资源／退出未知。贡献39、数学域39—74，无完整总分。实际边坡排水、公共救助与技术产用支持有限判断；医疗和成熟造血重建的通常公费／净反复照护桥可撤，不把活动量或指南当临床结局。"
