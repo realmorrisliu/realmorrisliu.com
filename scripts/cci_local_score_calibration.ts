@@ -166,6 +166,7 @@ const realCases = [
   "milton-keynes",
   "alkmaar",
   "bydgoszcz",
+  "bilbao",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -323,6 +324,7 @@ const [
   miltonKeynes,
   alkmaar,
   bydgoszcz,
+  bilbao,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4500,6 +4502,51 @@ assert(
   lasPalmasCase.coverageReview.length === 31 &&
     lasPalmasCase.coverageReview.every(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
+    )
+);
+
+const bilbaoCase = realCases.find(c => c.candidateId === 3539);
+assert.equal(
+  bilbaoCase.priorityCompletionReview.sha256,
+  digest(bilbaoCase.priorityCompletionReview.path)
+);
+assert.equal(
+  bilbaoCase.priorityCompletionReview.researchReportSha256,
+  digest(bilbaoCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(bilbao, { PCS: 60, ISR: 60, MED: 60, LON: 60, TEC: 60 });
+assert.deepEqual(total(bilbao), { center: null, lower: 39, upper: 74 });
+assert.deepEqual(total({ ...bilbao, MED: 40 }), { center: null, lower: 36, upper: 71 });
+assert.deepEqual(total({ ...bilbao, LON: 40 }), { center: null, lower: 37, upper: 72 });
+assert.deepEqual(total({ ...bilbao, MED: 40, LON: 40 }), { center: null, lower: 34, upper: 69 });
+for (const id of ["PCS", "ISR", "MED", "LON", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...bilbao };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    bilbaoCase.sensitivity.withdrawals[id]
+  );
+}
+for (const flag of [
+  "prescribed530901HoursAllDelivered",
+  "clinicalGuidesProveInfusionCountOrSurvivalRate",
+  "socialWorkEntryProvesCarerCostsPaid",
+  "publicHealthRightMeansAllCareCostsCovered",
+  "CanaryExtraBenefitsTransferredToBasque",
+  "EMASIndexProvesClinicalOutcomes",
+  "all34WomenRescuedInBilbao",
+  "suspectsAreConvicted",
+  "tapSamplesProveEveryHouseholdYearSafe",
+  "drinkingWaterAndLegionellaSamplesSamePool",
+  "ValenciaFloodResponseIsLocalBilbaoOutcome",
+  "cityTransportNavigationProvesActualInternationalOperations",
+  "allTecnaliaProjectsCountedLocal",
+])
+  assert.equal(bilbaoCase.rootScopeReview[flag], false);
+assert(
+  bilbaoCase.coverageReview.length === 31 &&
+    bilbaoCase.coverageReview.every(
+      (c: { score: null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
 

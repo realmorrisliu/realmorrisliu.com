@@ -124,6 +124,7 @@ import blackpool from "../../docs/data/cci-local-2026-blackpool-case.json";
 import miltonKeynes from "../../docs/data/cci-local-2026-milton-keynes-case.json";
 import alkmaar from "../../docs/data/cci-local-2026-alkmaar-case.json";
 import bydgoszcz from "../../docs/data/cci-local-2026-bydgoszcz-case.json";
+import bilbao from "../../docs/data/cci-local-2026-bilbao-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -252,8 +253,10 @@ const cases = [
   miltonKeynes,
   alkmaar,
   bydgoszcz,
+  bilbao,
 ];
 const caseNamesZh: Record<number, string> = {
+  [bilbao.candidateId]: "毕尔巴鄂功能区",
   [bydgoszcz.candidateId]: "比得哥什功能区",
   [alkmaar.candidateId]: "阿尔克马尔功能区",
   [miltonKeynes.candidateId]: "米尔顿凯恩斯功能区",
@@ -474,6 +477,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [bilbao.candidateId]: [
+    zh
+      ? "毕尔巴鄂防护／制度／医疗／专项转化／技术条件60，安全／资源／退出未知。贡献39、数学域39—74，无完整总分。实际边坡排水、公共救助与技术产用支持有限判断；医疗和成熟造血重建的通常公费／净反复照护桥可撤，不把活动量或指南当临床结局。"
+      : "Bilbao has conditional PCS/ISR/MED/LON/TEC 60; GSS/RES/OPT remain unknown. Contribution is 39, with a 39–74 arithmetic domain and no complete total. Delivered slope and drainage protection, social support and technical production support bounded judgments. Usual public payment and net repeat-care bridges for MED and mature HSCT are revocable; activity counts and guides are not clinical outcomes.",
+    zh
+      ? "前2—3周陪护及住院后监护有实质负担，社工入口非已付款；医疗40公平解释为36—71，专项转化40为37—72，共享负担两者同采为34—69。530901小时是核定非全履行，环境目录非临床质量，水样非全户全年安全，34解救非全本市，交通导航非实际跨境运营，全球入围未证。"
+      : "Care during the first 2–3 weeks and subsequent monitoring impose real burdens; social-work access does not prove payment. Fair MED40 and LON40 interpretations give 36–71 and 37–72, or 34–69 jointly under a shared care-burden assumption. The 530901 hours are prescribed, not all delivered; an environmental index is not clinical quality, water samples do not prove every household safe all year, 34 rescues are not all local, and transport navigation does not prove international operations. Global inclusion is unproven.",
+  ],
   [bydgoszcz.candidateId]: [
     zh
       ? "比得哥什防护／制度／资源／专项转化／技术／退出条件60，医疗条件40，安全未知。贡献48、数学域48—63，无完整总分。实际保供、食品帮助、公共服务与产用支持有限判断；必要全天照护在无法家中满足后仍长候支持40，医疗60公平解释给51—66，地域／时点／净取得桥可撤。"
