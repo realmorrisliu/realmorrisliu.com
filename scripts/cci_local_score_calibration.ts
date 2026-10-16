@@ -160,6 +160,7 @@ const realCases = [
   "las-palmas",
   "bremen",
   "larbert",
+  "panevezys",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -311,6 +312,7 @@ const [
   lasPalmas,
   bremen,
   larbert,
+  panevezys,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4488,6 +4490,41 @@ assert(
   lasPalmasCase.coverageReview.length === 31 &&
     lasPalmasCase.coverageReview.every(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
+    )
+);
+
+const panevezysCase = realCases.find(c => c.candidateId === 580);
+assert.equal(
+  panevezysCase.priorityCompletionReview.sha256,
+  digest(panevezysCase.priorityCompletionReview.path)
+);
+assert.equal(
+  panevezysCase.priorityCompletionReview.researchReportSha256,
+  digest(panevezysCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(panevezys, { ISR: 60, MED: 60, TEC: 60 });
+assert.deepEqual(total(panevezys), { center: null, lower: 24, upper: 84 });
+for (const [id, lower, upper] of [
+  ["ISR", 15, 90],
+  ["MED", 15, 90],
+  ["TEC", 18, 88],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...panevezys };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.equal(panevezysCase.sourceSnapshots.length, 12);
+assert(
+  panevezysCase.webReadSources.every(
+    (s: { sha256: null; isWebsiteRaw: boolean }) => s.sha256 === null && !s.isWebsiteRaw
+  )
+);
+assert.equal(panevezysCase.rootScopeReview.exactLocalHospitalEveryServiceContractVerified, false);
+assert.equal(panevezysCase.rootScopeReview.robotPrototypeEqualsCommercialDeployment, false);
+assert(
+  panevezysCase.coverageReview.length === 31 &&
+    panevezysCase.coverageReview.every(
+      (c: { score: null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
 

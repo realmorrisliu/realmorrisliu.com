@@ -118,6 +118,7 @@ import daugavpils from "../../docs/data/cci-local-2026-daugavpils-case.json";
 import lasPalmas from "../../docs/data/cci-local-2026-las-palmas-case.json";
 import bremen from "../../docs/data/cci-local-2026-bremen-case.json";
 import larbert from "../../docs/data/cci-local-2026-larbert-case.json";
+import panevezys from "../../docs/data/cci-local-2026-panevezys-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -240,8 +241,10 @@ const cases = [
   lasPalmas,
   bremen,
   larbert,
+  panevezys,
 ];
 const caseNamesZh: Record<number, string> = {
+  [panevezys.candidateId]: "帕内韦日斯功能区",
   [larbert.candidateId]: "拉伯特功能区",
   [bremen.candidateId]: "不来梅功能区",
   [lasPalmas.candidateId]: "拉斯帕尔马斯功能区",
@@ -456,6 +459,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [panevezys.candidateId]: [
+    zh
+      ? "帕内韦日斯制度／医疗／技术条件60，其余五维未知。已知贡献24、数学域24—84，无完整总分。实际水热服务、多科护理、委托研究及工业／公共技术采用支持有限判断；普通签约项目可进入性、净照护与地域时间桥可撤。"
+      : "Panevėžys has conditional ISR/MED/TEC 60; five dimensions remain unknown. Known contribution is 24, with a 24–84 arithmetic domain and no complete total. Delivered utilities, care, commissioned research and industrial/public adoption support a bounded judgment; usual contracted-service entry, net care, geography and time bridges are revocable.",
+    zh
+      ? "供应池非全功能区覆盖，补偿入口非人人已获助；机器人仍研发，制造本国市场占比非居民受益率。医院／医保材料部分为失败前官方工具正文，保留截断，非网站原件或逐项合同。食品净取得、成熟再建和实际退出接续未闭，全球入围未证。"
+      : "Provider pools are not whole-FUA coverage, and aid entry is not receipt by everyone. Robot development is not deployment; domestic sales are not resident benefit. Some hospital/payer evidence is pre-failure official tool text with truncation retained, not website originals or itemized contracts. Food access, mature rebuilding and actual exit continuity remain unresolved; global inclusion is unproven.",
+  ],
   [larbert.candidateId]: [
     zh
       ? "拉伯特安全／制度／专项转化／技术条件60、医疗条件40，防护／资源／退出未知。已知贡献36、数学域36—71，无完整总分。实际公共帮助、护理与研究产用，结合帮助后必要治疗久候作有限判断；地域、时间、普通付款／净照护及技术受益假设可撤。"

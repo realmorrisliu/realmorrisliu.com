@@ -1,0 +1,1079 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 580,
+  "name": "Panevėžys",
+  "countryIso": "LTU",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-16",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "普通画像不是已核全部公共保险合同/自付/陪护待遇；资格、地区、时间、净取得推定分别可撤，不移德国或NHS付款。",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "researchFrozenInputCommit": "a9032ea869c82c211712882ea78871db329bae7a",
+  "fixedInputCases": 107,
+  "fixedInputComplete": 23,
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 24,
+  "unknownWeight": 60,
+  "unresolvedScoreRange": [24, 84],
+  "candidateUniverseRetained": 9031,
+  "newAndUnmatchedCompetitorsRetained": true,
+  "supportedExclusions": 0,
+  "qualified32Threshold": null,
+  "globalRankingEligible": false,
+  "externalDelta": {
+    "fixedInputCommit": "a9032ea869c82c211712882ea78871db329bae7a",
+    "currentHeadObserved": "b3061cf67ca5a8ab54cdae5f0b89d5aa8ac7413c",
+    "unchangedFixedCases": 106,
+    "externalChangedOldCases": [
+      {
+        "name": "cci-local-2026-aarhus-case.json",
+        "bytes": 75908,
+        "sha256": "0a0f80422596226668547957d61dcbfcad89b90e212e58f5cb61a27d60d3cfd1",
+        "matchesFixedBytes": false,
+        "matchesFixedGitBlob": false
+      }
+    ],
+    "baselineNotRefreshed": true,
+    "rootAarhusPublicationNotIndependentlyVerifiedByThisResearch": true
+  },
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": null,
+      "rationale": "能源／供水真实运行与民防咨询入口有据，主要自然危险净保护方向尚未合判。",
+      "assumption": "S02当前市区水质表、S05本地热电/管网维护和deaerator已换是基础保护正链，但不是整维自然风险效果。W02是失败前846B市府搜索单entry，提到2025培训及全国93消防队周六咨询，非本地参加人数/演习通过/实际疏散结果。不能用境内地理形象或旧调度热指标填危险率，也不能把Zarasų备用锅炉/柴油机当580本地备援。当前尚未接受已有基础服务与咨询足代表当地主要热雨洪/强天气/地质防护。",
+      "alternativeRationales": "60允许有据主要危险和已实行保护的有限代表桥，不索全部危险/每人同年完美；本轮必要净方向未接受。40须帮助后真实重要危险及保护缺口，不由培训计划、未读数据或403自动40，也不需多数/停城。80看实际独立备援/有效性；未知null/[]。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S02", "S05", "W02"],
+      "scoreStatus": "unresolved",
+      "subpillars": {
+        "heat_humidity": "unresolved",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "partial"
+      }
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "rationale": "具体财产犯罪调查及民防咨询是部分证据，组织／区域／战略通常净安全未定。",
+      "assumption": "W03为失败前930B警方结果entry，2025April起15个盗窃事件调查、4名嫌疑人，范围跨Panevėžys市/区/Pasvalys，且可能有未报警者。不是4已定罪/全部组织暴力或本FUA受害率；W02民防咨询/培训入口不是战时有效保护实绩。S06年度报告和S17独立调查新闻403分别停件，未跨工具取回；不因被挡推执法失效。当前既不把邻近冲突/地缘形象自动等重要普通生活约束，也不由无攻击记录/一般咨询推低现实影响。",
+      "alternativeRationales": "60允许限定真实影响和已实施适配保护的通常代表/时点桥，无需战争先发生或每节点压测；本轮组织及战略净保护连接仍未接受。40要帮助后真实重要外溢/暴力或关键通道约束，不需多数/主导/停城，但普通盗窃调查/源失败不能直接40。80需更强低影响覆盖与实际缓解余量，未知null/[]。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["W02", "W03"],
+      "scoreStatus": "unresolved",
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "partial"
+      }
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "rationale": "实际公共水热／诊疗运行与可操作调价、维护和帮助路径支持有限通常制度可用60。",
+      "assumption": "S09物理11/12真实服务102188市与区居民/1635法人及监管2025价格调整，非全580人口覆盖率；S02实测水质与异常饮水处置指引，S05真实区域供热、实际本地维护与废热购入，S11收到收入证明后由供应者计算补偿及本地人员/联系路径；资格入口不是已获批/全需求满足。W01为失败前完整4340B官方工具entry，非网站raw：真实2025当地公立医院多科护理与远程/复合咨询、康复、护理改善。S03/13公共高教与企业完成委托实验也是实际社会协作。接受这些跨日常基本公共服务与行政计算/调整可有限代表通常执行，市/区/区域供应池向本地普通使用和2025到截止延续可撤，不认证全财政法院/应急恢复。",
+      "alternativeRationales": "补偿限低收入、收入核准/规范面积约束，医院急诊增加被归因他院住院不足、部分服务减少，是真反证；不把透明度/网页失败当能力差。40需帮助后执行/触达/恢复重要后果的普通适配，不由一项变化直接填。80需更强压力下触达/替代实绩，不要求全人口完美。拒跨服务/地理/时点通常执行桥回null。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S02", "S05", "S09", "S11", "S13", "S18", "W01"],
+      "scoreStatus": "conditional_root_review",
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      }
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "rationale": "水热实供与现行价格／补偿路径明确，普通食品与整束净取得方向尚未接受。",
+      "assumption": "S09实供及Sep2025水0.98/污水1.25EURm3（不含VAT，公寓购买点）与APPM不同类型/每表平均月3.66，非家庭总账；S02市区各水质指标未把村镇/全年的单次表混全覆盖。S05真实热供、62239套为跨多市公寓分母；真实向Panevėžys Vilniausduona供汽可证食品工业运行，非居民实际食物/营养/零售价取得。S18 Oct1_2026热9.91ct/kWh含21%VAT、市热水8.29EURm3和表费0.97EURflatmonth。S11低收入核准补偿有实际操作入口，但未证全受助净结果/中位本人合格。当前未接受这些供给/费率/产业及资格材料就足定普通水食能净篮子。",
+      "alternativeRationales": "60可在实际供给/必要费用帮助和通常食品/净资源可取得的有限合束桥下辩护，不索全户2026精确账/全营养队列；本轮必要普通食物/付后余量桥未接受。40需帮助后真实重要基本资源后果，不因涨价/生物燃料依赖/低收入资格或源失败自动40，也不需多数/停城。80需共同中断/替代供给效果，未知null/[]。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S02", "S05", "S09", "S11", "S18"],
+      "scoreStatus": "unresolved",
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      }
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "rationale": "真实本地多病种护理及诊断／接续改善，可在普通有效保障的明确净取得桥下有限支持60。",
+      "assumption": "W01为第一轮查询失败前完整官方医院新闻entry（4340B工具字节，非S01年报PDF或S07网站raw，日期22Apr2026、2025观察）；实述多科住/日间/门诊、初助41min（不冒door-to-needle/全部卒中平均）、复杂与远程咨询、手术/介入心脏/妇儿/感染/康复和护理改善。超过99%满意为提供者无分母自述，非全FUA疗效/独立质量率。公立医院的实际广泛交付和目标通常有效保障，可支持有限通常可得判断；必要而未逐条文件认证的桥是普通长期本国居民通常能按适用公共保险/转诊取得必要公立护理，自付/重复往返/出院照护在中位净资源可管理，以及医院患者池/2025实绩对本地截至2026延续。并未读到LTU具体PSDF合同/收费/陪护补助，不能把画像本身当这些付款已核事实，也不把German/NHS付款搬来。 根补证：T02国家付款说明（2022-10-20）规定CHI受保＋对应服务合同＋必要转诊，基金直接付机构；T03（2026-08-20）说明自2026年7月起合条件专科付费或免费问诊可开后续医保转诊，付费本身不生资格。T01/T04现行条目辅助基层注册与同病复诊/长期监测规则。以上是失败前工具返回正文，有原截断，不是网站raw或具体医院每项目合同；通常可经签约必要服务进入、净照护和延续仍为必要可撤桥。",
+      "alternativeRationales": "如不接受普通公共付款、净照护、地域/时点或工具证据范围桥，整维回null；不是要求每剂账单/全2026全人完美。门诊量下降8.2%、住院康复下降约21%与急诊需求转入是反证，复合咨询/远程/门诊康复增约10%是实际正证，不能把数量变化直接当伤害/必要诊疗失败40。40需帮助后重要余障真实适配，不需多数/停城，本轮无据不列数字替代；80需更强质量/转诊压力下余量，不索零风险。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["W01", "T01", "T02", "T03", "T04"],
+      "scoreStatus": "conditional_root_review",
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      }
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "rationale": "本地临床交付有据，尚无可匹配成熟允许再建路径及通常取得连接。",
+      "assumption": "W01真实介入/骨科内置假体和普通复杂护理不自动证明本地已实施允许的疾病细胞/组织再建转化；没有将试验/成熟类一般知识/购置设备当当地实施。现有材料未定位可核的580本地实际或通常国家转诊再建路径、成熟人体/适配许可与付款监护合束；维尔纽斯853/Kaunas435分析点在外，不能仅近邻有大院就移入能力。根亦无现成已验证LTU支付/细胞原件可复用，本轮停止额度不重开。",
+      "alternativeRationales": "60允许成熟疾病重建的有据实际当地或通常转诊、付款净照护可撤桥，不索健康人延寿/所有品牌逐剂票据；本轮连特定允许路径仍未闭，故不是只缺精确账单封档。40需研究到人体/监管/居民取得的真实重要断层，未定位或403不是断层证据；80需多条强路径及实际取得，未知null/[]。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["W01"],
+      "scoreStatus": "unresolved",
+      "subpillars": {
+        "translation": "unresolved",
+        "trial_maturity": "unresolved",
+        "regulatory_adoption": "unresolved",
+        "resident_access": "unresolved"
+      }
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "rationale": "真实本地受托科研、持续工业产出和公共／产业技术扩散可有限合判60。",
+      "assumption": "S13明确在Panevėžys机电中心为Optronika完成委托，9PCB电磁配置制成/测试，2.35/3.72mT和7.4度稳定实验是已产出结果；400mA约13秒升70°C需冷却，非商用光学系统已部署。S10木材机器人与PVC2024–26/27项目仍研发/原型未来，不能标题当投产。S16全栅格物理8/9/11亲见2025真实制造17.539mEUR（2024为17.873）、数量增14%、生产与出口持续，投资质检949k/供应468k为已发生投入但不能归因产量变化，localmarket62%非本地居民率，R&D栏质量稳定是目标不是新产品实绩。S05已有玻璃余热购入并实际供热、当地deaerator已换；W01真实远程/复合诊疗支持实际技术采用。接受本地知识生产/企业委托成果与持续工业、公用/临床采用可有限代表普通技术能力，非单一采购/机构数、论文排名或每人直接享有；客户地理/研究阶段与当前扩散代表桥可撤。",
+      "alternativeRationales": "60不要求同一实验产品已全面商用或全民AI，但不能将所有愿景/采购当本地产出。若拒已完成受托实验+实际工业/服务产用组合足以代表通常能力、或拒2025到截止延续，则null。80需更强持续多节点/广泛净扩散与韧性，不索每节点压测；没有采用后重要损害证据，不填40数字替代。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S03", "S05", "S10", "S13", "S15", "S16", "W01"],
+      "scoreStatus": "conditional_root_review",
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      }
+    },
+    {
+      "id": "OPT",
+      "score": null,
+      "rationale": "EU条件迁居与个体付款有耐久原件，实际本地退出／网络接续净链未闭。",
+      "assumption": "R01 EUworker合法居住/三月登记及失业/退休等条件，对本国公民有适用路径，但不预设已有境外工作或每年龄每目的地自动获准。R02个体Euro跨境等价费用/IBAN反歧视和双因素鉴权、外币/卡/银行手续费例外，非所有人已有足够资金或资产可即时全转。仅分析点核出本地站点不等真实旅次、班次冗余、票价和通行能力；本轮没有以飞机场/铁路目录或地理位置补交通净取得，也无已核本地普通通信合同/长居接续。",
+      "alternativeRationales": "60可有据实体退出和至少一条通常可满足法律/财力/通信路径的有限桥，不要求每条路线或全年龄完美；本轮必要连接尚不足。40须实际重要约束，不从缺票价/未取得运营资料或附资格规则给40，也不需多数/停城。80需替代与共同失效余量，未知null/[]。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["R01", "R02"],
+      "scoreStatus": "unresolved",
+      "subpillars": {
+        "transport_redundancy": "unresolved",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "unresolved"
+      }
+    }
+  ],
+  "coverageReview": [
+    {
+      "subpillar": "heat_humidity",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S02", "S05", "W02"],
+      "finding": "能源／供水真实运行与民防咨询入口有据，主要自然危险净保护方向尚未合判。 S02当前市区水质表、S05本地热电/管网维护和deaerator已换是基础保护正链，但不是整维自然风险效果。W02是失败前846B市府搜索单entry，提到2025培训及全国93消防队周六咨询，非本地参加人数/演习通过/实际疏散结果。不能用境内地理形象或旧调度热指标填危险率，也不能把Zarasų备用锅炉/柴油机当580本地备援。当前尚未接受已有基础服务与咨询足代表当地主要热雨洪/强天气/地质防护。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "PCS",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "flood_sea_level",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S02", "S05", "W02"],
+      "finding": "能源／供水真实运行与民防咨询入口有据，主要自然危险净保护方向尚未合判。 S02当前市区水质表、S05本地热电/管网维护和deaerator已换是基础保护正链，但不是整维自然风险效果。W02是失败前846B市府搜索单entry，提到2025培训及全国93消防队周六咨询，非本地参加人数/演习通过/实际疏散结果。不能用境内地理形象或旧调度热指标填危险率，也不能把Zarasų备用锅炉/柴油机当580本地备援。当前尚未接受已有基础服务与咨询足代表当地主要热雨洪/强天气/地质防护。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "PCS",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "geophysical",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S02", "S05", "W02"],
+      "finding": "能源／供水真实运行与民防咨询入口有据，主要自然危险净保护方向尚未合判。 S02当前市区水质表、S05本地热电/管网维护和deaerator已换是基础保护正链，但不是整维自然风险效果。W02是失败前846B市府搜索单entry，提到2025培训及全国93消防队周六咨询，非本地参加人数/演习通过/实际疏散结果。不能用境内地理形象或旧调度热指标填危险率，也不能把Zarasų备用锅炉/柴油机当580本地备援。当前尚未接受已有基础服务与咨询足代表当地主要热雨洪/强天气/地质防护。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "PCS",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "severe_weather_wildfire",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S02", "S05", "W02"],
+      "finding": "能源／供水真实运行与民防咨询入口有据，主要自然危险净保护方向尚未合判。 S02当前市区水质表、S05本地热电/管网维护和deaerator已换是基础保护正链，但不是整维自然风险效果。W02是失败前846B市府搜索单entry，提到2025培训及全国93消防队周六咨询，非本地参加人数/演习通过/实际疏散结果。不能用境内地理形象或旧调度热指标填危险率，也不能把Zarasų备用锅炉/柴油机当580本地备援。当前尚未接受已有基础服务与咨询足代表当地主要热雨洪/强天气/地质防护。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "PCS",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "organized_violence",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W02", "W03"],
+      "finding": "具体财产犯罪调查及民防咨询是部分证据，组织／区域／战略通常净安全未定。 W03为失败前930B警方结果entry，2025April起15个盗窃事件调查、4名嫌疑人，范围跨Panevėžys市/区/Pasvalys，且可能有未报警者。不是4已定罪/全部组织暴力或本FUA受害率；W02民防咨询/培训入口不是战时有效保护实绩。S06年度报告和S17独立调查新闻403分别停件，未跨工具取回；不因被挡推执法失效。当前既不把邻近冲突/地缘形象自动等重要普通生活约束，也不由无攻击记录/一般咨询推低现实影响。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "GSS",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "regional_conflict",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W02", "W03"],
+      "finding": "具体财产犯罪调查及民防咨询是部分证据，组织／区域／战略通常净安全未定。 W03为失败前930B警方结果entry，2025April起15个盗窃事件调查、4名嫌疑人，范围跨Panevėžys市/区/Pasvalys，且可能有未报警者。不是4已定罪/全部组织暴力或本FUA受害率；W02民防咨询/培训入口不是战时有效保护实绩。S06年度报告和S17独立调查新闻403分别停件，未跨工具取回；不因被挡推执法失效。当前既不把邻近冲突/地缘形象自动等重要普通生活约束，也不由无攻击记录/一般咨询推低现实影响。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "GSS",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "strategic_exposure",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W02", "W03"],
+      "finding": "具体财产犯罪调查及民防咨询是部分证据，组织／区域／战略通常净安全未定。 W03为失败前930B警方结果entry，2025April起15个盗窃事件调查、4名嫌疑人，范围跨Panevėžys市/区/Pasvalys，且可能有未报警者。不是4已定罪/全部组织暴力或本FUA受害率；W02民防咨询/培训入口不是战时有效保护实绩。S06年度报告和S17独立调查新闻403分别停件，未跨工具取回；不因被挡推执法失效。当前既不把邻近冲突/地缘形象自动等重要普通生活约束，也不由无攻击记录/一般咨询推低现实影响。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "GSS",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "governance",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S02", "S05", "S09", "S11", "S13", "S18", "W01"],
+      "finding": "实际公共水热／诊疗运行与可操作调价、维护和帮助路径支持有限通常制度可用60。 S09物理11/12真实服务102188市与区居民/1635法人及监管2025价格调整，非全580人口覆盖率；S02实测水质与异常饮水处置指引，S05真实区域供热、实际本地维护与废热购入，S11收到收入证明后由供应者计算补偿及本地人员/联系路径；资格入口不是已获批/全需求满足。W01为失败前完整4340B官方工具entry，非网站raw：真实2025当地公立医院多科护理与远程/复合咨询、康复、护理改善。S03/13公共高教与企业完成委托实验也是实际社会协作。接受这些跨日常基本公共服务与行政计算/调整可有限代表通常执行，市/区/区域供应池向本地普通使用和2025到截止延续可撤，不认证全财政法院/应急恢复。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "ISR",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "adaptive_capacity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S02", "S05", "S09", "S11", "S13", "S18", "W01"],
+      "finding": "实际公共水热／诊疗运行与可操作调价、维护和帮助路径支持有限通常制度可用60。 S09物理11/12真实服务102188市与区居民/1635法人及监管2025价格调整，非全580人口覆盖率；S02实测水质与异常饮水处置指引，S05真实区域供热、实际本地维护与废热购入，S11收到收入证明后由供应者计算补偿及本地人员/联系路径；资格入口不是已获批/全需求满足。W01为失败前完整4340B官方工具entry，非网站raw：真实2025当地公立医院多科护理与远程/复合咨询、康复、护理改善。S03/13公共高教与企业完成委托实验也是实际社会协作。接受这些跨日常基本公共服务与行政计算/调整可有限代表通常执行，市/区/区域供应池向本地普通使用和2025到截止延续可撤，不认证全财政法院/应急恢复。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "ISR",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "social_cohesion",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S02", "S05", "S09", "S11", "S13", "S18", "W01"],
+      "finding": "实际公共水热／诊疗运行与可操作调价、维护和帮助路径支持有限通常制度可用60。 S09物理11/12真实服务102188市与区居民/1635法人及监管2025价格调整，非全580人口覆盖率；S02实测水质与异常饮水处置指引，S05真实区域供热、实际本地维护与废热购入，S11收到收入证明后由供应者计算补偿及本地人员/联系路径；资格入口不是已获批/全需求满足。W01为失败前完整4340B官方工具entry，非网站raw：真实2025当地公立医院多科护理与远程/复合咨询、康复、护理改善。S03/13公共高教与企业完成委托实验也是实际社会协作。接受这些跨日常基本公共服务与行政计算/调整可有限代表通常执行，市/区/区域供应池向本地普通使用和2025到截止延续可撤，不认证全财政法院/应急恢复。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "ISR",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "emergency_recovery",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S02", "S05", "S09", "S11", "S13", "S18", "W01"],
+      "finding": "实际公共水热／诊疗运行与可操作调价、维护和帮助路径支持有限通常制度可用60。 S09物理11/12真实服务102188市与区居民/1635法人及监管2025价格调整，非全580人口覆盖率；S02实测水质与异常饮水处置指引，S05真实区域供热、实际本地维护与废热购入，S11收到收入证明后由供应者计算补偿及本地人员/联系路径；资格入口不是已获批/全需求满足。W01为失败前完整4340B官方工具entry，非网站raw：真实2025当地公立医院多科护理与远程/复合咨询、康复、护理改善。S03/13公共高教与企业完成委托实验也是实际社会协作。接受这些跨日常基本公共服务与行政计算/调整可有限代表通常执行，市/区/区域供应池向本地普通使用和2025到截止延续可撤，不认证全财政法院/应急恢复。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "ISR",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "water",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S02", "S05", "S09", "S11", "S18"],
+      "finding": "水热实供与现行价格／补偿路径明确，普通食品与整束净取得方向尚未接受。 S09实供及Sep2025水0.98/污水1.25EURm3（不含VAT，公寓购买点）与APPM不同类型/每表平均月3.66，非家庭总账；S02市区各水质指标未把村镇/全年的单次表混全覆盖。S05真实热供、62239套为跨多市公寓分母；真实向Panevėžys Vilniausduona供汽可证食品工业运行，非居民实际食物/营养/零售价取得。S18 Oct1_2026热9.91ct/kWh含21%VAT、市热水8.29EURm3和表费0.97EURflatmonth。S11低收入核准补偿有实际操作入口，但未证全受助净结果/中位本人合格。当前未接受这些供给/费率/产业及资格材料就足定普通水食能净篮子。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "RES",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "food",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S02", "S05", "S09", "S11", "S18"],
+      "finding": "水热实供与现行价格／补偿路径明确，普通食品与整束净取得方向尚未接受。 S09实供及Sep2025水0.98/污水1.25EURm3（不含VAT，公寓购买点）与APPM不同类型/每表平均月3.66，非家庭总账；S02市区各水质指标未把村镇/全年的单次表混全覆盖。S05真实热供、62239套为跨多市公寓分母；真实向Panevėžys Vilniausduona供汽可证食品工业运行，非居民实际食物/营养/零售价取得。S18 Oct1_2026热9.91ct/kWh含21%VAT、市热水8.29EURm3和表费0.97EURflatmonth。S11低收入核准补偿有实际操作入口，但未证全受助净结果/中位本人合格。当前未接受这些供给/费率/产业及资格材料就足定普通水食能净篮子。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "RES",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "energy",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S02", "S05", "S09", "S11", "S18"],
+      "finding": "水热实供与现行价格／补偿路径明确，普通食品与整束净取得方向尚未接受。 S09实供及Sep2025水0.98/污水1.25EURm3（不含VAT，公寓购买点）与APPM不同类型/每表平均月3.66，非家庭总账；S02市区各水质指标未把村镇/全年的单次表混全覆盖。S05真实热供、62239套为跨多市公寓分母；真实向Panevėžys Vilniausduona供汽可证食品工业运行，非居民实际食物/营养/零售价取得。S18 Oct1_2026热9.91ct/kWh含21%VAT、市热水8.29EURm3和表费0.97EURflatmonth。S11低收入核准补偿有实际操作入口，但未证全受助净结果/中位本人合格。当前未接受这些供给/费率/产业及资格材料就足定普通水食能净篮子。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "RES",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "supply_chain",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S02", "S05", "S09", "S11", "S18"],
+      "finding": "水热实供与现行价格／补偿路径明确，普通食品与整束净取得方向尚未接受。 S09实供及Sep2025水0.98/污水1.25EURm3（不含VAT，公寓购买点）与APPM不同类型/每表平均月3.66，非家庭总账；S02市区各水质指标未把村镇/全年的单次表混全覆盖。S05真实热供、62239套为跨多市公寓分母；真实向Panevėžys Vilniausduona供汽可证食品工业运行，非居民实际食物/营养/零售价取得。S18 Oct1_2026热9.91ct/kWh含21%VAT、市热水8.29EURm3和表费0.97EURflatmonth。S11低收入核准补偿有实际操作入口，但未证全受助净结果/中位本人合格。当前未接受这些供给/费率/产业及资格材料就足定普通水食能净篮子。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "RES",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "access",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01", "T01", "T02", "T03", "T04"],
+      "finding": "真实本地多病种护理及诊断／接续改善，可在普通有效保障的明确净取得桥下有限支持60。 W01为第一轮查询失败前完整官方医院新闻entry（4340B工具字节，非S01年报PDF或S07网站raw，日期22Apr2026、2025观察）；实述多科住/日间/门诊、初助41min（不冒door-to-needle/全部卒中平均）、复杂与远程咨询、手术/介入心脏/妇儿/感染/康复和护理改善。超过99%满意为提供者无分母自述，非全FUA疗效/独立质量率。公立医院的实际广泛交付和目标通常有效保障，可支持有限通常可得判断；必要而未逐条文件认证的桥是普通长期本国居民通常能按适用公共保险/转诊取得必要公立护理，自付/重复往返/出院照护在中位净资源可管理，以及医院患者池/2025实绩对本地截至2026延续。并未读到LTU具体PSDF合同/收费/陪护补助，不能把画像本身当这些付款已核事实，也不把German/NHS付款搬来。 根补证：T02国家付款说明（2022-10-20）规定CHI受保＋对应服务合同＋必要转诊，基金直接付机构；T03（2026-08-20）说明自2026年7月起合条件专科付费或免费问诊可开后续医保转诊，付费本身不生资格。T01/T04现行条目辅助基层注册与同病复诊/长期监测规则。以上是失败前工具返回正文，有原截断，不是网站raw或具体医院每项目合同；通常可经签约必要服务进入、净照护和延续仍为必要可撤桥。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "MED",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "routine_quality",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01", "T01", "T02", "T03", "T04"],
+      "finding": "真实本地多病种护理及诊断／接续改善，可在普通有效保障的明确净取得桥下有限支持60。 W01为第一轮查询失败前完整官方医院新闻entry（4340B工具字节，非S01年报PDF或S07网站raw，日期22Apr2026、2025观察）；实述多科住/日间/门诊、初助41min（不冒door-to-needle/全部卒中平均）、复杂与远程咨询、手术/介入心脏/妇儿/感染/康复和护理改善。超过99%满意为提供者无分母自述，非全FUA疗效/独立质量率。公立医院的实际广泛交付和目标通常有效保障，可支持有限通常可得判断；必要而未逐条文件认证的桥是普通长期本国居民通常能按适用公共保险/转诊取得必要公立护理，自付/重复往返/出院照护在中位净资源可管理，以及医院患者池/2025实绩对本地截至2026延续。并未读到LTU具体PSDF合同/收费/陪护补助，不能把画像本身当这些付款已核事实，也不把German/NHS付款搬来。 根补证：T02国家付款说明（2022-10-20）规定CHI受保＋对应服务合同＋必要转诊，基金直接付机构；T03（2026-08-20）说明自2026年7月起合条件专科付费或免费问诊可开后续医保转诊，付费本身不生资格。T01/T04现行条目辅助基层注册与同病复诊/长期监测规则。以上是失败前工具返回正文，有原截断，不是网站raw或具体医院每项目合同；通常可经签约必要服务进入、净照护和延续仍为必要可撤桥。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "MED",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "specialist_capacity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01", "T01", "T02", "T03", "T04"],
+      "finding": "真实本地多病种护理及诊断／接续改善，可在普通有效保障的明确净取得桥下有限支持60。 W01为第一轮查询失败前完整官方医院新闻entry（4340B工具字节，非S01年报PDF或S07网站raw，日期22Apr2026、2025观察）；实述多科住/日间/门诊、初助41min（不冒door-to-needle/全部卒中平均）、复杂与远程咨询、手术/介入心脏/妇儿/感染/康复和护理改善。超过99%满意为提供者无分母自述，非全FUA疗效/独立质量率。公立医院的实际广泛交付和目标通常有效保障，可支持有限通常可得判断；必要而未逐条文件认证的桥是普通长期本国居民通常能按适用公共保险/转诊取得必要公立护理，自付/重复往返/出院照护在中位净资源可管理，以及医院患者池/2025实绩对本地截至2026延续。并未读到LTU具体PSDF合同/收费/陪护补助，不能把画像本身当这些付款已核事实，也不把German/NHS付款搬来。 根补证：T02国家付款说明（2022-10-20）规定CHI受保＋对应服务合同＋必要转诊，基金直接付机构；T03（2026-08-20）说明自2026年7月起合条件专科付费或免费问诊可开后续医保转诊，付费本身不生资格。T01/T04现行条目辅助基层注册与同病复诊/长期监测规则。以上是失败前工具返回正文，有原截断，不是网站raw或具体医院每项目合同；通常可经签约必要服务进入、净照护和延续仍为必要可撤桥。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "MED",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "system_continuity",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01", "T01", "T02", "T03", "T04"],
+      "finding": "真实本地多病种护理及诊断／接续改善，可在普通有效保障的明确净取得桥下有限支持60。 W01为第一轮查询失败前完整官方医院新闻entry（4340B工具字节，非S01年报PDF或S07网站raw，日期22Apr2026、2025观察）；实述多科住/日间/门诊、初助41min（不冒door-to-needle/全部卒中平均）、复杂与远程咨询、手术/介入心脏/妇儿/感染/康复和护理改善。超过99%满意为提供者无分母自述，非全FUA疗效/独立质量率。公立医院的实际广泛交付和目标通常有效保障，可支持有限通常可得判断；必要而未逐条文件认证的桥是普通长期本国居民通常能按适用公共保险/转诊取得必要公立护理，自付/重复往返/出院照护在中位净资源可管理，以及医院患者池/2025实绩对本地截至2026延续。并未读到LTU具体PSDF合同/收费/陪护补助，不能把画像本身当这些付款已核事实，也不把German/NHS付款搬来。 根补证：T02国家付款说明（2022-10-20）规定CHI受保＋对应服务合同＋必要转诊，基金直接付机构；T03（2026-08-20）说明自2026年7月起合条件专科付费或免费问诊可开后续医保转诊，付费本身不生资格。T01/T04现行条目辅助基层注册与同病复诊/长期监测规则。以上是失败前工具返回正文，有原截断，不是网站raw或具体医院每项目合同；通常可经签约必要服务进入、净照护和延续仍为必要可撤桥。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "MED",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "translation",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01"],
+      "finding": "本地临床交付有据，尚无可匹配成熟允许再建路径及通常取得连接。 W01真实介入/骨科内置假体和普通复杂护理不自动证明本地已实施允许的疾病细胞/组织再建转化；没有将试验/成熟类一般知识/购置设备当当地实施。现有材料未定位可核的580本地实际或通常国家转诊再建路径、成熟人体/适配许可与付款监护合束；维尔纽斯853/Kaunas435分析点在外，不能仅近邻有大院就移入能力。根亦无现成已验证LTU支付/细胞原件可复用，本轮停止额度不重开。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "LON",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "trial_maturity",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01"],
+      "finding": "本地临床交付有据，尚无可匹配成熟允许再建路径及通常取得连接。 W01真实介入/骨科内置假体和普通复杂护理不自动证明本地已实施允许的疾病细胞/组织再建转化；没有将试验/成熟类一般知识/购置设备当当地实施。现有材料未定位可核的580本地实际或通常国家转诊再建路径、成熟人体/适配许可与付款监护合束；维尔纽斯853/Kaunas435分析点在外，不能仅近邻有大院就移入能力。根亦无现成已验证LTU支付/细胞原件可复用，本轮停止额度不重开。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "LON",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "regulatory_adoption",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01"],
+      "finding": "本地临床交付有据，尚无可匹配成熟允许再建路径及通常取得连接。 W01真实介入/骨科内置假体和普通复杂护理不自动证明本地已实施允许的疾病细胞/组织再建转化；没有将试验/成熟类一般知识/购置设备当当地实施。现有材料未定位可核的580本地实际或通常国家转诊再建路径、成熟人体/适配许可与付款监护合束；维尔纽斯853/Kaunas435分析点在外，不能仅近邻有大院就移入能力。根亦无现成已验证LTU支付/细胞原件可复用，本轮停止额度不重开。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "LON",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "resident_access",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01"],
+      "finding": "本地临床交付有据，尚无可匹配成熟允许再建路径及通常取得连接。 W01真实介入/骨科内置假体和普通复杂护理不自动证明本地已实施允许的疾病细胞/组织再建转化；没有将试验/成熟类一般知识/购置设备当当地实施。现有材料未定位可核的580本地实际或通常国家转诊再建路径、成熟人体/适配许可与付款监护合束；维尔纽斯853/Kaunas435分析点在外，不能仅近邻有大院就移入能力。根亦无现成已验证LTU支付/细胞原件可复用，本轮停止额度不重开。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "LON",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "knowledge_output",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S03", "S05", "S10", "S13", "S15", "S16", "W01"],
+      "finding": "真实本地受托科研、持续工业产出和公共／产业技术扩散可有限合判60。 S13明确在Panevėžys机电中心为Optronika完成委托，9PCB电磁配置制成/测试，2.35/3.72mT和7.4度稳定实验是已产出结果；400mA约13秒升70°C需冷却，非商用光学系统已部署。S10木材机器人与PVC2024–26/27项目仍研发/原型未来，不能标题当投产。S16全栅格物理8/9/11亲见2025真实制造17.539mEUR（2024为17.873）、数量增14%、生产与出口持续，投资质检949k/供应468k为已发生投入但不能归因产量变化，localmarket62%非本地居民率，R&D栏质量稳定是目标不是新产品实绩。S05已有玻璃余热购入并实际供热、当地deaerator已换；W01真实远程/复合诊疗支持实际技术采用。接受本地知识生产/企业委托成果与持续工业、公用/临床采用可有限代表普通技术能力，非单一采购/机构数、论文排名或每人直接享有；客户地理/研究阶段与当前扩散代表桥可撤。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "TEC",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "industry_density",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S03", "S05", "S10", "S13", "S15", "S16", "W01"],
+      "finding": "真实本地受托科研、持续工业产出和公共／产业技术扩散可有限合判60。 S13明确在Panevėžys机电中心为Optronika完成委托，9PCB电磁配置制成/测试，2.35/3.72mT和7.4度稳定实验是已产出结果；400mA约13秒升70°C需冷却，非商用光学系统已部署。S10木材机器人与PVC2024–26/27项目仍研发/原型未来，不能标题当投产。S16全栅格物理8/9/11亲见2025真实制造17.539mEUR（2024为17.873）、数量增14%、生产与出口持续，投资质检949k/供应468k为已发生投入但不能归因产量变化，localmarket62%非本地居民率，R&D栏质量稳定是目标不是新产品实绩。S05已有玻璃余热购入并实际供热、当地deaerator已换；W01真实远程/复合诊疗支持实际技术采用。接受本地知识生产/企业委托成果与持续工业、公用/临床采用可有限代表普通技术能力，非单一采购/机构数、论文排名或每人直接享有；客户地理/研究阶段与当前扩散代表桥可撤。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "TEC",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "digital_infrastructure",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S03", "S05", "S10", "S13", "S15", "S16", "W01"],
+      "finding": "真实本地受托科研、持续工业产出和公共／产业技术扩散可有限合判60。 S13明确在Panevėžys机电中心为Optronika完成委托，9PCB电磁配置制成/测试，2.35/3.72mT和7.4度稳定实验是已产出结果；400mA约13秒升70°C需冷却，非商用光学系统已部署。S10木材机器人与PVC2024–26/27项目仍研发/原型未来，不能标题当投产。S16全栅格物理8/9/11亲见2025真实制造17.539mEUR（2024为17.873）、数量增14%、生产与出口持续，投资质检949k/供应468k为已发生投入但不能归因产量变化，localmarket62%非本地居民率，R&D栏质量稳定是目标不是新产品实绩。S05已有玻璃余热购入并实际供热、当地deaerator已换；W01真实远程/复合诊疗支持实际技术采用。接受本地知识生产/企业委托成果与持续工业、公用/临床采用可有限代表普通技术能力，非单一采购/机构数、论文排名或每人直接享有；客户地理/研究阶段与当前扩散代表桥可撤。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "TEC",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "diffusion",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S03", "S05", "S10", "S13", "S15", "S16", "W01"],
+      "finding": "真实本地受托科研、持续工业产出和公共／产业技术扩散可有限合判60。 S13明确在Panevėžys机电中心为Optronika完成委托，9PCB电磁配置制成/测试，2.35/3.72mT和7.4度稳定实验是已产出结果；400mA约13秒升70°C需冷却，非商用光学系统已部署。S10木材机器人与PVC2024–26/27项目仍研发/原型未来，不能标题当投产。S16全栅格物理8/9/11亲见2025真实制造17.539mEUR（2024为17.873）、数量增14%、生产与出口持续，投资质检949k/供应468k为已发生投入但不能归因产量变化，localmarket62%非本地居民率，R&D栏质量稳定是目标不是新产品实绩。S05已有玻璃余热购入并实际供热、当地deaerator已换；W01真实远程/复合诊疗支持实际技术采用。接受本地知识生产/企业委托成果与持续工业、公用/临床采用可有限代表普通技术能力，非单一采购/机构数、论文排名或每人直接享有；客户地理/研究阶段与当前扩散代表桥可撤。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "TEC",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "transport_redundancy",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["R01", "R02"],
+      "finding": "EU条件迁居与个体付款有耐久原件，实际本地退出／网络接续净链未闭。 R01 EUworker合法居住/三月登记及失业/退休等条件，对本国公民有适用路径，但不预设已有境外工作或每年龄每目的地自动获准。R02个体Euro跨境等价费用/IBAN反歧视和双因素鉴权、外币/卡/银行手续费例外，非所有人已有足够资金或资产可即时全转。仅分析点核出本地站点不等真实旅次、班次冗余、票价和通行能力；本轮没有以飞机场/铁路目录或地理位置补交通净取得，也无已核本地普通通信合同/长居接续。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "OPT",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "legal_mobility",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["R01", "R02"],
+      "finding": "EU条件迁居与个体付款有耐久原件，实际本地退出／网络接续净链未闭。 R01 EUworker合法居住/三月登记及失业/退休等条件，对本国公民有适用路径，但不预设已有境外工作或每年龄每目的地自动获准。R02个体Euro跨境等价费用/IBAN反歧视和双因素鉴权、外币/卡/银行手续费例外，非所有人已有足够资金或资产可即时全转。仅分析点核出本地站点不等真实旅次、班次冗余、票价和通行能力；本轮没有以飞机场/铁路目录或地理位置补交通净取得，也无已核本地普通通信合同/长居接续。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "OPT",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "asset_portability",
+      "status": "partial",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["R01", "R02"],
+      "finding": "EU条件迁居与个体付款有耐久原件，实际本地退出／网络接续净链未闭。 R01 EUworker合法居住/三月登记及失业/退休等条件，对本国公民有适用路径，但不预设已有境外工作或每年龄每目的地自动获准。R02个体Euro跨境等价费用/IBAN反歧视和双因素鉴权、外币/卡/银行手续费例外，非所有人已有足够资金或资产可即时全转。仅分析点核出本地站点不等真实旅次、班次冗余、票价和通行能力；本轮没有以飞机场/铁路目录或地理位置补交通净取得，也无已核本地普通通信合同/长居接续。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "OPT",
+      "fullyMeasured": false
+    },
+    {
+      "subpillar": "network_continuity",
+      "status": "unresolved",
+      "boundedReviewPerformed": true,
+      "sourceIds": ["R01", "R02"],
+      "finding": "EU条件迁居与个体付款有耐久原件，实际本地退出／网络接续净链未闭。 R01 EUworker合法居住/三月登记及失业/退休等条件，对本国公民有适用路径，但不预设已有境外工作或每年龄每目的地自动获准。R02个体Euro跨境等价费用/IBAN反歧视和双因素鉴权、外币/卡/银行手续费例外，非所有人已有足够资金或资产可即时全转。仅分析点核出本地站点不等真实旅次、班次冗余、票价和通行能力；本轮没有以飞机场/铁路目录或地理位置补交通净取得，也无已核本地普通通信合同/长居接续。",
+      "score": null,
+      "scope": "31boundedsemanticitems_not31independentpopulationmeasurements",
+      "dimension": "OPT",
+      "fullyMeasured": false
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S02",
+      "url": "https://www.avandenys.lt/geriamojo-vandens-kokybe/",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/originals/water-quality.html",
+      "originalBytes": 67714,
+      "bytes": 67714,
+      "sha256": "fdd620b8f6cc389c6bba8e958e8acd0f79ff4b6fcefe4493784c7b8eba48001c",
+      "validOriginal": true,
+      "classification": "new_valid_raw",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "current table; last edited2026-05-20",
+      "actualReadScopeAndLimits": "city table not wholeFUA/2025annualsample; detectionlimitsnotzeros"
+    },
+    {
+      "id": "S03",
+      "url": "https://panko.lt/en/departments/applied-research-and-innovation-centre/",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/originals/applied-research.html",
+      "originalBytes": 91875,
+      "bytes": 91875,
+      "sha256": "e34689f21bc0fe1565e1c7e6e2e851d5f592dbd5ec352d15cc3fe33e413ee375",
+      "validOriginal": true,
+      "classification": "new_valid_raw",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "currentundatedcentreentry",
+      "actualReadScopeAndLimits": "actuallocalservices not missiontoresult"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.pe.lt/apie-bendrove",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/originals/heat-operation2025.html",
+      "originalBytes": 2280514,
+      "bytes": 2280514,
+      "sha256": "e900da8e9d72b0678aeddf461b80c08798e706cb208fa37c814157ee8747d7bf",
+      "validOriginal": true,
+      "classification": "new_valid_raw",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "2025operations; updated2026-05-19",
+      "actualReadScopeAndLimits": "regional62239flats notFUA;265km/188km/68.3% conflict;Zarasbackupoutside"
+    },
+    {
+      "id": "S09",
+      "url": "https://www.avandenys.lt/uploads/Finansines_ataskaitos/2025%20ataskaitos/AV%202025%20METINES%20FINANSINES%20ATASKAITOS.pdf",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/originals/water-annual2025.pdf",
+      "originalBytes": 833352,
+      "bytes": 833352,
+      "sha256": "5cb87e74fc9fe5bd5bc8ffa010273a6f49c448ff8482dfc913da90d8065626a0",
+      "validOriginal": true,
+      "classification": "new_valid_raw",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "2025accounts; PDFcreatedmodified2026-02-23",
+      "actualReadScopeAndLimits": "city+district102188notFUA;Sep2025exVATprices notfamilybill;APPMunitsdistinct"
+    },
+    {
+      "id": "S11",
+      "url": "https://www.pe.lt/kompensacijos-uz-siluma-ir-karsta-vandeni",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/originals/heat-cost-help.html",
+      "originalBytes": 40079,
+      "bytes": 40079,
+      "sha256": "88ef5be0db4d32dcf1b0f4cc5f29f3932f055b0cdbf393083c7f48418a8af123",
+      "validOriginal": true,
+      "classification": "new_valid_raw",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "updated2026-07-16",
+      "actualReadScopeAndLimits": "incomeproof/calculation/contactoperationalentry notactualallawards/medianeligible"
+    },
+    {
+      "id": "S10",
+      "url": "https://panko.lt/2025/07/16/robotizuotas-medienos-slifavimas-inovacija-keicianti-pramones-standartus/",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/originals/robotic-sanding-actual2025.html",
+      "originalBytes": 86023,
+      "bytes": 86023,
+      "sha256": "3bdc573493e72e7c4863e059e023f24ee478b1fb7cde522996910970f04ce46b",
+      "validOriginal": true,
+      "classification": "new_valid_raw",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "2025-07-16;2024-26project",
+      "actualReadScopeAndLimits": "initialexperiments/futureprototype notcompletedrobot"
+    },
+    {
+      "id": "S13",
+      "url": "https://panko.lt/2025/11/04/panevezio-kolegijoje-taikomuju-tyrimu-sprendimai-regiono-pramonei-ir-tvariai-pletrai/",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/originals/applied-solutions2025.html",
+      "originalBytes": 89004,
+      "bytes": 89004,
+      "sha256": "659144136c37a99f204fcddc3fe1bdb01ce24c3e7d64deed009c08f515087e2c",
+      "validOriginal": true,
+      "classification": "new_valid_raw",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "2025-11-04",
+      "actualReadScopeAndLimits": "actual9PCBexperimentsforOptronika;thermalconstraint70C13sec;PVC/woodfuture notcommercialready"
+    },
+    {
+      "id": "S15",
+      "url": "https://www.paneveziostiklas.lt/investuotojams/",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/originals/glass-production-index.html",
+      "originalBytes": 130309,
+      "bytes": 130309,
+      "sha256": "c047a56da24b2b2f236288c294000e3fb72ac3a24326df83d4fe777df25b9275",
+      "validOriginal": true,
+      "classification": "new_valid_raw",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "currentindex;2025reportlinked",
+      "actualReadScopeAndLimits": "Pramones10localproductionaddress;indexnotclinicalorallquality"
+    },
+    {
+      "id": "S16",
+      "url": "https://www.paneveziostiklas.lt/wp-content/uploads/2026/03/Vadovybes-atask-PS-2025.pdf",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/originals/glass-management2025.pdf",
+      "originalBytes": 2115459,
+      "bytes": 2115459,
+      "sha256": "8174108543fe2d9442bb991d084f917c48522fc0452c5cfb6bc748158b77dc6c",
+      "validOriginal": true,
+      "classification": "new_valid_raw",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "2025operations;March2026cover;PDFcreated2026-03-23",
+      "actualReadScopeAndLimits": "actualproduction/sales/investment;localmarketnotFUA;2026planfuture;R&Dobjective notnewresults"
+    },
+    {
+      "id": "S18",
+      "url": "https://www.pe.lt/silumos-ir-karsto-vandens-kainos",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/originals/heat-price-current.html",
+      "originalBytes": 43179,
+      "bytes": 43179,
+      "sha256": "5b8be391b5dbd7f67e3d400453589d02342b5d10801ea228d77fc57c4bfb546a",
+      "validOriginal": true,
+      "classification": "new_valid_raw",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "2026-09-24decision;updated09-25;effective10-01",
+      "actualReadScopeAndLimits": "heat9.91ctincl21%VAT;cityhotwater8.29EURm3;meter0.97EURflatmonth;notwholebasket"
+    },
+    {
+      "id": "R01",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_en.htm",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/originals/R01-R02-eu-worker-residence.html",
+      "originalBytes": 149227,
+      "bytes": 149227,
+      "sha256": "7efe28815c063333746989e18f412dd25f1ae88c45acde4b56e1e16d2187d42a",
+      "validOriginal": true,
+      "classification": "durable_sameSHA_reuse",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "durable EU current rules; finite applicability bridge",
+      "actualReadScopeAndLimits": "commonEUcitizenworker/residence or individualEurocrossborderpaymentonly;notLTUmedicalrights/localmobility"
+    },
+    {
+      "id": "R02",
+      "url": "https://europa.eu/youreurope/citizens/consumers/financial-products-and-services/payments-transfers-cheques/index_en.htm",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/originals/R02-R03-eu-payments.html",
+      "originalBytes": 155296,
+      "bytes": 155296,
+      "sha256": "0a457237f62980c579bc7dba314552421cb5b0fa826dc830b0e35bb42d458ee8",
+      "validOriginal": true,
+      "classification": "durable_sameSHA_reuse",
+      "historicalCutoffBytesAuthenticated": false,
+      "observationAndPublication": "durable EU current rules; finite applicability bridge",
+      "actualReadScopeAndLimits": "commonEUcitizenworker/residence or individualEurocrossborderpaymentonly;notLTUmedicalrights/localmobility"
+    }
+  ],
+  "sourceName": "Panevėžys",
+  "residentPerspectiveDescription": "2026普通立陶宛本国公民，通常长期本地居民，当地中位收入与通常有效保障，无固定年龄。",
+  "boundaryDescription": "GHS-FUA2019old580/LTU/UC3303/158km2;all9031/136repairs;city/district/utilityregion/hospitalpoolnotFUA;Vilnius853andKaunas435separate",
+  "evidenceReview": "cci-panevezys-priority-review.md",
+  "publishedInputCommit": "f2419143b1eb53456ee261f0cb295947ca174cdd",
+  "publishedInputCases": 108,
+  "publishedInputComplete": 25,
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.panevezioligonine.lt/Paneve%C5%BEio-ligonin%C4%97/vsi-respublikine-panevezio-ligonine-pristate-2025-m-veiklos-rezultatus/",
+      "localPath": null,
+      "sha256": null,
+      "originalBytes": null,
+      "isWebsiteRaw": false,
+      "transcriptPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/W01-hospital-results-prefailure-toolentry.txt",
+      "transcriptBytes": 4340,
+      "transcriptSha256": "ed0e3c636f32acd8f4a9f7338d4932bbc012f0fb2d493c099eca342bb89b424d",
+      "scope": "complete single result entry through exact separator;tooltext notwebsiteHTML/SHA;notPDF/yearreportbody;nosubsequentwebfetchafterfailures;date22Apr2026/report2025;providerclaimsnotindependentaudit",
+      "captureBeforeNormalRequest": true,
+      "historicalCutoffBytesAuthenticated": false
+    },
+    {
+      "id": "W02",
+      "url": "https://www.panevezys.lt/lt/veiklos-sritys/civiline-sauga-366/civilines-saugos-mokymai.html",
+      "localPath": null,
+      "sha256": null,
+      "originalBytes": null,
+      "isWebsiteRaw": false,
+      "transcriptPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/W02-civiltraining-prefailure-toolentry.txt",
+      "transcriptBytes": 846,
+      "transcriptSha256": "e6992809d5b4b566e06bf01310360bc24a84c689338325596ae778680357c7d1",
+      "scope": "complete single searchresult entry only;notfullarticle/websiteHTMLorSHA;nosubsequentwebfetchafterfailednormalfile",
+      "captureBeforeNormalRequest": true,
+      "historicalCutoffBytesAuthenticated": false
+    },
+    {
+      "id": "W03",
+      "url": "https://panevezys.policija.lrv.lt/lt/naujienos/panevezio-pareigunai-nustate-keturis-asmenis-itariamus-keliolika-vagysciu-panevezyje-panevezio-ir-pasvalio-rajonuose/",
+      "localPath": null,
+      "sha256": null,
+      "originalBytes": null,
+      "isWebsiteRaw": false,
+      "transcriptPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/W03-police-investigation-prefailure-toolentry.txt",
+      "transcriptBytes": 930,
+      "transcriptSha256": "6054c256045a84ec62a746b2821aef73994ebb4880a7ea3f2990b66ac5b3d778",
+      "scope": "complete single searchresult entry only;notfullarticle/websiteHTMLorSHA;nosubsequentwebfetchafterfailednormalfile",
+      "captureBeforeNormalRequest": true,
+      "historicalCutoffBytesAuthenticated": false
+    },
+    {
+      "id": "T01",
+      "url": "https://ligoniukasa.lrv.lt/en/sector-activities/servises-for-residents/medical-and-health-care-services/",
+      "localPath": null,
+      "sha256": null,
+      "originalBytes": null,
+      "isWebsiteRaw": false,
+      "transcriptPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-med-access83/T01-prefailure-toolentry.txt",
+      "transcriptBytes": 2330,
+      "transcriptSha256": "372495e125bc5e533b42a6ffeb08283f778c979725ed428a16aeea2262cd4f7f",
+      "scope": "returned official payer entry;not guaranteed complete websitearticle; original returned block retains truncation; not a complete website article guarantee",
+      "publication": "undatedcurrent",
+      "captureBeforeNormalRequest": true,
+      "historicalCutoffBytesAuthenticated": false
+    },
+    {
+      "id": "T02",
+      "url": "https://ligoniukasa.lrv.lt/en/news/healthcare-services-with-referral-things-to-know/",
+      "localPath": null,
+      "sha256": null,
+      "originalBytes": null,
+      "isWebsiteRaw": false,
+      "transcriptPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-med-access83/T02-prefailure-toolentry.txt",
+      "transcriptBytes": 5115,
+      "transcriptSha256": "34cc01006d9e129b8ae7c7b94608c0c7454e7cfed89d9d321384f15903a67bdc",
+      "scope": "returned official payer entry;not guaranteed complete websitearticle; original returned block retains truncation; not a complete website article guarantee",
+      "publication": "2022-10-20",
+      "captureBeforeNormalRequest": true,
+      "historicalCutoffBytesAuthenticated": false
+    },
+    {
+      "id": "T03",
+      "url": "https://ligoniukasa.lrv.lt/en/news/referral-for-a-free-specialist-doctor-consultation-who-issues-and-when-SnT/",
+      "localPath": null,
+      "sha256": null,
+      "originalBytes": null,
+      "isWebsiteRaw": false,
+      "transcriptPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-med-access83/T03-prefailure-toolentry.txt",
+      "transcriptBytes": 4908,
+      "transcriptSha256": "8db4e3532ca63b0658afcf324a726c9d56b6ce8eaa25c0164ebe1f7f9b2fe530",
+      "scope": "returned official payer entry;not guaranteed complete websitearticle; original returned block retains truncation; not a complete website article guarantee",
+      "publication": "2026-08-20;July1 sameyear rule",
+      "captureBeforeNormalRequest": true,
+      "historicalCutoffBytesAuthenticated": false
+    },
+    {
+      "id": "T04",
+      "url": "https://ligoniukasa.lrv.lt/en/sector-activities/servises-for-residents/medical-and-health-care-services/medical-specialist-services/",
+      "localPath": null,
+      "sha256": null,
+      "originalBytes": null,
+      "isWebsiteRaw": false,
+      "transcriptPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-med-access83/T04-prefailure-toolentry.txt",
+      "transcriptBytes": 3310,
+      "transcriptSha256": "b6b088d510965af2773a38736687d484ebd054b45f2fab6c8ee6bf0f12857c86",
+      "scope": "returned official payer entry;not guaranteed complete websitearticle; original returned block retains truncation; not a complete website article guarantee",
+      "publication": "undatedcurrent",
+      "captureBeforeNormalRequest": true,
+      "historicalCutoffBytesAuthenticated": false
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.panevezioligonine.lt/uploads/pdf/Veiklos_ataskaitos/VEIKLOS%20ATASKAITA%202025.pdf",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": 403,
+      "scope": "HTTP403_diagnostic_not_original",
+      "scoreEligible": false
+    },
+    {
+      "id": "S06",
+      "url": "https://panevezys.policija.lrv.lt/public/canonical/1771415694/2578/2026-02-18%20Nr.%2050-IL-1202_Panevezio%20aps.%20VPK%202025%20met%C5%B3%20veiklos%20plano%20igyvendinimo%20ataskaita.pdf",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": 403,
+      "scope": "HTTP403_diagnostic_not_original",
+      "scoreEligible": false
+    },
+    {
+      "id": "S04",
+      "url": "https://www.panevezys.eu/lt/veikla/planavimo-dokumentai.html",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": null,
+      "scope": "TLS_failure_no_body",
+      "scoreEligible": false
+    },
+    {
+      "id": "S07",
+      "url": "https://www.panevezioligonine.lt/Paneve%C5%BEio-ligonin%C4%97/vsi-respublikine-panevezio-ligonine-pristate-2025-m-veiklos-rezultatus/",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": 403,
+      "scope": "HTTP403_diagnostic_not_original",
+      "scoreEligible": false
+    },
+    {
+      "id": "S08",
+      "url": "https://www.panevezys.lt/lt/veiklos-sritys/civiline-sauga-366/civilines-saugos-mokymai.html",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": 403,
+      "scope": "HTTP403_diagnostic_not_original",
+      "scoreEligible": false
+    },
+    {
+      "id": "S12",
+      "url": "https://www.panevezys.lt/download/117689/2023%20m.%20ataskaiat.pdf",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": 403,
+      "scope": "HTTP403_diagnostic_not_original",
+      "scoreEligible": false
+    },
+    {
+      "id": "S14",
+      "url": "https://socmin.lrv.lt/lt/veiklos-sritys/kompensacija-uz-busto-sildyma",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": 403,
+      "scope": "HTTP403_diagnostic_not_original",
+      "scoreEligible": false
+    },
+    {
+      "id": "S17",
+      "url": "https://panevezys.policija.lrv.lt/lt/naujienos/panevezio-pareigunai-nustate-keturis-asmenis-itariamus-keliolika-vagysciu-panevezyje-panevezio-ir-pasvalio-rajonuose/",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": 403,
+      "scope": "HTTP403_diagnostic_not_original",
+      "scoreEligible": false
+    },
+    {
+      "id": "N01",
+      "url": "https://ligoniukasa.lrv.lt/en/sector-activities/servises-for-residents/medical-and-health-care-services/",
+      "validOriginal": false,
+      "localPath": null,
+      "sha256": null,
+      "status": 403,
+      "scope": "403 diagnostic only; no alternate fetch",
+      "scoreEligible": false
+    }
+  ],
+  "routingSourceSnapshots": [],
+  "exclusionCount": 0,
+  "threshold32": null,
+  "sensitivity": {
+    "ISRWithdrawn": [15, 90],
+    "MEDWithdrawn": [15, 90],
+    "TECWithdrawn": [18, 88],
+    "allWithdrawn": [0, 100]
+  },
+  "rootScopeReview": {
+    "rootValidOriginalIdentitiesVerified": 12,
+    "rootHtmlMainBodiesRead": [
+      "S02",
+      "S03",
+      "S05",
+      "S10",
+      "S11",
+      "S13",
+      "S15",
+      "S18",
+      "R01",
+      "R02"
+    ],
+    "rootSelectedPdfTextPages": {
+      "S09": [11, 12]
+    },
+    "rootPdfViewed": {
+      "S09": [11, 12],
+      "S16": [1, 8, 9, 11]
+    },
+    "rootPdfPageCount": 6,
+    "rootSelectedPdfTextPageCount": 2,
+    "rootToolEntriesRead": ["W01", "W02", "W03", "T01", "T02", "T03", "T04"],
+    "rootActualSessionRecordIdentitiesVerified": 6,
+    "rootDiscoveryInputsRead": 3,
+    "rootActualNewNetworkRequests": 0,
+    "wholeWorkflowComplianceCertified": false,
+    "historicalCutoffSameBytesCertified": false,
+    "wholePdfsRead": false,
+    "all31SubscoresMeasured": false,
+    "exactLocalHospitalEveryServiceContractVerified": false,
+    "everyCarerTransportExpenseCovered": false,
+    "robotPrototypeEqualsCommercialDeployment": false,
+    "glassLocalMarketEqualsFuaResidentShare": false,
+    "hospitalVolumeChangeEqualsNecessaryTreatmentHarm": false,
+    "sourceFailureReducesCityScore": false
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-panevezys-priority-review.md",
+    "researchReport": "docs/cci-panevezys-score-completion-review.md",
+    "fixedInputCommit": "f2419143b1eb53456ee261f0cb295947ca174cdd",
+    "fixedCases": 108,
+    "fixedComplete": 25,
+    "researchFixedInputCommit": "a9032ea869c82c211712882ea78871db329bae7a",
+    "researchFixedCases": 107,
+    "researchFixedComplete": 23,
+    "frozenManifestSha256": "b26c073a4cfead585c2205dde39fe09df7966a9212900513386be88c90d87972",
+    "researchFrozenReportSha256": "836f2a0e2d4f19edc82b49b09b51add8f900df74f44c05fa968815e324f0218a",
+    "medSupplementManifestSha256": "e8ae6b89b45b02070f66f868720e1c42599a2355cc0f23b30c8679cbe147c4df",
+    "medSupplementReportPath": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-med-access83/report.md",
+    "medSupplementReportSha256": "de5b306018f26c6d9a6aa3d420eed8398e04ed0e7cd52f674c42a73b84e9737b",
+    "validOriginalCount": 12,
+    "frozenFilesVerified": 162,
+    "medSupplementFilesVerified": 24,
+    "researchInputNotRewritten": true,
+    "sha256": "93c95e665a522ba080680b97c43276ddb6b58b540b7dc714d3bd776d2b28a6b6",
+    "researchReportSha256": "9285e8e7ffe427611b57060218b14d4d4b2c0f76cfb29ddcbda0dbc999e1cc6c"
+  },
+  "limitations": [
+    "Partial conditional case; no complete total or global ranking.",
+    "31 bounded reviews retain null subscores and fullyMeasured=false.",
+    "Municipality, district, utility and patient pools differ from old FUA; ordinary availability, contract entry, net care and time/diffusion bridges are revocable.",
+    "Tool-returned official text is separate from website raw bytes and retains source truncation.",
+    "No historical cutoff same-byte or whole-workflow certification.",
+    "Unknown competitors retained; no supported exclusions; threshold32 unknown."
+  ],
+  "referenceBoundaryCheck": {
+    "candidates": 9031,
+    "repairs": 136,
+    "metadata": {
+      "fid": 6014,
+      "eFUA_ID": 580.0,
+      "UC_num": 1.0,
+      "UC_IDs": "3303",
+      "eFUA_name": "Panevėžys",
+      "Commuting": 1.0,
+      "Cntry_ISO": "LTU",
+      "Cntry_name": "Lithuania",
+      "FUA_area": 158.0,
+      "UC_area": 28.0,
+      "FUA_p_2015": 111179.37400393747,
+      "UC_p_2015": 85619.91906738281,
+      "Com_p_2015": 25559.454936554655
+    },
+    "wkbSha256": "8ddf5c9d0d8e5777c0d060cf1c4dc89aa04eccd2172e330309fd05a45e944f35",
+    "points": [
+      {
+        "label": "center",
+        "lon": 24.352,
+        "lat": 55.734,
+        "matches": [580],
+        "approximateOnly": true
+      },
+      {
+        "label": "hospital-neighborhood",
+        "lon": 24.36,
+        "lat": 55.741,
+        "matches": [580],
+        "approximateOnly": true
+      },
+      {
+        "label": "rail-neighborhood",
+        "lon": 24.368,
+        "lat": 55.748,
+        "matches": [580],
+        "approximateOnly": true
+      },
+      {
+        "label": "bus-neighborhood",
+        "lon": 24.363,
+        "lat": 55.731,
+        "matches": [580],
+        "approximateOnly": true
+      },
+      {
+        "label": "Panko-neighborhood",
+        "lon": 24.35,
+        "lat": 55.733,
+        "matches": [580],
+        "approximateOnly": true
+      },
+      {
+        "label": "Santaros-neighborhood",
+        "lon": 25.28,
+        "lat": 54.755,
+        "matches": [853],
+        "approximateOnly": true
+      },
+      {
+        "label": "Kaunas-clinics-neighborhood",
+        "lon": 23.918,
+        "lat": 54.918,
+        "matches": [435],
+        "approximateOnly": true
+      }
+    ],
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "scope": "analyst approximate neighborhoods; not service coverage, actual route, resident eligibility or clinical capacity"
+  },
+  "sourceAndStopLedger": {
+    "path": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/source-and-stop-ledger.json",
+    "sha256": "8120679722dbcf9ca321fd59277a8a978772d05d50c5a5c25c82662e8e040ef5",
+    "normalHTTPActualLegs": 18,
+    "queryRounds": 2,
+    "queries": [4, 4],
+    "closed": true,
+    "providerStops": [
+      {
+        "group": "panevezioligonine.lt normalTLS",
+        "observedNewFailures": 2,
+        "sources": ["S01", "S07"],
+        "closed": true,
+        "reason": "voluntarycloseaftertwo;priorhistoryunknownnot0;nofurthercall/bypass"
+      },
+      {
+        "group": "conservativecityrelated .panevezys.eu + .panevezys.lt normalTLS",
+        "observedNewFailures": 3,
+        "sources": ["S04", "S08", "S12"],
+        "closed": true,
+        "reason": "thirdcumulativeconservativegroupfailure;commonbackendnotauthenticated"
+      },
+      {
+        "group": "conservative lrv.lt police+socialministry normalTLS",
+        "observedNewFailures": 3,
+        "sources": ["S06", "S14", "S17"],
+        "closed": true,
+        "reason": "police2+socmin1conservativeplatformgroup;notprovedcommonbackend"
+      }
+    ],
+    "inheritedLedgers": [
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/inherited-larbert-ledger.json",
+        "bytes": 46486,
+        "sha256": "5e425d21b0d88343fc05c89f3f50ec930aa45a952c094a08f51d0b3dccd13392",
+        "scope": "preserve nested specificprovider/topic/mechanismstops;notexhaustiveLTUhistory;successdoesnotreset"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-full81/inherited-daugavpils-ledger.json",
+        "bytes": 20473,
+        "sha256": "40fe4d656e6a740d828333d960f8444e998e94524c97dccdad63e038400b344b",
+        "scope": "preserve nested specificprovider/topic/mechanismstops;notexhaustiveLTUhistory;successdoesnotreset"
+      }
+    ],
+    "medSupplement": {
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/panevezys-med-access83/source-and-stop-ledger.json",
+      "queryRounds": 1,
+      "queries": 2,
+      "normalHTTPActualLegs": 1,
+      "unusedLegsClosed": 3,
+      "validWebsiteOriginals": 0,
+      "noAlternateFetch": true
+    },
+    "unknownPriorHistoryNotZero": true,
+    "failureDoesNotReduceCityScore": true
+  },
+  "reportSha256": "93c95e665a522ba080680b97c43276ddb6b58b540b7dc714d3bd776d2b28a6b6"
+}

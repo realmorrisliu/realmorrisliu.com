@@ -4,10 +4,10 @@
   "evidenceCutoff": "2026-10-10",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
-  "conditionalCaseCount": 108,
+  "conditionalCaseCount": 109,
   "completeConditionalCaseCount": 25,
-  "partialCaseCount": 83,
-  "unassessedCount": 8923,
+  "partialCaseCount": 84,
+  "unassessedCount": 8922,
   "weights": {
     "PCS": 15,
     "GSS": 15,
@@ -241,6 +241,15 @@
           "center": null,
           "lower": 36.0,
           "upper": 76.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "580",
+          "source_name": "Panev\u0117\u017eys",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1223,6 +1232,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "580",
+          "source_name": "Panev\u0117\u017eys",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "596",
           "source_name": "Oslo",
           "center": null,
@@ -2197,6 +2215,15 @@
           "center": null,
           "lower": 36.0,
           "upper": 76.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "580",
+          "source_name": "Panev\u0117\u017eys",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -3179,6 +3206,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "580",
+          "source_name": "Panev\u0117\u017eys",
+          "center": null,
+          "lower": 15.0,
+          "upper": 90.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "596",
           "source_name": "Oslo",
           "center": null,
@@ -4153,6 +4189,15 @@
           "center": null,
           "lower": 30.0,
           "upper": 80.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "580",
+          "source_name": "Panev\u0117\u017eys",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -5135,6 +5180,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "580",
+          "source_name": "Panev\u0117\u017eys",
+          "center": null,
+          "lower": 15.0,
+          "upper": 90.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "596",
           "source_name": "Oslo",
           "center": null,
@@ -6109,6 +6163,15 @@
           "center": null,
           "lower": 36.0,
           "upper": 76.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "580",
+          "source_name": "Panev\u0117\u017eys",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -7091,6 +7154,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "580",
+          "source_name": "Panev\u0117\u017eys",
+          "center": null,
+          "lower": 18.0,
+          "upper": 88.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "596",
           "source_name": "Oslo",
           "center": null,
@@ -8065,6 +8137,15 @@
           "center": null,
           "lower": 30.0,
           "upper": 80.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "580",
+          "source_name": "Panev\u0117\u017eys",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -9047,6 +9128,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "580",
+          "source_name": "Panev\u0117\u017eys",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "596",
           "source_name": "Oslo",
           "center": null,
@@ -9818,7 +9908,7 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "404770a1f2463ee00a1e6037b9ac8d1977557bbd7ba95c338ad78c2aa32794a8",
+    "cci-global-evidence-matrix.csv": "97a283dc6f09379c8447933807f5e750e9d2168e55ea698505e0ec573421b9fb",
     "cci-legal-mobility-rules.json": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "cci-legal-mobility.md": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e",
     "cci-local-2026-singapore-case.json": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -10037,12 +10127,14 @@
     "cci-bremen-priority-review.md": "5295632ae2f3aa7dc84e370b4b82aee692db26099ab01ed536eb0641a3261672",
     "cci-local-2026-larbert-case.json": "1de5905bc4a9674d6b0f96c9f1aceb080fa987e0ac9be18f92afd7729a3a22bd",
     "cci-larbert-priority-review.md": "2c4fa378cec8c8b0dbdeae8c16c612c2d941ec0fdcb9ba5c00d3556b7e8133eb",
+    "cci-local-2026-panevezys-case.json": "6616433c09d092d597bea197a4a271190afa50986095cbf14314372d9e2d19d6",
+    "cci-panevezys-priority-review.md": "93c95e665a522ba080680b97c43276ddb6b58b540b7dc714d3bd776d2b28a6b6",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "9d948d7dc68cca7222151367eeaafe9a9958d0bf48ebc3158c7098546c2aa13e",
+    "cci-global-evidence-matrix.json": "469520bef0328b7b37f0af3ca11555be1c054b5c6d21cb53563eaa22992a18b8",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "e22fdc7d6021d4e99ada3cae50ecaaddf56386a040f655a719af90f653a7c7cb"
+    "cci-local-2026-scoring-calibration.md": "9a5d6d35bb9940bed3729b827c1c5ef82ddf0d0d8c2ebd2a61c58e8a36a17723"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "77c2598d393d21abeee16fb7688fa107cf8a29c8509d55b0990a64b43e270bfb",
+  "csvSha256": "bcb892208f5f4b4f3c23f3db35ea5156ff2ba7fa16dc159761f0b7f79c80069d",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }
