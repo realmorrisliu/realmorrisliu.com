@@ -115,6 +115,7 @@ import aarhus from "../../docs/data/cci-local-2026-aarhus-case.json";
 import nottingham from "../../docs/data/cci-local-2026-nottingham-case.json";
 import burtonOnTrent from "../../docs/data/cci-local-2026-burton-on-trent-case.json";
 import daugavpils from "../../docs/data/cci-local-2026-daugavpils-case.json";
+import lasPalmas from "../../docs/data/cci-local-2026-las-palmas-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -234,8 +235,10 @@ const cases = [
   nottingham,
   burtonOnTrent,
   daugavpils,
+  lasPalmas,
 ];
 const caseNamesZh: Record<number, string> = {
+  [lasPalmas.candidateId]: "拉斯帕尔马斯功能区",
   [daugavpils.candidateId]: "道加夫皮尔斯功能区",
   [burtonOnTrent.candidateId]: "特伦特河畔伯顿功能区",
   [nottingham.candidateId]: "诺丁汉功能区",
@@ -447,6 +450,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [lasPalmas.candidateId]: [
+    zh
+      ? "拉斯帕尔马斯制度／医疗／专项转化／技术条件60，防护／安全／资源／退出未知。已知贡献30、数学域30—80，无完整总分；医疗40是公平竞争解释，对应27—77。实际社会援助、公立多专科与本地CAR-T持续实施、大学研究和临床应用支持有限判断，普通资格、净照护、类匹配、地域和延续假设可撤。"
+      : "Las Palmas has conditional ISR/MED/LON/TEC 60; PCS/GSS/RES/OPT remain unknown. Known contribution is 30, with a 30–80 mathematical domain and no total. MED 40 is a fair competing interpretation, giving 27–77. Delivered aid, operating public care, sustained local CAR-T, university research and clinical adoption support bounded judgments, subject to eligibility, net care, class compatibility, scope and continuity assumptions.",
+    zh
+      ? "100例是2019以来已治疗的淋巴瘤／骨髓瘤患者累计，非本FUA居民数、成功率或健康延寿。HAS仅作成熟B细胞疾病平台背景，未核当地具体品牌／适应证支付。ODDUS等待、拒绝与取消是投诉理由，非等量经证伤害或实际等候名单；异地过夜补偿有授权／上限／票据条件，不包本地所有陪护。大学合作企业不全在543，旧航空数字不作2026实测；特内里费能力未移入本地。"
+      : "The 100 treated lymphoma/myeloma patients are cumulative since 2019, not FUA residents, a success rate or healthy-longevity evidence. HAS supports mature B-cell platform context, without verifying a local product, indication-specific payment or outcomes. ODDUS waiting/refusal/cancellation figures are complaint reasons, not confirmed harms or actual queues. Overnight cross-area compensation has authorisation, caps and receipts; local carers are not universally covered. University partners are not all inside 543, old air figures are not 2026 measurements, and Tenerife capacity is not transferred.",
+  ],
   [daugavpils.candidateId]: [
     zh
       ? "道加夫皮尔斯制度／医疗／技术条件60，防护／安全／资源／专项转化／退出未知。原权重贡献24、数学域24—84，无完整总分。实际审计落实、公共照护、本地产业科研及数字化支持有限判断；地域、时间、通常支付和净照护假设可撤。"

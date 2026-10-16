@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 105,
+    "conditionalCaseCount": 106,
     "completeConditionalCaseCount": 22,
-    "partialCaseCount": 83,
-    "unassessedCount": 8926,
+    "partialCaseCount": 84,
+    "unassessedCount": 8925,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -830,8 +830,13 @@
       "sha256": "23adae68867b6b8325c8e403dc23d1d8efb030d0888c6a59a043f861e900dcb7",
       "provenance": "cci-daugavpils-priority-review.md",
       "provenanceSha256": "7549420fab8284970224e61454a63c5d1e3ed36b3271c894145aaff8adc2a8ae"
+    },
+    "cci-local-2026-las-palmas-case.json": {
+      "sha256": "70c732736456a45eea8d1fd6d2de0bf4da3402fc9db9e3dd375c49180a873938",
+      "provenance": "cci-las-palmas-priority-review.md",
+      "provenanceSha256": "5bac63604884548bd6b34344a41ca338ccb6e4fdb8e16a98bd6f3c076b6e9b61"
     }
   },
-  "scriptSha256": "cd4f2fbac370cb8ec9827bab63da0842475f0cedd2d77b6d992088418c43bc36",
-  "csvSha256": "635eedafb50f4be1fc2315be17b3d594f0b1dfc72edb3bc40a11ef023df91687"
+  "scriptSha256": "9ce961ee14c5ed93287c9a55906df7d511385d8f4cf6635e6b81c528c9549ae6",
+  "csvSha256": "9c6f24dd7f84fcac6a8908413f15a2784222614c636bbfe4e7bc6fb6548944cf"
 }

@@ -157,6 +157,7 @@ const realCases = [
   "nottingham",
   "burton-on-trent",
   "daugavpils",
+  "las-palmas",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -305,6 +306,7 @@ const [
   nottingham,
   burtonOnTrent,
   daugavpils,
+  lasPalmas,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4410,4 +4412,49 @@ assert.equal(
 assert.equal(
   daugavpilsCase.rootScopeReview.MEDUsualPayerAndNetCareBridgeNecessaryAndRevocable,
   true
+);
+
+const lasPalmasCase = realCases.find(c => c.candidateId === 543);
+assert.equal(
+  lasPalmasCase.priorityCompletionReview.sha256,
+  digest(lasPalmasCase.priorityCompletionReview.path)
+);
+assert.equal(
+  lasPalmasCase.priorityCompletionReview.researchReportSha256,
+  digest(lasPalmasCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(lasPalmas), { center: null, lower: 30, upper: 80 });
+assert.deepEqual(total({ ...lasPalmas, MED: 40 }), { center: null, lower: 27, upper: 77 });
+assert.deepEqual(
+  lasPalmasCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["PCS", "GSS", "RES", "OPT"]
+);
+for (const [id, lower, upper] of [
+  ["ISR", 21, 86],
+  ["MED", 21, 86],
+  ["LON", 24, 84],
+  ["TEC", 24, 84],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...lasPalmas };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.equal(lasPalmasCase.sourceSnapshots.length, 16);
+assert.equal(lasPalmasCase.failedSourceSnapshots.length, 5);
+assert.equal(lasPalmasCase.routingSourceSnapshots[0].actualTransportIsTLS, false);
+assert.equal(lasPalmasCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
+assert.equal(lasPalmasCase.rootScopeReview.rootSelectedPdfTextPageCount, 12);
+assert.equal(lasPalmasCase.rootScopeReview.rootPdfPageCount, 8);
+assert.equal(lasPalmasCase.rootScopeReview.complaintCountsAreAdjudicatedHarmRate, false);
+assert.equal(lasPalmasCase.rootScopeReview.specificLocalCARTProductPayerDirectlyVerified, false);
+assert.equal(lasPalmasCase.rootScopeReview.matureTisaDLBCLClassSourceActuallyRead, true);
+assert.equal(lasPalmasCase.webReadSources[0].isWebsiteRaw, false);
+assert.equal(lasPalmasCase.webReadSources[0].sha256, null);
+assert(
+  lasPalmasCase.coverageReview.length === 31 &&
+    lasPalmasCase.coverageReview.every(
+      (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
+    )
 );
