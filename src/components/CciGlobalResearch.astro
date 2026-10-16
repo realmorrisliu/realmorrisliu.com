@@ -122,6 +122,7 @@ import panevezys from "../../docs/data/cci-local-2026-panevezys-case.json";
 import vilnius from "../../docs/data/cci-local-2026-vilnius-case.json";
 import blackpool from "../../docs/data/cci-local-2026-blackpool-case.json";
 import miltonKeynes from "../../docs/data/cci-local-2026-milton-keynes-case.json";
+import alkmaar from "../../docs/data/cci-local-2026-alkmaar-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -248,8 +249,10 @@ const cases = [
   vilnius,
   blackpool,
   miltonKeynes,
+  alkmaar,
 ];
 const caseNamesZh: Record<number, string> = {
+  [alkmaar.candidateId]: "阿尔克马尔功能区",
   [miltonKeynes.candidateId]: "米尔顿凯恩斯功能区",
   [blackpool.candidateId]: "布莱克浦功能区",
   [vilnius.candidateId]: "维尔纽斯功能区",
@@ -468,6 +471,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [alkmaar.candidateId]: [
+    zh
+      ? "阿尔克马尔防护／医疗／技术条件60，安全／制度条件40，资源／专项转化／退出未知。贡献36、数学域36—66，无完整总分。实际防洪、必要护理和技术产用同权，住宅爆炸及帮助迟少／住房久候支持40；两项60公平解释各给39—69，必要画像／时点／净取得桥可撤。"
+      : "Alkmaar has conditional PCS/MED/TEC 60 and GSS/ISR 40; RES/LON/OPT remain unknown. Contribution is 36, with a 36–66 arithmetic domain and no complete total. Actual flood protection, necessary care and technical production coexist with residential explosions and delayed housing or support. Both 40s retain fair 60 alternatives at 39–69; profile, time and net-access bridges are revocable.",
+    zh
+      ? "HSMR并非显著优越，事故报告非患者伤害率；768套组合并非全已交。Castricum近似点属另一功能区，95套社区交付不直接计为本地；点位非完整项目边界。2025试产为syngas、未来绿气不算稳定供能，逮捕非定罪或同团伙证明，全球入围未证。"
+      : "HSMR is not significantly superior, and incident reports are not patient harm rates; the 768-unit mix is not wholly delivered. The Castricum reference point is in another FUA, so the 95-home community is not directly counted as local; a point is not a project footprint. The 2025 trial output is syngas, future green gas is not stable household supply, and arrests prove neither convictions nor a shared gang. Global inclusion is unproven.",
+  ],
   [miltonKeynes.candidateId]: [
     zh
       ? "米尔顿凯恩斯防护／医疗条件40，制度／专项转化／技术条件60，安全／资源／退出未知。贡献33、数学域33—68，无完整总分。实际防洪减损与护理改善同权，帮助后洪灾余障和必要治疗长候支持40；两项均保留60公平解释，旧观察至2026延续可撤。"

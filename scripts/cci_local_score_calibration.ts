@@ -164,6 +164,7 @@ const realCases = [
   "vilnius",
   "blackpool",
   "milton-keynes",
+  "alkmaar",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -319,6 +320,7 @@ const [
   vilnius,
   blackpool,
   miltonKeynes,
+  alkmaar,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4496,6 +4498,49 @@ assert(
   lasPalmasCase.coverageReview.length === 31 &&
     lasPalmasCase.coverageReview.every(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
+    )
+);
+
+const alkmaarCase = realCases.find(c => c.candidateId === 1326);
+assert.equal(
+  alkmaarCase.priorityCompletionReview.sha256,
+  digest(alkmaarCase.priorityCompletionReview.path)
+);
+assert.equal(
+  alkmaarCase.priorityCompletionReview.researchReportSha256,
+  digest(alkmaarCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(alkmaar, { PCS: 60, GSS: 40, ISR: 40, MED: 60, TEC: 60 });
+assert.deepEqual(total(alkmaar), { center: null, lower: 36, upper: 66 });
+for (const id of ["PCS", "GSS", "ISR", "MED", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...alkmaar };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    alkmaarCase.sensitivity.withdrawals[id]
+  );
+}
+for (const id of ["GSS", "ISR"] as const)
+  assert.deepEqual(total({ ...alkmaar, [id]: 60 }), { center: null, lower: 39, upper: 69 });
+assert(
+  alkmaarCase.webReadSources.every(
+    (s: { sha256: null; isWebsiteRaw: boolean }) => s.sha256 === null && !s.isWebsiteRaw
+  )
+);
+for (const f of [
+  "HSMRSignificantlySuperior",
+  "Castricum95Certified1326Local",
+  "all768HousingDelivered",
+  "syngas17914IsGreenGasInjected",
+  "suspectsAreConvicted",
+  "newAttackSameGangProven",
+  "allCareCostsCovered",
+])
+  assert.equal(alkmaarCase.rootScopeReview[f], false);
+assert(
+  alkmaarCase.coverageReview.length === 31 &&
+    alkmaarCase.coverageReview.every(
+      (c: { score: null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
 

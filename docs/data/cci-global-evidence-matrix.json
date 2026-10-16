@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 112,
+    "conditionalCaseCount": 113,
     "completeConditionalCaseCount": 25,
-    "partialCaseCount": 87,
-    "unassessedCount": 8919,
+    "partialCaseCount": 88,
+    "unassessedCount": 8918,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -865,8 +865,13 @@
       "sha256": "fc8da6220219c6f1584e5796cd59bca7492974ec44df4c7a9527a7c99b5e65f5",
       "provenance": "cci-milton-keynes-priority-review.md",
       "provenanceSha256": "b53c166ffd30de943db82392f1938b3e03329d1ba164bfe45fc4422aba2634b4"
+    },
+    "cci-local-2026-alkmaar-case.json": {
+      "sha256": "12a11dbb72a9eebe76855ccbbedf3f28283201913bfb8a4d040a6d8dd7b9bf0b",
+      "provenance": "cci-alkmaar-priority-review.md",
+      "provenanceSha256": "98256cbeec3da3f01e528ff815f5fe3f70140031a9e58abadb35bcfeed4813ea"
     }
   },
-  "scriptSha256": "f876cb9c0020789e170b8f6d1fbc5d67f51746998b54e7b4eb57a559dfe91994",
-  "csvSha256": "3619865a50e1aae8ca865cbf40a4a2c5d72feaa4c64e1c082e20e13cc7a7b41c"
+  "scriptSha256": "3f25bd68272ca9cea57fc0417b04b72c1542d21bdfc2a656b382d0f3c97afba1",
+  "csvSha256": "95ffcc87db9dd00406afd1747aa95ec43e1e05c3b5c39466a30ddb054392d37e"
 }
