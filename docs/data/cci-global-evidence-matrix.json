@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 98,
+    "conditionalCaseCount": 99,
     "completeConditionalCaseCount": 21,
-    "partialCaseCount": 77,
-    "unassessedCount": 8933,
+    "partialCaseCount": 78,
+    "unassessedCount": 8932,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -795,8 +795,13 @@
       "sha256": "b747b8fe491cbb91a699a11a1dff918a2138aa385b21dd0a74f408c8031b5e90",
       "provenance": "cci-corby-score-completion-review.md",
       "provenanceSha256": "ba5db5c6b81670c72987a9eea7481bd2874d49d453c5240b40d4600e2983d986"
+    },
+    "cci-local-2026-livingston-case.json": {
+      "sha256": "57fc0bdcbcd2160e50b0966812b8291ec49ed266545ea16e92217b28f8cb5de4",
+      "provenance": "cci-livingston-score-completion-review.md",
+      "provenanceSha256": "1ddd5b314509efbbf389a012e4600730f42dc7fb7d7ea2938e0a646c90d40811"
     }
   },
-  "scriptSha256": "6cdf76b2e44a47ad8d57af5f54d675b32ab4b89cf996c2ace4fd6ee9ecafd340",
-  "csvSha256": "b70339e982c37f5af207b56e9073a11c585221c557092ea471aa8e252a0c5164"
+  "scriptSha256": "7ac11eb027a0359b02974fff319a20074f0a7c68972540d52f30f1603b13bc80",
+  "csvSha256": "23f713eb8d62bfe41017fe45b8c287b8094acf51b2246ff4a81d7e0f686c8f02"
 }

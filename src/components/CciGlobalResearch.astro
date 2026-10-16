@@ -108,6 +108,7 @@ import kuopio from "../../docs/data/cci-local-2026-kuopio-case.json";
 import hilversum from "../../docs/data/cci-local-2026-hilversum-case.json";
 import odense from "../../docs/data/cci-local-2026-odense-case.json";
 import corby from "../../docs/data/cci-local-2026-corby-case.json";
+import livingston from "../../docs/data/cci-local-2026-livingston-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -220,8 +221,10 @@ const cases = [
   hilversum,
   odense,
   corby,
+  livingston,
 ];
 const caseNamesZh: Record<number, string> = {
+  [livingston.candidateId]: "利文斯顿功能区",
   [corby.candidateId]: "科比功能区（含凯特林）",
   [odense.candidateId]: "欧登塞功能区",
   [hilversum.candidateId]: "希尔弗瑟姆功能区",
@@ -426,6 +429,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [livingston.candidateId]: [
+    zh
+      ? "利文斯顿制度／技术条件60、医疗条件40，五维未知。原权重贡献21、数学域21—81，无完整总分。真实救助、风暴恢复、地方制造和居家护理应用，与财务韧性及出院接续余障一起判断；地域、时间、普通净照护与技术广度假设可撤。"
+      : "Livingston has conditional ISR/TEC 60 and MED 40; five dimensions remain unknown. Its original-weight contribution is 21 and arithmetic domain 21–81, without a complete total. Delivered support, storm recovery, local manufacturing and home-care technology are considered alongside financial-resilience and discharge-continuity gaps; geography, time, usual net care and technology-breadth assumptions are revocable.",
+    zh
+      ? "已可出院仍留院的床日虽下降，仍是重要接续余障；医疗60保留公平替代。急诊四小时附录系列不当StJohn或全功能区未治疗率，一般应急储备为0不等全部资金为0。制造者监管自述非独立认证，Oct16实时列车不计分；全球入围未证明。"
+      : "Bed-days spent in hospital after readiness for discharge declined but remain an important continuity constraint; MED 60 is a fair alternative. The appendix’s four-hour emergency series is not a St John’s or whole-area untreated rate, and zero general contingency reserves do not mean zero funds. The manufacturer’s regulatory claim is not independent certification; Oct16 live trains do not score. Global qualification is unproven.",
+  ],
   [corby.candidateId]: [
     zh
       ? "科比医疗条件40，七维未知；原权重贡献6、数学域6—91，无完整总分。凯特林医院及科比门诊、通常公费护理和质量正证，与疑癌诊断和必要计划护理久候一起判断；60保留公平替代，地域、时间、净照护与截止公开假设可撤。"

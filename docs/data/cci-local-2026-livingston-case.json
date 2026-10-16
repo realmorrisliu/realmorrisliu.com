@@ -1,0 +1,1770 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 2011,
+  "name": "Livingston",
+  "countryIso": "GBR",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-16",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "Ordinary British citizen, usuallylongterm locallyresident, local medianincome and usual effective publiccoverage, no fixedage. Scotland-specific actual provision; no imported NHS England charging rule.",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-livingston-score-completion-review.md",
+  "researchFrozenInputCommit": "a084101d6253831fdd806fffcf15b2034fdca6ff",
+  "fixedInputCases": 98,
+  "fixedInputComplete": 21,
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 21,
+  "unknownWeight": 60,
+  "unresolvedScoreRange": [21, 81],
+  "dimensions": [
+    {
+      "id": "PCS",
+      "weight": 15,
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "风暴雨洪有真正地方保护和恢复，仍不能从一次清理与一般消防推主要自然危险通常净影响整体40/60方向。残留低风险清理任务不夸为重大持续失效；未知不是弱能力。",
+      "assumption": "可接受有限地域/延续、风雨为实际重要危险的桥；本稿未接受一次风暴恢复足以代表持续多危险适配。不是要求每节点压测/全部人口2026实测。",
+      "alternativeRationales": "60：若接受具名Livingston风雨清理与消防触达代表普通主要危险的有效适配，可讨论；40：需要帮助后仍重要的雨洪/共因约束，不由初始闭路或停电未知时长自动得出。80需真正多危险/备用已检视；拒桥null。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "heat_humidity": "unresolved",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "partial"
+      },
+      "sourceIds": ["S03", "S06b"],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": []
+      }
+    },
+    {
+      "id": "GSS",
+      "weight": 15,
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "真实拦截/烟花处置与学校/群体工作存在，未取得这些保护后的通常组织影响与区域战略适配组合；不由查获重量、破案率、国家2022威胁或没有战争填分。",
+      "assumption": "允许未成功攻击和已运行针对保护支持有限方向；不要求全人口暴力率/先受战略攻击。当前材料实际未解区域/战略及普通后果的实质连接。",
+      "alternativeRationales": "60可由真实针对性保护和较低通常影响的有据有限桥成立，不能只机构存在；40需要已知重要实际组织/外溢/战略约束，不能由仇恨统计或缺源自动填。80要更强低影响/匹配保护依据；拒桥null。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "organized_violence": "partial",
+        "regional_conflict": "partial",
+        "strategic_exposure": "partial"
+      },
+      "sourceIds": ["S06b"],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": []
+      }
+    },
+    {
+      "id": "ISR",
+      "weight": 15,
+      "score": 60,
+      "scoreStatus": "conditional_root_adopted",
+      "rationale": "实际住房、福利/债务减负、就业和跨部门照护/消防/风暴恢复，以及公共咨询入决策，支持普通制度与服务可运作。真实交付后的14%financialhardship/燃贫、KeepSafe停止决定与替代仍规划和一般contingency耗尽仍重要，非宣称完美或由规划审批比例机械得分。",
+      "assumption": "接受WestLothian县与Livingston真实服务节点的有限代表和2024/25→截止延续；救助效果不自动属于全部中位居民。虽然一般储备为0，持续多组织交付仍支持条件60；这是可撤判断，不能把未来预算全算已花/所有压力已缓解。",
+      "alternativeRationales": "40：一般contingency已耗尽、无法吸收年度冲击而须即时削减/追加，与群体触达/未及时服务构成重要制度余障即可，不需多数/主导/停城。80：需要说明同层真实恢复/替代可抵这些已知短板，不要求零风险。拒地域/持续执行/通常触达桥null。",
+      "conditionalAlternatives": [40],
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "sourceIds": ["S01", "S12", "S06b", "S03"],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": []
+      }
+    },
+    {
+      "id": "RES",
+      "weight": 10,
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "水样/食物应急配送/实际节能减负都有真帮助，但国家水系统与县受助人群尚不能解释当地中位居民完整通常净取得和共因可靠性的40/60方向。既没有把市场在运行当可负担，也没有以缺每户账单设门槛。",
+      "assumption": "60可接受有限共享水系统/食物/能费和中位普通资源桥，但当前应急食物与受助节省不能实质代表整个普通净篮子。燃贫/经济困难也不直接证明目标中位人物已经有重要净取得约束。",
+      "alternativeRationales": "40：若这些真实燃贫/食物需求在实际帮助后仍实质适配普通目标重要障碍，可讨论，不需多数；60：若普通合束供给与通常净费用桥有据可接受，也可讨论；80需真实替代/共因缓解。相邻解释未解主null，非完美全人口账本要求。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      },
+      "sourceIds": ["S13", "S02", "S01", "S03"],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": []
+      }
+    },
+    {
+      "id": "MED",
+      "weight": 15,
+      "score": 40,
+      "scoreStatus": "conditional_root_adopted",
+      "rationale": "实际公共护理、StJohn出院、CareatHome低等待、H@H和较低28日再入院支持正能力；但成人A&E全流程持续压力与readyfordischarge仍630bed-days/1000population，是帮助后的重要急诊/出院接续约束。其对必要就医、适当照护地点和床位接续可用的后果是明示有限判断，故条件40；不是由目标未达单独降档、不是说未见医生或因等待死亡。",
+      "assumption": "必要桥：县居民/真实StJohn及急性居家路径对本FUA普通必要护理的有限代表、2024/25/至Dec25及FY25/26的有限截止延续；给定通常有效公保画像可经真实公费委托/接续通常取得，且必要家庭照护和附带费用在实际帮助后通常可承担。未独核完整NHSScotland收费/适应证，不进口England收费或自动贫困豁免；不主张全服务零费。拒普通支付/净照护/临床重要后果/地域/时间桥即null。 A&E附录左图未标单院/FUA分母、右列正文为Lothian，仅作报告背景系列，不借成StJohn或2011全部就诊率；四小时非首次评估/未治疗。",
+      "alternativeRationales": "60：实际低再入院、照护质量/体验改善、急性在宅/低CareatHome等待，可支持较强全维通常取得且仍有重要等待；无需无负结果。40：已可出院仍留院与急诊流程压力的实际重要后果桥，不需占多数/停城。80：已知这些仍重要时不采，但不能用没审全院/没逐剂账单另设门槛；拒桥null。",
+      "conditionalAlternatives": [60],
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "sourceIds": ["S12", "S01"],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": []
+      }
+    },
+    {
+      "id": "LON",
+      "weight": 10,
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "本轮没有成熟人体治疗平台与实际当地采用/有据跨区转诊、通常净付款监护的可对应链。工厂病毒原料与辅助照护不是该治疗平台兑现；也不由没有查到给40。",
+      "assumption": "允许类成熟人体、有限区域转诊/通常公费/净监护桥，不要求健康人延寿、同牌逐剂票据、固定成人或全2026结果；缺的仍是具体平台实施与通常取得事实，而非完美审计。",
+      "alternativeRationales": "60须有对应真实成熟治疗和当地/有据转诊采用及居民路径；40须有实际重要断点，不由资料缺失或只发现试用推低。80不要求零风险/健康人延寿。当前null/[]。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "sourceIds": ["S04", "S12"],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": []
+      }
+    },
+    {
+      "id": "TEC",
+      "weight": 10,
+      "score": 60,
+      "scoreStatus": "conditional_root_adopted",
+      "rationale": "具名Livingston病毒原料生产与真实商业/就业承接，结合56%合资格在家护理TEC及StJohn已运行多种监测/支持器材，支持有限应用知识、产业与普通采用链。不是由品牌/新企业名单或所有护理试用已证明疗效得分。",
+      "assumption": "接受当前制造者正文对实际地方应用知识/产用及县普通技术服务的有限代表与截止延续；FDAapproved为运营方自述，不认证当前全部监管合规。SEC2025申报403，发现监管观察线索未采具体数量或判定；对许可/持续产用及知识广度桥拒则null。不是要求大学专利或全民AI才准60。",
+      "alternativeRationales": "40：须存在真实重要产用/普通扩散断层，不能由只有6–10试用、原件403或没查到更多企业直接降档；未采用监管片段判坏。80：若多机构持续知识/产业和普通扩散可抵浓度/范围余障可再讨论，不要求每节点压测；本稿未有足够正面冗余链。拒桥null。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "sourceIds": ["S04", "S01", "S12"],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": []
+      }
+    },
+    {
+      "id": "OPT",
+      "weight": 10,
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "站点/本地道路、英国公民Germany有条件法律路径、普通转款和欧洲漫游均有真实有限事实；实际向外通道组合、合法长期资格和通常迁居资源/连续接驳未闭。Oct16实时列车仅截止后context，不当Oct10实际出发或零失效证明。",
+      "assumption": "允许有限普通资金/支付通信/接续桥，不要求完整目的地交易票据。不能默认中位居民满足§18b学位就业、足够净资源或机场就在域内；单一站点与将来可办理手续不足填60。",
+      "alternativeRationales": "40要实际重要退出障碍，不是法律有条件或网页失败；60需通常实际多通道/净资源合束有据；80需真正替代与共因检视。主null/[]而非交通弱结论。",
+      "conditionalAlternatives": [],
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      },
+      "sourceIds": ["S03", "S14", "R01", "R02", "R03", "R04", "R05", "R06"],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": []
+      }
+    }
+  ],
+  "coverageReview": [
+    {
+      "dimension": "PCS",
+      "subpillar": "heat_humidity",
+      "status": "not_substantively_resolved",
+      "finding": "未取得本地热湿实际暴露与适配保护，不将调度heat代理当能力或零危险。",
+      "sourceIds": [],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "flood_sea_level",
+      "status": "reviewed_partial",
+      "finding": "S03真实StormAmy本地雨洪处理避免部分闭路，不能等于长期河洪容量或全FUA防洪足迹。",
+      "sourceIds": ["S03"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "geophysical",
+      "status": "not_substantively_resolved",
+      "finding": "未取得本地地质危险实质，不以事件未匹配判零危险。",
+      "sourceIds": [],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "severe_weather_wildfire",
+      "status": "reviewed_partial",
+      "finding": "S03 October2025风70mph/树倒/闭路/停电，具名Livingston道路清理重开、余低风险任务。S06b实际救援/消防入户与水/户外安全教育，但全部火灾不当自然林火。",
+      "sourceIds": ["S03", "S06b"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "organized_violence",
+      "status": "reviewed_partial",
+      "finding": "S06b31真实跨区药物拦截及Addiewell约1吨烟花/318kg爆炸物回收，调查非定罪、烟花案在Q1/Q2报告窗外；22页仇恨/KeepSafe退出不全当组织暴力。",
+      "sourceIds": ["S06b"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "regional_conflict",
+      "status": "reviewed_partial",
+      "finding": "同包跨区协作并非战争外溢的地方后果；没有战争或未匹配事件不支持低风险分。",
+      "sourceIds": ["S06b"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "strategic_exposure",
+      "status": "reviewed_partial",
+      "finding": "Apr2025全国CAFU约260工作人员属于已启动保护背景，不直接代表本FUA所有关键节点。图示UK威胁2022旧版不冒2026现行城市率。",
+      "sourceIds": ["S06b"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "governance",
+      "status": "reviewed_partial",
+      "finding": "S01p5真实咨询首触解决99.6%、规划/consent81.9%期限内；不是所有复杂案件全部解决。S12p77实际ConsumerDuty评估/咨询入决策。",
+      "sourceIds": ["S01", "S12"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "adaptive_capacity",
+      "status": "reviewed_partial",
+      "finding": "实际福利£24m/能源节省>£568k、债务减付£1.774m及就业/居家跨机构交付；S12p73动用£2.4m储备至一般contingency为0，额定£2m短期不可达，是实质韧性反证。",
+      "sourceIds": ["S01", "S12"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "social_cohesion",
+      "status": "reviewed_partial",
+      "finding": "1208可负担住房交付/93%新homeless tenancies逾年持续与病患/消防群体触达正证；仇恨伤害、KeepSafe撤销与替代仍规划均留，不将低使用等于群体无需保护。",
+      "sourceIds": ["S01", "S06b"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "emergency_recovery",
+      "status": "reviewed_partial",
+      "finding": "S03具名道路夜间/周末清障、洪水处理，S06b实际救援45/入户309等；不把全部救援当气候事件，也不证明电网独立备用。",
+      "sourceIds": ["S03", "S06b"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "water",
+      "status": "reviewed_partial",
+      "finding": "S13 Scotland2025水样tap99.88%/137947tests、出厂22/62134失败、36重大调查/17558投诉。是共享水系统国家证据，不当Livingston供应足迹、每户可承担或居民不安全率。",
+      "sourceIds": ["S13"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "food",
+      "status": "reviewed_partial",
+      "finding": "S02真实4040应急包/7313people，foodnetworkQ4估16743people；未认证去重居民/全部中位食篮。",
+      "sourceIds": ["S02"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "energy",
+      "status": "reviewed_partial",
+      "finding": "S01p6已实现>£568k节能客户节省，S02仍18%燃贫/9%极度燃贫，调查/观察口径有限。受助资格不是中位收入自动；S03风暴停电时长未知。",
+      "sourceIds": ["S01", "S02", "S03"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "supply_chain",
+      "status": "reviewed_partial",
+      "finding": "实际水务/食物网络/能源帮助均有局部交付，未闭普通水食能合束的通常净取得与共因供给；不以缺账本直接40。",
+      "sourceIds": ["S01", "S02", "S13"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "access",
+      "status": "reviewed_partial",
+      "finding": "S12真实公共委托primary/community/unscheduledcare、StJohn出院和H@H。p82成人18+4h流程54.4%是2025/26 YTD数据至Dec25，不作全年/首次见医生/首次治疗未获率。",
+      "sourceIds": ["S12"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "routine_quality",
+      "status": "reviewed_partial",
+      "finding": "p21 28日readmit89/1000discharges对Scot103（2024/25），无本轮风险调整认证；p27正文用admissions与标签discharges冲突保留。CareInspectorate good+86%观察窗p21与p42冲突保留。",
+      "sourceIds": ["S12"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "specialist_capacity",
+      "status": "reviewed_partial",
+      "finding": "S12有StJohn实际出院、急性H@H及mental/community/primary服务，不能把公共委托清单当所有专科已取得/把Edinburgh移植移入本地。",
+      "sourceIds": ["S12"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "system_continuity",
+      "status": "reviewed_partial",
+      "finding": "p28真正CareatHome低未满足需求，p29 Feb26 StJohn技术出院试用6–10转介非完整疗效队列，p30 H@H容量扩大正文46%；p21 readyfordischarge仍占630bed-days/1000population，carer支持33.4%保留。",
+      "sourceIds": ["S01", "S12"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "translation",
+      "status": "reviewed_partial",
+      "finding": "居家监测/一般护理和疫苗工厂不等所评成熟疾病细胞/再生等人体治疗路径。",
+      "sourceIds": ["S04", "S12"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "trial_maturity",
+      "status": "reviewed_partial",
+      "finding": "未读到可对应具体居民治疗的平台成熟人体原件；不把护理TestofChange或厂区临床材料当成熟治疗效果。",
+      "sourceIds": ["S12"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "regulatory_adoption",
+      "status": "reviewed_partial",
+      "finding": "S04工厂自述FDAapproved与药物原料制造，不证明普通当地患者已获具体合资格治疗或安全监管全闭。",
+      "sourceIds": ["S04"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "resident_access",
+      "status": "reviewed_partial",
+      "finding": "真实StJohn接续/家庭照护存在，但没有具体成熟平台实施—转诊—通常支付/监护匹配链；未知不证明没有。",
+      "sourceIds": ["S12"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "knowledge_output",
+      "status": "reviewed_partial",
+      "finding": "S04 Livingston实际专用于病毒疫苗drugsubstance生产及过程/质量能力为具名应用知识正证；不是大学排名/论文数或其他国家厂区产出。",
+      "sourceIds": ["S04"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "industry_density",
+      "status": "reviewed_partial",
+      "finding": "受规制生物制造单节点与S01p4真实商业支持/385新创业就业/72工资补贴名额体现产业承接；321支持的新企业不是321生科厂，宽度/独立冗余仍弱。",
+      "sourceIds": ["S01", "S04"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "digital_infrastructure",
+      "status": "reviewed_partial",
+      "finding": "S01p3 56%在家护理受助者用TEC（2024/25）；S12p29 StJohn Feb26具体lifeline/KOMP/JustChecking/用药分配器实际试用，非全人口接入或已独立RCT。",
+      "sourceIds": ["S01", "S12"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "diffusion",
+      "status": "reviewed_partial",
+      "finding": "实际受助者技术采用、跨机构出院/社区团队与就业服务是普通实际扩散；6–10转介不当广泛全部居民、反馈评估框架不当已完整临床结果。",
+      "sourceIds": ["S01", "S12"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "transport_redundancy",
+      "status": "reviewed_partial",
+      "finding": "S14站实际Bus/Taxi/机器/坡道及无lift/无现场staff，S03道路清障；S16实时Oct16明确截止后，仅context，不回填为Oct10该趟已运行/零取消。没有机场在区内或普通国际接驳实证。",
+      "sourceIds": ["S03", "S14"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "legal_mobility",
+      "status": "reviewed_partial",
+      "finding": "英国公民Germany§41可非短期免签入并90日申请，§5生计/身份和§18b学位就业资格仍条件，不套德国公民EU自由工作/自动永居。",
+      "sourceIds": ["R01", "R02", "R03"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "asset_portability",
+      "status": "reviewed_partial",
+      "finding": "NatWest普通个人转款app/online/branch真实手续，需账户、收款信息、鉴权、费用/控制；£20k日上限不是居民资产或法律迁居总上限，Ulster正文保留。",
+      "sourceIds": ["R04"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "network_continuity",
+      "status": "reviewed_partial",
+      "finding": "O2德国在Europezone、最多25GB，>63days/fourmonth后附费；不等长期免费或当地SIM已经开户。",
+      "sourceIds": ["R05", "R06"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration; not complete population measurement or subpillar score",
+      "boundedReviewPerformed": true
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allCandidatesChecked": 9031,
+    "repairCount": 136,
+    "record": {
+      "fid": 8399,
+      "eFUA_ID": 2011.0,
+      "UC_num": 1.0,
+      "UC_IDs": "1739",
+      "eFUA_name": "Livingston",
+      "Commuting": 1.0,
+      "Cntry_ISO": "GBR",
+      "Cntry_name": "UnitedKingdom",
+      "FUA_area": 239.0,
+      "UC_area": 21.0,
+      "FUA_p_2015": 164619.3951126635,
+      "UC_p_2015": 54048.245697021484,
+      "Com_p_2015": 110571.14941564202
+    },
+    "points": [
+      {
+        "label": "Livingston centre analyst approximate",
+        "longitude": -3.523,
+        "latitude": 55.884,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 2011,
+            "name": "Livingston"
+          }
+        ]
+      },
+      {
+        "label": "St Johns hospital neighbourhood analyst approximate",
+        "longitude": -3.521,
+        "latitude": 55.893,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 2011,
+            "name": "Livingston"
+          }
+        ]
+      },
+      {
+        "label": "Western General hospital neighbourhood analyst approximate",
+        "longitude": -3.233,
+        "latitude": 55.962,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 2305,
+            "name": "Edinburgh"
+          }
+        ]
+      },
+      {
+        "label": "Royal Infirmary Edinburgh neighbourhood analyst approximate",
+        "longitude": -3.137,
+        "latitude": 55.922,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 2305,
+            "name": "Edinburgh"
+          }
+        ]
+      },
+      {
+        "label": "Edinburgh Airport neighbourhood analyst approximate",
+        "longitude": -3.362,
+        "latitude": 55.95,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 2305,
+            "name": "Edinburgh"
+          }
+        ]
+      },
+      {
+        "label": "Livingston North rail neighbourhood analyst approximate",
+        "longitude": -3.545,
+        "latitude": 55.901,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 2011,
+            "name": "Livingston"
+          }
+        ]
+      },
+      {
+        "label": "Livingston South rail neighbourhood analyst approximate",
+        "longitude": -3.501,
+        "latitude": 55.872,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 2011,
+            "name": "Livingston"
+          }
+        ]
+      }
+    ],
+    "targetWkbSha256": "b14fbe05685d45ed2e3bc3118ba1fe2f5247800be9e695ddde319a27840a70e3",
+    "meaning": "Old FUA is not municipal/provider/patient scope. Analyst approximate points are not surveyed footprints, residence, service-population denominators or actual journeys."
+  },
+  "sourceManifest": {
+    "sources": [
+      {
+        "id": "S01",
+        "file": "factfile2025.pdf",
+        "sha256": "c0e74d525cd664cfc7a483378c524fa969e279124992412142cc279ca9089ab1",
+        "originalBytes": 2056155,
+        "scoreEligible": true
+      },
+      {
+        "id": "S02",
+        "file": "poverty-profile2026.html",
+        "sha256": "d06aac86d73dbb647efe1c9086b8d1bfd577e2e03fced604576ab8a15b2baafb",
+        "originalBytes": 37972,
+        "scoreEligible": false
+      },
+      {
+        "id": "S03",
+        "file": "storm-amy.html",
+        "sha256": "dbfb56677c9efb1b38eef8c78557751c8e49a334424a2cbe4d6066605c68ff08",
+        "originalBytes": 32800,
+        "scoreEligible": true
+      },
+      {
+        "id": "S04",
+        "file": "valneva-manufacturing.html",
+        "sha256": "b1198d9999eb77c5d6d5686cc01d33e46f8432f3212406182bb7dfde9ac43209",
+        "originalBytes": 80498,
+        "scoreEligible": true
+      },
+      {
+        "id": "S05",
+        "file": "safety-panel-dec2025.html",
+        "sha256": "c494b848430ceccf75ac16de8b38de4abe4b087e16f65d858f84ad85b72f20d0",
+        "originalBytes": 12015,
+        "scoreEligible": false
+      },
+      {
+        "id": "S06",
+        "file": "safety-panel-pack2025.pdf",
+        "sha256": "0b75525f3f36fa5b039d46970e29961c3819e6c65f55e80b6f2c2c525f35ea8f",
+        "originalBytes": 8258,
+        "scoreEligible": false
+      },
+      {
+        "id": "S06b",
+        "file": "safety-panel-pack2025-final.pdf",
+        "sha256": "617c721530ab65f438910304e6bec6ab05bab2cb3a8d23fe4c1101adc3e3a18e",
+        "originalBytes": 5832965,
+        "scoreEligible": true
+      },
+      {
+        "id": "S07",
+        "file": "factfile-website.html",
+        "sha256": "e72b3ca8ead8189ad5c2c2feaedcce4f5e729fbcfe5ee857396d3fc00ffcadbf",
+        "originalBytes": 227020,
+        "scoreEligible": false
+      },
+      {
+        "id": "S08",
+        "file": "council-home.html",
+        "sha256": "f60a50b39796bec8ca199c54fabd16e8a4ceb86c5cd2b645e2c61aff990d20c0",
+        "originalBytes": 48036,
+        "scoreEligible": false
+      },
+      {
+        "id": "S09b",
+        "file": "hscp-home.html",
+        "sha256": "8c6d484c69cb33b6561935e2fb757f5b23f84c2daa36474701df61376cc94d4c",
+        "originalBytes": 42246,
+        "scoreEligible": false
+      },
+      {
+        "id": "S10",
+        "file": "hscp-ijb.html",
+        "sha256": "fdfc8a9ed50e8f1cb871e4060c21d67576351805eeb22449567969628cfd0efc",
+        "originalBytes": 34320,
+        "scoreEligible": false
+      },
+      {
+        "id": "S11",
+        "file": "hscp-performance-index.html",
+        "sha256": "cb802f0ad05657c72a7c98c558bb1c834c8d17760bee72bf7627f8521842c8df",
+        "originalBytes": 31381,
+        "scoreEligible": false
+      },
+      {
+        "id": "S12",
+        "file": "ijb-performance2026.pdf",
+        "sha256": "b1277068a5d39783c7857a7025d146d89d83c6d511a5f13ab4d5c29503def715",
+        "originalBytes": 26706625,
+        "scoreEligible": true
+      },
+      {
+        "id": "S13",
+        "file": "drinking-water2025.html",
+        "sha256": "05803c45f2b1c7e2f4a8e85c548c80777516b8d1a7aaf748c6ff74f865fd083e",
+        "originalBytes": 28345,
+        "scoreEligible": false
+      },
+      {
+        "id": "S14",
+        "file": "livingston-north-rail.html",
+        "sha256": "d715b1dcb1b9bf6df2d64db302294b42be5be597f16f25b3ebca748d312fdfdd",
+        "originalBytes": 314452,
+        "scoreEligible": false
+      },
+      {
+        "id": "S16",
+        "file": "livingston-edinburgh-journeycheck.html",
+        "sha256": "2a3bb62d035d36eb0071840ac3cf33df9dd74e4c5922df1d5d880b67d4d1c7be",
+        "originalBytes": 91325,
+        "scoreEligible": false
+      },
+      {
+        "id": "R01",
+        "file": "R03-aufenthv41.html",
+        "sha256": "0294e3696361d9294ae75c66475ccb897dcf68e1ffd1346fabf3a83104f74c85",
+        "originalBytes": 4613,
+        "scoreEligible": false
+      },
+      {
+        "id": "R02",
+        "file": "R04-aufenthg5.html",
+        "sha256": "2b1c6d9b2cda3c69f96b893150025c1490298f8de35741bb297ef82335df4e27",
+        "originalBytes": 6953,
+        "scoreEligible": false
+      },
+      {
+        "id": "R03",
+        "file": "R05-aufenthg18b.html",
+        "sha256": "d605edfdbf1977205ccc0f1c5b267b061e59f072200c04fbe5d02d340bc6a7b4",
+        "originalBytes": 3632,
+        "scoreEligible": false
+      },
+      {
+        "id": "R04",
+        "file": "natwest-personal-international.html",
+        "sha256": "3ee8c0cae114cfb51eeba606db44f4d2605b92b1620f2873c1c0dd55be4b56d6",
+        "originalBytes": 155117,
+        "scoreEligible": false
+      },
+      {
+        "id": "R05",
+        "file": "o2-europe-roaming.html",
+        "sha256": "5235d12659d1a3eaef83ace94990c0d98d756163e154b8e87fd8975bfc1d2bad",
+        "originalBytes": 500558,
+        "scoreEligible": false
+      },
+      {
+        "id": "R06",
+        "file": "o2-fairuse.html",
+        "sha256": "1986097cb8097e097d898c73a03be77fcecfdd833b091a151673436dd723ecfe",
+        "originalBytes": 443963,
+        "scoreEligible": false
+      }
+    ],
+    "newHTTP200Bodies": 16,
+    "durableReused": 6,
+    "scope": "22validsavedbodyidentities,includingnavigation/HTMLwrapper/postcutoffcontext. Fullsourceprovenancein sourceSnapshots;16new200not16scoringPDFs. One301/one403separate,sourcecountnotability."
+  },
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "leg": 1,
+      "file": "factfile2025.pdf",
+      "url": "https://www.westlothian.gov.uk/media/68598/Factfile-2025/pdf/Factfile_2025.pdf",
+      "utc": "2026-10-16T02:48:51.250338+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/pdf",
+        "Last-Modified": "Wed, 14 Jan 2026 10:53:18 GMT",
+        "ETag": "04DCB9FCF8DA0F04F08F311A651BD46F",
+        "Date": "Fri, 16 Oct 2026 02:48:53 GMT",
+        "Content-Length": "2056155"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/factfile2025.pdf",
+      "bytes": 2056155,
+      "sha256": "c0e74d525cd664cfc7a483378c524fa969e279124992412142cc279ca9089ab1",
+      "error": null,
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/factfile2025.pdf",
+      "sourceRole": "valid primary2024/25 performance PDF; limited county delivery not equal FUA",
+      "validation": "valid_body",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": true,
+      "originalBytes": 2056155,
+      "rootBytesReverified": true,
+      "scoreEligible": true
+    },
+    {
+      "id": "S02",
+      "leg": 2,
+      "file": "poverty-profile2026.html",
+      "url": "https://www.westlothian.gov.uk/article/86218/West-Lothian-Poverty-Profile-2026",
+      "utc": "2026-10-16T02:49:03.166662+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Fri, 16 Oct 2026 02:49:04 GMT",
+        "Content-Length": "37972"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/poverty-profile2026.html",
+      "bytes": 37972,
+      "sha256": "d06aac86d73dbb647efe1c9086b8d1bfd577e2e03fced604576ab8a15b2baafb",
+      "error": null,
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/poverty-profile2026.html",
+      "sourceRole": "valid local poverty profile; individual observation windows and unclear sample/unique people retained",
+      "validation": "valid_body",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": true,
+      "originalBytes": 37972,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "S03",
+      "leg": 3,
+      "file": "storm-amy.html",
+      "url": "https://www.westlothian.gov.uk/article/86722/Storm-Amy-response",
+      "utc": "2026-10-16T02:49:15.701158+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Fri, 16 Oct 2026 02:49:17 GMT",
+        "Content-Length": "32800"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/storm-amy.html",
+      "bytes": 32800,
+      "sha256": "dbfb56677c9efb1b38eef8c78557751c8e49a334424a2cbe4d6066605c68ff08",
+      "error": null,
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/storm-amy.html",
+      "sourceRole": "valid actual StormAmy7Oct2025 response; named Livingston roads and remaining lowrisk works",
+      "validation": "valid_body",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": true,
+      "originalBytes": 32800,
+      "rootBytesReverified": true,
+      "scoreEligible": true
+    },
+    {
+      "id": "S04",
+      "leg": 4,
+      "file": "valneva-manufacturing.html",
+      "url": "https://valneva.com/products/manufacturing-services/",
+      "utc": "2026-10-16T02:49:25.377156+00:00",
+      "status": 200,
+      "headers": {
+        "date": "Fri, 16 Oct 2026 02:49:26 GMT",
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/valneva-manufacturing.html",
+      "bytes": 80498,
+      "sha256": "b1198d9999eb77c5d6d5686cc01d33e46f8432f3212406182bb7dfde9ac43209",
+      "error": null,
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/valneva-manufacturing.html",
+      "sourceRole": "valid operator manufacturing body; current drug substance production claim, no independently certified regulatory audit or local public medicine access",
+      "validation": "valid_body",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": true,
+      "originalBytes": 80498,
+      "rootBytesReverified": true,
+      "scoreEligible": true
+    },
+    {
+      "id": "S05",
+      "leg": 5,
+      "file": "safety-panel-dec2025.html",
+      "url": "https://coins.westlothian.gov.uk/Agenda.asp?meetingid=10287",
+      "utc": "2026-10-16T02:50:36.392421+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 02:50:38 GMT",
+        "Content-Type": "text/html",
+        "Content-Length": "12015"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/safety-panel-dec2025.html",
+      "bytes": 12015,
+      "sha256": "c494b848430ceccf75ac16de8b38de4abe4b087e16f65d858f84ad85b72f20d0",
+      "error": null,
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/safety-panel-dec2025.html",
+      "sourceRole": "valid official locator/meeting agenda; not proof all agenda actions completed",
+      "validation": "valid_body",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": true,
+      "originalBytes": 12015,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "S06",
+      "leg": 6,
+      "file": "safety-panel-pack2025.pdf",
+      "url": "https://coins.westlothian.gov.uk/viewPack.asp?c=e%97%9Dc%8Eny%8B%7B%90%97%A5%C1%A2%AF%8B%A7%90o%7B%5Ei%88x",
+      "utc": "2026-10-16T02:51:15.729676+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 02:51:17 GMT",
+        "Content-Type": "text/html",
+        "Content-Length": "8258"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/safety-panel-pack2025.pdf",
+      "bytes": 8258,
+      "sha256": "0b75525f3f36fa5b039d46970e29961c3819e6c65f55e80b6f2c2c525f35ea8f",
+      "error": null,
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/safety-panel-pack2025.pdf",
+      "sourceRole": "valid HTML PDF-view wrapper despite saved.pdf filename; not PDF, no clinical/statistical body",
+      "validation": "valid_html_wrapper",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": true,
+      "originalBytes": 8258,
+      "rootBytesReverified": true,
+      "scoreEligible": false,
+      "actualBodyKind": "html_navigation_wrapper_not_pdf",
+      "validSubstantiveBody": false
+    },
+    {
+      "id": "S06b",
+      "leg": 7,
+      "file": "safety-panel-pack2025-final.pdf",
+      "url": "https://coins.westlothian.gov.uk/viewSelectedPack.asp?c=e%9C%9Dc%8Eny%8B",
+      "utc": "2026-10-16T02:51:38.874874+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 02:51:40 GMT",
+        "Content-Type": "application/pdf"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/safety-panel-pack2025-final.pdf",
+      "bytes": 5832965,
+      "sha256": "617c721530ab65f438910304e6bec6ab05bab2cb3a8d23fe4c1101adc3e3a18e",
+      "error": null,
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/safety-panel-pack2025-final.pdf",
+      "sourceRole": "valid official local public scrutiny pack; police/fire datasets provisional, not official crime statistics or fullFUA denominators",
+      "validation": "valid_body",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": true,
+      "originalBytes": 5832965,
+      "rootBytesReverified": true,
+      "scoreEligible": true
+    },
+    {
+      "id": "S07",
+      "leg": 8,
+      "file": "factfile-website.html",
+      "url": "https://factfile.westlothian.gov.uk/",
+      "utc": "2026-10-16T02:52:23.530135+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "etag": "\"2327-1792119117;;;\"",
+        "Date": "Fri, 16 Oct 2026 02:52:25 GMT"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/factfile-website.html",
+      "bytes": 227020,
+      "sha256": "e72b3ca8ead8189ad5c2c2feaedcce4f5e729fbcfe5ee857396d3fc00ffcadbf",
+      "error": null,
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/factfile-website.html",
+      "sourceRole": "valid same-upstream online version of S01, not independent corroboration; stale page title2023/24 while visible report2024/25",
+      "validation": "valid_body",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": true,
+      "originalBytes": 227020,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "S08",
+      "leg": 9,
+      "file": "council-home.html",
+      "url": "https://www.westlothian.gov.uk",
+      "utc": "2026-10-16T02:53:24.753060+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Fri, 16 Oct 2026 02:53:25 GMT",
+        "Content-Length": "48036"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/council-home.html",
+      "bytes": 48036,
+      "sha256": "f60a50b39796bec8ca199c54fabd16e8a4ceb86c5cd2b645e2c61aff990d20c0",
+      "error": null,
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/council-home.html",
+      "sourceRole": "valid council homepage locator only",
+      "validation": "valid_body",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": true,
+      "originalBytes": 48036,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "S09b",
+      "leg": 11,
+      "file": "hscp-home.html",
+      "url": "https://westlothianhscp.org.uk/article/27395/Home",
+      "utc": "2026-10-16T02:54:02.811895+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Fri, 16 Oct 2026 02:54:04 GMT",
+        "Content-Length": "42246"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/hscp-home.html",
+      "bytes": 42246,
+      "sha256": "8c6d484c69cb33b6561935e2fb757f5b23f84c2daa36474701df61376cc94d4c",
+      "error": null,
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/hscp-home.html",
+      "sourceRole": "valid HSCP homepage locator and service rights context, not full treatment results",
+      "validation": "valid_body",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": true,
+      "originalBytes": 42246,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "S10",
+      "leg": 12,
+      "file": "hscp-ijb.html",
+      "url": "https://westlothianhscp.org.uk/hsci",
+      "utc": "2026-10-16T02:54:25.909503+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Fri, 16 Oct 2026 02:54:27 GMT",
+        "Content-Length": "34320"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/hscp-ijb.html",
+      "bytes": 34320,
+      "sha256": "fdfc8a9ed50e8f1cb871e4060c21d67576351805eeb22449567969628cfd0efc",
+      "error": null,
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/hscp-ijb.html",
+      "sourceRole": "valid IJB locator only",
+      "validation": "valid_body",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": true,
+      "originalBytes": 34320,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "S11",
+      "leg": 13,
+      "file": "hscp-performance-index.html",
+      "url": "https://westlothianhscp.org.uk/article/78998/IJB-Annual-Performance-Report-2025-2026",
+      "utc": "2026-10-16T02:54:54.966688+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Fri, 16 Oct 2026 02:54:56 GMT",
+        "Content-Length": "31381"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/hscp-performance-index.html",
+      "bytes": 31381,
+      "sha256": "cb802f0ad05657c72a7c98c558bb1c834c8d17760bee72bf7627f8521842c8df",
+      "error": null,
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/hscp-performance-index.html",
+      "sourceRole": "valid performance-report locator and declared statutory July31 publication duty; deadline not actual exactpublication proof",
+      "validation": "valid_body",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": true,
+      "originalBytes": 31381,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "S12",
+      "leg": 14,
+      "file": "ijb-performance2026.pdf",
+      "url": "https://westlothianhscp.org.uk/media/70688/West-Lothian-IJB-Annual-Performance-Report-2025-26/pdf/202526_Annual_Performance_Report_final.pdf?m=1785339811770",
+      "utc": "2026-10-16T02:55:23.684713+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/pdf",
+        "Last-Modified": "Wed, 29 Jul 2026 14:42:52 GMT",
+        "ETag": "BD864EB2448386DB9FC5ECD3E3E45E67",
+        "Date": "Fri, 16 Oct 2026 02:55:25 GMT",
+        "Content-Length": "26706625"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/ijb-performance2026.pdf",
+      "bytes": 26706625,
+      "sha256": "b1277068a5d39783c7857a7025d146d89d83c6d511a5f13ab4d5c29503def715",
+      "error": null,
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/ijb-performance2026.pdf",
+      "sourceRole": "valid official2025/26 IJB report; various2024/25/2025/26/YTDDec2025 windows, selected actual pages only",
+      "validation": "valid_body",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": true,
+      "originalBytes": 26706625,
+      "rootBytesReverified": true,
+      "scoreEligible": true
+    },
+    {
+      "id": "S13",
+      "leg": 15,
+      "file": "drinking-water2025.html",
+      "url": "https://www.gov.scot/news/drinking-water-in-scotland-2025/",
+      "utc": "2026-10-16T02:56:34.880746+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "text/html;charset=UTF-8",
+        "Content-Length": "28345",
+        "Date": "Fri, 16 Oct 2026 02:56:36 GMT"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/drinking-water2025.html",
+      "bytes": 28345,
+      "sha256": "05803c45f2b1c7e2f4a8e85c548c80777516b8d1a7aaf748c6ff74f865fd083e",
+      "error": null,
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/drinking-water2025.html",
+      "sourceRole": "valid DWQR press source on2025 Scotland system; published2026Aug27, JSONLDmodOct6 versus dc.metaAug27; nationalnotlocalpipeline",
+      "validation": "valid_body",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": true,
+      "originalBytes": 28345,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "S14",
+      "leg": 16,
+      "file": "livingston-north-rail.html",
+      "url": "https://www.nationalrail.co.uk/stations/livingston-north/",
+      "utc": "2026-10-16T02:56:43.717799+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 02:56:45 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/livingston-north-rail.html",
+      "bytes": 314452,
+      "sha256": "d715b1dcb1b9bf6df2d64db302294b42be5be597f16f25b3ebca748d312fdfdd",
+      "error": null,
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/livingston-north-rail.html",
+      "sourceRole": "valid current NationalRail station facts; first publication not given, no everyresident journey proof",
+      "validation": "valid_body",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": true,
+      "originalBytes": 314452,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "S16",
+      "leg": 18,
+      "file": "livingston-edinburgh-journeycheck.html",
+      "url": "https://www.journeycheck.com/scotrail/route?action=search&from=LSN&to=EDB",
+      "utc": "2026-10-16T02:57:23.994750+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 02:57:25 GMT",
+        "Content-Type": "text/html;charset=UTF-8"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/livingston-edinburgh-journeycheck.html",
+      "bytes": 91325,
+      "sha256": "2a3bb62d035d36eb0071840ac3cf33df9dd74e4c5922df1d5d880b67d4d1c7be",
+      "error": null,
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/livingston-edinburgh-journeycheck.html",
+      "sourceRole": "valid operator live data explicitly16Oct2026; postcutoff context only, not necessary scorefact",
+      "validation": "valid_body",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": true,
+      "originalBytes": 91325,
+      "rootBytesReverified": true,
+      "scoreEligible": false,
+      "postCutoffContext": true,
+      "evidenceCutoffExceeded": true,
+      "scope": "16Oct2026livecontextonly,not10Oct2026operations/actualjourneyorcapabilityscore"
+    },
+    {
+      "id": "R01",
+      "url": "https://www.gesetze-im-internet.de/aufenthv/__41.html",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/R03-aufenthv41.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/R03-aufenthv41.html",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R03-aufenthv41.html",
+      "bytes": 4613,
+      "sha256": "0294e3696361d9294ae75c66475ccb897dcf68e1ffd1346fabf3a83104f74c85",
+      "localVerifiedOnUTC": "2026-10-16T03:04:43.896271+00:00",
+      "originalFetchUtc": "not re-fetched/not reinvented; inherited durable origin",
+      "historicalCutoffBytesAuthenticated": false,
+      "role": "British/nonEU specified country legal route, not automatic grant or local actual journey",
+      "validOriginal": true,
+      "originalBytes": 4613,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "R02",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__5.html",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/R04-aufenthg5.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/R04-aufenthg5.html",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R04-aufenthg5.html",
+      "bytes": 6953,
+      "sha256": "2b1c6d9b2cda3c69f96b893150025c1490298f8de35741bb297ef82335df4e27",
+      "localVerifiedOnUTC": "2026-10-16T03:04:43.898461+00:00",
+      "originalFetchUtc": "not re-fetched/not reinvented; inherited durable origin",
+      "historicalCutoffBytesAuthenticated": false,
+      "role": "British/nonEU specified country legal route, not automatic grant or local actual journey",
+      "validOriginal": true,
+      "originalBytes": 6953,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "R03",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__18b.html",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/R05-aufenthg18b.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/R05-aufenthg18b.html",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R05-aufenthg18b.html",
+      "bytes": 3632,
+      "sha256": "d605edfdbf1977205ccc0f1c5b267b061e59f072200c04fbe5d02d340bc6a7b4",
+      "localVerifiedOnUTC": "2026-10-16T03:04:43.899814+00:00",
+      "originalFetchUtc": "not re-fetched/not reinvented; inherited durable origin",
+      "historicalCutoffBytesAuthenticated": false,
+      "role": "British/nonEU specified country legal route, not automatic grant or local actual journey",
+      "validOriginal": true,
+      "originalBytes": 3632,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "R04",
+      "url": "https://www.natwest.com/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/natwest-personal-international.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/natwest-personal-international.html",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/natwest-personal-international.html",
+      "bytes": 155117,
+      "sha256": "3ee8c0cae114cfb51eeba606db44f4d2605b92b1620f2873c1c0dd55be4b56d6",
+      "localVerifiedOnUTC": "2026-10-16T03:05:04.747231+00:00",
+      "originalFetchUtc": "not re-fetched/not reinvented; inherited durable origin",
+      "historicalCutoffBytesAuthenticated": false,
+      "role": "Ordinary personal payment/roaming rules, not every resident banked or enough migration resources/longterm localSIM activation",
+      "validOriginal": true,
+      "originalBytes": 155117,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "R05",
+      "url": "https://www.o2.co.uk/eu-roaming",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/o2-europe-roaming.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/o2-europe-roaming.html",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/o2-europe-roaming.html",
+      "bytes": 500558,
+      "sha256": "5235d12659d1a3eaef83ace94990c0d98d756163e154b8e87fd8975bfc1d2bad",
+      "localVerifiedOnUTC": "2026-10-16T03:05:04.766761+00:00",
+      "originalFetchUtc": "not re-fetched/not reinvented; inherited durable origin",
+      "historicalCutoffBytesAuthenticated": false,
+      "role": "Ordinary personal payment/roaming rules, not every resident banked or enough migration resources/longterm localSIM activation",
+      "validOriginal": true,
+      "originalBytes": 500558,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "R06",
+      "url": "https://www.o2.co.uk/termsandconditions/mobile/roamfairuse",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/o2-fairuse.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/o2-fairuse.html",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/o2-fairuse.html",
+      "bytes": 443963,
+      "sha256": "1986097cb8097e097d898c73a03be77fcecfdd833b091a151673436dd723ecfe",
+      "localVerifiedOnUTC": "2026-10-16T03:05:04.781128+00:00",
+      "originalFetchUtc": "not re-fetched/not reinvented; inherited durable origin",
+      "historicalCutoffBytesAuthenticated": false,
+      "role": "Ordinary personal payment/roaming rules, not every resident banked or enough migration resources/longterm localSIM activation",
+      "validOriginal": true,
+      "originalBytes": 443963,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    }
+  ],
+  "webReadSources": [],
+  "failedSourceSnapshots": [
+    {
+      "id": "S15",
+      "leg": 17,
+      "file": "valneva20f2025.html",
+      "url": "https://www.sec.gov/Archives/edgar/data/1836564/000162828026018808/valn-20251231.htm",
+      "utc": "2026-10-16T02:57:10.969727+00:00",
+      "status": 403,
+      "headers": {
+        "Content-Length": "4818",
+        "Content-Type": "text/html",
+        "Date": "Fri, 16 Oct 2026 02:57:11 GMT"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/valneva20f2025.html",
+      "bytes": 4818,
+      "sha256": "8d526752134ab2abe3b2455cd902c21f984cf821644dc5ac5d2808029b9f2219",
+      "error": "HTTP Error 403: Forbidden",
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/valneva20f2025.html",
+      "sourceRole": "failed403 diagnostic, no underlying report body",
+      "validation": "failed",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": false,
+      "diagnosticBytes": 4818,
+      "diagnosticSha256": "8d526752134ab2abe3b2455cd902c21f984cf821644dc5ac5d2808029b9f2219",
+      "sha256Role": "diagnosticIdentityNotSubstantiveOriginal",
+      "scoreEligible": false
+    }
+  ],
+  "routingSourceSnapshots": [
+    {
+      "id": "S09",
+      "leg": 10,
+      "file": "hscp-council-entry.html",
+      "url": "https://www.westlothian.gov.uk/article/77378/West-Lothian-Health-and-Social-Care-Partnership",
+      "utc": "2026-10-16T02:53:51.789110+00:00",
+      "status": 301,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Location": "https://westlothianhscp.org.uk/article/27395/Home",
+        "Date": "Fri, 16 Oct 2026 02:53:52 GMT",
+        "Content-Length": "166"
+      },
+      "headersAreParsedNotWire": true,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/hscp-council-entry.html",
+      "bytes": 166,
+      "sha256": "093b7bb18cf0cfc94e2f49a46d144d81e215e5becf100feb1240e50f5a9d2c87",
+      "error": "HTTP Error 301: Moved Permanently",
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/hscp-council-entry.html",
+      "sourceRole": "redirect diagnostic only",
+      "validation": "routing",
+      "publishedHeadersAreSelectedMetadata": true,
+      "headersAreRawWireBlock": false,
+      "validOriginal": false,
+      "routingOnly": true,
+      "scoreEligible": false
+    }
+  ],
+  "sourceAndStopLedger": {
+    "originatingResearch": "Livingstonfull68",
+    "discoveryRounds": 2,
+    "queriesPerRound": [4, 4],
+    "queryBudgetClosed": true,
+    "normalHTTPActualLegs": 18,
+    "normalCap": 18,
+    "HTTP200Bodies": 16,
+    "HTTP301": 1,
+    "HTTP403": 1,
+    "HTMLWrapperLeg": 1,
+    "networkClosed": true,
+    "durableSourcesReused": 6,
+    "newFailedSources": [
+      {
+        "id": "S15",
+        "leg": 17,
+        "file": "valneva20f2025.html",
+        "url": "https://www.sec.gov/Archives/edgar/data/1836564/000162828026018808/valn-20251231.htm",
+        "utc": "2026-10-16T02:57:10.969727+00:00",
+        "status": 403,
+        "headers": {
+          "Content-Length": "4818",
+          "Content-Type": "text/html",
+          "Date": "Fri, 16 Oct 2026 02:57:11 GMT"
+        },
+        "headersAreParsedNotWire": true,
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/valneva20f2025.html",
+        "bytes": 4818,
+        "sha256": "8d526752134ab2abe3b2455cd902c21f984cf821644dc5ac5d2808029b9f2219",
+        "error": "HTTP Error 403: Forbidden",
+        "mechanism": "normalTLS urllib NoRedirect NoRetry",
+        "bodySavedBeforeValidation": true,
+        "cutoffHistoricalBytesAuthenticated": false,
+        "publishedHeadersAreSelectedMetadata": true,
+        "headersAreRawWireBlock": false
+      }
+    ],
+    "newRoutingSources": [
+      {
+        "id": "S09",
+        "leg": 10,
+        "file": "hscp-council-entry.html",
+        "url": "https://www.westlothian.gov.uk/article/77378/West-Lothian-Health-and-Social-Care-Partnership",
+        "utc": "2026-10-16T02:53:51.789110+00:00",
+        "status": 301,
+        "headers": {
+          "Content-Type": "text/html; charset=utf-8",
+          "Location": "https://westlothianhscp.org.uk/article/27395/Home",
+          "Date": "Fri, 16 Oct 2026 02:53:52 GMT",
+          "Content-Length": "166"
+        },
+        "headersAreParsedNotWire": true,
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/originals/hscp-council-entry.html",
+        "bytes": 166,
+        "sha256": "093b7bb18cf0cfc94e2f49a46d144d81e215e5becf100feb1240e50f5a9d2c87",
+        "error": "HTTP Error 301: Moved Permanently",
+        "mechanism": "normalTLS urllib NoRedirect NoRetry",
+        "bodySavedBeforeValidation": true,
+        "cutoffHistoricalBytesAuthenticated": false,
+        "publishedHeadersAreSelectedMetadata": true,
+        "headersAreRawWireBlock": false
+      }
+    ],
+    "upstream": [
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/livingston-full68/inherited-corby-stop-ledger.json",
+        "bytes": 4779,
+        "sha256": "688ee904f10ea13b5bf47536664c62cedaf237d1ed2f1d6ca63b6fe4f23cd01d"
+      },
+      "inherited-edinburgh-failures.json"
+    ],
+    "providerMechanism": [
+      "SEC normalTLS:one new403. Exactfailed20F stopped, no web/CDN/mirror recovery. Historical cumulative unknown, not0.",
+      "WestLothian/council/coins/HSCP normalTLS:newfailure0, currentbody successes do not reset prior failures.",
+      "PoliceScotland directnormalTLS closedhistorically: no request. Independent publicCouncil2025local scrutiny report is differentdocument, not mirror/recovery of failedEdinburghpolicearticles.",
+      "ScottishWater/SPEN stopped specificfiles notrequested. DWQRgovernment independent regulatornews is differentbody/problem, not mirror of failedoperatorincidentreport.",
+      "NHSInform stopped exactqualificationpage notrequested and not re-opened viaweb. No NHS England charging evidence imported intoScotland.",
+      "NHS England/UCLH/ECWHO/INGKPN/WIPO2026/DOJFBI/Skane and nested earlierstops preserved, not cleared by city/task/success."
+    ],
+    "processBoundaries": "Research stated <=3outerinput protocol. 18oneURLfetches use NoRetry/NoRedirect helper without priorjournal/metadatareads; finalindependentboundedverification recorded separately. No exhaustive allouter/allhistoric compliance claim.",
+    "observedProcessDeviations": [],
+    "scopeLimit": "No claim exhaustive historicprovider counts; boundedlocalCorby/Edinburgh/nestedledger check found no previous dedicatedLivingston research. Unknownhistory not0 and not blanket allcitystop. New18leg budget not reset by final directory or provider success.",
+    "capability": "Failures/sourcequantity not cityability/transparentness score; no criterion requires perfectall2026/allage/everyhousehold/everynode/everydose data."
+  },
+  "globalRankingEligible": false,
+  "exclusionCount": 0,
+  "threshold32": null,
+  "sourceName": "Bounded primary evidence proposal pending root independent adoption",
+  "limitations": [
+    "ConditionalISR60/MED40/TEC60;fiveunknown,known21/unknown60/arithmetic21–81/no total,notconfidenceorrankprobability.",
+    "MED40restsimportantremainingclinical/dischargecontinuitybridgeafteractualhelp,not4h targetmiss alone oruntreated/deathcausation. NI19readydischarge630bed-days/1000population improvedfrom960;actualcareathome/HAtH/readmissions/experiencepositivesreceiveequalweight;60fair.",
+    "AandEleftappendixseriesnodocumented singlehospital/FUA denominator;rightnarrativeLothian;54.4FYcolumnisYTDthroughDec25,notall2025/26orStJohnuntreatedrate. NI14discharges/admissionsandNI17yearconflictsretained;no silentrepair/riskadjustmentinference.",
+    "ISR60retainsgeneralcontingency0but2.5mearmarkedreserves,KeepSafewithdrawaldecision/futurealternativeandrealpoverty/administrationbarriers;40fair. Approvedfuturebudgetnotallspent.",
+    "TEC60needsrevocablelocalappliedknowledge/viralproduction/breadthandordinarydiffusionbridges. ManufacturerFDAclaimnotindependentregulatoryaudit;SEC403diagnostic/stopped,notadopted snippet. 56%subsetnotallcitizens;6–10TECreferralsnotmatureoutcomeorfullcitycoverage.",
+    "Root22rawidentitycopies/24selectedPDFtextpages/6viewedpages(5substantive+1locator-method),10fullHTMLmainbodies+oneboundedpostcutoffcontextandprior6sameSHAsharedreadingsnotfullsource/fullPDFsemanticreaudit.",
+    "18actualnormalHTTPlegs:16new200includingnavigation/wrapper/postcutofflivecontext,one301,one403,plus6durablereuse;tworoundsof4queriesclosed. Sourcefailure/historynotresetorcitypenalty;currentbytes/mtime/statutorydeadline notcutoffsamebyte/actualpublicationproof.",
+    "Scotlandusualpayer/netcarelimitedbridgeisrevocable;no standalonefullchargeseligibilityauditandnoEnglandfeeimport. County/provider/oldFUA/age-cohortsnotidentical;approxpointsnotfootprints/servicecoverageorjourneys.",
+    "Original98wholecasesincludingpublishedPhiladelphiaRESsupplementunchanged;researcha084101/98/21androote193734/98/21separate. All9031/newunmatchedretained,zeroexclusions,32thresholdnull/globalRankingEligiblefalse.GlobalTop32unproven."
+  ],
+  "sensitivity": {
+    "ISRWithdrawn": [12.0, 87.0],
+    "ISR40": [18.0, 78.0],
+    "MEDWithdrawn": [15.0, 90.0],
+    "MED60": [24.0, 84.0],
+    "TECWithdrawn": [15.0, 85.0],
+    "allJudgmentsWithdrawn": [0, 100]
+  },
+  "reportBytes": 9337,
+  "reportSha256": "1ddd5b314509efbbf389a012e4600730f42dc7fb7d7ea2938e0a646c90d40811",
+  "publishedInputCommit": "e193734a1fbe1edfdb36fccf40c1a654ac5ac9df",
+  "publishedInputCases": 98,
+  "researchProposedAlternatives": {
+    "ISR": [40, 80],
+    "MED": [60],
+    "TEC": [40, 80]
+  },
+  "rootScopeReview": {
+    "validOriginalsVerified": 22,
+    "newHTTP200Bodies": 16,
+    "durableReused": 6,
+    "rootRawCopiesMatch": 22,
+    "rootPdfPageCount": 6,
+    "rootSubstantivePdfPagesViewed": 5,
+    "rootLocatorOrMethodPdfPagesViewed": 1,
+    "rootPdfPixelsActuallyViewed": {
+      "S01": [6],
+      "S06b": [46, 47],
+      "S12": [20, 21, 82]
+    },
+    "rootSelectedPdfTextPageCount": 24,
+    "rootSelectedPdfTextPages": {
+      "S01": [3, 4, 5, 6],
+      "S06b": [22, 25, 31, 44, 45, 58],
+      "S12": [7, 14, 20, 21, 27, 28, 29, 30, 35, 36, 42, 72, 73, 77]
+    },
+    "rootFullHtmlMainBodiesRead": [
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S09b",
+      "S10",
+      "S11",
+      "S13",
+      "S14"
+    ],
+    "rootBoundedHtmlMainBodyRead": {
+      "S16": "opening12000characters,current16Octcontextonly,not score"
+    },
+    "rawLocatorCopiesNotSemanticallyRead": ["S07", "S08"],
+    "durableSharedSixSourcesUsePriorRootSameSHAReading": true,
+    "rootNewResearchNetworkRequests": 0,
+    "rootDiscoveryQueries": 0,
+    "all9031GeometriesRecomputed": true,
+    "sevenAnalystApproximatePointsRecomputed": true,
+    "original98WholeCaseBytesComparedToFixedGit": true,
+    "allOriginalBodiesFullyAudited": false,
+    "allPdfPagesViewed": false,
+    "cutoffSameBytesAuthenticated": false,
+    "sourceCountAffectsScore": false,
+    "AandEIsFirstClinicalAssessmentOrUntreatedRate": false,
+    "AandESeriesWhole2011OrStJohnDenominatorEstablished": false,
+    "NI14AdmittedDischargedDenominatorConflictResolved": false,
+    "NI17YearConflictResolved": false,
+    "CareSurvey94And59Point2SamePopulationOrWindow": false,
+    "HAtHGraphEndpointGrowthRecomputed": false,
+    "FDAIndependentlyCertifiedFromProviderClaimOrFailedSEC": false,
+    "EnglandFeeRulesImportedIntoScotland": false,
+    "localDiagnostic": "OnePythonhelpercalleddirectlyanddeniedbeforeanysourceread;reranusingexistingPythonruntime.No network/providerfailure.",
+    "independentIntegrityPayloadsVerified": 191,
+    "independentCrossPayloadsVerified": 26,
+    "independentCrossRawIdentitiesVerified": 24,
+    "strictProcessDifferences": [],
+    "strictProcessScope": "18oneURLfetchcalls/helperandselectedPDFcalls reviewed;noneobservedwithinthisboundedrange.Notwholeworkflow/allsource/historicprovidercompliancecertification.",
+    "strictSemanticDifferences": [
+      {
+        "source": "S06bphysical25",
+        "difference": "seriousassault57to36/table-36.8% vsprose-14.3%;retainboth,no silentfix"
+      },
+      {
+        "source": "S12physical21/27",
+        "difference": "NI14table/title per1000discharges vsphysical27prose/graphlabels admissions;retain anddo not calculaterepairedrate"
+      },
+      {
+        "source": "S12physical21/42",
+        "difference": "NI17table86%2024/25 vsprose86%2025/26;graphendnot usedtoforceprecision"
+      },
+      {
+        "source": "S06b initialpage locator",
+        "difference": "physical13cover/15TOC not actualpoliceperformance;rootauthorizedphysical25/31=printed13/19;crossadditionalreading25not claimedauthorread"
+      }
+    ],
+    "AandETechnicalDefinitionIndependentlyVerified": false
+  },
+  "rootAlternativesComparedWithFrozenResearch": {
+    "unchangedAdoptedScores": true,
+    "currentSupportedAlternatives": {
+      "ISR": [40],
+      "MED": [60],
+      "TEC": []
+    },
+    "notAdoptedAsCurrentPointAlternatives": ["ISR80", "TEC40", "TEC80"],
+    "reason": "Researchtextmakes thesepoints conditionalonadditionalunobtainedredundancy/production-breakfacts. Keepthresholdrationales,notcurrentalternativeassignments. RejectnecessaryTECknowledge/production/diffusionbridge=>unknown."
+  },
+  "rootToolProof": [
+    {
+      "round": 1,
+      "session": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-35-01a13e5e-aff8-7e60-869d-5befaae8680f.jsonl",
+      "actualCallID": "call_e4eb044bdfbf468a8e8153012f7f0dc5",
+      "actualCallCode": "const q=[{q:'site.westlothian.gov.uk annual performance report 2025 flood food energy actual delivered'},{q:'site.nhslothian.scot annual report 2025 2026 St Johns quality waiting patients'},{q:'site.dwqr.scot 2025 Livingston drinking water incident'},{q:'site.valneva.com Livingston 2025 manufacturing annual report production'}];if(q.length>4)throw Error(\"discovery cap\");const r=await tools.web__run({search_query:q,response_length:\"long\"});store(\"livingston68_discovery1\",r);text(r);\n",
+      "queryCount": 4,
+      "captures": [
+        {
+          "kind": "call",
+          "byteOffset": 130550086,
+          "bytes": 898,
+          "sha256": "7175013e669a11e287d39f6d3e233508b157b5d5dd4fbb55e836b319a4a3e3c4",
+          "matchFrozenCapture": true,
+          "timestamp": "2026-10-16T02:47:38.924Z"
+        },
+        {
+          "kind": "output",
+          "byteOffset": 130563016,
+          "bytes": 35832,
+          "sha256": "10a8fc8616343af5842236b996a7f083c57af236b688caaa0ec2514fb302bd16",
+          "matchFrozenCapture": true,
+          "timestamp": "2026-10-16T02:47:41.460Z"
+        }
+      ],
+      "blocks": [
+        {
+          "index": 0,
+          "bytes": 47,
+          "sha256": "c667706dacd77763cf53e111f02a62432389d5c8d4d6424424374f7699eda375"
+        },
+        {
+          "index": 1,
+          "bytes": 34846,
+          "sha256": "1a1db461037a8f1edeabee7f1b16cbd8867f83fa17c86e6ba7745373b3128f1b"
+        }
+      ],
+      "blocksMatch": true,
+      "callIdsMatch": true,
+      "websiteSHA256": null
+    },
+    {
+      "round": 2,
+      "session": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-35-01a13e5e-aff8-7e60-869d-5befaae8680f.jsonl",
+      "actualCallID": "call_ad2db1f65fd54884a3c886dc3e6eb74d",
+      "actualCallCode": "const q=[{q:'site.healthcareimprovementscotland.scot \"St John\" inspection 2025 2026'},{q:'site.westlothian.gov.uk 2025 storm Eowyn flood police partnership delivered'},{q:'site.scotrail.co.uk Livingston North Edinburgh airport train bus 2026'},{q:'\"NHS Lothian\" \"stem cell\" \"St John\" transplant'}];if(q.length>4)throw Error(\"discovery cap\");const r=await tools.web__run({search_query:q,response_length:\"long\"});store(\"livingston68_discovery2\",r);text(r);\n",
+      "queryCount": 4,
+      "captures": [
+        {
+          "kind": "call",
+          "byteOffset": 130604748,
+          "bytes": 874,
+          "sha256": "a1077d2ff6891b46a2acf3089018f9aa0b3cf0e7f67761ef0e9e841a42e4785c",
+          "matchFrozenCapture": true,
+          "timestamp": "2026-10-16T02:47:59.750Z"
+        },
+        {
+          "kind": "output",
+          "byteOffset": 130618688,
+          "bytes": 32885,
+          "sha256": "3b63cc4fa8403582c12b9e8f6ba7ee3fa2b4146956d028f440dfbda82f927bed",
+          "matchFrozenCapture": true,
+          "timestamp": "2026-10-16T02:48:02.446Z"
+        }
+      ],
+      "blocks": [
+        {
+          "index": 0,
+          "bytes": 47,
+          "sha256": "21d12153ee58410166c70753e9e96ee50469ae0e7869edff371090bba7f1e1ee"
+        },
+        {
+          "index": 1,
+          "bytes": 31749,
+          "sha256": "1cdc9f51f0e23195cee191c45759af4bfbd43bcbb60de57af68a7de8b2373c3a"
+        }
+      ],
+      "blocksMatch": true,
+      "callIdsMatch": true,
+      "websiteSHA256": null
+    }
+  ],
+  "priorityCompletionReview": {
+    "path": "docs/cci-livingston-score-completion-review.md",
+    "researchReport": "docs/cci-livingston-priority-review.md",
+    "reviewedOn": "2026-10-16",
+    "fixedInputCommit": "e193734a1fbe1edfdb36fccf40c1a654ac5ac9df",
+    "fixedCases": 98,
+    "fixedComplete": 21,
+    "researchFixedInputCommit": "a084101d6253831fdd806fffcf15b2034fdca6ff",
+    "researchFrozenReportSha256": "02b32a50132bdf45ff0f0515597554f3e3db59d4abd50996c075805f293263e0",
+    "frozenManifestSha256": "23a5b02ea80f8a5901f6fd6cdab56d8e7c31100dcdf18ac647ba09aadcbdc024",
+    "frozenFilesVerified": 191,
+    "validOriginalCount": 22,
+    "newValidOriginalCount": 16,
+    "reusedOriginalCount": 6,
+    "failedConcreteOriginalCount": 1,
+    "redirectResponses": 1,
+    "rootPdfPageCount": 6,
+    "rootSelectedPdfTextPageCount": 24,
+    "crossReviewReportSha256": "98e0aa946a4f33f68adb2f7925019ebe4f299ace9438d0d8698f0a4d21f76821",
+    "crossReviewResultSha256": "30ec292db2640133dd07675108621a4008fc8c6b824246d2416b5da93a5bcdc2",
+    "crossReviewManifestSha256": "3c87782c976b21c99169a2cf56fa57d0f6a01eb6701259c6e44edbb9bd7fc177",
+    "crossPayloadsVerified": 26,
+    "sha256": "1ddd5b314509efbbf389a012e4600730f42dc7fb7d7ea2938e0a646c90d40811",
+    "researchReportSha256": "11e2f3ca92b667e756a3d5ec7580d3a3ecd9d6a1255341ddf4c9034c9353c653"
+  }
+}

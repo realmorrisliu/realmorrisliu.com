@@ -150,6 +150,7 @@ const realCases = [
   "hilversum",
   "odense",
   "corby",
+  "livingston",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -173,7 +174,7 @@ const realScores = realCases.map(realCase => {
     const review = realCase.dimensions.find((d: { id: string }) => d.id === dimension.id);
     assert(review && review.rationale && review.assumption);
     assert(review.score === null || [20, 40, 60, 80].includes(review.score));
-    assert.equal(review.conditionalAlternatives.length === 0, review.score === null);
+    if (review.score === null) assert.deepEqual(review.conditionalAlternatives, []);
     assert(
       review.conditionalAlternatives.every((score: number) => [20, 40, 60, 80].includes(score))
     );
@@ -291,6 +292,7 @@ const [
   hilversum,
   odense,
   corby,
+  livingston,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4036,3 +4038,57 @@ for (const [RES, center] of [
   [80, 62],
 ] as const)
   assert.deepEqual(total({ ...philadelphia, RES }), { center, lower: center, upper: center });
+
+const livingstonCase = realCases.find(c => c.candidateId === 2011);
+assert.equal(
+  livingstonCase.priorityCompletionReview.sha256,
+  digest(livingstonCase.priorityCompletionReview.path)
+);
+assert.equal(
+  livingstonCase.priorityCompletionReview.researchReportSha256,
+  digest(livingstonCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(livingston), { center: null, lower: 21, upper: 81 });
+assert.equal(livingstonCase.unknownWeight, 60);
+assert.deepEqual(
+  livingstonCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["PCS", "GSS", "RES", "LON", "OPT"]
+);
+assert.deepEqual(total({ ...livingston, MED: 60 }), { center: null, lower: 24, upper: 84 });
+assert.deepEqual(total({ ...livingston, ISR: 40 }), { center: null, lower: 18, upper: 78 });
+for (const [id, lower, upper] of [
+  ["ISR", 12, 87],
+  ["MED", 15, 90],
+  ["TEC", 15, 85],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...livingston };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.equal(livingstonCase.sourceSnapshots.length, 22);
+assert(livingstonCase.sourceSnapshots.every((s: { validOriginal: boolean }) => s.validOriginal));
+assert.equal(
+  livingstonCase.sourceSnapshots.find((s: { id: string }) => s.id === "S06").validSubstantiveBody,
+  false
+);
+assert.equal(
+  livingstonCase.sourceSnapshots.find((s: { id: string }) => s.id === "S16").scoreEligible,
+  false
+);
+assert.equal(
+  livingstonCase.sourceSnapshots.find((s: { id: string }) => s.id === "S16").postCutoffContext,
+  true
+);
+assert.equal(livingstonCase.failedSourceSnapshots.length, 1);
+assert.equal(livingstonCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
+assert.equal(livingstonCase.rootScopeReview.rootPdfPageCount, 6);
+assert.equal(
+  livingstonCase.rootScopeReview.AandESeriesWhole2011OrStJohnDenominatorEstablished,
+  false
+);
+assert.deepEqual(
+  livingstonCase.dimensions.find((d: { id: string }) => d.id === "TEC").conditionalAlternatives,
+  []
+);
