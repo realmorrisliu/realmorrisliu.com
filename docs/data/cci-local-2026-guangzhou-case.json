@@ -5,12 +5,12 @@
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "boundaryVersion": "GHS-FUA R2019A",
   "boundaryReview": "unresolved",
-  "retrievedOn": "2026-10-12",
+  "retrievedOn": "2026-10-16",
   "candidateId": 9711,
   "name": "Guangzhou functional area",
   "evidenceReview": "cci-local-2026-guangzhou-case.md",
-  "expectedConditionalTotal": null,
-  "limitations": "Eight dimensions and31 subpillars reviewed at conditional/partial levels, not fully measured. PCS/GSS/ISR/RES/MED60, TEC80, OPT40; LON unresolved gives mathematical domain54-64 without a total centre, reliable exclusion bound or shortlist proof. The frozen9711 includes part of Foshan, not all Guangzhou or Foshan jurisdictions; healthcare payer boundaries persist inside the same functional area. Locality, continuity, usual legal qualification/coverage, affordability and residual materiality assumptions are reversible. Missing is not zero or negative transparency evidence; full9031 and outside-frame competitors remain. MED60 accepted after the2026-10-13 review; withdrawal restores MED/LON unknown domain45-70. The score is conditional on named locality, quality-continuity, usual insurance/affordability and residual-access assumptions.",
+  "expectedConditionalTotal": 58,
+  "limitations": "Eight dimensions and31 subpillars have bounded conditional reviews, not full independent measurements. PCS/GSS/ISR/RES/MED60, LON40, TEC80, OPT40 give conditional58. LON requires mature-class, cross-FUA clinical entry, ordinary financing-materiality and continuity bridges; withdrawal restores54–64/no centre. Qifu approximate reference9716 is outside target9711; its actual therapy is not allocated as local hospital capacity. Guangzhou/Foshan ordinary eligibility and supplementary enrollment remain distinct. Reported drug/claim ranges are not individual final OOP or a measured resident burden rate. Other seven original judgments and84 source objects are unchanged, not reaudited; original quality/payment/continuity limits persist. MED withdrawal now gives49–64 with LON40; dropping both restores45–70. All9031/outside-frame competitors retained; zero exclusions, threshold32null/globalfalse. Current source bytes do not authenticate same-cutoff historical version.",
   "dimensions": [
     {
       "id": "PCS",
@@ -78,16 +78,17 @@
     },
     {
       "id": "LON",
-      "score": null,
-      "rationale": "Shared disease-specific randomized evidence and Chinese approval, the261-patient21-centre SAIL study and local prescription are reviewed. National patients are not local treatment counts; a prescription is not an infusion. SAIL paired50 CDR-SB5.36to6.02 deteriorated and MMSE comparison was nonsignificant; external comparison/ARIA table-text conflicts remain. The formal2026supplementary policy gives different inpatient/medicine paths, an empty current specified-innovation list and exclusions, not automatic two-antibody/monitoring coverage.",
-      "assumption": "No anchor selected while actual local administration, current ordinarily eligible resident insurance enrollment, drug-path applicability/net cost and appropriate monitoring across Guangzhou/Foshan remain unresolved. Lack of invoices or contracts itself is not40. Credible local delivered, compliant and usually affordable disease-specific path with retained maturity limits could60; actual important residual access barriers after mitigation40; wider mature accessible routes80. Usual basic coverage is not supplementary enrollment; scientific medium-AD study does not expand approved early-AD indication.",
+      "score": 40,
+      "rationale": "Original clinician reporting establishes actual2024 Panyu axi-cel infusion, MDT monitoring and discharge; original2025 reporting describes five paid CAR-T claims. A mature disease-cell class and ordinary cross-FUA service bridge is accepted, with important residual financing constraints after applicable aid: conditional40, not missingness or a computed personal bill.",
+      "assumption": "Accept mature B-cell disease CAR-T class compatibility without transferring tisa efficacy/toxicity to axi; historical actual treatment plus current hospital entry extends to cutoff. Qifu analyst reference is outside9711 in9716: usual medically suitable9711 residents can use applicable cross-area admission/referral and transport, not imported local capacity. Guangzhou/Foshan eligibility remains distinct, basic coverage is not voluntary SuiSuiKang enrollment, and interview-only free shuttle is not patient transport. Accept that million-scale drug costs and reported partial claims leave important financing/continuing-care constraints for the median-income profile despite applicable ordinary aid. Unpaired ranges do not establish any individual final OOP or absence of other payers. If ordinary other payment removes that constraint, or necessary clinical/geographic/eligibility/continuity bridges fail, withdraw LON to null/[] and54–64.60/80 require further justified net-access/margin judgments, not perfect invoices or healthy-longevity evidence.",
       "conditionalAlternatives": [],
       "subpillars": {
         "translation": "partial",
         "trial_maturity": "partial",
         "regulatory_adoption": "partial",
-        "resident_access": "unresolved"
-      }
+        "resident_access": "partial"
+      },
+      "sourceIds": ["GL80-S01", "GL80-S02", "R80-S04", "R80-S06", "R80-HAS"]
     },
     {
       "id": "TEC",
@@ -982,6 +983,63 @@
       "sha256": "ddf2e8d5165d740bc549212e49e5b3c26625a29dd22bb4cbb38d27bd15b993c0",
       "publicationObservationContext": "2026-08-06 publication; treatment starts 2024-06-26 to 2025-11-01; national 37-centre cohort, not verified Wuhan outcomes. XML and HTML represent one study.",
       "scope": "valid_primary_national_context_not_Wuhan_cohort"
+    },
+    {
+      "id": "GL80-S01",
+      "url": "https://www.peopleapp.com/column/30049260855-500006298741",
+      "retrievedOn": "2026-10-16",
+      "bytes": 64901,
+      "sha256": "2ed549d1f4bf5ac5b85196dc2a5382129466f9881b332dd9cd24880e200871f3",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/guangzhou-lon77/diagnostics/S01-leg1.bin",
+      "publicationObservationContext": "Named local treatment September–November2024; discharge two weeks after infusion.",
+      "scope": "Original field reporting by Li Gang with directly attributed treating clinician statements; not a hospital-owned record or independently controlled clinical result.",
+      "cutoffSameBytesAuthenticated": false,
+      "role": "original_report_direct_clinician"
+    },
+    {
+      "id": "GL80-S02",
+      "url": "https://huacheng.gz-cmc.com/pages/2025/12/25/SF148788613c718c16628c4682874c54.html",
+      "retrievedOn": "2026-10-16",
+      "bytes": 15969,
+      "sha256": "7351523fbbe7f88b8c2a0d314c9c28db58bd313c169bce4554e17b4302190a49",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/guangzhou-lon77/diagnostics/S02-leg2.bin",
+      "publicationObservationContext": "2025 five CAR-T claims; 2026 voluntary enrollment at December2025.",
+      "scope": "Guangzhou Daily original news/资讯 by Zhao Dongqin; five claims attributed 据悉, not an insurer claims dataset or policy wording.",
+      "cutoffSameBytesAuthenticated": false,
+      "role": "original_report_claims_attributed_not_insurer_ledger"
+    },
+    {
+      "id": "R80-S04",
+      "url": "https://www.clifford-hospital.org/service/guide2.html",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/guangzhou-lon-root80/diagnostics/R80-S04.bin",
+      "bytes": 35819,
+      "sha256": "3c85b9762567953d368267a9a1982f3283a1054f512eb50e466c3d331b2470ed",
+      "retrievedOn": "2026-10-16",
+      "scope": "Current first-party appointment/address and insurance entry; not CAR-T-specific payer or cutoff same-version certification.",
+      "role": "first_party_hospital_current_entry",
+      "cutoffSameBytesAuthenticated": false
+    },
+    {
+      "id": "R80-S06",
+      "url": "https://www.clifford-hospital.org/service/guide1.html",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/guangzhou-lon-root80/diagnostics/R80-S06.bin",
+      "bytes": 36784,
+      "sha256": "9d43ffdb87fe52c2894e69911a75d4db9eca5f90d460d628cde1cfabceb6b890",
+      "retrievedOn": "2026-10-16",
+      "scope": "Current first-party appointment/address and insurance entry; not CAR-T-specific payer or cutoff same-version certification.",
+      "role": "first_party_hospital_current_entry",
+      "cutoffSameBytesAuthenticated": false
+    },
+    {
+      "id": "R80-HAS",
+      "url": "https://www.has-sante.fr/upload/docs/evamed/CT-20262_KYMRIAH_LDGCB_PIC_REEV_AvisDef_CT20262.pdf",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/aarhus-full70/originals/has-kymriah-2023.pdf",
+      "bytes": 741078,
+      "sha256": "b2612ca8b5c71c90f31608b5819b3ae3d8fde8aa060108db45d5e47bf47f5409",
+      "retrievedOn": "2026-10-16",
+      "scope": "Durable tisa/DLBCL mature disease-cell class background, physical14/24/25 actually read/viewed; not axi numerical outcomes or local payment.",
+      "newHTTPRequest": false,
+      "cutoffSameBytesAuthenticated": false
     }
   ],
   "webOnlySourceReviews": [
@@ -1015,5 +1073,105 @@
     "qualifyingNewEntryFound": false,
     "deepDiscoveryReopened": false,
     "dimensionObjectsChanged": false
+  },
+  "lonAccessReview": {
+    "path": "docs/cci-guangzhou-lon-access-review.md",
+    "reviewedOn": "2026-10-16",
+    "fixedInputCommit": "bc391152215cd4ae5e5cfcc51ed22b868905fa45",
+    "fixedCases": 107,
+    "fixedComplete": 22,
+    "publishedCaseCount": 107,
+    "publishedComplete": 23,
+    "inputCaseSha256": "f3d547bd4cc6849d246bc96845c97c328af821e573357cd1a14b4daedb110d59",
+    "dimensionObjectsChanged": true,
+    "changedDimensions": ["LON"],
+    "otherSevenDimensionsUnchanged": true,
+    "old84SourceObjectsUnchanged": true,
+    "oldSevenAnd84RawSourcesReaudited": false,
+    "newValidSourceSnapshots": 5,
+    "clinicalServiceInsideTarget9711Verified": false,
+    "qifuApproximateReferenceFua": 9716,
+    "crossFuaOrdinaryClinicalEntryBridgeAccepted": true,
+    "FoshanResidentsAutomaticallySuiSuiKangEligible": false,
+    "supplementaryEnrollmentPresumed": false,
+    "unpairedRangesAreFinalPersonalOop": false,
+    "importantResidualFinancingBridgeAccepted": true,
+    "otherUsualPayersMayInvalidateMaterialityBridge": true,
+    "matureTisaClassNumbersTransferredToAxi": false,
+    "healthyLongevityClaim": false,
+    "rootSelectedPdfPages": [14, 24, 25],
+    "rootPdfPagesPersonallyViewed": [14, 24, 25],
+    "rootFullHTMLBodiesActuallyRead": ["GL80-S01", "GL80-S02", "R80-S04", "R80-S06"],
+    "rootOtherResponseScope": [
+      "R80-S03 meta-refresh only not followed",
+      "R80-S05 route image page; image not fetched/read"
+    ],
+    "originalSupplement": {
+      "directory": "/Users/morris/.local/share/cci-research/2026-10-10/guangzhou-lon77",
+      "manifestSha256": "5eaff289383ecfd5f6a1fb73bc67a4c35162f78b5f1f0cfca8cf985236207ec1",
+      "payloads": 28,
+      "bytes": 218210,
+      "queries": 2,
+      "actualHTTP": 2,
+      "unusedLegsClosed": 2,
+      "proposedLON": null
+    },
+    "crossReview": {
+      "directory": "/Users/morris/.local/share/cci-research/2026-10-10/guangzhou-lon-cross79",
+      "manifestSha256": "90d76aa908e5dcc2f08c33e4ddc1e9f34cfcfeffa29248a11d62a8ce2fe50155",
+      "payloads": 11,
+      "bytes": 486569,
+      "reportSha256": "3410555cc91100f5b6d1579144549e2885bda64d4c2e35d374fb213e1ec54762",
+      "resultSha256": "7579dfb75e87e210a44835778559289498690d7b51870cfc1bd5848e6bde220a",
+      "rawsActuallyRead": 3,
+      "PDFPagesActuallyViewed": 3,
+      "mainNullAndCompeting40OpinionRetained": true
+    },
+    "rootExtension": {
+      "ledger": "/Users/morris/.local/share/cci-research/2026-10-10/guangzhou-lon-root80/root-extension-ledger.json",
+      "queries": 1,
+      "unusedQueriesClosed": 1,
+      "actualNormalHTTPLegs": 4,
+      "status200": 4,
+      "usefulFirstPartyEntryBodies": 2,
+      "routeImagePageNotRead": 1,
+      "metaRefreshWrapperNotFollowed": 1,
+      "newBudgetNotResetOld": true,
+      "redirects": 0,
+      "automaticRetries": 0,
+      "oldStopsNotReset": true,
+      "sameCutoffBytesAuthenticated": false,
+      "wholeWorkflowCertified": false
+    },
+    "rootBoundary": {
+      "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+      "allCandidates": 9031,
+      "repairs": 136,
+      "target9711WkbSha256": "fe2dfe06be620f35b1066c1721e38a7724538b4398bb55909cc814ef402661ab",
+      "approximateReference": [113.325, 22.973],
+      "matches": [9716],
+      "distanceTo9711ProjectedMetres": 4882.530535527081,
+      "isExactInstitutionFootprintOrResidentPool": false
+    },
+    "toolOnlyTransportBackground": {
+      "url": "https://www.clifford-hospital.org/resources/news_10946.html",
+      "isWebsiteRaw": false,
+      "rawSha256": null,
+      "rawBytes": null,
+      "dateScope": "2023 recruitment guide, not2026 measured journey",
+      "interviewShuttleFreeForPatientsVerified": false,
+      "newFetchAfterSourceFailure": false
+    },
+    "sensitivity": {
+      "LONWithdrawn": [54, 64],
+      "LON60MathOnly": 60,
+      "LON80MathOnly": 62,
+      "MEDWithdrawn": [49, 64],
+      "bothMEDandLONWithdrawn": [45, 70]
+    },
+    "supportedExclusions": 0,
+    "threshold32": null,
+    "globalRankingEligible": false,
+    "sha256": "a91bbcb0f7c19ad111faadd12e82dae197b5d629bc1be3c1ccdbfbefd491554e"
   }
 }
