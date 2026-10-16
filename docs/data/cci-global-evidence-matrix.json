@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 96,
+    "conditionalCaseCount": 97,
     "completeConditionalCaseCount": 20,
-    "partialCaseCount": 76,
-    "unassessedCount": 8935,
+    "partialCaseCount": 77,
+    "unassessedCount": 8934,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -785,8 +785,13 @@
       "sha256": "dc4f3da168f78a129193c0392118c3d2a8085e3ac7f87ad2be7a698c06538bef",
       "provenance": "cci-hilversum-score-completion-review.md",
       "provenanceSha256": "ca964604a9128df19725cbd23c7a30aff5dc6d93d6f88868f62007a515582ce5"
+    },
+    "cci-local-2026-odense-case.json": {
+      "sha256": "bb68d26e927d98a9e1546950fad1dc3ce770222fbb1bccc0cb215ca6a3e3f4f8",
+      "provenance": "cci-odense-score-completion-review.md",
+      "provenanceSha256": "65480b0547aa856bbfcc42f7acb9f42822e2b711e4c69f2a8f6beada3d10cb70"
     }
   },
-  "scriptSha256": "ea94716c601f38d0506efd51fdf1ab38e1e98ecb7bae7666cec81e6afe0a4b07",
-  "csvSha256": "b7cac432598a0f0d97df12484c141a2a22941812e8ec06f6038a096edcceaad1"
+  "scriptSha256": "1d5c7b661f20e767f11720b9b323f11742b9ebc45a9c1dc6b7e9d85cd6f3b595",
+  "csvSha256": "40db5c2a0b82c74d224ae556201d88c5b39cec7a9c7c7ff8dd7ff14d829472f0"
 }

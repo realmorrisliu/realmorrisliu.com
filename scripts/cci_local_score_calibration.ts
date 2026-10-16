@@ -148,6 +148,7 @@ const realCases = [
   "middlesbrough",
   "kuopio",
   "hilversum",
+  "odense",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -287,6 +288,7 @@ const [
   middlesbrough,
   kuopio,
   hilversum,
+  odense,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -3877,3 +3879,43 @@ assert.equal(hilversumCase.webOnlySources.length, 1);
 assert.equal(hilversumCase.webOnlySources[0].sha256, null);
 assert.equal(hilversumCase.failedSourceSnapshots.length, 1);
 assert.equal(hilversumCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
+
+const odenseCase = realCases.find(c => c.candidateId === 389);
+assert.equal(
+  odenseCase.priorityCompletionReview.sha256,
+  digest(odenseCase.priorityCompletionReview.path)
+);
+assert.equal(
+  odenseCase.priorityCompletionReview.researchReportSha256,
+  digest(odenseCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(odense), { center: null, lower: 24, upper: 69 });
+assert.equal(odenseCase.unknownWeight, 45);
+assert.deepEqual(
+  odenseCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["GSS", "RES", "LON", "OPT"]
+);
+for (const [id, lower, upper] of [
+  ["PCS", 18, 78],
+  ["ISR", 18, 78],
+  ["MED", 18, 78],
+  ["TEC", 18, 73],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...odense };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+for (const id of ["PCS", "ISR", "MED"] as const)
+  assert.deepEqual(total({ ...odense, [id]: 60 }), { center: null, lower: 27, upper: 72 });
+assert.deepEqual(total({ ...odense, TEC: 40 }), { center: null, lower: 22, upper: 67 });
+assert.equal(odenseCase.sourceSnapshots.length, 19);
+assert(odenseCase.sourceSnapshots.every((s: { validOriginal: boolean }) => s.validOriginal));
+assert.equal(
+  odenseCase.sourceSnapshots.find((s: { id: string }) => s.id === "S14").scoreEligible,
+  false
+);
+assert.equal(odenseCase.failedSourceSnapshots.length, 0);
+assert.equal(odenseCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
+assert.equal(odenseCase.rootScopeReview.rootPdfPageCount, 8);

@@ -106,6 +106,7 @@ import rostock from "../../docs/data/cci-local-2026-rostock-case.json";
 import middlesbrough from "../../docs/data/cci-local-2026-middlesbrough-case.json";
 import kuopio from "../../docs/data/cci-local-2026-kuopio-case.json";
 import hilversum from "../../docs/data/cci-local-2026-hilversum-case.json";
+import odense from "../../docs/data/cci-local-2026-odense-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -216,8 +217,10 @@ const cases = [
   middlesbrough,
   kuopio,
   hilversum,
+  odense,
 ];
 const caseNamesZh: Record<number, string> = {
+  [odense.candidateId]: "欧登塞功能区",
   [hilversum.candidateId]: "希尔弗瑟姆功能区",
   [kuopio.candidateId]: "库奥皮奥功能区",
   [middlesbrough.candidateId]: "米德尔斯堡功能区",
@@ -420,6 +423,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [odense.candidateId]: [
+    zh
+      ? "欧登塞防护／制度／医疗条件40，技术条件60，四维未知。原权重贡献24、数学域24—69，无完整总分；真实水热、救援、通常公费与在宅用药同排水、手续时效和出院接续余障一起判断，地域／年代／普通后果假设可撤。"
+      : "Odense has conditional PCS/ISR/MED 40 and TEC 60; four dimensions remain unknown. The original-weight contribution is 24 and arithmetic domain 24–69, without a complete total. Actual utilities, rescue, usual public care and home medication are considered alongside drainage, administrative delays and discharge gaps; geography, time and ordinary-impact assumptions remain revocable.",
+    zh
+      ? "院内骤停2025三十天38／83与2024一年46／115分开，不推因果优越；4798报告非伤害率，实际整改与2026在宅接续同权。机器人营销数字不计分；19原件、根亲见8页，原96案保持。三个40均保留60公平替代，全球入围未证明。"
+      : "The 2025 in-hospital arrest 30-day result of 38/83 is separate from the 2024 one-year result of 46/115; neither establishes causal superiority. The 4,798 reports are not a harm rate; implemented corrections and 2026 home continuity receive equal weight. Robotics marketing figures do not score. There are 19 originals and eight pages viewed by root; the previous 96 cases remain unchanged. Each 40 retains a fair 60 alternative; global qualification is unproven.",
+  ],
   [hilversum.candidateId]: [
     zh
       ? "希尔弗瑟姆防护条件60，制度／医疗条件40，另五维未知。原权重贡献21、数学域21—76，无完整总分；已建储水、现金发放和护理接续与履约／质量余障共同判读，地域、年代和通常净取得假设可撤。"
