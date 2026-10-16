@@ -114,6 +114,7 @@ import bedford from "../../docs/data/cci-local-2026-bedford-case.json";
 import aarhus from "../../docs/data/cci-local-2026-aarhus-case.json";
 import nottingham from "../../docs/data/cci-local-2026-nottingham-case.json";
 import burtonOnTrent from "../../docs/data/cci-local-2026-burton-on-trent-case.json";
+import daugavpils from "../../docs/data/cci-local-2026-daugavpils-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -232,8 +233,10 @@ const cases = [
   aarhus,
   nottingham,
   burtonOnTrent,
+  daugavpils,
 ];
 const caseNamesZh: Record<number, string> = {
+  [daugavpils.candidateId]: "道加夫皮尔斯功能区",
   [burtonOnTrent.candidateId]: "特伦特河畔伯顿功能区",
   [nottingham.candidateId]: "诺丁汉功能区",
   [aarhus.candidateId]: "奥胡斯功能区",
@@ -444,6 +447,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [daugavpils.candidateId]: [
+    zh
+      ? "道加夫皮尔斯制度／医疗／技术条件60，防护／安全／资源／专项转化／退出未知。原权重贡献24、数学域24—84，无完整总分。实际审计落实、公共照护、本地产业科研及数字化支持有限判断；地域、时间、通常支付和净照护假设可撤。"
+      : "Daugavpils has conditional ISR/MED/TEC 60; PCS/GSS/RES/LON/OPT remain unknown. Its original-weight contribution is 24 and arithmetic domain 24–84, without a complete total. Implemented audits, public care, local industry and research, and digital adoption support scoped judgments; geography, time, usual payment and net-care assumptions are revocable.",
+    zh
+      ? "医生短缺与实际全天服务并存，不能缺员比例直接判40。补血事件更正明确库存足、治疗未中断，沟通缺陷仍保留；邻区停课不搬本地。医疗通常付款与残余照护负担仍需推定，完整个人共付条款未核，拒必要假设回未知。全球入围未证明。"
+      : "Staff shortages coexist with maintained round-the-clock care; a vacancy ratio does not itself establish 40. The corrected blood-restocking report confirms adequate reserves and uninterrupted treatment while retaining communication gaps; neighbouring school closures are not local outcomes. MED still needs usual-payment and residual-care assumptions, with full personal co-payment terms unverified. Rejecting a necessary assumption restores unknown. Global qualification is unproven.",
+  ],
   [burtonOnTrent.candidateId]: [
     zh
       ? "伯顿防护／制度条件60、医疗条件40，安全／资源／专项转化／技术／退出未知。原权重贡献24、数学域24—79，无完整总分。实际防洪、公共执行及本地护理改善，与剩余洪水及诊疗等待合看；地域、时点、通常支付和净照护假设可撤。"

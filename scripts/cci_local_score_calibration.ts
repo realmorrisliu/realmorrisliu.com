@@ -156,6 +156,7 @@ const realCases = [
   "aarhus",
   "nottingham",
   "burton-on-trent",
+  "daugavpils",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -303,6 +304,7 @@ const [
   aarhus,
   nottingham,
   burtonOnTrent,
+  daugavpils,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4348,4 +4350,55 @@ assert(
   burtonCase.webReadSources.every(
     (s: { isWebsiteRaw: boolean; scoreEligible: boolean }) => !s.isWebsiteRaw && !s.scoreEligible
   )
+);
+
+const daugavpilsCase = realCases.find(c => c.candidateId === 436);
+assert.equal(
+  daugavpilsCase.priorityCompletionReview.sha256,
+  digest(daugavpilsCase.priorityCompletionReview.path)
+);
+assert.equal(
+  daugavpilsCase.priorityCompletionReview.researchReportSha256,
+  digest(daugavpilsCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(daugavpils), { center: null, lower: 24, upper: 84 });
+assert.equal(daugavpilsCase.unknownWeight, 60);
+assert.deepEqual(
+  daugavpilsCase.dimensions
+    .filter((d: { score: number | null }) => d.score !== null)
+    .map((d: { id: string }) => d.id),
+  ["ISR", "MED", "TEC"]
+);
+for (const [id, lower, upper] of [
+  ["ISR", 15, 90],
+  ["MED", 15, 90],
+  ["TEC", 18, 88],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...daugavpils };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert(
+  daugavpilsCase.dimensions.every(
+    (d: { conditionalAlternatives: number[] }) => d.conditionalAlternatives.length === 0
+  )
+);
+assert.equal(daugavpilsCase.sourceSnapshots.length, 18);
+assert.equal(daugavpilsCase.failedSourceSnapshots.length, 1);
+assert.deepEqual(
+  daugavpilsCase.routingSourceSnapshots.map((s: { status: number }) => s.status),
+  [302, 301]
+);
+assert.equal(daugavpilsCase.routingSourceSnapshots[0].actualTransportIsTLS, false);
+assert.equal(daugavpilsCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
+assert.equal(daugavpilsCase.rootScopeReview.rootSelectedPdfTextPageCount, 18);
+assert.equal(daugavpilsCase.rootScopeReview.rootPdfPageCount, 6);
+assert.equal(daugavpilsCase.rootScopeReview.correctedBloodShortageClaimAdoptedAsPatientHarm, false);
+assert.equal(
+  daugavpilsCase.rootScopeReview.allNVDPersonalEligibilityAndCopayTermsDirectlyRead,
+  false
+);
+assert.equal(
+  daugavpilsCase.rootScopeReview.MEDUsualPayerAndNetCareBridgeNecessaryAndRevocable,
+  true
 );

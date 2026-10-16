@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 104,
+    "conditionalCaseCount": 105,
     "completeConditionalCaseCount": 21,
-    "partialCaseCount": 83,
-    "unassessedCount": 8927,
+    "partialCaseCount": 84,
+    "unassessedCount": 8926,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -825,8 +825,13 @@
       "sha256": "7a50d7c9c9516155dcf5d50fbd65becdd951d21a03df0f6ba8871c3677441a4b",
       "provenance": "cci-burton-on-trent-priority-review.md",
       "provenanceSha256": "265d7b12408b318e26b3c6a593f339f2f6cfff162ae2e67eccf8724d14c0d233"
+    },
+    "cci-local-2026-daugavpils-case.json": {
+      "sha256": "23adae68867b6b8325c8e403dc23d1d8efb030d0888c6a59a043f861e900dcb7",
+      "provenance": "cci-daugavpils-priority-review.md",
+      "provenanceSha256": "7549420fab8284970224e61454a63c5d1e3ed36b3271c894145aaff8adc2a8ae"
     }
   },
-  "scriptSha256": "fb787a71edb9ca987f95b86b73ecf0d4491592c4ddecb26910edea38af866e15",
-  "csvSha256": "8c9fd8c69d8f74726d6fb7d7c6e5d3ece8270eabe436c851d180fc208b0b5148"
+  "scriptSha256": "cd4f2fbac370cb8ec9827bab63da0842475f0cedd2d77b6d992088418c43bc36",
+  "csvSha256": "31203f115b9cb6542bab5462c29705c15f03455902facda379772310395c5bf2"
 }
