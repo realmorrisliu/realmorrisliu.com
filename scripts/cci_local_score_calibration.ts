@@ -146,6 +146,7 @@ const realCases = [
   "birmingham",
   "rostock",
   "middlesbrough",
+  "kuopio",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -283,6 +284,7 @@ const [
   birmingham,
   rostock,
   middlesbrough,
+  kuopio,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -3773,3 +3775,42 @@ assert.equal(
   2
 );
 assert.equal(middlesbroughCase.sourceAndStopLedger.normalHTTPActualLegs, 18);
+
+const kuopioCase = realCases.find(c => c.candidateId === 823);
+assert.equal(
+  kuopioCase.priorityCompletionReview.sha256,
+  digest(kuopioCase.priorityCompletionReview.path)
+);
+assert.equal(
+  kuopioCase.priorityCompletionReview.researchReportSha256,
+  digest(kuopioCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(kuopio), { center: null, lower: 36, upper: 71 });
+assert.equal(kuopioCase.unknownWeight, 35);
+assert.deepEqual(
+  kuopioCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["GSS", "RES", "OPT"]
+);
+for (const [id, lower, upper] of [
+  ["PCS", 27, 77],
+  ["ISR", 27, 77],
+  ["MED", 30, 80],
+  ["LON", 30, 75],
+  ["TEC", 30, 75],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...kuopio };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+assert.deepEqual(total({ ...kuopio, ISR: 40 }), { center: null, lower: 33, upper: 68 });
+assert.deepEqual(total({ ...kuopio, MED: 60 }), { center: null, lower: 39, upper: 74 });
+assert.equal(kuopioCase.sourceSnapshots.length, 22);
+assert(kuopioCase.sourceSnapshots.every((s: { validOriginal: boolean }) => s.validOriginal));
+assert.equal(
+  kuopioCase.sourceSnapshots.find((s: { id: string }) => s.id === "S13").scoreEligible,
+  false
+);
+assert.equal(kuopioCase.failedSourceSnapshots.length, 0);
+assert.equal(kuopioCase.sourceAndStopLedger.normalHTTPActualLegs, 18);

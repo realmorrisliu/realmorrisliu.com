@@ -104,6 +104,7 @@ import portsmouth from "../../docs/data/cci-local-2026-portsmouth-case.json";
 import birmingham from "../../docs/data/cci-local-2026-birmingham-case.json";
 import rostock from "../../docs/data/cci-local-2026-rostock-case.json";
 import middlesbrough from "../../docs/data/cci-local-2026-middlesbrough-case.json";
+import kuopio from "../../docs/data/cci-local-2026-kuopio-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -212,8 +213,10 @@ const cases = [
   birmingham,
   rostock,
   middlesbrough,
+  kuopio,
 ];
 const caseNamesZh: Record<number, string> = {
+  [kuopio.candidateId]: "库奥皮奥功能区",
   [middlesbrough.candidateId]: "米德尔斯堡功能区",
   [rostock.candidateId]: "罗斯托克功能区",
   [birmingham.candidateId]: "伯明翰功能区",
@@ -414,6 +417,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [kuopio.candidateId]: [
+    zh
+      ? "库奥皮奥防护／制度／专项转化／技术条件60，医疗条件40，安全／资源／退出未知。原权重贡献36、数学域36—71，无完整总分；天气保护、实际服务与疾病重建支持有限判断，地域、年代、通常取得及净照护假设可撤。"
+      : "Kuopio has conditional PCS/ISR/LON/TEC 60 and MED 40; GSS/RES/OPT remain unknown. The original-weight contribution is 36 and arithmetic domain 36–71, without a complete total. Weather protection, actual services and disease reconstruction support limited judgments; geographic, time, usual-access and net-care assumptions remain revocable.",
+    zh
+      ? "主任务将制度由提案40改60：就业区已在2025年5月启动，两个项目已开展，住房和审计纠正真实；未实现项目及连续性缺口仍留。医疗有福利／康复中断实害；815欧只限部分费用，供热41分钟是采暖季均值，缺测不加分。原94案保持。"
+      : "Root review changes ISR from proposed 40 to 60: the employment area launched in May 2025, two projects operated, and housing and corrective work were delivered. Unrealised work and continuity gaps remain. Care delays interrupted benefits and rehabilitation; EUR 815 caps only specified fees, 41 minutes is a heating-season average, and missing data adds no capability points. The previous 94 cases are unchanged.",
+  ],
   [middlesbrough.candidateId]: [
     zh
       ? "米德尔斯堡安全／医疗条件40，制度／技术／退出条件60，防护／资源／专项转化未知。原权重贡献33、数学域33—68，无完整总分；真实帮助与重要余障并存，地域、年代和通常取得假设可撤。"
