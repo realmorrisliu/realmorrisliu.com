@@ -149,6 +149,7 @@ const realCases = [
   "kuopio",
   "hilversum",
   "odense",
+  "corby",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -289,6 +290,7 @@ const [
   kuopio,
   hilversum,
   odense,
+  corby,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -3961,3 +3963,33 @@ assert.deepEqual(
   [45, 70]
 );
 assert.deepEqual(viennaGssCase.sensitivity.GSSWithdrawn, [51, 66]);
+
+const corbyCase = realCases.find(c => c.candidateId === 5236);
+assert.equal(
+  corbyCase.priorityCompletionReview.sha256,
+  digest(corbyCase.priorityCompletionReview.path)
+);
+assert.equal(
+  corbyCase.priorityCompletionReview.researchReportSha256,
+  digest(corbyCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(total(corby), { center: null, lower: 6, upper: 91 });
+assert.deepEqual(total({ ...corby, MED: 60 }), { center: null, lower: 9, upper: 94 });
+assert.deepEqual(total({}), { center: null, lower: 0, upper: 100 });
+assert.equal(corbyCase.unknownWeight, 85);
+assert.equal(
+  corbyCase.dimensions.filter((d: { score: number | null }) => d.score !== null).length,
+  1
+);
+assert.equal(corbyCase.sourceSnapshots.length, 16);
+assert(corbyCase.sourceSnapshots.every((s: { validOriginal: boolean }) => s.validOriginal));
+assert.equal(
+  corbyCase.sourceSnapshots.find((s: { id: string }) => s.id === "S03").scoreEligible,
+  false
+);
+assert.equal(corbyCase.failedSourceSnapshots.length, 6);
+assert.equal(corbyCase.routingSourceSnapshots.length, 2);
+assert.equal(corbyCase.sourceAndStopLedger.normalHTTPActualLegs, 16);
+assert.equal(corbyCase.rootScopeReview.rootPdfPageCount, 4);
+assert.equal(corbyCase.rootScopeReview.processDeviations.length, 1);
+assert.equal(corbyCase.referenceBoundaryCheck.allCandidatesChecked, 9031);

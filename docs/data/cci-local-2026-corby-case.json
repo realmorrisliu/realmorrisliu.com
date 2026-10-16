@@ -1,0 +1,1864 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 5236,
+  "name": "Corby",
+  "countryIso": "GBR",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-16",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "Ordinary British citizen, usual longterm local resident, local median income, usual effective public coverage, no fixed age; NHS ordinary residence not nationality alone.",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "evidenceReview": "cci-corby-score-completion-review.md",
+  "researchFrozenInputCommit": "3654924f0f3909279553ef0ca21c81c2a2a55408",
+  "fixedInputCases": 97,
+  "fixedInputComplete": 20,
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 6,
+  "unknownWeight": 85,
+  "unresolvedScoreRange": [6, 91],
+  "dimensions": [
+    {
+      "id": "PCS",
+      "weight": 15,
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "未取得主要自然危险与实际保护后的地方生活影响链。医院建筑风险和旅行指引有局部事实，不能由它们覆盖热湿、洪水、地质、强天气；获取403不是40。",
+      "assumption": "本轮不接受医院RAAC或防护目录代表FUA主要自然危险的桥。60需要已有实际危险适配与帮助后作用；40需要具体重要余障正证；80需多危险/备援。均非要求全人口完美实测。",
+      "conditionalAlternatives": [],
+      "alternativeRationales": "本轮不接受医院RAAC或防护目录代表FUA主要自然危险的桥。60需要已有实际危险适配与帮助后作用；40需要具体重要余障正证；80需多危险/备援。均非要求全人口完美实测。",
+      "subpillars": {
+        "heat_humidity": "unresolved",
+        "flood_sea_level": "unresolved",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "partial"
+      },
+      "sourceIds": ["S10"],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": []
+      }
+    },
+    {
+      "id": "GSS",
+      "weight": 15,
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "警务具体原文获取受限，未读到本地组织暴力、区域/战略影响和匹配已运行保护的组合；不从无战争或国家印象填60。",
+      "assumption": "没有实际正文时40/60均无方向依据。可接受有限实际影响/保护触达/时间桥，但本轮无足够事实承载；不是必须先发生成功袭击。",
+      "conditionalAlternatives": [],
+      "alternativeRationales": "没有实际正文时40/60均无方向依据。可接受有限实际影响/保护触达/时间桥，但本轮无足够事实承载；不是必须先发生成功袭击。",
+      "subpillars": {
+        "organized_violence": "unresolved",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "unresolved"
+      },
+      "sourceIds": [],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": []
+      }
+    },
+    {
+      "id": "ISR",
+      "weight": 15,
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "医院季度治理/真实Apr2025问责与患者支持有实际执行正证，但只医疗机构，不足外推社会凝聚、公共治理及应急恢复。没有把单一医疗等待重复扣成制度40。",
+      "assumption": "60若有据接受多机构普通公共执行可讨论；本材料未完成这一地域/功能代表桥。40须公共执行重要余障而非计划/预算或一院旧评级；80需压力恢复/替代。拒桥null。",
+      "conditionalAlternatives": [],
+      "alternativeRationales": "60若有据接受多机构普通公共执行可讨论；本材料未完成这一地域/功能代表桥。40须公共执行重要余障而非计划/预算或一院旧评级；80需压力恢复/替代。拒桥null。",
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "sourceIds": ["S07", "S12", "S08", "S10"],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": []
+      }
+    },
+    {
+      "id": "RES",
+      "weight": 10,
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "水务实质原文受限，食品只有咨询而非实物交付，能源中心仍未来工程。日常水食能供给、费用/帮助后普通净取得与共因可靠性链未闭；不是断供结论。",
+      "assumption": "不以医院供应存在填60、不以没读到家庭账本判40。60需真实资源合束方向；40需实际重要供给/可负担余障。无需每户2026账本，但本轮缺的仍是真资源事实。",
+      "conditionalAlternatives": [],
+      "alternativeRationales": "不以医院供应存在填60、不以没读到家庭账本判40。60需真实资源合束方向；40需实际重要供给/可负担余障。无需每户2026账本，但本轮缺的仍是真资源事实。",
+      "subpillars": {
+        "water": "unresolved",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      },
+      "sourceIds": ["S12", "S07", "S13"],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": []
+      }
+    },
+    {
+      "id": "MED",
+      "weight": 15,
+      "score": 40,
+      "scoreStatus": "conditional_root_adopted",
+      "rationale": "实际KGH和Corby门诊、肿瘤/血液SACT与NHS常住资格、免费患者支持，结合SHMI96 as expected和再入院正证，证明必要护理真实运行。与此同时p76实际癌症FDS图KGH蓝线末段约低60%（至约Dec2025；62.9标签归属/具体日期不作精确断言），相当部分诊断路径未在其标准窗口完成；>52周计划护理约1.1%是实际久候，不仅目标差距。对疑癌诊断和必要计划治疗，延迟本身构成重要取得约束，故条件40；不是声称多数居民受害、因等待死亡或服务全面失效。",
+      "assumption": "根接受四项有限可撤桥：KGH服务对普通FUA居民必要护理的有限代表；2024/25及2025末等待向截止的有限延续；通常有效NHS和实际支持下家庭净照护通常可取得；年报/质量报告截止前可得的有限版本桥。PDF元数据不能证明首次公开或截止同版。拒任一必要桥则null/[]；国籍不自动免全部费用。",
+      "conditionalAlternatives": [60],
+      "alternativeRationales": "60：若根接受已运行护理、预期范围死亡指标及较低再入院与通常净取得足以支持较强全维能力，可条件60，仍明示疑癌和久候重要余障；不是必须无负面结果。80：本轮没有足够多路径压力备援与及时性的强证据，不因不完美自动封顶。40：按实际必要延迟的重要后果桥；拒截止公开/地域/通常取得或延续桥null/[]。",
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "sourceIds": ["S06b", "S08", "R01", "R02", "S09", "S13", "S12"],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": []
+      }
+    },
+    {
+      "id": "LON",
+      "weight": 10,
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "本地实际常规抗癌/支持治疗和跨院合作不等所评成熟疾病细胞/再生平台采用。未取得对应人体成熟证据—具体实施/真实转诊—通常付款监护的可对应链。不是断言本地没有平台。",
+      "assumption": "不要求同牌逐剂票据、健康人延寿或固定成年人；普通NHS类付款可有限适配，但不能把一般免疫治疗或研究机构名称当平台实施。60须对应真实链；40须实际重要断点而非资料缺失；本轮null。",
+      "conditionalAlternatives": [],
+      "alternativeRationales": "不要求同牌逐剂票据、健康人延寿或固定成年人；普通NHS类付款可有限适配，但不能把一般免疫治疗或研究机构名称当平台实施。60须对应真实链；40须实际重要断点而非资料缺失；本轮null。",
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "unresolved",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "sourceIds": ["S13", "R01", "S12", "R02"],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": []
+      }
+    },
+    {
+      "id": "TEC",
+      "weight": 10,
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "院内绩效框架/数据仓库是真应用，未取得独立地方知识成果、产业持续产用和通常扩散的组合；不由医院单节点或Corby品牌给60。",
+      "assumption": "60/80不要求全民AI或所有节点独立压测。当前真实事实范围过窄，40也缺已发生的重要产业/设施约束，故null。不是来源少判能力弱。",
+      "conditionalAlternatives": [],
+      "alternativeRationales": "60/80不要求全民AI或所有节点独立压测。当前真实事实范围过窄，40也缺已发生的重要产业/设施约束，故null。不是来源少判能力弱。",
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "unresolved",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "sourceIds": ["S07", "S12"],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": []
+      }
+    },
+    {
+      "id": "OPT",
+      "weight": 10,
+      "score": null,
+      "scoreStatus": "reviewed_insufficient_direction",
+      "rationale": "英国赴德国的有条件居留路径、普通个人国际转款及欧洲漫游已核；本地医院交通指引只局部，向外实际多通道和普通家庭长期搬迁/连续连接的净资源组合未闭。",
+      "assumption": "法律规则不是自动资格；没有默认最优账户/无限漫游。60允许有限通常资金/通信和接驳桥，但本轮缺真实向外交通组合；40也不能从403或法律条件存在自动得出。80需真实替代/共因检视。",
+      "conditionalAlternatives": [],
+      "alternativeRationales": "法律规则不是自动资格；没有默认最优账户/无限漫游。60允许有限通常资金/通信和接驳桥，但本轮缺真实向外交通组合；40也不能从403或法律条件存在自动得出。80需真实替代/共因检视。",
+      "subpillars": {
+        "transport_redundancy": "partial",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      },
+      "sourceIds": ["S10", "R03", "R04", "R05", "R09", "R10", "R11"],
+      "rejectionOutcome": {
+        "score": null,
+        "conditionalAlternatives": []
+      }
+    }
+  ],
+  "coverageReview": [
+    {
+      "dimension": "PCS",
+      "subpillar": "heat_humidity",
+      "status": "not_substantively_resolved",
+      "finding": "未取得本地热湿实际暴露、保护及帮助后普通生活影响。",
+      "sourceIds": [],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "flood_sea_level",
+      "status": "not_substantively_resolved",
+      "finding": "Anglian原件403；医院RAAC/能源中心规划不当防洪实绩。",
+      "sourceIds": [],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "geophysical",
+      "status": "not_substantively_resolved",
+      "finding": "未取得本地地质危险及匹配保护；不以无事件判低风险。",
+      "sourceIds": [],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "severe_weather_wildfire",
+      "status": "reviewed_partial",
+      "finding": "KGH旅行风险报告链接只定位渠道，未核地方强天气/林火真实执行与后果。",
+      "sourceIds": ["S10"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "organized_violence",
+      "status": "not_substantively_resolved",
+      "finding": "Northants具体Corby警务原件403，不采用检索摘要作行动成果或定罪。",
+      "sourceIds": [],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "regional_conflict",
+      "status": "not_substantively_resolved",
+      "finding": "未取得区域冲突外溢、本地实际影响与匹配保护；不以无战争判安全。",
+      "sourceIds": [],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "strategic_exposure",
+      "status": "not_substantively_resolved",
+      "finding": "未取得本地关键通道战略威胁及实际防护作用；医院存在不是军事/组织安全。",
+      "sourceIds": [],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "governance",
+      "status": "reviewed_partial",
+      "finding": "KGH实际Apr2025问责框架、季度深潜和>100风险register有运行正证，但只一个医疗提供者，不代表市政公共执行全束。",
+      "sourceIds": ["S07"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "adaptive_capacity",
+      "status": "reviewed_partial",
+      "finding": "UHN实际整合领导和数据仓库/绩效框架有帮助；旧院RAAC处理、能源中心2027及重建2030–35仍规划，不当完成。",
+      "sourceIds": ["S07"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "social_cohesion",
+      "status": "reviewed_partial",
+      "finding": "Macmillan/CAB/DWP现实建议和HOPE课程是特定病患支持；无一般群体信任/凝聚后果。",
+      "sourceIds": ["S12"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "emergency_recovery",
+      "status": "reviewed_partial",
+      "finding": "临床/旅行帮助并非全域灾后恢复实证，未取得实际多机构恢复结果。",
+      "sourceIds": ["S08", "S10"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "water",
+      "status": "not_substantively_resolved",
+      "finding": "AnglianAPR及报告入口403，未读到可采用实际水供/维修/家庭净费用正文。",
+      "sourceIds": [],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "food",
+      "status": "reviewed_partial",
+      "finding": "癌症支持有福利/财务咨询，不证明食品券、食物实际送达或通常中位家庭取得。",
+      "sourceIds": ["S12"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "energy",
+      "status": "reviewed_partial",
+      "finding": "S07p25能源中心2027预计完成，不能当已供热供电；无实际居民能费缓解链。",
+      "sourceIds": ["S07"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "supply_chain",
+      "status": "reviewed_partial",
+      "finding": "医院常规药物/SACT在运行仅局部供应正证，不覆盖日常水食能来源与共因可靠性。",
+      "sourceIds": ["S13"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "access",
+      "status": "reviewed_partial",
+      "finding": "KGH及Corby卫星服务实际存在；普通NHS长期居住资格不是单靠国籍。p76 FDS图KGH蓝线末段约低60%；62.9标签归属/日期不能无歧义定位与>52周约1.1%表明实际必要路径延迟，不把目标未达单独机械降档。",
+      "sourceIds": ["S06b", "S08", "R01", "R02"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "routine_quality",
+      "status": "reviewed_partial",
+      "finding": "p67KGH SHMI96 band2 as expected，Oct24–Sep25；p68/69 2024/25 <16再入院9.8对全国12.3，16+12.1对13.7。是出院/住院分母不是全FUA率，不做因果避免死亡解释。",
+      "sourceIds": ["S06b"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "specialist_capacity",
+      "status": "reviewed_partial",
+      "finding": "实际本地血液/肿瘤门诊与CSSTU SACT、支持治疗、PICC等，多病科服务；癌症诊断延迟仍重要。跨院协作不把NGH/UHL全部能力搬入。",
+      "sourceIds": ["S09", "S13", "S06b"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "system_continuity",
+      "status": "reviewed_partial",
+      "finding": "Macmillan免费实际咨询/HOPE与CAB/DWP支持、治疗停车许可是真帮助；不是现款福利/零交通照护成本。通常公保净照护桥允许但可撤。",
+      "sourceIds": ["S12", "S13", "R01", "R02"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "translation",
+      "status": "reviewed_partial",
+      "finding": "实际SACT/一般免疫治疗/输血服务属于MED正证，未明确合资格细胞/再生/基因机制实施或真实转诊。",
+      "sourceIds": ["S13"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "trial_maturity",
+      "status": "not_substantively_resolved",
+      "finding": "未取得可与本地具体机制对应的成熟人体结果，不以一般抗癌疗效或科研存在代替。",
+      "sourceIds": [],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "regulatory_adoption",
+      "status": "reviewed_partial",
+      "finding": "普通NHS付款/肿瘤门诊不是具体成熟平台监管及常规采用证明。",
+      "sourceIds": ["S13", "R01"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "resident_access",
+      "status": "reviewed_partial",
+      "finding": "本地支持/停车、Northampton/Leicester合作有真实有限照护正证；初始合资格治疗路径及通常净监护未闭，不要求逐剂发票。",
+      "sourceIds": ["S13", "S12", "R01", "R02"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "knowledge_output",
+      "status": "reviewed_partial",
+      "finding": "S07临床机构/分组存在不等实际本地知识产品产出，本轮未取得可判地方成果。",
+      "sourceIds": ["S07"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "industry_density",
+      "status": "not_substantively_resolved",
+      "finding": "Tata/本地产业发现查询未定位实质原文，不能用品牌/调度代理替产用。",
+      "sourceIds": [],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "digital_infrastructure",
+      "status": "reviewed_partial",
+      "finding": "S07p26实际绩效数据仓库/风险register和新框架有院内应用，不当全域数字接入/产业数字设施。",
+      "sourceIds": ["S07"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "diffusion",
+      "status": "reviewed_partial",
+      "finding": "真实临床支持和资料数字化仅单提供者应用，本轮没闭合知识—产业—普通使用扩散链。",
+      "sourceIds": ["S07", "S12"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "transport_redundancy",
+      "status": "reviewed_partial",
+      "finding": "医院外公交、步行/自行车/租赁实际指引有据，EMR/Stagecoach正文403；不足判断通常向外多通道和共同失效。",
+      "sourceIds": ["S10"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "legal_mobility",
+      "status": "reviewed_partial",
+      "finding": "英国公民德国§41可非短期免签入境并90日申请，但§5生计等及§18b合资格工作要求存在，非EU工作自由或自动长居。",
+      "sourceIds": ["R03", "R04", "R05"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "asset_portability",
+      "status": "reviewed_partial",
+      "finding": "NatWest普通个人国际转款app/online/branch可用，需收款信息/额度/费用/鉴权；不是中位家庭迁居预算。",
+      "sourceIds": ["R09"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "network_continuity",
+      "status": "reviewed_partial",
+      "finding": "O2欧洲区含德国25GB规则及>63日/四月附费；持续可付费但非永久免费/当地SIM已开户。",
+      "sourceIds": ["R10", "R11"],
+      "score": null,
+      "fullyMeasured": false,
+      "scope": "bounded semantic consideration, not wholepopulation or complete measurement"
+    }
+  ],
+  "referenceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "sourceSha256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allCandidatesChecked": 9031,
+    "repairCount": 136,
+    "record": {
+      "fid": 8452,
+      "eFUA_ID": 5236.0,
+      "UC_num": 2.0,
+      "UC_IDs": "1899;1900",
+      "eFUA_name": "Corby",
+      "Commuting": 1.0,
+      "Cntry_ISO": "GBR",
+      "Cntry_name": "UnitedKingdom",
+      "FUA_area": 930.0,
+      "UC_area": 42.0,
+      "FUA_p_2015": 337578.7031782381,
+      "UC_p_2015": 110692.49843597412,
+      "Com_p_2015": 226886.204742264
+    },
+    "points": [
+      {
+        "label": "Corby centre analyst approximate",
+        "longitude": -0.703,
+        "latitude": 52.489,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 5236,
+            "name": "Corby"
+          }
+        ]
+      },
+      {
+        "label": "KGH neighbourhood analyst approximate",
+        "longitude": -0.738,
+        "latitude": 52.404,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 5236,
+            "name": "Corby"
+          }
+        ]
+      },
+      {
+        "label": "NGH neighbourhood analyst approximate",
+        "longitude": -0.885,
+        "latitude": 52.233,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 5067,
+            "name": "Northampton"
+          }
+        ]
+      },
+      {
+        "label": "Leicester Royal Infirmary neighbourhood analyst approximate",
+        "longitude": -1.132,
+        "latitude": 52.625,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 4925,
+            "name": "Leicester"
+          }
+        ]
+      },
+      {
+        "label": "Leicester General Hospital neighbourhood analyst approximate",
+        "longitude": -1.072,
+        "latitude": 52.629,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 4925,
+            "name": "Leicester"
+          }
+        ]
+      },
+      {
+        "label": "Corby rail analyst approximate",
+        "longitude": -0.688,
+        "latitude": 52.488,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 5236,
+            "name": "Corby"
+          }
+        ]
+      },
+      {
+        "label": "Kettering rail analyst approximate",
+        "longitude": -0.731,
+        "latitude": 52.393,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 5236,
+            "name": "Corby"
+          }
+        ]
+      },
+      {
+        "label": "Luton Airport neighbourhood analyst approximate",
+        "longitude": -0.369,
+        "latitude": 51.875,
+        "approximateReferenceOnly": true,
+        "matches": [
+          {
+            "candidateId": 5356,
+            "name": "Luton"
+          }
+        ]
+      }
+    ],
+    "targetWkbSha256": "5e9ee94d04b8c81a1ae40c69a69123b31193dd2e2dd16f01b62b5d6afe6198d9",
+    "meaning": "Old FUA is not municipal/provider/patient scope. Analyst approximate points are not surveyed footprints, residence, service-population denominators or actual journeys."
+  },
+  "sourceManifest": {
+    "sources": [
+      {
+        "id": "S03",
+        "file": "kgh-reports-index.html",
+        "url": "https://www.kgh.nhs.uk/annual-report-and-statement-of-accounts/",
+        "leg": 3,
+        "utc": "2026-10-16T01:52:39.778900+00:00",
+        "mechanism": "normalTLS urllib noRetry noRedirect",
+        "headersAreParsedNotWire": true,
+        "status": 200,
+        "headers": {
+          "Date": "Fri, 16 Oct 2026 01:52:41 GMT",
+          "Content-Type": "text/html;charset=UTF-8",
+          "Content-Length": "56406"
+        },
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-reports-index.html",
+        "bytes": 56406,
+        "sha256": "0e456546924e467f36eda1c65fb3ecdcfcbfc7df1345e73b9aa0ba4402d43756",
+        "bodySavedBeforeValidation": true,
+        "cutoffHistoricalBytesAuthenticated": false,
+        "evidenceRole": "official report locator only, no actual first publication date",
+        "validSubstantiveBody": false,
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-reports-index.html",
+        "validBody": true,
+        "validOriginal": true,
+        "originalBytes": 56406,
+        "rootBytesReverified": true,
+        "scoreEligible": false
+      },
+      {
+        "id": "S07",
+        "file": "kgh-annual2026.pdf",
+        "url": "https://www.kgh.nhs.uk/download/kgh-final-annual-report-auditors-report-and-accounts-070926pdf.pdf?ver=12152&doc=docm93jijm4n5295.pdf",
+        "leg": 7,
+        "utc": "2026-10-16T01:55:30.357758+00:00",
+        "mechanism": "normalTLS urllib noRetry noRedirect",
+        "headersAreParsedNotWire": true,
+        "status": 200,
+        "headers": {
+          "Date": "Fri, 16 Oct 2026 01:55:31 GMT",
+          "Content-Type": "application/pdf",
+          "Content-Length": "5720015"
+        },
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-annual2026.pdf",
+        "bytes": 5720015,
+        "sha256": "c54ae0992806db8a50de3ebeab5988d74a69567075f9da8b7bece2986a906f36",
+        "bodySavedBeforeValidation": true,
+        "cutoffHistoricalBytesAuthenticated": false,
+        "evidenceRole": "KGH annual2025/26 actual institutions and operations; not all UHN/UHL scope local",
+        "validSubstantiveBody": true,
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-annual2026.pdf",
+        "validBody": true,
+        "validOriginal": true,
+        "originalBytes": 5720015,
+        "rootBytesReverified": true,
+        "scoreEligible": true
+      },
+      {
+        "id": "S08",
+        "file": "kgh-planning-visit.html",
+        "url": "https://www.kgh.nhs.uk/planning-your-visit-",
+        "leg": 8,
+        "utc": "2026-10-16T01:55:35.023523+00:00",
+        "mechanism": "normalTLS urllib noRetry noRedirect",
+        "headersAreParsedNotWire": true,
+        "status": 200,
+        "headers": {
+          "Date": "Fri, 16 Oct 2026 01:55:36 GMT",
+          "Content-Type": "text/html;charset=UTF-8",
+          "Content-Length": "60780"
+        },
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-planning-visit.html",
+        "bytes": 60780,
+        "sha256": "0e7a77c1d02e7cbfb7e758145279aa834ca15ff143d2b151c13b5b54db75efd8",
+        "bodySavedBeforeValidation": true,
+        "cutoffHistoricalBytesAuthenticated": false,
+        "evidenceRole": "current patient location/appointment route; original publication unknown",
+        "validSubstantiveBody": true,
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-planning-visit.html",
+        "validBody": true,
+        "validOriginal": true,
+        "originalBytes": 60780,
+        "rootBytesReverified": true,
+        "scoreEligible": true
+      },
+      {
+        "id": "S06b",
+        "file": "uhn-quality2026-final.pdf",
+        "url": "https://www.kgh.nhs.uk/download/uhn-quality-report-20252026-final-signedpdf.pdf?ver=11963&doc=docm93jijm4n5229",
+        "leg": 9,
+        "utc": "2026-10-16T01:56:30.450967+00:00",
+        "mechanism": "normalTLS urllib noRetry noRedirect",
+        "headersAreParsedNotWire": true,
+        "status": 200,
+        "headers": {
+          "Date": "Fri, 16 Oct 2026 01:56:31 GMT",
+          "Content-Type": "application/pdf",
+          "Content-Length": "15923236"
+        },
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/uhn-quality2026-final.pdf",
+        "bytes": 15923236,
+        "sha256": "dc920dea5e43e377045e5efcd6e624d0e2879e2c807d456ac591294e087e2268",
+        "bodySavedBeforeValidation": true,
+        "cutoffHistoricalBytesAuthenticated": false,
+        "evidenceRole": "local KGH core quality separated from NGH/group; nominal2025/26, historical exact bytes unverified",
+        "validSubstantiveBody": true,
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/uhn-quality2026-final.pdf",
+        "validBody": true,
+        "validOriginal": true,
+        "originalBytes": 15923236,
+        "rootBytesReverified": true,
+        "scoreEligible": true
+      },
+      {
+        "id": "S09",
+        "file": "kgh-service-directory.html",
+        "url": "https://www.kgh.nhs.uk/service-directory-home-page-",
+        "leg": 10,
+        "utc": "2026-10-16T01:59:58.733355+00:00",
+        "mechanism": "normalTLS urllib noRetry noRedirect",
+        "headersAreParsedNotWire": true,
+        "status": 200,
+        "headers": {
+          "Date": "Fri, 16 Oct 2026 02:00:00 GMT",
+          "Content-Type": "text/html;charset=UTF-8",
+          "Content-Length": "74286"
+        },
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-service-directory.html",
+        "bytes": 74286,
+        "sha256": "8c3f596b9cba14d2d2986ac676825b1162ae9a2c5de43438750769ec67402624",
+        "bodySavedBeforeValidation": true,
+        "cutoffHistoricalBytesAuthenticated": false,
+        "evidenceRole": "directory scope/context, no inferred full clinical outcomes",
+        "validSubstantiveBody": true,
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-service-directory.html",
+        "validBody": true,
+        "validOriginal": true,
+        "originalBytes": 74286,
+        "rootBytesReverified": true,
+        "scoreEligible": true
+      },
+      {
+        "id": "S10",
+        "file": "kgh-sustainable-travel.html",
+        "url": "https://www.kgh.nhs.uk/sustainable-ways-to-travel-kettering-general-hospital",
+        "leg": 11,
+        "utc": "2026-10-16T02:00:01.249751+00:00",
+        "mechanism": "normalTLS urllib noRetry noRedirect",
+        "headersAreParsedNotWire": true,
+        "status": 200,
+        "headers": {
+          "Date": "Fri, 16 Oct 2026 02:00:02 GMT",
+          "Content-Type": "text/html;charset=UTF-8",
+          "Content-Length": "53500"
+        },
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-sustainable-travel.html",
+        "bytes": 53500,
+        "sha256": "7f1d7cfb0db6744f8a2a7da680644e70f571649462cadc06880d3610eda52706",
+        "bodySavedBeforeValidation": true,
+        "cutoffHistoricalBytesAuthenticated": false,
+        "evidenceRole": "local hospital travel guidance, not measured all resident journeys or exit redundancy",
+        "validSubstantiveBody": true,
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-sustainable-travel.html",
+        "validBody": true,
+        "validOriginal": true,
+        "originalBytes": 53500,
+        "rootBytesReverified": true,
+        "scoreEligible": false
+      },
+      {
+        "id": "S12",
+        "file": "kgh-macmillan-support.html",
+        "url": "https://www.kgh.nhs.uk/macmillan-support-centre-kgh",
+        "leg": 13,
+        "utc": "2026-10-16T02:02:38.210661+00:00",
+        "mechanism": "normalTLS urllib noRetry noRedirect",
+        "headersAreParsedNotWire": true,
+        "status": 200,
+        "headers": {
+          "Date": "Fri, 16 Oct 2026 02:02:39 GMT",
+          "Content-Type": "text/html;charset=UTF-8",
+          "Content-Length": "54153"
+        },
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-macmillan-support.html",
+        "bytes": 54153,
+        "sha256": "6a10645874dcd8c65a858766aa51baea916329b04a2ddde16ffa7b768fa39138",
+        "bodySavedBeforeValidation": true,
+        "cutoffHistoricalBytesAuthenticated": false,
+        "evidenceRole": "actual free cancer support/advice, not cash benefit receipt",
+        "validSubstantiveBody": true,
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-macmillan-support.html",
+        "validBody": true,
+        "validOriginal": true,
+        "originalBytes": 54153,
+        "rootBytesReverified": true,
+        "scoreEligible": true
+      },
+      {
+        "id": "S13",
+        "file": "kgh-chemo-supportive-unit.html",
+        "url": "https://www.kgh.nhs.uk/centenary-wing---service-directory",
+        "leg": 14,
+        "utc": "2026-10-16T02:02:40.031153+00:00",
+        "mechanism": "normalTLS urllib noRetry noRedirect",
+        "headersAreParsedNotWire": true,
+        "status": 200,
+        "headers": {
+          "Date": "Fri, 16 Oct 2026 02:02:41 GMT",
+          "Content-Type": "text/html;charset=UTF-8",
+          "Content-Length": "54057"
+        },
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-chemo-supportive-unit.html",
+        "bytes": 54057,
+        "sha256": "c62da483bba9a610bef4eb0bc5c50e9406ae2b1144bcece4cb2b96f47da1b3bf",
+        "bodySavedBeforeValidation": true,
+        "cutoffHistoricalBytesAuthenticated": false,
+        "evidenceRole": "actual local SACT/supportive therapy, not proof eligible LON platform",
+        "validSubstantiveBody": true,
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-chemo-supportive-unit.html",
+        "validBody": true,
+        "validOriginal": true,
+        "originalBytes": 54057,
+        "rootBytesReverified": true,
+        "scoreEligible": true
+      },
+      {
+        "id": "R01",
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R01-S08-nhs-ordinary-residence.html",
+        "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/middlesbrough-full61/originals/R01-S08-nhs-ordinary-residence.html",
+        "bytes": 32662,
+        "sha256": "42c4cf404fdfc984257c5ea70f222b8c786e5d0d4d95c0e99f0b7eab682ed0ec",
+        "verifiedOnUTC": "2026-10-16T01:53:59.991436+00:00",
+        "originalFetchDateNotReinvented": true,
+        "historicalCutoffBytesAuthenticated": false,
+        "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+        "role": "durable primary common eligibility/payment/legal/personal transfer fact; not local execution or all profile eligibility",
+        "retrievedOn": "durable prior snapshot; this task locally hash verified, not newly fetched",
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R01-S08-nhs-ordinary-residence.html",
+        "validOriginal": true,
+        "originalBytes": 32662,
+        "rootBytesReverified": true,
+        "scoreEligible": true
+      },
+      {
+        "id": "R02",
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R02-S12-nhs-charges.html",
+        "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/middlesbrough-full61/originals/R02-S12-nhs-charges.html",
+        "bytes": 28145,
+        "sha256": "81b0a7b5cdeb5d401dc9835500553a5b646f8a3b89407af9404b577a3e7dcc0a",
+        "verifiedOnUTC": "2026-10-16T01:53:59.995825+00:00",
+        "originalFetchDateNotReinvented": true,
+        "historicalCutoffBytesAuthenticated": false,
+        "url": "https://www.nhs.uk/nhs-services/help-with-health-costs/when-you-need-to-pay-towards-nhs-care/",
+        "role": "durable primary common eligibility/payment/legal/personal transfer fact; not local execution or all profile eligibility",
+        "retrievedOn": "durable prior snapshot; this task locally hash verified, not newly fetched",
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R02-S12-nhs-charges.html",
+        "validOriginal": true,
+        "originalBytes": 28145,
+        "rootBytesReverified": true,
+        "scoreEligible": true
+      },
+      {
+        "id": "R03",
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R03-aufenthv41.html",
+        "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/middlesbrough-full61/originals/R03-aufenthv41.html",
+        "bytes": 4613,
+        "sha256": "0294e3696361d9294ae75c66475ccb897dcf68e1ffd1346fabf3a83104f74c85",
+        "verifiedOnUTC": "2026-10-16T01:54:00.007602+00:00",
+        "originalFetchDateNotReinvented": true,
+        "historicalCutoffBytesAuthenticated": false,
+        "url": "https://www.gesetze-im-internet.de/aufenthv/__41.html",
+        "role": "durable primary common eligibility/payment/legal/personal transfer fact; not local execution or all profile eligibility",
+        "retrievedOn": "durable prior snapshot; this task locally hash verified, not newly fetched",
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R03-aufenthv41.html",
+        "validOriginal": true,
+        "originalBytes": 4613,
+        "rootBytesReverified": true,
+        "scoreEligible": false
+      },
+      {
+        "id": "R04",
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R04-aufenthg5.html",
+        "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/middlesbrough-full61/originals/R04-aufenthg5.html",
+        "bytes": 6953,
+        "sha256": "2b1c6d9b2cda3c69f96b893150025c1490298f8de35741bb297ef82335df4e27",
+        "verifiedOnUTC": "2026-10-16T01:55:57.738637+00:00",
+        "originalFetchDateNotReinvented": true,
+        "historicalCutoffBytesAuthenticated": false,
+        "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__5.html",
+        "role": "durable primary common eligibility/payment/legal/personal transfer fact; not local execution or all profile eligibility",
+        "retrievedOn": "durable prior snapshot; this task locally hash verified, not newly fetched",
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R04-aufenthg5.html",
+        "validOriginal": true,
+        "originalBytes": 6953,
+        "rootBytesReverified": true,
+        "scoreEligible": false
+      },
+      {
+        "id": "R05",
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R05-aufenthg18b.html",
+        "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/middlesbrough-full61/originals/R05-aufenthg18b.html",
+        "bytes": 3632,
+        "sha256": "d605edfdbf1977205ccc0f1c5b267b061e59f072200c04fbe5d02d340bc6a7b4",
+        "verifiedOnUTC": "2026-10-16T01:55:57.740881+00:00",
+        "originalFetchDateNotReinvented": true,
+        "historicalCutoffBytesAuthenticated": false,
+        "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__18b.html",
+        "role": "durable primary common eligibility/payment/legal/personal transfer fact; not local execution or all profile eligibility",
+        "retrievedOn": "durable prior snapshot; this task locally hash verified, not newly fetched",
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R05-aufenthg18b.html",
+        "validOriginal": true,
+        "originalBytes": 3632,
+        "rootBytesReverified": true,
+        "scoreEligible": false
+      },
+      {
+        "id": "R09",
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/natwest-personal-international.html",
+        "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/middlesbrough-full61/originals/natwest-personal-international.html",
+        "bytes": 155117,
+        "sha256": "3ee8c0cae114cfb51eeba606db44f4d2605b92b1620f2873c1c0dd55be4b56d6",
+        "verifiedOnUTC": "2026-10-16T01:55:57.780547+00:00",
+        "originalFetchDateNotReinvented": true,
+        "historicalCutoffBytesAuthenticated": false,
+        "url": "https://www.natwest.com/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
+        "role": "durable primary common eligibility/payment/legal/personal transfer fact; not local execution or all profile eligibility",
+        "retrievedOn": "durable prior snapshot; this task locally hash verified, not newly fetched",
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/natwest-personal-international.html",
+        "validOriginal": true,
+        "originalBytes": 155117,
+        "rootBytesReverified": true,
+        "scoreEligible": false
+      },
+      {
+        "id": "R10",
+        "originalPath": "/Users/morris/.local/share/cci-research/2026-10-10/middlesbrough-full61/originals/o2-europe-roaming.html",
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/o2-europe-roaming.html",
+        "bytes": 500558,
+        "sha256": "5235d12659d1a3eaef83ace94990c0d98d756163e154b8e87fd8975bfc1d2bad",
+        "role": "durable common UK consumer roaming rule; independently adapted; not Corby travel or longstay activation proof",
+        "originalFetchUtc": "not re-fetched; see inherited manifest",
+        "cutoffHistoricalBytesAuthenticated": false,
+        "url": "https://www.o2.co.uk/eu-roaming",
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/o2-europe-roaming.html",
+        "validOriginal": true,
+        "originalBytes": 500558,
+        "rootBytesReverified": true,
+        "scoreEligible": false
+      },
+      {
+        "id": "R11",
+        "originalPath": "/Users/morris/.local/share/cci-research/2026-10-10/middlesbrough-full61/originals/o2-fairuse.html",
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/o2-fairuse.html",
+        "bytes": 443963,
+        "sha256": "1986097cb8097e097d898c73a03be77fcecfdd833b091a151673436dd723ecfe",
+        "role": "durable common UK consumer roaming rule; independently adapted; not Corby travel or longstay activation proof",
+        "originalFetchUtc": "not re-fetched; see inherited manifest",
+        "cutoffHistoricalBytesAuthenticated": false,
+        "url": "https://www.o2.co.uk/termsandconditions/mobile/roamfairuse",
+        "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/o2-fairuse.html",
+        "validOriginal": true,
+        "originalBytes": 443963,
+        "rootBytesReverified": true,
+        "scoreEligible": false
+      }
+    ],
+    "newValidOriginals": 8,
+    "newSubstantiveOriginals": 7,
+    "newLocatorOnlyOriginals": 1,
+    "reusedOriginals": 8,
+    "scope": "16 saved valid originals; locator S03 and other dimensions contextual evidence do not establish independent scores. Six403 diagnostics and two redirects are separate. Historical cutoff same bytes unauthenticated."
+  },
+  "sourceSnapshots": [
+    {
+      "id": "S03",
+      "file": "kgh-reports-index.html",
+      "url": "https://www.kgh.nhs.uk/annual-report-and-statement-of-accounts/",
+      "leg": 3,
+      "utc": "2026-10-16T01:52:39.778900+00:00",
+      "mechanism": "normalTLS urllib noRetry noRedirect",
+      "headersAreParsedNotWire": true,
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 01:52:41 GMT",
+        "Content-Type": "text/html;charset=UTF-8",
+        "Content-Length": "56406"
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-reports-index.html",
+      "bytes": 56406,
+      "sha256": "0e456546924e467f36eda1c65fb3ecdcfcbfc7df1345e73b9aa0ba4402d43756",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "evidenceRole": "official report locator only, no actual first publication date",
+      "validSubstantiveBody": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-reports-index.html",
+      "validBody": true,
+      "validOriginal": true,
+      "originalBytes": 56406,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "S07",
+      "file": "kgh-annual2026.pdf",
+      "url": "https://www.kgh.nhs.uk/download/kgh-final-annual-report-auditors-report-and-accounts-070926pdf.pdf?ver=12152&doc=docm93jijm4n5295.pdf",
+      "leg": 7,
+      "utc": "2026-10-16T01:55:30.357758+00:00",
+      "mechanism": "normalTLS urllib noRetry noRedirect",
+      "headersAreParsedNotWire": true,
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 01:55:31 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "5720015"
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-annual2026.pdf",
+      "bytes": 5720015,
+      "sha256": "c54ae0992806db8a50de3ebeab5988d74a69567075f9da8b7bece2986a906f36",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "evidenceRole": "KGH annual2025/26 actual institutions and operations; not all UHN/UHL scope local",
+      "validSubstantiveBody": true,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-annual2026.pdf",
+      "validBody": true,
+      "validOriginal": true,
+      "originalBytes": 5720015,
+      "rootBytesReverified": true,
+      "scoreEligible": true
+    },
+    {
+      "id": "S08",
+      "file": "kgh-planning-visit.html",
+      "url": "https://www.kgh.nhs.uk/planning-your-visit-",
+      "leg": 8,
+      "utc": "2026-10-16T01:55:35.023523+00:00",
+      "mechanism": "normalTLS urllib noRetry noRedirect",
+      "headersAreParsedNotWire": true,
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 01:55:36 GMT",
+        "Content-Type": "text/html;charset=UTF-8",
+        "Content-Length": "60780"
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-planning-visit.html",
+      "bytes": 60780,
+      "sha256": "0e7a77c1d02e7cbfb7e758145279aa834ca15ff143d2b151c13b5b54db75efd8",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "evidenceRole": "current patient location/appointment route; original publication unknown",
+      "validSubstantiveBody": true,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-planning-visit.html",
+      "validBody": true,
+      "validOriginal": true,
+      "originalBytes": 60780,
+      "rootBytesReverified": true,
+      "scoreEligible": true
+    },
+    {
+      "id": "S06b",
+      "file": "uhn-quality2026-final.pdf",
+      "url": "https://www.kgh.nhs.uk/download/uhn-quality-report-20252026-final-signedpdf.pdf?ver=11963&doc=docm93jijm4n5229",
+      "leg": 9,
+      "utc": "2026-10-16T01:56:30.450967+00:00",
+      "mechanism": "normalTLS urllib noRetry noRedirect",
+      "headersAreParsedNotWire": true,
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 01:56:31 GMT",
+        "Content-Type": "application/pdf",
+        "Content-Length": "15923236"
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/uhn-quality2026-final.pdf",
+      "bytes": 15923236,
+      "sha256": "dc920dea5e43e377045e5efcd6e624d0e2879e2c807d456ac591294e087e2268",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "evidenceRole": "local KGH core quality separated from NGH/group; nominal2025/26, historical exact bytes unverified",
+      "validSubstantiveBody": true,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/uhn-quality2026-final.pdf",
+      "validBody": true,
+      "validOriginal": true,
+      "originalBytes": 15923236,
+      "rootBytesReverified": true,
+      "scoreEligible": true
+    },
+    {
+      "id": "S09",
+      "file": "kgh-service-directory.html",
+      "url": "https://www.kgh.nhs.uk/service-directory-home-page-",
+      "leg": 10,
+      "utc": "2026-10-16T01:59:58.733355+00:00",
+      "mechanism": "normalTLS urllib noRetry noRedirect",
+      "headersAreParsedNotWire": true,
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 02:00:00 GMT",
+        "Content-Type": "text/html;charset=UTF-8",
+        "Content-Length": "74286"
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-service-directory.html",
+      "bytes": 74286,
+      "sha256": "8c3f596b9cba14d2d2986ac676825b1162ae9a2c5de43438750769ec67402624",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "evidenceRole": "directory scope/context, no inferred full clinical outcomes",
+      "validSubstantiveBody": true,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-service-directory.html",
+      "validBody": true,
+      "validOriginal": true,
+      "originalBytes": 74286,
+      "rootBytesReverified": true,
+      "scoreEligible": true
+    },
+    {
+      "id": "S10",
+      "file": "kgh-sustainable-travel.html",
+      "url": "https://www.kgh.nhs.uk/sustainable-ways-to-travel-kettering-general-hospital",
+      "leg": 11,
+      "utc": "2026-10-16T02:00:01.249751+00:00",
+      "mechanism": "normalTLS urllib noRetry noRedirect",
+      "headersAreParsedNotWire": true,
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 02:00:02 GMT",
+        "Content-Type": "text/html;charset=UTF-8",
+        "Content-Length": "53500"
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-sustainable-travel.html",
+      "bytes": 53500,
+      "sha256": "7f1d7cfb0db6744f8a2a7da680644e70f571649462cadc06880d3610eda52706",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "evidenceRole": "local hospital travel guidance, not measured all resident journeys or exit redundancy",
+      "validSubstantiveBody": true,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-sustainable-travel.html",
+      "validBody": true,
+      "validOriginal": true,
+      "originalBytes": 53500,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "S12",
+      "file": "kgh-macmillan-support.html",
+      "url": "https://www.kgh.nhs.uk/macmillan-support-centre-kgh",
+      "leg": 13,
+      "utc": "2026-10-16T02:02:38.210661+00:00",
+      "mechanism": "normalTLS urllib noRetry noRedirect",
+      "headersAreParsedNotWire": true,
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 02:02:39 GMT",
+        "Content-Type": "text/html;charset=UTF-8",
+        "Content-Length": "54153"
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-macmillan-support.html",
+      "bytes": 54153,
+      "sha256": "6a10645874dcd8c65a858766aa51baea916329b04a2ddde16ffa7b768fa39138",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "evidenceRole": "actual free cancer support/advice, not cash benefit receipt",
+      "validSubstantiveBody": true,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-macmillan-support.html",
+      "validBody": true,
+      "validOriginal": true,
+      "originalBytes": 54153,
+      "rootBytesReverified": true,
+      "scoreEligible": true
+    },
+    {
+      "id": "S13",
+      "file": "kgh-chemo-supportive-unit.html",
+      "url": "https://www.kgh.nhs.uk/centenary-wing---service-directory",
+      "leg": 14,
+      "utc": "2026-10-16T02:02:40.031153+00:00",
+      "mechanism": "normalTLS urllib noRetry noRedirect",
+      "headersAreParsedNotWire": true,
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 02:02:41 GMT",
+        "Content-Type": "text/html;charset=UTF-8",
+        "Content-Length": "54057"
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-chemo-supportive-unit.html",
+      "bytes": 54057,
+      "sha256": "c62da483bba9a610bef4eb0bc5c50e9406ae2b1144bcece4cb2b96f47da1b3bf",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "evidenceRole": "actual local SACT/supportive therapy, not proof eligible LON platform",
+      "validSubstantiveBody": true,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/kgh-chemo-supportive-unit.html",
+      "validBody": true,
+      "validOriginal": true,
+      "originalBytes": 54057,
+      "rootBytesReverified": true,
+      "scoreEligible": true
+    },
+    {
+      "id": "R01",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R01-S08-nhs-ordinary-residence.html",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/middlesbrough-full61/originals/R01-S08-nhs-ordinary-residence.html",
+      "bytes": 32662,
+      "sha256": "42c4cf404fdfc984257c5ea70f222b8c786e5d0d4d95c0e99f0b7eab682ed0ec",
+      "verifiedOnUTC": "2026-10-16T01:53:59.991436+00:00",
+      "originalFetchDateNotReinvented": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+      "role": "durable primary common eligibility/payment/legal/personal transfer fact; not local execution or all profile eligibility",
+      "retrievedOn": "durable prior snapshot; this task locally hash verified, not newly fetched",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R01-S08-nhs-ordinary-residence.html",
+      "validOriginal": true,
+      "originalBytes": 32662,
+      "rootBytesReverified": true,
+      "scoreEligible": true
+    },
+    {
+      "id": "R02",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R02-S12-nhs-charges.html",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/middlesbrough-full61/originals/R02-S12-nhs-charges.html",
+      "bytes": 28145,
+      "sha256": "81b0a7b5cdeb5d401dc9835500553a5b646f8a3b89407af9404b577a3e7dcc0a",
+      "verifiedOnUTC": "2026-10-16T01:53:59.995825+00:00",
+      "originalFetchDateNotReinvented": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "url": "https://www.nhs.uk/nhs-services/help-with-health-costs/when-you-need-to-pay-towards-nhs-care/",
+      "role": "durable primary common eligibility/payment/legal/personal transfer fact; not local execution or all profile eligibility",
+      "retrievedOn": "durable prior snapshot; this task locally hash verified, not newly fetched",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R02-S12-nhs-charges.html",
+      "validOriginal": true,
+      "originalBytes": 28145,
+      "rootBytesReverified": true,
+      "scoreEligible": true
+    },
+    {
+      "id": "R03",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R03-aufenthv41.html",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/middlesbrough-full61/originals/R03-aufenthv41.html",
+      "bytes": 4613,
+      "sha256": "0294e3696361d9294ae75c66475ccb897dcf68e1ffd1346fabf3a83104f74c85",
+      "verifiedOnUTC": "2026-10-16T01:54:00.007602+00:00",
+      "originalFetchDateNotReinvented": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "url": "https://www.gesetze-im-internet.de/aufenthv/__41.html",
+      "role": "durable primary common eligibility/payment/legal/personal transfer fact; not local execution or all profile eligibility",
+      "retrievedOn": "durable prior snapshot; this task locally hash verified, not newly fetched",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R03-aufenthv41.html",
+      "validOriginal": true,
+      "originalBytes": 4613,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "R04",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R04-aufenthg5.html",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/middlesbrough-full61/originals/R04-aufenthg5.html",
+      "bytes": 6953,
+      "sha256": "2b1c6d9b2cda3c69f96b893150025c1490298f8de35741bb297ef82335df4e27",
+      "verifiedOnUTC": "2026-10-16T01:55:57.738637+00:00",
+      "originalFetchDateNotReinvented": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__5.html",
+      "role": "durable primary common eligibility/payment/legal/personal transfer fact; not local execution or all profile eligibility",
+      "retrievedOn": "durable prior snapshot; this task locally hash verified, not newly fetched",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R04-aufenthg5.html",
+      "validOriginal": true,
+      "originalBytes": 6953,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "R05",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R05-aufenthg18b.html",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/middlesbrough-full61/originals/R05-aufenthg18b.html",
+      "bytes": 3632,
+      "sha256": "d605edfdbf1977205ccc0f1c5b267b061e59f072200c04fbe5d02d340bc6a7b4",
+      "verifiedOnUTC": "2026-10-16T01:55:57.740881+00:00",
+      "originalFetchDateNotReinvented": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__18b.html",
+      "role": "durable primary common eligibility/payment/legal/personal transfer fact; not local execution or all profile eligibility",
+      "retrievedOn": "durable prior snapshot; this task locally hash verified, not newly fetched",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/R05-aufenthg18b.html",
+      "validOriginal": true,
+      "originalBytes": 3632,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "R09",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/natwest-personal-international.html",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/middlesbrough-full61/originals/natwest-personal-international.html",
+      "bytes": 155117,
+      "sha256": "3ee8c0cae114cfb51eeba606db44f4d2605b92b1620f2873c1c0dd55be4b56d6",
+      "verifiedOnUTC": "2026-10-16T01:55:57.780547+00:00",
+      "originalFetchDateNotReinvented": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "url": "https://www.natwest.com/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
+      "role": "durable primary common eligibility/payment/legal/personal transfer fact; not local execution or all profile eligibility",
+      "retrievedOn": "durable prior snapshot; this task locally hash verified, not newly fetched",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/natwest-personal-international.html",
+      "validOriginal": true,
+      "originalBytes": 155117,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "R10",
+      "originalPath": "/Users/morris/.local/share/cci-research/2026-10-10/middlesbrough-full61/originals/o2-europe-roaming.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/o2-europe-roaming.html",
+      "bytes": 500558,
+      "sha256": "5235d12659d1a3eaef83ace94990c0d98d756163e154b8e87fd8975bfc1d2bad",
+      "role": "durable common UK consumer roaming rule; independently adapted; not Corby travel or longstay activation proof",
+      "originalFetchUtc": "not re-fetched; see inherited manifest",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "url": "https://www.o2.co.uk/eu-roaming",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/o2-europe-roaming.html",
+      "validOriginal": true,
+      "originalBytes": 500558,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    },
+    {
+      "id": "R11",
+      "originalPath": "/Users/morris/.local/share/cci-research/2026-10-10/middlesbrough-full61/originals/o2-fairuse.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/o2-fairuse.html",
+      "bytes": 443963,
+      "sha256": "1986097cb8097e097d898c73a03be77fcecfdd833b091a151673436dd723ecfe",
+      "role": "durable common UK consumer roaming rule; independently adapted; not Corby travel or longstay activation proof",
+      "originalFetchUtc": "not re-fetched; see inherited manifest",
+      "cutoffHistoricalBytesAuthenticated": false,
+      "url": "https://www.o2.co.uk/termsandconditions/mobile/roamfairuse",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/o2-fairuse.html",
+      "validOriginal": true,
+      "originalBytes": 443963,
+      "rootBytesReverified": true,
+      "scoreEligible": false
+    }
+  ],
+  "webReadSources": [],
+  "failedSourceSnapshots": [
+    {
+      "id": "S01",
+      "file": "anglian-apr2025.pdf",
+      "url": "https://www.anglianwater.co.uk/siteassets/household/corporate/plans-and-reports/apr-25-resubmission---march-2026.pdf",
+      "leg": 1,
+      "utc": "2026-10-16T01:51:12.809249+00:00",
+      "mechanism": "normalTLS urllib noRetry noRedirect",
+      "headersAreParsedNotWire": true,
+      "status": 403,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 01:51:14 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "5785"
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/anglian-apr2025.pdf",
+      "bytes": 5785,
+      "sha256": "0704c03193e8a7a26a18bea6d1d38273a889b0cd433ce3bb14c4170866020ac9",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "evidenceRole": "diagnostic/redirect only, not substantive scoring evidence",
+      "validSubstantiveBody": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/anglian-apr2025.pdf"
+    },
+    {
+      "id": "S02",
+      "file": "corby-policing2026.html",
+      "url": "https://www.northants.police.uk/news/northants/news/news/2026/may/you-said-we-did--local-policing-priorities-in-corby/",
+      "leg": 2,
+      "utc": "2026-10-16T01:51:14.452929+00:00",
+      "mechanism": "normalTLS urllib noRetry noRedirect",
+      "headersAreParsedNotWire": true,
+      "status": 403,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 01:51:16 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "5832"
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/corby-policing2026.html",
+      "bytes": 5832,
+      "sha256": "484a3ccfcde0fc27697ab6687eddc6b94bb55df3694a2730aeae232e9e06c09c",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "evidenceRole": "diagnostic/redirect only, not substantive scoring evidence",
+      "validSubstantiveBody": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/corby-policing2026.html"
+    },
+    {
+      "id": "S04",
+      "file": "emr-routes.html",
+      "url": "https://www.eastmidlandsrailway.co.uk/timetables-updates/our-routes",
+      "leg": 4,
+      "utc": "2026-10-16T01:52:42.433346+00:00",
+      "mechanism": "normalTLS urllib noRetry noRedirect",
+      "headersAreParsedNotWire": true,
+      "status": 403,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 01:52:43 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "9444"
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/emr-routes.html",
+      "bytes": 9444,
+      "sha256": "247d441ee7e53b87a0a1d8a811224564dc60f619b811f125a0d47daf740ba9eb",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "evidenceRole": "diagnostic/redirect only, not substantive scoring evidence",
+      "validSubstantiveBody": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/emr-routes.html"
+    },
+    {
+      "id": "S05",
+      "file": "anglian-reports-index.html",
+      "url": "https://www.anglianwater.co.uk/corporate/plans-and-reports/reports-search",
+      "leg": 5,
+      "utc": "2026-10-16T01:52:43.919851+00:00",
+      "mechanism": "normalTLS urllib noRetry noRedirect",
+      "headersAreParsedNotWire": true,
+      "status": 403,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 01:52:45 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "5613"
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/anglian-reports-index.html",
+      "bytes": 5613,
+      "sha256": "70966976a70901ef6fd5a709d8e41baacd69cdf193a59564ada6ca6d9948ff56",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "evidenceRole": "diagnostic/redirect only, not substantive scoring evidence",
+      "validSubstantiveBody": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/anglian-reports-index.html"
+    },
+    {
+      "id": "S11",
+      "file": "emr-corby-timetables.html",
+      "url": "https://www.eastmidlandsrailway.co.uk/timetables?station=Corby",
+      "leg": 12,
+      "utc": "2026-10-16T02:02:37.154037+00:00",
+      "mechanism": "normalTLS urllib noRetry noRedirect",
+      "headersAreParsedNotWire": true,
+      "status": 403,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 02:02:38 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "9444"
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/emr-corby-timetables.html",
+      "bytes": 9444,
+      "sha256": "c93157c5956410f9e05973822ff74611460f8c25361076ecd466a2da921c9e38",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "evidenceRole": "diagnostic/redirect only, not substantive scoring evidence",
+      "validSubstantiveBody": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/emr-corby-timetables.html"
+    },
+    {
+      "id": "S15",
+      "file": "stagecoach-home.html",
+      "url": "https://www.stagecoachbus.com/",
+      "leg": 16,
+      "utc": "2026-10-16T02:05:38.783358+00:00",
+      "mechanism": "normalTLS urllib noRetry noRedirect",
+      "headersAreParsedNotWire": true,
+      "status": 403,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 02:05:39 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "5401"
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/stagecoach-home.html",
+      "bytes": 5401,
+      "sha256": "77190b939633a0927199855186a131c1e98bf63cd77c522fc4b4fed4c71cb9f6",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "evidenceRole": "diagnostic/redirect only, not substantive scoring evidence",
+      "validSubstantiveBody": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/stagecoach-home.html"
+    }
+  ],
+  "routingSourceSnapshots": [
+    {
+      "id": "S06",
+      "file": "uhn-quality2026.pdf",
+      "url": "https://www.kgh.nhs.uk/download/uhn-quality-report-20252026-final-signedpdf.pdf?ver=11962&doc=docm93jijm4n5229.pdf",
+      "leg": 6,
+      "utc": "2026-10-16T01:55:29.132196+00:00",
+      "mechanism": "normalTLS urllib noRetry noRedirect",
+      "headersAreParsedNotWire": true,
+      "status": 302,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 01:55:30 GMT",
+        "Content-Type": "text/html;charset=UTF-8",
+        "Content-Length": "1",
+        "location": "/download/uhn-quality-report-20252026-final-signedpdf.pdf?ver=11963&doc=docm93jijm4n5229"
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/uhn-quality2026.pdf",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "evidenceRole": "diagnostic/redirect only, not substantive scoring evidence",
+      "validSubstantiveBody": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/uhn-quality2026.pdf"
+    },
+    {
+      "id": "S14",
+      "file": "northants-fixmystreet.html",
+      "url": "https://fixmystreet.northamptonshire.gov.uk/",
+      "leg": 15,
+      "utc": "2026-10-16T02:05:35.789345+00:00",
+      "mechanism": "normalTLS urllib noRetry noRedirect",
+      "headersAreParsedNotWire": true,
+      "status": 301,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 02:05:38 GMT",
+        "Content-Type": "text/html; charset=iso-8859-1",
+        "Content-Length": "272",
+        "Location": "https://fixmystreet.com/"
+      },
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/northants-fixmystreet.html",
+      "bytes": 272,
+      "sha256": "6e5651b03cb723af30fbe32ddab4b8d6bffd6fa9a2e494b95a48ae646e738c94",
+      "bodySavedBeforeValidation": true,
+      "cutoffHistoricalBytesAuthenticated": false,
+      "evidenceRole": "diagnostic/redirect only, not substantive scoring evidence",
+      "validSubstantiveBody": false,
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/originals/northants-fixmystreet.html"
+    }
+  ],
+  "sourceAndStopLedger": {
+    "scope": "Actual local provider/mechanism history inherited; unknown is not zero; no new task/directory/success resets historical failures. No source acquisition failure penalizes city.",
+    "upstreamLedgers": [
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/inherited-1.json",
+        "bytes": 5607,
+        "sha256": "45adb3ac462c4bee7a2fcf6ed44cea5fa5d9dcbb2b052fada51580ace9b51ac0",
+        "role": "copied nested historical stop ledger, not semantic rereview of every historic source"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/inherited-2.json",
+        "bytes": 4662,
+        "sha256": "2fab62f0d3515e44b56685d96f92dd833ab756dd67e0ab966f043d5601055778",
+        "role": "copied nested historical stop ledger, not semantic rereview of every historic source"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/inherited-3.json",
+        "bytes": 3231,
+        "sha256": "12f5fe67a489f972a059ebdc8c09642a2f17bd4373c3185a41c654468bc7963d",
+        "role": "copied nested historical stop ledger, not semantic rereview of every historic source"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/inherited-4.json",
+        "bytes": 4733,
+        "sha256": "7bf18c87dfed672d2a5af6c23d474e433f4e5ecaa6c5df1842e7941d61b37221",
+        "role": "copied nested historical stop ledger, not semantic rereview of every historic source"
+      },
+      {
+        "path": "/Users/morris/.local/share/cci-research/2026-10-10/corby-full66/inherited-6.json",
+        "bytes": 8204,
+        "sha256": "479b820bacf940fe30756dc9d1bd300dc711dc0d76ad0e60a12cbf1bea30c96b",
+        "role": "copied nested historical stop ledger, not semantic rereview of every historic source"
+      }
+    ],
+    "inheritedClosedMechanisms": [
+      "NHS England/UCLH normalTLS failures (do not retry specific failed source by web/CDN)",
+      "EC/WHO closed",
+      "ING/WIPO2026 closed"
+    ],
+    "newProviderHistory": [
+      {
+        "provider": "anglianwater.co.uk",
+        "mechanism": "normalTLS urllib noRetry noRedirect",
+        "newFailures": 2,
+        "historicalCount": "unknown unless upstream recorded; not treated as zero",
+        "action": "voluntary closure at two; no same failed document retry or alternate mechanism"
+      },
+      {
+        "provider": "eastmidlandsrailway.co.uk",
+        "mechanism": "normalTLS urllib noRetry noRedirect",
+        "newFailures": 2,
+        "historicalCount": "unknown unless upstream recorded; not treated as zero",
+        "action": "voluntary closure at two; observed PDF/CDN not used to bypass"
+      },
+      {
+        "provider": "northants.police.uk",
+        "mechanism": "normalTLS urllib noRetry noRedirect",
+        "newFailures": 1,
+        "historicalCount": "unknown unless upstream recorded; not treated as zero",
+        "action": "specific failed Corby document stopped; no web body bypass"
+      },
+      {
+        "provider": "stagecoachbus.com",
+        "mechanism": "normalTLS urllib noRetry noRedirect",
+        "newFailures": 1,
+        "historicalCount": "unknown unless upstream recorded; not treated as zero",
+        "action": "specific failed homepage stopped; no retry"
+      },
+      {
+        "provider": "kgh.nhs.uk",
+        "mechanism": "normalTLS urllib noRetry noRedirect",
+        "newFailures": 0,
+        "redirectLegs": 1,
+        "action": "single explicit302 manually followed as independent leg; successes do not reset upstream failures"
+      },
+      {
+        "provider": "fixmystreet.northamptonshire.gov.uk",
+        "mechanism": "normalTLS urllib noRetry noRedirect",
+        "newFailures": 0,
+        "redirectLegs": 1,
+        "action": "301 national destination not followed; not substantive evidence"
+      }
+    ],
+    "budgets": {
+      "discoveryRounds": 2,
+      "queriesPerRound": [4, 4],
+      "normalLegs": 16,
+      "normalCap": 18,
+      "normalBudgetClosedUnused": 2,
+      "newSuccessBodies": 8,
+      "new403Diagnostics": 6,
+      "redirectBodies": 2,
+      "durableReusedValid": 8
+    },
+    "process": "Two rounds of four discovery queries and 16 actual normal HTTP legs verified separately; one proven outer input-count deviation retained, no exhaustive outer-call compliance claim.",
+    "knownLocalProcessDiagnostics": [
+      "S07 physical5 text saved/read before linkRect serialization failed; did not reread5; later requested6/7 after default=str helper fix.",
+      "One local system python3 bs4 import missing before source read; reran with shared dependency env, not provider failure."
+    ],
+    "notClaims": [
+      "No proof of all historic Corby first research; bounded local history check found no previous actual Corby research evidence, unknown history retained.",
+      "No fullpopulation measurement or exact cutoff historical raw authentication."
+    ],
+    "normalHTTPActualLegs": 16,
+    "processDeviations": [
+      {
+        "id": "outer_http_batch_helper_metadata_exceeds_three_inputs",
+        "callId": "call_587b1c608e4540c99910bc90f2fb3322",
+        "sessionByteOffset": 124974068,
+        "timestamp": "2026-10-16T01:52:39.510Z",
+        "actualHTTPSourceUnits": 3,
+        "helperMetadataRead": "normaljournal.json already exists and fetch.py calls read_text",
+        "minimumActualInputUnits": 4,
+        "sourceArrayLengthGuardOnly": true,
+        "effect": "Outeraggregate<=3 violated despite3URLs;16totallegbudget andrawidentitypass separately.No correction retry/originalpackage edit.No city capability penalty.",
+        "exhaustiveness": "Proven bounded session call;not a full outer-call compliance audit of entire research."
+      }
+    ]
+  },
+  "globalRankingEligible": false,
+  "exclusionCount": 0,
+  "threshold32": null,
+  "limitations": [
+    "All9031 and new/unmatched competitors retained; no globalTop32 proof.",
+    "16 normal HTTP legs:8 valid first-party bodies (including one locator-only index),6 failures,2 redirects; eight durable common sources; two search rounds of4 queries. Search text is locator not source body.",
+    "MED first publication by cutoff not authenticated; PDF creation/modification only version clues, no explicit postcutoff publication found. Root must accept/reject bounded version-time bridge rather than treat current bytes as historical certification.",
+    "Seven unknown dimensions reflect missing discriminating facts, not low city capability.",
+    "No subpillar scores, no midpoint or renormalization; range is mathematical not confidence or rank probability.",
+    "Root adopts MED40 conditionally with60 fair alternative; no total. Four necessary geography/time/usual-net-care/pre-cutoff-availability bridges remain revocable. Root baseline37e1555/97/21 preserves all97 whole cases including ViennaRES60; research3654924/97/20 is historical. One proven outer input-count deviation retained separately from total-budget and original-identity verification."
+  ],
+  "sourceName": "Bounded first-party research, conditional proposal pending root acceptance",
+  "sensitivity": {
+    "MED60": [9, 94],
+    "MEDWithdrawn": [0, 100],
+    "allJudgmentsWithdrawn": [0, 100]
+  },
+  "reportBytes": 6355,
+  "reportSha256": "ba5db5c6b81670c72987a9eea7481bd2874d49d453c5240b40d4600e2983d986",
+  "rootToolProof": [
+    {
+      "round": 1,
+      "callId": "call_e64a2f20ed524a728ef604336c505eba",
+      "session": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-35-01a13e5e-aff8-7e60-869d-5befaae8680f.jsonl",
+      "queryCount": 4,
+      "actualCallCode": "const q=[{q:'site.kgh.nhs.uk \"quality account\" \"2025\" \"2026\"'},{q:'site.northnorthants.gov.uk 2025 annual report flooding household support fund delivered'},{q:'site.anglianwater.co.uk annual performance report 2025 customers interruptions affordability'},{q:'site.northants.police.uk Corby 2025 county lines exploitation residents protection'}];if(q.length>4)throw Error(\"discoverycap\");const r=await tools.web__run({search_query:q,response_length:\"long\"});store(\"corby66_discovery1\",r);text(r);\n",
+      "blocks": [
+        {
+          "index": 0,
+          "bytes": 47,
+          "sha256": "84d2f0a55d6e5b903d4e8c3651b20cf787b7e91d9440f8a90f17dbbcbb89c992"
+        },
+        {
+          "index": 1,
+          "bytes": 36218,
+          "sha256": "e075edabf9937af1b2e8300b7bfb52aef25ca897c69f66de82bea5247b833f9b"
+        }
+      ],
+      "allBlocksMatchProvenance": true,
+      "captures": [
+        {
+          "kind": "call",
+          "byteOffset": 124827627,
+          "recordBytes": 914,
+          "recordSHA256": "57dec0da2a22cb8e291ccabd2eb88b3ad07d7483d420628fde10bd5bfa091f7d",
+          "frozenCaptureMatches": true
+        },
+        {
+          "kind": "output",
+          "byteOffset": 124843495,
+          "recordBytes": 37220,
+          "recordSHA256": "b2eddd505e90761b60d21a0d51615c9d313a08c2fc75b7d5fb0a8eced1134204",
+          "frozenCaptureMatches": true
+        }
+      ],
+      "callIdMatches": true,
+      "websiteSHA256": null
+    },
+    {
+      "round": 2,
+      "callId": "call_cd02cecc5c1f4b908c612038c088c097",
+      "session": "/Users/morris/.codex/sessions/2026/10/15/rollout-2026-10-15T15-02-35-01a13e5e-aff8-7e60-869d-5befaae8680f.jsonl",
+      "queryCount": 4,
+      "actualCallCode": "const q=[{q:'Kettering General Hospital quality account 2025 2026 University Hospitals Northamptonshire'},{q:'site.northnorthants.gov.uk annual performance report 2025 household support flood delivered'},{q:'site.tatasteeleurope.com Corby 2024 2025 warehouse production commissioned'},{q:'site.eastmidlandsrailway.co.uk Corby London Luton Airport trains'}];if(q.length>4)throw Error(\"discoverycap\");const r=await tools.web__run({search_query:q,response_length:\"long\"});store(\"corby66_discovery2\",r);text(r);\n",
+      "blocks": [
+        {
+          "index": 0,
+          "bytes": 47,
+          "sha256": "e489e3832837280dfe60242cee72a21052a0ee5eac8cff472d5acadf8947e533"
+        },
+        {
+          "index": 1,
+          "bytes": 31657,
+          "sha256": "0506a7b0281be310e12ff414a3ba62b503993602edd8fd78b88f08f2c5cfbe1a"
+        }
+      ],
+      "allBlocksMatchProvenance": true,
+      "captures": [
+        {
+          "kind": "call",
+          "byteOffset": 124900424,
+          "recordBytes": 919,
+          "recordSHA256": "4e52a9d1366de60008c5e2006f94e39dab24968eca5188173ba8572e3637c0f5",
+          "frozenCaptureMatches": true
+        },
+        {
+          "kind": "output",
+          "byteOffset": 124920755,
+          "recordBytes": 32366,
+          "recordSHA256": "89b03df0dbc6135bf27107067c4d6419fad8169d49d21d395bd79a924c80ea3a",
+          "frozenCaptureMatches": true
+        }
+      ],
+      "callIdMatches": true,
+      "websiteSHA256": null
+    }
+  ],
+  "publishedInputCommit": "37e1555413631e7eb6ceb4e3bcd4d46a5c57bd9d",
+  "publishedInputCases": 97,
+  "rootScopeReview": {
+    "validOriginalsVerified": 16,
+    "newOriginals": 8,
+    "newSubstantiveOriginals": 7,
+    "locatorOnlyOriginals": 1,
+    "reusedOriginals": 8,
+    "rootRawCopiesMatch": 16,
+    "rootPdfPageCount": 4,
+    "rootSelectedPdfTextPageCount": 8,
+    "rootSelectedPdfTextPages": {
+      "S06b": [67, 68, 69, 76],
+      "S07": [14, 15, 25, 26]
+    },
+    "rasterPageWithoutText": ["S06b76"],
+    "rootHtmlMainBodiesRead": 14,
+    "rootNewNetworkRequests": 0,
+    "all9031GeometriesRecomputed": true,
+    "eightAnalystApproximatePointsRecomputed": true,
+    "original97WholeCaseBytesComparedToFixedGit": true,
+    "allOriginalBodiesFullyAudited": false,
+    "allPdfPagesViewed": false,
+    "cutoffSameBytesAuthenticated": false,
+    "sourceCountAffectsScore": false,
+    "independentIntegrityPayloadsVerified": 133,
+    "independentCrossPayloadsVerified": 2,
+    "processDeviations": [
+      {
+        "id": "outer_http_batch_helper_metadata_exceeds_three_inputs",
+        "callId": "call_587b1c608e4540c99910bc90f2fb3322",
+        "sessionByteOffset": 124974068,
+        "timestamp": "2026-10-16T01:52:39.510Z",
+        "actualHTTPSourceUnits": 3,
+        "helperMetadataRead": "normaljournal.json already exists and fetch.py calls read_text",
+        "minimumActualInputUnits": 4,
+        "sourceArrayLengthGuardOnly": true,
+        "effect": "Outeraggregate<=3 violated despite3URLs;16totallegbudget andrawidentitypass separately.No correction retry/originalpackage edit.No city capability penalty.",
+        "exhaustiveness": "Proven bounded session call;not a full outer-call compliance audit of entire research."
+      }
+    ],
+    "scope": "14 relevant HTML bodies and eight selected PDF pages considered, four distinct quality-report pages personally viewed plus one same-page76 detail. Full integrity is not full semantic or historical-byte certification.",
+    "rootPdfPixelsViewed": [
+      {
+        "sourceId": "S06b",
+        "physicalPage": 67,
+        "imagePath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-root67/views/S06b-p67.png",
+        "actuallyViewedByRoot": true
+      },
+      {
+        "sourceId": "S06b",
+        "physicalPage": 68,
+        "imagePath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-root67/views/S06b-p68.png",
+        "actuallyViewedByRoot": true
+      },
+      {
+        "sourceId": "S06b",
+        "physicalPage": 69,
+        "imagePath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-root67/views/S06b-p69.png",
+        "actuallyViewedByRoot": true
+      },
+      {
+        "sourceId": "S06b",
+        "physicalPage": 76,
+        "imagePath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-root67/views/S06b-p76.png",
+        "actuallyViewedByRoot": true
+      }
+    ],
+    "samePageDetail": {
+      "sourceId": "S06b",
+      "physicalPage": 76,
+      "imagePath": "/Users/morris/.local/share/cci-research/2026-10-10/corby-root67/views/S06b-p76-FDS-detail.png",
+      "actuallyViewedByRoot": true,
+      "notAdditionalDistinctPage": true
+    }
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-corby-score-completion-review.md",
+    "sha256": "ba5db5c6b81670c72987a9eea7481bd2874d49d453c5240b40d4600e2983d986",
+    "researchReport": "docs/cci-corby-priority-review.md",
+    "researchReportSha256": "3b28806401b1c01758e2fecc0c3e5f9ae6bd2905b35a25a0f71957bb2fb66761",
+    "researchFrozenReportSha256": "a50e49c608b33d5197d0bd29e866f58853bc397e557a6c8256dc95cdf642accf",
+    "frozenManifestSha256": "98f7eb85778ebc8b7899c3244f2460db81a82ec759764cd09ee9112915431e6e",
+    "frozenFilesVerified": 133,
+    "validOriginalCount": 16,
+    "newValidOriginalCount": 8,
+    "newSubstantiveOriginalCount": 7,
+    "newLocatorOnlyOriginalCount": 1,
+    "reusedOriginalCount": 8,
+    "failedConcreteOriginalCount": 6,
+    "redirectResponses": 2,
+    "rootPdfPageCount": 4,
+    "crossReviewReportSha256": "b8f5a69f8d56f0f7e719b66801f2949fd464e2e6f28d8de55a03968f90a5184a",
+    "crossReviewManifestSha256": "87229fff27e0df0330eb7ececd560f7feb3cf1cd58549870c3b260527eea1856",
+    "crossPayloadsVerified": 2
+  }
+}

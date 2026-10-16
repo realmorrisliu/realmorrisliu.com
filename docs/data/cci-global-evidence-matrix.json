@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 97,
+    "conditionalCaseCount": 98,
     "completeConditionalCaseCount": 21,
-    "partialCaseCount": 76,
-    "unassessedCount": 8934,
+    "partialCaseCount": 77,
+    "unassessedCount": 8933,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -790,8 +790,13 @@
       "sha256": "bb68d26e927d98a9e1546950fad1dc3ce770222fbb1bccc0cb215ca6a3e3f4f8",
       "provenance": "cci-odense-score-completion-review.md",
       "provenanceSha256": "65480b0547aa856bbfcc42f7acb9f42822e2b711e4c69f2a8f6beada3d10cb70"
+    },
+    "cci-local-2026-corby-case.json": {
+      "sha256": "b747b8fe491cbb91a699a11a1dff918a2138aa385b21dd0a74f408c8031b5e90",
+      "provenance": "cci-corby-score-completion-review.md",
+      "provenanceSha256": "ba5db5c6b81670c72987a9eea7481bd2874d49d453c5240b40d4600e2983d986"
     }
   },
-  "scriptSha256": "1d5c7b661f20e767f11720b9b323f11742b9ebc45a9c1dc6b7e9d85cd6f3b595",
-  "csvSha256": "c79df6291926c543b997977101ce5d3c3e9082e476f936f18f3dee0f8588db6d"
+  "scriptSha256": "6cdf76b2e44a47ad8d57af5f54d675b32ab4b89cf996c2ace4fd6ee9ecafd340",
+  "csvSha256": "555771ff974ed245d787bd8058093e5b66dff2b31dc4d5d8e2c083eaa1c364f4"
 }

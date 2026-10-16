@@ -107,6 +107,7 @@ import middlesbrough from "../../docs/data/cci-local-2026-middlesbrough-case.jso
 import kuopio from "../../docs/data/cci-local-2026-kuopio-case.json";
 import hilversum from "../../docs/data/cci-local-2026-hilversum-case.json";
 import odense from "../../docs/data/cci-local-2026-odense-case.json";
+import corby from "../../docs/data/cci-local-2026-corby-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -218,8 +219,10 @@ const cases = [
   kuopio,
   hilversum,
   odense,
+  corby,
 ];
 const caseNamesZh: Record<number, string> = {
+  [corby.candidateId]: "科比功能区（含凯特林）",
   [odense.candidateId]: "欧登塞功能区",
   [hilversum.candidateId]: "希尔弗瑟姆功能区",
   [kuopio.candidateId]: "库奥皮奥功能区",
@@ -423,6 +426,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [corby.candidateId]: [
+    zh
+      ? "科比医疗条件40，七维未知；原权重贡献6、数学域6—91，无完整总分。凯特林医院及科比门诊、通常公费护理和质量正证，与疑癌诊断和必要计划护理久候一起判断；60保留公平替代，地域、时间、净照护与截止公开假设可撤。"
+      : "Corby has conditional MED 40; seven dimensions remain unknown. Its original-weight contribution is 6 and arithmetic domain 6–91, without a complete total. Kettering hospital and Corby clinics, usual public care and quality evidence are considered alongside delayed cancer diagnosis and necessary planned care. A fair 60 alternative remains; geography, time, net-care and pre-cutoff availability assumptions are revocable.",
+    zh
+      ? "旧功能区包含凯特林，不能借入Northampton／Leicester全组成绩。SHMI96是预期范围，非96%死亡率；FDS末段约低60%，不作62.9精确归属。16有效原件、根亲见4页；一项研究输入数偏差独立保留，资料少不罚能力。原97案保持，全球入围未证明。"
+      : "The old functional area includes Kettering; Northampton and Leicester group results are not transferred wholesale. SHMI 96 is within the expected range, not a 96% death rate; the final FDS segment is roughly in the low 60s, without an exact attribution of 62.9. There are 16 valid originals and four pages viewed by root. One research input-count deviation is retained separately; sparse evidence does not reduce capability. The previous 97 cases remain unchanged; global qualification is unproven.",
+  ],
   [odense.candidateId]: [
     zh
       ? "欧登塞防护／制度／医疗条件40，技术条件60，四维未知。原权重贡献24、数学域24—69，无完整总分；真实水热、救援、通常公费与在宅用药同排水、手续时效和出院接续余障一起判断，地域／年代／普通后果假设可撤。"
