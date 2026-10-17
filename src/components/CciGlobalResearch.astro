@@ -131,6 +131,7 @@ import lodz from "../../docs/data/cci-local-2026-lodz-case.json";
 import gorzow from "../../docs/data/cci-local-2026-gorzow-case.json";
 import kiel from "../../docs/data/cci-local-2026-kiel-case.json";
 import cork from "../../docs/data/cci-local-2026-cork-case.json";
+import lubeck from "../../docs/data/cci-local-2026-lubeck-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -266,8 +267,10 @@ const cases = [
   gorzow,
   kiel,
   cork,
+  lubeck,
 ];
 const caseNamesZh: Record<number, string> = {
+  [lubeck.candidateId]: "吕贝克功能区",
   [cork.candidateId]: "科克功能区",
   [kiel.candidateId]: "基尔功能区",
   [gorzow.candidateId]: "戈茹夫功能区",
@@ -495,6 +498,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [lubeck.candidateId]: [
+    zh
+      ? "吕贝克防护条件40、制度／医疗／技术条件60，安全／资源／专项转化／退出未知。贡献30、数学域30—75，无完整总分。经验洪水中的住宅和通道余障与预警／关键设施保护并读；实际临床监督、通常支付及知识产用支持有限判断，地域／延续／普通净照护桥可撤。"
+      : "Lübeck has conditional PCS 40 and ISR/MED/TEC 60; GSS/RES/LON/OPT remain unknown. Contribution is 30, with a 30–75 arithmetic domain and no complete total. Experienced housing and access impacts are considered alongside warnings and critical-infrastructure protection. Actual clinical oversight, usual payment and knowledge production/use support finite judgments; geography, continuity and usual net-care bridges are revocable.",
+    zh
+      ? "防护60公平解释33—78、医疗40为27—72；资源60仅讨论36—71、主未知。3欧食物分发需困难证明，集团研发／产品不全归本地，11辆急救车为区域共享；旧规划和400／年不当2025实测。正文日期与截止后HTTP修改头分列，不认证截止同版，全球入围未证。"
+      : "Fair PCS60 and MED40 interpretations give 33–78 and 27–72; RES60 is discussed at 36–71 but remains unknown. Food distribution requires proof of need; group R&D/products are not all local, and 11 equipped ambulances are regionally shared. Old planning and 400/year are not 2025 measurements. Article dates and post-cutoff HTTP modification headers are distinguished, without cutoff-version authentication. Global inclusion is unproven.",
+  ],
   [cork.candidateId]: [
     zh
       ? "科克制度／技术条件60、医疗／专项转化条件40，防护／安全／资源／退出未知。贡献25、数学域25—75，无完整总分。实际必要诊疗、监管改进、成熟转诊和知识成果采用同真实临床容量与异地反复照护负担合判；普通净护理、地域与延续桥可撤。"

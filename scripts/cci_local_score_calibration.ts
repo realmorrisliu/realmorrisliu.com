@@ -173,6 +173,7 @@ const realCases = [
   "gorzow",
   "kiel",
   "cork",
+  "lubeck",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -337,6 +338,7 @@ const [
   gorzow,
   kiel,
   cork,
+  lubeck,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4526,6 +4528,34 @@ assert(
   lasPalmasCase.coverageReview.length === 31 &&
     lasPalmasCase.coverageReview.every(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
+    )
+);
+
+const lubeckCase = realCases.find(c => c.candidateId === 4221);
+assert.equal(
+  lubeckCase.priorityCompletionReview.sha256,
+  digest(lubeckCase.priorityCompletionReview.path)
+);
+assert.equal(
+  lubeckCase.priorityCompletionReview.researchReportSha256,
+  digest(lubeckCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(lubeck, { PCS: 40, ISR: 60, MED: 60, TEC: 60 });
+assert.deepEqual(total(lubeck), { center: null, lower: 30, upper: 75 });
+assert.deepEqual(total({ ...lubeck, PCS: 60 }), { center: null, lower: 33, upper: 78 });
+assert.deepEqual(total({ ...lubeck, MED: 40 }), { center: null, lower: 27, upper: 72 });
+for (const id of ["PCS", "ISR", "MED", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...lubeck };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    lubeckCase.sensitivity.withdrawals[id]
+  );
+}
+assert(
+  lubeckCase.coverageReview.length === 31 &&
+    lubeckCase.coverageReview.every(
+      (r: { score: null; fullyMeasured: boolean }) => r.score === null && !r.fullyMeasured
     )
 );
 

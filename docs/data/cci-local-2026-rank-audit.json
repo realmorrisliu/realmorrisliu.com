@@ -4,10 +4,10 @@
   "evidenceCutoff": "2026-10-10",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
-  "conditionalCaseCount": 121,
+  "conditionalCaseCount": 122,
   "completeConditionalCaseCount": 26,
-  "partialCaseCount": 95,
-  "unassessedCount": 8910,
+  "partialCaseCount": 96,
+  "unassessedCount": 8909,
   "weights": {
     "PCS": 15,
     "GSS": 15,
@@ -745,6 +745,15 @@
           "center": null,
           "lower": 27.0,
           "upper": 77.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "4221",
+          "source_name": "L\u00fcbeck",
+          "center": null,
+          "lower": 30.0,
+          "upper": 75.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -1844,6 +1853,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "4221",
+          "source_name": "L\u00fcbeck",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "4227",
           "source_name": "Newcastle upon Tyne",
           "center": null,
@@ -2935,6 +2953,15 @@
           "center": null,
           "lower": 27.0,
           "upper": 77.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "4221",
+          "source_name": "L\u00fcbeck",
+          "center": null,
+          "lower": 30.0,
+          "upper": 75.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -4034,6 +4061,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "4221",
+          "source_name": "L\u00fcbeck",
+          "center": null,
+          "lower": 21.0,
+          "upper": 81.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "4227",
           "source_name": "Newcastle upon Tyne",
           "center": null,
@@ -5125,6 +5161,15 @@
           "center": null,
           "lower": 27.0,
           "upper": 77.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "4221",
+          "source_name": "L\u00fcbeck",
+          "center": null,
+          "lower": 30.0,
+          "upper": 75.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -6224,6 +6269,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "4221",
+          "source_name": "L\u00fcbeck",
+          "center": null,
+          "lower": 21.0,
+          "upper": 81.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "4227",
           "source_name": "Newcastle upon Tyne",
           "center": null,
@@ -7315,6 +7369,15 @@
           "center": null,
           "lower": 21.0,
           "upper": 81.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "4221",
+          "source_name": "L\u00fcbeck",
+          "center": null,
+          "lower": 30.0,
+          "upper": 75.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -8414,6 +8477,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "4221",
+          "source_name": "L\u00fcbeck",
+          "center": null,
+          "lower": 24.0,
+          "upper": 79.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "4227",
           "source_name": "Newcastle upon Tyne",
           "center": null,
@@ -9505,6 +9577,15 @@
           "center": null,
           "lower": 21.0,
           "upper": 81.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "4221",
+          "source_name": "L\u00fcbeck",
+          "center": null,
+          "lower": 30.0,
+          "upper": 75.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -10604,6 +10685,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "4221",
+          "source_name": "L\u00fcbeck",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "4227",
           "source_name": "Newcastle upon Tyne",
           "center": null,
@@ -10988,7 +11078,7 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "a1f114d1ccadf0d9fb4cd12f3c61710f493e1eb346a22b68c6d7695660526eba",
+    "cci-global-evidence-matrix.csv": "eca8396a7b77bd0811fe78332edd206e04bd0a3e1be0a921c9da5b5ee742982d",
     "cci-legal-mobility-rules.json": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "cci-legal-mobility.md": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e",
     "cci-local-2026-singapore-case.json": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -11233,12 +11323,14 @@
     "cci-kiel-priority-review.md": "46016f4a72b101485b04f2380ffa030da7c06fd829a0fad76a6e76ebb0d17a06",
     "cci-local-2026-cork-case.json": "4abda77d105836dc8be343c85c00fb9aed98eba74b0406bda8ce8eab0adf0a00",
     "cci-cork-priority-review.md": "1cb801bbd0e9ceec481db759d309cbdd19e7deeefa8ccae30f70f6bcff937694",
+    "cci-local-2026-lubeck-case.json": "86c6c8fb54a397494e1cfe43b0386b13b8658d26358f9d4208fa7e61c6acb507",
+    "cci-lubeck-priority-review.md": "91a06646df7d7f5b7bdbeba927972a66a60b5d0b234923a36a5f3848b7a8a470",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "6b9778f88fce8c07f322168d24c45bd04acf3c8c7429e4c40d23a84b367ef063",
+    "cci-global-evidence-matrix.json": "d8190ef8c3ce3720cc841b6135c59b17a02522f5bb7f8df816ca0b6e3b36a82d",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "a84bc26c8e6c5bf5155b18e1f26b780c35a646076c9f6efb603ca942e17a8c62"
+    "cci-local-2026-scoring-calibration.md": "771a11a4db60554e9c822d28730a10f36c7627e01ffd3f1b608b816f80668328"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "bb174e4a1148ad2314812c25e9173583e058824e240df7e5ecbe2227a0f692a1",
+  "csvSha256": "5b480e41558bcfb761b3d4618b34ed217cb73c428e71f433802d675cf6e0a28d",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }

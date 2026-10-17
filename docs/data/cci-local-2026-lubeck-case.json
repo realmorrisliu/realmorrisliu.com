@@ -1,0 +1,1009 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 4221,
+  "name": "Lübeck",
+  "countryIso": "DEU",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-17",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentPerspectiveDescription": "Ordinary German native citizen, long-term local resident, local median resources, usual effective health cover, no fixed age",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "researchFrozenInputCommit": "7d5dd428925d2a8721d5c307b63d9a224ef9b1cd",
+  "fixedInputCases": 121,
+  "fixedInputComplete": 26,
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 30,
+  "unknownWeight": 45,
+  "unresolvedScoreRange": [30, 75],
+  "fullyMeasured": false,
+  "candidateUniverseRetained": 9031,
+  "newAndUnmatchedCompetitorsRetained": true,
+  "supportedExclusions": 0,
+  "qualified32Threshold": null,
+  "globalRankingEligible": false,
+  "dimensions": [
+    {
+      "id": "PCS",
+      "weight": 15,
+      "score": 40,
+      "rationale": "洪水原文记录Obertrave/Priwall等地淹水与道路、渡轮通达的经验阈值，预警、关键设施优先和隔离前部署急救存在；私人防水仍由住户承担，洪水地下室不抽排、不预发个人沙袋，保护后仍有重要居住及通道约束。不是声称2026发生同一灾害。",
+      "assumption": "把定点经验及当前操作规则有限延续到2026普通居民所面对的重要洪水后果；预部署并未消除私人财产/隔离负担。若拒时点、地点重要性和通常后果桥，撤回未知。 主40明确接受经验洪水与当前边界对普通重要住宅/通道后果的有限代表；不以私护责任、沙袋或未见灾害自动判档，不称2026已断航或救援不可用。60是适配预警/关键设施/预部署使主要生活保护通常可管理的公平解释。",
+      "sourceIds": ["S01", "S03", "S15"],
+      "conditionalAlternatives": [40, 60],
+      "alternativeRationales": {
+        "40_60_80": "60可由六级预警、增援组织与隔离前部署足以适配通常主要危险来辩；80还需多类相关危险和独立共因备援的实际证据，不索零风险。",
+        "rejectNecessaryBridge": "null/[]；不补中点或重归一。"
+      },
+      "subpillars": {
+        "heat_humidity": "unresolved",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "context"
+      },
+      "scoreStatus": "conditional"
+    },
+    {
+      "id": "GSS",
+      "weight": 15,
+      "score": null,
+      "rationale": "实际武器保管101次现场检查、38禁武/34撤拒许可以及283集会均保留；恐袭防冲撞只是安全概念，PKS本轮只读目录，不把普通违法或国别形象替代组织暴力/区域战略净安全。",
+      "assumption": "根实际读S01武器处置和安全概念，未全文独核警方目录之外的原始安全统计；未连定组织、区域与战略威胁及通常净保护。保持未知，不从一般违法总量、无战事、国家标签或获取失败推档。",
+      "sourceIds": ["S01", "S09", "S10"],
+      "conditionalAlternatives": [],
+      "alternativeRationales": {
+        "40_60_80": "40需真实帮助后仍重要组织/战略后果；60可接受有据地方威胁及适配保护/通常净影响桥；80需更宽可信缓解与低现实影响证据，不要求战争先发生。",
+        "rejectNecessaryBridge": "null/[]；不补中点或重归一。"
+      },
+      "subpillars": {
+        "organized_violence": "context",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "context"
+      },
+      "scoreStatus": "unresolved"
+    },
+    {
+      "id": "ISR",
+      "weight": 15,
+      "score": 60,
+      "rationale": "2025市民预约通常一周、线上状态/登记服务已使用，11辆区域救护车配远程医疗且医生在KI/HL轮值，市级水/医用设施监控与真实能源数据中心投运显示执行和适应能力。入籍36月/约40诉讼是机构执行反证，不作为已是公民的本人资格障碍。",
+      "assumption": "普通既有居民可通常使用已运行行政、应急和公共服务；市域与共享服务对692km²FUA的代表范围有限，2025执行延续至截止，非所有群体恢复/信任均已测。拒此桥未知。",
+      "sourceIds": ["S01", "S03", "S05", "S06", "S13"],
+      "conditionalAlternatives": [60],
+      "alternativeRationales": {
+        "40_60_80": "40可在明确服务修复后仍重要居民后果及代表桥下采用，不能只由入籍等待迁移给本国居民；80需压力恢复与群体触达的更强结果。",
+        "rejectNecessaryBridge": "null/[]；不补中点或重归一。"
+      },
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "context",
+        "emergency_recovery": "context"
+      },
+      "scoreStatus": "conditional"
+    },
+    {
+      "id": "RES",
+      "weight": 10,
+      "score": null,
+      "rationale": "三地下水厂/外部来水与监测、太阳热PV和既有能源服务、定点食品分发均真实；但困难证明和3欧Tafel不等普通中位居民本人的食品资格，现有原件没有足以判定通常食品及家庭能源净负担方向的另一连接。重要正供给保留，不从源少或未见断供推档。",
+      "assumption": "初稿60接受中位资源+实运三资源的通常净取得桥；同一证据复核后，这条家庭食品/能源净方向代表桥目前不接受，主null。不是要求全户/2026完整账本；可由一个有限有据普通费用或帮助后净取得连接支持60。接受桥则36–71；拒桥当前30–75。",
+      "sourceIds": ["S05", "S06", "S11", "S14"],
+      "conditionalAlternatives": [],
+      "alternativeRationales": {
+        "40": "若有帮助后真实重要家庭净负担/供给后果与本画像适配，可40；当前无足够反证直接定40，不以缺费率或TLS扣分。",
+        "60": "有限接受中位资源+真实水/食品分发/能源交付及通常可负担代表桥可60，但Tafel不自动合资格、家庭食品能源方向未实证是必要异议；不索全账本。",
+        "80": "需实际基本供给/负担和主要共因替代更强证据，非所有节点完美。",
+        "null": "作者最终；保留全部供给正证和60竞争解释，无新事实/请求。"
+      },
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "partial",
+        "supply_chain": "partial"
+      },
+      "scoreStatus": "unresolved"
+    },
+    {
+      "id": "MED",
+      "weight": 15,
+      "score": 60,
+      "rationale": "本地UKSH/Sana卒中、肿瘤南网络、姑息/精神和区域急救是具体必要服务；市报告p18/19现有医用空气和水设施监督、医院每年千余样本及异常整改过滤/复查属实运质控，非死亡率优越或全院感染达标。p4当前护理人手不能覆盖现有需求为反证。",
+      "assumption": "接受Dec2025前言及规划章节中本地现行配置/实运监督的有限延续和通常净质量代表桥，不把KHP2017/Stand2015或400/年当2025逐院实测。普通GKV§27/39必要服务/出院管理及§61/62合资格共付限制支持通常净进入；不包私人未覆盖费、收入损失或所有家庭照护。拒代表/净照护/截至前内容通常延续桥撤未知。 R01本轮仅选§27/39前5000字符、§61全部1445字符、§62前5000字符；未读各段尾部，不认证现行汇编每项修法在截止前生效。仅采通常必要治疗、出院支持和合资格共付限制的有限核心延续；供者免共付不等受者免费。",
+      "sourceIds": ["S01", "S13", "R01"],
+      "conditionalAlternatives": [40, 60],
+      "alternativeRationales": {
+        "40_60_80": "40可由帮助后仍重要护理接续/等待后果且本地通常代表桥采用，不仅缺员比例；80需更强实际质量/时效与压力下备援，不设全院完美门槛。",
+        "rejectNecessaryBridge": "null/[]；不补中点或重归一。"
+      },
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "scoreStatus": "conditional"
+    },
+    {
+      "id": "LON",
+      "weight": 10,
+      "score": null,
+      "rationale": "本轮实际选读的普通肿瘤与医疗配置不足以单独证明成熟细胞/重建治疗的本地或通常转诊实施、付款与反复照护链。不能把两个UKSH院区或Kiel早期研究互换。",
+      "assumption": "没有接受本地成熟疾病转化及通常取得的具体桥。不是因TLS或缺逐剂票据判低，也不把普通肿瘤化疗自动纳入。",
+      "sourceIds": ["S13", "R01", "R07"],
+      "conditionalAlternatives": [],
+      "alternativeRationales": {
+        "40_60_80": "40需实际帮助后重要取得断点；60可由成熟疾病重建可信人体、本地/通常转诊实施与通常付款/净护理有限桥支持；80看多条可信路径，不索健康人延寿或零风险。",
+        "rejectNecessaryBridge": "null/[]；不补中点或重归一。"
+      },
+      "subpillars": {
+        "translation": "context",
+        "trial_maturity": "unresolved",
+        "regulatory_adoption": "context",
+        "resident_access": "unresolved"
+      },
+      "scoreStatus": "unresolved"
+    },
+    {
+      "id": "TEC",
+      "weight": 10,
+      "score": 60,
+      "rationale": "Dräger官方预请求工具原文支持2025持续研发/实际产品业务与吕贝克基础研发/全球职能，集团数据不改成本地研发额、销量或居民使用率；同源材料非独立三验证。首自有数据中心、业务光纤合作和已配急救远程医疗为具体技术服务采用，非未来AI普及。",
+      "assumption": "明确以吕贝克基础研发/专业技术服务职能代表本地持续知识生产的一部分，结合真实产品业务与本地服务扩散；不把采购设备单独当知识生产。W02年报TLS失败前已捕获工具条目，仅限其实际文字，不冒读完整raw。若拒此本地生产代表/截至时间桥则未知。 根核W01/W02/W03确在实际第一查询原返回中，早于S02年报TLS尝试；只采其实际文字，未新渠道恢复失败年报。W03可见24Mar2026。S05正文22Jun2026而HTTP Last-Modified16Oct、末推荐12Oct，不采后者新事实；S14亦16Oct修改。当前字节不认证截止同版，常规业务和名义早期正文的有限时点桥可撤。",
+      "sourceIds": ["W01", "W02", "W03", "S01", "S05", "S13"],
+      "conditionalAlternatives": [60],
+      "alternativeRationales": {
+        "40_60_80": "40需实际重要产用/扩散断点，不以缺制造复产或未知地方份额降档；80需更广持续多机构与普遍受益/关键能力冗余，不索全民AI。",
+        "rejectNecessaryBridge": "null/[]；不补中点或重归一。"
+      },
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "partial",
+        "diffusion": "partial"
+      },
+      "scoreStatus": "conditional"
+    },
+    {
+      "id": "OPT",
+      "weight": 10,
+      "score": null,
+      "rationale": "欧盟就业居留、同价欧元转账/双因素、个人账户和手机跨境工具是可核法律/产品支路；就业/身份/信用、设备、收费、永久境外续用均有条件。Priwall渡轮有极端天气停运并不独证通常离开城市/国际目的地路线，机场点也非运行证据。",
+      "assumption": "未建立普通居民实际跨城/境外实体离开与接续路径，不能将法律迁移资格+通信或地图合成为完整OPT；不是索每笔交易/全部交通节点。",
+      "sourceIds": ["S15", "R02", "R03", "R04", "R05", "R06"],
+      "conditionalAlternatives": [],
+      "alternativeRationales": {
+        "40_60_80": "40需真实帮助后重要退出约束；60可用具体运行交通加有条件法律、个人资金与通信通常可用桥；80需实际替代/共同失效检视，不索无限永久漫游。",
+        "rejectNecessaryBridge": "null/[]；不补中点或重归一。"
+      },
+      "subpillars": {
+        "transport_redundancy": "context",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      },
+      "scoreStatus": "unresolved"
+    }
+  ],
+  "coverageReview": [
+    {
+      "dimension": "PCS",
+      "subpillar": "heat_humidity",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": [],
+      "finding": "未独立核热暴露及防护。"
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "flood_sea_level",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S01", "S03", "S15"],
+      "finding": "S15本地点洪水经验/关键保护/私人及通达余障。"
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "geophysical",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": [],
+      "finding": "未独立核地质保护，不以低模型值补分。"
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "severe_weather_wildfire",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S01", "S03", "S15"],
+      "finding": "水救援组织及火灾案例照片，不当全部结果率。"
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "organized_violence",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S01", "S09", "S10"],
+      "finding": "武器检查/集会仅实际干预背景，不等组织暴力净影响。"
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "regional_conflict",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": [],
+      "finding": "无本地适配的区域冲突净方向。"
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "strategic_exposure",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S01", "S09", "S10"],
+      "finding": "防冲撞安全概念/重要设施优先非已证威胁结果。"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "governance",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S01", "S03", "S05", "S06", "S13"],
+      "finding": "2025通常一周预约/已用线上服务与入籍执行反证分开。"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "adaptive_capacity",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S01", "S03", "S05", "S06", "S13"],
+      "finding": "远程急救/现行监测/能源数字设施实际使用。"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "social_cohesion",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S01", "S03", "S05", "S06", "S13"],
+      "finding": "实际困难食品分发/组织参与，信任和中位资格未量测。"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "emergency_recovery",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S01", "S03", "S05", "S06", "S13"],
+      "finding": "已介绍应急信息点与共享急救，未核全灾后恢复。"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "water",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S05", "S06", "S11", "S14"],
+      "finding": "现行供水来源/监测声明，未核质量PDF和全部FUA家庭率。"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "food",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S05", "S06", "S11", "S14"],
+      "finding": "实际定点捐赠分发/资格3欧；中位零售净取得有限桥。"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "energy",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S05", "S06", "S11", "S14"],
+      "finding": "已投太阳热/PV/既有能源服务，计划项目不计实交。"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "supply_chain",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S05", "S06", "S11", "S14"],
+      "finding": "地下水及外部来水/资源联系存在，电力共因备用未充分量测。"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "access",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S01", "S13", "R01"],
+      "finding": "本地必要专科与GKV通常进入，非全等待/人群。"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "routine_quality",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S01", "S13", "R01"],
+      "finding": "实运医用水/空气监督及整改；非患者结局全量表。"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "specialist_capacity",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S01", "S13", "R01"],
+      "finding": "本地卒中/肿瘤/姑息/精神网络，旧窗与当前描述分开。"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "system_continuity",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S01", "S13", "R01"],
+      "finding": "本地网络/急救+法定出院管理；家庭净照护有限桥。"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "translation",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S13", "R01", "R07"],
+      "finding": "学术癌症网络非成熟细胞实施。"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "trial_maturity",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": [],
+      "finding": "本地成熟疾病重建人体链未定位，非搬Kiel早期试验。"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "regulatory_adoption",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S13", "R01", "R07"],
+      "finding": "GKV必要护理为背景，不代具体成熟路径准入。"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "resident_access",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": [],
+      "finding": "本地/通常转诊实际实施和付款/重复监护未闭。"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "knowledge_output",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01", "W02", "W03", "S01", "S05", "S13"],
+      "finding": "Dräger本地基础研发职能/当前医技服务的有限代表。"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "industry_density",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01", "W02", "W03", "S01", "S05", "S13"],
+      "finding": "集团实际产品业务与本地职能，非全部产业普查。"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "digital_infrastructure",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01", "W02", "W03", "S01", "S05", "S13"],
+      "finding": "首数据中心/业务光纤合作实际，未核全居民接入。"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "diffusion",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["W01", "W02", "W03", "S01", "S05", "S13"],
+      "finding": "共享远程急救11车与本地服务采用，非11辆全在本地。"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "transport_redundancy",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S15", "R02", "R03", "R04", "R05", "R06"],
+      "finding": "Priwall通道/天气中断有据，跨城境外运行路径未闭。"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "legal_mobility",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S15", "R02", "R03", "R04", "R05", "R06"],
+      "finding": "德国公民欧盟工作居留有资格/登记条件。"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "asset_portability",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S15", "R02", "R03", "R04", "R05", "R06"],
+      "finding": "个人账户/欧元支付/双因素可用且有资源条件，非全资产保证。"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "network_continuity",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["S15", "R02", "R03", "R04", "R05", "R06"],
+      "finding": "临时境外漫游/设备接续工具，非永居后无限保证。"
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "url": "https://www.luebeck.de/de/rathaus/politik/pil/bi/wicket/resource/org.apache.wicket.Application/doc1716175.pdf",
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/diagnostics/S01-leg1.bin",
+      "path": null,
+      "bodyBytes": 2789518,
+      "bytes": null,
+      "bodySHA256": "38b91e49847d8ac0df7a91426b835f0c77ee5cb8939aee8868834d61f1791d5a",
+      "sha256": null,
+      "sourceKind": "websiteOriginal",
+      "publicationObservationScope": "Jan15_2026cityannual2025actualselectedorders/fire/telenotfall;noall20pagereview",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "S03",
+      "url": "https://www.luebeck.de/de/presse/pressemeldungen/pressemeldungen/staerkung-des-katastrophen-und-bevoelkerungsschutzes-404",
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/diagnostics/S03-leg3.bin",
+      "path": null,
+      "bodyBytes": 194413,
+      "bytes": null,
+      "bodySHA256": "9f0b6b61d70066b55af9a91402fd75aa25a223090a7bb4d1543e2e54c7e56cf6",
+      "sha256": null,
+      "sourceKind": "websiteOriginal",
+      "publicationObservationScope": "22Jan2026recognizedwaterrescueorganizations/currentstaffbase;futuregroup/personnelexpansionnotalreadydeployed",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "S05",
+      "url": "https://www.swhl.de/news/2026/stabile-basis-fuer-die-zukunft-stadtwerke-luebeck-gruppe-mit-positivem-ergebnis-2025/",
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/diagnostics/S05-leg5.bin",
+      "path": null,
+      "bodyBytes": 404938,
+      "bytes": null,
+      "bodySHA256": "ce3c664da895275d867763cf6addf4bd84047299dd295a5babf540bb2363d349",
+      "sha256": null,
+      "sourceKind": "websiteOriginal",
+      "publicationObservationScope": "22Jun2026FY2025groupresults/Apr2026solarheat/JanPV/dataCentreactual;plannedbus30/notallpaidcapital;Oct12recommendationspostcutoffnotadopted",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "S06",
+      "url": "https://tafel-luebeck.de/tafel-luebeck/ausgabestellen/",
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/diagnostics/S06-leg6.bin",
+      "path": null,
+      "bodyBytes": 27362,
+      "bytes": null,
+      "bodySHA256": "e565f4cb076e245414abf0bf1e3d7f9cbafff9445119374de9c7b84e5ecce8ed",
+      "sha256": null,
+      "sourceKind": "websiteOriginal",
+      "publicationObservationScope": "UndatedcurrentTafelordinarydonationdistributionandneedproof/3euro;limitedusualcontinuationbridge,notmedianautomaticeligibility",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "S08",
+      "url": "https://www.swhl.de/gruppe/ueber-uns/?mm=p&page_id=17",
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/diagnostics/S08-leg8.bin",
+      "path": null,
+      "bodyBytes": 428175,
+      "bytes": null,
+      "bodySHA256": "c8caafc798f70746ff4826e1ca4c9c662ce1acccc2bc17276296c4c209b59eab",
+      "sha256": null,
+      "sourceKind": "websiteOriginal",
+      "publicationObservationScope": "Undatedgroupoverview/nav;529m vsS05FY2025 577mnotcomparablewindow;380kand110municipalitynotFUAresidents",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "S09",
+      "url": "https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/POLIZEI/DasSindWir/PDen/Luebeck/pdLuebeck_index.html?focus=1",
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/diagnostics/S09-leg9.bin",
+      "path": null,
+      "bodyBytes": 295428,
+      "bytes": null,
+      "bodySHA256": "a52d2d73e34ab2264e92fa7de2ab1b2de106f2e2ea6bc795626e472404b686bb",
+      "sha256": null,
+      "sourceKind": "websiteOriginal",
+      "publicationObservationScope": "Officialpolicedirjurisdiction/directoryonly;lastupdated2024while2025linksinside,not2024publicationof2025data",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "S10",
+      "url": "https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/POLIZEI/DasSindWir/PDen/Luebeck/_downloads/pks/pks_pdluebeck_2025.pdf?__blob=publicationFile&v=2",
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/diagnostics/S10-leg10.bin",
+      "path": null,
+      "bodyBytes": 1052160,
+      "bytes": null,
+      "bodySHA256": "5d2c593711556122e0f1897be9222989ab8455862adbfa0ec5554efa598cde8e",
+      "sha256": null,
+      "sourceKind": "websiteOriginal",
+      "publicationObservationScope": "2025city/OstholsteinPKS;onlycover/accessibility/contentsphysical1–4read,noactualcrimeratesadopted",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "S11",
+      "url": "https://www.swhl.de/energie/",
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/diagnostics/S11-leg11.bin",
+      "path": null,
+      "bodyBytes": 483870,
+      "bytes": null,
+      "bodySHA256": "ea0f1504bdee99a02722b9e824561a73dcdba3abd7322b4f7d155015b3c3e2ac",
+      "sha256": null,
+      "sourceKind": "websiteOriginal",
+      "publicationObservationScope": "Undatedenergyoffer/130khouseholdwaterstatement,notpowerreliabilitymeasured;July8windconnectionheadlineonly/ nofullstory",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "S12",
+      "url": "https://www.luebeck.de/de/rathaus/verwaltung/gesundheitsamt/weitere-aufgaben/gesundheitsberichterstattung",
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/diagnostics/S12-leg12.bin",
+      "path": null,
+      "bodyBytes": 204741,
+      "bytes": null,
+      "bodySHA256": "20fea28ae30742a7c36d9da73bef1b9fa2b7f95e025692ad7ea94415e9fe0d54",
+      "sha256": null,
+      "sourceKind": "websiteOriginal",
+      "publicationObservationScope": "Cityhealthreportsindexonly2024/25reportactuallink",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "S13",
+      "url": "https://www.luebeck.de/file/gbe2025_ar_n.pdf",
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/diagnostics/S13-leg13.bin",
+      "path": null,
+      "bodyBytes": 6461644,
+      "bytes": null,
+      "bodySHA256": "ed4a413d4850a47bc286fd22643be5208b600457154716a22ecca052f04cd7f3",
+      "sha256": null,
+      "sourceKind": "websiteOriginal",
+      "publicationObservationScope": "2024/25report/editorialDec2025;chapterplanningmixes2015/2017rulesandcurrentdescriptions,not2025allclinicaloutcomes;actualqualitysurveillancep18/19",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "S14",
+      "url": "https://www.swhl.de/energie/trinkwasser/",
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/diagnostics/S14-leg14.bin",
+      "path": null,
+      "bodyBytes": 501732,
+      "bytes": null,
+      "bodySHA256": "938e4dcc3fc4037841e1f7ca14c2b23ee7838ad4adf4c22fe5b48dbc62cdd863",
+      "sha256": null,
+      "sourceKind": "websiteOriginal",
+      "publicationObservationScope": "Currentwaterprimaryprovider3wells+bulkimport/service/qualitymonitorclaim/tarifstructure;130kproviderhouseholdsnotallFUA;noPDFqualityresultsread",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "S15",
+      "url": "https://www.luebeck.de/de/rathaus/verwaltung/feuerwehr/ihre-sicherheit/hochwasser",
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/diagnostics/S15-leg15.bin",
+      "path": null,
+      "bodyBytes": 213473,
+      "bytes": null,
+      "bodySHA256": "28e3df63520d8f3083bb17fcdbcac1bf1449786d2a7a313a68d68e530d9e7403",
+      "sha256": null,
+      "sourceKind": "websiteOriginal",
+      "publicationObservationScope": "Undatedcurrentofficialfloodalarm/experiencedthresholds/criticalprotection+private-propertyandPriwallaccessconstraints;not2026observedevent/perfectforecast",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "R07",
+      "url": "https://www.uksh.de",
+      "bodyPath": null,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/R07-S07-decoded-website.html",
+      "bodyBytes": null,
+      "bytes": 126734,
+      "bodySHA256": null,
+      "sha256": "61b81ed6f1ff3a15e53dac015098c32df48051f10921948d79b0e225e56ac982",
+      "sourceKind": "durableSameSHAReuse",
+      "publicationObservationScope": "SelectedcommonDE/EUeligibility/payment/auth/roamingonly,notKielorLubeckcitycapability;R07navigationpostcutoffrecommendednewsnotadopted",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "R01",
+      "url": "https://www.gesetze-im-internet.de/sgb_5/BJNR024820988.html",
+      "bodyPath": null,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/R01-R01-sgb5.html",
+      "bodyBytes": null,
+      "bytes": 3647929,
+      "bodySHA256": null,
+      "sha256": "22b946cf88aedb5d53694d5d7b0703d10ca0ddfc9b09613e45ac9ecb397fb404",
+      "sourceKind": "durableSameSHAReuse",
+      "publicationObservationScope": "SelectedcommonDE/EUeligibility/payment/auth/roamingonly,notKielorLubeckcitycapability;R07navigationpostcutoffrecommendednewsnotadopted",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "R02",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_en.htm",
+      "bodyPath": null,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/R02-R02-eu-worker-residence.html",
+      "bodyBytes": null,
+      "bytes": 149227,
+      "bodySHA256": null,
+      "sha256": "7efe28815c063333746989e18f412dd25f1ae88c45acde4b56e1e16d2187d42a",
+      "sourceKind": "durableSameSHAReuse",
+      "publicationObservationScope": "SelectedcommonDE/EUeligibility/payment/auth/roamingonly,notKielorLubeckcitycapability;R07navigationpostcutoffrecommendednewsnotadopted",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "R03",
+      "url": "https://europa.eu/youreurope/citizens/consumers/financial-products-and-services/payments-transfers-cheques/index_en.htm",
+      "bodyPath": null,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/R03-R03-eu-payments.html",
+      "bodyBytes": null,
+      "bytes": 155296,
+      "bodySHA256": null,
+      "sha256": "0a457237f62980c579bc7dba314552421cb5b0fa826dc830b0e35bb42d458ee8",
+      "sourceKind": "durableSameSHAReuse",
+      "publicationObservationScope": "SelectedcommonDE/EUeligibility/payment/auth/roamingonly,notKielorLubeckcitycapability;R07navigationpostcutoffrecommendednewsnotadopted",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "R04",
+      "url": "https://www.ing.de/girokonto/kundenservice/",
+      "bodyPath": null,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/R04-R04-ing-eligibility.html",
+      "bodyBytes": null,
+      "bytes": 309978,
+      "bodySHA256": null,
+      "sha256": "fc0ce7af1b2fdbf5cdc9aa87b44ead075a231c1ba943c9b3ccfbcbf43e79e4e2",
+      "sourceKind": "durableSameSHAReuse",
+      "publicationObservationScope": "SelectedcommonDE/EUeligibility/payment/auth/roamingonly,notKielorLubeckcitycapability;R07navigationpostcutoffrecommendednewsnotadopted",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "R05",
+      "url": "https://www.ing.de/hilfe/ing-app/",
+      "bodyPath": null,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/R05-R05-ing-app.html",
+      "bodyBytes": null,
+      "bytes": 48810,
+      "bodySHA256": null,
+      "sha256": "a2b9faa8e9c1703139e51974c709eec84f29b4a4bfd7c704bd01497c18284cd9",
+      "sourceKind": "durableSameSHAReuse",
+      "publicationObservationScope": "SelectedcommonDE/EUeligibility/payment/auth/roamingonly,notKielorLubeckcitycapability;R07navigationpostcutoffrecommendednewsnotadopted",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "R06",
+      "url": "https://www.telekom.de/shop/shop/mobilfunk/roaming",
+      "bodyPath": null,
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/R06-R06-telekom-roaming.html",
+      "bodyBytes": null,
+      "bytes": 2206276,
+      "bodySHA256": null,
+      "sha256": "22203bb0fdf1b9a715927a293b39ba5e8334bd883d859d15a65e3ff1b9414db1",
+      "sourceKind": "durableSameSHAReuse",
+      "publicationObservationScope": "SelectedcommonDE/EUeligibility/payment/auth/roamingonly,notKielorLubeckcitycapability;R07navigationpostcutoffrecommendednewsnotadopted",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "id": "S02",
+      "leg": 2,
+      "url": "https://www.draeger.com/Content/Documents/Newsroom/geschaeftsbericht-2025-EmA4R7Xhj6.pdf",
+      "requestAtUTC": "2026-10-17T02:17:32.363613+00:00",
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "existingMetadataReads": 0,
+      "autoRetry": false,
+      "autoRedirect": false,
+      "parsedNonCookieHeadersNotWire": true,
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)>",
+      "bodyPath": null,
+      "bodyBytes": null,
+      "bodySHA256": null,
+      "classification": "transport_error_no_body",
+      "websiteOriginalSHA256": null,
+      "sourceKind": "failedDiagnosticNoBody",
+      "validOriginal": false,
+      "cutoffHistoricalSameBytesAuthenticated": false,
+      "publicationObservationScope": "ExactsourceTLSfailure;notadoptedcityevidence;priorproviderhistoryunknownnot0"
+    },
+    {
+      "id": "S04",
+      "leg": 4,
+      "url": "https://www.uksh.de/Das+UKSH/Medien/Qualit%C3%A4tsberichte.html",
+      "requestAtUTC": "2026-10-17T02:18:26.172564+00:00",
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "existingMetadataReads": 0,
+      "autoRetry": false,
+      "autoRedirect": false,
+      "parsedNonCookieHeadersNotWire": true,
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)>",
+      "bodyPath": null,
+      "bodyBytes": null,
+      "bodySHA256": null,
+      "classification": "transport_error_no_body",
+      "websiteOriginalSHA256": null,
+      "sourceKind": "failedDiagnosticNoBody",
+      "validOriginal": false,
+      "cutoffHistoricalSameBytesAuthenticated": false,
+      "publicationObservationScope": "ExactsourceTLSfailure;notadoptedcityevidence;priorproviderhistoryunknownnot0"
+    },
+    {
+      "id": "S07",
+      "leg": 7,
+      "url": "https://www.uni-luebeck.de/",
+      "requestAtUTC": "2026-10-17T02:19:40.545209+00:00",
+      "mechanism": "normalTLS urllib NoRedirect NoRetry",
+      "existingMetadataReads": 0,
+      "autoRetry": false,
+      "autoRedirect": false,
+      "parsedNonCookieHeadersNotWire": true,
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)>",
+      "bodyPath": null,
+      "bodyBytes": null,
+      "bodySHA256": null,
+      "classification": "transport_error_no_body",
+      "websiteOriginalSHA256": null,
+      "sourceKind": "failedDiagnosticNoBody",
+      "validOriginal": false,
+      "cutoffHistoricalSameBytesAuthenticated": false,
+      "publicationObservationScope": "ExactsourceTLSfailure;notadoptedcityevidence;priorproviderhistoryunknownnot0"
+    }
+  ],
+  "routingSourceSnapshots": [],
+  "webReadSources": [
+    {
+      "id": "W02",
+      "startByte": 14217,
+      "endByteExclusive": 17264,
+      "bytes": 3047,
+      "sha256": "fa26f5948057cde8ed4bf09708e3691aca9c9af41019482416cdef842dc7548e",
+      "path": "toolproof/W02-exact-entry.txt",
+      "role": "Actualpre-requestsearchtoolentry,notfullwebsiteoriginal/notpostfailrecovery",
+      "sourceKind": "preFailureToolOnly",
+      "websiteOriginalSHA256": null,
+      "firstToolCallId": "call_74dce76f7ac443ce9961f183fb31188d",
+      "toolBlockIndex": 1,
+      "url": "https://www.draeger.com/Content/Documents/Newsroom/geschaeftsbericht-2025-EmA4R7Xhj6.pdf",
+      "scope": "Groupknowledge/productsandLubeckHQfundamentaldevelopmentclaimonly;notfullannualrawread/localallR&Dorresidentmarketpenetration;preexistingtooltextnotpostfailurebypass"
+    },
+    {
+      "id": "W01",
+      "startByte": 17344,
+      "endByteExclusive": 18861,
+      "bytes": 1517,
+      "sha256": "1add1e55c05328932700d2de6fc2e1f15447b38dc62f2f4bae383c1e18e84c65",
+      "path": "toolproof/W01-exact-entry.txt",
+      "role": "Actualpre-requestsearchtoolentry,notfullwebsiteoriginal/notpostfailrecovery",
+      "sourceKind": "preFailureToolOnly",
+      "websiteOriginalSHA256": null,
+      "firstToolCallId": "call_74dce76f7ac443ce9961f183fb31188d",
+      "toolBlockIndex": 1,
+      "url": "https://www.draeger.com/de_de/About-Draeger",
+      "scope": "Groupknowledge/productsandLubeckHQfundamentaldevelopmentclaimonly;notfullannualrawread/localallR&Dorresidentmarketpenetration;preexistingtooltextnotpostfailurebypass"
+    },
+    {
+      "id": "W03",
+      "path": "toolproof/W03-exact-entry.txt",
+      "blockIndex": 1,
+      "parentToolBlock": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-full102/toolproof/call_74dce76f7ac443ce9961f183fb31188d-block1.txt",
+      "startByte": 0,
+      "endByteExclusive": 4776,
+      "bytes": 4776,
+      "sha256": "f60da93b06e1af7f140494b5686cd7447660f37cd75359ec562d1560a4a3adbe",
+      "websiteRaw": false,
+      "scope": "Officialprimarypre-failuretoolentrydated24Mar2026;groupactualbusinessonly,nolocalmarketshare orfullannualraw certification",
+      "url": "https://www.draeger.com/de_de/Newsroom/About-Draeger/pressemitteilung-geschaeftsbericht-2025",
+      "sourceKind": "preFailureToolOnly",
+      "websiteOriginalSHA256": null,
+      "firstToolCallId": "call_74dce76f7ac443ce9961f183fb31188d"
+    }
+  ],
+  "sourceAndStopLedger": "source-and-stop-ledger.json",
+  "boundaryReview": "approximate_reference_points_full9031_checked_not_service_coverage",
+  "limitations": "PCS40 and ISR/MED/TEC60, four unknowns; contribution30/unknown45 mathematical30–75, no complete total/midpoint/reweight/rank. PCS60 fair33–78; MED40 fair27–72; RES60 discussed36–71 not adopted. Actual public services, shared clinical oversight/payment and local professional production-use require revocable ordinary net-care/geography/time/importance bridges. 31bounded rows not full independent measures. All9031/new-unmatched competitors retained; zero exclusions and globalTop32 unproven. Source-tool entries are not raw website responses, current bytes not authenticated cutoff version; deviations retained, no wholeworkflow certification.",
+  "draftDecisionHistory": {
+    "initialUnfrozenRES": 60,
+    "finalRES": null,
+    "reason": "Samefacts,ordinaryfood/householdenergynetdirectionbridgeafterreviewnotaccepted;noperfectbudgetgate,nofetchpenalty",
+    "noNewRequestsForRevision": true
+  },
+  "boundaryVersionDescription": "4221/DEU/UC2630/692km2; all9031 and136shape-preserving repairs independently checked; approximate points not footprints or service coverage",
+  "evidenceReview": "cci-lubeck-priority-review.md",
+  "sourceName": "Lübeck",
+  "publishedInputCommit": "7d5dd428925d2a8721d5c307b63d9a224ef9b1cd",
+  "publishedInputCases": 121,
+  "publishedInputComplete": 26,
+  "rootReviewOn": "2026-10-17",
+  "referenceBoundaryCheck": {
+    "rawSHA256": "9934364827132232df67e8984768fb30865a846f5a786db999d49fc37fb7698d",
+    "allGeometries": 9031,
+    "repairs": 136,
+    "record": {
+      "fid": 3256,
+      "eFUA_ID": 4221.0,
+      "UC_num": 1.0,
+      "UC_IDs": "2630",
+      "eFUA_name": "Lübeck",
+      "Commuting": 1.0,
+      "Cntry_ISO": "DEU",
+      "Cntry_name": "Germany",
+      "FUA_area": 692.0,
+      "UC_area": 63.0,
+      "FUA_p_2015": 329526.71756619215,
+      "UC_p_2015": 150412.5030517578,
+      "Com_p_2015": 179114.21451443434
+    },
+    "targetOriginalWkbSHA256": "df6b4cc651c301f3df9160ddb7bbb93cdd241f6883f2164e63a4745bb08bbf00",
+    "referencePoints": [
+      {
+        "label": "LubeckCentreApprox",
+        "longitude": 10.686,
+        "latitude": 53.866,
+        "fuaMatches": [4221]
+      },
+      {
+        "label": "UKSHLubeckNeighbourhoodApprox",
+        "longitude": 10.704,
+        "latitude": 53.836,
+        "fuaMatches": [4221]
+      },
+      {
+        "label": "LubeckAirportApprox",
+        "longitude": 10.719,
+        "latitude": 53.805,
+        "fuaMatches": [4221]
+      },
+      {
+        "label": "TravemuendeApprox",
+        "longitude": 10.873,
+        "latitude": 53.958,
+        "fuaMatches": [4221]
+      }
+    ],
+    "pointsNotFootprintsOrServiceCoverage": true,
+    "population2015MetadataNot2026Denominator": true
+  },
+  "sensitivity": {
+    "PCS60": [33, 78],
+    "MED40": [27, 72],
+    "RES60DiscussedNotAdopted": [36, 71],
+    "withdrawals": {
+      "PCS": [24, 84],
+      "ISR": [21, 81],
+      "MED": [21, 81],
+      "TEC": [24, 79]
+    },
+    "allWithdrawn": [0, 100]
+  },
+  "rootScopeReview": {
+    "rootSelectedOriginals": 9,
+    "rootNewOriginalsSelected": 8,
+    "rootReusedOriginalsSelected": 1,
+    "rootHtmlMainSelected": ["S03", "S05", "S06", "S08", "S14", "S15"],
+    "rootLegalSelected": {
+      "sourceId": "R01",
+      "sections": {
+        "27": "first5000/5950chars",
+        "39": "first5000/6860chars",
+        "61": "all1445chars",
+        "62": "first5000/5279chars"
+      }
+    },
+    "rootToolEntriesRead": ["W01", "W02", "W03"],
+    "rootToolEntriesNotWebsiteRaw": true,
+    "rootPdfTextPhysicalPages": {
+      "S01": [1, 2, 3, 4, 7],
+      "S13": [1, 2, 4, 18, 19, 31, 34, 35]
+    },
+    "rootPdfTextPageCount": 13,
+    "rootPdfViewedPhysicalPages": {
+      "S01": [3, 4, 7],
+      "S13": [19, 34, 35]
+    },
+    "rootPdfViewedPageCount": 6,
+    "all9031IndependentlyChecked": true,
+    "repairs": 136,
+    "approximateReferencePoints": 4,
+    "referencePointsNotServiceCoverage": true,
+    "rootNewResearchHTTP": 0,
+    "actualSessionRecordIdentitiesVerified": 14,
+    "preFailureToolEntriesExactInActualFirstReturn": true,
+    "elevenAmbulancesAllLubeck": false,
+    "newRescue50AlreadyDelivered": false,
+    "group337point6MillionAnd24ProductsAllLocal": false,
+    "annual400IsMeasured2025Patients": false,
+    "hospitalWaterMonitoringProvesNoInfection": false,
+    "allRLT90InHospital": false,
+    "TafelEligibilityAutomaticForMedianResident": false,
+    "floodClosuresObserved2026": false,
+    "S05AndS14HttpModifiedAfterCutoff": true,
+    "postCutoffRecommendedArticleAdopted": false,
+    "currentBytesAuthenticateCutoffVersion": false,
+    "historicalCutoffSameBytesAuthenticated": false,
+    "sourceFailurePenalizesCity": false,
+    "wholeWorkflowCertified": false,
+    "rootMixedOuterInputDeviationsPreserved": true,
+    "rootTruncatedMetadataNotFullReadClaim": true,
+    "inheritedStopsAndUnknownHistoryNotReset": true,
+    "failedSourcesNotRecoveredViaAlternateChannel": true,
+    "pcsCrossPacket": "/Users/morris/.local/share/cci-research/2026-10-10/lubeck-pcs-cross102",
+    "pcsCrossManifestSHA256": "c91ee810cfc48b793761a5c3c4e9db1385ed7acf9e2cfe79c7ed37ad0558ada7"
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-lubeck-priority-review.md",
+    "researchReport": "docs/cci-lubeck-score-completion-review.md",
+    "fixedInputCommit": "7d5dd428925d2a8721d5c307b63d9a224ef9b1cd",
+    "fixedCases": 121,
+    "fixedComplete": 26,
+    "researchFixedInputCommit": "7d5dd428925d2a8721d5c307b63d9a224ef9b1cd",
+    "researchFixedCases": 121,
+    "researchFixedComplete": 26,
+    "frozenManifestSha256": "3074874d64f6420aa571d3ab3b48f9d2adaba894085f9247f36319e37efcc67d",
+    "frozenFilesVerified": 143,
+    "frozenPayloadBytes": 22665063,
+    "sha256": "91a06646df7d7f5b7bdbeba927972a66a60b5d0b234923a36a5f3848b7a8a470",
+    "researchReportSha256": "d064243c6cdef7ca910a781f6f40e7ec8bebf0d6a7715a4decc83a8f7a763fef"
+  }
+}

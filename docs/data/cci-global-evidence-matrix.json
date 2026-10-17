@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 121,
+    "conditionalCaseCount": 122,
     "completeConditionalCaseCount": 26,
-    "partialCaseCount": 95,
-    "unassessedCount": 8910,
+    "partialCaseCount": 96,
+    "unassessedCount": 8909,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -910,8 +910,13 @@
       "sha256": "4abda77d105836dc8be343c85c00fb9aed98eba74b0406bda8ce8eab0adf0a00",
       "provenance": "cci-cork-priority-review.md",
       "provenanceSha256": "1cb801bbd0e9ceec481db759d309cbdd19e7deeefa8ccae30f70f6bcff937694"
+    },
+    "cci-local-2026-lubeck-case.json": {
+      "sha256": "86c6c8fb54a397494e1cfe43b0386b13b8658d26358f9d4208fa7e61c6acb507",
+      "provenance": "cci-lubeck-priority-review.md",
+      "provenanceSha256": "91a06646df7d7f5b7bdbeba927972a66a60b5d0b234923a36a5f3848b7a8a470"
     }
   },
-  "scriptSha256": "a05758cd08b62ba3db442034bebb38df4dee0724c04498ad4c2248b00e2de072",
-  "csvSha256": "a1f114d1ccadf0d9fb4cd12f3c61710f493e1eb346a22b68c6d7695660526eba"
+  "scriptSha256": "a272b86db41553110aa264cb5cf3972ddfb082c37f61792c3ae1e3562726162d",
+  "csvSha256": "eca8396a7b77bd0811fe78332edd206e04bd0a3e1be0a921c9da5b5ee742982d"
 }
