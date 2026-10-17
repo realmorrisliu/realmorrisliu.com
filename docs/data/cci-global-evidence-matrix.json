@@ -177,8 +177,8 @@
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
     "conditionalCaseCount": 125,
-    "completeConditionalCaseCount": 27,
-    "partialCaseCount": 98,
+    "completeConditionalCaseCount": 28,
+    "partialCaseCount": 97,
     "unassessedCount": 8906,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
@@ -407,9 +407,9 @@
       "provenanceSha256": "e5e20d8857d16da21ba711f6b0194b9fffc01d69052f4a200b5960f07a59ad55"
     },
     "cci-local-2026-nanjing-case.json": {
-      "sha256": "78cbbc9e6f7831b78ff7d80260da46a77694ed7bf9c5d50955785a11fc45864f",
-      "provenance": "cci-local-2026-nanjing-case.md",
-      "provenanceSha256": "4ca926a35432f4dd830ebb59084cc5ced5f9afe6f8fea6bea4bffdaffeaac72c"
+      "sha256": "335d0aebcdd9fae1b57b36068f25c7ca2f081b17543d47783f16f5e21b1f5249",
+      "provenance": "cci-nanjing-gss-unified-threshold-review.md",
+      "provenanceSha256": "82eaeb50029374e55813cd7efd2705671f1f2ab8599efdab5e46780e6421b258"
     },
     "cci-local-2026-guangzhou-case.json": {
       "sha256": "27edb036c0f1c59417054280e1bd6ca2ffaeee94e2668c8b20416b6c8ca97ee0",
@@ -933,5 +933,5 @@
     }
   },
   "scriptSha256": "4276e3460d6f4eee5219b49ac9653c6d1070fe0ce81b059636f02275110c9ba0",
-  "csvSha256": "8a59ffd6c133090dfe7f7bd0a53bfa2d6ded9e95c905690ed9948b193173084f"
+  "csvSha256": "402ab88df8af02bd6c912a06979ee4f85506b9269a1b5576ce25542a90fc941a"
 }

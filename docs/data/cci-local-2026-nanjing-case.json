@@ -8,9 +8,9 @@
   "retrievedOn": "2026-10-13",
   "candidateId": 9701,
   "name": "Nanjing functional area",
-  "evidenceReview": "cci-local-2026-nanjing-case.md",
-  "expectedConditionalTotal": null,
-  "limitations": "Root GSS comparability acceptance withdraws prior60: actual enforcement and locally applicable shelter/warning protection retained, but current ordinary organised-harm residual impact and locality bridge not accepted from procedural counts/other old-case corrections alone. Other seven dimensions unchanged;49–64 without centre. No war prerequisite or missing-as-low score.",
+  "evidenceReview": "cci-nanjing-gss-unified-threshold-review.md",
+  "expectedConditionalTotal": 58,
+  "limitations": "Root GSS comparability acceptance withdraws prior60: actual enforcement and locally applicable shelter/warning protection retained, but current ordinary organised-harm residual impact and locality bridge not accepted from procedural counts/other old-case corrections alone. Other seven dimensions unchanged;49–64 without centre. No war prerequisite or missing-as-low score. Current GSS107 adopts conditional60 by a finite common-threshold judgment, not new complete-population measurement. Other seven dimension objects unchanged; prior civil-defence raw not reauthenticated, current S10 is403 diagnostic, no cutoff-same-version certification.",
   "dimensions": [
     {
       "id": "PCS",
@@ -27,14 +27,20 @@
     },
     {
       "id": "GSS",
-      "score": null,
-      "rationale": "真实累计组织伤害/再活动与2024起诉、2025审理保留；2026披露其他南京旧案与保护伞判刑/截至2025清理纠正及实际警务运行有缓解。2025/2026空袭背景警报链路排障、地下掩蔽/线路监测和居民演练是具体已实施适配，不能删成一般设施；但周某案当前通常剩余影响/地方覆盖与关键保护持续取得链不能由程序或其他旧案总量闭合。",
-      "assumption": "主null不因未有当地战争、没有终判或无全人口普测；目前不接受由已干预/核查/实演直接推出2026通常组织暴力影响较低且残余已充分受限。若接受针对性执法与纠错确实抑制再活动、限定9701核心普通生活/通道影响，并接受区域空袭/系统破坏情景下现役保护通常可达持续，条件60可辩护；重要已知未充分缓解的持续胁迫/通道限制才40。最小下一证为有范围的处置后仍/不再胁迫或通常居民/商户影响及对应干预触达，不必全区率、全终判或全部节点压力测试。",
+      "score": 60,
+      "rationale": "具体武器线索触发侦查、39人起诉及实际庭审，与另一南京案罪犯和保护伞定罪、截至2025旧案实际纠错共同构成已实施组织保护。沿用历史已验警报排障、地下掩蔽和居民／关键设施实演，接受有限通常净保护方向60；不是单位名单、无坏消息或默认填分。",
+      "assumption": "接受实际组织干预及司法庇护纠正通常抑制继续胁迫，核心9701普通生活／通道剩余净影响较有限，并接受历史现役风险适配保护通常可达延续至2026-10-10。个案向通常画像、南京多地／匿名区向核心FUA及时点延续均可撤；未声明39人终判／全员羁押／全部受害恢复／独立战时备援。拒必要桥回null/[]、49–64。40需有依据的帮助后重要未缓解约束延续，不需多数／主导；本批未独立接受该桥，55仅敏感情景；80需更强低残余和有效多途径保护。",
       "conditionalAlternatives": [],
       "subpillars": {
         "organized_violence": "partial",
         "regional_conflict": "context",
         "strategic_exposure": "partial"
+      },
+      "sourceIds": ["NJ107-S01", "NJ107-S07"],
+      "alternativeRationales": {
+        "40": "总55是另需接受当前重要未缓解胁迫／通道约束延续的情景，旧累计重伤财损／缺后续不自动赋40。",
+        "80": "总61仅算术，未建立足够强的低残余／多途径保护正证。",
+        "rejectNecessaryBridge": "null/[]；49–64，无中心／中点／权重重归一。"
       }
     },
     {
@@ -758,6 +764,28 @@
       "sha256": "292786b4ff90b9c1b2d69a2b099a4cdfb40b4aa1879c5340ed2d2c30664ff2fb",
       "publicationObservationContext": "主管原表2026-10-10；观察2026Jan–Aug；10-13取回",
       "scope": "See priority review: dated observations, unnamed provider/campus assumptions, sampling and payer denominators; current bytes are not a cutoff archive."
+    },
+    {
+      "id": "NJ107-S01",
+      "url": "https://www.spp.gov.cn/zdgz/202507/t20250704_700383.shtml",
+      "retrievedOn": "2026-10-17",
+      "http": 200,
+      "bytes": 35739,
+      "sha256": "63ad4691c812d5f9e2661b90206ad7eb1d5b5ad4dcee5d7fe8d0aeda1bf92070",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/root-107-small-release/NJ107-S01.html",
+      "publicationObservationContext": "2025-07-04 publication; historic harms,2024 investigation/prosecution,2025-06 trial",
+      "scope": "Root current visible original independently read; same SHA as old record binds current bytes only, not cutoff response or restoration of lost old response. S01 and S07 are separate cases from same SPP publisher, not independent institution counts."
+    },
+    {
+      "id": "NJ107-S07",
+      "url": "https://www.spp.gov.cn/spp/xwfbh/dxal/202602/t20260205_718394.shtml",
+      "retrievedOn": "2026-10-17",
+      "http": 200,
+      "bytes": 25587,
+      "sha256": "7190f042f3c36aa5376b53e6a1c23564939b43f641bc98f9b19f290d21e8881a",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/root-107-small-release/NJ107-S07.html",
+      "publicationObservationContext": "2026-02-05 publication; case5 only,2016/2018 harms,2020/2023 convictions,oversight through2025",
+      "scope": "Root current visible original independently read; same SHA as old record binds current bytes only, not cutoff response or restoration of lost old response. S01 and S07 are separate cases from same SPP publisher, not independent institution counts."
     }
   ],
   "webOnlySourceReviews": [
@@ -847,11 +875,11 @@
     "path": "docs/cci-nanjing-priority-completion-review.md",
     "sha256": "4f4177e2beb11ec032c76d724fab3447f3dfc5c45a615852b0cf6bcdea8fcb0a"
   },
-  "knownWeightedSubtotal": 49,
-  "unresolvedScoreRange": [49, 64],
+  "knownWeightedSubtotal": 58,
+  "unresolvedScoreRange": [58, 58],
   "gssComparabilityReview": {
     "path": "docs/cci-nanjing-gss-comparability-review.md",
-    "sha256": "becaa4e3adc953ce7b2ddd5e804dd7ed6566dcc6acc5b3983f5c7fc88d2b1683",
+    "sha256": "9b0471054f76424ecce763c0c358592fdbad4debce67d09d88216e3cb2fd3bda",
     "reviewedOn": "2026-10-13",
     "baseCaseSha256": "de143b9319f3c0d34647e0d569f03a7d995e8f8396f41ddb2c27b06068004cd4",
     "scope": "GSSonly_othersevenexactlyunchanged",
@@ -878,7 +906,8 @@
     "sourceManifest": "source-manifest.json",
     "referenceBoundaryRecord": "boundary-record.json",
     "discoveryRounds": 2,
-    "discoveryClosed": true
+    "discoveryClosed": true,
+    "historicalDecisionSupersededBy": "docs/cci-nanjing-gss-unified-threshold-review.md"
   },
   "gssSupplement": {
     "sourceSnapshots": [
@@ -1255,5 +1284,62 @@
       "reviewedOn": "2026-10-13"
     },
     "warOrSuccessfulStrategicAttackRequired": false
+  },
+  "unknownWeight": 0,
+  "fullyMeasured": false,
+  "globalRankingEligible": false,
+  "supportedExclusions": [],
+  "qualified32Threshold": null,
+  "candidateUniverseRetained": true,
+  "newAndUnmatchedCompetitorsRetained": true,
+  "failedSourceSnapshots": [
+    {
+      "id": "NJ107-S10",
+      "url": "https://gdb.nanjing.gov.cn/rfkx/202609/t20260920_5913840.html",
+      "retrievedOn": "2026-10-17",
+      "http": 403,
+      "bytes": 7382,
+      "sha256": "d4704d7714ffc513faea386c51b9781f0133dd3dd1cdfd443d0ceeabed2f145e",
+      "validOriginal": false,
+      "scope": "Verification-page diagnostic, not civil-defence body. Conservative GDB normalprovider count3 incl2 inheritedTLS failures; chain stopped, no tool/mirror/CDN recovery and no city-capability penalty."
+    }
+  ],
+  "gssUnifiedThresholdReview": {
+    "path": "docs/cci-nanjing-gss-unified-threshold-review.md",
+    "reviewedOn": "2026-10-17",
+    "fixedInputCommit": "256c9369b20e52eb35391194955e4ac6fd326ee3",
+    "fixedCases": 125,
+    "fixedComplete": 27,
+    "onlyDimensionChanged": "GSS",
+    "otherSevenDimensionObjectsUnchanged": true,
+    "oldCaseSHA256": "78cbbc9e6f7831b78ff7d80260da46a77694ed7bf9c5d50955785a11fc45864f",
+    "rootPrimaryHTMLRead": 2,
+    "rootResearchHTTPlegs": 3,
+    "rootValidNewOriginals": 2,
+    "rootDiagnosticOnly": 1,
+    "oldCivilDefenceRawArchiveMissing": true,
+    "oldCivilDefenceCurrentRawReauthenticated": false,
+    "currentBytesAuthenticateCutoffSameVersion": false,
+    "wholeWorkflowCertified": false,
+    "rootIndependentAll9031Geometry": true,
+    "repairs": 136,
+    "existingApproximatePointsVerified": 14,
+    "fullyMeasured": false,
+    "mainGSS": 60,
+    "conditionalTotal": 58,
+    "withdrawGSS": [49, 64],
+    "GSS40ScenarioOnly": 55,
+    "GSS80ScenarioOnly": 61,
+    "maxActiveResearchIncludingRoot": 3,
+    "method": "Finite ordinary-impact/locality/time/protection inference from actual specific interventions; not forced populationwide outcomes or finalverdict prerequisites; not gapfill.",
+    "authorFrozenManifestSHA256": "e1a256735809abf29008c96593ec2eb1b7d1a9d89741f0f5e6a3ba69ba0eaf9b",
+    "authorPayloadsVerified": 15,
+    "authorPayloadBytes": 205370,
+    "authorReportSHA256": "d2c2f7607c9ba0055e0605d926ac87402c2d69692d1c28a42ec2f8b3c2754bef",
+    "authorResearchHTTPlegs": 0,
+    "authorNewDiscoveryQueries": 0,
+    "authorUnusedNewAllowanceClosed": true,
+    "rootIntegrationHelperPlusThreeMDDeviationRetained": true,
+    "sha256": "82eaeb50029374e55813cd7efd2705671f1f2ab8599efdab5e46780e6421b258"
   }
 }
