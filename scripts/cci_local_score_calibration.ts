@@ -177,6 +177,7 @@ const realCases = [
   "shenzhen-reference",
   "hsinchu-reference",
   "dubai-reference",
+  "rugby",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -345,6 +346,7 @@ const [
   shenzhenReference,
   hsinchuReference,
   dubaiReference,
+  rugby,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4577,6 +4579,42 @@ assert(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
+
+const rugbyCase = realCases.find(c => c.candidateId === 4817);
+assert.equal(rugbyCase.sourceName, "Rugby");
+assert.deepEqual(rugby, { ISR: 60, MED: 40, LON: 60, TEC: 60 });
+assert.deepEqual(total(rugby), { center: null, lower: 27, upper: 77 });
+assert.equal(rugbyCase.unknownWeight, 50);
+assert.equal(
+  rugbyCase.priorityCompletionReview.sha256,
+  digest(rugbyCase.priorityCompletionReview.path)
+);
+assert.deepEqual(total({ ...rugby, MED: 60 }), { center: null, lower: 30, upper: 80 });
+assert.deepEqual(total({ ...rugby, ISR: 40 }), { center: null, lower: 24, upper: 74 });
+for (const id of ["ISR", "MED", "LON", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...rugby };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    rugbyCase.sensitivity.withdrawals[id]
+  );
+}
+assert.deepEqual(
+  rugbyCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["PCS", "GSS", "RES", "OPT"]
+);
+assert(
+  rugbyCase.coverageReview.length === 31 &&
+    rugbyCase.coverageReview.every(
+      (r: { score: null; fullyMeasured: boolean }) => r.score === null && !r.fullyMeasured
+    )
+);
+assert.equal(rugbyCase.rootScopeReview.all212PatientsReadyForDischarge, false);
+assert.equal(rugbyCase.rootScopeReview.allTrustPatientsAreRugbyResidents, false);
+assert.equal(rugbyCase.rootScopeReview.unreadImmuneMedicationProtocolClaimed, false);
+assert.equal(rugbyCase.rootScopeReview.NancyFactoryCapacityTransferredToRugby, false);
 
 const dubaiReferenceCase = realCases.find(c => c.candidateId === 357);
 assert.equal(dubaiReferenceCase.sourceName, "Dubai");

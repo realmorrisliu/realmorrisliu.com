@@ -135,6 +135,7 @@ import lubeck from "../../docs/data/cci-local-2026-lubeck-case.json";
 import shenzhenReference from "../../docs/data/cci-local-2026-shenzhen-reference-case.json";
 import hsinchuReference from "../../docs/data/cci-local-2026-hsinchu-reference-case.json";
 import dubaiReference from "../../docs/data/cci-local-2026-dubai-reference-case.json";
+import rugby from "../../docs/data/cci-local-2026-rugby-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -274,8 +275,10 @@ const cases = [
   shenzhenReference,
   hsinchuReference,
   dubaiReference,
+  rugby,
 ];
 const caseNamesZh: Record<number, string> = {
+  [rugby.candidateId]: "拉格比功能区",
   [dubaiReference.candidateId]: "迪拜参考功能区",
   [hsinchuReference.candidateId]: "新竹参考功能区",
   [lubeck.candidateId]: "吕贝克功能区",
@@ -507,6 +510,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [rugby.candidateId]: [
+    zh
+      ? "拉格比制度／专项转化／技术条件60、医疗40；防护、安全、资源、退出未知。已知贡献27，数学域27—77，无完整总分。跨职能服务、明确服务本地居民的共享肾移植专科及临床知识产用支持有限判断；通常净照护、地域和延续假设可撤。"
+      : "Rugby has conditional ISR/LON/TEC 60 and MED 40; PCS/GSS/RES/OPT remain unknown. Known contribution is 27, with a 27–77 arithmetic domain and no complete total. Actual services, shared kidney transplantation explicitly serving Rugby residents, and clinical knowledge put into use support finite judgments; usual net care, geography and continuity assumptions are revocable.",
+    zh
+      ? "诊断改善与长期待治／院外照护压力同时计入；212名长期住院者并非全已可出院被堵，区域业务量也非本地覆盖率。医疗60替代为30—80，制度40为24—74；撤专项转化或技术回21—81。厂册不是实际订单，规划新站不是已开通，全球入围未证。"
+      : "Diagnostic improvements coexist with long waits and aftercare capacity pressure. The 212 long-stay patients were not all ready for discharge, and regional volumes are not local coverage rates. MED 60 gives 30–80; ISR 40 gives 24–74. Withdrawing LON or TEC gives 21–81. A factory brochure is not actual orders, a planned station is not an operating route, and global inclusion is unproven.",
+  ],
   [dubaiReference.candidateId]: [
     zh
       ? "迪拜参考功能区制度／医疗／技术条件60，其余五维未知。贡献24、数学域24—84，无完整总分。实际多科诊疗、居家服务、患者援助及海关模型—人工反馈—交易者应用支持有限判断；普通净取得、核心代表及延续判断可撤。"
@@ -1601,7 +1612,7 @@ const caseReviewLinks: Record<number, { href: string; label: string }> = {
       {zh ? "全球 Top 32 研究进展" : "Global Top 32 research progress"}
     </h2>
     <p class="research-date">
-      {zh ? "研究更新" : "Research update"} · <time datetime="2026-10-15">2026-10-15</time>
+      {zh ? "研究更新" : "Research update"} · <time datetime="2026-10-17">2026-10-17</time>
     </p>
   </div>
   <div class="research-overview">

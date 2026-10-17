@@ -1,0 +1,1038 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 4817,
+  "sourceName": "Rugby",
+  "name": "Rugby",
+  "countryIso": "GBR",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-17",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "OrdinaryBritishcitizenlawfullyandproperlysettledlongtermEnglandresident,localmedianresources,usuallyeffectiveNHS,nofixedage;citizenshipalonenotordinaryresidenceproof;indications/exemptionsnotautomatic",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "referenceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "rowCount": 9031,
+    "invalidRepaired": 136,
+    "candidate": {
+      "candidateId": 4817,
+      "sourceName": "Rugby",
+      "countryIso": "GBR",
+      "areaKm2": 450.0,
+      "UCIDs": "1859",
+      "population2015": 145572.37396524847,
+      "originalWkbSHA256": "d96d853b873b072ecf8cc66dcd4a1f7404b0d352634fdc54db40c6d49c1bfd8f"
+    },
+    "points": [
+      {
+        "label": "Rugbyreference",
+        "lon": -1.264,
+        "lat": 52.3709,
+        "matches": [
+          {
+            "id": 4817,
+            "name": "Rugby"
+          }
+        ]
+      },
+      {
+        "label": "HospitalStCrossapprox",
+        "lon": -1.2545,
+        "lat": 52.3628,
+        "matches": [
+          {
+            "id": 4817,
+            "name": "Rugby"
+          }
+        ]
+      },
+      {
+        "label": "UniversityHospitalCoventryapprox",
+        "lon": -1.4415,
+        "lat": 52.4214,
+        "matches": [
+          {
+            "id": 4328,
+            "name": "Coventry"
+          }
+        ]
+      },
+      {
+        "label": "RugbyRailapprox",
+        "lon": -1.2506,
+        "lat": 52.3791,
+        "matches": [
+          {
+            "id": 4817,
+            "name": "Rugby"
+          }
+        ]
+      },
+      {
+        "label": "MTCAnstyapprox",
+        "lon": -1.4093,
+        "lat": 52.435,
+        "matches": [
+          {
+            "id": 4328,
+            "name": "Coventry"
+          }
+        ]
+      },
+      {
+        "label": "GEVernovaRugbyapprox",
+        "lon": -1.2512,
+        "lat": 52.388,
+        "matches": [
+          {
+            "id": 4817,
+            "name": "Rugby"
+          }
+        ]
+      },
+      {
+        "label": "BirminghamAirportapprox",
+        "lon": -1.748,
+        "lat": 52.453,
+        "matches": [
+          {
+            "id": 3799,
+            "name": "Birmingham"
+          }
+        ]
+      }
+    ],
+    "scope": "Analystapproxpointsnotofficialfootprints/serviceareas;notallTrust/borough/countycapacitybelongsFUA",
+    "rootIndependent": {
+      "allLoaded": 9031,
+      "repaired": 136,
+      "originalWKBsha256": "d96d853b873b072ecf8cc66dcd4a1f7404b0d352634fdc54db40c6d49c1bfd8f",
+      "targetFields": {
+        "fid": 8441,
+        "eFUA_ID": 4817.0,
+        "UC_num": 1.0,
+        "UC_IDs": "1859",
+        "eFUA_name": "Rugby",
+        "Commuting": 1.0,
+        "Cntry_ISO": "GBR",
+        "Cntry_name": "UnitedKingdom",
+        "FUA_area": 450.0,
+        "UC_area": 25.0,
+        "FUA_p_2015": 145572.37396524847,
+        "UC_p_2015": 73277.45141601562,
+        "Com_p_2015": 72294.92254923284
+      },
+      "matches": {
+        "Rugbyreference": [4817],
+        "HospitalStCrossapprox": [4817],
+        "UniversityHospitalCoventryapprox": [4328],
+        "RugbyRailapprox": [4817],
+        "MTCAnstyapprox": [4328],
+        "GEVernovaRugbyapprox": [4817],
+        "BirminghamAirportapprox": [3799]
+      },
+      "limits": "Approximate analyst points, not facility footprints, service catchments or current population."
+    }
+  },
+  "researchFrozenInputCommit": "ab347be9c587821a3943b285c14d6e186aeae50b",
+  "fixedInputCases": 125,
+  "fixedInputComplete": 28,
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": null,
+      "weight": 15,
+      "rationale": "真实县级救援/供水抗扰动是保护正证，但4817主要危险与普通净防护整体方向本轮未选定。",
+      "assumption": "S12的2025Jan6县域45通报警/救12人、分发沙袋和Wolston休息中心是真运行；不是全属Rugby。R03抗Darragh/冻融和供水响应同为真实共享服务。允许普通Rugby可用县域救援的有限地域/延续桥，但不能把区域救援数量或水网整体可靠自动升为整PCS。",
+      "alternativeRationales": "不要求每种危险全人群实测或先受灾；若接受主要危险/适配保护通常代表桥可讨论60。未有已核重要帮助后仍失效事实据以40，当前null/[]；未来容量或目标未达不机械定档。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S12", "R03"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "heat_humidity": "unresolved",
+        "flood_sea_level": "partial",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "partial"
+      },
+      "subscores": {
+        "heat_humidity": null,
+        "flood_sea_level": null,
+        "geophysical": null,
+        "severe_weather_wildfire": null
+      },
+      "fullyMeasured": false
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "weight": 15,
+      "rationale": "当地跨机构执法与旧区域组织武器风险，尚不足定当前通常生活/区域战略净保护方向。",
+      "assumption": "W02为27Mar2026实际非法烟草/电子烟扣押、禁令与移民执法，非组织暴力受害率/安全保护已成功全域。W03是2022区域武器/西米德兰兹OCG关联与2020/21处置，保留旧窗/建议性质，不升级2026实际保护；没读到战略适配并不证明低影响。",
+      "alternativeRationales": "不从无事件、常规犯罪或少警员自动60/40。60可有据有限当地威胁/已实行保护/通常净影响桥，不求战争实发或每节点压测；40需实际重要生活/通道余障，不需多数/崩溃。本轮两方向未闭null/[]。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["W02", "W03"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "organized_violence": "context",
+        "regional_conflict": "context",
+        "strategic_exposure": "unresolved"
+      },
+      "subscores": {
+        "organized_violence": null,
+        "regional_conflict": null,
+        "strategic_exposure": null
+      },
+      "fullyMeasured": false
+    },
+    {
+      "id": "ISR",
+      "score": 60,
+      "weight": 15,
+      "rationale": "真实食品/救援、已提供资助和改进照护/通行服务，有限支持主要制度可运作60，法定评估积压是重要反证。",
+      "assumption": "RugbyFoodbank2025给5693份三日紧急食品，不当5693人/营养充分率。S09p23的£6.9m是allocated，£183790明确provided grants；p22已上线全成人照护团队财务自评、83人受益陪同通行证、Rugby照护者活动；p21资源班272开放/236占用是实际，未来529不当完成。S04实际暖屋/市政咨询与县救援共同显示运行，接受共享县/市/4817服务对通常居民的有限代表和2024/25至截止延续，不移全县数量或全部低收入资格给中位人。",
+      "alternativeRationales": "S09p22法定EHCP20周仅19%（Mar25）及时、已做流程审查仍受积压/快速需求限制；DSG财务压力并非单独失灵。若有限接受它对有相应需要家庭造成重要支持安排延迟，即使不影响多数亦可40；仅目标差不能单独40。若主要实际服务代表桥不接受则null。80未有广泛替代/压力恢复证明。",
+      "conditionalAlternatives": [60, 40],
+      "sourceIds": ["S04", "S09", "S10", "S12"],
+      "scoreStatus": "conditional_research_judgment",
+      "subpillars": {
+        "governance": "partial",
+        "adaptive_capacity": "partial",
+        "social_cohesion": "partial",
+        "emergency_recovery": "partial"
+      },
+      "subscores": {
+        "governance": null,
+        "adaptive_capacity": null,
+        "social_cohesion": null,
+        "emergency_recovery": null
+      },
+      "fullyMeasured": false
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "weight": 10,
+      "rationale": "水网/食品/能源帮助已运行，但目标普通中位家庭的整束净取得方向未择定。",
+      "assumption": "S04确认当地有Severn用水减免/能源债务与锅炉帮助/暖屋，不能从方案存在推所有申请获助。R03区域2024/25平均物业中断4分34秒、平均水污账约£457、帮助29万余客户占需帮助者62%，并非全需覆盖/本FUA户率或中位本人账；56.2是严重干旱限制风险指标，不当已发生断水比例。S10实际食品交付有分量，但只救急3日券，不证明普通持续营养。能源通常供给/费用和帮助后剩余未触达，不以未查问题反推60。",
+      "alternativeRationales": "允许有限普通净资源/中位资源/时间地域合束判断，不要求完美总账或营养普测；本轮现有材料两向未选定。没有已核目标普通人重要净取得断裂不硬列40，也不因水网绩效单独60。null/[]。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S04", "S10", "R03"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "water": "partial",
+        "food": "partial",
+        "energy": "context",
+        "supply_chain": "context"
+      },
+      "subscores": {
+        "water": null,
+        "food": null,
+        "energy": null,
+        "supply_chain": null
+      },
+      "fullyMeasured": false
+    },
+    {
+      "id": "MED",
+      "score": 40,
+      "weight": 15,
+      "rationale": "真实公费/当地选择诊疗改善后，必要治疗长期等候和出院接续容量余障仍有实质，条件40。",
+      "assumption": "S01p21癌首治62日年度2024/25到Mar25=66.4%，p22诊断>6周16%Apr24→7.28%Mar25、FDS77.4%真实改善；p23仍1847条>52周待治路径/1条>78周（1月滞后），不是1847独立Rugby居民或全未治疗。212名住院至少21日同时包含复杂病程恢复和护理院/精神卫生/社福容量压力；不能把212全称已可出院被堵。接续容量仍造成重要照护后果，非只没达目标。S01明确服务Coventry与Rugby，W01当地StCross诊断/选择手术已运行、UTC虚拟顾问通道是正证；复杂服务在Coventry，不能把其全容量当在4817内。R01普通合法长期居民多数NHS免费，R02处方/牙眼费用和例外保留；不假设所有看护/旅费免费。主40接受共享等待/接续对Rugby普通人重要且至2026截止延续的有限桥，不冒当前同年本地率。",
+      "alternativeRationales": "60公平：真实StCross改善、优先高临床需要、诊断/快速诊断改善和常规公保可能使通常必要护理总体可得，长等/高复杂群体短板仍在。若拒区域/当前延续/必要后果代表或截止公开桥，回null，而非索全人口/逐账。p21 RTT文字March2024的52.37%不改为Mar2025；p23 latest53.01%1月滞后另列，癌年度66.4与2月latest59.38不合并。A&E4小时72.21%非未治疗；文本target76/表78、诊断表92.72标签与正文7.28方向不静默互补。HSMR94.31/SHMI109.62不是存活率/因果疗效。",
+      "conditionalAlternatives": [40, 60],
+      "sourceIds": ["S01", "W01", "S09", "R01", "R02"],
+      "scoreStatus": "conditional_research_judgment",
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "subscores": {
+        "access": null,
+        "routine_quality": null,
+        "specialist_capacity": null,
+        "system_continuity": null
+      },
+      "fullyMeasured": false
+    },
+    {
+      "id": "LON",
+      "score": 60,
+      "weight": 10,
+      "rationale": "成熟疾病器官重建与向Rugby人群运行的肾移植专科服务、通常公费及净重复照护，可有限条件60。",
+      "assumption": "S01p12年度实际服务陈述列肾移植，并明确对Coventry和Rugby人群提供专科；不是在StCross现场做移植、不是总80万episodes皆移植。接受该成熟器官替代/疾病功能重建为可信人体临床采用类别，以及相同Trust对普通Rugby适应证患者的通常专科转诊桥；不借旧failed2020招聘PDF的60例/透析数据。S14 NHSBT实际受者长期移植肾工作、风险/团队建议可信，非本地队列/RCT/当地生存率。R01/R02支持普通合法长期本地NHS付款，主60另需接受有临床适应证/合适供器时可走已运行专科，以及普通中位资源通常能管理跨区随访、非全免辅助费用与持续团队照护的有限桥。",
+      "alternativeRationales": "供器、适应证、等待、感染/癌风险和重复就诊都是实质限制；S14只读健康生活/团队建议，未读药物子页、免疫抑制频率或本地随访细则，不造其证据。若认为年度服务陈述尚不足实际采用/通常Rugby转诊或普通净重复照护，则拒桥null/[]，公平且不另加每产品逐票/健康人延寿门槛。40需已核帮助后重要取得/照护断点，不能由没读具体账单或一般风险自动40；80多路径冗余未证。",
+      "conditionalAlternatives": [60],
+      "sourceIds": ["S01", "S14", "R01", "R02"],
+      "scoreStatus": "conditional_research_judgment",
+      "subpillars": {
+        "translation": "partial",
+        "trial_maturity": "partial",
+        "regulatory_adoption": "partial",
+        "resident_access": "partial"
+      },
+      "subscores": {
+        "translation": null,
+        "trial_maturity": null,
+        "regulatory_adoption": null,
+        "resident_access": null
+      },
+      "fullyMeasured": false
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "weight": 10,
+      "rationale": "当地设计制造知识与真实共享临床数据知识生成/流程采用形成可辩持续产用链，条件60。",
+      "assumption": "S07实际图3明确Rugby为发电机设计制造中心、有线圈/定转子/组装测试维修能力；这是商业自报既有能力/工厂，非具体本地2025订单交付或把Nancy能力搬来。S01p11明确15Jun2024跨Trust运行EPR、Performance/Informatics团队流程挖掘把数据转患者路径知识、发现瓶颈并实施门诊/手术安排改变，不仅购软件；p12两医院含StCross及实际选择服务。S09p24已实行社工转录生成case notes并人工质控，Copilot训练/试点不等全城创新。主60接受Rugby设计/工业技术持续产出与上述实际共享知识服务覆盖本地患者/居民的有限代表桥，不将CoventryMTC或全部全球业务当4817产出。",
+      "alternativeRationales": "若认为现有工厂册只证明能力报价而持续产出未实证，或共享Trust知识生成→改变未足适配Rugby，应拒必要桥回null；不能仅凭设备、机构数、总部或未知软件效益60。实际产用/触达重要断层才40，不因缺论文/每节点制造复产/全民AI自动40。80多节点与冗余未证。",
+      "conditionalAlternatives": [60],
+      "sourceIds": ["S01", "S07", "S09"],
+      "scoreStatus": "conditional_research_judgment",
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "context",
+        "diffusion": "partial"
+      },
+      "subscores": {
+        "knowledge_output": null,
+        "industry_density": null,
+        "digital_infrastructure": null,
+        "diffusion": null
+      },
+      "fullyMeasured": false
+    },
+    {
+      "id": "OPT",
+      "score": null,
+      "weight": 10,
+      "rationale": "未将实际交通、本人长期迁居资格、资金鉴权和网络连续接成方向。",
+      "assumption": "旧参考Rugby铁路点4817无班次/费用证明，机场点3799非本地但允许普通跨界使用。S09p17RugbyParkway仅已获规划和用地，不当已开通；未把Coventry计划电巴当实际全运行。未读适用长期迁居/个人资产通信规则，不搬邻城或同国退出分。",
+      "alternativeRationales": "通道有限有据通常可达/合法资格/净财力桥允许60，不求所有年龄目的地自动资格；当前没有依据选40或60，null/[]。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S09"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "transport_redundancy": "context",
+        "legal_mobility": "unresolved",
+        "asset_portability": "unresolved",
+        "network_continuity": "unresolved"
+      },
+      "subscores": {
+        "transport_redundancy": null,
+        "legal_mobility": null,
+        "asset_portability": null,
+        "network_continuity": null
+      },
+      "fullyMeasured": false
+    }
+  ],
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 27,
+  "unknownWeight": 50,
+  "unresolvedScoreRange": [27, 77],
+  "fullyMeasured": false,
+  "coverageReview": [
+    {
+      "dimension": "PCS",
+      "subpillar": "heat_humidity",
+      "score": null,
+      "sourceIds": ["S12", "R03"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "unresolved"
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "flood_sea_level",
+      "score": null,
+      "sourceIds": ["S12", "R03"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "geophysical",
+      "score": null,
+      "sourceIds": ["S12", "R03"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "unresolved"
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "severe_weather_wildfire",
+      "score": null,
+      "sourceIds": ["S12", "R03"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "organized_violence",
+      "score": null,
+      "sourceIds": ["W02", "W03"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "context"
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "regional_conflict",
+      "score": null,
+      "sourceIds": ["W02", "W03"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "context"
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "strategic_exposure",
+      "score": null,
+      "sourceIds": ["W02", "W03"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "unresolved"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "governance",
+      "score": null,
+      "sourceIds": ["S04", "S09", "S10", "S12"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "adaptive_capacity",
+      "score": null,
+      "sourceIds": ["S04", "S09", "S10", "S12"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "social_cohesion",
+      "score": null,
+      "sourceIds": ["S04", "S09", "S10", "S12"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "emergency_recovery",
+      "score": null,
+      "sourceIds": ["S04", "S09", "S10", "S12"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "water",
+      "score": null,
+      "sourceIds": ["S04", "S10", "R03"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "food",
+      "score": null,
+      "sourceIds": ["S04", "S10", "R03"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "energy",
+      "score": null,
+      "sourceIds": ["S04", "S10", "R03"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "context"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "supply_chain",
+      "score": null,
+      "sourceIds": ["S04", "S10", "R03"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "context"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "access",
+      "score": null,
+      "sourceIds": ["S01", "W01", "S09", "R01", "R02"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "routine_quality",
+      "score": null,
+      "sourceIds": ["S01", "W01", "S09", "R01", "R02"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "specialist_capacity",
+      "score": null,
+      "sourceIds": ["S01", "W01", "S09", "R01", "R02"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "system_continuity",
+      "score": null,
+      "sourceIds": ["S01", "W01", "S09", "R01", "R02"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "translation",
+      "score": null,
+      "sourceIds": ["S01", "S14", "R01", "R02"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "trial_maturity",
+      "score": null,
+      "sourceIds": ["S01", "S14", "R01", "R02"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "regulatory_adoption",
+      "score": null,
+      "sourceIds": ["S01", "S14", "R01", "R02"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "resident_access",
+      "score": null,
+      "sourceIds": ["S01", "S14", "R01", "R02"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "knowledge_output",
+      "score": null,
+      "sourceIds": ["S01", "S07", "S09"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "industry_density",
+      "score": null,
+      "sourceIds": ["S01", "S07", "S09"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "digital_infrastructure",
+      "score": null,
+      "sourceIds": ["S01", "S07", "S09"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "context"
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "diffusion",
+      "score": null,
+      "sourceIds": ["S01", "S07", "S09"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "partial"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "transport_redundancy",
+      "score": null,
+      "sourceIds": ["S09"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "context"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "legal_mobility",
+      "score": null,
+      "sourceIds": ["S09"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "unresolved"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "asset_portability",
+      "score": null,
+      "sourceIds": ["S09"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "unresolved"
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "network_continuity",
+      "score": null,
+      "sourceIds": ["S09"],
+      "fullyMeasured": false,
+      "scope": "boundednotindependentadequatemeasurement;dimensioninterpretationrequired",
+      "status": "unresolved"
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S01",
+      "file": "S01.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/originals/S01.pdf",
+      "url": "https://www.uhcw.nhs.uk/download/clientfiles/files/NHS%20Annual%20Report%202024%20Final%20Full%20Version%20AW%202025.pdf",
+      "bytes": 3017263,
+      "sha256": "3b52cfa84584a555c116dfba50e462ec3b17fd5a9658979580972992366aa1bf",
+      "validOriginal": true,
+      "sourceKind": "new_valid_original",
+      "title": "UHCWannualreport2024/25",
+      "retrievedOn": "2026-10-17",
+      "requestAtUTC": "2026-10-17T05:18:13.517245+00:00",
+      "publishedOn": "Cover2024/25;PDFcreated18Sep2025versusHTTP24Jul2024conflict;firstpublicdateunverified",
+      "observed": "2024/25actualTrustservicesandMar2025performance;RugbyservedalongsideCoventry;notallTrustepisodes4817",
+      "scope": "physicaltext1,2,3,4,11,12,13,14,18,19,20,21,22,23;view22,23",
+      "pagesVisuallyChecked": [22, 23],
+      "historicalCutoffBytesObtained": false,
+      "headersAreParsedNonCookieNotWire": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S03",
+      "file": "S03.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/originals/S03.html",
+      "url": "https://www.rugby.gov.uk/performance-and-strategy",
+      "bytes": 113400,
+      "sha256": "43115e3f1a110fa757051052ce95cd0d516e5fe54f6a2d8d868c6ec7c3ead365",
+      "validOriginal": true,
+      "sourceKind": "new_valid_original",
+      "title": "Rugbyperformanceindex",
+      "retrievedOn": "2026-10-17",
+      "requestAtUTC": "2026-10-17T05:18:24.968489+00:00",
+      "publishedOn": "undatedcurrent",
+      "observed": "Navigationonly;notdeliveredannualperformance",
+      "scope": "completevisibleHTML",
+      "pagesVisuallyChecked": [],
+      "historicalCutoffBytesObtained": false,
+      "headersAreParsedNonCookieNotWire": true,
+      "usedForScore": false
+    },
+    {
+      "id": "S04",
+      "file": "S04.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/originals/S04.html",
+      "url": "https://www.rugby.gov.uk/w/keep-warm-and-access-support-this-winter",
+      "bytes": 120266,
+      "sha256": "43dd4cf914bc0bae346ac9f13615fd3807d1cac61c517cef8591d8f2714ac5cf",
+      "validOriginal": true,
+      "sourceKind": "new_valid_original",
+      "title": "Rugbywintersupport",
+      "retrievedOn": "2026-10-17",
+      "requestAtUTC": "2026-10-17T05:18:27.694150+00:00",
+      "publishedOn": "14Jan2026body",
+      "observed": "Actualopenwarmhubsandcouncilaccess;eligibleenergy/water/foodoffers—notallpaid/midpersoneligibility",
+      "scope": "completevisibleHTML",
+      "pagesVisuallyChecked": [],
+      "historicalCutoffBytesObtained": false,
+      "headersAreParsedNonCookieNotWire": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S07",
+      "file": "S07.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/originals/S07.pdf",
+      "url": "https://www.gevernova.com/electrification/sites/default/files/esy-pcs/2025-02/GEA35527_RM_BCH_Rotating-machine-services_EN_20240806_Rev0_HR.pdf",
+      "bytes": 4931815,
+      "sha256": "62ba3adb04f5110cec6ec9225e48b18e69ab51ed8ee81d2c792e5b233987e75e",
+      "validOriginal": true,
+      "sourceKind": "new_valid_original",
+      "title": "GEVernovaRMservicesbrochure",
+      "retrievedOn": "2026-10-17",
+      "requestAtUTC": "2026-10-17T05:20:20.331380+00:00",
+      "publishedOn": "Filename20240806Rev0/path2025-02notfirstpubproof",
+      "observed": "ActualRugbydesign/manufacturing/repaircapabilitycommercialselfreport;notallglobalfactories/customeroutcomeslocal",
+      "scope": "PDF19pages;text1-4onlybullets;actualpixels1-4;Rugbyphysical3",
+      "pagesVisuallyChecked": [1, 2, 3, 4],
+      "historicalCutoffBytesObtained": false,
+      "headersAreParsedNonCookieNotWire": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S08",
+      "file": "S08.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/originals/S08.html",
+      "url": "https://www.rugby.gov.uk/w/annual-performance-report-1",
+      "bytes": 118462,
+      "sha256": "862fe9dde6a6a38efa926a4c7af23535d9707ffc8dcc9fd4946578e9b17912a0",
+      "validOriginal": true,
+      "sourceKind": "new_valid_original",
+      "title": "Rugbyannualperformanceentry",
+      "retrievedOn": "2026-10-17",
+      "requestAtUTC": "2026-10-17T05:20:24.528941+00:00",
+      "publishedOn": "currentpagefor2022/23edition",
+      "observed": "Locatoronly;underlying2022/23reportnotacquired/adopted",
+      "scope": "completevisibleHTML",
+      "pagesVisuallyChecked": [],
+      "historicalCutoffBytesObtained": false,
+      "headersAreParsedNonCookieNotWire": true,
+      "usedForScore": false
+    },
+    {
+      "id": "S09",
+      "file": "S09.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/originals/S09.pdf",
+      "url": "https://api.warwickshire.gov.uk/documents/WCCC-428063900-2061",
+      "bytes": 2078166,
+      "sha256": "c5d264a102c3de947928a43df177c5e3afede7960b0b3eee7f767b3dcd504891",
+      "validOriginal": true,
+      "sourceKind": "new_valid_original",
+      "title": "WarwickshireaccountsNarrative2024/25",
+      "retrievedOn": "2026-10-17",
+      "requestAtUTC": "2026-10-17T05:22:08.787318+00:00",
+      "publishedOn": "PDFcreated/modified30Jun2025notfirstpubproof",
+      "observed": "Countyprogrammeactualoutputs/windows2024/25;notallFUA/cityorlocalmedianrates;DSGfinancialpressure",
+      "scope": "text1,2,3,4,9,10,13,14,17,18,21,22,23,24;13/14rastertextempty/nopixelclaim",
+      "pagesVisuallyChecked": [],
+      "historicalCutoffBytesObtained": false,
+      "headersAreParsedNonCookieNotWire": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S10",
+      "file": "S10.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/originals/S10.html",
+      "url": "https://rugby.foodbank.org.uk/",
+      "bytes": 53025,
+      "sha256": "348bc2cbd78b81c94a99186e2fd14c601ffb40e49f87acb0d0f7820365b113d0",
+      "validOriginal": true,
+      "sourceKind": "new_valid_original",
+      "title": "RugbyFoodbankactualdelivery",
+      "retrievedOn": "2026-10-17",
+      "requestAtUTC": "2026-10-17T05:22:12.764823+00:00",
+      "publishedOn": "Undatedcurrentbody;2025statistics;Sep2026newslinksnotindependenthistoryproof",
+      "observed": "5693three-dayemergencyfoodsuppliesin2025—notpersons/fulllife-nutrition/householdincidencerate",
+      "scope": "completevisibleHTML",
+      "pagesVisuallyChecked": [],
+      "historicalCutoffBytesObtained": false,
+      "headersAreParsedNonCookieNotWire": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S12",
+      "file": "S12.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/originals/S12.html",
+      "url": "https://www.warwickshire.gov.uk/news/article/5868/warwickshire-residents-urged-to-take-care-amid-widespread-flooding",
+      "bytes": 67360,
+      "sha256": "c7f14b2e4aa797cf9a82b0920cb469d947bd8e51c0592d41641c481f9457f1b2",
+      "validOriginal": true,
+      "sourceKind": "new_valid_original",
+      "title": "CountyrealJanuary2025floodresponse",
+      "retrievedOn": "2026-10-17",
+      "requestAtUTC": "2026-10-17T05:23:04.657122+00:00",
+      "publishedOn": "6Jan2025visiblepublished",
+      "observed": "45calls/12rescuescountywide,sandbags/Wolstonrestcentre;notallRugbyFUAorordinarynetprotection",
+      "scope": "completevisibleHTML",
+      "pagesVisuallyChecked": [],
+      "historicalCutoffBytesObtained": false,
+      "headersAreParsedNonCookieNotWire": true,
+      "usedForScore": true
+    },
+    {
+      "id": "S14",
+      "file": "S14.html",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/originals/S14.html",
+      "url": "https://www.nhsbt.nhs.uk/organ-transplantation/kidney/living-with-a-kidney-transplant/staying-healthy-after-a-kidney-transplant/",
+      "bytes": 111562,
+      "sha256": "80ce509c40ffac1ff618b5c1626a41164527f929edb852aabae539fcf438746e",
+      "validOriginal": true,
+      "sourceKind": "new_valid_original",
+      "title": "NHSBTlifeafterkidneytransplant",
+      "retrievedOn": "2026-10-17",
+      "requestAtUTC": "2026-10-17T05:23:52.082713+00:00",
+      "publishedOn": "undatedcurrent;firstpublicationunverified",
+      "observed": "Crediblematureorganrecipientlongtermfunction/lifestyle/supportandactualriskguidance—notlocalcohortorreadimmunosuppression/followupfrequency",
+      "scope": "completevisibleHTMLincludingnavigation;onlyactualhealthylifestyle/teamadvicebodyadopted",
+      "pagesVisuallyChecked": [],
+      "historicalCutoffBytesObtained": false,
+      "headersAreParsedNonCookieNotWire": true,
+      "usedForScore": true
+    },
+    {
+      "id": "R01",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/originals/R01.html",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/milton-keynes-full86/originals/R01-R01-S08-nhs-ordinary-residence.html",
+      "bytes": 32662,
+      "sha256": "42c4cf404fdfc984257c5ea70f222b8c786e5d0d4d95c0e99f0b7eab682ed0ec",
+      "url": "https://www.nhs.uk/nhs-services/visiting-or-moving-to-england/moving-to-england-from-outside-the-european-economic-area-eea/",
+      "sourceKind": "durable_same_SHA_reuse",
+      "newHTTPRequest": false,
+      "validOriginal": true,
+      "historicalCutoffBytesObtained": false,
+      "scope": "ordinaryEnglandNHSresidence/chargingonly—notallproduct/carerpayments",
+      "physicalTextPagesRead": [],
+      "pagesVisuallyChecked": [],
+      "actualVisibleMainRead": true
+    },
+    {
+      "id": "R02",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/originals/R02.html",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/milton-keynes-full86/originals/R02-R02-S12-nhs-charges.html",
+      "bytes": 28145,
+      "sha256": "81b0a7b5cdeb5d401dc9835500553a5b646f8a3b89407af9404b577a3e7dcc0a",
+      "url": "https://www.nhs.uk/nhs-services/help-with-health-costs/when-you-need-to-pay-towards-nhs-care/",
+      "sourceKind": "durable_same_SHA_reuse",
+      "newHTTPRequest": false,
+      "validOriginal": true,
+      "historicalCutoffBytesObtained": false,
+      "scope": "ordinaryEnglandNHSresidence/chargingonly—notallproduct/carerpayments",
+      "physicalTextPagesRead": [],
+      "pagesVisuallyChecked": [],
+      "actualVisibleMainRead": true
+    },
+    {
+      "id": "R03",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/originals/R03.pdf",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/nottingham-full72/originals/severn-apr2025.pdf",
+      "bytes": 14063876,
+      "sha256": "060893edb9565527e3f6c9af0b49e2d707654adb156bddd487adf1339bc1f79a",
+      "url": "https://www.stwater.co.uk/content/dam/stw/regulatory-library/stw-apr-2025.pdf",
+      "sourceKind": "durable_same_SHA_reuse",
+      "newHTTPRequest": false,
+      "validOriginal": true,
+      "historicalCutoffBytesObtained": false,
+      "scope": "Severnregion2024/25ordinarywaterbill/actualhelp/supply,localproviderbridgeviaS04;notRugbyhouseholdmeasurement",
+      "physicalTextPagesRead": [29, 33],
+      "pagesVisuallyChecked": [],
+      "actualVisibleMainRead": false
+    }
+  ],
+  "failedSourceReads": [
+    {
+      "id": "S11",
+      "url": "https://www.warwickshire.police.uk/news/warwickshire/news/2026/march/partnership-working-helps-make-rugby-communities-safer/",
+      "requestAtUTC": "2026-10-17T05:23:03.284974+00:00",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "status": 403,
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/diagnostics/S11.bin",
+      "bodyBytes": 5886,
+      "bodySHA256": "e9f2dc0358f303550593e0ffadd3af0600bcfdace48d80c4b3b2a15833399389",
+      "classification": "failure_diagnostic_not_original"
+    },
+    {
+      "id": "S13",
+      "url": "https://www.uhcw.nhs.uk/organisational-strategy/outline-for-new-page-re-redevelopment-of-hospital-of-st-cross/",
+      "requestAtUTC": "2026-10-17T05:23:50.376998+00:00",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "status": 404,
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/diagnostics/S13.bin",
+      "bodyBytes": 29031,
+      "bodySHA256": "8f049916f54300df609caf04534a6f58c15fb9bbb2993a4d5f62e4faefb084bd",
+      "classification": "failure_diagnostic_not_original"
+    }
+  ],
+  "routingSourceReads": [
+    {
+      "id": "S02",
+      "url": "https://www.gevernova.com/power-conversion/sites/default/files/2025-02/GEA35527_RM_BCH_Rotating-machine-services_EN_20240806_Rev0_HR.pdf",
+      "requestAtUTC": "2026-10-17T05:18:17.617167+00:00",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "status": 301,
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/diagnostics/S02.bin",
+      "bodyBytes": 0,
+      "bodySHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "routing_only_no_auto_follow"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.gevernova.com/electrification/sites/default/files/2025-02/GEA35527_RM_BCH_Rotating-machine-services_EN_20240806_Rev0_HR.pdf",
+      "requestAtUTC": "2026-10-17T05:19:14.361698+00:00",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "status": 301,
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/diagnostics/S05.bin",
+      "bodyBytes": 351,
+      "bodySHA256": "39bf228f6cb449dae10d22490fc584aa5a42141ab4d835fb321ac84affb0bcb7",
+      "classification": "routing_only_no_auto_follow"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.rugby.gov.uk/-/annual-performance-report-1",
+      "requestAtUTC": "2026-10-17T05:19:15.610165+00:00",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "status": 302,
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/diagnostics/S06.bin",
+      "bodyBytes": 0,
+      "bodySHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "routing_only_no_auto_follow"
+    }
+  ],
+  "webReadSources": [
+    {
+      "id": "W01",
+      "url": "https://www.uhcw.nhs.uk/organisational-strategy/outline-for-new-page-re-redevelopment-of-hospital-of-st-cross/",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/W01-preexisting-tool-block.txt",
+      "bytes": 3010,
+      "sha256": "baf5190e0205ba42743c3071b5751c7eb0981fe5985b72ab5c4e97be703317e6",
+      "sourceKind": "primary_tool_text_only_not_website_raw",
+      "scope": "25Oct2024StCrossactualelective/diagnosticdelivery;newtheatresfuture;preS13failure",
+      "use": "MED",
+      "websiteRawBytes": null,
+      "websiteRawSHA256": null,
+      "sameCutoffVersionAuthenticated": false
+    },
+    {
+      "id": "W02",
+      "url": "https://www.warwickshire.police.uk/news/warwickshire/news/2026/march/partnership-working-helps-make-rugby-communities-safer/",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/W02-preexisting-tool-block.txt",
+      "bytes": 3523,
+      "sha256": "cd3f5ac23073dbd2eb444be4cd878e01c760f89da10efd262702975c09a7ef08",
+      "sourceKind": "primary_tool_text_only_not_website_raw",
+      "scope": "27Mar2026actualRugbyillicittobacco/vapeoperations/prohibitionnotorganizedviolentimpact;preS11failure",
+      "use": "context",
+      "websiteRawBytes": null,
+      "websiteRawSHA256": null,
+      "sameCutoffVersionAuthenticated": false
+    },
+    {
+      "id": "W03",
+      "url": "https://www.warwickshire.police.uk/SysSiteAssets/foi-media/warwickshire/policies/s/strategic-assessment-2022.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/rugby-full108/W03-preexisting-tool-block.txt",
+      "bytes": 2068,
+      "sha256": "2c4b8fe0a0482c9659b9a207c592ce0707152feedba6f02cf762c97564780bb5",
+      "sourceKind": "primary_tool_text_only_not_website_raw",
+      "scope": "2022regionalweapons/OCGWestMidlandsscenariosand2020/21operations;not2026netprotection",
+      "use": "context",
+      "websiteRawBytes": null,
+      "websiteRawSHA256": null,
+      "sameCutoffVersionAuthenticated": false
+    }
+  ],
+  "globalRankingEligible": false,
+  "supportedExclusions": 0,
+  "qualified32Threshold": null,
+  "candidateUniverseRetained": 9031,
+  "newAndUnmatchedCompetitorsRetained": true,
+  "limitations": [
+    "Allcurrentbytesnotauthenticatedhistoricalcutoffversions;S01PDFcreation18Sep2025vsHTTP24Jul2024conflict/firstpubunknown",
+    "Trust/sharedcounty/municipality/notentireFUA;approxpointsnotfootprints",
+    "Clinicalwaiting/aftercare2024/25to2026andregionalordinarycarebridgeswithdrawable",
+    "LONmatureorganrepairandnormalreferral/netrepeatedcareexplicitbridge;no2026localcohortorunreadmedicationprotocolclaim",
+    "TECfactorycommercialcapabilitynotactualordercount;sharedclinicalknowledgeuptakebridgewithdrawable",
+    "Two4queryroundsclosed;14actualnormallegs/4unusedclosed;9new+3reused=12validoriginalcap",
+    "OnePDFtext/renderouterexceeded3strictmodalityunits,preservednotreplayed/nocitypenalty",
+    "NoRanking/Top32/exclusionorunknownmidpoint/renormalization",
+    "Rootselectedsource/metaoutersalsoexceeded3semanticunits;truncationsnotwholefilereads;NHSBTmainselectorfailedthenbodyread;noHTTPeffect;notwholeworkflowcertified"
+  ],
+  "residentPerspectiveDescription": "OrdinaryBritishcitizenlawfullyandproperlysettledlongtermEnglandresident,localmedianresources,usuallyeffectiveNHS,nofixedage;citizenshipalonenotordinaryresidenceproof;indications/exemptionsnotautomatic",
+  "evidenceReview": "cci-rugby-priority-review.md",
+  "boundaryReview": "cci-rugby-priority-review.md",
+  "sensitivity": {
+    "withdrawals": {
+      "ISR": [18, 83],
+      "MED": [21, 86],
+      "LON": [21, 81],
+      "TEC": [21, 81]
+    },
+    "MED60": [30, 80],
+    "ISR40": [24, 74],
+    "LON40": [25, 75],
+    "TEC40": [25, 75],
+    "allAdoptedBridgesWithdrawn": [0, 100],
+    "notConfidenceInterval": true
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-rugby-priority-review.md",
+    "sha256": "ea107df4adaf73e766c0dd65da382e9b6a101c942d5ad9bfdb6a376f0a6caa99",
+    "fixedInputCommit": "e8a8322f50bcb81ad59b4be131010e7a6b694f35",
+    "fixedCases": 125,
+    "fixedComplete": 28,
+    "researchFixedInputCommit": "ab347be9c587821a3943b285c14d6e186aeae50b",
+    "frozenManifestSha256": "9c26866833d36ab3f9f54bbb66630025fcdebe061095a7ed83ebfdc798aff321",
+    "frozenFilesVerified": 128,
+    "frozenPayloadBytes": 38711768,
+    "frozenAuthorReportSHA256": "254adf16e588feaf254a1768a388d4f9d7f38b48be7b297a149e5505cf264dcb",
+    "rootCorrectedUnknownWeight": 50,
+    "rootCorrectedDomain": [27, 77],
+    "frozenAuthorArithmeticNotRewritten": true
+  },
+  "rootScopeReview": {
+    "rootSelectedOriginals": 10,
+    "rootHtmlMainSelected": ["S04", "S10", "S12", "S14", "R01", "R02"],
+    "rootPdfTextPhysicalPages": {
+      "S01": [11, 12, 21, 22, 23],
+      "S07": [3],
+      "S09": [17, 21, 22, 23, 24],
+      "R03": [29, 33]
+    },
+    "rootPdfViewedPhysicalPages": {
+      "S01": [12, 23],
+      "S07": [3],
+      "S09": [22, 23]
+    },
+    "rootToolEntriesRead": ["W01", "W02", "W03"],
+    "rootToolEntriesNotWebsiteRaw": true,
+    "actualSessionCallOutputLineIdentitiesVerified": true,
+    "all9031IndependentlyChecked": true,
+    "approximateReferencePoints": 7,
+    "referencePointsNotServiceCoverage": true,
+    "rootNewResearchHTTP": 0,
+    "all212PatientsReadyForDischarge": false,
+    "allTrustPatientsAreRugbyResidents": false,
+    "kidneyTransplantPhysicallyAtStCrossVerified": false,
+    "localLongTermTransplantOutcomesVerified": false,
+    "unreadImmuneMedicationProtocolClaimed": false,
+    "ordinaryResidenceEquivalentToCitizenshipOrGPRegistration": false,
+    "NancyFactoryCapacityTransferredToRugby": false,
+    "cutoffHistoricalSameBytesAuthenticated": false,
+    "wholeWorkflowCertified": false,
+    "sourceFailurePenalizesCity": false,
+    "sourceStopsNotResetOrReopened": true,
+    "crossManifestSHA256": "7b82ba2084bb30cd25e6dbae7b0682c39e260251352d519f651f01ec187ee723",
+    "crossFilesVerified": 19,
+    "crossPayloadBytes": 1361219,
+    "processDeviationsRetained": true
+  }
+}

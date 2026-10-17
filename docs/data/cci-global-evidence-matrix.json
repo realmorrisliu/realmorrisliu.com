@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 125,
+    "conditionalCaseCount": 126,
     "completeConditionalCaseCount": 28,
-    "partialCaseCount": 97,
-    "unassessedCount": 8906,
+    "partialCaseCount": 98,
+    "unassessedCount": 8905,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -930,8 +930,13 @@
       "sha256": "bd50af4cc484acf3d8b22ae4b9d7c0bdaa5274d423803a3a005b1f0859f7820e",
       "provenance": "cci-dubai-reference-priority-review.md",
       "provenanceSha256": "6ed8ba0ff17b7d5be746de59dbff03b02aa96616e85b937278e74b20dd04ceb0"
+    },
+    "cci-local-2026-rugby-case.json": {
+      "sha256": "f6eceae6cbb65b58d80dfba89027954b6f7441c0ae5ce7b1abfb57a776086046",
+      "provenance": "cci-rugby-priority-review.md",
+      "provenanceSha256": "ea107df4adaf73e766c0dd65da382e9b6a101c942d5ad9bfdb6a376f0a6caa99"
     }
   },
-  "scriptSha256": "4276e3460d6f4eee5219b49ac9653c6d1070fe0ce81b059636f02275110c9ba0",
-  "csvSha256": "5264ea1554e3a4e786023b5261b08590433b179ba662575cdce345764710d978"
+  "scriptSha256": "89db77f4faf972fcb8ce008d4b147d7c1393f7b4e7b2d3f71d62a248be1ada65",
+  "csvSha256": "4bba822e1cc299b7aa44132a89d4d1357b09ed27a1129c6b53b6e40da4fe7575"
 }
