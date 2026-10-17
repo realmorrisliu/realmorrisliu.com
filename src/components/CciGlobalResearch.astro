@@ -132,6 +132,7 @@ import gorzow from "../../docs/data/cci-local-2026-gorzow-case.json";
 import kiel from "../../docs/data/cci-local-2026-kiel-case.json";
 import cork from "../../docs/data/cci-local-2026-cork-case.json";
 import lubeck from "../../docs/data/cci-local-2026-lubeck-case.json";
+import shenzhenReference from "../../docs/data/cci-local-2026-shenzhen-reference-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -268,9 +269,11 @@ const cases = [
   kiel,
   cork,
   lubeck,
+  shenzhenReference,
 ];
 const caseNamesZh: Record<number, string> = {
   [lubeck.candidateId]: "吕贝克功能区",
+  [shenzhenReference.candidateId]: "深圳参考功能区（原名Guangzhou，9725）",
   [cork.candidateId]: "科克功能区",
   [kiel.candidateId]: "基尔功能区",
   [gorzow.candidateId]: "戈茹夫功能区",
@@ -498,6 +501,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [shenzhenReference.candidateId]: [
+    zh
+      ? "深圳参考功能区制度／资源／医疗／专项转化／技术条件60，防护／安全／退出未知。贡献36、数学域36—76，无完整总分。实际居民水电及消费、医保办理、常规疾病造血重建与临床知识产用支持有限判断；普通净取得、专项付款、反复护理、地域和延续判断可撤。"
+      : "Shenzhen reference has conditional ISR/RES/MED/LON/TEC 60; PCS/GSS/OPT remain unknown. Contribution is 36, with a 36–76 arithmetic domain and no complete total. Actual household supply/consumption, insurance services, routine disease-specific blood reconstruction and clinical knowledge use support finite judgments; usual net access, specialist payment, repeated care, geography and continuity assumptions are revocable.",
+    zh
+      ? "原始Guangzhou候选9725不同于已评广州9711，也不等深圳行政市。医院多址数量非本区疗效，预交金非移植最终自付，供者费用规则不套受者；外国曲线只证成熟类别、CAR-T仍是试验。撤专项转化回30—80。具体防灾地点跨功能区，不移整个南山区结果；当前字节不认证截止同版，全球入围未证。"
+      : "Source Guangzhou candidate 9725 differs from assessed Guangzhou 9711 and the Shenzhen municipality. Multi-site hospital counts are not local outcomes; deposits are not final transplant bills, and donor rules cannot be assigned to recipients. Foreign curves support maturity only; CAR-T is trial activity. Withdrawing LON gives 30–80. Specific protection sites cross functional areas, without whole-district transfer or cutoff-version authentication. Global inclusion is unproven.",
+  ],
   [lubeck.candidateId]: [
     zh
       ? "吕贝克防护条件40、制度／医疗／技术条件60，安全／资源／专项转化／退出未知。贡献30、数学域30—75，无完整总分。经验洪水中的住宅和通道余障与预警／关键设施保护并读；实际临床监督、通常支付及知识产用支持有限判断，地域／延续／普通净照护桥可撤。"

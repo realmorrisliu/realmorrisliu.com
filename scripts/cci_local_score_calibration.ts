@@ -174,6 +174,7 @@ const realCases = [
   "kiel",
   "cork",
   "lubeck",
+  "shenzhen-reference",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -339,6 +340,7 @@ const [
   kiel,
   cork,
   lubeck,
+  shenzhenReference,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4530,6 +4532,41 @@ assert(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
+
+const shenzhenReferenceCase = realCases.find(c => c.candidateId === 9725);
+assert.equal(shenzhenReferenceCase.sourceName, "Guangzhou");
+assert.deepEqual(shenzhenReference, { ISR: 60, RES: 60, MED: 60, LON: 60, TEC: 60 });
+assert.deepEqual(total(shenzhenReference), { center: null, lower: 36, upper: 76 });
+assert.equal(
+  shenzhenReferenceCase.priorityCompletionReview.sha256,
+  digest(shenzhenReferenceCase.priorityCompletionReview.path)
+);
+assert.equal(
+  shenzhenReferenceCase.priorityCompletionReview.researchReportSha256,
+  digest(shenzhenReferenceCase.priorityCompletionReview.researchReport)
+);
+for (const id of ["ISR", "RES", "MED", "LON", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...shenzhenReference };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    shenzhenReferenceCase.sensitivity.withdrawals[id]
+  );
+}
+assert.deepEqual(
+  shenzhenReferenceCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["PCS", "GSS", "OPT"]
+);
+assert(
+  shenzhenReferenceCase.coverageReview.length === 31 &&
+    shenzhenReferenceCase.coverageReview.every(
+      (r: { score: null; fullyMeasured: boolean }) => r.score === null && !r.fullyMeasured
+    )
+);
+assert.equal(shenzhenReferenceCase.rootScopeReview.S13DepositIsHSCTFinalNetBill, false);
+assert.equal(shenzhenReferenceCase.rootScopeReview.foreignSurvivalOrPayerTransferred, false);
 
 const lubeckCase = realCases.find(c => c.candidateId === 4221);
 assert.equal(
