@@ -8,9 +8,9 @@
   "retrievedOn": "2026-10-12",
   "candidateId": 8989,
   "name": "Wuhan functional area",
-  "evidenceReview": "cci-local-2026-wuhan-case.md",
+  "evidenceReview": "cci-wuhan-lon-organ-access-review.md",
   "expectedConditionalTotal": null,
-  "limitations": "Eight dimensions and31 subpillars reviewed at conditional/partial levels, not fully measured. PCS/GSS/ISR/RES/MED60, TEC80, OPT40; LON unresolved gives mathematical domain54-64 without a total centre or reliable exclusion bound. Actual mitigation and current legal/operational paths are read with harms, old and selected clinical observations, unfinished repairs, payer qualifications and residual constraints. FUA8989 is not all administrative Wuhan; reference intersections are not exact projects, treatment sites or complete resident coverage. Locality, time continuity, usually usable appropriate affordable care/provision and residual materiality assumptions are reversible. All9031 and newer competitors remain.",
+  "limitations": "Eight dimensions and31 subpillars reviewed at conditional/partial levels, not fully measured. PCS/GSS/ISR/RES/MED60, TEC80, OPT40; LON unresolved gives mathematical domain54-64 without a total centre or reliable exclusion bound. Actual mitigation and current legal/operational paths are read with harms, old and selected clinical observations, unfinished repairs, payer qualifications and residual constraints. FUA8989 is not all administrative Wuhan; reference intersections are not exact projects, treatment sites or complete resident coverage. Locality, time continuity, usually usable appropriate affordable care/provision and residual materiality assumptions are reversible. All9031 and newer competitors remain. LON108 adds actual organ-replacement/follow-up and qualified post-transplant payment evidence; resident_access is partial, not full net access. Main remains null/[] and54–64, with no centre or exclusion. Other seven dimensions unchanged; old AD local-infusion checks remain about that old pathway. Current snapshots do not authenticate cutoff historical same bytes.",
   "dimensions": [
     {
       "id": "PCS",
@@ -79,15 +79,23 @@
     {
       "id": "LON",
       "score": null,
-      "rationale": "Shared disease-specific randomized human evidence, Chinese approval and261-patient national SAIL observations establish scoped scientific/regulatory context, not Wuhan treatment counts. The original2024local-infusion link returned a captcha; secondary reporting/prescription does not become verified hospital administration. Formal2026Fuhankang inpatient and listed-drug terms and human-assisted claims are reviewed, but local actual current mode, ordinary enrollment/net costs and monitoring remain unconnected. The 2026-10-13 priority review verified an undated Tongji two-antibody service statement without dated actual infusions, and a national 1042-person cohort with 172 discontinuations, 40 attributed to cost. Neither settles current local treatment/payment/monitoring; national outcomes are not Wuhan rates.",
-      "assumption": "No anchor while credible actual local administration and current normally eligible resident drug-mode/payment/appropriate-monitoring connections are unresolved. Unlisted antibodies do not imply no inpatient benefit or universal impossibility, and researcher channel failure is not negative transparency evidence. A supported usually affordable compliant delivered disease pathway could60; actual important residual access barriers after mitigation40; multiple mature accessible pathways80. Approved early-AD treatment is not healthy-person longevity or approval expanded by medium-AD research. Conditional LON40/60/80 would yield total58/60/62 only after accepting the explicitly documented local implementation, representativeness, continuity and residual-access assumptions. Supplementary insurance pre-existing-condition percentages require actual diagnosis and underwriting applicability, not automatic application to every AD patient.",
+      "rationale": "新原件确认人民医院2018实际心肺联合移植并持续至2025服药复查，以及协和多年儿童心移植随访；成熟疾病器官替换属于LON。武汉正式双参保分支抗排异专项及职工住院直结有具体依据，resident_access部分证据成立。居民初次住院、2025新移植项目支付映射及普通中位资源能否承担差额／反复家庭照护仍有实质两解，主未知；旧AD未核给药和商保路径不被器官资料替代认证。",
+      "assumption": "不只因缺逐票或全人口测量而未知。多年真实采用与具体专项支付足以支持60讨论，但需有据接受合资格手术支付可兑现、目录外余款及持续药物／复查／家庭护理通常可承担；本批未独立接受该普通净取得桥。职工住院86%不套居民，后发术后89%不与旧87%同时拼；价格限价和要求映射不等新医保代码已报销。2018天门患者借款卖房、50余天等待及感染排斥真实，但不自动延续成2026武汉中位画像重要余障40。若有据接受通常净可得可60→总60；接受帮助后重要残余的有限延续可40→58，不需多数／主导；80→62仅情景。拒必要地域／时点／净取得桥仍null/[]、54–64，不补中点／重归一。",
       "conditionalAlternatives": [],
       "subpillars": {
         "translation": "partial",
         "trial_maturity": "partial",
         "regulatory_adoption": "partial",
-        "resident_access": "unresolved"
-      }
+        "resident_access": "partial"
+      },
+      "sourceIds": [
+        "LON108-N01",
+        "LON108-N02",
+        "LON108-N03",
+        "LON108-N04",
+        "LON108-N05",
+        "LON108-N06"
+      ]
     },
     {
       "id": "TEC",
@@ -1114,6 +1122,84 @@
       "sha256": "221112e4514d436538bc50c6b89f200b9b8a7418720ce7d092fbb2e11315c173",
       "publicationObservationContext": "2026-08-06 publication; treatment starts 2024-06-26 to 2025-11-01; national 37-centre cohort, not verified Wuhan outcomes. XML and HTML represent one study.",
       "scope": "valid_primary_national_context_not_Wuhan_cohort"
+    },
+    {
+      "id": "LON108-N01",
+      "url": "https://ybj.wuhan.gov.cn/zwgk_52/zcfgyjd/zcjd/202312/t20231229_2332741.shtml",
+      "retrievedOn": "2026-10-17",
+      "http": 200,
+      "bytes": 53924,
+      "sha256": "4b3968e5bf4d0fe8783454b52714bb5a368ffdd5b8194bba4b43287c0cc006f3",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/wuhan-lon-supp107/diagnostics/N01-leg1.bin",
+      "publicationObservationContext": "2023-12-29;effective2024-01-01",
+      "scope": "FirstpartyWuhanpayerexplanation;bothworker/residentbranchesandnamedtransplantcategories,qualification/offlinehelp/provincialtransfer;notallinvoicepaid",
+      "rootReadScope": "Actual relevant HTML main body independently read; N02/N04 title/date/source metadata also read",
+      "currentBytesAuthenticateCutoffSameVersion": false
+    },
+    {
+      "id": "LON108-N02",
+      "url": "https://wjw.hubei.gov.cn/bmdt/mtjj/mtgz/202506/t20250617_5694697.shtml",
+      "retrievedOn": "2026-10-17",
+      "http": 200,
+      "bytes": 50271,
+      "sha256": "04e655b40ea5dd7df9403c59d4358c06bd843552013d630c0f09182072e40c59",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/wuhan-lon-supp107/diagnostics/N02-leg2.bin",
+      "publicationObservationContext": "body2025-05-27;URL2025-06-17",
+      "scope": "Reportedfirsthandphysician/patientinterview;providerlocalWuhanRenmin,patientTianmennotFUAresidentrate;2018debt/soldhouse+wait/infection/rejectionretained;titleHubeiDaily/sourceXinhuaconflict;notindependentcohort",
+      "rootReadScope": "Actual relevant HTML main body independently read; N02/N04 title/date/source metadata also read",
+      "currentBytesAuthenticateCutoffSameVersion": false
+    },
+    {
+      "id": "LON108-N03",
+      "url": "https://ybj.wuhan.gov.cn/zwgk_52/zcfgyjd/zcfg/202312/t20231229_2332616.shtml",
+      "retrievedOn": "2026-10-17",
+      "http": 200,
+      "bytes": 48818,
+      "sha256": "7260ec8cfcfac45e83f6381d1bcc44f037c08962ca8e37000f6b13df9f24efe0",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/wuhan-lon-supp107/diagnostics/N03-leg3.bin",
+      "publicationObservationContext": "signed2023-12-26;published2023-12-29;effective2024-01-01for5years",
+      "scope": "FormalWuhanworker/residentqualifiedposttransplantantirejectionpolicy89/91.2/70/90branchesnotallonelevel;specialnoindividualannualsublimitbutcombinedannualbasiccap;notinitialsurgeryfullpayment",
+      "rootReadScope": "Actual relevant HTML main body independently read; N02/N04 title/date/source metadata also read",
+      "currentBytesAuthenticateCutoffSameVersion": false
+    },
+    {
+      "id": "LON108-N04",
+      "url": "https://wjw.hubei.gov.cn/bmdt/mtjj/mtgz/202506/t20250613_5690695.shtml",
+      "retrievedOn": "2026-10-17",
+      "http": 200,
+      "bytes": 46213,
+      "sha256": "e0545d09727b5f8649fbb1e689b3ddb06eeb448f5e4c2f5721e8b248f8d38ef3",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/wuhan-lon-supp107/diagnostics/N04-leg4.bin",
+      "publicationObservationContext": "body2025-05-23;sourcefirstedition2025-05-20;URL2025-06-13",
+      "scope": "225pediatricfollowupreported;81%fiveyearsurvivalanalysisset/window/CIunspecifiednotassumed225samecohort;three-yearrecipientactualfunctionnotRCTorallWuhanoutcomes;China40000/100notlocalrate",
+      "rootReadScope": "Actual relevant HTML main body independently read; N02/N04 title/date/source metadata also read",
+      "currentBytesAuthenticateCutoffSameVersion": false
+    },
+    {
+      "id": "LON108-N05",
+      "url": "https://ybj.wuhan.gov.cn/zwgk_52/zcfgyjd/zcjd/202302/P020230815347111030977.pdf",
+      "retrievedOn": "2026-10-17",
+      "http": 200,
+      "bytes": 3638998,
+      "sha256": "8d78acb7f5d3e95ce8193ce66d71ce3f3b8d71a9a8783cd1fed547818e6881dc",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/wuhan-lon-supp107/diagnostics/N05-leg5.bin",
+      "publicationObservationContext": "signed2022-12-30;effective2023-01-01for5years;URLdated2023",
+      "scope": "Actualpixelsselected9/12pages;employeebranchnotdefaultallcitizens;tertiary800deductible/86%eligibleabove;24wexpensescapincludespatientnotfundonly;Bclass10%first;directsettlement;old87%antirejectionnotcurrentafternewN03",
+      "rootReadScope": "physical8/9/10/11/12 images only; scanned text empty, not full12pages",
+      "currentBytesAuthenticateCutoffSameVersion": false
+    },
+    {
+      "id": "LON108-N06",
+      "url": "https://wjw.hubei.gov.cn/zfxxgk/fdzdgknr/czzj/xzsysf/202509/t20250905_5765078.shtml",
+      "retrievedOn": "2026-10-17",
+      "http": 200,
+      "bytes": 50288,
+      "sha256": "8a6678b1218957d8603bf505a44f31d3ebf0850cca9d13c0fabc73fbcf5af74c",
+      "localPath": "/Users/morris/.local/share/cci-research/2026-10-10/wuhan-lon-supp107/diagnostics/N06-leg6.bin",
+      "publicationObservationContext": "signed2025-09-03;published2025-09-05;effective2025-10-20",
+      "scope": "Firstpartypricingnotpayerapproval;explicitnewintegratedproject医保支付另行通知;basicconsumablesnotdoublebilled/otherpurchasezeromargin;noassumeallnewcodescovered",
+      "rootReadScope": "Actual relevant HTML main body independently read; N02/N04 title/date/source metadata also read",
+      "currentBytesAuthenticateCutoffSameVersion": false
     }
   ],
   "webOnlySourceReviews": [
@@ -1338,5 +1424,68 @@
       "scopeWarning": "Points/buffers only; do not establish exact victims, community footprint, exercise engineering site or administrative/command service coverage."
     },
     "warOrSuccessfulStrategicAttackRequired": false
+  },
+  "knownWeightedSubtotal": 54,
+  "unknownWeight": 10,
+  "unresolvedScoreRange": [54, 64],
+  "fullyMeasured": false,
+  "globalRankingEligible": false,
+  "supportedExclusions": [],
+  "qualified32Threshold": null,
+  "candidateUniverseRetained": true,
+  "newAndUnmatchedCompetitorsRetained": true,
+  "lonOrganSupplementReview": {
+    "path": "docs/cci-wuhan-lon-organ-access-review.md",
+    "reviewedOn": "2026-10-17",
+    "fixedInputCommit": "ab347be9c587821a3943b285c14d6e186aeae50b",
+    "fixedCases": 125,
+    "fixedComplete": 28,
+    "onlyDimensionReviewed": "LON",
+    "scoreRemainsUnknown": true,
+    "conditionalAlternatives": [],
+    "residentAccessEvidenceBefore": "unresolved",
+    "residentAccessEvidenceAfter": "partial",
+    "otherSevenDimensionObjectsUnchanged": true,
+    "old99SourceObjectsUnchanged": true,
+    "oldCaseSHA256": "bcc220e534db0cf80ea7a98ad8cba9dbdd583e607cd3a5d010f93cde5251b5fb",
+    "authorManifestSHA256": "eb752532cc67cad73d09b0e43cb5e16b1e5c33adc1a641e0395c27027073fd06",
+    "authorPayloadsVerified": 69,
+    "authorPayloadBytes": 7597467,
+    "authorMainProposal": 60,
+    "rootMain": null,
+    "rootReason": "Substantive payer-branch/current-code/ordinary net-burden bridge not accepted, despite actual mature use and targeted payment. Not a perfect-bill or populationwide prerequisite.",
+    "crossManifestSHA256": "5b66b5ba77ff484691af55a1693269b6e81ef83b7248a195adc5fe03a5f98451",
+    "crossPayloadsVerified": 12,
+    "crossPayloadBytes": 43624,
+    "crossArticleNumberMismatchNotAdopted": true,
+    "rootOriginalHTMLRead": 5,
+    "rootN05PDFPhysicalPagesViewed": [8, 9, 10, 11, 12],
+    "rootN05ScannedTextReadable": false,
+    "rootNewPaymentQueries": 2,
+    "rootNewPaymentHTTPlegs": 1,
+    "rootNewRelevantPaymentDiscriminators": 0,
+    "unusedRootLegsClosed": 2,
+    "rootM01UnadoptedReason": "Actual physical1 is retail pharmacy2025agreement template notice, not transplant payment.38page document onlyphysical1text read; no scoring adoption.",
+    "authorHTTPlegs": 6,
+    "authorUnusedLegsClosed": 6,
+    "oldStoppedChainsReopened": false,
+    "successResetsFailures": false,
+    "currentBytesAuthenticateCutoffSameVersion": false,
+    "rootIndependentAll9031Geometry": true,
+    "repairs": 136,
+    "existing16ApproximatePointsVerified": true,
+    "exactRenminCampusFootprintNewlyEstablished": false,
+    "fullyMeasured": false,
+    "wholeWorkflowCertified": false,
+    "actualSessionCallInputOutputLineIdentitiesVerified": 5,
+    "allReturnSemanticsCertified": false,
+    "sensitivityOnly": {
+      "LON40Total": 58,
+      "LON60Total": 60,
+      "LON80Total": 62,
+      "rejectOrUnknownRange": [54, 64]
+    },
+    "priorADClinicalChecksReinterpreted": false,
+    "sha256": "a63a88a34cbebf94eeb3d53249258d24b3f3df1b5e7cf04840dfe5849fac125e"
   }
 }

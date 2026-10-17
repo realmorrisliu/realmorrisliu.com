@@ -1587,7 +1587,19 @@ assert.equal(
   wuhanCase.mobilityChecks.satelliteEmergencyVoiceProvesInternationalDataContinuity,
   false
 );
-assert.equal(wuhanCase.sourceSnapshots.length, 99);
+assert.equal(wuhanCase.sourceSnapshots.length, 105);
+assert.equal(
+  wuhanCase.lonOrganSupplementReview.sha256,
+  digest(wuhanCase.lonOrganSupplementReview.path)
+);
+const wuhanLon = wuhanCase.dimensions.find((d: { id: string }) => d.id === "LON");
+assert.equal(wuhanLon.score, null);
+assert.deepEqual(wuhanLon.conditionalAlternatives, []);
+assert.equal(wuhanLon.subpillars.resident_access, "partial");
+assert.equal(wuhanCase.lonOrganSupplementReview.otherSevenDimensionObjectsUnchanged, true);
+assert.equal(wuhanCase.lonOrganSupplementReview.rootNewRelevantPaymentDiscriminators, 0);
+assert.equal(wuhanCase.lonOrganSupplementReview.priorADClinicalChecksReinterpreted, false);
+assert.equal(wuhanCase.fullyMeasured, false);
 assert.equal(wuhanCase.webOnlySourceReviews.length, 3);
 assert(
   wuhanCase.webOnlySourceReviews.every(
