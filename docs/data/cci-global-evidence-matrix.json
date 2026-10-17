@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 119,
+    "conditionalCaseCount": 120,
     "completeConditionalCaseCount": 26,
-    "partialCaseCount": 93,
-    "unassessedCount": 8912,
+    "partialCaseCount": 94,
+    "unassessedCount": 8911,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -900,8 +900,13 @@
       "sha256": "a6e82a371685a1fedfe516ae339bb71849d085ae69879dd7921903ed5853f5d2",
       "provenance": "cci-gorzow-priority-review.md",
       "provenanceSha256": "4399e33fb1c0c39f24a425894616cc8d86d1c9d2cb553bf94c48352f2341e823"
+    },
+    "cci-local-2026-kiel-case.json": {
+      "sha256": "4bd412f9c95d6d8f71f732940129658990c6f43f3a33fc22861c10194d86b7b1",
+      "provenance": "cci-kiel-priority-review.md",
+      "provenanceSha256": "46016f4a72b101485b04f2380ffa030da7c06fd829a0fad76a6e76ebb0d17a06"
     }
   },
-  "scriptSha256": "e6a2f24d9b2a6c997234c05dc510492327bcb10f8d3363b738ccd00cac8df33c",
-  "csvSha256": "707cc2aefb6b65d1dbe6291e90d9265fe29adaa1269db7ddf2dc7964f638c889"
+  "scriptSha256": "426f1eac2aa498bbe78f7fbebcda4e25d3d61dacd85c6b1c776249c349a36161",
+  "csvSha256": "897abc3fe669ac418fd3c35911737e1a437b8d94477c7622062464870fc9fa31"
 }

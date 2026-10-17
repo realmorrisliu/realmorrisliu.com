@@ -129,6 +129,7 @@ import flensburg from "../../docs/data/cci-local-2026-flensburg-case.json";
 import maldonado from "../../docs/data/cci-local-2026-maldonado-case.json";
 import lodz from "../../docs/data/cci-local-2026-lodz-case.json";
 import gorzow from "../../docs/data/cci-local-2026-gorzow-case.json";
+import kiel from "../../docs/data/cci-local-2026-kiel-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -262,8 +263,10 @@ const cases = [
   maldonado,
   lodz,
   gorzow,
+  kiel,
 ];
 const caseNamesZh: Record<number, string> = {
+  [kiel.candidateId]: "基尔功能区",
   [gorzow.candidateId]: "戈茹夫功能区",
   [lodz.candidateId]: "罗兹功能区",
   [maldonado.candidateId]: "马尔多纳多功能区",
@@ -489,6 +492,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [kiel.candidateId]: [
+    zh
+      ? "基尔制度／医疗／技术／退出条件60，防护／安全／资源／专项转化未知。贡献30、数学域30—80，无完整总分。真实多年治疗、实际社会护理援助与通常支付支持医疗60；若接受未落实家护需求仍造成重要必要护理后果，医疗40公平域27—77。地域／延续／普通净护理、技术产用与迁移净资源桥均可撤。"
+      : "Kiel has conditional ISR/MED/TEC/OPT 60; PCS/GSS/RES/LON remain unknown. Contribution is 30, with a 30–80 arithmetic domain and no complete total. Sustained treatment, delivered social/care support and usual payment support MED 60. A fair MED 40 interpretation gives 27–77 if unmet home-care requests leave important necessary-care effects. Geography, continuity, usual net care, production-use and migration-resource bridges are revocable.",
+    zh
+      ? "1,380为年末护理援助人数，约600为年均新批准；未落实支持不全等必要护理被拒。699危机安置含区外机构，部分医院统计含吕贝克；床位／治疗日非质量率，税前全时雇员中位非全居民净中位。早期同种CAR-T一例不当成熟常规路径，客运量不证付得起，船上漫游另有条件；全球入围未证。"
+      : "The 1,380 care-aid figure is a year-end count; about 600 is annual-average new approvals. Unfulfilled support requests are not all denied necessary care. The 699 crisis placements include an outside facility, and some hospital tables include Lübeck. Beds/treatment days are not quality rates; full-time gross medians are not all-resident net medians. One early allogeneic CAR-T case is not mature ordinary access, passenger volumes do not prove affordability, and ship roaming has separate conditions. Global inclusion is unproven.",
+  ],
   [gorzow.candidateId]: [
     zh
       ? "戈茹夫防护／制度／专项转化条件60、医疗条件40，安全／资源／技术／退出未知。贡献30、数学域30—75，无完整总分。实际防洪维护、多机构帮助、成熟自体造血重建同必要照护半年／一年等待合判；重要普通家庭净照护后果与地域／时间／支付桥均可撤。"

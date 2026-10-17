@@ -171,6 +171,7 @@ const realCases = [
   "maldonado",
   "lodz",
   "gorzow",
+  "kiel",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -333,6 +334,7 @@ const [
   maldonado,
   lodz,
   gorzow,
+  kiel,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4522,6 +4524,33 @@ assert(
   lasPalmasCase.coverageReview.length === 31 &&
     lasPalmasCase.coverageReview.every(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
+    )
+);
+
+const kielCase = realCases.find(c => c.candidateId === 3942);
+assert.equal(
+  kielCase.priorityCompletionReview.sha256,
+  digest(kielCase.priorityCompletionReview.path)
+);
+assert.equal(
+  kielCase.priorityCompletionReview.researchReportSha256,
+  digest(kielCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(kiel, { ISR: 60, MED: 60, TEC: 60, OPT: 60 });
+assert.deepEqual(total(kiel), { center: null, lower: 30, upper: 80 });
+assert.deepEqual(total({ ...kiel, MED: 40 }), { center: null, lower: 27, upper: 77 });
+for (const id of ["ISR", "MED", "TEC", "OPT"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...kiel };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    kielCase.sensitivity.withdrawals[id]
+  );
+}
+assert(
+  kielCase.coverageReview.length === 31 &&
+    kielCase.coverageReview.every(
+      (c: { score: null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
 
