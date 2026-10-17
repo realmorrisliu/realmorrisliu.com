@@ -170,6 +170,7 @@ const realCases = [
   "flensburg",
   "maldonado",
   "lodz",
+  "gorzow",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -331,6 +332,7 @@ const [
   flensburg,
   maldonado,
   lodz,
+  gorzow,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4509,6 +4511,60 @@ assert(
     lasPalmasCase.coverageReview.every(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
+);
+
+const gorzowCase = realCases.find(c => c.candidateId === 461);
+assert.equal(
+  gorzowCase.priorityCompletionReview.sha256,
+  digest(gorzowCase.priorityCompletionReview.path)
+);
+assert.equal(
+  gorzowCase.priorityCompletionReview.researchReportSha256,
+  digest(gorzowCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(gorzow, { PCS: 60, ISR: 60, MED: 40, LON: 60 });
+assert.deepEqual(total(gorzow), { center: null, lower: 30, upper: 75 });
+assert.deepEqual(total({ ...gorzow, MED: 60 }), { center: null, lower: 33, upper: 78 });
+assert.deepEqual(total({ ...gorzow, ISR: 40 }), { center: null, lower: 27, upper: 72 });
+assert.deepEqual(total({ ...gorzow, TEC: 60 }), { center: null, lower: 36, upper: 71 });
+for (const id of ["PCS", "ISR", "MED", "LON"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...gorzow };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    gorzowCase.sensitivity.withdrawals[id]
+  );
+}
+for (const flag of [
+  "drillIsRealFloodOutcome",
+  "allSheltersCertifiedUsable",
+  "waitlistIsAllResidents",
+  "waitCodeUrgencyCertified",
+  "DpsResidentDeathsAreWaitingDeaths",
+  "cardiacContractProvesHSCTPayment",
+  "allTransplantFollowupAndFamilyCostsPaid",
+  "LeuvenOutcomesAndPayerTransferredLocally",
+  "allogeneicPermissionIsActualInfusion",
+  "allFoodNeedsMetByGenericSocialBenefits",
+  "waterProfitIsWaterReliability",
+  "compostIntakeIsFinishedProductOutput",
+  "futureProductionLineCertifiedComplete",
+  "allWorkshopFirmsAdoptedAI",
+  "seniorCardIsAllAgeResidentAdoption",
+  "S15IsOriginal2025PdfBytes",
+  "sourceFailurePenalizesCity",
+])
+  assert.equal(gorzowCase.rootScopeReview[flag], false);
+assert(
+  gorzowCase.coverageReview.length === 31 &&
+    gorzowCase.coverageReview.every(
+      (c: { score: null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
+    )
+);
+assert(
+  gorzowCase.webReadSources.every(
+    (s: { sha256: null; isWebsiteRaw: boolean }) => s.sha256 === null && !s.isWebsiteRaw
+  )
 );
 
 const lodzCase = realCases.find(c => c.candidateId === 2787);
