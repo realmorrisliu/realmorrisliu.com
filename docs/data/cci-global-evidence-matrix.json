@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 131,
+    "conditionalCaseCount": 132,
     "completeConditionalCaseCount": 28,
-    "partialCaseCount": 103,
-    "unassessedCount": 8900,
+    "partialCaseCount": 104,
+    "unassessedCount": 8899,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -960,8 +960,13 @@
       "sha256": "476df672e1c0b83afa4ad004eaba369b5929a4de55a8d92c9c7f86b34456b97c",
       "provenance": "cci-trondheim-priority-review.md",
       "provenanceSha256": "6b68443fd5ac01f7b2b6c8bbdd96ccc97b905eab728b2cfb12b83a248c1679c3"
+    },
+    "cci-local-2026-warsaw-case.json": {
+      "sha256": "a9511387e4cb802ca15c17f3183e1aa910f38652dcfea56d160aac2f864af45c",
+      "provenance": "cci-warsaw-priority-review.md",
+      "provenanceSha256": "6f7e38c6bfa5e63668e8336106b93e76571ca8ce3851657ae6330669d8f40462"
     }
   },
-  "scriptSha256": "88c93b0b0d897b30301a0e4ca8cb8b556e0a376d4cb9ee07af76c4c33f2d46d5",
-  "csvSha256": "caa20008fa2a9b4bf544f5b43b5672a12d50d17b06e6ad3e2aba48fed92103e4"
+  "scriptSha256": "38c560b02008ebf6a47f8a979cc2f756a1f83d82bcd598dda4dacb4b7c3a4147",
+  "csvSha256": "49b6480b9c37d8ab98cdae53b8b6a4bf277e5b2fcbfe9254332690a76d7d6e87"
 }

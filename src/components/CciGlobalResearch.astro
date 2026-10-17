@@ -141,6 +141,7 @@ import gronowoGorne from "../../docs/data/cci-local-2026-gronowo-gorne-case.json
 import leon from "../../docs/data/cci-local-2026-leon-case.json";
 import luton from "../../docs/data/cci-local-2026-luton-case.json";
 import trondheim from "../../docs/data/cci-local-2026-trondheim-case.json";
+import warsaw from "../../docs/data/cci-local-2026-warsaw-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -286,8 +287,10 @@ const cases = [
   leon,
   luton,
   trondheim,
+  warsaw,
 ];
 const caseNamesZh: Record<number, string> = {
+  [warsaw.candidateId]: "华沙参考功能区",
   [trondheim.candidateId]: "特隆赫姆参考功能区",
   [luton.candidateId]: "卢顿功能区",
   [leon.candidateId]: "莱昂参考功能区",
@@ -525,6 +528,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [warsaw.candidateId]: [
+    zh
+      ? "华沙防护／制度／专项转化／技术条件60、安全40；资源、医疗、退出未知。贡献36，数学域36—71，无完整总分。实际蓄排设施、服务接入、器官替换和知识产用支持有限判断；组织／区域威胁与真实调查及设施保护同读，普通净取得、地域与延续桥可撤。"
+      : "Warsaw has conditional PCS/ISR/LON/TEC 60 and GSS 40; RES/MED/OPT remain unknown. Contribution is 36, with a 36–71 arithmetic domain and no complete total. Operating retention works, service connections, organ replacement and knowledge put into use support finite judgments. Organized/regional threats are considered alongside investigations and infrastructure protection; usual net-access, geography and continuity assumptions are revocable.",
+    zh
+      ? "根将专项转化未知改60：当地实际器官治疗与已有付款、重复净照护有限桥相接。安全60公平替代39—74、专项转化40为34—69；全国1,142是移植前资格／监测结算患者，非华沙移植或术后队列；新KAOS不推荐非原移植不支付，区域名单非华沙合同，指控非定罪，集团收入非本地产出，全球入围未证。"
+      : "Root review changes LON from unknown to 60 using actual local organ treatment and finite existing-payment/repeated-net-care assumptions. Fair GSS60 and LON40 alternatives give 39–74 and 34–69. The national 1,142 are pre-transplant qualification/monitoring claim patients, not Warsaw transplants or a postoperative cohort. Rejected KAOS does not remove existing transplant funding, the regional list is not a Warsaw contract, charges are not convictions and group revenue is not local output. Global inclusion is unproven.",
+  ],
   [trondheim.candidateId]: [
     zh
       ? "特隆赫姆防护／制度条件60、医疗40；安全、资源、专项转化、技术、退出未知。贡献24，数学域24—79，无完整总分。根将防护从未知改60：真实住宅／医院热供、多分站、水质控制和已运行危机能力支持有限寒季保护判断，地域与延续桥可撤。"

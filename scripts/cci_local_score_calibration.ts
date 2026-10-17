@@ -183,6 +183,7 @@ const realCases = [
   "leon",
   "luton",
   "trondheim",
+  "warsaw",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -357,6 +358,7 @@ const [
   leon,
   luton,
   trondheim,
+  warsaw,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4589,6 +4591,42 @@ assert(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
+
+const warsawCase = realCases.find(c => c.candidateId === 3222);
+assert.equal(warsawCase.sourceName, "Warsaw");
+assert.deepEqual(warsaw, { PCS: 60, GSS: 40, ISR: 60, LON: 60, TEC: 60 });
+assert.deepEqual(total(warsaw), { center: null, lower: 36, upper: 71 });
+assert.equal(warsawCase.unknownWeight, 35);
+assert.equal(
+  warsawCase.priorityCompletionReview.sha256,
+  digest(warsawCase.priorityCompletionReview.path)
+);
+assert.deepEqual(total({ ...warsaw, GSS: 60 }), { center: null, lower: 39, upper: 74 });
+assert.deepEqual(total({ ...warsaw, LON: 40 }), { center: null, lower: 34, upper: 69 });
+for (const id of ["PCS", "GSS", "ISR", "LON", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...warsaw };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    warsawCase.sensitivity.withdrawals[id]
+  );
+}
+assert.deepEqual(
+  warsawCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["RES", "MED", "OPT"]
+);
+assert(
+  warsawCase.coverageReview.length === 31 &&
+    warsawCase.coverageReview.every(
+      (r: { score: null; fullyMeasured: boolean }) => r.score === null && !r.fullyMeasured
+    )
+);
+assert.equal(warsawCase.rootScopeReview.authorLONUnknownRootAdopted60, true);
+assert.equal(warsawCase.rootScopeReview.R02ProvesWarsawProviderContract, false);
+assert.equal(warsawCase.rootScopeReview.national1142IsLocalPatientCount, false);
+assert.equal(warsawCase.rootScopeReview.prosecutionChargesAreConvictions, false);
 
 const trondheimCase = realCases.find(c => c.candidateId === 452);
 assert.equal(trondheimCase.sourceName, "Trondheim");
