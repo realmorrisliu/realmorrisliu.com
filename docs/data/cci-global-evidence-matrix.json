@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 132,
+    "conditionalCaseCount": 133,
     "completeConditionalCaseCount": 28,
-    "partialCaseCount": 104,
-    "unassessedCount": 8899,
+    "partialCaseCount": 105,
+    "unassessedCount": 8898,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -965,8 +965,13 @@
       "sha256": "a9511387e4cb802ca15c17f3183e1aa910f38652dcfea56d160aac2f864af45c",
       "provenance": "cci-warsaw-priority-review.md",
       "provenanceSha256": "6f7e38c6bfa5e63668e8336106b93e76571ca8ce3851657ae6330669d8f40462"
+    },
+    "cci-local-2026-gottingen-case.json": {
+      "sha256": "2f32621bdcb34e01726342016f31bc52aa6a2c2f1569652a0d1e14697f8548b2",
+      "provenance": "cci-gottingen-priority-review.md",
+      "provenanceSha256": "110f464461e9fd0695b5acf60a720e4b85dbbe4f0326bc532edc28e599ddf798"
     }
   },
-  "scriptSha256": "38c560b02008ebf6a47f8a979cc2f756a1f83d82bcd598dda4dacb4b7c3a4147",
-  "csvSha256": "49b6480b9c37d8ab98cdae53b8b6a4bf277e5b2fcbfe9254332690a76d7d6e87"
+  "scriptSha256": "3e2d85c2103354f26a3ab326716a95f7f0b2cc8b4db292f4e4a6a9e05308785a",
+  "csvSha256": "3f8c2c4972a9dabac125ce418f2a946e8c96066ba3367ea8ee13bd54c126313c"
 }

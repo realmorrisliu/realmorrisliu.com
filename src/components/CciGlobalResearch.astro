@@ -142,6 +142,7 @@ import leon from "../../docs/data/cci-local-2026-leon-case.json";
 import luton from "../../docs/data/cci-local-2026-luton-case.json";
 import trondheim from "../../docs/data/cci-local-2026-trondheim-case.json";
 import warsaw from "../../docs/data/cci-local-2026-warsaw-case.json";
+import gottingen from "../../docs/data/cci-local-2026-gottingen-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -288,8 +289,10 @@ const cases = [
   luton,
   trondheim,
   warsaw,
+  gottingen,
 ];
 const caseNamesZh: Record<number, string> = {
+  [gottingen.candidateId]: "哥廷根参考功能区",
   [warsaw.candidateId]: "华沙参考功能区",
   [trondheim.candidateId]: "特隆赫姆参考功能区",
   [luton.candidateId]: "卢顿功能区",
@@ -528,6 +531,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [gottingen.candidateId]: [
+    zh
+      ? "哥廷根防护／制度／专项转化／技术条件60、医疗40；安全、资源、退出未知。贡献36，数学域36—71，无完整总分。复核将防护未知改60：真实水热供给、双来源与全天救援支持有限普通保护；地域、主要自然暴露代表和延续桥可撤。"
+      : "Göttingen has conditional PCS/ISR/LON/TEC 60 and MED 40; GSS/RES/OPT remain unknown. Contribution is 36, with a 36–71 arithmetic domain and no complete total. Review changes PCS from unknown to 60: actual water/heat supply, multiple water sources and round-the-clock rescue support finite ordinary protection; geographic, principal-hazard representation and continuity assumptions are revocable.",
+    zh
+      ? "医疗60公平替代39—74，专项转化40为34—69；旧护理统计不冒2026普查，院内病组死亡非因果错误率。实际肾移植／造血重建和随访与长期候肾负担同留，136及子类不相加成独立人数；Hann. Münden不在4083，共付上限非全部家庭成本全免，未来新厂非已交付，全球入围未证。"
+      : "Fair MED60 and LON40 alternatives give 39–74 and 34–69. Older care statistics are not a 2026 census, and hospital-group mortality is not a causal error rate. Actual kidney/stem-cell treatment and follow-up coexist with long organ waits; overlapping 136 counts and subgroups are not summed as unique people. Hann. Münden is outside 4083, copayment limits do not cover all household costs, and a future building is not delivered output. Global inclusion is unproven.",
+  ],
   [warsaw.candidateId]: [
     zh
       ? "华沙防护／制度／专项转化／技术条件60、安全40；资源、医疗、退出未知。贡献36，数学域36—71，无完整总分。实际蓄排设施、服务接入、器官替换和知识产用支持有限判断；组织／区域威胁与真实调查及设施保护同读，普通净取得、地域与延续桥可撤。"

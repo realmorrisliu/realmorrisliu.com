@@ -184,6 +184,7 @@ const realCases = [
   "luton",
   "trondheim",
   "warsaw",
+  "gottingen",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -359,6 +360,7 @@ const [
   luton,
   trondheim,
   warsaw,
+  gottingen,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4591,6 +4593,42 @@ assert(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
+
+const gottingenCase = realCases.find(c => c.candidateId === 4083);
+assert.equal(gottingenCase.sourceName, "Göttingen");
+assert.deepEqual(gottingen, { PCS: 60, ISR: 60, MED: 40, LON: 60, TEC: 60 });
+assert.deepEqual(total(gottingen), { center: null, lower: 36, upper: 71 });
+assert.equal(gottingenCase.unknownWeight, 35);
+assert.equal(
+  gottingenCase.priorityCompletionReview.sha256,
+  digest(gottingenCase.priorityCompletionReview.path)
+);
+assert.deepEqual(total({ ...gottingen, MED: 60 }), { center: null, lower: 39, upper: 74 });
+assert.deepEqual(total({ ...gottingen, LON: 40 }), { center: null, lower: 34, upper: 69 });
+for (const id of ["PCS", "ISR", "MED", "LON", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...gottingen };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    gottingenCase.sensitivity.withdrawals[id]
+  );
+}
+assert.deepEqual(
+  gottingenCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["GSS", "RES", "OPT"]
+);
+assert(
+  gottingenCase.coverageReview.length === 31 &&
+    gottingenCase.coverageReview.every(
+      (r: { score: null; fullyMeasured: boolean }) => r.score === null && !r.fullyMeasured
+    )
+);
+assert.equal(gottingenCase.rootScopeReview.authorPCSUnknownRootAdopted60, true);
+assert.equal(gottingenCase.rootScopeReview.data2021DescribedAs2026Census, false);
+assert.equal(gottingenCase.rootScopeReview.strokeMortalityIsCausalErrorRate, false);
+assert.equal(gottingenCase.rootScopeReview.overlappingStemCellCountsSummedAsUniquePeople, false);
 
 const warsawCase = realCases.find(c => c.candidateId === 3222);
 assert.equal(warsawCase.sourceName, "Warsaw");
