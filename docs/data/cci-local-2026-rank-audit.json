@@ -5,8 +5,8 @@
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
   "conditionalCaseCount": 119,
-  "completeConditionalCaseCount": 25,
-  "partialCaseCount": 94,
+  "completeConditionalCaseCount": 26,
+  "partialCaseCount": 93,
   "unassessedCount": 8912,
   "weights": {
     "PCS": 15,
@@ -107,7 +107,7 @@
           "lower": 62.0,
           "upper": 62.0,
           "bestPosition": 1,
-          "worstPosition": 9007
+          "worstPosition": 9006
         },
         {
           "efua_id": "229",
@@ -179,16 +179,16 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9019
+          "worstPosition": 9018
         },
         {
           "efua_id": "415",
           "source_name": "Dublin",
-          "center": null,
-          "lower": 48.0,
-          "upper": 63.0,
-          "bestPosition": 1,
-          "worstPosition": 9031
+          "center": 57.0,
+          "lower": 57.0,
+          "upper": 57.0,
+          "bestPosition": 23,
+          "worstPosition": 9030
         },
         {
           "efua_id": "436",
@@ -215,7 +215,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9019
+          "worstPosition": 9018
         },
         {
           "efua_id": "535",
@@ -224,7 +224,7 @@
           "lower": 62.0,
           "upper": 62.0,
           "bestPosition": 1,
-          "worstPosition": 9007
+          "worstPosition": 9006
         },
         {
           "efua_id": "537",
@@ -233,7 +233,7 @@
           "lower": 62.0,
           "upper": 62.0,
           "bestPosition": 1,
-          "worstPosition": 9007
+          "worstPosition": 9006
         },
         {
           "efua_id": "543",
@@ -287,7 +287,7 @@
           "lower": 62.0,
           "upper": 62.0,
           "bestPosition": 1,
-          "worstPosition": 9007
+          "worstPosition": 9006
         },
         {
           "efua_id": "708",
@@ -305,7 +305,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9019
+          "worstPosition": 9018
         },
         {
           "efua_id": "823",
@@ -431,7 +431,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9019
+          "worstPosition": 9018
         },
         {
           "efua_id": "1565",
@@ -584,7 +584,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9019
+          "worstPosition": 9018
         },
         {
           "efua_id": "2787",
@@ -719,7 +719,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9019
+          "worstPosition": 9018
         },
         {
           "efua_id": "4193",
@@ -871,7 +871,7 @@
           "center": null,
           "lower": 43.0,
           "upper": 53.0,
-          "bestPosition": 27,
+          "bestPosition": 28,
           "worstPosition": 9031
         },
         {
@@ -881,7 +881,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9019
+          "worstPosition": 9018
         },
         {
           "efua_id": "4946",
@@ -890,7 +890,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9019
+          "worstPosition": 9018
         },
         {
           "efua_id": "5087",
@@ -908,7 +908,7 @@
           "lower": 62.0,
           "upper": 62.0,
           "bestPosition": 1,
-          "worstPosition": 9007
+          "worstPosition": 9006
         },
         {
           "efua_id": "5236",
@@ -926,7 +926,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9019
+          "worstPosition": 9018
         },
         {
           "efua_id": "5349",
@@ -1007,7 +1007,7 @@
           "lower": 58.0,
           "upper": 58.0,
           "bestPosition": 18,
-          "worstPosition": 9027
+          "worstPosition": 9026
         },
         {
           "efua_id": "7094",
@@ -1025,7 +1025,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9019
+          "worstPosition": 9018
         },
         {
           "efua_id": "7244",
@@ -1034,7 +1034,7 @@
           "lower": 58.0,
           "upper": 58.0,
           "bestPosition": 18,
-          "worstPosition": 9027
+          "worstPosition": 9026
         },
         {
           "efua_id": "7347",
@@ -1043,7 +1043,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9019
+          "worstPosition": 9018
         },
         {
           "efua_id": "7704",
@@ -1052,7 +1052,7 @@
           "lower": 60.0,
           "upper": 60.0,
           "bestPosition": 6,
-          "worstPosition": 9019
+          "worstPosition": 9018
         },
         {
           "efua_id": "8299",
@@ -1088,7 +1088,7 @@
           "lower": 58.0,
           "upper": 58.0,
           "bestPosition": 18,
-          "worstPosition": 9027
+          "worstPosition": 9026
         },
         {
           "efua_id": "10078",
@@ -1097,7 +1097,7 @@
           "lower": 58.0,
           "upper": 58.0,
           "bestPosition": 18,
-          "worstPosition": 9027
+          "worstPosition": 9026
         },
         {
           "efua_id": "10097",
@@ -1106,7 +1106,7 @@
           "lower": 58.0,
           "upper": 58.0,
           "bestPosition": 18,
-          "worstPosition": 9027
+          "worstPosition": 9026
         }
       ]
     },
@@ -1262,8 +1262,8 @@
           "efua_id": "415",
           "source_name": "Dublin",
           "center": null,
-          "lower": 39.0,
-          "upper": 69.0,
+          "lower": 48.0,
+          "upper": 63.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -3416,8 +3416,8 @@
           "efua_id": "415",
           "source_name": "Dublin",
           "center": null,
-          "lower": 39.0,
-          "upper": 69.0,
+          "lower": 48.0,
+          "upper": 63.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -4493,8 +4493,8 @@
           "efua_id": "415",
           "source_name": "Dublin",
           "center": null,
-          "lower": 42.0,
-          "upper": 67.0,
+          "lower": 51.0,
+          "upper": 61.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -5570,8 +5570,8 @@
           "efua_id": "415",
           "source_name": "Dublin",
           "center": null,
-          "lower": 42.0,
-          "upper": 72.0,
+          "lower": 51.0,
+          "upper": 66.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -6647,8 +6647,8 @@
           "efua_id": "415",
           "source_name": "Dublin",
           "center": null,
-          "lower": 42.0,
-          "upper": 67.0,
+          "lower": 51.0,
+          "upper": 61.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -7724,8 +7724,8 @@
           "efua_id": "415",
           "source_name": "Dublin",
           "center": null,
-          "lower": 42.0,
-          "upper": 67.0,
+          "lower": 51.0,
+          "upper": 61.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -8801,8 +8801,8 @@
           "efua_id": "415",
           "source_name": "Dublin",
           "center": null,
-          "lower": 42.0,
-          "upper": 67.0,
+          "lower": 51.0,
+          "upper": 61.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -10808,7 +10808,7 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "5bc799373f06f1bba01ecf7739df249606b50f1d893a6a47b4bba5b8c25176ab",
+    "cci-global-evidence-matrix.csv": "707cc2aefb6b65d1dbe6291e90d9265fe29adaa1269db7ddf2dc7964f638c889",
     "cci-legal-mobility-rules.json": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "cci-legal-mobility.md": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e",
     "cci-local-2026-singapore-case.json": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -10877,8 +10877,8 @@
     "cci-oulu-priority-review.md": "dde5556cc0b7c4e089ef1492dcfaaa063bfd6796c171d93b9ed415c904eb6a83",
     "cci-local-2026-leicester-case.json": "bbab7a6391d628b414609e0091c3019a1724686b4709fabbb5a10d4ecc82c94f",
     "cci-leicester-priority-review.md": "121228531fbf659e121c9c7facd84fcde4912bde412c14e88f201b06b1e3ff5a",
-    "cci-local-2026-dublin-case.json": "47357b64fec016a1880ea00d2c65324790e258637f3f5e7e77fd72e3f6fea0bb",
-    "cci-dublin-priority-review.md": "4a4a50e4a886b263b2d67a92d1b1931f3c5cb5c862d41eec9c37c5f5f6185985",
+    "cci-local-2026-dublin-case.json": "137643437c2b78f0e5707395a8cd2b4b80f009ad2c11a3b64af7edc4be018088",
+    "cci-dublin-gss-completion-review.md": "10d030946a92ba9414dad84a88510de6b881c44e0cf35b1c7d18a441d8751aa5",
     "cci-local-2026-turku-case.json": "744f3027863f7f3befab1744834e8f0b125187c3a70d473cd31d73dc51d0bb02",
     "cci-turku-priority-review.md": "40a4657bb79de492c9c54ea8490df994e9d62193c488392e5bc9a8d82e79bd0f",
     "cci-local-2026-edinburgh-case.json": "94075dfc5a49fd63beecf7903e3163b3f2d4a50988d5de16e4bef09d603b3079",
@@ -11050,11 +11050,11 @@
     "cci-local-2026-gorzow-case.json": "a6e82a371685a1fedfe516ae339bb71849d085ae69879dd7921903ed5853f5d2",
     "cci-gorzow-priority-review.md": "4399e33fb1c0c39f24a425894616cc8d86d1c9d2cb553bf94c48352f2341e823",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "8345bf10b6d262e06808380a42cbe747959696742e9129107572d9c6b3b604a5",
+    "cci-global-evidence-matrix.json": "ba0eaaf8403bac692a3a69c9e931aadd41a46f0d78d60e9ac83ca5960aece7b0",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "2b6d2692b915836e064c3dea0f4c6336b696d55078c72f3f8f307eef61a2245c"
+    "cci-local-2026-scoring-calibration.md": "e0b2bd991c0455a110f446a88dd9e3a3bbbd94166b3d8da61fe767595dfb67f7"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "f4ac25255daba72a7b49145684b1b901a1297c0e7a5d98dd180e86990ef380ad",
+  "csvSha256": "860afd7fb4ca1156830f83d4b91c2cd8fafdec10b1862b0a5825cb786dc68382",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }
