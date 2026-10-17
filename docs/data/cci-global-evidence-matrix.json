@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 130,
+    "conditionalCaseCount": 131,
     "completeConditionalCaseCount": 28,
-    "partialCaseCount": 102,
-    "unassessedCount": 8901,
+    "partialCaseCount": 103,
+    "unassessedCount": 8900,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -955,8 +955,13 @@
       "sha256": "78310a4d545574b7b7f073dbc65fea1b6df4bd789266341f9d01bf7a807284a3",
       "provenance": "cci-luton-priority-review.md",
       "provenanceSha256": "9c3160623d2ce24b2e015a43ce063db1c74f5b4288b0835e47e676f52fea9297"
+    },
+    "cci-local-2026-trondheim-case.json": {
+      "sha256": "476df672e1c0b83afa4ad004eaba369b5929a4de55a8d92c9c7f86b34456b97c",
+      "provenance": "cci-trondheim-priority-review.md",
+      "provenanceSha256": "6b68443fd5ac01f7b2b6c8bbdd96ccc97b905eab728b2cfb12b83a248c1679c3"
     }
   },
-  "scriptSha256": "d46dce6d970b7f0bf78dce76f08b2835e532450ec5974bb07bba88a0aaf383ef",
-  "csvSha256": "240bba0ee2aeb12cd234755e9cf3b41701ed938e1c5aef645833ffa97ff82807"
+  "scriptSha256": "88c93b0b0d897b30301a0e4ca8cb8b556e0a376d4cb9ee07af76c4c33f2d46d5",
+  "csvSha256": "caa20008fa2a9b4bf544f5b43b5672a12d50d17b06e6ad3e2aba48fed92103e4"
 }

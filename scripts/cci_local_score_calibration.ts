@@ -182,6 +182,7 @@ const realCases = [
   "gronowo-gorne",
   "leon",
   "luton",
+  "trondheim",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -355,6 +356,7 @@ const [
   gronowoGorne,
   leon,
   luton,
+  trondheim,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4587,6 +4589,42 @@ assert(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
+
+const trondheimCase = realCases.find(c => c.candidateId === 452);
+assert.equal(trondheimCase.sourceName, "Trondheim");
+assert.deepEqual(trondheim, { PCS: 60, ISR: 60, MED: 40 });
+assert.deepEqual(total(trondheim), { center: null, lower: 24, upper: 79 });
+assert.equal(trondheimCase.unknownWeight, 55);
+assert.equal(
+  trondheimCase.priorityCompletionReview.sha256,
+  digest(trondheimCase.priorityCompletionReview.path)
+);
+assert.deepEqual(total({ ...trondheim, MED: 60 }), { center: null, lower: 27, upper: 82 });
+assert.deepEqual(total({ ...trondheim, ISR: 40 }), { center: null, lower: 21, upper: 76 });
+for (const id of ["PCS", "ISR", "MED"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...trondheim };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    trondheimCase.sensitivity.withdrawals[id]
+  );
+}
+assert.deepEqual(
+  trondheimCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["GSS", "RES", "LON", "TEC", "OPT"]
+);
+assert(
+  trondheimCase.coverageReview.length === 31 &&
+    trondheimCase.coverageReview.every(
+      (r: { score: null; fullyMeasured: boolean }) => r.score === null && !r.fullyMeasured
+    )
+);
+assert.equal(trondheimCase.rootScopeReview.authorPCSUnknownRootAdopted60, true);
+assert.equal(trondheimCase.rootScopeReview.allSixMobilizationsWereNaturalDisasterRescues, false);
+assert.equal(trondheimCase.rootScopeReview.allWaitingPeopleHadNoCare, false);
+assert.equal(trondheimCase.rootScopeReview.decisions7310AreActiveUsers, false);
 
 const lutonCase = realCases.find(c => c.candidateId === 5356);
 assert.equal(lutonCase.sourceName, "Luton");

@@ -140,6 +140,7 @@ import saskatoon from "../../docs/data/cci-local-2026-saskatoon-case.json";
 import gronowoGorne from "../../docs/data/cci-local-2026-gronowo-gorne-case.json";
 import leon from "../../docs/data/cci-local-2026-leon-case.json";
 import luton from "../../docs/data/cci-local-2026-luton-case.json";
+import trondheim from "../../docs/data/cci-local-2026-trondheim-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -284,8 +285,10 @@ const cases = [
   gronowoGorne,
   leon,
   luton,
+  trondheim,
 ];
 const caseNamesZh: Record<number, string> = {
+  [trondheim.candidateId]: "特隆赫姆参考功能区",
   [luton.candidateId]: "卢顿功能区",
   [leon.candidateId]: "莱昂参考功能区",
   [gronowoGorne.candidateId]: "埃尔布隆格参考功能区",
@@ -522,6 +525,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [trondheim.candidateId]: [
+    zh
+      ? "特隆赫姆防护／制度条件60、医疗40；安全、资源、专项转化、技术、退出未知。贡献24，数学域24—79，无完整总分。根将防护从未知改60：真实住宅／医院热供、多分站、水质控制和已运行危机能力支持有限寒季保护判断，地域与延续桥可撤。"
+      : "Trondheim has conditional PCS/ISR 60 and MED 40; GSS/RES/LON/TEC/OPT remain unknown. Contribution is 24, with a 24–79 arithmetic domain and no complete total. Root review changes PCS from unknown to 60: actual home/hospital heat, substations, water control and operating crisis capability support finite cold-season protection, with revocable geographic and continuity assumptions.",
+    zh
+      ? "医疗60公平替代27—82，制度40为21—76；撤防护回15—85。出院接续改善与必要安置长等待同读，57人超六周不等全部无护理或2026仍同一人；六次动员非六次天气救援，供热30%非住户率，7,310决定非独立用户，科研加采购不自动技术60，全球入围未证。"
+      : "The fair MED 60 alternative gives 27–82; ISR 40 gives 21–76; withdrawing PCS gives 15–85. Better discharge transitions coexist with long appropriate-placement waits. The 57 waits over six weeks do not mean everyone lacked care or the same people still wait in 2026. Six mobilizations are not six weather rescues, 30% heat is not household coverage, 7,310 decisions are not unique users, and research plus procurement is not automatic TEC 60. Global inclusion is unproven.",
+  ],
   [luton.candidateId]: [
     zh
       ? "卢顿制度／技术条件60、医疗40；防护、安全、资源、专项转化、退出未知。贡献21，数学域21—81，无完整总分。已交群体服务、真实医疗改善及专业知识产用支持有限判断；财政技能／住房数据与安全／等待余障同时保留，地域、净护理和时间桥可撤。"
