@@ -177,8 +177,8 @@
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
     "conditionalCaseCount": 125,
-    "completeConditionalCaseCount": 26,
-    "partialCaseCount": 99,
+    "completeConditionalCaseCount": 27,
+    "partialCaseCount": 98,
     "unassessedCount": 8906,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
@@ -527,9 +527,9 @@
       "provenanceSha256": "e0658b20bbd28f06dfee388abfcb0f933061681f2fd62fd4a9e2fc54705a8919"
     },
     "cci-local-2026-geneva-case.json": {
-      "sha256": "bd75fe9e89215eca41ac82bc6902e5a1a1c76fb06a943f4faf4ef45bcff2dabc",
-      "provenance": "cci-geneva-priority-review.md",
-      "provenanceSha256": "b1bcbdcabcaa1003a589a64ae13c503e75778af54fac1b6d782cef3b3c89fadb"
+      "sha256": "a48eca5dd1c6b5719cafaaa10053433ecb284897b4ebe50164de0d4a5c125f0a",
+      "provenance": "cci-geneva-safety-resources-review.md",
+      "provenanceSha256": "707a9d4731de00a4dd09bb9ad9b2fcf16da3b90b843c2ab4f4c140c6f8a0e5ef"
     },
     "cci-local-2026-seattle-case.json": {
       "sha256": "557dbaefd9b08f2cb6f76e4dd2e690ee01eab6efe961efd2be2e5fcee8619c8f",
@@ -933,5 +933,5 @@
     }
   },
   "scriptSha256": "4276e3460d6f4eee5219b49ac9653c6d1070fe0ce81b059636f02275110c9ba0",
-  "csvSha256": "1994915bcc951272697e5028ee4e7b95f54ccfde2bc87b00022a5dedceb373ac"
+  "csvSha256": "8a59ffd6c133090dfe7f7bd0a53bfa2d6ded9e95c905690ed9948b193173084f"
 }

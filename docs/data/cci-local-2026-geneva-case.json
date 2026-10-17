@@ -2,17 +2,17 @@
   "status": "real_conditional_calibration_case_not_ranking",
   "evidenceCutoff": "2026-10-10",
   "targetYear": 2026,
-  "retrievedOn": "2026-10-13",
+  "retrievedOn": "2026-10-17",
   "candidateId": 29,
   "name": "Geneva",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "boundaryVersion": "GHS-FUA R2019A",
   "boundaryReview": "approximate_reference_points_full9031_checked_not_service_coverage",
-  "evidenceReview": "cci-geneva-priority-review.md",
-  "expectedConditionalTotal": null,
-  "knownWeightedSubtotal": 45,
-  "unresolvedScoreRange": [45, 70],
-  "limitations": "两轮有界发现关闭；8维31键审阅映射非31项充分测量。GSS/RESnull，其余六维条件60。FUA29含Vaud/Nyon，不等CantonGeneva；法国点4293单列。LON按实际使用/运行措辞的有限类别—当前产品/付款连接推定，可撤回，非每次品牌硬门槛。",
+  "evidenceReview": "cci-geneva-safety-resources-review.md",
+  "expectedConditionalTotal": 60,
+  "knownWeightedSubtotal": 60,
+  "unresolvedScoreRange": [60, 60],
+  "limitations": "GSS/RES补为条件60，原六维整对象保持；八维条件总分60而非充分测量/全球排名。普通净取得、实际共享保护及地域/时点代表桥可撤，GSS40为57、RES40为58、同撤45–70。OFS平均/税务个人/家庭单位不拼净预算，OCSTAT表题2002与正文2022冲突保留。旧临时raw目录已失，本批不认证旧六维全部原件或截止同版；现SIG相同SHA仅新快照。全部候选保留、零排除、门槛null。",
   "dimensions": [
     {
       "id": "PCS",
@@ -29,15 +29,17 @@
     },
     {
       "id": "GSS",
-      "score": null,
-      "rationale": "2025实际执法/伤害/反毒与外交机场专门任务partial；总犯罪下降不证明组织暴力低残余，相关地区战略风险与已运行具体保护效果连接仍不足。",
-      "assumption": "无当地战争/攻击不是评分前置要求；本轮未取得可辩护低影响—实际适配的完整连接。最小下一证为限定组织暴力通常影响与本地/真实共享服务关键威胁保护；缺资料不自动40。",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "本地日常外交保护及2026真实跨州/跨境联合安保有明确关键设施、国际活动与普通邻里服务连接；结合共享威胁检视与有日期的交通限制解除决定，可有限判断通常净保护60，组织袭击、临时限制及警务刑查余障保留。",
+      "assumption": "N01为July1_2026警方回顾，10–18Jun实际IKAPOL/联邦/法国德国等增援、AMBA CENTRO/AERO SUBITO空域及关键设施保护，明说日常邻里服务未中断；不是单有单位名单。N02 Nov26_2025日常BSD及刚实施短通知美乌会谈安保，证明反复/突发外交节点实际运行，不将3万服务对象变居民保护率。N04 Jun25国家威胁明确俄混合、激进化、伊朗相关特定目标风险；尚无关键基础设施破坏袭击仅为限定共享事实，不是Geneva零威胁。N05宣布的A1/边境限制及N07 June17决定June18_06h全部边境通行恢复，支持事件期普通通道影响有界而非截止仍封闭。接受这些实际公共域保护/关键服务持续及恢复，可有限代表29普通居民（含Vaud/Nyon共享卫生交通/跨州协作）的通常净安全；不认证每居民/每节点或所有危险。机场点旧库未匹配不否定实际共享服务，不把法国4293或全Vaud损害全部移入。2025/June2026到cutoff延续、组织性质/地域代表与剩余净影响判断可撤。",
+      "conditionalAlternatives": [40],
       "subpillars": {
         "organized_violence": "partial",
-        "regional_conflict": "context",
+        "regional_conflict": "partial",
         "strategic_exposure": "partial"
-      }
+      },
+      "sourceIds": ["GSS106-N01", "GSS106-N02", "GSS106-N04", "GSS106-N05", "GSS106-N07"],
+      "alternativeRationales": "40是现证公平解释：两有组织组实际袭击/纵火/国际机构窗损、夜间攻击，保护措施后的临时通道/身份扣留及警务IGS刑查具有重要普通生活/权利后果；不需多数/主导/死亡/崩溃。主60是接受有实际日常/关键保护和事件后恢复支撑的通常低净影响判断，并非否认这些重要余障。20k多数和平参与者不能全变600组员，549身份核查不定罪；37总期羁留/9临拘与14Jun后28深化/3临拘口径不相加。官方无重伤/比例适当不是独立免责；IGS程序仍开放。80当前无足够低残余/广泛有效备援实绩，不能由无战争或国家形象赋80。若拒实际共享保护对普通人/29地域、时点延续或净影响必要桥，则整维null/[]；不要求先受攻击或每节点压测。"
     },
     {
       "id": "ISR",
@@ -54,15 +56,29 @@
     },
     {
       "id": "RES",
-      "score": null,
-      "rationale": "SIG2025真实水/能源量、工程与电价下降partial；住房当前高价/换租涨幅真实反证，但不能据2023住房感受将普通长期居民整维判40。食品/基本资源净负担连接未闭。",
-      "assumption": "不要求精准逐户账单或全人口压力普测。收入单位/观察窗和RDU家庭条件不同；国家实物储备不等本地最后一段食品取得。最小下一证为通常基本食品/资源取得及中位收入净预算适配，再辨40/60。",
-      "conditionalAlternatives": [],
+      "score": 60,
+      "rationale": "SIG2025实际50百万m³饮用水、2550GWh电/2350GWh气送达及连续按需抽水/节能，明确实际供给而非企业名册。新增OFS2023真实食品638CHF/月、住房能源1449的家庭消费与Genève2022实际饮食/税务资源结构，使普通中位长期居民通常购买基本资源的连接可有界成立；不是以无失败/高收入形象补60。低5份蔬果摄入、租住压力、固定计量费和低用气量用户涨价仍是重要反证，不认为补助已消除全部负担。",
+      "assumption": "接受全国真实家庭消费结构可有限用于同一商品市场的Genève/Vaud普通长期本国中位资源画像，并以本地税务收入分布/实际饮食及SIG实体供给校正。均值不是中位、年度个人税务口径不是家庭净收入，不把68.2%×62226、×2.07或旧租价跨表拼精确预算；2022/23/25→2026和Canton核心→FUA29(Nyon)是明确可撤代表桥，法国不纳入。长期租户不默认刚换租承担最高新租价；仍接受通常食水能可净取得。若拒任何必要桥撤null/[]，不要求逐户完美账本。",
+      "conditionalAlternatives": [40],
       "subpillars": {
         "water": "partial",
-        "food": "unresolved",
+        "food": "partial",
         "energy": "partial",
         "supply_chain": "partial"
+      },
+      "sourceIds": [
+        "RES106-N02",
+        "RES106-N03",
+        "RES106-N05",
+        "RES106-N06",
+        "RES106-N07",
+        "RES106-N08"
+      ],
+      "alternativeRationales": {
+        "40": "低蔬果摄入、收支困难组的饮食差异与住房/低用气量用户费后约束真实，可接受其在普通中位长期画像下构成重要资源/营养后果的有限桥而取40；不需多数/主导/停城。但不能把79%未达5份直接写买不起或低质量饮食全因贫困，也不能只目标miss即40。",
+        "60": "实际物理交付+真实消费和当地资源/饮食比照支持通常取得；允许现有重要短板，时间/地域/中位代表桥须明示可撤。",
+        "80": "当前共因外购、费用分配和实际饮食质量仍有限，缺更强营养/负担与多途径韧性正证；不索零风险或人人同年测量。",
+        "rejectNecessaryBridge": "null/[]；数学域45–70，无中点/重归一。"
       }
     },
     {
@@ -235,12 +251,19 @@
       "OPT": 10
     },
     "allJudgmentsWithdrawn": [0, 100],
-    "MED40": [42, 67],
-    "LONWithdrawn": [39, 74],
-    "MEDWithdrawn": [36, 76],
-    "PCSWithdrawn": [36, 76],
-    "TEC80": [47, 72],
-    "MEDandLONWithdrawn": [30, 80]
+    "MED40": [57, 57],
+    "LONWithdrawn": [54, 64],
+    "MEDWithdrawn": [51, 66],
+    "PCSWithdrawn": [51, 66],
+    "TEC80": [62, 62],
+    "MEDandLONWithdrawn": [45, 70],
+    "GSS40": [57, 57],
+    "RES40": [58, 58],
+    "GSSandRES40": [55, 55],
+    "GSSWithdrawn": [51, 66],
+    "RESWithdrawn": [54, 64],
+    "GSSandRESWithdrawn": [45, 70],
+    "notConfidenceInterval": true
   },
   "sourceSnapshots": [
     {
@@ -658,6 +681,154 @@
       "sourceKind": "reused_original_response",
       "reviewedOn": "2026-10-13",
       "id": "S25"
+    },
+    {
+      "id": "RES106-N02",
+      "url": "https://dam-api.bfs.admin.ch/hub/api/dam/assets/36192816/master",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/geneva-res-supp106/diagnostics/N02-leg2.bin",
+      "bytes": 243813,
+      "sha256": "c27611171c359cfca2ae0c71d4b376d336924b4ac06aa1b4479c4ab97611d8d7",
+      "validOriginal": true,
+      "sourceKind": "new_provider_snapshot_RES_supplement106",
+      "retrievedAt": "2026-10-17T04:10:41.684235+00:00",
+      "publicationOrVersion": "2025-11-17 publication;2023 households",
+      "scope": "Swissactualhouseholdincome/consumptionmeans;61%belowmean;638foodexcludes558restaurant/accommodation;basicinsurance689alreadydeductedbefore7186disposable;allpercentagebasegross10341;1736savingsincludes136sporadicandrounding",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "RES106-N03",
+      "url": "https://media.sig-ge.ch/documents/sig/rapport_annuel/rapport_gestion_et_durabilite_2025.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/geneva-res-supp106/diagnostics/N03-leg3.bin",
+      "bytes": 27361939,
+      "sha256": "0d07681b0eca46cd429b3a0e58e3b6529f87bf7023d4123aadec49f83f0fe74d",
+      "validOriginal": true,
+      "sourceKind": "new_provider_snapshot_RES_supplement106",
+      "retrievedAt": "2026-10-17T04:10:41.684382+00:00",
+      "publicationOrVersion": "nominal2025 annual;12Mar2026 Last-Modified clue,not first-publication authentication",
+      "scope": "new17OctsnapshotcoincidentallysamebytesSHAasoldlostSIG;notrecoveredoldresponseheaders;CantonoperatorspoolnotallFUA;50mwater/2550electricity/2350gasdelivered;countryandpumpingdependenciesretained",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "RES106-N05",
+      "url": "https://rapport-annuel.sig-ge.ch/actualites/nouveau-mode-de-facturation-pour-les-tarifs-delectricite",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/geneva-res-supp106/diagnostics/N05-leg5.bin",
+      "bytes": 75481,
+      "sha256": "dde8cff793171eeb90f96d0e6ff23b18d4190c063ba7a93f9f2d882cbcf706c7",
+      "validOriginal": true,
+      "sourceKind": "new_provider_snapshot_RES_supplement106",
+      "retrievedAt": "2026-10-17T04:11:20.499540+00:00",
+      "publicationOrVersion": "2025-08-20;2026 electricity and Oct2025 gas pricing",
+      "scope": "energycomponent-9%notwholebill;meter6.70/month;3000kWhmodel64/month+1.40;smallgasusers<=10000kWh+20%,aidproposednotallnetresolved",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "RES106-N06",
+      "url": "https://www.ge.ch/document/36693/telecharger",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/geneva-res-supp106/diagnostics/N06-leg6.bin",
+      "bytes": 3802476,
+      "sha256": "0e37081d75795a4e6ba054d0f60fe5cb80f13fd3d00e376bad942090748f4fea",
+      "validOriginal": true,
+      "sourceKind": "new_provider_snapshot_RES_supplement106",
+      "retrievedAt": "2026-10-17T04:11:20.499664+00:00",
+      "publicationOrVersion": "nominalObsan2024;2022 ESS diet",
+      "scope": "physical102/103printed99/100actualfruitvegportiondistributionanduncertainty;21%meet5portions>=5days,47.6%<=2,31.4%3-4;not79%financialdeprivation/notallnutritiondimensions;Swiss21.7/foreign19.5notwholeFUAresidentprofile",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "RES106-N07",
+      "url": "https://statistique.ge.ch/tel/publications/2025/informations_statistiques/autres_themes/is_revenu_fortune_09_2025.pdf",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/geneva-res-supp106/diagnostics/N07-leg7.bin",
+      "bytes": 1718797,
+      "sha256": "a16be547b4c17b0c44688ff0ae4858899d6c81669b70cd1d519285a385298d10",
+      "validOriginal": true,
+      "sourceKind": "new_provider_snapshot_RES_supplement106",
+      "retrievedAt": "2026-10-17T04:12:46.544014+00:00",
+      "publicationOrVersion": "September2025;2022 body,visible T02 EN2002 conflict",
+      "scope": "aggregateallhouseholds68.2%disposablevsdistributionIBO+TOUdifferentframes;62226annualgrossperassujettinotnethousehold;singlefiscaltaxpayernotlivingalone;couple69315perpersonnotmean2.07household;visibleT02EN2002vs2022bodyconflictretained;p3extract33193milliardsnotadopted",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "RES106-N08",
+      "url": "https://rapport-annuel.sig-ge.ch/actualites/les-tarifs-delectricite-vont-baisser-des-le-1er-janvier-2027",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/geneva-res-supp106/diagnostics/N08-leg8.bin",
+      "bytes": 78962,
+      "sha256": "764017e26b9b99ef1c9b7ccfa8d6b64dd1ac575883da5fb296b6898c7f94678b",
+      "validOriginal": true,
+      "sourceKind": "new_provider_snapshot_RES_supplement106",
+      "retrievedAt": "2026-10-17T04:16:01.521901+00:00",
+      "publicationOrVersion": "2026-08-26;2026 context and future2027 proposal",
+      "scope": "2026meter6.70/currentmean24.9ct,4500kWhmodel1120/year;notcombinedwithN05different3000modelastrend;future2027-2%not2026actualdecrease;hedgingactualbeforeMiddleEastshockselfreportnotglobalrisk0",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "GSS106-N01",
+      "url": "https://www.ge.ch/actualite/g7-dispositif-securite-ampleur-deploye-proteger-geneve-sa-population-liberte-manifester-1-07-2026",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/geneva-gss-supp106/originals/g7-operational-july2026.html",
+      "bytes": 111826,
+      "sha256": "62ca05cc2488ed8059440fb447d5577f2e365387e2ed435e9cfd33a180bbe6a3",
+      "validOriginal": true,
+      "sourceKind": "new_provider_snapshot_GSS_supplement106",
+      "retrievedAt": "2026-10-17T04:11:08.436109+00:00",
+      "publicationOrVersion": "2026-07-01",
+      "scope": "actualJune10–18G7operation;June14organizedtargetedviolence/propertydamage/detention;officialselfassessment+openIGSproceedings",
+      "actualReadScope": "fullrelevantHTMLmain;adoptedslicesA",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "GSS106-N02",
+      "url": "https://www.ge.ch/actualite/geneve-celebre-25-ans-brigade-securite-diplomatique-26-11-2025",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/geneva-gss-supp106/originals/diplomatic-security2025.html",
+      "bytes": 101336,
+      "sha256": "903eced15df34f352751fa74195aea4db0bd2b6fd5211fc9a2436e84499df09c",
+      "validOriginal": true,
+      "sourceKind": "new_provider_snapshot_GSS_supplement106",
+      "retrievedAt": "2026-10-17T04:11:30.280372+00:00",
+      "publicationOrVersion": "2025-11-26",
+      "scope": "dailyBSDserviceandrecentrapidUSUkraine diplomaticmeetingprotection;reducedfederalcofunding",
+      "actualReadScope": "HTMLmain;adoptedslicesA",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "GSS106-N04",
+      "url": "https://www.vbs.admin.ch/fr/newnsb/jyRmuld1hBVy",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/geneva-gss-supp106/originals/national-threat-june2026.html",
+      "bytes": 186392,
+      "sha256": "d1c7f4e3474238810ef7b70d4fb7473cdd5cc517080789ec29f458f053e01897",
+      "validOriginal": true,
+      "sourceKind": "new_provider_snapshot_GSS_supplement106",
+      "retrievedAt": "2026-10-17T04:13:28.797899+00:00",
+      "publicationOrVersion": "2026-06-25",
+      "scope": "sharedSwissradicalization/hybrid/Iranrelatedthreat;limitedno-knowncriticalinfrastructuresabotage;notGenevarate",
+      "actualReadScope": "fullrelevantHTMLmain;notlinked11.55MBreport",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "GSS106-N05",
+      "url": "https://www.ge.ch/actualite/g7-restrictions-circulation-autoroute-a1-5-06-2026",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/geneva-gss-supp106/originals/g7-a1-restrictions-june2026.html",
+      "bytes": 100877,
+      "sha256": "28901cecd8dd41776752d7c2c3bcb55b7ec6cb1ecbb74d625a3b50476b9d1c08",
+      "validOriginal": true,
+      "sourceKind": "new_provider_snapshot_GSS_supplement106",
+      "retrievedAt": "2026-10-17T04:14:19.211082+00:00",
+      "publicationOrVersion": "2026-06-05",
+      "scope": "eventperiodA1/borderrestrictionsannounced;mitigations/alternativecrossings;notOctoberongoingclosure",
+      "actualReadScope": "HTMLmain;adoptedslicesB",
+      "cutoffHistoricalSameBytesAuthenticated": false
+    },
+    {
+      "id": "GSS106-N07",
+      "url": "https://www.ge.ch/document/communique-hebdomadaire-du-conseil-etat-du-17-juin-2026",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/geneva-gss-supp106/originals/g7-border-lift-june2026.html",
+      "bytes": 147293,
+      "sha256": "0584bcb7056a9172e6ebb7e7fa268565e8ce649974474d19dee029d37702ee33",
+      "validOriginal": true,
+      "sourceKind": "new_provider_snapshot_GSS_supplement106",
+      "retrievedAt": "2026-10-17T04:15:16.101522+00:00",
+      "publicationOrVersion": "2026-06-17",
+      "scope": "explicitliftdecisioneffectiveJune18_06h;priorJune17_15h30selectedexitrelaxation;mobilityreviewfuture",
+      "actualReadScope": "G7focussection;initialmainprintalsoincludedunrelatedcouncilitemsnotused",
+      "cutoffHistoricalSameBytesAuthenticated": false
     }
   ],
   "webReadSources": [
@@ -774,10 +945,153 @@
   ],
   "priorityCompletionReview": {
     "path": "docs/cci-geneva-priority-review.md",
-    "sha256": "b1bcbdcabcaa1003a589a64ae13c503e75778af54fac1b6d782cef3b3c89fadb",
+    "sha256": "3feb8aed0c0961cc97b1b4094eb50705a99efeee3af049401d349e0f1480e1c2",
     "reviewedOn": "2026-10-13",
     "handoffSha256": "c90ec0660f0c7e43f0114b89315495d2544dd5874bb170d4453425ed05e6d4c0",
     "sourceManifestSha256": "b5f0ce042a765f2d9bf9aa6d8be80b957f7fddfb8a4ead507761b942fdf45044",
-    "scope": "bounded eight-dimension/31-semantic review with conditional judgments, not full measurement or ranking eligibility"
-  }
+    "scope": "bounded eight-dimension/31-semantic review with conditional judgments, not full measurement or ranking eligibility",
+    "supplementReviewedOn": "2026-10-17"
+  },
+  "unknownWeight": 0,
+  "fullyMeasured": false,
+  "globalRankingEligible": false,
+  "supportedExclusions": 0,
+  "qualified32Threshold": null,
+  "candidateUniverseRetained": 9031,
+  "newAndUnmatchedCompetitorsRetained": true,
+  "publishedInputCommit": "53bee7e6bb03bcc01f1e3d9875ddaef435458a5c",
+  "publishedInputCases": 125,
+  "publishedInputComplete": 26,
+  "gssResSupplementReview": {
+    "path": "docs/cci-geneva-safety-resources-review.md",
+    "reviewedOn": "2026-10-17",
+    "fixedInputCommit": "53bee7e6bb03bcc01f1e3d9875ddaef435458a5c",
+    "fixedCases": 125,
+    "fixedComplete": 26,
+    "onlyDimensionsChanged": ["GSS", "RES"],
+    "otherSixDimensionsUnchanged": true,
+    "oldCaseSHA256": "bd75fe9e89215eca41ac82bc6902e5a1a1c76fb06a943f4faf4ef45bcff2dabc",
+    "oldPriorityReviewSHA256": "b1bcbdcabcaa1003a589a64ae13c503e75778af54fac1b6d782cef3b3c89fadb",
+    "GSSFrozenManifestSHA256": "6e9caf71d9d93f3992e158572d26ec49cb48882dc674db801a9554dc68fa86b7",
+    "GSSPayloadsVerified": 65,
+    "GSSPayloadBytes": 1955716,
+    "GSSAuthorReportSHA256": "10fd79dd5458a6500ce079ebdeb417c5da0f48ca798c07ff7847268e7ae4686d",
+    "RESFrozenManifestSHA256": "a5a964cab474c6be78304eae79ce7f221050e2098923f6055fa969cfc2eb6025",
+    "RESPayloadsVerified": 87,
+    "RESPayloadBytes": 41712661,
+    "RESAuthorReportSHA256": "5065b1b662e3e9b46ddaa10d7e6f39ec5ac0cff85de0019bd79cd2fee2ac8010",
+    "rootOriginalsSelected": 11,
+    "rootGSSHtmlSelected": ["N01", "N02", "N04", "N05", "N07"],
+    "rootRESHtmlSelected": ["N05", "N08"],
+    "rootRESPdfTextPhysicalPages": {
+      "N02": [1, 2, 3, 4],
+      "N03": [4, 5, 13, 15],
+      "N06": [102, 103],
+      "N07": [1, 2, 3, 4]
+    },
+    "rootRESPdfViewedPhysicalPages": {
+      "N02": [4],
+      "N03": [5, 13],
+      "N06": [102, 103],
+      "N07": [4]
+    },
+    "rootResearchHTTP": 0,
+    "rootIndependentAll9031Geometry": true,
+    "geometryRepairs": 136,
+    "approximatePointsVerified": 13,
+    "actualSessionCallRecordsIdentityVerified": 16,
+    "currentSnapshotsAuthenticateCutoffSameBytes": false,
+    "oldSixDimensionsReassessed": false,
+    "oldRawArchiveReconstituted": false,
+    "wholeWorkflowCertified": false,
+    "processDeviationsRetained": true,
+    "medianNetBudgetCalculated": false,
+    "householdMeanEqualsMedian": false,
+    "dietFailureEqualsFinancialFoodDeprivation": false,
+    "allIGSComplaintsResolvedOrPoliceExonerated": false,
+    "announcedBorderLiftProvesEveryTripRestored": false,
+    "priorFixedSourceArchiveMissing": true,
+    "sha256": "707a9d4731de00a4dd09bb9ad9b2fcf16da3b90b843c2ab4f4c140c6f8a0e5ef",
+    "RESKnownHelperPlusThreeTargetOuters": 2
+  },
+  "gssResSupplementCoverageReview": [
+    {
+      "dimension": "GSS",
+      "subpillar": "organized_violence",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["GSS106-N01", "GSS106-N02", "GSS106-N04", "GSS106-N05", "GSS106-N07"]
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "regional_conflict",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["GSS106-N01", "GSS106-N02", "GSS106-N04", "GSS106-N05", "GSS106-N07"]
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "strategic_exposure",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["GSS106-N01", "GSS106-N02", "GSS106-N04", "GSS106-N05", "GSS106-N07"]
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "water",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["RES106-N03"],
+      "finding": "实际交付/连续按需抽水，依赖电力/湖泊，非全参数质量或逐户不中断率。"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "food",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["RES106-N02", "RES106-N06", "RES106-N07"],
+      "finding": "实际消费篮子与当地蔬果摄入/群体差异；通常中位净取得有限桥，不等营养全面充分。"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "energy",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["RES106-N03", "RES106-N05", "RES106-N08"],
+      "finding": "实际电气交付及当前/宣布收费、小用量后果同判；未来2027降费不当前化。"
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "supply_chain",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "boundedReviewPerformed": true,
+      "sourceIds": ["RES106-N03", "RES106-N02"],
+      "finding": "电气外购/共因与正常商品消费实际，不冒联邦库存本地最后一公里压力实测。"
+    }
+  ],
+  "failedSourceSnapshots": [
+    {
+      "id": "GSS106-N03",
+      "url": "https://www.admin.ch/fr/newnsb/HXKYFESgffYvQOzpHDVOB",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/geneva-gss-supp106/diagnostics/N03-leg3.bin",
+      "bytes": 405,
+      "sha256": "dcd1ff08ff6c70ac7072ba1d9219731fbfe8f329ce501584394b932344d1a1d2",
+      "status": 403,
+      "validOriginal": false,
+      "websiteOriginalSHA256": null,
+      "sourceKind": "failed_diagnostic_not_scoring_evidence",
+      "scope": "exactHTTP403 retained;no alternate recovery;not city capability evidence"
+    }
+  ]
 }

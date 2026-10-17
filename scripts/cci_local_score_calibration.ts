@@ -577,7 +577,7 @@ const tokyoPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.
 assert(tokyoPosition);
 assert.equal(tokyoPosition.center, 62);
 assert.equal(tokyoPosition.bestPosition, 1);
-assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 25);
+assert.equal(tokyoPosition.worstPosition, rankAudit.candidateCount - 26);
 assert.deepEqual(total(washington), { center: 58, lower: 58, upper: 58 });
 assert.equal(washington.RES, 40);
 assert.equal(washington.OPT, 60);
@@ -625,7 +625,7 @@ const washingtonPosition = rankAudit.scenarios.fixed_conditional_centers.caseRes
 );
 assert(washingtonPosition);
 assert.equal(washingtonPosition.center, 58);
-assert.equal(washingtonPosition.bestPosition, 18);
+assert.equal(washingtonPosition.bestPosition, 19);
 assert.equal(washingtonPosition.worstPosition, rankAudit.candidateCount - 5);
 assert.equal(total({ ...washington, GSS: 40 }).center, 55);
 assert.equal(total({ ...washington, GSS: 80 }).center, 61);
@@ -681,7 +681,7 @@ const newYorkPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
 );
 assert(newYorkPosition);
 assert.equal(newYorkPosition.center, 58);
-assert.equal(newYorkPosition.bestPosition, 18);
+assert.equal(newYorkPosition.bestPosition, 19);
 assert.equal(newYorkPosition.worstPosition, rankAudit.candidateCount - 5);
 assert.deepEqual(realCases[7].clinicBoundaryCheck.fuaMatches, [7244]);
 assert.equal(realCases[7].referenceBoundaryCheck.referencePoints.length, 6);
@@ -1149,7 +1149,7 @@ const shanghaiPosition = rankAudit.scenarios.fixed_conditional_centers.caseResul
   (c: { efua_id: string }) => c.efua_id === "10097"
 );
 assert(shanghaiPosition);
-assert.equal(shanghaiPosition.bestPosition, 18);
+assert.equal(shanghaiPosition.bestPosition, 19);
 assert.equal(shanghaiPosition.worstPosition, rankAudit.candidateCount - 5);
 
 assert.deepEqual(total(jakarta), { center: null, lower: 43, upper: 53 });
@@ -1232,7 +1232,7 @@ const jakartaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResult
 );
 assert(jakartaPosition);
 // Dublin's conditional57 also exceeds Jakarta's upper53.
-assert.equal(jakartaPosition.bestPosition, 28);
+assert.equal(jakartaPosition.bestPosition, 29);
 assert.equal(jakartaPosition.worstPosition, rankAudit.candidateCount);
 
 assert.deepEqual(total(nanjing), { center: null, lower: 49, upper: 64 });
@@ -1311,7 +1311,7 @@ const praguePosition = rankAudit.scenarios.fixed_conditional_centers.caseResults
 );
 assert(praguePosition);
 assert.equal(praguePosition.bestPosition, 1);
-assert.equal(praguePosition.worstPosition, rankAudit.candidateCount - 25);
+assert.equal(praguePosition.worstPosition, rankAudit.candidateCount - 26);
 const tokyoWithoutTec = { ...tokyo };
 delete tokyoWithoutTec.TEC;
 assert.deepEqual(total(tokyoWithoutTec), { center: null, lower: 54, upper: 64 });
@@ -1484,7 +1484,7 @@ const guangzhouPosition = rankAudit.scenarios.fixed_conditional_centers.caseResu
   (row: { efua_id: string }) => row.efua_id === "9711"
 );
 assert(guangzhouPosition);
-assert.equal(guangzhouPosition.bestPosition, 18);
+assert.equal(guangzhouPosition.bestPosition, 19);
 assert.equal(guangzhouPosition.worstPosition, rankAudit.candidateCount - 5);
 
 assert.deepEqual(total(wuhan), { center: null, lower: 54, upper: 64 });
@@ -1722,7 +1722,7 @@ const surabayaPosition = rankAudit.scenarios.fixed_conditional_centers.caseResul
   (row: { efua_id: string }) => row.efua_id === "6401"
 );
 assert(surabayaPosition);
-assert.equal(surabayaPosition.bestPosition, 18);
+assert.equal(surabayaPosition.bestPosition, 19);
 assert.equal(surabayaPosition.worstPosition, rankAudit.candidateCount);
 
 assert.deepEqual(total(hangzhou), { center: 58, lower: 58, upper: 58 });
@@ -2090,16 +2090,35 @@ assert.equal(
   "context"
 );
 
-assert.deepEqual(total(geneva), { center: null, lower: 45, upper: 70 });
-assert.deepEqual(total({ ...geneva, MED: 40 }), { center: null, lower: 42, upper: 67 });
+assert.deepEqual(total(geneva), { center: 60, lower: 60, upper: 60 });
+assert.deepEqual(total({ ...geneva, MED: 40 }), { center: 57, lower: 57, upper: 57 });
 const genevaWithoutLon = { ...geneva };
 delete genevaWithoutLon.LON;
-assert.deepEqual(total(genevaWithoutLon), { center: null, lower: 39, upper: 74 });
+assert.deepEqual(total(genevaWithoutLon), { center: null, lower: 54, upper: 64 });
 const genevaCase = realCases.find(c => c.candidateId === 29);
 assert.equal(
   genevaCase.priorityCompletionReview.sha256,
   digest(genevaCase.priorityCompletionReview.path)
 );
+
+assert.equal(
+  genevaCase.gssResSupplementReview.sha256,
+  digest(genevaCase.gssResSupplementReview.path)
+);
+assert.equal(total({ ...geneva, GSS: 40 }).center, 57);
+assert.equal(total({ ...geneva, RES: 40 }).center, 58);
+for (const [id, lower, upper] of [
+  ["GSS", 51, 66],
+  ["RES", 54, 64],
+] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...geneva };
+  delete withdrawn[id];
+  assert.deepEqual(total(withdrawn), { center: null, lower, upper });
+}
+const genevaWithoutGssRes = { ...geneva };
+delete genevaWithoutGssRes.GSS;
+delete genevaWithoutGssRes.RES;
+assert.deepEqual(total(genevaWithoutGssRes), { center: null, lower: 45, upper: 70 });
 
 const helsinkiWithoutGss = { ...helsinki };
 delete helsinkiWithoutGss.GSS;
@@ -3207,7 +3226,7 @@ assert.deepEqual(total({ ...eindhoven, OPT: 40 }), { center: 55, lower: 55, uppe
 const eindhovenPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
   (c: { efua_id: string }) => c.efua_id === "2254"
 );
-assert.equal(eindhovenPosition.bestPosition, 23);
+assert.equal(eindhovenPosition.bestPosition, 24);
 assert.equal(eindhovenPosition.worstPosition, rankAudit.candidateCount - 1);
 
 assert.equal(eindhoven.RES, 60);
@@ -3348,7 +3367,7 @@ for (const [id, value, lower, upper] of [
 const stuttgartPosition = rankAudit.scenarios.fixed_conditional_centers.caseResults.find(
   (c: { efua_id: string }) => c.efua_id === "3580"
 );
-assert.equal(stuttgartPosition.bestPosition, 23);
+assert.equal(stuttgartPosition.bestPosition, 24);
 assert.equal(stuttgartPosition.worstPosition, rankAudit.candidateCount - 1);
 
 assert.equal(stuttgart.RES, 60);
