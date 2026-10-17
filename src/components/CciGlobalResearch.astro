@@ -139,6 +139,7 @@ import rugby from "../../docs/data/cci-local-2026-rugby-case.json";
 import saskatoon from "../../docs/data/cci-local-2026-saskatoon-case.json";
 import gronowoGorne from "../../docs/data/cci-local-2026-gronowo-gorne-case.json";
 import leon from "../../docs/data/cci-local-2026-leon-case.json";
+import luton from "../../docs/data/cci-local-2026-luton-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -282,8 +283,10 @@ const cases = [
   saskatoon,
   gronowoGorne,
   leon,
+  luton,
 ];
 const caseNamesZh: Record<number, string> = {
+  [luton.candidateId]: "卢顿功能区",
   [leon.candidateId]: "莱昂参考功能区",
   [gronowoGorne.candidateId]: "埃尔布隆格参考功能区",
   [saskatoon.candidateId]: "萨斯卡通功能区",
@@ -519,6 +522,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [luton.candidateId]: [
+    zh
+      ? "卢顿制度／技术条件60、医疗40；防护、安全、资源、专项转化、退出未知。贡献21，数学域21—81，无完整总分。已交群体服务、真实医疗改善及专业知识产用支持有限判断；财政技能／住房数据与安全／等待余障同时保留，地域、净护理和时间桥可撤。"
+      : "Luton has conditional ISR/TEC 60 and MED 40; PCS/GSS/RES/LON/OPT remain unknown. Contribution is 21, with a 21–81 arithmetic domain and no complete total. Delivered community services, actual clinical improvements and professional knowledge put into use support finite judgments; finance skills/housing data and safety/waiting gaps remain, with revocable geography, net-care and temporal assumptions.",
+    zh
+      ? "医疗60公平替代24—84，制度40为18—78；撤技术回15—85，不以未知产用断点填技术40。Luton新楼改善不等Bedford电话分诊，未来电子病历／GCAP非已交付；两院病例和集团研发不冒本地居民率／产出，虚构援助案例不当实绩，全球入围未证。"
+      : "The fair MED 60 alternative gives 24–84; ISR 40 gives 18–78. Withdrawing TEC gives 15–85; an unknown knowledge-use gap is not TEC 40. Luton’s new-block improvements are distinct from Bedford telephone triage. Planned records/GCAP are not delivered, Trust cases and group R&D are not local resident rates/output, and fictional aid examples are not actual delivery. Global inclusion is unproven.",
+  ],
   [leon.candidateId]: [
     zh
       ? "莱昂制度／专项转化／技术条件60、医疗40；防护、安全、资源、退出未知。贡献27，数学域27—77，无完整总分。实际公共诊疗、成熟造血重建、家庭支持和医工知识产用支持有限判断；通常付款／反复净照护、地域与延续桥可撤。"

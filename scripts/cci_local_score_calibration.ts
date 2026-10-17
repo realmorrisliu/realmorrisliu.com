@@ -181,6 +181,7 @@ const realCases = [
   "saskatoon",
   "gronowo-gorne",
   "leon",
+  "luton",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -353,6 +354,7 @@ const [
   saskatoon,
   gronowoGorne,
   leon,
+  luton,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4585,6 +4587,45 @@ assert(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
+
+const lutonCase = realCases.find(c => c.candidateId === 5356);
+assert.equal(lutonCase.sourceName, "Luton");
+assert.deepEqual(luton, { ISR: 60, MED: 40, TEC: 60 });
+assert.deepEqual(total(luton), { center: null, lower: 21, upper: 81 });
+assert.equal(lutonCase.unknownWeight, 60);
+assert.equal(
+  lutonCase.priorityCompletionReview.sha256,
+  digest(lutonCase.priorityCompletionReview.path)
+);
+assert.deepEqual(total({ ...luton, MED: 60 }), { center: null, lower: 24, upper: 84 });
+assert.deepEqual(total({ ...luton, ISR: 40 }), { center: null, lower: 18, upper: 78 });
+for (const id of ["ISR", "MED", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...luton };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    lutonCase.sensitivity.withdrawals[id]
+  );
+}
+assert.deepEqual(
+  lutonCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["PCS", "GSS", "RES", "LON", "OPT"]
+);
+assert(
+  lutonCase.coverageReview.length === 31 &&
+    lutonCase.coverageReview.every(
+      (r: { score: null; fullyMeasured: boolean }) => r.score === null && !r.fullyMeasured
+    )
+);
+assert.deepEqual(
+  lutonCase.dimensions.find((d: { id: string }) => d.id === "TEC").conditionalAlternatives,
+  [60]
+);
+assert.equal(lutonCase.rootScopeReview.BedfordTelephoneTriageTransferredToLuton, false);
+assert.equal(lutonCase.rootScopeReview.futureBadgerNetAlreadyDelivered, false);
+assert.equal(lutonCase.rootScopeReview.fictionalSupportCaseIsRealAward, false);
 
 const leonCase = realCases.find(c => c.candidateId === 2571);
 assert.equal(leonCase.sourceName, "León");

@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 129,
+    "conditionalCaseCount": 130,
     "completeConditionalCaseCount": 28,
-    "partialCaseCount": 101,
-    "unassessedCount": 8902,
+    "partialCaseCount": 102,
+    "unassessedCount": 8901,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -950,8 +950,13 @@
       "sha256": "6d1b499c7bef9cb6bd81f8c076782b37c9091314c3656ad3ba306879e20ed242",
       "provenance": "cci-leon-priority-review.md",
       "provenanceSha256": "7f7c481e66ed6c46f258c1853455391a5f8b1e4e06a14b1de90c48ea26b83630"
+    },
+    "cci-local-2026-luton-case.json": {
+      "sha256": "78310a4d545574b7b7f073dbc65fea1b6df4bd789266341f9d01bf7a807284a3",
+      "provenance": "cci-luton-priority-review.md",
+      "provenanceSha256": "9c3160623d2ce24b2e015a43ce063db1c74f5b4288b0835e47e676f52fea9297"
     }
   },
-  "scriptSha256": "8e1adcb6085bf56eda9f0a25e137518edc743b56cbfeeec4265ce2bd4140d202",
-  "csvSha256": "77d803d3556f7f80fae225edb26ddc2d3851459ede6bbc753d4d814ff15a982b"
+  "scriptSha256": "d46dce6d970b7f0bf78dce76f08b2835e532450ec5974bb07bba88a0aaf383ef",
+  "csvSha256": "240bba0ee2aeb12cd234755e9cf3b41701ed938e1c5aef645833ffa97ff82807"
 }
