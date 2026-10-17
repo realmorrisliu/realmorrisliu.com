@@ -178,6 +178,7 @@ const realCases = [
   "hsinchu-reference",
   "dubai-reference",
   "rugby",
+  "saskatoon",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -347,6 +348,7 @@ const [
   hsinchuReference,
   dubaiReference,
   rugby,
+  saskatoon,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4578,6 +4580,47 @@ assert(
     lasPalmasCase.coverageReview.every(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
+);
+
+const saskatoonCase = realCases.find(c => c.candidateId === 1751);
+assert.equal(saskatoonCase.sourceName, "Saskatoon");
+assert.deepEqual(saskatoon, { PCS: 60, ISR: 60, MED: 40, LON: 40, TEC: 60 });
+assert.deepEqual(total(saskatoon), { center: null, lower: 34, upper: 69 });
+assert.equal(saskatoonCase.unknownWeight, 35);
+assert.equal(
+  saskatoonCase.priorityCompletionReview.sha256,
+  digest(saskatoonCase.priorityCompletionReview.path)
+);
+assert.deepEqual(total({ ...saskatoon, LON: 60 }), { center: null, lower: 36, upper: 71 });
+assert.deepEqual(total({ ...saskatoon, MED: 60 }), { center: null, lower: 37, upper: 72 });
+for (const id of ["PCS", "ISR", "MED", "LON", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...saskatoon };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    saskatoonCase.sensitivity.withdrawals[id]
+  );
+}
+assert.deepEqual(
+  saskatoonCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["GSS", "RES", "OPT"]
+);
+assert(
+  saskatoonCase.coverageReview.length === 31 &&
+    saskatoonCase.coverageReview.every(
+      (r: { score: null; fullyMeasured: boolean }) => r.score === null && !r.fullyMeasured
+    )
+);
+assert.equal(saskatoonCase.rootScopeReview.offeredSurgeryIsCompletedProcedureRate, false);
+assert.equal(saskatoonCase.rootScopeReview.criteriaComplianceIsSurvivalRate, false);
+assert.equal(saskatoonCase.rootScopeReview.assessmentAndWaitYearsAdded, false);
+assert.equal(saskatoonCase.rootScopeReview.future2027DrugRenewalUsedAs2026Rule, false);
+assert.equal(saskatoonCase.rootScopeReview.netDrugCostUnknownPenalizedAs40, false);
+assert.deepEqual(
+  saskatoonCase.dimensions.find((d: { id: string }) => d.id === "PCS").conditionalAlternatives,
+  [60]
 );
 
 const rugbyCase = realCases.find(c => c.candidateId === 4817);

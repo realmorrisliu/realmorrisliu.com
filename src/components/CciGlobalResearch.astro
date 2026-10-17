@@ -136,6 +136,7 @@ import shenzhenReference from "../../docs/data/cci-local-2026-shenzhen-reference
 import hsinchuReference from "../../docs/data/cci-local-2026-hsinchu-reference-case.json";
 import dubaiReference from "../../docs/data/cci-local-2026-dubai-reference-case.json";
 import rugby from "../../docs/data/cci-local-2026-rugby-case.json";
+import saskatoon from "../../docs/data/cci-local-2026-saskatoon-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -276,8 +277,10 @@ const cases = [
   hsinchuReference,
   dubaiReference,
   rugby,
+  saskatoon,
 ];
 const caseNamesZh: Record<number, string> = {
+  [saskatoon.candidateId]: "萨斯卡通功能区",
   [rugby.candidateId]: "拉格比功能区",
   [dubaiReference.candidateId]: "迪拜参考功能区",
   [hsinchuReference.candidateId]: "新竹参考功能区",
@@ -510,6 +513,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [saskatoon.candidateId]: [
+    zh
+      ? "萨斯卡通防护／制度／技术条件60，医疗／专项转化条件40；安全、资源、退出未知。贡献34、数学域34—69，无完整总分。暴雨下实际保护、社区履约及专业知识产用支持有限判断；急诊进入／接续瓶颈和候肾透析负担仍重要。"
+      : "Saskatoon has conditional PCS/ISR/TEC 60 and MED/LON 40; GSS/RES/OPT remain unknown. Contribution is 34, with a 34–69 arithmetic domain and no complete total. Actual storm protection, community services and professional knowledge put into use support finite judgments; emergency access/transition bottlenecks and kidney-wait/dialysis burdens remain important.",
+    zh
+      ? "当地成熟肾替代、减旅行费的预评估和终身随访是正证；1.5年评估与2.8年候肾不相加，也非每人固定经历或2026队列。专项转化60替代为36—71，医疗60为37—72；撤专项转化回30—75。未来床位不当已交，药援未知不罚40，时间／地域／净照护桥可撤，全球入围未证。"
+      : "Local kidney replacement, pre-assessment that reduces travel costs, and lifelong follow-up are positive evidence. The 1.5-year assessment and 2.8-year kidney wait are not added, fixed for everyone or a 2026 cohort. LON 60 gives 36–71; MED 60 gives 37–72; withdrawing LON gives 30–75. Planned beds are not delivered capacity, unknown net drug cost is not a 40 penalty, and temporal/geographic/net-care assumptions are revocable. Global inclusion is unproven.",
+  ],
   [rugby.candidateId]: [
     zh
       ? "拉格比制度／专项转化／技术条件60、医疗40；防护、安全、资源、退出未知。已知贡献27，数学域27—77，无完整总分。跨职能服务、明确服务本地居民的共享肾移植专科及临床知识产用支持有限判断；通常净照护、地域和延续假设可撤。"
