@@ -138,6 +138,7 @@ import dubaiReference from "../../docs/data/cci-local-2026-dubai-reference-case.
 import rugby from "../../docs/data/cci-local-2026-rugby-case.json";
 import saskatoon from "../../docs/data/cci-local-2026-saskatoon-case.json";
 import gronowoGorne from "../../docs/data/cci-local-2026-gronowo-gorne-case.json";
+import leon from "../../docs/data/cci-local-2026-leon-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -280,8 +281,10 @@ const cases = [
   rugby,
   saskatoon,
   gronowoGorne,
+  leon,
 ];
 const caseNamesZh: Record<number, string> = {
+  [leon.candidateId]: "莱昂参考功能区",
   [gronowoGorne.candidateId]: "埃尔布隆格参考功能区",
   [saskatoon.candidateId]: "萨斯卡通功能区",
   [rugby.candidateId]: "拉格比功能区",
@@ -516,6 +519,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [leon.candidateId]: [
+    zh
+      ? "莱昂制度／专项转化／技术条件60、医疗40；防护、安全、资源、退出未知。贡献27，数学域27—77，无完整总分。实际公共诊疗、成熟造血重建、家庭支持和医工知识产用支持有限判断；通常付款／反复净照护、地域与延续桥可撤。"
+      : "León has conditional ISR/LON/TEC 60 and MED 40; PCS/GSS/RES/OPT remain unknown. Contribution is 27, with a 27–77 arithmetic domain and no complete total. Actual public care, mature hematopoietic replacement, family support and clinical engineering knowledge put into use support finite judgments; usual payment/repeated net care, geography and continuity assumptions are revocable.",
+    zh
+      ? "维持康复无法覆盖不等全部维持治疗必需或全部拒疗；医疗40依赖替代后仍有重要功能照护缺口的有限判断，60公平替代为30—80。2025实际19次自体HSCT非居民覆盖率，35例导板应用非对照疗效，批准援助非到账，未来CAR-T不当前化。撤专项转化或技术回21—81，全球入围未证。"
+      : "Uncovered maintenance rehabilitation does not mean all maintenance is necessary or all care refused. MED 40 requires a finite judgment of important functional-care gaps after alternatives; the fair 60 alternative gives 30–80. The 19 actual autologous HSCT procedures in 2025 are not resident coverage, 35 guide applications are not controlled efficacy, approved aid is not payment, and planned CAR-T is not current delivery. Withdrawing LON or TEC gives 21–81. Global inclusion is unproven.",
+  ],
   [gronowoGorne.candidateId]: [
     zh
       ? "埃尔布隆格参考功能区医疗／技术条件60，其余六维未知。已知贡献15，数学域15—90，无完整总分。持续综合诊疗、2026实际机器人手术、NFZ签约背景与具体企业研发支持有限判断；通常质量／净照护、研发实际应用及延续桥可撤。"

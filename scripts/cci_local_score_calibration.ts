@@ -180,6 +180,7 @@ const realCases = [
   "rugby",
   "saskatoon",
   "gronowo-gorne",
+  "leon",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -351,6 +352,7 @@ const [
   rugby,
   saskatoon,
   gronowoGorne,
+  leon,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4583,6 +4585,41 @@ assert(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
+
+const leonCase = realCases.find(c => c.candidateId === 2571);
+assert.equal(leonCase.sourceName, "León");
+assert.deepEqual(leon, { ISR: 60, MED: 40, LON: 60, TEC: 60 });
+assert.deepEqual(total(leon), { center: null, lower: 27, upper: 77 });
+assert.equal(leonCase.unknownWeight, 50);
+assert.equal(
+  leonCase.priorityCompletionReview.sha256,
+  digest(leonCase.priorityCompletionReview.path)
+);
+assert.deepEqual(total({ ...leon, MED: 60 }), { center: null, lower: 30, upper: 80 });
+for (const id of ["ISR", "MED", "LON", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...leon };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    leonCase.sensitivity.withdrawals[id]
+  );
+}
+assert.deepEqual(
+  leonCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["PCS", "GSS", "RES", "OPT"]
+);
+assert(
+  leonCase.coverageReview.length === 31 &&
+    leonCase.coverageReview.every(
+      (r: { score: null; fullyMeasured: boolean }) => r.score === null && !r.fullyMeasured
+    )
+);
+assert.equal(leonCase.rootScopeReview.maintenanceAlwaysClinicallyNecessary, false);
+assert.equal(leonCase.rootScopeReview.priority3DelayAloneTriggersMED40, false);
+assert.equal(leonCase.rootScopeReview.approvalMeansBankPaymentOrMealsDelivered, false);
+assert.equal(leonCase.rootScopeReview.futureCARTHematologyDayHospitalAlreadyDelivered, false);
 
 const gronowoGorneCase = realCases.find(c => c.candidateId === 2531);
 assert.equal(gronowoGorneCase.sourceName, "Gronowo Górne");
