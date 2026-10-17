@@ -4,10 +4,10 @@
   "evidenceCutoff": "2026-10-10",
   "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
   "candidateCount": 9031,
-  "conditionalCaseCount": 123,
+  "conditionalCaseCount": 124,
   "completeConditionalCaseCount": 26,
-  "partialCaseCount": 97,
-  "unassessedCount": 8908,
+  "partialCaseCount": 98,
+  "unassessedCount": 8907,
   "weights": {
     "PCS": 15,
     "GSS": 15,
@@ -225,6 +225,15 @@
           "upper": 60.0,
           "bestPosition": 6,
           "worstPosition": 9018
+        },
+        {
+          "efua_id": "491",
+          "source_name": "Hsinchu",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
         },
         {
           "efua_id": "535",
@@ -1336,6 +1345,15 @@
           "center": null,
           "lower": 51.0,
           "upper": 66.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "491",
+          "source_name": "Hsinchu",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -2453,6 +2471,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "491",
+          "source_name": "Hsinchu",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "535",
           "source_name": "Prague",
           "center": null,
@@ -3562,6 +3589,15 @@
           "center": null,
           "lower": 51.0,
           "upper": 66.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "491",
+          "source_name": "Hsinchu",
+          "center": null,
+          "lower": 15.0,
+          "upper": 90.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -4679,6 +4715,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "491",
+          "source_name": "Hsinchu",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "535",
           "source_name": "Prague",
           "center": null,
@@ -5788,6 +5833,15 @@
           "center": null,
           "lower": 51.0,
           "upper": 66.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "491",
+          "source_name": "Hsinchu",
+          "center": null,
+          "lower": 15.0,
+          "upper": 90.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -6905,6 +6959,15 @@
           "worstPosition": 9030
         },
         {
+          "efua_id": "491",
+          "source_name": "Hsinchu",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "535",
           "source_name": "Prague",
           "center": null,
@@ -8014,6 +8077,15 @@
           "center": null,
           "lower": 54.0,
           "upper": 64.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
+          "efua_id": "491",
+          "source_name": "Hsinchu",
+          "center": null,
+          "lower": 18.0,
+          "upper": 88.0,
           "bestPosition": 1,
           "worstPosition": 9031
         },
@@ -9131,6 +9203,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "491",
+          "source_name": "Hsinchu",
+          "center": null,
+          "lower": 24.0,
+          "upper": 84.0,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "535",
           "source_name": "Prague",
           "center": null,
@@ -10244,6 +10325,15 @@
           "worstPosition": 9031
         },
         {
+          "efua_id": "491",
+          "source_name": "Hsinchu",
+          "center": null,
+          "lower": 0,
+          "upper": 100,
+          "bestPosition": 1,
+          "worstPosition": 9031
+        },
+        {
           "efua_id": "535",
           "source_name": "Prague",
           "center": null,
@@ -11168,7 +11258,7 @@
     "cci-unmatched-centre-review.json": "1eeb90c373820e16680b9d1a608f2bd0535c77d857b7f520b7e879d09309ec9f",
     "cci-unmatched-centre-review.csv": "609913bb99c35fc6b7136302a70b91d15b4c6c377a625b416efb06ca4829d10f",
     "cci-global-candidates-r2019a.csv": "e48be2474377bb1d9c5fdf2df23deac9af747d34436db7383cb834e993b2d1df",
-    "cci-global-evidence-matrix.csv": "3e411794a7a9891065922f9e3f7733694616c73f5eae8e247c5063076b0814cf",
+    "cci-global-evidence-matrix.csv": "c3246836ceffd1ce02d26610d543232522b2957d3185f8f58ce09a7affd6054b",
     "cci-legal-mobility-rules.json": "0213b57c376d2fa07d77127a8a88c147ef5a45e6b791fcdb39ea46ae0e493f6e",
     "cci-legal-mobility.md": "d040ecb1174c6d8fc7a2dd995c2aa9a446c3aeda9458459c54ec0f8c3d27035e",
     "cci-local-2026-singapore-case.json": "4572daf92159cc9a98c9c55f461892ef9c649ce4327713420808a6f68ec45cbb",
@@ -11417,12 +11507,14 @@
     "cci-lubeck-priority-review.md": "91a06646df7d7f5b7bdbeba927972a66a60b5d0b234923a36a5f3848b7a8a470",
     "cci-local-2026-shenzhen-reference-case.json": "fd474f1826d41c79c96c6957c113716bc4aedb9ac8367bf586346a25af5b1705",
     "cci-shenzhen-reference-priority-review.md": "3cf21fc99e68ac21eea3efe479ae3a35dc5e04ce902b27548a6b1c7ed2c9fd14",
+    "cci-local-2026-hsinchu-reference-case.json": "7cb8c9da39e5a4942342ea3e23fabd17587eebe046bcd20b2247832a1938d5f3",
+    "cci-hsinchu-reference-priority-review.md": "2a789353c02d25f26c02d64f602b4ac7edf21155760d99b6687576d5c28255fe",
     "src/cci/data/releases/cci-2026.10.3.json": "a1ed963d9ead2928e0470f7f26d9d59e4aca32d5a5075fceb669b19dacc9b29a",
-    "cci-global-evidence-matrix.json": "ebcbd69adeb017ee3839d83f6670cff49b32368c32ac1aedc6fd522f72ce3084",
+    "cci-global-evidence-matrix.json": "c4fa242aac4255951a38f32413be72d9aa50d143b6cee87dafd57e0f0bcfec97",
     "cci-global-candidates-r2019a.provenance.json": "0e056aa7122361ef454f9e143afa635d74e3dce137954b1ca5d7c38f75deca3d",
-    "cci-local-2026-scoring-calibration.md": "976a84158f991bf8968a79206dca23b3158832dddfe8780fa787cf81deac489a"
+    "cci-local-2026-scoring-calibration.md": "6d05306bf58dd608b45312fc641c918dac0b670deea3e4fa424a0be9fd992cf4"
   },
   "scriptSha256": "903e6543b9e2033f2dffa5b5cbf0338e508bd9407da3ba8dd8108ecd5ee2936b",
-  "csvSha256": "f9efc43de4fc495b062f81338a774ce1dbcb1b5008b0df7865d1c0ec35c0e743",
+  "csvSha256": "ba3b3a8a627c8d1996aac772bca3eea797e9d8457f715ae01e9862762d4fc9fb",
   "limitations": "Fixed conditional judgments, including partial cases without total centres, are arithmetic assumptions, not reliable city bounds. Unknown dimensions retain the full model domain, with no centre or weight redistribution. Positions account for every frozen candidate and allow any tie order, but are not probabilities or verified global ranks. All case scores require necessary assumptions; rejecting them all leaves every candidate unresolved. New unmatched global centres remain outside this old-boundary count and are not excluded. No supported exclusion, current 32nd-place threshold or ranking eligibility."
 }

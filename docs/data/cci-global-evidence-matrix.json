@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 123,
+    "conditionalCaseCount": 124,
     "completeConditionalCaseCount": 26,
-    "partialCaseCount": 97,
-    "unassessedCount": 8908,
+    "partialCaseCount": 98,
+    "unassessedCount": 8907,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -920,8 +920,13 @@
       "sha256": "fd474f1826d41c79c96c6957c113716bc4aedb9ac8367bf586346a25af5b1705",
       "provenance": "cci-shenzhen-reference-priority-review.md",
       "provenanceSha256": "3cf21fc99e68ac21eea3efe479ae3a35dc5e04ce902b27548a6b1c7ed2c9fd14"
+    },
+    "cci-local-2026-hsinchu-reference-case.json": {
+      "sha256": "7cb8c9da39e5a4942342ea3e23fabd17587eebe046bcd20b2247832a1938d5f3",
+      "provenance": "cci-hsinchu-reference-priority-review.md",
+      "provenanceSha256": "2a789353c02d25f26c02d64f602b4ac7edf21155760d99b6687576d5c28255fe"
     }
   },
-  "scriptSha256": "06689f38b6fca67ae58a5e74e9f2cb6059fab30044e9851ee0aa362ffc0b2602",
-  "csvSha256": "3e411794a7a9891065922f9e3f7733694616c73f5eae8e247c5063076b0814cf"
+  "scriptSha256": "ce298fe6a15ebf0cc46954b157947c5c098a05333f450475dd74f50af493ff12",
+  "csvSha256": "c3246836ceffd1ce02d26610d543232522b2957d3185f8f58ce09a7affd6054b"
 }

@@ -175,6 +175,7 @@ const realCases = [
   "cork",
   "lubeck",
   "shenzhen-reference",
+  "hsinchu-reference",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -341,6 +342,7 @@ const [
   cork,
   lubeck,
   shenzhenReference,
+  hsinchuReference,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4531,6 +4533,45 @@ assert(
     lasPalmasCase.coverageReview.every(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
+);
+
+const hsinchuReferenceCase = realCases.find(c => c.candidateId === 491);
+assert.equal(hsinchuReferenceCase.sourceName, "Hsinchu");
+assert.deepEqual(hsinchuReference, { ISR: 60, MED: 60, TEC: 60 });
+assert.deepEqual(total(hsinchuReference), { center: null, lower: 24, upper: 84 });
+assert.equal(
+  hsinchuReferenceCase.priorityCompletionReview.sha256,
+  digest(hsinchuReferenceCase.priorityCompletionReview.path)
+);
+assert.equal(
+  hsinchuReferenceCase.priorityCompletionReview.researchReportSha256,
+  digest(hsinchuReferenceCase.priorityCompletionReview.researchReport)
+);
+for (const id of ["ISR", "MED", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...hsinchuReference };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    hsinchuReferenceCase.sensitivity.withdrawals[id]
+  );
+}
+assert.deepEqual(
+  hsinchuReferenceCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["PCS", "GSS", "RES", "LON", "OPT"]
+);
+assert(
+  hsinchuReferenceCase.coverageReview.length === 31 &&
+    hsinchuReferenceCase.coverageReview.every(
+      (r: { score: null; fullyMeasured: boolean }) => r.score === null && !r.fullyMeasured
+    )
+);
+assert.equal(hsinchuReferenceCase.rootScopeReview.NHIOriginalBodyReobtained, false);
+assert.equal(hsinchuReferenceCase.rootScopeReview.S16AllWardsOrUniversalCoverage, false);
+assert.equal(
+  hsinchuReferenceCase.rootScopeReview.floodDelistingMeans38PhysicalWorksCompleted,
+  false
 );
 
 const shenzhenReferenceCase = realCases.find(c => c.candidateId === 9725);

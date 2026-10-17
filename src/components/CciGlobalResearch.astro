@@ -133,6 +133,7 @@ import kiel from "../../docs/data/cci-local-2026-kiel-case.json";
 import cork from "../../docs/data/cci-local-2026-cork-case.json";
 import lubeck from "../../docs/data/cci-local-2026-lubeck-case.json";
 import shenzhenReference from "../../docs/data/cci-local-2026-shenzhen-reference-case.json";
+import hsinchuReference from "../../docs/data/cci-local-2026-hsinchu-reference-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -270,8 +271,10 @@ const cases = [
   cork,
   lubeck,
   shenzhenReference,
+  hsinchuReference,
 ];
 const caseNamesZh: Record<number, string> = {
+  [hsinchuReference.candidateId]: "新竹参考功能区",
   [lubeck.candidateId]: "吕贝克功能区",
   [shenzhenReference.candidateId]: "深圳参考功能区（原名Guangzhou，9725）",
   [cork.candidateId]: "科克功能区",
@@ -501,6 +504,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [hsinchuReference.candidateId]: [
+    zh
+      ? "新竹参考功能区制度／医疗／技术条件60，其余五维未知。贡献24、数学域24—84，无完整总分。实际清障、个管及照护，与诊断信息—专业判断—治疗反馈支持有限能力判断；通常净支付／护理、本地持续产用及地域／延续判断可撤。"
+      : "Hsinchu reference has conditional ISR/MED/TEC 60; five dimensions remain unknown. Contribution is 24, with a 24–84 arithmetic domain and no complete total. Actual clearance, case management and care, together with diagnostic information, professional decisions and treatment feedback, support finite judgments; usual net payment/care, sustained local production/use, geography and continuity assumptions are revocable.",
+    zh
+      ? "6B护理限合资格病人、每日1050新台币，非全院或全部护理费用；移植专长不证当地已实施HSCT。38件解除列管不等38处工程完工，园区总量不全归491；科室四人与七人名单未解，NHI仅复用旧资格摘要。撤医疗或制度回15—90、撤技术回18—88，全球入围未证。"
+      : "The NTD1050/day care programme applies only to eligible patients in ward 6B, not all wards or all care costs. Transplant expertise does not establish local HSCT delivery. Delisting 38 flood cases is not 38 completed works; park totals are not all local. Four-versus-seven physician counts remain unresolved, and NHI eligibility is a prior summary reuse. Withdrawing MED or ISR gives 15–90; withdrawing TEC gives 18–88. Global inclusion is unproven.",
+  ],
   [shenzhenReference.candidateId]: [
     zh
       ? "深圳参考功能区制度／资源／医疗／专项转化／技术条件60，防护／安全／退出未知。贡献36、数学域36—76，无完整总分。实际居民水电及消费、医保办理、常规疾病造血重建与临床知识产用支持有限判断；普通净取得、专项付款、反复护理、地域和延续判断可撤。"
