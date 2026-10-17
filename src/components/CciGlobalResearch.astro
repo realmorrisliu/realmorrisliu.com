@@ -134,6 +134,7 @@ import cork from "../../docs/data/cci-local-2026-cork-case.json";
 import lubeck from "../../docs/data/cci-local-2026-lubeck-case.json";
 import shenzhenReference from "../../docs/data/cci-local-2026-shenzhen-reference-case.json";
 import hsinchuReference from "../../docs/data/cci-local-2026-hsinchu-reference-case.json";
+import dubaiReference from "../../docs/data/cci-local-2026-dubai-reference-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -272,8 +273,10 @@ const cases = [
   lubeck,
   shenzhenReference,
   hsinchuReference,
+  dubaiReference,
 ];
 const caseNamesZh: Record<number, string> = {
+  [dubaiReference.candidateId]: "迪拜参考功能区",
   [hsinchuReference.candidateId]: "新竹参考功能区",
   [lubeck.candidateId]: "吕贝克功能区",
   [shenzhenReference.candidateId]: "深圳参考功能区（原名Guangzhou，9725）",
@@ -504,6 +507,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [dubaiReference.candidateId]: [
+    zh
+      ? "迪拜参考功能区制度／医疗／技术条件60，其余五维未知。贡献24、数学域24—84，无完整总分。实际多科诊疗、居家服务、患者援助及海关模型—人工反馈—交易者应用支持有限判断；普通净取得、核心代表及延续判断可撤。"
+      : "Dubai reference has conditional ISR/MED/TEC 60; five dimensions remain unknown. Contribution is 24, with a 24–84 arithmetic domain and no complete total. Actual clinical care, homecare, patient assistance and customs models, human feedback and trader use support finite judgments; usual net access, core representativeness and continuity assumptions are revocable.",
+    zh
+      ? "28例肾移植是成熟器官替换正证，但通常受者进入、长期免疫监护与净照护尚未接通，专项转化保持未知。357含Dubai／Sharjah核心，国籍不等Enaya资格；洪灾拨款非实付，2030目标非成果，截止后机场空列表非停飞。撤医疗或制度回15—90、撤技术回18—88，全球入围未证。"
+      : "The 28 kidney transplants are positive evidence of mature organ replacement; usual recipient access and long-term immune monitoring/net care remain unresolved, leaving LON unknown. Area 357 contains Dubai/Sharjah cores: citizenship is not Enaya eligibility. Flood allocations are not paid compensation, 2030 targets are not achievements, and a post-cutoff empty flight widget is not closure evidence. Withdrawing MED or ISR gives 15–90; withdrawing TEC gives 18–88. Global inclusion is unproven.",
+  ],
   [hsinchuReference.candidateId]: [
     zh
       ? "新竹参考功能区制度／医疗／技术条件60，其余五维未知。贡献24、数学域24—84，无完整总分。实际清障、个管及照护，与诊断信息—专业判断—治疗反馈支持有限能力判断；通常净支付／护理、本地持续产用及地域／延续判断可撤。"

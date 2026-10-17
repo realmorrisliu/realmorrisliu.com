@@ -176,6 +176,7 @@ const realCases = [
   "lubeck",
   "shenzhen-reference",
   "hsinchu-reference",
+  "dubai-reference",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -343,6 +344,7 @@ const [
   lubeck,
   shenzhenReference,
   hsinchuReference,
+  dubaiReference,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4534,6 +4536,47 @@ assert(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
+
+const dubaiReferenceCase = realCases.find(c => c.candidateId === 357);
+assert.equal(dubaiReferenceCase.sourceName, "Dubai");
+assert.deepEqual(dubaiReference, { ISR: 60, MED: 60, TEC: 60 });
+assert.deepEqual(total(dubaiReference), { center: null, lower: 24, upper: 84 });
+assert.equal(
+  dubaiReferenceCase.priorityCompletionReview.sha256,
+  digest(dubaiReferenceCase.priorityCompletionReview.path)
+);
+assert.equal(
+  dubaiReferenceCase.priorityCompletionReview.researchReportSha256,
+  digest(dubaiReferenceCase.priorityCompletionReview.researchReport)
+);
+for (const id of ["ISR", "MED", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...dubaiReference };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    dubaiReferenceCase.sensitivity.withdrawals[id]
+  );
+}
+assert.deepEqual(
+  dubaiReferenceCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["PCS", "GSS", "RES", "LON", "OPT"]
+);
+assert(
+  dubaiReferenceCase.coverageReview.length === 31 &&
+    dubaiReferenceCase.coverageReview.every(
+      (r: { score: null; fullyMeasured: boolean }) => r.score === null && !r.fullyMeasured
+    )
+);
+assert.equal(dubaiReferenceCase.rootScopeReview.localKidneyOrganReplacementActuallyDelivered, true);
+assert.equal(dubaiReferenceCase.rootScopeReview.kidney28LongTermCureOrSurvivalDefined, false);
+assert.equal(dubaiReferenceCase.rootScopeReview.allFuaCitizensEnayaEligible, false);
+assert.equal(
+  dubaiReferenceCase.rootScopeReview.maternityNoWaitingImpliesTransplantNoWaiting,
+  false
+);
+assert.equal(dubaiReferenceCase.rootScopeReview.airportPostcutoffEmptyWidgetProvesClosure, false);
 
 const hsinchuReferenceCase = realCases.find(c => c.candidateId === 491);
 assert.equal(hsinchuReferenceCase.sourceName, "Hsinchu");

@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 124,
+    "conditionalCaseCount": 125,
     "completeConditionalCaseCount": 26,
-    "partialCaseCount": 98,
-    "unassessedCount": 8907,
+    "partialCaseCount": 99,
+    "unassessedCount": 8906,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -925,8 +925,13 @@
       "sha256": "7cb8c9da39e5a4942342ea3e23fabd17587eebe046bcd20b2247832a1938d5f3",
       "provenance": "cci-hsinchu-reference-priority-review.md",
       "provenanceSha256": "2a789353c02d25f26c02d64f602b4ac7edf21155760d99b6687576d5c28255fe"
+    },
+    "cci-local-2026-dubai-reference-case.json": {
+      "sha256": "bd50af4cc484acf3d8b22ae4b9d7c0bdaa5274d423803a3a005b1f0859f7820e",
+      "provenance": "cci-dubai-reference-priority-review.md",
+      "provenanceSha256": "6ed8ba0ff17b7d5be746de59dbff03b02aa96616e85b937278e74b20dd04ceb0"
     }
   },
-  "scriptSha256": "ce298fe6a15ebf0cc46954b157947c5c098a05333f450475dd74f50af493ff12",
-  "csvSha256": "c3246836ceffd1ce02d26610d543232522b2957d3185f8f58ce09a7affd6054b"
+  "scriptSha256": "4276e3460d6f4eee5219b49ac9653c6d1070fe0ce81b059636f02275110c9ba0",
+  "csvSha256": "1994915bcc951272697e5028ee4e7b95f54ccfde2bc87b00022a5dedceb373ac"
 }
