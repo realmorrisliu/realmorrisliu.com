@@ -176,10 +176,10 @@
     "targetYear": 2026,
     "evidenceCutoff": "2026-10-10",
     "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
-    "conditionalCaseCount": 127,
+    "conditionalCaseCount": 128,
     "completeConditionalCaseCount": 28,
-    "partialCaseCount": 99,
-    "unassessedCount": 8904,
+    "partialCaseCount": 100,
+    "unassessedCount": 8903,
     "retainedCount": 9031,
     "supportedExclusionCount": 0,
     "statusCounts": {
@@ -940,8 +940,13 @@
       "sha256": "1c43ea3bf3b2f8c424770e058720e28dfe6e98d7d0c691936dcb887a8f11d76a",
       "provenance": "cci-saskatoon-priority-review.md",
       "provenanceSha256": "7d67e8edeb0c153651daefbedbeb10fbe0e5d19dae64738b576d7446044d8b98"
+    },
+    "cci-local-2026-gronowo-gorne-case.json": {
+      "sha256": "dcaab312aac089f0a376a1ad4ac61a2d32ad7bdbd6a0a566ff4faa96549c4a39",
+      "provenance": "cci-gronowo-gorne-priority-review.md",
+      "provenanceSha256": "1e0c79d079e283a0947f817f78103348b92ab54a1c439cb0692b0dc0c0769261"
     }
   },
-  "scriptSha256": "859a1a3e0865798d65bcff69930ff1dc8d84d1dd4ca7ffc62b6d1aa35360e35a",
-  "csvSha256": "fe5f9f2eee289d618ef4b876f46fc7c7a9c06111eb5baca885682ed57a2ba29a"
+  "scriptSha256": "6ad242fac0424bb77410ee5f0fef4165f33bdb1769996362c1c5e4adf151b7fe",
+  "csvSha256": "a4ab76ca84a00486d16e4ec0389f14489e05ab51a2098f1f2b3f96338c8a26b0"
 }

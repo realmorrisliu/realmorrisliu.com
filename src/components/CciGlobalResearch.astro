@@ -137,6 +137,7 @@ import hsinchuReference from "../../docs/data/cci-local-2026-hsinchu-reference-c
 import dubaiReference from "../../docs/data/cci-local-2026-dubai-reference-case.json";
 import rugby from "../../docs/data/cci-local-2026-rugby-case.json";
 import saskatoon from "../../docs/data/cci-local-2026-saskatoon-case.json";
+import gronowoGorne from "../../docs/data/cci-local-2026-gronowo-gorne-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -278,8 +279,10 @@ const cases = [
   dubaiReference,
   rugby,
   saskatoon,
+  gronowoGorne,
 ];
 const caseNamesZh: Record<number, string> = {
+  [gronowoGorne.candidateId]: "埃尔布隆格参考功能区",
   [saskatoon.candidateId]: "萨斯卡通功能区",
   [rugby.candidateId]: "拉格比功能区",
   [dubaiReference.candidateId]: "迪拜参考功能区",
@@ -513,6 +516,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [gronowoGorne.candidateId]: [
+    zh
+      ? "埃尔布隆格参考功能区医疗／技术条件60，其余六维未知。已知贡献15，数学域15—90，无完整总分。持续综合诊疗、2026实际机器人手术、NFZ签约背景与具体企业研发支持有限判断；通常质量／净照护、研发实际应用及延续桥可撤。"
+      : "Gronowo Górne–Elbląg reference has conditional MED/TEC 60; six dimensions remain unknown. Known contribution is 15, with a 15–90 arithmetic domain and no complete total. Ongoing clinical care, actual robotic surgery from 2026, the NFZ contract context and R&D for specific enterprises support finite judgments; usual quality/net care, actual R&D use and continuity assumptions are revocable.",
+    zh
+      ? "旧源名Gronowo Górne（2531）包含Elbląg中心、医院与园区近似点，点不是服务区。未注明年份的业务量不当居民覆盖率，机器人效益不当实测疗效，研发陈述不冒具名客户成果，全国供热人数不搬本地。撤医疗回6—96、撤技术回9—94，两者同撤0—100，全球入围未证。"
+      : "The old source name Gronowo Górne (2531) includes approximate Elbląg centre, hospital and park points; points are not service catchments. Undated annual volumes are not resident coverage, robotic benefit claims are not measured outcomes, R&D descriptions are not named client results, and national heat users are not local. Withdrawing MED gives 6–96, TEC gives 9–94, and both gives 0–100. Global inclusion is unproven.",
+  ],
   [saskatoon.candidateId]: [
     zh
       ? "萨斯卡通防护／制度／技术条件60，医疗／专项转化条件40；安全、资源、退出未知。贡献34、数学域34—69，无完整总分。暴雨下实际保护、社区履约及专业知识产用支持有限判断；急诊进入／接续瓶颈和候肾透析负担仍重要。"

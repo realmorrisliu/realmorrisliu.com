@@ -1,0 +1,1048 @@
+{
+  "status": "real_conditional_calibration_case_not_ranking",
+  "candidateId": 2531,
+  "sourceName": "Gronowo Górne",
+  "name": "Gronowo Górne–Elbląg reference",
+  "countryIso": "POL",
+  "targetYear": 2026,
+  "evidenceCutoff": "2026-10-10",
+  "retrievedOn": "2026-10-17",
+  "residentPerspective": "local_citizen_ordinary_resident_median_income_usual_coverage",
+  "residentEligibility": "Ordinary Polish citizen, usually long-term local residence, local median resources and usually effective NFZ entitlement, no fixed age; citizenship alone not proof every guaranteed-care indication or exemption",
+  "boundaryVersion": "GHS-FUA R2019A",
+  "referenceBoundaryCheck": {
+    "source": "/Users/morris/.local/share/cci-research/2026-10-10/shared-geo/GHS_FUA_UCDB2015_GLOBE_R2019A_54009_1K_V1_0.gpkg",
+    "rowCount": 9031,
+    "invalidRepaired": 136,
+    "candidate": {
+      "candidateId": 2531,
+      "sourceName": "Gronowo Górne",
+      "countryIso": "POL",
+      "areaKm2": 152.0,
+      "UCIDs": "3126",
+      "population2015": 99988.30123233795,
+      "originalWkbSHA256": "9be4113ee66665f331762b8434091e04a826969a90918b8aa36cbf637185ba77"
+    },
+    "fixedMatrixCandidate": {
+      "efua_id": "2531",
+      "source_name": "Gronowo Górne",
+      "country_iso": "POL",
+      "historical_research_slug": "",
+      "historical_research_scope": "not_researched",
+      "PCS": "partial_seismic_hazard_model",
+      "GSS": "no_assigned_events_not_zero_risk",
+      "ISR": "country_context_only",
+      "RES": "country_urban_water_context_only",
+      "MED": "partial_access_model",
+      "LON": "not_assembled",
+      "TEC": "partial_network_samples",
+      "OPT": "airport_directory_points_only",
+      "airport_directory_points": "1",
+      "scheduled_nonclosed_airport_directory_points": "0",
+      "legal_mobility_status": "conditional_legal_path_under_citizenship_assumption",
+      "legal_mobility_rule": "other_eu_citizen_to_germany",
+      "legal_mobility_destination": "DEU",
+      "lon_claims_exact_registered_npi_records": "0",
+      "lon_claims_uncertain_address_npi_records": "0",
+      "lon_claims_scope_status": "outside_payer_frame_not_no_adoption",
+      "network_sample_connection_types": "2",
+      "network_boundary_tiles": "19",
+      "ucdb_intersecting_centres": "1",
+      "wup_2025_intersecting_centres": "1",
+      "ucdb_centre_area_share": "0.144736842",
+      "ucdp_assigned_events_2021_2025": "0",
+      "ucdp_2026_clear_precise_events": "0",
+      "ucdp_2026_pending_precise_events": "0",
+      "wgi_country_dimensions_available": "6",
+      "wgi_lookup_economy_code": "POL",
+      "cci_score_status": "not_computed_under_global_protocol",
+      "local2026_case_status": "unassessed",
+      "local2026_case_review": "",
+      "local2026_screening_status": "retained_no_supported_exclusion",
+      "local2026_retention_reason": "partial_sources_do_not_bound_whole_dimensions",
+      "tec_directory_record_associations": "66",
+      "tec_directory_record_status": "directory_record_association_not_output"
+    },
+    "points": [
+      {
+        "label": "GronowoGorneapprox",
+        "lon": 19.4609,
+        "lat": 54.1153,
+        "matches": [
+          {
+            "id": 2531,
+            "name": "Gronowo Górne"
+          }
+        ]
+      },
+      {
+        "label": "Elblagcentreapprox",
+        "lon": 19.4045,
+        "lat": 54.1561,
+        "matches": [
+          {
+            "id": 2531,
+            "name": "Gronowo Górne"
+          }
+        ]
+      },
+      {
+        "label": "WSZElblagKrolewieckaapprox",
+        "lon": 19.4227,
+        "lat": 54.1753,
+        "matches": [
+          {
+            "id": 2531,
+            "name": "Gronowo Górne"
+          }
+        ]
+      },
+      {
+        "label": "Elblagmunicipalhospitalapprox",
+        "lon": 19.4016,
+        "lat": 54.1496,
+        "matches": [
+          {
+            "id": 2531,
+            "name": "Gronowo Górne"
+          }
+        ]
+      },
+      {
+        "label": "Elblagtechnicalparkapprox",
+        "lon": 19.442,
+        "lat": 54.19,
+        "matches": [
+          {
+            "id": 2531,
+            "name": "Gronowo Górne"
+          }
+        ]
+      },
+      {
+        "label": "Gdanskairportapprox",
+        "lon": 18.466,
+        "lat": 54.377,
+        "matches": [
+          {
+            "id": 2037,
+            "name": "Gdansk"
+          }
+        ]
+      }
+    ],
+    "scope": "Analystapproxreferencepointsnotofficialaddress/footprints/servicearea;Elblagcity/county/regionmaydifferfromold2531",
+    "rootIndependent": {
+      "allLoaded": 9031,
+      "repairedInvalid": 136,
+      "targetFields": {
+        "fid": 7324,
+        "eFUA_ID": 2531.0,
+        "UC_num": 1.0,
+        "UC_IDs": "3126",
+        "eFUA_name": "Gronowo Górne",
+        "Commuting": 1.0,
+        "Cntry_ISO": "POL",
+        "Cntry_name": "Poland",
+        "FUA_area": 152.0,
+        "UC_area": 5.0,
+        "FUA_p_2015": 99988.30123233795,
+        "UC_p_2015": 51299.318359375,
+        "Com_p_2015": 48688.98287296295
+      },
+      "originalWKBsha256": "9be4113ee66665f331762b8434091e04a826969a90918b8aa36cbf637185ba77",
+      "matches": {
+        "GronowoGorneapprox": [2531],
+        "Elblagcentreapprox": [2531],
+        "WSZElblagKrolewieckaapprox": [2531],
+        "Elblagmunicipalhospitalapprox": [2531],
+        "Elblagtechnicalparkapprox": [2531],
+        "Gdanskairportapprox": [2037]
+      },
+      "limits": "Analyst approximate points only, not official facility footprints, municipality/county boundaries, service catchments or current population."
+    }
+  },
+  "researchFrozenInputCommit": "ee461e9f2b52b807f0e957537b6309af76a50ec4",
+  "fixedInputCases": 126,
+  "fixedInputComplete": 28,
+  "dimensions": [
+    {
+      "id": "PCS",
+      "score": null,
+      "weight": 15,
+      "rationale": "2025真实洪水、回水及火灾发生，但主要自然危险保护后的普通净影响未定。",
+      "assumption": "S08实际年报列Elbląg/Tolkmicko洪水、分拣厂/医院楼火灾及回水；并不证明全部在2531或应对后的损害/恢复。S07仅选读必要市政导航／地理段，未读链接运行结果。",
+      "alternativeRationales": "60允许有据主要危险与适配保护代表桥，不要求全危险先发生；本轮未有足够实际处置/余障以择60或40，null/[]。事故火灾不自动当组织袭击。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S08", "S07"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "heat_humidity": "unresolved",
+        "flood_sea_level": "context",
+        "geophysical": "unresolved",
+        "severe_weather_wildfire": "context"
+      },
+      "subscores": {
+        "heat_humidity": null,
+        "flood_sea_level": null,
+        "geophysical": null,
+        "severe_weather_wildfire": null
+      },
+      "fullyMeasured": false
+    },
+    {
+      "id": "GSS",
+      "score": null,
+      "weight": 15,
+      "rationale": "真实警务干预未接成组织暴力、区域冲突和战略暴露的净保护判断。",
+      "assumption": "S08 2025常规案件/巡逻/缉毒/破案，逮捕非定罪；2025洪水火灾非组织袭击。S07近边境道路介绍是地理背景，不是战略防护成果。",
+      "alternativeRationales": "无事件/破案率或少8空缺不自动60；40需已帮助后重要生活/通道后果，不要求多数或崩溃。本轮两向未闭null/[]。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S08", "S07"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "organized_violence": "context",
+        "regional_conflict": "unresolved",
+        "strategic_exposure": "context"
+      },
+      "subscores": {
+        "organized_violence": null,
+        "regional_conflict": null,
+        "strategic_exposure": null
+      },
+      "fullyMeasured": false
+    },
+    {
+      "id": "ISR",
+      "score": null,
+      "weight": 15,
+      "rationale": "市政、法律帮助和就医入口可见，尚不足判断实际履约、适应与恢复方向。",
+      "assumption": "S07现行电子办事/法律帮助/市民卡等仅导航；S08跨机构年会与装备支持是真活动，但不直接量出普通制度履约。",
+      "alternativeRationales": "不把入口/部门存在当已兑现，也不因报告TLS失败低打40；有限通常履约桥需实际帮助/修正连接，当前null/[]。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S07", "S08"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "governance": "context",
+        "adaptive_capacity": "context",
+        "social_cohesion": "unresolved",
+        "emergency_recovery": "context"
+      },
+      "subscores": {
+        "governance": null,
+        "adaptive_capacity": null,
+        "social_cohesion": null,
+        "emergency_recovery": null
+      },
+      "fullyMeasured": false
+    },
+    {
+      "id": "RES",
+      "score": null,
+      "weight": 10,
+      "rationale": "热力供应入口有迹，但食品、水、能源帮助后的普通整束净取得未定。",
+      "assumption": "S06索引称向数千接收者供热/热水，计划降价不等已降；S10 1500万为全国用热者而非本地。未把2024–28水务投资计划、空白检测订单当完成或合格率，也不把食品节庆当营养取得。",
+      "alternativeRationales": "允许有据中位资源/实际供给与帮助的有限合束桥，不索全户账本；当前缺实质整束方向，40/60均不硬填。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S06", "S10", "S07"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "water": "unresolved",
+        "food": "unresolved",
+        "energy": "context",
+        "supply_chain": "unresolved"
+      },
+      "subscores": {
+        "water": null,
+        "food": null,
+        "energy": null,
+        "supply_chain": null
+      },
+      "fullyMeasured": false
+    },
+    {
+      "id": "MED",
+      "score": 60,
+      "weight": 15,
+      "rationale": "本地多专科真实持续交付、2026实际机器人手术与通常NFZ取得，可撤条件60。",
+      "assumption": "S12自报每年约8万住院含急诊、1.4万手术、约7.2万门诊，未注明统计年/去重人群，不按2531居民率；明确住院/门诊/急救/康复持续服务，医院点在2531。S09明确Jan2026起当地实际开展机器人手术，短住院等是提供者效益陈述非队列验证。R01对通常有NFZ权者多数治疗免费，必要转诊/继续照护有路径；处方、辅助品、疗养/长期护理食宿及部分运输可能自付。主60接受本地已运行综合服务/专业人员对普通需要可用、NFZ资格与当地中位资源通常能管理合理反复照护费用及至截止延续的有限桥；不是全部护理免费或直接认证质量结局。 本院原HTML明确NFZ签约背景，但不证所有项目；R01纸转诊/2015旧措辞不冒完整2026程序。S08记医院建筑火灾，未核具体机构/临床停诊或恢复，不据未知硬40，也不称已恢复。",
+      "alternativeRationales": "若认为年窗不明/提供者自报尚不足通常质量或净持续照护，应拒必要桥null。没有已核帮助后重要诊疗断点，不能用没读到等候/账单硬列40；80多路径高稳健未证。不要求每位同年普测/逐剂票据。",
+      "conditionalAlternatives": [60],
+      "sourceIds": ["S12", "S09", "S05", "R01", "S08"],
+      "scoreStatus": "conditional_research_judgment",
+      "subpillars": {
+        "access": "partial",
+        "routine_quality": "partial",
+        "specialist_capacity": "partial",
+        "system_continuity": "partial"
+      },
+      "subscores": {
+        "access": null,
+        "routine_quality": null,
+        "specialist_capacity": null,
+        "system_continuity": null
+      },
+      "fullyMeasured": false
+    },
+    {
+      "id": "LON",
+      "score": null,
+      "weight": 10,
+      "rationale": "未定位成熟疾病功能重建的实际本地或普通转诊、付款与反复净照护连接。",
+      "assumption": "实际肿瘤/机器人/血液科导航不等器官/HSCT/细胞重建；R01一般权利不是某成熟路径本地实施。失败的旧urology页及外地PUM CAR-T不可绕回或迁移。 S05首页关节置换准备标题未跟读，不当已核专项路径。",
+      "alternativeRationales": "成熟器官/组织/HSCT疾病重建允许有限通常转诊与付款净照护桥，无健康人延寿/全品牌逐票门槛；当前未有对应临床路径，null/[]，不是证明本地无服务。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["S05", "S09", "R01"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "translation": "unresolved",
+        "trial_maturity": "unresolved",
+        "regulatory_adoption": "context",
+        "resident_access": "unresolved"
+      },
+      "subscores": {
+        "translation": null,
+        "trial_maturity": null,
+        "regulatory_adoption": null,
+        "resident_access": null
+      },
+      "fullyMeasured": false
+    },
+    {
+      "id": "TEC",
+      "score": 60,
+      "weight": 10,
+      "rationale": "当地专业实验研发知识为具体企业持续产用，可辩有限60。",
+      "assumption": "S04明确实验人员为具体企业开展研究开发并与研究机构合作，提供认可水/职业暴露/材料/木材测试、原型技术服务；这是提供者对实际专业知识生产与企业需求应用的陈述，不只7实验室设备数。主60接受持续运行的受认可测试/研发输出进入企业技术判断与改进、当地企业可通常委托取得的有限专业服务扩散桥；不把出租空位/创新产品上市愿景当已交付成果，也不按机构名、论文或采购评分。S09本地实际医疗技术采用为独立扩散正证，不证明本地发明。",
+      "alternativeRationales": "若认为S04没有实际客户/项目产用例，当前措辞仍不足从持续知识输出跨到真实应用，拒此必要桥回null公平；不得只凭买设备/企业名单60。未核实际重要产用失效不填40；80多节点高稳健未证，不新增制造复产/全民AI门槛。",
+      "conditionalAlternatives": [60],
+      "sourceIds": ["S04", "S09"],
+      "scoreStatus": "conditional_research_judgment",
+      "subpillars": {
+        "knowledge_output": "partial",
+        "industry_density": "partial",
+        "digital_infrastructure": "context",
+        "diffusion": "partial"
+      },
+      "subscores": {
+        "knowledge_output": null,
+        "industry_density": null,
+        "digital_infrastructure": null,
+        "diffusion": null
+      },
+      "fullyMeasured": false
+    },
+    {
+      "id": "OPT",
+      "score": null,
+      "weight": 10,
+      "rationale": "EU资格、付款和通信正链可复用，但实际当地国际接续与普通净资金链未闭。",
+      "assumption": "R02工作/自雇及附条件保留居住权，不证明无业退休者自动无限居留；R03跨境EUR同价和双因子鉴权并非所有资产自由/现有余额证明；R04偶尔EU漫游、公平使用/卫星例外保留。S07道路介绍和S12就医公交入口不证明当前国际班次/费用/冗余；Gdansk机场在2037可跨界使用，不能当2531设施。",
+      "alternativeRationales": "可接受通常合法路由/个人资源通信有据有限桥，不要求每年龄每目的地自动资格；当前交通与资金净连接不足择方向，null/[]。",
+      "conditionalAlternatives": [],
+      "sourceIds": ["R02", "R03", "R04", "S07", "S12"],
+      "scoreStatus": "reviewed_insufficient_direction",
+      "subpillars": {
+        "transport_redundancy": "context",
+        "legal_mobility": "partial",
+        "asset_portability": "partial",
+        "network_continuity": "partial"
+      },
+      "subscores": {
+        "transport_redundancy": null,
+        "legal_mobility": null,
+        "asset_portability": null,
+        "network_continuity": null
+      },
+      "fullyMeasured": false
+    }
+  ],
+  "expectedConditionalTotal": null,
+  "knownWeightedSubtotal": 15,
+  "unknownWeight": 75,
+  "unresolvedScoreRange": [15, 90],
+  "fullyMeasured": false,
+  "coverageReview": [
+    {
+      "dimension": "PCS",
+      "subpillar": "heat_humidity",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S08", "S07"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "flood_sea_level",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S08", "S07"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "geophysical",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S08", "S07"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "PCS",
+      "subpillar": "severe_weather_wildfire",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S08", "S07"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "organized_violence",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S08", "S07"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "regional_conflict",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S08", "S07"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "GSS",
+      "subpillar": "strategic_exposure",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S08", "S07"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "governance",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S07", "S08"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "adaptive_capacity",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S07", "S08"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "social_cohesion",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S07", "S08"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "ISR",
+      "subpillar": "emergency_recovery",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S07", "S08"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "water",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S06", "S10", "S07"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "food",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S06", "S10", "S07"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "energy",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S06", "S10", "S07"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "RES",
+      "subpillar": "supply_chain",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S06", "S10", "S07"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "access",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S12", "S09", "S05", "R01", "S08"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "routine_quality",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S12", "S09", "S05", "R01", "S08"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "specialist_capacity",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S12", "S09", "S05", "R01", "S08"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "MED",
+      "subpillar": "system_continuity",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S12", "S09", "S05", "R01", "S08"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "translation",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S05", "S09", "R01"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "trial_maturity",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S05", "S09", "R01"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "regulatory_adoption",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S05", "S09", "R01"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "LON",
+      "subpillar": "resident_access",
+      "status": "unresolved",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S05", "S09", "R01"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "knowledge_output",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S04", "S09"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "industry_density",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S04", "S09"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "digital_infrastructure",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S04", "S09"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "TEC",
+      "subpillar": "diffusion",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["S04", "S09"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "transport_redundancy",
+      "status": "context",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["R02", "R03", "R04", "S07", "S12"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "legal_mobility",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["R02", "R03", "R04", "S07", "S12"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "asset_portability",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["R02", "R03", "R04", "S07", "S12"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    },
+    {
+      "dimension": "OPT",
+      "subpillar": "network_continuity",
+      "status": "partial",
+      "score": null,
+      "fullyMeasured": false,
+      "sourceIds": ["R02", "R03", "R04", "S07", "S12"],
+      "scope": "Bounded semantic review, not an independent measured subscore."
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "S04",
+      "url": "https://ept.elblag.eu/centrum-badawczo-rozwojowe.html",
+      "requestAtUTC": "2026-10-17T06:05:38.981058+00:00",
+      "mechanism": "normalTLS urllib single-open NoRetry NoRedirect",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "helperMetadataReads": 0,
+      "headersAreParsedNonCookieNotWire": true,
+      "status": 200,
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/diagnostics/S04.bin",
+      "bodyBytes": 130876,
+      "bodySHA256": "4975036da107e302423f8b546526c46027db46ffb4a5d74d8bacd3663e6c70bd",
+      "bodySavedBeforeValidation": true,
+      "classification": "html_candidate_needs_substantive_check",
+      "originalPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/originals/S04.html",
+      "validOriginal": true,
+      "sourceKind": "normal_TLS_HTML_raw",
+      "observedWindow": "undated provider present-tense description",
+      "actualReadScope": "ongoing enterprise-oriented R&D and recognised tests; no customer outcome cohort",
+      "nominalPublicationAuthenticated": false,
+      "sameCutoffBytesAuthenticated": false,
+      "rawNotToolText": true
+    },
+    {
+      "id": "S05",
+      "url": "https://www.szpital.elblag.pl/",
+      "requestAtUTC": "2026-10-17T06:07:01.200624+00:00",
+      "mechanism": "normalTLS urllib single-open NoRetry NoRedirect",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "helperMetadataReads": 0,
+      "headersAreParsedNonCookieNotWire": true,
+      "status": 200,
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/diagnostics/S05.bin",
+      "bodyBytes": 79828,
+      "bodySHA256": "fc9ac07523fda3264fc7556ad1210d4222af1cad7c63aa9a763bfe099e8dd0ae",
+      "bodySavedBeforeValidation": true,
+      "classification": "html_candidate_needs_substantive_check",
+      "originalPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/originals/S05.html",
+      "validOriginal": true,
+      "sourceKind": "normal_TLS_HTML_raw",
+      "observedWindow": "current dynamic index includes post-cutoff news",
+      "actualReadScope": "navigation/department locator only; not proof all listed care operational",
+      "nominalPublicationAuthenticated": false,
+      "sameCutoffBytesAuthenticated": false,
+      "rawNotToolText": true
+    },
+    {
+      "id": "S06",
+      "url": "https://epec.pl/kategorie-aktualnosci/informacje-prasowe/",
+      "requestAtUTC": "2026-10-17T06:07:04.093062+00:00",
+      "mechanism": "normalTLS urllib single-open NoRetry NoRedirect",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "helperMetadataReads": 0,
+      "headersAreParsedNonCookieNotWire": true,
+      "status": 200,
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/diagnostics/S06.bin",
+      "bodyBytes": 42045,
+      "bodySHA256": "1e8f8cd85a4c3661fe503ee2c6154caf8457bf2d162a246f266bcd3c842e1931",
+      "bodySavedBeforeValidation": true,
+      "classification": "html_candidate_needs_substantive_check",
+      "originalPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/originals/S06.html",
+      "validOriginal": true,
+      "sourceKind": "normal_TLS_HTML_raw",
+      "observedWindow": "2024/2025 press index",
+      "actualReadScope": "heat delivery to thousands mentioned; price reduction planned not implemented proof",
+      "nominalPublicationAuthenticated": false,
+      "sameCutoffBytesAuthenticated": false,
+      "rawNotToolText": true
+    },
+    {
+      "id": "S07",
+      "url": "https://elblag.eu/",
+      "requestAtUTC": "2026-10-17T06:07:20.543395+00:00",
+      "mechanism": "normalTLS urllib single-open NoRetry NoRedirect",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "helperMetadataReads": 0,
+      "headersAreParsedNonCookieNotWire": true,
+      "status": 200,
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/diagnostics/S07.bin",
+      "bodyBytes": 221559,
+      "bodySHA256": "9b66c45485e6314459c0eb2d781f89facc03933ce1b2cc0db2287273f91b18eb",
+      "bodySavedBeforeValidation": true,
+      "classification": "html_candidate_needs_substantive_check",
+      "originalPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/originals/S07.html",
+      "validOriginal": true,
+      "sourceKind": "normal_TLS_HTML_raw",
+      "observedWindow": "current dynamic municipal portal, post-cutoff news retained",
+      "actualReadScope": "actual service entry points; no adjudicated restoration/outcomes; not all page news cutoff admissible",
+      "nominalPublicationAuthenticated": false,
+      "sameCutoffBytesAuthenticated": false,
+      "rawNotToolText": true
+    },
+    {
+      "id": "S08",
+      "url": "https://elblag.policja.gov.pl/o01/aktualnosci/147580%2CElblag-Policyjne-podsumowanie-2025-roku.html",
+      "requestAtUTC": "2026-10-17T06:07:23.442537+00:00",
+      "mechanism": "normalTLS urllib single-open NoRetry NoRedirect",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "helperMetadataReads": 0,
+      "headersAreParsedNonCookieNotWire": true,
+      "status": 200,
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/diagnostics/S08.bin",
+      "bodyBytes": 37522,
+      "bodySHA256": "88736f99bb25b7c99f64308ccf48919f88cd0645224e0d6af7cfeae7f34a9869",
+      "bodySavedBeforeValidation": true,
+      "classification": "html_candidate_needs_substantive_check",
+      "originalPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/originals/S08.html",
+      "validOriginal": true,
+      "sourceKind": "normal_TLS_HTML_raw",
+      "observedWindow": "published 2026-02-03; observation2025",
+      "actualReadScope": "full police article; flood/fire/backwater named, patrols/enforcement actual; not organised-violence net impact",
+      "nominalPublicationAuthenticated": true,
+      "sameCutoffBytesAuthenticated": false,
+      "rawNotToolText": true
+    },
+    {
+      "id": "S09",
+      "url": "https://www.szpital.elblag.pl/p,409,chirurgia-robotyczna-w-wojewodzkim-szpitalu-zespolonym-w-elblagu.html",
+      "requestAtUTC": "2026-10-17T06:10:42.917308+00:00",
+      "mechanism": "normalTLS urllib single-open NoRetry NoRedirect",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "helperMetadataReads": 0,
+      "headersAreParsedNonCookieNotWire": true,
+      "status": 200,
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/diagnostics/S09.bin",
+      "bodyBytes": 57469,
+      "bodySHA256": "1d988a8368248220eab6bec2180988efedd4fe2e9504f229b13a8b7f8b17ff5f",
+      "bodySavedBeforeValidation": true,
+      "classification": "html_candidate_needs_substantive_check",
+      "originalPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/originals/S09.html",
+      "validOriginal": true,
+      "sourceKind": "normal_TLS_HTML_raw",
+      "observedWindow": "undated article; explicit since January2026 robotic surgery",
+      "actualReadScope": "actual operating-care assertion, benefit claims not measured patient outcomes",
+      "nominalPublicationAuthenticated": false,
+      "sameCutoffBytesAuthenticated": false,
+      "rawNotToolText": true
+    },
+    {
+      "id": "S10",
+      "url": "https://epec.pl/cieplo-systemowe-w-elblagu/",
+      "requestAtUTC": "2026-10-17T06:10:45.374960+00:00",
+      "mechanism": "normalTLS urllib single-open NoRetry NoRedirect",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "helperMetadataReads": 0,
+      "headersAreParsedNonCookieNotWire": true,
+      "status": 200,
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/diagnostics/S10.bin",
+      "bodyBytes": 37792,
+      "bodySHA256": "1a5c8f56dc018f09b270b6f8426e55fc12839d35191e29c7a28f7724f06d653c",
+      "bodySavedBeforeValidation": true,
+      "classification": "html_candidate_needs_substantive_check",
+      "originalPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/originals/S10.html",
+      "validOriginal": true,
+      "sourceKind": "normal_TLS_HTML_raw",
+      "observedWindow": "undated national educational heat description",
+      "actualReadScope": "15million Poland not Elblag; no local supply/affordability rate",
+      "nominalPublicationAuthenticated": false,
+      "sameCutoffBytesAuthenticated": false,
+      "rawNotToolText": true
+    },
+    {
+      "id": "S12",
+      "url": "https://www.szpital.elblag.pl/o-nas/p,191,o-nas.html",
+      "requestAtUTC": "2026-10-17T06:11:34.407711+00:00",
+      "mechanism": "normalTLS urllib single-open NoRetry NoRedirect",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "helperMetadataReads": 0,
+      "headersAreParsedNonCookieNotWire": true,
+      "status": 200,
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/diagnostics/S12.bin",
+      "bodyBytes": 57622,
+      "bodySHA256": "0273007d60de6d22db3a1b64dcf29f2868bde27873c93d21e92b42c3d08d8e5f",
+      "bodySavedBeforeValidation": true,
+      "classification": "html_candidate_needs_substantive_check",
+      "originalPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/originals/S12.html",
+      "validOriginal": true,
+      "sourceKind": "normal_TLS_HTML_raw",
+      "observedWindow": "undated hospital about; annual figures without year",
+      "actualReadScope": "actual multispecialty operations/self-report; no deduplicated FUA patient rate/quality outcome",
+      "nominalPublicationAuthenticated": false,
+      "sameCutoffBytesAuthenticated": false,
+      "rawNotToolText": true
+    },
+    {
+      "id": "R01",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/originals/R01.html",
+      "bytes": 45530,
+      "sha256": "8aed343c0fae97b58442ffdf133c837245fea5d7ba40caaf6196a75db7b2f735",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/bydgoszcz-full88/originals/R01-nfz-patient-rights.html",
+      "url": "https://www.nfz.gov.pl/dla-pacjenta/informacje-o-swiadczeniach/",
+      "sourceKind": "durable_same_SHA_reuse",
+      "newHTTPRequest": false,
+      "validOriginal": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "identityOnlyReadHere": false,
+      "actualReadScope": "visible substantive rights/payment/roaming main text, restrictions preserved; R02 worker not automatic all-person long-term entry",
+      "sameCutoffBytesAuthenticated": false,
+      "observedWindow": "undated current NFZ rights with legacy2015/paper referral phrasing; not consolidated2026 law certification"
+    },
+    {
+      "id": "R02",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/originals/R02.html",
+      "bytes": 149227,
+      "sha256": "7efe28815c063333746989e18f412dd25f1ae88c45acde4b56e1e16d2187d42a",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/bydgoszcz-full88/originals/R03-R01-R02-eu-worker-residence.html",
+      "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/workers/index_en.htm",
+      "sourceKind": "durable_same_SHA_reuse",
+      "newHTTPRequest": false,
+      "validOriginal": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "identityOnlyReadHere": false,
+      "actualReadScope": "visible substantive rights/payment/roaming main text, restrictions preserved; R02 worker not automatic all-person long-term entry",
+      "sameCutoffBytesAuthenticated": false,
+      "observedWindow": "lastchecked2026-08-19"
+    },
+    {
+      "id": "R03",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/originals/R03.html",
+      "bytes": 155296,
+      "sha256": "0a457237f62980c579bc7dba314552421cb5b0fa826dc830b0e35bb42d458ee8",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/szczecin-full69/originals/R02-eu-payments.html",
+      "url": "https://europa.eu/youreurope/citizens/consumers/financial-products-and-services/payments-transfers-cheques/index_en.htm",
+      "sourceKind": "durable_same_SHA_reuse",
+      "newHTTPRequest": false,
+      "validOriginal": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "identityOnlyReadHere": false,
+      "actualReadScope": "visible substantive rights/payment/roaming main text, restrictions preserved; R02 worker not automatic all-person long-term entry",
+      "sameCutoffBytesAuthenticated": false,
+      "observedWindow": "lastchecked2026-04-28"
+    },
+    {
+      "id": "R04",
+      "path": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/originals/R04.html",
+      "bytes": 155071,
+      "sha256": "e2e15e5e0521db23b3d99d06fa691c557b5ebdb63b09aa5ccb50f58af9a8f0d4",
+      "reuseFrom": "/Users/morris/.local/share/cci-research/2026-10-10/szczecin-full69/originals/R03-eu-roaming.html",
+      "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/mobile-roaming-costs/index_en.htm",
+      "sourceKind": "durable_same_SHA_reuse",
+      "newHTTPRequest": false,
+      "validOriginal": true,
+      "historicalCutoffBytesAuthenticated": false,
+      "identityOnlyReadHere": false,
+      "actualReadScope": "visible substantive rights/payment/roaming main text, restrictions preserved; R02 worker not automatic all-person long-term entry",
+      "sameCutoffBytesAuthenticated": false,
+      "observedWindow": "lastchecked2026-01-07"
+    }
+  ],
+  "failedSourceReads": [
+    {
+      "id": "S01",
+      "url": "https://bip.elblag.eu/attachments/download/17684",
+      "requestAtUTC": "2026-10-17T06:05:15.844225+00:00",
+      "mechanism": "normalTLS urllib single-open NoRetry NoRedirect",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "helperMetadataReads": 0,
+      "headersAreParsedNonCookieNotWire": true,
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1127)>",
+      "classification": "transport_failure_no_retry",
+      "bodyBytes": null,
+      "bodySHA256": null
+    },
+    {
+      "id": "S02",
+      "url": "https://bip.elblag.eu/artykul/83/10079/raport-o-stanie-miasta-za-rok-2025",
+      "requestAtUTC": "2026-10-17T06:05:17.753718+00:00",
+      "mechanism": "normalTLS urllib single-open NoRetry NoRedirect",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "helperMetadataReads": 0,
+      "headersAreParsedNonCookieNotWire": true,
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1127)>",
+      "classification": "transport_failure_no_retry",
+      "bodyBytes": null,
+      "bodySHA256": null
+    },
+    {
+      "id": "S03",
+      "url": "https://www.szpital.elblag.pl/oddzialy/p%2C107%2Ckliniczny-oddzial-urologiczny.html",
+      "requestAtUTC": "2026-10-17T06:05:36.254178+00:00",
+      "mechanism": "normalTLS urllib single-open NoRetry NoRedirect",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "helperMetadataReads": 0,
+      "headersAreParsedNonCookieNotWire": true,
+      "status": 404,
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/diagnostics/S03.bin",
+      "bodyBytes": 1058,
+      "bodySHA256": "698fcc28540517cc8468096fc7b295916ed2ca729272bf2c150a113ffc15f466",
+      "bodySavedBeforeValidation": true,
+      "classification": "failure_diagnostic_not_original"
+    },
+    {
+      "id": "S11",
+      "url": "https://ept.elblag.eu/lzas.html",
+      "requestAtUTC": "2026-10-17T06:10:48.826200+00:00",
+      "mechanism": "normalTLS urllib single-open NoRetry NoRedirect",
+      "autoRedirect": false,
+      "autoRetry": false,
+      "helperMetadataReads": 0,
+      "headersAreParsedNonCookieNotWire": true,
+      "status": 404,
+      "bodyPath": "/Users/morris/.local/share/cci-research/2026-10-10/gronowo-gorne-full110/diagnostics/S11.bin",
+      "bodyBytes": 100836,
+      "bodySHA256": "baf1290caf4374f29cb8358c90da193d9141203a6b5ae28870d1ed5bbcd844b8",
+      "bodySavedBeforeValidation": true,
+      "classification": "failure_diagnostic_not_original"
+    }
+  ],
+  "routingSourceReads": [],
+  "webReadSources": [],
+  "globalRankingEligible": false,
+  "supportedExclusions": 0,
+  "qualified32Threshold": null,
+  "candidateUniverseRetained": 9031,
+  "newAndUnmatchedCompetitorsRetained": true,
+  "limitations": [
+    "Provider descriptions are current snapshots not authenticated historical cutoff bytes; explicit necessary timing bridges can be rejected",
+    "No valid PDF acquired/no PDF text or pixels read; failed same report not recovered through mirror",
+    "FUA differs from municipality/county/hospital patient pool; approx point is not footprint/service coverage",
+    "No actual empirical CCI rank/probability or globalTop32 qualification",
+    "Numeric40 not manufactured without important actual help-after effects",
+    "Rootcoveragefile contained8dimension records, not31rows; expanded explicitly fromsubpillar states. Local shape/relativehelperpath readerrors retained, no new network/evidence replay. No complete2026referral procedure or hospitalfireclinicalimpact certified."
+  ],
+  "residentPerspectiveDescription": "Ordinary Polish citizen, usually long-term local residence, local median resources and usually effective NFZ entitlement, no fixed age; citizenship alone not proof every guaranteed-care indication or exemption",
+  "evidenceReview": "cci-gronowo-gorne-priority-review.md",
+  "boundaryReview": "cci-gronowo-gorne-priority-review.md",
+  "sensitivity": {
+    "withdrawals": {
+      "MED": [6, 96],
+      "TEC": [9, 94]
+    },
+    "allAdoptedBridgesWithdrawn": [0, 100],
+    "notConfidenceInterval": true
+  },
+  "priorityCompletionReview": {
+    "path": "docs/cci-gronowo-gorne-priority-review.md",
+    "sha256": "1e0c79d079e283a0947f817f78103348b92ab54a1c439cb0692b0dc0c0769261",
+    "fixedInputCommit": "c96edf64073489e616feeaa8b28ff7c5d7c95a77",
+    "fixedCases": 127,
+    "fixedComplete": 28,
+    "researchFixedInputCommit": "ee461e9f2b52b807f0e957537b6309af76a50ec4",
+    "researchFixedCases": 126,
+    "frozenManifestSha256": "356f2430568606c4fff181823bb601f615e7e925f8d7de1cc3e1e558dc8e2299",
+    "frozenFilesVerified": 105,
+    "frozenPayloadBytes": 2489121,
+    "frozenAuthorReportSHA256": "68fc1ca2cdcec7666270faa0e4f48c2c42d4da856f723598d4059ebae835e827",
+    "frozenAuthorProposalNotRewritten": true
+  },
+  "rootScopeReview": {
+    "rootSelectedOriginals": 12,
+    "rootHtmlBodyOrRelevantArticleRead": [
+      "S04",
+      "S05",
+      "S06",
+      "S08",
+      "S09",
+      "S10",
+      "S12",
+      "R01",
+      "R02",
+      "R03",
+      "R04"
+    ],
+    "rootHtmlSelectedNavigationAndGeographyOnly": ["S07"],
+    "rootPdfTextPages": 0,
+    "rootPdfViewedPages": 0,
+    "all9031IndependentlyChecked": true,
+    "approximateReferencePoints": 6,
+    "referencePointsNotServiceCoverage": true,
+    "rootNewResearchHTTP": 0,
+    "authorPayloadIdentitiesVerified": 105,
+    "crossManifestSHA256": "4c76de4186a191e576fe8f9fdd5d9b0f5fcb8d8f715b20228f35c4428af2d2eb",
+    "crossFilesVerified": 15,
+    "crossPayloadBytes": 69828,
+    "actualSessionCallOutputLineIdentitiesVerified": 20,
+    "hospitalAnnualVolumeIsFuaUniqueCoverage": false,
+    "roboticBenefitsAreComparativeLocalOutcomeCohort": false,
+    "NFZContractCoversEveryProcedureVerified": false,
+    "NFZOldPaperReferralInstructionsAuthenticatedAsComplete2026Law": false,
+    "providerRAndDClaimIsNamedClientOutcome": false,
+    "futureInnovativeProductMarketEntryAlreadyDelivered": false,
+    "unknownHospitalFireOutcomePenalizedAs40": false,
+    "allHeatUsers15MillionAreLocal": false,
+    "EUResidencePaymentsRoamingAreMedicalPayerEvidence": false,
+    "cutoffHistoricalSameBytesAuthenticated": false,
+    "wholeWorkflowCertified": false,
+    "sourceFailurePenalizesCity": false,
+    "sourceStopsNotResetOrReopened": true,
+    "processDeviationsRetained": true
+  }
+}

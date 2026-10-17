@@ -179,6 +179,7 @@ const realCases = [
   "dubai-reference",
   "rugby",
   "saskatoon",
+  "gronowo-gorne",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -349,6 +350,7 @@ const [
   dubaiReference,
   rugby,
   saskatoon,
+  gronowoGorne,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4581,6 +4583,38 @@ assert(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
+
+const gronowoGorneCase = realCases.find(c => c.candidateId === 2531);
+assert.equal(gronowoGorneCase.sourceName, "Gronowo Górne");
+assert.deepEqual(gronowoGorne, { MED: 60, TEC: 60 });
+assert.deepEqual(total(gronowoGorne), { center: null, lower: 15, upper: 90 });
+assert.equal(gronowoGorneCase.unknownWeight, 75);
+assert.equal(
+  gronowoGorneCase.priorityCompletionReview.sha256,
+  digest(gronowoGorneCase.priorityCompletionReview.path)
+);
+for (const id of ["MED", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...gronowoGorne };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    gronowoGorneCase.sensitivity.withdrawals[id]
+  );
+}
+assert.deepEqual(
+  gronowoGorneCase.dimensions
+    .filter((d: { score: number | null }) => d.score === null)
+    .map((d: { id: string }) => d.id),
+  ["PCS", "GSS", "ISR", "RES", "LON", "OPT"]
+);
+assert(
+  gronowoGorneCase.coverageReview.length === 31 &&
+    gronowoGorneCase.coverageReview.every(
+      (r: { score: null; fullyMeasured: boolean }) => r.score === null && !r.fullyMeasured
+    )
+);
+assert.equal(gronowoGorneCase.rootScopeReview.hospitalAnnualVolumeIsFuaUniqueCoverage, false);
+assert.equal(gronowoGorneCase.rootScopeReview.providerRAndDClaimIsNamedClientOutcome, false);
 
 const saskatoonCase = realCases.find(c => c.candidateId === 1751);
 assert.equal(saskatoonCase.sourceName, "Saskatoon");
