@@ -130,6 +130,7 @@ import maldonado from "../../docs/data/cci-local-2026-maldonado-case.json";
 import lodz from "../../docs/data/cci-local-2026-lodz-case.json";
 import gorzow from "../../docs/data/cci-local-2026-gorzow-case.json";
 import kiel from "../../docs/data/cci-local-2026-kiel-case.json";
+import cork from "../../docs/data/cci-local-2026-cork-case.json";
 import rankAudit from "../../docs/data/cci-local-2026-rank-audit.json";
 import { cciCopy } from "@/cci/copy";
 import { DIMENSIONS } from "@/cci/model";
@@ -264,8 +265,10 @@ const cases = [
   lodz,
   gorzow,
   kiel,
+  cork,
 ];
 const caseNamesZh: Record<number, string> = {
+  [cork.candidateId]: "科克功能区",
   [kiel.candidateId]: "基尔功能区",
   [gorzow.candidateId]: "戈茹夫功能区",
   [lodz.candidateId]: "罗兹功能区",
@@ -492,6 +495,14 @@ const rows = [
   ],
 ] as const;
 const caseNotes: Record<number, string[]> = {
+  [cork.candidateId]: [
+    zh
+      ? "科克制度／技术条件60、医疗／专项转化条件40，防护／安全／资源／退出未知。贡献25、数学域25—75，无完整总分。实际必要诊疗、监管改进、成熟转诊和知识成果采用同真实临床容量与异地反复照护负担合判；普通净护理、地域与延续桥可撤。"
+      : "Cork has conditional ISR/TEC 60 and MED/LON 40; PCS/GSS/RES/OPT remain unknown. Contribution is 25, with a 25–75 arithmetic domain and no complete total. Actual treatment, oversight improvements, mature referrals and knowledge use are considered alongside clinical capacity and repeated distant-care burdens. Usual net care, geography and continuity bridges are revocable.",
+    zh
+      ? "医疗60公平解释28—78、专项转化60为27—77，均取60为30—80。公寓援助未证受访家庭实际获得，HDU整改计划未证已完成；4月项目仍须审批。患者报道文章日期为10月4日、HTTP修改头为10月13日，仅采有限时点桥、未认证截止同版；全国风暴和郡供水不冒全FUA率，全球入围未证。"
+      : "Fair MED60 and LON60 interpretations give 28–78 and 27–77; both give 30–80. Interviewed families are not verified apartment-aid recipients, and planned HDU beds are not verified complete. The article dates itself 4 October but its HTTP modification header is 13 October: only a finite time bridge is accepted, not cutoff-version authentication. National storm and county water evidence are not whole-FUA rates. Global inclusion is unproven.",
+  ],
   [kiel.candidateId]: [
     zh
       ? "基尔制度／医疗／技术／退出条件60，防护／安全／资源／专项转化未知。贡献30、数学域30—80，无完整总分。真实多年治疗、实际社会护理援助与通常支付支持医疗60；若接受未落实家护需求仍造成重要必要护理后果，医疗40公平域27—77。地域／延续／普通净护理、技术产用与迁移净资源桥均可撤。"

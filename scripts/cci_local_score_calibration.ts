@@ -172,6 +172,7 @@ const realCases = [
   "lodz",
   "gorzow",
   "kiel",
+  "cork",
 ].map(city =>
   JSON.parse(
     readFileSync(new URL(`../docs/data/cci-local-2026-${city}-case.json`, import.meta.url), "utf8")
@@ -335,6 +336,7 @@ const [
   lodz,
   gorzow,
   kiel,
+  cork,
 ] = realScores;
 const rankAudit = JSON.parse(
   readFileSync(new URL("../docs/data/cci-local-2026-rank-audit.json", import.meta.url), "utf8")
@@ -4526,6 +4528,40 @@ assert(
       (c: { score: number | null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
     )
 );
+
+const corkCase = realCases.find(c => c.candidateId === 259);
+assert.equal(
+  corkCase.priorityCompletionReview.sha256,
+  digest(corkCase.priorityCompletionReview.path)
+);
+assert.equal(
+  corkCase.priorityCompletionReview.researchReportSha256,
+  digest(corkCase.priorityCompletionReview.researchReport)
+);
+assert.deepEqual(cork, { ISR: 60, MED: 40, LON: 40, TEC: 60 });
+assert.deepEqual(total(cork), { center: null, lower: 25, upper: 75 });
+assert.deepEqual(total({ ...cork, MED: 60 }), { center: null, lower: 28, upper: 78 });
+assert.deepEqual(total({ ...cork, LON: 60 }), { center: null, lower: 27, upper: 77 });
+for (const id of ["ISR", "MED", "LON", "TEC"] as const) {
+  const withdrawn: Partial<Record<DimensionId, number>> = { ...cork };
+  delete withdrawn[id];
+  assert.deepEqual(
+    [total(withdrawn).lower, total(withdrawn).upper],
+    corkCase.sensitivity.withdrawals[id]
+  );
+}
+assert(
+  corkCase.coverageReview.length === 31 &&
+    corkCase.coverageReview.every(
+      (c: { score: null; fullyMeasured: boolean }) => c.score === null && !c.fullyMeasured
+    )
+);
+assert(
+  corkCase.rootScopeReview.rteHttpModifiedAfterCutoff &&
+    corkCase.rootScopeReview.rteArticleMetadataBeforeCutoff
+);
+assert(!corkCase.rootScopeReview.interviewFamiliesReceivedBMLTApartmentsVerified);
+assert(!corkCase.rootScopeReview.currentOrdinaryWardVasoactivePracticeVerified);
 
 const kielCase = realCases.find(c => c.candidateId === 3942);
 assert.equal(
