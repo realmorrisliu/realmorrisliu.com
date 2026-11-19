@@ -1,6 +1,7 @@
 import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
 import type { APIContext } from "astro";
+import { thoughtFeedPath } from "@utils/thoughtPath";
 
 export async function GET(context: APIContext) {
   const posts = (await getCollection("blog"))
@@ -16,7 +17,7 @@ export async function GET(context: APIContext) {
       title: post.data.title,
       pubDate: post.data.pubDate,
       description: post.data.description,
-      link: `/thoughts/${post.id.replace(/\.md$/, "")}`,
+      link: thoughtFeedPath(post.id),
       author: post.data.author || "Morris Liu",
       categories: post.data.tags,
     })),
