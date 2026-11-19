@@ -10,6 +10,11 @@ const currentLang = lang === "zh" ? "zh" : "en";
 const t = getTranslations(currentLang);
 const htmlLang = getHtmlLangAttribute(currentLang);
 
+const alternateLanguages =
+  currentLang === "zh"
+    ? [{ lang: "en", url: "https://realmorrisliu.com/so-far" }]
+    : [{ lang: "zh-CN", url: "https://realmorrisliu.com/so-far/zh" }];
+
 // Define static paths for generation
 export const prerender = true;
 export function getStaticPaths() {
@@ -21,7 +26,7 @@ export function getStaticPaths() {
   title={t.soFar.meta.title}
   description={t.soFar.meta.description}
   lang={htmlLang}
-  alternateLanguages={[{ lang: "en", url: "https://realmorrisliu.com/so-far" }]}
+  alternateLanguages={alternateLanguages}
 >
   <SoFarPage currentLang={currentLang} />
 </Layout>

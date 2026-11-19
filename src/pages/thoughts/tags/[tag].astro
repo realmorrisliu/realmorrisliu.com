@@ -94,6 +94,7 @@ const structuredData = {
 <Layout
   title={`${displayTag} Posts - Morris Liu`}
   description={`Technical posts about ${displayTag} from Morris Liu. Deep insights on ${displayTag} and related technologies.`}
+  robots={postsWithMeta.length < 2 ? "noindex, follow" : "index, follow"}
 >
   <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)} />
 

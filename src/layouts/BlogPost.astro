@@ -18,6 +18,7 @@ interface Props {
   tags?: string[];
   readingTime?: number;
   draft?: boolean;
+  alternateLanguages?: { lang: string; url: string }[];
 }
 
 const {
@@ -30,6 +31,7 @@ const {
   tags,
   readingTime: propReadingTime,
   draft = false,
+  alternateLanguages = [],
 } = Astro.props;
 
 // Use reading time from frontmatter, or calculate as fallback
@@ -42,6 +44,11 @@ const readingTime =
 
 // Detect if this is a Chinese article by checking URL path or title
 const isChinese = Astro.url.pathname.includes("-zh") || /[\u4e00-\u9fff]/.test(title);
+const cleanPathname = Astro.url.pathname
+  .replace(/\/index\.html$/, "")
+  .replace(/\.html$/, "")
+  .replace(/\/$/, "");
+const postUrl = `https://realmorrisliu.com${cleanPathname}`;
 
 // Determine prose classes based on language
 const proseClasses = isChinese
@@ -77,6 +84,8 @@ const truncateTitle = (text: string, maxLength: number = 50) => {
   modifiedTime={updatedDate?.toISOString()}
   tags={enhancedKeywords}
   readingTime={readingTime}
+  lang={isChinese ? "zh-CN" : "en"}
+  alternateLanguages={alternateLanguages}
 >
   <article class="mx-auto max-w-2xl px-6 py-16">
     <!-- Breadcrumb Navigation for SEO -->
@@ -103,7 +112,7 @@ const truncateTitle = (text: string, maxLength: number = 50) => {
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://realmorrisliu.com/",
+              item: "https://realmorrisliu.com",
             },
             {
               "@type": "ListItem",
@@ -115,7 +124,7 @@ const truncateTitle = (text: string, maxLength: number = 50) => {
               "@type": "ListItem",
               position: 3,
               name: title,
-              item: `https://realmorrisliu.com${Astro.url.pathname}`,
+              item: postUrl,
             },
           ],
         })}
@@ -135,7 +144,7 @@ const truncateTitle = (text: string, maxLength: number = 50) => {
       <slot />
     </div>
 
-    {!draft && <SocialShare title={title} url={`https://realmorrisliu.com${Astro.url.pathname}`} />}
+    {!draft && <SocialShare title={title} url={postUrl} />}
 
     <FooterSignature author={author} translator={translator}>
       <nav class="mt-2">

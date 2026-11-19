@@ -17,13 +17,17 @@ const pageTitle = t.soFar.pdf.pageTitle;
 const pageDescription = t.soFar.pdf.pageDescription;
 const backUrl = currentLang === "zh" ? "/so-far/zh" : "/so-far";
 
-const pathname = Astro.url.pathname.replace(/\.html$/, "").replace(/\/$/, "");
+const pathname = Astro.url.pathname
+  .replace(/\/index\.html$/, "")
+  .replace(/\.html$/, "")
+  .replace(/\/$/, "");
 const canonicalURL = new URL(pathname, Astro.site || "https://realmorrisliu.com");
 
-const alternateLanguages =
-  currentLang === "en"
-    ? [{ lang: "zh", url: "https://realmorrisliu.com/so-far/pdf/zh" }]
-    : [{ lang: "en", url: "https://realmorrisliu.com/so-far/pdf" }];
+const hreflangLinks = [
+  { lang: "en", url: "https://realmorrisliu.com/so-far/pdf" },
+  { lang: "zh-CN", url: "https://realmorrisliu.com/so-far/pdf/zh" },
+  { lang: "x-default", url: "https://realmorrisliu.com/so-far/pdf" },
+];
 
 const backLabel = t.soFar.pdf.backText;
 const downloadLabel = t.soFar.pdf.printButton;
@@ -69,24 +73,23 @@ const { previewUrl } = getResumeTypstAssetUrls(currentLang);
     <meta property="og:site_name" content="Morris Liu" />
     <meta property="og:locale" content={currentLang === "zh" ? "zh_CN" : "en_US"} />
 
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={pageTitle} />
-    <meta property="twitter:description" content={pageDescription} />
-    <meta property="twitter:image" content="https://realmorrisliu.com/og-image.png" />
-    <meta property="twitter:image:alt" content="Morris Liu - Resume" />
-    <meta property="twitter:creator" content="@realmorrisliu" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content="https://realmorrisliu.com/og-image.png" />
+    <meta name="twitter:image:alt" content="Morris Liu - Resume" />
+    <meta name="twitter:creator" content="@realmorrisliu" />
 
     <meta name="theme-color" content="#ffffff" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <link rel="preload" href={previewUrl} as="image" type="image/svg+xml" />
 
     {
-      alternateLanguages.map(({ lang: hrefLang, url }) => (
+      hreflangLinks.map(({ lang: hrefLang, url }) => (
         <link rel="alternate" hreflang={hrefLang} href={url} />
       ))
     }
-    <link rel="alternate" hreflang={currentLang} href={canonicalURL.toString()} />
     <link rel="alternate" type="application/rss+xml" title="Morris Liu's Blog" href="/rss.xml" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap-index.xml" />

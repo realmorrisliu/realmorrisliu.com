@@ -4,20 +4,35 @@ import BlogPost from "@layouts/BlogPost.astro";
 
 export const prerender = true;
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
-  return posts
-    .filter(post => !post.data.draft)
-    .map(post => ({
-      params: { slug: post.id.replace(/\.(md|mdx)$/, "") },
-      props: { post },
-    }));
+  const posts = (await getCollection("blog")).filter(post => !post.data.draft);
+  const slugSet = new Set(posts.map(post => post.id.replace(/\.(md|mdx)$/, "")));
+
+  return posts.map(post => {
+    const slug = post.id.replace(/\.(md|mdx)$/, "");
+    const isChineseSlug = slug.endsWith("-zh");
+    const counterpartSlug = isChineseSlug ? slug.slice(0, -3) : `${slug}-zh`;
+    const alternateLanguages = slugSet.has(counterpartSlug)
+      ? [
+          {
+            lang: isChineseSlug ? "en" : "zh-CN",
+            url: `https://realmorrisliu.com/thoughts/${counterpartSlug}`,
+          },
+        ]
+      : [];
+
+    return {
+      params: { slug },
+      props: { post, alternateLanguages },
+    };
+  });
 }
 
 type Props = {
   post: CollectionEntry<"blog">;
+  alternateLanguages: { lang: string; url: string }[];
 };
 
-const { post } = Astro.props;
+const { post, alternateLanguages } = Astro.props;
 const { Content } = await render(post);
 ---
 
@@ -30,6 +45,7 @@ const { Content } = await render(post);
   tags={post.data.tags}
   readingTime={post.data.readingTime}
   draft={post.data.draft}
+  alternateLanguages={alternateLanguages}
 >
   <Content />
 </BlogPost>
