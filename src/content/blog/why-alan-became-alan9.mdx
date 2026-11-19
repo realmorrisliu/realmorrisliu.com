@@ -1,0 +1,180 @@
+---
+title: "Why Alan Became alan9: From Agent Runtime to a Plan 9-Inspired Agent OS"
+description: "Why Rust AI agent runtime Alan became alan9—a Plan 9-inspired agent OS where agents are ordinary processes, state lives in namespaces, and everything is a file."
+pubDate: 2026-11-19
+tags: ["alan", "alan9", "agents", "architecture", "rust"]
+featured: true
+author: "Morris Liu"
+readingTime: 11
+---
+
+import LanguageSwitcher from "../../components/LanguageSwitcher.astro";
+
+<LanguageSwitcher
+  language={{
+    name: "阅读中文版",
+    url: "/thoughts/why-alan-became-alan9-zh",
+  }}
+/>
+
+Back in February 2026, when I wrote [Human in the End](/thoughts/human-in-the-end-next-gen-agent-interaction), I described [Alan](https://alanworks.app) as a Rust agent runtime built around Turing machines—a stateless program executing over a stateful tape, paired with _Skills over Plugins_ and `Yield/Resume` commit boundaries.
+
+By [July 2026](/now/2026-07), that framing broke down. Alan was no longer best described as an agent runtime with a terminal or desktop wrapper bolted onto it. It had become a programmable personal computing environment built on **`alan9`**—an agent operating system inspired by **Plan 9**.
+
+One clarification up front, because naming gets sloppy fast in systems writing: **Alan** is the product, and **`alan9`** (always lowercase) is the operating system boundary beneath it (`alan9 Kernel`, File-Server Services, Service Manager, Root Agent Process, Agent Runtime Service, `alan9 Host`, and app conventions). Calling it `alan9` acknowledges Plan 9's influence on per-process namespaces and file servers. It does **not** mean 9P wire compatibility or a bare-metal bootable OS replacement—`alan9` runs on macOS and Linux using its own byte-oriented file-service protocol, **`aP`**.
+
+The reason for this shift was simple: the more seriously Alan took Plan 9, the less agent-specific machinery it needed.
+
+## Why Alan Outgrew "Runtime + Wrapper"
+
+Every agent runtime starts innocently enough. You have a model loop, a list of tool schemas, a conversation history, and maybe a CLI or UI on top.
+
+Then you try to make it hold up over real work. You add sub-agents, permissions, durable rollouts, memory, skill packages, streaming UI clients, and model credentials. Before you realize it, your "runtime" is quietly reinventing an operating system inside application code—except without clean boundaries.
+
+That drift actually happened inside [Alan](https://github.com/realmorrisliu/alan) itself. For a stretch, two incompatible worldviews lived side by side in our architecture notes:
+
+1. **A sprawling "semantic runtime" ontology** — `Object`, `Buffer`, `View`, `Command`, `Query`, `Subscription`, `Task`, `Artifact`, `Evidence`, `Journal`, `ViewModel`, `AgentInstance`, `Context Grant`, plus a dedicated kernel-level `Agent Process` type.
+2. **Semantic Unix primitives** — namespaces, files, descriptors, streams, and ordinary processes.
+
+Whenever a new feature arrived—an external terminal view, delegated child runs, shared memory, package management—the semantic-runtime side wanted a new top-level object and another custom RPC seam. Each layer knew too much about the layer below it.
+
+The turning point came from one load-bearing reframing recorded in `ADR-0024`:
+
+> **An LLM is a typed stream a process reads; an agent is the process that consumes that stream and turns its content into effects governed by its own namespace.**
+
+The model has no inherent authority. It only emits suggestions into a stream. A "tool call" is not a privileged RPC into the universe; it is structured content on that stream that the consuming process may turn into an effect—if, and only if, its namespace and runtime policy allow it.
+
+Once you accept that premise, most of the bespoke runtime vocabulary collapses. The kernel vocabulary shrinks to a dozen nouns: `file`, `directory`, `stream`, `namespace`, `mount`, `bind`, `union`, `fid`, `process`, `/proc`, `/srv`, and `ctl`.
+
+And the Rust workspace reflects that cut structurally (`ADR-0025`): `crates/kernel` (`alan-kernel`) depends **only** on `crates/ap` (`alan-ap`) among Alan crates. The kernel knows nothing about LLMs, prompts, memory, tapes, or agents. Everything agent-specific lives above it in user-space file servers: `alan-agentfs`, `alan-hostfs`, `alan-llmfs`, `alan-memfs`, `alan-routefs`, `alan-editfs`, and `alan-branchfs`.
+
+## Everything Is a File—Even an Agent
+
+In `alan9`, there is **only one Kernel Process category**: `Process`.
+
+There is no special `AgentProcess` struct inside `alan9 Kernel`, and no special process kind for "System 1" or "System 2" tiers. **Agent-ness is a file-layout convention—filesystem duck typing—not a second kernel type.**
+
+Here is how ownership splits across the execution path:
+
+```text
+Agent Executable (/bin/alan)
+  -> Process in /proc/<pid>           (Kernel: PID, descriptors, credentials, exit state)
+      -> AgentFS view in /agent/<pid> (Agent Runtime Service: IO, requests, actions, children)
+          -> /agent/<pid>/machine     (Agent Machine: tape projection, state, ctl)
+              -> System Store         (Durable truth: rollouts, checkpoints)
+```
+
+- **`/proc/<pid>` is lifecycle truth.** `alan9 Kernel` owns process identity, parentage, descriptors, credentials, namespace mounts, `io/`, `status`, exit state, and generic lifecycle control through `/proc/<pid>/ctl` (interrupt, cancel). A `Process Reference` pairs a boot identity with a PID so a host restart never mistakes a reused PID for an earlier process.
+- **`/agent/<pid>` is an overlay, not a second process table.** Served by the user-space Agent Runtime Service (`crates/agentfs` backed by `crates/agent-engine`), it unions the kernel's `/proc/<pid>` layout with agent surfaces: `requests/`, `actions/`, `machine/`, `context/`, `children/`, and an aggregate `events` stream—plus the instance-local alias `/agent/root` for the Root Agent Process.
+- **Control stays split by owner.** Generic process signals go to `/proc/<pid>/ctl`. Agent Execution Engine controls—like compacting or rolling back state—go to `agentfs`-owned `/agent/<pid>/machine/ctl`. The kernel never parses agent runtime semantics.
+- **Observation needs no `Subscription` object.** Watching an agent or a pending `requests/` directory is just a blocking offset-based read on an append stream (`tail -f` semantics).
+
+There is one important engineering caveat we keep explicit in `ADR-0024`: in v1, built-in file servers share one address space over an in-process `aP` fast path so LLM token streams pay zero serialization tax. That keeps the interface wire-shaped (`fid`, `qid`, byte offsets, `FileServer`), **but in-process namespace checks are convention/capability boundaries, not OS-level syscall confinement.** Real process isolation for native tools still belongs to the Host OS sandbox boundary until out-of-process wire transport lands.
+
+## The Standard Namespace: Seven Directories, Zero Hidden Globals
+
+If an agent's capabilities are defined by what is mounted in its namespace, you need a clean, predictable map. `alan9` organizes everything under seven canonical root directories:
+
+| Path     | Owner / Source               | Role in `alan9`                                                                                                                           |
+| -------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `/proc`  | `alan9 Kernel`               | Process table and lifecycle truth: PID, parentage, descriptors, credentials, `status`, `ctl`, exit state.                                 |
+| `/agent` | `alan-agentfs`               | AgentFS views overlaying `/proc/<pid>`, with `/agent/root` for the instance's Root Agent Process.                                         |
+| `/srv`   | `alan9 Kernel`               | Service Handle Registry where running File-Server Services post mountable `aP` handles (e.g., `/srv/package`, `/srv/llm`).                |
+| `/bin`   | Union of Tools & Executables | Model-callable Tools (with manifests) and Agent Executables (`/bin/alan`), plus Quartermaster at `/bin/q`.                                |
+| `/lib`   | Package Service              | Immutable Skill package content projected read-only at `/lib/pkg/<package-id>` on explicit Process reference.                             |
+| `/man`   | System & Package manuals     | Manual pages for commands, file servers, and architectural conventions.                                                                   |
+| `/mnt`   | Host Mounts & Service trees  | Explicitly authorized Host Mounts (`alan-hostfs`) and mounted service trees like `/mnt/llm`, `/mnt/mem`, `/mnt/route`, and `/mnt/import`. |
+
+The core security rule across all seven directories is **no global ambient addressing**.
+
+A resource is reachable only if it is bound into that Process's namespace. Even `/srv` is not an ambient backdoor: posted handles carry access rights, and a Process's view of `/srv` is filtered to what it is allowed to mount.
+
+That single rule makes several notoriously messy agent problems boring:
+
+- **Restricting a child agent's model access** means not binding an `llmfs` Connection (`/mnt/llm/connections/<profile>`) into its namespace.
+- **Switching providers** means rebinding the provider tree; `alan-llmfs` translates the provider-agnostic request assembled from namespace files into OpenAI, Anthropic, or OpenRouter wire formats.
+- **Preventing context leaks** means passing explicit descriptors or mounted files at launch instead of letting sub-agents guess or discover host files by convention.
+
+## Explicit Boundaries: Host Mounts, Separate Stores, and `/bin/q`
+
+Most CLI agents share the same silent assumption: if you run the command inside `/Users/you/secret-repo`, the agent now owns that directory, searches `~/.agents` or project dotfiles for hidden instructions, and reads API keys from whatever environment variables happen to be lying around.
+
+`alan9` rejects ambient host inheritance across three concrete boundaries.
+
+### 1. Host Mounts Never Leak from `$PWD`
+
+Running `alan` inside a host directory does **not** put that directory inside `alan9`. Host files enter only through an explicit **Host Mount** owned by the **Host Mount Service** (for instance, selecting and approving a folder via `/project` in the terminal UI).
+
+Inside `alan9`, records use only grant identities, labels, and `/mnt/...` namespace paths. Only the Host platform adapter retains the raw Host OS path, translating public project paths when invoking native tools and configuring the OS sandbox root. Revoke the grant, and queued native work that depends on it fails cleanly before touching files.
+
+### 2. System Store vs. Host Store
+
+Durable state on disk is split by ownership into a single Host-private store pair:
+
+```text
+~/Library/Application Support/Alan/System Store/
+├── services/agent-runtime/    # rollouts, checkpoints, cache, tmp, metadata
+├── services/connections/      # non-secret LLM connection profiles
+├── services/memory/           # Memory Store backing
+└── services/packages/         # Quartermaster catalog & immutable revisions
+
+~/Library/Application Support/Alan/Host Store/
+├── credentials/               # Host-owned secret material
+└── auth.json                  # Host-managed provider auth
+```
+
+Agent configs may reference a profile with `connection_profile = "chatgpt-main"`, managed through `alan connection ...`, while secrets stay in the Host Store or OS keychain behind opaque credential references. Inline secrets in agent definitions are out. Neither `System Store` nor `Host Store` paths are ever mounted into an agent's workspace or injected into prompts.
+
+### 3. Quartermaster (`/bin/q`) and Capability Separation
+
+Skill distribution follows the same discipline (`ADR-0030`, `ADR-0052`). **Package Service** publishes `/srv/package`, and **Quartermaster** (`/bin/q`) is just an ordinary Process spawned via `/proc/clone` that talks to Package Service over `aP`:
+
+```text
+q install --name my-skills /mnt/import/my-skills
+q list
+q upgrade my-skills /mnt/import/my-skills
+q uninstall my-skills
+```
+
+Notice two strict boundaries here:
+
+- **`q` never scans Host directories or fetches arbitrary remote URLs.** A directory must first be explicitly authorized as a Host Mount under `/mnt/import` before `q` can snapshot it into the System Store.
+- **Installation is not Process authority.** Installing a package adds an immutable, content-fingerprinted revision to Package Service's catalog—nothing more. Running processes do not change underneath their feet, and a new Process only sees `/lib/pkg/<package-id>` read-only if its launch context passes an explicit package reference. Today, `q` v0 distributes Skills (`SKILL.md` packages and readable assets); executable distribution into `/bin` remains separate future work.
+
+## Retiring Alan for macOS: Why Terminal-First Won
+
+For a while, Alan also carried a native macOS desktop shell (**Alan for macOS**, built around `shell-core`, FFI bindings, and an embedded Ghostty surface). In September 2026 (`ADR-0054`), I retired that desktop direction and removed the App, helper, and `shell-core`/FFI source from the repository.
+
+Rebuilding windows, workspaces, tabs, panes, and a terminal emulator inside Alan solved the wrong problem. External terminal hosts already own presentation topology and PTY delivery far better—my preferred host today is **Herdr**, while `alan` itself remains terminal-neutral. (And to keep boundaries honest: Herdr identifiers are not Alan Process identity, and native Herdr-side Alan agent detection is not implemented; ordinary terminal operation comes first.)
+
+Retiring the desktop shell also forced a much cleaner lifecycle model (`ADR-0056`):
+
+- **One foreground instance per invocation.** There is no global background daemon or singleton "thread manager" silently sharing a Root Agent across windows. Every bare `alan` invocation boots its own foreground `alan9` instance, Service Manager, and instance-local `/agent/root`, rendering it via `crates/tui` (a non-owning Ratatui file client over AgentFS and `/proc`).
+- **True Unix composition.** Pipe stdin (`git diff | alan`), and `alan` boots an instance, runs one task to stdout, sends diagnostics to stderr, and exits with the task's status.
+- **Explicit recovery, never silent adoption.** Detaching a view in Herdr can leave the native `alan` process alive to finish work; actually exiting `alan` shuts down that instance and its owned descendants. A fresh `alan` never silently joins an earlier session. Resuming durable work requires an explicit `alan --resume`, which restores paused queues with current authority checks—never blindly replaying completed or unknown-outcome effects.
+
+Inside the interactive TUI, the two-line prompt keeps intent visible on every submission: `: ` sends work to the Agent, while `! ` routes an explicit shell command through the governed `bash` Tool—never bypassing namespace mounts or OS sandboxing.
+
+## The AI Turing Machine: Accepted Direction vs. What Is Shipped Today
+
+In [Human in the End](/thoughts/human-in-the-end-next-gen-agent-interaction), I modeled an agent as a Turing machine: stateless program, stateful tape, observable side effects.
+
+Under `alan9`, that idea lives inside `/agent/<pid>/machine` and `ADR-0055`. The **accepted direction** generalizes the Machine beyond "call LLM to generate text, run tool, repeat." An `Agent Machine` advances from events, current state, and capability results by composing **deterministic computation**, **typed evaluation**, **generation**, **governed effects**, and **waiting**.
+
+Two design rules keep that direction grounded:
+
+1. **"System 1" and "System 2" are work modes, not Kernel Process types or permission levels.** You spawn a child Process only when you actually need an independent lifecycle or isolation boundary—not just to switch between fast classification and deep reasoning.
+2. **An evaluation result is evidence, never authorization.** Even if a model or reviewer is confident, it never manufactures a Host Mount, credential, or permission grant (`ADR-0055`, `ADR-0060`). And success doesn't even require generating prose—completion, waiting, failure, and Process exit are distinct states.
+
+At the same time, it matters to draw a sharp line between **accepted architecture direction** and **what is shipped in the repository today**:
+
+- **What is shipped today:** `crates/agent-engine` (`alan-agent-engine`) still runs a **generation/Tool loop** at its center. Building on that loop, we have shipped **finite-choice Connection evaluation** (via a TypeSafe adapter), **no-effect Machine shadow advice** (PR #1035), and a **bounded read-only source-owner Machine program** (PR #1039/#1040) that composes deterministic lookup, finite-choice evaluation, a budget-gated generation fallback, and owned wait/resume. Explicit `!` / `:` input prefixes, independent foreground instances, and explicit `alan --resume` non-replay recovery (PR #1032) are shipped.
+- **What is not shipped yet:** General mixed transitions across arbitrary tasks remain unfinished. **Jev** (our candidate typed evaluation adapter) is **not implemented**. **Automatic input routing** (classifying unprefixed user input into direct commands vs. agent turns without `!` or `:`) remains **unqualified and disabled**. Today's namespace `Tape` is still a **text projection** rather than a complete recovery checkpoint (durable recovery lives in rollout and checkpoint files in `System Store`). And the broader project-delegation and no-tools **Guardian** reviewer architecture (`ADR-0060`) is accepted direction under active work, not shipped runtime behavior.
+
+## Closing
+
+A lot of AI tooling starts as a prompt wrapper and ends up growing an ad-hoc operating system around itself—hidden dotfiles for skills, implicit environment secrets, global session registries, and bespoke RPC layers for every tool.
+
+Turning Alan into `alan9` inverted that order. Instead of inventing agent-only abstractions and bolting isolation on later, we dropped down to Plan 9's simplest ideas in Rust: one `Process` category in `/proc`, seven standard namespace directories, user-space `aP` file servers, explicit Host Mounts, and a terminal that attaches cleanly to `/agent/root`.
+
+Alan is still in early development, and there is plenty of unshipped work between today's generation/Tool engine and a fully general mixed-capability `Agent Machine`. But the shape finally feels right. You can explore the live environment overview at [alanworks.app](https://alanworks.app) or read the crates and OpenSpec records directly at [github.com/realmorrisliu/alan](https://github.com/realmorrisliu/alan).

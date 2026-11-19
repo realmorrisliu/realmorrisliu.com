@@ -1,0 +1,182 @@
+---
+title: "为什么 Alan 演变成了 alan9：从 Agent 运行时到受 Plan 9 启发的 Agent OS"
+description: "用 Rust 构建的 Alan 为何从 Agent 运行时演进为 alan9——一个受 Plan 9 启发的 AI Agent 操作系统：Agent 只是普通 Process，能力与状态收拢在七个标准命名空间目录中，宿主挂载与 /bin/q 软件包边界明确，退役桌面壳并坚持终端优先。"
+pubDate: 2026-11-19
+tags: ["alan", "alan9", "agents", "architecture", "rust"]
+featured: true
+author: "Morris Liu"
+readingTime: 11
+---
+
+import LanguageSwitcher from "../../components/LanguageSwitcher.astro";
+
+<LanguageSwitcher
+  language={{
+    name: "Read in English",
+    url: "/thoughts/why-alan-became-alan9",
+  }}
+/>
+
+今年 2 月写 [《Human in the End》](/thoughts/human-in-the-end-next-gen-agent-interaction-zh) 时，我对 [Alan](https://alanworks.app) 的定位还是一个用 Rust 写的 Agent 运行时：把 AI Agent 建模为图灵机——无状态程序在有状态纸带上执行，配合 _Skills over Plugins_ 与 `Yield/Resume` 提交边界。
+
+但到了 [2026 年 7 月](/now/2026-07)，这个定位撑不住了。Alan 已经很难再被准确地描述成「一个带终端或桌面壳的 Agent 运行时」。它演进成了一个可编程个人计算环境，而支撑它的系统层，我们命名为 **`alan9`**——一个受 **Plan 9** 启发的 Agent 操作系统。
+
+先做一句概念澄清，避免系统讨论里常见的术语混淆：**Alan** 是产品名称，**`alan9`**（始终小写）是其底层的系统边界（包括 `alan9 Kernel`、各 File-Server Services、Service Manager、Root Agent Process、Agent Runtime Service、`alan9 Host` 以及应用集成约定）。取名 `alan9` 是为了致敬 Plan 9 在 per-process 命名空间和文件服务器上的思想影响，但它**并不**承诺 9P 协议兼容，也**不是**一个可裸机启动的替代操作系统——`alan9` 运行在 macOS 和 Linux 宿主系统之上，使用自己面向字节流的文件服务协议 **`aP`**。
+
+推动这次转向的核心原因其实很简单：Alan 越认真地向 Plan 9 靠拢，系统里需要专门为「Agent」造的特殊机制就越少。
+
+## 为什么 Alan 走出了「运行时 + 外壳」的框架
+
+几乎所有 Agent 运行时在起步时都很轻巧：一个模型循环、几份 Tool Schema、一段对话历史，外面再套一个 CLI 或图形界面。
+
+但一旦你试图让它承载真实的长期工作，工具、记忆、子 Agent、审批流、持久化 Rollout、技能包管理、流式 UI 客户端、模型凭证就会接踵而至。还没等你反应过来，这个所谓的「运行时」就已经在应用层里悄悄重造了一个操作系统——只是没有操作系统应有的清晰边界。
+
+这种架构漂移，在 [Alan](https://github.com/realmorrisliu/alan) 自己的演化里也真实发生过。有段时间，两套互不兼容的世界观并存在我们的设计文档中：
+
+1. **膨胀的「语义运行时」本体论** —— `Object`、`Buffer`、`View`、`Command`、`Query`、`Subscription`、`Task`、`Artifact`、`Evidence`、`Journal`、`ViewModel`、`AgentInstance`、`Context Grant`，外加一个内核级的一等公民 `Agent Process` 类型。
+2. **语义化的 Unix 原语** —— 命名空间、文件、描述符、流和普通进程。
+
+每当要接入一个新能力——比如外部终端视图、子 Agent 派发、共享记忆、包管理——前一套世界观就会催生一个新的顶层对象和一套专用 RPC 胶水，上下层之间耦合得越来越紧。
+
+真正解开死结的，是 `ADR-0024` 里那次关键的重构视角：
+
+> **LLM 只是进程读取的一条类型化流（typed stream）；Agent 则是消费这条流、并在自身命名空间约束下把建议转化为真实副作用的普通进程。**
+
+模型本身没有任何原生权限，它能做的只是往流里输出建议。「工具调用」也不是直通系统内部的特权 API，而只是流里的数据记录——消费它的进程只有在自身命名空间和运行时策略允许时，才会把它变成动作。
+
+想通这一点后，绝大多数为运行时专门发明的概念都可以删掉了。内核层的核心词汇收缩到了十几个：`file`、`directory`、`stream`、`namespace`、`mount`、`bind`、`union`、`fid`、`process`、`/proc`、`/srv` 和 `ctl`。
+
+Rust 工作区的 crate 依赖直接把这个边界钉死在了代码结构里（`ADR-0025`）：`crates/kernel`（`alan-kernel`）在所有 Alan crate 中**只依赖** `crates/ap`（`alan-ap`）。内核对 LLM、Prompt、记忆、纸带或 Agent 一无所知。所有与 Agent 相关的能力——`alan-agentfs`、`alan-hostfs`、`alan-llmfs`、`alan-memfs`、`alan-routefs`、`alan-editfs`、`alan-branchfs`——全部作为用户态文件服务器站在内核之上。
+
+## 一切皆文件——Agent 也不例外
+
+在 `alan9` 里，**内核只有一种 Process 类型**，那就是 `Process`。
+
+`alan9 Kernel` 内部没有专门的 `AgentProcess` 类型，也没有对应「System 1 / System 2」的特殊内核进程分级。**一个进程是不是 Agent，取决于它的目录结构是否遵循约定的文件布局（filesystem duck typing），而不是内核态的类型标签。**
+
+执行链路上的权责拆分是这样的：
+
+```text
+Agent Executable (/bin/alan)
+  -> /proc/<pid> 里的普通 Process     (Kernel：PID、描述符、凭证、退出状态)
+      -> /agent/<pid> 中的 AgentFS 视图 (Agent Runtime Service：IO、requests、actions、children)
+          -> /agent/<pid>/machine     (Agent Machine：纸带投影、状态、ctl)
+              -> System Store         (持久化真相：rollouts、checkpoints)
+```
+
+- **`/proc/<pid>` 是生命周期真相源。** `alan9 Kernel` 拥有进程身份、父子关系、描述符、凭证、命名空间挂载、`io/`、`status`、退出状态，以及通过 `/proc/<pid>/ctl` 发出的通用生命周期控制（中断、取消）。`Process Reference` 把实例启动标识与 PID 绑定在一起，避免宿主重启后因为 PID 复用而误连到错误进程。
+- **`/agent/<pid>` 是叠加视图，不是第二张进程表。** 它由用户态的 Agent Runtime Service（`crates/agentfs` 驱动 `crates/agent-engine`）提供，在内核 `/proc/<pid>` 的基础上叠加上 Agent 专属目录：`requests/`、`actions/`、`machine/`、`context/`、`children/` 以及聚合 `events` 流；实例根 Agent 则挂载在 `/agent/root`。
+- **控制面按归属拆分。** 通用的进程中断写往 `/proc/<pid>/ctl`；属于 Agent Execution Engine 的操作（比如上下文压缩或回滚）写往 `agentfs` 拥有的 `/agent/<pid>/machine/ctl`。内核从不解析运行时语义。
+- **观测不需要单独的 `Subscription` 原语。** 监听一个 Agent 或等待 `requests/` 里的审批请求，本质上就是对追加日志流做基于偏移量的阻塞读取（`tail -f` 语义）。
+
+这里必须把 `ADR-0024` 明确记录的一个现阶段工程限制说透：v1 版本中，内置文件服务器共享同一个进程地址空间，通过内存里的 `aP` 快速通道通信，避免给 LLM token 流增加序列化开销。这保证了接口形态严格面向协议（`fid`、`qid`、字节偏移、`FileServer`），**但进程内的命名空间检查属于结构与能力约定，并不等同于操作系统级的 syscall 隔离。** 原生工具的真实隔离边界，在跨进程传输落地前仍然依赖宿主 OS 的沙盒执行适配器。
+
+## 标准命名空间：七个根目录，没有隐式全局状态
+
+如果一个 Agent 能做什么完全取决于它命名空间里挂载了什么，系统就需要一张清晰且可预期的地图。`alan9` 把所有资源收拢在七个标准根目录下：
+
+| 路径     | 归属 / 来源                   | 在 `alan9` 中的职责                                                                                                |
+| -------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `/proc`  | `alan9 Kernel`                | 进程表与生命周期真相：PID、父子关系、描述符、凭证、`status`、`ctl`、退出状态。                                     |
+| `/agent` | `alan-agentfs`                | 叠加在 `/proc/<pid>` 之上的 AgentFS 视图，其中 `/agent/root` 指向本实例的 Root Agent Process。                     |
+| `/srv`   | `alan9 Kernel`                | Service Handle Registry，供运行中的 File-Server Services 发布可挂载的 `aP` 句柄（如 `/srv/package`、`/srv/llm`）。 |
+| `/bin`   | Tools 与 Executables 联合视图 | 模型可调用的 Tools（带 manifest）和 Agent Executables（`/bin/alan`），以及包管理命令 `/bin/q`。                    |
+| `/lib`   | Package Service               | 仅当 Process 启动上下文显式传入包引用时，以只读方式投影到 `/lib/pkg/<package-id>` 的不可变 Skill 包内容。          |
+| `/man`   | 系统与包手册                  | 命令、文件服务器以及系统架构约定的说明文档。                                                                       |
+| `/mnt`   | 宿主挂载与服务树              | 显式授权的 Host Mounts（`alan-hostfs`），以及 `/mnt/llm`、`/mnt/mem`、`/mnt/route`、`/mnt/import` 等挂载树。       |
+
+贯穿这七个目录的核心安全原则是：**没有全局环境寻址（no global ambient addressing）**。
+
+一个资源对进程可见，当且仅当它被显式绑定进了该进程的命名空间。哪怕是 `/srv` 也不是绕过隔离的后门：发布到 `/srv` 的句柄携带访问权限，进程看到的 `/srv` 视图会按权限过滤，未被授予的服务无法直接从 `/srv` 重新挂载。
+
+就这一条规则，让过去极易失控的几个 Agent 设计问题变得非常干净：
+
+- **限制子 Agent 不准调某个模型**：不在它的命名空间里绑定对应的 `llmfs` Connection（`/mnt/llm/connections/<profile>`）即可。
+- **切换模型供应商**：重新绑定挂载树；`alan-llmfs` 负责把由命名空间文件拼装出来的通用请求，翻译成 OpenAI、Anthropic 或 OpenRouter 的实际协议格式。
+- **防止上下文隐式泄露**：启动进程时只传显式描述符或挂载路径，而不是让子进程在宿主机目录树里自行「发现」文件。
+
+## 显式边界：Host Mounts、分离存储与 Quartermaster（`/bin/q`）
+
+市面上的大多数 CLI Agent 共享同一套隐式假设：只要你在 `/Users/you/secret-repo` 下启动它，它就默认接管当前目录，顺手扫描 `~/.agents` 或项目隐藏配置，再把环境变量里的 API Key 直接吞进上下文。
+
+`alan9` 在三个具体边界上彻底切断了这种隐式继承。
+
+### 1. Host Mounts 不会从 `$PWD` 自动渗入
+
+在某个宿主机目录下执行 `alan`，**并不会**把那个目录自动暴露进 `alan9`。宿主机文件只能通过 **Host Mount Service** 管理的显式 **Host Mount** 进入系统（例如在终端 UI 中用 `/project` 选定并批准一个目录）。
+
+在 `alan9` 内部，记录里只存在授权标识（grant identity）、标签和 `/mnt/...` 命名空间路径。原始的宿主机 OS 路径只保存在 Host 平台适配器内部，供原生工具执行和配置 OS 沙盒根目录时解析。一旦撤销授权，排队中依赖该授权的原生操作就会在触碰文件前直接失败。
+
+### 2. System Store 与 Host Store 分离
+
+磁盘上的持久化数据按归属拆成成对的宿主私有存储：
+
+```text
+~/Library/Application Support/Alan/System Store/
+├── services/agent-runtime/    # rollout、checkpoint、cache、tmp、metadata
+├── services/connections/      # 非敏感的 LLM 连接配置元数据
+├── services/memory/           # Memory Store 底层存储
+└── services/packages/         # Quartermaster 目录与不可变修订版本
+
+~/Library/Application Support/Alan/Host Store/
+├── credentials/               # Host 持有的密钥材料
+└── auth.json                  # Host 管理的供应商认证状态
+```
+
+Agent 配置可以用 `connection_profile = "chatgpt-main"` 引用由 `alan connection ...` 管理的连接档案，而真实密钥留在 Host Store 或系统钥匙串里，通过不透明的凭证引用调用；内联在配置里的明文密钥已被禁止。`System Store` 和 `Host Store` 的原始物理路径，永远不会挂载进 Agent 工作区或出现在 Prompt 里。
+
+### 3. Quartermaster（`/bin/q`）：安装不等于运行权限
+
+Skill 的分发同样遵守这套边界（`ADR-0030`、`ADR-0052`）。Package Service 发布 `/srv/package`，而 **Quartermaster**（`/bin/q`）只是通过 `/proc/clone` 拉起的一个普通进程，沿着命名空间用 `aP` 与 Package Service 对话：
+
+```text
+q install --name my-skills /mnt/import/my-skills
+q list
+q upgrade my-skills /mnt/import/my-skills
+q uninstall my-skills
+```
+
+这里有两条硬边界：
+
+- **`q` 从不扫描宿主机目录，也不直接拉取任意远程 URL。** 想要安装的目录必须先被显式授权挂载到 `/mnt/import` 等命名空间路径，`q` 才能把快照导入 System Store。
+- **安装不等于授予进程权限。** `q install` 只会往 Package Service 的目录里写入一个带内容指纹的不可变修订版本。正在运行的进程不会在中途被热篡改；新启动的进程也只有在启动上下文里显式携带该包引用时，才会在 `/lib/pkg/<package-id>` 看到它的只读投影。v0 阶段的 `q` 只负责分发 Skill（`SKILL.md` 及随附只读资源）；可执行文件向 `/bin` 的包分发属于后续独立规划。
+
+## 退役 Alan for macOS：为什么终端优先赢了
+
+在一段时期里，Alan 还维护着一个原生 macOS 桌面壳（**Alan for macOS**，包含 `shell-core`、FFI 绑定以及内嵌 Ghostty 终端）。到了 2026 年 9 月（`ADR-0054`），我决定退役这个桌面产品方向，并把 App、helper 以及 `shell-core`/FFI 源码从仓库里彻底移除。
+
+原因很现实：在 Alan 里重写窗口、工作区、标签页、分屏和终端仿真器，是在花巨大精力复制优秀终端宿主已经做得更好的事情——而且会把窗口管理与 `alan9` 进程归属搅在一起。
+
+现在，**Herdr** 是我们优先配合的外部终端宿主，负责窗口、标签、分屏和 PTY 交付；`alan` 自身保持终端中立（`crates/tui` 是一个基于 Ratatui 的纯文件客户端，读写 AgentFS 与 `/proc`，不拥有进程生命周期，也不再造分屏）。这里也如实标明现状：Herdr 的会话标识不是 Alan 的 Process 身份，Herdr 原生的 Alan Agent 自动探测目前也尚未实现——先把普通终端里的工作流打磨扎实排在第一位。
+
+拿下桌面壳后，生命周期模型反而变得前所未有地清楚（`ADR-0056`）：
+
+- **每次前台启动独立拥有一个实例。** 系统里没有全局常驻守护进程，也没有跨窗口共享同一个 Root Agent 的「全局会话管理器」。每次直接运行 `alan`，都会在当前前台拉起属于它自己的 `alan9` 实例、Service Manager 以及本地 `/agent/root`，并用 `crates/tui` 渲染在终端标准输入输出上。
+- **天然融入 Unix 管道。** 通过标准输入喂入任务（例如 `git diff | alan`），`alan` 会启动一个前台实例，执行单次任务，把最终答案写回 stdout、诊断信息写向 stderr，并以任务状态码退出。
+- **显式恢复，拒绝隐式接管。** 在 Herdr 里把视图 detach 掉可以让后台的原生 `alan` 进程继续跑完手头工作；真正退出 `alan` 进程则会关闭该实例及其全部子进程。重新打开一个 `alan` 永远不会悄悄接管上一次残留的工作——要恢复持久化进度，必须显式传入 `alan --resume`，并在恢复时重新校验当前授权、保持未执行队列处于暂停状态，绝不盲目重放已完成或结果未知的副作用。
+
+交互式 TUI 里的两行提示符也把输入意图写在了明面上：`: ` 把输入交给 Agent 推理，而 `! ` 显式触发受治理的 `bash` Tool 执行命令——不绕过命名空间挂载，也不绕过宿主沙盒。
+
+## AI 图灵机的演进：已接受方向 vs. 今日已交付实现
+
+在 [《Human in the End》](/thoughts/human-in-the-end-next-gen-agent-interaction-zh) 里，我把 Agent 建模为图灵机：无状态程序、有状态纸带、可观测副作用。
+
+在 `alan9` 中，这个模型落在了 `/agent/<pid>/machine` 和 `ADR-0055` 上。**已接受的演进方向**是把状态机从单一的「调用 LLM 生成文本 → 执行工具 → 循环」推广为混合能力的 `Agent Machine`：根据事件、当前状态和能力返回结果推进状态转移，把**确定性计算**、**类型化评估（typed evaluation）**、**文本生成**、**受治理副作用**与**等待（waiting）**组合在同一个状态机里。
+
+支撑这条方向的有两条硬约束：
+
+1. **「System 1」和「System 2」只是工作模式，不是内核进程类型，更不是权限等级。** 只有当你确实需要独立的生命周期或隔离边界时，才需要拉起子进程——而不是为了切换快慢思考去拆进程。
+2. **评估结果只是证据（evidence），永远不是授权（authorization）。** 模型或审查器再自信，也不能凭空签发 Host Mount、凭证或执行权限（`ADR-0055`、`ADR-0060`）。同时，任务成功也不一定非要生成自然语言输出；完成、等待、失败和进程退出是彼此独立的语义状态。
+
+同样重要的，是把**架构上已接受的蓝图**和**仓库里今天真正交付的代码**严格区分开来：
+
+- **今天已经交付的部分：** `crates/agent-engine`（`alan-agent-engine`）的核心依然是一个**生成 / Tool 执行循环**。在此之上，我们已经落地了**有限选择集的类型化 Connection 评估**（通过 TypeSafe 适配器）、**无副作用的 Machine shadow advice**（PR #1035），以及一个**有界的只读 source-owner Machine 程序**（PR #1039/#1040），把确定性查找、有限集评估、受预算控制的生成回退以及等待/恢复组合在了一起；显式的 `!` / `:` 输入前缀、独立前台实例生命周期，以及 `alan --resume` 的不重放恢复流程（PR #1032）也已交付。
+- **今天尚未交付的部分：** 面向任意任务的通用混合状态转移仍在演进中，尚未完成；候选类型化评估适配器 **Jev** **尚未实现**；不带前缀的**自动输入路由**（自动判断一条输入是命令还是 Agent 任务）目前**尚未通过资格验证且处于禁用状态**；命名空间里的 `Tape` 目前仍是一个**文本投影视图**，并非完整的恢复检查点（持久化恢复真相源在 `System Store` 的 rollout 与 checkpoint 文件里）；而 `ADR-0060` 定义的项目级委托授权与无工具 **Guardian** 审查体系，也属于仍在推进中的已接受方向，而非已上线运行时行为。
+
+## 结语
+
+很多 AI 工具起点是一段 Prompt 包装器，走着走着就在应用层里长出了一个杂乱的「半成品操作系统」——隐式扫描的本地配置目录、混在环境里的密钥、全局会话注册表，以及为每个工具单独适配的 RPC 胶水。
+
+把 Alan 演进成 `alan9`，是把这个顺序彻底倒了过来。我们不再先造一堆 Agent 专有抽象然后再想办法补隔离，而是直接用 Rust 落地 Plan 9 最朴素的纪律：`/proc` 里只有一种 `Process`、七个标准命名空间目录、用户态的 `aP` 文件服务器、显式的 Host Mounts，以及一个安静附着在 `/agent/root` 上的终端。
+
+Alan 仍处于早期开发阶段，从今天以生成/工具循环为主的引擎走向真正通用的混合能力 `Agent Machine`，还有不少硬骨头要啃。但整个系统的骨架终于对了。你可以在 [alanworks.app](https://alanworks.app) 看到项目概览，也可以直接去 [github.com/realmorrisliu/alan](https://github.com/realmorrisliu/alan) 翻看源码与 OpenSpec 规格文档。
