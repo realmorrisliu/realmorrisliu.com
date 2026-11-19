@@ -24,9 +24,9 @@ describe("githubActivity", () => {
     });
   });
 
-  it("fetches rolling commit/PR totals and 30-day daily buckets without exposing repo names", async () => {
+  it("fetches rolling commit/PR totals via 2-step GraphQL, deduplicates repos, and leaks no repo names", async () => {
     const now = new Date("2026-11-19T07:12:00.000Z");
-    const seenUrls: string[] = [];
+    const graphqlCalls: Array<{ query: string; variables: Record<string, unknown> }> = [];
 
     const mockDays = Array.from({ length: 32 }, (_, idx) => {
       const day = new Date(Date.UTC(2026, 9, 19 + idx));
@@ -36,18 +36,45 @@ describe("githubActivity", () => {
       };
     });
 
-    const mockFetch: typeof fetch = async input => {
+    const mockFetch: typeof fetch = async (input, init) => {
       const url =
         typeof input === "string" ? input : input instanceof URL ? input.toString() : input.url;
-      seenUrls.push(url);
+      assert.equal(url, "https://api.github.com/graphql");
 
-      if (url === "https://api.github.com/graphql") {
+      const body = JSON.parse(String(init?.body ?? "{}")) as {
+        query: string;
+        variables: Record<string, unknown>;
+      };
+      graphqlCalls.push(body);
+
+      if (graphqlCalls.length === 1) {
         return new Response(
           JSON.stringify({
             data: {
+              viewer: {
+                id: "MDQ6VXNlcjEyMzQ=",
+                repositories: {
+                  nodes: [
+                    { id: "repo_1", pushedAt: "2026-11-19T06:00:00Z" },
+                    { id: "repo_dormant", pushedAt: "2026-10-01T00:00:00Z" },
+                  ],
+                },
+                repositoriesContributedTo: {
+                  nodes: [
+                    { id: "repo_1", pushedAt: "2026-11-19T06:00:00Z" },
+                    { id: "repo_2", pushedAt: "2026-11-18T12:00:00Z" },
+                  ],
+                },
+              },
               pr24h: { issueCount: 12 },
               pr7d: { issueCount: 64 },
-              pr30d: { issueCount: 210 },
+              pr30d: {
+                issueCount: 210,
+                nodes: [
+                  { repository: { id: "repo_2", pushedAt: "2026-11-18T12:00:00Z" } },
+                  { repository: { id: "repo_3", pushedAt: "2026-11-10T09:00:00Z" } },
+                ],
+              },
               user: {
                 contributionsCollection: {
                   contributionCalendar: {
@@ -64,17 +91,37 @@ describe("githubActivity", () => {
         );
       }
 
-      if (url.includes("2026-11-18T07%3A12%3A00Z")) {
-        return new Response(JSON.stringify({ total_count: 19 }), { status: 200 });
-      }
-      if (url.includes("2026-11-12T07%3A12%3A00Z")) {
-        return new Response(JSON.stringify({ total_count: 105 }), { status: 200 });
-      }
-      if (url.includes("2026-10-20T07%3A12%3A00Z")) {
-        return new Response(JSON.stringify({ total_count: 420 }), { status: 200 });
-      }
+      assert.deepEqual(body.variables.ids, ["repo_1", "repo_2", "repo_3"]);
+      assert.equal(body.variables.authorId, "MDQ6VXNlcjEyMzQ=");
 
-      return new Response("unexpected url", { status: 500 });
+      return new Response(
+        JSON.stringify({
+          data: {
+            nodes: [
+              {
+                defaultBranchRef: {
+                  target: {
+                    c24h: { totalCount: 10 },
+                    c7d: { totalCount: 50 },
+                    c30d: { totalCount: 200 },
+                  },
+                },
+              },
+              {
+                defaultBranchRef: {
+                  target: {
+                    c24h: { totalCount: 9 },
+                    c7d: { totalCount: 55 },
+                    c30d: { totalCount: 220 },
+                  },
+                },
+              },
+              { defaultBranchRef: null },
+            ],
+          },
+        }),
+        { status: 200 }
+      );
     };
 
     const payload = await fetchGitHubActivity({
@@ -84,7 +131,7 @@ describe("githubActivity", () => {
       fetchImpl: mockFetch,
     });
 
-    assert.equal(seenUrls.length, 4);
+    assert.equal(graphqlCalls.length, 2);
     assert.deepEqual(payload.windows, {
       day: { commits: 19, mergedPrs: 12 },
       week: { commits: 105, mergedPrs: 64 },
@@ -97,7 +144,51 @@ describe("githubActivity", () => {
 
     const serialized = JSON.stringify(payload);
     assert.equal(serialized.includes("ghp_secret_test_token"), false);
-    assert.equal(serialized.includes("repository"), false);
+    assert.equal(serialized.includes("repo_1"), false);
+  });
+
+  it("skips commit history query when no repositories have recent activity", async () => {
+    const now = new Date("2026-11-19T07:12:00.000Z");
+    let callCount = 0;
+
+    const payload = await fetchGitHubActivity({
+      token: "ghp_test",
+      now,
+      fetchImpl: async () => {
+        callCount += 1;
+        return new Response(
+          JSON.stringify({
+            data: {
+              viewer: {
+                id: "MDQ6VXNlcjE=",
+                repositories: {
+                  nodes: [{ id: "old_repo", pushedAt: "2026-09-01T00:00:00Z" }],
+                },
+                repositoriesContributedTo: { nodes: [] },
+              },
+              pr24h: { issueCount: 0 },
+              pr7d: { issueCount: 0 },
+              pr30d: { issueCount: 0, nodes: [] },
+              user: {
+                contributionsCollection: {
+                  contributionCalendar: {
+                    weeks: [{ contributionDays: [{ date: "2026-11-19", contributionCount: 0 }] }],
+                  },
+                },
+              },
+            },
+          }),
+          { status: 200 }
+        );
+      },
+    });
+
+    assert.equal(callCount, 1);
+    assert.deepEqual(payload.windows, {
+      day: { commits: 0, mergedPrs: 0 },
+      week: { commits: 0, mergedPrs: 0 },
+      month: { commits: 0, mergedPrs: 0 },
+    });
   });
 
   it("uses edge cache hits, populates edge cache on misses with bound ctx, and degrades quietly", async () => {
@@ -168,6 +259,7 @@ describe("githubActivity", () => {
     assert.equal(missFail, null);
     assert.equal(putCalls, 0);
 
+    let step = 0;
     const missSuccess = await getCachedGitHubActivity({
       runtime: {
         env: { GITHUB_TOKEN: "ghp_test" },
@@ -184,16 +276,22 @@ describe("githubActivity", () => {
         ctx: ctxObj,
       },
       now: new Date("2026-11-19T07:12:00Z"),
-      fetchImpl: async input => {
-        const url =
-          typeof input === "string" ? input : input instanceof URL ? input.toString() : input.url;
-        if (url === "https://api.github.com/graphql") {
+      fetchImpl: async () => {
+        step += 1;
+        if (step === 1) {
           return new Response(
             JSON.stringify({
               data: {
+                viewer: {
+                  id: "MDQ6VXNlcjE=",
+                  repositories: {
+                    nodes: [{ id: "repo_1", pushedAt: "2026-11-19T06:00:00Z" }],
+                  },
+                  repositoriesContributedTo: { nodes: [] },
+                },
                 pr24h: { issueCount: 1 },
                 pr7d: { issueCount: 2 },
-                pr30d: { issueCount: 3 },
+                pr30d: { issueCount: 3, nodes: [] },
                 user: {
                   contributionsCollection: {
                     contributionCalendar: {
@@ -206,7 +304,24 @@ describe("githubActivity", () => {
             { status: 200 }
           );
         }
-        return new Response(JSON.stringify({ total_count: 9 }), { status: 200 });
+        return new Response(
+          JSON.stringify({
+            data: {
+              nodes: [
+                {
+                  defaultBranchRef: {
+                    target: {
+                      c24h: { totalCount: 9 },
+                      c7d: { totalCount: 21 },
+                      c30d: { totalCount: 45 },
+                    },
+                  },
+                },
+              ],
+            },
+          }),
+          { status: 200 }
+        );
       },
     });
     await Promise.all(waitUntilCalls);

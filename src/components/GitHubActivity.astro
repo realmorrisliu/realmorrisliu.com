@@ -58,61 +58,82 @@ const compactButtons: Array<{ key: "day" | "week" | "month"; label: string }> = 
 
 {
   activity && variant === "compact" && (
-    <div
-      class="text-text-tertiary mb-2 flex flex-wrap items-baseline gap-x-2 gap-y-1 text-sm leading-normal"
+    <section
+      aria-label="GitHub activity"
+      class="mt-10 border-y border-[color:var(--color-border)] py-4"
       data-gh-compact
     >
-      <a
-        href="/now#github-activity"
-        class="text-text-secondary hover:text-text-link hover:underline"
-      >
-        GitHub
-      </a>
-      <span aria-hidden="true">·</span>
-      <span class="inline-flex items-baseline gap-1.5" role="group" aria-label="GitHub window">
-        {compactButtons.map((btn, index) => (
-          <>
-            {index > 0 && (
-              <span class="text-[color:var(--color-border)]" aria-hidden="true">
-                /
-              </span>
-            )}
-            <button
-              type="button"
-              data-gh-window-btn={btn.key}
-              aria-pressed={btn.key === "week" ? "true" : "false"}
-              class:list={[
-                "cursor-pointer font-mono text-xs transition-colors",
-                btn.key === "week"
-                  ? "text-text-primary underline underline-offset-4"
-                  : "text-text-tertiary hover:text-text-primary",
-              ]}
-            >
-              {btn.label}
-            </button>
-          </>
-        ))}
-      </span>
-      <span aria-hidden="true">·</span>
-      <span
-        data-gh-compact-output
-        data-day-commits={String(activity.windows.day.commits)}
-        data-day-prs={String(activity.windows.day.mergedPrs)}
-        data-week-commits={String(activity.windows.week.commits)}
-        data-week-prs={String(activity.windows.week.mergedPrs)}
-        data-month-commits={String(activity.windows.month.commits)}
-        data-month-prs={String(activity.windows.month.mergedPrs)}
-      >
-        <span data-gh-commits class="text-text-primary font-mono tabular-nums">
-          {activity.windows.week.commits.toLocaleString("en-US")}
-        </span>{" "}
-        <span data-gh-commits-label>{formatCommitsSuffix(activity.windows.week.commits)}</span>,{" "}
-        <span data-gh-prs class="text-text-primary font-mono tabular-nums">
-          {activity.windows.week.mergedPrs.toLocaleString("en-US")}
-        </span>{" "}
-        <span data-gh-prs-label>{formatPrsSuffix(activity.windows.week.mergedPrs)}</span>
-      </span>
-    </div>
+      <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 text-sm">
+        <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+          <a
+            href="/now#github-activity"
+            class="text-text-primary hover:text-text-link font-medium hover:underline"
+          >
+            GitHub
+          </a>
+          <span
+            class="text-text-tertiary"
+            data-gh-compact-output
+            data-day-commits={String(activity.windows.day.commits)}
+            data-day-prs={String(activity.windows.day.mergedPrs)}
+            data-week-commits={String(activity.windows.week.commits)}
+            data-week-prs={String(activity.windows.week.mergedPrs)}
+            data-month-commits={String(activity.windows.month.commits)}
+            data-month-prs={String(activity.windows.month.mergedPrs)}
+          >
+            <span data-gh-commits class="text-text-primary font-mono tabular-nums">
+              {activity.windows.week.commits.toLocaleString("en-US")}
+            </span>{" "}
+            <span data-gh-commits-label>{formatCommitsSuffix(activity.windows.week.commits)}</span>
+            <span class="mx-1.5 text-[color:var(--color-border)]" aria-hidden="true">
+              ·
+            </span>
+            <span data-gh-prs class="text-text-primary font-mono tabular-nums">
+              {activity.windows.week.mergedPrs.toLocaleString("en-US")}
+            </span>{" "}
+            <span data-gh-prs-label>{formatPrsSuffix(activity.windows.week.mergedPrs)}</span>
+          </span>
+        </div>
+
+        <div class="flex items-baseline gap-3">
+          <span
+            class="inline-flex items-baseline gap-1.5"
+            role="group"
+            aria-label="GitHub rolling window"
+          >
+            {compactButtons.map((btn, index) => (
+              <>
+                {index > 0 && (
+                  <span class="text-[color:var(--color-border)]" aria-hidden="true">
+                    /
+                  </span>
+                )}
+                <button
+                  type="button"
+                  data-gh-window-btn={btn.key}
+                  aria-pressed={btn.key === "week" ? "true" : "false"}
+                  class:list={[
+                    "cursor-pointer font-mono text-xs transition-colors",
+                    btn.key === "week"
+                      ? "text-text-primary underline underline-offset-4"
+                      : "text-text-tertiary hover:text-text-primary",
+                  ]}
+                >
+                  {btn.label}
+                </button>
+              </>
+            ))}
+          </span>
+          <a
+            href="/now#github-activity"
+            class="text-text-tertiary hover:text-text-link text-xs transition-colors"
+            aria-label="View full GitHub activity on Now page"
+          >
+            →
+          </a>
+        </div>
+      </div>
+    </section>
   )
 }
 

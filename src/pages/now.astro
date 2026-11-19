@@ -17,7 +17,7 @@ const { Content } = await latestEntry.render();
 const { title, description, lastUpdated } = latestEntry.data;
 const githubActivity = await getCachedGitHubActivity({
   runtime: Astro.locals.runtime,
-  timeoutMs: 2500,
+  timeoutMs: 8000,
 });
 
 // Format the date for display

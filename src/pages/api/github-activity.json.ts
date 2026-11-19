@@ -10,7 +10,7 @@ export const prerender = false;
 export async function GET({ locals }: APIContext) {
   const data = await getCachedGitHubActivity({
     runtime: locals.runtime,
-    timeoutMs: 4500,
+    timeoutMs: 10000,
   });
 
   if (!data) {

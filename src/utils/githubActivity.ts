@@ -5,7 +5,6 @@ export const CACHE_TTL_SECONDS = 300;
 export const STALE_WHILE_REVALIDATE_SECONDS = 3600;
 const CACHE_KEY_URL = "https://realmorrisliu.com/__cache/github-activity/v1";
 const GITHUB_GRAPHQL_URL = "https://api.github.com/graphql";
-const GITHUB_COMMIT_SEARCH_URL = "https://api.github.com/search/commits";
 
 export interface GitHubWindowStats {
   commits: number;
@@ -64,6 +63,13 @@ export interface CachedGitHubActivityOptions {
   fetchImpl?: typeof fetch;
 }
 
+type FetchSignal = NonNullable<Parameters<typeof fetch>[1]>["signal"];
+
+interface GraphQLRepoRef {
+  id?: unknown;
+  pushedAt?: unknown;
+}
+
 interface GraphQLContributionDay {
   date?: unknown;
   contributionCount?: unknown;
@@ -73,36 +79,79 @@ interface GraphQLContributionWeek {
   contributionDays?: GraphQLContributionDay[];
 }
 
-interface GitHubGraphQLResponse {
-  data?: {
-    pr24h?: { issueCount?: unknown };
-    pr7d?: { issueCount?: unknown };
-    pr30d?: { issueCount?: unknown };
-    user?: {
-      contributionsCollection?: {
-        contributionCalendar?: {
-          weeks?: GraphQLContributionWeek[];
-        };
+interface DiscoveryAndPrsData {
+  viewer?: {
+    id?: unknown;
+    repositories?: { nodes?: Array<GraphQLRepoRef | null> };
+    repositoriesContributedTo?: { nodes?: Array<GraphQLRepoRef | null> };
+  };
+  pr24h?: { issueCount?: unknown };
+  pr7d?: { issueCount?: unknown };
+  pr30d?: {
+    issueCount?: unknown;
+    nodes?: Array<{ repository?: GraphQLRepoRef | null } | null>;
+  };
+  user?: {
+    contributionsCollection?: {
+      contributionCalendar?: {
+        weeks?: GraphQLContributionWeek[];
       };
     };
   };
+}
+
+interface CommitHistoryNode {
+  defaultBranchRef?: {
+    target?: {
+      c24h?: { totalCount?: unknown };
+      c7d?: { totalCount?: unknown };
+      c30d?: { totalCount?: unknown };
+    } | null;
+  } | null;
+}
+
+interface CommitHistoryData {
+  nodes?: Array<CommitHistoryNode | null>;
+}
+
+interface GitHubGraphQLResponse<T> {
+  data?: T;
   errors?: Array<{ message?: string }>;
 }
 
-interface GitHubCommitSearchResponse {
-  total_count?: unknown;
-}
-
-const ROLLING_ACTIVITY_GRAPHQL = `
+const DISCOVERY_AND_PRS_GRAPHQL = `
 query($login: String!, $from30d: DateTime!, $to: DateTime!, $q24h: String!, $q7d: String!, $q30d: String!) {
+  viewer {
+    id
+    repositories(first: 20, affiliations: [OWNER, COLLABORATOR], orderBy: { field: PUSHED_AT, direction: DESC }) {
+      nodes {
+        id
+        pushedAt
+      }
+    }
+    repositoriesContributedTo(first: 20, contributionTypes: [COMMIT, PULL_REQUEST], includeUserRepositories: true, orderBy: { field: PUSHED_AT, direction: DESC }) {
+      nodes {
+        id
+        pushedAt
+      }
+    }
+  }
   pr24h: search(query: $q24h, type: ISSUE, first: 1) {
     issueCount
   }
   pr7d: search(query: $q7d, type: ISSUE, first: 1) {
     issueCount
   }
-  pr30d: search(query: $q30d, type: ISSUE, first: 1) {
+  pr30d: search(query: $q30d, type: ISSUE, first: 15) {
     issueCount
+    nodes {
+      ... on PullRequest {
+        repository {
+          id
+          pushedAt
+        }
+      }
+    }
   }
   user(login: $login) {
     contributionsCollection(from: $from30d, to: $to) {
@@ -119,7 +168,31 @@ query($login: String!, $from30d: DateTime!, $to: DateTime!, $q24h: String!, $q7d
 }
 `;
 
-/** Format a Date to second-precision UTC ISO-8601 required by GitHub search qualifiers. */
+const COMMIT_HISTORY_GRAPHQL = `
+query($ids: [ID!]!, $authorId: ID!, $from24h: GitTimestamp!, $from7d: GitTimestamp!, $from30d: GitTimestamp!, $to: GitTimestamp!) {
+  nodes(ids: $ids) {
+    ... on Repository {
+      defaultBranchRef {
+        target {
+          ... on Commit {
+            c24h: history(since: $from24h, until: $to, author: { id: $authorId }) {
+              totalCount
+            }
+            c7d: history(since: $from7d, until: $to, author: { id: $authorId }) {
+              totalCount
+            }
+            c30d: history(since: $from30d, until: $to, author: { id: $authorId }) {
+              totalCount
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`;
+
+/** Format a Date to second-precision UTC ISO-8601 required by GitHub search and timestamp filters. */
 export function toGitHubTimestamp(date: Date): string {
   return date.toISOString().replace(/\.\d{3}Z$/, "Z");
 }
@@ -182,40 +255,71 @@ function createHeaders(token: string): Record<string, string> {
   return {
     Authorization: `Bearer ${token}`,
     Accept: "application/vnd.github+json",
+    "Content-Type": "application/json",
     "X-GitHub-Api-Version": "2022-11-28",
     "User-Agent": "realmorrisliu.com-github-activity",
   };
 }
 
-type FetchSignal = NonNullable<Parameters<typeof fetch>[1]>["signal"];
-
-async function fetchCommitSearchCount(
+async function postGraphQL<T>(
   fetchImpl: typeof fetch,
   headers: Record<string, string>,
-  username: string,
-  fromIso: string,
+  query: string,
+  variables: Record<string, unknown>,
   signal?: FetchSignal
-): Promise<number> {
-  const query = `author:${username} committer-date:>=${fromIso}`;
-  const url = `${GITHUB_COMMIT_SEARCH_URL}?q=${encodeURIComponent(query)}&per_page=1`;
-  const res = await fetchImpl(url, { headers, signal });
+): Promise<T> {
+  const res = await fetchImpl(GITHUB_GRAPHQL_URL, {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ query, variables }),
+    signal,
+  });
   if (!res.ok) {
-    throw new Error(`GitHub commit search failed with ${res.status}`);
+    throw new Error(`GitHub GraphQL failed with ${res.status}`);
   }
-  const body = (await res.json()) as GitHubCommitSearchResponse;
-  return asNonNegativeInt(body.total_count);
+  const json = (await res.json()) as GitHubGraphQLResponse<T>;
+  if (json.errors && json.errors.length > 0) {
+    throw new Error(json.errors[0]?.message ?? "GitHub GraphQL returned errors");
+  }
+  if (!json.data) {
+    throw new Error("GitHub GraphQL returned no data");
+  }
+  return json.data;
+}
+
+function collectActiveRepoIds(data: DiscoveryAndPrsData, from30d: string): string[] {
+  const refs: Array<GraphQLRepoRef | null | undefined> = [
+    ...(data.viewer?.repositories?.nodes ?? []),
+    ...(data.viewer?.repositoriesContributedTo?.nodes ?? []),
+    ...(data.pr30d?.nodes?.map(node => node?.repository) ?? []),
+  ];
+
+  const activeIds = new Set<string>();
+  for (const repo of refs) {
+    if (
+      repo &&
+      typeof repo.id === "string" &&
+      repo.id &&
+      typeof repo.pushedAt === "string" &&
+      repo.pushedAt >= from30d
+    ) {
+      activeIds.add(repo.id);
+    }
+  }
+  return Array.from(activeIds);
 }
 
 /**
  * Fetch aggregate rolling 24h / 7d / 30d commit & merged-PR counts plus the 30-day
- * daily contribution calendar for `username`. Only aggregate counts are returned;
- * repository names, organization names, and commit/PR titles are never exposed.
+ * daily contribution calendar for `username` via pure 2-step GraphQL (zero REST commit
+ * search calls). Only aggregate counts are returned; repository names, organization names,
+ * and commit/PR titles are never queried or exposed.
  */
 export async function fetchGitHubActivity({
   token,
   username = DEFAULT_GITHUB_USERNAME,
   now = new Date(),
-  timeoutMs = 3000,
+  timeoutMs = 8000,
   fetchImpl = fetch,
 }: FetchGitHubActivityOptions): Promise<GitHubActivityPayload> {
   const bounds = buildRollingWindowBounds(now);
@@ -228,43 +332,54 @@ export async function fetchGitHubActivity({
   const signal = controller?.signal;
 
   try {
-    const graphqlPromise = fetchImpl(GITHUB_GRAPHQL_URL, {
-      method: "POST",
-      headers: {
-        ...headers,
-        "Content-Type": "application/json",
+    const discoveryData = await postGraphQL<DiscoveryAndPrsData>(
+      fetchImpl,
+      headers,
+      DISCOVERY_AND_PRS_GRAPHQL,
+      {
+        login: username,
+        from30d: bounds.from30d,
+        to: bounds.to,
+        q24h: `author:${username} is:pr is:merged merged:>=${bounds.from24h}`,
+        q7d: `author:${username} is:pr is:merged merged:>=${bounds.from7d}`,
+        q30d: `author:${username} is:pr is:merged merged:>=${bounds.from30d}`,
       },
-      body: JSON.stringify({
-        query: ROLLING_ACTIVITY_GRAPHQL,
-        variables: {
-          login: username,
+      signal
+    );
+
+    const authorId = discoveryData.viewer?.id;
+    const activeIds = collectActiveRepoIds(discoveryData, bounds.from30d);
+
+    let commits24h = 0;
+    let commits7d = 0;
+    let commits30d = 0;
+
+    if (activeIds.length > 0 && typeof authorId === "string" && authorId) {
+      const historyData = await postGraphQL<CommitHistoryData>(
+        fetchImpl,
+        headers,
+        COMMIT_HISTORY_GRAPHQL,
+        {
+          ids: activeIds,
+          authorId,
+          from24h: bounds.from24h,
+          from7d: bounds.from7d,
           from30d: bounds.from30d,
           to: bounds.to,
-          q24h: `author:${username} is:pr is:merged merged:>=${bounds.from24h}`,
-          q7d: `author:${username} is:pr is:merged merged:>=${bounds.from7d}`,
-          q30d: `author:${username} is:pr is:merged merged:>=${bounds.from30d}`,
         },
-      }),
-      signal,
-    }).then(async res => {
-      if (!res.ok) {
-        throw new Error(`GitHub GraphQL failed with ${res.status}`);
-      }
-      const json = (await res.json()) as GitHubGraphQLResponse;
-      if (json.errors && json.errors.length > 0) {
-        throw new Error(json.errors[0]?.message ?? "GitHub GraphQL returned errors");
-      }
-      return json;
-    });
+        signal
+      );
 
-    const [graphql, commits24h, commits7d, commits30d] = await Promise.all([
-      graphqlPromise,
-      fetchCommitSearchCount(fetchImpl, headers, username, bounds.from24h, signal),
-      fetchCommitSearchCount(fetchImpl, headers, username, bounds.from7d, signal),
-      fetchCommitSearchCount(fetchImpl, headers, username, bounds.from30d, signal),
-    ]);
+      for (const node of historyData.nodes ?? []) {
+        const target = node?.defaultBranchRef?.target;
+        if (!target) continue;
+        commits24h += asNonNegativeInt(target.c24h?.totalCount);
+        commits7d += asNonNegativeInt(target.c7d?.totalCount);
+        commits30d += asNonNegativeInt(target.c30d?.totalCount);
+      }
+    }
 
-    const weeks = graphql.data?.user?.contributionsCollection?.contributionCalendar?.weeks ?? [];
+    const weeks = discoveryData.user?.contributionsCollection?.contributionCalendar?.weeks ?? [];
     const flattenedDays: GitHubDailyBucket[] = [];
     for (const week of weeks) {
       for (const day of week.contributionDays ?? []) {
@@ -283,15 +398,15 @@ export async function fetchGitHubActivity({
       windows: {
         day: {
           commits: commits24h,
-          mergedPrs: asNonNegativeInt(graphql.data?.pr24h?.issueCount),
+          mergedPrs: asNonNegativeInt(discoveryData.pr24h?.issueCount),
         },
         week: {
           commits: commits7d,
-          mergedPrs: asNonNegativeInt(graphql.data?.pr7d?.issueCount),
+          mergedPrs: asNonNegativeInt(discoveryData.pr7d?.issueCount),
         },
         month: {
           commits: commits30d,
-          mergedPrs: asNonNegativeInt(graphql.data?.pr30d?.issueCount),
+          mergedPrs: asNonNegativeInt(discoveryData.pr30d?.issueCount),
         },
       },
       daily: flattenedDays.slice(-30),
@@ -350,7 +465,7 @@ function isValidPayload(value: unknown): value is GitHubActivityPayload {
 export async function getCachedGitHubActivity({
   runtime,
   username,
-  timeoutMs = 2500,
+  timeoutMs = 8000,
   now,
   fetchImpl,
 }: CachedGitHubActivityOptions = {}): Promise<GitHubActivityPayload | null> {
