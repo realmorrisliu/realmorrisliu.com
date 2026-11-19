@@ -2,6 +2,8 @@
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import FooterSignature from "@components/FooterSignature.astro";
+import GitHubActivity from "@components/GitHubActivity.astro";
+import { getCachedGitHubActivity } from "@utils/githubActivity";
 import "@styles/global.css";
 import "@styles/prose.css";
 
@@ -13,6 +15,10 @@ const latestEntry = nowEntries.sort(
 
 const { Content } = await latestEntry.render();
 const { title, description, lastUpdated } = latestEntry.data;
+const githubActivity = await getCachedGitHubActivity({
+  runtime: Astro.locals.runtime,
+  timeoutMs: 2500,
+});
 
 // Format the date for display
 const formatDate = (date: Date | string): string => {
@@ -41,6 +47,8 @@ const formatDate = (date: Date | string): string => {
           Last updated {formatDate(lastUpdated)}
         </p>
       </div>
+
+      <GitHubActivity variant="full" activity={githubActivity} />
 
       <div class="prose prose-lg prose-gray max-w-none">
         <div class="text-text-secondary space-y-6 text-lg">

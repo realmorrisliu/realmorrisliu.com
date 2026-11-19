@@ -1,0 +1,333 @@
+---
+import {
+  formatRelativeUpdated,
+  formatShortDay,
+  type GitHubActivityPayload,
+} from "@utils/githubActivity";
+
+export interface Props {
+  variant: "compact" | "full";
+  activity: GitHubActivityPayload | null;
+}
+
+const { variant, activity } = Astro.props;
+
+const formatCommitsSuffix = (count: number) => (count === 1 ? "commit" : "commits");
+const formatPrsSuffix = (count: number) => (count === 1 ? "PR merged" : "PRs merged");
+
+const daily = activity?.daily ?? [];
+const maxDailyContributions = daily.reduce(
+  (max, bucket) => (bucket.contributions > max ? bucket.contributions : max),
+  1
+);
+const total30dContributions = daily.reduce((sum, bucket) => sum + bucket.contributions, 0);
+const startDayLabel = daily.length > 0 ? formatShortDay(daily[0].date) : "";
+const endDayLabel = daily.length > 0 ? formatShortDay(daily[daily.length - 1].date) : "";
+const defaultBarSummary =
+  daily.length > 0
+    ? `${startDayLabel} – ${endDayLabel} · ${total30dContributions.toLocaleString("en-US")} total`
+    : "";
+
+const barToneForCount = (count: number, maxCount: number): string => {
+  if (count <= 0) return "#e5e5e5";
+  const ratio = count / Math.max(1, maxCount);
+  if (ratio <= 0.25) return "#d1d5db";
+  if (ratio <= 0.6) return "#6b6b6b";
+  return "#1a1a1a";
+};
+
+const barHeightForCount = (count: number, maxCount: number): number => {
+  if (count <= 0) return 7;
+  return Math.max(14, Math.round((count / Math.max(1, maxCount)) * 100));
+};
+
+const windowRows = activity
+  ? [
+      { key: "day", label: "Last 24 hours", stats: activity.windows.day },
+      { key: "week", label: "Last 7 days", stats: activity.windows.week },
+      { key: "month", label: "Last 30 days", stats: activity.windows.month },
+    ]
+  : [];
+
+const compactButtons: Array<{ key: "day" | "week" | "month"; label: string }> = [
+  { key: "day", label: "24h" },
+  { key: "week", label: "7d" },
+  { key: "month", label: "30d" },
+];
+---
+
+{
+  activity && variant === "compact" && (
+    <div
+      class="text-text-tertiary mb-2 flex flex-wrap items-baseline gap-x-2 gap-y-1 text-sm leading-normal"
+      data-gh-compact
+    >
+      <a
+        href="/now#github-activity"
+        class="text-text-secondary hover:text-text-link hover:underline"
+      >
+        GitHub
+      </a>
+      <span aria-hidden="true">·</span>
+      <span class="inline-flex items-baseline gap-1.5" role="group" aria-label="GitHub window">
+        {compactButtons.map((btn, index) => (
+          <>
+            {index > 0 && (
+              <span class="text-[color:var(--color-border)]" aria-hidden="true">
+                /
+              </span>
+            )}
+            <button
+              type="button"
+              data-gh-window-btn={btn.key}
+              aria-pressed={btn.key === "week" ? "true" : "false"}
+              class:list={[
+                "cursor-pointer font-mono text-xs transition-colors",
+                btn.key === "week"
+                  ? "text-text-primary underline underline-offset-4"
+                  : "text-text-tertiary hover:text-text-primary",
+              ]}
+            >
+              {btn.label}
+            </button>
+          </>
+        ))}
+      </span>
+      <span aria-hidden="true">·</span>
+      <span
+        data-gh-compact-output
+        data-day-commits={String(activity.windows.day.commits)}
+        data-day-prs={String(activity.windows.day.mergedPrs)}
+        data-week-commits={String(activity.windows.week.commits)}
+        data-week-prs={String(activity.windows.week.mergedPrs)}
+        data-month-commits={String(activity.windows.month.commits)}
+        data-month-prs={String(activity.windows.month.mergedPrs)}
+      >
+        <span data-gh-commits class="text-text-primary font-mono tabular-nums">
+          {activity.windows.week.commits.toLocaleString("en-US")}
+        </span>{" "}
+        <span data-gh-commits-label>{formatCommitsSuffix(activity.windows.week.commits)}</span>,{" "}
+        <span data-gh-prs class="text-text-primary font-mono tabular-nums">
+          {activity.windows.week.mergedPrs.toLocaleString("en-US")}
+        </span>{" "}
+        <span data-gh-prs-label>{formatPrsSuffix(activity.windows.week.mergedPrs)}</span>
+      </span>
+    </div>
+  )
+}
+
+{
+  activity && variant === "full" && (
+    <section
+      id="github-activity"
+      aria-labelledby="github-activity-heading"
+      class="border-y border-[color:var(--color-border)] py-5"
+      data-gh-full
+    >
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <div class="flex items-baseline gap-2.5">
+          <h2 id="github-activity-heading" class="text-text-primary text-sm font-medium">
+            GitHub activity
+          </h2>
+          <a
+            href={`https://github.com/${activity.username}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-text-tertiary hover:text-text-link font-mono text-xs hover:underline"
+          >
+            @{activity.username} ↗
+          </a>
+        </div>
+        <time datetime={activity.updatedAt} class="text-text-tertiary font-mono text-xs">
+          rolling · {formatRelativeUpdated(activity.updatedAt)}
+        </time>
+      </div>
+
+      <table class="mt-4 w-full border-collapse text-sm">
+        <thead class="sr-only">
+          <tr>
+            <th scope="col">Rolling window</th>
+            <th scope="col">Commits</th>
+            <th scope="col">Merged PRs</th>
+          </tr>
+        </thead>
+        <tbody>
+          {windowRows.map(row => (
+            <tr data-gh-window-row={row.key}>
+              <th scope="row" class="text-text-tertiary py-1 pr-4 text-left font-normal">
+                {row.label}
+              </th>
+              <td class="py-1 pr-6 text-right whitespace-nowrap">
+                <span class="text-text-primary font-mono tabular-nums">
+                  {row.stats.commits.toLocaleString("en-US")}
+                </span>{" "}
+                <span class="text-text-tertiary text-xs">
+                  {formatCommitsSuffix(row.stats.commits)}
+                </span>
+              </td>
+              <td class="py-1 text-right whitespace-nowrap">
+                <span class="text-text-primary font-mono tabular-nums">
+                  {row.stats.mergedPrs.toLocaleString("en-US")}
+                </span>{" "}
+                <span class="text-text-tertiary text-xs">
+                  {formatPrsSuffix(row.stats.mergedPrs)}
+                </span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {daily.length > 0 && (
+        <div class="mt-4 border-t border-[color:var(--color-border)] pt-4">
+          <div class="mb-2.5 flex flex-wrap items-baseline justify-between gap-2 text-xs">
+            <span class="text-text-tertiary">Daily contributions · last {daily.length} days</span>
+            <span
+              data-gh-bar-readout
+              data-default={defaultBarSummary}
+              class="text-text-tertiary font-mono tabular-nums transition-colors duration-150"
+            >
+              {defaultBarSummary}
+            </span>
+          </div>
+
+          <div
+            class="flex h-8 items-end gap-[3px]"
+            data-gh-bars
+            role="group"
+            aria-label={`Daily contributions over the last ${daily.length} days`}
+          >
+            {daily.map(bucket => {
+              const dayLabel = formatShortDay(bucket.date);
+              const readout = `${dayLabel} · ${bucket.contributions.toLocaleString("en-US")} ${bucket.contributions === 1 ? "contribution" : "contributions"}`;
+              const heightPct = barHeightForCount(bucket.contributions, maxDailyContributions);
+              const tone = barToneForCount(bucket.contributions, maxDailyContributions);
+              return (
+                <button
+                  type="button"
+                  class="group flex h-full flex-1 cursor-pointer items-end p-0 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-[color:var(--color-text-link)]"
+                  aria-label={readout}
+                  aria-pressed="false"
+                  data-gh-bar
+                  data-readout={readout}
+                >
+                  <span
+                    class="block w-full transition-colors duration-150 group-hover:!bg-[#000000] group-focus-visible:!bg-[#000000]"
+                    style={`height: ${heightPct}%; background-color: ${tone};`}
+                  />
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </section>
+  )
+}
+
+<script>
+  function initGitHubActivity() {
+    document.querySelectorAll<HTMLElement>("[data-gh-compact]").forEach(root => {
+      if (root.dataset.ghBound === "true") return;
+      root.dataset.ghBound = "true";
+
+      const output = root.querySelector<HTMLElement>("[data-gh-compact-output]");
+      const commitsEl = root.querySelector<HTMLElement>("[data-gh-commits]");
+      const commitsLabelEl = root.querySelector<HTMLElement>("[data-gh-commits-label]");
+      const prsEl = root.querySelector<HTMLElement>("[data-gh-prs]");
+      const prsLabelEl = root.querySelector<HTMLElement>("[data-gh-prs-label]");
+      const buttons = root.querySelectorAll<HTMLButtonElement>("[data-gh-window-btn]");
+
+      if (!output || !commitsEl || !commitsLabelEl || !prsEl || !prsLabelEl) return;
+
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const win = btn.dataset.ghWindowBtn;
+          if (win !== "day" && win !== "week" && win !== "month") return;
+
+          const commitsRaw = output.dataset[`${win}Commits`];
+          const prsRaw = output.dataset[`${win}Prs`];
+          const commits = Number(commitsRaw ?? 0);
+          const prs = Number(prsRaw ?? 0);
+
+          commitsEl.textContent = commits.toLocaleString("en-US");
+          commitsLabelEl.textContent = commits === 1 ? "commit" : "commits";
+          prsEl.textContent = prs.toLocaleString("en-US");
+          prsLabelEl.textContent = prs === 1 ? "PR merged" : "PRs merged";
+
+          buttons.forEach(other => {
+            const isSelected = other === btn;
+            other.setAttribute("aria-pressed", String(isSelected));
+            other.classList.toggle("text-text-primary", isSelected);
+            other.classList.toggle("underline", isSelected);
+            other.classList.toggle("underline-offset-4", isSelected);
+            other.classList.toggle("text-text-tertiary", !isSelected);
+          });
+        });
+      });
+    });
+
+    document.querySelectorAll<HTMLElement>("[data-gh-full]").forEach(section => {
+      if (section.dataset.ghBound === "true") return;
+      section.dataset.ghBound = "true";
+
+      const readout = section.querySelector<HTMLElement>("[data-gh-bar-readout]");
+      const barsContainer = section.querySelector<HTMLElement>("[data-gh-bars]");
+      const bars = section.querySelectorAll<HTMLButtonElement>("[data-gh-bar]");
+      if (!readout || !barsContainer || bars.length === 0) return;
+
+      const defaultText = readout.dataset.default ?? "";
+      let pinnedBar: HTMLButtonElement | null = null;
+
+      const setReadout = (text: string, active: boolean) => {
+        readout.textContent = text;
+        readout.classList.toggle("text-text-primary", active);
+        readout.classList.toggle("text-text-tertiary", !active);
+      };
+
+      const restoreReadout = () => {
+        if (pinnedBar) {
+          setReadout(pinnedBar.dataset.readout ?? defaultText, true);
+        } else {
+          setReadout(defaultText, false);
+        }
+      };
+
+      bars.forEach(bar => {
+        const preview = () => setReadout(bar.dataset.readout ?? defaultText, true);
+
+        bar.addEventListener("mouseenter", preview);
+        bar.addEventListener("focus", preview);
+        bar.addEventListener("blur", restoreReadout);
+        bar.addEventListener("click", () => {
+          if (pinnedBar === bar) {
+            pinnedBar = null;
+            bar.setAttribute("aria-pressed", "false");
+          } else {
+            if (pinnedBar) {
+              pinnedBar.setAttribute("aria-pressed", "false");
+            }
+            pinnedBar = bar;
+            bar.setAttribute("aria-pressed", "true");
+          }
+          restoreReadout();
+        });
+      });
+
+      barsContainer.addEventListener("mouseleave", restoreReadout);
+      section.addEventListener("keydown", event => {
+        if (event.key === "Escape" && pinnedBar) {
+          pinnedBar.setAttribute("aria-pressed", "false");
+          pinnedBar = null;
+          restoreReadout();
+        }
+      });
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initGitHubActivity);
+  } else {
+    initGitHubActivity();
+  }
+</script>

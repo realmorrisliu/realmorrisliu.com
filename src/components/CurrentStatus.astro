@@ -1,7 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 import Link from "@components/Link.astro";
+import GitHubActivity from "@components/GitHubActivity.astro";
 import { formatDate } from "@utils/dateUtils";
+import { getCachedGitHubActivity } from "@utils/githubActivity";
 
 // Get the latest now entry
 const nowEntries = await getCollection("now");
@@ -10,6 +12,10 @@ const latestEntry = nowEntries.sort(
 )[0];
 
 const { summary, lastUpdated } = latestEntry.data;
+const githubActivity = await getCachedGitHubActivity({
+  runtime: Astro.locals.runtime,
+  timeoutMs: 2500,
+});
 ---
 
 <section class="current-status mb-8 border-l-2 border-[color:var(--color-border)] py-3 pl-4">
@@ -20,6 +26,7 @@ const { summary, lastUpdated } = latestEntry.data;
   <p class="text-text-tertiary mb-2 text-sm leading-normal">
     Last updated {formatDate(lastUpdated)}
   </p>
+  <GitHubActivity variant="compact" activity={githubActivity} />
   <p class="text-text-tertiary text-sm leading-normal">
     <Link href="/now" class="text-sm"> → Learn more about what I'm up to now </Link>
   </p>
