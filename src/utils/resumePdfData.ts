@@ -12,6 +12,12 @@ function projectGithubLabel(project: PersonalProject): string | undefined {
   return project.githubUrl?.replace("https://github.com/", "");
 }
 
+function projectWebsiteLabel(project: PersonalProject): string | undefined {
+  return "websiteUrl" in project && typeof project.websiteUrl === "string"
+    ? project.websiteUrl.replace(/^https?:\/\//, "").replace(/\/$/, "")
+    : undefined;
+}
+
 function contactLinks() {
   return [
     {
@@ -83,6 +89,9 @@ export function getResumePdfData(lang: Language) {
       title: project.title,
       period: "",
       description: project.description,
+      website: projectWebsiteLabel(project) ?? "",
+      websiteUrl:
+        "websiteUrl" in project && typeof project.websiteUrl === "string" ? project.websiteUrl : "",
       github: projectGithubLabel(project) ?? "",
       githubUrl: project.githubUrl ?? "",
     })),

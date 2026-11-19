@@ -34,6 +34,9 @@ const visibleForPdf = items => items.filter(item => item.showInPdf !== false);
 
 const projectGithubLabel = project => project.githubUrl?.replace("https://github.com/", "");
 
+const projectWebsiteLabel = project =>
+  project.websiteUrl?.replace(/^https?:\/\//, "").replace(/\/$/, "");
+
 const contactLinks = () => [
   {
     label: "morrisliu1994@outlook.com",
@@ -100,6 +103,8 @@ const getResumePdfData = (translations, lang) => {
       title: project.title,
       period: "",
       description: project.description,
+      website: projectWebsiteLabel(project) ?? "",
+      websiteUrl: project.websiteUrl ?? "",
       github: projectGithubLabel(project) ?? "",
       githubUrl: project.githubUrl ?? "",
     })),

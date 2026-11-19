@@ -45,6 +45,10 @@ const keywords = [
   "Secret Management",
   "AI Tools",
   "Open Source",
+  "Alan",
+  "alan9",
+  "Agent Runtime",
+  "Personal Computing",
   "Sealbox",
   "TypeScript",
   "CAD Technology",
@@ -132,22 +136,24 @@ const keywords = [
     <script
       type="application/ld+json"
       is:inline
-      set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": type === "article" ? "BlogPosting" : "Person",
-        ...(type === "article"
+      set:html={JSON.stringify(
+        type === "article"
           ? {
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
               headline: title,
               description: description,
               image: imageURL.toString(),
               author: {
                 "@type": "Person",
+                "@id": "https://realmorrisliu.com/#person",
                 name: "Morris Liu",
                 url: "https://realmorrisliu.com",
-                sameAs: ["https://github.com/realmorrisliu", "https://twitter.com/realmorrisliu"],
+                sameAs: ["https://github.com/realmorrisliu", "https://x.com/realmorrisliu"],
               },
               publisher: {
                 "@type": "Person",
+                "@id": "https://realmorrisliu.com/#person",
                 name: "Morris Liu",
                 url: "https://realmorrisliu.com",
                 logo: {
@@ -173,53 +179,76 @@ const keywords = [
               }),
             }
           : {
-              name: "Morris Liu",
-              alternateName: ["Morris", "Liu Morris"],
-              description:
-                "Senior Software Engineer & Former CTO with 7+ years experience in Rust systems programming and AI infrastructure. Creator of Sealbox open source project.",
-              url: "https://realmorrisliu.com",
-              image: imageURL.toString(),
-              sameAs: [
-                "https://github.com/realmorrisliu",
-                "https://twitter.com/realmorrisliu",
-                "https://linkedin.com/in/realmorrisliu",
-              ],
-              jobTitle: "Senior Software Engineer & AI Infrastructure Architect",
-              hasOccupation: {
-                "@type": "Occupation",
-                name: "Software Engineer",
-                occupationalCategory: "15-1132.00",
-                skills: [
-                  "Rust Programming",
-                  "AI Infrastructure",
-                  "Systems Architecture",
-                  "Technical Leadership",
-                  "DevOps Security",
-                ],
-              },
-              alumniOf: {
-                "@type": "EducationalOrganization",
-                name: "Engineering Excellence Program",
-              },
-              knowsAbout: [
-                "Rust Systems Programming",
-                "AI Infrastructure Architecture",
-                "Zero-Trust Security",
-                "Technical Leadership",
-                "Startup Engineering",
-                "Open Source Development",
-                "DevOps Best Practices",
-                "Enterprise Software Design",
-              ],
-              makesOffer: {
-                "@type": "Offer",
-                itemOffered: {
-                  "@type": "Service",
-                  name: "Technical Consulting & Architecture Review",
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Person",
+                  "@id": "https://realmorrisliu.com/#person",
+                  name: "Morris Liu",
+                  alternateName: ["Morris", "Liu Morris"],
+                  description:
+                    "Systems builder and engineering leader working in Rust across CAD, computer graphics, AI infrastructure, and agent runtimes. Creator of Alan (alanworks.app) and openrouter-rs.",
+                  url: "https://realmorrisliu.com",
+                  image: imageURL.toString(),
+                  sameAs: [
+                    "https://github.com/realmorrisliu",
+                    "https://x.com/realmorrisliu",
+                    "https://linkedin.com/in/realmorrisliu",
+                  ],
+                  jobTitle: "CTO & Systems Builder",
+                  hasOccupation: {
+                    "@type": "Occupation",
+                    name: "Software Engineer",
+                    occupationalCategory: "15-1132.00",
+                    skills: [
+                      "Rust Programming",
+                      "Agent Runtimes",
+                      "AI Infrastructure",
+                      "Systems Architecture",
+                      "Technical Leadership",
+                    ],
+                  },
+                  alumniOf: {
+                    "@type": "EducationalOrganization",
+                    name: "Huazhong University of Science and Technology",
+                  },
+                  knowsAbout: [
+                    "Rust Systems Programming",
+                    "Agent Runtimes",
+                    "Plan 9 / Personal Computing",
+                    "AI Infrastructure Architecture",
+                    "CAD & Computer Graphics",
+                    "Technical Leadership",
+                    "Startup Engineering",
+                    "Open Source Development",
+                  ],
+                  makesOffer: {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Technical Consulting & Architecture Review",
+                    },
+                  },
                 },
-              },
-            }),
-      })}
+                {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://alanworks.app/#software",
+                  name: "Alan",
+                  alternateName: "alan9",
+                  applicationCategory: "DeveloperApplication",
+                  operatingSystem: "macOS, Linux",
+                  description:
+                    "A programmable personal computing environment built on alan9—where agents are ordinary processes, state lives in namespaces, and your terminal is the interface.",
+                  url: "https://alanworks.app",
+                  codeRepository: "https://github.com/realmorrisliu/alan",
+                  license: "https://www.apache.org/licenses/LICENSE-2.0",
+                  author: {
+                    "@id": "https://realmorrisliu.com/#person",
+                  },
+                },
+              ],
+            }
+      )}
     />
 
     <PostHog />

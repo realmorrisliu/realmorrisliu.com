@@ -18,7 +18,7 @@ import LanguageSwitcher from "../../components/LanguageSwitcher.astro";
   }}
 />
 
-I've been building an agent runtime called [Alan](https://github.com/realmorrisliu/Alan). It's written in Rust, and the core idea is to model AI agents as Turing machines—a stateless program executes on a stateful tape, producing observable side effects.
+I've been building an agent runtime called [Alan](https://alanworks.app). It's written in Rust, and the core idea is to model AI agents as Turing machines—a stateless program executes on a stateful tape, producing observable side effects.
 
 But the deeper I got into the runtime design, the more I kept hitting the same question: where does the human fit in?
 
@@ -101,7 +101,7 @@ HITE frees humans from execution oversight so they can focus on what genuinely r
 
 Ideas are cheap. The hard part is encoding them into a runtime.
 
-I've been working through this in [Alan](https://github.com/realmorrisliu/Alan), which models agents as Turing machines: a stateless program (AgentConfig) executes on a stateful tape (Tape), producing durable side effects recorded in a rollout log. Three abstractions:
+I've been working through this in [Alan](https://github.com/realmorrisliu/alan), which models agents as Turing machines: a stateless program (AgentConfig) executes on a stateful tape (Tape), producing durable side effects recorded in a rollout log. Three abstractions:
 
 ```
 AgentConfig  →  "how to think"   (stateless: LLM + tools + policies)
@@ -169,3 +169,5 @@ This solves real problems: context isolation (the model only loads the current s
 Today I came across Eric Holmes's post on Hacker News: [MCP is dead. Long live the CLI](https://ejholmes.github.io/2026/02/28/mcp-is-dead-long-live-the-cli.html). One line captures the core tradeoff well: "The best tools are the ones that work for both humans and machines."
 
 This aligns with the "Skills over Plugins" argument above. In Alan, Skills remain the orchestration layer over small CLI executors. MCP and OpenAPI still have value as adapters when needed, but CLI-first is the default path because it gives better composability, easier debugging, and cleaner permission boundaries.
+
+_Note: Alan has since evolved from an agent runtime into a Plan 9-inspired programmable personal computing environment (`alan9`), documented in [July 2026 Now](/now/2026-07) and live at [alanworks.app](https://alanworks.app)._

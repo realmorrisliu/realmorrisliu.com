@@ -190,6 +190,7 @@ const zhUrl = createLangSwitchUrl("zh", currentHash);
                 title={project.title}
                 description={project.description}
                 githubUrl={project.githubUrl}
+                websiteUrl={"websiteUrl" in project ? project.websiteUrl : undefined}
               />
               {project.readMoreLink && (
                 <p class="text-text-tertiary mt-2 ml-0 text-sm">

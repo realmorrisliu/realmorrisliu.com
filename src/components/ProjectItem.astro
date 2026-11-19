@@ -1,19 +1,32 @@
 ---
 import GitHubIcon from "@components/GitHubIcon.astro";
+import Link from "@components/Link.astro";
 
 export interface Props {
   title: string;
   description: string;
   githubUrl?: string;
+  websiteUrl?: string;
 }
 
-const { title, description, githubUrl } = Astro.props;
+const { title, description, githubUrl, websiteUrl } = Astro.props;
+const websiteLabel = websiteUrl?.replace(/^https?:\/\//, "").replace(/\/$/, "");
 ---
 
 <div>
-  <h3 class="text-text-primary mb-2 flex items-center gap-2 font-serif text-lg">
-    {title}
+  <h3 class="text-text-primary mb-2 flex flex-wrap items-center gap-2 font-serif text-lg">
+    <span>{title}</span>
     {githubUrl && <GitHubIcon href={githubUrl} />}
+    {
+      websiteUrl && websiteLabel && (
+        <Link
+          href={websiteUrl}
+          class="text-text-tertiary hover:text-text-primary font-sans text-sm font-normal"
+        >
+          {websiteLabel} ↗
+        </Link>
+      )
+    }
   </h3>
   <p class="text-text-secondary font-sans text-base leading-relaxed">
     {description}

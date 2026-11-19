@@ -151,7 +151,15 @@ const structuredData = {
           )
         }
         {
-          tag !== "rust" && tag !== "ai" && tag !== "devops" && (
+          tag === "alan" && (
+            <p class="text-text-tertiary leading-relaxed">
+              Essays and design notes behind <Link href="https://alanworks.app">Alan</Link>, an
+              open-source, Plan 9-inspired programmable personal computing environment.
+            </p>
+          )
+        }
+        {
+          tag !== "rust" && tag !== "ai" && tag !== "devops" && tag !== "alan" && (
             <p class="text-text-tertiary leading-relaxed">
               Technical insights and engineering experiences from building production systems.
             </p>

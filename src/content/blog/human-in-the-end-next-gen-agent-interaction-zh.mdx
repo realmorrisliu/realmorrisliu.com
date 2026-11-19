@@ -18,7 +18,7 @@ import LanguageSwitcher from "../../components/LanguageSwitcher.astro";
   }}
 />
 
-我最近一直在花时间构建一个新的 Agent 运行时，我叫它 [Alan](https://github.com/realmorrisliu/Alan)。Alan 用 Rust 实现，核心思路是把 AI Agent 建模为图灵机——无状态的程序在有状态的纸带上执行，产生可观测的副作用。
+我最近一直在花时间构建一个新的 Agent 运行时，我叫它 [Alan](https://alanworks.app)。Alan 用 Rust 实现，核心思路是把 AI Agent 建模为图灵机——无状态的程序在有状态的纸带上执行，产生可观测的副作用。
 
 但越深入运行时设计，我就越频繁地撞上同一个问题：人类在这个系统里到底扮演什么角色？
 
@@ -101,7 +101,7 @@ HITE 把人类从执行监督的琐碎中解放出来，让他们专注于真正
 
 理念不值钱。难的是把它落地为运行时语义。
 
-我一直在 [Alan](https://github.com/realmorrisliu/Alan) 中推演这个问题。Alan 把 Agent 建模为图灵机：无状态的程序（AgentConfig）在有状态的纸带（Tape）上执行，产生持久化记录在 Rollout 日志中的副作用。三层清晰的抽象：
+我一直在 [Alan](https://github.com/realmorrisliu/alan) 中推演这个问题。Alan 把 Agent 建模为图灵机：无状态的程序（AgentConfig）在有状态的纸带（Tape）上执行，产生持久化记录在 Rollout 日志中的副作用。三层清晰的抽象：
 
 ```
 AgentConfig  →  "how to think"   (无状态：LLM + 工具 + 策略)
@@ -169,3 +169,5 @@ Alan 选择了一条不同的路径：**Skills over Plugins。**
 今天我在 Hacker News 上看到 Eric Holmes 的文章：[MCP is dead. Long live the CLI](https://ejholmes.github.io/2026/02/28/mcp-is-dead-long-live-the-cli.html)。其中一句话和上面的判断高度一致："The best tools are the ones that work for both humans and machines."
 
 这也印证了上面「Skills over Plugins」的观点。在 Alan 里，Skills 仍然是编排层，底层执行默认优先走小型 CLI 工具。MCP 和 OpenAPI 依然有价值，但更适合作为按需接入的适配器，而不是唯一入口。这样在组合性、可调试性和权限边界上都更清晰。
+
+_注：Alan 后来从 Agent 运行时进一步演进为受 Plan 9 启发的可编程个人计算环境（`alan9`），这段转向记录在 [2026 年 7 月的 Now](/now/2026-07)，最新介绍见 [alanworks.app](https://alanworks.app)。_

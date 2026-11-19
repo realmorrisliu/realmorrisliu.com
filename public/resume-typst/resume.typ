@@ -100,9 +100,21 @@
   ] else [
     #text(weight: "semibold")[#project.title]
   ]
-  #if show-github and project.github != "" [
+  #let has-website = project.at("website", default: "") != ""
+  #let has-github = show-github and project.github != ""
+  #if has-website or has-github [
     #linebreak()
-    #text(size: 7.4pt, fill: faint)[GitHub: #maybe-link(project.github, project.at("githubUrl", default: ""))]
+    #text(size: 7.4pt, fill: faint)[#{
+      if has-website {
+        maybe-link(project.website, project.at("websiteUrl", default: ""))
+      }
+      if has-website and has-github {
+        [ | ]
+      }
+      if has-github {
+        [GitHub: #maybe-link(project.github, project.at("githubUrl", default: ""))]
+      }
+    }]
   ]
   #v(item-title-gap-for(lang))
   #paragraph(project.description, item-leading-for(lang))
