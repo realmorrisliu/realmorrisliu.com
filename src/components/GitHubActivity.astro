@@ -6,11 +6,10 @@ import {
 } from "@utils/githubActivity";
 
 export interface Props {
-  variant: "compact" | "full";
   activity: GitHubActivityPayload | null;
 }
 
-const { variant, activity } = Astro.props;
+const { activity } = Astro.props;
 
 const formatCommitsSuffix = (count: number) => (count === 1 ? "commit" : "commits");
 const formatPrsSuffix = (count: number) => (count === 1 ? "PR merged" : "PRs merged");
@@ -48,101 +47,14 @@ const windowRows = activity
       { key: "month", label: "Last 30 days", stats: activity.windows.month },
     ]
   : [];
-
-const compactButtons: Array<{ key: "day" | "week" | "month"; label: string }> = [
-  { key: "day", label: "24h" },
-  { key: "week", label: "7d" },
-  { key: "month", label: "30d" },
-];
 ---
 
 {
-  activity && variant === "compact" && (
-    <section
-      aria-label="GitHub activity"
-      class="mt-10 border-y border-[color:var(--color-border)] py-4"
-      data-gh-compact
-    >
-      <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 text-sm">
-        <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-          <a
-            href="/now#github-activity"
-            class="text-text-primary hover:text-text-link font-medium hover:underline"
-          >
-            GitHub
-          </a>
-          <span
-            class="text-text-tertiary"
-            data-gh-compact-output
-            data-day-commits={String(activity.windows.day.commits)}
-            data-day-prs={String(activity.windows.day.mergedPrs)}
-            data-week-commits={String(activity.windows.week.commits)}
-            data-week-prs={String(activity.windows.week.mergedPrs)}
-            data-month-commits={String(activity.windows.month.commits)}
-            data-month-prs={String(activity.windows.month.mergedPrs)}
-          >
-            <span data-gh-commits class="text-text-primary font-mono tabular-nums">
-              {activity.windows.week.commits.toLocaleString("en-US")}
-            </span>{" "}
-            <span data-gh-commits-label>{formatCommitsSuffix(activity.windows.week.commits)}</span>
-            <span class="mx-1.5 text-[color:var(--color-border)]" aria-hidden="true">
-              ·
-            </span>
-            <span data-gh-prs class="text-text-primary font-mono tabular-nums">
-              {activity.windows.week.mergedPrs.toLocaleString("en-US")}
-            </span>{" "}
-            <span data-gh-prs-label>{formatPrsSuffix(activity.windows.week.mergedPrs)}</span>
-          </span>
-        </div>
-
-        <div class="flex items-baseline gap-3">
-          <span
-            class="inline-flex items-baseline gap-1.5"
-            role="group"
-            aria-label="GitHub rolling window"
-          >
-            {compactButtons.map((btn, index) => (
-              <>
-                {index > 0 && (
-                  <span class="text-[color:var(--color-border)]" aria-hidden="true">
-                    /
-                  </span>
-                )}
-                <button
-                  type="button"
-                  data-gh-window-btn={btn.key}
-                  aria-pressed={btn.key === "week" ? "true" : "false"}
-                  class:list={[
-                    "cursor-pointer font-mono text-xs transition-colors",
-                    btn.key === "week"
-                      ? "text-text-primary underline underline-offset-4"
-                      : "text-text-tertiary hover:text-text-primary",
-                  ]}
-                >
-                  {btn.label}
-                </button>
-              </>
-            ))}
-          </span>
-          <a
-            href="/now#github-activity"
-            class="text-text-tertiary hover:text-text-link text-xs transition-colors"
-            aria-label="View full GitHub activity on Now page"
-          >
-            →
-          </a>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-{
-  activity && variant === "full" && (
+  activity && (
     <section
       id="github-activity"
       aria-labelledby="github-activity-heading"
-      class="border-y border-[color:var(--color-border)] py-5"
+      class="mt-10 border-y border-[color:var(--color-border)] py-5"
       data-gh-full
     >
       <div class="flex flex-wrap items-baseline justify-between gap-2">
@@ -248,46 +160,6 @@ const compactButtons: Array<{ key: "day" | "week" | "month"; label: string }> = 
 
 <script>
   function initGitHubActivity() {
-    document.querySelectorAll<HTMLElement>("[data-gh-compact]").forEach(root => {
-      if (root.dataset.ghBound === "true") return;
-      root.dataset.ghBound = "true";
-
-      const output = root.querySelector<HTMLElement>("[data-gh-compact-output]");
-      const commitsEl = root.querySelector<HTMLElement>("[data-gh-commits]");
-      const commitsLabelEl = root.querySelector<HTMLElement>("[data-gh-commits-label]");
-      const prsEl = root.querySelector<HTMLElement>("[data-gh-prs]");
-      const prsLabelEl = root.querySelector<HTMLElement>("[data-gh-prs-label]");
-      const buttons = root.querySelectorAll<HTMLButtonElement>("[data-gh-window-btn]");
-
-      if (!output || !commitsEl || !commitsLabelEl || !prsEl || !prsLabelEl) return;
-
-      buttons.forEach(btn => {
-        btn.addEventListener("click", () => {
-          const win = btn.dataset.ghWindowBtn;
-          if (win !== "day" && win !== "week" && win !== "month") return;
-
-          const commitsRaw = output.dataset[`${win}Commits`];
-          const prsRaw = output.dataset[`${win}Prs`];
-          const commits = Number(commitsRaw ?? 0);
-          const prs = Number(prsRaw ?? 0);
-
-          commitsEl.textContent = commits.toLocaleString("en-US");
-          commitsLabelEl.textContent = commits === 1 ? "commit" : "commits";
-          prsEl.textContent = prs.toLocaleString("en-US");
-          prsLabelEl.textContent = prs === 1 ? "PR merged" : "PRs merged";
-
-          buttons.forEach(other => {
-            const isSelected = other === btn;
-            other.setAttribute("aria-pressed", String(isSelected));
-            other.classList.toggle("text-text-primary", isSelected);
-            other.classList.toggle("underline", isSelected);
-            other.classList.toggle("underline-offset-4", isSelected);
-            other.classList.toggle("text-text-tertiary", !isSelected);
-          });
-        });
-      });
-    });
-
     document.querySelectorAll<HTMLElement>("[data-gh-full]").forEach(section => {
       if (section.dataset.ghBound === "true") return;
       section.dataset.ghBound = "true";
