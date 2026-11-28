@@ -35,7 +35,7 @@ Plan 9 最核心的想法大家都很熟：**everything is a file**。
 
 对我来说，这不只是架构上好看，它背后还连着我对 AI 产品形态的一个判断：**对话式 UI 未必是 AI 时代的终极方案。**
 
-聊天框很万能，但对大多数人和大多数场景来说，设计良好的垂直 UI/UX 依然非常有价值。我一直想做的是让各种不同的垂直 App 共享同一套 Agent 底座——比如我最近在折腾的 M3 和 [slowpage](https://github.com/realmorrisliu/slowpage)（一个面向阅读场景的 App）。坦白讲，它们的 UI/UX 离我理想中的状态还差得远，但沿着这条路做下来，我能感觉到思路本身是通的。
+聊天框很万能，但对大多数人和大多数场景来说，设计良好的垂直 UI/UX 依然非常有价值。我一直想做的是让各种不同的垂直 App 共享同一套 Agent 底座——比如我最近在折腾的 M3 和 [slowpage](https://github.com/thinksmart-systems/slowpage)（一个面向阅读场景的 App）。坦白讲，它们的 UI/UX 离我理想中的状态还差得远，但沿着这条路做下来，我能感觉到思路本身是通的。
 
 站在这些垂直 App 的视角来看，把 Agent 抽象成文件系统，最大的好处其实很朴素：你不用专门去处理 Agent 的输出。状态、事件和输出流在文件系统这一层就已经抽象好了，App 按读写文件的方式去对接就行，不需要和某套特定的对话协议或 SDK 死绑在一起。而且既然都是文件和文本流，平时在 Unix 里顺手的标准文本工具全都能直接拿来用。
 
@@ -67,4 +67,4 @@ Alan 到今天依然处在很早期的阶段。不管是底层的 `alan9`，还�
 
 把这些写出来，也不是想宣布什么已经完工的方案。只是觉得 **Agent as a filesystem** 是个挺优雅的抽象——把 AI 放回文件、流和命名空间这些老派但经得起时间考验的原语里，很多原本缠在一起的问题会突然变得清楚。如果你也在琢磨 Agent 的架构或者交互形态，希望这个视角能给你带来一点灵感。
 
-项目本身都在开源推进，概览在 [alanworks.app](https://alanworks.app)，代码放在 [github.com/realmorrisliu/alan](https://github.com/realmorrisliu/alan)。
+项目本身都在开源推进，概览在 [alanworks.app](https://alanworks.app)，代码放在 [github.com/thinksmart-systems/alan](https://github.com/thinksmart-systems/alan)。

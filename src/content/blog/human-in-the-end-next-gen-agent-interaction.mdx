@@ -101,7 +101,7 @@ HITE frees humans from execution oversight so they can focus on what genuinely r
 
 Ideas are cheap. The hard part is encoding them into a runtime.
 
-I've been working through this in [Alan](https://github.com/realmorrisliu/alan), which models agents as Turing machines: a stateless program (AgentConfig) executes on a stateful tape (Tape), producing durable side effects recorded in a rollout log. Three abstractions:
+I've been working through this in [Alan](https://github.com/thinksmart-systems/alan), which models agents as Turing machines: a stateless program (AgentConfig) executes on a stateful tape (Tape), producing durable side effects recorded in a rollout log. Three abstractions:
 
 ```
 AgentConfig  →  "how to think"   (stateless: LLM + tools + policies)

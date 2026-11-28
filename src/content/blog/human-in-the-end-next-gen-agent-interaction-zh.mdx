@@ -101,7 +101,7 @@ HITE 把人类从执行监督的琐碎中解放出来，让他们专注于真正
 
 理念不值钱。难的是把它落地为运行时语义。
 
-我一直在 [Alan](https://github.com/realmorrisliu/alan) 中推演这个问题。Alan 把 Agent 建模为图灵机：无状态的程序（AgentConfig）在有状态的纸带（Tape）上执行，产生持久化记录在 Rollout 日志中的副作用。三层清晰的抽象：
+我一直在 [Alan](https://github.com/thinksmart-systems/alan) 中推演这个问题。Alan 把 Agent 建模为图灵机：无状态的程序（AgentConfig）在有状态的纸带（Tape）上执行，产生持久化记录在 Rollout 日志中的副作用。三层清晰的抽象：
 
 ```
 AgentConfig  →  "how to think"   (无状态：LLM + 工具 + 策略)

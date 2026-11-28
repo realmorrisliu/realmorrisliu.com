@@ -35,7 +35,7 @@ Once you follow that thought, an entire agent can be treated as a filesystem. Th
 
 For me, this was not just about finding a neat systems metaphor. It tied directly into another belief I hold about AI software: **conversational UI is not necessarily the final form of the AI era.**
 
-Chat works for many things, but for most users, well-designed UI and UX still matter a great deal. What I actually want is for different vertical apps to share the same agent foundation underneath. Some of the things I have been experimenting with lately, like M3 and [slowpage](https://github.com/realmorrisliu/slowpage) (a reader app), come out of this exact direction. Their UI and UX are still nowhere near the level I want, to be honest, but the underlying idea holds up.
+Chat works for many things, but for most users, well-designed UI and UX still matter a great deal. What I actually want is for different vertical apps to share the same agent foundation underneath. Some of the things I have been experimenting with lately, like M3 and [slowpage](https://github.com/thinksmart-systems/slowpage) (a reader app), come out of this exact direction. Their UI and UX are still nowhere near the level I want, to be honest, but the underlying idea holds up.
 
 Looking at the problem from those vertical apps, treating an agent as a filesystem turns out to be a very clean abstraction. The biggest practical advantage is that you do not need special-purpose plumbing to handle agent output. State, events, and streams are already shaped inside the filesystem, so an app just reads and writes files instead of coupling itself to a bespoke chat protocol or SDK. And because everything is text and files, standard text tools work out of the box.
 
@@ -65,4 +65,4 @@ Alan is still very early. Neither `alan9` nor the apps on top of it are finished
 
 I am not writing this to announce a finished system. I just find **agent as a filesystem** to be an unusually clean abstraction. Bringing AI back to old, restrained primitives like files, streams, and namespaces makes a lot of tangled problems feel simpler. If you are building agents or thinking about how software should sit on top of them, I hope the idea sparks something useful.
 
-The project is open source. You can see the overview at [alanworks.app](https://alanworks.app) or browse the code at [github.com/realmorrisliu/alan](https://github.com/realmorrisliu/alan).
+The project is open source. You can see the overview at [alanworks.app](https://alanworks.app) or browse the code at [github.com/thinksmart-systems/alan](https://github.com/thinksmart-systems/alan).
